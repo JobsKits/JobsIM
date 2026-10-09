@@ -27,7 +27,7 @@
 
 ## 🔥 <font id=前言>前言</font>
 
-本文是可评审的后端工程设计基线，文档更新日与依赖复核日为 **2026-10-08**，工程选定基线为 **IM-baseline-20261008.2**。产品行为由 [IM需求明细表](../IM需求明细表.md/IM需求明细表.md) 定义；本文负责服务、协议、数据、部署和依赖，端侧工程与本地表由 [IM前端架构表](../IM前端架构表.md/IM前端架构表.md) 定义，验收结果写入 [IM功能验收表](../IM功能验收表.md/IM功能验收表.md)。当前尚未实现、部署或压测，不把设计值当作已通过的事实。
+本文是可评审的后端工程设计基线，文档更新日为 **2026-10-09**，依赖复核日为 **2026-10-08**，工程选定基线为 **IM-baseline-20261009.1**。产品行为由 [IM需求明细表](../IM需求明细表.md/IM需求明细表.md) 定义；本文负责服务、协议、数据、部署和依赖，端侧工程与本地表由 [IM前端架构表](../IM前端架构表.md/IM前端架构表.md) 定义，验收结果写入 [IM功能验收表](../IM功能验收表.md/IM功能验收表.md)。当前尚未实现、部署或压测，不把设计值当作已通过的事实。
 
 已确定使用 [**Redis**](https://redis.io/) 辅助后端，采用 [**PostgreSQL**](https://www.postgresql.org/) 保存权威业务事实，[**Go**](https://go.dev/) 实现业务微服务。Redis 的具体许可证按 [依赖清单](#dependency-versions) 纳入交付；不以缓存替代聊天历史、账号权限或资金账本。
 
@@ -121,7 +121,7 @@
 
 | 服务 | 责任与接口 | 自有 schema / 状态 | 故障边界 |
 | --- | --- | --- | --- |
-| `edge-gateway` | HTTPS/WebSocket、连接鉴权、连接限额、心跳、请求路由；协议不含宿主业务实现 | 无权威业务表；Redis 存短时连接路由 | 重连后从同步服务补洞，内存连接不是消息事实 |
+| `edge-gateway` | HTTPS/WebSocket、连接鉴权、连接限额、心跳、请求路由；Web含同源BFF角色，协议不含宿主业务实现 | 无业务私表写权；BFF通过identity内部API访问auth.bff_sessions；Redis仅短时路由 | 重连从同步补洞，Cookie/凭据安全事实不依赖Redis缓存 |
 | `identity-service` | 用户/身份、密码/OTP/MFA、设备与会话、权限验证、封禁/墓碑/恢复 | `auth` | 关键鉴权不可用时拒绝新受保护操作，不信任缓存授权 |
 | `directory-service` | 公开资料、手工联系人、拉黑与隐私；标准阶段增加明确同意的通讯录发现 | `directory` | 资料缓存失效可回源；拉黑等权限规则用当前权威判定 |
 | `conversation-service` | 私聊唯一性、成员、发送准入、角色、历史可见范围；标准阶段承载群/频道权限 | `conversation` | 无法确认发言权限时不接受新消息；授权与权限撤销有明确先后边界 |
@@ -143,6 +143,7 @@
 | --- | --- | --- |
 | II | `media-service` | 静态/动态图片、音频/视频消息、文件的上传、授权下载、完整性校验、处理与独立保留 / `media`；基础预设不启动 |
 | II→III | `interaction-service` | II 的反应、投票、结构化卡片；III 增量消息置顶与收藏 / `interaction`；消息正文仍归 message，@成员由 message/conversation 校验与 sync/notify 分发 |
+| II | `location-service` | 单次位置、限时实时位置与独立授权的附近发现 / `location`；位置受众/来源、截止、点位清理和候选查询由本服务负责；基础不初始化，E2EE 当前拒绝云位置能力，见[位置合同](#location-service-contract) |
 | II | `search-service` | 被授权的云会话搜索索引、个人查询 / `search`；权限在返回结果时重验 |
 | II | `rtc-service` | 通话状态、首个接听获胜、房间授权 / `rtc`；媒体转发部署为独立 RTC 服务 |
 | II | `bot-service` | Bot API、机器人凭据/权限、Webhook/轮询、默认机器人、执行审计 / `bot` |
@@ -172,14 +173,34 @@
 
 | 合同 | 字段 / 规则 |
 | --- | --- |
-| 请求上下文 | `requestId`、`traceId`、认证会话、服务端解析的 `scopeId`；幂等写入增加 `idempotencyKey`、`expectedVersion` |
-| 同步结果 | 业务对象、权威 `version`、服务端时间；错误统一 `code/message/retryable/requestId`，明确 `UNAUTHORIZED/FORBIDDEN/FEATURE_DISABLED/VERSION_CONFLICT/RATE_LIMITED` |
+| 请求上下文 | `requestId`、`traceId`、认证会话、服务端解析的`scopeId/sourceContextId`；幂等写入增加`idempotencyKey`，普通可变对象并发更新同时提交`expectedRevisionEpoch/expectedVersion`，不能只传裸版本 |
+| 同步结果 | 业务对象、权威`revisionEpoch/version`、来源键与服务端时间；快照/增量/分页沿用同类型比较；错误统一`code/message/retryable/requestId`，明确`UNAUTHORIZED/FORBIDDEN/FEATURE_DISABLED/VERSION_CONFLICT/RATE_LIMITED` |
 | 消息发送 | `sendNamespaceId/restoreEpoch/clientMsgId/conversationId/type/schemaVersion/payload/attachmentIds`；I 仅 text/空附件，II 按已启用消息类型校验，III E2EE 增加 `protocolId/protocolVersion/keyEpoch/cryptoContextId/providerGroupId/protocolEpoch`；身份、发送时间、成员、权限、序号、成功状态由服务端决定 |
 | WebSocket 通知 | 通知类型、对象 ID、权威版本、增量游标；有界载荷，收到通知后按权限拉取，不把通知当作唯一历史 |
 | 事件信封 | `eventId/scopeId/restoreEpoch/eventType/schemaVersion/aggregateId/aggregateVersion/revisionEpoch/occurredAt/causationId/traceId/payload`；订阅方按事件 ID 幂等，版本比较包含代际 |
 | 对外 Webhook | 事件 ID、时间戳、签名、重试号；密钥轮换、重放时间窗、幂等与停用；未知字段兼容，未知事件不崩溃 |
 
-接口路径分 `/v1/auth`、`/v1/conversations`、`/v1/messages`、`/v1/sync`、`/v1/media`、`/v1/capabilities`、`/v1/bots`、`/v1/bridge` 和管理员路径。认证来自令牌与服务身份，不来自路径中的用户 ID。分页用稳定游标，所有批量请求限制条数、字节、执行时间和并发。
+接口路径分 `/v1/auth`、`/v1/conversations`、`/v1/messages`、`/v1/sync`、`/v1/media`、`/v1/locations`、`/v1/capabilities`、`/v1/bots`、`/v1/bridge` 和管理员路径。认证来自令牌与服务身份，不来自路径中的用户 ID。分页用稳定游标，所有批量请求限制条数、字节、执行时间和并发。
+
+Web 默认由同源网关的 BFF 角色保管上游访问/刷新凭据，浏览器只持 `__Host-jobsim_session` 的随机不透明会话 Cookie：`Secure; HttpOnly; Path=/; SameSite=Lax`，不设置 Domain。BFF 会话绑定部署/scope/用户/设备/来源和刷新 family；自身到期不得晚于上游会话。浏览器写接口检查 Origin 和绑定会话的 CSRF token，GET 不产生业务写入；WebSocket 仅同源、校验 Origin 和会话/来源授权。跨域候选由 BFF 在可信入口验证后调用，不向其他域名共享浏览器 Cookie，也不把 refresh 回传 JavaScript。正常刷新通过BFF单协调器原子更新上游凭据，保持仍有效的浏览器会话；重用检测、撤权/退出和恢复代际改变则结束对应BFF会话。刷新成功响应丢失不套用宿主换票的300秒记录，未交付刷新专用恢复合同前停止使用旧refresh并重新验证身份、受控撤销旧family，不能靠sessionId续登或盲目重刷。此网关内部角色无需新增业务微服务，服务端仍重验上游权限；I/II不因此启用III多入口组功能，具体各端保护见[前端凭据合同](../IM前端架构表.md/IM前端架构表.md#platform-lifecycle)。
+
+BFF耐久秘密的owner选定为identity-service的`auth.bff_sessions`，网关仅通过受限内部Web会话API读取/更新，不直接读写auth私表。Cookie常态只存高熵摘要；上游refresh以AEAD密文存该专用表，视BFF为受限Web客户端凭据持有者，不改变`auth.sessions`仅存摘要的规则。密钥由独立秘密配置引用，AAD绑定BFF记录/scope/user/device/source/restoreEpoch/family/refresh_generation；只有指定BFF服务身份、该Cookie/来源和当前会话检查通过才可取内部交付，不开放浏览器获取refresh的接口。TTL取当前上游闲置/绝对期限中的较早者，不得由Cookie续期扩大；退出/撤权失效立即拒读并耐久清理密文，BFF/Redis重启不能让旧Cookie恢复权限。刷新先将本记录标updating，BFF只在新凭据和匹配generation密封存储成功后恢复active；响应/保存未知时转reauth_required并终止旧资格，不把旧密文当可用refresh。PITR恢复按当前安全journal使旧代际BFF记录失效/清密文，再重新登录；备份旧秘密字节沿保留窗处理，journal不含Cookie/refresh。详见[身份表](#identity-tables)。
+
+Web登录前verifier由同一owner的专用短期`auth.bff_exchange_requests`密封保存，最长300秒，不依赖BFF进程内存。浏览器只持`__Host-jobsim_exchange`随机不透明挑战Cookie（Secure/HttpOnly/SameSite=Lax/Path=/、无Domain，Max-Age不超原期限）；它**仅原挑战查询/交付，不能访问聊天或作为完成登录Cookie**。记录存摘要并绑定准确Origin、requestId/challenge/来源/设备/恢复代际，只有指定BFF内部API凭该Cookie及原上下文可取verifier。普通`auth.exchange_challenges`仍只存S256 challenge，原生/CLI的verifier不上传秘密保管表。BFF重启可续原请求；Web须先耐久密封上游refresh及原正式Cookie交付材料，再按下述**浏览器确认**合同清秘密/过期挑战Cookie，不能因BFF已拿到refresh就提前清证明。恢复旧epoch或证明材料不可取得，按[replacement合同](#exchange-credential-delivery)以新宿主证明撤原资格和会话再新挑战；不从备份恢复有效verifier。
+
+#### 3.1.1、<span id="web-cookie-delivery">Web登录Cookie最后一跳的耐久再交付与确认</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+上游换票凭据交付与浏览器`Set-Cookie`交付是两个完成点，成功取得refresh不代表浏览器已登录。identity在本域同事务把上游refresh密封进`auth.bff_sessions`、把随机原正式Cookie及确认上下文以独立nonce/AAD密封进`auth.bff_exchange_requests.browser_cookie_ciphertext`，绑定原挑战/request/来源/设备/恢复代际、result_bff_session_id、family和refresh_generation；正式Cookie常态仍仅在bff_sessions存摘要。此事务完成后，BFF才可确认上游交付；Web记录保持`awaiting_browser_confirmation`，原300秒窗口/更早原截止**不重新起算**。
+
+| 阶段 | 行为与竞态边界 |
+| --- | --- |
+| pending | 初始仅原挑战查询/交付。没有已密封refresh和Cookie材料时不发正式Cookie、不确认上游；崩溃/保存未知沿同requestId查原本域结果，不重新换票 |
+| awaiting_browser_confirmation | BFF用原挑战Cookie＋准确Origin/CSRF＋当前上下文，受限读取原密封Cookie并重发**同一个**`__Host-jobsim_session`；不创建第二上游/BFF会话，不生成另一个Cookie，不把材料交JavaScript。此状态的正式Cookie也只能查询/确认/取消交付，聊天、同步、WebSocket和刷新准入均关闭 |
+| 浏览器确认 | 浏览器实际收到正式Cookie后，使用它调用`/v1/auth/web-session/confirm`，携原绑定requestId/稳定confirmationOperationId及CSRF证明；受限`/v1/auth/web-session/status`可在响应正文丢失时取回原确认ID/CSRF挑战和阶段，不返回任何令牌/Cookie材料。identity核对准确Origin、Cookie摘要对应的同BFF会话、family/refresh/来源/安全/恢复代际和原截止，在相同BFF/交换行锁下转active/confirmed。只在**浏览器证明已持正式Cookie**后清verifier/Cookie交付密文并过期挑战Cookie，随后开放获权聊天；错误Cookie/他人会话/错上下文拒绝 |
+| 响应丢失/重启 | Set-Cookie响应丢失时，浏览器仍用原挑战Cookie在原窗取同材料，BFF重启不丢密封记录。confirm响应丢失时，浏览器已持正式Cookie，用原确认ID查已active结果；重复/并发确认只一次转态，不反复换票/刷新。confirm和撤权/到期按同本域锁排序，失效先成立则确认拒绝 |
+| 失效与超期 | 首次刷新旋转、会话撤销/退出、授权/恢复代际变化、原挑战到期使**仍待交付/确认**资格invalidated/expired并清秘密，未确认的BFF/上游会话按原安全撤销合同终止，不能后续凭旧Cookie激活。需要继续登录先完成replacement再新挑战；已确认active会话遵守正常会话截止，不因300秒交付窗自然结束被注销，但不能再交付旧Cookie |
+
+该临时Cookie密文是auth专属秘密，与verifier分别使用唯一nonce和明确AAD用途，禁止进日志/事件/journal或普通缓存。恢复旧记录拒绝交付并清秘密，不从旧备份恢复Cookie可用性。T-34及对应整改子场景验证Set-Cookie丢失、确认丢失、BFF重启、并发确认、错误Cookie、首次刷新与撤权/恢复；这是设计合同，尚未实际运行。
 
 ### 3.2、<span id="durable-message-flow">消息接受、投递与事务 Outbox</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -271,6 +292,25 @@ deviceId 表示某来源上下文的一次消息存储实例，不是可跨重�
 
 回调接收方应验证签名并先持久入队/去重再返回 2xx；失败进入退避、死信与受控回放。公网与私有桥接采用不同受控出口策略，不能以开放任意 URL 换取方便，也不能一律拒绝合法私有部署。[OWASP Webhook 安全](https://cheatsheetseries.owasp.org/cheatsheets/Webhook_Security_Cheat_Sheet.html)
 
+#### 3.3.1、<span id="schedule-favorite-retention">计划正文、周期模板和收藏引用的保留/清理</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+明确区分三种计划内容：`source_ref`只引用已有获权消息ID/代际/版本，`independent_draft`为本人尚未发送的一次内容，`independent_template`为本人明确授权独立存储的周期内容。scheduler唯一拥有`schedule.plan_payloads`，`plans`只保存active_payload_id和计划控制字段，原`plans.action_payload_ciphertext`不在新设计重复保存正文；修改创建新payload_version，旧run固定旧版本，并按原交接/排空合同收尾。Outbox/运行结果/批次结果只存ID/摘要/状态，不复制正文。
+
+| 对象 | 保留与清理合同 |
+| --- | --- |
+| 源引用计划 | `source_ref`的ciphertext必须NULL，每次执行向message取当前获权原版本。源global/焚毁、来源撤权或历史失权立即禁止新动作并取消未准入run，不从缓存/旧备份复活。cloud_only后服务端无正文则报告`SOURCE_CONTENT_UNAVAILABLE`并暂停/终止该版本；合法本地源副本不构成scheduler取回正文的授权 |
+| 一次未发送正文 | 仅本人明确创建的独立draft，不因收藏/转发已有消息自动变独立副本。创建时冻结绝对payload_expires_at，首期创建起最长30天，schedule执行必须更早；到期停新准入，未知交接沿原ID对账，不凭计时宣称未发。已下游接受的消息使用自己的生命周期，不由计划清理撤回 |
+| 周期独立模板 | 须显式用途/受众/内容独立存储授权及endAt，首期`endAt<=createdAt+30天`；无期限计划/模板拒绝。取消/结束/授权失效停止新执行；模板是明确独立内容，不属于某次已发消息的副本，某次消息cloud_only不自动取消整个计划，也不得把已有焚毁/global消息偷偷复制成模板。若来源本就受禁止复制/焚毁规则约束，拒绝独立模板创建 |
+| 终态清理 | 全部动作已完成/取消且无未知交接的payload，默认终态后300秒清理，可配置0～86400秒，`cleanup_due_at=min(terminal_at+delay, payload_expires_at)`；编辑退休的旧payload同样排清理。不把stopping/draining假称终态。即使执行仍未知，到绝对payload期限也停止所有新正文交付并清正文，继续保留原幂等ID/摘要/已交接资格等元数据核对与排空；不能借未知结果无限保留正文或重新发消息 |
+| 已发送正文 | 每条已提交消息由message/media独立承担冻结策略/收讫/焚毁；计划结束不清历史消息，消息删除也不改已提交的计划执行事实。关联只保稳定result_message_id，不复制已发正文作执行报告 |
+| 收藏与置顶 | 收藏默认仅`source_message_id/source_revision_epoch/source_version/source_context_id`引用，`snapshot_ciphertext`保留兼容字段时以数据库CHECK强制NULL；不在服务端建独立收藏正文。置顶同样纯引用。查询重验源权限/版本/来源，cloud_only标云源不可取，端侧原合法副本按原规则显示；global/焚毁撤销引用和清端缓存。E2EE收藏保端侧引用并用原Provider解密源，不上传明文/另建服务端副本 |
+
+计划自己的终态/期限清理由`schedule.payload_cleanup_jobs`持久领取，准确键为`(scope,planId,payloadId,payloadVersion,cleanupGeneration)`，使用租约/fencing与journal期限/intent/result门禁；只清本域正文、对应缓存/在线副本，保留必要无正文执行事实。涉及源消息派生引用或受约束副本时，message的`content_cleanup_steps`记录`owner_service=scheduler-service, representation=schedule_source_ref, holder_id=planId, object_type=plan_payload, object_id=payloadId, payload_version=原版本, source_context_id=原来源`；interaction用`representation=favorite_ref/pin_ref, holder_id=收藏/置顶ID, object_type=favorite/pin, object_id=同ID`。纯引用清理不是云正文副本删除，global必须传播引用失效；cloud_only标不可取但不虚称删除合法端侧源。
+
+普通投票卡片仅保存pollId引用，interaction的prepared投票绑定已提交source_message_id及源版本/保留合同才开放；源cloud_only/global/到期时停止投票/修改、失效准入generation，`content_cleanup_steps`准确登记`owner_service=interaction-service, representation=poll_question_options/poll_votes, holder_id=pollId, object_type=poll, object_id=pollId, payload_version=源绑定版本`。interaction清题目/选项和该poll的votes明细后只保留无正文不可用状态，迟到准入不得再次填充，不能只清message正文遗留投票副本。未绑定的创建尝试沿原请求核对/abort，状态未知不对外公开。
+
+任何以后批准的正文副本须另登记持有者/用途/原源ID/版本、绝对期限和准确object键，未纳入manifest不得报告源正文全清理；scheduler不能跨schema清message或interaction表。global/撤权访问立即禁用，物理清理待journal确认，延迟和未知独立报警。独立模板的备份字节按既有窗口保留，恢复对账当前绝对期限/撤权并清理，不自动复活任务。T-10/T-20/T-30验证副本/引用、300秒终态、30天绝对边界、取消未知、已发消息独立保留和旧备份。
+
 ### 3.4、<span id="bridge-architecture">嵌入别的产品与独立中间件</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 宿主通过原生 SDK/界面组件/CLI/HTTP 接入，可以为某个产品独立部署完整 IM 实例或服务器。桥接中间件持有宿主连接配置，将经宿主服务端签发、经验证的身份映射到 IM 用户；不能由前端提交 `externalUserId` 即获取他人会话。宿主凭据与 IM 用户会话分离，短时换票绑定 app、audience、nonce 和过期时间。[产品合同](../IM需求明细表.md/IM需求明细表.md#external-integration)
@@ -284,7 +324,7 @@ deviceId 表示某来源上下文的一次消息存储实例，不是可跨重�
 
 中间件可以替换而不修改消息核心。Webhook/事件暂时失败进入持久重试和待处理状态，宿主与 IM 不共用数据库事务，也不承诺用分布式回调自动实现跨系统原子提交。基础版完成一个最小身份换票与业务资源绑定演示，随后每种宿主连接器单独验收。
 
-身份换票由 identity-service 在本域事务中原子消费 `(scope,app,issuer,nonce)` 并创建绑定来源的会话，唯一键防并发兑换；nonce 到期、已消费或宿主映射 generation 不符均拒绝。同请求摘要的响应丢失可按稳定请求 ID 查询原会话签发结果/完成状态，重新提供交付材料须验证原申请方，不再次消费 nonce 创建第二个会话；异摘要重放拒绝。会话保存 `source_app_id/source_mapping_id/source_mapping_generation`；签发、刷新和受保护请求同时验证个人账号与当前 app/映射权威状态，bridge 不可用或来源撤权尚未核实则拒绝该来源授权。停用 app、解绑外部身份先在 bridge 本域耐久递增撤权 generation 并禁止新换票，经事件/API 让 identity 撤销对应来源会话；撤权期间不得信任旧缓存。个人登录和其他 app 会话不因此被连坐，除非另有明确账号处罚。
+身份换票由 identity-service 在本域事务中原子消费 `(scope,app,issuer,nonce)` 并创建绑定来源的会话，唯一键防并发兑换；nonce 到期、已消费或宿主映射 generation 不符均拒绝**新兑换**。同请求摘要的响应丢失通过[短期交付记录](#exchange-credential-delivery)取回原会话的同一份凭据，不重新消费 nonce 或创建第二会话；异摘要重放拒绝。会话保存 `source_app_id/source_mapping_id/source_mapping_generation`；签发、刷新和受保护请求同时验证个人账号与当前 app/映射权威状态，bridge 不可用或来源撤权尚未核实则拒绝该来源授权。停用 app、解绑外部身份先在 bridge 本域耐久递增撤权 generation 并禁止新换票，经事件/API 让 identity 撤销对应来源会话；撤权期间不得信任旧缓存。个人登录和其他 app 会话不因此被连坐，除非另有明确账号处罚。
 
 来源 app 有效不等于取得该用户全部 IM 权限。来源会话绑定不可扩大的 grant（允许的 app/resource/conversation/operation、grant 版本和期限），实际授权再与本人当前成员/可见性取交集；个人空间和其他 app 会话默认不授予。列表/搜索/同步流/快照/推送、下载和直接猜 ID 请求都按来源裁剪，准入凭据绑定 source/grant；客户端不可通过省略来源字段转为个人身份。授权变更使旧 grant 失效并通知来源流，本地 SDK 按来源上下文隔离缓存/游标。跨产品共享会话须另有明确共享授权，T-49 检验同 scope/同用户的宿主 A/B 隔离。
 
@@ -293,6 +333,23 @@ grant、来源会话与消息准入固定签发时的 app_authorization_generati
 身份兑换先取得 IM 当前交换挑战/上下文，宿主签名票据绑定其 restore_epoch、app 授权代际、mapping/grant及 nonce/用途/受众。identity 只接受独立 registry 当前恢复代际并在 nonce 事务中核验；PITR 前的票据即使未过期、消费记录被回退，也只能拒绝并重新签发，不能重复建立新会话。T-33/34覆盖已消费票据的恢复重放。
 
 Bot/bridge 的持久投递队列默认只存事件 ID、版本、摘要和授权对象指针，发送/重试时按当前授权与生命周期取正文；global、到期或撤权后不能把积压旧载荷再次外发。确有声明的正文复制用途时登记持有者、用途、保留期限与清理责任，未发送副本进入 content_cleanup_steps；外部已经交付的独立副本按告知边界处理，不虚称可远程擦除。云正文清理完成必须覆盖所有约定在线队列副本，不能因加密存储就排除。
+
+#### 3.4.1、<span id="exchange-credential-delivery">宿主换票的原申请方证明与短期凭据再交付</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+选择 **PKCE S256 申请方绑定＋auth 专属 AEAD 短期交付记录**。常态`auth.sessions`仍只存随机刷新摘要，不把sessionId当登录完成。挑战前原生/CLI生成32字节随机verifier，Web由同源BFF生成并放专用300秒密封保管表；普通挑战/宿主签发方只接收SHA-256后的base64url challenge。verifier不进入日志/事件/bridge或常态会话，原生/CLI交付前安全保存；BFF短时秘密按[Web保护合同](#api-contracts)受限保管，丢失且无法安全取原记录即走replacement。[PKCE S256格式](https://www.rfc-editor.org/rfc/rfc7636)
+
+规范请求摘要覆盖challengeId/requestId、S256 challenge、app/mapping/grant/source、device/storeGeneration、恢复/授权代际和用途等固定交换上下文，不把尚未签发的票据签名或verifier放入摘要，避免票据自签摘要的循环。再交付同时核对原票据签名摘要与该原上下文，不能只核对可自报的requestId。
+
+| 步骤 | 本域处理与失败合同 |
+| --- | --- |
+| 申请 | `/v1/auth/exchange/challenges` 以稳定requestId绑定app、来源映射/grant、设备/storeGeneration、当前restoreEpoch和S256 challenge；最长300秒。宿主签发的票据签名**同时覆盖challengeId、S256 challenge、device/storeGeneration、sourceContextId、requestId/规范请求摘要**以及nonce、用途/受众/期限/安全代际，identity逐字段核验；未绑定的旧票据不能用攻击者自己的verifier兑换。挑战API不接受客户端自报userId，身份由已验宿主证明与当前映射权威决定 |
+| 首次兑换 | `/v1/auth/exchange` 校验同挑战/票据、verifier和请求摘要。identity同事务消费原nonce、创建**一**个来源会话、写固定refresh_generation及加密交付材料、完成幂等结果；并发只返回这一结果。访问/刷新令牌先随机生成，再以Go标准AES-256-GCM、唯一随机nonce及外置key_ref加密，AAD绑定scope/app/requestId/challenge/device/storeGeneration/session/family/refresh_generation/restoreEpoch及摘要 |
+| 响应丢失 | `/v1/auth/exchange/delivery` 要求原requestId、**同请求摘要和verifier证明**；只查既有交付记录，不执行兑换、不再次消费nonce。校验原票据/challenge尚未到期、会话未撤销、刷新generation未旋转、账号/app/映射/grant和恢复代际仍有效后，解密并交付原字节；缺记录、secret或任何校验不明均拒绝，sessionId本身不构成证明。Web交付只到BFF，再设同源Cookie |
+| 期限与消费 | `expires_at=min(created_at+300秒, 原票据/挑战/来源grant截止, 会话截止)`；同请求原材料可在此范围重复取回，不能每次读取续期。成功拿到凭据后可用本会话确认交付；确认、首次刷新旋转、撤销/退出或代际变化原子使交付资格consumed/invalidated并清密文，不再返还旧refresh。刷新和再交付用相同会话/交付行锁排序，避免旋转后迟到取旧凭据 |
+| 超期/原材料丢失 | 返回 `EXCHANGE_DELIVERY_EXPIRED/PROOF_UNAVAILABLE` 与受限状态，不自动创建第二会话。原申请方以新有效宿主身份证明请求replacement：先在identity事务中撤销旧交付资格及**该旧会话**（客户端明确提示旧会话已失效），完成安全journal撤销门禁后才发新挑战/新requestId并重新换票；撤销未知保持pending，不能无限要求重试已无材料的旧请求。无当前证明无法补交，走正常本人重新验证 |
+| 恢复与清理 | 交付密文是短时秘密，过期即关闭读取，auth耐久清理角色移除密文/nonce/key_ref后保留最小幂等状态。物理备份可能保留旧密文字节，恢复门禁核验当前期限/代际并清理，绝不重新交付；恢复journal只记撤销/generation等最小事实，禁止放Token、verifier或交付密文。旧nonce/请求不能因PITR被复活 |
+
+T-34验证“真实获得可使用的原会话凭据”、响应丢失/并发、verifier伪造、票据到期、刷新竞态、撤权/恢复和超期重申请；T-33验证新挑战不能绕过原安全代际。记录字段见[身份表](#identity-tables)。
 
 ### 3.5、<span id="receipt-deletion-hooks">收讫后可配置删除与生命周期回调</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -351,9 +408,17 @@ Codex 的高级交付门禁包括标准向量、另一个独立 MLS 实现互操
 | 消息信封 | 每条密文固定 `protocol_id/protocol_version/key_epoch/crypto_context_id/provider_group_id/protocol_epoch` 与设备目标信息；接收端据此选择原 Provider。缓存、重试和服务端路由不得把旧密文按新的默认协议解释；未知/禁用协议或验证失败显示受控错误，不尝试不安全的自动回退 |
 | 历史兼容 | 切换只改变切换边界后的新消息；旧协议以 read-only 方式保留到历史迁移/保留期完成。历史重加密由获授权端侧执行、验证完整性并发布新版本，服务端不持私钥代做；Provider 退役前核对旧密文、离线设备、备份、恢复与密钥销毁，无法读取的历史明确告知 |
 | 密钥与隐私 | E2EE 的内容加解密和私钥在端侧；服务器仅持设备公钥/预密钥、协商结果、密文与必要元数据。密钥 epoch 更新与成员加入/退出/设备撤销形成版本化边界，管理员切换协议不获取聊天明文或私钥 |
-| 与体验组合 | E2EE 搜索/收藏在端侧完成或保存端侧加密副本；置顶/@仅按获授权元数据处理。阅后即焚的起算/对象/传播范围独立于收讫删云策略，启用收藏/转发/备份前校验冲突，不能借体验增强绕开既定焚毁责任 |
+| 与体验组合 | E2EE 搜索在端侧完成，收藏默认只持源引用且按[计划/收藏清理合同](#schedule-favorite-retention)处理；置顶/@仅按获授权元数据处理。阅后即焚的起算/对象/传播范围独立于收讫删云策略，启用收藏/转发/备份前校验冲突，不能借体验增强绕开既定焚毁责任。普通投票/云位置不能被高级继承自动打开，遵守以下组合禁用合同 |
 
 协议切换是可随时**发起**的受控操作，不承诺所有设备瞬间热切完成。停用/降档仍保留旧密文所需的最小只读 Provider 和到期清理角色，直到迁移/退役合同完成。[加密模块字段](#advanced-module-tables)、[能力配置](#core-capability-assembly)
+
+#### 3.6.1、<span id="crypto-feature-boundary">E2EE与普通投票、云位置及源消息引用的组合边界</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+`interaction.polls`属于标准阶段，**仅非E2EE普通会话**可用；当前没有端间加密投票实现。interaction创建/投票/改选/修改/重新开放API均通过conversation权威安全模式和有限准入校验，E2EE返回`FEATURE_INCOMPATIBLE_SECURITY_MODE`，关闭UI不是唯一保护。既有普通投票不能以“存储加密”更名为E2EE投票；未来若交付`interaction.polls.e2ee`，需独立内容加密、状态汇总、成员/设备权限、匿名与删除合同，当前能力注册为不可启用。
+
+切换E2EE前取得conversation安全模式栅栏，停止签发旧普通投票/位置准入，排空已准入动作；必须关闭进行中的普通投票、暂停/结束实时共享及普通位置发布并取得各owner确认后才能激活。只查询一次状态不构成跨服务原子性；未确认保持切换待完成，迟到旧动作由绑定`command_seq/security_mode_generation`的截止/栅栏拒绝。旧投票题目/选项、历史坐标仍按原安全模式与保留责任清理，不重新上传、不改写为“已经加密”。E2EE API不从旧普通投票/云坐标表填充明文卡片，返回原类型/原安全模式的不可用占位；原先合法保有的端侧普通历史明确标“普通模式历史”，新成员/来源不因此获得旧明文，具体历史仍服从源权限。
+
+`location.share`的单次位置和实时位置当前禁止在E2EE会话创建卡片或把坐标交服务端；附近发现是独立账户授权场景，不属于E2EE聊天内容，不能借`location.nearby`绕回会话上传。未来端间位置共享单独实施和验收，禁止降为普通卡片。消息置顶/收藏始终重验当前源消息、来源grant、历史范围和生命周期；只能返回获权源的元数据/端侧解密结果，不能借pin/favorite取源已清理正文或跨来源授权。global/焚毁撤销引用并传播端侧清理，cloud_only保留合法端侧源副本但不给服务器凭空重建正文的权限。FE-039/056/057、SEC-08与T-10/20覆盖这些组合。
 
 ### 3.7、<span id="time-slo-contracts">权威时间、偏差门禁与清理时效</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -436,6 +501,30 @@ sequenceDiagram
 
 上述图是现有同步合同的视图；快照缺页/失效及恢复代际重基线、浏览器存储资格的完整判据见 [前端可靠同步](../IM前端架构表.md/IM前端架构表.md#durable-sync)，测试见T-47、T-50、T-53～55。服务端只读灾备期间不接受进度/收讫/已读等写操作，客户端保留本地意图，恢复可写并核对代际后再对账。
 
+### 3.9、<span id="location-service-contract">标准位置分享、附近发现与生命周期</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+位置属于标准扩展，`location-service`唯一拥有`location` schema；基础不迁移/初始化其数据、采集或查询能力。`location.share`分`location.share.single`（一次位置卡片）和`location.share.live`（限时共享最新点），`location.nearby`为独立默认关闭的发现能力。CLI不采集定位，仍可在获权时查询结构化卡片/最新点；不能用假数据上传替代真实授权。单次卡片和实时共享当前仅普通会话支持，[E2EE组合](#crypto-feature-boundary)明确拒绝，不引入第三方地图库或后台秘密采集。
+
+| 路径/责任 | 权威规则 |
+| --- | --- |
+| `/v1/locations/shares` | 稳定requestId/idempotencyKey创建prepared分享；绑定本人/设备/storeGeneration、服务端派生来源键、会话/成员版本/安全模式及冻结受众。单次点和live首先验证用户明确同意、字段/期限；准备态不对受众公开。message按原发送尝试提交卡片，Outbox交给location绑定messageId后转active；确认未知不重复发卡、不自行清仍可能已提交引用 |
+| `/v1/locations/shares/{id}/points` | 仅原获权采集设备可上报；序号/操作ID及摘要去重，校验当前state/权限/来源/原deadline/速率。只持最新点，不存轨迹；服务端received_at决定新鲜度，client observed_at只作诊断，不能未来时间伪造fresh。坐标/精度范围双验证，坐标不是身份、实际人在场或可信真实定位证明 |
+| `/pause`、`/resume`、`/stop` | 分享行锁/CAS和当前(revisionEpoch,rowVersion)排序上报/暂停/停止/到期。pause立刻停止授权读取最新点并清点；resume必须同一来源获权本人和新明确授权，保持原截止；stop不可逆关闭当前分享，恢复需要创建新分享ID。关闭模块/成员失权/账号墓碑/来源解绑使当前分享revoked，不自动随解封复活 |
+| `/v1/locations/shares/{id}` | 按冻结受众与当前用户/会话历史/grant取交集；受众清单绑定各recipient自己的来源授权上下文，不能要求发送者/接收者的mapping字符串相同。直接猜ID、宿主A/B、改userId或新成员不继承旧受众；同app跨mapping会话须确实已有resource授权。卡片只返引用/模式/状态/截止，坐标临时获权读，sync/事件/推送不存坐标；暂停/过旧/到期不标实时 |
+| `/v1/locations/nearby/consent`与`/nearby` | 分享与附近可见**两份**独立授权。服务端派生发现域`discovery_domain_id=personal`或`app:<appUUID>`，只在同scope/同发现域筛选；查询者和候选各自核验自己的source_context_id/mapping/grant及新鲜点、隐私/拉黑/处罚。同app不同合法mapping可互相发现，跨app/个人域拒绝；不能要求完整来源键相等，也不能用发现域代替本人权限。只返粗距离区间，不返精确坐标/cell。关闭两种用途分别生效 |
+
+实时/附近期限默认**900秒**，可配置**60～86400秒**，创建时冻结deadline且不可因重试/恢复延期；每设备/用途**5秒最多上报一次**，过载限流。服务器收到点后**60秒**仍无新点则不可标实时、附近不再返回该候选；OS后台限制/省电/定位撤权时端侧立即停采集并提交暂停/停止。端离线只能先在本机停止，服务器尚未确认时明确pending，不能承诺所有其他端瞬间停止；对端最多按原新鲜度与原绝对截止失效，网络恢复再沿原操作ID确认。
+
+附近显示距离区间步长不小于**500米**，不展示精确方向/轨迹；默认搜索半径5000米（可调500～10000）、每页20人/最多50人，每次查询最多500个候选行和128个粗cell，超界返回明确缩小范围/分页提示，不做无界全库扫描。这些是**已选首期有界查询参数**，尚未验证容量，也不承诺全球空间检索能力。PG按(scope,discoveryDomain,state,coarseCell,expiresAt)受限索引筛候选，Go在有界集合解密并计算球面距离，逐候选重验自己的来源权限，处理跨日期线/高纬边界；粗cell算法/version进入协议锁定与样本，精确点密文独立保存，索引cell属于敏感派生数据。半径和重复查询按本人/设备/scope限流，不把粗化当作绝对无法推断位置的隐私保证。扩大区域/容量须另做空间查询实现与测量，不加未经选型的地图库。
+
+状态为`prepared/active/paused/stopping/stopped/expired/revoked`；prepared到期未绑定时先核对message尝试，未知保持待确认且不公开坐标。单次坐标随对应源卡片的云保留责任清理；live只保最新点，暂停清点，停止/撤权/到期立即拒读，原截止的访问限制不等待journal或worker。服务器时间/5秒准入栅栏与mode切换共同拒绝迟到上报，终态不再resume，必要清理角色继续运行。
+
+位置坐标与粗索引是云内容：location自有耐久任务完成点/候选/缓存清理，回报准确holder/对象版本；global消息撤回/焚毁清卡片引用及合法端缓存，cloud_only清服务器点/索引但保留原已获权端侧静态副本。实时UI无新鲜点也必须撤“实时”标记，不能用缓存重新发布。冻结截止、stop/revoke最小事实与当前授权generation按既有独立journal门禁保护，不把坐标/cell/轨迹放journal、Outbox、搜索、日志或告警标签。location备份沿业务PG/WAL并记资产清单；恢复先对账当前期限/撤权/墓碑，清过期点与旧索引，原live/nearby保持paused且需新授权/新点，deadline仍取原值，已终止分享不复活。历史备份中的坐标密文字节按现有备份保护窗告知，不声称逻辑删点即全域擦除。位置全文/名称搜索只索引卡片类型和有权名称，不索引坐标。
+
+源卡片cloud_only/global/到期先将该分享stopping/expired并递增sharing_generation，停止新上报与读取，迟到旧准入不能再次填坐标；当前分享不可resume，只留内容不可用状态。附近数据来自独立purpose授权，不是分享副本，按自身授权/截止清理，不因清一个卡片误删另一用途。源清理清单准确键为`owner_service=location-service, representation=location_share_point, holder_id=shareId, object_type=location_share, object_id=shareId, payload_version=原sharing_generation`；owner清该代际及其全部待清点/缓存，不能以清理时generation已递增而漏掉旧点。
+
+FE-056/057和BE-017分别验证分享/发现，覆盖双授权、越权受众/来源、旧点、后台暂停、断网停止未知、迟到上报、到期/恢复和E2EE拒绝；字段见[位置表](#location-tables)，已选参数见[默认表](#operational-defaults)。
+
 ## 四、<span id="identity-security">账号安全、邮件 OTP 与管理员状态控制</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 ### 4.1、<span id="password-design">密码的不可逆哈希</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
@@ -496,7 +585,7 @@ Identity 确认、清理资格排空及 journal 结果对账后，Governance 才
 | --- | --- | --- |
 | `im:{scope}:route:{user}:{device}` | 网关实例/连接代号，初始 90 秒、心跳刷新；连接代号防旧离线事件删新连接 | 路由可重建，客户端补同步；不丢持久消息 |
 | `im:{scope}:presence:{user}` | 在线/输入等短时状态；在线 90 秒、输入 10 秒；返回前应用隐私 | 标记未知/离线，不影响账号权限 |
-| `im:{scope}:cache:{object}:{id}:{version}` | 资料/配置缓存，初始 60～300 秒，随机抖动；只缓存获授权裁剪或内部对象 | 有界回源、单飞、防穿透，不把历史缓存当当前权限 |
+| `im:{scope}:cache:{source}:{object}:{id}:{revision_epoch}:{version}` | 资料/配置缓存，初始60～300秒、抖动；来源和(epoch,version)齐全，只缓存获权裁剪；内部缓存与用户视图分命名空间 | 有界回源/单飞；恢复旧epoch不能命中新基线，不把缓存当权限 |
 | `im:{scope}:rate:{purpose}:{subject}` | 原子计数/令牌桶、服务端 TTL，主体使用带密钥摘要，日志不含邮箱/IP原值 | 安全限流有界数据库回退或拒绝，不默认放行 |
 | `im:{scope}:lease:{worker}:{job}` | 辅助租约与唯一持有者，续期/释放需校验 token | 持久任务状态与唯一键保证最终幂等；Redis 锁失效不能造成重复扣款 |
 | `im:{scope}:hint:{channel}` | 可丢的刷新/在线通知 | 普通 Pub/Sub 断线可丢通知；可靠消息从持久流恢复 |
@@ -515,6 +604,10 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 
 下表是可直接细化为迁移 SQL 的字段合同。字段默认 `NOT NULL`；标 `?` 的字段可空。业务表标 **C** 时包含 `scope_id uuid、id uuid、created_at timestamptz、updated_at timestamptz、revision_epoch bigint、row_version bigint DEFAULT 1`，主键 `(scope_id,id)`，约束 `row_version > 0`；无 C 的表已列出主键字段。`scope_id` 是服务端从部署/app授权解析的隔离范围，不能直接采用客户端声称的范围。revision_epoch 来自当前独立恢复代际，普通对象版本用(epoch,version)比较；无 C 的同步/版本表也显式列代际。时间存 UTC，计划任务另存 IANA 时区；内容长度、枚举、金额/次数边界在 API 与数据库双重验证。
 
+`source_context_id`全链路采用**text**，API中的`sourceContextId`为同一个精确字符串：个人上下文为`personal`，宿主为`app:<规范小写appUUID>:mapping:<规范小写mappingUUID>`。identity从已验会话及mapping派生并固定到device/流/缓存/搜索/位置/计划；不得把UUID型来源键当同义列，也不接受空值/省略字段将宿主请求提升为个人权限。grant/授权generation和恢复epoch单独保存、独立校验，不塞入该字符串或只因键相等就授予权限。对象没有自身来源列时，其访问仍按请求当前来源裁剪，禁止跨来源缓存命中。
+
+profiles/contacts、会话个人视图/草稿、成员显示状态、用户级别和可变投影等普通对象均显式记录`revision_epoch`与版本；草稿另用`draft_revision_epoch/draft_version`。恢复owner在门禁内将**可变基线投影**签发为新epoch，普通行、API/CAS、快照、增量与搜索源版本一致；客户端旧epoch/v20不能挡住新epoch/v1的权威基线，源未写也必须纳入覆盖。不可变事件、已发布策略内容、账本分录/入账交易保留原身份/创建epoch并追加新事实，不原地重写账本或“rebase”消除资金、撤权、删除/截止。安全generation与使用过的namespace独立journal对账且不可回退。search索引、RTC参与行等无独立对象版本的附属表使用显式父对象/source版本，不自行发裸版本；派生索引恢复清空重建，不能当真源。
+
 `user_id`、`conversation_id` 等跨服务引用是稳定 ID，通过权威 API 和事件校验，不建立跨服务外键或直接 JOIN 私有表；同服务引用用含 `scope_id` 的复合外键。`jsonb` 仅承载带 schemaVersion 的已验证扩展字段，不能代替成员权限、金额、状态和索引字段。下面每表的唯一键/索引也包含作用域，除特别注明的全局随机凭据查找摘要。可空字段参与业务唯一性时，使用 `NULLS NOT DISTINCT` 或与业务范围一致的部分唯一索引，不能让空值绕过去重；活跃唯一约束明确对应的状态条件。
 
 ### 6.2、<span id="identity-tables">身份、认证与资料表</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
@@ -525,8 +618,12 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 | `auth.principals` / I→II | `scope_id uuid、id uuid、kind text、authority_service text、registered_at timestamptz` | PK scope/id；kind human/bot/service 不可变，人类id沿用userId、bot id沿用botId；仅登记定位，状态仍向身份或bot权威校验；I只启用human，service无独立模块授权不得通信 |
 | `auth.identities` / I | C；`user_id uuid、kind text、provider text、lookup_mac bytea、value_ciphertext bytea、verified_at timestamptz?` | UNIQUE `(scope_id,kind,provider,lookup_mac)`；用户复合 FK；邮箱规范化有版本，不随意合并提供商别名 |
 | `auth.devices` / I | C；`user_id uuid、source_context_id text、store_generation uuid、durable_contract_version text、receipt_eligible boolean、platform text、client_version text、name text、last_seen_at timestamptz、revoked_at timestamptz?` | INDEX `(scope_id,user_id,revoked_at)`；人类设备限定；来源/存储generation不可覆盖，丢库或旧备份恢复退休旧id并重新认证登记；合格版本按支持矩阵验收，不因自报能力自动具备删除资格；平台白名单；设备名长度上限 |
-| `auth.sessions` / I | C；`user_id uuid、device_id uuid、refresh_digest bytea、family_id uuid、security_version bigint、restore_epoch bigint、source_app_id uuid?、source_mapping_id uuid?、source_mapping_generation bigint?、source_app_generation bigint?、source_grant_id uuid?、source_grant_version bigint?、expires_at timestamptz、revoked_at timestamptz?、replaced_by uuid?` | UNIQUE `refresh_digest`；INDEX 用户/设备/来源/过期；来源及grant字段同时空或齐全，app/映射/grant权威验证；仅授予指定资源/操作，不继承个人全部权限；device绑定原存储实例；restore_epoch 对当前恢复代际；轮换与重用检测同事务，旧令牌不可反复刷新 |
-| `auth.exchange_nonces` / I | C；`app_id uuid、restore_epoch bigint、app_authorization_generation bigint、source_grant_id uuid、source_grant_version bigint、issuer text、nonce_digest bytea、mapping_id uuid、mapping_generation bigint、request_id uuid、request_digest bytea、expires_at timestamptz、consumed_at timestamptz?、result_session_id uuid?` | UNIQUE scope/app/issuer/nonce；UNIQUE scope/app/request；消费与来源会话创建同事务；票据/nonce绑定当前独立恢复代际与app/grant，旧epoch恢复重放拒绝；nonce不明文入日志，响应未知查询同请求结果，不再次签发 |
+| `auth.sessions` / I | C；`user_id uuid、device_id uuid、source_context_id text、refresh_digest bytea、family_id uuid、refresh_generation bigint、security_version bigint、restore_epoch bigint、source_app_id uuid?、source_mapping_id uuid?、source_mapping_generation bigint?、source_app_generation bigint?、source_grant_id uuid?、source_grant_version bigint?、expires_at timestamptz、revoked_at timestamptz?、replaced_by uuid?` | UNIQUE `refresh_digest`；INDEX 用户/设备/来源/过期；来源及grant字段同时空或齐全，app/映射/grant权威验证；仅授予指定资源/操作，不继承个人全部权限；device绑定原存储实例；restore_epoch 对当前恢复代际；轮换/重用检测与refresh_generation递增及旧交付资格失效同事务，旧令牌不可反复刷新 |
+| `auth.bff_sessions` / I Web | C；`cookie_digest bytea、user_id uuid、device_id uuid、store_generation uuid、source_context_id text、session_id uuid、family_id uuid、refresh_generation bigint、security_version bigint、restore_epoch bigint、upstream_refresh_ciphertext bytea?、secret_nonce bytea?、secret_key_ref text?、aad_digest bytea、expires_at timestamptz、state text、refresh_operation_id uuid?、browser_confirmation_operation_id uuid?、browser_confirmed_at timestamptz?、revoked_at timestamptz?、cleared_at timestamptz?` | UNIQUE cookie_digest；session FK；awaiting_browser_confirmation/active/updating/reauth_required/revoked/expired/cleared；待确认Cookie仅原交付查询/确认/取消不授聊天/刷新，active需浏览器持Cookie确认且当前family/generation匹配；TTL不超上游，Cookie只摘要/refresh密封，失效清秘密，Redis不作权威 |
+| `auth.bff_exchange_requests` / I Web | C；`challenge_cookie_digest bytea、origin text、app_id uuid、request_id uuid、request_digest bytea、challenge_id uuid、source_context_id text、device_id uuid、store_generation uuid、restore_epoch bigint、verifier_ciphertext bytea?、secret_nonce bytea?、secret_key_ref text?、aad_digest bytea、result_bff_session_id uuid?、family_id uuid?、refresh_generation bigint?、browser_cookie_ciphertext bytea?、browser_cookie_nonce bytea?、browser_cookie_key_ref text?、browser_cookie_aad_digest bytea?、confirmation_operation_id uuid?、upstream_delivery_confirmed_at timestamptz?、browser_confirmed_at timestamptz?、expires_at timestamptz、state text、cleared_at timestamptz?` | UNIQUE challenge_cookie_digest；UNIQUE scope/app/request；challenge/result BFF session本域FK；pending/awaiting_browser_confirmation/confirmed/invalidated/expired/cleared，原300秒窗不续期；refresh及Cookie材料同事务耐久后才确认上游，用原挑战取同Cookie不换票；browser持正式Cookie确认后才active/清秘密；并发同锁、旧family/恢复代际/截止拒绝 |
+| `auth.exchange_challenges` / I | C；`app_id uuid、mapping_id uuid、source_context_id text、source_grant_id uuid、source_grant_version bigint、device_id uuid、store_generation uuid、request_id uuid、restore_epoch bigint、app_authorization_generation bigint、mapping_generation bigint、pkce_method text、pkce_challenge text、expires_at timestamptz、state text` | UNIQUE scope/app/request；S256固定格式，最长300秒且受原grant/票据更早截止限制；只存challenge不存verifier，来源/设备/恢复绑定不可改；旧挑战不能在新代际使用 |
+| `auth.exchange_nonces` / I | C；`app_id uuid、challenge_id uuid、restore_epoch bigint、app_authorization_generation bigint、source_grant_id uuid、source_grant_version bigint、issuer text、nonce_digest bytea、ticket_digest bytea、mapping_id uuid、mapping_generation bigint、request_id uuid、request_digest bytea、expires_at timestamptz、consumed_at timestamptz?、result_session_id uuid?` | UNIQUE scope/app/issuer/nonce_digest；UNIQUE scope/app/request；challenge FK；消费/会话/交付同事务；已验原票据摘要与签名绑定上下文保存，S256/当前代际逐字段检查；响应未知走同请求再交付，不重新消费或接受另一张未绑定票据 |
+| `auth.credential_deliveries` / I | C；`app_id uuid、request_id uuid、request_digest bytea、challenge_id uuid、source_context_id text、session_id uuid、family_id uuid、refresh_generation bigint、device_id uuid、store_generation uuid、restore_epoch bigint、security_version bigint、app_authorization_generation bigint、mapping_generation bigint、grant_version bigint、delivery_ciphertext bytea?、delivery_nonce bytea?、key_ref text?、aad_digest bytea、expires_at timestamptz、state text、consumed_at timestamptz?、invalidated_at timestamptz?、cleared_at timestamptz?、replacement_operation_id uuid?` | UNIQUE scope/app/request；本服务session/challenge FK；最长300秒且原截止优先；ready/consumed/invalidated/expired/cleared，ready密文/nonce/key齐全、清理后均NULL；S256同请求取原材料，摘要/当前所有代际与refresh_generation不符拒绝，交付/刷新/确认锁同会话与记录；auth专属秘密保护，禁止日志/journal回显 |
 | `auth.completion_operations` / I | C；`request_id uuid、request_digest bytea、challenge_id uuid、purpose text、target_user_id uuid?、state text、result_redacted jsonb、completed_at timestamptz?` | UNIQUE scope/request；OTP 消费/最终身份写入/本操作完成同事务；成功记录结果不含密码、码或令牌；不同摘要拒绝 |
 | `auth.otp_challenges` / I | C；`target_user_id uuid?、target_security_version bigint?、restore_epoch bigint、identity_lookup_mac bytea、purpose text、request_session_id uuid?、code_mac bytea、key_version int、expires_at timestamptz、attempt_count int、max_attempts int、consumed_at timestamptz?、superseded_at timestamptz?` | INDEX 目标账号/邮箱MAC/用途/到期；注册前 user 可空，绑定/恢复必须与权威账号/用途/邮箱一致；次数 `0..max_attempts`，错误分支原子提交次数/锁定，成功消费与身份写入同事务；并发原子消费、重发废弃旧码，状态/security_version/restore_epoch 变化须重新检查 |
 | `auth.rate_windows` / I | `scope_id uuid、purpose text、subject_mac bytea、window_start timestamptz、count int、expires_at timestamptz` | PK `(scope_id,purpose,subject_mac,window_start)`；count 非负；数据库限流回退原子更新并有并发上限 |
@@ -535,8 +632,8 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 | `auth.recovery_codes` / I 管理员→II 用户 | C；`user_id uuid、code_digest bytea、consumed_at timestamptz?` | UNIQUE `(scope_id,code_digest)`；一次性原子消费 |
 | `auth.admin_grants` / I | C；`user_id uuid、permission_id text、granted_by uuid、expires_at timestamptz?、revoked_at timestamptz?` | UNIQUE 活跃 `(scope_id,user_id,permission_id)`；普通用户/机器人不能自行授权；初始化受控 |
 | `auth.account_actions` / I | C；`user_id uuid、actor_admin_id uuid、action text、from_state text、to_state text、reason text、request_id uuid、recoverable_until timestamptz?、result jsonb` | UNIQUE `(scope_id,request_id)`；INDEX 用户/时间；追加审计，不能覆盖前次理由 |
-| `directory.profiles` / I→II | `scope_id uuid、user_id uuid、username text、display_name text、avatar_preset text、avatar_object_id uuid?、bio text、privacy jsonb、font_preset text、row_version bigint、updated_at timestamptz` | PK `(scope_id,user_id)`；唯一规范化 username；字体 `small/standard/large`；I avatar_preset 为随包资源标识且 avatar_object_id 空，II 才允许上传头像；私密字段按权限裁剪 |
-| `directory.contacts` / I | `scope_id uuid、owner_user_id uuid、peer_user_id uuid、state text、alias text?、labels jsonb、created_at timestamptz、updated_at timestamptz、row_version bigint` | PK `(scope_id,owner_user_id,peer_user_id)`；禁止 self；state 区分申请/好友/拒绝/移除；反向关系同服务事务处理 |
+| `directory.profiles` / I→II | `scope_id uuid、user_id uuid、username text、display_name text、avatar_preset text、avatar_object_id uuid?、bio text、privacy jsonb、font_preset text、revision_epoch bigint、row_version bigint、updated_at timestamptz` | PK `(scope_id,user_id)`；唯一规范化username；普通对象按(epoch,row_version) CAS/快照/事件，恢复签发新基线；字体small/standard/large；I预设且avatar_object_id空，II才允许上传；按当前来源/权限裁剪，私密字段不成为公共搜索 |
+| `directory.contacts` / I | `scope_id uuid、owner_user_id uuid、peer_user_id uuid、state text、alias text?、labels jsonb、created_at timestamptz、updated_at timestamptz、revision_epoch bigint、row_version bigint` | PK `(scope_id,owner_user_id,peer_user_id)`；禁止self；state区分申请/好友/拒绝/移除；(epoch,row_version)更新/投影；反向关系同本域事务；个人联系人/备注只在获权来源索引，不因宿主同userId外泄 |
 | `directory.blocks` / I | `scope_id uuid、owner_user_id uuid、peer_user_id uuid、created_at timestamptz` | PK 用户对；与管理员封禁分别建模；只本人或明确治理权限可修改 |
 | `directory.addressbook_consents` / II | C；`user_id uuid、device_id uuid、policy_version text、granted_at timestamptz、revoked_at timestamptz?、sync_mode text` | INDEX `(scope_id,user_id,device_id)`；OS 联系人授权与 IM 明确同意分别检查 |
 | `directory.addressbook_syncs` / II | C；`user_id uuid、device_id uuid、consent_id uuid、requested_count int、matched_count int、status text、expires_at timestamptz、result_ciphertext bytea?` | INDEX 到期/用户；结果短期保存、数量有上限；撤回同意停止增量并删除可清理数据，不自动加好友 |
@@ -547,9 +644,9 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 
 | 表 / 阶段 | 字段（含类型） | 主键 / 索引 / 关键约束 |
 | --- | --- | --- |
-| `conversation.conversations` / I→II→III | C；`kind text、direct_pair_key bytea?、owner_user_id uuid?、title text?、avatar_object_id uuid?、description text?、security_mode text、membership_version bigint、command_seq bigint、state text、policy jsonb` | 私聊对以 `WHERE kind='direct'` 的部分唯一索引约束 `(scope_id,direct_pair_key)`，私聊 key 不可空，按有类型principal对规范化，II允许明确授权的人机私聊；I 仅私聊/自聊，II 群/频道，III E2EE；扩展字段存在不提前允许扩展写入；安全模式不得因普通开关静默降为明文 |
-| `conversation.members` / I→II | `scope_id uuid、conversation_id uuid、user_id uuid、role text、state text、member_display_name text?、joined_at timestamptz、left_at timestamptz?、history_from_epoch bigint、history_from_seq bigint、membership_version bigint` | PK `(scope_id,conversation_id,user_id)`；本 schema 复合 FK；INDEX 用户/状态；角色/历史范围受权限控制，群昵称按权限编辑；user_id限定人类，历史边界用(epoch,seq) |
-| `conversation.bot_members` / II | `scope_id uuid、conversation_id uuid、bot_id uuid、role text、state text、history_from_epoch bigint、history_from_seq bigint、membership_version bigint、grant_id uuid、grant_version bigint` | PK scope/conversation/bot；本服务会话FK；独立bot成员/授权，不把owner当成员；历史/角色经bot和会话权威取交集 |
+| `conversation.conversations` / I→II→III | C；`kind text、direct_pair_key bytea?、owner_user_id uuid?、title text?、avatar_object_id uuid?、description text?、security_mode text、security_mode_generation bigint、membership_version bigint、command_seq bigint、state text、policy jsonb` | 私聊对以 `WHERE kind='direct'` 的部分唯一索引约束 `(scope_id,direct_pair_key)`，私聊key不可空，按有类型principal对规范化；I仅私聊/自聊，II群/频道，III E2EE；普通扩展写入必须匹配当前mode_generation/command_seq，切换先排空owner；安全模式不因普通开关降明文 |
+| `conversation.members` / I→II | `scope_id uuid、conversation_id uuid、user_id uuid、role text、state text、member_display_name text?、joined_at timestamptz、left_at timestamptz?、history_from_epoch bigint、history_from_seq bigint、revision_epoch bigint、row_version bigint、membership_version bigint` | PK `(scope_id,conversation_id,user_id)`；本schema FK；INDEX用户/状态；普通昵称/视图按(epoch,row_version)，角色/历史授权仍对账当前membership与撤权事实；user_id人类，历史边界(epoch,seq)，重基线不放大权限 |
+| `conversation.bot_members` / II | `scope_id uuid、conversation_id uuid、bot_id uuid、role text、state text、history_from_epoch bigint、history_from_seq bigint、revision_epoch bigint、row_version bigint、membership_version bigint、grant_id uuid、grant_version bigint` | PK scope/conversation/bot；会话FK；独立bot成员/授权；普通投影按(epoch,row_version)，grant/安全代际独立不可回退，不把owner当成员 |
 | `conversation.admissions` / I→III | C；`conversation_id uuid、sender_id uuid、sender_kind text、send_namespace_id uuid、send_restore_epoch bigint、source_grant_id uuid?、source_grant_version bigint?、source_app_generation bigint?、bot_permission_version bigint?、owner_security_version bigint?、client_msg_id uuid、payload_digest bytea、security_version bigint、config_version bigint、level_generation bigint、membership_version bigint、command_seq bigint、protocol_id text?、protocol_version text?、key_epoch bigint?、crypto_context_id uuid?、provider_group_id bytea?、protocol_epoch numeric(20,0)?、identity_checked_at timestamptz、capability_checked_at timestamptz、expires_at timestamptz、status text` | UNIQUE `(scope_id,sender_id,send_namespace_id,client_msg_id)`；sender为有类型principal；Bot绑定权限/owner状态而不继承管理员；来源grant取资源交集，准入绑定namespace/摘要且限时；撤权与准入按各权威处理顺序判定；III E2EE 绑定允许的协议/产品generation/上下文/真实组与协议epoch，不能穿越切换截止提交旧准入 |
 | `conversation.invites` / II | C；`conversation_id uuid、token_digest bytea、created_by uuid、expires_at timestamptz、max_uses int、used_count int、revoked_at timestamptz?、approval_required boolean` | UNIQUE token_digest；次数有界、领取原子；链接不直接授予管理员权限 |
 | `message.heads` / I | `scope_id uuid、conversation_id uuid、sequence_epoch bigint、last_event_seq bigint、updated_at timestamptz` | PK `(scope_id,conversation_id,sequence_epoch)`；事件序号在消息事务内行锁递增 |
@@ -566,7 +663,7 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 | `message.lifecycle_triggers` / I→III | C；`message_id uuid、source_operation_key text、trigger_generation bigint、reason text、delete_scope text、due_at timestamptz、protection_state text、deadline_journal_operation_id uuid?、deadline_journal_seq bigint?、state text、fulfilled_at timestamptz?、result_deletion_generation bigint?` | UNIQUE scope/message/source_operation/trigger_generation；trigger ID稳定，同服务消息FK；pending/eligible/fulfilled；protection pending/durable，受保护截止建立时journal确认，恢复不重算；未来trigger不参与当前scope仲裁；已生效强范围不可被撤销/普通配置降级；消息行锁/CAS分配删除代际，云删不删除后续global trigger |
 | `message.lifecycle_jobs` / I→III | C；`message_id uuid、trigger_id uuid、kind text、policy_version bigint、deletion_generation bigint、delete_scope text、due_at timestamptz、status text、attempt_count int、lease_owner text?、lease_token uuid?、lease_until timestamptz?、journal_operation_id uuid?、journal_intent_seq bigint?、journal_result_seq bigint?、last_error_code text?、completed_at timestamptz?` | UNIQUE 消息/类型/generation；UNIQUE scope/trigger_id；同服务trigger FK，云删与后续global分别分配代际可共存；INDEX `(status,due_at)`；事务校验状态/策略代际并取得执行资格；intent 耐久确认前不移除正文，结果未确认显示 journal_pending；重启补跑、租约过期防旧工作者重复提交，降档仍执行 |
 | `message.delete_hook_deliveries` / I | C；`job_id uuid、event_id uuid、phase text、deletion_generation bigint、execution_attempt int、hook_id text、contract_version int、metadata jsonb、status text、delivery_attempt_count int、next_attempt_at timestamptz、last_error_code text?` | UNIQUE event/hook；INDEX status/next_attempt；phase before/after/failure；通知先耐久写入，独立限额/重试/死信；metadata 不含正文或密钥；回调失败不阻断删除 |
-| `message.content_cleanup_steps` / I→III | C；`message_id uuid、deletion_generation bigint、owner_service text、representation text、replica_id text?、replica_generation bigint?、pg_system_identifier text?、timeline int?、required_lsn pg_lsn?、confirmed_apply_lsn pg_lsn?、object_version_id text?、replica_content_digest bytea?、delete_scope text、state text、due_at timestamptz、completed_at timestamptz?、attempt_count int、last_error_code text?` | UNIQUE 消息/generation/所有者/副本类别/replica_id（NULLS NOT DISTINCT）；PG副本清理绑定身份/timeline及删除覆盖LSN，apply达标才完成；对象副本须匹配版本/摘要；各服务仅清自己表/缓存并回报，无跨schema写入；在线副本、外部缓存与备份时间窗分开，状态未知不冒充全量完成；不把正文放入清理任务 |
+| `message.content_cleanup_steps` / I→III | C；`message_id uuid、deletion_generation bigint、owner_service text、representation text、source_context_id text、holder_id uuid、object_type text、object_id uuid、payload_version bigint?、replica_id text?、replica_generation bigint?、pg_system_identifier text?、timeline int?、required_lsn pg_lsn?、confirmed_apply_lsn pg_lsn?、object_version_id text?、replica_content_digest bytea?、delete_scope text、state text、due_at timestamptz、completed_at timestamptz?、attempt_count int、last_error_code text?` | UNIQUE消息/generation/owner/representation/source/holder/object_type/object_id/payload_version/replica_id（NULLS NOT DISTINCT）；准确定位多个计划payload/收藏/位置持有者，不能只靠messageId误清整域；PG副本身份/timeline/apply覆盖，对象匹配版本/摘要；owner仅清自己表并回报，无正文入任务；副本/引用类别和备份时间窗分开，未知不冒充完成 |
 | `message.mentions` / III | `scope_id uuid、message_id uuid、conversation_id uuid、mentioned_user_id uuid、mention_kind text、membership_version bigint、created_at timestamptz` | PK scope/message/user；仅允许发送时合格成员及获授权 @全体；不信任文本中伪造 userId；E2EE 仅存用户同意公开的路由元数据，正文标注在端侧加密 |
 | `sync.user_heads` / I | `scope_id uuid、user_id uuid、source_context_id text、restore_epoch bigint、stream_id uuid、last_cursor bigint、updated_at timestamptz` | PK 作用域/用户/来源/恢复代际/流；用户增量游标事务内递增 |
 | `sync.inbox_events` / I | `scope_id uuid、user_id uuid、source_context_id text、restore_epoch bigint、stream_id uuid、cursor bigint、origin_event_id uuid、conversation_id uuid?、event_type text、object_id uuid?、object_revision_epoch bigint、object_version bigint、payload jsonb、created_at timestamptz` | PK scope/user/source/restore_epoch/stream/cursor；UNIQUE 同流/origin_event_id；payload仅元数据/授权指针，不持久复制聊天正文或密钥；响应正文临时向message按当前权限/生命周期读取，已清理返回明确范围状态；授权过滤返回无敏感redacted/skip覆盖标记，不静默跳号、不算正文收讫；不可变eventDigest与hydration版本/bodyDigest分开；按保留期分区，快照补偿明确 |
@@ -575,7 +672,7 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 | `sync.delivery_targets` / I→II | `scope_id uuid、message_id uuid、generation bigint、target_user_id uuid、target_device_id uuid、store_generation uuid、restore_epoch bigint、manifest_digest bytea、message_revision_epoch bigint、message_version bigint、state text、received_at timestamptz?、revocation_event_id uuid?、expires_at timestamptz、updated_at timestamptz` | PK scope/message/generation/user/device；本服务FK指向delivery_manifests；目标来自已提交消息的冻结清单，不异步读取新成员替换；编辑的新版本必须另确认，旧版本不累计；ACK须当前恢复/存储代际，重建新device不继承原目标；撤销须权威事件，过期不伪造收讫；II 扩展群目标 |
 | `sync.bot_delivery_targets` / II | `scope_id uuid、message_id uuid、generation bigint、restore_epoch bigint、bot_id uuid、endpoint_id uuid、endpoint_generation bigint、message_revision_epoch bigint、message_version bigint、manifest_digest bytea、content_digest bytea、state text、received_at timestamptz?、revocation_event_id uuid?` | PK scope/message/generation/bot/endpoint；本服务manifest FK；校验冻结端点与bot权威，显式完整持久确认才计数，普通Webhook/轮询ACK不计；旧代际/撤销拒绝，空端点不完成 |
 | `sync.read_cursors` / I | `scope_id uuid、user_id uuid、conversation_id uuid、read_sequence_epoch bigint、read_seq bigint、updated_at timestamptz` | PK 用户/会话；`read_seq >= 0`；服务端校验可见范围，跨设备按(epoch,seq)取单调最大值 |
-| `sync.conversation_views` / I→II | `scope_id uuid、user_id uuid、conversation_id uuid、pinned_rank int?、muted_until timestamptz?、archived boolean、hidden boolean、manual_unread_from_epoch bigint?、manual_unread_from_seq bigint?、draft_ciphertext bytea?、draft_version bigint、row_version bigint、updated_at timestamptz` | PK 用户/会话；个人状态不改变群级权限；pinned_rank 仅II会话列表置顶，与III消息置顶不同，I 不开放写入；标记未读不回退真实已读游标；草稿显式冲突/版本策略 |
+| `sync.conversation_views` / I→II | `scope_id uuid、source_context_id text、user_id uuid、conversation_id uuid、pinned_rank int?、muted_until timestamptz?、archived boolean、hidden boolean、manual_unread_from_epoch bigint?、manual_unread_from_seq bigint?、draft_ciphertext bytea?、draft_revision_epoch bigint、draft_version bigint、revision_epoch bigint、row_version bigint、updated_at timestamptz` | PK scope/来源/用户/会话；个人状态不改群权限；视图CAS用(epoch,row_version)，草稿单独(draft_epoch,draft_version)，恢复两者重基线且快照/事件同值；pinned_rank仅II会话列表置顶，与III消息置顶不同；来源缓存/草稿不混用，标记未读不退真实已读游标 |
 | `sync.snapshots` / I | C；`user_id uuid、source_context_id text、restore_epoch bigint、stream_id uuid、boundary_cursor bigint、schema_version int、coverage jsonb、classification_watermark bigint、page_manifest jsonb、owner_watermarks jsonb、permission_generation bigint、state text、expires_at timestamptz` | INDEX user/到期；按owner版本/水位核对后固定页面及完整清单；不能把跨域混合版本作为完整快照，边界后事件再补同步；权限/版本变化重验或使快照失效；分类覆盖不足明确unknown，客户端原子切换前不ACK边界 |
 | `sync.snapshot_pages` / I | `scope_id uuid、snapshot_id uuid、page_no int、payload_ciphertext bytea、next_page_no int?、created_at timestamptz` | PK scope/snapshot/page；同服务 FK；持久页面只含边界/对象ID/版本/元数据及删除范围，不保存正文副本；响应临时取权威可读内容，变更/已清理按版本状态明确返回；旧版本正文副本必须纳入content_cleanup_steps，不因存为密文免除清理 |
 | `各服务.outbox` / I | C；`restore_epoch bigint、event_digest bytea、event_type text、aggregate_id uuid、aggregate_version bigint、payload jsonb、status text、available_at timestamptz、published_at timestamptz?、attempt_count int、last_error_code text?` | INDEX 部分 `(available_at) WHERE status='pending'`；事件 ID 固定；仅随本服务业务同事务写入；不存聊天正文含E2EE密文，JetStream/消费Inbox/死信同合同；保留元数据覆盖重放窗口 |
@@ -617,13 +714,13 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 | `control.features` / I | `feature_id text、module_id text、minimum_profile text、schema_version int、dependencies jsonb、conflicts jsonb、parameter_schema jsonb、apply_mode text、minimum_clients jsonb` | PK feature_id；定义属于源码与锁定合同，后台不能填任意执行代码 |
 | `control.config_releases` / I | C；`config_version bigint、profile text、desired jsonb、effective jsonb、state text、effective_at timestamptz?、created_by uuid、reason text、rollback_from uuid?、validation_report jsonb` | UNIQUE scope/config_version；状态 draft/validated/applying/effective/failed/rolled_back；effective 只在必需接流实例已确认版本及健康/合同检查后更新；回滚新建更高版本，不回退撤权/删除事实 |
 | `control.module_states` / I | `scope_id uuid、module_id text、instance_id text、release_id uuid、applied_release_id uuid?、applied_config_version bigint?、boot_generation uuid、desired_state text、actual_state text、serving boolean、applied_at timestamptz?、heartbeat_at timestamptz、error_code text?` | PK 作用域/模块/实例；应用确认绑定当前启动代际，旧心跳不能复活已摘流实例；未就绪/版本不符不得接相关新工作或宣告已开放 |
-| `control.membership_current` / II | `scope_id uuid、policy_version bigint、activation_version bigint、state text、activated_at timestamptz` | PK scope；FK policy；仅当前有效指针参与权限计算，activation_version 单调，激活与迁移目标核验同本域事务 |
+| `control.membership_current` / II | `scope_id uuid、policy_version bigint、activation_version bigint、revision_epoch bigint、row_version bigint、state text、activated_at timestamptz` | PK scope；FK policy；可变指针按(epoch,row_version)更新，activation_version单调且授权事实journal核对；只当前有效版本计算权限，恢复不回退安全代际 |
 | `control.membership_policies` / II | `scope_id uuid、policy_version bigint、max_level int、state text、created_by uuid、created_at timestamptz` | PK scope/policy_version；max_level 有管理上限；发布前检查现有分配级别与迁移 |
 | `control.membership_levels` / II | `scope_id uuid、policy_version bigint、level int、name text、description text` | PK scope/policy/level；完整 `0..N`，等级递增；不按等级动态建立物理表 |
 | `control.level_feature_grants` / II | `scope_id uuid、policy_version bigint、level int、feature_id text、enabled boolean、parameters jsonb` | PK scope/policy/level/feature；复合 FK；继承能力不可取消；参数按能力定义的比较器校验不降级 |
-| `control.user_levels` / II | `scope_id uuid、user_id uuid、policy_version bigint、activation_version bigint、level int、assigned_by uuid、assigned_at timestamptz、expires_at timestamptz?、row_version bigint` | PK scope/activation_version/user；FK level；新版本可预构建分配，只有 current 同一激活版本有效，未分配/到期回 0；等级授权来自后台/获授权策略，不接受前端自报等级 |
-| `control.membership_migration_items` / II | `scope_id uuid、target_policy_version bigint、user_id uuid、source_assignment_version bigint、target_level int、target_expires_at timestamptz?、state text、error_code text?` | PK scope/target_policy/user；每用户有明确迁移目标，级别在新 0..N 内；并发分配变更重验/CAS，未完成不得激活为部分混合策略 |
-| `control.quota_buckets` / II | `scope_id uuid、subject_id uuid、feature_id text、window_start timestamptz、window_end timestamptz、limit_value bigint、reserved_value bigint、consumed_value bigint、policy_version bigint、row_version bigint` | PK scope/subject/feature/window_start；值非负；reserve 行锁/CAS 保证剩余额度，调低上限后剩余可为零而不改历史用量 |
+| `control.user_levels` / II | `scope_id uuid、user_id uuid、policy_version bigint、activation_version bigint、level int、assigned_by uuid、assigned_at timestamptz、expires_at timestamptz?、revision_epoch bigint、row_version bigint` | PK scope/activation_version/user；FK level；分配CAS和快照带(epoch,row_version)，仅current同一激活有效；未分配/到期0，恢复对账当前授权而非提高级别，拒绝前端自报 |
+| `control.membership_migration_items` / II | `scope_id uuid、target_policy_version bigint、user_id uuid、source_assignment_revision_epoch bigint、source_assignment_version bigint、revision_epoch bigint、row_version bigint、target_level int、target_expires_at timestamptz?、state text、error_code text?` | PK scope/target_policy/user；按完整源assignment(epoch,version)重验目标，目标级别在0..N；本行CAS带(epoch,row_version)，不匹配或未完成不得激活混合策略 |
+| `control.quota_buckets` / II | `scope_id uuid、subject_id uuid、feature_id text、window_start timestamptz、window_end timestamptz、limit_value bigint、reserved_value bigint、consumed_value bigint、policy_version bigint、revision_epoch bigint、row_version bigint` | PK scope/subject/feature/window_start；值非负，(epoch,row_version)CAS；reserve本域行锁，恢复须核对已消费/在途事实，不能重基线清空用量赠额度；降低上限不改历史 |
 | `control.quota_reservations` / II | C；`subject_id uuid、feature_id text、window_start timestamptz、idempotency_key text、amount bigint、state text、owner_service text、owner_operation_id uuid、policy_version bigint、expires_at timestamptz、consumed_at timestamptz?` | UNIQUE scope/idempotency_key；reserve/consume/release 幂等且与桶同事务；expire 先核对业务是否提交，未确认不释放可能已消费额度 |
 | `admin.operation_requests` / I | C；`actor_admin_id uuid、permission_id text、target_service text、target_id uuid、request_id uuid、reason text、state text、result_redacted jsonb` | UNIQUE scope/request_id；管理员操作 API 与数据所有者审计关联 |
 | `bridge.apps` / I | C；`name text、issuer text、audience text、verification_config jsonb、credential_ref text、state text、authorization_generation bigint、pending_security_operation_id uuid?` | UNIQUE scope/issuer/audience；密钥只存外部秘密引用，限制换票作用域；停用耐久递增 generation 并拒绝新来源授权 |
@@ -637,8 +734,10 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 | `bot.grants` / II | C；`bot_id uuid、conversation_id uuid?、permission_id text、granted_by uuid、parameters jsonb、revoked_at timestamptz?` | INDEX bot/会话；活跃授权唯一；没有全库历史默认授权 |
 | `bot.subscriptions` / II | C；`bot_id uuid、mode text、event_types jsonb、webhook_url text?、signing_secret_ref text?、restore_epoch bigint、last_cursor bigint、state text` | UNIQUE 活跃 bot；轮询/Webhook 消费合同明确；URL 审核与出口隔离 |
 | `bot.updates` / II | `scope_id uuid、bot_id uuid、restore_epoch bigint、update_id bigint、origin_event_id uuid、object_id uuid?、object_revision_epoch bigint?、object_version bigint?、authorization_generation bigint、payload jsonb、created_at timestamptz、acknowledged_at timestamptz?、expires_at timestamptz` | PK scope/bot/restore_epoch/update；UNIQUE bot/origin；默认指针/元数据，重试取正文重验当前grant/生命周期；消费进度与完整内容收讫分开；显式正文副本纳入清理清单 |
-| `schedule.plans` / II | C；`owner_user_id uuid、bot_id uuid?、plan_version bigint、cancel_generation bigint、action_type text、action_schema_version int、action_payload_ciphertext bytea、timezone text、timezone_rules_version text、schedule_rule text、dst_policy text、next_run_at timestamptz、end_at timestamptz?、max_runs int?、missed_run_policy text、state text` | INDEX state/next_run；规则先验证后解析；修改新版本/取消旧未准入动作；active/stopping/draining/cancelled 区分，不取消已提交事实 |
-| `schedule.runs` / II | C；`plan_id uuid、plan_version bigint、cancel_generation bigint、scheduled_at timestamptz、status text、lease_owner text?、lease_token uuid?、lease_until timestamptz?、attempt_count int、result jsonb` | UNIQUE plan/plan_version/scheduled_at；租约 fencing 防旧工作者；取消与动作准入按计划行锁排序，失败可重试/终止 |
+| `schedule.plans` / II | C；`owner_user_id uuid、bot_id uuid?、source_context_id text、plan_version bigint、active_payload_id uuid、cancel_generation bigint、action_type text、action_schema_version int、timezone text、timezone_rules_version text、schedule_rule text、dst_policy text、next_run_at timestamptz、end_at timestamptz、max_runs int?、missed_run_policy text、state text、terminal_at timestamptz?` | INDEX state/next_run；active_payload_id为本域版本化正文FK，不再重复存action_payload_ciphertext；end_at必填且创建起≤30天；修改新版本/取消旧未准入动作；active/stopping/draining/completed/cancelled/expired/content_unavailable区分，不以未知伪称终态 |
+| `schedule.plan_payloads` / II | C；`plan_id uuid、payload_version bigint、content_mode text、source_context_id text、source_message_id uuid?、source_revision_epoch bigint?、source_version bigint?、action_payload_ciphertext bytea?、content_digest bytea、independent_consent_ref uuid?、payload_expires_at timestamptz、terminal_at timestamptz?、cleanup_delay_seconds int、cleanup_due_at timestamptz?、cleanup_generation bigint、state text、cleared_at timestamptz?` | UNIQUE scope/plan/payload_version；本域plan FK；source_ref源字段齐全且ciphertext/独立授权NULL；independent_draft/template须明确授权且源字段NULL，正文清理后ciphertext为空但留摘要/执行关联；期限创建起≤30天，终态delay默认300且0..86400，不可越过绝对截止；新payload不覆盖旧run固定版本 |
+| `schedule.payload_cleanup_jobs` / II | C；`plan_id uuid、payload_id uuid、payload_version bigint、cleanup_generation bigint、due_at timestamptz、state text、lease_token uuid?、lease_until timestamptz?、journal_operation_id uuid?、attempt_count int、last_error_code text?、completed_at timestamptz?` | UNIQUE scope/payload/generation；本域plan/payload FK；停止新正文交付后按准确版本清理，intent/result与fencing；到绝对期限清正文但保留未知操作元数据继续核对，清理不撤回已发消息 |
+| `schedule.runs` / II | C；`plan_id uuid、plan_version bigint、payload_id uuid、payload_version bigint、cancel_generation bigint、scheduled_at timestamptz、status text、lease_owner text?、lease_token uuid?、lease_until timestamptz?、attempt_count int、result jsonb` | UNIQUE plan/plan_version/scheduled_at；本域payload FK；固定payload/计划版本、租约fencing；取消/正文期限/动作准入按计划行锁排序，result仅无正文状态和ID，失败可重试/终止 |
 | `schedule.batch_items` / II | C；`run_id uuid、recipient_user_id uuid、plan_version bigint、cancel_generation bigint、client_msg_id uuid、idempotency_key text、admission_id uuid?、admission_expires_at timestamptz?、handoff_state text、state text、result_object_id uuid?、error_code text?` | UNIQUE run/recipient；UNIQUE scope/idempotency_key；稳定 client_msg_id，未准入取消、已交接有界收尾、未知查询不重发；逐项反馈，不重复可见消息 |
 
 ### 6.6、<span id="standard-module-tables">标准聊天扩展表</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
@@ -646,12 +745,13 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 | 表 / 阶段 | 字段（含类型） | 主键 / 索引 / 关键约束 |
 | --- | --- | --- |
 | `interaction.reactions` / II | `scope_id uuid、message_id uuid、user_id uuid、reaction_key text、created_at timestamptz` | PK scope/message/user/reaction；消息访问/互动权限当前重验 |
-| `interaction.pins` / III | C；`conversation_id uuid、message_id uuid、pin_scope text、owner_user_id uuid?、pinned_by uuid、expires_at timestamptz?、state text` | pin_scope 为 personal/conversation；personal 必有 owner，conversation 的 owner 必空；活跃个人部分唯一 `(scope,owner,conversation,message)`，会话级部分唯一 `(scope,conversation,message)`；个人仅发本人，全群需角色权限；II 不开放消息置顶新写入 |
-| `interaction.favorites` / III | C；`user_id uuid、source_message_id uuid、snapshot_ciphertext bytea?、source_security_mode text、state text` | UNIQUE 用户/源消息；E2EE 收藏不能偷改成服务端明文副本，焚毁冲突先拒绝；II 不开放收藏新写入 |
-| `interaction.polls` / II | C；`conversation_id uuid、creator_id uuid、question text、options jsonb、multiple boolean、anonymous boolean、closes_at timestamptz?、state text` | INDEX 会话；选项 ID 稳定、有界；匿名规则不在公开 API 暴露用户投票 |
-| `interaction.votes` / II | `scope_id uuid、poll_id uuid、user_id uuid、option_id text、created_at timestamptz` | PK scope/poll/user/option；同服务 FK；是否可改单按投票规则原子验证 |
+| `interaction.pins` / III | C；`source_context_id text、conversation_id uuid、message_id uuid、source_revision_epoch bigint、source_version bigint、pin_scope text、owner_user_id uuid?、pinned_by uuid、expires_at timestamptz?、state text` | personal必有owner/conversation必空；活跃personal部分唯一scope/source/owner/conversation/message；活跃conversation部分唯一scope/conversation/message，source只记操作者来源，不因不同mapping造两个群级事实；读改按各自当前grant/群角色/源历史重验；纯引用，global失效、cloud_only不可取云正文，II不开新写 |
+| `interaction.favorites` / III | C；`source_context_id text、user_id uuid、source_message_id uuid、source_revision_epoch bigint、source_version bigint、snapshot_ciphertext bytea?、source_security_mode text、state text` | UNIQUE scope/source/user/源消息；CHECK snapshot_ciphertext IS NULL，默认纯引用；源权限重验，E2EE只端侧解密源，不藏服务端副本；global/焚毁清引用及端缓存、cloud_only不复活云正文；II不开新写 |
+| `interaction.polls` / II | C；`source_context_id text、conversation_id uuid、creator_id uuid、source_message_id uuid?、source_revision_epoch bigint?、source_version bigint?、question text?、options jsonb?、multiple boolean、anonymous boolean、security_mode text、security_mode_generation bigint、command_seq bigint、content_retention_generation bigint、content_expires_at timestamptz?、closes_at timestamptz?、state text、cleared_at timestamptz?` | 仅普通会话且CHECK security_mode=cloud；prepared卡片引用确认后active且源字段/题目/选项齐全，未绑定不公开；源cloud_only/global及期限清题目/选项/投票明细，清后题目/选项NULL保最小状态；当前mode/grant准入，E2EE拒绝且切换先关闭/排空；选项ID有界、匿名规则受控 |
+| `interaction.votes` / II | `scope_id uuid、poll_id uuid、user_id uuid、option_id text、revision_epoch bigint、row_version bigint、created_at timestamptz、updated_at timestamptz` | PK scope/poll/user/option；本域poll FK；当前会话mode/grant和规则原子校验，E2EE不准新投票/改选；结果随poll源授权和保留，不另供跨来源读取 |
+| `interaction.cleanup_jobs` / II→III | C；`target_type text、target_id uuid、source_message_id uuid、cleanup_generation bigint、delete_scope text、due_at timestamptz、state text、lease_token uuid?、lease_until timestamptz?、journal_operation_id uuid?、attempt_count int、completed_at timestamptz?` | UNIQUE scope/type/target/generation；poll清题目/选项/votes，favorite/pin清或失效引用；源card与本域对象准确绑定，intent/result/fencing，事件只元数据，停用仍收尾 |
 | `search.documents` / II | `scope_id uuid、message_id uuid、conversation_id uuid、source_revision_epoch bigint、message_version bigint、normalized_body text、body_tsv tsvector、state text、indexed_at timestamptz` | PK scope/message；GIN(body_tsv)及GIN(normalized_body gin_trgm_ops)、INDEX会话；NFC正文与英文simple投影，仅云明文模式；按来源恢复代际／版本拒旧，返回前重验权限和源消息仍存在 |
-| `search.name_documents` / II | `scope_id uuid、source_context_id uuid、audience_user_id uuid、object_type text、object_id uuid、source_field text、source_revision_epoch bigint、source_version bigint、normalized_text text、pinyin_full text、pinyin_initials text、transliteration_version text、state text、indexed_at timestamptz` | PK包含scope/来源/受众/对象/字段；INDEX(scope,audience,pinyin_full text_pattern_ops)及首字母等价索引；来源为Directory资料／本人备注、Conversation会话名，不跨域直写，私人备注不成为公共索引；仅本来获权的受众可查询 |
+| `search.name_documents` / II | `scope_id uuid、source_context_id text、audience_user_id uuid、object_type text、object_id uuid、source_field text、source_revision_epoch bigint、source_version bigint、normalized_text text、pinyin_full text、pinyin_initials text、transliteration_version text、state text、indexed_at timestamptz` | PK含scope/来源/受众/对象/字段；INDEX含scope/source/audience/pinyin_full前缀及首字母等价索引；来源为Directory资料／本人备注、Conversation会话名，按源(epoch,version)取新基线；私人备注不成为公共索引，返回前重验当前来源grant |
 | `rtc.calls` / II | C；`conversation_id uuid、initiator_user_id uuid、type text、state text、accepted_device_id uuid?、started_at timestamptz?、ended_at timestamptz?、expires_at timestamptz、room_id text?` | INDEX 会话/时间；row_version CAS 首个有效接听获胜，迟到取消/接听不能复活通话 |
 | `rtc.participants` / II | `scope_id uuid、call_id uuid、user_id uuid、device_id uuid、state text、joined_at timestamptz?、left_at timestamptz?` | PK scope/call/user/device；同服务 FK；媒体 token 绑定 call/成员/时限/发布订阅权限 |
 | `rtc.recordings` / III | C；`call_id uuid、consent_snapshot jsonb、storage_object_id uuid?、state text、started_at timestamptz、ended_at timestamptz?、expires_at timestamptz?` | 不随标准通话自动启用；录制/转写与 E2EE 组合必须有独立授权合同 |
@@ -662,12 +762,25 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 
 搜索服务只维护可重建投影，通过 owner API／事件取得获权内容，按来源代际／版本更新；改名、删备注、撤权、注销和消息删除使对应投影失效，命中不授予访问权。仅端侧可见的名称／备注及E2EE正文和索引不上传。五端与Go从同一固定tag字表构建带版本／摘要的只读映射及薄转换，保留原MIT和来源，使用相同固定向量；不混用系统转写造成不同拼音结果，不另引全文词库或运行期Go FFI。当前未导出资源或集成，访问框架、性能和五端向量仍须实测。[端侧搜索](../IM前端架构表.md/IM前端架构表.md#local-search-contract)
 
+#### 6.6.1、<span id="location-tables">位置所有者、授权、坐标与清理表</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+| 表 / 阶段 | 字段（含类型） | 主键 / 索引 / 关键约束 |
+| --- | --- | --- |
+| `location.consents` / II | C；`user_id uuid、device_id uuid、store_generation uuid、source_context_id text、discovery_domain_id text?、purpose text、consent_generation bigint、authorization_generation bigint、policy_version text、granted_at timestamptz、expires_at timestamptz、revoked_at timestamptz?、state text` | 活跃唯一scope/source/user/device/purpose；purpose为share_single/share_live/nearby，发现域仅nearby必填且由服务端派生；OS授权不替代IM同意，两用途不通用，来源/安全代际校验；CLI不签采集授权 |
+| `location.shares` / II | C；`owner_user_id uuid、collecting_device_id uuid、store_generation uuid、source_context_id text、consent_id uuid、consent_generation bigint、conversation_id uuid、message_id uuid?、send_namespace_id uuid、client_msg_id uuid、share_mode text、security_mode text、security_mode_generation bigint、command_seq bigint、membership_version bigint、audience_manifest jsonb、audience_digest bytea、sharing_generation bigint、starts_at timestamptz、expires_at timestamptz、state text、stop_operation_id uuid?、deadline_journal_seq bigint?` | UNIQUE scope/owner/namespace/clientMsgId；consent FK，跨域经API验证；prepared绑定成功才active；single/live且security_mode=cloud；live900秒/60..86400，single沿卡片云期限；受众各自来源/grant核验；源清理先失效generation并终止，旧上报不得复活，终态不resume |
+| `location.latest_points` / II | `scope_id uuid、share_id uuid、revision_epoch bigint、row_version bigint、point_seq bigint、device_id uuid、consent_generation bigint、sharing_generation bigint、coordinates_ciphertext bytea?、encryption_key_ref text?、point_digest bytea、observed_at timestamptz、received_at timestamptz、fresh_until timestamptz?、expires_at timestamptz、state text` | PK scope/share；本域share FK；只持最新点，live fresh_until=min(received_at+60秒,share截止)，single不冒称实时且沿源云期限；seq/摘要去重/5秒速率，暂停/过旧/终止关闭读取；清理后密文/key_ref为空 |
+| `location.nearby_points` / II | C；`discovery_domain_id text、source_context_id text、user_id uuid、device_id uuid、consent_id uuid、consent_generation bigint、coordinates_ciphertext bytea?、encryption_key_ref text?、coarse_cell text?、cell_algorithm_version text、received_at timestamptz、fresh_until timestamptz、expires_at timestamptz、state text` | 活跃唯一scope/domain/source/user/device；INDEX scope/domain/state/coarse_cell/expires；同发现域不同mapping可候选，逐人重验自己的grant并按user去重；精确点不外发，coarse_cell敏感派生；暂停/撤权/60秒旧点不候选，到期清点及cell，来源绝不转换为个人域 |
+| `location.operation_results` / II | C；`actor_user_id uuid、source_context_id text、request_id uuid、request_digest bytea、target_type text、target_id uuid、operation text、expected_revision_epoch bigint、expected_version bigint、state text、result_redacted jsonb、completed_at timestamptz?` | UNIQUE scope/source/actor/request；同摘要原操作查询，上报/暂停/停止行锁排序；结果不含坐标/cell，未知不新建第二共享 |
+| `location.cleanup_jobs` / II | C；`target_type text、target_id uuid、source_context_id text、cleanup_generation bigint、delete_scope text、due_at timestamptz、state text、lease_token uuid?、lease_until timestamptz?、journal_operation_id uuid?、attempt_count int、last_error_code text?、completed_at timestamptz?` | UNIQUE scope/type/target/generation；只清location自有坐标/粗索引/缓存，源卡片global用content_cleanup_steps准确share/point键交接；原截止与stop/revoke最小事实journal保护，截止访问先拒绝、物理清理intent/result/fencing，备份另计 |
+
+`coordinates_ciphertext`包含经校验的纬度/经度/精度等敏感点字段，由服务端数据保护密钥加密，非E2EE且不能宣传服务端看不见。只在所需有界查询/读取时解密；普通事件、metric、恢复journal不带点/cell。location使用各域共同Outbox/Inbox/审计合同，但不会向message/sync复制坐标正文。[分享与发现完整规则](#location-service-contract)、[恢复资产](#dr-assets)
+
 ### 6.7、<span id="advanced-module-tables">高级场景扩展表</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 | 表 / 阶段 | 字段（含类型） | 主键 / 索引 / 关键约束 |
 | --- | --- | --- |
 | `workspace.workspaces` / III | C；`name text、owner_user_id uuid、state text、policy jsonb` | INDEX owner；工作区不是管理员全局 scope 越权入口 |
-| `workspace.members` / III | `scope_id uuid、workspace_id uuid、user_id uuid、role text、state text、guest_expires_at timestamptz?、row_version bigint` | PK scope/workspace/user；guest 到期撤权；角色修改审计 |
+| `workspace.members` / III | `scope_id uuid、workspace_id uuid、user_id uuid、role text、state text、guest_expires_at timestamptz?、revision_epoch bigint、row_version bigint` | PK scope/workspace/user；普通投影/CAS带(epoch,row_version)，guest到期/撤权按当前安全事实；角色审计，重基线不复活权限 |
 | `support.queues` / III | C；`workspace_id uuid、name text、routing_policy jsonb、state text` | workspace_id 为跨服务稳定 ID，由 workspace 权威 API 校验；不建跨 schema FK；队列角色与管理员角色分开 |
 | `support.tickets` / III | C；`queue_id uuid、conversation_id uuid、requester_user_id uuid、assignee_user_id uuid?、external_ticket_ref text?、state text、assigned_at timestamptz?、closed_at timestamptz?` | INDEX queue/state；CAS 分配避免两人同时抢单；宿主工单经 bridge 关联 |
 | `keyring.providers` / III | C；`provider_id text、protocol_id text、protocol_version text、key_format_version text、source_release text、dependency_lock_ref text、capabilities jsonb、state text、read_enabled boolean、write_enabled boolean` | UNIQUE scope/protocol_id/protocol_version；登记白名单与可读/可写状态；源码注册对应已审查 Provider，不把后台记录当任意动态代码 |
@@ -680,16 +793,16 @@ Redis 不保存密码明文/邮件验证码明文、E2EE 私钥、唯一投递�
 | `keyring.backups` / III | C；`user_id uuid、backup_object_id uuid、format_version int、recovery_public_metadata jsonb、expires_at timestamptz?` | 备份正文端侧加密；服务器没有可自行恢复端侧私钥的明文材料 |
 | `benefit.coupon_templates` / III | C；`issuer_id uuid、name text、terms jsonb、stock_total bigint、stock_available bigint、starts_at timestamptz、expires_at timestamptz、state text` | 可用库存 `0..stock_total`；发行/核销主体与规则授权；库存原子扣减 |
 | `benefit.coupons` / III | C；`template_id uuid、holder_user_id uuid、claim_key text、state text、claimed_at timestamptz、redeemed_at timestamptz?、redemption_ref text?` | UNIQUE scope/claim_key；INDEX holder/state；状态未核销/核销/过期/作废明确 |
-| `benefit.point_accounts` / III | `scope_id uuid、user_id uuid、point_type text、balance bigint、reserved bigint、state text、row_version bigint、updated_at timestamptz` | PK scope/user/type；余额/预留非负；积分变动先锁余额行，与分录/兑换同事务，不可只读后分别写 |
+| `benefit.point_accounts` / III | `scope_id uuid、user_id uuid、point_type text、balance bigint、reserved bigint、state text、revision_epoch bigint、row_version bigint、updated_at timestamptz` | PK scope/user/type；余额/预留非负，投影CAS带(epoch,row_version)；与分录/兑换同事务锁余额，恢复重建核对事实，不原地改不可变分录 |
 | `benefit.point_entries` / III | C；`user_id uuid、point_type text、delta bigint、balance_after bigint、business_ref text、idempotency_key text、reversal_of uuid?` | UNIQUE 幂等键；对应 point_accounts；分录追加、冲正新分录，不直接改历史；不可兑换货币的积分与资金分账 |
 | `benefit.exchanges` / III | C；`user_id uuid、item_ref text、points_cost bigint、quantity int、state text、idempotency_key text、reversal_entry_id uuid?` | UNIQUE 幂等键；成本/数量非负且有上限；失败补偿可追踪，不能先显示到账 |
 | `ledger.assets` / III | `scope_id uuid、asset_code text、asset_type text、decimal_scale smallint、maximum_minor numeric(38,0)、state text、created_at timestamptz` | PK scope/asset；精度 `0..18` 且启用后不原地变更，最大值正数；注册资产/渠道与适用性经审核 |
 | `ledger.accounts` / III | C；`owner_user_id uuid?、asset_code text、account_type text、state text` | UNIQUE owner/asset/type；同服务 FK assets；类型含用户可用/预留、系统手续费/清算；账户币种不能原地变更，聊天用户不能任意开结算账号 |
-| `ledger.account_balances` / III | `scope_id uuid、account_id uuid、asset_code text、balance_minor numeric(38,0)、last_transaction_id uuid、row_version bigint、updated_at timestamptz` | PK scope/account；同服务 FK；用户可用/预留余额非负，只在入账事务内锁定并更新；从不可变分录重建核对，不能独立改余额或用 Redis 余额作事实 |
+| `ledger.account_balances` / III | `scope_id uuid、account_id uuid、asset_code text、balance_minor numeric(38,0)、last_transaction_id uuid、revision_epoch bigint、row_version bigint、updated_at timestamptz` | PK scope/account；同服务FK；可用/预留非负，只在入账事务更新；投影CAS带(epoch,row_version)，恢复先从完整不可变分录和当前资金journal核对再签新基线，不能重基线账本或用Redis当余额事实 |
 | `ledger.transactions` / III | C；`business_type text、business_ref text、operation_type text、idempotency_key text、request_digest bytea、state text、external_ref text?、posted_at timestamptz?、reversal_of uuid?、protected_journal_seq bigint?` | UNIQUE scope/operation_type/服务端命名空间幂等键与受约束外部回调号；键绑定原主体/业务/操作，同键异摘要拒绝；已入账交易及原始摘要不可覆写；交易 ID 不因重试/灾备变更 |
 | `ledger.entries` / III | `scope_id uuid、transaction_id uuid、line_no int、account_id uuid、asset_code text、amount_minor numeric(38,0)、created_at timestamptz` | PK scope/transaction/line；同服务 FK；每交易每资产金额代数和为 0，入账事务强制校验；整数最小单位，不用浮点金额 |
 | `ledger.transfers` / III | C；`sender_user_id uuid、recipient_user_id uuid、conversation_id uuid?、asset_code text、amount_minor numeric(38,0)、fee_minor numeric(38,0)、fee_payer text、sender_debit_minor numeric(38,0)、recipient_credit_minor numeric(38,0)、fee_policy_version bigint、receipt_window_seconds int、sender_cancel_allowed boolean、expires_at timestamptz、state text、idempotency_key text、request_digest bytea、authorization_ref text、reserve_transaction_id uuid、settlement_transaction_id uuid?、release_transaction_id uuid?、refund_transaction_id uuid?、resolved_at timestamptz?` | UNIQUE scope/sender/幂等键；本人不能向自己转账，双方须在同一 scope；同服务 FK 指向账本交易；金额正数/手续费非负、receipt_window_seconds约束60..604800、金额关系与快照校验；INDEX recipient/state/expires；确认/拒收/允许的发送方取消/到期以同一行锁/版本栅栏仲裁，结算与释放互斥 |
-| `ledger.billing_records` / III | `scope_id uuid、user_id uuid、record_id uuid、business_type text、business_id uuid、record_stage text、transaction_id uuid?、direction text、asset_code text、amount_minor numeric(38,0)、fee_minor numeric(38,0)、counterparty_user_id uuid?、status text、occurred_at timestamptz、settled_at timestamptz?、source_version bigint、reversal_of_record_id uuid?` | PK scope/user/record；UNIQUE scope/user/business_type/business_id/record_stage；record_stage为稳定账单阶段（reserved/settled/released/refunded/failed/unknown），不以可变status作唯一键；INDEX scope/user/occurred_at/record；按转账生命周期/入账事件生成本人视图，待收款明确未结算；可核对重建，已入账事实仍以 transactions/entries 为准；退款关联原记录 |
+| `ledger.billing_records` / III | `scope_id uuid、user_id uuid、record_id uuid、business_type text、business_id uuid、record_stage text、transaction_id uuid?、direction text、asset_code text、amount_minor numeric(38,0)、fee_minor numeric(38,0)、counterparty_user_id uuid?、status text、occurred_at timestamptz、settled_at timestamptz?、source_revision_epoch bigint、source_version bigint、revision_epoch bigint、row_version bigint、reversal_of_record_id uuid?` | PK scope/user/record；UNIQUE scope/user/business_type/business_id/record_stage；稳定stage不以可变status作唯一键；INDEX本人时间/record；投影自身(epoch,row_version)与源(epoch,source_version)分别比较，完整资金事实核对后重建；待收款未结算，transactions/entries权威且不可改，退款关联原记录 |
 | `ledger.red_packets` / III | C；`issuer_user_id uuid、conversation_id uuid、asset_code text、total_minor numeric(38,0)、remaining_minor numeric(38,0)、piece_count int、remaining_count int、expires_at timestamptz、state text、funding_transaction_id uuid` | 金额/份数有界；冻结/领取/到期退回通过账本接口；Redis 抢锁不是财务事实 |
 | `ledger.red_packet_claims` / III | C；`red_packet_id uuid、claimant_user_id uuid、amount_minor numeric(38,0)、transaction_id uuid、idempotency_key text、claimed_at timestamptz` | UNIQUE 红包/领取者、幂等键；并发不超发；余额与分录同本服务事务 |
 | `ledger.reconciliations` / III | C；`channel text、period_start timestamptz、period_end timestamptz、state text、difference_count int、report_object_id uuid?` | 唯一渠道/周期；差异工单、退款与支付回调状态有专项合同 |
@@ -777,6 +890,8 @@ stateDiagram-v2
 | `message.image` / II | media + message + sync | 静态图/动图分别验证；I 不启动媒体上传/下载和处理任务 |
 | `message.audio`、`message.video`、`message.file` / II | media + message + sync | 音频/视频/文件是持久消息对象；与 `rtc.*` 通话能力分别控制，禁止媒体消息失败时借通话标通过 |
 | `conversation.group` / II | conversation 群权限 + message + sync 群目标/扇出 | I 不接受群创建/入群/群发送；不另建一套身份与消息表 |
+| `interaction.polls` / II；`interaction.polls.e2ee` / III未来专项 | interaction + conversation安全模式/成员 + message源卡片 | 普通投票仅非E2EE，创建/投票/修改均服务端拒绝不兼容组合；普通模式切E2EE先关闭/排空。e2ee子码当前不可启用，未来另交付内容/状态/匿名/清理，不把存储加密充当E2EE |
+| `location.share`（single/live）、`location.nearby` / II | location + identity/directory隐私 + conversation源/受众 + message卡片 | 单次/限时实时子码独立，nearby另授权且默认关闭；I不初始化，E2EE当前禁云卡片/上报，CLI不采集；停止/到期/源清理继续收尾，不同用途不互开 |
 | `message.burn` / III | message/media 生命周期 + sync；若与 E2EE 组合需 crypto | 阅后触发与收讫删云独立；用户告知/焚毁范围/最长保留合同确定，停用仍执行既定任务 |
 | `conversation.e2ee`、`crypto.protocol_switch` / III | crypto-service + 端侧 CryptoProvider + 当前成员/设备协商 | 只使用已审查锁定的协议；新消息受激活边界约束，旧密文保持原协议与 epoch；停用不暴露私钥/静默降级 |
 | `message.pin`、`message.favorite` / III | interaction 高级子模块 + message 权限/删除事件 | II 的 reaction/poll 子模块不提前开放这些接口；置顶与收藏不能绕过源消息权限/焚毁 |
@@ -786,7 +901,7 @@ stateDiagram-v2
 
 ### 7.4、<span id="operational-defaults">已选默认参数与安全边界</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-工程基线 `IM-baseline-20261008.2` 由 Codex 选定并负责实现、兼容和测试；Jobs 只需判断产品目标和体验。下表是可直接生成首次安装配置的数值，不是待用户选择的候选。当前未生成配置文件或执行服务测试。单位 `KiB/MiB/GiB` 按二进制，期限按秒，时间保存 UTC。作用域默认为部署 scope；安全规则不能关闭，调整须版本化校验。配额是默认容量目标，不等于每种机器已经支持表内最大值。
+工程基线 `IM-baseline-20261009.1` 由 Codex 选定并负责实现、兼容和测试；Jobs 只需判断产品目标和体验。下表是可直接生成首次安装配置的数值，不是待用户选择的候选。当前未生成配置文件或执行服务测试。单位 `KiB/MiB/GiB` 按二进制，期限按秒，时间保存 UTC。作用域默认为部署 scope；安全规则不能关闭，调整须版本化校验。配额是默认容量目标，不等于每种机器已经支持表内最大值。
 
 | 参数 / 起始阶段 | 已选默认 | 可调边界 / 生效合同 |
 | --- | --- | --- |
@@ -797,6 +912,7 @@ stateDiagram-v2
 | 发送频率 / I | 每用户每秒 5 条，突发桶 10 条；单设备待发队列最多 1000 条 / 16 MiB | 人类/机器人分桶且 scope 总桶有界；队列满明确拒绝新增，不删除未对账待发。批次逐项幂等、不以批量绕限流 |
 | 编辑与撤回 / I→II | 基础本人双方撤回窗 120 秒；标准编辑窗 900 秒 | 0～86400 秒；0 关闭对应普通用户新操作，管理员依法获权治理另合同。after_receipt 已排期不可编辑，global 撤回传播清理且期限不可复活 |
 | 访问/刷新会话 / I | access 900 秒；刷新闲置 30 天、绝对 90 天，逐次旋转刷新令牌 | access 300～1800 秒、刷新闲置 1～30 天、绝对 1～90 天且绝对不短于闲置；重用撤销家族，账号/来源/恢复代际撤销即时生效，不等 token 自然到期 |
+| 宿主换票凭据再交付 / I | PKCE S256＋auth AEAD记录，最长300秒；原requestId/同摘要/原verifier | 期限取原票据/挑战/grant/会话较早者，不续期；首次刷新/确认/撤权清原资格，超期先以新身份证明撤销原交付与会话、journal确认再新挑战；不推广为refresh恢复，不以sessionId登录 |
 | 密码成本与工作池 / I | Argon2id `m=65536 KiB,t=3,p=1`，独立盐 16 字节、输出 32 字节；最低主机 2 个哈希工作者、等待队列 16、等待超时 3 秒 | 受限并发，满载拒绝/重试，不无限开 goroutine；推荐机先取 4 工作者并实测。成本只能通过安全基线和容量回归后提高或调整，不交由普通用户任意设置 |
 | 邮件 OTP / I | 6 位、有效 300 秒、失败最多 5 次；邮箱重发 60 秒、每小时 5 次；IP 每小时 100 次、设备每小时 20 次 | 6～8 位、120～600 秒、错误上限 1～5 次，重发间隔不低于 60 秒；额外 scope 配额与风控可收紧。同用途重发失效旧码，错误次数与成功消费各自原子提交 |
 | 登录/MFA / I 管理员→II 普通用户 | 账号登录桶 5 次/分钟、IP 30 次/分钟；基础管理员强制 TOTP，6 位/30 秒/HMAC-SHA-1、允许相邻 ±1 步；step-up 有效 120 秒；标准普通用户可选同一免费认证器 MFA | 对账号与IP联合限速，不因收到恢复邮件锁死用户；已用时间步永不重复消费。step-up 30～180 秒且绑定请求/目标/版本，一次消费；I普通用户仍完整交付密码／邮件OTP和设备安全，不提前启用普通用户可选MFA。[TOTP 标准](https://www.rfc-editor.org/rfc/rfc6238.html) |
@@ -813,6 +929,8 @@ stateDiagram-v2
 | 媒体存储与访问 / II | media-service 单写者使用独立本地持久卷/异机备份；对象固定保留 30 天、下载授权 60 秒；上传分片 4 MiB、未完成上传 24 小时清理 | 默认 `fixed_retention` 独立于消息收讫，global 撤回/焚毁更早截止仍优先；派生物继承根对象 ACL/期限。先不增加第三方对象存储；横向扩展由 Codex 增加 S3 适配、锁定具体实现并通过 CAS/恢复测试后发布 |
 | 搜索 / II | 明文中文先用 NFC 规范化＋字面子串/多个词段 AND，查询 2～64 字，结果每页 50；英文使用 PostgreSQL `simple` 全文索引 | 中文子串 3 字及以上由同版本内置 `pg_trgm` 加速，2 字走受限授权扫描；SQL 参数化，2 秒超时，返回重验权限。首版不承诺语义/形态分词；E2EE 只在授权端侧检索，不上传明文索引 |
 | 默认机器人与计划 / II | 帮助、个人提醒默认可用；群欢迎/规则/公告须管理员授权；外部 AI/批量群发默认关闭。批次最多 100 受众、每 bot 每秒 1 次发送；默认时区 UTC | 时区使用 IANA ID；错过触发默认跳过，显式补跑最多 100 次；DST 缺时刻跳过、重时刻只首次。每用户最多 10 个自建 bot/100 个活跃计划，越界另验资源，不绕过 scope 总限额 |
+| 计划正文/模板 / II | 终态清理延迟300秒；创建起正文绝对期限2592000秒（30天），周期endAt必填 | delay为0～86400且不得越绝对期限；stopping/draining不假终态，绝对期限即使未知仍禁正文交付并清正文，保留ID/摘要核对；source_ref不拷正文，独立draft/template须明确授权 |
+| 位置/附近发现 / II | live/nearby900秒；每用途/设备5秒最多1次；点旧60秒不实时/不候选；nearby关闭、粗距离≥500米 | 期限60～86400秒，新建冻结；双用途授权，停/撤权/到期不复活，E2EE拒绝云位置；nearby同发现域分别核验来源，查询默认5000米（500～10000）、20人/页最多50、最多500候选/128cell，先有界验证容量 |
 | 非付费会员 / II | `max_level=3`，每个新用户为 0 级；所有等级先继承基础已开能力，无收费与购买条件 | N 为 1～100；仅管理员自定义增量勾选/配额，继承项不能取消，降低 N 必须迁移预览；等级不自动触发跨阶段能力或解封 |
 | E2EE / III | 默认普通会话不开启；获权双方/群按明确确认启用 `mls10-openmls` Provider | 已启用不静默降级；只用 [已选正式密码套件](#crypto-providers)，设备加入/退出/撤销更新 epoch，未知客户端拒绝新安全会话发送 |
 | 阅后即焚 / III | 明确开启后 `burn_delay_seconds=60; start_rule=first_authorized_recipient_read; unread_max_age_seconds=604800; delete_scope=global` | 延迟 5～86400 秒，未读上限 1 小时～30 天；发件人已读不启动，接收方首个获权设备阅读触发全会话范围，发送前明示。起点/绝对截止须 journal 保护，离线不阻止上限过期 |
@@ -850,7 +968,7 @@ flowchart TD
     A --> J
     B --> J
     J --> Q[异故障域 PostgreSQL 与不可变归档]
-    E --> X[标准 Media 群周边 与高级 Crypto 体验及场景服务]
+    E --> X[标准 Media Location RTC 群周边<br/>高级 Crypto 体验及场景服务]
     X --> P
 ```
 
@@ -934,7 +1052,7 @@ flowchart TD
 
 ### 8.5、<span id="guided-deployment">主流平台一键部署、运行与反部署工程</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-从基础版交付 Linux/macOS/Windows 薄入口与共享实现，部署 `Deployment` 和反部署 `unDeployment` 成对提供；系统/版本/CPU/运行路线、依赖、资源及实测状态进入版本化支持矩阵。非后端人员可按简短说明完成安装、运行与反部署。参考 [既有部署](../../../啄木鸟维修平台/Deployment/README.md) 与 [既有反部署](../../../啄木鸟维修平台/unDeployment/README.md)，承接组织与经验，不沿用维修业务数据库、固定项目名、默认凭据或整机清场范围。
+从基础版交付 Linux/macOS/Windows 薄入口与共享实现，部署 `Deployment` 和反部署 `unDeployment` 成对提供；系统/版本/CPU/运行路线、依赖、资源及实测状态进入版本化支持矩阵。非后端人员可按简短说明完成安装、运行与反部署。参考 [既有部署](../../啄木鸟维修平台/Deployment/README.md) 与 [既有反部署](../../啄木鸟维修平台/unDeployment/README.md)，承接组织与经验，不沿用维修业务数据库、固定项目名、默认凭据或整机清场范围。
 
 本机体验默认低成本路线采用已锁定的 [**Docker Compose**](https://docs.docker.com/compose/) 与独立服务容器；多节点编排按实际规模另行交付，不作为首次体验的必需项。Linux 是生产服务器基线，macOS/Windows 提供本机体验与联调入口。体验仍须鉴权并隔离数据；生产准入要求[正式灾备拓扑](#dr-topology)的同步业务副本、独立恢复 journal、不可变/离线备份、校时与已锁定 SLO，一键安装或单机启动不能绕过门禁。客户端构建、移动平台签名与发布条件单列说明，服务端部署成功不等于五端发布完成。
 
@@ -1127,6 +1245,9 @@ D/E纳入正文/对象清理清单；PG远端flush不等于删除已经replay/ap
 | 资产 / owner / 阶段 | 副本与备份责任 | 恢复与验真边界 |
 | --- | --- | --- |
 | 所有业务PG / 各服务 / I→III | A→D同步；C每日物理全备＋连续WAL、timeline/manifest，覆盖账号/设备/授权/消息/幂等/回执/任务/配置 | 对应版本/架构恢复，业务owner逐一核验；不能只备message schema |
+| Web BFF/换票交付秘密 / Identity / I | auth.bff_sessions/bff_exchange_requests/credential_deliveries及会话/挑战随PG/WAL；密钥独立保护，Cookie摘要与密封refresh/verifier/临时Cookie再交付材料不进安全journal | 恢复核对当前期限/安全/来源/family/refresh/restore代际，清旧秘密并重认证；不能把awaiting_browser_confirmation恢复成active或重发旧Cookie，物理旧密文沿备份保护窗，Redis不作授权 |
+| 位置授权/分享/最新点/候选/清理 / Location / II | location全部表/任务随A→D与C PG/WAL；坐标密文/粗cell按敏感内容保护，manifest登记owner、版本与key_ref，期限/stop/revoke最小事实在B/C；单次与live/nearby用途独立 | 对账最新授权/墓碑/期限/源卡片，清过期点/粗索引并重建有界候选；原live/nearby暂停需新授权/点，终态和已清源不复活；journal不含坐标/cell，旧备份字节按保护窗口告知 |
+| 计划模板/投票/收藏置顶 / Schedule与Interaction / II→III | 版本化payload、source绑定、run/幂等/清理job及poll内容随PG/WAL；独立模板授权/绝对截止与源清理持有者纳入manifest/journal最小期限事实，收藏不备不存在的snapshot正文 | 恢复按当前授权/源global/cloud_only及原绝对截止清正文/引用；不重启旧未知run、不复活源poll/坐标或模板；已发消息保留由其owner决定，执行元数据核对而非重做 |
 | 原件/衍生/头像/用户加密备份对象 / Media / II→III | A/D完整字节；C保存不可变对象版本、摘要、引用与生命周期清单；原件与元数据恢复责任配套 | 上传成功有双份证明；恢复先按权限/期限裁剪，缺失字节不返回可下载；高级密钥仍由端侧持有 |
 | 安全/删除journal / Governance / I | B独立PG＋C不可变版本、完整checkpoint和后续链；含未决动作、权限收缩、代际与绝对截止 | 核对当前完整水位，不仅备份时水位；B丢失从C重建同等角色，恢复双点确认后才分配/激活代际 |
 | C自身元数据/卷/索引/对象锁配置 / Backup / I | 主路线为版本化对象逻辑导出到F，含完整字节、元数据/锁定属性、原准确版本与manifest；filer PG/配置辅助留存，不以未经协调热拷贝卷作唯一恢复源 | C损毁在新独立归档恢复已验真集合；逻辑导入使用新versionId，按不可变原版本→新版本映射核对摘要/链/保留属性，并取得新的B/C恢复证明，不能伪造原版本/确认 |

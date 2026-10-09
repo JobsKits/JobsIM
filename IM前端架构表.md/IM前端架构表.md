@@ -8,7 +8,7 @@
 
 ## 🔥 <font id=前言>前言</font>
 
-本文件定义五端的工程、分层、本地数据、同步与构建合同，对应 [产品需求](../IM需求明细表.md/IM需求明细表.md)、[后端架构](../IM后端架构表.md/IM后端架构表.md) 和 [验收台账](../IM功能验收表.md/IM功能验收表.md)。文档基线：**2026年10月8日**。当前仅完成设计和模板只读核对，尚未创建 IM 业务工程、执行依赖安装或构建，不能据此宣称客户端已实现。
+本文件定义五端的工程、分层、本地数据、同步与构建合同，对应 [产品需求](../IM需求明细表.md/IM需求明细表.md)、[后端架构](../IM后端架构表.md/IM后端架构表.md) 和 [验收台账](../IM功能验收表.md/IM功能验收表.md)。文档基线：**2026年10月9日**。当前仅完成设计和模板只读核对，尚未创建 IM 业务工程、执行依赖安装或构建，不能据此宣称客户端已实现。
 
 | 阅读入口 | 内容 |
 | --- | --- |
@@ -29,7 +29,7 @@
 
 另起一套 IM 工程，从零设计并实现业务代码；不在既有业务工程上直接修改、改名或覆盖。旧代码仅用于提取有价值的工程经验，例如部署/反部署、自检、日志、挂载与构建交付。阶段 II/III 继承的是本项目已封版的新基线，不是旧业务源码。
 
-iOS 明确使用 <u>[**Swift**](https://www.swift.org/)</u>，以 Jobs 本人的 [Swift 基础工程](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/README.md) 为工程模板；承接自有通用 Pods、依赖解耦、脚本与 DSL 约定。新 App、标识、业务模块、配置、产物目录与验收记录独立建立；自有通用框架可按需复用并锁定来源版本，不搬入旧业务、Demo 入口、无关跨端引擎或默认账号。模板本身不因本需求自动获得修改授权。
+iOS 明确使用 <u>[**Swift**](https://www.swift.org/)</u>，以 Jobs 本人的 [Swift 基础工程](../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/README.md) 为工程模板；承接自有通用 Pods、依赖解耦、脚本与 DSL 约定。新 App、标识、业务模块、配置、产物目录与验收记录独立建立；自有通用框架可按需复用并锁定来源版本，不搬入旧业务、Demo 入口、无关跨端引擎或默认账号。模板本身不因本需求自动获得修改授权。
 
 ### 1.2、<span id="frontend-platforms">平台路线与确认状态</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -43,7 +43,7 @@ iOS 明确使用 <u>[**Swift**](https://www.swift.org/)</u>，以 Jobs 本人的
 | [**Web**](https://developer.mozilla.org/zh-CN/docs/Web) | [**TypeScript**](https://www.typescriptlang.org/) / [**React**](https://react.dev/) SPA；原生 [**IndexedDB**](https://www.w3.org/TR/IndexedDB/)＋自有有限适配 | Codex 已选具体浏览器基线；配额/驱逐/隐私模式单列，不套用原生 SQLite 耐久保证 |
 | CLI | [**Go**](https://go.dev/)＋[**modernc.org/sqlite**](https://pkg.go.dev/modernc.org/sqlite) | Codex 已选纯 Go 驱动与三桌面平台/双 CPU 架构；复用 IM API，数据库与凭据保护由 Codex 验证 |
 
-工程基线 `IM-baseline-20261008.2` 的框架、最低系统和参数由 Codex 决定并负责验证，不再交给用户补技术判断。各端以相同 IM 合同实现，各自留下构建/耐久/兼容证据；选型存在和组合通过是两种状态。服务端版本由 [后端表](../IM后端架构表.md/IM后端架构表.md#dependency-versions) 管理，客户端具体版本由 [前端锁定清单](#frontend-locks) 管理。
+工程基线 `IM-baseline-20261009.1` 的框架、最低系统和参数由 Codex 决定并负责验证，不再交给用户补技术判断。各端以相同 IM 合同实现，各自留下构建/耐久/兼容证据；选型存在和组合通过是两种状态。服务端版本由 [后端表](../IM后端架构表.md/IM后端架构表.md#dependency-versions) 管理，客户端具体版本由 [前端锁定清单](#frontend-locks) 管理。
 
 ### 1.3、<span id="communication-client-boundary">通信模式与端侧责任边界</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -61,7 +61,7 @@ iOS 明确使用 <u>[**Swift**](https://www.swift.org/)</u>，以 Jobs 本人的
 
 只有通过 TLS、部署签名挑战和协议核查的准确候选才取得认证材料；跨域重定向不自动转交凭据。HTTP 和实时通道属于同一已验证目标代次；账号／环境切换取消旧探测及刷新。正式 Outbox 保持原发送 namespace／恢复代际／clientMsgId，未知结果先查询或按原 ID 重试，旧连接响应不能改写新连接或其他账号；新恢复代际继续走权威快照及旧凭证失效合同。
 
-五端均做对应适配和证据：原生端核查证书、网络变化与后台约束，CLI 核查构建预置及凭据保护；Web 必须满足候选 API 的 CORS、CSP、WebSocket 来源校验及跨源认证策略，不能假设不同域名自动共享 Cookie。浏览器里的前端代码须先能加载，网页原始入口本身打不开时，这个 JS 地址池不能帮助尚未运行的页面。地址组也不改变附近蓝牙支持或服务端灾备责任。[Web CORS 机制](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
+五端均做对应适配和证据：原生端核查证书、网络变化与后台约束，CLI 核查构建预置及凭据保护；Web 默认通过已加载页面的同源 BFF 访问 API 与 WebSocket，由 BFF 执行候选验证及上游切换，浏览器不把 Cookie 转交其他域名。页面可匿名参与签名清单核验和展示切换状态，实际上游凭据始终由 BFF 保管；默认不启动携带认证材料的浏览器跨源直连，CORS 不是跨域 Cookie 共用机制，CSP 和 WebSocket Origin 另作校验。BFF 的同源代理能力从基础版存在，只有高级才装配地址组扫描／刷新／冷却，不能借网关越级。浏览器里的前端代码须先能加载，网页原始入口或同源 BFF 本身不可达时，页面内切换不能修复这个入口；网页／BFF 可用性另依部署灾备负责。地址组也不改变附近蓝牙支持或服务端灾备责任。[Web 凭据与来源合同](#web-credential-contract)、[Web CORS 机制](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS)
 
 ### 1.5、<span id="local-search-contract">标准搜索范围与端侧私密索引</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -121,6 +121,12 @@ flowchart TD
 
 从未启用的扩展不创建专属连接、任务和媒体/加密引擎；已启用后关闭则拒绝新动作，保留必要历史读取、取消、恢复、删除收尾。关闭高级 UI 不等于可以丢弃旧密文 Provider 或删除旧数据。旧端/未知类型提示受限或升级，安全协议不静默降级成明文。限制的是初始化与资源使用，不宣称静态代码天然不占包体或内存。
 
+标准能力被高级继承不等于任何会话都可用。当前 E2EE 会话禁用服务端普通投票与单次／实时位置分享；发送前、深链与机器人入口按会话加密模式复核，服务端须独立拒绝，不能仅隐藏按钮。媒体仅在双方／群成员端侧协议、附件加密和设备信任均满足已交付合同后发送；尚不支持的组合明确显示原因，不自动改用普通会话、把加密内容交给服务端搜索／机器人或降成明文。未来端间投票和位置须先补专门合同与组合验收，见 [E2EE Provider](../IM后端架构表.md/IM后端架构表.md#crypto-providers)；后台开关不能越过这道门禁。
+
+普通会话切到 E2EE 时，前端显示投票／位置正在终止和服务端确认的切换待完成状态，各 owner 排空确认前不能显示已启用。切换前本端合法持有的普通历史保留“普通模式历史”标签与原删除责任；E2EE API 返回的旧投票／位置不可用占位不能由云端明文卡片补齐，新成员不因此获得旧内容。对应[安全模式边界](../IM后端架构表.md/IM后端架构表.md#crypto-feature-boundary)和 AUDC-03。
+
+普通投票卡片只引用 pollId，题目／选项／选票由 interaction owner 维护；源卡片云正文清理、global 或到期后，显示不可继续投票，关闭修改和投票动作。合法本地普通历史可按原范围保留静态内容，不能用缓存重新填云端正文或提交迟到选票。清理交接与恢复门禁见[源引用合同](../IM后端架构表.md/IM后端架构表.md#schedule-favorite-retention)。
+
 ### 2.3、<span id="money-client-contract">高级转账、账单与资金状态</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 对应[产品转账与账单](../IM需求明细表.md/IM需求明细表.md#transfer-billing)、[资金权威模型](../IM后端架构表.md/IM后端架构表.md#money-transfer-billing)和[资金专项验收](../IM功能验收表.md/IM功能验收表.md#money-acceptance-cases)。`finance.transfer` 与 `finance.bill` 仅高级注册；前端隐藏与后端拒绝越级同时生效，有资金写入必须配套账单。关闭新资金业务保留获权用户必要只读账单、旧单查询和受控资金退出，不能丢弃未核实操作。
@@ -138,11 +144,27 @@ flowchart TD
 
 以上是设计合同，真实资金执行、五端展示、独立权限与灾备对账仍须按FE-089／090、BE-028、T-14及相关ARCH项取得证据。
 
+### 2.4、<span id="location-client-contract">位置授权、显示与停止共享</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+标准 FE-056／057 的位置分享与 BE-017 的“附近的人”分别实现，后者为独立默认关闭的标准扩展；当前 E2EE 会话拒绝位置分享。领域与权威状态由 [location-service](../IM后端架构表.md/IM后端架构表.md#location-service-contract) 管理，聊天卡片只引用分享 ID，不承担权限或后台定位权威。
+
+| 场景 | 客户端合同 |
+| --- | --- |
+| 开始单次／实时分享 | 用户先明确选目标会话／受众、范围与期限，再请求系统定位；OS 授权不代替产品内分享同意。实时默认 900 秒，配置 60～86400 秒；确认时显示具体到期时间，服务器返回的受众／版本／expires_at 为权威。单次卡片明确采集时间，不标为持续实时 |
+| 状态与刷新 | 区分 prepared／active／paused／stopping／stopped／expired／revoked；最快每 5 秒提交一次新点，点位超过 60 秒须显示“位置已过时”，不能伪造移动或继续标为实时。服务端版本与恢复代际控制迟到更新；prepared 未获接受不得显示已开始 |
+| 暂停与恢复 | 断网、后台采集被限制或系统暂不可用时停止新采集／上传，尽力在线提交 paused；受众立即停止实时标记，服务端清 latest；网络失联不能保证通知瞬间送达，受众仍受 60 秒陈旧阈值约束。恢复须重验系统许可、产品受众和未过期期限，沿原分享 ID 对账，不延长原 expires_at；不补传离线轨迹 |
+| 停止／撤权／到期 | 本端点击停止、OS 撤权、退出或原期限到达即停止采集与上传，清本地位置缓存；离线保留不含坐标的稳定停止请求，联网后先完成停止／查原状态，不能再上传旧点。stopping 显示“本端已停止，服务器待确认”，不谎报全端清除；stopped／expired／revoked 为终态，不自动恢复共享 |
+| 受众与历史 | 每次显示先核验当前受众与权限；成员离群、被撤权后关闭原分享，旧通知／深链不能读坐标。位置快照与实时 latest 按位置 owner 的保留／删除事实处理，已结束、过期或恢复旧备份的 latest 不能复活；源云正文清理终止该分享的新上报，清待上传点并禁止自动恢复，另外已授权的附近发现按独立用途处理；全局删除同步清本地坐标／地图缓存和预览 |
+| 附近的人 | 需独立主动开启、独立期限和可随时关闭；期限默认 900 秒、配置 60～86400 秒。该用途的新鲜点仅交 location owner 的授权接口按密文保管／有界查询，向其他用户只展示步长不小于 500 米的粗距离区间，不展示经纬度／cell／精确方向，不从聊天位置自动加入。无当前发现同意不上传发现用点；匿名公开与陌生人可见须另获明确同意 |
+| 五端差异 | 原生端遵循前后台定位许可与系统耗电限制；Web 仅在可用安全上下文和明确浏览器授权下采集，页面休眠不承诺持续。CLI 不采集、创建或上报位置，可读获权结构化卡片／粗距离、查询状态并执行获权停止；不伪造点位 |
+
+位置不会因为聊天 UI 隐藏、应用重新前台或账号切换而重新授权；新分享需重新明确确认。T-11、FE-056／057、BE-017 的专项验收须覆盖暂停／停止丢响应、到期、OS 撤权、过时点、越权访问、灾后旧点与无采集终端。
+
 ## 三、<span id="ios-template">iOS Swift 模板、Pods 与 DSL</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 ### 3.1、<span id="ios-pods">工程模板与模块组织</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-模板依据为实际 [Podfile](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile)、[Podfile.deps](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile.deps)、[JobsByPods](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods) 与 [Swift 工程框架文档](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/SwiftDoc.md/Swift工程项目框架配置方案@Jobs.md/Swift工程项目框架配置方案@Jobs.md)。这些材料用于提炼新工程合同，不表示当前模板包含新 IM 功能。
+模板依据为实际 [Podfile](../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile)、[Podfile.deps](../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile.deps)、[JobsByPods](../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods) 与 [Swift 工程框架文档](../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/SwiftDoc.md/Swift工程项目框架配置方案@Jobs.md/Swift工程项目框架配置方案@Jobs.md)。这些材料用于提炼新工程合同，不表示当前模板包含新 IM 功能。
 
 主 App 负责品牌、页面与入口；IM 核心、存储、传输和可复用 UI 按责任拆成本地 Pods，避免所有逻辑堆进控制器或聚合 Pod。建议在新工程 `JobsByPods/` 下建立独立 IM 领域、存储和传输模块，名称在实施时锁定；UI 模块依赖核心，核心不依赖 UI。模块粒度按可维护和可验收职责划分，不按每张表/每个按钮建 Pod。
 
@@ -220,7 +242,9 @@ WCDB 的价值在 SQLite/[**SQLCipher**](https://www.zetetic.net/sqlcipher/) 之
 | `transfer_cache` / III | P、transfer_id、sender_id、recipient_id、asset_code、amount_minor文本、fee_minor文本、fee_payer、status、row_version、expires_at、cancel_pending_snapshot、updated_at | PK P/transfer；仅缓存获权API响应；精确金额与服务端单调版本，卡片引用与资金状态分离，不据本地写入／时钟结算 |
 | `billing_cache` / III | P、financial_account_id、bill_id、transaction_id、original_transaction_id?、direction、amount_minor文本、asset_code、fee_minor文本、type、status、source_version、occurred_at、fetched_at | PK P/account/bill；按本人资金权限、稳定游标分页缓存；分币种汇总、待处理与已记账区分；只读投影不替代账本，登出／撤权清缓存不删除后台财务事实 |
 
-高级体验对象按来源消息及作用域保存引用：个人收藏、个人消息置顶与群级置顶分别建模，不能共用缺所有者的唯一键。服务端 global/焚毁须清理本地衍生正文、搜索索引、通知预览与应清理的文件；cloud_only 不强制删掉合格本地正文。媒体授权/保留独立见 [附件合同](../IM后端架构表.md/IM后端架构表.md#receipt-deletion-hooks)。
+高级体验对象按来源消息及作用域保存引用：个人收藏、个人消息置顶与群级置顶分别建模，不能共用缺所有者的唯一键。收藏默认仅保存消息引用，不另建正文快照；cloud_only 后可读取既有合格本地正文，但源正文不在本端时显示不可恢复提示，不把收藏当作额外云备份。服务端 global/焚毁须清理本地衍生正文、搜索索引、通知预览与应清理的文件，并使引用显示已删除；cloud_only 不强制删掉合格本地正文。媒体授权/保留独立见 [附件合同](../IM后端架构表.md/IM后端架构表.md#receipt-deletion-hooks)。
+
+计划缓存按 P／schedule_id／payload_version／内容持有者保存，不存身份凭据。新写的未发送计划是独立草稿；若从源消息引用创建，保留 source_message_id／来源版本而非静默复制，执行前重验源是否可读，global／焚毁使相关引用计划失效并清载荷，cloud_only 不被解释成“调度器可以从收藏还原正文”。一次任务完成／已确认取消／周期任务终止后，服务端载荷默认 300 秒清理（配置 0～86400 秒）且不晚于其绝对期限，客户端同步终态后执行等效清理；未知执行／排空中不能假称取消成功。独立草稿与周期模板均从创建起最多保留 30 天，周期模板另需用户明确授权和 endAt，保留期间每次执行仍核验权限；即使执行结果未知，到绝对载荷期限也清正文，只保留无正文的原 ID／摘要继续查单，不能无限留正文。清理按 owner／schedule_id／payload_version 关联 `content_cleanup_steps`，失败保留可重试清理记录，不继续展示过期载荷。详见 [计划与内容持有者](../IM后端架构表.md/IM后端架构表.md#control-bridge-bot-tables) 和 T-10／T-20／T-30。
 
 ### 5.2、<span id="local-migrations">迁移、清理与重建</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -309,7 +333,47 @@ flowchart TD
 
 各端记录前后台、断网、休眠/进程终止、系统更新与通知失达行为；重连从连续进度补同步，不依赖推送必达或后台永久运行。通知只是唤醒/提示，点击须核对当前身份、会话和删除事实；已撤销设备不得靠本地 token 继续拉取受保护数据。
 
-iOS 采用 [**Keychain**](https://developer.apple.com/documentation/security/keychain-services) 与数据保护机制保管凭据/密钥引用，锁屏可用性按威胁模型和后台需求明确选择；Android/鸿蒙使用各自系统安全能力，Web/CLI 单独定义凭据与设备信任边界。凭据与密钥不进普通数据库、资源、build 包清单或诊断日志。MFA、E2EE 与邮件 OTP 的服务端合同不在 UI 层重新发明。
+身份访问凭据只在必要运行内存使用，持久刷新凭据和换票 verifier 按下表保存；账号、环境、deployment、scope、source_context 与 device/store_generation 全量绑定，不与普通消息库混存。密码／OTP 不持久保存，MFA、E2EE 与邮件 OTP 的服务端合同不在 UI 层重新发明；端侧加密状态另由 CryptoProvider 密封和事务保护，不把系统安全库当成消息数据库。
+
+#### 7.1.1、<span id="credential-platform-defaults">五端凭据存放与访问默认值</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+本表是本项目实施决策，官方 API 可用性已核查，实际系统／设备组合仍须取得验证证据；不新增未锁定的第三方凭据包装库。
+
+| 平台 | 已选存放位置 | 访问与不可用行为 |
+| --- | --- | --- |
+| iOS 16.0＋ | 系统 [**Keychain**](https://developer.apple.com/documentation/security/keychain-services)，刷新凭据／verifier 使用 `kSecAttrAccessibleWhenUnlockedThisDeviceOnly`、`kSecAttrSynchronizable=false` 和本 App 专属访问组 | 只在解锁后读取；锁屏清运行内存中的敏感材料，后台通知只给不含正文／凭据的提示，解锁后再鉴权补同步。写入失败不转存 UserDefaults／SQLite，不宣称后台持续读取；[保护类](https://developer.apple.com/documentation/security/ksecattraccessiblewhenunlockedthisdeviceonly)随设备，不把重装后残留钥匙视为旧设备继续有效 |
+| Android API26＋ | 系统 [**Android Keystore**](https://developer.android.com/privacy-and-security/keystore) 创建不可导出 AES-GCM 包装密钥；刷新凭据／verifier 的密文、独立随机 nonce 与认证标签存 App 私有、排除备份的文件，AAD 绑定来源和存储代际 | Keystore 保存密钥，不能直接当字符串保险箱。应用读取前检查设备解锁／当前账户，锁屏清内存并暂停敏感读取；API26／27 不调用 API28 才有的 `setUnlockedDeviceRequired`，API35＋可启用该额外约束，较旧系统按[官方缺陷说明](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder#setUnlockedDeviceRequired(boolean))采用运行期门禁并单列证据。硬件保护能力检测／记录，不假定每台都有 StrongBox；密钥失效／文件损坏须重认证，不生成新密钥强行读取旧 blob |
+| 鸿蒙 API12＋ | 系统 [**Asset Store**](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-asset) 保管刷新凭据／verifier，`ACCESSIBILITY=DEVICE_UNLOCKED`、`SYNC_TYPE=NEVER`、`IS_PERSISTENT=false`；系统 [**HUKS**](https://github.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/js-apis-huks.md) 保管 CryptoProvider 的包装密钥和引用 | 使用 API12 可用的 add/query/update/remove 与访问属性；不依赖 API14 的附属信息加密、API18 的加密导入／导出或 API20 的同步查询。无锁屏密码时 DEVICE_UNLOCKED 不能提供密码屏障，须记录条件并在前台采用当前账号再验证；系统服务／钥匙不可用停止持久登录，不降到普通 RDB／preferences |
+| Web | 同源 BFF 保管上游访问／刷新凭据与 verifier；浏览器仅存不透明会话 `__Host-jobsim_session` Cookie，`Secure; HttpOnly; SameSite=Lax; Path=/`，不设 Domain | Cookie 不放 localStorage／IndexedDB 或 JS 变量；浏览器 JS 也不拿上游 refresh。Cookie 禁用、BFF 不可达或会话失效时暂停正式联网操作并给重认证入口；仅可按原权限／隐私合同读取合格本地缓存，不模拟登录成功。浏览器不能承诺 OS 级钥匙或可信锁屏通知；敏感页面失焦／隐藏遮蔽，受限场景重验会话。见[同源合同](#web-credential-contract)与[Cookie 属性](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) |
+| CLI：macOS／Windows／Linux | macOS 系统 Keychain；Windows [**Credential Manager**](https://learn.microsoft.com/en-us/windows/win32/api/wincred/nf-wincred-credwritew)，Generic 条目／`CRED_PERSIST_LOCAL_MACHINE`；Linux [**Secret Service**](https://specifications.freedesktop.org/secret-service/latest/)，当前用户集合与本 App 条目 | 凭据命名含来源上下文，Windows 不跨机器漫游；Linux 服务存在且集合可解锁后才持久保管。无桌面钥匙服务、集合不可访问或系统拒绝时不写明文文件／环境变量／命令行参数；交互式可明确选择本进程内存临时登录，进程结束即丢，下一次需重认证；无人值守任务受控失败，另用获授权机器人任务合同。系统库不是对同 OS 用户的绝对隔离，也不保证终端一直运行或锁屏立即自动锁库 |
+
+秘密不进入资源、源码、build 包清单、剪贴板、历史命令或诊断日志；各平台凭据接口只输出必要错误码和引用。应用账号切换关闭旧连接与异步任务，正式注销／设备撤销后删除对应凭据条目和运行内存，消息缓存／待发／资金核实引用按各自权利合同处理，不用“删 token”冒充聊天正文已删除。安全设施暂不可读时保留受保护待发状态，既不发送无授权请求，也不伪造收讫。
+
+CLI 的 `CGO_ENABLED=0` 约束 Go 主程序；macOS Keychain 接入选本项目自有 Swift 原生助手，随包单独编译、签名并核对摘要，通过有界匿名管道交付到运行内存。不得把凭据放进 `security` 命令参数或临时文件，也不以此打开 Go 的 CGO。助手源码、工具链、安装位置和失败行为纳入 CLI 构建及 SEC-02／AUDC-15 证据；助手缺失或签名不符时停止持久登录，沿上述内存临时登录边界处理。
+
+原生／CLI 退出立即关闭本端会话、清内存和登录凭据；在线先请求撤销原 session／family，结果不明则留不含秘密的待撤销 ID／状态。离线同样本端退出，联网须经本人重新验证后先对账／撤销旧会话，不用已清 token 再开旧连接，也不声称其他设备和服务端已完成撤销。服务器收到撤权后按当前授权阻断，无法联网时只保证本端停用；账号切换保留的旧账号凭据不自动授权当前账号。安全存储写入失败的新登录不报告成功，尽力撤销已签发但未安全交付的会话；E2EE 密钥／正文和未知资金引用依独立恢复合同封存或交接，不随通用 token 清理一并销毁。
+
+#### 7.1.2、<span id="web-credential-contract">Web 同源网关、来源与退出</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+Web 页面／`/api`／实时升级入口在同一 HTTPS Origin，经同源 BFF 转交后端；BFF 使用服务端加密会话记录保管上游凭据，必要会话元数据随部署恢复而核验授权代际。它不会保存或解密 E2EE 聊天私钥。宿主集成默认由宿主的同源 BFF／中间件提供账号绑定，第三方 iframe／跨站 Cookie 组合另作专项，不通过放宽 Cookie 域／SameSite 偷渡默认合同。
+
+密封会话的权威 owner 为 identity-service 的 `auth.bff_sessions`，BFF 通过受限内部 API 使用，刷新存储成功后才能从 updating 恢复 active；未知结果进入 reauth_required。到期、退出、撤权与恢复代际变化拒绝旧 Cookie 并清秘密，Redis／BFF 重启不重新授予权限，见[后端接口与存储合同](../IM后端架构表.md/IM后端架构表.md#api-contracts)。
+
+登录前的 verifier 由同一 owner 的 `auth.bff_exchange_requests` 专属 AEAD 记录保管，期限不超过300秒及原挑战截止；浏览器持独立的 `__Host-jobsim_exchange` 不透明挑战 Cookie，使用 Secure／HttpOnly／SameSite=Lax／Path=/ 且无 Domain。它只授予原挑战查询／交付，不授予聊天；BFF 服务身份、挑战 Cookie、准确 Origin 和原来源上下文都需核验。
+
+上游 refresh 与原正式 Cookie 交付材料同事务密封完成后，BFF才可确认上游换票交付；浏览器仍处于 awaiting_browser_confirmation，未确认时只可查询／确认／取消，聊天、同步、WebSocket和刷新均拒绝。Set-Cookie丢响应或BFF重启，在原300秒窗口内用挑战 Cookie取回同一正式Cookie，窗口不续期、不重建会话。浏览器实际持正式Cookie后，用原确认ID／CSRF／Origin请求确认，取得active结果才显示已登录，并清verifier、临时Cookie密文及挑战Cookie；确认响应丢失用正式Cookie查询原结果。期限／证明／代际失效走撤旧会话再新挑战，已确认登录不因交付窗结束退出。完整状态见[Web Cookie交付](../IM后端架构表.md/IM后端架构表.md#web-cookie-delivery)。
+
+写操作必须使用非 GET 方法、会话绑定 CSRF 值和准确 Origin 白名单；CSRF 值可短期放 JS 内存，经同源请求取得，不能替代会话认证。拒绝缺失或不合规的浏览器 Origin；WebSocket 升级也校验 Origin／当前会话，认证材料不写 URL 查询参数。HttpOnly 和 SameSite 减少材料暴露／跨站携带，不能防止同源恶意脚本发请求，仍由 CSP、内容安全渲染和服务端逐操作授权约束。[WebSocket 来源规则](https://datatracker.ietf.org/doc/html/rfc6455#section-10.2)
+
+浏览器退出先请求撤销 BFF／上游会话，再按相同 Path／host 属性让 Cookie 过期；清本端敏感视图及账号缓存，通知其他标签页当前账号已退出，后端逐请求校验撤权并断开实时连接。断网退出立即阻止本端读取／发起正式操作、清展示并留下不含秘密的待注销标记；联网只允许同源注销／查状态，成功或得到已无效响应后清标记，在此之前不恢复旧 Cookie 会话。不能向用户声称离线已完成服务端撤销；安全设施不可用不能退回 JS 保存 refresh。
+
+#### 7.1.3、<span id="credential-refresh-delivery">并发刷新与换票丢响应恢复</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+同一原生／CLI 会话只允许一个刷新动作，受保护状态先记录原 refresh 请求 ID／凭据代次；Web 由 BFF 按会话串行刷新，标签页不各持 refresh 并竞争旋转。新凭据在安全存储原子替换成功后才释放等待请求／删除旧代次；旧响应按来源／会话代次丢弃。正常刷新只更新 BFF 内部上游凭据，不使浏览器自动退出。当前刷新接口未另设凭据再交付记录，刷新成功但响应丢失时停止使用旧凭据，经本人重新验证撤旧 family 后重认证，不把“旧 token 拒绝”当网络失败无限轮询；下述 300 秒记录仅用于宿主换票，不自动套给刷新。若未来补刷新再交付，须绑定原请求 ID／代次、核验授权并单独验收，不能通过盲目重刷恢复。
+
+业务中间件换票前生成独立随机 verifier，以 [**PKCE S256**](https://datatracker.ietf.org/doc/html/rfc7636#section-4.1) challenge 绑定稳定 requestId、来源上下文、device/store_generation；verifier 放系统安全库，Web 由 BFF 保管，不出现在宿主普通消息或浏览器 URL。成功但响应丢失时以原 requestId／相同参数摘要／verifier 查询 [300 秒加密交付记录](../IM后端架构表.md/IM后端架构表.md#bridge-architecture)，取得同一会话的原交付材料并校验／安全落盘；只得到 session_id 不能宣称已登录。交付过期、原票据到期、撤权或凭据已旋转时不重新创建第二会话，按后端撤销旧交付资格再新挑战；成功、取消或终态到达时清短期 verifier。
+
+离线只保留合格本地消息／待发，不生成刷新成功、设备收讫或资金成功；新凭据尚未耐久时暂停相关联网确认。五端按 FE-007／008／009／071、SEC-02／07 与 T-34 验证锁屏、系统库损坏、并发旋转、响应丢失、来源切换、退出与重装，静态文档核查不等于这些测试已通过。
 
 ### 7.2、<span id="frontend-demo">正式与本地演示隔离</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
