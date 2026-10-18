@@ -2,15 +2,38 @@
 
 ![Jobs出品，必属精品](https://picsum.photos/1500/400)
 
-[toc]
+<!-- jobs-toc:start -->
+<!-- jobs-toc:source {"v":2,"token":"[toc]"} -->
+<details>
+<summary>📚 目录（点击展开 / 收起）</summary>
+
+- [🔥 前言](#jobs-toc-heading-1)
+- [一、先看一级分类：中心化与去中心化](#im-categories)
+- [二、中心化 IM：消息交给同一个后台体系](#centralized-im)
+  - [2.1、悟空放在图中的位置](#wukong-classification)
+- [三、去中心化 IM：再看消息由谁接力](#decentralized-im)
+  - [3.1、不同运营方的服务器互通：联邦](#federated-chat)
+  - [3.2、中继转送：选择由谁暂存密文](#relay-chat)
+  - [3.3、设备互联：终端承担更多责任](#peer-chat)
+- [四、附近蓝牙／Wi-Fi：没有互联网也能聊天的场景](#nearby-chat)
+  - [4.1、两台设备在附近，建立本地通信路径](#nearby-path)
+  - [4.2、对方不在附近或没在线，消息不会凭空送达](#offline-nearby)
+- [五、后端业务架构确实有很大差异](#responsibility-boundaries)
+- [六、同一个产品，可以有不同的通信实现](#product-assembly)
+- [七、高级版多 BaseURL：同一个中心的多个入口](#advanced-entry-pool)
+- [八、名词解释：先用一句话理解](#plain-glossary)
+- [九、当前适用边界与验证责任](#design-status)
+
+</details>
+<!-- jobs-toc:end -->
 
 ---
 
-## 🔥 <font id=前言>前言</font>
+## <span id="jobs-toc-heading-1" data-jobs-toc="v2">🔥 <font id=前言>前言</font></span><!-- jobs-toc:heading-end -->
 
 先看图中的消息经过哪里，再看账号、历史和管理权限由谁负责。一级分类采用 **中心化 IM／去中心化 IM**；去中心化下面再介绍不同实现。本文是产品视角的阅读分类，不把整个行业强行划成互斥路线。
 
-文档基线：**2026年10月9日**。现行基础、标准、高级以中心化内核增量交付；去中心化仍属高级可选独立标段。蓝牙／附近 Wi-Fi 是值得评估的候选通信能力，尚未选定实现或列入当前基础封版。图中的竞品机制是公开资料归纳，不代表本产品已经实现或验收。
+文档基线：**2026年10月18日**。现行基础、标准、高级以中心化内核增量交付；去中心化仍属高级可选独立标段。蓝牙／附近 Wi-Fi 是值得评估的候选通信能力，尚未选定实现或列入当前基础封版。图中的竞品机制是公开资料归纳，不代表本产品已经实现或验收。
 
 高级版中心化多 BaseURL 入口组是已明确的功能需求，包含预埋、失达轮询、连通后刷新及前端发版整组更新；目前仅完成设计，尚未实现或验收。
 

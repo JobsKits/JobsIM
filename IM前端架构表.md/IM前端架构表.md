@@ -2,13 +2,58 @@
 
 ![Jobs出品，必属精品](https://picsum.photos/1500/400)
 
-[toc]
+<!-- jobs-toc:start -->
+<!-- jobs-toc:source {"v":2,"token":"[toc]"} -->
+<details>
+<summary>📚 目录（点击展开 / 收起）</summary>
+
+- [🔥 前言](#jobs-toc-heading-1)
+- [一、从零新建与五端工程边界](#frontend-scope)
+  - [1.1、独立新工程与模板承接](#new-project-boundary)
+  - [1.2、平台路线与确认状态](#frontend-platforms)
+  - [1.3、通信模式与端侧责任边界](#communication-client-boundary)
+  - [1.4、高级中心化多 BaseURL 协调器](#endpoint-group-client)
+  - [1.5、标准搜索范围与端侧私密索引](#local-search-contract)
+- [二、分层、依赖与能力开关](#frontend-layers)
+  - [2.1、模块责任合同](#frontend-modules)
+  - [2.2、配置、生效与历史读取](#frontend-capabilities)
+  - [2.3、高级转账、账单与资金状态](#money-client-contract)
+  - [2.4、位置授权、显示与停止共享](#location-client-contract)
+- [三、iOS Swift 模板、Pods 与 DSL](#ios-template)
+  - [3.1、工程模板与模块组织](#ios-pods)
+  - [3.2、UI 与代码块写法](#ios-dsl)
+  - [3.3、源码与维护边界](#frontend-ownership)
+- [四、SQLite 与封装选型](#storage-selection)
+  - [4.1、三层职责与选择状态](#storage-responsibilities)
+  - [4.2、耐久、性能与替换门禁](#storage-gates)
+- [五、本地表、字段与迁移合同](#local-schema)
+  - [5.1、本地关系模型](#local-data-model)
+  - [5.2、迁移、清理与重建](#local-migrations)
+- [六、本地可靠收发、收讫与删除](#durable-sync)
+  - [6.1、发送与未知结果](#local-send-flow)
+  - [6.2、入站事务与 ACK](#local-receipt-flow)
+  - [6.3、云端清理、全局删除与浏览器边界](#client-deletion-policy)
+  - [6.4、端侧事务、补洞与收讫架构图](#local-sync-transaction-diagram)
+- [七、平台、安全、演示与体验](#frontend-experience)
+  - [7.1、生命周期与凭据保护](#platform-lifecycle)
+    - [7.1.1、五端凭据存放与访问默认值](#credential-platform-defaults)
+    - [7.1.2、Web 同源网关、来源与退出](#web-credential-contract)
+    - [7.1.3、并发刷新与换票丢响应恢复](#credential-refresh-delivery)
+  - [7.2、正式与本地演示隔离](#frontend-demo)
+  - [7.3、字体、主题、空态与资源](#frontend-accessibility)
+- [八、依赖安装、构建产物与前端交付](#frontend-build)
+  - [8.1、安装后行为与 build 产物](#ios-build-hooks)
+  - [8.2、工具链与依赖锁定清单](#frontend-locks)
+  - [8.3、前端交付与验收门禁](#frontend-gates)
+
+</details>
+<!-- jobs-toc:end -->
 
 ---
 
-## 🔥 <font id=前言>前言</font>
+## <span id="jobs-toc-heading-1" data-jobs-toc="v2">🔥 <font id=前言>前言</font></span><!-- jobs-toc:heading-end -->
 
-本文件定义五端的工程、分层、本地数据、同步与构建合同，对应 [产品需求](../IM需求明细表.md/IM需求明细表.md)、[后端架构](../IM后端架构表.md/IM后端架构表.md) 和 [验收台账](../IM功能验收表.md/IM功能验收表.md)。文档基线：**2026年10月9日**。当前仅完成设计和模板只读核对，尚未创建 IM 业务工程、执行依赖安装或构建，不能据此宣称客户端已实现。
+本文件定义五端的工程、分层、本地数据、同步与构建合同，对应 [产品需求](../IM需求明细表.md/IM需求明细表.md)、[后端架构](../IM后端架构表.md/IM后端架构表.md) 和 [验收台账](../IM功能验收表.md/IM功能验收表.md)。文档基线：**2026年10月18日**。当前仅完成设计和模板只读核对，尚未创建 IM 业务工程、执行依赖安装或构建，不能据此宣称客户端已实现。
 
 | 阅读入口 | 内容 |
 | --- | --- |
@@ -43,7 +88,7 @@ iOS 明确使用 <u>[**Swift**](https://www.swift.org/)</u>，以 Jobs 本人的
 | [**Web**](https://developer.mozilla.org/zh-CN/docs/Web) | [**TypeScript**](https://www.typescriptlang.org/) / [**React**](https://react.dev/) SPA；原生 [**IndexedDB**](https://www.w3.org/TR/IndexedDB/)＋自有有限适配 | Codex 已选具体浏览器基线；配额/驱逐/隐私模式单列，不套用原生 SQLite 耐久保证 |
 | CLI | [**Go**](https://go.dev/)＋[**modernc.org/sqlite**](https://pkg.go.dev/modernc.org/sqlite) | Codex 已选纯 Go 驱动与三桌面平台/双 CPU 架构；复用 IM API，数据库与凭据保护由 Codex 验证 |
 
-工程基线 `IM-baseline-20261009.1` 的框架、最低系统和参数由 Codex 决定并负责验证，不再交给用户补技术判断。各端以相同 IM 合同实现，各自留下构建/耐久/兼容证据；选型存在和组合通过是两种状态。服务端版本由 [后端表](../IM后端架构表.md/IM后端架构表.md#dependency-versions) 管理，客户端具体版本由 [前端锁定清单](#frontend-locks) 管理。
+工程基线 `IM-baseline-20261018.1` 的框架、最低系统和参数由 Codex 决定并负责验证，不再交给用户补技术判断。各端以相同 IM 合同实现，各自留下构建/耐久/兼容证据；选型存在和组合通过是两种状态。服务端版本由 [后端表](../IM后端架构表.md/IM后端架构表.md#dependency-versions) 管理，客户端具体版本由 [前端锁定清单](#frontend-locks) 管理。
 
 ### 1.3、<span id="communication-client-boundary">通信模式与端侧责任边界</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -65,9 +110,9 @@ iOS 明确使用 <u>[**Swift**](https://www.swift.org/)</u>，以 Jobs 本人的
 
 ### 1.5、<span id="local-search-contract">标准搜索范围与端侧私密索引</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-FE-023标准范围分开验收：消息正文中文NFC字面／英文词，联系人昵称／本人备注及获权会话名称的全拼／首字母前缀；不承诺任意正文拼音。名称转换用[后端已选同源字表](../IM后端架构表.md/IM后端架构表.md#standard-module-tables)，固定默认读音，原名称优先并解释多音字可能漏匹配；五端在启用前生成资源版本／摘要、许可和一致性向量。
+FE-023标准范围分开验收：消息正文中文NFC字面／英文词，联系人昵称／本人备注及获权会话名称的全拼／首字母前缀；不承诺任意正文拼音。名称转换用[后端已选同源字表](../数据库设计.md/数据库设计.md#standard-module-tables)，固定默认读音，原名称优先并解释多音字可能漏匹配；五端在启用前生成资源版本／摘要、许可和一致性向量。
 
-本地模块按账号／来源隔离可重建 `local_search_documents`：messageId、conversationId、来源代际／内容版本、normalizedBody、状态；`local_name_documents`：对象类型／ID／字段、来源代际／版本、normalizedText、pinyinFull、pinyinInitials、transliterationVersion、状态，字段类型按第五章平台映射。仅索引当前有权内容；私密名称／备注及E2EE正文不向服务器上传原文或索引。各存储按支持能力选择索引／有界查询，不假称所有平台都自带同一种全文插件，结果和权限向量保持一致。
+本地模块按账号／来源隔离可重建 `local_search_documents`：messageId、conversationId、来源代际／内容版本、normalizedBody、状态；`local_name_documents`：对象类型／ID／字段、来源代际／版本、normalizedText、pinyinFull、pinyinInitials、transliterationVersion、状态，字段类型按[数据库平台映射](../数据库设计.md/数据库设计.md#client-database)。仅索引当前有权内容；私密名称／备注及E2EE正文不向服务器上传原文或索引。各存储按支持能力选择索引／有界查询，不假称所有平台都自带同一种全文插件，结果和权限向量保持一致。
 
 改名／删备注／撤权／global删除或焚毁使本地派生索引失效并继续幂等清理；合法cloud_only仍按原本地保留合同读取唯一副本。搜索补充不延长消息寿命，不从迟到事件或旧备份复活索引。受限数据权利查询／取消另用专门入口和短期证明，不借搜索模块恢复注销中的普通会话。[注销取消合同](../IM后端架构表.md/IM后端架构表.md#account-state-design)
 
@@ -129,7 +174,7 @@ flowchart TD
 
 ### 2.3、<span id="money-client-contract">高级转账、账单与资金状态</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-对应[产品转账与账单](../IM需求明细表.md/IM需求明细表.md#transfer-billing)、[资金权威模型](../IM后端架构表.md/IM后端架构表.md#money-transfer-billing)和[资金专项验收](../IM功能验收表.md/IM功能验收表.md#money-acceptance-cases)。`finance.transfer` 与 `finance.bill` 仅高级注册；前端隐藏与后端拒绝越级同时生效，有资金写入必须配套账单。关闭新资金业务保留获权用户必要只读账单、旧单查询和受控资金退出，不能丢弃未核实操作。
+对应[产品转账与账单](../IM需求明细表.md/IM需求明细表.md#transfer-billing)、[资金权威模型](../数据库设计.md/数据库设计.md#money-transfer-billing)和[资金专项验收](../IM功能验收表.md/IM功能验收表.md#money-acceptance-cases)。`finance.transfer` 与 `finance.bill` 仅高级注册；前端隐藏与后端拒绝越级同时生效，有资金写入必须配套账单。关闭新资金业务保留获权用户必要只读账单、旧单查询和受控资金退出，不能丢弃未核实操作。
 
 | 客户端职责 | 必须实施 |
 | --- | --- |
@@ -218,7 +263,7 @@ WCDB 的价值在 SQLite/[**SQLCipher**](https://www.zetetic.net/sqlcipher/) 之
 
 ### 5.1、<span id="local-data-model">本地关系模型</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-以下是前端逻辑字段合同，原生 SQLite 落地时补齐可执行 DDL、类型/枚举、空值、外键、索引和 migration checksum；Web 用等效对象库/索引与事务实现，不声称共用 SQL 文件。平台存储私有，不能直接写后端表。[服务端权威模型](../IM后端架构表.md/IM后端架构表.md#data-design)
+物理类型、大整数排序、同域约束与迁移门禁见[数据库设计](../数据库设计.md/数据库设计.md#client-database)。以下是前端逻辑字段合同，原生 SQLite 落地时补齐可执行 DDL、类型/枚举、空值、外键、索引和 migration checksum；Web 用等效对象库/索引与事务实现，不声称共用 SQL 文件。平台存储私有，不能直接写后端表。[服务端权威模型](../数据库设计.md/数据库设计.md#data-design)
 
 公共命名空间 `P = environment_id + deployment_id + scope_id + source_context_id + user_id + device_id + store_generation`，绑定服务来源并防止同名租户跨实例串库。`source_context_id` 区分个人客户端与宿主 app/授权上下文；同一 IM 用户通过不同宿主登录不共用未经裁剪的历史、能力缓存或游标，授权代际另随记录校验。每个正式账户/来源上下文独立库/目录或等效可验证隔离；所有查询、缓存、队列与异步任务均携带 P。标识符用精确字符串映射，序号跨语言保持精确，不以浮点近似值比较。平台安全凭据另存，不列入 P 对应普通表。
 
@@ -239,12 +284,12 @@ WCDB 的价值在 SQLite/[**SQLCipher**](https://www.zetetic.net/sqlcipher/) 之
 | `identity_trust` / III | P、peer_user_id、root_generation、root_public_key、fingerprint、verification_state、device_manifest_digest、checked_at | PK P/peer/root_generation；TOFU首次记录、安全码核验与公钥变化状态独立保存；证书绑定验证失败阻止安全发送，服务端账号登录不代替端侧信任 |
 | `crypto_states` / III | P、conversation_id、provider_id、key_epoch、crypto_context_id、provider_group_id、protocol_epoch、state_version、state_format_version、sealed_state、wrapping_key_ref、updated_at | PK P/conversation/provider/context；protocol_epoch用精确uint64表示，不与产品key_epoch混用；仅存受端侧密钥保护的版本化密封状态，普通库无明文私钥/ratchet秘密。发送状态与对应密文Outbox原子提交；接收状态/Inbox/消息/连续游标/ACK意图同事务耐久后确认；FFI只在事务提交成功后安装新内存状态，崩溃/旧备份不能回退写能力 |
 | `finance_operation_refs` / III | P、operation_id、transfer_id?、request_hash、state、submitted_at、reconciled_at? | PK P/operation；只保存明确提交的最小核实引用，不是离线付款队列；重启／切换入口查原单，禁止改ID自动扣款 |
-| `transfer_cache` / III | P、transfer_id、sender_id、recipient_id、asset_code、amount_minor文本、fee_minor文本、fee_payer、status、row_version、expires_at、cancel_pending_snapshot、updated_at | PK P/transfer；仅缓存获权API响应；精确金额与服务端单调版本，卡片引用与资金状态分离，不据本地写入／时钟结算 |
-| `billing_cache` / III | P、financial_account_id、bill_id、transaction_id、original_transaction_id?、direction、amount_minor文本、asset_code、fee_minor文本、type、status、source_version、occurred_at、fetched_at | PK P/account/bill；按本人资金权限、稳定游标分页缓存；分币种汇总、待处理与已记账区分；只读投影不替代账本，登出／撤权清缓存不删除后台财务事实 |
+| `transfer_cache` / III | P、transfer_id、sender_id、recipient_id、asset_code、amount_minor文本、fee_minor文本、fee_payer、status、revision_epoch、row_version、expires_at、cancel_pending_snapshot、updated_at | PK P/transfer；仅缓存获权API响应；精确金额与服务端单调版本，按(revision_epoch,row_version)比较，新恢复代际的权威基线不被旧代际高版本挡住；卡片引用与资金状态分离，不据本地写入／时钟结算 |
+| `billing_cache` / III | P、financial_account_id、bill_id、transaction_id、original_transaction_id?、direction、amount_minor文本、asset_code、fee_minor文本、type、status、revision_epoch、row_version、source_revision_epoch、source_version、occurred_at、fetched_at | PK P/account/bill；按本人资金权限、稳定游标分页缓存；自身投影按(revision_epoch,row_version)比较，源对象按(source_revision_epoch,source_version)独立比较，新恢复代际的权威基线不被旧代际高版本挡住；分币种汇总、待处理与已记账区分；只读投影不替代账本，登出／撤权清缓存不删除后台财务事实 |
 
 高级体验对象按来源消息及作用域保存引用：个人收藏、个人消息置顶与群级置顶分别建模，不能共用缺所有者的唯一键。收藏默认仅保存消息引用，不另建正文快照；cloud_only 后可读取既有合格本地正文，但源正文不在本端时显示不可恢复提示，不把收藏当作额外云备份。服务端 global/焚毁须清理本地衍生正文、搜索索引、通知预览与应清理的文件，并使引用显示已删除；cloud_only 不强制删掉合格本地正文。媒体授权/保留独立见 [附件合同](../IM后端架构表.md/IM后端架构表.md#receipt-deletion-hooks)。
 
-计划缓存按 P／schedule_id／payload_version／内容持有者保存，不存身份凭据。新写的未发送计划是独立草稿；若从源消息引用创建，保留 source_message_id／来源版本而非静默复制，执行前重验源是否可读，global／焚毁使相关引用计划失效并清载荷，cloud_only 不被解释成“调度器可以从收藏还原正文”。一次任务完成／已确认取消／周期任务终止后，服务端载荷默认 300 秒清理（配置 0～86400 秒）且不晚于其绝对期限，客户端同步终态后执行等效清理；未知执行／排空中不能假称取消成功。独立草稿与周期模板均从创建起最多保留 30 天，周期模板另需用户明确授权和 endAt，保留期间每次执行仍核验权限；即使执行结果未知，到绝对载荷期限也清正文，只保留无正文的原 ID／摘要继续查单，不能无限留正文。清理按 owner／schedule_id／payload_version 关联 `content_cleanup_steps`，失败保留可重试清理记录，不继续展示过期载荷。详见 [计划与内容持有者](../IM后端架构表.md/IM后端架构表.md#control-bridge-bot-tables) 和 T-10／T-20／T-30。
+计划缓存按 P／schedule_id／payload_version／内容持有者保存，不存身份凭据。新写的未发送计划是独立草稿；若从源消息引用创建，保留 source_message_id／来源版本而非静默复制，执行前重验源是否可读，global／焚毁使相关引用计划失效并清载荷，cloud_only 不被解释成“调度器可以从收藏还原正文”。一次任务完成／已确认取消／周期任务终止后，服务端载荷默认 300 秒清理（配置 0～86400 秒）且不晚于其绝对期限，客户端同步终态后执行等效清理；未知执行／排空中不能假称取消成功。独立草稿与周期模板均从创建起最多保留 30 天，周期模板另需用户明确授权和 endAt，保留期间每次执行仍核验权限；即使执行结果未知，到绝对载荷期限也清正文，只保留无正文的原 ID／摘要继续查单，不能无限留正文。清理按 owner／schedule_id／payload_version 关联 `content_cleanup_steps`，失败保留可重试清理记录，不继续展示过期载荷。详见 [计划与内容持有者](../数据库设计.md/数据库设计.md#control-bridge-bot-tables) 和 T-10／T-20／T-30。
 
 ### 5.2、<span id="local-migrations">迁移、清理与重建</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -284,7 +329,7 @@ store_generation 与服务器登记的 deviceId 一一绑定，不是客户端�
 
 附件文件与数据库不能共享一笔事务：文件先达到约定耐久点，再事务记录完成和对象回执意图。下载任务绑定消息/对象版本及授权/生命周期代际，转正前与元数据提交时重验墓碑/代际，按版本隔离路径；失效任务不发布正文/文件并清理残留。文件已保存而元数据未提交时按孤儿对账恢复，不能直接发回执；对象回执首次发送/重试前再次核验文件完整及当前删除/授权代际，缺失/损坏/已失效则暂停并对账，不伪造收到对象。
 
-缩略图、转码、播放清单/分片和缓存预览继承其来源消息引用的访问集合、授权代际及有效截止，不通过猜到衍生 objectId 获取额外权限；原引用 global/到期后，迟到处理或下载结果不能重新发布。共享原对象的其他有效引用单独核验，不把一条消息撤回误作全对象删除。T-52 对照 [媒体表与衍生合同](../IM后端架构表.md/IM后端架构表.md#media-notify-tables) 验收。
+缩略图、转码、播放清单/分片和缓存预览继承其来源消息引用的访问集合、授权代际及有效截止，不通过猜到衍生 objectId 获取额外权限；原引用 global/到期后，迟到处理或下载结果不能重新发布。共享原对象的其他有效引用单独核验，不把一条消息撤回误作全对象删除。T-52 对照 [媒体表与衍生合同](../数据库设计.md/数据库设计.md#media-notify-tables) 验收。
 
 ### 6.3、<span id="client-deletion-policy">云端清理、全局删除与浏览器边界</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -326,6 +371,8 @@ flowchart TD
 ```
 
 图中正文收讫、流进度与用户已读是不同状态；不把skip覆盖、删除墓碑或普通Web展示当完整正文已收到。快照核验失败不提交新边界；暂不能外发回执不回滚此前合法提交的本地事务，保留原意图待对账。附件先完成文件耐久及版本/授权核验，再写对象完成与回执意图，不能由正文收讫代替。只读灾备时暂不外发进度/收讫；代际改变、数据库驱逐或重建时先按登记与快照合同对账，旧意图不能改ID/代际冒充新确认。[入站完整合同](#local-receipt-flow)、[删除与浏览器边界](#client-deletion-policy)、[后端增量/快照时序](../IM后端架构表.md/IM后端架构表.md#multidevice-sync-architecture)
+
+私密焚毁首次打开须在线取得原权威截止，公开已读开关不关闭内部清理；一次查看以用户跨设备／来源唯一消费为准，官方端禁止预下载／转发／导出／备份，viewer关闭、锁屏、切账号或崩溃后不重开。viewer取已建立且完成journal保护的最早global绝对截止，即便该截止尚未来到；后来的打开或断网不重置、也不越过此截止，但到期前不提前global清理。秘密／缓存清理及Provider组合能力须独立验证，不能用普通下载链接冒充一次查看。导出制品在每次获取前重验源权限／生命周期，源cloud_only／global／失权后不从本地旧包继续展示；已明确交付外部文件的边界另行告知。见[私密阅读合同](../IM需求明细表.md/IM需求明细表.md#private-open-contract)、[后端导出合同](../IM后端架构表.md/IM后端架构表.md#privacy-export-contract)和[数据库专项](../IM功能验收表.md/IM功能验收表.md#database-audit-cases)。
 
 ## 七、<span id="frontend-experience">平台、安全、演示与体验</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
