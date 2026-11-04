@@ -98,7 +98,7 @@
 
 ## 二、<span id="frontend-checklist">前端功能验收</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-完整合同见 [总纲前端功能](../IM需求明细表.md/IM需求明细表.md#chapter-3)，共 102 项；状态和异常按 [状态合同](../IM需求明细表.md/IM需求明细表.md#chapter-4) 与 [前端架构](../IM前端架构表.md/IM前端架构表.md#frontend-scope) 验证。
+> 完整合同见 [总纲前端功能](../IM需求明细表.md/IM需求明细表.md#chapter-3)，共 102 项；状态和异常按 [状态合同](../IM需求明细表.md/IM需求明细表.md#chapter-4) 与 [前端架构](../IM前端架构表.md/IM前端架构表.md#frontend-scope) 验证。
 
 | 编号 | 验收对象 | 验收状态 | 证据/备注 |
 | --- | --- | --- | --- |
@@ -207,7 +207,7 @@
 
 ## 三、<span id="backend-checklist">后端能力验收</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-完整合同见 [总纲后端能力](../IM需求明细表.md/IM需求明细表.md#chapter-5)，实现与数据归属见 [后端架构表](../IM后端架构表.md/IM后端架构表.md)，共 36 项。
+> 完整合同见 [总纲后端能力](../IM需求明细表.md/IM需求明细表.md#chapter-5)，实现与数据归属见 [后端架构表](../IM后端架构表.md/IM后端架构表.md)，共 36 项。
 
 | 编号 | 验收对象 | 验收状态 | 证据/备注 |
 | --- | --- | --- | --- |
@@ -250,7 +250,7 @@
 
 ## 四、<span id="security-checklist">平台与安全验收</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-完整合同见 [总纲平台与安全](../IM需求明细表.md/IM需求明细表.md#chapter-6)，共 12 项。
+> 完整合同见 [总纲平台与安全](../IM需求明细表.md/IM需求明细表.md#chapter-6)，共 12 项。
 
 | 编号 | 验收对象 | 验收状态 | 证据/备注 |
 | --- | --- | --- | --- |
