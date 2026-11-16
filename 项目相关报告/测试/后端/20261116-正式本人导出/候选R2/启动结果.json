@@ -1,0 +1,58 @@
+{
+  "bootstrap": {
+    "deploymentId": "4846b144-f43e-42a5-9aba-45db2c459cd8",
+    "features": {
+      "account_metadata_export": true,
+      "admin_writes": true,
+      "after_receipt": false,
+      "announcements": true,
+      "auth_refresh": true,
+      "auth_retirement_chain": true,
+      "authoritative_sync": true,
+      "avatars": true,
+      "chat_export": false,
+      "cloud_drafts": true,
+      "durable_receipt_protocol": true,
+      "e2ee": false,
+      "email_otp": false,
+      "favorites": true,
+      "forwarding": true,
+      "groups": true,
+      "independent_journal": true,
+      "media": true,
+      "mentions": true,
+      "messages": true,
+      "pins": true,
+      "reactions": true,
+      "registration": true,
+      "remote_push": false,
+      "reports": true,
+      "role_admission": true,
+      "rtc": false,
+      "safe_restore": false,
+      "search": true,
+      "send_admission": true,
+      "strong_protection": false,
+      "sync_jetstream": true,
+      "sync_self_state": true,
+      "text_forward": false
+    },
+    "name": "JobsIM",
+    "protocolVersion": "1",
+    "restoreEpoch": "1"
+  },
+  "binarySHA256": "c3d1128f246361f10f72711a545f7a9af5892e1db9b4b915d363bbc774326d34",
+  "newOwnDomainOnly": true,
+  "sourceAndJournalIdentities": [
+    {
+      "port": 63381,
+      "systemIdentifier": "7708672205778385125",
+      "dataDir": "/Users/jobs/Library/Application Support/JobsIM/Integration/formal-export-6a6e756c432041c890f9a16168326c69/Safety/Postgres/Main"
+    },
+    {
+      "port": 63382,
+      "systemIdentifier": "7708672209776122119",
+      "dataDir": "/Users/jobs/Library/Application Support/JobsIM/Integration/formal-export-6a6e756c432041c890f9a16168326c69/Safety/Postgres/Journal"
+    }
+  ]
+}

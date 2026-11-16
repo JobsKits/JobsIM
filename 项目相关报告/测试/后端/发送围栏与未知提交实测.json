@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": [
+    "cross-process exclusive lock cancellation",
+    "kernel lock released after actual process kill",
+    "RPC canonical state identity mismatch fails closed",
+    "in-progress marker retained",
+    "proven abort and exact committed fact reconciled",
+    "actual crash retains marker then original PG transaction abort proves cleanup",
+    "foreign database marker retained",
+    "backup and restore refuse unresolved markers",
+    "eight independent per-role PostgreSQL databases: old membership admission rejected and new explicit intent succeeds"
+  ],
+  "scope": "MacOS local filesystem/real PostgreSQL; Windows/Linux native behavior not executed",
+  "independentRoleDatabaseCount": 8
+}

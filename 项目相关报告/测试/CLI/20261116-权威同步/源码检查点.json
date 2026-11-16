@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-16",
+  "status": "source-only; uncompiled and unexecuted",
+  "localSchema": 4,
+  "protocolSchema": "1",
+  "newTopLevelTestMethods": [
+    "TestSyncSchemaSeparatesPhysicalUUIDFromLegacyAuthAndSurvivesReopen",
+    "TestSyncFullManifestOriginalBytesAndFirstChangesBeforeAtomicInstall",
+    "TestSyncUnknownSnapshotPreservesOriginalRequestAcrossReopen",
+    "TestSyncMissingOrCorruptPageRejectsWholeBoundary",
+    "TestSyncFinalWatermarkPermissionAndLocalGuardBlockLateInstall",
+    "TestSyncSameClientIDBadResultAnd503NeverAckOrBlockVerifiedGlobal",
+    "TestSyncCompleteReadonlyOriginalProofAndHashCAS",
+    "TestSyncGlobalOverridesHigherCacheVersionAndCannotRevive",
+    "TestSyncUnknownRetainsOnlyVerifiedOrdinaryHistory",
+    "TestSyncCapabilityLossNeverFallsBackToHistoryOrCreate",
+    "TestSyncProtocolRejectsCounterGapUnknownAndWrongOriginalDigest",
+    "TestSyncBodyAndCursorRollbackTogetherOnSQLFailure",
+    "TestSyncCrossDeviceCleanupResumesWithoutNetworkAndQuarantinesUnknownFile",
+    "TestSyncPhysicalGenerationMissingAfterRegistrationFailsClosed"
+  ],
+  "newTestMethodCount": 14,
+  "gofmt": {
+    "parsed": true,
+    "listOutputEmpty": true,
+    "isTypeCheck": false
+  },
+  "executed": {
+    "goBuild": false,
+    "goTest": false,
+    "goVet": false,
+    "testRunner": false,
+    "realAPI": false,
+    "backupOrRestore": false,
+    "serviceRestart": false
+  },
+  "historicalInputArchive": {
+    "count": 24,
+    "allByteHashesMatch": true
+  },
+  "oldBinaryUpdated": false,
+  "newDependencies": false,
+  "boundaries": [
+    "No qualified ACK or after_receipt",
+    "No server read/cloud draft/preferences acceptance",
+    "Mac DPK entitlement remains unresolved",
+    "Cross-SQLite cleanup is durable per-database, not atomic across databases",
+    "Unproven old namespace/foreign epoch stores remain quarantined",
+    "Unresolved Outbox is never acknowledged by clientMsgId or erased by guessed global association",
+    "Explicit external downloads are not remote-erased"
+  ],
+  "sourceFileCount": 25
+}

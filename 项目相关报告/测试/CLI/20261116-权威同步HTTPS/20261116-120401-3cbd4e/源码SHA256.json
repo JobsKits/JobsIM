@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "path": "测试/CLI/sync-https.py/sync-https.py",
+      "sha256": "cae545b8dda07b97f32ec07685d90c9cd1467eb90063ab629f916480834947d0",
+      "snapshot": "源码快照/测试/CLI/sync-https.py/sync-https.py"
+    },
+    {
+      "path": "测试/CLI/sync-https.py/README.md",
+      "sha256": "8ff9def4e118da0646a8b934d6d07d13021838a82ab5766f370121a7ecba3b07",
+      "snapshot": "源码快照/测试/CLI/sync-https.py/README.md"
+    },
+    {
+      "path": "代码/前端/CLI/README.md",
+      "sha256": "35e72b8b5380f29da0b78e0d7868718eeddfcf7511402849ab2d5d673e9d0c96",
+      "snapshot": "源码快照/代码/前端/CLI/README.md"
+    },
+    {
+      "path": "代码/前端/CLI/代码地图/README.md",
+      "sha256": "090d4a8c9d5cc5197d91b5134f0bd4b16a0a1f2513bc956542b1bb163be13870",
+      "snapshot": "源码快照/代码/前端/CLI/代码地图/README.md"
+    },
+    {
+      "path": "测试/CLI/README.md",
+      "sha256": "afc8a9e3220faf1488acc5341f9dbba25fe4c20c3f448778215a52d471f36542",
+      "snapshot": "源码快照/测试/CLI/README.md"
+    }
+  ],
+  "compiledGoInputsMatch": 19,
+  "compiledSourceManifest": "../../20261116-权威同步编译回归/20261116-113743-192d48/源码SHA256.json"
+}

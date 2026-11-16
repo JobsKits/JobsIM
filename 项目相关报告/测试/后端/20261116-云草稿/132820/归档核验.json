@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-11-16T06:06:14.150333+00:00",
+  "finalSourceInputsAndArchiveVerified": 96,
+  "e69ProductionInputsAndArchiveVerified": 75,
+  "onlyProductionDeltaIsCapabilityFlag": true,
+  "secretValuesAndPrivateKeyPEMAbsent": true,
+  "rawPreparedHostFailureRetained": true,
+  "rawPreparedReadOnlyResumeRetained": true,
+  "liveRealmHeldForParentClientTesting": true,
+  "phaseBAndFixedDomainsUntouched": true,
+  "links": {
+    "项目相关报告/测试/后端/20261116-云草稿/README.md": {
+      "existingLocalLinks": 3,
+      "uniqueAnchors": 4
+    },
+    "项目相关报告/测试/后端/20261116-云草稿/132820/README.md": {
+      "existingLocalLinks": 29,
+      "uniqueAnchors": 6
+    },
+    "测试/后端/接口/cloud_drafts.py/README.md": {
+      "existingLocalLinks": 5,
+      "uniqueAnchors": 4
+    },
+    "代码/后端/Go/接口契约/README.md": {
+      "existingLocalLinks": 4,
+      "uniqueAnchors": 12
+    },
+    "代码/后端/Go/README.md": {
+      "existingLocalLinks": 22,
+      "uniqueAnchors": 7
+    },
+    "代码/后端/Go/代码地图/README.md": {
+      "existingLocalLinks": 71,
+      "uniqueAnchors": 3
+    }
+  }
+}

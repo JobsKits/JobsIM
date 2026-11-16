@@ -1,0 +1,20 @@
+2026-11-15T16:59:04.144938+00:00 START authorized fixed-binary isolated restore; base seed and live 44443 domain read-only
+2026-11-15T16:59:05.144116+00:00 PASS new databases on business cluster and separate journal physical cluster; fresh CA/SKI/AKI, state, token and broker store
+2026-11-15T16:59:06.510647+00:00 PASS owned strict-HTTPS ten-role startup epoch=1
+2026-11-15T16:59:08.620614+00:00 PASS real encrypted backup before recall/edit; recovery key stored separately
+2026-11-15T16:59:08.913349+00:00 PASS exact owned application PID stopped; NATS and PostgreSQL untouched
+2026-11-15T16:59:11.249383+00:00 PASS owned strict-HTTPS ten-role startup epoch=2
+2026-11-15T16:59:11.587911+00:00 PASS new epoch origin reached target through real JetStream before owner HTTP compensation
+2026-11-15T16:59:12.166303+00:00 PASS new message origin reached target through real JetStream before delta HTTP replay
+2026-11-15T16:59:12.306267+00:00 PASS exact owned application PID stopped; NATS and PostgreSQL untouched
+2026-11-15T16:59:12.307054+00:00 FAIL isolated restore suite; exception=ConnectionResetError; private details suppressed
+2026-11-15T17:05:00.795008+00:00 START authorized fixed-binary isolated restore; base seed and live 44443 domain read-only
+2026-11-15T17:05:02.060864+00:00 RESUME owned post-restore verification only; original backup/restore, broker PID and persisted store retained
+2026-11-15T17:05:03.686864+00:00 PASS owned strict-HTTPS ten-role startup epoch=2
+2026-11-15T17:05:06.243750+00:00 PASS new login origin reached target through real JetStream before owner HTTP compensation
+2026-11-15T17:05:08.325232+00:00 PASS new message origin reached target through real JetStream before delta HTTP replay
+2026-11-15T17:05:09.388828+00:00 PASS consumer processed or terminated re-delivered old epoch through its real acknowledgement floor
+2026-11-15T17:05:11.574094+00:00 PASS old AT, boundary and snapshot rejection; journal deletion/edit safety; E1 creation tuple, E2 refs, full manifest and real E2 delta
+2026-11-15T17:05:12.552626+00:00 PASS exact owned application PID stopped; NATS and PostgreSQL untouched
+2026-11-15T17:05:12.572034+00:00 PASS restore suite http=22 semantic=56
+2026-11-15T17:08:01.189003+00:00 READBACK PASS original E1 wire/MsgId preserved; PubAck duplicate=false seq=34; consumer ackFloor=34; target old-origin count=0; E2 head sum=8

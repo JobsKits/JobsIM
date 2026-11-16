@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:52.292539+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:52.466827+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReadPointsNumericCreationScanAndPagination"}
+{"Time":"2026-11-16T12:11:52.466906+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReadPointsNumericCreationScanAndPagination","Output":"=== RUN   TestReadPointsNumericCreationScanAndPagination\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:52.594088+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReadPointsNumericCreationScanAndPagination","Output":"--- PASS: TestReadPointsNumericCreationScanAndPagination (0.13s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:52.594149+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReadPointsNumericCreationScanAndPagination","Elapsed":0.13}
+{"Time":"2026-11-16T12:11:52.59418+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:52.594329+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.301s\n"}
+{"Time":"2026-11-16T12:11:52.594368+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.302}

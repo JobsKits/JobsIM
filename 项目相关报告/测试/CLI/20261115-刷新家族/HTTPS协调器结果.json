@@ -1,0 +1,13 @@
+{
+  "R0CommittedResponseUnreadR1NeverPostedR2CompleteClosure": true,
+  "accessExpiryFixture": "only current owned-family SQL access deadline, not fifteen minutes wall-clock waiting",
+  "independentFamiliesRemainAuthorized": true,
+  "lateR1Rejected": true,
+  "noSecretsInOrdinarySQLite": true,
+  "realCoordinatorAgainstPostgreSQL": true,
+  "scope": "real HTTPS coordinator plus explicit SQL clock fixture; not full I/three-system secure storage acceptance",
+  "secureStoreForThisCoordinatorTest": "bounded in-memory test double; native system helper has separate evidence",
+  "sixConcurrentCallsOneRefresh": true,
+  "status": "passed",
+  "strictHTTPS": true
+}

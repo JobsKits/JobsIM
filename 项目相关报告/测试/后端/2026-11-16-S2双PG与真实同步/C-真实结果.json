@@ -1,0 +1,45 @@
+{
+  "group": "c",
+  "status": "passed",
+  "httpChecks": 22,
+  "semanticAssertions": 7,
+  "verifiedPages": 0,
+  "elapsedSeconds": 0.26,
+  "checkedAt": "2026-11-16T04:28:48.177233+00:00",
+  "binarySHA256": "25de7285297c3773ee09cb90bf00b3e92f8c9319153befd7878cc274ea954001",
+  "failure": null,
+  "assertions": [
+    {
+      "assertion": "default own read is exact zero without a persisted cursor",
+      "passed": true
+    },
+    {
+      "assertion": "observing later message cannot cross an unobserved predecessor",
+      "passed": true
+    },
+    {
+      "assertion": "exact unread removes a sparse observation but does not count own messages",
+      "passed": true
+    },
+    {
+      "assertion": "stored later observation joins the now-complete prefix",
+      "passed": true
+    },
+    {
+      "assertion": "compacted prefix keeps the remaining eligible unread exact",
+      "passed": true
+    },
+    {
+      "assertion": "two real owner-RPC writers merge observations without losing a committed read",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    }
+  ],
+  "strictHTTPS": true,
+  "realPhysicalPGClusters": 2,
+  "qualifiedAck": false,
+  "draftsActivated": false
+}

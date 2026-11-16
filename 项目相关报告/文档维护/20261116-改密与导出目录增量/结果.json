@@ -1,0 +1,31 @@
+{
+  "add": [
+    "测试/后端/接口/password_change.mjs/README.md",
+    "项目相关报告/测试/后端/20261116-本人主动改密/README.md",
+    "项目相关报告/测试/CLI/20261116-正式本人导出/README.md",
+    "项目相关报告/测试/前端/iOS/20261116-正式本人导出/README.md",
+    "项目相关报告/测试/前端/Android/20261116-正式本人导出/README.md"
+  ],
+  "documents": 150,
+  "before": {
+    "stage": "3337bd1702f61745905b883d2c13ed7dacf1a6307d0e94b0c95b0b9ff6e669b5",
+    "flags": "bdf878bdd84ca7c377cb530ff7370465a7227bf030030fd50e5d330859846642",
+    "staged": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "after": {
+    "stage": "3337bd1702f61745905b883d2c13ed7dacf1a6307d0e94b0c95b0b9ff6e669b5",
+    "flags": "bdf878bdd84ca7c377cb530ff7370465a7227bf030030fd50e5d330859846642",
+    "staged": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "indexMeaningUnchanged": true,
+  "runs": [
+    {
+      "mode": "install",
+      "exitCode": 0
+    },
+    {
+      "mode": "verify",
+      "exitCode": 0
+    }
+  ]
+}

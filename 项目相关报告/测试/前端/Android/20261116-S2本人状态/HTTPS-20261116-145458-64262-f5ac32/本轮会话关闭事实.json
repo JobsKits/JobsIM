@@ -1,0 +1,68 @@
+[
+  {
+    "runId": "29db0f69-2450-4a3d-8f3a-94ea934ae5e5",
+    "username": "s2_android_a_d86674c52f1b",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "requestId": "e5421eb1-df6b-4107-8c3d-df88d5e81e93",
+    "closed": true,
+    "userId": "138e2246-9715-45d6-99d0-0db299f57f47",
+    "familyId": "d704f64b-7e19-4482-9f4e-bebba69403d0",
+    "deviceId": "bc2ff318-b915-47e6-8c31-ae482b8cc9f4"
+  },
+  {
+    "runId": "29db0f69-2450-4a3d-8f3a-94ea934ae5e5",
+    "username": "s2_android_b_d86674c52f1b",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "requestId": "dbe54177-2b00-43e2-9e29-eb8fb56dbe9f",
+    "closed": true,
+    "userId": "e11fb6b4-e387-4575-9d40-5ee6b7f68123",
+    "familyId": "c79f5d2c-ba06-4416-b66c-06af5654ef59",
+    "deviceId": "32e511f3-995a-4b8e-950e-ffedc9dee470"
+  },
+  {
+    "runId": "29db0f69-2450-4a3d-8f3a-94ea934ae5e5",
+    "username": "s2_android_a_3499e2c972fa",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "requestId": "b6d23da5-da7b-401f-a793-7bb2a6553e10",
+    "closed": true,
+    "userId": "511df72e-6bd8-4f40-b412-10d3d95fb842",
+    "familyId": "6a869e3b-1dbf-426b-869d-92f105f5f56f",
+    "deviceId": "20336746-7f87-4e54-92cc-20043c5831c9"
+  },
+  {
+    "runId": "29db0f69-2450-4a3d-8f3a-94ea934ae5e5",
+    "username": "s2_android_b_3499e2c972fa",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "requestId": "cf9e863b-5800-4105-aa99-28d2d06b5063",
+    "closed": true,
+    "userId": "1a143f0a-8d21-44c0-b673-93ed731b7aba",
+    "familyId": "e295b7b5-f000-4313-b3d9-ef7cb8a6ba36",
+    "deviceId": "4a8d943c-2514-4756-82a5-e7b3996b43fa"
+  },
+  {
+    "runId": "29db0f69-2450-4a3d-8f3a-94ea934ae5e5",
+    "username": "s2_android_a_3f269b942022",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "requestId": "14551b2e-f587-4682-aa27-4a68443d87a4",
+    "closed": true,
+    "userId": "da83ecf2-b1ee-4f96-84ce-e734bb983461",
+    "familyId": "cf4adcb0-1fc9-48bb-ae63-a8be59bbd8ca",
+    "deviceId": "d68c2ada-dba8-47ad-a453-5cd8d7462bf9"
+  },
+  {
+    "runId": "29db0f69-2450-4a3d-8f3a-94ea934ae5e5",
+    "username": "s2_android_b_3f269b942022",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "requestId": "b1d142d7-059b-466a-863d-8e6e40f32d0c",
+    "closed": true,
+    "userId": "61ac2aca-a7ef-4fa1-ba9d-17e228f39f21",
+    "familyId": "4755c68c-9aaf-4754-9c4f-576327470926",
+    "deviceId": "f379fc26-7394-457e-99fb-92a7300ada72"
+  }
+]

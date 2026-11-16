@@ -1,0 +1,34 @@
+{
+  "startedAt": "2026-11-16T09:46:38.043Z",
+  "finishedAt": "2026-11-16T09:47:12.640Z",
+  "status": "passed",
+  "checks": [
+    "private candidates validate owner/epoch/kind/channel/UUID; readonly or absent conversation and retired-only intents are discoverable",
+    "retired-only candidate without a personal projection opens exact authorized draft GET without fabricating a conversation or reading source",
+    "unknown original result uses only original-body draft-results, with zero PUT/DELETE or proof/nonce replacement",
+    "explicit copy revalidates the displayed version/text and copies only current GET ownedText or current GET recovery text into an injected clipboard sink",
+    "late remote text/version change does not silently change the user-selected copy",
+    "confirmed clear captures the shown exact large version, refuses stale CAS, and preserves another conversation's entire local input/Space",
+    "unknown GET and capability withdrawal show reload/error without restoring text from private metadata or original bodies",
+    "a late exact GET from the previous family/namespace cannot publish into the remounted empty current context",
+    "an actual Web Locks queued clear is cancelled after family invalidation before any creating write",
+    "ten languages inherit light/dark/resolved-system tokens at mobile width without horizontal overflow; three current-text screenshots retained"
+  ],
+  "sourceSHA256": {
+    "代码/前端/Web/Src/SelfDraftRecovery.tsx": "bb74321aaccee052b8be88f1f4506f0ac28b236d92981c8f8f5c336beda1aec0",
+    "代码/前端/Web/Src/SelfStateLabels.ts": "f8d6fa451c3409a45f383f76665a8354a9b9ef744ddba20fefddaa610e8cd92b",
+    "代码/前端/Web/Src/SelfStateActions.ts": "37bed10ac5c1cdc1d82ed92ec0be60ec8102b80ab6f9a7ba2021a4c8cd629518",
+    "代码/前端/Web/Src/SelfStateProtocol.ts": "ff06896bb7326fa730a0befad1edbbe9d5dff6fa6b7f3aef11c39c14aa2cd00a",
+    "代码/前端/Web/Src/SyncStore.ts": "ee58c03c638b25ebc6a015c046b1f2d23af948e81d8bc079735f5bcdb0dd72b9",
+    "代码/前端/Web/Src/App.tsx": "e105c048fc4fb906a04b53eaca70f2bd4e0809ae53aa3b8915fe21e098305a43",
+    "代码/前端/Web/Src/styles.css": "37c5cfd3d9bed3c5a8238d08622246d3284fedced9ca9ab3a6dbc81d3edb04d3",
+    "测试/前端/Web/draft-recovery.cjs/draft-recovery.cjs": "59b3aa8cd7b6bdcdac8d9fe5e93fb1351ba945887f9cfe67a9d72523696fb2bd"
+  },
+  "sourceUnchanged": true,
+  "scope": "Real Chrome/React/IndexedDB/Web Locks; injected draft request function and clipboard sink. Private Vite has no API proxy; all browser API routes aborted. No E2/live server/device storage attestation.",
+  "blockedAPIAttempts": [
+    "GET /api/bootstrap",
+    "GET /api/bootstrap"
+  ],
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/DraftRecovery/20261116-174629/jobsim-draft-recovery-hk6jyW"
+}

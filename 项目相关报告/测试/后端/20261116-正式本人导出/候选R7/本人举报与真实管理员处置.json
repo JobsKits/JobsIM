@@ -1,0 +1,24 @@
+{
+  "status": "failed",
+  "failure": "formal manifest includes only the reporter's current own reason and public status",
+  "httpChecks": 12,
+  "semanticAssertions": 3,
+  "binarySHA256": "a48e0ac3e42cee8f9d669a35df83cc4c3eb3609677ca11b2696875421bf1c3ea",
+  "scriptSHA256": "022c066886ee29650a75b45798c4a04e38a1637301de0de15e32eb64ba111f5f",
+  "administratorBootstrap": "owned realm real operator and TOTP; no SQL privilege grant",
+  "checkedAt": "2026-11-16T09:30:24.583723+00:00",
+  "assertions": [
+    {
+      "assertion": "report submission original nonce retains one current source identity",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    }
+  ]
+}

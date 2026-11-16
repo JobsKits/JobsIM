@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-16T10:07:54.144520+00:00",
+  "simulator": "870CE7EA-610E-4F2F-A484-614BDA16576B",
+  "getAppContainerExitCode": 148,
+  "devicePlistExists": false,
+  "freeBytes": 27704741888,
+  "noAction": "No erase/delete/shutdown/recreate/clean was performed by this agent in this interval",
+  "registrationBoundary": "Two selected native methods failed in authenticate; do not infer no account/family was created, do not claim closure"
+}

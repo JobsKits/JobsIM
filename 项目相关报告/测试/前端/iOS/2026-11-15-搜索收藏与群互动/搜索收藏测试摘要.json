@@ -1,0 +1,37 @@
+{
+  "phase": "search/favorites and pure original-result lookup",
+  "status": "passed",
+  "testMethods": 5,
+  "apiAndDataTests": 4,
+  "nativeUITests": 1,
+  "resultBundle": "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/build/Results/Test-2026.11.15_11-40-26-135dbeb2.xcresult",
+  "newLocalizedKeys": 2,
+  "localizedKeyCount": 123,
+  "languages": 10,
+  "concreteViewControllers": 9,
+  "checks": [
+    "strict CA HTTPS on isolated 20443",
+    "two-page owner-only favorites",
+    "source revalidation denies removed member",
+    "frozen still-valid snapshot cannot create on lookup",
+    "existing original result closes local Outbox",
+    "native 50+5 favorites pagination",
+    "source conversation outside public first 100",
+    "native server search and exact visible source"
+  ],
+  "sourceSHA256": {
+    "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessagePage.swift": "f6f627cdf3bd3c2fe5bedf6295c8906a2b39fa487d737f2d5f1753dfe5853cc1",
+    "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessageListService.swift": "eeca00262e5017e187b4707066ab56ea9a793c7a64ace24f407df66e08f9fa6b",
+    "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift": "415bccd2889af2dce53c5059aed0900d43a607807733f83dba813b3dbbee7346",
+    "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift": "622a5f04b7e61604dbab9db0834eecbe8409c2a504c59b3c478e57b5427877d0",
+    "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift": "06d0ad5e7c608b89b1d845ec4f3715cb441a4b364f5f20711d39a32b41a8a05a",
+    "测试/前端/iOS/IMMessageListTests.swift": "6216eae76ab5de080c48a8b345cefe50564e545855159042c159421ad784f7e3",
+    "测试/前端/iOS/UI/IMMessageListUITests.swift": "2f0f5b095bcf4a2651af83a3097b402e675bc2d3be88a910703a09131416b095"
+  },
+  "notClaimed": [
+    "old 30/4 rerun",
+    "physical device",
+    "complete I",
+    "all themes or iPad for this increment"
+  ]
+}

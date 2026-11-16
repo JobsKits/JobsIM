@@ -1,0 +1,36 @@
+{
+  "stoppedAt": "2026-11-16T04:31:38.579832+00:00",
+  "order": [
+    {
+      "component": "app",
+      "exactCommandVerified": true,
+      "SIGTERM": true,
+      "stopped": true
+    },
+    {
+      "component": "broker",
+      "exactCommandVerified": true,
+      "SIGTERM": true,
+      "stopped": true
+    },
+    {
+      "component": "journalPG",
+      "exactPIDDataDirectoryPortVerified": true,
+      "pgCtlFastStop": true,
+      "stopped": true,
+      "log": "撤收-journalPG.log",
+      "logSHA256": "ca19178a35ab4153b75b494963b66ce8243e1b94c173107c87b44d09db23652d"
+    },
+    {
+      "component": "mainPG",
+      "exactPIDDataDirectoryPortVerified": true,
+      "pgCtlFastStop": true,
+      "stopped": true,
+      "log": "撤收-mainPG.log",
+      "logSHA256": "ca19178a35ab4153b75b494963b66ce8243e1b94c173107c87b44d09db23652d"
+    }
+  ],
+  "dataStateSecretsAndLogsRetained": true,
+  "fixedDomainsTouched": false,
+  "freeBytesAfter": 12191838208
+}

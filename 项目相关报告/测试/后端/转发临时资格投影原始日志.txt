@@ -1,0 +1,6 @@
+=== RUN   TestForwardTemporaryProjectionRecoversAtSameVersion
+--- PASS: TestForwardTemporaryProjectionRecoversAtSameVersion (0.25s)
+PASS
+ok  	jobsim/backend	0.635s
+?   	jobsim/backend/cmd/jobsimd	[no test files]
+?   	jobsim/backend/cmd/jobsimops	[no test files]

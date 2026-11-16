@@ -1,0 +1,16 @@
+[
+  {
+    "path": "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+    "beforeSHA256": "3217f5611c52946eeba4299b7ae7762f7640c6e20bf9310a71968bfbbe2ca530",
+    "afterSHA256": "513bd91e78fc6a14a0ecc3779546ce82ba89c7adabf191fff23d568051ec6ff0",
+    "defaultOnly": true,
+    "envPriority": "JOBSIM_AUTH_REPORT unchanged"
+  },
+  {
+    "path": "测试/前端/Web/auth-https.cjs/auth-https.cjs",
+    "beforeSHA256": "740a773bf4626e2da3f772c7124c05559cfd566e0476b64e7ef053383f4c3daf",
+    "afterSHA256": "d72e8b57309796d1a7d84638e357790e5260dbf3ec8e2ca309b4a07ec7238bd1",
+    "defaultOnly": true,
+    "envPriority": "JOBSIM_AUTH_REPORT unchanged"
+  }
+]

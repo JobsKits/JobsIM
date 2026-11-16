@@ -1,0 +1,31 @@
+{
+  "command": [
+    "xcodebuild",
+    "-workspace",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/JobsIM.xcworkspace",
+    "-scheme",
+    "JobsIM",
+    "-destination",
+    "platform=iOS Simulator,id=927610A5-305F-41F5-BA69-7DA273F4C47E",
+    "-derivedDataPath",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData",
+    "-jobs",
+    "1",
+    "ARCHS=arm64",
+    "ONLY_ACTIVE_ARCH=YES",
+    "CODE_SIGN_IDENTITY=-",
+    "SWIFT_ENABLE_BATCH_MODE=NO",
+    "SWIFT_USE_INTEGRATED_DRIVER=NO",
+    "SWIFT_EXEC=/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthoritativeSync/Tools/swiftc-j1",
+    "CONFIGURATION_BUILD_DIR=/Users/jobs/Library/Application Support/JobsIM/Build/iOS/SelfState/Products/Debug-iphonesimulator",
+    "build-for-testing"
+  ],
+  "exitCode": 0,
+  "stopped": null,
+  "seconds": 392.737,
+  "minFreeBytes": 8176988160,
+  "inputFiles": 80,
+  "sourceStable": true,
+  "oldS1AppUnchanged": true,
+  "logSHA256": "fabed57906bc5e353abeb3c3a942a291b1de1a093de7e1e31cdba990f506ab23"
+}

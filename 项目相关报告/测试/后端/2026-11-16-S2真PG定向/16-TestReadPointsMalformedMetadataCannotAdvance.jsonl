@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:53.103752+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:53.254568+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReadPointsMalformedMetadataCannotAdvance"}
+{"Time":"2026-11-16T12:11:53.254631+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReadPointsMalformedMetadataCannotAdvance","Output":"=== RUN   TestReadPointsMalformedMetadataCannotAdvance\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:53.368109+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReadPointsMalformedMetadataCannotAdvance","Output":"--- PASS: TestReadPointsMalformedMetadataCannotAdvance (0.11s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:53.368136+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReadPointsMalformedMetadataCannotAdvance","Elapsed":0.11}
+{"Time":"2026-11-16T12:11:53.368173+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:53.368772+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.265s\n"}
+{"Time":"2026-11-16T12:11:53.368798+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.265}

@@ -1,0 +1,49 @@
+{
+  "scope": "Navigation pass initially normalized relative README links under Vendor; restored exact pre-pass per-file snapshots immediately. No third-party source changed; current bytes equal pre-pass. Vendor excluded from all remaining walkers.",
+  "restored": [
+    {
+      "path": "代码/前端/iOS/Vendor/ESPullToRefresh-2.9.3/README.md",
+      "sha256": "ee43f3d6bfa8047a65bf8ea10ffc597aec3c8226d26c20345a8325257daf0186"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/GRDB.swift-7.11.1/README.md",
+      "sha256": "edf1f711627c07e48c453ad45530be50f3967be811dd0df314a17893beb3864f"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/RxSwift-6.9.0/README.md",
+      "sha256": "8c266ce1e6100abaa8332b34b48cc38367ae4914aa174e8661466e122779d354"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "sha256": "453fc4b008ba4374d59fcb003b0926ed71ed3b21626d9793c727059934308508"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/YTKNetwork-3.0.6/README.md",
+      "sha256": "ce3a2bf7ea560df31dd2a95e9289bbb826505b390766b1aacf8092c8b8b1e29b"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "sha256": "08a7d4e839bf4c1fac081268defb41c59b6d79ff73810b8690665bf3b16cec24"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/lottie-ios-4.6.1/README.md",
+      "sha256": "c037e965e3bd61be5ddbb408825a5763cac3aaeb8cf9a6e04860a43ad198b8a3"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "sha256": "e95659f753187f0ddd55bdea3cf80984eb285780e0c4494d4edab8d2c1c3d244"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/RxCocoa-6.9.0/README.md",
+      "sha256": "8c266ce1e6100abaa8332b34b48cc38367ae4914aa174e8661466e122779d354"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/RxRelay-6.9.0/README.md",
+      "sha256": "8c266ce1e6100abaa8332b34b48cc38367ae4914aa174e8661466e122779d354"
+    },
+    {
+      "path": "代码/前端/iOS/Vendor/GRDB.swift-7.11.1/Documentation/DemoApps/GRDBDemo/README.md",
+      "sha256": "a7ee7b2fd717d4cdea56257a1cf82ae652a9109221572652705d1be081e4de48"
+    }
+  ]
+}

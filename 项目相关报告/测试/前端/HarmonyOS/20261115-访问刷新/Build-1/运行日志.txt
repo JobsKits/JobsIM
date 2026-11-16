@@ -1,0 +1,19 @@
+ASCII源码快照=/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dtZQQi
+[33mohpm WARN: [93m[1mSource code dependencies in project-level "oh-package.json5" are as follows, which could lead to circular dependencies reference.[22m[39m[33m
+	 - "@ohos/hypium@file:./MirrorHypium"
+[39m[39m
+[32minstall completed in 0s 44ms[39m
+> hvigor [91mERROR: [31m00303168 Configuration Error
+Error Message: SDK component missing.
+
+* Try the following:
+  > Please verify the integrity of your SDK.
+  > Please update the SDK at the download link below.
+  > More info: https://developer.huawei.com/consumer/cn/download
+[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 871 ms [39m

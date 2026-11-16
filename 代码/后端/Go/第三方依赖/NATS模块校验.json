@@ -1,0 +1,42 @@
+[
+  {
+    "module": "github.com/nats-io/nats.go",
+    "version": "v1.55.0",
+    "officialSumDB": "https://sum.golang.org/lookup/github.com/nats-io/nats.go@v1.55.0",
+    "hashes": [
+      "github.com/nats-io/nats.go v1.55.0 h1:Ng8QKHdvdHIWoaiq0+d/aH1BWkxvcJxWJ0Y/9BPKx3M=",
+      "github.com/nats-io/nats.go v1.55.0/go.mod h1:y+DZoD1oBOYfZTU681eTUiUjI0vbqYGixNVFHcjHJ0k="
+    ],
+    "archiveSHA256": "18e655f24519136d879af6017897a33e7d472174b3e4516306627e3e3acbff5d"
+  },
+  {
+    "module": "github.com/klauspost/compress",
+    "version": "v1.20.0",
+    "officialSumDB": "https://sum.golang.org/lookup/github.com/klauspost/compress@v1.20.0",
+    "hashes": [
+      "github.com/klauspost/compress v1.20.0 h1:a3C1ke2ohxFymNlb2HWAHjDeKCI90scRskErZkR0ezA=",
+      "github.com/klauspost/compress v1.20.0/go.mod h1:LUdAzn7YLVvxLpc7y3V1m40wESHTgc1422pwwBSKYuI="
+    ],
+    "archiveSHA256": "a04654d049a3caf33bcb60ee45efd8ccecabb93eb8be88045ed0003b0ecb5773"
+  },
+  {
+    "module": "github.com/nats-io/nkeys",
+    "version": "v0.4.16",
+    "officialSumDB": "https://sum.golang.org/lookup/github.com/nats-io/nkeys@v0.4.16",
+    "hashes": [
+      "github.com/nats-io/nkeys v0.4.16 h1:rd5oAuLOb8mnAycB0xleuEBNS1pVVnN0fv/FF34Eypg=",
+      "github.com/nats-io/nkeys v0.4.16/go.mod h1:llLgWoI0o4z/Q57q2R1kHfmocyhGV6VG/U18Glg1Afs="
+    ],
+    "archiveSHA256": "622f43893c8136fae2ee5a3b4375e5e6812ad564fde63fc80b806c1438428a31"
+  },
+  {
+    "module": "github.com/nats-io/nuid",
+    "version": "v1.0.1",
+    "officialSumDB": "https://sum.golang.org/lookup/github.com/nats-io/nuid@v1.0.1",
+    "hashes": [
+      "github.com/nats-io/nuid v1.0.1 h1:5iA8DT8V7q8WK2EScv2padNa/rTESc1KdnPw4TC2paw=",
+      "github.com/nats-io/nuid v1.0.1/go.mod h1:19wcPz3Ph3q0Jbyiqsd0kePYG7A95tJPxeL+1OSON2c="
+    ],
+    "archiveSHA256": "809d144fbd16f91651a433e28d2008d339e19dafc450c5995e2ed92f1c17c1f3"
+  }
+]

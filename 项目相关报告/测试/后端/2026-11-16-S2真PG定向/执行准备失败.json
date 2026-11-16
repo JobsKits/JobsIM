@@ -1,0 +1,8 @@
+{
+  "stage": "pre-execution source manifest assertion",
+  "exitCode": 1,
+  "observed": "AssertionError before any Go or SQL test",
+  "cause": "expected 69 production Go files but initial collector used top-level glob (67), omitting two cmd main.go files",
+  "repair": "use recursive rglob for production inputs; no product/test source change",
+  "rerun": "compile plus two guard tests"
+}

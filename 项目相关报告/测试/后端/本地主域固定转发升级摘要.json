@@ -1,0 +1,130 @@
+{
+  "status": "primary-upgraded-safety-retained-by-protection",
+  "testedAtUTC": "2026-11-15T06:41:06.760954+00:00",
+  "fixedBinarySHA256": "bb1e9c527dedf0aee3a5f66b548b0a361801fe183f2c980d2d42e51e88aac79a",
+  "sourceServerRebuilt": false,
+  "primary": {
+    "oldPID": 61473,
+    "newPID": 83470,
+    "oldBinarySHA256": "6830750b31368ba206a8e933854400cb5ac53d1a99bb7308de972b52b7055c1d",
+    "deploymentId": "db7781a8-91c7-42a3-84c2-3d5771e53570",
+    "restoreEpoch": "1",
+    "forwarding": true,
+    "textForward": false,
+    "healthyRoles": [
+      "identity",
+      "directory",
+      "conversation",
+      "message",
+      "media",
+      "control",
+      "journal",
+      "governance",
+      "gateway"
+    ],
+    "originalSessionAndMessagePreserved": true,
+    "newOrdinaryMessageAccepted": true,
+    "newForwardAndOriginalResultVerified": true,
+    "probeSessionLoggedOut": true,
+    "CAAndStatePathsUnchanged": true
+  },
+  "primaryBackup": {
+    "archive": "/Users/jobs/Library/Caches/JobsIM/Integration/run-ld8td0a0/Upgrades/Forward-20261115-142817-90d22a44/Backups/primary-final.jimbackup",
+    "archiveSHA256": "a2c0b58718bdeb3a88d7a1691efee57746d78a9dddcc5f8ad9caaf0b9b01520b",
+    "journalDump": "/Users/jobs/Library/Caches/JobsIM/Integration/run-ld8td0a0/Upgrades/Forward-20261115-142817-90d22a44/Backups/primary-final-independent-journal.dump",
+    "journalSHA256": "1d4b8fd2cb165f1ac59f0e4e15fbff60ed0d38fe676c2b8678ae7d59842cc945",
+    "separateRecoveryKeyPath": "/Users/jobs/Library/Caches/JobsIM/Integration/run-ld8td0a0/Upgrades/Forward-20261115-142817-90d22a44/SeparateKeys/primary-final.recovery.key",
+    "journalArchiveListVerified": true
+  },
+  "privateRecoveryRoot": "/Users/jobs/Library/Caches/JobsIM/Integration/run-ld8td0a0/Upgrades/Forward-20261115-142817-90d22a44",
+  "primaryPrivateEnvironmentOnlyServerPIDChanged": true,
+  "primaryArchiveAuthenticatedReadback": {
+    "authenticatedArchive": true,
+    "assetSHA256Verified": true,
+    "databaseDumpTOCListed": true,
+    "sourceRestoreEpoch": "1",
+    "ownerCoverage": [
+      "control",
+      "conversation",
+      "directory",
+      "governance",
+      "identity",
+      "media",
+      "message"
+    ]
+  },
+  "safety": {
+    "pid": 61488,
+    "upgraded": false,
+    "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+    "restoreEpoch": "2",
+    "currentOwnerBaselines": [
+      {
+        "schema": "auth",
+        "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+        "restoreEpoch": "2"
+      },
+      {
+        "schema": "directory",
+        "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+        "restoreEpoch": "2"
+      },
+      {
+        "schema": "conversation",
+        "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+        "restoreEpoch": "2"
+      },
+      {
+        "schema": "message",
+        "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+        "restoreEpoch": "2"
+      },
+      {
+        "schema": "media",
+        "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+        "restoreEpoch": "2"
+      },
+      {
+        "schema": "control",
+        "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+        "restoreEpoch": "2"
+      },
+      {
+        "schema": "governance",
+        "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+        "restoreEpoch": "1"
+      }
+    ],
+    "backupRejectedReason": "backup owner deployment/epoch does not match: governance",
+    "privateEnvironmentByteIdentical": true,
+    "originalBinarySHA256": "6830750b31368ba206a8e933854400cb5ac53d1a99bb7308de972b52b7055c1d",
+    "nineRolesHealthy": true,
+    "ownProbeSessionLoggedOut": true
+  },
+  "safetyOldRestoreEvidence": {
+    "backupPath": "/Users/jobs/Library/Caches/JobsIM/Integration/run-ld8td0a0/Safety/Backups/snapshot-9aaeb1a0.jimbackup",
+    "authenticatedArchive": true,
+    "sourceRestoreEpoch": "1",
+    "journalThrough": 24,
+    "ownerCoverageAbsent": true,
+    "databaseTOCListedReadOnly": true,
+    "governanceSchemaPresent": false,
+    "governanceTablesPresent": false,
+    "governanceTableDataPresent": false,
+    "restoreReceiptOperationId": "restore-9aaeb1a0",
+    "restoreReceiptEpoch": "2",
+    "conclusion": "The authenticated old backup omitted governance; its later epoch1 owner baseline is consistent with creation outside the original epoch2 restore. No metadata was patched."
+  },
+  "otherRealms": [
+    "20443 untouched",
+    "28443 untouched"
+  ],
+  "boundaries": [
+    "No Safety service stop or SQL/owner baseline repair",
+    "Independent journal was not rolled back; separate private0600 PG dump and TOC retained",
+    "Primary business/State/TLS archive uses existing authenticated encryption, key separate from backup directory",
+    "Backup readback and archive listing do not claim full offline restore execution",
+    "No production/HA/cross-host RPO0 claim",
+    "No system proxy, system trust, source build, commit or push"
+  ]
+}

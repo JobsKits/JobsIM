@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:55.31469+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:55.50459+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSelfReadConcurrentObservationUnionUsesCASRetry"}
+{"Time":"2026-11-16T12:11:55.504655+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfReadConcurrentObservationUnionUsesCASRetry","Output":"=== RUN   TestSelfReadConcurrentObservationUnionUsesCASRetry\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:55.607613+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfReadConcurrentObservationUnionUsesCASRetry","Output":"--- PASS: TestSelfReadConcurrentObservationUnionUsesCASRetry (0.10s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:55.607654+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSelfReadConcurrentObservationUnionUsesCASRetry","Elapsed":0.1}
+{"Time":"2026-11-16T12:11:55.607686+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:55.607782+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.293s\n"}
+{"Time":"2026-11-16T12:11:55.607802+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.293}

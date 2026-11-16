@@ -1,0 +1,96 @@
+{
+  "startedAt": "2026-11-16T07:59:30.436236+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "name": "strict-ca-two-real-tty-process-only",
+      "passed": true
+    },
+    {
+      "name": "automatic-s2-physical-store-keeps-legacy-identity",
+      "passed": true
+    },
+    {
+      "name": "font-cas-shared-only-with-own-family",
+      "passed": true
+    },
+    {
+      "name": "hidden-view-all-restoration-entry",
+      "passed": true
+    },
+    {
+      "name": "history-is-not-read-observation",
+      "passed": true
+    },
+    {
+      "name": "explicit-observation-fills-hole-without-clearing-manual-unread",
+      "passed": true
+    },
+    {
+      "name": "text-draft-explicit-write-and-private-projection",
+      "passed": true
+    },
+    {
+      "name": "remote-draft-does-not-overwrite-local-input",
+      "passed": true
+    },
+    {
+      "name": "explicit-adoption-uses-local-original-text-cas",
+      "passed": true
+    },
+    {
+      "name": "completed-original-result-does-not-revert-current-draft",
+      "passed": true
+    },
+    {
+      "name": "source-global-removes-reply-only-keeps-owned-text",
+      "passed": true
+    },
+    {
+      "name": "explicit-cloud-clear-preserves-local-input",
+      "passed": true
+    },
+    {
+      "name": "original-operation-bodies-remain-local-and-stable",
+      "passed": true
+    }
+  ],
+  "cleanup": [
+    {
+      "kind": "own-tty",
+      "label": "A",
+      "normalExit": true,
+      "logoutSuccessState": true,
+      "deviceAbsentFromActiveSessions": true
+    },
+    {
+      "kind": "own-tty",
+      "label": "B",
+      "normalExit": true,
+      "logoutSuccessState": true,
+      "deviceAbsentFromActiveSessions": true
+    },
+    {
+      "kind": "owned-control-family",
+      "logoutHTTP200": true,
+      "originalAT401": true
+    },
+    {
+      "kind": "owned-control-family",
+      "logoutHTTP200": true,
+      "originalAT401": true
+    }
+  ],
+  "rawTTYRecorded": false,
+  "nativeCredentialStorePositive": false,
+  "processOnlyExplicitPerPTY": true,
+  "pgUsed": false,
+  "serviceChanged": false,
+  "cliHTTPCountMeasured": false,
+  "unknownResponseInjected": false,
+  "binarySHA256": "15a4c053c7d82a60c57adfea5910aa3f32e5810b3b45e0813b6e0985e6dfe1cf",
+  "origin": "https://127.0.0.1:54443",
+  "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+  "restoreEpoch": "2",
+  "finishedAt": "2026-11-16T07:59:32.246369+00:00"
+}

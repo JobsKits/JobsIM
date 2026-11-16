@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "staticDelivery": "actual built Dist supplied by isolated Playwright route at API HTTPS origin; deployment static delivery tested separately",
+  "at": "2026-11-15T06:27:32.953Z",
+  "checks": [
+    "current exact source/content version and destination admission",
+    "reference-only durable Outbox and original proof",
+    "lost response + browser reload queries original result without duplicate POST",
+    "never-arrived POST remains absent; explicit retry first looks up 404 then creates exactly once with identical original body",
+    "late successful original POST cannot roll back a newer invalidation already obtained by sync",
+    "temporary 503 or 200 unavailable exact-read masks the projection; replayed real same-version history cannot reopen it, only a later successful exact GET can",
+    "own forward hides edit and keeps recall",
+    "source group removal clears target projection and persistent cache without a new message event"
+  ],
+  "errors": []
+}

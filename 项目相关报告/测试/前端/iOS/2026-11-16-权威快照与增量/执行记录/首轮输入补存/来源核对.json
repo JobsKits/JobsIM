@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-16T04:11:28.138841+00:00",
+  "testSource": {
+    "originalPath": "测试/前端/iOS/IMAuthoritativeSyncTests.swift",
+    "sha256": "9205b6bb8bbf8bcaa6606480f1d9c04b73ccc096266afdb995307567120ed893",
+    "provenance": "recovered by reversing only the exact known fixture patch; bytes match the pre-build input manifest",
+    "failedResult": "../20261116-120521-20600/测试结果.json"
+  },
+  "storeSource": {
+    "compiledSHA256": "dbb21ec9531d676bac452f3f119a0cbe4815bfd68042378ba08b8c495c5308d9",
+    "firstTypecheckFailureSHA256": "b72965dcb5e216ba5a93e0eddc9f7c100fa63fc82ac0b76feeb15a46858b509c",
+    "provenance": "current compiled store bytes preserved; first compile-failure source recovered by the one known Self.save qualification inverse and verified against its input hash"
+  },
+  "rawLogsOrResultsModified": false
+}

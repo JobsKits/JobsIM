@@ -1,0 +1,9 @@
+{
+  "kind": "test route correction",
+  "initialTestSHA256": "bd1637b6320c3dc5235f08a51b70b0c689f4f491e781a1df4977ae9501eb4ce5",
+  "newTestSHA256": "4e2b90dc199d665cc256fbfa545b7f25c953e5a953591ff8d0481bd86de531e4",
+  "cause": "test used nonexistent sync/status; production endpoint is sync/context",
+  "productionSourceChanged": false,
+  "retainedFailure": "B-真实结果.json",
+  "retryFrom": "b"
+}

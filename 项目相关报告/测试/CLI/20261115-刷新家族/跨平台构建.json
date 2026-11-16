@@ -1,0 +1,20 @@
+{
+  "cgo": false,
+  "goParallelism": 1,
+  "maxProcs": 2,
+  "targets": [
+    {
+      "target": "windows/amd64",
+      "status": "compiled",
+      "sha256": "308dcd943f58efafd21d656a11e3319bea436a2c4014299e5854fe9abc794180",
+      "nativeRuntimeTested": false
+    },
+    {
+      "target": "linux/amd64",
+      "status": "compiled",
+      "sha256": "e62de8300632959216abb5bac692ab405324399e3ef4e05715f47d95691b8f34",
+      "nativeRuntimeTested": false
+    }
+  ],
+  "scope": "type/link validation only; no target OS secure-store acceptance"
+}

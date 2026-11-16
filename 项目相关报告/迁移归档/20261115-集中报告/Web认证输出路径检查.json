@@ -1,0 +1,29 @@
+{
+  "scope": "actual out expression in isolated vm; no browser/server/API calls",
+  "checks": [
+    {
+      "entry": "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+      "mode": "default",
+      "destination": "项目相关报告/测试/前端/Web/执行记录/auth-session-1794755695253-424242",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+      "mode": "explicit",
+      "destination": "项目相关报告/测试/前端/Web/explicit-path-only",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/auth-https.cjs/auth-https.cjs",
+      "mode": "default",
+      "destination": "项目相关报告/测试/前端/Web/执行记录/auth-https-1794755695255-424242",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/auth-https.cjs/auth-https.cjs",
+      "mode": "explicit",
+      "destination": "项目相关报告/测试/前端/Web/explicit-path-only",
+      "status": "passed"
+    }
+  ]
+}

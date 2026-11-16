@@ -1,0 +1,14 @@
+{
+  "exitCode": 0,
+  "gate": "",
+  "seconds": 5.83,
+  "minimumFreeBytes": 26806079488,
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-Receipts/20261116-165448",
+  "realAPI": false,
+  "bounds": {
+    "seconds": 180,
+    "freeBytes": 4294967296,
+    "gomaxprocs": 2,
+    "parallelPackages": 1
+  }
+}

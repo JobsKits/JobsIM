@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "testedAtUTC": "2026-11-15T05:55:24.684618+00:00",
+  "strictHTTPS": true,
+  "runs": {
+    "core": {
+      "status": "passed",
+      "httpAssertions": 55,
+      "deploymentId": "c2a6a394-a383-4164-bd54-f04f4af59c12",
+      "scope": "real PostgreSQL HTTP functional slice; no full I or recovery acceptance"
+    },
+    "searchFavorites": {
+      "status": "passed",
+      "httpAssertions": 279,
+      "foreignRecentHits": 110,
+      "ownedConversationsBeyondPublicTop100": true,
+      "qualifyBeforeSQLLimit": true,
+      "stableOwnerEpochQueryBoundCursor": true,
+      "favoritesNeedNoSearchQuery": true,
+      "favoriteSourceACLAndRejoinFloor": true,
+      "retractedAndUnfavoritedSourcesOmitted": true,
+      "exactSourceLookupRechecksReadACL": true,
+      "strictHTTPS": true,
+      "scope": "functional PostgreSQL substring search and source references; no full-text performance or complete I claim"
+    },
+    "roleMentionsAnnouncement": {
+      "httpAssertions": 77,
+      "semanticAssertions": 23,
+      "roleBoomerang": true,
+      "immutableOriginalOperations": true,
+      "structuredMentionsAndBlocks": true,
+      "interactionKeepsContentVersion": true,
+      "sourceEditRecallExpiryAndClear": true,
+      "parentRowSourceEditFenceRace": true
+    }
+  },
+  "binarySHA256": "bb1e9c527dedf0aee3a5f66b548b0a361801fe183f2c980d2d42e51e88aac79a",
+  "scriptSHA256": "bf0b82cf90a00361eaf419fee0142c0aca82eaa81c603f81a70876c35dd8608c",
+  "scope": "Real existing core, signed pagination and current role/announcement regressions on forward realm; historical reports unchanged; no full I or strong protection claim"
+}

@@ -1,0 +1,157 @@
+#!/bin/zsh
+# shell: zsh
+# Created by Jobs on 2026年11月14日，星期六.
+initialize() {
+    setopt NO_NOMATCH PIPE_FAIL
+    set -eu
+    SCRIPT_DIR="${${(%):-%x}:A:h}"
+    PROJECT_ROOT="${SCRIPT_DIR}/../../../.."
+    PROJECT_ROOT="${PROJECT_ROOT:A}"
+    HARMONY_PROJECT="${PROJECT_ROOT}/代码/前端/HarmonyOS"
+    REPORT_DIR="${PROJECT_ROOT}/测试/前端/HarmonyOS/报告/$(date +%Y%m%d-%H%M%S)-$$"
+    mkdir -p "$REPORT_DIR"
+}
+find_tools() {
+    CACHE="${JOBS_IM_HARMONY_CACHE:-$HOME/Library/Application Support/JobsIM/Toolchains/HarmonyMirror}"
+    [[ "$CACHE" == /* && "$CACHE" != "$PROJECT_ROOT" && "$CACHE" != "$PROJECT_ROOT"/* && ! -L "$CACHE" ]] || { print -u2 '工具缓存必须位于源码外独立目录。'; return 2; }
+    CLT="${JOBS_IM_HARMONY_CLT_HOME:-$CACHE/ArkTS-6.1.1.280/command-line-tools}"
+    if [[ -d "$CLT/command-line-tools" ]]; then CLT="$CLT/command-line-tools"; fi
+    NODE="$CLT/tool/node/bin/node"
+    BUILDER="$CLT/hvigor/hvigor/bin/hvigor.js"
+    [[ -x "$NODE" && -f "$BUILDER" ]] || { print -u2 '缺libsdl镜像CLT；先执行工程工具链prepare入口或指定JOBS_IM_HARMONY_CLT_HOME。'; return 2; }
+    export DEVECO_SDK_HOME="$CLT/sdk"
+    export DEVECO_NODE_HOME="${NODE:h:h}"
+    export PATH="${NODE:h}:$PATH"
+    export npm_config_offline=true
+    # Use bundled packages directly; hvigorw may install wrappers from other registries.
+    mkdir -p "$CACHE/LocalModules/node_modules/@ohos"
+    ln -sfn "$CLT/hvigor/hvigor" "$CACHE/LocalModules/node_modules/@ohos/hvigor"
+    ln -sfn "$CLT/hvigor/hvigor-ohos-plugin" "$CACHE/LocalModules/node_modules/@ohos/hvigor-ohos-plugin"
+    export NODE_PATH="$CACHE/LocalModules/node_modules"
+    OHPM="$CLT/ohpm/bin/ohpm"
+    HDC="${HDC_COMMAND:-$DEVECO_SDK_HOME/default/openharmony/toolchains/hdc}"
+}
+hvigor() { "$NODE" "$BUILDER" "$@"; }
+
+stage_source() {
+    [[ "$CACHE" =~ '^[A-Za-z0-9/_.@() -]+$' ]] || { print -u2 '官方Hvigor要求ASCII构建路径；JOBS_IM_HARMONY_CACHE请选源码外ASCII目录。'; return 2; }
+    mkdir -p "$CACHE/Workspaces"
+    BUILD_PROJECT="$(mktemp -d "$CACHE/Workspaces/Build.XXXXXX")"
+    rsync -a --exclude=build --exclude=.hvigor --exclude=node_modules --exclude=oh_modules --exclude=Dist --exclude=ohosTest "$HARMONY_PROJECT/" "$BUILD_PROJECT/"
+    cp -R "$PROJECT_ROOT/测试/前端/HarmonyOS/OhosTest" "$BUILD_PROJECT/entry/src/ohosTest"
+    # Only relative imports change in the temporary copy of Jobs-owned tests.
+    "$NODE" - "$BUILD_PROJECT" <<'JS'
+const fs=require('node:fs');
+const path=require('node:path');
+const crypto=require('node:crypto');
+const root=process.argv[2];
+const manifest=[];
+function walk(dir){
+  for(const item of fs.readdirSync(dir,{withFileTypes:true})){
+    const file=path.join(dir,item.name);
+    if(item.isDirectory()){walk(file);continue;}
+    if(!item.isFile())continue;
+    const original=fs.readFileSync(file);
+    let current=original;
+    if(file.includes('/ohosTest/')&&file.endsWith('.ets')){
+      current=Buffer.from(original.toString().replaceAll('../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/','../../../main/ets/'));
+      if(!original.equals(current))fs.writeFileSync(file,current);
+    }
+    manifest.push({file:path.relative(root,file),sourceSha256:crypto.createHash('sha256').update(original).digest('hex'),buildSha256:crypto.createHash('sha256').update(current).digest('hex')});
+  }
+}
+walk(root);
+fs.writeFileSync(path.join(root,'source-manifest.json'),JSON.stringify(manifest,null,2));
+JS
+    cp "$BUILD_PROJECT/source-manifest.json" "$REPORT_DIR/source-manifest.json"
+    print "ASCII源码快照=$BUILD_PROJECT"
+}
+build_hap() {
+    local target="$1"
+    stage_source || return $?
+    local hypium="$CLT/sdk/default/openharmony/ets/build-tools/ets-loader/node_modules/@ohos/hypium"
+    [[ -f "$hypium/index.ets" ]] || { print -u2 '镜像SDK缺内置Hypium；不从其他源补齐。'; return 2; }
+    mkdir "$BUILD_PROJECT/MirrorHypium"
+    rsync -a --exclude='*.ets' "$hypium/" "$BUILD_PROJECT/MirrorHypium/"
+    "$NODE" - "$BUILD_PROJECT" <<'JS'
+const fs=require('fs'),path=require('path'),root=process.argv[2];
+fs.writeFileSync(path.join(root,'MirrorHypium/oh-package.json5'),JSON.stringify({name:'@ohos/hypium',version:'1.0.0',main:'index.js',types:'index.d.ts',dependencies:{}}));
+const config=JSON.parse(fs.readFileSync(path.join(root,'oh-package.json5'),'utf8'));
+config.devDependencies={'@ohos/hypium':'file:./MirrorHypium'};
+fs.writeFileSync(path.join(root,'oh-package.json5'),JSON.stringify(config));
+const crypto=require('crypto');
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'source-manifest.json'),'utf8'));
+const entry=manifest.find(item=>item.file==='oh-package.json5');
+entry.buildSha256=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'oh-package.json5'))).digest('hex');
+entry.transform='Bind test-only dependency to mirror SDK Hypium1.0.0';
+fs.writeFileSync(path.join(root,'source-manifest.json'),JSON.stringify(manifest,null,2));
+
+JS
+    cp "$BUILD_PROJECT/source-manifest.json" "$REPORT_DIR/source-manifest.json"
+    # All declared packages are local mirror SDK files. Any accidental remote lookup stays on the designated mirror and fails there.
+    (cd "$BUILD_PROJECT" && "$OHPM" install --all --strict_ssl true --registry https://libsdl.org/harmonyos-devtools/ --retry_times 0 --fetch_timeout 10000 --cache "$CACHE/OhpmCache") || return $?
+    (cd "$BUILD_PROJECT" && hvigor --mode module -p product=default -p "module=entry@$target" assembleHap --no-daemon --offline)
+}
+
+choose_device() {
+    local mode="$1" target
+    local -a targets
+    targets=()
+    [[ -x "$HDC" ]] || { print -u2 '缺HDC；设置HDC_COMMAND或HARMONY_SDK_HOME。'; return 2; }
+    while IFS= read -r target; do [[ -n "$target" && "$target" != '[Empty]' ]] && targets+=("$target"); done < <("$HDC" list targets)
+    (( ${#targets} > 0 )) || { print -u2 '无已连接/授权目标。模拟器在DevEco启动；真机启用开发者模式和USB调试。'; return 2; }
+    if [[ -n "${HDC_TARGET:-}" ]]; then
+        [[ "${targets[(Ie)$HDC_TARGET]}" != '0' ]] || return 2
+        TARGET="$HDC_TARGET"
+    elif (( ${#targets} == 1 )); then TARGET="${targets[1]}"
+    elif [[ -t 0 ]] && command -v fzf >/dev/null; then TARGET="$(printf '%s\n' "${targets[@]}" | fzf --prompt='选择鸿蒙目标（Esc取消）> ')" || return 130
+    else print -u2 '多个目标；使用fzf选择或指定已枚举的HDC_TARGET。'; return 2
+    fi
+    local actual
+    actual="$("$HDC" -t "$TARGET" shell param get const.product.devicetype | tr -d '\r')"
+    print "请求模式=$mode；目标=$TARGET；设备类型=$actual"
+    if [[ "$mode" == emulator && "$TARGET" != 127.0.0.1:* && "$actual" != *emulator* ]]; then print -u2 '所选目标未识别为模拟器，拒绝混记为模拟器验收。'; return 2; fi
+    if [[ "$mode" == device && ( "$TARGET" == 127.0.0.1:* || "$actual" == *emulator* ) ]]; then print -u2 '所选目标为模拟器，不记真机通过。'; return 2; fi
+}
+run_tests() {
+    local mode="$1"
+    case "$mode" in
+        check)
+            find_tools || return $?
+            hvigor --version || return $?
+            [[ -d "${DEVECO_SDK_HOME:-}/default/openharmony" && -n "$OHPM" ]] || { print -u2 '构建器已能运行；仍缺完整SDK/OHPM。通过官方页本人登录和许可后指定CLT或DevEco缓存。'; return 2; }
+            print "SDK=$DEVECO_SDK_HOME"
+            ;;
+        build|test-build)
+            find_tools || return $?
+            local target=default; [[ "$mode" != test-build ]] || target=ohosTest
+            build_hap "$target" || return $?
+            local -a packages; packages=("$BUILD_PROJECT"/entry/build/**/outputs/**/*.hap(.N))
+            (( ${#packages} > 0 )) || { print -u2 '构建未产生HAP，不标通过。'; return 2; }
+            mkdir -p "$HARMONY_PROJECT/Dist"
+            for package in "${packages[@]}"; do cp "$package" "$HARMONY_PROJECT/Dist/${package:t}"; done
+            ;;
+        emulator|device)
+            find_tools || return $?
+            choose_device "$mode" || return $?
+            build_hap ohosTest || return $?
+            local test_hap="$BUILD_PROJECT/entry/build/default/outputs/ohosTest/entry-ohosTest-signed.hap"
+            [[ -f "$test_hap" ]] || { print -u2 '未生成已签名测试HAP；在DevEco配置本目标开发签名，不安装未签名包。'; return 2; }
+            "$HDC" -t "$TARGET" install -r "$test_hap" || return $?
+            "$HDC" -t "$TARGET" shell aa test -b com.jobs.im -m entry_test -s unittest OpenHarmonyTestRunner -s timeout 60000 > "$REPORT_DIR/Hypium.txt" || return $?
+            cat "$REPORT_DIR/Hypium.txt"
+            grep -Eq 'FAILURES|FAILED|Error|error' "$REPORT_DIR/Hypium.txt" && return 1
+            grep -Eq 'OK \([1-9][0-9]* tests?\)' "$REPORT_DIR/Hypium.txt" || { print -u2 '没有可信测试完成计数，不标通过；检查Hypium报告。'; return 2; }
+            ;;
+        *) print -u2 '用法：运行测试.command check|build|test-build|emulator|device'; return 2 ;;
+    esac
+}
+main() {
+    initialize
+    print 'JobsIM鸿蒙原生测试：check只检查；build/test-build在ASCII快照构建HAP；emulator/device需要镜像配套SDK与对应开发签名，安装测试HAP并运行Hypium。Ctrl+C取消。'
+    local result=0
+    run_tests "${1:-check}" 2>&1 | tee "$REPORT_DIR/运行日志.txt" || result=$?
+    print "退出码=$result；日志=$REPORT_DIR"
+    return "$result"
+}
+main "$@"

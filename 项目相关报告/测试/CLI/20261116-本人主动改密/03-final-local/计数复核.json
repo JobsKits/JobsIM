@@ -1,0 +1,14 @@
+{
+  "status": "verified_from_unchanged_original_raw",
+  "originalRunnerReportedPass": 95,
+  "passedGroups": 97,
+  "failedGroups": 0,
+  "skippedGroups": 2,
+  "sourceTopLevelMethods": 99,
+  "unobservedSourceNames": [],
+  "unexpectedOrDuplicateNames": [],
+  "typedInputMismatches": [],
+  "rawSHA256": "9aa8dc8915083d3daf226d34051b921d8debd2f655802c7e9a99eaa2101b4305",
+  "parserSyntheticCasesPassed": 3,
+  "explanation": "OTP/initial-auth prompts share a line with top-level PASS; old line-anchored counter undercounted. Original logs and JSON are not modified; parser-only fix is exercised against raw and synthetic text, not a new Go run."
+}

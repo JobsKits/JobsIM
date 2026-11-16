@@ -1,0 +1,26 @@
+{
+  "status": "local-validation-and-mac-build-passed",
+  "date": "2026-11-16",
+  "localTopLevelPass": 67,
+  "localTopLevelFail": 0,
+  "skipped": [
+    "TestAuthCoordinatorActualHTTPSAndUnknownClosure",
+    "TestAuthNativeSystemVaultSeparateDiagnostic"
+  ],
+  "addedReceiptGroups": 12,
+  "binary": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-Receipts/20261116-165448/Products/jobsim-content-receipts",
+  "binarySHA256": "12acd7dd54f4f7c3b17852f5be9c58b7f81eefd6ed6e8ecac9d6924ee556416b",
+  "sourceMatchesFinalLocalInputs": true,
+  "old15a4BinarySHA256Unchanged": "15a4c053c7d82a60c57adfea5910aa3f32e5810b3b45e0813b6e0985e6dfe1cf",
+  "actualReceiptHTTPS": false,
+  "E2Accessed": false,
+  "backendModified": false,
+  "runtimeAttestation": false,
+  "qualifiedCumulativeACK": false,
+  "objectComplete": false,
+  "targetRangeComplete": false,
+  "deletionEligible": false,
+  "afterReceiptEnabled": false,
+  "inputCount": 34,
+  "scope": "actual SQLite and injected HTTP, no device or production durability certification"
+}

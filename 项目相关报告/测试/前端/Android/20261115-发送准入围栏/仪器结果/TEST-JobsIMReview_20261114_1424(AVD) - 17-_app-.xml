@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="9" failures="0" errors="0" skipped="0" time="16.494" timestamp="2026-11-15T02:48:25" hostname="localhost">
+  <testsuite name="com.jobs.im.AdmissionFenceTest" tests="1" failures="0" errors="0" skipped="0" time="3.245" timestamp="2026-11-15T02:48:25" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox" classname="com.jobs.im.AdmissionFenceTest" time="3.245" />
+  </testsuite>
+  <testsuite name="com.jobs.im.DatabaseIsolationTest" tests="1" failures="0" errors="0" skipped="0" time="0.028" timestamp="2026-11-15T02:48:25" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="liveOutboxSurvivesIndependentDemoWrites" classname="com.jobs.im.DatabaseIsolationTest" time="0.028" />
+  </testsuite>
+  <testsuite name="com.jobs.im.LiveApiTest" tests="1" failures="0" errors="0" skipped="0" time="0.416" timestamp="2026-11-15T02:48:25" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="verifiedTlsTwoAccountMessageContract" classname="com.jobs.im.LiveApiTest" time="0.416" />
+  </testsuite>
+  <testsuite name="com.jobs.im.ModelClosureTest" tests="1" failures="0" errors="0" skipped="0" time="5.729" timestamp="2026-11-15T02:48:25" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="realNativeModelKeepsOriginalOperationsAndRelationshipGenerations" classname="com.jobs.im.ModelClosureTest" time="5.729" />
+  </testsuite>
+  <testsuite name="com.jobs.im.NativeUiTest" tests="1" failures="0" errors="0" skipped="0" time="5.547" timestamp="2026-11-15T02:48:25" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="realConversationGroupAndSettingsRenderInNativeActivity" classname="com.jobs.im.NativeUiTest" time="5.547" />
+  </testsuite>
+  <testsuite name="com.jobs.im.NotificationPrivacyTest" tests="1" failures="0" errors="0" skipped="0" time="0.396" timestamp="2026-11-15T02:48:25" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="localAlertHidesBodyAndRejectsAnotherNamespace" classname="com.jobs.im.NotificationPrivacyTest" time="0.396" />
+  </testsuite>
+  <testsuite name="com.jobs.im.StorageLifecycleTest" tests="3" failures="0" errors="0" skipped="0" time="0.138" timestamp="2026-11-15T02:48:25" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="durableQueueDraftRevisionAndCursorRemainAtomic" classname="com.jobs.im.StorageLifecycleTest" time="0.036" />
+    <testcase name="anonymousReconnectFreezesEveryAccountOfOnlyTheOldInstanceEpoch" classname="com.jobs.im.StorageLifecycleTest" time="0.001" />
+    <testcase name="versionTwoUpgradePreservesOriginalPendingIdentity" classname="com.jobs.im.StorageLifecycleTest" time="0.101" />
+  </testsuite>
+</testsuites>

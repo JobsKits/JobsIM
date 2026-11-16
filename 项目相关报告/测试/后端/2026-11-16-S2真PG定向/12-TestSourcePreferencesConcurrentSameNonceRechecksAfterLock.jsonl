@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:49.803344+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:49.954921+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSourcePreferencesConcurrentSameNonceRechecksAfterLock"}
+{"Time":"2026-11-16T12:11:49.954983+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSourcePreferencesConcurrentSameNonceRechecksAfterLock","Output":"=== RUN   TestSourcePreferencesConcurrentSameNonceRechecksAfterLock\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:50.109187+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSourcePreferencesConcurrentSameNonceRechecksAfterLock","Output":"--- PASS: TestSourcePreferencesConcurrentSameNonceRechecksAfterLock (0.15s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:50.109223+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSourcePreferencesConcurrentSameNonceRechecksAfterLock","Elapsed":0.15}
+{"Time":"2026-11-16T12:11:50.109242+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:50.109685+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.306s\n"}
+{"Time":"2026-11-16T12:11:50.109715+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.306}

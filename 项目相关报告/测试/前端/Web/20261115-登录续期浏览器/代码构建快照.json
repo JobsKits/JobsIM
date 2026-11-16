@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-15T12:43:21.707601+00:00",
+  "scope": "Web build, browser simulated-BFF 11 groups, real HTTPS production UI 6 groups and existing offline browser regression; not complete IM acceptance",
+  "backendBinarySHA256": "7ef53be2fe9004fd66978a7313dac016dfdf146a66e3116767a61bdf0dcd40c9",
+  "publicServerCertificateSHA256": "dc51d65840b05ef74654bc189ebc9ca273ebf4eeee553526300a139d75bff463",
+  "files": {
+    "代码/前端/Web/Src/AuthSession.ts": "feec8ab34adb7eff40659c524ca299c8be47e1a6029d6ff16912623af27a4ee1",
+    "代码/前端/Web/Src/api.ts": "216461225283cbce8dc0235bec37e7effb2c332f38c077ec125e6f2a1842b8b1",
+    "代码/前端/Web/Src/App.tsx": "fe911d6ef76d2bc65dd9512d816965464a0da5542b6c9742aefd5ff73cd316aa",
+    "代码/前端/Web/Src/PrivateMedia.tsx": "96dae0097a134528b2c32c7ed5772f85492ee8e407c20567ed804b54c8f78903",
+    "代码/前端/Web/Src/storage.ts": "49d0fa6798a13ee7aecc7be29ece74018e2eb3f9a4a5f60fa08faf4bd80064e9",
+    "代码/前端/Web/Src/types.ts": "92f526767bb81dc88c4be65f487f97a42dd00b3b5e5bde6b2f94e98c9dc3913b",
+    "代码/前端/Web/Src/i18n.ts": "75794466522de0c9059f5afcf34492f0d46d18ffd8af1509f8e7fc5ec474b1f1",
+    "测试/前端/Web/auth-session.cjs/auth-session.cjs": "216d8bc86ff94b354cf38055e332de7849a8dd62295a6811fcff665351c5de49",
+    "测试/前端/Web/auth-https.cjs/auth-https.cjs": "5135e3a4c41832f57869abcb1443f6f095afd392c5f9043dd1166951b0977a8f",
+    "代码/前端/Web/Dist/index.html": "17c8cbfcaa5ec946c685727bbf7b5ff9ad77329ae4d81e2d7e0ae010f86d3249",
+    "代码/前端/Web/Dist/资源出处.md": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82",
+    "代码/前端/Web/Dist/Logo.svg": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+    "代码/前端/Web/Dist/Licenses/Lucide.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "代码/前端/Web/Dist/Licenses/react-dom.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "代码/前端/Web/Dist/Licenses/react.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "代码/前端/Web/Dist/Fonts/OFL.txt": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+    "代码/前端/Web/Dist/Fonts/SourceSans3.ttf": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+    "代码/前端/Web/Dist/assets/index-C2GaQo1N.js.map": "8edebdc0771641b2132521d342384bdec7d53b35a7d44c55885c5218cf982623",
+    "代码/前端/Web/Dist/assets/index-CSOrBoKN.css": "055195d078e475f838e356095bad238e033d7971a0db2b163a7a518697221fd3",
+    "代码/前端/Web/Dist/assets/index-C2GaQo1N.js": "795d5cf7eec65968ad462144f2b22a9b7cf3a84f2aaa22dce31903e415c45297"
+  }
+}

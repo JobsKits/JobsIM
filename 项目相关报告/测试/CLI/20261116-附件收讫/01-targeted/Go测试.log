@@ -1,0 +1,136 @@
+=== RUN   TestObjectReceiptFullFileAndDescriptorCommittedBeforeHTTP
+--- PASS: TestObjectReceiptFullFileAndDescriptorCommittedBeforeHTTP (0.47s)
+=== RUN   TestObjectReceiptUnknownReopenPureQueryAndExplicitSameBody
+--- PASS: TestObjectReceiptUnknownReopenPureQueryAndExplicitSameBody (0.20s)
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/hash
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/short
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/long
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/good
+--- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal (0.44s)
+    --- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/hash (0.09s)
+    --- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/short (0.11s)
+    --- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/long (0.10s)
+    --- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/good (0.14s)
+=== RUN   TestObjectReceiptSQLFailureAndOrphanCrashBoundary
+=== RUN   TestObjectReceiptSQLFailureAndOrphanCrashBoundary/process-exit-after-FULL-commit
+--- PASS: TestObjectReceiptSQLFailureAndOrphanCrashBoundary (0.26s)
+    --- PASS: TestObjectReceiptSQLFailureAndOrphanCrashBoundary/process-exit-after-FULL-commit (0.17s)
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind/modified
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind/symlink
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind/missing
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind/directory
+--- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind (0.55s)
+    --- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind/modified (0.14s)
+    --- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind/symlink (0.13s)
+    --- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind/missing (0.14s)
+    --- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind/directory (0.13s)
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/old
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/missing
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/claim
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/flag
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/build
+--- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade (0.35s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/old (0.06s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/missing (0.05s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/claim (0.05s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/flag (0.06s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/build (0.13s)
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/pending
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/result
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/qualification
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/epoch
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/physical
+--- PASS: TestObjectReceiptParentMustBeRecordedSameQualification (0.75s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/pending (0.12s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/result (0.10s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/qualification (0.13s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/epoch (0.21s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/physical (0.20s)
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/object
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/size
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/digest
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/parent
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/epoch
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/content
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/expired
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/proof
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/target
+--- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape (0.66s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/object (0.14s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/size (0.07s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/digest (0.07s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/parent (0.06s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/epoch (0.06s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/content (0.06s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/expired (0.05s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/proof (0.05s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/target (0.10s)
+=== RUN   TestObjectReceiptExpiredMissingFileCanStillQueryHistoricalResult
+--- PASS: TestObjectReceiptExpiredMissingFileCanStillQueryHistoricalResult (0.15s)
+=== RUN   TestObjectReceiptGlobalDurableCleanupCrashResume
+--- PASS: TestObjectReceiptGlobalDurableCleanupCrashResume (0.15s)
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess/descriptor
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess/payload
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess/result
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess/unknown
+--- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess (0.37s)
+    --- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess/descriptor (0.10s)
+    --- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess/payload (0.09s)
+    --- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess/result (0.09s)
+    --- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess/unknown (0.08s)
+=== RUN   TestObjectReceiptForwardAndPartialMediaRemainUnsupported
+=== RUN   TestObjectReceiptForwardAndPartialMediaRemainUnsupported/forward
+=== RUN   TestObjectReceiptForwardAndPartialMediaRemainUnsupported/partial
+--- PASS: TestObjectReceiptForwardAndPartialMediaRemainUnsupported (0.05s)
+    --- PASS: TestObjectReceiptForwardAndPartialMediaRemainUnsupported/forward (0.00s)
+    --- PASS: TestObjectReceiptForwardAndPartialMediaRemainUnsupported/partial (0.00s)
+=== RUN   TestReceiptTextAtomicCommitPrecedesHTTPAndNeverConfirmsMessageOutbox
+--- PASS: TestReceiptTextAtomicCommitPrecedesHTTPAndNeverConfirmsMessageOutbox (0.04s)
+=== RUN   TestReceiptSQLFailureRollsBodyAndIntentBackTogether
+--- PASS: TestReceiptSQLFailureRollsBodyAndIntentBackTogether (0.03s)
+=== RUN   TestReceiptUnknownReopensOriginalAndAutomatic404NeverWrites
+--- PASS: TestReceiptUnknownReopensOriginalAndAutomatic404NeverWrites (0.05s)
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-device
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-epoch
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-qualification
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-digest
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/expired
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/forward
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/attachment
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/missing-content-version
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/deleted
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/bad-signature-shape
+--- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies (0.02s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-device (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-epoch (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-qualification (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-digest (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/expired (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/forward (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/attachment (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/missing-content-version (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/deleted (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/bad-signature-shape (0.00s)
+=== RUN   TestReceiptCapabilityAndQualificationCannotRebindAnUnknownIntent
+--- PASS: TestReceiptCapabilityAndQualificationCannotRebindAnUnknownIntent (0.12s)
+=== RUN   TestReceiptGlobalAndGuardPreventLateBodyInstallationOrRetry
+--- PASS: TestReceiptGlobalAndGuardPreventLateBodyInstallationOrRetry (0.05s)
+=== RUN   TestReceiptExpiredUnknownOnlyChecksOriginalAndNeverRefreshesProof
+--- PASS: TestReceiptExpiredUnknownOnlyChecksOriginalAndNeverRefreshesProof (1.61s)
+=== RUN   TestReceiptWrongIdentityAndCorruptOriginalNeverContactReceiptRoute
+--- PASS: TestReceiptWrongIdentityAndCorruptOriginalNeverContactReceiptRoute (0.03s)
+=== RUN   TestReceiptBadSuccessDoesNotCompleteAndHistoricalProofNeverCreates
+--- PASS: TestReceiptBadSuccessDoesNotCompleteAndHistoricalProofNeverCreates (0.08s)
+=== RUN   TestReceiptUnqualifiedAndWrongLocalDurabilityDoNotMakeDeclaration
+--- PASS: TestReceiptUnqualifiedAndWrongLocalDurabilityDoNotMakeDeclaration (0.11s)
+=== RUN   TestReceiptReplacedDatabaseAndRestoreEpochCannotInheritOriginalIntent
+--- PASS: TestReceiptReplacedDatabaseAndRestoreEpochCannotInheritOriginalIntent (0.09s)
+PASS
+ok  	jobsim/cli/cmd/jobsim	7.003s

@@ -1,0 +1,139 @@
+{
+  "status": "passed",
+  "startedAt": "2026-11-16T06:13:15.452159+00:00",
+  "buildReport": "项目相关报告/测试/前端/Android/20261116-S2本人状态/Build-20261116-140306-18190-f588c8",
+  "serial": "emulator-5582",
+  "avd": "JobsIMReview_20261114_1424",
+  "filter": "com.jobs.im.AuthoritativeSyncTest,com.jobs.im.NativeSessionLifecycleTest#retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch,com.jobs.im.Migration8To9Test#originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification,com.jobs.im.SelfStateTest",
+  "apiUsed": false,
+  "fixtureIsolation": "Each method uses fresh UUID SQLite/profile/cache scope; no live server or account seed",
+  "runnerSourceSHA256": "42450d81d04b5bfbcc300a41d4ef3767a244c5f07a0a6e4550524dc22c7c874b",
+  "packagedSchema8SHA256": "c2d08158cfa211cc6300c45a83ae192ff3cc8739bdc9f2f729e0b30d43683404",
+  "emulatorProcess": {
+    "pid": 21924,
+    "command": "/Users/jobs/Library/Android/sdk/emulator/qemu/darwin-aarch64/qemu-system-aarch64 -avd JobsIMReview_20261114_1424 -port 5582 -no-snapshot-load -no-snapshot-save -no-boot-anim -no-audio -memory 2048 -cores 2"
+  },
+  "previousInstalledAppSHA256": "978b9f9c54e4fa22b8adbc92211610f10cb8238bf297c83bfa4517de922f7d08",
+  "installedSHA256": {
+    "app-debug.apk": "a135ef54037e571f8903a0acc1821fe9e8aad1088212631872000a01d513df59",
+    "app-debug-androidTest.apk": "8a30ab5cf565be6c339cd75b28cdfb2762db24fe1fda60b7b51ac222eb00f808"
+  },
+  "outcomes": [
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.NativeSessionLifecycleTest",
+      "test": "retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.Migration8To9Test",
+      "test": "originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "retiredDraftIsNotRecordedAsAppliedAndIndependentTextRequiresExplicitRecovery",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "unknownNotFoundRequiresExplicitRetryAndUsesIdenticalOriginalRequest",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "changedDraftReplyRequiresReselectionAndCreatesNoCloudWrite",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "firstActivationRemainsEnabledAndSameIdentityResetRejectsLateResponse",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "wrongPrincipalOrNumericCountersRollbackSelfProjectionAndCursorTogether",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "schemaUpgradeRetainsPhysicalRegistrationAndSeparatesOriginalSchemaCursor",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "sparseVisibleObservationDoesNotClearIndependentManualUnreadAndConflictFreezesOriginal",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "lateIdentityOrChangedProjectionGuardCannotPublishSelfState",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "draftCapturesIndependentTextAndDistinctOriginalProofsWithoutChangingLocalMessageOutbox",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "unknownPreferenceSurvivesColdReopenAndReadonlyResultNeverReplaysWrite",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "s2ProjectionAndCursorShareTransactionAndWrongSubjectCannotPartiallyPublish",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.SelfStateTest",
+      "test": "queuedUiIntentCapturesLifecycleBeforeMutexAndCannotAdoptResetIdentity",
+      "code": 0
+    }
+  ],
+  "totals": {
+    "tests": 22,
+    "passed": 22,
+    "failedOrSkipped": 0
+  },
+  "finishedAt": "2026-11-16T06:13:23.214942+00:00"
+}

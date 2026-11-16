@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "testedAtUTC": "2026-11-15T17:05:11.574176+00:00",
+  "httpChecks": 22,
+  "semanticAssertions": 56,
+  "verifiedPages": 2,
+  "strictHTTPS": true,
+  "restoreEpochBefore": "1",
+  "restoreEpochAfter": "2",
+  "stableRestoreOperationId": true,
+  "oldAccess401": true,
+  "oldBoundary409RestoreEpochChanged": true,
+  "oldSnapshotPage404": true,
+  "newRefsCurrentEpoch": true,
+  "oldCreationTuplePreserved": true,
+  "recallGlobalAndBodyEmpty": true,
+  "newerEditUnavailableWithoutOldBody": true,
+  "completeManifestValidated": true,
+  "newEpochMessageAndDelta": true,
+  "samePersistentBroker": true,
+  "oldPostBackupWireNetworkPublishDuplicate": false,
+  "oldWireConsumerAckFloorReached": true,
+  "oldWireNoOriginAndNoCurrentPosition": true,
+  "newOriginsObservedBeforeHTTPReplay": true,
+  "candidateBinarySHA256": "57a86767d12f005da08c728ff544a2b66076b2db03a203e3221d3490e355f290",
+  "opsBinarySHA256": "00be09aae751214ca4722eec24e7d5e0cbbad63902b180151fb9e9a1d6e9fbbc",
+  "scriptSHA256": "ebaa7bb8102420bd8ecfd8370655e854592837c6ace0ac887d780b8dc64072cd",
+  "runDirectory": "/Users/jobs/Library/Application Support/JobsIM/Integration/sync-restore-4d7ff7816f/Safety",
+  "backupDirectory": "/Users/jobs/Documents/JobsIMBackups/sync-restore-4d7ff7816f",
+  "scope": "One business database restored to a new database on its existing physical cluster; independent journal database on a separate physical PostgreSQL cluster; same persisted single-node JetStream broker across application restore.",
+  "boundaries": {
+    "emptyJetStreamRebuild": false,
+    "multipleOwnerDatabaseAggregateRestore": false,
+    "qualifiedAck": false,
+    "clientAtomicInstall": false,
+    "strongProtection": false,
+    "crossHostRecovery": false
+  },
+  "wrapperRetry": {
+    "kind": "NATS protocol probe headers capability correction; no business-source or restore change",
+    "originalRawTranscriptPreservedAndAppended": true,
+    "previousFailureType": "ConnectionResetError",
+    "sameRestoreOperationAndBroker": true,
+    "countScope": "Successful resumed post-restore verification only; original source phase/backup/restore remain in the earlier raw transcript and private source fixture."
+  },
+  "baseSeedSHA256BeforeAndAfter": "1a6dd8ef8acd70a77d440b3dd23c2f885652d20fdc4ac0e51f0eacdf57bf7843",
+  "baselineUntouched": true,
+  "rawLogSHA256": "acd0d7f6c6dfbf37056eb67ea589647c2e72b5ed017a89a9ceddbbf08885b5cf",
+  "oldEpochNetworkEvidence": {
+    "publishAckDuplicate": false,
+    "publishAckSequence": "34",
+    "consumerAckFloorSequence": "34",
+    "exactWireSHA256": "5ae12235c293cb28fc4bd5abc6e5d823d2b5f2c43b025ba7911f85033361c0e6",
+    "originalMsgIdPreserved": true,
+    "postBackupOriginAbsentFromTargetCount": "0",
+    "currentEpochPositionSumAfterUnchangedAssertion": "8",
+    "readbackAfterOwnedApplicationStop": true
+  },
+  "execution": {
+    "python": "python3 -B",
+    "baseSeed": "/Users/jobs/Library/Application Support/JobsIM/Integration/sync-308bba50/Safety/environment.json",
+    "resumeOwnedSeed": "/Users/jobs/Library/Application Support/JobsIM/Integration/sync-restore-4d7ff7816f/Safety/environment.json",
+    "flags": [
+      "--execute-authorized"
+    ],
+    "initialPreparationFailures": [
+      {
+        "privatePreservedRaw": "/Users/jobs/Library/Application Support/JobsIM/Integration/sync-restore-4a968cb7de/Safety/wrapper-setup-attempt-1.log",
+        "phase": "wrapper libpq connection selection before any database/service creation"
+      },
+      {
+        "privatePreservedRaw": "/Users/jobs/Library/Application Support/JobsIM/Integration/sync-restore-9f3c846c80/Safety/wrapper-setup-attempt-2.log",
+        "phase": "wrapper libpq connection selection before any database/service creation"
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "status": "source_in_progress",
+  "createdAt": "2026-11-16 02:31:41 +0800",
+  "ownSwiftSources": 69,
+  "injectedMethods": 17,
+  "nativeTypecheck": "not_completed",
+  "nativeTests": "not_run",
+  "https": "not_run",
+  "parser": {
+    "exitCode": 0,
+    "stderr": ""
+  },
+  "constructionAudit": {
+    "issues": 0,
+    "issueFiles": 0,
+    "factoryHits": 23,
+    "scannedFiles": 69,
+    "sdkClasses": 3512
+  },
+  "languages": {
+    "de.lproj": 147,
+    "zh-Hans.lproj": 147,
+    "ja.lproj": 147,
+    "en.lproj": 147,
+    "es.lproj": 147,
+    "ko.lproj": 147,
+    "zh-Hant.lproj": 147,
+    "bo.lproj": 147,
+    "ru.lproj": 147,
+    "fr.lproj": 147
+  },
+  "baseline": {
+    "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Baselines/Auth-before-authoritative-sync-20261116",
+    "sourceFiles": 67,
+    "copiedSourceMismatches": [
+
+    ],
+    "priorAuthReportUnmodified": true,
+    "originalAppFiles": 108,
+    "originalAppMismatches": [
+
+    ]
+  },
+  "buildAttempts": [
+    {
+      "exitCode": null,
+      "stopped": null,
+      "log": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthoritativeSync/build-20261116-014045.log",
+      "diskAfter": "Filesystem   1024-blocks      Used Available Capacity  iused    ifree %iused  Mounted on\n/dev/disk3s5   971298980 921317796   9699748    99% 10250232 96997480   10%   /System/Volumes/Data\n",
+      "elapsed": 122.49506899999687,
+      "record": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthoritativeSync/build-20261116-014045.json",
+      "sha256": "1436ac4c384a9e76b8b81f9e796eb2fc008ed70aade7f9b12dd989c2254fa5f9",
+      "logSHA256": "5ea9195da9ac1c905c0923596ef2afa214d27ffde261be4b8b3dbfc36d5ad553"
+    },
+    {
+      "exitCode": null,
+      "signal": 15,
+      "stopped": "timeout_240s",
+      "log": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthoritativeSync/build-20261116-014525.log",
+      "audit": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthoritativeSync/swift-j1-20261116-014525.jsonl",
+      "maxObservedOwnSwiftFrontends": 0,
+      "diskAfter": "Filesystem   1024-blocks      Used Available Capacity  iused    ifree %iused  Mounted on\n/dev/disk3s5   971298980 921711688   9305856   100% 10263443 93058560   10%   /System/Volumes/Data\n",
+      "elapsed": 243.56148599999142,
+      "record": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthoritativeSync/build-20261116-014525.json",
+      "sha256": "61def5b3b1f220ccc68dfaf15ddcc649c04154c8caa7eb78fe6b72515d4ab967",
+      "logSHA256": "7249ea1ca2823fd2f2517a50c94abbcd05a3f7e9d84989170ccb671938465509"
+    },
+    {
+      "exitCode": null,
+      "signal": 15,
+      "stopped": "disk_below_4GiB",
+      "log": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthoritativeSync/build-20261116-015241.log",
+      "audit": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthoritativeSync/swift-j1-20261116-015241.jsonl",
+      "maxObservedOwnSwiftFrontends": 0,
+      "diskBefore": "Filesystem   1024-blocks      Used Available Capacity  iused   ifree %iused  Mounted on\n/dev/disk3s5   971298980 921730636    891624   100% 10263456 8916240   54%   /System/Volumes/Data\n",
+      "diskAfter": "Filesystem   1024-blocks      Used Available Capacity  iused   ifree %iused  Mounted on\n/dev/disk3s5   971298980 921731244    891016   100% 10263458 8910160   54%   /System/Volumes/Data\n",
+      "elapsed": 3.1671820000046864,
+      "record": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthoritativeSync/build-20261116-015241.json",
+      "sha256": "f7b5f6b1d3224e6373cb898034c2db4aca5f6dd03bee606a7dd1837b6b06b5f1",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "knownLimits": [
+    "No native test or API execution",
+    "Unattributed legacy namespaces remain quarantined",
+    "Unresolved original Outbox not acknowledged by global client ID",
+    "qualifiedAck and after_receipt disabled"
+  ],
+  "disk": "Filesystem   1024-blocks      Used Available Capacity  iused    ifree %iused  Mounted on\n/dev/disk3s5   971298980 921944516   1728504   100% 10263590 17285040   37%   /System/Volumes/Data\n"
+}

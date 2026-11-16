@@ -1,0 +1,10 @@
+{
+  "independentDeviceStillAuthorized": true,
+  "oneSuccessOneReuse": true,
+  "onlyOriginalFamilyRevoked": true,
+  "onlyTwoHistoryGenerations": true,
+  "outerOSFenceBypassedOnlyInTest": true,
+  "realPostgreSQLConcurrentConsume": true,
+  "scope": "Current identity handler/SQL transactions with real isolated PostgreSQL and TLS; private test only, not a production lock bypass",
+  "status": "passed"
+}

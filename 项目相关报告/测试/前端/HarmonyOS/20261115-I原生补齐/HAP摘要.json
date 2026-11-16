@@ -1,0 +1,30 @@
+[
+  {
+    "file": "entry-default-unsigned.hap",
+    "bytes": 475281,
+    "sha256": "51ee285d3bea5aefc362858c245148c17d0c28b7c52ac59c3ca90b07b7087317",
+    "arkBytecode": [
+      {
+        "path": "ets/modules.abc",
+        "bytes": 334828,
+        "sha256": "14e8817d2802addb7f8c7876bc7b9ec439bbbd57d0382c6f1f9b812221dc9664"
+      }
+    ],
+    "signed": false,
+    "deviceExecution": "not run"
+  },
+  {
+    "file": "entry-ohosTest-unsigned.hap",
+    "bytes": 1279651,
+    "sha256": "8ccd3e2bb6f11141e06526f49b9013c93be8132df32ac44a287677324e1c4c43",
+    "arkBytecode": [
+      {
+        "path": "ets/modules.abc",
+        "bytes": 325004,
+        "sha256": "b6a3e8e74551042347ea141f00dcf919d8d12bf5b587c353fe623a08b4288992"
+      }
+    ],
+    "signed": false,
+    "deviceExecution": "not run"
+  }
+]

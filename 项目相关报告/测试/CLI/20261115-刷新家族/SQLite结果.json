@@ -1,0 +1,109 @@
+{
+  "at": "2026-11-15T14:02:50.303Z",
+  "status": "passed",
+  "exitCode": 0,
+  "error": null,
+  "passedGroups": 31,
+  "failedGroups": 0,
+  "sourceFiles": [
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth.go",
+      "sha256": "0d01a848c1d5ba02f55bd0f3c8a5527cad4c11d78381b920ab644ee5f7c96287"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go",
+      "sha256": "99aba4b84a204208ec607d925415470c18a0a90f29626b2be37b7c9b43682a70"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go",
+      "sha256": "802f2dc215b0716db0389a0483989de6c25446fd700781976558af4801ad8bd4"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go",
+      "sha256": "0165ee54098f1b4e223d3005cf54445ea945e88ddb5f5800f148985402a57a06"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go",
+      "sha256": "f85527dd37bddc1d7e1c17da398b6bf12ca7d42ed94a0517ab87d50bb4c17f2a"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_other.go",
+      "sha256": "232842a24f0efa8691c222c8ad616146db98f5a45acb417526e0679589f2e4fd"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go",
+      "sha256": "863cb2ed0ca254473fa11a8b2dfe2f8fb5c2414d6846ca316cfbfc8ace69fc51"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+      "sha256": "379fb31e54b9568a3d986b90dd2306a8338a4bd32ad2976c1f0a883fd6b8353d"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "sha256": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/forward.go",
+      "sha256": "747de459652d091dfb32f882448147963a64dddd6e798355f08e42bfc3a557e6"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "sha256": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/local.go",
+      "sha256": "e1e5ffa8a299397a9714006b1938544f007a708cf5116a4258deaabe09d48788"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/main.go",
+      "sha256": "e820e2f1f4fa2f532d092842b2798fee4c641c135149c66cd8f41fb9824f31a8"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/store.go",
+      "sha256": "ea188268569ff18276b6fe3195d3aa514088be62727cd2eb77d350c65f840f97"
+    },
+    {
+      "path": "代码/前端/CLI/go.mod",
+      "sha256": "4ca83c3741ef64a504e79ed56281a7d583b968273ea284786ee89248a013db39"
+    },
+    {
+      "path": "代码/前端/CLI/go.sum",
+      "sha256": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030"
+    },
+    {
+      "path": "测试/CLI/auth_https_test.go",
+      "sha256": "9ef8c4042dcf0d747df4d1d12c171e3e224b027c1e41bd5f3c24a55085db56b7"
+    },
+    {
+      "path": "测试/CLI/auth_test.go",
+      "sha256": "f481c34188d7c3ac6da8ac08592ae97e2a376d69de369749f01735cc2ff8302f"
+    },
+    {
+      "path": "测试/CLI/collaboration_test.go",
+      "sha256": "6174741808763c247b25264fa1709013f31549e289479af181c114e3eb10d030"
+    },
+    {
+      "path": "测试/CLI/governance_test.go",
+      "sha256": "aae050ed8b6c7783019efa3a4b6216f38ba3fc37951e7d462bbf5e34f1ca2e7f"
+    },
+    {
+      "path": "测试/CLI/outbox_test.go",
+      "sha256": "a0b3c4756c3b5907c759615acca8c3df8c33b62770482ee5a933397ffc590952"
+    }
+  ],
+  "checks": [
+    "durable commit before HTTP; original ID/payload after unknown results",
+    "real SQLite reopen, namespace/restore isolation, WAL/FULL",
+    "message/cursor atomicity and large string version monotonicity",
+    "explicit atomic legacy import; unavailable content never exposes old body",
+    "original send admission retained; absent capability receives no POST",
+    "request/reopen original operation persisted before HTTP and reused after reopen",
+    "completed operations query current inbound policy without new POST",
+    "only corresponding direct is frozen before relationship write; raw payload/hash unchanged",
+    "leave/member-self removal atomically withdraws history/cursor before HTTP and retains draft",
+    "SQL fault rolls leave freeze/history/cursor back together",
+    "explicit original member generations; PATCH/DELETE unknown results not replayed",
+    "schema1 to schema2 retains original Outbox bytes and independent reason",
+    "governance frozen reconciliation only reads current authorized history, never creates an old intent"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "httpAssertions": 55,
+  "scope": "real HTTPS/PostgreSQL/native cookie and CSRF/core contacts/message/recovery slice; no full I acceptance",
+  "restoreEpochBound": true,
+  "malformedPathCannotPoisonJournal": true,
+  "testSessionsFinallyRevoked": true,
+  "explicitRecipientGateReopen": true,
+  "stableReopenGeneration": true,
+  "oldRequestIdCannotResurrect": true,
+  "currentRequesterProfileAggregation": true,
+  "blockedRequesterMetadataOmitted": true,
+  "sendAdmissionSnapshotRegression": "55 HTTP assertions rerun with original immutable per-intent sendAdmission; blocked new intent returns SEND_ADMISSION_CHANGED"
+}

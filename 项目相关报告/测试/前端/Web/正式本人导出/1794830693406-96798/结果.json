@@ -1,0 +1,44 @@
+{
+  "startedAt": "2026-11-16T12:04:53.406Z",
+  "finishedAt": "2026-11-16T12:04:56.479Z",
+  "status": "passed",
+  "checks": [
+    "filename and complete ZIP validation reject traversal, controls, duplicates, truncated streams and trailing bytes",
+    "actual apiFile uses cookie/family/header authentication, validates ZIP and rejects MIME/size/truncation before handoff",
+    "lost successful create is reconciled by original-body result with no second creating POST",
+    "unreached original stays read-only on check and only explicit retry reuses its exact ID/body",
+    "cancel original is durable and stable; checking an unknown cancellation never resends it",
+    "capability withdrawal, frozen namespace and corrupt body digest each block creating writes",
+    "capability withdrawal still allows original cancellation but blocks both new creation and downloads",
+    "late create from a retired family cannot bind a job or change the original payload",
+    "Web Locks queued original retry is fenced before any write after context retirement",
+    "strict metadata projection preserves decimal counters, drops unknown secrets and rejects wrong epoch/job",
+    "download ticket is RAM/header-only and never persisted in task originals",
+    "browser download/ZIP-directory limits have a specific localized error and never hand oversized files to save",
+    "rendered task lifecycle creates, downloads via a short-lived Blob URL and requires explicit cancellation confirmation",
+    "rendered unknown task offers read-only check and explicit same-request retry; failed current GET clears its prior downloadable view",
+    "unmounted old-family download completion cannot create a Blob URL or publish into the next account",
+    "ten complete languages inherit all three native Web theme settings without mobile horizontal overflow",
+    "rendered capability withdrawal preserves existing original check/cancel controls while disabling create/download",
+    "unsupported connection has a truthful empty/connect/reload state and no synthetic ZIP"
+  ],
+  "sourceSHA256": {
+    "代码/前端/Web/Src/App.tsx": "f01915729c6636ee59b9f8fac47727c53516cd91941766173050c78c3319faf0",
+    "代码/前端/Web/Src/api.ts": "afe79d46d018c8623d66f630364382ec641a274a595678da2976d01359850c23",
+    "代码/前端/Web/Src/DataExportActions.ts": "3b02f6729b72fed976ef8f676f82e3189c7b500021f40d01aa36df3c0264c987",
+    "代码/前端/Web/Src/DataExportArchive.ts": "9288da3f62c09d533e9af219adcf63ee9fc9f445b9c56756c90f9ee07e09670d",
+    "代码/前端/Web/Src/DataExportLabels.ts": "39e7c9c64b2797df4959d20213d3c07c90032550fd470401d56012d409efb1c0",
+    "代码/前端/Web/Src/DataExportPanel.tsx": "280d728a94c93d9e2b152a026fc3876cdfbc51ea99ce956f88863ce78bba080d",
+    "代码/前端/Web/Src/DataExportProtocol.ts": "048c02c83af44eebcc02d5db4fe003e737133bbf59d87e00f1f66a3d0583a136",
+    "代码/前端/Web/Src/DataExportStore.ts": "b33f7f0c6b1685ea9a3edaab6062e13b3b6e40fa6d340b0daeecdb2f34e740bd",
+    "代码/前端/Web/Src/styles.css": "37c5cfd3d9bed3c5a8238d08622246d3284fedced9ca9ab3a6dbc81d3edb04d3",
+    "测试/前端/Web/data-export.cjs/data-export.cjs": "23bd302e9102570d6e5d06dcbc61f6d38627a40132e37a870421b4f24af336b8"
+  },
+  "sourceUnchanged": true,
+  "apiAttempts": [
+    "GET /api/bootstrap",
+    "GET /api/bootstrap"
+  ],
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/jobsim-data-export-NgAudY",
+  "scope": "Actual Chrome/React/IndexedDB/Web Locks; injected personal-export request/file services and browser-save sink. No live server or OS filesystem persistence attestation."
+}

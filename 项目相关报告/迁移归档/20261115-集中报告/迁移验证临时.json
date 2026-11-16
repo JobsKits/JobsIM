@@ -1,0 +1,278 @@
+{
+  "originalFiles": 449,
+  "unchangedCurrentBytes": 440,
+  "navigationChangedWithOriginalArchive": 9,
+  "rawErrors": [],
+  "relativeCompatibilityDirectories": 8,
+  "localMarkdownTargetsChecked": 1067,
+  "brokenLocalTargets": [
+    {
+      "document": "代码/前端/iOS/Vendor/ESPullToRefresh-2.9.3/README.md",
+      "target": "./logo.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/ESPullToRefresh-2.9.3/README.md",
+      "target": "./README_CN.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/ESPullToRefresh-2.9.3/README.md",
+      "target": "./example_default.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/ESPullToRefresh-2.9.3/README.md",
+      "target": "./example_meituan.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/ESPullToRefresh-2.9.3/README.md",
+      "target": "./example_wechat.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/RxSwift-6.9.0/README.md",
+      "target": "./Documentation/GettingStarted.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/RxSwift-6.9.0/README.md",
+      "target": "./Documentation/NewFeatureRequestTemplate.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/GettingStarted.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/GettingStarted.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/FAQ.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/GettingStarted.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/XcodeTricks.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/PerLoggerLogLevels.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/XcodeColors.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/CustomFormatters.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/FAQ.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/Performance.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/ProblemSolution.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation/AppCode-support.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+      "target": "./Documentation"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/YTKNetwork-3.0.6/README.md",
+      "target": "./Docs/README_cn.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/YTKNetwork-3.0.6/README.md",
+      "target": "./Docs/BasicGuide_en.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/YTKNetwork-3.0.6/README.md",
+      "target": "./Docs/2.0_MigrationGuide_cn.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/header2.jpg"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Translations/README_es.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Translations/README_zh.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Translations/README_pt-br.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Translations/README_ko.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Translations/README_fr.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Translations/README_de.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/storyboard.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/multilines2.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/multiline_lastline.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/multiline_corner.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/multiline_lineSpacing.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/multiline_insets.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/multiline_lineHeight.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/multiline_corner.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/multiline_customize.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/flatcolors.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/sliding_left_to_right.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/sliding_right_to_left.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/sliding_top_to_bottom.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/sliding_bottom_to_top.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/sliding_topLeft_to_bottomRight.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/sliding_bottomRight_to_topLeft.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+      "target": "./Assets/debug_mode.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/lottie-ios-4.6.1/README.md",
+      "target": "./_Gifs/Examples1.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/lottie-ios-4.6.1/README.md",
+      "target": "./_Gifs/Examples2.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/lottie-ios-4.6.1/README.md",
+      "target": "./_Gifs/Examples3.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/lottie-ios-4.6.1/README.md",
+      "target": "./_Gifs/Examples4.gif"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/lottie-ios-4.6.1/README.md",
+      "target": "./_Gifs/code_signature.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "target": "../gh-pages/public/img/logo-tight.png"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "target": "./Documentation/GettingStarted.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "target": "./Documentation/CommonPatterns.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "target": "./Documentation/FAQ.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "target": "./Documentation/Installation.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "target": "./Documentation/ObjectiveC.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "target": "./Documentation/Troubleshooting.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "target": "./Documentation/Appendix.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+      "target": "./Documentation/Troubleshooting.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/RxCocoa-6.9.0/README.md",
+      "target": "./Documentation/GettingStarted.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/RxCocoa-6.9.0/README.md",
+      "target": "./Documentation/NewFeatureRequestTemplate.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/SwiftMessages-10.0.2/README.md",
+      "target": "./ViewControllers.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/RxRelay-6.9.0/README.md",
+      "target": "./Documentation/GettingStarted.md"
+    },
+    {
+      "document": "代码/前端/iOS/Vendor/RxRelay-6.9.0/README.md",
+      "target": "./Documentation/NewFeatureRequestTemplate.md"
+    }
+  ]
+}

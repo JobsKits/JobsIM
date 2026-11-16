@@ -1,0 +1,254 @@
+=== RUN   TestCollaborationPayloadCompatibilityAndDurableMentionQualification
+--- PASS: TestCollaborationPayloadCompatibilityAndDurableMentionQualification (0.02s)
+=== RUN   TestCollaborationSignedPagingExactSourceAndContextFence
+{
+  "cursor": "end",
+  "hasMore": false,
+  "items": [
+    {
+      "conversationId": "beyond100",
+      "id": "m2"
+    }
+  ]
+}
+{
+  "cursor": "opaque+/= %汉",
+  "hasMore": true,
+  "items": [
+    {
+      "conversationId": "beyond100",
+      "id": "m1",
+      "text": "old list body"
+    }
+  ]
+}
+{
+  "cursor": "opaque+/= %汉",
+  "hasMore": true,
+  "items": [
+    {
+      "conversationId": "beyond100",
+      "id": "m1",
+      "text": "old list body"
+    }
+  ]
+}
+--- PASS: TestCollaborationSignedPagingExactSourceAndContextFence (0.01s)
+=== RUN   TestAnnouncementDurableOriginalFactAndNoBodyRollback
+{
+  "currentAnnouncement": {
+    "canManage": true,
+    "conversationId": "g",
+    "state": "empty",
+    "version": "4"
+  },
+  "operationId": "6525c5c7fbcb81de6e788a49e34d85f8",
+  "originalFact": {
+    "current": false,
+    "operationId": "6525c5c7fbcb81de6e788a49e34d85f8",
+    "result": {
+      "canManage": false,
+      "conversationId": "g",
+      "messageId": "source",
+      "sourceVersion": "2",
+      "state": "active",
+      "version": "1"
+    },
+    "status": "applied"
+  }
+}
+--- PASS: TestAnnouncementDurableOriginalFactAndNoBodyRollback (0.02s)
+=== RUN   TestAnnouncementCASFreezeEpochAndTransactionRollback
+--- PASS: TestAnnouncementCASFreezeEpochAndTransactionRollback (0.02s)
+=== RUN   TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen
+=== RUN   TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/request
+{
+  "operationId": "e7cf7d96ddd6e8d99ea4c6cbfc31c704",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "id": "request-fact",
+    "state": "pending"
+  },
+  "state": "completed"
+}
+{
+  "operationId": "e7cf7d96ddd6e8d99ea4c6cbfc31c704",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "id": "request-fact",
+    "state": "pending"
+  },
+  "state": "completed"
+}
+=== RUN   TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/reopen
+{
+  "operationId": "7196ac62cab6c43f6c97104ebe4fa3d6",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "current": false,
+    "generation": "1",
+    "status": "opened"
+  },
+  "state": "completed"
+}
+{
+  "operationId": "7196ac62cab6c43f6c97104ebe4fa3d6",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "current": false,
+    "generation": "1",
+    "status": "opened"
+  },
+  "state": "completed"
+}
+--- PASS: TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen (0.05s)
+    --- PASS: TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/request (0.02s)
+    --- PASS: TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/reopen (0.03s)
+=== RUN   TestRelationshipFreezeTargetsOnlyCorrespondingDirectAndKeepsPayloadBytes
+--- PASS: TestRelationshipFreezeTargetsOnlyCorrespondingDirectAndKeepsPayloadBytes (0.01s)
+=== RUN   TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory
+=== RUN   TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/leave
+{
+  "message": {
+    "clientMsgId": "original-group",
+    "conversationId": "group",
+    "createdAt": "2026-11-15T06:31:50.103576Z",
+    "id": "original-success",
+    "senderId": "user",
+    "sequence": "9007199254740993123",
+    "text": "authoritative",
+    "version": "1"
+  },
+  "source": "read_only_reconciliation"
+}
+=== RUN   TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/remove-member
+{
+  "message": {
+    "clientMsgId": "original-group",
+    "conversationId": "group",
+    "createdAt": "2026-11-15T06:31:50.116761Z",
+    "id": "original-success",
+    "senderId": "user",
+    "sequence": "9007199254740993123",
+    "text": "authoritative",
+    "version": "1"
+  },
+  "source": "read_only_reconciliation"
+}
+--- PASS: TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory (0.03s)
+    --- PASS: TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/leave (0.01s)
+    --- PASS: TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/remove-member (0.01s)
+=== RUN   TestLeaveFailureRollsBackFreezeHistoryAndCursorTogether
+--- PASS: TestLeaveFailureRollsBackFreezeHistoryAndCursorTogether (0.01s)
+=== RUN   TestGroupCommandsKeepExactContractAndDoNotReplayUnknownPatch
+{
+  "items": []
+}
+{
+  "status": "added"
+}
+{
+  "status": "removed"
+}
+--- PASS: TestGroupCommandsKeepExactContractAndDoNotReplayUnknownPatch (0.01s)
+=== RUN   TestSchemaOneMigrationPreservesPendingAndAddsIndependentFreezeReason
+--- PASS: TestSchemaOneMigrationPreservesPendingAndAddsIndependentFreezeReason (0.02s)
+=== RUN   TestUnknownLocalRevocationCannotCreateAnOldIntentDuringReconciliation
+--- PASS: TestUnknownLocalRevocationCannotCreateAnOldIntentDuringReconciliation (0.01s)
+=== RUN   TestUnavailableContentNeverExposesOlderBodyInPresentation
+--- PASS: TestUnavailableContentNeverExposesOlderBodyInPresentation (0.00s)
+=== RUN   TestOutboxPersistsBeforeSendAndKeepsUnknownIdentity
+Pending original ID: stable-original-id
+{
+  "clientMsgId": "stable-original-id",
+  "conversationId": "conversation",
+  "createdAt": "2026-11-15T06:31:50.183521Z",
+  "id": "server-message",
+  "senderId": "user",
+  "sequence": "9007199254740993123",
+  "text": "authoritative",
+  "version": "1"
+}
+--- PASS: TestOutboxPersistsBeforeSendAndKeepsUnknownIdentity (0.01s)
+=== RUN   TestOutboxCrashReopenAndRestoreFreeze
+Pending original ID: original
+--- PASS: TestOutboxCrashReopenAndRestoreFreeze (0.02s)
+=== RUN   TestCursorAndMessagesCommitTogetherWithoutVersionRollback
+--- PASS: TestCursorAndMessagesCommitTogetherWithoutVersionRollback (0.01s)
+=== RUN   TestLegacyImportIsExplicitAtomicAndRetainsOriginal
+--- PASS: TestLegacyImportIsExplicitAtomicAndRetainsOriginal (0.01s)
+=== RUN   TestSendingAdmissionSurvivesRestartAndNeverUpgradesOriginalIntent
+Pending original ID: original-id
+--- PASS: TestSendingAdmissionSurvivesRestartAndNeverUpgradesOriginalIntent (0.02s)
+=== RUN   TestAdmissionLookupFailureKeepsDraftWithoutInventingQualification
+--- PASS: TestAdmissionLookupFailureKeepsDraftWithoutInventingQualification (0.01s)
+=== RUN   TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen
+=== RUN   TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen/committed_false
+{
+  "clientMsgId": "ce9d962c502dd1e2dd28e3f66ca10a8e",
+  "conversationId": "conversation",
+  "createdAt": "2026-11-15T06:31:50.273311Z",
+  "id": "result",
+  "senderId": "user",
+  "sequence": "9007199254740993123",
+  "text": "authoritative",
+  "version": "1"
+}
+=== RUN   TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen/committed_true
+{
+  "clientMsgId": "3cb68d7bea653d91e10c0aeca76e3f63",
+  "conversationId": "conversation",
+  "createdAt": "2026-11-15T06:31:50.29262Z",
+  "id": "result",
+  "senderId": "user",
+  "sequence": "9007199254740993123",
+  "text": "authoritative",
+  "version": "1"
+}
+--- PASS: TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen (0.04s)
+    --- PASS: TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen/committed_false (0.02s)
+    --- PASS: TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen/committed_true (0.02s)
+=== RUN   TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof
+=== RUN   TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/FORWARD_ADMISSION_CHANGED
+=== RUN   TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/NOT_A_MEMBER
+=== RUN   TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/HISTORY_NOT_ALLOWED
+--- PASS: TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof (0.05s)
+    --- PASS: TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/FORWARD_ADMISSION_CHANGED (0.01s)
+    --- PASS: TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/NOT_A_MEMBER (0.01s)
+    --- PASS: TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/HISTORY_NOT_ALLOWED (0.02s)
+=== RUN   TestForwardCacheAndPresentationCannotRetainProjectedBodyOrProof
+--- PASS: TestForwardCacheAndPresentationCannotRetainProjectedBodyOrProof (0.01s)
+PASS
+ok  	jobsim/cli/cmd/jobsim	0.952s

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="10" failures="0" errors="0" skipped="0" time="10.16" timestamp="2026-11-15T13:18:04" hostname="localhost">
+  <testsuite name="com.jobs.im.NativeSessionLifecycleTest" tests="6" failures="0" errors="0" skipped="0" time="0.318" timestamp="2026-11-15T13:18:04" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="lateEpochInvalidationAndLegacyCommitCannotEraseRecoveredPair" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.093" />
+    <testcase name="lateExpiredBusinessCannotBorrowReplacementFamilyAndOther401NeverRefreshes" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.027" />
+    <testcase name="initialUnknownChainKeepsOriginalIdsAndRejectsLateDelivery" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.001" />
+    <testcase name="committedPairHandoffRecoversAndRetiresOriginalOutboxWithoutChangingPayload" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.027" />
+    <testcase name="concurrentExpiredRequestsShareOneRotationAndPublishOnlyDurablePair" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.17" />
+    <testcase name="secureWriteFailureAndUnknownRefreshStayBlockedAcrossRestart" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.0" />
+  </testsuite>
+  <testsuite name="com.jobs.im.StorageLifecycleTest" tests="1" failures="0" errors="0" skipped="0" time="0.001" timestamp="2026-11-15T13:18:04" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="versionTwoUpgradePreservesOriginalPendingIdentity" classname="com.jobs.im.StorageLifecycleTest" time="0.001" />
+  </testsuite>
+  <testsuite name="com.jobs.im.NativeSessionHttpsTest" tests="3" failures="0" errors="0" skipped="0" time="9.047" timestamp="2026-11-15T13:18:04" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope" classname="com.jobs.im.NativeSessionHttpsTest" time="6.225" />
+    <testcase name="realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair" classname="com.jobs.im.NativeSessionHttpsTest" time="1.451" />
+    <testcase name="realLostRefreshAndThreeIntentClosureRetireUnknownAncestors" classname="com.jobs.im.NativeSessionHttpsTest" time="1.371" />
+  </testsuite>
+</testsuites>

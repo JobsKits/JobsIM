@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "httpAssertions": 20,
+  "singleUsePasswordPurpose": true,
+  "shortTermExpiryEnforced": true,
+  "issueInvalidatesOldPasswordAndSessions": true,
+  "originalCredentialNotRedisplayed": true,
+  "originalConsumeResultRetry": true,
+  "mfaFactorNotReset": true,
+  "scope": "isolated real HTTPS/PG/journal password-reset slice; no full I acceptance"
+}

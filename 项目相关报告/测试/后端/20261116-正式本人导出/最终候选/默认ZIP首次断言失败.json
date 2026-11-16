@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "kind": "test_assertion",
+  "failure": "Test searched the compressed ZIP bytes instead of extracting entries. Actual package and original prepared task retained; no product source correction applied.",
+  "httpChecks": null,
+  "binarySHA256": "2b58586428a345309f3dcdca651d35de6b24f122ac717b8b8397d357901e5c87",
+  "raw": "exec c4354f; original stderr preserved by session tool output"
+}

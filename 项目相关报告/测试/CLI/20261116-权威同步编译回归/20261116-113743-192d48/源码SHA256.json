@@ -1,0 +1,154 @@
+{
+  "files": [
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth.go",
+      "sha256": "df8291be0fd1040b39159a7e106a9087f02782f692cb699acf9dc9cb76124709",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go",
+      "sha256": "99aba4b84a204208ec607d925415470c18a0a90f29626b2be37b7c9b43682a70",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_lock_unix.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go",
+      "sha256": "802f2dc215b0716db0389a0483989de6c25446fd700781976558af4801ad8bd4",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_lock_windows.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go",
+      "sha256": "0165ee54098f1b4e223d3005cf54445ea945e88ddb5f5800f148985402a57a06",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go",
+      "sha256": "f85527dd37bddc1d7e1c17da398b6bf12ca7d42ed94a0517ab87d50bb4c17f2a",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_vault_linux.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_other.go",
+      "sha256": "232842a24f0efa8691c222c8ad616146db98f5a45acb417526e0679589f2e4fd",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_vault_other.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go",
+      "sha256": "863cb2ed0ca254473fa11a8b2dfe2f8fb5c2414d6846ca316cfbfc8ace69fc51",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_vault_windows.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+      "sha256": "805f1dfd0f440aba5da175f7becec66360f832fdb13e7aabc558ff31a635d043",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/collaboration.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "sha256": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/credentials.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/forward.go",
+      "sha256": "ef4692138b5458d003c5df06983e2fde187a464da5eae5451d2283dbe9f3a157",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/forward.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "sha256": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/governance.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/local.go",
+      "sha256": "f067618d3f4073fd5915f2d870aaeb66d9d7b6ff4c5fb9eebc27a8c5b07bb7e9",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/local.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/main.go",
+      "sha256": "7197126ed48f58fb9cf4a30c5fd0745104ae66022869a4724f26f744ffe33ad2",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/main.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/store.go",
+      "sha256": "93a4cb6fd4136a34da0d43ec947718bb8c1d734f1f6e341332a82e49f04de806",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/store.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_engine.go",
+      "sha256": "a83308bd419e57b2d2526eeca476a8421f62c6344dff135718be7a6f52199af8",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/sync_engine.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_protocol.go",
+      "sha256": "28d6729bf3b23496fb4a1eec5f89d669386eedbf40c9762e2b92a75dcdd774e7",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/sync_protocol.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_store.go",
+      "sha256": "f9d955aa1db01edaa9685ea080a3b435651785bd8ca3bedc18f6bed0a20f2c0c",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/sync_store.go"
+    },
+    {
+      "path": "测试/CLI/auth_https_test.go",
+      "sha256": "9ef8c4042dcf0d747df4d1d12c171e3e224b027c1e41bd5f3c24a55085db56b7",
+      "snapshot": "源码快照/测试/CLI/auth_https_test.go"
+    },
+    {
+      "path": "测试/CLI/auth_test.go",
+      "sha256": "f481c34188d7c3ac6da8ac08592ae97e2a376d69de369749f01735cc2ff8302f",
+      "snapshot": "源码快照/测试/CLI/auth_test.go"
+    },
+    {
+      "path": "测试/CLI/collaboration_test.go",
+      "sha256": "5a2d25be12c8c82b87c1bfe0e6af31c64a214bcc5eff56cc20078defeb607364",
+      "snapshot": "源码快照/测试/CLI/collaboration_test.go"
+    },
+    {
+      "path": "测试/CLI/governance_test.go",
+      "sha256": "5212e31c0bef4391f426d55831ae7a29402c7c6f0e71fb6ee4e550ad44c1fa74",
+      "snapshot": "源码快照/测试/CLI/governance_test.go"
+    },
+    {
+      "path": "测试/CLI/outbox_test.go",
+      "sha256": "16b8b0ce8397d029c7ceb33239230cc005114134b8f78138949c7e2f58287ce8",
+      "snapshot": "源码快照/测试/CLI/outbox_test.go"
+    },
+    {
+      "path": "测试/CLI/sync_test.go",
+      "sha256": "db6d111e3723c44f82ef1f2e00717723a46b2f06f9aff14882b25e8ca0a3e598",
+      "snapshot": "源码快照/测试/CLI/sync_test.go"
+    },
+    {
+      "path": "代码/前端/CLI/go.mod",
+      "sha256": "4ca83c3741ef64a504e79ed56281a7d583b968273ea284786ee89248a013db39",
+      "snapshot": "源码快照/代码/前端/CLI/go.mod"
+    },
+    {
+      "path": "代码/前端/CLI/go.sum",
+      "sha256": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030",
+      "snapshot": "源码快照/代码/前端/CLI/go.sum"
+    },
+    {
+      "path": "代码/前端/CLI/README.md",
+      "sha256": "42eb8cadcf126daeadd96faa9a6e0a661f127c51ead71d68f970a863fdd44e96",
+      "snapshot": "源码快照/代码/前端/CLI/README.md"
+    },
+    {
+      "path": "代码/前端/CLI/代码地图/README.md",
+      "sha256": "b03241566f020f81cd4d08792221bce7b5ff8babedc070d6e4698f864cf4f754",
+      "snapshot": "源码快照/代码/前端/CLI/代码地图/README.md"
+    },
+    {
+      "path": "测试/CLI/README.md",
+      "sha256": "bdf39618413a27ab6e3fa55460f4107432126d33bbf85403682891db977ce524",
+      "snapshot": "源码快照/测试/CLI/README.md"
+    },
+    {
+      "path": "测试/CLI/运行测试.mjs/运行测试.mjs",
+      "sha256": "127fa785c8672d807e71596f83e5a3adad335ee9b4d937ed642389560717d548",
+      "snapshot": "源码快照/测试/CLI/运行测试.mjs/运行测试.mjs"
+    },
+    {
+      "path": "测试/CLI/运行测试.mjs/README.md",
+      "sha256": "55d0e95fa1a71f5b9af4cd476a069bfd74e6a58a442642bf81c47bafc102f6ea",
+      "snapshot": "源码快照/测试/CLI/运行测试.mjs/README.md"
+    }
+  ]
+}

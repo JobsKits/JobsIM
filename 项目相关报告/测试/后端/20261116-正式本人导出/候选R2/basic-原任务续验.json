@@ -1,0 +1,89 @@
+{
+  "group": "basic",
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 11,
+  "semanticAssertions": 19,
+  "elapsedSeconds": 0.152,
+  "binarySHA256": "c3d1128f246361f10f72711a545f7a9af5892e1db9b4b915d363bbc774326d34",
+  "scriptSHA256": "bee71e954e42043da6ca679ae91f9c22453628edb8db681deb664aff2b2cf86f",
+  "checkedAt": "2026-11-16T08:07:25.612331+00:00",
+  "assertions": [
+    {
+      "assertion": "unread create response reuses the same nonce, task and sealed key",
+      "passed": true
+    },
+    {
+      "assertion": "task metadata never delivers a ZIP key",
+      "passed": true
+    },
+    {
+      "assertion": "ready artifact keeps only an instance-sealed server key until cleanup",
+      "passed": true
+    },
+    {
+      "assertion": "ordinary access/refresh rotation does not invalidate stable public device metadata",
+      "passed": true
+    },
+    {
+      "assertion": "unauthorized metadata mutation does not revoke another owner's package",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "all downloaded ZIP entries pass their complete CRC",
+      "passed": true
+    },
+    {
+      "assertion": "original file name never becomes an unsafe ZIP path",
+      "passed": true
+    },
+    {
+      "assertion": "own current profile exported",
+      "passed": true
+    },
+    {
+      "assertion": "own source font preference exported",
+      "passed": true
+    },
+    {
+      "assertion": "own independent manual unread view exported",
+      "passed": true
+    },
+    {
+      "assertion": "own read point and complete currently stored sparse observations exported; contiguous observations may be compacted",
+      "passed": true
+    },
+    {
+      "assertion": "independent applied draft text and pure reply reference exported",
+      "passed": true
+    },
+    {
+      "assertion": "forward target becomes a bodyless placeholder without source grant",
+      "passed": true
+    },
+    {
+      "assertion": "currently authorized ordinary message body exported",
+      "passed": true
+    },
+    {
+      "assertion": "ordinary attachment download retains exact authenticated bytes",
+      "passed": true
+    },
+    {
+      "assertion": "JSON and manifests contain no reusable proof, credential or original recovery store",
+      "passed": true
+    },
+    {
+      "assertion": "formal export task is explicitly distinct from legacy experimental chat export",
+      "passed": true
+    }
+  ]
+}

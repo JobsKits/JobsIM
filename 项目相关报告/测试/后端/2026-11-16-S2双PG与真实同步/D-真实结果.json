@@ -1,0 +1,41 @@
+{
+  "group": "d",
+  "status": "passed",
+  "httpChecks": 12,
+  "semanticAssertions": 6,
+  "verifiedPages": 0,
+  "elapsedSeconds": 0.273,
+  "checkedAt": "2026-11-16T04:28:48.547069+00:00",
+  "binarySHA256": "25de7285297c3773ee09cb90bf00b3e92f8c9319153befd7878cc274ea954001",
+  "failure": null,
+  "assertions": [
+    {
+      "assertion": "competing view CAS commits exactly one original intent",
+      "passed": true
+    },
+    {
+      "assertion": "automatic read observation cannot erase an explicit manual unread marker",
+      "passed": true
+    },
+    {
+      "assertion": "old view proof returns its original fact without rolling back current",
+      "passed": true
+    },
+    {
+      "assertion": "preference proof binds the complete original payload",
+      "passed": true
+    },
+    {
+      "assertion": "completed old preference cannot overwrite a later choice",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    }
+  ],
+  "strictHTTPS": true,
+  "realPhysicalPGClusters": 2,
+  "qualifiedAck": false,
+  "draftsActivated": false
+}

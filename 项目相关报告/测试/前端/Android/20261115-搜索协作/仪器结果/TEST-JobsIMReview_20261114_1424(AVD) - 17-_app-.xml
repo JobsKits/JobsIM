@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="8" failures="0" errors="0" skipped="0" time="46.311" timestamp="2026-11-15T04:52:37" hostname="localhost">
+  <testsuite name="com.jobs.im.RoleAdmissionLifecycleTest" tests="1" failures="0" errors="0" skipped="0" time="5.675" timestamp="2026-11-15T04:52:37" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="ownerRoundTripCannotReviveOldAllMentionOrAnnouncementAndMissingFlagNeverWrites" classname="com.jobs.im.RoleAdmissionLifecycleTest" time="5.675" />
+  </testsuite>
+  <testsuite name="com.jobs.im.CollaborationLifecycleTest" tests="1" failures="0" errors="0" skipped="0" time="4.578" timestamp="2026-11-15T04:52:37" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference" classname="com.jobs.im.CollaborationLifecycleTest" time="4.578" />
+  </testsuite>
+  <testsuite name="com.jobs.im.DiscoveryLifecycleTest" tests="1" failures="0" errors="0" skipped="0" time="4.018" timestamp="2026-11-15T04:52:37" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="realLookupPagesKeepOpaqueCursorsAndReauthorizeAnUnlistedSource" classname="com.jobs.im.DiscoveryLifecycleTest" time="4.018" />
+  </testsuite>
+  <testsuite name="com.jobs.im.StorageLifecycleTest" tests="3" failures="0" errors="0" skipped="0" time="0.146" timestamp="2026-11-15T04:52:37" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="durableQueueDraftRevisionAndCursorRemainAtomic" classname="com.jobs.im.StorageLifecycleTest" time="0.058" />
+    <testcase name="anonymousReconnectFreezesEveryAccountOfOnlyTheOldInstanceEpoch" classname="com.jobs.im.StorageLifecycleTest" time="0.032" />
+    <testcase name="versionTwoUpgradePreservesOriginalPendingIdentity" classname="com.jobs.im.StorageLifecycleTest" time="0.056" />
+  </testsuite>
+  <testsuite name="com.jobs.im.AdmissionFenceTest" tests="1" failures="0" errors="0" skipped="0" time="3.309" timestamp="2026-11-15T04:52:37" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox" classname="com.jobs.im.AdmissionFenceTest" time="3.309" />
+  </testsuite>
+  <testsuite name="com.jobs.im.DiscoveryCollaborationUiTest" tests="1" failures="0" errors="0" skipped="0" time="27.597" timestamp="2026-11-15T04:52:37" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="nativeFavoritesExactSourceMentionsAndAnnouncementControlsReachRealBackend" classname="com.jobs.im.DiscoveryCollaborationUiTest" time="27.597" />
+  </testsuite>
+</testsuites>

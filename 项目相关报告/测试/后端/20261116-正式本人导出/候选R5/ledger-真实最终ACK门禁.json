@@ -1,0 +1,12 @@
+{
+  "group": "ledger",
+  "status": "failed",
+  "failure": "Formal export terminal state failed/EXPORT_SOURCE_UNAVAILABLE",
+  "httpChecks": 7,
+  "semanticAssertions": 0,
+  "elapsedSeconds": 0.182,
+  "binarySHA256": "b129ee7dbf0898a99f62f2354326470deb26c0bf3ec761d96784b0e70ef6e9c5",
+  "scriptSHA256": "bee42b3c1f4e9cdff467dca6c817d0782f725f78affaede6afcdfa6f114e3519",
+  "checkedAt": "2026-11-16T08:40:40.286060+00:00",
+  "assertions": []
+}

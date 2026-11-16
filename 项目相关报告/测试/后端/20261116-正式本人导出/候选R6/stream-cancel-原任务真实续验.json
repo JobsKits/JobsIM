@@ -1,0 +1,37 @@
+{
+  "group": "stream_cancel",
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 11,
+  "semanticAssertions": 6,
+  "elapsedSeconds": 0.316,
+  "binarySHA256": "aea1ca1985ad0b2b7d3e5b1e7d843895cb04990ab08996951dd0380cdfaa0116",
+  "scriptSHA256": "7295747b84225d97ddc8bf31a35e4af3b48358e50968025c409e3f2281817cbd",
+  "checkedAt": "2026-11-16T08:56:03.553582+00:00",
+  "assertions": [
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "real authenticated complete ZIP begins only after the complete encrypted verification pass",
+      "passed": true
+    },
+    {
+      "assertion": "real in-progress download cancellation revokes and drains before acknowledging cleanup",
+      "passed": true
+    },
+    {
+      "assertion": "real cancelled stream retains no sealed delivery key",
+      "passed": true
+    }
+  ]
+}

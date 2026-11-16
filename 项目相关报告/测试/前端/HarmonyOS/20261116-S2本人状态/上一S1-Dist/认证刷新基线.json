@@ -1,0 +1,28 @@
+{
+  "report": "../../../../项目相关报告/测试/前端/HarmonyOS/20261115-访问刷新/结果.json",
+  "artifacts": [
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-default-unsigned.hap",
+      "bytes": 818905,
+      "sha256": "dd7775def9b34bc78d08446e3b5bcaa5b94aae4c8d00cf08174469a45eb8bc31",
+      "arkBytecodeSha256": "630faca982dd002be791d9a01e127b305dc860c2ba1fa0fb451340560f4f2921",
+      "unsigned": true,
+      "zipCRCValid": true,
+      "authCoordinatorInBytecode": true
+    },
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-ohosTest-unsigned.hap",
+      "bytes": 1382076,
+      "sha256": "986862148d6548288b7fde9013bde5cace0e1d6589a1a5f9e0fd8e115b1345b1",
+      "arkBytecodeSha256": "21716cedeefb55b7e30d042f85a35090da2b410521f94aa5aa54e49bd3b773b1",
+      "unsigned": true,
+      "zipCRCValid": true,
+      "compiledHypiumMethodCount": 29,
+      "compiledHypiumNamesPresent": true,
+      "hypiumExecuted": false
+    }
+  ],
+  "nativeInstalled": false,
+  "deviceTestsExecuted": false,
+  "sourceShaManifest": "../../../../项目相关报告/测试/前端/HarmonyOS/20261115-访问刷新/源码摘要.json"
+}

@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-16T04:34:23.810445+00:00",
+  "scope": "Summary wording correction only; no test count, source hash, raw log, result record or artifact changed",
+  "oldSummarySHA256": "81cc9d3c00b28fb26496039d1e430b1e65e62c643d10a8bdc83cafd7485e3105",
+  "oldSummaryArchive": "执行记录/首轮输入补存/隔离措辞补正前汇总.json",
+  "newSummarySHA256": "e64918ab5dfd85b1920f184ba0828c2012a84a8d085268760edb4acc05bcfee1",
+  "reason": "The DEBUG flag isolates the shared IMSession and verifyRestoreEpoch, not every IMAPIClient call. The selected suites use injected request closures and do not select real HTTPS integrations."
+}

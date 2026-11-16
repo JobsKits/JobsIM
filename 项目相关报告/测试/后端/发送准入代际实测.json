@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "httpAssertions": 52,
+  "strictHTTPS": true,
+  "legacyCommittedDigestReplay": true,
+  "missingSnapshotCannotCreate": true,
+  "peerTokenCannotBorrow": true,
+  "directDeleteAndBlockRotateGrant": true,
+  "groupRejoinKeepsOldQueueIneligible": true,
+  "originalReadACLBeforeReplay": true,
+  "revocationWaitsForActualCommit": true,
+  "scope": "single-host common-state-dir OS fence; independent-domain PG transactions; throughput and cross-host distribution not accepted"
+}

@@ -1,0 +1,39 @@
+ASCII源码快照=/Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.jCoSG8
+[33mohpm WARN: [93m[1mSource code dependencies in project-level "oh-package.json5" are as follows, which could lead to circular dependencies reference.[22m[39m[33m
+	 - "@ohos/hypium@file:./MirrorHypium"
+[39m[39m
+[32minstall completed in 0s 37ms[39m
+> hvigor [32mFinished :entry:clean... after 1 ms [39m
+> hvigor [33mWARN: The version number of the 'entry' module does not comply with the SemVer specification.
+               This will affect the installation and publication by ohpm.
+               Make sure the value of version in the oh-package.json5 file of the module complies with the SemVer specification.[39m
+> hvigor [91mERROR: Failed :entry:ohosTest@PreBuild... [39m
+> hvigor [91mERROR: [31m00303038 Configuration Error
+Error Message: Schema validate failed, at file: /Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.jCoSG8/entry/src/ohosTest/module.json5
+
+* Try the following:
+  > Please check the following fields. 
+ {
+  instancePath: 'module.abilities[0]',
+  keyword: 'required',
+  params: { missingProperty: 'startWindowIcon' },
+  message: "must have required property 'startWindowIcon'",
+  location: '/Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.jCoSG8/entry/src/ohosTest/module.json5:1:148',
+  solution: 'For help about startWindows, you can solve the problem with this FAQ.'
+} 
+{
+  instancePath: 'module.abilities[0]',
+  keyword: 'required',
+  params: { missingProperty: 'startWindowBackground' },
+  message: "must have required property 'startWindowBackground'",
+  location: '/Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.jCoSG8/entry/src/ohosTest/module.json5:1:148',
+  solution: 'For help about startWindows, you can solve the problem with this FAQ.'
+} 
+
+[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 925 ms [39m

@@ -1,0 +1,15 @@
+{
+  "exitCode": 0,
+  "args": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "build",
+    "-p",
+    "1",
+    "-o",
+    "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/Bin/jobsimops-draft",
+    "./cmd/jobsimops"
+  ],
+  "elapsedSeconds": 1.295,
+  "sourceMatchesAPICandidate": true,
+  "binarySHA256": "69fb4a4a80807e5bae4cadb2cc06e02a3812f5b8fd589ee97714db4dc2af2d63"
+}

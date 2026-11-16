@@ -1,0 +1,11 @@
+{
+  "command": [
+    "ruby",
+    "/Users/jobs/.agents/skills/jobs-swift/scripts/audit_swift_system_class_construction.rb",
+    "--sdk-root",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/JobsIM",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/JobsByPods"
+  ],
+  "exitCode": 0
+}

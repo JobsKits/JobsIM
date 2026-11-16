@@ -1,0 +1,64 @@
+{
+  "at": "2026-11-15T16:03:10.989901+00:00",
+  "scope": "Only the eight enumerated task-owned compiler intermediate directories; preserved Products, Results, Screenshots, logs, databases, keys, SDKs, backups and package baselines",
+  "planned": [
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/build/DerivedData/Build/Intermediates.noindex",
+      "bytesBefore": 808143533,
+      "filesBefore": 15223,
+      "reason": "rebuildable JobsIM compiler intermediate/module cache/index; not products or test results"
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/build/DerivedData/ModuleCache.noindex",
+      "bytesBefore": 432275520,
+      "filesBefore": 5648,
+      "reason": "rebuildable JobsIM compiler intermediate/module cache/index; not products or test results"
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/build/DerivedData/SDKExplicitPrecompiledModules",
+      "bytesBefore": 359102512,
+      "filesBefore": 410,
+      "reason": "rebuildable JobsIM compiler intermediate/module cache/index; not products or test results"
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/build/DerivedData/Index.noindex",
+      "bytesBefore": 66454320,
+      "filesBefore": 7994,
+      "reason": "rebuildable JobsIM compiler intermediate/module cache/index; not products or test results"
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Intermediates.noindex",
+      "bytesBefore": 1419858631,
+      "filesBefore": 24581,
+      "reason": "rebuildable JobsIM compiler intermediate/module cache/index; not products or test results"
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/ModuleCache.noindex",
+      "bytesBefore": 756260907,
+      "filesBefore": 9998,
+      "reason": "rebuildable JobsIM compiler intermediate/module cache/index; not products or test results"
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/SDKExplicitPrecompiledModules",
+      "bytesBefore": 550583120,
+      "filesBefore": 633,
+      "reason": "rebuildable JobsIM compiler intermediate/module cache/index; not products or test results"
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Index.noindex",
+      "bytesBefore": 76151636,
+      "filesBefore": 10104,
+      "reason": "rebuildable JobsIM compiler intermediate/module cache/index; not products or test results"
+    }
+  ],
+  "removed": [
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/build/DerivedData/Build/Intermediates.noindex",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/build/DerivedData/ModuleCache.noindex",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/build/DerivedData/SDKExplicitPrecompiledModules",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/build/DerivedData/Index.noindex",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Intermediates.noindex",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/ModuleCache.noindex",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/SDKExplicitPrecompiledModules",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Index.noindex"
+  ]
+}

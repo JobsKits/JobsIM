@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="1" failures="0" errors="0" skipped="0" time="5.008" timestamp="2026-11-15T03:59:46" hostname="localhost">
+  <testsuite name="com.jobs.im.CollaborationLifecycleTest" tests="1" failures="0" errors="0" skipped="0" time="4.703" timestamp="2026-11-15T03:59:46" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference" classname="com.jobs.im.CollaborationLifecycleTest" time="4.703" />
+  </testsuite>
+</testsuites>

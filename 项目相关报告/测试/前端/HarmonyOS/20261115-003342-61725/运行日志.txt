@@ -1,0 +1,16 @@
+ASCII源码快照=/Users/jobs/Library/Caches/JobsIM/Toolchains/Harmony/26.0.0.865/Workspaces/Build.zOIlKK
+缺OHPM；构建器仍会实际检查当前配置，不把缺SDK/依赖当通过。
+> hvigor [91mERROR: [31m00303217 Configuration Error
+[31mError Message: Invalid value of 'DEVECO_SDK_HOME' in the system environment path.
+[31m
+* Try the following:
+  > Correct the value, run hvigorw --stop-daemon to stop the daemon process, and then try again.
+[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 798 ms [39m
+
+0 task in total: 0 executed, 0 up-to-date.

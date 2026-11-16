@@ -1,0 +1,24 @@
+{
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/SelfState-20261116-143808.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=870CE7EA-610E-4F2F-A484-614BDA16576B",
+    "-parallel-testing-enabled",
+    "NO",
+    "-maximum-concurrent-test-simulator-destinations",
+    "1",
+    "-resultBundlePath",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/SelfState-20261116-143808-认证本地12.xcresult",
+    "-only-testing:JobsIMTests/IMAuthCredentialTests",
+    "-only-testing:JobsIMTests/IMAuthCoordinatorTests"
+  ],
+  "exitCode": 0,
+  "stopped": null,
+  "seconds": 10.029,
+  "minFreeBytes": 39000326144,
+  "xcresult": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/SelfState-20261116-143808-认证本地12.xcresult",
+  "xctestrunSHA256": "20f097bc4f3d776ad3a41cb3efc2a982eff5a0619be26168cd91501fa5628d4c"
+}

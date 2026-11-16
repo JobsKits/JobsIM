@@ -1,0 +1,33 @@
+{
+  "group": "ledger",
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 39,
+  "semanticAssertions": 5,
+  "elapsedSeconds": 24.276,
+  "binarySHA256": "aea1ca1985ad0b2b7d3e5b1e7d843895cb04990ab08996951dd0380cdfaa0116",
+  "scriptSHA256": "b307083b9a2433a98381ecf8d19ab66adcea8258c2257450550747a90178f851",
+  "checkedAt": "2026-11-16T08:45:51.004874+00:00",
+  "assertions": [
+    {
+      "assertion": "original failed task remains terminal; retry requires a new explicit task intent",
+      "passed": true
+    },
+    {
+      "assertion": "cleanup of earlier terminal tasks never sweeps a newer current task for the same owner",
+      "passed": true
+    },
+    {
+      "assertion": "source cleanup responsibility survives after holder byte-clear while governance final acknowledgment is blocked",
+      "passed": true
+    },
+    {
+      "assertion": "already committed original nonce does not bypass the persistent cleanup ledger",
+      "passed": true
+    },
+    {
+      "assertion": "original source intent succeeds only after the exact durable final-ack gate is released",
+      "passed": true
+    }
+  ]
+}

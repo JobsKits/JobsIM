@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:56.933729+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:57.103027+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSelfViewPGDefaultCASAndOriginalFacts"}
+{"Time":"2026-11-16T12:11:57.103126+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfViewPGDefaultCASAndOriginalFacts","Output":"=== RUN   TestSelfViewPGDefaultCASAndOriginalFacts\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:57.256888+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfViewPGDefaultCASAndOriginalFacts","Output":"--- PASS: TestSelfViewPGDefaultCASAndOriginalFacts (0.15s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:57.256936+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSelfViewPGDefaultCASAndOriginalFacts","Elapsed":0.15}
+{"Time":"2026-11-16T12:11:57.25696+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:57.257164+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.323s\n"}
+{"Time":"2026-11-16T12:11:57.257192+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.323}

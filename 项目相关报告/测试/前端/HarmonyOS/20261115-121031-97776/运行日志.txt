@@ -1,0 +1,50 @@
+ASCII源码快照=/Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.zCGhOY
+[33mohpm WARN: [93m[1mSource code dependencies in project-level "oh-package.json5" are as follows, which could lead to circular dependencies reference.[22m[39m[33m
+	 - "@ohos/hypium@file:./MirrorHypium"
+[39m[39m
+[32minstall completed in 0s 157ms[39m
+> hvigor [32mFinished :entry:clean... after 9 ms [39m
+> hvigor [33mWARN: The version number of the 'entry' module does not comply with the SemVer specification.
+               This will affect the installation and publication by ohpm.
+               Make sure the value of version in the oh-package.json5 file of the module complies with the SemVer specification.[39m
+> hvigor [32mFinished :entry:ohosTest@PreBuild... after 157 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GenerateMetadata... after 13 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ConfigureCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@MergeProfile... after 3 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CreateBuildProfile... after 4 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgContextInfo... after 10 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgSdkInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@BuildNativeWithCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@MakePackInfo... after 4 ms [39m
+> hvigor [32mFinished :entry:ohosTest@SyscapTransform... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessProfile... after 139 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessRouterMap... after 4 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessShareConfig... after 3 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessStartupConfig... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@BuildNativeWithNinja... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessResource... after 3 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GenerateLoaderJson... after 6 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessLibs... after 7 ms [39m
+> hvigor [33mWARN: Warning: 'app_name' conflict, first declared.
+at /Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.zCGhOY/AppScope/resources/base/element/string.json
+but declared again.
+at /Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.zCGhOY/entry/src/main/resources/base/element/string.json
+[39m
+> hvigor [32mFinished :entry:ohosTest@CompileResource... after 144 ms [39m
+> hvigor [32mFinished :entry:ohosTest@DoNativeStrip... after 3 ms [39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestBuildJS... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CacheNativeLibs... after 11 ms [39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestCompileArkTS... after 6 s 105 ms [39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestCopyMockConfigJson... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgModuleJson... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessCompiledResources... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PackageHap... after 600 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PackingCheck... after 3 ms [39m
+> hvigor [33mWARN: No signingConfig found for product default[39m
+> hvigor [32mFinished :entry:ohosTest@SignHap... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CollectDebugSymbol... after 1 ms [39m
+> hvigor [32mFinished :entry:assembleHap... after 1 ms [39m
+> hvigor [32mBUILD SUCCESSFUL in 13 s 566 ms [39m

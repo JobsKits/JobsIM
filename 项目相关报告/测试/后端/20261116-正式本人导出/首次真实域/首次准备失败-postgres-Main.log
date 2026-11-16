@@ -1,0 +1,6 @@
+2026-11-16 15:44:09.702 CST [2022] LOG:  starting PostgreSQL 18.7 (Postgres.app) on aarch64-apple-darwin23.6.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2026-11-16 15:44:09.702 CST [2022] LOG:  listening on IPv4 address "127.0.0.1", port 63381
+2026-11-16 15:44:09.702 CST [2022] LOG:  Unix-domain socket path "/Users/jobs/Library/Application Support/JobsIM/Integration/formal-export-a8c1db5133bf47a4ad9c53508cbf873d/Safety/Sockets/Main/.s.PGSQL.63381" is too long (maximum 103 bytes)
+2026-11-16 15:44:09.702 CST [2022] WARNING:  could not create Unix-domain socket in directory "/Users/jobs/Library/Application Support/JobsIM/Integration/formal-export-a8c1db5133bf47a4ad9c53508cbf873d/Safety/Sockets/Main"
+2026-11-16 15:44:09.703 CST [2022] FATAL:  could not create any Unix-domain sockets
+2026-11-16 15:44:09.703 CST [2022] LOG:  database system is shut down

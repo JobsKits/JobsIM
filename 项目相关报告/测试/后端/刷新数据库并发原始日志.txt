@@ -1,0 +1,6 @@
+=== RUN   TestRefreshTransactionSingleConsumeWithoutOuterProcessFence
+--- PASS: TestRefreshTransactionSingleConsumeWithoutOuterProcessFence (0.26s)
+PASS
+ok  	jobsim/backend	0.728s
+?   	jobsim/backend/cmd/jobsimd	[no test files]
+?   	jobsim/backend/cmd/jobsimops	[no test files]

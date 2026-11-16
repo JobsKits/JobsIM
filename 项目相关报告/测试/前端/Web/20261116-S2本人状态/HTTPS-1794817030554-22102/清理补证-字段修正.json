@@ -1,0 +1,15 @@
+{
+  "originalRun": "1794817030554-22102",
+  "scope": "only the freshly created first test account",
+  "originalFailure": "prior cleanup fixture used id; actual session DTO uses deviceId",
+  "orphanDevices": [
+    {
+      "deviceId": "1ad8289b-149e-469d-aa24-66640d6408de",
+      "status": 200
+    }
+  ],
+  "reconcilerFamily": "b77ee3e5-2802-4248-b37b-918eb124ace3",
+  "onlyReconcilerRemains": true,
+  "reconcilerLogout": 200,
+  "reconcilerAT401": true
+}

@@ -1,0 +1,40 @@
+{"Time":"2026-11-16T18:41:29.779849+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T18:41:29.937064+08:00","Action":"run","Package":"jobsim/backend","Test":"TestObjectReceiptPGOriginalResultsConcurrencyAndDescriptorSeparation"}
+{"Time":"2026-11-16T18:41:29.937093+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGOriginalResultsConcurrencyAndDescriptorSeparation","Output":"=== RUN   TestObjectReceiptPGOriginalResultsConcurrencyAndDescriptorSeparation\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:30.101095+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGOriginalResultsConcurrencyAndDescriptorSeparation","Output":"--- PASS: TestObjectReceiptPGOriginalResultsConcurrencyAndDescriptorSeparation (0.16s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:30.101112+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestObjectReceiptPGOriginalResultsConcurrencyAndDescriptorSeparation","Elapsed":0.16}
+{"Time":"2026-11-16T18:41:30.101123+08:00","Action":"run","Package":"jobsim/backend","Test":"TestObjectReceiptPGRejectsOldQualificationContentPermissionAndBytes"}
+{"Time":"2026-11-16T18:41:30.101126+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGRejectsOldQualificationContentPermissionAndBytes","Output":"=== RUN   TestObjectReceiptPGRejectsOldQualificationContentPermissionAndBytes\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:30.251036+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGRejectsOldQualificationContentPermissionAndBytes","Output":"--- PASS: TestObjectReceiptPGRejectsOldQualificationContentPermissionAndBytes (0.15s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:30.251055+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestObjectReceiptPGRejectsOldQualificationContentPermissionAndBytes","Elapsed":0.15}
+{"Time":"2026-11-16T18:41:30.251059+08:00","Action":"run","Package":"jobsim/backend","Test":"TestObjectReceiptPGSQLiteApprovalNeedsNewQualificationAndParent"}
+{"Time":"2026-11-16T18:41:30.251061+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGSQLiteApprovalNeedsNewQualificationAndParent","Output":"=== RUN   TestObjectReceiptPGSQLiteApprovalNeedsNewQualificationAndParent\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:30.400366+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGSQLiteApprovalNeedsNewQualificationAndParent","Output":"--- PASS: TestObjectReceiptPGSQLiteApprovalNeedsNewQualificationAndParent (0.15s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:30.400388+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestObjectReceiptPGSQLiteApprovalNeedsNewQualificationAndParent","Elapsed":0.15}
+{"Time":"2026-11-16T18:41:30.400396+08:00","Action":"run","Package":"jobsim/backend","Test":"TestObjectReceiptPGMediaChecksRealOriginalFile"}
+{"Time":"2026-11-16T18:41:30.400399+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGMediaChecksRealOriginalFile","Output":"=== RUN   TestObjectReceiptPGMediaChecksRealOriginalFile\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:30.551181+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGMediaChecksRealOriginalFile","Output":"--- PASS: TestObjectReceiptPGMediaChecksRealOriginalFile (0.15s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:30.5512+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestObjectReceiptPGMediaChecksRealOriginalFile","Elapsed":0.15}
+{"Time":"2026-11-16T18:41:30.551205+08:00","Action":"run","Package":"jobsim/backend","Test":"TestObjectReceiptPGDeadlineRecheckedAfterLocalLock"}
+{"Time":"2026-11-16T18:41:30.551208+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGDeadlineRecheckedAfterLocalLock","Output":"=== RUN   TestObjectReceiptPGDeadlineRecheckedAfterLocalLock\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.043154+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGDeadlineRecheckedAfterLocalLock","Output":"--- PASS: TestObjectReceiptPGDeadlineRecheckedAfterLocalLock (1.49s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.043171+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestObjectReceiptPGDeadlineRecheckedAfterLocalLock","Elapsed":1.49}
+{"Time":"2026-11-16T18:41:32.043179+08:00","Action":"run","Package":"jobsim/backend","Test":"TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite"}
+{"Time":"2026-11-16T18:41:32.04318+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite","Output":"=== RUN   TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.268006+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite","Output":"--- PASS: TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite (0.22s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.268022+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite","Elapsed":0.22}
+{"Time":"2026-11-16T18:41:32.268027+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReceiptPGOriginalFactsAndVersionRevocation"}
+{"Time":"2026-11-16T18:41:32.268029+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPGOriginalFactsAndVersionRevocation","Output":"=== RUN   TestReceiptPGOriginalFactsAndVersionRevocation\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.408234+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPGOriginalFactsAndVersionRevocation","Output":"--- PASS: TestReceiptPGOriginalFactsAndVersionRevocation (0.14s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.408262+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReceiptPGOriginalFactsAndVersionRevocation","Elapsed":0.14}
+{"Time":"2026-11-16T18:41:32.408268+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReceiptPGPermissionPolicyAndDeviceDoNotInherit"}
+{"Time":"2026-11-16T18:41:32.40827+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPGPermissionPolicyAndDeviceDoNotInherit","Output":"=== RUN   TestReceiptPGPermissionPolicyAndDeviceDoNotInherit\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.527694+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPGPermissionPolicyAndDeviceDoNotInherit","Output":"--- PASS: TestReceiptPGPermissionPolicyAndDeviceDoNotInherit (0.12s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.527711+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReceiptPGPermissionPolicyAndDeviceDoNotInherit","Elapsed":0.12}
+{"Time":"2026-11-16T18:41:32.527716+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReceiptPGConcurrentDuplicateHasOneOriginalFact"}
+{"Time":"2026-11-16T18:41:32.527718+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPGConcurrentDuplicateHasOneOriginalFact","Output":"=== RUN   TestReceiptPGConcurrentDuplicateHasOneOriginalFact\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.671821+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPGConcurrentDuplicateHasOneOriginalFact","Output":"--- PASS: TestReceiptPGConcurrentDuplicateHasOneOriginalFact (0.14s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.67184+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReceiptPGConcurrentDuplicateHasOneOriginalFact","Elapsed":0.14}
+{"Time":"2026-11-16T18:41:32.671846+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T18:41:32.67244+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t2.892s\n"}
+{"Time":"2026-11-16T18:41:32.672446+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":2.893}

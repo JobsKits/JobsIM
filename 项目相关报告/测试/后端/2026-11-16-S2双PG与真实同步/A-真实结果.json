@@ -1,0 +1,37 @@
+{
+  "group": "a",
+  "status": "passed",
+  "httpChecks": 8,
+  "semanticAssertions": 5,
+  "verifiedPages": 0,
+  "elapsedSeconds": 1.034,
+  "checkedAt": "2026-11-16T04:27:40.238499+00:00",
+  "binarySHA256": "25de7285297c3773ee09cb90bf00b3e92f8c9319153befd7878cc274ea954001",
+  "failure": null,
+  "assertions": [
+    {
+      "assertion": "identity comes from the actual strict-HTTPS bootstrap",
+      "passed": true
+    },
+    {
+      "assertion": "configured NATS never qualifies durable device ACK",
+      "passed": true
+    },
+    {
+      "assertion": "journal uses another real physical PostgreSQL cluster",
+      "passed": true
+    },
+    {
+      "assertion": "second authenticated device is a distinct identity",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    }
+  ],
+  "strictHTTPS": true,
+  "realPhysicalPGClusters": 2,
+  "qualifiedAck": false,
+  "draftsActivated": false
+}

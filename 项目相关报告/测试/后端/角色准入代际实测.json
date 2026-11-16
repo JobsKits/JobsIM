@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "httpAssertions": 46,
+  "semanticAssertions": 27,
+  "preUpgradeFixtureHTTPAssertions": 14,
+  "strictHTTPS": true,
+  "unobservedOwnerReturnRejectsAllAndAnnouncement": true,
+  "ordinaryOldIntentConservativelyFrozen": true,
+  "legacyCompletedDigestCompatibility": true,
+  "currentReadHistoryPreserved": true,
+  "membershipAndJoinedAtUnchanged": true,
+  "unaffectedMemberAdmissionUnchanged": true,
+  "sameOwnerNoopStable": true,
+  "roleAdmissionCapability": true,
+  "largeRoleGenerationFixture": true,
+  "scope": "Same-host role fence and real HTTPS/PG; no client UI, hardware, cross-host or full phase-I acceptance claim",
+  "testedAtUTC": "2026-11-15T04:07:54.113808+00:00",
+  "scriptSHA256": "cb666647226379ea3027a9c9d98f480914507a8d5c681a69d6e58942daa0ee51",
+  "backendSHA256": {
+    "conversation.go": "641dfc051200e7a8c6661c601ea514ecca04c79837ee44383b034e17e5dcb1e4",
+    "send_admission.go": "b7732adee9ed6f5378dd3f3adcbc4402d17f53faf5d557a175922cbbcae88a9e",
+    "types.go": "f74c5de0489972badb6d46383f62d2c5f357f69e90c6f72994f960735297ac85",
+    "control.go": "ec64cf7080bce607e5a20af7638a8b3292a1c08a89e3d79a7720b3244efba626",
+    "mentions_announcements.go": "12e68abcf718762677b44dc415ea3316e14c825bef64a2dba3e6e4b4553d36b7"
+  }
+}

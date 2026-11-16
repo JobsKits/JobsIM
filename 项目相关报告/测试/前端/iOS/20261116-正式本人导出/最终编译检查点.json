@@ -1,0 +1,37 @@
+{
+  "status": "build-passed-tests-not-executed",
+  "build": "Build-20261116-205705-4c8f38",
+  "firstFailure": "Build-20261116-204840-02fdf2",
+  "buildSeconds": 377.42,
+  "inputCount": 123,
+  "binarySHA256": {
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Build-20261116-205705-4c8f38/Debug-iphonesimulator/JobsIM.app/JobsIM": "89e027360aae25ea66521e68eb4737bc0e6edc3fdcbda6fd664cbce3cfeef8f1",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Build-20261116-205705-4c8f38/Debug-iphonesimulator/JobsIM.app/PlugIns/JobsIMTests.xctest/JobsIMTests": "94a1cbb88479e42fce297f9d2a55d56742cd213602fee956dde2a865f9a83b93"
+  },
+  "completeProductTrees": {
+    "JobsIM.app": {
+      "files": 109,
+      "sameBytes": true,
+      "treeDigest": "f8567fbb97e0d893e552337863f8ca954af2f4eac82c979d3d6ee1ed84a21745"
+    },
+    "JobsIMUITests-Runner.app": {
+      "files": 7,
+      "sameBytes": true,
+      "treeDigest": "34b6ada68240163f24cffecbab236a8ce3e6cdc2743be9256f3dd87235505fa1"
+    }
+  },
+  "compiledLocalMethods": {
+    "IMAuthoritativeSyncTests": 21,
+    "IMPersonalStateTests": 10,
+    "IMDataExportTests": 10
+  },
+  "executedLocalMethods": 0,
+  "simulatorBooted": false,
+  "apiUsed": false,
+  "deviceTested": false,
+  "systemSaveTested": false,
+  "oldFrozenBinariesUnchanged": true,
+  "inputAndArchiveSHAAllMatch": true,
+  "buildMetadataSHA256": "573c12e117277d607e71cde26713d08f58079f4326ab6adbafeb4d734d149936",
+  "buildVerificationSHA256": "6e5031ba1eaf697f5b5641ae3c4647daf5e55ae867200a5d6841a0387d0d3a73"
+}

@@ -1,0 +1,15 @@
+{
+  "scope": "actual report assignment only; no mkdir/build/API",
+  "checks": [
+    {
+      "entry": "测试/前端/Android/运行测试.command/运行测试.command",
+      "path": "项目相关报告/测试/前端/Android/20261115-232405-65086",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/部署/MacOS/运行测试.command/运行测试.command",
+      "path": "项目相关报告/测试/部署/MacOS/20261115-232405",
+      "status": "passed"
+    }
+  ]
+}

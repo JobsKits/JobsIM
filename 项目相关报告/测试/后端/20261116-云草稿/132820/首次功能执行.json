@@ -1,0 +1,50 @@
+[
+  {
+    "group": "basic",
+    "exitCode": 0,
+    "elapsedSeconds": 0.465,
+    "testSourceSHA256": "94cff920e7694034dca2a3c36adf7b48e5fd86c766b082a4fadaca3ffb3773de",
+    "freeBytesAfter": 7315464192,
+    "logSHA256": "3c9f8dd3156315917aedbfc44067800e91230ae08a96f5aac222ea71e9c34618"
+  },
+  {
+    "group": "source",
+    "exitCode": 0,
+    "elapsedSeconds": 0.679,
+    "testSourceSHA256": "94cff920e7694034dca2a3c36adf7b48e5fd86c766b082a4fadaca3ffb3773de",
+    "freeBytesAfter": 7315394560,
+    "logSHA256": "07fe7e925ff5a3ebbd608b39fc2faa543b7b923c3f9844a81abd1265a6bcb515"
+  },
+  {
+    "group": "membership",
+    "exitCode": 0,
+    "elapsedSeconds": 0.539,
+    "testSourceSHA256": "94cff920e7694034dca2a3c36adf7b48e5fd86c766b082a4fadaca3ffb3773de",
+    "freeBytesAfter": 7315161088,
+    "logSHA256": "817afb7c06b18aed94957c663199383d653c102270e7801ae31ffa97f6b7b15f"
+  },
+  {
+    "group": "forwarding",
+    "exitCode": 0,
+    "elapsedSeconds": 0.382,
+    "testSourceSHA256": "94cff920e7694034dca2a3c36adf7b48e5fd86c766b082a4fadaca3ffb3773de",
+    "freeBytesAfter": 7314604032,
+    "logSHA256": "33f0f5bdf74de03f90d2a406b429c6e25e6e625078a4c99177e4281d293a019b"
+  },
+  {
+    "group": "principal",
+    "exitCode": 0,
+    "elapsedSeconds": 0.675,
+    "testSourceSHA256": "94cff920e7694034dca2a3c36adf7b48e5fd86c766b082a4fadaca3ffb3773de",
+    "freeBytesAfter": 7314149376,
+    "logSHA256": "bc5f565105dc64dfbbd2786e0b38e8382677a057dc4ede2989a8e0f4b0a885e9"
+  },
+  {
+    "group": "sync",
+    "exitCode": 0,
+    "elapsedSeconds": 0.598,
+    "testSourceSHA256": "94cff920e7694034dca2a3c36adf7b48e5fd86c766b082a4fadaca3ffb3773de",
+    "freeBytesAfter": 7312715776,
+    "logSHA256": "4bd061ab58090351b60fb2229d79042ec99577097977619635e7e7995535d07a"
+  }
+]

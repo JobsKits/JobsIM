@@ -1,0 +1,34 @@
+=== RUN   TestSyncSnapshotCaptureRejectsChangingCommittedOwners
+--- PASS: TestSyncSnapshotCaptureRejectsChangingCommittedOwners (0.38s)
+=== RUN   TestSyncSnapshotNATSDuplicateAndBodyRejection
+--- PASS: TestSyncSnapshotNATSDuplicateAndBodyRejection (0.02s)
+=== RUN   TestSyncSnapshotMetadataAndEncryptedPagesContainReferencesOnly
+--- PASS: TestSyncSnapshotMetadataAndEncryptedPagesContainReferencesOnly (0.02s)
+=== RUN   TestSyncSnapshotCursorPreservesIntegersAboveFloatPrecision
+--- PASS: TestSyncSnapshotCursorPreservesIntegersAboveFloatPrecision (0.00s)
+=== RUN   TestSyncNATSTokenLocalPermission
+=== RUN   TestSyncNATSTokenLocalPermission/current_owner_0600
+=== RUN   TestSyncNATSTokenLocalPermission/group_world_0664_rejected
+=== RUN   TestSyncNATSTokenLocalPermission/over_4KiB_rejected
+=== RUN   TestSyncNATSTokenLocalPermission/symlink_rejected
+--- PASS: TestSyncNATSTokenLocalPermission (0.00s)
+    --- PASS: TestSyncNATSTokenLocalPermission/current_owner_0600 (0.00s)
+    --- PASS: TestSyncNATSTokenLocalPermission/group_world_0664_rejected (0.00s)
+    --- PASS: TestSyncNATSTokenLocalPermission/over_4KiB_rejected (0.00s)
+    --- PASS: TestSyncNATSTokenLocalPermission/symlink_rejected (0.00s)
+=== RUN   TestSyncSnapshotOwnedOutboxTransactions
+=== RUN   TestSyncSnapshotOwnedOutboxTransactions/minimal_metadata_and_related_objects
+=== RUN   TestSyncSnapshotOwnedOutboxTransactions/rollback_restores_clock_versions_and_outbox
+=== RUN   TestSyncSnapshotOwnedOutboxTransactions/uncommitted_revision_cannot_be_overtaken
+=== RUN   TestSyncSnapshotOwnedOutboxTransactions/repeat_migration_preserves_revision_and_events
+=== RUN   TestSyncSnapshotOwnedOutboxTransactions/owner_and_scope_are_closed
+--- PASS: TestSyncSnapshotOwnedOutboxTransactions (0.58s)
+    --- PASS: TestSyncSnapshotOwnedOutboxTransactions/minimal_metadata_and_related_objects (0.04s)
+    --- PASS: TestSyncSnapshotOwnedOutboxTransactions/rollback_restores_clock_versions_and_outbox (0.00s)
+    --- PASS: TestSyncSnapshotOwnedOutboxTransactions/uncommitted_revision_cannot_be_overtaken (0.04s)
+    --- PASS: TestSyncSnapshotOwnedOutboxTransactions/repeat_migration_preserves_revision_and_events (0.02s)
+    --- PASS: TestSyncSnapshotOwnedOutboxTransactions/owner_and_scope_are_closed (0.00s)
+=== RUN   TestSyncSnapshotReplayDoesNotCrossMissingCommittedOrigin
+--- PASS: TestSyncSnapshotReplayDoesNotCrossMissingCommittedOrigin (0.47s)
+PASS
+ok  	jobsim/backend	2.075s

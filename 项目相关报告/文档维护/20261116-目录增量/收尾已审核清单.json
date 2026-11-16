@@ -1,0 +1,40 @@
+{
+  "root": "/Users/jobs/Documents/GitHub/JobsIM",
+  "candidates": [
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/20261116-完整对象收讫/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "1bd245c3b4b4ee9281d095492b9b752fc4ad8f3acee7d58ffe63766dc7256456",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/CLI/20261116-附件收讫/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "1f70c2299f67986998e5ca884cbc7144eca890bee15c95a0098e7a26a74d2157",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "68fa37180c4bb93f84d6497a38993e58f42250e71e8d5fdb83e19f0bfcad36ea",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/Web/20261116-正式本人导出/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "f8a4c88892c25ac2d31bb31bc67bed15b0eccf577616af8e8b68b8974da2f941",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/data-export.cjs/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "daacd7502c9ce5d9b0fd2c0df5baece42912ac76ae04544622f20d4beeef73fd",
+      "approved": true
+    }
+  ],
+  "excluded": [
+    {
+      "reason": "只登记五份含有效目录的自有新增说明"
+    }
+  ]
+}

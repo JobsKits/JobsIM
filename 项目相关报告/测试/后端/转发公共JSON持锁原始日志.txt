@@ -1,0 +1,25 @@
+=== RUN   TestGatewayProjectionModeCoverage
+--- PASS: TestGatewayProjectionModeCoverage (0.00s)
+=== RUN   TestForwardTemporaryProjectionRecoversAtSameVersion
+--- PASS: TestForwardTemporaryProjectionRecoversAtSameVersion (0.14s)
+=== RUN   TestGatewayJSONFlushCancellationAndUntrustedProof
+=== RUN   TestGatewayJSONFlushCancellationAndUntrustedProof/history
+2026/11/15 14:09:40 suppressing panic for copyResponse error in test; copy error: context canceled
+=== RUN   TestGatewayJSONFlushCancellationAndUntrustedProof/search
+2026/11/15 14:09:40 suppressing panic for copyResponse error in test; copy error: context canceled
+=== RUN   TestGatewayJSONFlushCancellationAndUntrustedProof/favorites
+2026/11/15 14:09:40 suppressing panic for copyResponse error in test; copy error: context canceled
+=== RUN   TestGatewayJSONFlushCancellationAndUntrustedProof/announcement
+2026/11/15 14:09:41 suppressing panic for copyResponse error in test; copy error: context canceled
+=== RUN   TestGatewayJSONFlushCancellationAndUntrustedProof/original-result
+2026/11/15 14:09:41 suppressing panic for copyResponse error in test; copy error: context canceled
+--- PASS: TestGatewayJSONFlushCancellationAndUntrustedProof (1.25s)
+    --- PASS: TestGatewayJSONFlushCancellationAndUntrustedProof/history (0.22s)
+    --- PASS: TestGatewayJSONFlushCancellationAndUntrustedProof/search (0.22s)
+    --- PASS: TestGatewayJSONFlushCancellationAndUntrustedProof/favorites (0.35s)
+    --- PASS: TestGatewayJSONFlushCancellationAndUntrustedProof/announcement (0.20s)
+    --- PASS: TestGatewayJSONFlushCancellationAndUntrustedProof/original-result (0.22s)
+PASS
+ok  	jobsim/backend	2.042s
+?   	jobsim/backend/cmd/jobsimd	[no test files]
+?   	jobsim/backend/cmd/jobsimops	[no test files]

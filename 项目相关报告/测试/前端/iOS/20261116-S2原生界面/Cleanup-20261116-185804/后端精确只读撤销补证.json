@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-11-16T11:10:32.457435+00:00",
+  "scope": "E2 only; exact supplied owned username + family/device; no API or credential/body selection; no database mutation",
+  "identitySHA256": "40c1014f8d782bf81425fada5ca3fb814862cc13eb7cbd552c0bdacb81d52382",
+  "querySHA256": "406e00df8c9504305e147c7bd579a99f3f3f7fc0b5b4b9b5bc8fed0ee0fc61d8",
+  "manifestSHA256": "a74fe5c2c41d725bae6365a1329faef20ffb176751484635d43dcc73d9636aa7",
+  "priorProbe": "PGDATABASE full-URI was not accepted as a psql connection: two bounded local socket failures; no database session was opened. Final probe explicitly used parsed loopback host/port/user/database and private pgpass.",
+  "facts": {
+    "readonly": true,
+    "deploymentMatches": true,
+    "ownerCount": 1,
+    "exactFamilyDeviceRows": 1,
+    "revokedRows": 1,
+    "activeFamilyRows": 0,
+    "activeDeviceRows": 0,
+    "epochMatches": true
+  },
+  "boundary": "Database revocation corroborates client logout/old-AT401; does not validate failed UI assertions."
+}

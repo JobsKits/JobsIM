@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-11-15T19:21:19.674356+00:00",
+  "scope": "Source-only checkpoint. No Kotlin/KSP/Room migration/JVM/instrumentation/UI/HTTPS execution in this slice.",
+  "plannedNewJvmMethods": 4,
+  "plannedNewInstrumentationMethods": 9,
+  "sourceSHA256": {
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt": "7c11b08543cb0eb6272b5a0c90ae73b87d825a523878794b96071fc8a0760523",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncStore.kt": "f110f391b8117d38ae2bad976d9862ba1dfe27b68e88e1fb21987b7e32d94c6a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncEngine.kt": "17d4406e4fc9b1f7241d5f85d860f37ebfb4313dd229449d73638a9c20e3e79e",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncGuardApi.kt": "a91aa0083dd1840180390b32eef0ec3eab8f4755da6cc2d5940716141bbf6e11",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt": "d2c54f5b9e439cd429165e8ae086c2b32744cd329ee077707332822ab6b92635",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt": "e166da188fe54d41949b1e8763ef0ccff65f2e146939e59068155bc78ca09dad",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt": "04580cca737a6f9d4ca1f5d78f90fe6fa8a3eb415a41f76d2590b66faecff2a4",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SessionCoordinator.kt": "edbbca48b9352933b36501a8cebee8a5286c56141efeac5f8b7120afd7ec5ee5",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt": "c56a4c9cf6b1fff578a7acaac65a8e03a492c9356dd59c1f3cff329b2e928ccf",
+    "测试/前端/Android/Unit/SyncWireTest.kt": "1c94f261f15bcb5f56a8dc569fc762daeca436bf7d17da616e49b71a726ce0de",
+    "测试/前端/Android/Instrumentation/AuthoritativeSyncTest.kt": "ed08e097caf1fa55b61a11fa189e0f6e53e609fd1a1fbaea3d69d2647061789d",
+    "测试/前端/Android/Instrumentation/StorageLifecycleTest.kt": "7a7e2d75bb468a4ce02696b473675bfb89f3d88cd5835886365e97f7c4c7e9c8",
+    "测试/前端/Android/Instrumentation/NativeSessionLifecycleTest.kt": "cf86112fd91afc47e53067291a1bcc51f4defa1d35a663fb31f073c0f69d4ba3"
+  },
+  "sourceBytesArchived": false,
+  "previousAuthApkSHA256": {
+    "代码/前端/Android/Dist/JobsIM-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+    "代码/前端/Android/Dist/Baselines/20261115-native-auth-refresh-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3"
+  },
+  "diffCheck": {
+    "exitCode": 0,
+    "output": ""
+  },
+  "localMarkdownDocumentsChecked": 4,
+  "brokenLocalTargets": [],
+  "review": "Two definite findings were source-fixed; reviewer did not fully reread the final cleanup/proof patch. Not recorded as final review passed."
+}

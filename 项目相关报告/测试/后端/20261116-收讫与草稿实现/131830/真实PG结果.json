@@ -1,0 +1,22 @@
+{
+  "exitCode": 0,
+  "elapsedSeconds": 8.925,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "test",
+    "-p",
+    "1",
+    "-count=1",
+    "-json",
+    "-run",
+    "^TestReceiptPG",
+    "-timeout",
+    "150s",
+    "."
+  ],
+  "realPG": true,
+  "owners": "explicit process-local fixture",
+  "liveHTTPS": false,
+  "realRestore": false,
+  "oldRealmsTouched": false
+}

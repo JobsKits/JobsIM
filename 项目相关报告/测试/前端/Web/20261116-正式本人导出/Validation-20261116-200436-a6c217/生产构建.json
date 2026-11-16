@@ -1,0 +1,30 @@
+{
+  "exitCode": 0,
+  "dist": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/DataExport/20261116-200608-24f605/Dist",
+  "sourceUnchanged": true,
+  "sourceSHA256": {
+    "代码/前端/Web/Src/DataExportActions.ts": "3b02f6729b72fed976ef8f676f82e3189c7b500021f40d01aa36df3c0264c987",
+    "代码/前端/Web/Src/DataExportLabels.ts": "39e7c9c64b2797df4959d20213d3c07c90032550fd470401d56012d409efb1c0",
+    "代码/前端/Web/Src/DataExportPanel.tsx": "280d728a94c93d9e2b152a026fc3876cdfbc51ea99ce956f88863ce78bba080d",
+    "代码/前端/Web/Src/DataExportProtocol.ts": "048c02c83af44eebcc02d5db4fe003e737133bbf59d87e00f1f66a3d0583a136",
+    "代码/前端/Web/Src/DataExportStore.ts": "b33f7f0c6b1685ea9a3edaab6062e13b3b6e40fa6d340b0daeecdb2f34e740bd",
+    "代码/前端/Web/Src/DataExportArchive.ts": "9288da3f62c09d533e9af219adcf63ee9fc9f445b9c56756c90f9ee07e09670d",
+    "代码/前端/Web/Src/App.tsx": "f01915729c6636ee59b9f8fac47727c53516cd91941766173050c78c3319faf0",
+    "代码/前端/Web/Src/api.ts": "afe79d46d018c8623d66f630364382ec641a274a595678da2976d01359850c23",
+    "代码/前端/Web/Src/styles.css": "37c5cfd3d9bed3c5a8238d08622246d3284fedced9ca9ab3a6dbc81d3edb04d3"
+  },
+  "artifactSHA256": {
+    "index.html": "effe35cded2ac0e0303c309d0c56141fb18be3181b8f5d186ad0d7ffcb28ef0e",
+    "资源出处.md": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82",
+    "Logo.svg": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+    "Licenses/Lucide.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "Licenses/react-dom.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "Licenses/react.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "Fonts/OFL.txt": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+    "Fonts/SourceSans3.ttf": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+    "assets/index-D15iqubR.js.map": "aded47268f217a7c112747a040b253e611edf54a80c5b30001869e3dfa3202e1",
+    "assets/index-9Qyu2mfS.css": "1cf0a4f1783bf205ba81e6f0467f3714f27c85032bf3a15f09a59878df93d1a1",
+    "assets/index-D15iqubR.js": "a53afe46baec4db515778f851ae7564724084f0f1aac43cdf7b59c4893fe63f0"
+  },
+  "scope": "Independent private Web production bundle; no service/API changes"
+}

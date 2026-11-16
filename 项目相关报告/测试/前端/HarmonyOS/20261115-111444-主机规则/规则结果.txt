@@ -1,0 +1,75 @@
+TAP version 13
+# Subtest: pending inbox is recipient-bound and never resurrects accepted requests
+ok 1 - pending inbox is recipient-bound and never resurrects accepted requests
+  ---
+  duration_ms: 0.991916
+  ...
+# Subtest: read-only and unavailable-owner groups reject writes
+ok 2 - read-only and unavailable-owner groups reject writes
+  ---
+  duration_ms: 0.132833
+  ...
+# Subtest: original group membership generation remains decimal text above JS safe integer
+ok 3 - original group membership generation remains decimal text above JS safe integer
+  ---
+  duration_ms: 0.163833
+  ...
+# Subtest: profile, account, device, demo and restore epochs each isolate local data
+ok 4 - profile, account, device, demo and restore epochs each isolate local data
+  ---
+  duration_ms: 0.0715
+  ...
+# Subtest: opaque history cursor is epoch-bound without integer coercion
+ok 5 - opaque history cursor is epoch-bound without integer coercion
+  ---
+  duration_ms: 0.073125
+  ...
+# Subtest: restored secure credentials require matching account, device and epoch
+ok 6 - restored secure credentials require matching account, device and epoch
+  ---
+  duration_ms: 0.045416
+  ...
+# Subtest: strict authentication JSON separates login OTP from recovery code
+ok 7 - strict authentication JSON separates login OTP from recovery code
+  ---
+  duration_ms: 0.468166
+  ...
+# Subtest: connection descriptions reject credentials, HTTP, queries and fragments
+ok 8 - connection descriptions reject credentials, HTTP, queries and fragments
+  ---
+  duration_ms: 0.139625
+  ...
+# Subtest: all ten language tables cover the current control vocabulary
+ok 9 - all ten language tables cover the current control vocabulary
+  ---
+  duration_ms: 0.1495
+  ...
+# Subtest: literal UI actions and labels resolve in every language
+ok 10 - literal UI actions and labels resolve in every language
+  ---
+  duration_ms: 3.646417
+  ...
+# Subtest: sending qualification support requires the current instance and an explicit capability
+ok 11 - sending qualification support requires the current instance and an explicit capability
+  ---
+  duration_ms: 0.062708
+  ...
+# Subtest: retries serialize the original admission and never infer missing legacy qualification
+ok 12 - retries serialize the original admission and never infer missing legacy qualification
+  ---
+  duration_ms: 0.059958
+  ...
+# Subtest: lookup paths keep search criteria and signed cursor separate, and favorites never use empty search
+ok 13 - lookup paths keep search criteria and signed cursor separate, and favorites never use empty search
+  ---
+  duration_ms: 0.269458
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 45.319917

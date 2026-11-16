@@ -1,0 +1,30 @@
+{
+  "status": "41-local-passed",
+  "scopes": {
+    "IMAuthoritativeSyncTests": 21,
+    "IMDataExportTests": 10,
+    "IMPersonalStateTests": 10
+  },
+  "passed": 41,
+  "failed": 0,
+  "skipped": 0,
+  "seconds": 22.59,
+  "inputCount": 123,
+  "allInputAndArchivedSHA256Match": true,
+  "compiledBinarySHA256": {
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Build-20261116-205705-4c8f38/Debug-iphonesimulator/JobsIM.app/JobsIM": "89e027360aae25ea66521e68eb4737bc0e6edc3fdcbda6fd664cbce3cfeef8f1",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Build-20261116-205705-4c8f38/Debug-iphonesimulator/JobsIM.app/PlugIns/JobsIMTests.xctest/JobsIMTests": "94a1cbb88479e42fce297f9d2a55d56742cd213602fee956dde2a865f9a83b93"
+  },
+  "allCompiledBinarySHA256Match": true,
+  "oldFrozenBinariesUnchanged": true,
+  "minimumFreeBytes": 5116923904,
+  "simulator": "0EE39534-95F7-4624-A395-D51F65B70E7F",
+  "simulatorState": "Shutdown",
+  "bootedOnlyExistingOwnedSimulator": true,
+  "uiTestsExecuted": false,
+  "apiUsed": false,
+  "filesSaveExecuted": false,
+  "trueHTTPSExecuted": false,
+  "deviceTested": false,
+  "reportSHA256": "a34e42e1851287fca5cea03d067253b45553ff70218aa5b02b4a8e18fd60ccb6"
+}

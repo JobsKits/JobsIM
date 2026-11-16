@@ -1,0 +1,34 @@
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 2112 modules transformed.
+
+(!) outDir /Users/jobs/Library/Application Support/JobsIM/Build/Web/DraftRecovery/20261116-174629/Dist is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../../../../../../Library/Application Support/JobsIM/Build/Web/DraftRecovery/20261116-174629/Dist/index.html                   0.44 kB │ gzip:   0.31 kB
+../../../../../../Library/Application Support/JobsIM/Build/Web/DraftRecovery/20261116-174629/Dist/assets/index-9Qyu2mfS.css   27.20 kB │ gzip:   6.03 kB
+../../../../../../Library/Application Support/JobsIM/Build/Web/DraftRecovery/20261116-174629/Dist/assets/index-D_uZ6muW.js   494.30 kB │ gzip: 154.59 kB │ map: 1,858.70 kB
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../../../.cache/JobsIM/Web/node_modules/lucide-react/dist/esm/Icon.mjs" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../../../.cache/JobsIM/Web/node_modules/lucide-react/dist/esm/Icon.mjs:2:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m2 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../../../.cache/JobsIM/Web/node_modules/lucide-react/dist/esm/context.mjs" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../../../.cache/JobsIM/Web/node_modules/lucide-react/dist/esm/context.mjs:2:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m2 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+✓ built in 217ms

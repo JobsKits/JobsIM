@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:51.405172+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:51.563482+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReadPointsInputOrderUnknownAndUniformVisibility"}
+{"Time":"2026-11-16T12:11:51.563563+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReadPointsInputOrderUnknownAndUniformVisibility","Output":"=== RUN   TestReadPointsInputOrderUnknownAndUniformVisibility\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:51.684773+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReadPointsInputOrderUnknownAndUniformVisibility","Output":"--- PASS: TestReadPointsInputOrderUnknownAndUniformVisibility (0.12s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:51.684812+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReadPointsInputOrderUnknownAndUniformVisibility","Elapsed":0.12}
+{"Time":"2026-11-16T12:11:51.684838+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:51.685477+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.280s\n"}
+{"Time":"2026-11-16T12:11:51.685498+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.28}

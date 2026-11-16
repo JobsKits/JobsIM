@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="8" failures="0" errors="0" skipped="0" time="17.533" timestamp="2026-11-15T02:22:43" hostname="localhost">
+  <testsuite name="com.jobs.im.DatabaseIsolationTest" tests="1" failures="0" errors="0" skipped="0" time="0.072" timestamp="2026-11-15T02:22:43" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="liveOutboxSurvivesIndependentDemoWrites" classname="com.jobs.im.DatabaseIsolationTest" time="0.072" />
+  </testsuite>
+  <testsuite name="com.jobs.im.LiveApiTest" tests="1" failures="0" errors="0" skipped="0" time="0.68" timestamp="2026-11-15T02:22:43" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="verifiedTlsTwoAccountMessageContract" classname="com.jobs.im.LiveApiTest" time="0.68" />
+  </testsuite>
+  <testsuite name="com.jobs.im.ModelClosureTest" tests="1" failures="0" errors="0" skipped="0" time="5.818" timestamp="2026-11-15T02:22:43" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="realNativeModelKeepsOriginalOperationsAndRelationshipGenerations" classname="com.jobs.im.ModelClosureTest" time="5.818" />
+  </testsuite>
+  <testsuite name="com.jobs.im.NativeUiTest" tests="1" failures="0" errors="0" skipped="0" time="8.924" timestamp="2026-11-15T02:22:43" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="realConversationGroupAndSettingsRenderInNativeActivity" classname="com.jobs.im.NativeUiTest" time="8.924" />
+  </testsuite>
+  <testsuite name="com.jobs.im.NotificationPrivacyTest" tests="1" failures="0" errors="0" skipped="0" time="0.401" timestamp="2026-11-15T02:22:43" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="localAlertHidesBodyAndRejectsAnotherNamespace" classname="com.jobs.im.NotificationPrivacyTest" time="0.401" />
+  </testsuite>
+  <testsuite name="com.jobs.im.StorageLifecycleTest" tests="3" failures="0" errors="0" skipped="0" time="0.358" timestamp="2026-11-15T02:22:43" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="durableQueueDraftRevisionAndCursorRemainAtomic" classname="com.jobs.im.StorageLifecycleTest" time="0.243" />
+    <testcase name="anonymousReconnectFreezesEveryAccountOfOnlyTheOldInstanceEpoch" classname="com.jobs.im.StorageLifecycleTest" time="0.059" />
+    <testcase name="versionTwoUpgradePreservesOriginalPendingIdentity" classname="com.jobs.im.StorageLifecycleTest" time="0.056" />
+  </testsuite>
+</testsuites>

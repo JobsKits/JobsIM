@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-15",
+  "status": "scoped-verified",
+  "scope": "iOS access/refresh integration; two independent native rounds",
+  "toolchain": {
+    "xcode": "27.2",
+    "sdk": "27.2",
+    "platform": "iOS Simulator 27.2",
+    "device": "iPhone 17 Pro",
+    "simulatorId": "927610A5-305F-41F5-BA69-7DA273F4C47E"
+  },
+  "build": {
+    "result": "TEST BUILD SUCCEEDED",
+    "log": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/auth-refresh-incremental-build.log",
+    "outputRoot": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS",
+    "concurrency": "one build target; Swift driver -j2; arm64 only"
+  },
+  "runs": [
+    {
+      "phase": "local",
+      "bundle": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/AuthLocal-20261115-212146-5e127e3a.xcresult",
+      "log": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthLocal-20261115-212146-5e127e3a.log",
+      "simulator": "927610A5-305F-41F5-BA69-7DA273F4C47E",
+      "expectedMethods": 12,
+      "exitCode": 0,
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "methods": [
+        "JobsIMTests.IMAuthCoordinatorTests testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace",
+        "JobsIMTests.IMAuthCoordinatorTests testFreshProofRetiresCompleteSavedChainWithoutChangingOldBodies",
+        "JobsIMTests.IMAuthCoordinatorTests testMissingRetirementCapabilityKeepsOriginalIntentAndMakesNoRequest",
+        "JobsIMTests.IMAuthCoordinatorTests testRestartFinishesSecuredInitialPairBeforeExposingNewNamespace",
+        "JobsIMTests.IMAuthCoordinatorTests testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily",
+        "JobsIMTests.IMAuthCoordinatorTests testStaleOldFamilyCannotInvalidateReplacementDevice",
+        "JobsIMTests.IMAuthCoordinatorTests testUnknownInitialUsesOriginalIDThenExplicitReauthLinksAndFreezesOldDevice",
+        "JobsIMTests.IMAuthCoordinatorTests testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret",
+        "JobsIMTests.IMAuthCoordinatorTests testUnknownRegistrationCannotBecomeUnlinkedFreshAuthentication",
+        "JobsIMTests.IMAuthCredentialTests testKeychainStoresCompletePairAsSingleItem",
+        "JobsIMTests.IMAuthCredentialTests testNamespaceHandoffFreezesOldOutboxAndRollsBackPartialCommit",
+        "JobsIMTests.IMAuthCredentialTests testPairStrictnessAndRotationKeepsDeviceNamespace"
+      ],
+      "summaryFile": "本机12项-xcresult摘要.json"
+    },
+    {
+      "phase": "https",
+      "bundle": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/AuthHTTPS-20261115-212324-46e7d6d0.xcresult",
+      "log": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/AuthHTTPS-20261115-212324-46e7d6d0.log",
+      "simulator": "927610A5-305F-41F5-BA69-7DA273F4C47E",
+      "expectedMethods": 4,
+      "endpoint": "https://127.0.0.1:36443",
+      "deploymentId": "8196a425-b530-49d5-b57f-4663f416e909",
+      "exitCode": 0,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "methods": [
+        "JobsIMTests.IMAuthRefreshIntegrationTests testRealHTTPSConcurrentAccessExpiryCoordinatesOneRotation",
+        "JobsIMTests.IMAuthRefreshIntegrationTests testRealHTTPSInitialLostDeliveryReusesOriginalBodyAndDevice",
+        "JobsIMTests.IMAuthRefreshIntegrationTests testRealHTTPSLostRefreshRequiresReauthAndPreservesIndependentFamily",
+        "JobsIMTests.IMAuthRefreshIntegrationTests testRealHTTPSUnknownSuccessorsRetireCompleteChain"
+      ],
+      "summaryFile": "HTTPS4项-xcresult摘要.json"
+    }
+  ],
+  "methodExecutions": 16,
+  "passed": 16,
+  "failed": 0,
+  "skipped": 0,
+  "protocol": {
+    "endpoint": "https://127.0.0.1:36443",
+    "deploymentId": "8196a425-b530-49d5-b57f-4663f416e909",
+    "restoreEpoch": "1",
+    "requiredCapabilities": [
+      "auth_refresh",
+      "auth_retirement_chain"
+    ],
+    "privateSeedCopied": false,
+    "globalTrustModified": false,
+    "postgresModified": false
+  },
+  "verified": [
+    "Whole credential pair in one real Keychain item; strict rotation validation and namespace identity",
+    "Concurrent refresh single-flight; old refresh credentials blocked after a persisted unknown result",
+    "SQLite file reopened for unknown barrier and secured initial handoff; old Outbox bytes retained and frozen",
+    "Original initial request proof stays in memory only; changed proof is rejected before HTTP",
+    "Full retained R1/R2 retirement closure sent only in a new explicit verified R3; missing capability blocks HTTP",
+    "Real HTTPS refresh plus real file upload, message binding and authenticated identical-byte download within one stable family/device namespace",
+    "Real refresh committed then response deliberately lost; controlled reauth revokes that family while independent family remains usable",
+    "Real initial response lost then original request/body delivered again yields same family/device",
+    "Real unknown R1/R2 successors are retired by R3 with complete closure; current family usable",
+    "Actual fresh auth screen captured after waiting for paint; startup transition frame retained separately"
+  ],
+  "injectionBoundaries": {
+    "ACCESS_EXPIRED": "Injected by the native business-operation closure; refresh and subsequent HTTPS are real. Does not prove a natural fifteen-minute expiry.",
+    "lostResponses": "Real HTTPS success consumed before a client callback intentionally throws TRANSPORT_UNKNOWN.",
+    "secureStorageFailure": "Controlled local secure-write failure in the native coordinator unit seam.",
+    "restart": "New coordinator/session and a new SQLite connection plus real Keychain; not a process kill or power-loss simulation."
+  },
+  "limits": [
+    "No physical device or iPad run",
+    "No actual administrator OTP UI flow in this round",
+    "No idle-30-day or absolute-90-day waiting/time mutation on native; server contract fields validated only",
+    "No new CA file-picker UI validation; prior iOS 27.2 Files issue unchanged",
+    "No full prior thirty-method rerun or entire first-stage acceptance",
+    "Old Caches runtime material was lost; no old services stopped or old cache namespace recreated"
+  ],
+  "infrastructureNotes": [
+    "Old simulator initial runner was cancelled before test execution; fresh dedicated simulator used",
+    "Cold dependency builds reached bounded limits under host memory pressure; preserved caches and serialized with Android",
+    "Final incremental full build passed; only the two completed test bundles count toward results"
+  ],
+  "localization": {
+    "languages": 10,
+    "keysPerLanguage": 146,
+    "sameKeySet": true,
+    "fullRuntimeLanguageMatrix": false
+  },
+  "screenshots": {
+    "accepted": "认证入口-原生UI.png",
+    "transitionOnly": "启动过渡帧-未作验收.png"
+  },
+  "sourceSHA256": {
+    "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMCredentialPair.swift": "b6f0fa031c77b6885f67de6f38088fe805e3a2eeedf3e481b51377429016f6bb",
+    "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift": "0c811a1337e60824e967611c9bbe16b12043904aa35a3149e1cde31595292b27",
+    "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift": "0555b46e1f5941ddf96e596758570c760ecc19065e2035462206735dcd980aa4",
+    "代码/前端/iOS/JobsIM/Services/IMKeychain/IMKeychain.swift": "52486c05587fdd0000f163cb91ab3fd7b952ffdbd51a8d3a9469ee55feb682be",
+    "代码/前端/iOS/JobsIM/Services/IMMediaCache/IMMediaCache.swift": "6d9d211e4b983de088d12224adfa8006f8c68475bdaf3d8fd250a1821bde373a",
+    "代码/前端/iOS/JobsIM/Services/IMAvatarLoader/IMAvatarLoader.swift": "43f6b6053d9d2c475ddd77bfabdf289995a05ada25078b4c84ef444dc01d9e43",
+    "代码/前端/iOS/JobsIM/Services/IMAvatarService/IMAvatarService.swift": "d62d1c41d70d31f6ad3a4aee2e3c17d5cd94d360004ef19cc2771eb1ac65b3d6",
+    "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift": "cfa6953ac7161574f558c1160fd70d0484f0336a498f70c680a8ede957ac4e9a",
+    "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift": "0749638ee950195e14af1ad60553fb77b62845227b50bf1ce45337f1027a2fbe",
+    "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift": "61587604d3378d044fc7c87203521cf0199c630d1982066d365e3f7c7c1d3c59",
+    "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMNamespace/IMNamespace.swift": "4cdb9367113b58ce7c8e480ea24ca298372f9b7552950e6a511c74a510307221",
+    "代码/前端/iOS/JobsByPods/JobsIMCore/Core/ISO8601DateFormatter/ISO8601DateFormatter+Make.swift": "3676c995da8a68f9aac5b30f87657a7d71ff05fff6a9c513d10454d5082e69a8",
+    "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift": "c30d2bac1425d8dfa7857053afd42bef0590e5300abacf2259846dd1eae29307",
+    "代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj": "bf4d024e50a26a52e0b2846ba967bba26348c31070b91115c0ad66e903bb51fa",
+    "测试/前端/iOS/IMAuthCredentialTests.swift": "a09449a8da1a616ddef3e638e9585b7738e743619d86c9c387955c9484e4c6e4",
+    "测试/前端/iOS/IMAuthCoordinatorTests.swift": "0836d9821413478213d24ef14fdfb905016d93cc0de6da5ce55ecf5bff48786d",
+    "测试/前端/iOS/IMAuthRefreshIntegrationTests.swift": "74d2fae6dd5206db6e02306a01018a27a67f1a9e82ab59ff8afc4e53a8f2d485",
+    "测试/前端/iOS/Fixtures/AuthRefreshPublic.json": "bc896d5ef4ce20df08fd02e0e42cd279eceb329942ae37fbd486233ef454ab64",
+    "代码/前端/iOS/JobsIM/Resource/de.lproj/Localizable.strings": "63fb9581886f5ac1bb9a5e1df3762445ecfc3710d1f8bf4754a0b1d275bf5be8",
+    "代码/前端/iOS/JobsIM/Resource/zh-Hans.lproj/Localizable.strings": "0404ef2b4234011676e35b988b870781f89db3309d55c8288471fa66717fb143",
+    "代码/前端/iOS/JobsIM/Resource/ja.lproj/Localizable.strings": "bb3882d422b901054589f582e915e6a9dbbef6a0a3121f66894e652d72513252",
+    "代码/前端/iOS/JobsIM/Resource/en.lproj/Localizable.strings": "6750bf67a2c92a916500a88021e4312590bfeb9abfa6db421b763396a91cb94e",
+    "代码/前端/iOS/JobsIM/Resource/es.lproj/Localizable.strings": "28e7d6f71fd31c4ef9e840a4cc28cb9b4bc7454469de545864b164ea75945a5c",
+    "代码/前端/iOS/JobsIM/Resource/ko.lproj/Localizable.strings": "df7f4b11cbca7bbf771d5cbc16c3ef86fefe7fb3b3127f6e18bee07f02a15e19",
+    "代码/前端/iOS/JobsIM/Resource/zh-Hant.lproj/Localizable.strings": "171abf2312519cb30aac17649c28fb63d739e8f5f741d7793b05ca881c2a93ad",
+    "代码/前端/iOS/JobsIM/Resource/bo.lproj/Localizable.strings": "9b7dfce2612809b6ba33852564f8ccd685cbabb633976df6060b01b8051b1cfd",
+    "代码/前端/iOS/JobsIM/Resource/ru.lproj/Localizable.strings": "5d6da4d8d1e36a533ca0de66ae77d334bbcb0adc256b2d88957c3db38145ee09",
+    "代码/前端/iOS/JobsIM/Resource/fr.lproj/Localizable.strings": "3eed16d279db631748e7f1fc5c4141e9cd8775b5a1ef8eb1ea7fc0c434ca0750"
+  },
+  "constructionAudit": {
+    "issues": 0,
+    "factoryHits": 23,
+    "scannedFiles": 67
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "Own CLI inputs before schema1 authoritative synchronization; historical auth claims remain tied to their original report",
+  "files": {
+    "代码/前端/CLI/README.md": "01cd32a88c873e428549447bb26dead896b9341eb991d0d35a67b8f692ac87fa",
+    "代码/前端/CLI/Scripts/Build.py/README.md": "23b2680e9ba3eb2c689c8dc119b0b533e3d4effa156ac0c2e53b694910ef3b89",
+    "代码/前端/CLI/cmd/jobsim/auth.go": "0d01a848c1d5ba02f55bd0f3c8a5527cad4c11d78381b920ab644ee5f7c96287",
+    "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go": "99aba4b84a204208ec607d925415470c18a0a90f29626b2be37b7c9b43682a70",
+    "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go": "802f2dc215b0716db0389a0483989de6c25446fd700781976558af4801ad8bd4",
+    "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go": "0165ee54098f1b4e223d3005cf54445ea945e88ddb5f5800f148985402a57a06",
+    "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go": "f85527dd37bddc1d7e1c17da398b6bf12ca7d42ed94a0517ab87d50bb4c17f2a",
+    "代码/前端/CLI/cmd/jobsim/auth_vault_other.go": "232842a24f0efa8691c222c8ad616146db98f5a45acb417526e0679589f2e4fd",
+    "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go": "863cb2ed0ca254473fa11a8b2dfe2f8fb5c2414d6846ca316cfbfc8ace69fc51",
+    "代码/前端/CLI/cmd/jobsim/collaboration.go": "379fb31e54b9568a3d986b90dd2306a8338a4bd32ad2976c1f0a883fd6b8353d",
+    "代码/前端/CLI/cmd/jobsim/credentials.go": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea",
+    "代码/前端/CLI/cmd/jobsim/forward.go": "747de459652d091dfb32f882448147963a64dddd6e798355f08e42bfc3a557e6",
+    "代码/前端/CLI/cmd/jobsim/governance.go": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84",
+    "代码/前端/CLI/cmd/jobsim/local.go": "e1e5ffa8a299397a9714006b1938544f007a708cf5116a4258deaabe09d48788",
+    "代码/前端/CLI/cmd/jobsim/main.go": "e820e2f1f4fa2f532d092842b2798fee4c641c135149c66cd8f41fb9824f31a8",
+    "代码/前端/CLI/cmd/jobsim/store.go": "ea188268569ff18276b6fe3195d3aa514088be62727cd2eb77d350c65f840f97",
+    "代码/前端/CLI/go.mod": "4ca83c3741ef64a504e79ed56281a7d583b968273ea284786ee89248a013db39",
+    "代码/前端/CLI/go.sum": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030",
+    "代码/前端/CLI/代码地图/README.md": "9040ca663cfe51514108a401f0228ff693b49f36e2ac744ee7c64d31b0bab604",
+    "代码/前端/CLI/原生助手/Keychain/JobsIMKeychain.swift": "155f11edd08138caf3e4367c74aa066cd8bd4233e8713d92f0e1b58711ac954d",
+    "代码/前端/CLI/原生助手/Keychain/README.md": "4e7782381105b8b1d4efb1f58e8404840f5f2a30e9b6bd2458fe6c95ef45bf5b",
+    "代码/前端/CLI/第三方许可/modernc.org_libc--LICENSE-3RD-PARTY.md": "f597097efe3d97021f89170746bd3a0fb9a8b6fb26b82043ed68a4e0283bee6c",
+    "代码/前端/CLI/第三方许可/modernc.org_sqlite--LICENSE-3RD-PARTY.md": "f4a00ade8f4057ab0ea49097d9c459df8559fcf10ca78da0c950343fb7428d37",
+    "代码/前端/CLI/第三方许可/清单.json": "133581ce8ce76b571df75d645639123ea70d56a121e709b31cd727d939317dda"
+  }
+}

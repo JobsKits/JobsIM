@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:39.051095+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:39.241604+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSyncSchemasPreserve57StateAndRepeatConstraintIDs"}
+{"Time":"2026-11-16T12:11:39.242075+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSchemasPreserve57StateAndRepeatConstraintIDs","Output":"=== RUN   TestSyncSchemasPreserve57StateAndRepeatConstraintIDs\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:40.07196+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSchemasPreserve57StateAndRepeatConstraintIDs","Output":"--- PASS: TestSyncSchemasPreserve57StateAndRepeatConstraintIDs (0.83s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:40.072016+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSyncSchemasPreserve57StateAndRepeatConstraintIDs","Elapsed":0.83}
+{"Time":"2026-11-16T12:11:40.072273+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:40.072974+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t1.021s\n"}
+{"Time":"2026-11-16T12:11:40.07303+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":1.022}

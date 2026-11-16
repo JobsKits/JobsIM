@@ -1,0 +1,11 @@
+{
+  "hostPassed": 25,
+  "hostFailed": 0,
+  "HAPRebuilt": false,
+  "reason": "Resource floor and user clean gate; two invalid owner/business version equality checks removed",
+  "inputs": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "492af8e46ab4edf1aefa9eb19817d014e5e72edac5dfa53c243b292b8768a860",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncStore.ets": "cead4d7cb9687c92aef48415048f82d8285eb2037cfd2930229050cd58c6d269",
+    "测试/前端/HarmonyOS/Unit/Sync.test.cjs": "6fc66656b2f37e3379e7c6ab87833cd544493b261923bd283e16d65f8166874b"
+  }
+}

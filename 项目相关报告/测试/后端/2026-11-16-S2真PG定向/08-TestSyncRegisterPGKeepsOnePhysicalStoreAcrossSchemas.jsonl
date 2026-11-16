@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:46.247742+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:46.434593+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas"}
+{"Time":"2026-11-16T12:11:46.434742+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas","Output":"=== RUN   TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:46.596355+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas","Output":"--- PASS: TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas (0.16s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:46.596389+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas","Elapsed":0.16}
+{"Time":"2026-11-16T12:11:46.596418+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:46.597184+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.349s\n"}
+{"Time":"2026-11-16T12:11:46.597212+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.349}

@@ -1,0 +1,18 @@
+{
+  "kind": "report_archive_validation",
+  "at": "2026-11-16T03:47:15.972119+00:00",
+  "initialAttempt": {
+    "status": "failed",
+    "phase": "local_link_validation",
+    "reason": "SHA256SUMS checked before it was created",
+    "runtimeOrSourceFailure": false,
+    "rawGoLogsChanged": false
+  },
+  "finalAttempt": {
+    "status": "pass",
+    "sourceHashesVerified": 80,
+    "localLinksVerified": 13,
+    "anchorsVerified": 6,
+    "goOrSQLOrAPIInvocations": 0
+  }
+}

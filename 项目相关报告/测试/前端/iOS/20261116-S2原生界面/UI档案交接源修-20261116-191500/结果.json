@@ -1,0 +1,44 @@
+{
+  "status": "source-only",
+  "atUTC": "2026-11-16T11:14:07.144750+00:00",
+  "changes": [
+    "DEBUG bounded public plist handoff before shared Session restoration",
+    "Original Keychain and GRDB credentials remain authoritative",
+    "Public context used for both UI launch and cleanup",
+    "Expired AT401 cannot establish family closure",
+    "Host fsync archive for public UI plist"
+  ],
+  "validation": {
+    "swiftFrontendParse": {
+      "exitCode": 0,
+      "files": [
+        "代码/前端/iOS/JobsIM/App/AppDelegate/AppDelegate.swift",
+        "测试/前端/iOS/IMPersonalStateTests.swift",
+        "测试/前端/iOS/IMSelfStateIntegrationTests.swift"
+      ]
+    },
+    "pythonAST": {
+      "exitCode": 0,
+      "file": "测试/前端/iOS/personal_state.py/personal_state.py"
+    },
+    "newLocalMethodTarget": 31,
+    "nativeExecutedOnTheseInputs": false,
+    "newBuildExecuted": false,
+    "apiExecutedOnTheseInputs": false
+  },
+  "inputsSHA256": {
+    "代码/前端/iOS/JobsIM/App/AppDelegate/AppDelegate.swift": "00c1694024480335efe8f2bdbcc5a9ebe45e76f2f81ba33388dde89d26bb167a",
+    "测试/前端/iOS/IMPersonalStateTests.swift": "cc811f4e20fa2a2b19f134d67951a9570d02fcbdf5850cc5cfa4d1b5602f10c7",
+    "测试/前端/iOS/IMSelfStateIntegrationTests.swift": "786110539f2e1ee06114e4460309c05ee124434d96d079454c6c96159a43ee86",
+    "测试/前端/iOS/personal_state.py/personal_state.py": "1285116091ba0ab332574be9dd132be0fd61e912cbd8f296060488e17c54fda5"
+  },
+  "priorBuild": "Build-20261116-182322-d0b761",
+  "priorLocal": "Test-20261116-182952-5122e6",
+  "priorUIFailure": "Ui-20261116-184627-7af057",
+  "allSixFamiliesClosedEvidence": "../Cleanup-20261116-185804/六会话关闭事实.json",
+  "lastFamilyReadOnlyRevokeEvidence": "../Cleanup-20261116-185804/后端精确只读撤销补证.json",
+  "ownedSimulator": "0EE39534-95F7-4624-A395-D51F65B70E7F",
+  "simulatorState": "Shutdown",
+  "reasonNotExecuted": "DISK_BELOW_4_GIB",
+  "noNewInitialAuthentication": true
+}

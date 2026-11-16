@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "httpChecks": 100,
+  "semanticAssertions": 1282,
+  "verifiedPages": 32,
+  "bulkRows": 510,
+  "bulkFixture": "owned explicit SQL; not send-API acceptance evidence",
+  "nats": {
+    "actualServer": "2.15.3",
+    "publishAck": true,
+    "realDisconnectReconnect": true,
+    "httpCompensation": true,
+    "duplicateOriginNoExtraPosition": true
+  },
+  "clientAtomicInstall": false,
+  "qualifiedAck": false,
+  "fullAccountCoverage": false,
+  "afterReceipt": false,
+  "checkedAt": "2026-11-15T16:11:56.112315+00:00",
+  "binarySHA256": "57a86767d12f005da08c728ff544a2b66076b2db03a203e3221d3490e355f290",
+  "serverURL": "https://127.0.0.1:44443"
+}

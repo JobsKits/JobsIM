@@ -1,0 +1,16 @@
+{
+  "baseline": "项目相关报告/测试/前端/iOS/20261116-S2原生界面/Build-20261116-182322-d0b761",
+  "oldProductsUsedAsCurrentOutput": false,
+  "checks": [
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Debug-iphonesimulator/JobsIM.app/JobsIM",
+      "exists": true,
+      "sameSHA": true
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Debug-iphonesimulator/JobsIM.app/PlugIns/JobsIMTests.xctest/JobsIMTests",
+      "exists": true,
+      "sameSHA": true
+    }
+  ]
+}

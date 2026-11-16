@@ -1,0 +1,340 @@
+{
+  "startedAt": "2026-11-16T08:17:10.563Z",
+  "finishedAt": "2026-11-16T08:17:13.147Z",
+  "status": "failed",
+  "candidateJS": "index-BZ_49Klw.js",
+  "candidateSHA256": "77fd43dbe85e40566ceace7ade875303f8fb23b74b3407b3fd15f08db2f3a63f",
+  "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+  "restoreEpoch": "2",
+  "backendSHA256": "dea37a66395b0b2c503ba934bafef327d3d87b407c73a10595e770f46948a2cd",
+  "strictNodeCA": true,
+  "browserTrust": "Only the explicitly selected local certificate SPKI; no system trust or global TLS bypass",
+  "checks": [],
+  "controlledFault": {
+    "dropped": false,
+    "originalBodySHA256": "",
+    "matchingPuts": 0
+  },
+  "cleanup": [
+    {
+      "kind": "control",
+      "familyId": "5db7b823-c6dd-4629-9b50-1ddb76214ccc",
+      "logoutStatus": 200,
+      "originalAT401": true
+    },
+    {
+      "kind": "control",
+      "familyId": "20f559aa-1c56-4930-a9b8-bd3281bcc85b",
+      "logoutStatus": 200,
+      "originalAT401": true
+    }
+  ],
+  "network": [
+    {
+      "method": "GET",
+      "route": "/bootstrap",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/auth/register",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/auth/register",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/contacts/requests",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/contacts/requests/93c1bd0e-4785-4e6c-bcf5-b95b2d0f3fc4/accept",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/messages",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/draft",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "route": "/conversations/95f3405b-bfce-4853-a9c4-ea04f742ed37/draft",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "route": "/auth/logout",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "route": "/me",
+      "status": 401,
+      "errorCode": "UNAUTHORIZED"
+    },
+    {
+      "method": "POST",
+      "route": "/auth/logout",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "route": "/me",
+      "status": 401,
+      "errorCode": "UNAUTHORIZED"
+    }
+  ],
+  "pageErrors": [],
+  "sourceSHA256": {
+    "代码/前端/Web/Src/AdminPanel.tsx": "84a9903f345372b1f0b8efc787f600a2d0c90bfebafbaf887c8afce40555169e",
+    "代码/前端/Web/Src/AnnouncementPanel.tsx": "3a5b0d49a3b39e32997b9ac39a4553ed04af0a1e9a84aefe03867ab7dc0c1e55",
+    "代码/前端/Web/Src/App.tsx": "84e7ea814bc9fcc4b93c379833da48dd79ad79298877cd836a0185231a25d9b7",
+    "代码/前端/Web/Src/AuthSession.ts": "b3073d6f452a2164953d626814b3330a63daa7724d610507a906b758dda0f25e",
+    "代码/前端/Web/Src/GlobalMessages.ts": "c25d20144be737821daac5fbd6701988280d316912567098c5975150183d03dd",
+    "代码/前端/Web/Src/GroupControls.tsx": "136ac32a4bc9be1645b97e0d7644c17fab600f60d26a99ae8c897f3bfb39b326",
+    "代码/前端/Web/Src/MentionPicker.tsx": "b371b091cfe600b1dbcaf10f081e01801a41a4e66da7a40ea8ee4dbd9c3aca53",
+    "代码/前端/Web/Src/MessageFacts.ts": "9b632494d74bb22a1b71f1c0c6bd573ad73d0808c6cd0045be4ff7459221eee8",
+    "代码/前端/Web/Src/MessageLookup.tsx": "700bdae3f148954dcf7b0d1e6a3def9e77be555438929d7cd8c4537bd49e7f12",
+    "代码/前端/Web/Src/PeerControls.tsx": "0e5d91aaba10f8fb3c3d43e5e5327eba57b1e9cec3aa4d95ed6140a57d8642a5",
+    "代码/前端/Web/Src/PrivateMedia.tsx": "79e7b6aa495cf3f80553a8c3eec897528dbffc1923b1a789b3567d8074da4660",
+    "代码/前端/Web/Src/ReportPanel.tsx": "9887915b07c63dd5358b9009fa8eb0493d5c96e45b246b30520c2655014489b1",
+    "代码/前端/Web/Src/SelfStateActions.ts": "a05df4be101c472574dcd46f501ffcfa8e92b1f54825ba8d9ae6fb4b570baa93",
+    "代码/前端/Web/Src/SelfStateLabels.ts": "ad9ae628528157834830e4930448572db57debe8b0cb127679233da49fb4929b",
+    "代码/前端/Web/Src/SelfStatePanel.tsx": "4333f27e0ea1e6953b33216733a8c9334250582bc8a06cb2fba6e0f15e584ced",
+    "代码/前端/Web/Src/SelfStateProtocol.ts": "ff06896bb7326fa730a0befad1edbbe9d5dff6fa6b7f3aef11c39c14aa2cd00a",
+    "代码/前端/Web/Src/StorageDatabase.ts": "93b3badb1aa759c06e13bc07982a9e69803fdcc41752c56374171b12414579aa",
+    "代码/前端/Web/Src/SyncEngine.ts": "3998511d10cf14a406a6d8c5d6e4818ac3179f8da1ef0efdf34fd9b076e0bfe5",
+    "代码/前端/Web/Src/SyncProtocol.ts": "9f9dc0866de08fc5f2e39dd5c5bbc16e520537b2f210fa6d8570acb30783ddc6",
+    "代码/前端/Web/Src/SyncStore.ts": "35d74cd4a671f6d5045b6f4250cccc7a29cc554bef214c95f73e83fa4f2d1b55",
+    "代码/前端/Web/Src/SyncView.ts": "cea1be4b73b5143d27abeb3cff780bca8b7ab00ab14dbadbe791c1b8a63dd533",
+    "代码/前端/Web/Src/api.ts": "c4f2153b999ba3b9397593b452af58ee2d160b344c25e479c59d9249edab1f38",
+    "代码/前端/Web/Src/demo.ts": "4b11d1b2d1757fdfb95e720e0f08730c07e9f33237ba330ab26f0fc85f1db62b",
+    "代码/前端/Web/Src/env.d.ts": "9bf140f3a5154723b62d993f482744357ab6b908d89ff9a5777f3f8e3642f634",
+    "代码/前端/Web/Src/forward.ts": "688de48c837608a7f36f1452fe79155d819946f97499e8bead0e7872ebfa9e0d",
+    "代码/前端/Web/Src/i18n.ts": "8e0c6f80ce6ffa09d86147350a88eb79a315ebb671853ae36230a30042300ef5",
+    "代码/前端/Web/Src/main.tsx": "7dd0ec7c005211dc0191dbe92115cb395ec8f04c2591d2259039a5d7b42fb3c0",
+    "代码/前端/Web/Src/storage.ts": "9f81597f61d4ebfb3011d246889e39d616ceb704374356388cdafd522f823026",
+    "代码/前端/Web/Src/styles.css": "37c5cfd3d9bed3c5a8238d08622246d3284fedced9ca9ab3a6dbc81d3edb04d3",
+    "代码/前端/Web/Src/types.ts": "7c26af97938ce2282d0500898be69d328b8af9847cdfe67b3323010f49308c78",
+    "测试/前端/Web/self-state-https.cjs/self-state-https.cjs": "3bc6c2af14ec9e7800aff690b1eb0e49f8700e3e5957161711ef4ae8166d4039"
+  },
+  "sourceUnchanged": true,
+  "failure": {
+    "message": "page.evaluate: Error: public context unavailable\n    at eval (eval at evaluate (:370:30), <anonymous>:1:143)\n    at async <anonymous>:381:23",
+    "stack": "page.evaluate: Error: public context unavailable\n    at eval (eval at evaluate (:370:30), <anonymous>:1:143)\n    at async <anonymous>:381:23\n    at login (/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/self-state-https.cjs/self-state-https.cjs:87:27)\n    at async /Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/self-state-https.cjs/self-state-https.cjs:116:12"
+  }
+}

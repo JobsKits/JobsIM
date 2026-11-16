@@ -1,0 +1,16 @@
+{
+  "historicalStatePreserved": "状态.json",
+  "compiledInLaterCandidate": true,
+  "report": "../../20261116-S2本人状态/结果.json",
+  "scope": "Later S2 candidate includes owner/business version independence fix; prior S1 HAP and prior HAPRebuilt=false unchanged",
+  "artifacts": [
+    {
+      "sha256": "3db7f8c87b3ede705228ea0363ccd38d24af03de9877c744134312b2de9e9384",
+      "file": "代码/前端/HarmonyOS/Dist/entry-default-unsigned.hap"
+    },
+    {
+      "sha256": "d8c72d9fe4d18955ef93c9f12fb18797636668b7a3c54e5297e8bfc7d0d678bb",
+      "file": "代码/前端/HarmonyOS/Dist/entry-ohosTest-unsigned.hap"
+    }
+  ]
+}

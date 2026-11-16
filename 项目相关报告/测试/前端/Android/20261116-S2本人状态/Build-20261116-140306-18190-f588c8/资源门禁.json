@@ -1,0 +1,123 @@
+{
+  "minimumFreeBytes": 4294967296,
+  "maxSeconds": 360,
+  "reason": "completed",
+  "samples": [
+    {
+      "seconds": 0.0,
+      "freeBytes": 8148148224
+    },
+    {
+      "seconds": 1.01,
+      "freeBytes": 8147976192
+    },
+    {
+      "seconds": 2.02,
+      "freeBytes": 8147787776
+    },
+    {
+      "seconds": 3.03,
+      "freeBytes": 8147615744
+    },
+    {
+      "seconds": 4.03,
+      "freeBytes": 8147607552
+    },
+    {
+      "seconds": 5.03,
+      "freeBytes": 8147525632
+    },
+    {
+      "seconds": 6.04,
+      "freeBytes": 8147345408
+    },
+    {
+      "seconds": 7.05,
+      "freeBytes": 8147329024
+    },
+    {
+      "seconds": 8.06,
+      "freeBytes": 8146239488
+    },
+    {
+      "seconds": 9.07,
+      "freeBytes": 8146636800
+    },
+    {
+      "seconds": 10.08,
+      "freeBytes": 8146407424
+    },
+    {
+      "seconds": 11.09,
+      "freeBytes": 8146358272
+    },
+    {
+      "seconds": 12.09,
+      "freeBytes": 8146219008
+    },
+    {
+      "seconds": 13.1,
+      "freeBytes": 8146190336
+    },
+    {
+      "seconds": 14.11,
+      "freeBytes": 8146386944
+    },
+    {
+      "seconds": 15.12,
+      "freeBytes": 8146399232
+    },
+    {
+      "seconds": 16.12,
+      "freeBytes": 8145903616
+    },
+    {
+      "seconds": 17.13,
+      "freeBytes": 8145915904
+    },
+    {
+      "seconds": 18.14,
+      "freeBytes": 8145866752
+    },
+    {
+      "seconds": 19.15,
+      "freeBytes": 8145793024
+    },
+    {
+      "seconds": 20.16,
+      "freeBytes": 8146149376
+    },
+    {
+      "seconds": 21.17,
+      "freeBytes": 8145117184
+    },
+    {
+      "seconds": 22.18,
+      "freeBytes": 8144830464
+    },
+    {
+      "seconds": 23.18,
+      "freeBytes": 8144809984
+    },
+    {
+      "seconds": 24.19,
+      "freeBytes": 8145362944
+    },
+    {
+      "seconds": 25.2,
+      "freeBytes": 8145358848
+    },
+    {
+      "seconds": 26.21,
+      "freeBytes": 8145215488
+    },
+    {
+      "seconds": 27.21,
+      "freeBytes": 8144891904
+    },
+    {
+      "seconds": 28.21,
+      "freeBytes": 8144515072
+    }
+  ]
+}

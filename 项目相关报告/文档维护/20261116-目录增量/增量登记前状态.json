@@ -1,0 +1,5 @@
+{
+  "indexEntriesSHA": "c116f3dad629ee2c19cd52d26aa81a07bb0e3f17a188cd54bcbc9bca782e2a91",
+  "manifestCount": 121,
+  "reason": "部署器旧的索引字节不变审计与当前安装器合法stat刷新不兼容；只增量清单及精确属性，继续用仓内原转换器install/verify，未替换转换代码或原文"
+}

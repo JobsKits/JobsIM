@@ -1,0 +1,28 @@
+EXECUTING: /Users/jobs/Library/Android/sdk/build-tools/36.0.0/aapt dump badging /Users/jobs/Documents/GitHub/JobsIM/代码/前端/Android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+CURRENT_WORKING_DIRECTORY: /Users/jobs/Documents/GitHub/JobsIM
+START_TIME: 2026-11-14 22:42:02.099
+START_TIME-NANOS: 2026-11-14 22:42:02.099712000
+ENVIRONMENT:
+
+*****************************************
+STDOUT/STDERR BELOW
+===================
+package: name='com.jobs.im.test' versionCode='' versionName='' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
+sdkVersion:'26'
+targetSdkVersion:'37'
+uses-permission: name='android.permission.REORDER_TASKS'
+application: label='' icon=''
+application-debuggable
+feature-group: label=''
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+other-activities
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'
+===================
+END_TIME: 2026-11-14 22:42:02.121
+END_TIME-NANOS: 2026-11-14 22:42:02.121386000
+DURATION: 21ms
+EXIT CODE: 0

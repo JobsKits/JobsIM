@@ -1,0 +1,19 @@
+{
+  "exitCode": 0,
+  "elapsedSeconds": 2.774,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "test",
+    "-p",
+    "1",
+    "-count=1",
+    "-json",
+    "-run",
+    "^TestReceipt(Policy|Proof|Requests)",
+    "-timeout",
+    "150s",
+    "."
+  ],
+  "inputFiles": 82,
+  "frozenSource": true
+}

@@ -1,0 +1,166 @@
+{
+  "recordedAt": "2026-11-16T04:31:38.165905+00:00",
+  "snapshotNotPeak": true,
+  "freeBytes": 12192329728,
+  "processes": {
+    "mainPG": {
+      "rootPID": 32735,
+      "processCountIncludingChildren": 22,
+      "rssKiBIncludingChildren": 296768,
+      "rssKiBRoot": 14400
+    },
+    "journalPG": {
+      "rootPID": 32747,
+      "processCountIncludingChildren": 10,
+      "rssKiBIncludingChildren": 79792,
+      "rssKiBRoot": 12352
+    },
+    "nats": {
+      "rootPID": 36125,
+      "processCountIncludingChildren": 1,
+      "rssKiBIncludingChildren": 22576,
+      "rssKiBRoot": 22576
+    },
+    "app": {
+      "rootPID": 32768,
+      "processCountIncludingChildren": 1,
+      "rssKiBIncludingChildren": 42352,
+      "rssKiBRoot": 42352
+    }
+  },
+  "connections": [
+    {
+      "cluster": "main",
+      "maxConnections": "80",
+      "allDatabaseConnections": 14,
+      "byApplication": [
+        {
+          "application_name": "jobsim-control",
+          "connections": 1
+        },
+        {
+          "application_name": "jobsim-conversation",
+          "connections": 2
+        },
+        {
+          "application_name": "jobsim-directory",
+          "connections": 1
+        },
+        {
+          "application_name": "jobsim-governance",
+          "connections": 1
+        },
+        {
+          "application_name": "jobsim-identity",
+          "connections": 2
+        },
+        {
+          "application_name": "jobsim-media",
+          "connections": 1
+        },
+        {
+          "application_name": "jobsim-message",
+          "connections": 2
+        },
+        {
+          "application_name": "jobsim-sync",
+          "connections": 3
+        },
+        {
+          "application_name": "psql",
+          "connections": 1
+        }
+      ],
+      "fsync": "on",
+      "fullPageWrites": "on",
+      "synchronousCommit": "on"
+    },
+    {
+      "cluster": "journal",
+      "maxConnections": "16",
+      "allDatabaseConnections": 2,
+      "byApplication": [
+        {
+          "application_name": "jobsim-journal",
+          "connections": 1
+        },
+        {
+          "application_name": "psql",
+          "connections": 1
+        }
+      ],
+      "fsync": "on",
+      "fullPageWrites": "on",
+      "synchronousCommit": "on"
+    }
+  ],
+  "healthChecks": [
+    {
+      "role": "gateway",
+      "port": 50443,
+      "status": "ok",
+      "strictTLS": true
+    },
+    {
+      "role": "identity",
+      "port": 51101,
+      "status": "ok",
+      "strictTLS": false
+    },
+    {
+      "role": "directory",
+      "port": 51102,
+      "status": "ok",
+      "strictTLS": false
+    },
+    {
+      "role": "conversation",
+      "port": 51103,
+      "status": "ok",
+      "strictTLS": false
+    },
+    {
+      "role": "message",
+      "port": 51104,
+      "status": "ok",
+      "strictTLS": false
+    },
+    {
+      "role": "media",
+      "port": 51105,
+      "status": "ok",
+      "strictTLS": false
+    },
+    {
+      "role": "control",
+      "port": 51106,
+      "status": "ok",
+      "strictTLS": false
+    },
+    {
+      "role": "journal",
+      "port": 51107,
+      "status": "ok",
+      "strictTLS": false
+    },
+    {
+      "role": "governance",
+      "port": 51108,
+      "status": "ok",
+      "strictTLS": false
+    },
+    {
+      "role": "sync",
+      "port": 51109,
+      "status": "ok",
+      "strictTLS": false
+    }
+  ],
+  "listenerCount": 10,
+  "appOSProcesses": 1,
+  "theoreticalPoolMaximum": {
+    "main": 64,
+    "journal": 8
+  },
+  "sharedBuffersMiBPerPG": 16
+}

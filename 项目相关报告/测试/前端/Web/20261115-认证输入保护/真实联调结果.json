@@ -1,0 +1,19 @@
+{
+  "realBackend": true,
+  "tlsVerifiedByCAAndPinnedBrowserCertificate": true,
+  "productionDist": true,
+  "checks": [
+    "production UI login: real HttpOnly Secure host cookie, no JS credentials",
+    "two real UI tabs consume one refresh and retain the same device/family",
+    "committed refresh response loss and reload stop automatic refresh replay",
+    "verified reauthentication retires only the old Web family; original queue stays frozen in its old namespace",
+    "new session sends normally through production UI without moving the old draft",
+    "expired opaque Cookie with no JS metadata learns only public context and renews the same family once",
+    "closing a queued production auth form prevents a later credentials POST after the other tab releases its lock",
+    "lost real initial response keeps its nonce; changed proof is rejected before POST and explicit new proof retires the original family"
+  ],
+  "refreshCalls": 3,
+  "pendingAttempts": 1,
+  "errors": [],
+  "date": "2026-11-15T14:43:02.607Z"
+}

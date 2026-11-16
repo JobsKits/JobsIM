@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "test",
+    "-p",
+    "1",
+    "-run",
+    "^$",
+    "./..."
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 2.11,
+  "productionGoFiles": 75,
+  "sourceStable": true
+}

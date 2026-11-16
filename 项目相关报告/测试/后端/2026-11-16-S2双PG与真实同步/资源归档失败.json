@@ -1,0 +1,7 @@
+{
+  "stage": "resource artifact serialization before teardown",
+  "observed": "NameError: timezone is not defined",
+  "productTestsAffected": false,
+  "processSignalledBeforeFailure": false,
+  "repair": "explicit datetime/timezone import in host orchestration; no product/test source change"
+}

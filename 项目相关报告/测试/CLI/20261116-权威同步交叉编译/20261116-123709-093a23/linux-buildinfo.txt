@@ -1,0 +1,22 @@
+/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/Cross-20261116-123709-093a23/jobsim-linux-amd64: go1.27.4
+	path	jobsim/cli/cmd/jobsim
+	mod	jobsim/cli	(devel)	
+	dep	github.com/dustin/go-humanize	v1.1.0	h1:dbKTrvD0klcbBV/h4AWJdMuZogJACoMlvWIWZ5b2xWg=
+	dep	github.com/google/uuid	v1.6.0	h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
+	dep	github.com/remyoudompheng/bigfft	v0.0.0-20230129092748-24d4a6f8daec	h1:W09IVJc94icq4NjY3clb7Lk8O1qJ8BdBEF8z0ibU0rE=
+	dep	golang.org/x/sys	v0.50.0	h1:dkKZEFTEKaLr1sjhs0WiKqoi8Jj5nHbS3Njmx1UoMJs=
+	dep	golang.org/x/term	v0.48.0	h1:G6UU1eiSB8nl3DzeUGt7Mg+2SctI8tPS6Z5/mBt6cOk=
+	dep	modernc.org/libc	v1.80.1	h1:ejn7HtTV3GknNKbklqWQ1nvUrfX8mTxs1D+xp/JQwy4=
+	dep	modernc.org/mathutil	v1.7.1	h1:GCZVGXdaN8gTqB1Mf/usp1Y/hSqgI2vAGGP4jZMCxOU=
+	dep	modernc.org/memory	v1.12.1	h1:nFMiWrpStgZczNl6XI9GnIk/rWhYIyHGUaR04pGbp9g=
+	dep	modernc.org/sqlite	v1.62.0	h1:gMaCjSM1qpl+iOjiWhR1LYP3zqrYDI+5GYLGt6veP2g=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	CGO_ENABLED=0
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1
+	build	vcs=git
+	build	vcs.revision=18ceb7445fc59cf00e7ba2d7d452d360c021ee41
+	build	vcs.time=2026-11-04T09:43:29Z
+	build	vcs.modified=true

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "httpAssertions": 185,
+  "semanticAssertions": 104,
+  "strictHTTPS": true,
+  "referenceOnlyStorage": true,
+  "sourceProofAndDestinationAdmissionFrozen": true,
+  "actualUnreadResponseReconciled": true,
+  "lookup404ExplicitOriginalRetry": true,
+  "depthEight": true,
+  "targetHasNoSourceACL": true,
+  "sourceEditRecallMembershipAndPrincipalInvalidations": true,
+  "mediaTypesAndRange": true,
+  "streamCancelReleasesPublicFence": true,
+  "ordinaryLogoutDoesNotRevoke": true,
+  "searchAndFavoritesDynamic": true,
+  "experimentalForwardExportRejected": true,
+  "scope": "Isolated same-host HTTPS/PG and real media; UI, physical devices, cross-host, strong protection and full phase I not accepted",
+  "testedAtUTC": "2026-11-15T05:21:17.959428+00:00",
+  "scriptSHA256": "26ded1adfabbbece427f92908a7f52a2a19c9b692824ee2dad88859f86b232f3"
+}

@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: exact counters and opaque cross-end client IDs, explicit full DTO
+ok 1 - exact counters and opaque cross-end client IDs, explicit full DTO
+  ---
+  duration_ms: 30.120334
+  ...
+# Subtest: raw envelope bytes SHA and structural deep equality both required
+ok 2 - raw envelope bytes SHA and structural deep equality both required
+  ---
+  duration_ms: 0.617
+  ...
+# Subtest: all pages plus final validation and first changes precede atomic publication
+ok 3 - all pages plus final validation and first changes precede atomic publication
+  ---
+  duration_ms: 31.424083
+  ...
+# Subtest: missing page item cannot publish partial body/cursor
+ok 4 - missing page item cannot publish partial body/cursor
+  ---
+  duration_ms: 26.623542
+  ...
+# Subtest: raw body hash mismatch cannot publish partial body/cursor
+ok 5 - raw body hash mismatch cannot publish partial body/cursor
+  ---
+  duration_ms: 26.517334
+  ...
+# Subtest: outer object mismatch cannot publish partial body/cursor
+ok 6 - outer object mismatch cannot publish partial body/cursor
+  ---
+  duration_ms: 25.652208
+  ...
+# Subtest: permission ABA cannot publish partial body/cursor
+ok 7 - permission ABA cannot publish partial body/cursor
+  ---
+  duration_ms: 24.393291
+  ...
+# Subtest: reference current revision mismatch cannot publish partial body/cursor
+ok 8 - reference current revision mismatch cannot publish partial body/cursor
+  ---
+  duration_ms: 26.045958
+  ...
+# Subtest: classification watermark regression rejects complete snapshot
+ok 9 - classification watermark regression rejects complete snapshot
+  ---
+  duration_ms: 26.660875
+  ...
+# Subtest: durable original registration and snapshot request survive failed round
+ok 10 - durable original registration and snapshot request survive failed round
+  ---
+  duration_ms: 31.601667
+  ...
+# Subtest: same client ID from peer never acknowledges own original
+ok 11 - same client ID from peer never acknowledges own original
+  ---
+  duration_ms: 30.503542
+  ...
+# Subtest: auxiliary 503 and corrupt original evidence are zero proof but verified global still installs
+ok 12 - auxiliary 503 and corrupt original evidence are zero proof but verified global still installs
+  ---
+  duration_ms: 34.873083
+  ...
+# Subtest: full readonly original result confirms only matching sender route/body hash
+ok 13 - full readonly original result confirms only matching sender route/body hash
+  ---
+  duration_ms: 29.147333
+  ...
+# Subtest: malformed complete 200 and wrong sender never confirm queue
+ok 14 - malformed complete 200 and wrong sender never confirm queue
+  ---
+  duration_ms: 29.974917
+  ...
+# Subtest: late context and SQLite transaction failure never publish body/cursor
+ok 15 - late context and SQLite transaction failure never publish body/cursor
+  ---
+  duration_ms: 29.391958
+  ...
+# Subtest: ordinary retained copies stay isolated and global dominates newer resurrection
+ok 16 - ordinary retained copies stay isolated and global dominates newer resurrection
+  ---
+  duration_ms: 29.8965
+  ...
+# Subtest: forward and announcement source body are never durable projections
+ok 17 - forward and announcement source body are never durable projections
+  ---
+  duration_ms: 28.163
+  ...
+# Subtest: terminal cleanup intent survives failure and retries without new events
+ok 18 - terminal cleanup intent survives failure and retries without new events
+  ---
+  duration_ms: 29.209541
+  ...
+# Subtest: capability absence does not create responsibility; disappearance never legacy falls back
+ok 19 - capability absence does not create responsibility; disappearance never legacy falls back
+  ---
+  duration_ms: 27.00175
+  ...
+# Subtest: registered physical UUID loss is refused instead of silently regenerating
+ok 20 - registered physical UUID loss is refused instead of silently regenerating
+  ---
+  duration_ms: 27.293959
+  ...
+# Subtest: global cleans all proven same-account old device/epoch holders without crossing other users
+ok 21 - global cleans all proven same-account old device/epoch holders without crossing other users
+  ---
+  duration_ms: 30.073583
+  ...
+# Subtest: origin conflict aborts entire projection/cursor transaction
+ok 22 - origin conflict aborts entire projection/cursor transaction
+  ---
+  duration_ms: 28.343166
+  ...
+# Subtest: proof captured before a guard or payload mutation cannot close the current original
+ok 23 - proof captured before a guard or payload mutation cannot close the current original
+  ---
+  duration_ms: 29.594166
+  ...
+# Subtest: delta gap and unknown state do not advance a verified old cursor
+ok 24 - delta gap and unknown state do not advance a verified old cursor
+  ---
+  duration_ms: 27.696666
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 701.957333

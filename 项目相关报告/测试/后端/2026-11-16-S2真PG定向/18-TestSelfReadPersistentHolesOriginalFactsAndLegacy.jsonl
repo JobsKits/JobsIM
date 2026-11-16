@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:54.541783+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:54.693583+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSelfReadPersistentHolesOriginalFactsAndLegacy"}
+{"Time":"2026-11-16T12:11:54.693654+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfReadPersistentHolesOriginalFactsAndLegacy","Output":"=== RUN   TestSelfReadPersistentHolesOriginalFactsAndLegacy\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:54.811806+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfReadPersistentHolesOriginalFactsAndLegacy","Output":"--- PASS: TestSelfReadPersistentHolesOriginalFactsAndLegacy (0.12s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:54.811832+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSelfReadPersistentHolesOriginalFactsAndLegacy","Elapsed":0.12}
+{"Time":"2026-11-16T12:11:54.811849+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:54.812339+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.270s\n"}
+{"Time":"2026-11-16T12:11:54.812362+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.271}

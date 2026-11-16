@@ -1,0 +1,53 @@
+{
+  "scope": "test child process only",
+  "clearedInherited": [
+    "PG*",
+    "JOBS_IM_*",
+    "DATABASE_URL",
+    "JOURNAL_DATABASE_URL",
+    "*_DATABASE_URL"
+  ],
+  "setNonSecret": {
+    "GOMAXPROCS": "2",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off"
+  },
+  "enabledFeatureGates": [
+    "JOBS_IM_SYNC_SCHEMAS_TEST",
+    "JOBS_IM_SOURCE_PREFERENCES_TEST",
+    "JOBS_IM_READ_POINT_TEST",
+    "JOBS_IM_SELF_READ_TEST"
+  ],
+  "allGateValues": "1",
+  "realmURLMarker": "https://127.0.0.1:50443",
+  "realmMarkerDoesNotRepresentAListeningService": true,
+  "privatePassfile": "runtime-resolved new namespace/Safety/Secrets/pgpass (0600 regular file, no symlink)",
+  "connectionGuards": {
+    "host": "127.0.0.1",
+    "port": 62381,
+    "owner": "s2_owner_ + first12 lowercase UUID hex of approved private namespace",
+    "maintenanceDatabase": "postgres",
+    "childDatabasePrefixes": [
+      "jobsim_sync_schemas_",
+      "jobsim_source_preferences_",
+      "jobsim_read_point_",
+      "jobsim_self_read_"
+    ],
+    "childSuffix": "32 lowercase UUID hex",
+    "fallbacksMustMatchEndpoint": true
+  },
+  "limits": {
+    "minimumFreeBytes": 4294967296,
+    "outerStepTimeoutSeconds": 180,
+    "goTimeoutSeconds": 170,
+    "goPackageParallelism": 1,
+    "topLevelTestParallelism": 1,
+    "caseInternalTransactions": "purpose-specific concurrent writers only",
+    "postgresMaxConnections": 12,
+    "physicalClusters": 1
+  },
+  "systemTrustChanged": false,
+  "networkDownloads": false,
+  "fixedRuntimeTouched": false
+}

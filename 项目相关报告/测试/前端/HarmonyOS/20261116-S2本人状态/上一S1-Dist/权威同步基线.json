@@ -1,0 +1,29 @@
+{
+  "report": "../../../../项目相关报告/测试/前端/HarmonyOS/20261116-权威同步/结果.json",
+  "artifacts": [
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-ohosTest-unsigned.hap",
+      "bytes": 1442373,
+      "sha256": "f8b67f11e2055c6cb10baa583640cdbd900b39552897715faaea9f4a349ff99b",
+      "arkBytecodeSha256": "933ed3c6139665756cacdd2aa00ffb3a82fb62c69a6c9476c65c849a1719aac6",
+      "zipCRCValid": true,
+      "unsigned": true,
+      "compiledHypiumMethodCount": 32,
+      "hypiumExecuted": false
+    },
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-default-unsigned.hap",
+      "bytes": 1045021,
+      "sha256": "6e5dcce21aff451eda58c978abe7de2ec3e64316c61906cc87aef9c53a90cda8",
+      "arkBytecodeSha256": "d7dc444d4e21533f9653277a667c13115bdd81473ed06a0cf02c5855c1812bd4",
+      "zipCRCValid": true,
+      "unsigned": true,
+      "compiledHypiumMethodCount": null,
+      "hypiumExecuted": false
+    }
+  ],
+  "nativeInstalled": false,
+  "deviceTestsExecuted": false,
+  "sourceShaManifest": "../../../../项目相关报告/测试/前端/HarmonyOS/20261116-权威同步/源码摘要.json",
+  "sourceRefinementNotBuilt": "../../../../项目相关报告/测试/前端/HarmonyOS/20261116-权威同步/OwnerRevision补充/状态.json"
+}

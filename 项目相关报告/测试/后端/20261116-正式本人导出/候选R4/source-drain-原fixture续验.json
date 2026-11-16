@@ -1,0 +1,57 @@
+{
+  "group": "source_drain",
+  "status": "failed",
+  "failure": "original successful nonce finishes the pending handoff after the exact holder is released",
+  "httpChecks": 26,
+  "semanticAssertions": 11,
+  "elapsedSeconds": 15.848,
+  "binarySHA256": "dd998c368efdbc7e82a4619db8ed613b61594bb85c2cc4ac75983fbeba293a93",
+  "scriptSHA256": "80213a7a35870c0e27f56e3427e3ad258ca5817dcef3074bd64c54e806d30fe9",
+  "checkedAt": "2026-11-16T08:21:43.285800+00:00",
+  "assertions": [
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "profile source mutation returns only after its old personal export is cleared",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "own real crop and thumbnail assets exported through typed profile holders",
+      "passed": true
+    },
+    {
+      "assertion": "a real non-contiguous own observation is included rather than invented from a read point",
+      "passed": true
+    },
+    {
+      "assertion": "committed source mutation does not claim success while an export reader has not drained",
+      "passed": true
+    },
+    {
+      "assertion": "download authorization revoked durably before artifact drain",
+      "passed": true
+    },
+    {
+      "assertion": "same committed source nonce resumes cleanup without another source write",
+      "passed": true
+    },
+    {
+      "assertion": "initial authentication success cookie and body are not partially flushed before export cleanup",
+      "passed": true
+    }
+  ]
+}

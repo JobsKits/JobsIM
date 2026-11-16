@@ -1,0 +1,337 @@
+[
+  {
+    "name": "AFNetworking",
+    "version": "4.0.1",
+    "source": {
+      "git": "https://github.com/AFNetworking/AFNetworking.git",
+      "tag": "4.0.1"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/AFNetworking.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "Alamofire",
+    "version": "5.12.2",
+    "source": {
+      "git": "https://github.com/Alamofire/Alamofire.git",
+      "tag": "5.12.2"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "业务直接使用",
+    "licenseSource": "Pods/Local Podspecs/Alamofire.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "BMPlayer",
+    "version": "1.3.2",
+    "source": {
+      "git": "https://github.com/BrikerMan/BMPlayer.git",
+      "tag": "1.3.2"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/BMPlayer.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "CocoaLumberjack",
+    "version": "3.10.0",
+    "source": {
+      "git": "https://github.com/CocoaLumberjack/CocoaLumberjack.git",
+      "tag": "3.10.0"
+    },
+    "license": "BSD",
+    "originalLicenseDeclaration": "BSD",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/CocoaLumberjack.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "ESPullToRefresh",
+    "version": "2.9.3",
+    "source": {
+      "git": "https://github.com/eggswift/pull-to-refresh.git",
+      "tag": "2.9.3"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": {
+      "type": "MIT",
+      "file": "LICENSE"
+    },
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/ESPullToRefresh.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "GKNavigationBarSwift",
+    "version": "1.7.3",
+    "source": {
+      "git": "https://github.com/QuintGao/GKNavigationBarSwift.git",
+      "tag": "1.7.3"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "业务直接使用",
+    "licenseSource": "Pods/Local Podspecs/GKNavigationBarSwift.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "GRDB.swift",
+    "version": "7.11.1",
+    "source": {
+      "git": "https://github.com/groue/GRDB.swift.git",
+      "tag": "v7.11.1"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": {
+      "type": "MIT",
+      "file": "LICENSE"
+    },
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "业务直接使用",
+    "licenseSource": "Pods/Local Podspecs/GRDB.swift.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "Kingfisher",
+    "version": "8.14.0",
+    "source": {
+      "git": "https://github.com/onevcat/Kingfisher.git",
+      "tag": "8.14.0"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": {
+      "type": "MIT",
+      "file": "LICENSE"
+    },
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/Kingfisher.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "Moya",
+    "version": "15.0.0",
+    "source": {
+      "git": "https://github.com/Moya/Moya.git",
+      "tag": "15.0.0"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": {
+      "type": "MIT",
+      "file": "License.md"
+    },
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/Moya.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "NVActivityIndicatorView",
+    "version": "4.7.0",
+    "source": {
+      "git": "https://github.com/ninjaprox/NVActivityIndicatorView.git",
+      "tag": "4.7.0"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": {
+      "type": "MIT",
+      "file": "LICENSE"
+    },
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/NVActivityIndicatorView.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "PromiseKit",
+    "version": "8.2.0",
+    "source": {
+      "git": "https://github.com/mxcl/PromiseKit.git",
+      "tag": "8.2.0",
+      "submodules": true
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/PromiseKit.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "ReactiveSwift",
+    "version": "7.2.1",
+    "source": {
+      "git": "https://github.com/ReactiveCocoa/ReactiveSwift.git",
+      "tag": "7.2.1"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": {
+      "type": "MIT",
+      "file": "LICENSE.md"
+    },
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/ReactiveSwift.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "RxCocoa",
+    "version": "6.9.0",
+    "source": {
+      "git": "https://github.com/ReactiveX/RxSwift.git",
+      "tag": "6.9.0"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/RxCocoa.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "RxRelay",
+    "version": "6.9.0",
+    "source": {
+      "git": "https://github.com/ReactiveX/RxSwift.git",
+      "tag": "6.9.0"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/RxRelay.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "RxSwift",
+    "version": "6.9.0",
+    "source": {
+      "git": "https://github.com/ReactiveX/RxSwift.git",
+      "tag": "6.9.0"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/RxSwift.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "SDWebImage",
+    "version": "5.21.7",
+    "source": {
+      "git": "https://github.com/SDWebImage/SDWebImage.git",
+      "tag": "5.21.7"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/SDWebImage.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "SVGKit",
+    "version": "3.0.0",
+    "source": {
+      "git": "https://github.com/SVGKit/SVGKit.git",
+      "tag": "3.0.0"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/SVGKit.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "SkeletonView",
+    "version": "1.30.4",
+    "source": {
+      "git": "https://github.com/Juanpe/SkeletonView.git",
+      "tag": "1.30.4"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": {
+      "type": "MIT",
+      "file": "LICENSE"
+    },
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/SkeletonView.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "SnapKit",
+    "version": "5.0.1",
+    "source": {
+      "git": "https://github.com/SnapKit/SnapKit.git",
+      "tag": "5.0.1"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "业务直接使用",
+    "licenseSource": "Pods/Local Podspecs/SnapKit.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "SwiftMessages",
+    "version": "10.0.2",
+    "source": {
+      "git": "https://github.com/SwiftKickMobile/SwiftMessages.git",
+      "tag": "10.0.2"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": {
+      "type": "MIT"
+    },
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/SwiftMessages.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "YTKNetwork",
+    "version": "3.0.6",
+    "source": {
+      "git": "https://github.com/yuantiku/YTKNetwork.git",
+      "tag": "3.0.6"
+    },
+    "license": "MIT",
+    "originalLicenseDeclaration": "MIT",
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/YTKNetwork.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  },
+  {
+    "name": "lottie-ios",
+    "version": "4.6.1",
+    "source": {
+      "git": "https://github.com/airbnb/lottie-ios.git",
+      "tag": "4.6.1"
+    },
+    "license": "Apache",
+    "originalLicenseDeclaration": {
+      "type": "Apache",
+      "file": "LICENSE"
+    },
+    "declaredDirectlyInPodfile": true,
+    "currentUse": "模板依赖，仍挂载；本人业务未直接调用",
+    "licenseSource": "Pods/Local Podspecs/lottie-ios.podspec.json",
+    "note": "原始源码与LICENSE只读保留，Vendor/Pods可重建。"
+  }
+]

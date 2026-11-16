@@ -1,0 +1,62 @@
+{
+  "group": "source",
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 26,
+  "semanticAssertions": 12,
+  "expectedCASConflictsSeparate": 0,
+  "verifiedPages": 0,
+  "elapsedSeconds": 0.596,
+  "checkedAt": "2026-11-16T05:37:02.197920+00:00",
+  "binarySHA256": "e69e51d2f0620752005df9ee8656fc6ce77511ae1939d994707615b63f2e7214",
+  "assertions": [
+    {
+      "assertion": "reply selection freezes the current same-conversation source proof",
+      "passed": true
+    },
+    {
+      "assertion": "original owned text draft reached positive durable commit",
+      "passed": true
+    },
+    {
+      "assertion": "private favorite interaction does not invalidate a reply content reference",
+      "passed": true
+    },
+    {
+      "assertion": "source edit retires only reply qualification and preserves owned text",
+      "passed": true
+    },
+    {
+      "assertion": "reference invalidation advances draft version and makes old success non-current",
+      "passed": true
+    },
+    {
+      "assertion": "unpublished invalid reply preserves separately recoverable independent input",
+      "passed": true
+    },
+    {
+      "assertion": "original owned text draft reached positive durable commit",
+      "passed": true
+    },
+    {
+      "assertion": "explicit new authored replacement retires superseded recovery bytes",
+      "passed": true
+    },
+    {
+      "assertion": "reply selection freezes the current same-conversation source proof",
+      "passed": true
+    },
+    {
+      "assertion": "original owned text draft reached positive durable commit",
+      "passed": true
+    },
+    {
+      "assertion": "global source recall does not erase independently authored draft text",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    }
+  ]
+}

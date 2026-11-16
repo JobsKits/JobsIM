@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "name": "本地规则",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedSeconds": 3.137,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "name": "真实PG",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedSeconds": 10.648,
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "changedInputs": [],
+  "withPG": true,
+  "authAndJournal": "production handlers against an owned random PostgreSQL database",
+  "sourceDependencies": "in-process acknowledgement fixtures",
+  "liveHTTPS": false,
+  "independentClusterRestore": false,
+  "nativeClients": false
+}

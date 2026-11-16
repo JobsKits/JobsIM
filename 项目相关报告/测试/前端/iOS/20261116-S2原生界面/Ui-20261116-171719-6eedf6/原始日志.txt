@@ -1,0 +1,367 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -xctestrun /Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Ui-20261116-171719-6eedf6/隔离本地测试.xctestrun -destination "platform=iOS Simulator,id=870CE7EA-610E-4F2F-A484-614BDA16576B" -parallel-testing-enabled NO -resultBundlePath /Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Ui-20261116-171719-6eedf6/结果.xcresult test-without-building "-only-testing:JobsIMUITests/IMSelfStateUITests/testNativeSelfStateViewsCloudDraftAndExplicitAdoption"
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Ui-20261116-171719-6eedf6/结果.xcresult
+
+2026-11-16 17:17:21.687326+0800 JobsIMUITests-Runner[34683:9153027] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-11-16 17:17:25.391.
+Test Suite 'JobsIMUITests.xctest' started at 2026-11-16 17:17:25.392.
+Test Suite 'IMSelfStateUITests' started at 2026-11-16 17:17:25.392.
+Test Case '-[JobsIMUITests.IMSelfStateUITests testNativeSelfStateViewsCloudDraftAndExplicitAdoption]' started.
+    t =     0.01s Start Test at 2026-11-16 17:17:25.401
+    t =     0.31s Set Up
+    t =     0.32s Open com.jobs.im
+    t =     0.32s     Launch com.jobs.im
+2026-11-16 17:17:26.068 xcodebuild[34676:9152900] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-16 17:17:26.068 xcodebuild[34676:9152900] [MT] IDELaunchParametersSnapshot: no debugger version
+objc[34683]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.awLWFK/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x1065d0310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.awLWFK/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x106624398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     1.50s         Setting up automation session
+    t =     4.26s         Wait for com.jobs.im to idle
+    t =     5.99s Waiting 30.0s for Cell (First Match) to exist
+    t =     7.02s     Checking `Expect predicate `existsNoRetry == 1` for object Cell (First Match)`
+    t =     7.02s         Checking existence of `Cell (First Match)`
+    t =     7.15s Checking existence of `Cell (First Match)`
+    t =     7.17s Find the Cell (First Match)
+    t =     7.25s Find the "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell
+    t =     7.28s Tap "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell
+    t =     7.28s     Wait for com.jobs.im to idle
+    t =     7.28s     Find the "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell
+    t =     7.31s     Check for interrupting elements affecting "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell
+    t =     7.37s     Synthesize event
+    t =     7.81s     Wait for com.jobs.im to idle
+    t =     7.86s Checking existence of `"self.open" Button`
+    t =     7.95s Find the "self.open" Button
+    t =     8.01s Find the "self.open" Button
+    t =     8.06s Tap "self.open" Button
+    t =     8.06s     Wait for com.jobs.im to idle
+    t =     8.33s     Find the "self.open" Button
+    t =     8.36s     Check for interrupting elements affecting "self.open" Button
+    t =     8.39s     Synthesize event
+    t =     8.68s     Wait for com.jobs.im to idle
+    t =     9.02s Checking existence of `"self.markManualUnread" Cell`
+    t =     9.08s Find the "self.markManualUnread" Cell
+    t =     9.13s Find the "self.markManualUnread" Cell
+    t =     9.16s Tap "self.markManualUnread" Cell
+    t =     9.16s     Wait for com.jobs.im to idle
+    t =     9.17s     Find the "self.markManualUnread" Cell
+    t =     9.20s     Check for interrupting elements affecting "self.markManualUnread" Cell
+    t =     9.24s     Synthesize event
+    t =     9.53s     Wait for com.jobs.im to idle
+    t =     9.86s Waiting 15.0s for "self.clearManualUnread" Cell to exist
+    t =    10.88s     Checking `Expect predicate `existsNoRetry == 1` for object "self.clearManualUnread" Cell`
+    t =    10.88s         Checking existence of `"self.clearManualUnread" Cell`
+    t =    10.92s Checking existence of `"self.pinChat" Cell`
+    t =    10.94s Find the "self.pinChat" Cell
+    t =    10.98s Find the "self.pinChat" Cell
+    t =    11.00s Tap "self.pinChat" Cell
+    t =    11.00s     Wait for com.jobs.im to idle
+    t =    11.00s     Find the "self.pinChat" Cell
+    t =    11.03s     Check for interrupting elements affecting "self.pinChat" Cell
+    t =    11.05s     Synthesize event
+    t =    11.34s     Wait for com.jobs.im to idle
+    t =    11.34s Waiting 15.0s for "self.unpinChat" Cell to exist
+    t =    12.36s     Checking `Expect predicate `existsNoRetry == 1` for object "self.unpinChat" Cell`
+    t =    12.36s         Checking existence of `"self.unpinChat" Cell`
+    t =    12.41s Checking existence of `"self.muteChat" Cell`
+    t =    12.43s Find the "self.muteChat" Cell
+    t =    12.46s Find the "self.muteChat" Cell
+    t =    12.49s Tap "self.muteChat" Cell
+    t =    12.49s     Wait for com.jobs.im to idle
+    t =    12.49s     Find the "self.muteChat" Cell
+    t =    12.52s     Check for interrupting elements affecting "self.muteChat" Cell
+    t =    12.54s     Synthesize event
+    t =    12.83s     Wait for com.jobs.im to idle
+    t =    12.83s Waiting 15.0s for "self.unmuteChat" Cell to exist
+    t =    13.86s     Checking `Expect predicate `existsNoRetry == 1` for object "self.unmuteChat" Cell`
+    t =    13.86s         Checking existence of `"self.unmuteChat" Cell`
+    t =    13.90s Find the Target Application 'com.jobs.im'
+    t =    14.04s Added attachment named '01-native-self-state'
+    t =    14.04s Checking existence of `"self.archiveChat" Cell`
+    t =    14.06s Find the "self.archiveChat" Cell
+    t =    14.09s Find the "self.archiveChat" Cell
+    t =    14.12s Tap "self.archiveChat" Cell
+    t =    14.12s     Wait for com.jobs.im to idle
+    t =    14.12s     Find the "self.archiveChat" Cell
+    t =    14.15s     Check for interrupting elements affecting "self.archiveChat" Cell
+    t =    14.17s     Synthesize event
+    t =    14.46s     Wait for com.jobs.im to idle
+    t =    14.46s Waiting 15.0s for "self.unarchiveChat" Cell to exist
+    t =    15.49s     Checking `Expect predicate `existsNoRetry == 1` for object "self.unarchiveChat" Cell`
+    t =    15.49s         Checking existence of `"self.unarchiveChat" Cell`
+    t =    15.54s Checking existence of `"self.hideChat" Cell`
+    t =    15.56s Find the "self.hideChat" Cell
+    t =    15.59s Find the "self.hideChat" Cell
+    t =    15.61s Tap "self.hideChat" Cell
+    t =    15.61s     Wait for com.jobs.im to idle
+    t =    15.62s     Find the "self.hideChat" Cell
+    t =    15.64s     Check for interrupting elements affecting "self.hideChat" Cell
+    t =    15.67s     Synthesize event
+    t =    15.95s     Wait for com.jobs.im to idle
+    t =    15.96s Waiting 15.0s for "self.showChat" Cell to exist
+    t =    16.98s     Checking `Expect predicate `existsNoRetry == 1` for object "self.showChat" Cell`
+    t =    16.98s         Checking existence of `"self.showChat" Cell`
+    t =    17.02s Checking existence of `Button (First Match)`
+    t =    17.03s Find the Button (First Match)
+    t =    17.06s Find the "返回" Button
+    t =    17.07s Tap "返回" Button
+    t =    17.07s     Wait for com.jobs.im to idle
+    t =    17.07s     Find the "返回" Button
+    t =    17.09s     Check for interrupting elements affecting "返回" Button
+    t =    17.11s     Synthesize event
+    t =    17.40s     Wait for com.jobs.im to idle
+    t =    17.73s Checking existence of `Button (First Match)`
+    t =    17.75s Find the Button (First Match)
+    t =    17.79s Find the "返回" Button
+    t =    17.82s Tap "返回" Button
+    t =    17.82s     Wait for com.jobs.im to idle
+    t =    17.82s     Find the "返回" Button
+    t =    17.85s     Check for interrupting elements affecting "返回" Button
+    t =    17.87s     Synthesize event
+    t =    18.17s     Wait for com.jobs.im to idle
+    t =    18.49s Checking existence of `"self.recoveryLists" Button`
+    t =    18.52s Find the "self.recoveryLists" Button
+    t =    18.56s Find the "self.recoveryLists" Button
+    t =    18.58s Tap "self.recoveryLists" Button
+    t =    18.58s     Wait for com.jobs.im to idle
+    t =    18.59s     Find the "self.recoveryLists" Button
+    t =    18.61s     Check for interrupting elements affecting "self.recoveryLists" Button
+    t =    18.64s     Synthesize event
+    t =    18.93s     Wait for com.jobs.im to idle
+    t =    19.61s Checking existence of `"Show hidden conversations" Button`
+    t =    19.65s Find the "Show hidden conversations" Button
+    t =    19.70s Find the "Show hidden conversations" Button
+    t =    19.73s Tap "Show hidden conversations" Button
+    t =    19.73s     Wait for com.jobs.im to idle
+    t =    20.12s     Find the "Show hidden conversations" Button
+    t =    20.15s     Check for interrupting elements affecting "Show hidden conversations" Button
+    t =    20.17s     Synthesize event
+    t =    20.46s     Wait for com.jobs.im to idle
+    t =    20.80s Waiting 15.0s for "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell to exist
+    t =    21.83s     Checking `Expect predicate `existsNoRetry == 1` for object "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell`
+    t =    21.83s         Checking existence of `"conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell`
+    t =    21.87s Checking existence of `"conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell`
+    t =    21.90s Find the "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell
+    t =    21.94s Find the "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell
+    t =    21.98s Tap "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell
+    t =    21.98s     Wait for com.jobs.im to idle
+    t =    21.98s     Find the "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell
+    t =    22.02s     Check for interrupting elements affecting "conversation.434fc728-17d0-404a-b023-18f010abe9ef" Cell
+    t =    22.04s     Synthesize event
+    t =    22.34s     Wait for com.jobs.im to idle
+    t =    22.70s Checking existence of `"self.open" Button`
+    t =    22.73s Find the "self.open" Button
+    t =    22.77s Find the "self.open" Button
+    t =    22.80s Tap "self.open" Button
+    t =    22.80s     Wait for com.jobs.im to idle
+    t =    22.80s     Find the "self.open" Button
+    t =    22.83s     Check for interrupting elements affecting "self.open" Button
+    t =    22.86s     Synthesize event
+    t =    23.16s     Wait for com.jobs.im to idle
+    t =    23.49s Checking existence of `"self.showChat" Cell`
+    t =    23.54s Find the "self.showChat" Cell
+    t =    23.60s Find the "self.showChat" Cell
+    t =    23.65s Tap "self.showChat" Cell
+    t =    23.65s     Wait for com.jobs.im to idle
+    t =    23.65s     Find the "self.showChat" Cell
+    t =    23.70s     Check for interrupting elements affecting "self.showChat" Cell
+    t =    23.75s     Synthesize event
+    t =    24.04s     Wait for com.jobs.im to idle
+    t =    24.36s Waiting 15.0s for "self.hideChat" Cell to exist
+    t =    25.38s     Checking `Expect predicate `existsNoRetry == 1` for object "self.hideChat" Cell`
+    t =    25.38s         Checking existence of `"self.hideChat" Cell`
+    t =    25.45s Checking existence of `"self.unarchiveChat" Cell`
+    t =    25.53s Find the "self.unarchiveChat" Cell
+    t =    25.58s Find the "self.unarchiveChat" Cell
+    t =    25.63s Tap "self.unarchiveChat" Cell
+    t =    25.63s     Wait for com.jobs.im to idle
+    t =    25.63s     Find the "self.unarchiveChat" Cell
+    t =    25.67s     Check for interrupting elements affecting "self.unarchiveChat" Cell
+    t =    25.70s     Synthesize event
+    t =    26.03s     Wait for com.jobs.im to idle
+    t =    26.04s Waiting 15.0s for "self.archiveChat" Cell to exist
+    t =    27.06s     Checking `Expect predicate `existsNoRetry == 1` for object "self.archiveChat" Cell`
+    t =    27.06s         Checking existence of `"self.archiveChat" Cell`
+    t =    27.28s Checking existence of `Button (First Match)`
+    t =    27.31s Find the Button (First Match)
+    t =    27.38s Find the "返回" Button
+    t =    27.42s Tap "返回" Button
+    t =    27.42s     Wait for com.jobs.im to idle
+    t =    27.43s     Find the "返回" Button
+    t =    27.47s     Check for interrupting elements affecting "返回" Button
+    t =    27.52s     Synthesize event
+    t =    27.82s     Wait for com.jobs.im to idle
+    t =    28.13s Waiting 15.0s for "Write a message…" TextField to exist
+    t =    29.16s     Checking `Expect predicate `existsNoRetry == 1` for object "Write a message…" TextField`
+    t =    29.16s         Checking existence of `"Write a message…" TextField`
+    t =    29.19s Checking existence of `"Write a message…" TextField`
+    t =    29.21s Find the "Write a message…" TextField
+    t =    29.23s Find the "Write a message…" TextField
+    t =    29.25s Tap "Write a message…" TextField
+    t =    29.25s     Wait for com.jobs.im to idle
+    t =    29.26s     Find the "Write a message…" TextField
+    t =    29.28s     Check for interrupting elements affecting "Write a message…" TextField
+    t =    29.30s     Synthesize event
+    t =    29.59s     Wait for com.jobs.im to idle
+    t =    32.33s Find the "Write a message…" TextField
+    t =    32.41s Type 'Independent iOS cl...' into "Write a message…" TextField
+    t =    32.41s     Wait for com.jobs.im to idle
+    t =    32.67s     Find the "Write a message…" TextField
+    t =    32.74s     Check for interrupting elements affecting "Write a message…" TextField
+    t =    32.78s     Synthesize event
+    t =    33.45s     Wait for com.jobs.im to idle
+    t =    33.46s Checking existence of `"Done" Button`
+    t =    33.51s Checking existence of `"self.open" Button`
+    t =    33.55s Find the "self.open" Button
+    t =    33.64s Find the "self.open" Button
+    t =    33.70s Tap "self.open" Button
+    t =    33.70s     Wait for com.jobs.im to idle
+    t =    33.71s     Find the "self.open" Button
+    t =    33.77s     Check for interrupting elements affecting "self.open" Button
+    t =    33.82s     Synthesize event
+    t =    34.13s     Wait for com.jobs.im to idle
+    t =    34.52s Checking existence of `"self.saveCloudDraft" Cell`
+    t =    34.58s Find the "self.saveCloudDraft" Cell
+    t =    34.68s Find the "self.saveCloudDraft" Cell
+    t =    34.73s Tap "self.saveCloudDraft" Cell
+    t =    34.73s     Wait for com.jobs.im to idle
+    t =    34.74s     Find the "self.saveCloudDraft" Cell
+    t =    34.78s     Check for interrupting elements affecting "self.saveCloudDraft" Cell
+    t =    34.83s     Synthesize event
+    t =    35.14s     Wait for com.jobs.im to idle
+    t =    35.46s Waiting 15.0s for "Independent iOS cloud draft" StaticText to exist
+    t =    36.48s     Checking `Expect predicate `existsNoRetry == 1` for object "Independent iOS cloud draft" StaticText`
+    t =    36.48s         Checking existence of `"Independent iOS cloud draft" StaticText`
+    t =    36.52s Find the Target Application 'com.jobs.im'
+    t =    36.63s Added attachment named '02-native-cloud-draft'
+    t =    36.63s Checking existence of `Button (First Match)`
+    t =    36.65s Find the Button (First Match)
+    t =    36.68s Find the "返回" Button
+    t =    36.70s Tap "返回" Button
+    t =    36.70s     Wait for com.jobs.im to idle
+    t =    36.71s     Find the "返回" Button
+    t =    36.73s     Check for interrupting elements affecting "返回" Button
+    t =    36.76s     Synthesize event
+    t =    37.06s     Wait for com.jobs.im to idle
+    t =    37.55s Waiting 15.0s for "Write a message…" TextField to exist
+    t =    38.57s     Checking `Expect predicate `existsNoRetry == 1` for object "Write a message…" TextField`
+    t =    38.57s         Checking existence of `"Write a message…" TextField`
+    t =    38.64s Checking existence of `"Write a message…" TextField`
+    t =    38.68s Find the "Write a message…" TextField
+    t =    38.72s Find the "Write a message…" TextField
+    t =    38.76s Tap "Write a message…" TextField
+    t =    38.76s     Wait for com.jobs.im to idle
+    t =    38.76s     Find the "Write a message…" TextField
+    t =    38.80s     Check for interrupting elements affecting "Write a message…" TextField
+    t =    38.83s     Synthesize event
+    t =    39.11s     Wait for com.jobs.im to idle
+    t =    39.11s Find the "Write a message…" TextField
+    t =    39.15s Type '...' into "Write a message…" TextField
+    t =    39.15s     Wait for com.jobs.im to idle
+    t =    39.15s     Find the "Write a message…" TextField
+    t =    39.19s     Check for interrupting elements affecting "Write a message…" TextField
+    t =    39.21s     Synthesize event
+    t =    39.87s     Wait for com.jobs.im to idle
+    t =    39.87s Type 'New local input un...' into "Write a message…" TextField
+    t =    39.87s     Wait for com.jobs.im to idle
+    t =    39.87s     Find the "Write a message…" TextField
+    t =    39.90s     Check for interrupting elements affecting "Write a message…" TextField
+    t =    39.93s     Synthesize event
+    t =    40.79s     Wait for com.jobs.im to idle
+    t =    40.79s Checking existence of `"Done" Button`
+    t =    40.82s Checking existence of `"self.open" Button`
+    t =    40.85s Find the "self.open" Button
+    t =    40.88s Find the "self.open" Button
+    t =    40.91s Tap "self.open" Button
+    t =    40.91s     Wait for com.jobs.im to idle
+    t =    40.91s     Find the "self.open" Button
+    t =    40.94s     Check for interrupting elements affecting "self.open" Button
+    t =    40.97s     Synthesize event
+    t =    41.26s     Wait for com.jobs.im to idle
+    t =    41.59s Checking existence of `"self.loadCloudDraft" Cell`
+    t =    41.63s Find the "self.loadCloudDraft" Cell
+    t =    41.68s Checking existence of `Table (First Match)`
+    t =    41.70s Swipe up Table (First Match)
+    t =    41.70s     Wait for com.jobs.im to idle
+    t =    41.72s     Find the Table (First Match)
+    t =    41.75s     Check for interrupting elements affecting Table
+    t =    41.78s     Synthesize event
+    t =    42.24s     Wait for com.jobs.im to idle
+    t =    43.23s Checking existence of `"self.loadCloudDraft" Cell`
+    t =    43.29s Find the "self.loadCloudDraft" Cell
+    t =    43.36s Find the "self.loadCloudDraft" Cell
+    t =    43.41s Tap "self.loadCloudDraft" Cell
+    t =    43.41s     Wait for com.jobs.im to idle
+    t =    43.41s     Find the "self.loadCloudDraft" Cell
+    t =    43.46s     Check for interrupting elements affecting "self.loadCloudDraft" Cell
+    t =    43.50s     Synthesize event
+    t =    43.81s     Wait for com.jobs.im to idle
+    t =    44.12s Checking existence of `"Continue" Button`
+    t =    44.19s Find the "Continue" Button
+    t =    44.27s Find the "Continue" Button
+    t =    44.34s Tap "Continue" Button
+    t =    44.34s     Wait for com.jobs.im to idle
+    t =    44.35s     Find the "Continue" Button
+    t =    44.42s     Check for interrupting elements affecting "Continue" Button
+    t =    44.49s     Synthesize event
+    t =    44.79s     Wait for com.jobs.im to idle
+    t =    46.09s Checking `Expect predicate `value == "Independent iOS cloud draft"` for object "Write a message…" TextField`
+    t =    46.09s     Find the "Write a message…" TextField
+    t =    46.15s Find the Target Application 'com.jobs.im'
+    t =    46.30s Added attachment named '03-native-explicit-adoption'
+    t =    46.30s Checking existence of `"Settings" Button`
+    t =    46.36s Find the "Settings" Button
+    t =    46.70s Checking existence of `"Settings" Button`
+    t =    46.77s Find the "Settings" Button
+    t =    47.08s Checking existence of `"Settings" Button`
+    t =    47.13s Find the "Settings" Button
+    t =    47.46s Checking existence of `"Settings" Button`
+    t =    47.55s Find the "Settings" Button
+    t =    47.87s Checking existence of `"Settings" Button`
+    t =    47.92s Find the "Settings" Button
+    t =    48.25s Checking existence of `"Settings" Button`
+    t =    48.37s Find the "Settings" Button
+    t =    48.71s Checking existence of `"Settings" Button`
+    t =    48.79s Find the "Settings" Button
+    t =    49.12s Checking existence of `"Settings" Button`
+    t =    49.19s Find the "Settings" Button
+    t =    49.52s Checking existence of `"Settings" Button`
+    t =    49.62s Find the "Settings" Button
+    t =    49.96s Checking existence of `"Settings" Button`
+    t =    50.02s Find the "Settings" Button
+    t =    50.35s Checking existence of `"Settings" Button`
+    t =    50.41s Find the "Settings" Button
+    t =    50.73s Checking existence of `"Settings" Button`
+    t =    50.79s Find the "Settings" Button
+    t =    51.13s Checking existence of `"Settings" Button`
+    t =    51.23s Find the "Settings" Button
+    t =    51.61s Checking existence of `"Settings" Button`
+    t =    51.70s Find the "Settings" Button
+    t =    52.03s Checking existence of `"Settings" Button`
+    t =    52.09s Find the "Settings" Button
+    t =    52.42s Checking existence of `"Settings" Button`
+    t =    52.50s Find the "Settings" Button
+    t =    52.84s Find the "Settings" Button
+/Users/jobs/Documents/GitHub/JobsIM/测试/前端/iOS/UI/IMSelfStateUITests.swift:24: error: -[JobsIMUITests.IMSelfStateUITests testNativeSelfStateViewsCloudDraftAndExplicitAdoption] : failed - Enabled native control unavailable: 
+    t =    53.53s Tear Down
+Test Case '-[JobsIMUITests.IMSelfStateUITests testNativeSelfStateViewsCloudDraftAndExplicitAdoption]' failed (53.861 seconds).
+Test Suite 'IMSelfStateUITests' failed at 2026-11-16 17:18:19.262.
+	 Executed 1 test, with 1 failure (0 unexpected) in 53.861 (53.870) seconds
+Test Suite 'JobsIMUITests.xctest' failed at 2026-11-16 17:18:19.263.
+	 Executed 1 test, with 1 failure (0 unexpected) in 53.861 (53.871) seconds
+Test Suite 'Selected tests' failed at 2026-11-16 17:18:19.263.
+	 Executed 1 test, with 1 failure (0 unexpected) in 53.861 (53.873) seconds
+2026-11-16 17:18:49.163 xcodebuild[34676:9152900] [MT] IDETestOperationsObserverDebug: 88.695 elapsed -- Testing started completed.
+2026-11-16 17:18:49.163 xcodebuild[34676:9152900] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-16 17:18:49.163 xcodebuild[34676:9152900] [MT] IDETestOperationsObserverDebug: 88.695 sec, +88.695 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Ui-20261116-171719-6eedf6/结果.xcresult
+
+Failing tests:
+	IMSelfStateUITests.testNativeSelfStateViewsCloudDraftAndExplicitAdoption()
+
+** TEST EXECUTE FAILED **
+
+Testing started

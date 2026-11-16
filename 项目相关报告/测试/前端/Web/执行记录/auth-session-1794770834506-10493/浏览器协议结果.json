@@ -1,0 +1,26 @@
+{
+  "simulatedBFF": true,
+  "realBackend": false,
+  "checks": [
+    "12 concurrent writes: one refresh, original business payloads",
+    "two browser tabs: Web Locks prevent a second refresh consume",
+    "lost committed refresh response stays blocked after reload without replay",
+    "fresh proof links the unknown old family and clears only its recovery marker",
+    "unknown initial and unknown successor retain their original nonces",
+    "late Alice response cannot replace or revoke the newly verified Bob context",
+    "private bytes carry the family header; storage contains no credentials",
+    "failed pending-state persistence prevents the refresh POST",
+    "cold browser learns only the public expired context before one refresh",
+    "initial authentication intents do not cross deployment identities",
+    "IndexedDB transaction freezes legacy/old device queues and late enqueue without moving drafts",
+    "changed proof cannot reuse an old intent; explicit fresh proof carries its retirement chain without storing secrets",
+    "full lifecycle lock retains both concurrent tab intents through preparation and receipt updates",
+    "retained multi-level body is refused before POST when live chain capability disappears",
+    "context reset cancels queued lifecycle work before it can submit credentials",
+    "missing refresh capability cannot bypass retained responsibility through a new legacy login ID"
+  ],
+  "refreshCalls": 4,
+  "initialCalls": 4,
+  "learnCalls": 2,
+  "date": "2026-11-15T19:27:16.115Z"
+}

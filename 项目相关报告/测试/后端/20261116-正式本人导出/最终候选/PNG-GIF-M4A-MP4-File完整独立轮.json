@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 27,
+  "semanticAssertions": 13,
+  "binarySHA256": "2b58586428a345309f3dcdca651d35de6b24f122ac717b8b8397d357901e5c87",
+  "scriptSHA256": "453147737e50fbf508e9efb2d30f039e82a1404490c0b5a9b1d1d3c1357b3a82",
+  "actualFixtures": [
+    "PNG",
+    "animated GIF",
+    "AAC M4A",
+    "MP4 video",
+    "ordinary file"
+  ],
+  "mediaToolsDownloaded": false,
+  "checkedAt": "2026-11-16T09:46:07.966454+00:00",
+  "assertions": [
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "all actual ZIP entries pass CRC after the complete encrypted authentication pass",
+      "passed": true
+    },
+    {
+      "assertion": "actual image.png is exported with exact original authenticated bytes and message type",
+      "passed": true
+    },
+    {
+      "assertion": "actual animated.gif is exported with exact original authenticated bytes and message type",
+      "passed": true
+    },
+    {
+      "assertion": "actual voice.m4a is exported with exact original authenticated bytes and message type",
+      "passed": true
+    },
+    {
+      "assertion": "actual clip.mp4 is exported with exact original authenticated bytes and message type",
+      "passed": true
+    },
+    {
+      "assertion": "actual ordinary-file.txt is exported with exact original authenticated bytes and message type",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "failed",
+  "startedAt": "2026-11-16T06:50:02.291493+00:00",
+  "serial": "emulator-5582",
+  "suite": "com.jobs.im.NativeSelfStateHttpsTest",
+  "realHTTPS": true,
+  "productSHA256": "a135ef54037e571f8903a0acc1821fe9e8aad1088212631872000a01d513df59",
+  "runnerSHA256": "ef9008b111ca2afb4cf36b91d7d5a95f85f820135f3fe195c3c34af4071ccb10",
+  "clockInjection": false,
+  "publicFixture": {
+    "serverURL": "https://127.0.0.1:54443",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "caSHA256": "68a1d8a9b39e99a9a3f9fcd6389cefa4df78083857952689582cc7f400e69e7e",
+    "binarySHA256": "dea37a66395b0b2c503ba934bafef327d3d87b407c73a10595e770f46948a2cd"
+  },
+  "ownedEmulatorPID": 60026,
+  "error": "ADB_COMMAND_FAILED:当前产品-path.txt",
+  "finishedAt": "2026-11-16T06:50:03.393002+00:00"
+}

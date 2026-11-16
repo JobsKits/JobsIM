@@ -1,0 +1,135 @@
+[
+  {
+    "group": "b",
+    "args": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_state_sync.py/self_state_sync.py",
+      "--environment-file",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/environment.json",
+      "--group",
+      "b",
+      "--report",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2双PG与真实同步/B-重跑1-真实结果.json"
+    ],
+    "testSourceSHA256": "4e2b90dc199d665cc256fbfa545b7f25c953e5a953591ff8d0481bd86de531e4",
+    "exitCode": 0,
+    "elapsedSeconds": 0.258,
+    "freeBytesAfter": 12233003008,
+    "log": "B-重跑1-原始.log",
+    "sha256": "84cf192cf902f3d8de7ca7a33162aee71fa97e6c2d64350ebdd3d00ddd7e3de8"
+  },
+  {
+    "group": "c",
+    "args": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_state_sync.py/self_state_sync.py",
+      "--environment-file",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/environment.json",
+      "--group",
+      "c",
+      "--report",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2双PG与真实同步/C-真实结果.json"
+    ],
+    "testSourceSHA256": "4e2b90dc199d665cc256fbfa545b7f25c953e5a953591ff8d0481bd86de531e4",
+    "exitCode": 0,
+    "elapsedSeconds": 0.344,
+    "freeBytesAfter": 12233113600,
+    "log": "C-原始.log",
+    "sha256": "511e7c68a7187e799e9ad9b89ed68165dea11538f0d714cdae74d0b45de23dca"
+  },
+  {
+    "group": "d",
+    "args": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_state_sync.py/self_state_sync.py",
+      "--environment-file",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/environment.json",
+      "--group",
+      "d",
+      "--report",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2双PG与真实同步/D-真实结果.json"
+    ],
+    "testSourceSHA256": "4e2b90dc199d665cc256fbfa545b7f25c953e5a953591ff8d0481bd86de531e4",
+    "exitCode": 0,
+    "elapsedSeconds": 0.372,
+    "freeBytesAfter": 12232847360,
+    "log": "D-原始.log",
+    "sha256": "f4fcdacc0311be51cf6cfa9133d39cbbb5ce454d53b82c3a7666c2d697c3ddad"
+  },
+  {
+    "group": "e",
+    "args": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_state_sync.py/self_state_sync.py",
+      "--environment-file",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/environment.json",
+      "--group",
+      "e",
+      "--report",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2双PG与真实同步/E-真实结果.json"
+    ],
+    "testSourceSHA256": "4e2b90dc199d665cc256fbfa545b7f25c953e5a953591ff8d0481bd86de531e4",
+    "exitCode": 0,
+    "elapsedSeconds": 0.939,
+    "freeBytesAfter": 12232867840,
+    "log": "E-原始.log",
+    "sha256": "01beb42b4339d14489ea58a89ed5afd3e4d2b0d53c6981d38e022db3d40bf36b"
+  },
+  {
+    "group": "f",
+    "args": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_state_sync.py/self_state_sync.py",
+      "--environment-file",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/environment.json",
+      "--group",
+      "f",
+      "--report",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2双PG与真实同步/F-真实结果.json"
+    ],
+    "testSourceSHA256": "4e2b90dc199d665cc256fbfa545b7f25c953e5a953591ff8d0481bd86de531e4",
+    "exitCode": 0,
+    "elapsedSeconds": 0.297,
+    "freeBytesAfter": 12232757248,
+    "log": "F-原始.log",
+    "sha256": "d0deb29a8a5b07d3ab79e1b8ed5f521dd066c52cad27adeced97cc38d6d3cfeb"
+  },
+  {
+    "group": "g",
+    "args": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_state_sync.py/self_state_sync.py",
+      "--environment-file",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/environment.json",
+      "--group",
+      "g",
+      "--report",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2双PG与真实同步/G-真实结果.json"
+    ],
+    "testSourceSHA256": "4e2b90dc199d665cc256fbfa545b7f25c953e5a953591ff8d0481bd86de531e4",
+    "exitCode": 0,
+    "elapsedSeconds": 0.235,
+    "freeBytesAfter": 12232658944,
+    "log": "G-原始.log",
+    "sha256": "2704475bf81fdef18538fc3562918ea60b76da6c1b497272eb1e4ac5c8f116fa"
+  },
+  {
+    "group": "h",
+    "args": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_state_sync.py/self_state_sync.py",
+      "--environment-file",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/environment.json",
+      "--group",
+      "h",
+      "--report",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2双PG与真实同步/H-真实结果.json"
+    ],
+    "testSourceSHA256": "4e2b90dc199d665cc256fbfa545b7f25c953e5a953591ff8d0481bd86de531e4",
+    "exitCode": 0,
+    "elapsedSeconds": 3.674,
+    "freeBytesAfter": 12232581120,
+    "log": "H-原始.log",
+    "sha256": "785fe75d04348492474572b7e0604ae7d661794bded125055774971e4a65ac29"
+  }
+]

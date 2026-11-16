@@ -1,0 +1,6 @@
+{
+  "automaticDeployment": "The original deployment attempt observed index-byte changes and rolled back; the precise concurrent or permitted-stat cause was not independently established. The separate-index attempt was rejected before mutation.",
+  "fallback": "Only reviewed metadata paths were added to this single repository. Its existing converter/README bytes were retained; local install and readonly verify used the original tool.",
+  "actualIndexEntryAudit": "mode/object/stage/path/flags were equal before and after the successful incremental registration; staged file list remained empty.",
+  "globalConfigChanged": false
+}

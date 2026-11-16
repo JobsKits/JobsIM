@@ -1,0 +1,9 @@
+{
+  "pid": 99437,
+  "exitConfirmed": true,
+  "method": "adb emu kill after avd+argv ownership verification",
+  "noSnapshotSave": true,
+  "wipe": false,
+  "uninstall": false,
+  "clear": false
+}

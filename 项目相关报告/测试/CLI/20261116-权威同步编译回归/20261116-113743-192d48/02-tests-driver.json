@@ -1,0 +1,12 @@
+{
+  "step": "full-local-tests",
+  "status": "completed",
+  "exitCode": -9,
+  "seconds": 6.45,
+  "minimumFreeGiB": 13.74,
+  "command": [
+    "/Users/jobs/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/CLI/运行测试.mjs/运行测试.mjs"
+  ],
+  "realAPIEnabled": false
+}

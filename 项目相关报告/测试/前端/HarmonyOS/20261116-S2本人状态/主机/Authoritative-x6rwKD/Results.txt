@@ -1,0 +1,185 @@
+TAP version 13
+# Subtest: exact counters and opaque cross-end client IDs, explicit full DTO
+ok 1 - exact counters and opaque cross-end client IDs, explicit full DTO
+  ---
+  duration_ms: 77.252042
+  ...
+# Subtest: raw envelope bytes SHA and structural deep equality both required
+ok 2 - raw envelope bytes SHA and structural deep equality both required
+  ---
+  duration_ms: 0.8535
+  ...
+# Subtest: all pages plus final validation and first changes precede atomic publication
+ok 3 - all pages plus final validation and first changes precede atomic publication
+  ---
+  duration_ms: 50.275708
+  ...
+# Subtest: owner reference revision is independent of Message business version
+ok 4 - owner reference revision is independent of Message business version
+  ---
+  duration_ms: 46.66075
+  ...
+# Subtest: missing page item cannot publish partial body/cursor
+ok 5 - missing page item cannot publish partial body/cursor
+  ---
+  duration_ms: 41.940958
+  ...
+# Subtest: raw body hash mismatch cannot publish partial body/cursor
+ok 6 - raw body hash mismatch cannot publish partial body/cursor
+  ---
+  duration_ms: 40.052041
+  ...
+# Subtest: outer object mismatch cannot publish partial body/cursor
+ok 7 - outer object mismatch cannot publish partial body/cursor
+  ---
+  duration_ms: 41.947583
+  ...
+# Subtest: permission ABA cannot publish partial body/cursor
+ok 8 - permission ABA cannot publish partial body/cursor
+  ---
+  duration_ms: 39.390958
+  ...
+# Subtest: reference current revision mismatch cannot publish partial body/cursor
+ok 9 - reference current revision mismatch cannot publish partial body/cursor
+  ---
+  duration_ms: 44.994875
+  ...
+# Subtest: classification watermark regression rejects complete snapshot
+ok 10 - classification watermark regression rejects complete snapshot
+  ---
+  duration_ms: 43.372166
+  ...
+# Subtest: durable original registration and snapshot request survive failed round
+ok 11 - durable original registration and snapshot request survive failed round
+  ---
+  duration_ms: 45.524834
+  ...
+# Subtest: same client ID from peer never acknowledges own original
+ok 12 - same client ID from peer never acknowledges own original
+  ---
+  duration_ms: 41.007416
+  ...
+# Subtest: auxiliary 503 and corrupt original evidence are zero proof but verified global still installs
+ok 13 - auxiliary 503 and corrupt original evidence are zero proof but verified global still installs
+  ---
+  duration_ms: 45.992166
+  ...
+# Subtest: full readonly original result confirms only matching sender route/body hash
+ok 14 - full readonly original result confirms only matching sender route/body hash
+  ---
+  duration_ms: 39.583834
+  ...
+# Subtest: malformed complete 200 and wrong sender never confirm queue
+ok 15 - malformed complete 200 and wrong sender never confirm queue
+  ---
+  duration_ms: 39.12375
+  ...
+# Subtest: late context and SQLite transaction failure never publish body/cursor
+ok 16 - late context and SQLite transaction failure never publish body/cursor
+  ---
+  duration_ms: 40.584542
+  ...
+# Subtest: ordinary retained copies stay isolated and global dominates newer resurrection
+ok 17 - ordinary retained copies stay isolated and global dominates newer resurrection
+  ---
+  duration_ms: 38.397625
+  ...
+# Subtest: forward and announcement source body are never durable projections
+ok 18 - forward and announcement source body are never durable projections
+  ---
+  duration_ms: 36.686333
+  ...
+# Subtest: terminal cleanup intent survives failure and retries without new events
+ok 19 - terminal cleanup intent survives failure and retries without new events
+  ---
+  duration_ms: 37.426875
+  ...
+# Subtest: capability absence does not create responsibility; disappearance never legacy falls back
+ok 20 - capability absence does not create responsibility; disappearance never legacy falls back
+  ---
+  duration_ms: 34.291834
+  ...
+# Subtest: registered physical UUID loss is refused instead of silently regenerating
+ok 21 - registered physical UUID loss is refused instead of silently regenerating
+  ---
+  duration_ms: 34.130583
+  ...
+# Subtest: global cleans all proven same-account old device/epoch holders without crossing other users
+ok 22 - global cleans all proven same-account old device/epoch holders without crossing other users
+  ---
+  duration_ms: 34.689459
+  ...
+# Subtest: origin conflict aborts entire projection/cursor transaction
+ok 23 - origin conflict aborts entire projection/cursor transaction
+  ---
+  duration_ms: 34.580167
+  ...
+# Subtest: proof captured before a guard or payload mutation cannot close the current original
+ok 24 - proof captured before a guard or payload mutation cannot close the current original
+  ---
+  duration_ms: 36.278958
+  ...
+# Subtest: delta gap and unknown state do not advance a verified old cursor
+ok 25 - delta gap and unknown state do not advance a verified old cursor
+  ---
+  duration_ms: 37.397458
+  ...
+# Subtest: S2 automatic transition archives old stream while retaining physical UUID and original queue
+ok 26 - S2 automatic transition archives old stream while retaining physical UUID and original queue
+  ---
+  duration_ms: 46.584417
+  ...
+# Subtest: S2 ordinary updates cannot replace a schema or registration nonce
+ok 27 - S2 ordinary updates cannot replace a schema or registration nonce
+  ---
+  duration_ms: 39.276667
+  ...
+# Subtest: S2 personal projection has independent object version and exact own identity
+ok 28 - S2 personal projection has independent object version and exact own identity
+  ---
+  duration_ms: 30.10975
+  ...
+# Subtest: S2 timestamps accept RFC3339 offsets without rewriting original text
+ok 29 - S2 timestamps accept RFC3339 offsets without rewriting original text
+  ---
+  duration_ms: 0.237916
+  ...
+# Subtest: S2 default empty draft is valid and cloud projection drops temporary authorizations
+ok 30 - S2 default empty draft is valid and cloud projection drops temporary authorizations
+  ---
+  duration_ms: 30.415916
+  ...
+# Subtest: S2 native service preserves prepared body and checks completed current by readonly route
+ok 31 - S2 native service preserves prepared body and checks completed current by readonly route
+  ---
+  duration_ms: 40.206
+  ...
+# Subtest: S2 completed404 and automatic unknown never create a personal write
+ok 32 - S2 completed404 and automatic unknown never create a personal write
+  ---
+  duration_ms: 35.960833
+  ...
+# Subtest: S2 cloud adoption compares local original plus lifecycle in the same SQLite transaction
+ok 33 - S2 cloud adoption compares local original plus lifecycle in the same SQLite transaction
+  ---
+  duration_ms: 36.274667
+  ...
+# Subtest: S2 stale visible membership rejects observation before creating an original write
+ok 34 - S2 stale visible membership rejects observation before creating an original write
+  ---
+  duration_ms: 38.697875
+  ...
+# Subtest: S2 personal controls and state labels cover all ten languages
+ok 35 - S2 personal controls and state labels cover all ten languages
+  ---
+  duration_ms: 0.443417
+  ...
+1..35
+# tests 35
+# suites 0
+# pass 35
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1370.12925

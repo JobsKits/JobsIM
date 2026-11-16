@@ -1,0 +1,29 @@
+{
+  "status": "source_only",
+  "gofmtParse": true,
+  "typeChecked": false,
+  "testsExecuted": false,
+  "built": false,
+  "realAPI": false,
+  "PG": false,
+  "preparationBoundTo": [
+    "scope",
+    "principal",
+    "sourceContext",
+    "device",
+    "physicalStore",
+    "epoch",
+    "message",
+    "contentVersion",
+    "bodyDigest",
+    "objectId",
+    "sizeBytes",
+    "objectDigest",
+    "privateRelativePath",
+    "originalRo1"
+  ],
+  "plannedObjectGroups": 13,
+  "expectedTotalGroups": 80,
+  "previous79And395CandidateAreHistorical": true,
+  "diskGate": "free space below 4GiB; no build/test/API started"
+}

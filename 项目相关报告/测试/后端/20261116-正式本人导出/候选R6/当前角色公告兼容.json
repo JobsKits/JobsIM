@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "failure": null,
+  "group": "roles",
+  "httpChecks": 43,
+  "semanticAssertions": 10,
+  "binarySHA256": "aea1ca1985ad0b2b7d3e5b1e7d843895cb04990ab08996951dd0380cdfaa0116",
+  "scriptSHA256": "775ebd7aa856fe9fef43fd570b69c9ef55b5528f1d607287b610d9317128d5b9",
+  "checkedAt": "2026-11-16T09:21:42.623393+00:00",
+  "notAPreUpgradeMigrationTest": true,
+  "assertions": [
+    {
+      "assertion": "current role protection is discoverable",
+      "passed": true
+    },
+    {
+      "assertion": "current member structured mention survives the source drain wrapper",
+      "passed": true
+    },
+    {
+      "assertion": "current role announcement commits with its original role and membership snapshot",
+      "passed": true
+    },
+    {
+      "assertion": "owner-role boomerang changes role generation without discarding legitimate history membership",
+      "passed": true
+    },
+    {
+      "assertion": "old unsubmitted all cannot borrow returned owner authority",
+      "passed": true
+    },
+    {
+      "assertion": "old unsubmitted announcement cannot borrow returned role",
+      "passed": true
+    },
+    {
+      "assertion": "already committed complete announcement body remains read-only metadata under current read ACL",
+      "passed": true
+    },
+    {
+      "assertion": "personal interactions do not invalidate an announcement content version",
+      "passed": true
+    },
+    {
+      "assertion": "source edit drains and makes the previous announcement reference unavailable",
+      "passed": true
+    },
+    {
+      "assertion": "original committed message remains queryable without creating another intent",
+      "passed": true
+    }
+  ]
+}

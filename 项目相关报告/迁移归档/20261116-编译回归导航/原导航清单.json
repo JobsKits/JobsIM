@@ -1,0 +1,57 @@
+{
+  "at": "2026-11-16T04:40:26.355002+00:00",
+  "files": {
+    "README.md": {
+      "sha256": "4e279894042ce033ad17cf44079f2fc392a2a4686dc2f7f03259c6de409570e8",
+      "bytes": 16944
+    },
+    ".gitattributes": {
+      "sha256": "084b1ab39e0a788f743059d46afff8d3f93ca5553001cbe74388c1da1d86f847",
+      "bytes": 8383
+    },
+    ".jobs-markdown-toc/manifest.json": {
+      "sha256": "d33ee4a3144bb54d4d3de2bd67d95f09ce62839c2ddb9135cd7f55833ae67d92",
+      "bytes": 6038
+    },
+    "项目相关报告/README.md": {
+      "sha256": "ba53c94115e07980b4934b4711037818d09adc136b324cf27a64c506a85f4e71",
+      "bytes": 2821
+    },
+    "项目相关报告/实现进度/README.md": {
+      "sha256": "3158dbbeb5cf379ccf8fc73416c0b04844ddaa6e97079d1682d3f352e6c7d4d1",
+      "bytes": 9226
+    },
+    "项目相关报告/资产盘点/README.md": {
+      "sha256": "2cc44aaf731992cee24d55ec6afb88528214663d3540a79c99e461f2d724f3cc",
+      "bytes": 18579
+    },
+    "项目相关报告/项目统计/README.md": {
+      "sha256": "efac552680916cd4481d394fc333953186de6b43dc03842dd6cd6c00199ac00f",
+      "bytes": 1862
+    },
+    "项目相关报告/项目统计/报告.json": {
+      "sha256": "5ad7618e64b17be6bfcbdae946b4f74bdd83a228f203dc3c41d3d79d4bc06a64",
+      "bytes": 47249
+    },
+    "项目相关报告/测试/README.md": {
+      "sha256": "86249f58c837549e64451c7787471f5381d52a25a0e336174a196eae39703a47",
+      "bytes": 1255
+    },
+    "项目相关报告/测试/前端/README.md": {
+      "sha256": "f05435728601598caa78e50b977c62c8679b7606f42d4dcbe7d0b8ce7b62b638",
+      "bytes": 804
+    },
+    "项目相关报告/测试/前端/iOS/README.md": {
+      "sha256": "6ba3255a3d59826ac6a6d2a676f6cc8a05f174ee625d26e6d7f9918cc9280ce1",
+      "bytes": 2075
+    },
+    "项目相关报告/测试/CLI/README.md": {
+      "sha256": "3100ed9d3105bf7f3c4a8dc9a58cb8a89c71a6a8db526378d19bc5bd184b2fb4",
+      "bytes": 1644
+    },
+    "项目相关报告/测试/后端/README.md": {
+      "sha256": "cbc11a7a6c77f8d12449474c7fea812fa16f9bb5f547c200a5d4ec32ba9d241e",
+      "bytes": 7427
+    }
+  }
+}

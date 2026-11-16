@@ -1,0 +1,143 @@
+{
+  "date": "2026-11-16",
+  "mode": "read-only source/requirements review; no API/SQL/build/test",
+  "all243Enumerated": false,
+  "excludedInProgress": [
+    "receipts/objects/targets/retention",
+    "formal export",
+    "account deletion",
+    "ordinary migration"
+  ],
+  "inputs": [
+    {
+      "file": "需求/IM需求明细表.md/IM需求明细表.md",
+      "sha256": "ae32101dfe1b66ace1bb67ac4d236cadd27f6284ec002fb368139eda9cecd18b",
+      "lines": 1214
+    },
+    {
+      "file": "需求/IM功能验收表.md/IM功能验收表.md",
+      "sha256": "3f6f21528983bd9141b4be722232ca01f18d2decb0d7367964c98a6f630114ae",
+      "lines": 466
+    },
+    {
+      "file": "需求/JobsIM数据库设计.md/JobsIM数据库设计.md",
+      "sha256": "4adbaeee639a7668d3ba4c241c5ad538e8115d053fb88d329fdbe64468a4592a",
+      "lines": 570
+    },
+    {
+      "file": "代码/后端/Go/conversation.go",
+      "sha256": "f2d1ce277571015f53025a9656ee75f8b7fff0df69b45f4205188ca759786f0e",
+      "lines": 511
+    },
+    {
+      "file": "代码/后端/Go/owner_lifecycle.go",
+      "sha256": "450911cba96de2bfe0523a4208a7f9965fd1d81bd11cec647ddc59de383bb24d",
+      "lines": 57
+    },
+    {
+      "file": "代码/后端/Go/directory.go",
+      "sha256": "80a962f036bb9a26b1fa0a6d37c310ae4f812d8717a5da44242548fc16cb54da",
+      "lines": 483
+    },
+    {
+      "file": "代码/后端/Go/contact_relationship.go",
+      "sha256": "ccdb8ac8fec13f2344ea159d62a1d66425f567056f102f04d254855d480ae976",
+      "lines": 44
+    },
+    {
+      "file": "代码/后端/Go/request_gate.go",
+      "sha256": "fc2d396272d4ae4b0c8e348f227795e3059139b6dac7557c22c1a3bacec85199",
+      "lines": 101
+    },
+    {
+      "file": "代码/后端/Go/send_admission.go",
+      "sha256": "1c8377feae552ad5afb856e52203733ad5b3761f76f3b13eb33d27b8a2178dae",
+      "lines": 382
+    },
+    {
+      "file": "代码/后端/Go/reports.go",
+      "sha256": "ec31ee2999e6ecfbd469f20935a2d473cbaf45466be541f449fe5d8394e3d434",
+      "lines": 294
+    },
+    {
+      "file": "代码/后端/Go/admin_identity.go",
+      "sha256": "2d190871a402043ab019e498088a6af3ab4f7cb9cd39a40cbfe256b8326c61b2",
+      "lines": 277
+    },
+    {
+      "file": "代码/后端/Go/mfa.go",
+      "sha256": "e076d75bcd6548bf528964a6b2bee1d37fd15a1f72f2a880701d1c6fadef7a79",
+      "lines": 373
+    },
+    {
+      "file": "代码/后端/Go/reset_grant.go",
+      "sha256": "d284b9b49e12ae0d96ed23476775230f1d6dbe0ef7cf425f828c44f011dd2835",
+      "lines": 199
+    },
+    {
+      "file": "代码/后端/Go/identity.go",
+      "sha256": "a375d3bbce82e3f7b67aa22e42ba6d0697e155980fcab96620faa5ca8efe1b62",
+      "lines": 1064
+    },
+    {
+      "file": "代码/后端/Go/migrations.go",
+      "sha256": "f5666f06ab2cad1cf3cd6791717334af61b0f3bdb5d50c5cdcdf64ebe463b496",
+      "lines": 170
+    },
+    {
+      "file": "代码/后端/Go/asset_migrations.go",
+      "sha256": "a134b1f2de14973d1eb92b7584b82bdcdde889f4677d733e8242f3a257f71179",
+      "lines": 24
+    },
+    {
+      "file": "代码/后端/Go/source_preferences.go",
+      "sha256": "9da6fd7c1f67b8c4df0f527ec429a5db421e169479e448e1e395813a83a993b2",
+      "lines": 342
+    },
+    {
+      "file": "代码/后端/Go/types.go",
+      "sha256": "484f1a4c9561edd4b179c1a72b2b780823d70cb50f460081c4422c4f5c5e873d",
+      "lines": 122
+    },
+    {
+      "file": "代码/后端/Go/session_refresh.go",
+      "sha256": "d398c5fa5f0f52a22c6696ec82c071a373b5b246d287c57a46d441a0f9b20db2",
+      "lines": 268
+    },
+    {
+      "file": "代码/后端/Go/sync_service.go",
+      "sha256": "1d5df0e786070b131e98f27edd17efefcfcb026bb8e73e2e857ac4df0e9e5aa8",
+      "lines": 854
+    },
+    {
+      "file": "代码/后端/Go/sync_classification.go",
+      "sha256": "01d1a009b1d5272c707bf832afa845fe0c15a4344b6c8cc7686f07f8d755f98e",
+      "lines": 96
+    },
+    {
+      "file": "代码/后端/Go/export_identity.go",
+      "sha256": "542c1f9dea354d434ed0f23b646d76dad890fd134aa7262a0bdc10675b49b4b8",
+      "lines": 112
+    },
+    {
+      "file": "代码/后端/Go/message.go",
+      "sha256": "02835f94d9a1279af77c4b4ebb311ad13c9f3508866a047f41aa1c3b09af4fb7",
+      "lines": 632
+    },
+    {
+      "file": "代码/后端/Go/mentions_announcements.go",
+      "sha256": "54cb181d54b231161b843c4c66eded95c176f0633010e7b9b33060e9caff6d1a",
+      "lines": 558
+    },
+    {
+      "file": "代码/后端/Go/cmd/jobsimops/main.go",
+      "sha256": "b2f8bfce929ab40e63faa3e006e7fa0e7d15eb1be031c43fe25ba38c987f5f66",
+      "lines": 90
+    },
+    {
+      "file": "代码/后端/Go/cmd/jobsimd/main.go",
+      "sha256": "9bb05e02e27070595845e55345e7fc1b5427b5470b4a409b9d3243f36a572a5d",
+      "lines": 163
+    }
+  ]
+}

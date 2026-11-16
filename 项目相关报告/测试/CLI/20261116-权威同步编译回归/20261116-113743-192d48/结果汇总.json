@@ -1,0 +1,62 @@
+{
+  "status": "passed-local-only",
+  "date": "2026-11-16",
+  "platform": "MacOS arm64",
+  "go": "1.27.4",
+  "GOMAXPROCS": 2,
+  "buildParallelism": 1,
+  "stepLimitSeconds": 180,
+  "testInternalTimeout": "120s",
+  "diskFloorGiB": 4,
+  "minimumObservedFreeGiB": 13.42,
+  "workLogicalSizeMiB": 227,
+  "finalBuild": {
+    "step": "05-final-build",
+    "status": "completed",
+    "exitCode": 0,
+    "seconds": 3.01,
+    "minimumFreeGiB": 13.47,
+    "command": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+      "build",
+      "-p=1",
+      "-o",
+      "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/jobsim-final",
+      "./cmd/jobsim"
+    ],
+    "realAPIEnabled": false,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "binarySHA256": "18738c34228b3318a7a68c8eb34854cb9c3a84fc0351d405a69d16d365f12929"
+  },
+  "finalTests": {
+    "step": "06-final-runner",
+    "status": "completed",
+    "exitCode": 0,
+    "seconds": 3.01,
+    "minimumFreeGiB": 13.42,
+    "command": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/tool/node/bin/node",
+      "/Users/jobs/Documents/GitHub/JobsIM/测试/CLI/运行测试.mjs/运行测试.mjs"
+    ],
+    "realAPIEnabled": false,
+    "passed": 45,
+    "failed": 0,
+    "skipped": 2
+  },
+  "realAPI": false,
+  "PG": false,
+  "nativeCredentialVaultPositive": false,
+  "serviceRestart": false,
+  "historical24InputsUnchanged": true,
+  "historicalBinaryUpdated": false,
+  "sourceFileCount": 30,
+  "priorFailurePreserved": [
+    "02-tests-driver.json",
+    "02-tests-driver.log",
+    "03-tests-direct.json",
+    "03-tests-direct.log"
+  ],
+  "failureSourceBoundary": "The first-failure runner did not separately capture all old fixture byte hashes; final source SHA and exact source snapshot bind final results only."
+}

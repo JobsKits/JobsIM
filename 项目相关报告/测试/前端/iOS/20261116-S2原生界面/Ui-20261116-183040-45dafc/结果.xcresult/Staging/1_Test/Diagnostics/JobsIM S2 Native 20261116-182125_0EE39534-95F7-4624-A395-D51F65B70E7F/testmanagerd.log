@@ -1,0 +1,23 @@
+18:30:41.638 xcodebuild[29757:9495567] Sim JobsIM S2 Native 20261116-182125: Unregistering for sim device notification with token 3
+18:30:41.641 xcodebuild[29757:9495567] Calling -[SimDevice getenv:error:] for TESTMANAGERD_SIM_SOCK
+18:30:41.644 xcodebuild[29757:9495567] Sim JobsIM S2 Native 20261116-182125 has testmanagerd socket at /private/var/tmp/com.apple.launchd.LxsFxK84Gj/com.apple.testmanagerd.unix-domain.socket
+18:30:41.644 xcodebuild[29757:9495567] Validating test connection socket path (/private/var/tmp/com.apple.launchd.LxsFxK84Gj/com.apple.testmanagerd.unix-domain.socket)
+18:30:41.644 xcodebuild[29757:9495567] Constructing transport for test connection socket
+18:30:41.644 xcodebuild[29757:9495567] Connected socket 24 to testmanagerd for Sim JobsIM S2 Native 20261116-182125
+18:30:41.644 xcodebuild[29757:9495567] Initiating control session with IDE capabilities: <XCTCapabilities: 0x7b3412c9b0>: {
+    "report crashes capability" = 3;
+}
+18:30:41.645 xcodebuild[29757:9495579] Got reply to control session initiation request (result:error): <XCTCapabilities: 0x7b3412c9c0>: {
+    "authorize test session capability" = 1;
+    "automation mode" = 1;
+    "initiate daemon control session capability" = 4;
+    "initiate test runner session capability" = 2;
+    "record UI interaction capability" = 2;
+    "recording events as source code" = 1;
+    "request log archive capability" = 1;
+    "structured results configuration" = 1;
+    "supports delayed attachment transfers" = 1;
+}: (null)
+18:30:41.660 xcodebuild[29757:9495567] Requesting crash report collection for process names: JobsIMUITests-Runner, xctest, JobsIM, DTServiceHub, SpringBoard, testmanagerd, assertiond, FrontBoard, debugserver, backboardd, runningboardd
+18:30:44.055 xcodebuild[29757:9495570] Requesting authorization for pid 29777
+18:30:44.056 xcodebuild[29757:9495570] Got reply to authorization request for pid 29777 (result:error): 1: (null)

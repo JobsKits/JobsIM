@@ -1,0 +1,60 @@
+TAP version 13
+# Subtest: pending inbox is recipient-bound and never resurrects accepted requests
+ok 1 - pending inbox is recipient-bound and never resurrects accepted requests
+  ---
+  duration_ms: 1.147
+  ...
+# Subtest: read-only and unavailable-owner groups reject writes
+ok 2 - read-only and unavailable-owner groups reject writes
+  ---
+  duration_ms: 0.062042
+  ...
+# Subtest: original group membership generation remains decimal text above JS safe integer
+ok 3 - original group membership generation remains decimal text above JS safe integer
+  ---
+  duration_ms: 0.191167
+  ...
+# Subtest: profile, account, device, demo and restore epochs each isolate local data
+ok 4 - profile, account, device, demo and restore epochs each isolate local data
+  ---
+  duration_ms: 0.077333
+  ...
+# Subtest: opaque history cursor is epoch-bound without integer coercion
+ok 5 - opaque history cursor is epoch-bound without integer coercion
+  ---
+  duration_ms: 0.183416
+  ...
+# Subtest: restored secure credentials require matching account, device and epoch
+ok 6 - restored secure credentials require matching account, device and epoch
+  ---
+  duration_ms: 0.05875
+  ...
+# Subtest: strict authentication JSON separates login OTP from recovery code
+ok 7 - strict authentication JSON separates login OTP from recovery code
+  ---
+  duration_ms: 0.709792
+  ...
+# Subtest: connection descriptions reject credentials, HTTP, queries and fragments
+ok 8 - connection descriptions reject credentials, HTTP, queries and fragments
+  ---
+  duration_ms: 0.276
+  ...
+# Subtest: all ten language tables cover the current control vocabulary
+ok 9 - all ten language tables cover the current control vocabulary
+  ---
+  duration_ms: 0.122
+  ...
+# Subtest: literal UI actions and labels resolve in every language
+ok 10 - literal UI actions and labels resolve in every language
+  ---
+  duration_ms: 5.8105
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 57.112958

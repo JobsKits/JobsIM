@@ -1,0 +1,178 @@
+[
+  {
+    "file": ".gitignore",
+    "sourceSha256": "6884aa42c3fcb9d8febe3fcedaaa6ae501e7d40d12993dc91a0bbf25ed01ae9d",
+    "buildSha256": "6884aa42c3fcb9d8febe3fcedaaa6ae501e7d40d12993dc91a0bbf25ed01ae9d"
+  },
+  {
+    "file": "AppScope/app.json5",
+    "sourceSha256": "c667964aef3e391307a3353fc3e27f9e87419bfe35bbf98d240213f76a4e0374",
+    "buildSha256": "c667964aef3e391307a3353fc3e27f9e87419bfe35bbf98d240213f76a4e0374"
+  },
+  {
+    "file": "AppScope/resources/base/element/string.json",
+    "sourceSha256": "279e0e2ef166614c3f1194b7145d4c089e8474d76ca2eac6e147d9ce256d2dbf",
+    "buildSha256": "279e0e2ef166614c3f1194b7145d4c089e8474d76ca2eac6e147d9ce256d2dbf"
+  },
+  {
+    "file": "AppScope/resources/base/media/app_icon.png",
+    "sourceSha256": "d45233db7e776369c531e64df51cf762e3a291300c6169914a933a96b68074eb",
+    "buildSha256": "d45233db7e776369c531e64df51cf762e3a291300c6169914a933a96b68074eb"
+  },
+  {
+    "file": "DESIGN.md",
+    "sourceSha256": "ed3d45946c3fdd134f66b403f97ffa18bb0f5ec139b6a253cf395c3b0c24b408",
+    "buildSha256": "ed3d45946c3fdd134f66b403f97ffa18bb0f5ec139b6a253cf395c3b0c24b408"
+  },
+  {
+    "file": "PRODUCT.md",
+    "sourceSha256": "dcc9aeef71b15445456466cb0c3f10181ca6e7cad000db632be983ca69274fe1",
+    "buildSha256": "dcc9aeef71b15445456466cb0c3f10181ca6e7cad000db632be983ca69274fe1"
+  },
+  {
+    "file": "README.md",
+    "sourceSha256": "1aab7a48e90580e20fd2b600447a28d2f1c894df5e8dc61a982ec4463c8a71d8",
+    "buildSha256": "1aab7a48e90580e20fd2b600447a28d2f1c894df5e8dc61a982ec4463c8a71d8"
+  },
+  {
+    "file": "build-profile.json5",
+    "sourceSha256": "010b2307aad2255373dd8b844ad07fce7897e5761fb61041130bdcc102266e18",
+    "buildSha256": "010b2307aad2255373dd8b844ad07fce7897e5761fb61041130bdcc102266e18"
+  },
+  {
+    "file": "entry/build-profile.json5",
+    "sourceSha256": "6d7a700b77bc3ae334ee654a8ed561388480a19375f8e62bb33839acf1b160eb",
+    "buildSha256": "6d7a700b77bc3ae334ee654a8ed561388480a19375f8e62bb33839acf1b160eb"
+  },
+  {
+    "file": "entry/hvigorfile.ts",
+    "sourceSha256": "f547983dcab9c8fff87cc3ddedb22bb98063663c5b8afe18bb32e131311ec289",
+    "buildSha256": "f547983dcab9c8fff87cc3ddedb22bb98063663c5b8afe18bb32e131311ec289"
+  },
+  {
+    "file": "entry/oh-package.json5",
+    "sourceSha256": "f6e290480c4a763f46f737853f7703000026e27a0a914a398e13101175349963",
+    "buildSha256": "f6e290480c4a763f46f737853f7703000026e27a0a914a398e13101175349963"
+  },
+  {
+    "file": "entry/src/main/ets/Data/Api.ets",
+    "sourceSha256": "94d5be315e297b5629b0a658cbeb7245474d8f97b20307e4cc1aceaf8300f220",
+    "buildSha256": "94d5be315e297b5629b0a658cbeb7245474d8f97b20307e4cc1aceaf8300f220"
+  },
+  {
+    "file": "entry/src/main/ets/Data/AuthCoordinator.ets",
+    "sourceSha256": "16052ae2c64c51b000e8cd4e2302811e733e6fedac34bd4119ea7b73209b92cb",
+    "buildSha256": "16052ae2c64c51b000e8cd4e2302811e733e6fedac34bd4119ea7b73209b92cb"
+  },
+  {
+    "file": "entry/src/main/ets/Data/Models.ets",
+    "sourceSha256": "162f769542102319fa2db282b9946c5953af14a4f5c875df33765bfd508f0be6",
+    "buildSha256": "162f769542102319fa2db282b9946c5953af14a4f5c875df33765bfd508f0be6"
+  },
+  {
+    "file": "entry/src/main/ets/Data/NativeServices.ets",
+    "sourceSha256": "6ce5edc95655cb5d5f20502bd70179826126c058da4b3fae4881c36479284bfd",
+    "buildSha256": "6ce5edc95655cb5d5f20502bd70179826126c058da4b3fae4881c36479284bfd"
+  },
+  {
+    "file": "entry/src/main/ets/Data/Store.ets",
+    "sourceSha256": "ccec0d006efd73e75e87275ae2f87cd409bd10e6d123d9fc7c227d3e59b1ed7e",
+    "buildSha256": "ccec0d006efd73e75e87275ae2f87cd409bd10e6d123d9fc7c227d3e59b1ed7e"
+  },
+  {
+    "file": "entry/src/main/ets/Data/Strings.ets",
+    "sourceSha256": "f8070229568cab15d7113784d2a602eea10c57a3f71fda57a36b010a80ad0db2",
+    "buildSha256": "f8070229568cab15d7113784d2a602eea10c57a3f71fda57a36b010a80ad0db2"
+  },
+  {
+    "file": "entry/src/main/ets/entryability/EntryAbility.ets",
+    "sourceSha256": "620dea51502e2ac25c7cba6b4b9975e27ebc3ffbe9510edb18c9035384085665",
+    "buildSha256": "620dea51502e2ac25c7cba6b4b9975e27ebc3ffbe9510edb18c9035384085665"
+  },
+  {
+    "file": "entry/src/main/ets/pages/Index.ets",
+    "sourceSha256": "8ca51d32cea860334dc479264199ddce6053c094fe4f2615f5e0492360507946",
+    "buildSha256": "8ca51d32cea860334dc479264199ddce6053c094fe4f2615f5e0492360507946"
+  },
+  {
+    "file": "entry/src/main/module.json5",
+    "sourceSha256": "3c09d94fff710c5fa5228a1dd36e7177578ba9a80c3207f774fbc0a1be32eda5",
+    "buildSha256": "3c09d94fff710c5fa5228a1dd36e7177578ba9a80c3207f774fbc0a1be32eda5"
+  },
+  {
+    "file": "entry/src/main/resources/base/element/color.json",
+    "sourceSha256": "31185ec80ad155267ed90e1a3b669eeb7e4fa02fc7a119a07329e45faff36fd3",
+    "buildSha256": "31185ec80ad155267ed90e1a3b669eeb7e4fa02fc7a119a07329e45faff36fd3"
+  },
+  {
+    "file": "entry/src/main/resources/base/element/string.json",
+    "sourceSha256": "88b0a176526e937a589a2035849bea71221e0afe26ca8ec7abba1a73f23f0d80",
+    "buildSha256": "88b0a176526e937a589a2035849bea71221e0afe26ca8ec7abba1a73f23f0d80"
+  },
+  {
+    "file": "entry/src/main/resources/base/media/app_icon.png",
+    "sourceSha256": "d45233db7e776369c531e64df51cf762e3a291300c6169914a933a96b68074eb",
+    "buildSha256": "d45233db7e776369c531e64df51cf762e3a291300c6169914a933a96b68074eb"
+  },
+  {
+    "file": "entry/src/main/resources/base/profile/main_pages.json",
+    "sourceSha256": "621d1c271cf89755a64364b8e70c65745d9049ebaf18efa3eba95a2ae0b4558d",
+    "buildSha256": "621d1c271cf89755a64364b8e70c65745d9049ebaf18efa3eba95a2ae0b4558d"
+  },
+  {
+    "file": "entry/src/ohosTest/ets/test/List.test.ets",
+    "sourceSha256": "e5cea6661893bad26711431d9066c9e6ef477c135d21bc674d989eae9d35d0b8",
+    "buildSha256": "c73bedf715fc4d124888ef07a5912a3f6bb81ab579ffa01c2feee532f74bbff9"
+  },
+  {
+    "file": "entry/src/ohosTest/ets/testability/TestAbility.ets",
+    "sourceSha256": "80290bf630eda782dffa05c050eba7718642a892347909b998be3b91c0708f46",
+    "buildSha256": "80290bf630eda782dffa05c050eba7718642a892347909b998be3b91c0708f46"
+  },
+  {
+    "file": "entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ets",
+    "sourceSha256": "77a44f6c92751bff55704c8e8724f9fd5ca7db46915ea43ba0887fc02b35e448",
+    "buildSha256": "77a44f6c92751bff55704c8e8724f9fd5ca7db46915ea43ba0887fc02b35e448"
+  },
+  {
+    "file": "entry/src/ohosTest/module.json5",
+    "sourceSha256": "6df20b32a1471194a0e65e74c3b4fb18ce1ffacc2a8faab69d3b365faae5eef5",
+    "buildSha256": "6df20b32a1471194a0e65e74c3b4fb18ce1ffacc2a8faab69d3b365faae5eef5"
+  },
+  {
+    "file": "hvigor/hvigor-config.json5",
+    "sourceSha256": "0e9dea3c02aaced82ec33b426f7b6dc99843cade173deded8f531a650c9b900f",
+    "buildSha256": "0e9dea3c02aaced82ec33b426f7b6dc99843cade173deded8f531a650c9b900f"
+  },
+  {
+    "file": "hvigorfile.ts",
+    "sourceSha256": "2378c5e0c5246005ada73a67e8c9834fa08adb9ffd6fb6c219051456753bed5a",
+    "buildSha256": "2378c5e0c5246005ada73a67e8c9834fa08adb9ffd6fb6c219051456753bed5a"
+  },
+  {
+    "file": "oh-package.json5",
+    "sourceSha256": "386462ef10c6944a8c049c65fa7afde46bf572fcf25a3df25f165b6d17c349a5",
+    "buildSha256": "15e52885953508f16c8ca0d179266a1fb15dc38ff73e998d0b87cbd724658c21",
+    "transform": "Bind test-only dependency to mirror SDK Hypium1.0.0"
+  },
+  {
+    "file": "代码地图/README.md",
+    "sourceSha256": "0a288eff4a7e88056ca952888d86a44ba71e2ab1c53a0b78d22aad699961151c",
+    "buildSha256": "0a288eff4a7e88056ca952888d86a44ba71e2ab1c53a0b78d22aad699961151c"
+  },
+  {
+    "file": "工具链/README.md",
+    "sourceSha256": "4d1c6b7f779fa560844e376cae8055ac58d4c2874b6cfba775cba0a38eabfb19",
+    "buildSha256": "4d1c6b7f779fa560844e376cae8055ac58d4c2874b6cfba775cba0a38eabfb19"
+  },
+  {
+    "file": "工具链/【MacOS】准备工具链.command/README.md",
+    "sourceSha256": "8eee87cc5c792f5b8940438d879ae095b57f19ac88a9da123e417843a11078f0",
+    "buildSha256": "8eee87cc5c792f5b8940438d879ae095b57f19ac88a9da123e417843a11078f0"
+  },
+  {
+    "file": "工具链/【MacOS】准备工具链.command/【MacOS】准备工具链.command",
+    "sourceSha256": "248cfeb6c6a2dbd2a0e8bb0c15a21da0386972743034b1dfd74629df4fba3bac",
+    "buildSha256": "248cfeb6c6a2dbd2a0e8bb0c15a21da0386972743034b1dfd74629df4fba3bac"
+  }
+]

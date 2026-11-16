@@ -1,0 +1,48 @@
+{
+  "scope": "Real Chrome IndexedDB and injected local projections; all API routes aborted",
+  "apiAttempts": 0,
+  "inputSHA256": {
+    "代码/前端/Web/Src/GlobalMessages.ts": "c25d20144be737821daac5fbd6701988280d316912567098c5975150183d03dd",
+    "代码/前端/Web/Src/StorageDatabase.ts": "93b3badb1aa759c06e13bc07982a9e69803fdcc41752c56374171b12414579aa",
+    "代码/前端/Web/Src/storage.ts": "9f81597f61d4ebfb3011d246889e39d616ceb704374356388cdafd522f823026",
+    "代码/前端/Web/Src/SyncStore.ts": "35d74cd4a671f6d5045b6f4250cccc7a29cc554bef214c95f73e83fa4f2d1b55",
+    "代码/前端/Web/Src/types.ts": "7c26af97938ce2282d0500898be69d328b8af9847cdfe67b3323010f49308c78",
+    "代码/前端/Web/Src/forward.ts": "688de48c837608a7f36f1452fe79155d819946f97499e8bead0e7872ebfa9e0d",
+    "代码/前端/Web/Src/SyncProtocol.ts": "9f9dc0866de08fc5f2e39dd5c5bbc16e520537b2f210fa6d8570acb30783ddc6",
+    "测试/前端/Web/global-facts.cjs/global-facts.cjs": "80e46d0aab94089709368e788a59cfa038f4b56151bb9140e99dbd3f34eb9c22"
+  },
+  "results": [
+    {
+      "name": "terminal facts clear current old-device epoch archive and retained without touching other scopes or original Outbox",
+      "status": "passed",
+      "milliseconds": 8
+    },
+    {
+      "name": "readonly complete ledger does not create durable sync responsibility and RAM mask only changes specified IDs",
+      "status": "passed",
+      "milliseconds": 3
+    },
+    {
+      "name": "high-version stale save freeze and enqueue cannot restore a known body and accepted CID does not hide pending",
+      "status": "passed",
+      "milliseconds": 5
+    },
+    {
+      "name": "late lifecycle active mismatch and malformed object IDs produce no facts",
+      "status": "passed",
+      "milliseconds": 3
+    },
+    {
+      "name": "external verified fact advances existing guard and higher delta cannot resurrect or ACK original",
+      "status": "passed",
+      "milliseconds": 5
+    },
+    {
+      "name": "validated global sync projection shares the ledger atomically with cursor and future legacy writes",
+      "status": "passed",
+      "milliseconds": 5
+    }
+  ],
+  "passed": 6,
+  "failed": 0
+}

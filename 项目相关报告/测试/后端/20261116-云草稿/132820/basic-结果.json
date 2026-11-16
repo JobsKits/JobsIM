@@ -1,0 +1,42 @@
+{
+  "group": "basic",
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 12,
+  "semanticAssertions": 7,
+  "expectedCASConflictsSeparate": 1,
+  "verifiedPages": 0,
+  "elapsedSeconds": 0.355,
+  "checkedAt": "2026-11-16T05:37:01.518712+00:00",
+  "binarySHA256": "e69e51d2f0620752005df9ee8656fc6ce77511ae1939d994707615b63f2e7214",
+  "assertions": [
+    {
+      "assertion": "original successful full body proves the current draft",
+      "passed": true
+    },
+    {
+      "assertion": "unknown read-only result lookup creates no operation",
+      "passed": true
+    },
+    {
+      "assertion": "two devices cannot silently overwrite the same draft CAS version",
+      "passed": true
+    },
+    {
+      "assertion": "old successful metadata cannot revive its old text",
+      "passed": true
+    },
+    {
+      "assertion": "explicit clear removes the current owned bytes",
+      "passed": true
+    },
+    {
+      "assertion": "DELETE has the same original-body read-only proof contract",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    }
+  ]
+}

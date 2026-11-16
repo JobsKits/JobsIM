@@ -1,0 +1,26 @@
+{
+  "scope": "Only original UI family cleanup; root explicitly authorized low-disk exception; no new authentication, nonce or compile",
+  "command": [
+    "xcodebuild",
+    "-xctestrun",
+    "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Real-20261116-183029-430436/隔离本地测试.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=0EE39534-95F7-4624-A395-D51F65B70E7F",
+    "-parallel-testing-enabled",
+    "NO",
+    "-only-testing:JobsIMTests/IMSelfStateIntegrationTests/testVerifyNativeUIFixtureClosed",
+    "-resultBundlePath",
+    "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Cleanup-20261116-183535/结果.xcresult",
+    "test-without-building"
+  ],
+  "status": "closed",
+  "ownedTestContainer": "/Users/jobs/Library/Developer/CoreSimulator/Devices/0EE39534-95F7-4624-A395-D51F65B70E7F/data/Containers/Data/Application/1AD01B62-5C53-47B7-BE49-649EFAF3B4B8",
+  "hostPublicIntentJournal": {
+    "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/PublicIntentJournals/fd035f21-2cec-4ed0-99d0-611b6c47ea16/bcb26593ee408e7e07eaf7b973390e586e070984c08467a88730f96a98d1e62c.json",
+    "sha256": "bcb26593ee408e7e07eaf7b973390e586e070984c08467a88730f96a98d1e62c",
+    "accountCount": 6
+  },
+  "exitCode": 65,
+  "seconds": 22.22,
+  "allSixFamiliesClosed": true
+}

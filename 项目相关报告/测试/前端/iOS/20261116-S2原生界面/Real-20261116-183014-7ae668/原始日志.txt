@@ -1,0 +1,56 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -xctestrun /Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Real-20261116-183014-7ae668/隔离本地测试.xctestrun -destination "platform=iOS Simulator,id=0EE39534-95F7-4624-A395-D51F65B70E7F" -parallel-testing-enabled NO -resultBundlePath /Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Real-20261116-183014-7ae668/结果.xcresult test-without-building "-only-testing:JobsIMTests/IMSelfStateIntegrationTests/testRealSchemaTwoReadViewAndFontKeepOriginalOutbox" "-only-testing:JobsIMTests/IMSelfStateIntegrationTests/testRealDraftLostDeliveryReopensOriginalAndRetiredKeepsOwnedText"
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Real-20261116-183014-7ae668/结果.xcresult
+
+2026-11-16 18:30:22.433476+0800 JobsIM[29506:9493018] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/0EE39534-95F7-4624-A395-D51F65B70E7F/data/Containers/Bundle/Application/568FD773-F3A3-40FC-82B2-314B8FB7817A/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-16 18:30:22.433720+0800 JobsIM[29506:9493018] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/0EE39534-95F7-4624-A395-D51F65B70E7F/data/Containers/Bundle/Application/568FD773-F3A3-40FC-82B2-314B8FB7817A/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-16 18:30:22.461874+0800 JobsIM[29506:9493018] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-16 18:30:22.462071+0800 JobsIM[29506:9493018] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-16 18:30:22.604913+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.605027+0800 JobsIM[29506:9493018] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.605234+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.716486+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.716586+0800 JobsIM[29506:9493018] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.716696+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.721064+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.721184+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.721295+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.721350+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.721828+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.721905+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.721973+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.722032+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.734925+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.735032+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.735120+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.735189+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.783729+0800 JobsIM[29506:9493018] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+2026-11-16 18:30:22.810445+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.810554+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.810654+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:30:22.810704+0800 JobsIM[29506:9493018] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+Test Suite 'Selected tests' started at 2026-11-16 18:30:22.878.
+Test Suite 'JobsIMTests.xctest' started at 2026-11-16 18:30:22.879.
+Test Suite 'IMSelfStateIntegrationTests' started at 2026-11-16 18:30:22.879.
+Test Case '-[JobsIMTests.IMSelfStateIntegrationTests testRealDraftLostDeliveryReopensOriginalAndRetiredKeepsOwnedText]' started.
+Test Case '-[JobsIMTests.IMSelfStateIntegrationTests testRealDraftLostDeliveryReopensOriginalAndRetiredKeepsOwnedText]' passed (2.745 seconds).
+Test Case '-[JobsIMTests.IMSelfStateIntegrationTests testRealSchemaTwoReadViewAndFontKeepOriginalOutbox]' started.
+Test Case '-[JobsIMTests.IMSelfStateIntegrationTests testRealSchemaTwoReadViewAndFontKeepOriginalOutbox]' passed (2.537 seconds).
+Test Suite 'IMSelfStateIntegrationTests' passed at 2026-11-16 18:30:28.165.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 5.282 (5.286) seconds
+Test Suite 'JobsIMTests.xctest' passed at 2026-11-16 18:30:28.165.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 5.282 (5.286) seconds
+Test Suite 'Selected tests' passed at 2026-11-16 18:30:28.165.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 5.282 (5.287) seconds
+2026-11-16 18:30:28.460 xcodebuild[29481:9492440] [MT] IDETestOperationsObserverDebug: 12.961 elapsed -- Testing started completed.
+2026-11-16 18:30:28.460 xcodebuild[29481:9492440] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-16 18:30:28.460 xcodebuild[29481:9492440] [MT] IDETestOperationsObserverDebug: 12.961 sec, +12.961 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Real-20261116-183014-7ae668/结果.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

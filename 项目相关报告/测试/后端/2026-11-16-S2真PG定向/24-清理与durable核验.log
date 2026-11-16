@@ -1,0 +1,1 @@
+{"database" : "postgres", "user" : "s2_owner_44abaaa0a6ba", "address" : "127.0.0.1/32", "port" : 62381, "systemIdentifier" : "7708615014033636187", "fsync" : "on", "fullPageWrites" : "on", "synchronousCommit" : "on", "remainingDatabases" : ["postgres", "template0", "template1"], "remainingOwnedRandomDatabases" : 0}

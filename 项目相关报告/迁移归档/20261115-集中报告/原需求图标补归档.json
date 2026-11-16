@@ -1,0 +1,12 @@
+{
+  "createdAt": "2026-11-15T19:48:10.028921+00:00",
+  "reason": "The user designated all pre-coding JobsIM contents as requirements; the original requirements README retains ./icon.png",
+  "source": "icon.png",
+  "destination": "需求/icon.png",
+  "bytes": 3662,
+  "sha256": "d45233db7e776369c531e64df51cf762e3a291300c6169914a933a96b68074eb",
+  "operation": "same-repository rename; original bytes preserved; no Git commit or staging",
+  "verification": "Existing requirements README image link resolves; no source app import references the old root image",
+  "originalGitBlob": "e946068398d866b7f76e0e910047e51e19d0e324",
+  "gitOriginalByteMatch": true
+}

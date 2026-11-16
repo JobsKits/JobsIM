@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:47.17439+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:47.34594+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores"}
+{"Time":"2026-11-16T12:11:47.346004+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores","Output":"=== RUN   TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:47.493484+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores","Output":"--- PASS: TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores (0.15s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:47.493523+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores","Elapsed":0.15}
+{"Time":"2026-11-16T12:11:47.493549+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:47.494559+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.320s\n"}
+{"Time":"2026-11-16T12:11:47.494603+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.32}

@@ -1,0 +1,4 @@
+FAIL	jobsim/cli/cmd/jobsim [build failed]
+FAIL
+# jobsim/cli/cmd/jobsim [jobsim/cli/cmd/jobsim.test]
+../../../测试/CLI/data_export_test.go:144:15: assignment mismatch: 2 variables but r.client.createDataExport returns 3 values

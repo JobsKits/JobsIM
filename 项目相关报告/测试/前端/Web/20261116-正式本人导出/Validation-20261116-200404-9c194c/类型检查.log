@@ -1,0 +1,10 @@
+Src/DataExportLabels.ts(42,73): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ downloadHint: string; restricted: string; browserLimit: string; }'.
+  No index signature with a parameter of type 'string' was found on type '{ downloadHint: string; restricted: string; browserLimit: string; }'.
+Src/DataExportLabels.ts(42,108): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ downloadHint: string; restricted: string; browserLimit: string; }'.
+  No index signature with a parameter of type 'string' was found on type '{ downloadHint: string; restricted: string; browserLimit: string; }'.
+Src/DataExportStore.ts(56,5): error TS18048: 'row' is possibly 'undefined'.
+Src/DataExportStore.ts(62,3): error TS2322: Type 'ExportIntent | undefined' is not assignable to type 'ExportIntent'.
+  Type 'undefined' is not assignable to type 'ExportIntent'.
+Src/DataExportStore.ts(65,10): error TS18048: 'row' is possibly 'undefined'.
+Src/DataExportStore.ts(65,28): error TS18048: 'row' is possibly 'undefined'.
+Src/DataExportStore.ts(65,57): error TS18048: 'row' is possibly 'undefined'.

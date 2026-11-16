@@ -1,0 +1,82 @@
+{
+  "at": "2026-11-15T15:16:27.144324+00:00",
+  "scope": "Web simulated BFF 16 groups; production HTTPS 8 groups; existing offline UI regression; not full IM acceptance",
+  "productionBundle": "index-CnD80aSu.js",
+  "backendBinarySHA256": "7ef53be2fe9004fd66978a7313dac016dfdf146a66e3116767a61bdf0dcd40c9",
+  "publicServerCertificateSHA256": "dc51d65840b05ef74654bc189ebc9ca273ebf4eeee553526300a139d75bff463",
+  "browserResultCopiedByteExactlyFrom": "项目相关报告/测试/前端/Web/20261115-登录续期浏览器/浏览器协议结果.json",
+  "testScriptChangesAfterExecution": "Only default report-output directory changed during central report migration; test logic unchanged.",
+  "offlineUIRun": "项目相关报告/测试/前端/Web/执行记录/1794755667853-41809",
+  "files": {
+    "代码/前端/Web/Src/AuthSession.ts": "b3073d6f452a2164953d626814b3330a63daa7724d610507a906b758dda0f25e",
+    "代码/前端/Web/Src/api.ts": "e8f2937800ee9665ad3b605c40aa6a024494c64d302cdc63775824f24442b25f",
+    "代码/前端/Web/Src/App.tsx": "127ab35e37aca15f6d0102da25f8c14f8c5e3ece1074a05b9aadef5e33e63598",
+    "代码/前端/Web/Src/PrivateMedia.tsx": "96dae0097a134528b2c32c7ed5772f85492ee8e407c20567ed804b54c8f78903",
+    "代码/前端/Web/Src/storage.ts": "5922a287b58160a4e0d99624b350bd1da06fd85f2063885ef4c62de6385e8d34",
+    "代码/前端/Web/Src/types.ts": "92f526767bb81dc88c4be65f487f97a42dd00b3b5e5bde6b2f94e98c9dc3913b",
+    "代码/前端/Web/Src/i18n.ts": "3e6e1bee25bd8605e9af9cef59b5ef22094385be86b11f5b4ef6ea06ee1807b6",
+    "测试/前端/Web/auth-session.cjs/auth-session.cjs": "513bd91e78fc6a14a0ecc3779546ce82ba89c7adabf191fff23d568051ec6ff0",
+    "测试/前端/Web/auth-https.cjs/auth-https.cjs": "d72e8b57309796d1a7d84638e357790e5260dbf3ec8e2ca309b4a07ec7238bd1",
+    "测试/前端/Web/browser.cjs/browser.cjs": "9710ac6f28972e0f2f901f1cbdb8bc9619ef1096d4e9367efa0bf1df3ba56d4f",
+    "代码/前端/Web/Dist/Fonts/OFL.txt": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+    "代码/前端/Web/Dist/Fonts/SourceSans3.ttf": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+    "代码/前端/Web/Dist/Licenses/Lucide.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "代码/前端/Web/Dist/Licenses/react-dom.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "代码/前端/Web/Dist/Licenses/react.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "代码/前端/Web/Dist/Logo.svg": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+    "代码/前端/Web/Dist/assets/index-CSOrBoKN.css": "055195d078e475f838e356095bad238e033d7971a0db2b163a7a518697221fd3",
+    "代码/前端/Web/Dist/assets/index-CnD80aSu.js": "304eeebfa63dd7289c8fa503181814a050ecf6e452c0f7a55cfbd0a660320bd5",
+    "代码/前端/Web/Dist/assets/index-CnD80aSu.js.map": "9cd38f76c12b56b1d322e2a313cfc8ba7a96b7355ba2cd718fa9a769d2854d41",
+    "代码/前端/Web/Dist/index.html": "ca320c80bf3c2e7a4becc4ac0e95f75abb1402571b116bb06dbd3f7bd5a496d3",
+    "代码/前端/Web/Dist/资源出处.md": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/README.md": "48059f170e8670db223546a9f50b146910fa1fb4d261d8d2d77694fb8be227d8",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/Web-原证明保护与关联验证.png": "3c68fbf397aa3ece3ad359d0750b39fbd28bbab2b03da54a4f11eee1cec0f8f3",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/Web-真实续期与重新认证.png": "e981ba88e4b38001f0c4c44a6f5bd7721ec461108cd85a2c895e98f060021b29",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/浏览器协议结果.json": "ab0622c6362b6b5682103bb1829b32088e4a9cdfbd9618c4743438df45c96061",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/真实联调结果.json": "2a663cf8d2070974a0cbb9ecdb35a41cbd119ad14c2e99ec0826786b75d9f1e1"
+  },
+  "archivedTestedSources": {
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/认证源码基线/AuthSession.ts": {
+      "original": "代码/前端/Web/Src/AuthSession.ts",
+      "sha256": "b3073d6f452a2164953d626814b3330a63daa7724d610507a906b758dda0f25e"
+    },
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/认证源码基线/api.ts": {
+      "original": "代码/前端/Web/Src/api.ts",
+      "sha256": "e8f2937800ee9665ad3b605c40aa6a024494c64d302cdc63775824f24442b25f"
+    },
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/认证源码基线/PrivateMedia.tsx": {
+      "original": "代码/前端/Web/Src/PrivateMedia.tsx",
+      "sha256": "96dae0097a134528b2c32c7ed5772f85492ee8e407c20567ed804b54c8f78903"
+    },
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/认证源码基线/types.ts": {
+      "original": "代码/前端/Web/Src/types.ts",
+      "sha256": "92f526767bb81dc88c4be65f487f97a42dd00b3b5e5bde6b2f94e98c9dc3913b"
+    },
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/认证源码基线/storage.ts": {
+      "original": "代码/前端/Web/Src/storage.ts",
+      "sha256": "5922a287b58160a4e0d99624b350bd1da06fd85f2063885ef4c62de6385e8d34"
+    },
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/认证源码基线/i18n.ts": {
+      "original": "代码/前端/Web/Src/i18n.ts",
+      "sha256": "3e6e1bee25bd8605e9af9cef59b5ef22094385be86b11f5b4ef6ea06ee1807b6"
+    },
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/认证源码基线/App.tsx": {
+      "original": "代码/前端/Web/Src/App.tsx",
+      "sha256": "127ab35e37aca15f6d0102da25f8c14f8c5e3ece1074a05b9aadef5e33e63598"
+    }
+  },
+  "sourceLifecycle": "The seven tested frontend sources are archived byte-exactly from the tested CnD80aSu source map before the next synchronization slice. Live source paths may subsequently evolve; this remains the authentication baseline.",
+  "archivedProductionFiles": {
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/Fonts/OFL.txt": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/Fonts/SourceSans3.ttf": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/Licenses/Lucide.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/Licenses/react-dom.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/Licenses/react.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/Logo.svg": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/assets/index-CSOrBoKN.css": "055195d078e475f838e356095bad238e033d7971a0db2b163a7a518697221fd3",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/assets/index-CnD80aSu.js": "304eeebfa63dd7289c8fa503181814a050ecf6e452c0f7a55cfbd0a660320bd5",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/assets/index-CnD80aSu.js.map": "9cd38f76c12b56b1d322e2a313cfc8ba7a96b7355ba2cd718fa9a769d2854d41",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/index.html": "ca320c80bf3c2e7a4becc4ac0e95f75abb1402571b116bb06dbd3f7bd5a496d3",
+    "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/资源出处.md": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82"
+  }
+}

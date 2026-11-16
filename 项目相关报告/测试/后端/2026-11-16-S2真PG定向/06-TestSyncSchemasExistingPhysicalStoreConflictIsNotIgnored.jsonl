@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:43.975952+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:44.16137+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored"}
+{"Time":"2026-11-16T12:11:44.161966+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored","Output":"=== RUN   TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:44.375016+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored","Output":"--- PASS: TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored (0.21s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:44.375088+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored","Elapsed":0.21}
+{"Time":"2026-11-16T12:11:44.375126+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:44.375789+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.399s\n"}
+{"Time":"2026-11-16T12:11:44.375823+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.4}

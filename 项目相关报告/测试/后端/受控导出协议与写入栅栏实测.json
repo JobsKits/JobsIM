@@ -1,0 +1,15 @@
+{
+  "busyWriterCleanupStaysPending": true,
+  "foreignOwnerDenied": true,
+  "holderConfirmedBeforeBody": true,
+  "httpAssertions": 21,
+  "lateWorkerCannotRecreateClearedPrefix": true,
+  "mediaByteCount": 1680000,
+  "oneTimeKeyAndStableTask": true,
+  "originalCleanupResumesAfterDrain": true,
+  "realMediaBytesEncryptedAndDecoded": true,
+  "realPostgreSQLAndIndependentJournal": true,
+  "scope": "explicit private protocol harness; production mutation hooks, full account snapshot and public capability remain unaccepted",
+  "status": "passed",
+  "userRetryDoesNotSkipTerminalPending": true
+}

@@ -1,0 +1,1 @@
+{"group": "b", "status": "failed", "httpChecks": 11, "semanticAssertions": 7, "verifiedPages": 0, "elapsedSeconds": 0.082, "failure": "GET /api/sync/status: expected 200, received 404/NOT_FOUND; body redacted"}

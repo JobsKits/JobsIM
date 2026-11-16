@@ -1,0 +1,76 @@
+{
+  "phaseAEnvironmentSnapshotSHA256": "4b1f9c11ff02028870159775540ec610a02a438036eb8aad579a5ba9f0f861fc",
+  "phaseAPlanSnapshotSHA256": "43aaf6241b8a0561b0d79051a0b8a3a6f3201156513f6c0aad8609e115497ea7",
+  "phaseAOriginalEnvironmentUnchanged": true,
+  "phaseAOriginalPlanUnchanged": true,
+  "candidateBinarySHA256": "25de7285297c3773ee09cb90bf00b3e92f8c9319153befd7878cc274ea954001",
+  "phaseACandidateBinarySHA256": "25de7285297c3773ee09cb90bf00b3e92f8c9319153befd7878cc274ea954001",
+  "mainClusterReusedOnlyFromOwnedPhaseA": true,
+  "newMainBusinessDatabase": "jobsim_s2_b_53742e5436be",
+  "newJournalDatabase": "jobsim_s2_j_53742e5436be",
+  "newStateAndSecrets": true,
+  "fixed57BinaryOrSeedNotUsed": true,
+  "CAFromOwnedNewPhaseAOnly": true,
+  "privateLogs": [
+    {
+      "path": "Logs/01-initdb-journal.log",
+      "bytes": 796,
+      "sha256": "9a3d02a2e5ba532d28f477ea4cb0a9ced7fcd0491dfbf76072e97e75ae88cb48"
+    },
+    {
+      "path": "Logs/02-start-main.log",
+      "bytes": 52,
+      "sha256": "66afd0411ccc09366e99fdd99b85f21899c8d2d064f5835126859618802153ad"
+    },
+    {
+      "path": "Logs/03-start-journal.log",
+      "bytes": 52,
+      "sha256": "66afd0411ccc09366e99fdd99b85f21899c8d2d064f5835126859618802153ad"
+    },
+    {
+      "path": "Logs/04-identity-journal.log",
+      "bytes": 204,
+      "sha256": "6cb4eb1a1a4d6d1f3d2ba7cee4c816bf779bd9afa7dad4b36018b801717fbfbd"
+    },
+    {
+      "path": "Logs/04-identity-main.log",
+      "bytes": 202,
+      "sha256": "801beffe73568841c765267098c894468fc73c6871347ce3b6680dbfb30878f0"
+    },
+    {
+      "path": "Logs/05-create-journal.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Logs/05-create-main.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "Logs/06-NATS-check.log",
+      "bytes": 243,
+      "sha256": "96f2d4bf70751344625937b81b1327e4e17930d4f987493f0028e89f8126efe7"
+    },
+    {
+      "path": "Logs/app.log",
+      "bytes": 783,
+      "sha256": "5eaad6bb1f3b5470efacc9c348c3e4659f6cc7ec09f6a368847c750724b9ddc5"
+    },
+    {
+      "path": "Logs/journal-postgres.log",
+      "bytes": 3040,
+      "sha256": "428d61e02f1c1efbf8f29c24a985bcbb0a96e0ebbf01f2b6555950312fc055db"
+    },
+    {
+      "path": "Logs/main-postgres.log",
+      "bytes": 78289,
+      "sha256": "365abad67bda747e1379224fd107574a7f43f93b0d9e9990435af38c33971916"
+    },
+    {
+      "path": "Logs/nats.log",
+      "bytes": 2460,
+      "sha256": "8e5b796ffc65d0fa89e015751b6e5ca5e13e38d12956b10112afc2ebfc77425b"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "exitCode": 0,
+  "gate": "",
+  "seconds": 16.289,
+  "minimumFreeBytes": 9267339264,
+  "passedGroups": 23,
+  "failedGroups": 0,
+  "task": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-ObjectReceipts/20261116-1794825944953",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "-C",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/CLI",
+    "test",
+    "-overlay",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-ObjectReceipts/20261116-1794825944953/Temp/overlay.json",
+    "-timeout",
+    "120s",
+    "-count=1",
+    "-v",
+    "-run",
+    "Test(ObjectReceipt|Receipt)",
+    "./..."
+  ],
+  "realAPI": false,
+  "PG": false
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/SelfState-20261116-135235.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=927610A5-305F-41F5-BA69-7DA273F4C47E",
+    "-parallel-testing-enabled",
+    "NO",
+    "-maximum-concurrent-test-simulator-destinations",
+    "1",
+    "-resultBundlePath",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/SelfState-20261116-135235-同步21.xcresult",
+    "-only-testing:JobsIMTests/IMAuthoritativeSyncTests"
+  ],
+  "exitCode": 65,
+  "stopped": null,
+  "seconds": 76.642,
+  "minFreeBytes": 4485165056,
+  "xcresult": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/SelfState-20261116-135235-同步21.xcresult",
+  "xctestrunSHA256": "20f097bc4f3d776ad3a41cb3efc2a982eff5a0619be26168cd91501fa5628d4c"
+}

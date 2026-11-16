@@ -1,0 +1,53 @@
+{
+  "recordedAt": "2026-11-16T04:20:23.657157+00:00",
+  "buildReport": "项目相关报告/测试/前端/Android/20261116-权威同步/Build-20261116-121304-27317-f957c0",
+  "instrumentReport": "项目相关报告/测试/前端/Android/20261116-权威同步/Instrument-20261116-121415-27662-967574",
+  "inputCount": 60,
+  "archiveSHAMismatches": [],
+  "currentSHAMismatches": [],
+  "packages": {
+    "app-debug.apk": {
+      "sha256": "978b9f9c54e4fa22b8adbc92211610f10cb8238bf297c83bfa4517de922f7d08",
+      "matchesBuild": true,
+      "matchesInstalledReadback": true,
+      "zipCRCError": null,
+      "containsTestSchema8": false
+    },
+    "app-debug-androidTest.apk": {
+      "sha256": "6b0c5b6793f8127f45e5e460994308d4a47acea1b6fbba7df691fba1253f236f",
+      "matchesBuild": true,
+      "matchesInstalledReadback": true,
+      "zipCRCError": null,
+      "containsTestSchema8": true,
+      "schema8SHA256": "c2d08158cfa211cc6300c45a83ae192ff3cc8739bdc9f2f729e0b30d43683404"
+    }
+  },
+  "schema8SHA256": {
+    "repo": "c2d08158cfa211cc6300c45a83ae192ff3cc8739bdc9f2f729e0b30d43683404",
+    "oldAuthArchive": "c2d08158cfa211cc6300c45a83ae192ff3cc8739bdc9f2f729e0b30d43683404",
+    "testAsset": "c2d08158cfa211cc6300c45a83ae192ff3cc8739bdc9f2f729e0b30d43683404"
+  },
+  "oldAuthSchema8ManifestSHA256": "c2d08158cfa211cc6300c45a83ae192ff3cc8739bdc9f2f729e0b30d43683404",
+  "schema9UnchangedSinceFirstBuild": true,
+  "protectedAuthPackagesSHA256": {
+    "代码/前端/Android/Dist/JobsIM-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+    "代码/前端/Android/Dist/Baselines/20261115-native-auth-refresh-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3"
+  },
+  "jvm": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "actualExecutionBuild": "Build-20261116-115754-14667-083e7d",
+    "finalBuildTask": "UP-TO-DATE; same product APK978"
+  },
+  "native": {
+    "tests": 10,
+    "passed": 10,
+    "failedOrSkipped": 0
+  },
+  "instrumentRunnerMatchesArchivedSource": true,
+  "apiUsed": false,
+  "uiVerified": false,
+  "limits": "Only isolated local fixture migration and injected protocol; no live HTTPS/NATS, device ACK, power loss or complete I acceptance"
+}

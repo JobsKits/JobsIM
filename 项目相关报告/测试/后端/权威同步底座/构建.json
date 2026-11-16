@@ -1,0 +1,34 @@
+{
+  "host": "darwin/arm64",
+  "go": "1.27.4",
+  "sourceManifest": "源码摘要.json",
+  "sourceCount": 56,
+  "darwinFixedBinarySHA256": "57a86767d12f005da08c728ff544a2b66076b2db03a203e3221d3490e355f290",
+  "darwinBuildPassed": true,
+  "vetPassed": true,
+  "flags": [
+    "-p=1",
+    "GOMAXPROCS=2",
+    "GOPROXY=off"
+  ],
+  "cross": [
+    {
+      "goos": "windows",
+      "goarch": "amd64",
+      "crossCompiled": true,
+      "executedOnTarget": false,
+      "sha256": "ee54c67edbad4fe51915df170397eb11510cc32fab33e7643436b354df41ca81",
+      "bytes": 21449216
+    },
+    {
+      "goos": "linux",
+      "goarch": "amd64",
+      "crossCompiled": true,
+      "executedOnTarget": false,
+      "sha256": "4efad93861091339b39ce6eb4b4acc21a6ff0bcfa2cb35fc73b002e5bdabe306",
+      "bytes": 20983939
+    }
+  ],
+  "scope": "Cross-compilation is not Linux/Windows native service or DACL execution.",
+  "recordedAt": "2026-11-15T16:44:28.350866+00:00"
+}

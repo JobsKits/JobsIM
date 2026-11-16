@@ -1,0 +1,97 @@
+{
+  "observedAt": "2026-11-15T06:35:55.989574+00:00",
+  "scope": "CLI signed search/favorites paging and exact source; durable structured mentions and immutable announcement operations",
+  "sqliteFaultGroups": 21,
+  "sqliteStatus": "passed",
+  "httpsStatus": "passed",
+  "httpsChecks": [
+    "real server search and favorites 50+1 opaque pages; ordinary output strips reader proof",
+    "exact source GET reflects later edit without trusting old list body",
+    "current member and owner-all structured mentions reach actual recipient mentionedMe",
+    "announcement source uses contentVersion independent from favorite version",
+    "publish none/1d, old operation current=false preserves newer current reference, source edit unavailable and clear",
+    "owner role loss rejects new mention-all and announcement before enqueue",
+    "completed announcement facts survive process reopen without storing source body",
+    "source membership round trip rejects old selected result, clears paging session"
+  ],
+  "service": {
+    "url": "https://127.0.0.1:28443",
+    "deploymentId": "c2a6a394-a383-4164-bd54-f04f4af59c12",
+    "restoreEpoch": "1"
+  },
+  "toolchain": "go version go1.27.4 darwin/arm64",
+  "binary": {
+    "path": "/Users/jobs/Library/Caches/JobsIM/CLI/collaboration/jobsim",
+    "sha256": "bd973f53f167f1a18be99593ea20c921e2e46bd36891a0e52814e2076e5f6b53",
+    "bytes": 16313026
+  },
+  "priorForwardBinaryUnchanged": {
+    "path": "/Users/jobs/Library/Caches/JobsIM/CLI/jobsim-forward",
+    "sha256": "ecd708106af3db4e2a1a4243632d9ea87857c70a72bb25fc196313b8830e52c5"
+  },
+  "sourceFiles": [
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+      "sha256": "379fb31e54b9568a3d986b90dd2306a8338a4bd32ad2976c1f0a883fd6b8353d"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "sha256": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/forward.go",
+      "sha256": "747de459652d091dfb32f882448147963a64dddd6e798355f08e42bfc3a557e6"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "sha256": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/local.go",
+      "sha256": "c21212f980c929626e28ba2c4b58690d4c948619c7eb7ad939cd33c67757e610"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/main.go",
+      "sha256": "ed80b33e98d896f5f596c6a7614109e2a07bbd27c1bd3c0094d00326cca4e144"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/store.go",
+      "sha256": "1b645828921ed30c5006e0bace63449f8481f50a05a6672eeff9dc588cb72215"
+    },
+    {
+      "path": "代码/前端/CLI/go.mod",
+      "sha256": "3909e75826adbcd87c321b2a2acd03bcb5240334035d03bd47174f1b71c7b46e"
+    },
+    {
+      "path": "代码/前端/CLI/go.sum",
+      "sha256": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030"
+    },
+    {
+      "path": "测试/CLI/collaboration-https.cjs/collaboration-https.cjs",
+      "sha256": "2eb520087ed56e7ba30253dffdc323a76f033842a191b3c25c2cad250a3c7082"
+    },
+    {
+      "path": "测试/CLI/collaboration_test.go",
+      "sha256": "6174741808763c247b25264fa1709013f31549e289479af181c114e3eb10d030"
+    },
+    {
+      "path": "测试/CLI/governance_test.go",
+      "sha256": "aae050ed8b6c7783019efa3a4b6216f38ba3fc37951e7d462bbf5e34f1ca2e7f"
+    },
+    {
+      "path": "测试/CLI/outbox_test.go",
+      "sha256": "a0b3c4756c3b5907c759615acca8c3df8c33b62770482ee5a933397ffc590952"
+    },
+    {
+      "path": "测试/CLI/运行测试.mjs/运行测试.mjs",
+      "sha256": "4a900b869fe438ae18c006df4e1d4ad259e31482fe49a27b38a29c10210e0043"
+    }
+  ],
+  "limitations": [
+    "Mock HTTP/real SQLite cover lost replies, old role qualification, missing capabilities, expired-intent rejection and SQL rollback; real HTTPS does not inject those failures",
+    "Real source membership round trip and new owner-role denial checked; old queued role-roundtrip failure is controlled HTTP evidence",
+    "No GUI, no physical devices, no full I/243 or production disaster recovery",
+    "No persistent search/favorite body or cursor cache; already displayed terminal output and explicitly downloaded files are not remotely erased",
+    "New auth-refresh protocol not implemented or tested in this round"
+  ]
+}

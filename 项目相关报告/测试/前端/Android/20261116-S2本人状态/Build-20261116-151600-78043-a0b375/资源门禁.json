@@ -1,0 +1,35 @@
+{
+  "minimumFreeBytes": 4294967296,
+  "maxSeconds": 360,
+  "reason": "completed",
+  "samples": [
+    {
+      "seconds": 0.0,
+      "freeBytes": 37765361664
+    },
+    {
+      "seconds": 1.0,
+      "freeBytes": 37765103616
+    },
+    {
+      "seconds": 2.01,
+      "freeBytes": 37764947968
+    },
+    {
+      "seconds": 3.01,
+      "freeBytes": 37764767744
+    },
+    {
+      "seconds": 4.01,
+      "freeBytes": 37763715072
+    },
+    {
+      "seconds": 5.01,
+      "freeBytes": 37763629056
+    },
+    {
+      "seconds": 6.02,
+      "freeBytes": 37764685824
+    }
+  ]
+}

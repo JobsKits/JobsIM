@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jobs.im.IsolationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-16T03:58:30.589Z" hostname="JobsdeAir" time="0.063">
+  <properties/>
+  <testcase name="sameServerNameCannotMergeProfiles" classname="com.jobs.im.IsolationTest" time="0.018"/>
+  <testcase name="certificateInputIsBoundedBeforeWholeFileAllocation" classname="com.jobs.im.IsolationTest" time="0.001"/>
+  <testcase name="demoCanNeverEnterLiveTransport" classname="com.jobs.im.IsolationTest" time="0.003"/>
+  <testcase name="restoreEpochChangeCannotResendOldOutbox" classname="com.jobs.im.IsolationTest" time="0.002"/>
+  <testcase name="endpointsRejectSecretsAndInsecureSchemes" classname="com.jobs.im.IsolationTest" time="0.021"/>
+  <testcase name="allTenLanguagesHaveEveryControlLabel" classname="com.jobs.im.IsolationTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

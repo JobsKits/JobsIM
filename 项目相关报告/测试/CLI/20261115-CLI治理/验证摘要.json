@@ -1,0 +1,70 @@
+{
+  "observedAt": "2026-11-15T03:20:21.961761+00:00",
+  "scope": "CLI relationship/group governance and read-only reconciliation after local governance freeze",
+  "goVersion": "go1.27.4 darwin/arm64",
+  "sqlite": {
+    "passedGroups": 14,
+    "failedGroups": 0
+  },
+  "https": {
+    "status": "passed",
+    "server": "https://127.0.0.1:8443"
+  },
+  "binary": {
+    "path": "/Users/jobs/Library/Caches/JobsIM/CLI/governance/jobsim",
+    "sha256": "462f69bff2f60ae381edd8c77d1618d28fb386577597efd2945336c83fa85e02",
+    "bytes": 16194354
+  },
+  "sourceFiles": [
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "sha256": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "sha256": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/local.go",
+      "sha256": "dbcbf2bdd4a41d189fb19e01f6add23d57d7ee4efa9931f690ee9895370f1f6c"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/main.go",
+      "sha256": "b92b82e568a5ff90726e3aa5145311ad0c2d519ad9ed8e78cb0ad8714c27d25a"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/store.go",
+      "sha256": "0a3155b40fd77c3a799e098a9cacaeb44c153d13a72102e2fa87ca701b06180e"
+    },
+    {
+      "path": "代码/前端/CLI/go.mod",
+      "sha256": "3909e75826adbcd87c321b2a2acd03bcb5240334035d03bd47174f1b71c7b46e"
+    },
+    {
+      "path": "代码/前端/CLI/go.sum",
+      "sha256": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030"
+    },
+    {
+      "path": "测试/CLI/governance_test.go",
+      "sha256": "1fce5849364a016f34e680d04e2dc15f45dd2638ac09d8151c6271a2a020a9a8"
+    },
+    {
+      "path": "测试/CLI/https-integration.cjs/https-integration.cjs",
+      "sha256": "2bf7bb9252521b343b6593874bdc4ef5e96c59d0c432631163ebce236ea35c22"
+    },
+    {
+      "path": "测试/CLI/outbox_test.go",
+      "sha256": "26a772457ef841d17b27957e7f8efae1e9be63f385f1ef7422498159bc06771f"
+    },
+    {
+      "path": "测试/CLI/运行测试.mjs/运行测试.mjs",
+      "sha256": "3ecef0c6b5cabd2e8deb1b15ed82691f9660fd0ad2b65484cb0ec1fceb771313"
+    }
+  ],
+  "limitations": [
+    "No complete I/243 acceptance",
+    "No OS power-loss exercise",
+    "Read-only governance reconciliation at most 1000 pages x 200; not found remains unknown",
+    "No remote rollback/automatic replay of unknown PATCH/DELETE"
+  ]
+}

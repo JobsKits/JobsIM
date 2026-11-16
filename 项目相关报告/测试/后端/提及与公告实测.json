@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "httpAssertions": 181,
+  "semanticAssertions": 42,
+  "strictHTTPS": true,
+  "structuredMentions": true,
+  "memberGenerationBound": true,
+  "blockSuppressesTargetedReminder": true,
+  "mentionAllOwnerAndIndependentRate": true,
+  "announcementReferenceNoStoredBody": true,
+  "sourceEditRecallExpiryAndJoinBoundary": true,
+  "immutableOriginalOperation": true,
+  "readOnlyMessageResultNeverCreates": true,
+  "sameHostFenceSerializesSourceEdit": true,
+  "interactionDoesNotInvalidateAnnouncementContent": true,
+  "scope": "Real HTTPS and PostgreSQL; no frontend, hardware, push or distributed-host acceptance claim",
+  "testedAtUTC": "2026-11-15T03:30:18.248791+00:00",
+  "backendSHA256": {
+    "message.go": "9c977ae7bd8d8e52c465e646dd1fb96fe52c0ad7efc6baa6f21aa28103ed4adc",
+    "mentions_announcements.go": "5939e037507b6c826502f4796d5a3dd06b26f16ec2f843aee5a27363c7cf21d0",
+    "types.go": "914980ec914d6515a7455ea0b7d88152ee5445ff1f4e01f727bc4359ce7f5ae8",
+    "conversation.go": "0d1effbdf95d9cc5f6db9091162923ad33dff1f4ad1e8fb59da4c28eab12482f",
+    "control.go": "3e794577f8f4791797acc24427b27050ec144b4b7e3d49178ae85007d21f3cde",
+    "send_admission.go": "4fcabab05e3083c01cd47e365d3670eaf7e589957c83bc920af12f23ac5763f4",
+    "operations.go": "03916110afdae1220a347f254295fb539a8af3626b74bb35a4a6f7627a878473",
+    "server.go": "7dd662b50c23a60cdf8d6392f33251563c81d541d4628183b177db5446ac01ee"
+  },
+  "scriptSHA256": "4ceaf8ee4f4ae6a3d6ec875144c4530567da67118534ca41f7349055765ce99d",
+  "ownerUnavailableFixture": "direct PostgreSQL group-state fixture; administrator lifecycle not exercised here"
+}

@@ -1,0 +1,15 @@
+{
+  "step": "06-final-runner",
+  "status": "completed",
+  "exitCode": 0,
+  "seconds": 3.01,
+  "minimumFreeGiB": 13.42,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/tool/node/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/CLI/运行测试.mjs/运行测试.mjs"
+  ],
+  "realAPIEnabled": false,
+  "passed": 45,
+  "failed": 0,
+  "skipped": 2
+}

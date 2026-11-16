@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "httpAssertions": 15,
+  "realFileFenceTimeout": true,
+  "sessionRejectsNormalRequestsWhileClosing": true,
+  "onlyOriginalCloseAndCSRFContinue": true,
+  "originalLogoutCompletesAfterFenceDrains": true,
+  "scope": "isolated experimental HTTPS/PG/FS fault test; not full I acceptance"
+}

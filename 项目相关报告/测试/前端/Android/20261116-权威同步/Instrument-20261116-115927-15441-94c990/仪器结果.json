@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "startedAt": "2026-11-16T03:59:27.075249+00:00",
+  "buildReport": "项目相关报告/测试/前端/Android/20261116-权威同步/Build-20261116-115754-14667-083e7d",
+  "serial": "emulator-5582",
+  "avd": "JobsIMReview_20261114_1424",
+  "filter": "com.jobs.im.AuthoritativeSyncTest,com.jobs.im.NativeSessionLifecycleTest#retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch",
+  "apiUsed": false,
+  "fixtureIsolation": "Each method uses fresh UUID SQLite/profile/cache scope; no live server or account seed",
+  "runnerSourceSHA256": "ff7df1ce60449d5d7e762c8e02362d45ae2a134c029aabbe675748f0221b3e1d",
+  "emulatorProcess": {
+    "pid": 69646,
+    "command": "/Users/jobs/Library/Android/sdk/emulator/qemu/darwin-aarch64/qemu-system-aarch64-headless -avd JobsIMReview_20261114_1424 -port 5582 -no-window -no-audio -no-snapshot-save"
+  },
+  "previousInstalledAppSHA256": "239a5ed3272b095d37a9758071ff1542add258c42bcfb8171cae31a3ef5eafc9",
+  "installedSHA256": {
+    "app-debug.apk": "978b9f9c54e4fa22b8adbc92211610f10cb8238bf297c83bfa4517de922f7d08",
+    "app-debug-androidTest.apk": "2054b38d28de451b2f8db6bbca9881a9633b68c4cd22488fd3c1a5d14d391060"
+  },
+  "outcomes": [
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.AuthoritativeSyncTest",
+      "test": "localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody",
+      "code": 0
+    },
+    {
+      "class": "com.jobs.im.NativeSessionLifecycleTest",
+      "test": "retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch",
+      "code": 0
+    }
+  ],
+  "totals": {
+    "tests": 9,
+    "passed": 9,
+    "failedOrSkipped": 0
+  },
+  "finishedAt": "2026-11-16T03:59:34.824450+00:00"
+}

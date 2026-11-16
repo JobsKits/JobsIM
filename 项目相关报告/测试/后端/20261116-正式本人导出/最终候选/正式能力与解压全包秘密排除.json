@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 19,
+  "semanticAssertions": 11,
+  "binarySHA256": "2b58586428a345309f3dcdca651d35de6b24f122ac717b8b8397d357901e5c87",
+  "operatorBinarySHA256": "9bf24cdb77f2eebf028792efba1495352312bbb1cb5d94047edab8e100c37545",
+  "scriptSHA256": "3b77d70fab444f2e4f2000eedb2ef70dc1dec1c6b322ceb7ca59e6539b7b43b8",
+  "chat_export": true,
+  "experimentalEnabled": false,
+  "after_receipt": false,
+  "checkedAt": "2026-11-16T09:38:42.305775+00:00",
+  "assertions": [
+    {
+      "assertion": "actual capability enables formal export while irreversible and strong protection gates remain off",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "actual ZIP CRC and complete entry extraction succeed",
+      "passed": true
+    },
+    {
+      "assertion": "decoded nonexperimental formal ZIP contains its actual own message and own report",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "actual ZIP CRC and complete entry extraction succeed",
+      "passed": true
+    },
+    {
+      "assertion": "actual decompressed reporter entry contains the current public disposition and original own reason",
+      "passed": true
+    },
+    {
+      "assertion": "decompressed entire package excludes actual stored administrator and other reporter private reasons",
+      "passed": true
+    },
+    {
+      "assertion": "entire decompressed current package excludes auth and temporary source grants",
+      "passed": true
+    }
+  ]
+}

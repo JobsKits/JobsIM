@@ -1,0 +1,43 @@
+{
+  "sources": [
+    {
+      "file": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "sha256": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea"
+    },
+    {
+      "file": "代码/前端/CLI/cmd/jobsim/forward.go",
+      "sha256": "747de459652d091dfb32f882448147963a64dddd6e798355f08e42bfc3a557e6"
+    },
+    {
+      "file": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "sha256": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84"
+    },
+    {
+      "file": "代码/前端/CLI/cmd/jobsim/local.go",
+      "sha256": "456593f510c532b8c48ddb338b5b1ea93c94d22d208048ae19b3605eb9b4b3f3"
+    },
+    {
+      "file": "代码/前端/CLI/cmd/jobsim/main.go",
+      "sha256": "5fd95abd2e06d46d9d9cd66194ebeb778caec429761a2e786a49e81e1fb64a56"
+    },
+    {
+      "file": "代码/前端/CLI/cmd/jobsim/store.go",
+      "sha256": "9bd340c2afbaf142a431127141041dc8bd07d84f1f3e61cba8a816f09acc282d"
+    },
+    {
+      "file": "测试/CLI/forward-https.cjs/forward-https.cjs",
+      "sha256": "f0f2f0749fd3c1d5b30eba200c72ea22ffc44f8f280bf1467eeecb6157eac76a"
+    },
+    {
+      "file": "测试/CLI/outbox_test.go",
+      "sha256": "a0b3c4756c3b5907c759615acca8c3df8c33b62770482ee5a933397ffc590952"
+    }
+  ],
+  "binary": {
+    "path": "external managed CLI/jobsim-forward",
+    "sha256": "ecd708106af3db4e2a1a4243632d9ea87857c70a72bb25fc196313b8830e52c5"
+  },
+  "sqliteGroups": 17,
+  "forwardRealHTTPS": "passed",
+  "finalGatewayJSONFence": "real HTTPS rerun passed"
+}

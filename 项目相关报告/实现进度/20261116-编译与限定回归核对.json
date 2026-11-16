@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-16T04:53:11.232250+00:00",
+  "status": "scoped_development_regression_complete_not_phase_one_complete",
+  "codeDevelopmentFinished": false,
+  "web": {
+    "bundle": "index-DXdl9E2N.js",
+    "realSyncGroups": 10,
+    "realAuthGroups": 8,
+    "fixedInputFiles": 52,
+    "hashMismatches": []
+  },
+  "android": {
+    "candidateSHA256": "978b9f9c54e4fa22b8adbc92211610f10cb8238bf297c83bfa4517de922f7d08",
+    "JVMpassed": 10,
+    "instrumentedPassed": 10,
+    "migration": "real bundled SQLite 8-to-9 from original schema SHA c2d08158cfa211cc6300c45a83ae192ff3cc8739bdc9f2f729e0b30d43683404",
+    "newSyncHTTPS": "not_run",
+    "UI": "not_run",
+    "report": "../测试/前端/Android/20261116-权威同步/README.md"
+  },
+  "ios": {
+    "arm64Build": true,
+    "syncInjectedPassed": 18,
+    "oldAuthLocalPassed": 12,
+    "newSyncHTTPS": "not_run",
+    "UI": "not_run",
+    "report": "../测试/前端/iOS/2026-11-16-权威快照与增量/README.md"
+  },
+  "cli": {
+    "localPassed": 45,
+    "localExplicitSkipped": 2,
+    "realPTYHTTPSGroups": 10,
+    "linuxWindowsAMD64": "cross_compiled_only_not_executed",
+    "credentialPath": "process-only; Mac DPK positive remains unresolved",
+    "report": "../测试/CLI/20261116-权威同步HTTPS/20261116-120401-3cbd4e/README.md"
+  },
+  "backendS2": {
+    "pureGroupsPassed": 16,
+    "realPGGroupsPassed": 20,
+    "twoPGHTTPSNATSGroups": 8,
+    "jsonHTTPChecks": 125,
+    "semanticAssertions": 334,
+    "snapshotPages": 17,
+    "extraRawDroppedResponseWrites": 3,
+    "notAdditionalJSONHTTPCount": true,
+    "productionSourceChangesThisRound": false,
+    "candidateStopped": true,
+    "fixed57And7efUnchanged": true,
+    "report": "../测试/后端/2026-11-16-S2双PG与真实同步/README.md"
+  },
+  "navigation": {
+    "at": "2026-11-16T04:50:40.481688+00:00",
+    "READMEfiles": 137,
+    "localTargets": 1469,
+    "invalidTargets": [],
+    "scope": "local README targets only; source archives/generated/third-party excluded; remote/anchors not checked",
+    "tocDocuments": 121,
+    "stagedPaths": []
+  },
+  "freeBytesAtClose": 8836812800,
+  "notDelivered": [
+    "Harmony authoritative sync consumer",
+    "Native new sync real HTTPS/UI",
+    "Client schema2 atomic installation",
+    "Public cloud drafts",
+    "qualified ACK / after_receipt",
+    "Formal export, account deletion, ordinary migration",
+    "Other first-stage requirements remain subject to the 243-item acceptance table"
+  ],
+  "git": {
+    "stagedPaths": [],
+    "committedOrPushed": false
+  }
+}

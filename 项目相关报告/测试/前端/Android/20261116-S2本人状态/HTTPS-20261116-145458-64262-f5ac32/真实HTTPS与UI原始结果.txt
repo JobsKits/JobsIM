@@ -1,0 +1,163 @@
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSelfStateHttpsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.NativeSelfStateHttpsTest:
+INSTRUMENTATION_STATUS: test=nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSelfStateHttpsTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Native S2 UI manual unread timed out: NO_PROTOCOL_ERROR
+	at com.jobs.im.NativeSelfStateHttpsTest$nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps$1.invokeSuspend$waitFor(NativeSelfStateHttpsTest.kt:232)
+	at com.jobs.im.NativeSelfStateHttpsTest$nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps$1.access$invokeSuspend$waitFor(NativeSelfStateHttpsTest.kt:0)
+	at com.jobs.im.NativeSelfStateHttpsTest$nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps$1$waitFor$1.invokeSuspend(NativeSelfStateHttpsTest.kt:13)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:35)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:47)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeSelfStateHttpsTest.nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps(NativeSelfStateHttpsTest.kt:215)
+
+INSTRUMENTATION_STATUS: stream=
+Error in nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps(com.jobs.im.NativeSelfStateHttpsTest):
+java.lang.AssertionError: Native S2 UI manual unread timed out: NO_PROTOCOL_ERROR
+	at com.jobs.im.NativeSelfStateHttpsTest$nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps$1.invokeSuspend$waitFor(NativeSelfStateHttpsTest.kt:232)
+	at com.jobs.im.NativeSelfStateHttpsTest$nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps$1.access$invokeSuspend$waitFor(NativeSelfStateHttpsTest.kt:0)
+	at com.jobs.im.NativeSelfStateHttpsTest$nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps$1$waitFor$1.invokeSuspend(NativeSelfStateHttpsTest.kt:13)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:35)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:47)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeSelfStateHttpsTest.nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps(NativeSelfStateHttpsTest.kt:215)
+
+INSTRUMENTATION_STATUS: test=nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSelfStateHttpsTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSelfStateHttpsTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=com.jobs.im.SyncFailure: SYNC_INVALID_RESPONSE
+	at com.jobs.im.SyncWire.fail(SyncProtocol.kt:17)
+	at com.jobs.im.SyncWire.fail$default(SyncProtocol.kt:17)
+	at com.jobs.im.SelfStateWire.utc(SelfState.kt:87)
+	at com.jobs.im.SelfStateWire.validate(SelfState.kt:48)
+	at com.jobs.im.SelfStateWire.validate$default(SelfState.kt:27)
+	at com.jobs.im.SelfStateModel.readCurrent(SelfStateModel.kt:123)
+	at com.jobs.im.SelfStateModel.access$readCurrent(SelfStateModel.kt:12)
+	at com.jobs.im.SelfStateModel$readCurrent$1.invokeSuspend(SelfStateModel.kt:18)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeSelfStateHttpsTest.realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue(NativeSelfStateHttpsTest.kt:116)
+
+INSTRUMENTATION_STATUS: stream=
+Error in realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue(com.jobs.im.NativeSelfStateHttpsTest):
+com.jobs.im.SyncFailure: SYNC_INVALID_RESPONSE
+	at com.jobs.im.SyncWire.fail(SyncProtocol.kt:17)
+	at com.jobs.im.SyncWire.fail$default(SyncProtocol.kt:17)
+	at com.jobs.im.SelfStateWire.utc(SelfState.kt:87)
+	at com.jobs.im.SelfStateWire.validate(SelfState.kt:48)
+	at com.jobs.im.SelfStateWire.validate$default(SelfState.kt:27)
+	at com.jobs.im.SelfStateModel.readCurrent(SelfStateModel.kt:123)
+	at com.jobs.im.SelfStateModel.access$readCurrent(SelfStateModel.kt:12)
+	at com.jobs.im.SelfStateModel$readCurrent$1.invokeSuspend(SelfStateModel.kt:18)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeSelfStateHttpsTest.realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue(NativeSelfStateHttpsTest.kt:116)
+
+INSTRUMENTATION_STATUS: test=realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSelfStateHttpsTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=realDraftLossUsesReadonlyOriginalBodyAndRetiredSourceKeepsIndependentText
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSelfStateHttpsTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=realDraftLossUsesReadonlyOriginalBodyAndRetiredSourceKeepsIndependentText
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 68.093
+There were 2 failures:
+1) nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps(com.jobs.im.NativeSelfStateHttpsTest)
+java.lang.AssertionError: Native S2 UI manual unread timed out: NO_PROTOCOL_ERROR
+	at com.jobs.im.NativeSelfStateHttpsTest$nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps$1.invokeSuspend$waitFor(NativeSelfStateHttpsTest.kt:232)
+	at com.jobs.im.NativeSelfStateHttpsTest$nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps$1.access$invokeSuspend$waitFor(NativeSelfStateHttpsTest.kt:0)
+	at com.jobs.im.NativeSelfStateHttpsTest$nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps$1$waitFor$1.invokeSuspend(NativeSelfStateHttpsTest.kt:13)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:35)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:47)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeSelfStateHttpsTest.nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps(NativeSelfStateHttpsTest.kt:215)
+2) realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue(com.jobs.im.NativeSelfStateHttpsTest)
+com.jobs.im.SyncFailure: SYNC_INVALID_RESPONSE
+	at com.jobs.im.SyncWire.fail(SyncProtocol.kt:17)
+	at com.jobs.im.SyncWire.fail$default(SyncProtocol.kt:17)
+	at com.jobs.im.SelfStateWire.utc(SelfState.kt:87)
+	at com.jobs.im.SelfStateWire.validate(SelfState.kt:48)
+	at com.jobs.im.SelfStateWire.validate$default(SelfState.kt:27)
+	at com.jobs.im.SelfStateModel.readCurrent(SelfStateModel.kt:123)
+	at com.jobs.im.SelfStateModel.access$readCurrent(SelfStateModel.kt:12)
+	at com.jobs.im.SelfStateModel$readCurrent$1.invokeSuspend(SelfStateModel.kt:18)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeSelfStateHttpsTest.realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue(NativeSelfStateHttpsTest.kt:116)
+
+FAILURES!!!
+Tests run: 3,  Failures: 2
+
+
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,45 @@
+{
+  "sealedAt": "2026-11-16T08:03:29.255830+00:00",
+  "scope": "Android S2 latest product; original reports remain distinct",
+  "build": "项目相关报告/测试/前端/Android/20261116-S2本人状态/Build-20261116-155610-95376-8caaec",
+  "instrument": "项目相关报告/测试/前端/Android/20261116-S2本人状态/Instrument-20261116-155736-1436-dea38c",
+  "https": "项目相关报告/测试/前端/Android/20261116-S2本人状态/HTTPS-20261116-155802-1622-da2100",
+  "productSHA256": "5774b93a9c5c5d930cc682d91d55336addb414f53a8374cfb65dcd2106a6d13d",
+  "testSHA256": "7067f7b67dd39ae56ab536583489de98b4c55bb61c8365d2c39d0e3acd9be9cb",
+  "inputCount": 66,
+  "liveInputsMatch": true,
+  "jvmMethodCount": 11,
+  "jvmEvidence": "Original XML execution from Build-151122 retained; later Gradle UP-TO-DATE reused exact XML, not a newly claimed execution",
+  "nativeTotals": {
+    "tests": 23,
+    "passed": 23,
+    "failedOrSkipped": 0
+  },
+  "realHttpsTotals": {
+    "tests": 3,
+    "passed": 3,
+    "failedOrSkipped": 0
+  },
+  "ownedFamiliesConfirmedClosed": true,
+  "emulatorProcess": {
+    "pid": 99437,
+    "exited": true,
+    "preserveData": true,
+    "snapshotSaved": false
+  },
+  "screenshotsReviewed": 5,
+  "screenshotLimits": "Raw frames 01/02/04 show transitional disabled controls or previous selection; authoritative writes verified separately; not a claim of all settled visual combinations",
+  "preservedAuthBaselineSHA256": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+  "evidenceSHA256": {
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/Build-20261116-155610-95376-8caaec/构建结果.json": "3c73d629974a7f4e54aa24faf5b733e15461d3bee6ee20ea7a9c5f4a278891f7",
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/Instrument-20261116-155736-1436-dea38c/仪器结果.json": "e0166d717d4d065aa09dc622b8a53c9123d8b043ed8098018b380b97970c4fa0",
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/HTTPS-20261116-155802-1622-da2100/真实HTTPS结果.json": "8b09001aaf104d7cb09489ec8d35e1cddd4201bb555a8098051cb53530ce5282",
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/HTTPS-20261116-155802-1622-da2100/本轮会话关闭事实.json": "71fd01c4910fb57fdad59986dc9824450bb5c85b156cde4d1bdf340c6cc9b82c",
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/HTTPS-20261116-155802-1622-da2100/原生UI步骤.json": "2ab9867e6c6ef767c20b8a0df57e6373333aab34d41640b91d3a0d3e2d932897",
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/HTTPS-20261116-155802-1622-da2100/截图/05-S2-Dark-Settings.png": "d339b79713646086bf1f79800cb6e9b2903db2efe4553eb7673f8723f4780b86",
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/HTTPS-20261116-155802-1622-da2100/截图/04-S2-Large-Settings.png": "1d35a7f08ae0a12bb8a307fcda01f14782d7a3c343e105897c6ccb2e7297f314",
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/HTTPS-20261116-155802-1622-da2100/截图/02-S2-Cloud-Draft.png": "3d6d21f47d9121cf64a1a70b54c18f32e0eeb2fb5f1ad4b808f7ffb7ce3e2a6c",
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/HTTPS-20261116-155802-1622-da2100/截图/03-S2-Loaded-Draft.png": "71ee432cc50606202359188fab42eb4054f366a1222cc8fb5787e4f6002844ea",
+    "项目相关报告/测试/前端/Android/20261116-S2本人状态/HTTPS-20261116-155802-1622-da2100/截图/01-S2-State-Light.png": "be9854677e739b4a1bb705b3151caa01b0b4962fb2110524671b2334ce925696"
+  }
+}

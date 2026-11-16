@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-15",
+  "scope": "HarmonyOS auth refresh; host injection and unsigned compilation only",
+  "toolchain": {
+    "origin": "user-designated libsdl mirror",
+    "clt": "6.1.1.280",
+    "sdk": "6.1.1.125",
+    "api": 24,
+    "compatibleApi": 12,
+    "hvigor": "6.24.2",
+    "node": "18.20.1"
+  },
+  "host": {
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "existingRules": 25,
+    "coordinatorInjection": 11,
+    "apiInjection": 5,
+    "native": false,
+    "strictModelsCoordinatorDiagnostics": 0
+  },
+  "applicationBuild": {
+    "exitCode": 0,
+    "durationSeconds": 63.67
+  },
+  "testBuild": {
+    "exitCode": 0,
+    "durationSeconds": 46.394,
+    "hypiumMethodsCompiled": 29,
+    "hypiumExecuted": false
+  },
+  "sourceSnapshotChecks": {
+    "Build-2": {
+      "currentAppAndTestSourceMatch": true,
+      "matched": [
+        "entry/src/main/ets/Data/Models.ets",
+        "entry/src/main/ets/Data/Strings.ets",
+        "entry/src/main/ets/Data/AuthCoordinator.ets",
+        "entry/src/main/ets/Data/Api.ets",
+        "entry/src/main/ets/Data/Store.ets",
+        "entry/src/main/ets/Data/NativeServices.ets",
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/main/ets/entryability/EntryAbility.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets"
+      ]
+    },
+    "TestBuild-1": {
+      "currentAppAndTestSourceMatch": true,
+      "matched": [
+        "entry/src/main/ets/Data/Models.ets",
+        "entry/src/main/ets/Data/Strings.ets",
+        "entry/src/main/ets/Data/AuthCoordinator.ets",
+        "entry/src/main/ets/Data/Api.ets",
+        "entry/src/main/ets/Data/Store.ets",
+        "entry/src/main/ets/Data/NativeServices.ets",
+        "entry/src/main/ets/pages/Index.ets",
+        "entry/src/main/ets/entryability/EntryAbility.ets",
+        "entry/src/ohosTest/ets/test/List.test.ets"
+      ]
+    }
+  },
+  "artifacts": [
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-default-unsigned.hap",
+      "bytes": 818905,
+      "sha256": "dd7775def9b34bc78d08446e3b5bcaa5b94aae4c8d00cf08174469a45eb8bc31",
+      "arkBytecodeSha256": "630faca982dd002be791d9a01e127b305dc860c2ba1fa0fb451340560f4f2921",
+      "unsigned": true,
+      "zipCRCValid": true,
+      "authCoordinatorInBytecode": true
+    },
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-ohosTest-unsigned.hap",
+      "bytes": 1382076,
+      "sha256": "986862148d6548288b7fde9013bde5cace0e1d6589a1a5f9e0fd8e115b1345b1",
+      "arkBytecodeSha256": "21716cedeefb55b7e30d042f85a35090da2b410521f94aa5aa54e49bd3b773b1",
+      "unsigned": true,
+      "zipCRCValid": true,
+      "compiledHypiumMethodCount": 29,
+      "compiledHypiumNamesPresent": true,
+      "hypiumExecuted": false
+    }
+  ],
+  "hdc": "[Empty]",
+  "nativeInstallation": false,
+  "nativeHTTPS": false,
+  "nativeAssetStore": false,
+  "nativeRDB": false,
+  "priorHAPBackupManifest": "/Users/jobs/Library/Application Support/JobsIM/Build/Harmony/PreviousHAP-before-auth/Manifest.json",
+  "oldReportsModified": false,
+  "initialFailure": {
+    "SDKScan": "00303168",
+    "resourceLibrary": "11201001 libsec_shared.dylib",
+    "resolution": "root restored original metadata and dylib closure from the same designated mirror ZIP; original failure logs retained"
+  },
+  "boundaries": [
+    "Mocked persistence and transport do not prove native crash, durability or system API behavior",
+    "No 15-minute natural expiry, 30-day idle or 90-day absolute time passage",
+    "Warnings include deprecated platform APIs, exception handling diagnostics, test resource duplication and package version syntax"
+  ]
+}

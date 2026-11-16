@@ -1,0 +1,13 @@
+{
+  "xctestrun": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/SelfState-20261116-135235.xctestrun",
+  "xctestrunSHA256": "20f097bc4f3d776ad3a41cb3efc2a982eff5a0619be26168cd91501fa5628d4c",
+  "appFiles": 108,
+  "testFlag": "JOBS_IM_SYNC_INJECTED_TESTS=1",
+  "testSelectionPending": [
+    "IMAuthoritativeSyncTests:21",
+    "IMAuthCredentialTests:3",
+    "IMAuthCoordinatorTests:9"
+  ],
+  "scope": "injected transport only; not global IMAPIClient blocker; no integration classes selected",
+  "testsExecuted": false
+}

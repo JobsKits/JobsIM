@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "httpAssertions": 91,
+  "publicExperimentalRoutes": true,
+  "capabilityRemainsFalse": true,
+  "sourceEditCancelsAndClearsPackage": true,
+  "sourceRetractionCancelsAndClearsPackage": true,
+  "deviceLogoutCancelsPackage": true,
+  "groupLeaveCancelsPackage": true,
+  "oldGenerationCannotKickRejoinedMember": true,
+  "adminBanAndUnbanDoNotResurrectPackage": true,
+  "scope": "public experimental chat slice; full account export, snapshot consistency and all I remain unaccepted"
+}

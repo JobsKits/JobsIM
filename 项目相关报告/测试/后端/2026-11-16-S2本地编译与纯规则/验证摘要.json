@@ -1,0 +1,231 @@
+{
+  "kind": "scoped_local_compilation_and_rules",
+  "generatedAt": "2026-11-16T03:44:25.303638+00:00",
+  "target": "darwin/arm64",
+  "goVersion": "go version go1.27.4 darwin/arm64",
+  "tools": [
+    {
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "version"
+      ],
+      "exitCode": 0,
+      "log": "00-Go版本-原始.log",
+      "sha256": "c6f1c8d54aedc3afa72560d934397ad6c33b28f1b4d3546ec53176439b2397d5"
+    },
+    {
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "env",
+        "GOOS",
+        "GOARCH",
+        "GOCACHE",
+        "GOMODCACHE"
+      ],
+      "exitCode": 0,
+      "log": "00-Go环境-原始.log",
+      "sha256": "792fe814f6ac340468c90f14a0c087a46db49bf660ba1757911d7a24e945b270"
+    }
+  ],
+  "productionCompile": {
+    "status": "pass",
+    "packages": [
+      "jobsim/backend",
+      "jobsim/backend/cmd/jobsimd",
+      "jobsim/backend/cmd/jobsimops"
+    ],
+    "method": "go test -run ^$ ./... compiles native target without executing tests or service startup",
+    "metadata": "01-生产类型编译.json",
+    "log": "01-生产类型编译-原始.log",
+    "logSHA256": "73536820228a55095c62b11b3d2baf8a37b0b05f7803cfea5ef5ef1e5af8f318"
+  },
+  "localRules": {
+    "status": "pass",
+    "topLevel": {
+      "pass": 16,
+      "fail": 0,
+      "skip": 0
+    },
+    "subtests": {
+      "pass": 11,
+      "fail": 0,
+      "skip": 0
+    },
+    "selectedTopLevelNames": [
+      "TestSyncProtocolSchemaCanonical",
+      "TestSourcePreferencesStrictRequestAndExactCounters",
+      "TestReadPointsPrivateCallerAndStrictMetadata",
+      "TestSelfViewIntentRejectsAmbiguousFields",
+      "TestSelfViewIntentKeepsExactCountersAndExplicitNulls",
+      "TestPrivateStateGatewayUsesSharedResponseFence",
+      "TestSyncSchemaIsBoundWithoutChangingChatIdentity",
+      "TestSyncSchemaOneNeverAllocatesNewPrivateKinds",
+      "TestSyncNewPrivateWireCannotTargetAnotherSource",
+      "TestSelfReadPrefixRetainsHolesAndExactCreationOrder",
+      "TestSelfReadStrictOriginalBodyAndNoSourceOverride",
+      "TestUnreadSummaryCannotSelectArbitrarySourceOrInexactPrefix",
+      "TestDraftReplyAdmissionHasIndependentPurposeAndFrozenQualification",
+      "TestDraftOwnedCipherBindingSurvivesLogicalRebase",
+      "TestDraftFloorDenialCannotBeDowngradedAtSameTuple",
+      "TestDraftReplyFloorKeepsOnlyMatchingOwnedCipher"
+    ],
+    "notSelectedExternalStateTests": [
+      {
+        "name": "TestSyncSchemasPreserve57StateAndRepeatConstraintIDs",
+        "file": "测试/后端/接口/sync_schemas_test.go",
+        "line": 132,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSyncSchemasConflictingBackfillRollsBackAllDDL",
+        "file": "测试/后端/接口/sync_schemas_test.go",
+        "line": 195,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored",
+        "file": "测试/后端/接口/sync_schemas_test.go",
+        "line": 229,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSyncSchemasScopeMismatchMakesNoColumns",
+        "file": "测试/后端/接口/sync_schemas_test.go",
+        "line": 252,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite",
+        "file": "测试/后端/接口/source_preferences_test.go",
+        "line": 101,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSourcePreferencesConcurrentCASAndOriginalFact",
+        "file": "测试/后端/接口/source_preferences_test.go",
+        "line": 133,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSourcePreferencesConcurrentSameNonceRechecksAfterLock",
+        "file": "测试/后端/接口/source_preferences_test.go",
+        "line": 197,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSourcePreferencesEpochResetRetainsOriginalFacts",
+        "file": "测试/后端/接口/source_preferences_test.go",
+        "line": 258,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestReadPointsInputOrderUnknownAndUniformVisibility",
+        "file": "测试/后端/接口/message_read_points_test.go",
+        "line": 162,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestReadPointsNumericCreationScanAndPagination",
+        "file": "测试/后端/接口/message_read_points_test.go",
+        "line": 204,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestReadPointsMalformedMetadataCannotAdvance",
+        "file": "测试/后端/接口/message_read_points_test.go",
+        "line": 229,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSelfReadPersistentHolesOriginalFactsAndLegacy",
+        "file": "测试/后端/接口/self_read_test.go",
+        "line": 189,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSelfReadConcurrentObservationUnionUsesCASRetry",
+        "file": "测试/后端/接口/self_read_test.go",
+        "line": 244,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestSelfReadEpochZeroRebaseAndQualification",
+        "file": "测试/后端/接口/self_read_test.go",
+        "line": 290,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles",
+        "file": "测试/后端/接口/message_read_summary_test.go",
+        "line": 41,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestDraftFloorAbsentViewUnknownStageAndLateInsert",
+        "file": "测试/后端/接口/self_draft_floor_test.go",
+        "line": 196,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestDraftFloorPreservesOwnedBytesAndRejectsOldBackupText",
+        "file": "测试/后端/接口/self_draft_floor_test.go",
+        "line": 255,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestDraftPendingExactFloorRequiredAndImmutableMetadata",
+        "file": "测试/后端/接口/self_draft_floor_test.go",
+        "line": 304,
+        "status": "not_selected_not_executed"
+      },
+      {
+        "name": "TestDraftReferenceRetirementPreservesUnpublishedOwnedText",
+        "file": "测试/后端/接口/self_draft_floor_test.go",
+        "line": 346,
+        "status": "not_selected_not_executed"
+      }
+    ],
+    "notSelectedCount": 19,
+    "overlaySourcesCompiled": 9,
+    "metadata": "02-本地纯规则.json",
+    "log": "02-本地纯规则-原始.jsonl",
+    "logSHA256": "3528a3661c296497a5b6a8bdc8fe24b6d66c2bdb0ef11b78b8ea93e545be4aff",
+    "packageExecutionElapsedSeconds": 0.478
+  },
+  "limits": {
+    "GOMAXPROCS": 2,
+    "packageBuildParallelism": 1,
+    "freeSpaceGateBytes": 4294967296,
+    "perStepTimeoutSeconds": 180,
+    "offlineModuleResolution": true,
+    "removedEnvironmentPrefix": "JOBS_IM_"
+  },
+  "attempts": [
+    {
+      "step": 1,
+      "status": "pass",
+      "elapsedSeconds": 2.991
+    },
+    {
+      "step": 2,
+      "status": "pass",
+      "elapsedSeconds": 4.44
+    }
+  ],
+  "firstAttemptFailures": 0,
+  "sourceRepairs": [],
+  "inputSourceFilesMatched": 80,
+  "sourceManifest": "源SHA.json",
+  "sourceManifestSHA256": "81abebd6ad0d1f10cf7a4270f0f02ca5b275924eeaacfc1972a7ef4986e3c8ec",
+  "freeBytesAfter": 14520356864,
+  "notPerformed": [
+    "PostgreSQL connection or SQL/migration",
+    "real API/HTTP/NATS connection",
+    "service startup/restart",
+    "backup/restore",
+    "new draft route or feature hookup",
+    "client/GUI/device validation",
+    "Windows/Linux cross or native build"
+  ],
+  "fixed57AndOriginalEvidenceUnchanged": true
+}

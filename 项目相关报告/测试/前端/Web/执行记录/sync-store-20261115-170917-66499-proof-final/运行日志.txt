@@ -1,0 +1,12 @@
+PASS single flight and snapshot/cursor atomic install
+PASS missing persisted page refuses install
+PASS late context cannot clear a new device namespace
+PASS old saveView cannot overwrite newer sync state
+PASS unknown delta retains cursor and isolated history
+PASS global clears duplicate holders and masks unrelated forward bodies
+PASS unknown snapshot POST keeps original request through cold reload
+PASS partial staging survives and cold resume re-fetches every page
+PASS capability absent creates no durable sync responsibility
+PASS native IDB abort rolls back view and cursor together
+PASS new local restriction fences late validated snapshot
+PASS two tabs serialize through real WebLocks and one registration identity

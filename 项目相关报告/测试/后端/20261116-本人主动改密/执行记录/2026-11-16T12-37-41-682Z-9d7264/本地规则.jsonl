@@ -1,0 +1,20 @@
+{"Time":"2026-11-16T20:37:44.203668+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T20:37:44.860501+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangeDecodeRejectsAmbiguousOrUnboundedInput"}
+{"Time":"2026-11-16T20:37:44.860569+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangeDecodeRejectsAmbiguousOrUnboundedInput","Output":"=== RUN   TestPasswordChangeDecodeRejectsAmbiguousOrUnboundedInput\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:44.861118+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangeDecodeRejectsAmbiguousOrUnboundedInput","Output":"--- PASS: TestPasswordChangeDecodeRejectsAmbiguousOrUnboundedInput (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:44.861135+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangeDecodeRejectsAmbiguousOrUnboundedInput","Elapsed":0}
+{"Time":"2026-11-16T20:37:44.861157+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangeProofBindsOriginalIntentAndPurpose"}
+{"Time":"2026-11-16T20:37:44.861161+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangeProofBindsOriginalIntentAndPurpose","Output":"=== RUN   TestPasswordChangeProofBindsOriginalIntentAndPurpose\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:44.861184+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangeProofBindsOriginalIntentAndPurpose","Output":"--- PASS: TestPasswordChangeProofBindsOriginalIntentAndPurpose (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:44.861192+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangeProofBindsOriginalIntentAndPurpose","Elapsed":0}
+{"Time":"2026-11-16T20:37:44.861196+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangeSealedReplacementCannotCrossContext"}
+{"Time":"2026-11-16T20:37:44.8612+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangeSealedReplacementCannotCrossContext","Output":"=== RUN   TestPasswordChangeSealedReplacementCannotCrossContext\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:44.861242+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangeSealedReplacementCannotCrossContext","Output":"--- PASS: TestPasswordChangeSealedReplacementCannotCrossContext (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:44.861247+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangeSealedReplacementCannotCrossContext","Elapsed":0}
+{"Time":"2026-11-16T20:37:44.861251+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangeResultIsOutsideMutatingExportDrain"}
+{"Time":"2026-11-16T20:37:44.861253+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangeResultIsOutsideMutatingExportDrain","Output":"=== RUN   TestPasswordChangeResultIsOutsideMutatingExportDrain\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:44.861364+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangeResultIsOutsideMutatingExportDrain","Output":"--- PASS: TestPasswordChangeResultIsOutsideMutatingExportDrain (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:44.861372+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangeResultIsOutsideMutatingExportDrain","Elapsed":0}
+{"Time":"2026-11-16T20:37:44.86139+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:44.862339+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.658s\n"}
+{"Time":"2026-11-16T20:37:44.862355+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.659}

@@ -1,0 +1,117 @@
+{
+  "results": [
+    {
+      "scope": "完整纵向闭环18项",
+      "resultRepositoryPath": "代码/前端/iOS/build/DerivedData/Logs/Test/Test-JobsIM-2026.11.15_01-49-06-+0800.xcresult",
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "A0C093A9-B23A-4C1A-8F88-41DD967F89BB",
+              "deviceName": "JobsIM Instance Trust",
+              "modelName": "iPhone 17 Pro",
+              "osBuildNumber": "24B8117",
+              "osVersion": "27.2",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 18,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1794678703.799,
+        "passedTests": 18,
+        "result": "Passed",
+        "runtimeWarnings": [
+          {
+            "issueType": "Runtime Warning",
+            "message": "This method should not be called on the main thread as it may lead to UI unresponsiveness."
+          },
+          {
+            "issueType": "Runtime Warning",
+            "message": "This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread."
+          }
+        ],
+        "skippedTests": 0,
+        "startTime": 1794678546.013,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - JobsIM",
+        "topInsights": [
+          {
+            "category": "Longest Test Runs",
+            "impact": "58% of duration",
+            "text": "1 longest test run with outlier durations exceeding 2.39s (three standard deviations)"
+          }
+        ],
+        "totalTestCount": 18
+      },
+      "resultInfoSHA256": "262b3d8c3862f8fe48be0ce6076efbd15400e0520e72787236cddb1355dc51f5"
+    },
+    {
+      "scope": "发送提交顺序及只读保护定向4项",
+      "resultRepositoryPath": "代码/前端/iOS/build/DerivedData/Logs/Test/Test-JobsIM-2026.11.15_01-52-55-+0800.xcresult",
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "A0C093A9-B23A-4C1A-8F88-41DD967F89BB",
+              "deviceName": "JobsIM Instance Trust",
+              "modelName": "iPhone 17 Pro",
+              "osBuildNumber": "24B8117",
+              "osVersion": "27.2",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 4,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1794678858.842,
+        "passedTests": 4,
+        "result": "Passed",
+        "runtimeWarnings": [],
+        "skippedTests": 0,
+        "startTime": 1794678775.914,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - JobsIM",
+        "topInsights": [],
+        "totalTestCount": 4
+      },
+      "resultInfoSHA256": "a40346bd3bc8cc89629ab465ee1369e93127fb9087781d35b3af1fac37c4a218"
+    }
+  ],
+  "distinctTests": 20,
+  "note": "18项完整运行通过；随后4项定向运行通过，其中2项为新增测试。不是同一轮20项运行；不代表全I或243项验收。",
+  "simulatorSystemTrust": "全新JobsIM Instance Trust，无安装系统root动作，普通系统信任客户端拒绝本地CA由原生测试验证。",
+  "finalBuild": {
+    "status": "Passed",
+    "logRepositoryPath": "代码/前端/iOS/build/build.log",
+    "postTestChanges": [
+      "前后台轮询门禁",
+      "举报状态本地化",
+      "可选requester资料显示，缺失回退ID",
+      "Swift可读性格式整理"
+    ],
+    "note": "末次小改动以原生构建验证；不把它们写成另外一轮完整20项测试。"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "step": "build",
+  "status": "completed",
+  "exitCode": 0,
+  "seconds": 29.1,
+  "minimumFreeGiB": 13.63,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "build",
+    "-p=1",
+    "-o",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/jobsim",
+    "./cmd/jobsim"
+  ],
+  "GOMAXPROCS": 2,
+  "parallelism": 1
+}

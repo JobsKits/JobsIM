@@ -1,0 +1,3 @@
+PASS parser 部署/WindowsOS/部署运行.ps1/部署运行.ps1
+PASS parser 部署/WindowsOS/停止备份.ps1/停止备份.ps1
+PASS CSharp compile; Win32 not invoked

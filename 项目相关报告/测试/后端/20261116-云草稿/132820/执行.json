@@ -1,0 +1,43 @@
+[
+  {
+    "name": "01-候选构建",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+      "build",
+      "-p",
+      "1",
+      "-o",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/Bin/jobsimd-draft",
+      "./cmd/jobsimd"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 3.409,
+    "freeBytesAfter": 6907949056,
+    "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "02-纯规则",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+      "test",
+      "-json",
+      "-p",
+      "1",
+      "-parallel",
+      "1",
+      "-count",
+      "1",
+      "-overlay",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/20261116-云草稿/132820/测试Overlay.json",
+      "-run",
+      "^Test(SelfDraft.*|DraftReplyAdmissionHasIndependentPurposeAndFrozenQualification|DraftOwnedCipherBindingSurvivesLogicalRebase|DraftFloorDenialCannotBeDowngradedAtSameTuple)$",
+      "-timeout",
+      "170s",
+      "."
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 3.178,
+    "freeBytesAfter": 6825664512,
+    "logSHA256": "26041214840734889c91612e6ed2c98bf6b4d9854bf0a4e8db76c949ab9da9ea"
+  }
+]

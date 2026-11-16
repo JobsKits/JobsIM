@@ -1,0 +1,6 @@
+component=NATS JetStream
+state=stopped-before-archive
+store=Application/JetStream
+config=Secrets/nats.conf
+token=Secrets/nats.token
+restore=offline verification required; not tested by archive listing

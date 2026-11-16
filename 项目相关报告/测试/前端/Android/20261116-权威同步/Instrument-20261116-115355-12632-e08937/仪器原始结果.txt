@@ -1,0 +1,796 @@
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.AuthoritativeSyncTest:
+INSTRUMENTATION_STATUS: test=incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: stream=
+Error in incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart(com.jobs.im.AuthoritativeSyncTest):
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: test=incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: stream=
+Error in sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof(com.jobs.im.AuthoritativeSyncTest):
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: test=sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: stream=
+Error in exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives(com.jobs.im.AuthoritativeSyncTest):
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: test=exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: stream=
+Error in globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval(com.jobs.im.AuthoritativeSyncTest):
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: test=globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: stream=
+Error in auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage(com.jobs.im.AuthoritativeSyncTest):
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: test=auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: stream=
+Error in globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive(com.jobs.im.AuthoritativeSyncTest):
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: test=globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: stream=
+Error in localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody(com.jobs.im.AuthoritativeSyncTest):
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: test=localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.NativeSessionLifecycleTest:
+INSTRUMENTATION_STATUS: test=retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 0.83
+There were 7 failures:
+1) incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart(com.jobs.im.AuthoritativeSyncTest)
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+2) sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof(com.jobs.im.AuthoritativeSyncTest)
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+3) exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives(com.jobs.im.AuthoritativeSyncTest)
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+4) globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval(com.jobs.im.AuthoritativeSyncTest)
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+5) auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage(com.jobs.im.AuthoritativeSyncTest)
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+6) globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive(com.jobs.im.AuthoritativeSyncTest)
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+7) localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody(com.jobs.im.AuthoritativeSyncTest)
+java.lang.IllegalStateException: Cannot return a SupportSQLiteOpenHelper since no SupportSQLiteOpenHelper.Factory was configured with Room.
+	at androidx.room.RoomDatabase.getOpenHelper(RoomDatabase.android.kt:134)
+	at androidx.room.RoomDatabase.internalBeginTransaction(RoomDatabase.android.kt:696)
+	at androidx.room.RoomDatabase.beginTransaction(RoomDatabase.android.kt:691)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invokeSuspend(RoomDatabase.android.kt:2043)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransaction$2.invoke(RoomDatabase.android.kt:2)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invokeSuspend(RoomDatabase.android.kt:2059)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:8)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$withTransactionContext$transactionBlock$1.invoke(RoomDatabase.android.kt:4)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndspatched(Undispatched.kt:66)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
+	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:165)
+	at kotlinx.coroutines.BuildersKt.withContext(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1$1.invokeSuspend(RoomDatabase.android.kt:2088)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at androidx.room.RoomDatabaseKt__RoomDatabase_androidKt$startTransactionCoroutine$2$1.run(RoomDatabase.android.kt:2085)
+	at androidx.room.TransactionExecutor.execute$lambda$1$lambda$0(TransactionExecutor.android.kt:38)
+	at androidx.room.TransactionExecutor$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+FAILURES!!!
+Tests run: 9,  Failures: 7
+
+
+INSTRUMENTATION_CODE: -1

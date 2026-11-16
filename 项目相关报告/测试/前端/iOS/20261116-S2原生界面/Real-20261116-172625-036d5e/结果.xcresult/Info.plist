@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>dateCreated</key>
+	<date>2026-11-16T09:26:26Z</date>
+	<key>directoryImportMode</key>
+	<string>concurrent</string>
+	<key>externalLocations</key>
+	<array/>
+	<key>rootId</key>
+	<dict>
+		<key>hash</key>
+		<string>0~GU4Sv7UQ1sWsUaRg6_t-fuD6swH45c7JycLOR2PnmvsW1aJeRVG1iM9t0fSYoHXgh0nliS3jT4eMTn52Wv5lSg==</string>
+	</dict>
+	<key>storage</key>
+	<dict>
+		<key>backend</key>
+		<string>fileBacked2</string>
+		<key>compression</key>
+		<string>standard</string>
+	</dict>
+	<key>version</key>
+	<dict>
+		<key>major</key>
+		<integer>3</integer>
+		<key>minor</key>
+		<integer>60</integer>
+	</dict>
+</dict>
+</plist>

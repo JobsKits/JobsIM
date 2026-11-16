@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-16T10:42:33.235028+00:00",
+  "authorization": "Parent explicit authorization for these three task-owned rebuildable cache directories only",
+  "noCompilerProcessesBeforeDelete": true,
+  "removed": [
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Index.noindex",
+      "bytesBefore": 60621728,
+      "removed": true
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/ModuleCache.noindex",
+      "bytesBefore": 961053070,
+      "removed": true
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Intermediates.noindex",
+      "bytesBefore": 741370521,
+      "removed": true
+    }
+  ],
+  "freeBefore": 7611604992,
+  "freeAfter": 9517805568,
+  "productBinariesUnchanged": true,
+  "uiRunnerFrozenTreeMatches": true,
+  "protected": "Products, raw reports, SDK, database, Keychain and simulator data were not removed"
+}

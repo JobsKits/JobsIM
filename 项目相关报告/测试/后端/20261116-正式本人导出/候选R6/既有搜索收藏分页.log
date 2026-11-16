@@ -1,0 +1,3 @@
+usage: search_favorites.py [-h] --environment-file ENVIRONMENT_FILE
+                           [--report REPORT]
+search_favorites.py: error: the following arguments are required: --environment-file

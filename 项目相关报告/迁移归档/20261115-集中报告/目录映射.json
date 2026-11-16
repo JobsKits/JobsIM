@@ -1,0 +1,46 @@
+{
+  "directories": [
+    {
+      "old": "测试/CLI/报告",
+      "new": "项目相关报告/测试/CLI",
+      "compatibility": "../../项目相关报告/测试/CLI"
+    },
+    {
+      "old": "测试/前端/Android/报告",
+      "new": "项目相关报告/测试/前端/Android",
+      "compatibility": "../../../项目相关报告/测试/前端/Android"
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告",
+      "new": "项目相关报告/测试/前端/HarmonyOS",
+      "compatibility": "../../../项目相关报告/测试/前端/HarmonyOS"
+    },
+    {
+      "old": "测试/前端/Web/报告",
+      "new": "项目相关报告/测试/前端/Web",
+      "compatibility": "../../../项目相关报告/测试/前端/Web"
+    },
+    {
+      "old": "测试/前端/iOS/报告",
+      "new": "项目相关报告/测试/前端/iOS",
+      "compatibility": "../../../项目相关报告/测试/前端/iOS"
+    },
+    {
+      "old": "测试/后端/报告",
+      "new": "项目相关报告/测试/后端",
+      "compatibility": "../../项目相关报告/测试/后端"
+    },
+    {
+      "old": "测试/部署/MacOS/报告",
+      "new": "项目相关报告/测试/部署/MacOS",
+      "compatibility": "../../../项目相关报告/测试/部署/MacOS"
+    },
+    {
+      "old": "需求/实现进度",
+      "new": "项目相关报告/实现进度",
+      "compatibility": "../项目相关报告/实现进度"
+    }
+  ],
+  "statHistorical": "项目相关报告/项目统计/历史/20261115-迁移前统计.json",
+  "statCompatibility": "工具/统计项目.mjs/报告.json -> 项目相关报告/项目统计/报告.json"
+}

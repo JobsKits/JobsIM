@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:53.819591+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:53.970353+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles"}
+{"Time":"2026-11-16T12:11:53.970414+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles","Output":"=== RUN   TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:54.074734+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles","Output":"--- PASS: TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles (0.10s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:54.074763+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles","Elapsed":0.1}
+{"Time":"2026-11-16T12:11:54.074781+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:54.074904+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.255s\n"}
+{"Time":"2026-11-16T12:11:54.074919+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.255}

@@ -1,0 +1,62 @@
+{
+  "phase": "structured mentions, announcement and original-operation recovery",
+  "status": "passed",
+  "results": [
+    {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_12-21-03-d97e0140.xcresult",
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "runtimeWarnings": []
+    },
+    {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_12-25-08-9cec5c5a.xcresult",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "runtimeWarnings": []
+    }
+  ],
+  "testExecutions": 6,
+  "languages": 10,
+  "localizedKeyCount": 137,
+  "concreteViewControllers": 9,
+  "checks": [
+    "structured selected-member and owner all mention checked by real peer",
+    "literal @ text does not grant structured mention",
+    "original mention snapshot permanently frozen after role rejection",
+    "announcement durable original operation before PUT",
+    "lost successful PUT response and recreated service use only GET original operation",
+    "native UI resumes pending operation without automatic PUT",
+    "favorites do not invalidate announcement contentVersion",
+    "content edit invalidates referenced announcement",
+    "native explicit publish and clear checked from peer version3",
+    "placeholder contrast >=4.5 in light/dark"
+  ],
+  "sourceSHA256": {
+    "代码/前端/iOS/JobsIM/Services/IMAnnouncementService/IMAnnouncementService.swift": "26e309237271aff306ac6e8e3b26153b81b18bc937e8cf0750479ae1cd9abda0",
+    "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift": "1582acebf959abd308f4953c569168fc9cebc6c2726713b87fad5f97f8dba572",
+    "代码/前端/iOS/JobsIM/Services/IMNotifications/IMNotifications.swift": "8afa74014afbacd95969be3621991c565b6f56fe1a2fb7a6ec578bbed5e7a538",
+    "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift": "71d48a21aa26c774f5349dde806472fdf15e75140188ab03764ed37e9e9ffe07",
+    "代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift": "61ef1197c4c1e4e1441c8357c41674b923c180a84c2bb28b2c4629f7f816b386",
+    "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift": "96d901e6b845e5a2bcd07b86e498a79101f0ab138b8a607da10e48623950ce91",
+    "测试/前端/iOS/IMMessageListTests.swift": "b041e3bbc0a0a9533d7402c832d8be4ba22ef2b46aaa2eceb82b33384486d6bb",
+    "测试/前端/iOS/UI/IMMessageListUITests.swift": "8dd2c5cceed74c6fcdf7e3f68c4391326aedf091595b6b9ea2694ee39898b231"
+  },
+  "audit": {
+    "systemConstructors": {
+      "scanned": 64,
+      "issues": 0
+    },
+    "chainAudit": "heuristic findings remain; not claimed clean",
+    "runtimeConsole": "xcresult console log unavailable; summary runtimeWarnings empty only"
+  },
+  "notClaimed": [
+    "old 30/4 rerun",
+    "physical device",
+    "iPad",
+    "all themes and ten-language UI matrix",
+    "complete I",
+    "automatic retry of announcement operation missing on server"
+  ]
+}

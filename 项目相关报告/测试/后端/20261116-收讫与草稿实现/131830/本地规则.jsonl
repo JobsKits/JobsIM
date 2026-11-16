@@ -1,0 +1,20 @@
+{"Time":"2026-11-16T13:18:33.31376+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T13:18:33.656907+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReceiptPolicyRequiresExactNativeBuildAndEvidence"}
+{"Time":"2026-11-16T13:18:33.657162+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPolicyRequiresExactNativeBuildAndEvidence","Output":"=== RUN   TestReceiptPolicyRequiresExactNativeBuildAndEvidence\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:18:33.65719+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPolicyRequiresExactNativeBuildAndEvidence","Output":"--- PASS: TestReceiptPolicyRequiresExactNativeBuildAndEvidence (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:18:33.657196+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReceiptPolicyRequiresExactNativeBuildAndEvidence","Elapsed":0}
+{"Time":"2026-11-16T13:18:33.657206+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReceiptPolicyFileIsBoundedAndStrict"}
+{"Time":"2026-11-16T13:18:33.65721+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPolicyFileIsBoundedAndStrict","Output":"=== RUN   TestReceiptPolicyFileIsBoundedAndStrict\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:18:33.658584+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptPolicyFileIsBoundedAndStrict","Output":"--- PASS: TestReceiptPolicyFileIsBoundedAndStrict (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:18:33.658596+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReceiptPolicyFileIsBoundedAndStrict","Elapsed":0}
+{"Time":"2026-11-16T13:18:33.6586+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReceiptProofBindsExactContentStoreAndRestoreEpoch"}
+{"Time":"2026-11-16T13:18:33.658603+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptProofBindsExactContentStoreAndRestoreEpoch","Output":"=== RUN   TestReceiptProofBindsExactContentStoreAndRestoreEpoch\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:18:33.658683+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptProofBindsExactContentStoreAndRestoreEpoch","Output":"--- PASS: TestReceiptProofBindsExactContentStoreAndRestoreEpoch (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:18:33.658692+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReceiptProofBindsExactContentStoreAndRestoreEpoch","Elapsed":0}
+{"Time":"2026-11-16T13:18:33.658696+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReceiptRequestsRejectTailUnknownFieldsAndNumericEpoch"}
+{"Time":"2026-11-16T13:18:33.6587+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptRequestsRejectTailUnknownFieldsAndNumericEpoch","Output":"=== RUN   TestReceiptRequestsRejectTailUnknownFieldsAndNumericEpoch\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:18:33.658769+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptRequestsRejectTailUnknownFieldsAndNumericEpoch","Output":"--- PASS: TestReceiptRequestsRejectTailUnknownFieldsAndNumericEpoch (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:18:33.658774+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReceiptRequestsRejectTailUnknownFieldsAndNumericEpoch","Elapsed":0}
+{"Time":"2026-11-16T13:18:33.658777+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:18:33.659243+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.345s\n"}
+{"Time":"2026-11-16T13:18:33.659254+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.345}

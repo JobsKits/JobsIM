@@ -1,0 +1,47 @@
+ASCII源码快照=/Users/jobs/Library/Caches/JobsIM/Toolchains/Harmony/26.0.0.865/Workspaces/Build.dndfC7
+ohpm INFO: MetaDataFetcher fetching meta info of package '@ohos/hypium' from https://ohpm.openharmony.cn/ohpm/
+ohpm INFO: fetch meta info of package '@ohos/hypium' success https://ohpm.openharmony.cn/ohpm/@ohos/hypium
+ohpm INFO: fetch package done 1 @ohos/hypium from https://ohpm.openharmony.cn/ohpm/@ohos/hypium/-/hypium-1.0.21.har
+[32minstall completed in 0s 635ms[39m
+> hvigor [31mERROR: 00303137 Configuration Error[31m
+Error Message: The hvigor depends on the npmrc file. No npmrc file is matched in the current user folder. Configure the npmrc file first.[31m
+
+* Try the following: [31m
+  > Configure the .npmrc file in the user directory.[39m
+Installing pnpm@10.28.2...
+
+added 1 package, and audited 2 packages in 10s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Pnpm install success.
+> hvigor [31mERROR: 00303137 Configuration Error[31m
+Error Message: The hvigor depends on the npmrc file. No npmrc file is matched in the current user folder. Configure the npmrc file first.[31m
+
+* Try the following: [31m
+  > Configure the .npmrc file in the user directory.[39m
+Installing dependencies...
+ ERR_PNPM_FETCH_404  GET https://registry.npmjs.org/@ohos%2Fhvigor-ohos-plugin: Not Found - 404
+
+This error happened while installing a direct dependency of /Users/jobs/.hvigor/project_caches/a8af5a454996ba021bdc202f89cb9209/workspace
+
+@ohos/hvigor-ohos-plugin is not in the npm registry, or you have no permission to fetch it.
+
+No authorization header was set for the request.
+> hvigor [31mERROR: 00308019 Operation Error[31m
+Error Message: /Users/jobs/.hvigor/wrapper/tools/node_modules/.bin/pnpm install execute failed. More details:
+
+ ERR_PNPM_FETCH_404  GET https://registry.npmjs.org/@ohos%2Fhvigor-ohos-plugin: Not Found - 404
+This error happened while installing a direct dependency of /Users/jobs/.hvigor/project_caches/a8af5a454996ba021bdc202f89cb9209/workspace
+@ohos/hvigor-ohos-plugin is not in the npm registry, or you have no permission to fetch it.
+No authorization header was set for the request.[31m
+
+* Try the following: [31m
+  > Check whether the failed package exists in the npm repository.[39m

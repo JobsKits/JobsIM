@@ -1,0 +1,49 @@
+{
+  "status": "failed",
+  "startedAt": "2026-11-16T07:22:24.390434+00:00",
+  "serial": "emulator-5582",
+  "suite": "com.jobs.im.NativeSelfStateHttpsTest",
+  "realHTTPS": true,
+  "apiTestsStarted": true,
+  "productSHA256": "5774b93a9c5c5d930cc682d91d55336addb414f53a8374cfb65dcd2106a6d13d",
+  "runnerSHA256": "222119a063a5908fbb94fc40b36862c42acf25b8a5cdb473e0d9a9023910d7d6",
+  "clockInjection": false,
+  "publicFixture": {
+    "serverURL": "https://127.0.0.1:54443",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "caSHA256": "68a1d8a9b39e99a9a3f9fcd6389cefa4df78083857952689582cc7f400e69e7e",
+    "binarySHA256": "dea37a66395b0b2c503ba934bafef327d3d87b407c73a10595e770f46948a2cd"
+  },
+  "ownedEmulatorPID": 83717,
+  "installedSHA256": {
+    "app-debug.apk": "5774b93a9c5c5d930cc682d91d55336addb414f53a8374cfb65dcd2106a6d13d",
+    "app-debug-androidTest.apk": "60ee092fbd0b32314f1264f191a069ef4210ad3416e41eed9bbee7e9216e3dcc"
+  },
+  "outcomes": [
+    {
+      "test": "nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps",
+      "class": "com.jobs.im.NativeSelfStateHttpsTest",
+      "code": -2
+    },
+    {
+      "test": "realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue",
+      "class": "com.jobs.im.NativeSelfStateHttpsTest",
+      "code": 0
+    },
+    {
+      "test": "realDraftLossUsesReadonlyOriginalBodyAndRetiredSourceKeepsIndependentText",
+      "class": "com.jobs.im.NativeSelfStateHttpsTest",
+      "code": 0
+    }
+  ],
+  "totals": {
+    "tests": 3,
+    "passed": 2,
+    "failedOrSkipped": 1
+  },
+  "error": "NATIVE_SELF_CASES_DID_NOT_ALL_PASS",
+  "partialScreenshotsPulled": true,
+  "ownedFamiliesConfirmedClosed": true,
+  "finishedAt": "2026-11-16T07:23:45.160319+00:00"
+}

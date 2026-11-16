@@ -1,0 +1,66 @@
+{
+  "at": "2026-11-16T07:22:43.114Z",
+  "scope": "Real Chrome IndexedDB/WebLocks with explicit simulated API; /api requests blocked; not backend HTTPS or qualified ACK",
+  "status": "passed",
+  "passedGroups": 12,
+  "checks": [
+    {
+      "name": "single flight and snapshot/cursor atomic install",
+      "status": "passed"
+    },
+    {
+      "name": "missing persisted page refuses install",
+      "status": "passed"
+    },
+    {
+      "name": "late context cannot clear a new device namespace",
+      "status": "passed"
+    },
+    {
+      "name": "old saveView cannot overwrite newer sync state",
+      "status": "passed"
+    },
+    {
+      "name": "unknown delta retains cursor and isolated history",
+      "status": "passed"
+    },
+    {
+      "name": "global clears duplicate holders and masks unrelated forward bodies",
+      "status": "passed"
+    },
+    {
+      "name": "unknown snapshot POST keeps original request through cold reload",
+      "status": "passed"
+    },
+    {
+      "name": "partial staging survives and cold resume re-fetches every page",
+      "status": "passed"
+    },
+    {
+      "name": "capability absent creates no durable sync responsibility",
+      "status": "passed"
+    },
+    {
+      "name": "native IDB abort rolls back view and cursor together",
+      "status": "passed"
+    },
+    {
+      "name": "new local restriction fences late validated snapshot",
+      "status": "passed"
+    },
+    {
+      "name": "two tabs serialize through real WebLocks and one registration identity",
+      "status": "passed"
+    }
+  ],
+  "sourceSHA256": {
+    "代码/前端/Web/Src/SyncStore.ts": "c510bf5d7abafcd3e2ce830317c6ec60cb9d3ace2718f09d8f63603170c4ce05",
+    "代码/前端/Web/Src/SyncEngine.ts": "3998511d10cf14a406a6d8c5d6e4818ac3179f8da1ef0efdf34fd9b076e0bfe5",
+    "代码/前端/Web/Src/SyncProtocol.ts": "9f9dc0866de08fc5f2e39dd5c5bbc16e520537b2f210fa6d8570acb30783ddc6",
+    "代码/前端/Web/Src/SyncView.ts": "e63ad67510f0138be9c96243afd2bdb73848a78cb14352c17ab362b70eff33d9",
+    "代码/前端/Web/Src/storage.ts": "a1f821dcbce3d65347a7dc28644aa681e916c00685e001c50fdc78006f4b7d2b",
+    "代码/前端/Web/Src/types.ts": "cab4d98ca58a2c6cb78ccc83122a54878061bb160e70f035e277d31646d4d340",
+    "代码/前端/Web/Src/forward.ts": "688de48c837608a7f36f1452fe79155d819946f97499e8bead0e7872ebfa9e0d",
+    "测试/前端/Web/sync-store.cjs/sync-store.cjs": "44bc2772f44de1c8b9bfd3e9486ba37285288d5f05b00d79a22c7494656106d6"
+  }
+}

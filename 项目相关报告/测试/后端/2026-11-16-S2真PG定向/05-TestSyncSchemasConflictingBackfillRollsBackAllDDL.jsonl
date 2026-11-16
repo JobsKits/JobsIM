@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:41.583497+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:41.828132+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSyncSchemasConflictingBackfillRollsBackAllDDL"}
+{"Time":"2026-11-16T12:11:41.828223+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSchemasConflictingBackfillRollsBackAllDDL","Output":"=== RUN   TestSyncSchemasConflictingBackfillRollsBackAllDDL\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:42.454665+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSchemasConflictingBackfillRollsBackAllDDL","Output":"--- PASS: TestSyncSchemasConflictingBackfillRollsBackAllDDL (0.63s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:42.454704+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSyncSchemasConflictingBackfillRollsBackAllDDL","Elapsed":0.63}
+{"Time":"2026-11-16T12:11:42.454725+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:42.456548+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.866s\n"}
+{"Time":"2026-11-16T12:11:42.456573+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.873}

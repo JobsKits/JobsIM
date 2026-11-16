@@ -1,0 +1,117 @@
+Static source route literals for review, not a registered endpoint count; dynamic loops also read in owning modules.
+代码/后端/Go/admin_identity.go:28 h("GET /api/admin/users", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/admin_identity.go:55 h("PATCH /api/admin/users/{id}/state", a.adminAccountState)
+代码/后端/Go/admin_identity.go:56 h("POST /api/admin/users/{id}/reset-grants", a.adminResetGrant)
+代码/后端/Go/admin_identity.go:57 h("GET /api/admin/operations/{id}", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/avatar.go:70 h("POST /api/me/avatar", a.publishAvatar)
+代码/后端/Go/avatar.go:71 h("GET /api/me/avatar/operations/{id}", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/avatar_media.go:31 h("GET /api/avatars/{id}", a.downloadAvatar)
+代码/后端/Go/control.go:60 h("GET /api/bootstrap", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/control.go:72 h("GET /api/capabilities", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/control.go:116 h("PUT /api/capabilities/{name}", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/control.go:221 h("GET /api/admin/status", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/conversation.go:38 h("GET /api/conversations", a.conversations)
+代码/后端/Go/conversation.go:39 h("POST /api/conversations", a.createConversation)
+代码/后端/Go/conversation.go:40 h("GET /api/conversations/{id}/members", a.members)
+代码/后端/Go/conversation.go:41 h("POST /api/conversations/{id}/members", a.addMember)
+代码/后端/Go/conversation.go:42 h("DELETE /api/conversations/{id}/members/{userId}", a.removeMember)
+代码/后端/Go/conversation.go:43 h("PATCH /api/conversations/{id}", a.updateConversation)
+代码/后端/Go/directory.go:92 h("PATCH /api/me", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/directory.go:142 h("GET /api/contacts", a.contacts)
+代码/后端/Go/directory.go:143 h("GET /api/contacts/{userId}/relationship", a.contactRelationship)
+代码/后端/Go/directory.go:144 h("POST /api/contacts/requests", a.contactRequest)
+代码/后端/Go/directory.go:145 h("POST /api/contacts/requests/{id}/accept", func(w http.ResponseWriter, r *http.Request) error { return a.resolveContact(w, r, true) })
+代码/后端/Go/directory.go:146 h("POST /api/contacts/requests/{id}/reject", func(w http.ResponseWriter, r *http.Request) error { return a.resolveContact(w, r, false) })
+代码/后端/Go/directory.go:147 h("DELETE /api/contacts/{userId}", a.removeContact)
+代码/后端/Go/directory.go:148 h("PUT /api/blocks/{userId}", func(w http.ResponseWriter, r *http.Request) error { return a.block(w, r, true) })
+代码/后端/Go/directory.go:149 h("DELETE /api/blocks/{userId}", func(w http.ResponseWriter, r *http.Request) error { return a.block(w, r, false) })
+代码/后端/Go/directory.go:150 h("POST /api/contacts/{userId}/reopen", a.reopenRequestGate)
+代码/后端/Go/export.go:107 h("POST /api/me/exports", a.createExport)
+代码/后端/Go/export.go:108 h("GET /api/me/exports/{id}", a.exportStatus)
+代码/后端/Go/export.go:109 h("POST /api/me/exports/{id}/cancel", a.cancelOwnExport)
+代码/后端/Go/export.go:110 h("POST /api/me/exports/{id}/download-ticket", a.exportDownloadTicket)
+代码/后端/Go/export.go:111 h("GET /api/me/exports/{id}/download", a.downloadExport)
+代码/后端/Go/forward_media.go:96 h("GET /api/messages/{id}/attachment", a.forwardAttachment)
+代码/后端/Go/identity.go:77 h("POST /api/auth/register", a.register)
+代码/后端/Go/identity.go:78 h("POST /api/auth/login", a.login)
+代码/后端/Go/identity.go:81 h("GET /api/me", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/identity.go:94 h("GET /api/auth/context", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/identity.go:116 h("GET /api/me/export", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/identity.go:132 h("GET /api/users", a.users)
+代码/后端/Go/identity.go:133 h("GET /api/auth/csrf", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/identity.go:140 h("POST /api/auth/confirm", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/identity.go:150 h("POST /api/auth/logout", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/identity.go:174 h("GET /api/auth/sessions", a.sessions)
+代码/后端/Go/identity.go:175 h("DELETE /api/auth/sessions/{deviceId}", a.revokeDevice)
+代码/后端/Go/identity.go:176 h("POST /api/auth/recovery-codes", a.recoveryCodes)
+代码/后端/Go/identity.go:177 h("POST /api/auth/recover", a.recoverAccount)
+代码/后端/Go/identity.go:178 h("POST /api/auth/reset-password", func(w http.ResponseWriter, r *http.Request) error { return a.recoverWithCredential(w, r, true) })
+代码/后端/Go/media.go:17 h("POST /api/media", a.upload)
+代码/后端/Go/media.go:18 h("GET /api/media/{id}", a.download)
+代码/后端/Go/mentions_announcements.go:181 h("GET /api/conversations/{id}/announcement", a.getAnnouncement)
+代码/后端/Go/mentions_announcements.go:182 h("PUT /api/conversations/{id}/announcement", func(w http.ResponseWriter, r *http.Request) error { return a.writeAnnouncement(w, r, false) })
+代码/后端/Go/mentions_announcements.go:183 h("DELETE /api/conversations/{id}/announcement", func(w http.ResponseWriter, r *http.Request) error { return a.writeAnnouncement(w, r, true) })
+代码/后端/Go/mentions_announcements.go:184 h("GET /api/conversations/{id}/announcement/operations/{requestId}", a.getAnnouncementOperation)
+代码/后端/Go/message.go:97 h("GET /api/conversations/{id}/messages", a.history)
+代码/后端/Go/message.go:98 h("POST /api/conversations/{id}/messages", a.sendMessage)
+代码/后端/Go/message.go:99 h("POST /api/conversations/{id}/message-results", a.messageResult)
+代码/后端/Go/message.go:100 h("PATCH /api/messages/{id}", a.editMessage)
+代码/后端/Go/message.go:101 h("DELETE /api/messages/{id}", a.deleteMessage)
+代码/后端/Go/message.go:102 h("GET /api/search", a.search)
+代码/后端/Go/message.go:103 h("POST /api/messages/{id}/reactions", func(w http.ResponseWriter, r *http.Request) error { return a.react(w, r, true) })
+代码/后端/Go/message.go:104 h("DELETE /api/messages/{id}/reactions/{emoji}", func(w http.ResponseWriter, r *http.Request) error { return a.react(w, r, false) })
+代码/后端/Go/message.go:107 h("PUT /api/messages/{id}/"+k, func(w http.ResponseWriter, r *http.Request) error { return a.markMessage(w, r, k, true) })
+代码/后端/Go/message.go:108 h("DELETE /api/messages/{id}/"+k, func(w http.ResponseWriter, r *http.Request) error { return a.markMessage(w, r, k, false) })
+代码/后端/Go/mfa.go:147 h("POST /api/auth/step-up", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/personal_export.go:94 h("POST /api/me/data-exports", a.createPersonalExport)
+代码/后端/Go/personal_export.go:95 h("POST /api/me/data-export-results", a.personalExportResult)
+代码/后端/Go/personal_export.go:96 h("GET /api/me/data-exports/{id}", a.personalExportStatus)
+代码/后端/Go/personal_export.go:97 h("POST /api/me/data-exports/{id}/cancel", a.cancelPersonalExport)
+代码/后端/Go/personal_export.go:98 h("POST /api/me/data-exports/{id}/download-ticket", a.personalExportTicket)
+代码/后端/Go/personal_export.go:99 h("GET /api/me/data-exports/{id}/download", a.downloadPersonalExport)
+代码/后端/Go/reports.go:39 h("POST /api/reports", a.createReport)
+代码/后端/Go/reports.go:40 h("GET /api/reports", func(w http.ResponseWriter, r *http.Request) error { return a.listReports(w, r, false) })
+代码/后端/Go/reports.go:41 h("GET /api/admin/reports", func(w http.ResponseWriter, r *http.Request) error { return a.listReports(w, r, true) })
+代码/后端/Go/reports.go:42 h("PATCH /api/admin/reports/{id}", a.resolveReport)
+代码/后端/Go/reports.go:43 h("GET /api/admin/report-operations/{id}", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/search.go:32 h("GET /api/favorites", func(w http.ResponseWriter, r *http.Request) error { return a.listReadableMessages(w, r, true) })
+代码/后端/Go/search.go:33 h("GET /api/messages/{id}", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/search.go:50 h("GET /api/conversations/{id}", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/self_draft.go:598 h("GET /api/conversations/{id}/draft", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/self_draft.go:634 h("POST /api/conversations/{id}/draft-results", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/self_read.go:192 handle("GET /api/conversations/{id}/read", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/self_read.go:205 pattern := "PUT /api/conversations/{id}/read"
+代码/后端/Go/self_read.go:207 pattern = "POST /api/conversations/{id}/read-results"
+代码/后端/Go/self_views.go:142 h("GET /api/conversations/{id}/view", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/self_views.go:161 pattern := "PATCH /api/conversations/{id}/view"
+代码/后端/Go/self_views.go:163 pattern = "POST /api/conversations/{id}/view-results"
+代码/后端/Go/send_admission.go:113 shared := a.Role == "message" && pattern == "POST /api/conversations/{id}/messages"
+代码/后端/Go/send_admission.go:118 shared = shared || a.Role == "message" && pattern == "POST /api/conversations/{id}/message-results"
+代码/后端/Go/send_admission.go:119 shared = shared || a.Role == "conversation" && (pattern == "GET /api/conversations/{id}/announcement" || pattern == "GET /api/conversations/{id}/announcement/operations/{requestId}")
+代码/后端/Go/send_admission.go:122 "GET /api/messages/{id}", "GET /api/conversations/{id}/messages", "GET /api/search", "GET /api/favorites", "GET /api/messages/{id}/attachment",
+代码/后端/Go/send_admission.go:123 "POST /api/messages/{id}/reactions", "DELETE /api/messages/{id}/reactions/{emoji}",
+代码/后端/Go/send_admission.go:124 "PUT /api/messages/{id}/pin", "DELETE /api/messages/{id}/pin", "PUT /api/messages/{id}/favorite", "DELETE /api/messages/{id}/favorite",
+代码/后端/Go/send_admission.go:130 exclusive = exclusive || a.Role == "identity" && (pattern == "POST /api/auth/refresh" || pattern == "POST /api/auth/reauthenticate")
+代码/后端/Go/send_admission.go:131 exclusive = exclusive || a.Role == "directory" && (strings.HasPrefix(pattern, "PUT /api/blocks/") || strings.HasPrefix(pattern, "DELETE /api/blocks/") || strings.HasPrefix(pattern, "DELETE /api/contacts/") || strings.HasSuffix(pattern, "/accept"))
+代码/后端/Go/send_admission.go:132 exclusive = exclusive || a.Role == "message" && (pattern == "PATCH /api/messages/{id}" || pattern == "DELETE /api/messages/{id}" || pattern == "POST /internal/forwards/revoke-principal" || pattern == "POST /internal/forwards/revoke-source")
+代码/后端/Go/send_admission.go:134 exclusive = exclusive || a.Role == "conversation" && (strings.HasPrefix(pattern, "POST /api/conversations") || strings.HasPrefix(pattern, "PUT /api/conversations") || strings.HasPrefix(pattern, "PATCH /api/conversations") || strings.HasPrefix(pattern, "DELETE /api/conversations") || pattern == "POST /internal/owner-unavailable")
+代码/后端/Go/server.go:261 handle("GET /api/health", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/session_refresh.go:21 h("GET /api/auth/refresh-context", a.browserRefreshContext)
+代码/后端/Go/session_refresh.go:22 h("POST /api/auth/refresh", a.refreshSession)
+代码/后端/Go/session_refresh.go:23 h("POST /api/auth/reauthenticate", a.login)
+代码/后端/Go/source_preferences.go:67 h("GET /api/me/preferences", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/source_preferences.go:79 h("PATCH /api/me/preferences", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/source_preferences.go:95 h("GET /api/me/preferences/operations/{requestId}", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/source_preferences.go:107 h("POST /api/me/preferences-results", func(w http.ResponseWriter, r *http.Request) error {
+代码/后端/Go/sync_receipts.go:73 h("PUT /api/sync/storage", a.declareSyncStorage)
+代码/后端/Go/sync_receipts.go:74 h("GET /api/sync/storage", a.getSyncStorage)
+代码/后端/Go/sync_receipts.go:75 h("POST /api/sync/receipt-challenges", a.syncReceiptChallenge)
+代码/后端/Go/sync_receipts.go:76 h("POST /api/sync/receipts", a.submitSyncReceipt)
+代码/后端/Go/sync_receipts.go:77 h("POST /api/sync/receipt-results", a.syncReceiptResults)
+代码/后端/Go/sync_service.go:64 h("PUT /api/sync/device", a.syncRegister)
+代码/后端/Go/sync_service.go:65 h("GET /api/sync/context", a.syncContext)
+代码/后端/Go/sync_service.go:66 h("POST /api/sync/snapshots", a.syncCreateSnapshot)
+代码/后端/Go/sync_service.go:67 h("GET /api/sync/snapshots/{id}/pages/{page}", a.syncSnapshotPage)
+代码/后端/Go/sync_service.go:68 h("POST /api/sync/snapshots/{id}/validate", a.syncValidateSnapshot)
+代码/后端/Go/sync_service.go:69 h("GET /api/sync/changes", a.syncChanges)
+代码/后端/Go/sync_service.go:70 h("POST /api/sync/classifications", a.syncClassifications)

@@ -1,0 +1,26 @@
+{
+  "targetOS": "windows",
+  "targetArch": "amd64",
+  "CGO_ENABLED": 0,
+  "GOMAXPROCS": 2,
+  "parallelism": 1,
+  "status": "completed",
+  "exitCode": 0,
+  "seconds": 59.27,
+  "minimumFreeGiB": 9.95,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "build",
+    "-p=1",
+    "-o",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/Cross-20261116-123709-093a23/jobsim-windows-amd64.exe",
+    "./cmd/jobsim"
+  ],
+  "executedTargetBinary": false,
+  "nativeVaultTested": false,
+  "APIUsed": false,
+  "binarySHA256": "45ad1e495b7f2cb13599dd3e96b8c6d97baf7e797900ff9223b39e7cca700d88",
+  "bytes": 17580544,
+  "fileDescription": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/Cross-20261116-123709-093a23/jobsim-windows-amd64.exe: PE32+ executable (console) x86-64, for MS Windows",
+  "buildInfoExitCode": 0
+}

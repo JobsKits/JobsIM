@@ -1,0 +1,14 @@
+{
+  "status": "passed_resume",
+  "originalFailurePreserved": "prepared-中断续跑.json",
+  "failureWasHostAttributeErrorAfterRealAppRestart": true,
+  "exactUniqueAppCommandPIDRecoveredBeforeProbing": true,
+  "realOriginalPreparedWriteNotResent": true,
+  "onlyReadOnlyOriginalBodyLookupUsedOnResume": true,
+  "originalOperationAppliedByWorker": true,
+  "sameDeploymentEpochCA": true,
+  "originalFactCount": 1,
+  "httpChecks": 3,
+  "semanticAssertions": 1,
+  "binarySHA256": "e69e51d2f0620752005df9ee8656fc6ce77511ae1939d994707615b63f2e7214"
+}

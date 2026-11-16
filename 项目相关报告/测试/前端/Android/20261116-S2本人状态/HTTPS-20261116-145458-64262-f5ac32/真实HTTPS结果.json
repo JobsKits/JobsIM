@@ -1,0 +1,49 @@
+{
+  "status": "failed",
+  "startedAt": "2026-11-16T06:54:58.831482+00:00",
+  "serial": "emulator-5582",
+  "suite": "com.jobs.im.NativeSelfStateHttpsTest",
+  "realHTTPS": true,
+  "apiTestsStarted": true,
+  "productSHA256": "a135ef54037e571f8903a0acc1821fe9e8aad1088212631872000a01d513df59",
+  "runnerSHA256": "3c37ddd3486413b0e8186bd57524908d42ff7ccd7f2e6cbf8fcb1c0921a9eda7",
+  "clockInjection": false,
+  "publicFixture": {
+    "serverURL": "https://127.0.0.1:54443",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "caSHA256": "68a1d8a9b39e99a9a3f9fcd6389cefa4df78083857952689582cc7f400e69e7e",
+    "binarySHA256": "dea37a66395b0b2c503ba934bafef327d3d87b407c73a10595e770f46948a2cd"
+  },
+  "ownedEmulatorPID": 60026,
+  "productInstallation": "Package absent; installed same fixed product bytes without wipe/uninstall/clear; previous app data and Keystore recovery unverified",
+  "installedSHA256": {
+    "app-debug.apk": "a135ef54037e571f8903a0acc1821fe9e8aad1088212631872000a01d513df59",
+    "app-debug-androidTest.apk": "444d732351bced95863dec22f78173f7d1de143ac74bbb9d43afc91dfddff973"
+  },
+  "outcomes": [
+    {
+      "test": "nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps",
+      "class": "com.jobs.im.NativeSelfStateHttpsTest",
+      "code": -2
+    },
+    {
+      "test": "realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue",
+      "class": "com.jobs.im.NativeSelfStateHttpsTest",
+      "code": -2
+    },
+    {
+      "test": "realDraftLossUsesReadonlyOriginalBodyAndRetiredSourceKeepsIndependentText",
+      "class": "com.jobs.im.NativeSelfStateHttpsTest",
+      "code": 0
+    }
+  ],
+  "totals": {
+    "tests": 3,
+    "passed": 1,
+    "failedOrSkipped": 2
+  },
+  "error": "NATIVE_SELF_CASES_DID_NOT_ALL_PASS",
+  "ownedFamiliesConfirmedClosed": true,
+  "finishedAt": "2026-11-16T06:56:14.670620+00:00"
+}

@@ -1,0 +1,72 @@
+# JobsIM 后端测试
+
+![Jobs出品，必属精品](https://picsum.photos/1500/400)
+
+<!-- jobs-toc:start -->
+<!-- jobs-toc:source {"v":2,"token":"[toc]"} -->
+<details>
+<summary>📚 目录（点击展开 / 收起）</summary>
+
+- [前言](#jobs-toc-heading-1)
+- [一、离线单元测试与编译](#jobs-toc-heading-2)
+- [二、真实 HTTP、数据库与恢复](#jobs-toc-heading-3)
+- [三、结果的边界](#jobs-toc-heading-4)
+
+</details>
+<!-- jobs-toc:end -->
+
+---
+
+## <span id="jobs-toc-heading-1" data-jobs-toc="v2">前言</span><!-- jobs-toc:heading-end -->
+
+测试代码独立放在本目录，生产 Go 工程不复制测试文件。当前结果覆盖已经运行的基础切片；单一现行需求中的完整 I、跨故障域强保护及全量功能验收仍须继续完成，不以这里的通过数替代产品验收。
+
+## <span id="jobs-toc-heading-2" data-jobs-toc="v2">一、离线单元测试与编译</span><!-- jobs-toc:heading-end -->
+
+从仓库根目录运行 `python3 测试/后端/运行测试.py --go <Go可执行文件>`。运行器用临时 Go overlay 挂载 [安全测试](./security_test.go)与[头像编解码测试](./接口/avatar_codec_test.go)，校验用户名／密码规范、Argon2id参数边界、凭据加密用途、TOTP向量、管理员载荷规范化、非法路径不能污染恢复日志、认证归档截断／换序／尾随拒绝及真实头像规范化；随后兼容运行 CLI 外置测试。不会将测试写入工程源目录。
+
+显式设置`JOBS_IM_MIGRATION_TEST_ENV=<私密环境文件>`才运行[空库迁移测试](./接口/fresh_migrations_test.go)，创建随机专用业务／journal数据库、验证全部角色从空库迁移及幂等重跑并只清理本测试数据库。显式设置`JOBS_IM_EXPORT_TEST_ENV=<独立协议域环境文件>`才运行[导出协议／文件栅栏测试](./接口/export_fence_test.go)，用真实PG、TLS测试角色、1.68MB附件和文件锁验证取消后无晚写复活；该私有harness不与运行中的实验worker共用业务数据库。
+
+[发送围栏外置测试](./接口/send_admission_test.go)由同一运行器挂载。常规执行验证实际子进程持锁、等待取消、kill后内核释放及不同StateDir证明拒绝；设置`JOBS_IM_ADMISSION_TEST_ENV=<私密测试环境JSON>`后，还核PG未决／提交／回滚原事实、真实带标记进程崩溃后恢复、异库标记保留及备份恢复门禁，并创建8个独立角色数据库验证退重入旧快照拒绝和新意图成功，结束关闭并删除本轮独占数据库。[结构化证据](./报告/发送围栏与未知提交实测.json)仅证明MacOS本地文件系统与真实PG，不代替Linux／Windows原生或跨主机验收。
+
+[转发网关外置测试](./接口/forward_gateway_test.go)同样通过overlay挂载。常规执行核公开路径持锁模式；显式`JOBS_IM_FORWARD_JSON_FIXTURE=<独立转发域私密夹具>`才连真实角色HTTP／PG验证history／search／favorites／announcement／message-results整个JSON写出期间仍持围栏、客户端取消排空、伪造内部证明不能跳锁，以及外层SH之后出现marker不触发内部嵌套提升自锁。另一项仅进程内注入principal RPC503，验证精确GET／history／结果200空占位、搜索收藏503及同version精确GET恢复，不冒充部署服务真实故障；对应[临时投影证据](./报告/转发临时资格投影恢复实测.json)。私密夹具生成与真实慢TLS客户端步骤见[持锁专项](./接口/forward_fences.py/README.md)。
+
+后端工程独立执行 `go build ./...` 与 `go vet ./...`；依赖由工程 `go.mod`／`go.sum` 锁定并保留校验，不要求全局修改 Go 环境。
+
+## <span id="jobs-toc-heading-3" data-jobs-toc="v2">二、真实 HTTP、数据库与恢复</span><!-- jobs-toc:heading-end -->
+
+以下测试会创建带随机后缀的专用账户与数据，必须指向受控测试实例。HTTPS 信任显式测试 CA，禁止关闭证书验证。
+
+| 入口 | 执行与范围 | 已记录证据 |
+| --- | --- | --- |
+| [核心接口回归](./接口/integration.py) | `python3 测试/后端/接口/integration.py --server https://127.0.0.1:<端口> --ca-file <显式CA.pem>`；检查注册、联系人、稳定消息ID、异参冲突、编辑回复、反应／置顶／收藏、拉黑、收件人明确新代际reopen、Cookie／CSRF及恢复码，finally撤本轮会话。 | [核心 HTTP 报告](./报告/核心HTTP回归.json) |
+| [本人关系只读接口](./接口/contact_relationship.py) | `python3 测试/后端/接口/contact_relationship.py --environment-file <私密环境JSON>`；两个真实账号验证owner隔离、门禁／重开代际、伪造owner查询无效、GET不创建记录、大代际保持字符串及头像ACL保持。 | [本人关系报告](./报告/本人关系只读接口实测.json) |
+| [登录刷新家族](./接口/session_refresh.py/README.md) | 独立新域，真实旧7天schema迁移、AT／RT单代旋转／并发／重用／多设备、实际丢成功响应、初始未知关联撤旧与持久退休、BFF密封／CSRF／原family header；期限和代际有明确SQL夹具，非90天实等。 | [86 HTTP／43语义](./报告/登录刷新家族真实实测.json)、[无外层OS锁的PG并发](./报告/刷新数据库并发单消费实测.json) |
+| [刷新持久环境续验](./接口/session_refresh.py/README.md) | 新CA／身份／两套物理PG，补完整多层未知退休闭包与迟到拒建；旧binary已丢失，本轮不称真实旧schema迁移，BFF进程重启也未重复。 | [102 HTTP／48语义](./报告/登录刷新持久环境与完整退休链实测.json)、[新PG并发](./报告/刷新数据库并发持久环境实测.json)、[Go原始日志](./报告/刷新持久环境Go原始日志.txt) |
+| [刷新恢复拒旧](./接口/session_refresh_restore.py/README.md) | 新建独占源／目标及独立journal；真实加密backup、offline restore、原恢复操作续跑，旧AT／RT／Cookie拒、密文清，备份后退休事实重放不复活旧认证。 | [22 HTTP／9语义](./报告/登录刷新恢复拒旧实测.json) |
+| [刷新持久环境恢复](./接口/session_refresh_restore.py/README.md) | 独立持久namespace重跑，Documents备份与运行目录key分离，保留历史报告。 | [新22 HTTP／9语义](./报告/登录刷新持久环境恢复拒旧实测.json) |
+| [原发送准入与提交围栏](./接口/send_admission.py) | `python3 测试/后端/接口/send_admission.py --environment-file <私密环境JSON>`；真实HTTPS检查旧摘要回放、缺快照不新建、peer token不能借用、direct撤权新接受／群退重入、当前read ACL及真实PG阻塞提交时撤权等待。 | [52项HTTP报告](./报告/发送准入代际实测.json) |
+| [搜索与本人收藏分页](./接口/search_favorites.py) | `python3 测试/后端/接口/search_favorites.py --environment-file <私密环境JSON>`；较新110条他人命中不挤本人结果、本人会话超公共前100、签名游标隔离、收藏源撤回／失权／退重入及原会话／消息定位ACL；[游标测试](./接口/search_test.go)核原owner／查询／恢复代际。 | [搜索收藏报告](./报告/搜索与本人收藏分页实测.json) |
+| [结构化提及与群公告](./接口/mentions_announcements.py/README.md) | `python3 测试/后端/接口/mentions_announcements.py/mentions_announcements.py --environment-file <私密环境JSON>`；真实成员代际／block／独立限频、内容版本与互动版本分离、引用源变化／到期／重入占位、原操作immutable及只读原消息查结果绝不新建；父群锁与源编辑真实竞态。 | [提及公告报告](./报告/提及与公告实测.json) |
+| [群角色准入代际](./接口/role_qualification.py/README.md) | 先在真实旧无role服务准备已提交原公告，原实例受控升级后验证owner转出／转回、旧@all／普通待发／公告PUT和DELETE拒未建、已成旧摘要兼容、成员与joinedAt不变、无关成员与no-op不抬授权；大数role字段仅SQL精度夹具。 | [角色代际报告](./报告/角色准入代际实测.json) |
+| [普通引用式转发](./接口/forward_refs.py/README.md) | 纯引用入库、原proof／目标token／原ID、真实成功响应未读对账、链深8、编辑／撤回／源退重入／改密、当前搜索收藏，以及真实PNG／GIF／AAC-M4A／MP4／文件代理、Range／SHA与慢媒体排空。 | [185 HTTP／104语义报告](./报告/普通转发真实闭环.json) |
+| [转发公共JSON与持久续跑](./接口/forward_fences.py/README.md) | 显式独立域；真实慢TLS公共JSON阻塞EX、断开释放、200后代分批拒假完成及worker恢复；另用明确SQL夹具模拟owner pending已提交但RPC未到，再经真实原退群接口收尾。 | [218 HTTP／12语义报告](./报告/转发公共JSON与持久续跑.json)、[5类JSON围栏](./报告/转发公共JSON持锁与私有证明.json) |
+| [转发恢复代际](./接口/forward_restore.py/README.md) | 另建源／目标业务DB及独立journal DB，仅停止自己记录PID；真实加密backup／offline restore，source／membership／security不变且旧ref仍active时只因epoch拒旧投影，新显式proof可新发，旧ref不复活。 | [33 HTTP／16语义报告](./报告/普通转发恢复代际实测.json) |
+| [转发构建既有回归](./接口/forward_compatibility.py/README.md) | 当前候选构建重新跑核心55、分页279、当前role／提及／公告77；历史报告不覆盖。`--export-only`另核含forward实验包明确失败／failureCode及制品清理。 | [既有回归](./报告/转发构建既有接口回归.json)、[导出拒绝11 HTTP／3语义](./报告/转发导出明确拒绝实测.json) |
+| [备份、隔离恢复与音频](./接口/backup_restore.py) | `python3 测试/后端/接口/backup_restore.py --environment-file <私密环境JSON>`；只接受显式 `Safety` 独立测试域，停止其记录的 PID，真实 pg_dump、加密制品、独立数据库恢复、旧会话／口令／游标／Outbox拒旧，生成真实 AAC/M4A并鉴权下载核验。 | [备份恢复与音频报告](./报告/备份恢复与音频实测.json) |
+| [管理员 MFA 与状态](./接口/admin_mfa.py) | `python3 测试/后端/接口/admin_mfa.py --environment-file <私密环境JSON>`；只接受显式 `Safety` 域，受控初始化首位管理员，检查 TOTP 必须与防重放、目标／载荷／版本绑定、原成功操作对账及封禁／墓碑／恢复。每 TOTP 步只能用一次，测试会等待有效窗口，不能与其他管理员测试并发消耗同一因子。 | [管理员 MFA 报告](./报告/管理员MFA与状态实测.json) |
+| [管理员重置凭证](./接口/reset_grant.py) | 专用Safety域；检查密码用途／600秒到期／单次消费、发放即撤旧登录资格、原凭证不回显、原消费结果对账且不重置MFA。 | [重置凭证报告](./报告/管理员重置凭证实测.json) |
+| [头像／最小举报](./接口/avatar_reports.py) | `--environment-file <私密环境JSON>`，可选`--admin-fixture <私密管理员文件>`；真实512/128 JPEG、四并发原ID、ACL／block、坏图保旧、原结果current=false、源授权及MFA治理。 | [头像／举报报告](./报告/静态头像与最小举报实测.json) |
+| [关闭会话受限续跑](./接口/session_closure.py) | 只接显式Assets实验域；真实持有文件EX锁使logout排空超时，确认普通请求401、仅原close／CSRF可续，释放锁后沿原logout完成。 | [关闭续跑报告](./报告/设备关闭受限续跑实测.json) |
+
+导出当前另有[公开实验生命周期](./报告/实验导出公开生命周期实测.json)与[私有协议／写入栅栏](./报告/受控导出协议与写入栅栏实测.json)证据；正式`chat_export`继续false，不把实验聊天包等同完整本人账号资料导出。
+
+私密环境 JSON 位于仓库外、权限600，含运行器需要的数据库连接、CA、状态目录与记录的服务 PID。测试只输出脱敏断言与汇总，凭据、Cookie、TOTP种子、备份密钥不得写入报告或仓库。恢复测试操作专用源／目标数据库，不默认选择用户联调服务；有效备份失败时不得被覆盖或删除。
+
+本轮转发切片的[固定构建快照](./报告/普通转发固定构建快照.json)记录最终binary、各报告／日志及48个后端／测试源码摘要、实际能力和59条正式普通HTTP统计口径。主转发／慢TLS／恢复证据保留各自早一候选快照；最终仅导出失败原因可解释性窄改另有当前binary回归，不把历史报告改写成全部重跑。
+
+## <span id="jobs-toc-heading-4" data-jobs-toc="v2">三、结果的边界</span><!-- jobs-toc:heading-end -->
+
+报告记录实际执行时的范围，不代表后续新增代码自动通过；不同报告有重叠，不能相加成产品通过项。备份恢复实测包括导入已提交响应丢失后的同操作续跑／epoch不重复分配、完整journal snapshot anchor/tail、旧编辑正文不复活和互动版本推进。跨域最小权限、完整同步快照／增量连续性、全部拒绝门禁及资格的精确恢复证明、全量安全恢复覆盖、媒体多引用生命周期与跨端完整 I 仍需专项证据；`after_receipt`、`e2ee`、`strong_protection`、`safe_restore`、`chat_export` 等能力不能由测试绕过开关宣称已交付。
+
+工程说明见 [后端 README](../../代码/后端/Go/README.md)，实际接口字段见 [接口契约](../../代码/后端/Go/接口契约/README.md)。

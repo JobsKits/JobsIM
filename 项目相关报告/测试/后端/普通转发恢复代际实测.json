@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "testedAtUTC": "2026-11-15T05:50:51.557211+00:00",
+  "httpAssertions": 33,
+  "semanticAssertions": 16,
+  "strictHTTPS": true,
+  "separateBusinessAndJournalDatabases": true,
+  "realEncryptedBackupAndOfflineRestore": true,
+  "sameRestoreOperationResumedWithoutExtraEpoch": true,
+  "restoredActiveOldRefRejected": true,
+  "sourceMembershipAndSecurityUnchanged": true,
+  "sourceStillReadable": true,
+  "oldBodyFactLookupDoesNotRevive": true,
+  "oldUncommittedIntentRejected": true,
+  "newExplicitProofWorks": true,
+  "sharedRealmsUntouched": true,
+  "binarySHA256": "0219a5148445ff2f5f9b6332430da9c02a443286979e33674011a2bc873f8204",
+  "scriptSHA256": "64390cef8a70625084675a96e78f630f72781f3d51e7317cc037c48d147bf33d",
+  "scope": "Isolated same-host real PostgreSQL+journal backup/restore; no cross-host, strong-protection, client-device or complete I acceptance claim"
+}

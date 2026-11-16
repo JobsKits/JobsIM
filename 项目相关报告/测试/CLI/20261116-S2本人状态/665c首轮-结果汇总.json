@@ -1,0 +1,16 @@
+{
+  "passedGroups": 55,
+  "failedGroups": 0,
+  "skippedGroups": 2,
+  "platform": "MacOS arm64",
+  "GoVersion": "1.27.4",
+  "actualS2HTTPS": false,
+  "nativeVaultPositive": false,
+  "LinuxWindowsCurrentSourceBuild": false,
+  "qualifiedAck": false,
+  "afterReceipt": false,
+  "binary": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-S2/20261116-self-state/Products/jobsim-s2",
+  "binarySHA256": "665c470690468da04bb93030b468a4d49408d818868f19900e4296a2c5a36c94",
+  "originalS1BinaryModified": false,
+  "sourceFileCount": 30
+}

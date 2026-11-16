@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "sourceVersionUnchanged": true,
+  "before": {
+    "jobState": "ready",
+    "accountRevision": "3"
+  },
+  "after": {
+    "jobState": "ready",
+    "accountRevision": "3"
+  },
+  "sameDeploymentAndEpoch": true,
+  "binarySHA256": "61ab6ed89d7afaf7d9f84659c7686874f0771a65f9422a82a0287805132a782a"
+}

@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "completedAt": "2026-11-16T00:26:42+08:00",
+  "host": "darwin/arm64",
+  "toolchain": "go1.27.4",
+  "exitCode": 0,
+  "package": "jobsim/backend",
+  "reportedPackageDurationSeconds": 2.075,
+  "counts": {
+    "topLevelPassed": 7,
+    "subtestsPassed": 9,
+    "failed": 0,
+    "skippedOnThisHost": 0,
+    "existingSuite": "6 top-level groups and 5 nested PostgreSQL contracts",
+    "addedTokenPermissionSuite": "1 top-level group and 4 nested local filesystem contracts"
+  },
+  "evidence": {
+    "rawLog": "Go定向.log",
+    "rawLogSHA256": "34e2c1e88782bbbe2edf62cbe1da5ed1c0d434152fbb832d3263886a972acec7",
+    "rawLogOrigin": "This execution's direct, unmodified go test stdout and stderr redirection; not reconstructed from the earlier run.",
+    "snapshotTestSource": "../../../../测试/后端/接口/sync_snapshot_test.go",
+    "snapshotTestSourceSHA256": "34da337f6234f0409263baa06e2033cde5a3abadd3fe82038935d4e9dd78b6df",
+    "outboxTestSource": "../../../../测试/后端/接口/sync_outbox_test.go",
+    "outboxTestSourceSHA256": "86febb41cc2260f71cd59c1d3eabb2de4ff85e8736512edfae69b6436c3a1a60",
+    "candidateServerBinarySHA256": "57a86767d12f005da08c728ff544a2b66076b2db03a203e3221d3490e355f290",
+    "candidateServerBinarySHA256Source": "Authorized environment.json binarySHA256; identifies the serving candidate, not the locally generated go test binary."
+  },
+  "execution": {
+    "workingDirectory": "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go",
+    "environment": {
+      "GOMAXPROCS": "2",
+      "GOTOOLCHAIN": "local",
+      "GOPROXY": "off",
+      "GOSUMDB": "off",
+      "JOBS_IM_SYNC_SNAPSHOT_READY": "1",
+      "JOBS_IM_SYNC_SNAPSHOT_TEST_ENV": "/Users/jobs/Library/Application Support/JobsIM/Integration/sync-308bba50/Safety/environment.json"
+    },
+    "executable": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "arguments": [
+      "test",
+      "-mod=readonly",
+      "-p",
+      "1",
+      "-parallel",
+      "1",
+      "-vet=off",
+      "-overlay",
+      "/tmp/jobsim-sync-go.dm3GIh/overlay.json",
+      "-run",
+      "^(TestSyncSnapshot|TestSyncNATSTokenLocalPermission)",
+      "-count=1",
+      "-v",
+      "."
+    ],
+    "overlayReplace": {
+      "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/codex_sync_snapshot_external_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/sync_snapshot_test.go",
+      "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/codex_sync_outbox_external_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/sync_outbox_test.go"
+    },
+    "stdoutAndStderr": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/权威同步底座/Go定向.log",
+    "privateInputHandling": "The fixture reader deserializes only identity/store/snapshot references, wipes private fixture bytes, and never logs credentials or DSNs. PGPASSFILE and owned-database admin URL are set internally from the authorized seed."
+  },
+  "scope": [
+    {
+      "test": "TestSyncSnapshotCaptureRejectsChangingCommittedOwners",
+      "kind": "cross-database owner RPC and real PostgreSQL; separate databases in the same business cluster",
+      "verified": "Identity capture runs an actual owner Handler over httptest with the same canonical StateDir/admission proof but a new isolated database in the same business PostgreSQL cluster containing only a non-login dummy account. Other owners use the authorized existing role RPC endpoints. Three committed dummy display-name changes between capture and double collect produce 503 SYNC_SNAPSHOT_BUSY and no new snapshot. The real actor account is never changed."
+    },
+    {
+      "test": "TestSyncSnapshotOwnedOutboxTransactions",
+      "kind": "real PostgreSQL transactions and concurrent connections in a new owned database",
+      "verified": "Minimal metadata/related objects and permissions, rollback of clock/object versions/outbox, an uncommitted revision blocking a second connection, idempotent migration, and closed owner/scope validation."
+    },
+    {
+      "test": "TestSyncSnapshotReplayDoesNotCrossMissingCommittedOrigin",
+      "kind": "owner HTTP replay and real PostgreSQL in a new owned database",
+      "verified": "R1 and R3 exist but the owned fixture deliberately lacks R2. Import returns 503 SYNC_OWNER_INCOMPLETE, persists no R3 origin, and cannot advance its durable owner boundary past R1."
+    },
+    {
+      "test": "TestSyncSnapshotNATSDuplicateAndBodyRejection",
+      "kind": "syncNATSStore function with real PostgreSQL; no JetStream network transport",
+      "verified": "The selected real Outbox origin already exists in sync.origins. Repeated same-ID storage remains one unchanged origin; changed immutable reference content and an unknown body field are rejected."
+    },
+    {
+      "test": "TestSyncSnapshotMetadataAndEncryptedPagesContainReferencesOnly",
+      "kind": "read-only existing-realm PostgreSQL inspection and local AAD decryption",
+      "verified": "Checks at most 500 metadata rows per business owner, 1000 origin references, and all pages of the authorized first fixture snapshot. Rejects forbidden body/secret field names and verifies encrypted refs AAD, page order, digest and manifest count. This is a bounded inspection, not an exhaustive scan of all stored rows."
+    },
+    {
+      "test": "TestSyncSnapshotCursorPreservesIntegersAboveFloatPrecision",
+      "kind": "pure local cursor encode/decode",
+      "verified": "Exact decimal positions 9007199254740992, 9007199254740993 and 9223372036854775807 survive signing/decoding, and another device is rejected."
+    },
+    {
+      "test": "TestSyncNATSTokenLocalPermission",
+      "kind": "pure local macOS filesystem permissions",
+      "verified": "A current-owner regular 0600 token file succeeds; 0664, a symlink, and a 4097-byte file fail closed without returning contents. All fixture bytes are non-secret synthetic values."
+    }
+  ],
+  "boundaries": [
+    "No service was restarted and no public authentication/account write was performed. Temporary database mutations and deliberate gaps were confined to this suite's newly created databases, whose cleanup passed.",
+    "This run does not verify publish/subscribe over a real JetStream network, public HTTP client flows, client-side installation, or qualified ACK. Those require separate evidence.",
+    "The Unix token test executed on macOS only. It is enabled for Linux but Linux-native execution is not evidenced here. Windows skips this Unix test explicitly; real Windows DACL behavior is not verified.",
+    "The parent's Windows/Linux cross-compilation, vet, HTTP and page-suite results are separate evidence and are not counted in this report.",
+    "Cross-owner capture used different database identities on one business PostgreSQL cluster. It does not claim separate physical business clusters or cross-host validation; the independent journal cluster is a separate runtime property."
+  ]
+}

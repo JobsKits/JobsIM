@@ -1,0 +1,60 @@
+ASCII源码快照=/Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.KukbLW
+[33mohpm WARN: [93m[1mSource code dependencies in project-level "oh-package.json5" are as follows, which could lead to circular dependencies reference.[22m[39m[33m
+	 - "@ohos/hypium@file:./MirrorHypium"
+[39m[39m
+[32minstall completed in 0s 43ms[39m
+> hvigor [32mFinished :entry:clean... after 1 ms [39m
+> hvigor [33mWARN: The version number of the 'entry' module does not comply with the SemVer specification.
+               This will affect the installation and publication by ohpm.
+               Make sure the value of version in the oh-package.json5 file of the module complies with the SemVer specification.[39m
+> hvigor [32mFinished :entry:ohosTest@PreBuild... after 62 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GenerateMetadata... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ConfigureCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@MergeProfile... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CreateBuildProfile... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgContextInfo... after 5 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgSdkInfo... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@BuildNativeWithCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@MakePackInfo... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@SyscapTransform... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessProfile... after 49 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessRouterMap... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessShareConfig... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessStartupConfig... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@BuildNativeWithNinja... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessResource... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GenerateLoaderJson... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessLibs... after 3 ms [39m
+> hvigor [33mWARN: Warning: 'app_name' conflict, first declared.
+at /Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.KukbLW/AppScope/resources/base/element/string.json
+but declared again.
+at /Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.KukbLW/entry/src/main/resources/base/element/string.json
+[39m
+> hvigor [32mFinished :entry:ohosTest@CompileResource... after 71 ms [39m
+> hvigor [32mFinished :entry:ohosTest@DoNativeStrip... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestBuildJS... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CacheNativeLibs... after 4 ms [39m
+> hvigor [91mERROR: Failed :entry:ohosTest@OhosTestCompileArkTS... [39m
+> hvigor [33mWARN: 
+[33m1 WARN: [33mDuplicate file names detected, which may cause compilation errors. Please check the following files: 
+/Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.KukbLW/MirrorHypium/index.ets
+/Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.KukbLW/MirrorHypium/index.ts[39m[39m[39m
+> hvigor [91mERROR: ArkTS Compiler Error
+[31m1 ERROR: [31m10605999 ArkTS Compiler Error
+Error Message: Importing ArkTS files in JS and TS files is forbidden. At File: /Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.KukbLW/MirrorHypium/index.d.ts:47:46
+[39m
+[39m
+[31m2 ERROR: [31m10505001 ArkTS Compiler Error
+Error Message: Cannot extend an interface 'TestRunner'. Did you mean 'implements'? At File: /Users/jobs/Library/Caches/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.KukbLW/entry/src/ohosTest/ets/testrunner/OpenHarmonyTestRunner.ets:5:52
+[39m
+[39m
+[31mCOMPILE RESULT:FAIL {ERROR:3 WARN:1}[39m
+
+[31m* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: BUILD FAILED in 4 s 116 ms [39m

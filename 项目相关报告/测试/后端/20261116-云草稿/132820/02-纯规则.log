@@ -1,0 +1,28 @@
+{"Time":"2026-11-16T13:28:26.881896+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T13:28:27.262363+08:00","Action":"run","Package":"jobsim/backend","Test":"TestDraftReplyAdmissionHasIndependentPurposeAndFrozenQualification"}
+{"Time":"2026-11-16T13:28:27.26261+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDraftReplyAdmissionHasIndependentPurposeAndFrozenQualification","Output":"=== RUN   TestDraftReplyAdmissionHasIndependentPurposeAndFrozenQualification\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.262634+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDraftReplyAdmissionHasIndependentPurposeAndFrozenQualification","Output":"--- PASS: TestDraftReplyAdmissionHasIndependentPurposeAndFrozenQualification (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.26264+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestDraftReplyAdmissionHasIndependentPurposeAndFrozenQualification","Elapsed":0}
+{"Time":"2026-11-16T13:28:27.262649+08:00","Action":"run","Package":"jobsim/backend","Test":"TestDraftOwnedCipherBindingSurvivesLogicalRebase"}
+{"Time":"2026-11-16T13:28:27.262654+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDraftOwnedCipherBindingSurvivesLogicalRebase","Output":"=== RUN   TestDraftOwnedCipherBindingSurvivesLogicalRebase\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.26266+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDraftOwnedCipherBindingSurvivesLogicalRebase","Output":"--- PASS: TestDraftOwnedCipherBindingSurvivesLogicalRebase (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.262664+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestDraftOwnedCipherBindingSurvivesLogicalRebase","Elapsed":0}
+{"Time":"2026-11-16T13:28:27.262667+08:00","Action":"run","Package":"jobsim/backend","Test":"TestDraftFloorDenialCannotBeDowngradedAtSameTuple"}
+{"Time":"2026-11-16T13:28:27.262671+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDraftFloorDenialCannotBeDowngradedAtSameTuple","Output":"=== RUN   TestDraftFloorDenialCannotBeDowngradedAtSameTuple\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.262676+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDraftFloorDenialCannotBeDowngradedAtSameTuple","Output":"--- PASS: TestDraftFloorDenialCannotBeDowngradedAtSameTuple (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.26268+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestDraftFloorDenialCannotBeDowngradedAtSameTuple","Elapsed":0}
+{"Time":"2026-11-16T13:28:27.262684+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSelfDraftOriginalBodyAndScopeCannotBeSubstituted"}
+{"Time":"2026-11-16T13:28:27.262688+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfDraftOriginalBodyAndScopeCannotBeSubstituted","Output":"=== RUN   TestSelfDraftOriginalBodyAndScopeCannotBeSubstituted\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.262692+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfDraftOriginalBodyAndScopeCannotBeSubstituted","Output":"--- PASS: TestSelfDraftOriginalBodyAndScopeCannotBeSubstituted (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.262697+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSelfDraftOriginalBodyAndScopeCannotBeSubstituted","Elapsed":0}
+{"Time":"2026-11-16T13:28:27.262702+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSelfDraftStrictJSONAndTextBounds"}
+{"Time":"2026-11-16T13:28:27.262705+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfDraftStrictJSONAndTextBounds","Output":"=== RUN   TestSelfDraftStrictJSONAndTextBounds\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.262721+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfDraftStrictJSONAndTextBounds","Output":"--- PASS: TestSelfDraftStrictJSONAndTextBounds (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.262725+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSelfDraftStrictJSONAndTextBounds","Elapsed":0}
+{"Time":"2026-11-16T13:28:27.262729+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSelfDraftJournalNeverCarriesOwnedTextOrReplyProof"}
+{"Time":"2026-11-16T13:28:27.26275+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfDraftJournalNeverCarriesOwnedTextOrReplyProof","Output":"=== RUN   TestSelfDraftJournalNeverCarriesOwnedTextOrReplyProof\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.262754+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfDraftJournalNeverCarriesOwnedTextOrReplyProof","Output":"--- PASS: TestSelfDraftJournalNeverCarriesOwnedTextOrReplyProof (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.262758+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSelfDraftJournalNeverCarriesOwnedTextOrReplyProof","Elapsed":0}
+{"Time":"2026-11-16T13:28:27.262761+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T13:28:27.263815+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.381s\n"}
+{"Time":"2026-11-16T13:28:27.26383+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.382}

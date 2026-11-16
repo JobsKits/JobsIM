@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "at": "2026-11-15T06:20:21.255Z",
+  "checks": [
+    "strict CA native peer",
+    "exact certificate pin isolated browser",
+    "HttpOnly Secure session",
+    "no JS tokens",
+    "registration and browser confirmation",
+    "friend request acceptance",
+    "unobserved owner-to-member-to-owner cannot revive an unsent at-all message or announcement; original role snapshot is never replaced, read-only lookup confirms no new message",
+    "structured member selection persists in the original retry payload; plain at-text has no mention, incoming edit does not increment mention count, opening clears local mentions",
+    "announcement original operation survives lost response and restart, completed operation is queried only, personal favorite preserves the announcement, content edit invalidates its preview, owner clears with version checks",
+    "server favorites and scoped search load 50 plus one unique result, signed cursors remain opaque, clicked source is rechecked and a recalled result never shows its old body",
+    "unobserved remote member exit/rejoin rejects original unsent admission and freezes the exact persisted payload; new intent uses new admission",
+    "own relationship GET drives block/unblock/remove/re-request UI; original reopen identity survives lost response and browser restart without projecting peer private gates",
+    "browser notification protocol default excludes source body; notification constructor failure does not prevent real incoming message persistence (OS delivery not tested)",
+    "local unread identities persist with incoming pages, edits do not count again, opening the visible conversation clears them",
+    "real group creation/rename/member-generation removal/owner transfer/leave through UI; late committed Outbox frozen on leave and hidden after rejoin",
+    "report source identity committed before HTTP; browser refresh retries original operation and creates one report without persisting the source-body preview",
+    "incoming request shows authorized requester profile; only pending recipient items are actionable; UI acceptance refreshes real friendship",
+    "browser/native API bidirectional messages",
+    "refresh retains real account and history",
+    "lost response retries original ID without duplicate message",
+    "avatar source and identity committed before HTTPS; lost response original-ID retry",
+    "historical avatar result current=false never rolls back the current profile"
+  ],
+  "errors": []
+}

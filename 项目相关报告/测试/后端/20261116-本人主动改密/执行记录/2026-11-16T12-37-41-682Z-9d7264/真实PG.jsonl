@@ -1,0 +1,40 @@
+{"Time":"2026-11-16T20:37:45.224358+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T20:37:45.389225+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGRevokesEveryFamilyWithoutCredentialDelivery"}
+{"Time":"2026-11-16T20:37:45.389276+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGRevokesEveryFamilyWithoutCredentialDelivery","Output":"=== RUN   TestPasswordChangePGRevokesEveryFamilyWithoutCredentialDelivery\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:46.200373+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGRevokesEveryFamilyWithoutCredentialDelivery","Output":"--- PASS: TestPasswordChangePGRevokesEveryFamilyWithoutCredentialDelivery (0.81s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:46.200391+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangePGRevokesEveryFamilyWithoutCredentialDelivery","Elapsed":0.81}
+{"Time":"2026-11-16T20:37:46.200417+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGJournalFailureCanResumeWithoutPlaintext"}
+{"Time":"2026-11-16T20:37:46.200419+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGJournalFailureCanResumeWithoutPlaintext","Output":"=== RUN   TestPasswordChangePGJournalFailureCanResumeWithoutPlaintext\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:46.910036+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGJournalFailureCanResumeWithoutPlaintext","Output":"--- PASS: TestPasswordChangePGJournalFailureCanResumeWithoutPlaintext (0.71s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:46.910056+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangePGJournalFailureCanResumeWithoutPlaintext","Elapsed":0.71}
+{"Time":"2026-11-16T20:37:46.910061+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGCommittedResultRetryDoesNotRehash"}
+{"Time":"2026-11-16T20:37:46.910062+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGCommittedResultRetryDoesNotRehash","Output":"=== RUN   TestPasswordChangePGCommittedResultRetryDoesNotRehash\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:47.454187+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGCommittedResultRetryDoesNotRehash","Output":"--- PASS: TestPasswordChangePGCommittedResultRetryDoesNotRehash (0.54s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:47.454203+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangePGCommittedResultRetryDoesNotRehash","Elapsed":0.54}
+{"Time":"2026-11-16T20:37:47.454206+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGRejectsNewUnownedIntentAndUnknownLookup"}
+{"Time":"2026-11-16T20:37:47.454207+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGRejectsNewUnownedIntentAndUnknownLookup","Output":"=== RUN   TestPasswordChangePGRejectsNewUnownedIntentAndUnknownLookup\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:47.983881+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGRejectsNewUnownedIntentAndUnknownLookup","Output":"--- PASS: TestPasswordChangePGRejectsNewUnownedIntentAndUnknownLookup (0.53s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:47.983897+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangePGRejectsNewUnownedIntentAndUnknownLookup","Elapsed":0.53}
+{"Time":"2026-11-16T20:37:47.983904+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGOldEpochCannotInstallSealedCredential"}
+{"Time":"2026-11-16T20:37:47.983907+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGOldEpochCannotInstallSealedCredential","Output":"=== RUN   TestPasswordChangePGOldEpochCannotInstallSealedCredential\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:48.512302+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGOldEpochCannotInstallSealedCredential","Output":"--- PASS: TestPasswordChangePGOldEpochCannotInstallSealedCredential (0.53s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:48.512323+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangePGOldEpochCannotInstallSealedCredential","Elapsed":0.53}
+{"Time":"2026-11-16T20:37:48.512328+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGAdminNeedsCurrentAuthenticator"}
+{"Time":"2026-11-16T20:37:48.51233+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGAdminNeedsCurrentAuthenticator","Output":"=== RUN   TestPasswordChangePGAdminNeedsCurrentAuthenticator\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:49.043799+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGAdminNeedsCurrentAuthenticator","Output":"--- PASS: TestPasswordChangePGAdminNeedsCurrentAuthenticator (0.53s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:49.043822+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangePGAdminNeedsCurrentAuthenticator","Elapsed":0.53}
+{"Time":"2026-11-16T20:37:49.043829+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGAdminKeepsMFAAndCanQueryWithoutReplayingOTP"}
+{"Time":"2026-11-16T20:37:49.043831+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGAdminKeepsMFAAndCanQueryWithoutReplayingOTP","Output":"=== RUN   TestPasswordChangePGAdminKeepsMFAAndCanQueryWithoutReplayingOTP\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:49.605665+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGAdminKeepsMFAAndCanQueryWithoutReplayingOTP","Output":"--- PASS: TestPasswordChangePGAdminKeepsMFAAndCanQueryWithoutReplayingOTP (0.56s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:49.605683+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangePGAdminKeepsMFAAndCanQueryWithoutReplayingOTP","Elapsed":0.56}
+{"Time":"2026-11-16T20:37:49.605687+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGBoundedOriginalKeyAndWorkerFairness"}
+{"Time":"2026-11-16T20:37:49.605688+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGBoundedOriginalKeyAndWorkerFairness","Output":"=== RUN   TestPasswordChangePGBoundedOriginalKeyAndWorkerFairness\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:50.143111+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGBoundedOriginalKeyAndWorkerFairness","Output":"--- PASS: TestPasswordChangePGBoundedOriginalKeyAndWorkerFairness (0.54s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:50.143138+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangePGBoundedOriginalKeyAndWorkerFairness","Elapsed":0.54}
+{"Time":"2026-11-16T20:37:50.143144+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGResultProofOracleIsRateBounded"}
+{"Time":"2026-11-16T20:37:50.143146+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGResultProofOracleIsRateBounded","Output":"=== RUN   TestPasswordChangePGResultProofOracleIsRateBounded\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:50.41116+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGResultProofOracleIsRateBounded","Output":"--- PASS: TestPasswordChangePGResultProofOracleIsRateBounded (0.27s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:50.411185+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestPasswordChangePGResultProofOracleIsRateBounded","Elapsed":0.27}
+{"Time":"2026-11-16T20:37:50.411191+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T20:37:50.414279+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t5.190s\n"}
+{"Time":"2026-11-16T20:37:50.414305+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":5.19}

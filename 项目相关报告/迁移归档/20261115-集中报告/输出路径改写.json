@@ -1,0 +1,34 @@
+{
+  "files": [
+    "工具/统计项目.mjs/统计项目.mjs",
+    "测试/CLI/collaboration-https.cjs/collaboration-https.cjs",
+    "测试/CLI/forward-https.cjs/forward-https.cjs",
+    "测试/CLI/https-integration.cjs/https-integration.cjs",
+    "测试/CLI/运行测试.mjs/运行测试.mjs",
+    "测试/前端/Android/运行测试.command/运行测试.command",
+    "测试/前端/HarmonyOS/【MacOS】运行规则测试.command/【MacOS】运行规则测试.command",
+    "测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+    "测试/前端/Web/admin-integration.cjs/admin-integration.cjs",
+    "测试/前端/Web/browser.cjs/browser.cjs",
+    "测试/前端/Web/forward.cjs/forward.cjs",
+    "测试/前端/Web/integration.cjs/integration.cjs",
+    "测试/后端/接口/contact_relationship.py",
+    "测试/后端/接口/forward_compatibility.py/forward_compatibility.py",
+    "测试/后端/接口/forward_fences.py/forward_fences.py",
+    "测试/后端/接口/forward_refs.py/forward_refs.py",
+    "测试/后端/接口/forward_restore.py/forward_restore.py",
+    "测试/后端/接口/mentions_announcements.py/mentions_announcements.py",
+    "测试/后端/接口/role_qualification.py/role_qualification.py",
+    "测试/后端/接口/search_favorites.py",
+    "测试/后端/接口/send_admission.py",
+    "测试/后端/接口/session_closure.py",
+    "测试/后端/接口/session_refresh.py/session_refresh.py",
+    "测试/后端/接口/session_refresh_restore.py/session_refresh_restore.py",
+    "测试/部署/MacOS/运行测试.command/运行测试.command"
+  ],
+  "untouchedWebAuth": [
+    "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+    "测试/前端/Web/auth-https.cjs/auth-https.cjs"
+  ],
+  "boundary": "report destination changes only; no tests/API/build executed"
+}

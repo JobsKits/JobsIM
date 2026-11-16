@@ -1,0 +1,66 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -xctestrun /Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Cleanup-20261116-185804/现包收尾-公开参数.xctestrun -destination "platform=iOS Simulator,id=0EE39534-95F7-4624-A395-D51F65B70E7F" -parallel-testing-enabled NO "-only-testing:JobsIMTests/IMSelfStateIntegrationTests/testVerifyNativeUIFixtureClosed" -resultBundlePath /Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Cleanup-20261116-185804/结果.xcresult test-without-building
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Cleanup-20261116-185804/结果.xcresult
+
+2026-11-16 18:58:15.666357+0800 JobsIM[57648:9623715] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/0EE39534-95F7-4624-A395-D51F65B70E7F/data/Containers/Bundle/Application/CB258454-DF9B-4F09-848A-06CEFBD8D029/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-16 18:58:15.666544+0800 JobsIM[57648:9623715] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/0EE39534-95F7-4624-A395-D51F65B70E7F/data/Containers/Bundle/Application/CB258454-DF9B-4F09-848A-06CEFBD8D029/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-16 18:58:15.740513+0800 JobsIM[57648:9623715] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-16 18:58:15.740722+0800 JobsIM[57648:9623715] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-16 18:58:16.703288+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:16.703402+0800 JobsIM[57648:9623715] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:16.703554+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.024414+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.024554+0800 JobsIM[57648:9623715] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.024661+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.030228+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.030347+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.030476+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.030536+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.030966+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.031035+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.031128+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.031182+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.047589+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.047707+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.047834+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.047892+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.106023+0800 JobsIM[57648:9623715] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+2026-11-16 18:58:17.178364+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.178495+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.178600+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 18:58:17.178674+0800 JobsIM[57648:9623715] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+Test Suite 'Selected tests' started at 2026-11-16 18:58:17.251.
+Test Suite 'JobsIMTests.xctest' started at 2026-11-16 18:58:17.252.
+Test Suite 'IMSelfStateIntegrationTests' started at 2026-11-16 18:58:17.252.
+Test Case '-[JobsIMTests.IMSelfStateIntegrationTests testVerifyNativeUIFixtureClosed]' started.
+/Users/jobs/Documents/GitHub/JobsIM/测试/前端/iOS/IMSelfStateIntegrationTests.swift:328: error: -[JobsIMTests.IMSelfStateIntegrationTests testVerifyNativeUIFixtureClosed] : XCTAssertEqual failed: ("bool(false)") is not equal to ("bool(true)")
+/Users/jobs/Documents/GitHub/JobsIM/测试/前端/iOS/IMSelfStateIntegrationTests.swift:331: error: -[JobsIMTests.IMSelfStateIntegrationTests testVerifyNativeUIFixtureClosed] : XCTAssertEqual failed: ("null") is not equal to ("number(0)")
+/Users/jobs/Documents/GitHub/JobsIM/测试/前端/iOS/IMSelfStateIntegrationTests.swift:332: error: -[JobsIMTests.IMSelfStateIntegrationTests testVerifyNativeUIFixtureClosed] : XCTAssertNotEqual failed: ("null") is equal to ("null")
+/Users/jobs/Documents/GitHub/JobsIM/测试/前端/iOS/IMSelfStateIntegrationTests.swift:333: error: -[JobsIMTests.IMSelfStateIntegrationTests testVerifyNativeUIFixtureClosed] : XCTAssertEqual failed: ("string("standard")") is not equal to ("string("large")")
+/Users/jobs/Documents/GitHub/JobsIM/测试/前端/iOS/IMSelfStateIntegrationTests.swift:334: error: -[JobsIMTests.IMSelfStateIntegrationTests testVerifyNativeUIFixtureClosed] : XCTAssertEqual failed: ("null") is not equal to ("string("Independent iOS cloud draft")")
+Test Case '-[JobsIMTests.IMSelfStateIntegrationTests testVerifyNativeUIFixtureClosed]' failed (0.786 seconds).
+Test Suite 'IMSelfStateIntegrationTests' failed at 2026-11-16 18:58:18.042.
+	 Executed 1 test, with 5 failures (0 unexpected) in 0.786 (0.790) seconds
+Test Suite 'JobsIMTests.xctest' failed at 2026-11-16 18:58:18.045.
+	 Executed 1 test, with 5 failures (0 unexpected) in 0.786 (0.792) seconds
+Test Suite 'Selected tests' failed at 2026-11-16 18:58:18.045.
+	 Executed 1 test, with 5 failures (0 unexpected) in 0.786 (0.794) seconds
+2026-11-16 18:58:40.616 xcodebuild[57507:9622944] [MT] IDETestOperationsObserverDebug: 34.206 elapsed -- Testing started completed.
+2026-11-16 18:58:40.616 xcodebuild[57507:9622944] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-16 18:58:40.616 xcodebuild[57507:9622944] [MT] IDETestOperationsObserverDebug: 34.206 sec, +34.206 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Cleanup-20261116-185804/结果.xcresult
+
+Failing tests:
+	IMSelfStateIntegrationTests.testVerifyNativeUIFixtureClosed()
+	IMSelfStateIntegrationTests.testVerifyNativeUIFixtureClosed()
+	IMSelfStateIntegrationTests.testVerifyNativeUIFixtureClosed()
+	IMSelfStateIntegrationTests.testVerifyNativeUIFixtureClosed()
+	IMSelfStateIntegrationTests.testVerifyNativeUIFixtureClosed()
+
+** TEST EXECUTE FAILED **
+
+Testing started

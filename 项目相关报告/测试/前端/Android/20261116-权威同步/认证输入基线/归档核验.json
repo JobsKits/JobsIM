@@ -1,0 +1,17 @@
+{
+  "scope": "Original authentication input bytes before new sync changes; APKs remain at original paths and were not overwritten or rebuilt",
+  "matchedInputCount": 38,
+  "changedNotArchivedAsOld": [],
+  "packages": [
+    {
+      "path": "代码/前端/Android/Dist/JobsIM-debug.apk",
+      "sha256": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+      "bytes": 18827119
+    },
+    {
+      "path": "代码/前端/Android/Dist/Baselines/20261115-native-auth-refresh-debug.apk",
+      "sha256": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+      "bytes": 18827119
+    }
+  ]
+}

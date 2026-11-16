@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "httpAssertions": 51,
+  "canonicalJPEGOutputs": true,
+  "avatarACL": true,
+  "avatarOriginalResultSurvivesReplacement": true,
+  "invalidImagePreservesOldAvatar": true,
+  "chatMediaCannotBypassAvatarACL": true,
+  "reportSourceAuthorization": true,
+  "reportsDoNotCopyChatBodies": true,
+  "adminStepUpGovernance": true,
+  "scope": "avatar and minimal report integration only; evidence uploads, appeals, group avatars and full I remain unaccepted"
+}

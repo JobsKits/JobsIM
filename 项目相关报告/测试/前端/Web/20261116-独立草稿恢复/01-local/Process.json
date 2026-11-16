@@ -1,0 +1,20 @@
+{
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/DraftRecovery/20261116-174629",
+  "steps": [
+    {
+      "step": "typecheck",
+      "exitCode": 0,
+      "gate": "",
+      "seconds": 4.21,
+      "minimumFreeBytes": 12098129920
+    },
+    {
+      "step": "browser",
+      "exitCode": 0,
+      "gate": "",
+      "seconds": 41.49,
+      "minimumFreeBytes": 12094623744
+    }
+  ],
+  "realAPI": false
+}

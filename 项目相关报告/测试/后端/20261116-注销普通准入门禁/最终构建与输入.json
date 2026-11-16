@@ -1,0 +1,24 @@
+{
+  "inputs": 95,
+  "unchangedInputs": true,
+  "archive": "复核后固定输入.zip",
+  "archiveSHA256": "f8a27fa98f785621214f66554dade66695e1eb68c3b996369e3749c7b77480c4",
+  "products": {
+    "jobsimd": {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/Backend/DeletionAdmission/20261116-2120/jobsimd",
+      "sha256": "fee94dd772d0241d612a7d7b20a67351f563bdca704dd345a8b1a9e85a5dac29",
+      "exitCode": 0
+    },
+    "jobsimops": {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/Backend/DeletionAdmission/20261116-2120/jobsimops",
+      "sha256": "78ba68e2ca61c2d5f55ba4a6be42922117261d4621fb65b6efa2f6be1dadcb0a",
+      "exitCode": 0
+    }
+  },
+  "testResults": "执行记录/2026-11-16T13-17-18-670Z-b518fc/结果.json",
+  "publicDeletionAPI": false,
+  "restrictedDataRights": false,
+  "cleanupWorker": false,
+  "liveHTTPS": false,
+  "deployed": false
+}

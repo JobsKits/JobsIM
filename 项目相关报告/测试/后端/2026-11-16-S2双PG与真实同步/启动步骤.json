@@ -1,0 +1,150 @@
+[
+  {
+    "step": "01-initdb-journal",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/initdb",
+      "-D",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/Postgres/Journal",
+      "-U",
+      "s2_journal_53742e5436be",
+      "--pwfile",
+      "[private-password-file]",
+      "--auth-local=scram-sha-256",
+      "--auth-host=scram-sha-256",
+      "--encoding=UTF8",
+      "--locale=C",
+      "--no-instructions"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.834,
+    "freeBytesBefore": 12292661248,
+    "freeBytesAfter": 12251353088,
+    "privateLog": "01-initdb-journal.log",
+    "logSHA256": "9a3d02a2e5ba532d28f477ea4cb0a9ced7fcd0491dfbf76072e97e75ae88cb48"
+  },
+  {
+    "step": "02-start-main",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/pg_ctl",
+      "-D",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/Postgres/Main",
+      "-l",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/Logs/main-postgres.log",
+      "-o",
+      "-c max_connections=80",
+      "-w",
+      "-t",
+      "30",
+      "start"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.131,
+    "freeBytesBefore": 12251340800,
+    "freeBytesAfter": 12251787264,
+    "privateLog": "02-start-main.log",
+    "logSHA256": "66afd0411ccc09366e99fdd99b85f21899c8d2d064f5835126859618802153ad"
+  },
+  {
+    "step": "03-start-journal",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/pg_ctl",
+      "-D",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/Postgres/Journal",
+      "-l",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/Logs/journal-postgres.log",
+      "-w",
+      "-t",
+      "30",
+      "start"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.128,
+    "freeBytesBefore": 12251787264,
+    "freeBytesAfter": 12251885568,
+    "privateLog": "03-start-journal.log",
+    "logSHA256": "66afd0411ccc09366e99fdd99b85f21899c8d2d064f5835126859618802153ad"
+  },
+  {
+    "step": "04-identity-main",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/psql",
+      "postgresql://s2_owner_44abaaa0a6ba@127.0.0.1:62381/postgres?sslmode=disable",
+      "-XqAt",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-c",
+      "SELECT json_build_object('database',current_database(),'user',current_user,'port',inet_server_port(),'systemIdentifier',(SELECT system_identifier::text FROM pg_control_system()),'maxConnections',current_setting('max_connections'),'fsync',current_setting('fsync'),'fullPages',current_setting('full_page_writes'),'syncCommit',current_setting('synchronous_commit'))"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.035,
+    "freeBytesBefore": 12251885568,
+    "freeBytesAfter": 12251680768,
+    "privateLog": "04-identity-main.log",
+    "logSHA256": "801beffe73568841c765267098c894468fc73c6871347ce3b6680dbfb30878f0"
+  },
+  {
+    "step": "05-create-main",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/psql",
+      "postgresql://s2_owner_44abaaa0a6ba@127.0.0.1:62381/postgres?sslmode=disable",
+      "-XqAt",
+      "-v",
+      "ON_ERROR_STOP=1"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.203,
+    "freeBytesBefore": 12251680768,
+    "freeBytesAfter": 12243611648,
+    "privateLog": "05-create-main.log",
+    "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "step": "04-identity-journal",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/psql",
+      "postgresql://s2_journal_53742e5436be@127.0.0.1:62382/postgres?sslmode=disable",
+      "-XqAt",
+      "-v",
+      "ON_ERROR_STOP=1",
+      "-c",
+      "SELECT json_build_object('database',current_database(),'user',current_user,'port',inet_server_port(),'systemIdentifier',(SELECT system_identifier::text FROM pg_control_system()),'maxConnections',current_setting('max_connections'),'fsync',current_setting('fsync'),'fullPages',current_setting('full_page_writes'),'syncCommit',current_setting('synchronous_commit'))"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.022,
+    "freeBytesBefore": 12243611648,
+    "freeBytesAfter": 12243410944,
+    "privateLog": "04-identity-journal.log",
+    "logSHA256": "6cb4eb1a1a4d6d1f3d2ba7cee4c816bf779bd9afa7dad4b36018b801717fbfbd"
+  },
+  {
+    "step": "05-create-journal",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/psql",
+      "postgresql://s2_journal_53742e5436be@127.0.0.1:62382/postgres?sslmode=disable",
+      "-XqAt",
+      "-v",
+      "ON_ERROR_STOP=1"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.119,
+    "freeBytesBefore": 12243406848,
+    "freeBytesAfter": 12235321344,
+    "privateLog": "05-create-journal.log",
+    "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "step": "06-NATS-check",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/NATS-v2.15.3/nats-server-v2.15.3-darwin-arm64/nats-server",
+      "-t",
+      "-c",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/Secrets/nats.conf"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.041,
+    "freeBytesBefore": 12235321344,
+    "freeBytesAfter": 12235317248,
+    "privateLog": "06-NATS-check.log",
+    "logSHA256": "96f2d4bf70751344625937b81b1327e4e17930d4f987493f0028e89f8126efe7"
+  }
+]

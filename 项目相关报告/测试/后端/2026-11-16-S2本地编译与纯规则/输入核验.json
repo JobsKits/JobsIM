@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-16T03:39:50.098114+00:00",
+  "freeBytes": 14675685376,
+  "requiredFreeBytes": 4294967296,
+  "sourceOnlyManifest": "项目相关报告/测试/后端/2026-11-16-S2本人状态-源码检查点/源SHA.json",
+  "sourceOnlyManifestSHA256": "bd913f0c6cc325931d0d2434a5e4bfdb2477ffd4f808bb32281a22ff9c410f50",
+  "inputHashesMatched": 80,
+  "goTool": "AppSupport Go1.27.4",
+  "scope": "native compilation and selected local no-external-state tests only; no PG/API/SQL/service/backup",
+  "sourceOnlyInputPreserved": true
+}

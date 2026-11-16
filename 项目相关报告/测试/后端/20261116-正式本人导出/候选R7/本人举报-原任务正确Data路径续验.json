@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 24,
+  "semanticAssertions": 12,
+  "binarySHA256": "a48e0ac3e42cee8f9d669a35df83cc4c3eb3609677ca11b2696875421bf1c3ea",
+  "scriptSHA256": "42662a2e4e93ef41554e053e4affdd74834c4a88f957834e83a858e991d37aad",
+  "administratorBootstrap": "owned realm real operator and TOTP; no SQL privilege grant",
+  "checkedAt": "2026-11-16T09:30:54.132721+00:00",
+  "assertions": [
+    {
+      "assertion": "report submission original nonce retains one current source identity",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "formal manifest includes only the reporter's current own reason and public status",
+      "passed": true
+    },
+    {
+      "assertion": "another reporter's content is absent and live coverage explicitly includes own reports",
+      "passed": true
+    },
+    {
+      "assertion": "unauthorized report disposition neither changes the source nor revokes a valid personal package",
+      "passed": true
+    },
+    {
+      "assertion": "real MFA-authorized disposition drains same-owner governance holders and artifact before its success response",
+      "passed": true
+    },
+    {
+      "assertion": "original completed disposition is replayed without another source revision",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "new current package exports the public reviewed state while retaining only the reporter's own reason",
+      "passed": true
+    },
+    {
+      "assertion": "report body is backed by its own active durable typed holder",
+      "passed": true
+    }
+  ]
+}

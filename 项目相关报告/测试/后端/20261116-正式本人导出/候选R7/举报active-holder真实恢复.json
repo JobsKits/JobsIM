@@ -1,0 +1,28 @@
+{
+  "status": "failed",
+  "failure": "restored report source holder and its durable handoff ledger are fully denied",
+  "lastCompletedStage": "target_started",
+  "httpChecks": 5,
+  "semanticAssertions": 3,
+  "binarySHA256": "a48e0ac3e42cee8f9d669a35df83cc4c3eb3609677ca11b2696875421bf1c3ea",
+  "operatorBinarySHA256": "93d370a1c112d0adc28e3d8ee1bc970acb3ff3896a4d1212c635dbb1a755cb64",
+  "scriptSHA256": "8d7418f9fe83395b142f1860a7f45c2d2b514346b0b70a94359c02a283d496ff",
+  "realEncryptedReportHolderRestore": true,
+  "checkedAt": "2026-11-16T09:33:13.371705+00:00",
+  "assertions": [
+    {
+      "assertion": "actual backup source contains one active ready reporter holder",
+      "passed": true
+    },
+    {
+      "assertion": "real second restore advances once and retains the exact deployment",
+      "passed": true
+    },
+    {
+      "assertion": "ready report-backed export restores cancelled metadata only",
+      "passed": true
+    }
+  ],
+  "backupSHA256": "b36acf75d11108fc3a60fd5d2a32a40407bf9d5bb3760cf0c72749d6916eefa4",
+  "backupBytes": 17241528
+}

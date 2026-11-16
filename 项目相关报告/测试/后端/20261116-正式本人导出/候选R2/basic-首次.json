@@ -1,0 +1,21 @@
+{
+  "group": "basic",
+  "status": "failed",
+  "failure": "PATCH /api/conversations/c9069243-917c-4603-ad4d-ecbc38c1f8a8/view: expected 200, received 400/MANUAL_UNREAD_GENERATION_REQUIRED; body redacted",
+  "httpChecks": 18,
+  "semanticAssertions": 2,
+  "elapsedSeconds": 0.463,
+  "binarySHA256": "c3d1128f246361f10f72711a545f7a9af5892e1db9b4b915d363bbc774326d34",
+  "scriptSHA256": "e910e70e9d4c7b811dc19b87a05d304be48eb6ce1eb3201ce581aec8fa1c4e12",
+  "checkedAt": "2026-11-16T08:03:06.489468+00:00",
+  "assertions": [
+    {
+      "assertion": "current reader source proof required",
+      "passed": true
+    },
+    {
+      "assertion": "real media upload",
+      "passed": true
+    }
+  ]
+}

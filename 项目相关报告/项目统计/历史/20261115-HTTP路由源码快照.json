@@ -1,0 +1,583 @@
+{
+  "at": "2026-11-15T15:11:05.994344+00:00",
+  "method": "Literal h(method/path) registration; pin/favorite loop expanded. Ordinary excludes /api/admin and /exports; excludes internal/health. Source snapshot includes unverified sync; not deployed acceptance. Historical management semantic count is a different unit.",
+  "counts": {
+    "ordinaryPublic": 70,
+    "experimentalExport": 5,
+    "adminPrefixMethodPatterns": 8
+  },
+  "sources": [
+    {
+      "path": "代码/后端/Go/admin_identity.go",
+      "sha256": "2d190871a402043ab019e498088a6af3ab4f7cb9cd39a40cbfe256b8326c61b2"
+    },
+    {
+      "path": "代码/后端/Go/avatar.go",
+      "sha256": "9ab68cd2c236120dbb2bcbaef12526fa29a0738abff6b5074179349d1b323a31"
+    },
+    {
+      "path": "代码/后端/Go/avatar_media.go",
+      "sha256": "b11459bbbc7aa1200210736670cf72d7a6be3ec9c49e1897443cf827ccf6010c"
+    },
+    {
+      "path": "代码/后端/Go/control.go",
+      "sha256": "db58bede77b4ac21e5a2264885a27459b485ac00ca5d77dce28976ba27206eb8"
+    },
+    {
+      "path": "代码/后端/Go/conversation.go",
+      "sha256": "f2d1ce277571015f53025a9656ee75f8b7fff0df69b45f4205188ca759786f0e"
+    },
+    {
+      "path": "代码/后端/Go/directory.go",
+      "sha256": "80a962f036bb9a26b1fa0a6d37c310ae4f812d8717a5da44242548fc16cb54da"
+    },
+    {
+      "path": "代码/后端/Go/export.go",
+      "sha256": "f071ccd348c60fffab82e5d4b9cf16d6a9821e2ec34f8caee4ccd9d5cc234f43"
+    },
+    {
+      "path": "代码/后端/Go/forward_media.go",
+      "sha256": "d096c0b23df32ec82f9a9c14b19ca08289f81cfafe7017bc2c35056692a68896"
+    },
+    {
+      "path": "代码/后端/Go/identity.go",
+      "sha256": "a375d3bbce82e3f7b67aa22e42ba6d0697e155980fcab96620faa5ca8efe1b62"
+    },
+    {
+      "path": "代码/后端/Go/media.go",
+      "sha256": "54b7dedaab50bb1163a17cbf01a54720f3bda2c51ec54377862a13a09da402e0"
+    },
+    {
+      "path": "代码/后端/Go/mentions_announcements.go",
+      "sha256": "54cb181d54b231161b843c4c66eded95c176f0633010e7b9b33060e9caff6d1a"
+    },
+    {
+      "path": "代码/后端/Go/message.go",
+      "sha256": "02835f94d9a1279af77c4b4ebb311ad13c9f3508866a047f41aa1c3b09af4fb7"
+    },
+    {
+      "path": "代码/后端/Go/mfa.go",
+      "sha256": "e076d75bcd6548bf528964a6b2bee1d37fd15a1f72f2a880701d1c6fadef7a79"
+    },
+    {
+      "path": "代码/后端/Go/reports.go",
+      "sha256": "ec31ee2999e6ecfbd469f20935a2d473cbaf45466be541f449fe5d8394e3d434"
+    },
+    {
+      "path": "代码/后端/Go/search.go",
+      "sha256": "4428c6b89247dc4e7dbee194ef86f879aaf08cb0f44eaeb859aa850b2ed0fb4f"
+    },
+    {
+      "path": "代码/后端/Go/session_refresh.go",
+      "sha256": "79a96511e38d56dfd809616f96c68068ef5f91c9d54adb8b36d967bf2714b7af"
+    },
+    {
+      "path": "代码/后端/Go/sync_service.go",
+      "sha256": "5ad81edbb0efcce2a8cff1650326c266c2370fa143ed106213fd68988fe5ecea"
+    }
+  ],
+  "ordinaryPublic": [
+    {
+      "method": "POST",
+      "path": "/api/me/avatar",
+      "file": "代码/后端/Go/avatar.go",
+      "line": 70
+    },
+    {
+      "method": "GET",
+      "path": "/api/me/avatar/operations/{id}",
+      "file": "代码/后端/Go/avatar.go",
+      "line": 71
+    },
+    {
+      "method": "GET",
+      "path": "/api/avatars/{id}",
+      "file": "代码/后端/Go/avatar_media.go",
+      "line": 31
+    },
+    {
+      "method": "GET",
+      "path": "/api/bootstrap",
+      "file": "代码/后端/Go/control.go",
+      "line": 57
+    },
+    {
+      "method": "GET",
+      "path": "/api/capabilities",
+      "file": "代码/后端/Go/control.go",
+      "line": 69
+    },
+    {
+      "method": "PUT",
+      "path": "/api/capabilities/{name}",
+      "file": "代码/后端/Go/control.go",
+      "line": 113
+    },
+    {
+      "method": "GET",
+      "path": "/api/conversations",
+      "file": "代码/后端/Go/conversation.go",
+      "line": 38
+    },
+    {
+      "method": "POST",
+      "path": "/api/conversations",
+      "file": "代码/后端/Go/conversation.go",
+      "line": 39
+    },
+    {
+      "method": "GET",
+      "path": "/api/conversations/{id}/members",
+      "file": "代码/后端/Go/conversation.go",
+      "line": 40
+    },
+    {
+      "method": "POST",
+      "path": "/api/conversations/{id}/members",
+      "file": "代码/后端/Go/conversation.go",
+      "line": 41
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/conversations/{id}/members/{userId}",
+      "file": "代码/后端/Go/conversation.go",
+      "line": 42
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/conversations/{id}",
+      "file": "代码/后端/Go/conversation.go",
+      "line": 43
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/me",
+      "file": "代码/后端/Go/directory.go",
+      "line": 92
+    },
+    {
+      "method": "GET",
+      "path": "/api/contacts",
+      "file": "代码/后端/Go/directory.go",
+      "line": 142
+    },
+    {
+      "method": "GET",
+      "path": "/api/contacts/{userId}/relationship",
+      "file": "代码/后端/Go/directory.go",
+      "line": 143
+    },
+    {
+      "method": "POST",
+      "path": "/api/contacts/requests",
+      "file": "代码/后端/Go/directory.go",
+      "line": 144
+    },
+    {
+      "method": "POST",
+      "path": "/api/contacts/requests/{id}/accept",
+      "file": "代码/后端/Go/directory.go",
+      "line": 145
+    },
+    {
+      "method": "POST",
+      "path": "/api/contacts/requests/{id}/reject",
+      "file": "代码/后端/Go/directory.go",
+      "line": 146
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/contacts/{userId}",
+      "file": "代码/后端/Go/directory.go",
+      "line": 147
+    },
+    {
+      "method": "PUT",
+      "path": "/api/blocks/{userId}",
+      "file": "代码/后端/Go/directory.go",
+      "line": 148
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/blocks/{userId}",
+      "file": "代码/后端/Go/directory.go",
+      "line": 149
+    },
+    {
+      "method": "POST",
+      "path": "/api/contacts/{userId}/reopen",
+      "file": "代码/后端/Go/directory.go",
+      "line": 150
+    },
+    {
+      "method": "GET",
+      "path": "/api/messages/{id}/attachment",
+      "file": "代码/后端/Go/forward_media.go",
+      "line": 87
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "file": "代码/后端/Go/identity.go",
+      "line": 77
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "file": "代码/后端/Go/identity.go",
+      "line": 78
+    },
+    {
+      "method": "GET",
+      "path": "/api/me",
+      "file": "代码/后端/Go/identity.go",
+      "line": 81
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/context",
+      "file": "代码/后端/Go/identity.go",
+      "line": 94
+    },
+    {
+      "method": "GET",
+      "path": "/api/me/export",
+      "file": "代码/后端/Go/identity.go",
+      "line": 116
+    },
+    {
+      "method": "GET",
+      "path": "/api/users",
+      "file": "代码/后端/Go/identity.go",
+      "line": 132
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/csrf",
+      "file": "代码/后端/Go/identity.go",
+      "line": 133
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/confirm",
+      "file": "代码/后端/Go/identity.go",
+      "line": 140
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/logout",
+      "file": "代码/后端/Go/identity.go",
+      "line": 150
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/sessions",
+      "file": "代码/后端/Go/identity.go",
+      "line": 174
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/auth/sessions/{deviceId}",
+      "file": "代码/后端/Go/identity.go",
+      "line": 175
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/recovery-codes",
+      "file": "代码/后端/Go/identity.go",
+      "line": 176
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/recover",
+      "file": "代码/后端/Go/identity.go",
+      "line": 177
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/reset-password",
+      "file": "代码/后端/Go/identity.go",
+      "line": 178
+    },
+    {
+      "method": "POST",
+      "path": "/api/media",
+      "file": "代码/后端/Go/media.go",
+      "line": 17
+    },
+    {
+      "method": "GET",
+      "path": "/api/media/{id}",
+      "file": "代码/后端/Go/media.go",
+      "line": 18
+    },
+    {
+      "method": "GET",
+      "path": "/api/conversations/{id}/announcement",
+      "file": "代码/后端/Go/mentions_announcements.go",
+      "line": 181
+    },
+    {
+      "method": "PUT",
+      "path": "/api/conversations/{id}/announcement",
+      "file": "代码/后端/Go/mentions_announcements.go",
+      "line": 182
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/conversations/{id}/announcement",
+      "file": "代码/后端/Go/mentions_announcements.go",
+      "line": 183
+    },
+    {
+      "method": "GET",
+      "path": "/api/conversations/{id}/announcement/operations/{requestId}",
+      "file": "代码/后端/Go/mentions_announcements.go",
+      "line": 184
+    },
+    {
+      "method": "GET",
+      "path": "/api/conversations/{id}/messages",
+      "file": "代码/后端/Go/message.go",
+      "line": 97
+    },
+    {
+      "method": "POST",
+      "path": "/api/conversations/{id}/messages",
+      "file": "代码/后端/Go/message.go",
+      "line": 98
+    },
+    {
+      "method": "POST",
+      "path": "/api/conversations/{id}/message-results",
+      "file": "代码/后端/Go/message.go",
+      "line": 99
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/messages/{id}",
+      "file": "代码/后端/Go/message.go",
+      "line": 100
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/messages/{id}",
+      "file": "代码/后端/Go/message.go",
+      "line": 101
+    },
+    {
+      "method": "GET",
+      "path": "/api/search",
+      "file": "代码/后端/Go/message.go",
+      "line": 102
+    },
+    {
+      "method": "POST",
+      "path": "/api/messages/{id}/reactions",
+      "file": "代码/后端/Go/message.go",
+      "line": 103
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/messages/{id}/reactions/{emoji}",
+      "file": "代码/后端/Go/message.go",
+      "line": 104
+    },
+    {
+      "method": "PUT",
+      "path": "/api/messages/{id}/pin",
+      "file": "代码/后端/Go/message.go",
+      "line": 107
+    },
+    {
+      "method": "PUT",
+      "path": "/api/messages/{id}/favorite",
+      "file": "代码/后端/Go/message.go",
+      "line": 107
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/messages/{id}/pin",
+      "file": "代码/后端/Go/message.go",
+      "line": 108
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/messages/{id}/favorite",
+      "file": "代码/后端/Go/message.go",
+      "line": 108
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/step-up",
+      "file": "代码/后端/Go/mfa.go",
+      "line": 147
+    },
+    {
+      "method": "POST",
+      "path": "/api/reports",
+      "file": "代码/后端/Go/reports.go",
+      "line": 39
+    },
+    {
+      "method": "GET",
+      "path": "/api/reports",
+      "file": "代码/后端/Go/reports.go",
+      "line": 40
+    },
+    {
+      "method": "GET",
+      "path": "/api/favorites",
+      "file": "代码/后端/Go/search.go",
+      "line": 32
+    },
+    {
+      "method": "GET",
+      "path": "/api/messages/{id}",
+      "file": "代码/后端/Go/search.go",
+      "line": 33
+    },
+    {
+      "method": "GET",
+      "path": "/api/conversations/{id}",
+      "file": "代码/后端/Go/search.go",
+      "line": 50
+    },
+    {
+      "method": "GET",
+      "path": "/api/auth/refresh-context",
+      "file": "代码/后端/Go/session_refresh.go",
+      "line": 21
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/refresh",
+      "file": "代码/后端/Go/session_refresh.go",
+      "line": 22
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/reauthenticate",
+      "file": "代码/后端/Go/session_refresh.go",
+      "line": 23
+    },
+    {
+      "method": "PUT",
+      "path": "/api/sync/device",
+      "file": "代码/后端/Go/sync_service.go",
+      "line": 58
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/context",
+      "file": "代码/后端/Go/sync_service.go",
+      "line": 59
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/snapshots",
+      "file": "代码/后端/Go/sync_service.go",
+      "line": 60
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/snapshots/{id}/pages/{page}",
+      "file": "代码/后端/Go/sync_service.go",
+      "line": 61
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/changes",
+      "file": "代码/后端/Go/sync_service.go",
+      "line": 62
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/classifications",
+      "file": "代码/后端/Go/sync_service.go",
+      "line": 63
+    }
+  ],
+  "experimentalExport": [
+    {
+      "method": "POST",
+      "path": "/api/me/exports",
+      "file": "代码/后端/Go/export.go",
+      "line": 107
+    },
+    {
+      "method": "GET",
+      "path": "/api/me/exports/{id}",
+      "file": "代码/后端/Go/export.go",
+      "line": 108
+    },
+    {
+      "method": "POST",
+      "path": "/api/me/exports/{id}/cancel",
+      "file": "代码/后端/Go/export.go",
+      "line": 109
+    },
+    {
+      "method": "POST",
+      "path": "/api/me/exports/{id}/download-ticket",
+      "file": "代码/后端/Go/export.go",
+      "line": 110
+    },
+    {
+      "method": "GET",
+      "path": "/api/me/exports/{id}/download",
+      "file": "代码/后端/Go/export.go",
+      "line": 111
+    }
+  ],
+  "admin": [
+    {
+      "method": "GET",
+      "path": "/api/admin/users",
+      "file": "代码/后端/Go/admin_identity.go",
+      "line": 28
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/admin/users/{id}/state",
+      "file": "代码/后端/Go/admin_identity.go",
+      "line": 55
+    },
+    {
+      "method": "POST",
+      "path": "/api/admin/users/{id}/reset-grants",
+      "file": "代码/后端/Go/admin_identity.go",
+      "line": 56
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/operations/{id}",
+      "file": "代码/后端/Go/admin_identity.go",
+      "line": 57
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/status",
+      "file": "代码/后端/Go/control.go",
+      "line": 218
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/reports",
+      "file": "代码/后端/Go/reports.go",
+      "line": 41
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/admin/reports/{id}",
+      "file": "代码/后端/Go/reports.go",
+      "line": 42
+    },
+    {
+      "method": "GET",
+      "path": "/api/admin/report-operations/{id}",
+      "file": "代码/后端/Go/reports.go",
+      "line": 43
+    }
+  ]
+}

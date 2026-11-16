@@ -1,0 +1,21 @@
+{
+  "exitCode": 0,
+  "timedOut": false,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "test",
+    "-p",
+    "1",
+    "-overlay",
+    "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/20261116-正式本人导出/源码与本地检查/02-overlay.json",
+    "-run",
+    "^TestPersonalExport",
+    "-count=1",
+    "-v",
+    "."
+  ],
+  "apiRequests": 0,
+  "postgresStarted": false,
+  "schemaMigration": false,
+  "sourceUnchanged": true
+}

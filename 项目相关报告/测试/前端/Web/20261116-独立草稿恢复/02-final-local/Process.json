@@ -1,0 +1,28 @@
+{
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/DraftRecovery/20261116-174629",
+  "steps": [
+    {
+      "step": "typecheck",
+      "exitCode": 0,
+      "gate": "",
+      "seconds": 0.52,
+      "minimumFreeBytes": 28070785024
+    },
+    {
+      "step": "browser",
+      "exitCode": 0,
+      "gate": "",
+      "seconds": 4.31,
+      "minimumFreeBytes": 28008550400
+    },
+    {
+      "step": "build",
+      "exitCode": 0,
+      "gate": "",
+      "seconds": 0.51,
+      "minimumFreeBytes": 28011868160
+    }
+  ],
+  "realAPI": false,
+  "productionDist": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/DraftRecovery/20261116-174629/Dist"
+}

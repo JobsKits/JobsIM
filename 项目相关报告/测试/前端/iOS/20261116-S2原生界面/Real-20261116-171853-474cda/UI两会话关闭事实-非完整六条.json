@@ -1,0 +1,31 @@
+{
+  "scope": "UI fixture only; four business closures proven by passing method assertions, their UserDefaults journal did not survive phase boundary",
+  "rows": [
+    {
+      "userID": "e1a14a0e-b363-4fad-82f8-04f1371b3187",
+      "closed": "true",
+      "requestID": "55abcff1-9ecf-48a7-a67e-aa09aed3df61",
+      "epoch": "2",
+      "runID": "949a1ecc-70ac-4e24-873b-598cfbec0569",
+      "deviceID": "99dfea95-b684-4fdf-aedf-58c9c6792cb7",
+      "username": "s2_ios_ad6d8ca7f64a4b88",
+      "familyID": "18ecbbd5-9fd0-440e-ae83-fbeab55729f1",
+      "profile": "s2-ios-e8098955-3a9b-4a6a-80fe-8bd49319fcb1",
+      "accessExpiresAt": "2026-11-16T09:32:18.190201Z",
+      "deployment": "24fb0a3c-99a0-4ada-9d01-07467724e829"
+    },
+    {
+      "requestID": "4d38f8fe-cb87-4c0f-9c99-ed0f785bd69f",
+      "userID": "fa262b92-4d31-4032-b51f-2c58be437f66",
+      "closed": "true",
+      "epoch": "2",
+      "deviceID": "1a2d1b7e-4f25-48a2-943e-dde6411884ef",
+      "runID": "949a1ecc-70ac-4e24-873b-598cfbec0569",
+      "username": "s2_ios_4392c4901de64cde",
+      "deployment": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+      "familyID": "9d929619-bbc1-4779-a1ad-b52c16deb0c2",
+      "profile": "s2-ios-129e0fc9-be51-45ab-995d-6dde99abce53",
+      "accessExpiresAt": "2026-11-16T09:32:18.384984Z"
+    }
+  ]
+}

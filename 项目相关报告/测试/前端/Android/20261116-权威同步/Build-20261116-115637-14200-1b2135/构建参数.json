@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/Android/gradlew",
+    "--offline",
+    "--no-daemon",
+    "--max-workers=1",
+    "--console=plain",
+    "-Dorg.gradle.jvmargs=-Xmx1536m -XX:ActiveProcessorCount=2 -Dfile.encoding=UTF-8",
+    "-Pkotlin.compiler.execution.strategy=in-process",
+    "--init-script",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/Android/sync-build-ij2gvpos/limits.gradle",
+    ":app:assembleDebug",
+    ":app:testDebugUnitTest",
+    ":app:assembleDebugAndroidTest"
+  ],
+  "javaHome": "/Applications/Android Studio.app/Contents/jbr/Contents/Home",
+  "sdk": "/Users/jobs/Library/Android/sdk",
+  "initSHA256": "a76cfe89af585eb7486ed889323ff20c550b13ed43345cf4b37c3d0ed21b3819"
+}

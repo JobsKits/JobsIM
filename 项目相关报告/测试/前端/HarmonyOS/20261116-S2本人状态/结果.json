@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-16",
+  "hostSyncSelfState": {
+    "pass": 35,
+    "fail": 0,
+    "skip": 0,
+    "report": "主机/Authoritative-x6rwKD/Results.txt",
+    "adapter": "actual Jobs transpiled source with Python SQLite WAL/FULL; not native RDB"
+  },
+  "hostLegacyRules": {
+    "pass": 41,
+    "fail": 0,
+    "skip": 0,
+    "report": "主机/AuthRules-LzwvNr/Results.txt",
+    "adapter": "API/RCP/AssetStore mocked"
+  },
+  "finalApplicationBuild": {
+    "exitCode": 0,
+    "gate": "",
+    "seconds": 10.04,
+    "minimumFreeBytes": 35392299008,
+    "deviceExecuted": false
+  },
+  "finalTestBuild": {
+    "exitCode": 0,
+    "gate": "",
+    "seconds": 7.02,
+    "minimumFreeBytes": 35377741824,
+    "deviceExecuted": false
+  },
+  "artifacts": [
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-default-unsigned.hap",
+      "archive": "项目相关报告/测试/前端/HarmonyOS/20261116-S2本人状态/当前HAP/entry-default-unsigned.hap",
+      "bytes": 1252390,
+      "sha256": "3db7f8c87b3ede705228ea0363ccd38d24af03de9877c744134312b2de9e9384",
+      "arkBytecodeSha256": "bd5f84b9b69274cd20ea222a2ff5f0a336b31eb2f359563feb7f3f412cd91115",
+      "zipCRCValid": true,
+      "unsigned": true,
+      "compiledHypiumMethodCount": null,
+      "hypiumExecuted": false
+    },
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-ohosTest-unsigned.hap",
+      "archive": "项目相关报告/测试/前端/HarmonyOS/20261116-S2本人状态/当前HAP/entry-ohosTest-unsigned.hap",
+      "bytes": 1500789,
+      "sha256": "d8c72d9fe4d18955ef93c9f12fb18797636668b7a3c54e5297e8bfc7d0d678bb",
+      "arkBytecodeSha256": "efe84a32fdbc1f6a3941a56b903dc49004917e105b1de746f120335bb5c9b6ab",
+      "zipCRCValid": true,
+      "unsigned": true,
+      "compiledHypiumMethodCount": 37,
+      "hypiumExecuted": false
+    }
+  ],
+  "nativeDeviceExecuted": false,
+  "HDC": "No target; not installed or run",
+  "actualHarmonyHTTPS": false,
+  "qualifiedACK": false,
+  "after_receipt": false,
+  "notes": [
+    "App-01/Test-01 retained; App-02/Test-02 recompile two final Index presentation changes",
+    "35 is current independent matrix including corrected 25 S1 cases, not accumulated historical runs",
+    "37 Hypium methods compiled only; bytecode name presence is not execution",
+    "S1 owner-reference revision and Message.version remain independent in current HAP"
+  ]
+}

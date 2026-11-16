@@ -1,0 +1,32 @@
+{
+  "status": "readonly_scoped_check_complete",
+  "observedAt": "2026-11-16T10:15:46.988906+00:00",
+  "runID": "68c645c0-d6ba-4fa5-9891-99b016bdd07a",
+  "hostWindowUTC": {
+    "from": "2026-11-16T09:41:11.290982Z",
+    "through": "2026-11-16T09:43:38.994218Z"
+  },
+  "testWindowUTC": {
+    "from": "2026-11-16T09:41:51.548Z",
+    "through": "2026-11-16T09:41:59.978Z"
+  },
+  "scope": "Only this run exclusive test-account format and exact host window; no usernames, request IDs, sessions or credential values exported",
+  "accountCount": 0,
+  "identity": {
+    "serverURL": "https://127.0.0.1:54443",
+    "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "restoreEpoch": "2",
+    "binarySHA256": "dea37a66395b0b2c503ba934bafef327d3d87b407c73a10595e770f46948a2cd",
+    "liveExactPIDAndArgvMatched": true
+  },
+  "readonly": {
+    "postgresDefaultTransactionReadonly": true,
+    "transactionReadonly": true,
+    "writeStatements": 0,
+    "revocations": 0,
+    "otherRealmsAccessed": false
+  },
+  "resultBoundary": "No matching committed test account or linked family found in the bounded window. This is not evidence of logout/closure and does not establish a TLS root cause. Original failed authentication results remain unchanged.",
+  "initialIntentJournalAvailable": false,
+  "hostInitialIntentCopyAvailable": false
+}

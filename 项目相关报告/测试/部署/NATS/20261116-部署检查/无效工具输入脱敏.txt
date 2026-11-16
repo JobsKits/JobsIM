@@ -1,0 +1,7 @@
+JobsIM：check/plan/status只读；run启动本实例双PG、loopback JetStream与Go角色；stop默认备份并保留数据。
+动作=check；不会创建state、启动/停止服务、生成密钥或安装环境。
+go version go1.27.4 darwin/arm64
+pg_ctl (PostgreSQL) 18.7 (Postgres.app)
+OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+v24.22.1
+NATS工具须为本地可执行路径；无效输入不回显。

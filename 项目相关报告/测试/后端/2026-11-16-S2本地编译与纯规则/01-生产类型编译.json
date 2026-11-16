@@ -1,0 +1,32 @@
+{
+  "step": 1,
+  "name": "production_type_compile",
+  "args": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "test",
+    "-p",
+    "1",
+    "-run",
+    "^$",
+    "-timeout",
+    "170s",
+    "./..."
+  ],
+  "workingDirectory": "代码/后端/Go",
+  "explicitEnvironment": {
+    "GOMAXPROCS": "2",
+    "GOTOOLCHAIN": "local",
+    "GOPROXY": "off",
+    "GOSUMDB": "off"
+  },
+  "removedEnvironmentPrefix": "JOBS_IM_",
+  "startedAt": "2026-11-16T03:39:50.098940+00:00",
+  "timeoutSeconds": 180,
+  "freeBytesBefore": 14675685376,
+  "log": "01-生产类型编译-原始.log",
+  "exitCode": 0,
+  "elapsedSeconds": 2.991,
+  "endedAt": "2026-11-16T03:39:53.089925+00:00",
+  "freeBytesAfter": 14695718912,
+  "logSHA256": "73536820228a55095c62b11b3d2baf8a37b0b05f7803cfea5ef5ef1e5af8f318"
+}

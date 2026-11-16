@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-16",
+  "status": "cross-build-passed-not-native",
+  "host": "MacOS arm64",
+  "go": "1.27.4",
+  "sourceInputsUnchanged": 19,
+  "sourceCodeChanged": false,
+  "targets": [
+    {
+      "targetOS": "linux",
+      "targetArch": "amd64",
+      "CGO_ENABLED": 0,
+      "GOMAXPROCS": 2,
+      "parallelism": 1,
+      "status": "completed",
+      "exitCode": 0,
+      "seconds": 77.42,
+      "minimumFreeGiB": 10.41,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "build",
+        "-p=1",
+        "-o",
+        "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/Cross-20261116-123709-093a23/jobsim-linux-amd64",
+        "./cmd/jobsim"
+      ],
+      "executedTargetBinary": false,
+      "nativeVaultTested": false,
+      "APIUsed": false,
+      "binarySHA256": "3709d4560f052302ad1279bc2ef7289a1389380f9b4171ca5d7692af7c3298f9",
+      "bytes": 17635931,
+      "fileDescription": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/Cross-20261116-123709-093a23/jobsim-linux-amd64: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=URHRLgMb-NI220PgHCut/oPQO4vMq75EwTGjFu1PX/Srvco9KeNVG3ud47DGDM/f43HHE0rhuzwVqKLtm04, BuildID[sha1]=075a2b5d84943afc97688e9b7e535f093670e377, with debug_info, not stripped",
+      "buildInfoExitCode": 0
+    },
+    {
+      "targetOS": "windows",
+      "targetArch": "amd64",
+      "CGO_ENABLED": 0,
+      "GOMAXPROCS": 2,
+      "parallelism": 1,
+      "status": "completed",
+      "exitCode": 0,
+      "seconds": 59.27,
+      "minimumFreeGiB": 9.95,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "build",
+        "-p=1",
+        "-o",
+        "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/Cross-20261116-123709-093a23/jobsim-windows-amd64.exe",
+        "./cmd/jobsim"
+      ],
+      "executedTargetBinary": false,
+      "nativeVaultTested": false,
+      "APIUsed": false,
+      "binarySHA256": "45ad1e495b7f2cb13599dd3e96b8c6d97baf7e797900ff9223b39e7cca700d88",
+      "bytes": 17580544,
+      "fileDescription": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/Cross-20261116-123709-093a23/jobsim-windows-amd64.exe: PE32+ executable (console) x86-64, for MS Windows",
+      "buildInfoExitCode": 0
+    }
+  ],
+  "targetBinaryExecuted": false,
+  "targetVaultCalled": false,
+  "APIUsed": false,
+  "PGUsed": false,
+  "dependenciesInstalled": false,
+  "Mac45AndHTTPS10Repeated": false,
+  "reasonNotRepeated": "No Go/module input changes relative to their fixed candidate; target-only builds do not change Mac code."
+}

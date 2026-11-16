@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-15T18:49:03.202085+00:00",
+  "availableBytes": 2585710592,
+  "currentMode": "Only small source/format/typecheck work; no native builds, database fixtures, new backups or write-heavy browser tests",
+  "actions": "Stopped only task-owned build groups and the task-owned Vite process; preserved all application products, results, database/key/SDK/backup files",
+  "observedSwap": "vm.swapusage: total = 20480.00M  used = 19677.56M  free = 802.44M  (encrypted)",
+  "deviceFS": "CoreDevice/DeviceFS is a devicefs virtual mount (df reports its own virtual 1TiB); du 62GiB is not evidence of 62GiB host cache to delete",
+  "concurrency": "Other project simulator apps and about 140 codegraph processes observed; ownership/cause not established, none stopped; user clarification pending",
+  "node": "System Homebrew Node26 could not load libsimdutf.37 while opt/simdutf exposes .38; reused existing standalone Node24.22.1 for current processes and local repository Toc filter, no global environment/library edits"
+}

@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:48.125067+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:48.293146+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite"}
+{"Time":"2026-11-16T12:11:48.293232+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite","Output":"=== RUN   TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:48.455697+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite","Output":"--- PASS: TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite (0.16s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:48.45573+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite","Elapsed":0.16}
+{"Time":"2026-11-16T12:11:48.455758+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:48.456359+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.331s\n"}
+{"Time":"2026-11-16T12:11:48.456385+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.331}

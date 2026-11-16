@@ -1,0 +1,21 @@
+{
+  "status": "local_passed",
+  "registeredTopLevelMethods": 99,
+  "passedGroups": 97,
+  "failedGroups": 0,
+  "skippedGroups": 2,
+  "sourceSetEqualsRawUniquePassSkip": true,
+  "GoExitCode": 0,
+  "binary": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-PasswordChange/20261116-1794834770703/Products/jobsim-own-password-change-final",
+  "binarySHA256": "71500985db27598cdd72e58ca326a1875cd4d23b672a4e7488b186f07101ca8a",
+  "buildExitCode": 0,
+  "rawSHA256": "9aa8dc8915083d3daf226d34051b921d8debd2f655802c7e9a99eaa2101b4305",
+  "typedInputs": 37,
+  "finalInputs": 42,
+  "runnerParserOnlyChangedAfterExecution": true,
+  "realAPI": false,
+  "PG": false,
+  "realTTY": false,
+  "systemVaultPositive": false,
+  "sourceFrozen": true
+}

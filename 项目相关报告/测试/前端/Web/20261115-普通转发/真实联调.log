@@ -1,0 +1,8 @@
+POST /api/auth/login 200
+POST /api/auth/confirm 200
+POST /api/conversations/9161e33b-f375-462f-905e-943c322dd121/message-results 200
+POST /api/conversations/9161e33b-f375-462f-905e-943c322dd121/message-results 404
+POST /api/conversations/9161e33b-f375-462f-905e-943c322dd121/messages 200
+POST /api/conversations/9161e33b-f375-462f-905e-943c322dd121/messages 200
+POST /api/conversations/9161e33b-f375-462f-905e-943c322dd121/messages 200
+PASS Web reference forwarding against real HTTPS/PostgreSQL

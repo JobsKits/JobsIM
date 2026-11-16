@@ -1,0 +1,9 @@
+{
+  "messageHistoryResultHTTP200Placeholder": true,
+  "noDurableRefStateChanged": true,
+  "sameVersionExactGETRecovers": true,
+  "scope": "Current message handler with real isolated PG and authenticated owner RPCs; only the forward principal RPC is process-locally fault-injected, not a deployed outage",
+  "searchFavoriteWholePage503": true,
+  "status": "passed",
+  "temporaryRoutes": 5
+}

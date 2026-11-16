@@ -1,0 +1,220 @@
+[
+  {
+    "step": "01-新CA",
+    "exitCode": 0,
+    "elapsedSeconds": 0.053,
+    "freeBytesBefore": 6907596800,
+    "freeBytesAfter": 6907531264,
+    "args": [
+      "/opt/homebrew/opt/openssl@3/bin/openssl",
+      "req",
+      "-new",
+      "-x509",
+      "-newkey",
+      "rsa:2048",
+      "-nodes",
+      "-days",
+      "7",
+      "-config",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/openssl.cnf",
+      "-keyout",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/ca.key",
+      "-out",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/ca.pem"
+    ],
+    "privateLog": "01-新CA.log",
+    "sha256": "c86ce8b8e57d192c0ef20012915173e2eda9dd256918c24dabfa41da201c7298"
+  },
+  {
+    "step": "02-新CSR",
+    "exitCode": 0,
+    "elapsedSeconds": 0.108,
+    "freeBytesBefore": 6907523072,
+    "freeBytesAfter": 6907465728,
+    "args": [
+      "/opt/homebrew/opt/openssl@3/bin/openssl",
+      "req",
+      "-new",
+      "-newkey",
+      "rsa:2048",
+      "-nodes",
+      "-subj",
+      "/CN=localhost",
+      "-keyout",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/server.key",
+      "-out",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/server.csr"
+    ],
+    "privateLog": "02-新CSR.log",
+    "sha256": "2f90716bf30c261793da34688d4e84cfc45e62cc020bc5892c0a450ecf0842ce"
+  },
+  {
+    "step": "03-新证书",
+    "exitCode": 0,
+    "elapsedSeconds": 0.018,
+    "freeBytesBefore": 6907465728,
+    "freeBytesAfter": 6907437056,
+    "args": [
+      "/opt/homebrew/opt/openssl@3/bin/openssl",
+      "x509",
+      "-req",
+      "-in",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/server.csr",
+      "-CA",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/ca.pem",
+      "-CAkey",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/ca.key",
+      "-set_serial",
+      "166146028787584164162767630228674738",
+      "-days",
+      "3",
+      "-extfile",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/openssl.cnf",
+      "-extensions",
+      "server_ext",
+      "-out",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/server.pem"
+    ],
+    "privateLog": "03-新证书.log",
+    "sha256": "0867f8872496fcdb52d0a23ce7dca874dd26d943e1a01d4cf66e273954c88544"
+  },
+  {
+    "step": "04-离线CA核验",
+    "exitCode": 0,
+    "elapsedSeconds": 0.008,
+    "freeBytesBefore": 6907428864,
+    "freeBytesAfter": 6907424768,
+    "args": [
+      "/opt/homebrew/opt/openssl@3/bin/openssl",
+      "verify",
+      "-CAfile",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/ca.pem",
+      "-verify_ip",
+      "127.0.0.1",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/TLS/server.pem"
+    ],
+    "privateLog": "04-离线CA核验.log",
+    "sha256": "c4fce51ca4d5ca6d8081a2c2e56026b8d6f17b6441ae7ebe877d2f1f67e80940"
+  },
+  {
+    "step": "05-启动主PG",
+    "exitCode": 0,
+    "elapsedSeconds": 0.144,
+    "freeBytesBefore": 6907424768,
+    "freeBytesAfter": 6907625472,
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/pg_ctl",
+      "-D",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/Postgres/Main",
+      "-l",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/Logs/main-postgres.log",
+      "-o",
+      "-c max_connections=80",
+      "-w",
+      "-t",
+      "30",
+      "start"
+    ],
+    "privateLog": "05-启动主PG.log",
+    "sha256": "66afd0411ccc09366e99fdd99b85f21899c8d2d064f5835126859618802153ad"
+  },
+  {
+    "step": "06-启动独立journal",
+    "exitCode": 0,
+    "elapsedSeconds": 0.121,
+    "freeBytesBefore": 6907621376,
+    "freeBytesAfter": 6908260352,
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/pg_ctl",
+      "-D",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/44abaaa0-a6ba-43b2-91b2-907f398adcd2/Safety/PhaseB/Postgres/Journal",
+      "-l",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/Logs/journal-postgres.log",
+      "-w",
+      "-t",
+      "30",
+      "start"
+    ],
+    "privateLog": "06-启动独立journal.log",
+    "sha256": "66afd0411ccc09366e99fdd99b85f21899c8d2d064f5835126859618802153ad"
+  },
+  {
+    "step": "07-身份-main",
+    "exitCode": 0,
+    "elapsedSeconds": 0.077,
+    "freeBytesBefore": 6908260352,
+    "freeBytesAfter": 6907944960,
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/psql",
+      "postgresql://s2_owner_44abaaa0a6ba@127.0.0.1:62381/postgres?sslmode=disable",
+      "-XqAt",
+      "-v",
+      "ON_ERROR_STOP=1"
+    ],
+    "privateLog": "07-身份-main.log",
+    "sha256": "0a39b0e2a8762ab9b9968a3a33486cf1bc47a019b4250deb6fb222e7080a5a0c"
+  },
+  {
+    "step": "08-新DB-main",
+    "exitCode": 0,
+    "elapsedSeconds": 0.181,
+    "freeBytesBefore": 6907944960,
+    "freeBytesAfter": 6905094144,
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/psql",
+      "postgresql://s2_owner_44abaaa0a6ba@127.0.0.1:62381/postgres?sslmode=disable",
+      "-XqAt",
+      "-v",
+      "ON_ERROR_STOP=1"
+    ],
+    "privateLog": "08-新DB-main.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "step": "07-身份-journal",
+    "exitCode": 0,
+    "elapsedSeconds": 0.026,
+    "freeBytesBefore": 6905094144,
+    "freeBytesAfter": 6904877056,
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/psql",
+      "postgresql://s2_journal_53742e5436be@127.0.0.1:62382/postgres?sslmode=disable",
+      "-XqAt",
+      "-v",
+      "ON_ERROR_STOP=1"
+    ],
+    "privateLog": "07-身份-journal.log",
+    "sha256": "049398aaae3c7410daa59616b0f2b1cbfbcd976b21e0063a18e5883750be7c3e"
+  },
+  {
+    "step": "08-新DB-journal",
+    "exitCode": 0,
+    "elapsedSeconds": 0.154,
+    "freeBytesBefore": 6904877056,
+    "freeBytesAfter": 6902079488,
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/psql",
+      "postgresql://s2_journal_53742e5436be@127.0.0.1:62382/postgres?sslmode=disable",
+      "-XqAt",
+      "-v",
+      "ON_ERROR_STOP=1"
+    ],
+    "privateLog": "08-新DB-journal.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "step": "09-NATS配置核验",
+    "exitCode": 0,
+    "elapsedSeconds": 0.024,
+    "freeBytesBefore": 6902075392,
+    "freeBytesAfter": 6902071296,
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/NATS-v2.15.3/nats-server-v2.15.3-darwin-arm64/nats-server",
+      "-t",
+      "-c",
+      "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/Secrets/nats.conf"
+    ],
+    "privateLog": "09-NATS配置核验.log",
+    "sha256": "5b29bb117080c73adda5798e696988abb0c593fb30b828023146fd16ca919da0"
+  }
+]

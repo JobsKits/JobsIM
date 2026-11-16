@@ -1,0 +1,293 @@
+{
+  "group": "b",
+  "status": "passed",
+  "httpChecks": 23,
+  "semanticAssertions": 69,
+  "verifiedPages": 5,
+  "elapsedSeconds": 0.186,
+  "checkedAt": "2026-11-16T04:28:47.834128+00:00",
+  "binarySHA256": "25de7285297c3773ee09cb90bf00b3e92f8c9319153befd7878cc274ea954001",
+  "failure": null,
+  "assertions": [
+    {
+      "assertion": "registration retries retain the same transport-only fact",
+      "passed": true
+    },
+    {
+      "assertion": "registration retries retain the same transport-only fact",
+      "passed": true
+    },
+    {
+      "assertion": "schema upgrade separates streams without changing physical chat identity",
+      "passed": true
+    },
+    {
+      "assertion": "different physical store cannot inherit a schema stream",
+      "passed": true
+    },
+    {
+      "assertion": "registration retries retain the same transport-only fact",
+      "passed": true
+    },
+    {
+      "assertion": "registration retries retain the same transport-only fact",
+      "passed": true
+    },
+    {
+      "assertion": "registration retries retain the same transport-only fact",
+      "passed": true
+    },
+    {
+      "assertion": "schema-one coverage remains unchanged while schema-two adds own state",
+      "passed": true
+    },
+    {
+      "assertion": "unfinished drafts stay explicitly excluded",
+      "passed": true
+    },
+    {
+      "assertion": "original S2 manifest is stable on retry",
+      "passed": true
+    },
+    {
+      "assertion": "original S2 manifest is stable on retry",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "schema-one pages never expose schema-two private kinds",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "schema-two initial snapshot includes virtual private defaults",
+      "passed": true
+    },
+    {
+      "assertion": "final validation does not claim local commit or ACK",
+      "passed": true
+    },
+    {
+      "assertion": "installation returns the original cut boundary",
+      "passed": true
+    }
+  ],
+  "strictHTTPS": true,
+  "realPhysicalPGClusters": 2,
+  "qualifiedAck": false,
+  "draftsActivated": false
+}

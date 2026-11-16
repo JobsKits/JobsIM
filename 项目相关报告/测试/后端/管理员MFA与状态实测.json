@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "httpAssertions": 49,
+  "totpRequired": true,
+  "totpReplayRejected": true,
+  "bootstrapExactRetry": true,
+  "boundStepUpPayloadAndTarget": true,
+  "originalOperationResultReplay": true,
+  "tombstoneRetainsBan": true,
+  "ownerUnavailableReadOnlyRetainsHistory": true,
+  "restoredOwnerNeedsIndependentGovernance": true,
+  "authorErasureStillAllowed": true,
+  "oldSessionsStayRevokedAfterUnban": true,
+  "profileUsesDirectoryOwner": true,
+  "scope": "isolated HTTPS/PG/journal integration; no full I acceptance"
+}

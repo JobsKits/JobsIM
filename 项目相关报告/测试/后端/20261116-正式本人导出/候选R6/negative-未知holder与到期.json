@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 24,
+  "semanticAssertions": 8,
+  "binarySHA256": "aea1ca1985ad0b2b7d3e5b1e7d843895cb04990ab08996951dd0380cdfaa0116",
+  "scriptSHA256": "3f710a50907d9ffa3c2a0c530a3475c8d4bfeb1ffb65ef54f40bc42bf4bb64b0",
+  "SQLFixtures": [
+    "owned exact holder active/prepared/active",
+    "owned job expiry only"
+  ],
+  "experimentalEnabled": false,
+  "checkedAt": "2026-11-16T09:18:43.105800+00:00",
+  "assertions": [
+    {
+      "assertion": "original complete export intent resolves its single committed task",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "explicit owned unknown-holder fixture rejects delivery before any ZIP byte",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "only explicit restoration of the exact fixture holder enables the unchanged package",
+      "passed": true
+    },
+    {
+      "assertion": "disabled experimental routes do not mutate or expose a formal task",
+      "passed": true
+    },
+    {
+      "assertion": "explicit owned job-expiry SQL clock fixture revokes key and drains all delivery bytes",
+      "passed": true
+    }
+  ]
+}

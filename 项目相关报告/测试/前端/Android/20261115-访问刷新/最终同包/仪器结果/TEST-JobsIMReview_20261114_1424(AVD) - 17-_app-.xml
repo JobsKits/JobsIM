@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="3" failures="0" errors="0" skipped="0" time="39.403" timestamp="2026-11-15T12:57:40" hostname="localhost">
+  <testsuite name="com.jobs.im.NativeSessionHttpsTest" tests="3" failures="0" errors="0" skipped="0" time="36.336" timestamp="2026-11-15T12:57:40" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope" classname="com.jobs.im.NativeSessionHttpsTest" time="25.909" />
+    <testcase name="realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair" classname="com.jobs.im.NativeSessionHttpsTest" time="5.55" />
+    <testcase name="realLostRefreshAndThreeIntentClosureRetireUnknownAncestors" classname="com.jobs.im.NativeSessionHttpsTest" time="4.877" />
+  </testsuite>
+</testsuites>

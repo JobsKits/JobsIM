@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "at": "2026-11-15T05:11:38.925Z",
+  "binarySHA256": "dc20e6a383d0492f76063e4057093719fce77cd9d75c90b9cdec80123302c65b",
+  "checks": [
+    "strict private CA and hostname verification",
+    "real PostgreSQL identities/friendship/conversation",
+    "CLI message reaches authenticated peer",
+    "real SQLite Outbox confirmed",
+    "authenticated upload/media message/download and existing-file protection",
+    "process restart retains history and draft",
+    "same-machine second account has separate local database",
+    "process exit revokes its session",
+    "persisted original request/reopen operations and current inbound policy",
+    "remove-contact/block freeze only affected direct intents without changing payload",
+    "unblock does not reopen or restore friendship; explicit reopen does not revive old requests",
+    "group members/add/remove/rename/transfer/leave use original generation",
+    "leave purges local history and retains drafts before HTTP; stale leave after rejoin retains new intent/history"
+  ]
+}

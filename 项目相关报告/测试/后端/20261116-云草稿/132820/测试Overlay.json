@@ -1,0 +1,17 @@
+{
+  "Replace": {
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/sync_schemas_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/sync_schemas_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/source_preferences_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/source_preferences_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/message_read_points_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/message_read_points_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/self_views_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_views_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/sync_schema_protocol_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/sync_schema_protocol_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/self_read_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_read_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/message_read_summary_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/message_read_summary_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/draft_reply_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/draft_reply_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/self_draft_floor_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_draft_floor_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/s2_pg_guard_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/s2_pg_guard_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/self_views_pg_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_views_pg_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/sync_register_pg_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/sync_register_pg_test.go",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go/self_draft_test.go": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/self_draft_test.go"
+  }
+}

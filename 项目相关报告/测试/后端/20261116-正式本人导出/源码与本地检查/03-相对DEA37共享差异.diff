@@ -1,0 +1,536 @@
+--- DEA37/代码/后端/Go/cmd/jobsimd/main.go
++++ formal-candidate/代码/后端/Go/cmd/jobsimd/main.go
+@@ -129,6 +129,7 @@
+ 	}
+ 	for _, app := range apps {
+ 		app.StartSyncWorkers(ctx)
++		app.StartPersonalExportOwnerWorkers(ctx)
+ 		if app.Role == "sync" {
+ 			app.StartSelfDraftWorkers(ctx)
+ 		}
+--- DEA37/代码/后端/Go/export.go
++++ formal-candidate/代码/后端/Go/export.go
+@@ -127,6 +127,13 @@
+ 	var existing string
+ 	e = a.DB.QueryRow(r.Context(), `SELECT id::text FROM governance.export_jobs WHERE user_id=$1 AND request_id=$2`, u.ID, q.RequestID).Scan(&existing)
+ 	if e == nil {
++		var purpose string
++		if e = a.DB.QueryRow(r.Context(), `SELECT purpose FROM governance.export_jobs WHERE id=$1`, existing).Scan(&purpose); e != nil {
++			return e
++		}
++		if purpose != "experimental_chat" {
++			return fail(409, "IDEMPOTENCY_CONFLICT", "Original export request has a different purpose")
++		}
+ 		v, e := a.exportJob(r.Context(), existing)
+ 		if e != nil {
+ 			return e
+@@ -199,6 +206,13 @@
+ 	}
+ 	if v.UserID != u.ID {
+ 		return u, v, fail(404, "EXPORT_NOT_FOUND", "Export task unavailable")
++	}
++	var purpose string
++	if e = a.DB.QueryRow(r.Context(), `SELECT purpose FROM governance.export_jobs WHERE id=$1`, v.ID).Scan(&purpose); e != nil {
++		return u, v, e
++	}
++	if purpose != "experimental_chat" {
++		return u, v, fail(404, "EXPORT_NOT_FOUND", "Experimental export task unavailable")
+ 	}
+ 	return u, v, nil
+ }
+@@ -321,6 +335,9 @@
+ 		if e = a.rpc(ctx, role, "/internal/exports/clear-holders", map[string]string{"jobId": v.JobID, "artifactId": v.ArtifactID}, nil); e != nil {
+ 			return e
+ 		}
++	}
++	if e = a.clearPersonalExportHolders(ctx, job); e != nil {
++		return e
+ 	}
+ 	payload["state"] = "cleared"
+ 	if e = a.protect(ctx, operation, "result", "governance.export_fence", payload); e != nil {
+--- DEA37/代码/后端/Go/export_restore.go
++++ formal-candidate/代码/后端/Go/export_restore.go
+@@ -93,5 +93,14 @@
+ 			}
+ 		}
+ 	}
++	connection, e := pool.Acquire(ctx)
++	if e != nil {
++		return 0, e
++	}
++	e = CancelRestoredPersonalExportHolders(ctx, connection.Conn())
++	connection.Release()
++	if e != nil {
++		return 0, e
++	}
+ 	return len(ids), nil
+ }
+--- DEA37/代码/后端/Go/export_worker.go
++++ formal-candidate/代码/后端/Go/export_worker.go
+@@ -87,7 +87,12 @@
+ 							if e != nil {
+ 								return
+ 							}
+-							if !allowBuild {
++							var purpose string
++							if e = a.DB.QueryRow(ctx, `SELECT purpose FROM governance.export_jobs WHERE id=$1`, job).Scan(&purpose); e != nil {
++								return
++							}
++							personal := purpose == personalExportPurpose
++							if !allowBuild && !personal {
+ 								_ = a.cancelExportTask(ctx, job, "feature-disabled", "cancelled")
+ 								return
+ 							}
+@@ -101,7 +106,11 @@
+ 								}
+ 								return
+ 							}
+-							e = a.runExportBuild(ctx, job)
++							if personal {
++								e = a.runPersonalExportBuild(ctx, job)
++							} else {
++								e = a.runExportBuild(ctx, job)
++							}
+ 							if e != nil {
+ 								cleanup, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+ 								defer cancel()
+--- DEA37/代码/后端/Go/forward_media.go
++++ formal-candidate/代码/后端/Go/forward_media.go
+@@ -34,6 +34,9 @@
+ 
+ // These are public responses carrying Message projections, not an ACL bypass.
+ func gatewayProjectionMode(r *http.Request) string {
++	if mode := personalExportGatewayMode(r); mode != "" {
++		return mode
++	}
+ 	method := r.Method
+ 	if method == "HEAD" {
+ 		method = "GET"
+--- DEA37/代码/后端/Go/journal.go
++++ formal-candidate/代码/后端/Go/journal.go
+@@ -86,6 +86,9 @@
+ 		for kind, fields := range draftJournalKinds() {
+ 			allowed[kind] = fields
+ 		}
++		for kind, fields := range personalExportJournalKinds() {
++			allowed[kind] = fields
++		}
+ 		if _, current := q.Payload["membershipGeneration"]; q.Kind == "conversation.leave" && current {
+ 			allowed[q.Kind] = []string{"conversationId", "userId", "membershipGeneration"}
+ 		}
+@@ -189,6 +192,9 @@
+ 	return e == nil
+ }
+ func validateJournalField(field string, raw any) error {
++	if handled, err := validatePersonalExportJournalField(field, raw); handled {
++		return err
++	}
+ 	if handled, err := validateDraftJournalField(field, raw); handled {
+ 		return err
+ 	}
+--- DEA37/代码/后端/Go/media_export.go
++++ formal-candidate/代码/后端/Go/media_export.go
+@@ -2,6 +2,7 @@
+ 
+ import (
+ 	"context"
++	"encoding/base64"
+ 	"encoding/hex"
+ 	"io"
+ 	"net/http"
+@@ -99,10 +100,10 @@
+ 	if e := a.checkMediaExportSource(r.Context(), q); e != nil {
+ 		return e
+ 	}
+-	var key string
++	var key, name, contentType string
+ 	var size int64
+ 	var hash []byte
+-	e := a.DB.QueryRow(r.Context(), `SELECT o.storage_key,o.size_bytes,o.sha256 FROM media.objects o JOIN media.export_holders h ON h.object_id=o.id WHERE h.job_id=$1 AND h.object_id=$2 AND h.message_id=$3 AND h.user_id=$4 AND h.artifact_id=$5 AND h.restore_epoch=$6::bigint AND h.build_generation=$7::bigint AND h.state='active' AND h.journal_seq IS NOT NULL AND h.expires_at>now() AND o.purpose='chat_attachment' AND o.message_id=h.message_id`, q.JobID, q.ObjectID, q.MessageID, q.UserID, q.ArtifactID, q.RestoreEpoch, q.BuildGeneration).Scan(&key, &size, &hash)
++	e := a.DB.QueryRow(r.Context(), `SELECT o.storage_key,o.size_bytes,o.sha256,o.name,o.content_type FROM media.objects o JOIN media.export_holders h ON h.object_id=o.id WHERE h.job_id=$1 AND h.object_id=$2 AND h.message_id=$3 AND h.user_id=$4 AND h.artifact_id=$5 AND h.restore_epoch=$6::bigint AND h.build_generation=$7::bigint AND h.state='active' AND h.journal_seq IS NOT NULL AND h.expires_at>now() AND o.purpose='chat_attachment' AND o.message_id=h.message_id`, q.JobID, q.ObjectID, q.MessageID, q.UserID, q.ArtifactID, q.RestoreEpoch, q.BuildGeneration).Scan(&key, &size, &hash, &name, &contentType)
+ 	if e != nil {
+ 		return fail(403, "EXPORT_MEDIA_HOLDER_REQUIRED", "Current registered media holder required")
+ 	}
+@@ -124,6 +125,8 @@
+ 	w.Header().Set("Content-Type", "application/octet-stream")
+ 	w.Header().Set("X-JobsIM-Size", str(size))
+ 	w.Header().Set("X-JobsIM-SHA256", hex.EncodeToString(hash))
++	w.Header().Set("X-JobsIM-Name", base64.RawURLEncoding.EncodeToString([]byte(name)))
++	w.Header().Set("X-JobsIM-Content-Type", contentType)
+ 	buffer := make([]byte, 65536)
+ 	for {
+ 		if e = a.checkMediaExportSource(r.Context(), q); e != nil {
+--- DEA37/代码/后端/Go/message_export.go
++++ formal-candidate/代码/后端/Go/message_export.go
+@@ -17,12 +17,14 @@
+ }
+ 
+ type exportSource struct {
+-	MessageID      string `json:"messageId"`
+-	ConversationID string `json:"conversationId"`
+-	SourceVersion  string `json:"sourceVersion"`
+-	AttachmentID   string `json:"attachmentId,omitempty"`
++	MessageID          string `json:"messageId"`
++	ConversationID     string `json:"conversationId"`
++	SourceVersion      string `json:"sourceVersion"`
++	AttachmentID       string `json:"attachmentId,omitempty"`
++	ForwardPlaceholder bool   `json:"forwardPlaceholder,omitempty"`
+ }
+ type exportHolderRequest struct {
++	Personal        bool      `json:"personal,omitempty"`
+ 	JobID           string    `json:"jobId"`
+ 	ArtifactID      string    `json:"artifactId"`
+ 	UserID          string    `json:"userId"`
+@@ -52,6 +54,7 @@
+ 		ConversationIDs []string  `json:"conversationIds"`
+ 		Before          time.Time `json:"before"`
+ 		After           string    `json:"after"`
++		Personal        bool      `json:"personal,omitempty"`
+ 	}
+ 	if e := decode(r, &q); e != nil {
+ 		return e
+@@ -61,6 +64,12 @@
+ 	}
+ 	if e := a.rpc(r.Context(), "governance", "/internal/exports/build", map[string]string{"jobId": q.JobID, "userId": q.UserID}, nil); e != nil {
+ 		return e
++	}
++	if q.Personal {
++		q.Before = q.Before.UTC()
++		if e := a.requirePersonalExportBuild(r.Context(), q.JobID, q.UserID); e != nil {
++			return e
++		}
+ 	}
+ 	groupIDs := []string{}
+ 	groupJoined := []time.Time{}
+@@ -82,7 +91,11 @@
+ 			groupJoined = append(groupJoined, joined)
+ 		}
+ 	}
+-	raw, _ := json.Marshal(map[string]any{"userId": q.UserID, "conversations": q.ConversationIDs, "before": q.Before})
++	manifestScope := map[string]any{"userId": q.UserID, "conversations": q.ConversationIDs, "before": q.Before}
++	if q.Personal {
++		manifestScope["personal"] = true
++	}
++	raw, _ := json.Marshal(manifestScope)
+ 	digest := keyedDigest(a.Config.Key, "export-manifest", raw)
+ 	tx, e := a.DB.Begin(r.Context())
+ 	if e != nil {
+@@ -118,13 +131,13 @@
+ 	if e = tx.QueryRow(r.Context(), `SELECT EXISTS(SELECT 1 FROM message.export_manifest_items i JOIN message.messages m ON m.id=i.message_id WHERE i.job_id=$1 AND m.type='forward')`, q.JobID).Scan(&containsForward); e != nil {
+ 		return e
+ 	}
+-	if containsForward {
++	if containsForward && !q.Personal {
+ 		return fail(409, "FORWARD_EXPORT_UNSUPPORTED", "This export contains forward references; chain-level export holders are not implemented")
+ 	}
+ 	if e = tx.Commit(r.Context()); e != nil {
+ 		return e
+ 	}
+-	rows, e := a.DB.Query(r.Context(), `SELECT message_id::text,conversation_id::text,source_version,COALESCE(attachment_id::text,'') FROM message.export_manifest_items WHERE job_id=$1 AND($2='' OR message_id>NULLIF($2,'')::uuid) ORDER BY message_id LIMIT 200`, q.JobID, q.After)
++	rows, e := a.DB.Query(r.Context(), `SELECT i.message_id::text,i.conversation_id::text,i.source_version,CASE WHEN m.type='forward' THEN '' ELSE COALESCE(i.attachment_id::text,'') END,m.type='forward' FROM message.export_manifest_items i JOIN message.messages m ON m.id=i.message_id WHERE i.job_id=$1 AND($2='' OR i.message_id>NULLIF($2,'')::uuid) ORDER BY i.message_id LIMIT 200`, q.JobID, q.After)
+ 	if e != nil {
+ 		return e
+ 	}
+@@ -134,7 +147,7 @@
+ 	for rows.Next() {
+ 		var item exportSource
+ 		var version int64
+-		if e = rows.Scan(&item.MessageID, &item.ConversationID, &version, &item.AttachmentID); e != nil {
++		if e = rows.Scan(&item.MessageID, &item.ConversationID, &version, &item.AttachmentID, &item.ForwardPlaceholder); e != nil {
+ 			return e
+ 		}
+ 		item.SourceVersion = str(version)
+@@ -167,13 +180,18 @@
+ 	}
+ 	if e := a.rpc(r.Context(), "governance", "/internal/exports/build", map[string]string{"jobId": q.JobID, "userId": q.UserID, "artifactId": q.ArtifactID, "restoreEpoch": q.RestoreEpoch, "buildGeneration": q.BuildGeneration}, nil); e != nil {
+ 		return e
++	}
++	if q.Personal {
++		if e := a.requirePersonalExportBuild(r.Context(), q.JobID, q.UserID); e != nil {
++			return e
++		}
+ 	}
+ 	var conversation, kind string
+ 	var created time.Time
+ 	if e := a.DB.QueryRow(r.Context(), `SELECT conversation_id::text,created_at,type FROM message.messages WHERE id=$1`, q.MessageID).Scan(&conversation, &created, &kind); e != nil {
+ 		return fail(404, "MESSAGE_NOT_FOUND", "Export source unavailable")
+ 	}
+-	if kind == "forward" {
++	if kind == "forward" && !q.Personal {
+ 		return fail(409, "FORWARD_EXPORT_UNSUPPORTED", "Forward chain export holders are not implemented")
+ 	}
+ 	meta, e := a.member(r.Context(), q.UserID, conversation)
+@@ -241,12 +259,17 @@
+ 	if e := a.rpc(r.Context(), "governance", "/internal/exports/build", map[string]string{"jobId": q.JobID, "userId": q.UserID, "artifactId": q.ArtifactID, "restoreEpoch": q.RestoreEpoch, "buildGeneration": q.BuildGeneration}, nil); e != nil {
+ 		return e
+ 	}
++	if q.Personal {
++		if e := a.requirePersonalExportBuild(r.Context(), q.JobID, q.UserID); e != nil {
++			return e
++		}
++	}
+ 	var conversation, kind string
+ 	var created time.Time
+ 	if e := a.DB.QueryRow(r.Context(), `SELECT conversation_id::text,created_at,type FROM message.messages WHERE id=$1`, q.MessageID).Scan(&conversation, &created, &kind); e != nil {
+ 		return fail(404, "MESSAGE_NOT_FOUND", "Export source unavailable")
+ 	}
+-	if kind == "forward" {
++	if kind == "forward" && !q.Personal {
+ 		return fail(409, "FORWARD_EXPORT_UNSUPPORTED", "Forward chain export holders are not implemented")
+ 	}
+ 	meta, e := a.member(r.Context(), q.UserID, conversation)
+@@ -279,11 +302,18 @@
+ 		if e = tx.Commit(r.Context()); e != nil {
+ 			return e
+ 		}
++		if kind == "forward" {
++			// A target placeholder has no source body, source identity, URL or
++			// temporary admission. No chain-level export grant is implied.
++			respond(w, 200, map[string]any{"id": m.ID, "conversationId": m.ConversationID, "senderId": m.SenderID, "type": "forward", "forwarded": true, "forwardUnavailable": true, "exportState": "forward_placeholder", "createdAt": m.CreatedAt, "updatedAt": m.UpdatedAt, "version": m.Version, "contentVersion": m.ContentVersion})
++			return nil
++		}
+ 		if e = a.enrich(r.Context(), &m, q.UserID); e != nil {
+ 			return e
+ 		}
+ 		m.ForwardAdmission = ""
+ 		m.ReplyAdmission = ""
++		m.ClientMsgID = ""
+ 		respond(w, 200, m)
+ 	} else {
+ 		var attachment *string
+--- DEA37/代码/后端/Go/migrations.go
++++ formal-candidate/代码/后端/Go/migrations.go
+@@ -163,5 +163,8 @@
+ 			return err
+ 		}
+ 	}
++	if err = migratePersonalExports(ctx, tx, a.Role); err != nil {
++		return err
++	}
+ 	return tx.Commit(ctx)
+ }
+--- DEA37/代码/后端/Go/operations.go
++++ formal-candidate/代码/后端/Go/operations.go
+@@ -699,7 +699,10 @@
+ 		case "message.content_floor":
+ 			_, e = business.Exec(ctx, `UPDATE message.messages SET text='',content_unavailable=true,content_version=content_version+1,version=$2 WHERE id=$1 AND version<$2::bigint`, text("messageId"), text("version"))
+ 		default:
+-			handled, replayError := ReplayDraftSafety(ctx, business, q)
++			handled, replayError := ReplayPersonalExportSafety(ctx, business, q)
++			if replayError == nil && !handled {
++				handled, replayError = ReplayDraftSafety(ctx, business, q)
++			}
+ 			if replayError == nil && !handled {
+ 				handled, replayError = ReplayExportSafety(ctx, business, q)
+ 			}
+--- DEA37/代码/后端/Go/self_draft.go
++++ formal-candidate/代码/后端/Go/self_draft.go
+@@ -691,11 +691,12 @@
+ 				return
+ 			case <-ticker.C:
+ 				attempt, cancel := context.WithTimeout(ctx, 5*time.Second)
+-				fence, err := a.admissionFence(attempt, false)
++				fence, err := a.admissionFence(attempt, true)
+ 				if err == nil {
+ 					markers, markerError := a.admissionMarkers()
+ 					if markerError == nil && len(markers) == 0 {
+ 						_ = a.resumeSelfDraftOperations(attempt)
++						_ = a.drainPersonalExportInvalidations(attempt)
+ 					}
+ 					closeExportFence(fence)
+ 				}
+--- DEA37/代码/后端/Go/send_admission.go
++++ formal-candidate/代码/后端/Go/send_admission.go
+@@ -14,6 +14,7 @@
+ 	"os"
+ 	"path/filepath"
+ 	"strings"
++	"sync"
+ 	"time"
+ )
+ 
+@@ -48,6 +49,21 @@
+ }
+ func (a *App) admissionFenceIdentity() string {
+ 	return base64.RawURLEncoding.EncodeToString(keyedDigest(a.Config.Key, "same-host-admission-fence-v1", []byte(a.Config.StateDir)))
++}
++
++type heldAdmissionContextKey struct{}
++type admissionScopeLease struct {
++	mu     sync.RWMutex
++	active bool
++}
++type heldAdmissionContext struct {
++	Identity, Mode string
++	Scope          *admissionScopeLease
++}
++
++func (a *App) heldAdmissionScope(ctx context.Context, mode string) (context.Context, func()) {
++	scope := &admissionScopeLease{active: true}
++	return context.WithValue(ctx, heldAdmissionContextKey{}, heldAdmissionContext{a.admissionFenceIdentity(), mode, scope}), func() { scope.mu.Lock(); scope.active = false; scope.mu.Unlock() }
+ }
+ func (a *App) admissionFence(ctx context.Context, exclusive bool) (*os.File, error) {
+ 	path := filepath.Join(a.Config.StateDir, "send-admission.lock")
+@@ -116,14 +132,29 @@
+ 	exclusive = exclusive || a.Role == "message" && (pattern == "PATCH /api/messages/{id}" || pattern == "DELETE /api/messages/{id}" || pattern == "POST /internal/forwards/revoke-principal" || pattern == "POST /internal/forwards/revoke-source")
+ 
+ 	exclusive = exclusive || a.Role == "conversation" && (strings.HasPrefix(pattern, "POST /api/conversations") || strings.HasPrefix(pattern, "PUT /api/conversations") || strings.HasPrefix(pattern, "PATCH /api/conversations") || strings.HasPrefix(pattern, "DELETE /api/conversations") || pattern == "POST /internal/owner-unavailable")
++	if personalShared, personalExclusive := a.personalExportOwnerFence(pattern); personalShared || personalExclusive {
++		shared, exclusive = personalShared, personalExclusive
++	}
+ 	if !shared && !exclusive {
+ 		return fn
+ 	}
+ 	return func(w http.ResponseWriter, r *http.Request) error {
+ 		// The authenticated gateway proof represents its still-held public response
+ 		// fence. Reacquiring here could self-deadlock on marker promotion.
+-		if (a.Role == "message" || a.Role == "conversation" || a.Role == "sync" || a.Role == "directory") && a.hasGatewayProjectionFence(r, exclusive) {
+-			return fn(w, r)
++		if a.Role == "message" || a.Role == "conversation" || a.Role == "sync" || a.Role == "directory" || a.Role == "identity" || a.Role == "governance" {
++			if a.hasGatewayProjectionFence(r, true) {
++				ctx, expire := a.heldAdmissionScope(r.Context(), "exclusive")
++				defer expire()
++				return fn(w, r.WithContext(ctx))
++			}
++			if a.hasGatewayProjectionFence(r, false) {
++				if exclusive {
++					return fail(503, "ADMISSION_FENCE_MODE_MISMATCH", "Source write requires its outer exclusive fence")
++				}
++				ctx, expire := a.heldAdmissionScope(r.Context(), "shared")
++				defer expire()
++				return fn(w, r.WithContext(ctx))
++			}
+ 		}
+ 		writeFence := exclusive
+ 		lock, e := a.admissionFence(r.Context(), writeFence)
+@@ -162,7 +193,13 @@
+ 				}
+ 			}
+ 		}
+-		return fn(w, r)
++		mode := "shared"
++		if writeFence {
++			mode = "exclusive"
++		}
++		ctx, expire := a.heldAdmissionScope(r.Context(), mode)
++		defer expire()
++		return fn(w, r.WithContext(ctx))
+ 	}
+ }
+ 
+--- DEA37/代码/后端/Go/server.go
++++ formal-candidate/代码/后端/Go/server.go
+@@ -184,12 +184,24 @@
+ 	r.Header.Set("Content-Type", "application/json")
+ 	r.Header.Set("X-JobsIM-Service-Key", base64.RawURLEncoding.EncodeToString(a.Config.Key))
+ 	r.Header.Set("X-JobsIM-Caller", a.Role)
++	if held, ok := ctx.Value(heldAdmissionContextKey{}).(heldAdmissionContext); ok {
++		if held.Scope == nil {
++			return fail(503, "ADMISSION_FENCE_EXPIRED", "Private RPC has no live admission scope")
++		}
++		held.Scope.mu.RLock()
++		defer held.Scope.mu.RUnlock()
++		if !held.Scope.active || ctx.Err() != nil || held.Identity != a.admissionFenceIdentity() || (held.Mode != "shared" && held.Mode != "exclusive") {
++			return fail(503, "ADMISSION_FENCE_EXPIRED", "Private RPC no longer owns its live admission scope")
++		}
++		r.Header.Set("X-JobsIM-Projection-Fence-Mode", held.Mode)
++		r.Header.Set("X-JobsIM-Projection-Fence", a.gatewayProjectionProof(r, held.Mode))
++	}
+ 	res, err := a.Client.Do(r)
+ 	if err != nil {
+ 		return fail(503, "DEPENDENCY_UNAVAILABLE", role+" service unavailable")
+ 	}
+ 	defer res.Body.Close()
+-	if path == "/internal/member" || path == "/internal/relationship" || path == "/internal/admission/recover" || path == "/internal/read-scopes" || path == "/internal/read-boundaries" || path == "/internal/read-summary" || path == "/internal/announcement-source" || path == "/internal/mentions/snapshot" || strings.HasPrefix(path, "/internal/forwards/") || strings.HasPrefix(path, "/internal/sync/") || strings.HasPrefix(path, "/internal/drafts/") {
++	if path == "/internal/member" || path == "/internal/relationship" || path == "/internal/admission/recover" || path == "/internal/read-scopes" || path == "/internal/read-boundaries" || path == "/internal/read-summary" || path == "/internal/announcement-source" || path == "/internal/mentions/snapshot" || strings.HasPrefix(path, "/internal/forwards/") || strings.HasPrefix(path, "/internal/sync/") || strings.HasPrefix(path, "/internal/drafts/") || strings.HasPrefix(path, "/internal/personal-exports/") {
+ 		if !hmac.Equal([]byte(res.Header.Get("X-JobsIM-Admission-Fence")), []byte(a.admissionFenceIdentity())) {
+ 			return fail(503, "ADMISSION_FENCE_MISMATCH", "Roles must share the same canonical local instance directory")
+ 		}
+@@ -238,6 +250,7 @@
+ func (a *App) Handler() http.Handler {
+ 	mux := http.NewServeMux()
+ 	handle := func(pattern string, fn func(http.ResponseWriter, *http.Request) error) {
++		fn = a.withPersonalExportSourceDrain(pattern, fn)
+ 		fn = a.withAdmissionFence(pattern, fn)
+ 		mux.HandleFunc(pattern, func(w http.ResponseWriter, r *http.Request) {
+ 			if err := fn(w, r); err != nil {
+@@ -277,6 +290,7 @@
+ 		a.syncValidationOwnerRoute(handle, internal)
+ 		a.syncHistoricalAccessRoute(handle, internal)
+ 	}
++	a.personalExportOwnerRoutes(handle, internal)
+ 	switch a.Role {
+ 	case "sync":
+ 		a.syncRoutes(handle)
+@@ -300,6 +314,7 @@
+ 		a.draftReplyHolderRoutes(handle, internal)
+ 	case "media":
+ 		a.mediaRoutes(handle, internal)
++		a.personalExportMediaRoutes(handle, internal)
+ 	case "control":
+ 		a.controlRoutes(handle, internal)
+ 	case "journal":
+@@ -307,6 +322,8 @@
+ 	case "governance":
+ 		a.governanceRoutes(handle, internal)
+ 		a.exportInternalRoutes(handle, internal)
++		a.personalExportRoutes(handle)
++		a.personalExportGovernanceRoutes(handle, internal)
+ 		if a.Config.ExperimentalExports {
+ 			a.exportRoutes(handle)
+ 		}
+@@ -345,7 +362,7 @@
+ 			role = "sync"
+ 		case selfStatePublicPath(p):
+ 			role = "sync"
+-		case strings.HasPrefix(p, "/api/me/exports"):
++		case strings.HasPrefix(p, "/api/me/exports"), p == "/api/me/data-exports", p == "/api/me/data-export-results", strings.HasPrefix(p, "/api/me/data-exports/"):
+ 			role = "governance"
+ 		case strings.HasPrefix(p, "/api/reports"), strings.HasPrefix(p, "/api/admin/reports"), strings.HasPrefix(p, "/api/admin/report-operations"):
+ 			role = "governance"
+--- DEA37/代码/后端/Go/session_refresh.go
++++ formal-candidate/代码/后端/Go/session_refresh.go
+@@ -205,10 +205,33 @@
+ 			case <-timer.C:
+ 			}
+ 			attempt, cancel := context.WithTimeout(ctx, 5*time.Second)
++			fence, fenceError := a.admissionFence(attempt, true)
++			if fenceError != nil {
++				cancel()
++				continue
++			}
++			attempt, expireFence := a.heldAdmissionScope(attempt, "exclusive")
++			markers, markerError := a.admissionMarkers()
++			if markerError != nil {
++				expireFence()
++				closeExportFence(fence)
++				cancel()
++				continue
++			}
++			if len(markers) > 0 {
++				if recoveryError := a.rpc(attempt, "message", "/internal/admission/recover", map[string]string{}, nil); recoveryError != nil {
++					expireFence()
++					closeExportFence(fence)
++					cancel()
++					continue
++				}
++			}
+ 			_, _ = a.DB.Exec(attempt, `UPDATE auth.local_auth_requests SET delivery_ciphertext=decode('','hex') WHERE expires_at<=now() AND octet_length(delivery_ciphertext)>0`)
+ 			_, _ = a.DB.Exec(attempt, `UPDATE auth.sessions s SET revoked_at=now() FROM auth.users u,auth.instance i WHERE i.singleton AND s.user_id=u.id AND s.revoked_at IS NULL AND s.family_id IS NOT NULL AND (s.expires_at<=now() OR s.generation<>u.credential_generation OR s.security_version<>u.security_version OR s.restore_epoch<>i.restore_epoch OR s.source_generation<>i.personal_source_generation OR u.state IN('banned','tombstoned') OR u.recovery_state<>'normal')`)
+ 			rows, e := a.DB.Query(attempt, `SELECT session_id::text,user_id::text,device_id::text,operation_id FROM auth.session_revocations WHERE state='pending' ORDER BY last_attempt_at,created_at LIMIT 10`)
+ 			if e != nil {
++				expireFence()
++				closeExportFence(fence)
+ 				cancel()
+ 				continue
+ 			}
+@@ -235,6 +258,9 @@
+ 				}
+ 				_, _ = a.DB.Exec(attempt, `UPDATE auth.session_revocations SET state='cleared' WHERE session_id=$1`, j.id)
+ 			}
++			_ = a.drainPersonalExportInvalidations(attempt)
++			expireFence()
++			closeExportFence(fence)
+ 			cancel()
+ 			timer.Reset(time.Second)
+ 		}

@@ -1,0 +1,15 @@
+{
+  "matchedAndCopied": [
+    "代码/前端/Web/Src/SyncStore.ts",
+    "代码/前端/Web/Src/SyncEngine.ts",
+    "代码/前端/Web/Src/SyncProtocol.ts",
+    "代码/前端/Web/Src/storage.ts",
+    "代码/前端/Web/Src/types.ts",
+    "代码/前端/Web/Src/forward.ts",
+    "测试/前端/Web/sync-view.cjs/sync-view.cjs"
+  ],
+  "alreadyChangedNotCopied": [
+    "代码/前端/Web/Src/SyncView.ts"
+  ],
+  "rawResultJSONUnmodified": true
+}

@@ -1,0 +1,66 @@
+{
+  "startedAt": "2026-11-16T07:07:24.477019+00:00",
+  "status": "failed",
+  "checks": [
+    {
+      "name": "strict-ca-two-real-tty-process-only",
+      "passed": true
+    },
+    {
+      "name": "automatic-s2-physical-store-keeps-legacy-identity",
+      "passed": true
+    },
+    {
+      "name": "font-cas-shared-only-with-own-family",
+      "passed": true
+    },
+    {
+      "name": "hidden-view-all-restoration-entry",
+      "passed": true
+    },
+    {
+      "name": "history-is-not-read-observation",
+      "passed": true
+    }
+  ],
+  "cleanup": [
+    {
+      "kind": "own-tty",
+      "label": "A",
+      "normalExit": true,
+      "logoutSuccessState": true,
+      "deviceAbsentFromActiveSessions": false
+    },
+    {
+      "kind": "own-tty",
+      "label": "B",
+      "normalExit": true,
+      "logoutSuccessState": true,
+      "deviceAbsentFromActiveSessions": false
+    },
+    {
+      "kind": "owned-control-family",
+      "logoutHTTP200": true,
+      "originalAT401": true
+    },
+    {
+      "kind": "owned-control-family",
+      "logoutHTTP200": true,
+      "originalAT401": true
+    }
+  ],
+  "rawTTYRecorded": false,
+  "nativeCredentialStorePositive": false,
+  "processOnlyExplicitPerPTY": true,
+  "pgUsed": false,
+  "serviceChanged": false,
+  "cliHTTPCountMeasured": false,
+  "unknownResponseInjected": false,
+  "binarySHA256": "80737ca3f8630e40c1c792ac76a8aafbff50a3cedbea3567ddeb6dd96388037f",
+  "origin": "https://127.0.0.1:54443",
+  "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+  "restoreEpoch": "2",
+  "phase": "real-observation-holes",
+  "failure": "one-public-json-result",
+  "finishedAt": "2026-11-16T07:07:25.648422+00:00"
+}

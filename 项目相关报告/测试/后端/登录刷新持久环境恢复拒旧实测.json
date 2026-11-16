@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "httpAssertions": 22,
+  "semanticAssertions": 9,
+  "strictHTTPS": true,
+  "realEncryptedBackupOfflineRestore": true,
+  "sameRestoreOperationDoesNotAllocateTwice": true,
+  "oldAccessAndRefreshRejected": true,
+  "oldBFFCookieRejectedAndCiphertextCleared": true,
+  "postSnapshotRetirementReplayedFromIndependentJournal": true,
+  "retiredLateAuthenticationCannotReappear": true,
+  "newVerifiedAuthenticationWorks": true,
+  "binarySHA256": "7ef53be2fe9004fd66978a7313dac016dfdf146a66e3116767a61bdf0dcd40c9",
+  "scriptSHA256": "a6323eb72ec60660749e691f4b0e2b7edadea2e8657f4162370eab95dfe60b0f",
+  "testedAtUTC": "2026-11-15T12:35:10.238890+00:00",
+  "scope": "New isolated source/target and independent journal databases; only its recorded PID stopped; no shared realm or strong protection acceptance"
+}

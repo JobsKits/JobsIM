@@ -1,0 +1,100 @@
+{
+  "matchesPassedMacAndHTTPSBinaryInputs": true,
+  "files": [
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth.go",
+      "sha256": "df8291be0fd1040b39159a7e106a9087f02782f692cb699acf9dc9cb76124709",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go",
+      "sha256": "99aba4b84a204208ec607d925415470c18a0a90f29626b2be37b7c9b43682a70",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_lock_unix.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go",
+      "sha256": "802f2dc215b0716db0389a0483989de6c25446fd700781976558af4801ad8bd4",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_lock_windows.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go",
+      "sha256": "0165ee54098f1b4e223d3005cf54445ea945e88ddb5f5800f148985402a57a06",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go",
+      "sha256": "f85527dd37bddc1d7e1c17da398b6bf12ca7d42ed94a0517ab87d50bb4c17f2a",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_vault_linux.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_other.go",
+      "sha256": "232842a24f0efa8691c222c8ad616146db98f5a45acb417526e0679589f2e4fd",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_vault_other.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go",
+      "sha256": "863cb2ed0ca254473fa11a8b2dfe2f8fb5c2414d6846ca316cfbfc8ace69fc51",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/auth_vault_windows.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+      "sha256": "805f1dfd0f440aba5da175f7becec66360f832fdb13e7aabc558ff31a635d043",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/collaboration.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "sha256": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/credentials.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/forward.go",
+      "sha256": "ef4692138b5458d003c5df06983e2fde187a464da5eae5451d2283dbe9f3a157",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/forward.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "sha256": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/governance.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/local.go",
+      "sha256": "f067618d3f4073fd5915f2d870aaeb66d9d7b6ff4c5fb9eebc27a8c5b07bb7e9",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/local.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/main.go",
+      "sha256": "7197126ed48f58fb9cf4a30c5fd0745104ae66022869a4724f26f744ffe33ad2",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/main.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/store.go",
+      "sha256": "93a4cb6fd4136a34da0d43ec947718bb8c1d734f1f6e341332a82e49f04de806",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/store.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_engine.go",
+      "sha256": "a83308bd419e57b2d2526eeca476a8421f62c6344dff135718be7a6f52199af8",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/sync_engine.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_protocol.go",
+      "sha256": "28d6729bf3b23496fb4a1eec5f89d669386eedbf40c9762e2b92a75dcdd774e7",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/sync_protocol.go"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_store.go",
+      "sha256": "f9d955aa1db01edaa9685ea080a3b435651785bd8ca3bedc18f6bed0a20f2c0c",
+      "snapshot": "源码快照/代码/前端/CLI/cmd/jobsim/sync_store.go"
+    },
+    {
+      "path": "代码/前端/CLI/go.mod",
+      "sha256": "4ca83c3741ef64a504e79ed56281a7d583b968273ea284786ee89248a013db39",
+      "snapshot": "源码快照/代码/前端/CLI/go.mod"
+    },
+    {
+      "path": "代码/前端/CLI/go.sum",
+      "sha256": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030",
+      "snapshot": "源码快照/代码/前端/CLI/go.sum"
+    }
+  ]
+}

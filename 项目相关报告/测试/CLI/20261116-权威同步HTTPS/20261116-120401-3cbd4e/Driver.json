@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "exitCode": 0,
+  "seconds": 1.01,
+  "minimumFreeGiB": 12.34,
+  "command": [
+    "/opt/homebrew/opt/python@3.15/bin/python3.15",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/CLI/sync-https.py/sync-https.py",
+    "--environment-file",
+    "/Users/jobs/Library/Application Support/JobsIM/Integration/sync-308bba50/Safety/environment.json",
+    "--binary",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/jobsim-final",
+    "--data-root",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/HTTPS-20261116-120401-3cbd4e",
+    "--report-dir",
+    "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/CLI/20261116-权威同步HTTPS/20261116-120401-3cbd4e/Assertions"
+  ]
+}

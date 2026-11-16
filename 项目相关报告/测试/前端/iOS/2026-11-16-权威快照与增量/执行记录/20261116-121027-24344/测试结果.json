@@ -1,0 +1,20 @@
+{
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/Authoritative-20261116-121027-24344.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=927610A5-305F-41F5-BA69-7DA273F4C47E",
+    "-parallel-testing-enabled",
+    "NO",
+    "-only-testing:JobsIMTests/IMAuthoritativeSyncTests",
+    "-resultBundlePath",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/Sync-20261116-121027-24344.xcresult"
+  ],
+  "exitCode": 0,
+  "stopped": null,
+  "seconds": 65.86272949998965,
+  "minFreeBytes": 13010677760,
+  "logSHA256": "12ab893a7cd8a03a53f07c486cc39c717a68d73d8466c35043c34ca8fe4f2dfe"
+}

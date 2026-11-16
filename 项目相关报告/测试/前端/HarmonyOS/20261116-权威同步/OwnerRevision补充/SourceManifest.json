@@ -1,0 +1,18 @@
+{
+  "native": false,
+  "database": "Python SQLite adapter, not Harmony RDB NAPI",
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Harmony/Authoritative-H10MqH",
+  "hashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "6543094ccd9b86672b37eebe5896c8d15320d743969e8029a50f461c6ed18d99",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "492af8e46ab4edf1aefa9eb19817d014e5e72edac5dfa53c243b292b8768a860",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncEngine.ets": "f2a37b7e5467c106877041e8098b86f090c8b15eb65fed118dada0d30d8c16fa",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncStore.ets": "cead4d7cb9687c92aef48415048f82d8285eb2037cfd2930229050cd58c6d269",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncText.ets": "cbdc1ff61579cffaf504bcd9a0f0720b91fb71660f336675169410a7cb8885e7",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Store.ets": "b8660b30de7972a8137686dc354328e85cc9f999fe9793630c92cdba49490e48",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeServices.ets": "378549e0133cd5edc2e8212e3fe94a01b2f2192b907b7e38c551806f4db9e52e",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/AuthCoordinator.ets": "35ddfa9ab3f1203ba5a38dafa5eebc9351b32ca6b49e20eab6b520c586588506",
+    "测试/前端/HarmonyOS/Unit/RunSync.mjs": "0e96b5db0e013bebc63ed5325da4d93606d76478f55346da6cc57113572e075b",
+    "测试/前端/HarmonyOS/Unit/Sync.test.cjs": "6fc66656b2f37e3379e7c6ab87833cd544493b261923bd283e16d65f8166874b",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee"
+  }
+}

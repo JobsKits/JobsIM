@@ -1,0 +1,16 @@
+go version go1.27.4 darwin/arm64
+pg_ctl (PostgreSQL) 18.7 (Postgres.app)
+OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+v26.13.1
+JobsIM MacOS · stop
+实例：/Users/jobs/Library/Caches/JobsIM/DeploymentChecks/MacOS automated
+HTTPS=19443；业务PG=17543；独立journalPG=17544；内部角色=20101～20107
+只操作此收据匹配实例；不安装全局工具、不清理数据、不修改系统CA。备份会暂停本实例，完成后保持停止。
+已生成并解密验真：/Users/jobs/Library/Caches/JobsIM/DeploymentChecks/Backups/MacOS automated/JobsIM-20261114-233945-85301.cms
+恢复私钥独立保存于：/Users/jobs/Library/Caches/JobsIM/DeploymentChecks/RecoveryKeys/MacOS automated/key.pem；请另行离线保管。备份不包含这把解密私钥。
+备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。
+waiting for server to shut down.... done
+server stopped
+waiting for server to shut down.... done
+server stopped
+本实例已停止；数据库、对象、CA/私钥、独立journal与既有备份均保留。

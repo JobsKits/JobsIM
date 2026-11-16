@@ -1,0 +1,208 @@
+{
+  "scope": "25 entry points parse-only plus actual Python path expression evaluation; no mkdir/build/API",
+  "checks": [
+    {
+      "entry": "工具/统计项目.mjs/统计项目.mjs",
+      "check": "node --check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/CLI/collaboration-https.cjs/collaboration-https.cjs",
+      "check": "node --check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/CLI/forward-https.cjs/forward-https.cjs",
+      "check": "node --check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/CLI/https-integration.cjs/https-integration.cjs",
+      "check": "node --check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/CLI/运行测试.mjs/运行测试.mjs",
+      "check": "node --check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Android/运行测试.command/运行测试.command",
+      "check": "zsh -n",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/HarmonyOS/【MacOS】运行规则测试.command/【MacOS】运行规则测试.command",
+      "check": "zsh -n",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+      "check": "zsh -n",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/admin-integration.cjs/admin-integration.cjs",
+      "check": "node --check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/browser.cjs/browser.cjs",
+      "check": "node --check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/forward.cjs/forward.cjs",
+      "check": "node --check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/integration.cjs/integration.cjs",
+      "check": "node --check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/contact_relationship.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/contact_relationship.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/forward_compatibility.py/forward_compatibility.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/forward_compatibility.py/forward_compatibility.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/forward_compatibility.py/forward_compatibility.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/forward_fences.py/forward_fences.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/forward_fences.py/forward_fences.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/forward_refs.py/forward_refs.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/forward_refs.py/forward_refs.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/forward_restore.py/forward_restore.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/forward_restore.py/forward_restore.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/mentions_announcements.py/mentions_announcements.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/mentions_announcements.py/mentions_announcements.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/role_qualification.py/role_qualification.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/role_qualification.py/role_qualification.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/search_favorites.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/search_favorites.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/send_admission.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/send_admission.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/session_closure.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/session_closure.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/session_refresh.py/session_refresh.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/session_refresh.py/session_refresh.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/session_refresh_restore.py/session_refresh_restore.py",
+      "check": "Python default report expression",
+      "destinationRoot": "项目相关报告/测试/后端/执行记录",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/后端/接口/session_refresh_restore.py/session_refresh_restore.py",
+      "check": "Python AST",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/部署/MacOS/运行测试.command/运行测试.command",
+      "check": "zsh -n",
+      "status": "passed"
+    }
+  ]
+}

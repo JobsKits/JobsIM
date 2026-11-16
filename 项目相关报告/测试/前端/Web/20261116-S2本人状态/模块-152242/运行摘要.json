@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "name": "sync-protocol",
+      "exitCode": 1,
+      "seconds": 0.135
+    },
+    {
+      "name": "sync-store",
+      "exitCode": 0,
+      "seconds": 2.148
+    },
+    {
+      "name": "sync-view",
+      "exitCode": 0,
+      "seconds": 0.931
+    }
+  ],
+  "sourceStable": true,
+  "liveAPI": false
+}

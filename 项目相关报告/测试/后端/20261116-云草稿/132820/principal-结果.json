@@ -1,0 +1,38 @@
+{
+  "group": "principal",
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 13,
+  "semanticAssertions": 6,
+  "expectedCASConflictsSeparate": 0,
+  "verifiedPages": 0,
+  "elapsedSeconds": 0.593,
+  "checkedAt": "2026-11-16T05:37:03.796190+00:00",
+  "binarySHA256": "e69e51d2f0620752005df9ee8656fc6ce77511ae1939d994707615b63f2e7214",
+  "assertions": [
+    {
+      "assertion": "reply selection freezes the current same-conversation source proof",
+      "passed": true
+    },
+    {
+      "assertion": "original owned text draft reached positive durable commit",
+      "passed": true
+    },
+    {
+      "assertion": "reply selection freezes the current same-conversation source proof",
+      "passed": true
+    },
+    {
+      "assertion": "account security recovery preserves owned text but never the old reply grant",
+      "passed": true
+    },
+    {
+      "assertion": "fresh authentication cannot silently repair old unsent draft payloads",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    }
+  ]
+}

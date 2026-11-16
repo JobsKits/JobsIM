@@ -1,0 +1,99 @@
+> hvigor DEBUG prepare-node-path [36menv: nodejsVersion=v18.20.1[39m
+> hvigor DEBUG prepare-node-path [36menv: hvigor-config.json5 content = {
+  modelVersion: '6.1.1',
+  dependencies: { '@ohos/hvigor-ohos-plugin': '6.24.2' },
+  execution: {
+    analyze: 'normal',
+    daemon: true,
+    incremental: true,
+    parallel: true
+  },
+  logging: { level: 'info' }
+}[39m
+> hvigor DEBUG hvigor [36menv: daemon=false[39m
+> hvigor DEBUG hvigor [36mno-daemon, use the default node options[39m
+> hvigor DEBUG hvigor-init [36mHvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: true,
+  daemon: false,
+  analyze: 0,
+  logLevel: Level { level: 10000, levelStr: 'DEBUG', colour: 'cyan' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}[39m
+> hvigor DEBUG project-cache-service [36mSince current hvigor version 6.24.2 differs from last hvigor version 
+      undefined, delete file-cache.json and task-cache.json.[39m
+> hvigor DEBUG hvigor-init [36mCache service initialization finished in 2 ms [39m
+> hvigor DEBUG configuration [36mhvigorfile, resolving /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dtZQQi/hvigorfile.ts[39m
+> hvigor DEBUG configuration [36mhvigorfile, require result:  { default: { system: [Function: appTasks], plugins: [] } }[39m
+> hvigor DEBUG configuration [36mhvigorfile, binding system plugins [Function: appTasks][39m
+> hvigor DEBUG AbstractPluginBuilder [36mStarting plugin build process[39m
+> hvigor DEBUG AbstractPluginBuilder [36mApp plugin prepare start...[39m
+> hvigor DEBUG AbstractPluginBuilder [36mApp plugin prepare end...[39m
+> hvigor DEBUG AbstractPluginBuilder [36mApp plugin creating...[39m
+> hvigor DEBUG AbstractPluginBuilder [36mApp plugin register hook start...[39m
+> hvigor DEBUG AbstractPluginBuilder [36mApp plugin register hook end...[39m
+> hvigor DEBUG AbstractPluginBuilder [36mPlugin build process completed[39m
+> hvigor DEBUG BuildModeManager [36mStart initialize project's product build option map with build mode debug.[39m
+> hvigor DEBUG BuildModeManager [36mPicking option from product 'default' with build mode 'debug'.[39m
+> hvigor DEBUG BuildModeManager [36mProduct 'default' build option initialized[39m
+> hvigor DEBUG BuildModeManager [36mEnd initialize project's product build option map with build mode 'debug'.[39m
+> hvigor DEBUG BuildModeManager [36mObtain build option for product 'default'in this build.[39m
+> hvigor DEBUG GlobalProjectDataService [36mNo signingConfig found, initRemoteHspCache failed.[39m
+> hvigor DEBUG DurationEvent [36mLocal scan or download HarmonyOS sdk components toolchains,ets,js,native,previewer[39m
+> hvigor DEBUG DurationEvent [36mLocal scan or download hmscore sdk components toolchains,ets,native[39m
+> hvigor DEBUG hvigor-process [36mhvigor build process will be closed with an error.[39m
+> hvigor [91mERROR: [31m00303168 Configuration Error
+Error Message: SDK component missing.
+
+* Try the following:
+  > Please verify the integrity of your SDK.
+  > Please update the SDK at the download link below.
+  > More info: https://developer.huawei.com/consumer/cn/download
+[39m[39m
+> hvigor [91mERROR: AdaptorError: [31m00303168 Configuration Error
+Error Message: SDK component missing.
+
+* Try the following:
+  > Please verify the integrity of your SDK.
+  > Please update the SDK at the download link below.
+  > More info: https://developer.huawei.com/consumer/cn/download
+[39m
+    at OhosLogger.printErrorExit (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor/src/base/log/hvigor-log.js:1:5087)
+    at HmosSdkLoader.getHmsSdkComponents (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/sdk/hmos-sdk-loader.js:1:2991)
+    at HosSdkInfo.setup (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/sdk/info/hos-sdk-info.js:1:1629)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ProjectTaskService.setup (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/tasks/service/project-task-service.js:1:2505)
+    at async ProjectImpl.<anonymous> (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/plugin/builder/app-plugin-builder.js:1:2304)
+    at async ProjectImpl.executeAfterBindSystemPluginsHook (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor/src/base/internal/lifecycle/hvigor-node-impl/default-node-impl.js:1:5559)
+    at async evaluateNodeVigorFile (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor/src/base/internal/lifecycle/configuration.js:1:9609)
+    at async evalProject (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor/src/base/internal/lifecycle/configuration.js:1:3608)
+    at async configuration (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor/src/base/internal/lifecycle/configuration.js:1:2352)[39m
+> hvigor [91mERROR: BUILD FAILED in 1 s 297 ms [39m
+> hvigor DEBUG hvigor-worker-pool [36mSince there is no instance or instance is terminated, create a new worker pool.[39m
+> hvigor DEBUG hvigor-worker-pool [36mWorker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}[39m
+> hvigor DEBUG WorkerManagerImpl [36mCreate  resident worker with id: 0.[39m
+> hvigor DEBUG WorkerManagerImpl [36mCreate  resident worker with id: 1.[39m
+> hvigor DEBUG hvigor-worker-pool [36mCurrent worker pool is stopped or closed.[39m
+> hvigor DEBUG WorkerManagerImpl [36mClear worker 0.[39m
+> hvigor DEBUG WorkerManagerImpl [36mWorker 0 has been cleared.[39m
+> hvigor DEBUG WorkerManagerImpl [36mCurrent idle worker size: 1.[39m
+> hvigor DEBUG WorkerManagerImpl [36mCurrent busy worker size: 0.[39m
+> hvigor DEBUG WorkerManagerImpl [36mClear worker 1.[39m
+> hvigor DEBUG WorkerManagerImpl [36mWorker 1 has been cleared.[39m
+> hvigor DEBUG WorkerManagerImpl [36mCurrent idle worker size: 0.[39m
+> hvigor DEBUG WorkerManagerImpl [36mCurrent busy worker size: 0.[39m
+> hvigor DEBUG hvigor-process [36mhvigor build process will be closed.[39m
+> hvigor DEBUG WorkerManagerImpl [36mworker[0] exits with exit code 0.[39m
+> hvigor DEBUG WorkerManagerImpl [36mworker[1] exits with exit code 0.[39m
+> hvigor DEBUG hvigor-worker-pool [36mCurrent worker pool is terminated.[39m

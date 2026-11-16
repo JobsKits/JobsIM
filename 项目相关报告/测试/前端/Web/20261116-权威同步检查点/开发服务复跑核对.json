@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-15T19:43:07.824295+00:00",
+  "failed": "项目相关报告/测试/前端/Web/执行记录/business-global-1794770792385-10334/失败记录.json",
+  "passed": "项目相关报告/测试/前端/Web/执行记录/business-global-1794770833410-10474/业务终态结果.json",
+  "inputs": 14,
+  "inputHashesIdentical": true,
+  "failedRecordSHA256": "fc6a89a687a4893968c738428192307202c06026c6f784d277ab805bfdeb3055",
+  "passedRecordSHA256": "40c27d840bc1f46bec729849a4c7204e1e7d965af79389d6c070688060ee8216",
+  "changeBetweenRuns": "Only the task-owned Vite development server was restarted; source inputs remained unchanged",
+  "inference": "HMR module instance mismatch is suspected; original served module URLs were not captured, so a unique cause is not established",
+  "finalScope": "Later 9-group result and production build are separate evidence; failed raw record retained"
+}

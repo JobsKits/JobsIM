@@ -1,0 +1,116 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/Authoritative-20261116-120521-20600.xctestrun" -destination "platform=iOS Simulator,id=927610A5-305F-41F5-BA69-7DA273F4C47E" -parallel-testing-enabled NO "-only-testing:JobsIMTests/IMAuthoritativeSyncTests" -resultBundlePath "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/Sync-20261116-120521-20600.xcresult"
+
+Writing result bundle at path:
+	/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/Sync-20261116-120521-20600.xcresult
+
+2026-11-16 12:06:36.628613+0800 JobsIM[21196:7487571] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/927610A5-305F-41F5-BA69-7DA273F4C47E/data/Containers/Bundle/Application/33BD98B4-5DBA-4D03-B800-F98F0BD51B91/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-16 12:06:36.628878+0800 JobsIM[21196:7487571] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/927610A5-305F-41F5-BA69-7DA273F4C47E/data/Containers/Bundle/Application/33BD98B4-5DBA-4D03-B800-F98F0BD51B91/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-16 12:06:36.670923+0800 JobsIM[21196:7487571] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-16 12:06:36.671241+0800 JobsIM[21196:7487571] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-16 12:06:37.067198+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.067428+0800 JobsIM[21196:7487571] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.067559+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.366007+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.366113+0800 JobsIM[21196:7487571] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.366220+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.377631+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.377737+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.377856+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.377936+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.378425+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.378506+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.378585+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.378649+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.408428+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.408583+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.408701+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.408787+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.674343+0800 JobsIM[21196:7489078] [General] Failed to send CA Event for app launch measurements for ca_event_type: 0 event_name: com.apple.app_launch_measurement.FirstFramePresentationMetric
+2026-11-16 12:06:37.676940+0800 JobsIM[21196:7487571] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+2026-11-16 12:06:37.847567+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.847670+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.847810+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.847891+0800 JobsIM[21196:7487571] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 12:06:37.917297+0800 JobsIM[21196:7489078] [General] Failed to send CA Event for app launch measurements for ca_event_type: 1 event_name: com.apple.app_launch_measurement.ExtendedLaunchMetrics
+Test Suite 'Selected tests' started at 2026-11-16 12:06:38.268.
+Test Suite 'JobsIMTests.xctest' started at 2026-11-16 12:06:38.270.
+Test Suite 'IMAuthoritativeSyncTests' started at 2026-11-16 12:06:38.270.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testAnnouncementPersistsOnlyReferenceWithoutSourceBodyOrProof]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testAnnouncementPersistsOnlyReferenceWithoutSourceBodyOrProof] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testAnnouncementPersistsOnlyReferenceWithoutSourceBodyOrProof]' failed (0.111 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCapabilityLossCannotReturnToLegacyPollOrCreateRoutes]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testCapabilityLossCannotReturnToLegacyPollOrCreateRoutes] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCapabilityLossCannotReturnToLegacyPollOrCreateRoutes]' failed (0.036 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions]' failed (0.011 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testDeltaOriginConflictRollsBackBodyAndContinuousPosition]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testDeltaOriginConflictRollsBackBodyAndContinuousPosition] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testDeltaOriginConflictRollsBackBodyAndContinuousPosition]' failed (0.013 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testGlobalIsTerminalAcrossDeviceRetainedSavedAndUnreadHolders]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testGlobalIsTerminalAcrossDeviceRetainedSavedAndUnreadHolders] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testGlobalIsTerminalAcrossDeviceRetainedSavedAndUnreadHolders]' failed (0.011 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLateAccountContextCannotPublishSnapshot]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLateAccountContextCannotPublishSnapshot]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLocalGuardChangedAfterValidatePreventsLateAtomicCommit]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLocalGuardChangedAfterValidatePreventsLateAtomicCommit]' passed (0.063 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testMissingOrCorruptedSecondPageNeverInstallsFirstPage]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testMissingOrCorruptedSecondPageNeverInstallsFirstPage]' passed (0.012 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOpaqueCLIClientNonceIsNotRequiredToBeAServerUUID]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testOpaqueCLIClientNonceIsNotRequiredToBeAServerUUID] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOpaqueCLIClientNonceIsNotRequiredToBeAServerUUID]' failed (0.008 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOrdinaryCopiesRetainedWhileForwardBodyAndProofNeverPersistInSyncStore]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testOrdinaryCopiesRetainedWhileForwardBodyAndProofNeverPersistInSyncStore] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOrdinaryCopiesRetainedWhileForwardBodyAndProofNeverPersistInSyncStore]' failed (0.012 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOriginalReadOnlyProofClosesOutboxOnlyWithAtomicOriginalBodyMatch]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testOriginalReadOnlyProofClosesOutboxOnlyWithAtomicOriginalBodyMatch] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOriginalReadOnlyProofClosesOutboxOnlyWithAtomicOriginalBodyMatch]' failed (0.012 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testRetainedEntryRequiresPreviouslyValidatedExactBodyAndSameIdentity]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testRetainedEntryRequiresPreviouslyValidatedExactBodyAndSameIdentity] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testRetainedEntryRequiresPreviouslyValidatedExactBodyAndSameIdentity]' failed (0.012 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStoreGenerationSurvivesReopenAndCannotSilentlyReplaceARegisteredStore]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStoreGenerationSurvivesReopenAndCannotSilentlyReplaceARegisteredStore]' passed (0.026 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStrictCountersOriginalBodyDigestAndContinuousRedactions]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStrictCountersOriginalBodyDigestAndContinuousRedactions]' passed (0.005 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSyncMatchingClientIDIsNotOutboxProofAndNeverPostsCreate]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testSyncMatchingClientIDIsNotOutboxProofAndNeverPostsCreate] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSyncMatchingClientIDIsNotOutboxProofAndNeverPostsCreate]' failed (0.014 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownDeltaCannotAdvanceCursorOrEraseLawfulOrdinaryCopy]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testUnknownDeltaCannotAdvanceCursorOrEraseLawfulOrdinaryCopy] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownDeltaCannotAdvanceCursorOrEraseLawfulOrdinaryCopy]' failed (0.010 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownSnapshotRetriesIdenticalDurableIntentAfterReopen]' started.
+<unknown>:0: error: -[JobsIMTests.IMAuthoritativeSyncTests testUnknownSnapshotRetriesIdenticalDurableIntentAfterReopen] : failed: caught error: "Failure(code: "SYNC_DIGEST_MISMATCH")"
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownSnapshotRetriesIdenticalDurableIntentAfterReopen]' failed (0.032 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testValidationWatermarkRegressionAndPermissionABARefuseInstallation]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testValidationWatermarkRegressionAndPermissionABARefuseInstallation]' passed (0.019 seconds).
+Test Suite 'IMAuthoritativeSyncTests' failed at 2026-11-16 12:06:38.696.
+	 Executed 18 tests, with 12 failures (12 unexpected) in 0.414 (0.426) seconds
+Test Suite 'JobsIMTests.xctest' failed at 2026-11-16 12:06:38.696.
+	 Executed 18 tests, with 12 failures (12 unexpected) in 0.414 (0.427) seconds
+Test Suite 'Selected tests' failed at 2026-11-16 12:06:38.696.
+	 Executed 18 tests, with 12 failures (12 unexpected) in 0.414 (0.428) seconds
+2026-11-16 12:07:50.851 xcodebuild[20601:7482837] [MT] IDETestOperationsObserverDebug: 146.886 elapsed -- Testing started completed.
+2026-11-16 12:07:50.851 xcodebuild[20601:7482837] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-16 12:07:50.851 xcodebuild[20601:7482837] [MT] IDETestOperationsObserverDebug: 146.886 sec, +146.886 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/Sync-20261116-120521-20600.xcresult
+
+Failing tests:
+	IMAuthoritativeSyncTests.testAnnouncementPersistsOnlyReferenceWithoutSourceBodyOrProof()
+	IMAuthoritativeSyncTests.testCapabilityLossCannotReturnToLegacyPollOrCreateRoutes()
+	IMAuthoritativeSyncTests.testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions()
+	IMAuthoritativeSyncTests.testDeltaOriginConflictRollsBackBodyAndContinuousPosition()
+	IMAuthoritativeSyncTests.testGlobalIsTerminalAcrossDeviceRetainedSavedAndUnreadHolders()
+	IMAuthoritativeSyncTests.testOpaqueCLIClientNonceIsNotRequiredToBeAServerUUID()
+	IMAuthoritativeSyncTests.testOrdinaryCopiesRetainedWhileForwardBodyAndProofNeverPersistInSyncStore()
+	IMAuthoritativeSyncTests.testOriginalReadOnlyProofClosesOutboxOnlyWithAtomicOriginalBodyMatch()
+	IMAuthoritativeSyncTests.testRetainedEntryRequiresPreviouslyValidatedExactBodyAndSameIdentity()
+	IMAuthoritativeSyncTests.testSyncMatchingClientIDIsNotOutboxProofAndNeverPostsCreate()
+	IMAuthoritativeSyncTests.testUnknownDeltaCannotAdvanceCursorOrEraseLawfulOrdinaryCopy()
+	IMAuthoritativeSyncTests.testUnknownSnapshotRetriesIdenticalDurableIntentAfterReopen()
+
+** TEST EXECUTE FAILED **
+
+Testing started

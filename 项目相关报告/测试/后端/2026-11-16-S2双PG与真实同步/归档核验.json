@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-11-16T04:38:43.578770+00:00",
+  "sourceFilesVerified": 75,
+  "sourceArchiveEntriesVerified": 75,
+  "failedInputMirrorVerified": true,
+  "stoppedOwnAppBrokerAndBothPostmasters": true,
+  "reportAndTouchedDocsContainNoCollectedSecretsOrPrivateKeyPEM": true,
+  "initialRaw404Retained": true,
+  "hostSerializationFailureRetained": true,
+  "links": {
+    "项目相关报告/测试/后端/2026-11-16-S2双PG与真实同步/README.md": {
+      "existingLocalLinks": 37,
+      "uniqueAnchors": 7
+    },
+    "测试/后端/接口/self_state_sync.py/README.md": {
+      "existingLocalLinks": 3,
+      "uniqueAnchors": 4
+    },
+    "代码/后端/Go/README.md": {
+      "existingLocalLinks": 19,
+      "uniqueAnchors": 7
+    },
+    "代码/后端/Go/接口契约/README.md": {
+      "existingLocalLinks": 2,
+      "uniqueAnchors": 10
+    }
+  },
+  "allProductionAndLocksMatchPhaseA": true,
+  "phaseAOriginalEnvironmentAndPlanUnchanged": true
+}

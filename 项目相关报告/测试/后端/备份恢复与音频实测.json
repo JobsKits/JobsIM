@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "httpAssertions": 27,
+  "encryptedBackup": true,
+  "tamperRejected": true,
+  "lastValidSetPreserved": true,
+  "realM4AAudioUploadBindDownload": true,
+  "oldSessionRejected": true,
+  "oldPasswordNotTrusted": true,
+  "withdrawalReplayed": true,
+  "oldEditedTextNotResurrected": true,
+  "reactionVersionAndSequenceAdvanceTogether": true,
+  "reservedUsernamePreserved": true,
+  "oldCursorAndOutboxFrozen": true,
+  "lostDatabaseImportResponseResumed": true,
+  "sameRestoreOperationKeepsEpoch": true,
+  "wrongTargetBindingRejected": true,
+  "journalSnapshotAnchorAndTailVerified": true,
+  "scope": "isolated safety realm; no full I/strong protection acceptance"
+}

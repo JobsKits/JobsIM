@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:50.59929+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:50.762791+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSourcePreferencesEpochResetRetainsOriginalFacts"}
+{"Time":"2026-11-16T12:11:50.762863+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSourcePreferencesEpochResetRetainsOriginalFacts","Output":"=== RUN   TestSourcePreferencesEpochResetRetainsOriginalFacts\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:50.904346+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSourcePreferencesEpochResetRetainsOriginalFacts","Output":"--- PASS: TestSourcePreferencesEpochResetRetainsOriginalFacts (0.14s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:50.904374+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSourcePreferencesEpochResetRetainsOriginalFacts","Elapsed":0.14}
+{"Time":"2026-11-16T12:11:50.904402+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:50.905198+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.306s\n"}
+{"Time":"2026-11-16T12:11:50.905235+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.306}

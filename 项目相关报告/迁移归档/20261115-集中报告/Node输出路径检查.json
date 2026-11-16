@@ -1,0 +1,50 @@
+{
+  "scope": "isolated vm evaluates actual path expressions only; no script execution/filesystem writes except this audit",
+  "checks": [
+    {
+      "entry": "工具/统计项目.mjs/统计项目.mjs",
+      "destination": "项目相关报告/项目统计/报告.json",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/CLI/collaboration-https.cjs/collaboration-https.cjs",
+      "destination": "项目相关报告/测试/CLI/执行记录/collaboration-1794755362712-424242",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/CLI/forward-https.cjs/forward-https.cjs",
+      "destination": "项目相关报告/测试/CLI/执行记录/1794755362713-424242",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/CLI/https-integration.cjs/https-integration.cjs",
+      "destination": "项目相关报告/测试/CLI/执行记录/1794755362713-424242",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/CLI/运行测试.mjs/运行测试.mjs",
+      "destination": "项目相关报告/测试/CLI/执行记录/1794755362714-424242",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/admin-integration.cjs/admin-integration.cjs",
+      "destination": "项目相关报告/测试/前端/Web/执行记录/path-only-check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/browser.cjs/browser.cjs",
+      "destination": "项目相关报告/测试/前端/Web/执行记录/path-only-check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/forward.cjs/forward.cjs",
+      "destination": "项目相关报告/测试/前端/Web/执行记录/path-only-check",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/Web/integration.cjs/integration.cjs",
+      "destination": "项目相关报告/测试/前端/Web/执行记录/path-only-check",
+      "status": "passed"
+    }
+  ]
+}

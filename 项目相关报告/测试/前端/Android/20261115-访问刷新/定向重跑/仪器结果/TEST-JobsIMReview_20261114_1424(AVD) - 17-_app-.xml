@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="7" failures="1" errors="0" skipped="0" time="0.66" timestamp="2026-11-15T12:33:18" hostname="localhost">
+  <testsuite name="com.jobs.im.NativeSessionLifecycleTest" tests="5" failures="0" errors="0" skipped="0" time="0.377" timestamp="2026-11-15T12:33:18" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="lateExpiredBusinessCannotBorrowReplacementFamilyAndOther401NeverRefreshes" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.124" />
+    <testcase name="initialUnknownChainKeepsOriginalIdsAndRejectsLateDelivery" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.001" />
+    <testcase name="committedPairHandoffRecoversAndRetiresOriginalOutboxWithoutChangingPayload" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.054" />
+    <testcase name="concurrentExpiredRequestsShareOneRotationAndPublishOnlyDurablePair" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.138" />
+    <testcase name="secureWriteFailureAndUnknownRefreshStayBlockedAcrossRestart" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.06" />
+  </testsuite>
+  <testsuite name="com.jobs.im.StorageLifecycleTest" tests="1" failures="0" errors="0" skipped="0" time="0.032" timestamp="2026-11-15T12:33:18" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="versionTwoUpgradePreservesOriginalPendingIdentity" classname="com.jobs.im.StorageLifecycleTest" time="0.032" />
+  </testsuite>
+  <testsuite name="com.jobs.im.NativeSessionHttpsTest" tests="1" failures="1" errors="0" skipped="0" time="0.002" timestamp="2026-11-15T12:33:18" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="initializationError" classname="com.jobs.im.NativeSessionHttpsTest" time="0.002">
+      <failure>java.lang.RuntimeException: Failed to instantiate test runner class androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
+
+
+at androidx.test.ext.junit.runners.AndroidJUnit4.throwInitializationError(AndroidJUnit4.java:129)
+at androidx.test.ext.junit.runners.AndroidJUnit4.loadRunner(AndroidJUnit4.java:121)
+at androidx.test.ext.junit.runners.AndroidJUnit4.loadRunner(AndroidJUnit4.java:82)
+at androidx.test.ext.junit.runners.AndroidJUnit4.&lt;init&gt;(AndroidJUnit4.java:56)
+... 14 trimmed
+Caused by: java.lang.reflect.InvocationTargetException
+at java.lang.reflect.Constructor.newInstance0(Native Method)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+at androidx.test.ext.junit.runners.AndroidJUnit4.loadRunner(AndroidJUnit4.java:112)
+... 17 more
+Caused by: org.junit.runners.model.InvalidTestClassError: Invalid test class 'com.jobs.im.NativeSessionHttpsTest':
+1. Method realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair() should be void
+2. Method realLostRefreshAndThreeIntentClosureRetireUnknownAncestors() should be void
+at org.junit.runners.ParentRunner.validate(ParentRunner.java:525)
+at org.junit.runners.ParentRunner.&lt;init&gt;(ParentRunner.java:92)
+at org.junit.runners.BlockJUnit4ClassRunner.&lt;init&gt;(BlockJUnit4ClassRunner.java:74)
+at androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner.&lt;init&gt;(AndroidJUnit4ClassRunner.java:50)
+at androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner.&lt;init&gt;(AndroidJUnit4ClassRunner.java:55)
+... 20 more
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

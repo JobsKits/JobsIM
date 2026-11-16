@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "testedAtUTC": "2026-11-15T12:47:53.030375+00:00",
+  "candidateBinarySHA256": "7ef53be2fe9004fd66978a7313dac016dfdf146a66e3116767a61bdf0dcd40c9",
+  "fixedBinaryName": "jobsimd-refresh-fixed-7ef53be2fe90",
+  "deploymentId": "8196a425-b530-49d5-b57f-4663f416e909",
+  "restoreEpoch": "1",
+  "strictHTTPS": true,
+  "freshIdentityAndCA": true,
+  "persistentApplicationSupportData": true,
+  "formalHTTP": 62,
+  "experimentalHTTP": 5,
+  "adminSemanticHTTP": 10,
+  "healthHTTP": 1,
+  "roles": 9,
+  "reports": {
+    "测试/后端/报告/登录刷新持久环境与完整退休链实测.json": {
+      "sha256": "bdc7ec0ce846e8ed4b4a264bd59bff1357d5427249a448b816bb7c4c86a77694",
+      "bytes": 809
+    },
+    "测试/后端/报告/登录刷新持久环境恢复拒旧实测.json": {
+      "sha256": "f364c78d66cf3033d2476eb2499f0f02dd90f9fb2214d082d35b4560ad576dc5",
+      "bytes": 824
+    },
+    "测试/后端/报告/刷新数据库并发持久环境实测.json": {
+      "sha256": "2995daa6bc7333a6196157e94ccb7bd3cc2411ad08bfb2ee5df917cf1891bf3e",
+      "bytes": 401
+    },
+    "测试/后端/报告/刷新持久环境Go原始日志.txt": {
+      "sha256": "13187d9a6163a20df7a0216438046c5de7ec45d466338db862152ff076d5233f",
+      "bytes": 159
+    },
+    "测试/后端/报告/刷新构建既有接口回归.json": {
+      "sha256": "3a21cd89b1bdc4da2e60c81f59459978730ef4366b02ba5f8bd8bb8e9d43129d",
+      "bytes": 1496
+    }
+  },
+  "productionSources": {
+    "代码/后端/Go/admin_identity.go": "2d190871a402043ab019e498088a6af3ab4f7cb9cd39a40cbfe256b8326c61b2",
+    "代码/后端/Go/asset_migrations.go": "a134b1f2de14973d1eb92b7584b82bdcdde889f4677d733e8242f3a257f71179",
+    "代码/后端/Go/avatar.go": "9ab68cd2c236120dbb2bcbaef12526fa29a0738abff6b5074179349d1b323a31",
+    "代码/后端/Go/avatar_media.go": "b11459bbbc7aa1200210736670cf72d7a6be3ec9c49e1897443cf827ccf6010c",
+    "代码/后端/Go/cmd/jobsimd/main.go": "bd8e0f715cf3d7f9fa14f774b47907a4fb857ec1dc3a8b0e6d2fdaa45eb3eb68",
+    "代码/后端/Go/cmd/jobsimops/main.go": "b2f8bfce929ab40e63faa3e006e7fa0e7d15eb1be031c43fe25ba38c987f5f66",
+    "代码/后端/Go/contact_relationship.go": "ccdb8ac8fec13f2344ea159d62a1d66425f567056f102f04d254855d480ae976",
+    "代码/后端/Go/control.go": "45cc91381cf5751a726db83657008e11f2ab21bdd21dafed2b6519be67219c05",
+    "代码/后端/Go/conversation.go": "f2d1ce277571015f53025a9656ee75f8b7fff0df69b45f4205188ca759786f0e",
+    "代码/后端/Go/directory.go": "80a962f036bb9a26b1fa0a6d37c310ae4f812d8717a5da44242548fc16cb54da",
+    "代码/后端/Go/export.go": "f071ccd348c60fffab82e5d4b9cf16d6a9821e2ec34f8caee4ccd9d5cc234f43",
+    "代码/后端/Go/export_identity.go": "542c1f9dea354d434ed0f23b646d76dad890fd134aa7262a0bdc10675b49b4b8",
+    "代码/后端/Go/export_lock_unix.go": "945aab26432f3e0ba8d46e7c687c267b209f3fb439a7380f162e40363ede3812",
+    "代码/后端/Go/export_lock_windows.go": "0a2ebf2546b37d15cf75a4dfccd1eb06f43624eeb768f75d00bbf3610e10adb5",
+    "代码/后端/Go/export_restore.go": "9c04fa9409aacd99a042bb5cabb55413a0c5dd531ce400acdde668acd081832b",
+    "代码/后端/Go/export_worker.go": "2b0252e62fee7398473e32a50c81acc277afe74a60722a9670fe18f880c301b9",
+    "代码/后端/Go/forward_media.go": "6f2f21230c0257ccc327c3abc7ece5ad36d3688fb2f100b4e6102973f651dcf6",
+    "代码/后端/Go/forward_projection.go": "b046beb464e839c70ef88cd301a97269f365847bb86bbe50913a152ef53bea4e",
+    "代码/后端/Go/forward_revocation.go": "9e6660b6a55492cf6bb6ad275b1471fc0fb60c9e191223e97aafd13ceac33b18",
+    "代码/后端/Go/identity.go": "a375d3bbce82e3f7b67aa22e42ba6d0697e155980fcab96620faa5ca8efe1b62",
+    "代码/后端/Go/journal.go": "1063b1459430af788f97f18cc05b4f3903d28183ab697af2994031eb7afc42bf",
+    "代码/后端/Go/media.go": "54b7dedaab50bb1163a17cbf01a54720f3bda2c51ec54377862a13a09da402e0",
+    "代码/后端/Go/media_export.go": "f8c2fab705d066db72cf423ce1128c3f9037ed011dd935decd8d949709c70049",
+    "代码/后端/Go/media_format.go": "439fd425c2fda2ae4e60731b9150410dbee4bdeb195c6b564f3c3c44fa9c36b0",
+    "代码/后端/Go/mentions_announcements.go": "4c185809b67c0bc42748b7d1bbc8f7d6cd1d21e7ca1e395693aa642c42205ccb",
+    "代码/后端/Go/message.go": "a4fb9008783c452cfd66a7ccc51b447cf9bcf773d2a64d2b545b4752fcb63127",
+    "代码/后端/Go/message_export.go": "28da5ca2211b7f6fbc99dcbb5c216b45a8411ef0fa0a3747ca99ad1b6251975f",
+    "代码/后端/Go/message_lifecycle.go": "ae5808a853f96f418bfbf4762fceebd385741bcff226637871f4bb032729b329",
+    "代码/后端/Go/mfa.go": "e076d75bcd6548bf528964a6b2bee1d37fd15a1f72f2a880701d1c6fadef7a79",
+    "代码/后端/Go/migrations.go": "c5cb14b892979519a486ab667155e55a397284b6eb9874e4ae9fff3e7cf4f007",
+    "代码/后端/Go/operations.go": "2136bb96bec0fe93928a4e5a1e2af97d69166bccf9451f446d8715bf956a6bd9",
+    "代码/后端/Go/owner_lifecycle.go": "450911cba96de2bfe0523a4208a7f9965fd1d81bd11cec647ddc59de383bb24d",
+    "代码/后端/Go/reports.go": "ec31ee2999e6ecfbd469f20935a2d473cbaf45466be541f449fe5d8394e3d434",
+    "代码/后端/Go/request_gate.go": "fc2d396272d4ae4b0c8e348f227795e3059139b6dac7557c22c1a3bacec85199",
+    "代码/后端/Go/reset_grant.go": "d284b9b49e12ae0d96ed23476775230f1d6dbe0ef7cf425f828c44f011dd2835",
+    "代码/后端/Go/restore_runner.go": "f7c3af874402523ceb8006166da01306c0ae8bd39d2eb73b4c59ba0f5dfac22b",
+    "代码/后端/Go/search.go": "4428c6b89247dc4e7dbee194ef86f879aaf08cb0f44eaeb859aa850b2ed0fb4f",
+    "代码/后端/Go/security.go": "156d165e4e9317ef5cc4941d893bcead210da9c33cf3e1c71da9b09e735c8c30",
+    "代码/后端/Go/send_admission.go": "97c331b0377d687dbc02b866ddbd3e82d592accb5c96e3352caabdc11b441809",
+    "代码/后端/Go/server.go": "f529021a8efeb6c151250622886eaf43eb112963f1bb08115c1610cb77e6208f",
+    "代码/后端/Go/session_auth_retirement.go": "426bcee0fb6a85088ca012760ccba34e25fd8b3028c50e70c0ea4e09ec7a8a11",
+    "代码/后端/Go/session_bff.go": "55ff21e427c697c2fe869311132bce7ca9a63ac71107e8e18f414a0ef13cb854",
+    "代码/后端/Go/session_refresh.go": "79a96511e38d56dfd809616f96c68068ef5f91c9d54adb8b36d967bf2714b7af",
+    "代码/后端/Go/session_refresh_model.go": "274a4fff519cb1be2018c6f11de554d2cafa55813defe00723bbc4b7c2567a43",
+    "代码/后端/Go/types.go": "b2837f096570c5d4ea4fe0cf8e94032e05842c5cc39bd56b2d2060b58d612a77",
+    "代码/后端/Go/web.go": "7f022cfb049090a6ab70ac099533c9df69287291afff53c5753ec0143b6955ce"
+  },
+  "backupAssets": {
+    "instance.jimbackup": {
+      "bytes": 165476,
+      "sha256": "204463bf005e9f288fd803ec3d3df66e8b34537c1edf68309fce9026954d041c"
+    },
+    "independent-journal.dump": {
+      "bytes": 30385,
+      "sha256": "5caa1d0dcf9df0979c8f3a9547a4952b5a0835748027a1f5aaecfb878ee5469b"
+    }
+  },
+  "backupKeySeparated": true,
+  "journalArchiveTOCVerified": true,
+  "journalArchiveRestoreNotReexercised": true,
+  "oldCacheDataRecovered": false,
+  "realOldBinaryMigrationReexercised": false,
+  "bffSameGenerationProcessRestartReexercised": false,
+  "limitations": [
+    "same-host shared StateDir only",
+    "personal source context only; hosted grant is later scope",
+    "SQL deadlines are explicit fixture clocks, not 90 days wall time",
+    "native secure-pair storage and browser same-context pages belong to per-client reports",
+    "no complete I/DBC-05 or 243 acceptance state change"
+  ]
+}

@@ -1,0 +1,16 @@
+JobsIM：check/plan/status只读；run启动本实例双PG、loopback JetStream与Go角色；stop默认备份并保留数据。
+动作=check；不会创建state、启动/停止服务、生成密钥或安装环境。
+go version go1.27.4 darwin/arm64
+pg_ctl (PostgreSQL) 18.7 (Postgres.app)
+OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+v24.22.1
+nats-server: v2.15.3
+源码=/Users/jobs/Documents/GitHub/JobsIM
+state=/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/NATS-readonly-final
+HTTPS=9443；独立PG=16543/16544；内部端口=18101～18109
+当前是单机原生开发切片：两独立PG集群、按角色数据库与用户、TLS、WebDist；不宣称完整生产／强保护／RPO0。
+没有已匹配的本实例后端。
+本实例NATS：
+nats://127.0.0.1:4222
+JetStream=/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/NATS-readonly-final/Application/JetStream；token仅私有文件。
+没有匹配的本实例NATS。

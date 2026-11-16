@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "failure": null,
+  "lastCompletedStage": "verified",
+  "httpChecks": 7,
+  "semanticAssertions": 4,
+  "binarySHA256": "a48e0ac3e42cee8f9d669a35df83cc4c3eb3609677ca11b2696875421bf1c3ea",
+  "operatorBinarySHA256": "93d370a1c112d0adc28e3d8ee1bc970acb3ff3896a4d1212c635dbb1a755cb64",
+  "scriptSHA256": "6e12033f0fa91d4ffed827e89eae59a7ade61d0ab40b09073743f301cac56089",
+  "realEncryptedReportHolderRestore": true,
+  "checkedAt": "2026-11-16T09:34:55.843200+00:00",
+  "assertions": [
+    {
+      "assertion": "real second restore advances once and retains the exact deployment",
+      "passed": true
+    },
+    {
+      "assertion": "ready report-backed export restores cancelled metadata only",
+      "passed": true
+    },
+    {
+      "assertion": "restored report source holder and its durable handoff ledger finish cleared without a delivery grant",
+      "passed": true
+    },
+    {
+      "assertion": "restored report-backed task never regains a delivery key",
+      "passed": true
+    }
+  ],
+  "backupSHA256": "b36acf75d11108fc3a60fd5d2a32a40407bf9d5bb3760cf0c72749d6916eefa4",
+  "backupBytes": 17241528
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "02-测试目标编译",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+      "test",
+      "-json",
+      "-p",
+      "1",
+      "-parallel",
+      "1",
+      "-count",
+      "1",
+      "-overlay",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+      "-run",
+      "^$",
+      "-timeout",
+      "170s",
+      "."
+    ],
+    "elapsedSeconds": 4.604,
+    "exitCode": 0,
+    "freeBytesBefore": 13164019712,
+    "freeBytesAfter": 13149020160,
+    "log": "02-测试目标编译.jsonl",
+    "logSHA256": "f55fc287327e165a583483358a179b29c834f91bb89ad6808ca150ba4bd91286"
+  },
+  {
+    "name": "03-连接围栏纯本地",
+    "args": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+      "test",
+      "-json",
+      "-p",
+      "1",
+      "-parallel",
+      "1",
+      "-count",
+      "1",
+      "-overlay",
+      "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+      "-run",
+      "^TestS2PGGuard",
+      "-timeout",
+      "170s",
+      "."
+    ],
+    "elapsedSeconds": 1.062,
+    "exitCode": 0,
+    "freeBytesBefore": 13149011968,
+    "freeBytesAfter": 13149016064,
+    "log": "03-连接围栏纯本地.jsonl",
+    "logSHA256": "2e57383af94bdb2232bdc9cbcbc5919334b8deb88011289fab4edc7950f49c34"
+  }
+]

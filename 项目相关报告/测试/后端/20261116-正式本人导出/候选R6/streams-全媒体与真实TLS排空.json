@@ -1,0 +1,73 @@
+{
+  "group": "streams",
+  "status": "failed",
+  "failure": "cancel did not persist delivery denial",
+  "httpChecks": 68,
+  "semanticAssertions": 15,
+  "elapsedSeconds": 18.262,
+  "binarySHA256": "aea1ca1985ad0b2b7d3e5b1e7d843895cb04990ab08996951dd0380cdfaa0116",
+  "scriptSHA256": "bf1532b15c9bc58fcd6b51b37b877a6b2a9ee5d8b8cb95fd31b56959e5c4f16f",
+  "checkedAt": "2026-11-16T08:47:55.143451+00:00",
+  "assertions": [
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "real media upload",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "real PNG/GIF/AAC-M4A/MP4 export retains original type and exact attachment bytes",
+      "passed": true
+    },
+    {
+      "assertion": "real PNG/GIF/AAC-M4A/MP4 export retains original type and exact attachment bytes",
+      "passed": true
+    },
+    {
+      "assertion": "real PNG/GIF/AAC-M4A/MP4 export retains original type and exact attachment bytes",
+      "passed": true
+    },
+    {
+      "assertion": "real PNG/GIF/AAC-M4A/MP4 export retains original type and exact attachment bytes",
+      "passed": true
+    },
+    {
+      "assertion": "real stream starts with authenticated plaintext ZIP only after complete encrypted validation",
+      "passed": true
+    },
+    {
+      "assertion": "real download SH holds the source EX mutation outside its commit",
+      "passed": true
+    },
+    {
+      "assertion": "source EX mutation completes only after real TLS client disconnect and artifact drain",
+      "passed": true
+    },
+    {
+      "assertion": "real stream starts with authenticated plaintext ZIP only after complete encrypted validation",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,463 @@
+=== RUN   TestAuthCoordinatorActualHTTPSAndUnknownClosure
+    auth_https_test.go:27: explicit isolated refresh realm required
+--- SKIP: TestAuthCoordinatorActualHTTPSAndUnknownClosure (0.00s)
+=== RUN   TestAuthNativeSystemVaultSeparateDiagnostic
+    auth_https_test.go:194: explicit native system credential diagnostic required
+--- SKIP: TestAuthNativeSystemVaultSeparateDiagnostic (0.00s)
+=== RUN   TestAuthRefreshSingleFlightCommitsPairBeforePublishing
+--- PASS: TestAuthRefreshSingleFlightCommitsPairBeforePublishing (0.03s)
+=== RUN   TestAuthRefreshUnknownNeverReusesOldRefreshAfterReopen
+--- PASS: TestAuthRefreshUnknownNeverReusesOldRefreshAfterReopen (0.00s)
+=== RUN   TestAuthSecurePairFailureDoesNotPublishOrRetry
+--- PASS: TestAuthSecurePairFailureDoesNotPublishOrRetry (0.00s)
+=== RUN   TestAuthInitialNonceAndCompleteRetirementClosureRemainImmutable
+Password: --- PASS: TestAuthInitialNonceAndCompleteRetirementClosureRemainImmutable (0.00s)
+=== RUN   TestAuthUnknownRegistrationCannotInferCreatedAccount
+--- PASS: TestAuthUnknownRegistrationCannotInferCreatedAccount (0.00s)
+=== RUN   TestAuthLateFamilyResponseCannotEnterReplacementContext
+--- PASS: TestAuthLateFamilyResponseCannotEnterReplacementContext (0.00s)
+=== RUN   TestAuthDeviceRetirementPreservesOriginalOutboxAndRejectsLateEnqueue
+--- PASS: TestAuthDeviceRetirementPreservesOriginalOutboxAndRejectsLateEnqueue (0.01s)
+=== RUN   TestAuthLogoutUnknownKeepsFamilyButClearsRuntimeAndSystemEntry
+--- PASS: TestAuthLogoutUnknownKeepsFamilyButClearsRuntimeAndSystemEntry (0.00s)
+=== RUN   TestAuthLogoutMetadataFailureStillDeletesSecureEntryAndRevokes
+--- PASS: TestAuthLogoutMetadataFailureStillDeletesSecureEntryAndRevokes (0.00s)
+=== RUN   TestAuthMissingMessageStoreCannotResumeSurvivingSystemCredentials
+--- PASS: TestAuthMissingMessageStoreCannotResumeSurvivingSystemCredentials (0.01s)
+=== RUN   TestAuthMediaRefreshPreservesExactBodyBytes
+--- PASS: TestAuthMediaRefreshPreservesExactBodyBytes (0.00s)
+=== RUN   TestCollaborationPayloadCompatibilityAndDurableMentionQualification
+--- PASS: TestCollaborationPayloadCompatibilityAndDurableMentionQualification (0.01s)
+=== RUN   TestCollaborationSignedPagingExactSourceAndContextFence
+{
+  "cursor": "end",
+  "hasMore": false,
+  "items": [
+    {
+      "conversationId": "beyond100",
+      "id": "m2"
+    }
+  ]
+}
+{
+  "cursor": "opaque+/= %汉",
+  "hasMore": true,
+  "items": [
+    {
+      "conversationId": "beyond100",
+      "id": "m1",
+      "text": "old list body"
+    }
+  ]
+}
+{
+  "cursor": "opaque+/= %汉",
+  "hasMore": true,
+  "items": [
+    {
+      "conversationId": "beyond100",
+      "id": "m1",
+      "text": "old list body"
+    }
+  ]
+}
+--- PASS: TestCollaborationSignedPagingExactSourceAndContextFence (0.00s)
+=== RUN   TestAnnouncementDurableOriginalFactAndNoBodyRollback
+{
+  "currentAnnouncement": {
+    "canManage": true,
+    "conversationId": "g",
+    "state": "empty",
+    "version": "4"
+  },
+  "operationId": "81609739c7145fa0acdb7dbda8302faa",
+  "originalFact": {
+    "current": false,
+    "operationId": "81609739c7145fa0acdb7dbda8302faa",
+    "result": {
+      "canManage": false,
+      "conversationId": "g",
+      "messageId": "source",
+      "sourceVersion": "2",
+      "state": "active",
+      "version": "1"
+    },
+    "status": "applied"
+  }
+}
+--- PASS: TestAnnouncementDurableOriginalFactAndNoBodyRollback (0.01s)
+=== RUN   TestAnnouncementCASFreezeEpochAndTransactionRollback
+--- PASS: TestAnnouncementCASFreezeEpochAndTransactionRollback (0.01s)
+=== RUN   TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen
+=== RUN   TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/request
+{
+  "operationId": "0f618d77f2b861662c81a22918a7c963",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "id": "request-fact",
+    "state": "pending"
+  },
+  "state": "completed"
+}
+{
+  "operationId": "0f618d77f2b861662c81a22918a7c963",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "id": "request-fact",
+    "state": "pending"
+  },
+  "state": "completed"
+}
+=== RUN   TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/reopen
+{
+  "operationId": "e0ebdb9ff6f2766321f1c4828ac643dd",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "current": false,
+    "generation": "1",
+    "status": "opened"
+  },
+  "state": "completed"
+}
+{
+  "operationId": "e0ebdb9ff6f2766321f1c4828ac643dd",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "current": false,
+    "generation": "1",
+    "status": "opened"
+  },
+  "state": "completed"
+}
+--- PASS: TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen (0.01s)
+    --- PASS: TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/request (0.01s)
+    --- PASS: TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/reopen (0.01s)
+=== RUN   TestRelationshipFreezeTargetsOnlyCorrespondingDirectAndKeepsPayloadBytes
+--- PASS: TestRelationshipFreezeTargetsOnlyCorrespondingDirectAndKeepsPayloadBytes (0.00s)
+=== RUN   TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory
+=== RUN   TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/leave
+{
+  "clientMsgId": "original-99999999-9999-4999-8999-999999999999",
+  "confirmed": true,
+  "messageId": "bb3eb955-807c-e8ae-e2c8-bc59ddc9e32c",
+  "source": "read_only_original_result"
+}
+=== RUN   TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/remove-member
+{
+  "clientMsgId": "original-99999999-9999-4999-8999-999999999999",
+  "confirmed": true,
+  "messageId": "bb3eb955-807c-e8ae-e2c8-bc59ddc9e32c",
+  "source": "read_only_original_result"
+}
+--- PASS: TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory (0.01s)
+    --- PASS: TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/leave (0.01s)
+    --- PASS: TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/remove-member (0.01s)
+=== RUN   TestLeaveFailureRollsBackFreezeHistoryAndCursorTogether
+--- PASS: TestLeaveFailureRollsBackFreezeHistoryAndCursorTogether (0.00s)
+=== RUN   TestGroupCommandsKeepExactContractAndDoNotReplayUnknownPatch
+{
+  "items": []
+}
+{
+  "status": "added"
+}
+{
+  "status": "removed"
+}
+--- PASS: TestGroupCommandsKeepExactContractAndDoNotReplayUnknownPatch (0.00s)
+=== RUN   TestSchemaOneMigrationPreservesPendingAndAddsIndependentFreezeReason
+--- PASS: TestSchemaOneMigrationPreservesPendingAndAddsIndependentFreezeReason (0.01s)
+=== RUN   TestUnknownLocalRevocationCannotCreateAnOldIntentDuringReconciliation
+--- PASS: TestUnknownLocalRevocationCannotCreateAnOldIntentDuringReconciliation (0.01s)
+=== RUN   TestUnavailableContentNeverExposesOlderBodyInPresentation
+--- PASS: TestUnavailableContentNeverExposesOlderBodyInPresentation (0.00s)
+=== RUN   TestOutboxPersistsBeforeSendAndKeepsUnknownIdentity
+Pending original ID: stable-original-id
+{
+  "clientMsgId": "stable-original-id",
+  "confirmed": true,
+  "messageId": "2c2eb61f-881e-1499-4dd0-41698113e758",
+  "source": "read_only_original_result"
+}
+--- PASS: TestOutboxPersistsBeforeSendAndKeepsUnknownIdentity (0.01s)
+=== RUN   TestOutboxCrashReopenAndRestoreFreeze
+--- PASS: TestOutboxCrashReopenAndRestoreFreeze (0.02s)
+=== RUN   TestCursorAndMessagesCommitTogetherWithoutVersionRollback
+--- PASS: TestCursorAndMessagesCommitTogetherWithoutVersionRollback (0.01s)
+=== RUN   TestLegacyImportIsExplicitAtomicAndRetainsOriginal
+--- PASS: TestLegacyImportIsExplicitAtomicAndRetainsOriginal (0.01s)
+=== RUN   TestSendingAdmissionSurvivesRestartAndNeverUpgradesOriginalIntent
+Pending original ID: original-id
+--- PASS: TestSendingAdmissionSurvivesRestartAndNeverUpgradesOriginalIntent (0.01s)
+=== RUN   TestAdmissionLookupFailureKeepsDraftWithoutInventingQualification
+--- PASS: TestAdmissionLookupFailureKeepsDraftWithoutInventingQualification (0.01s)
+=== RUN   TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen
+=== RUN   TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen/committed_false
+{
+  "clientMsgId": "f4247ad77bc08408bc9920c0390b85c1",
+  "confirmed": true,
+  "messageId": "f6a214f7-a5fc-da0c-2cee-9660b7fc29f5",
+  "source": "read_only_original_result"
+}
+=== RUN   TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen/committed_true
+{
+  "clientMsgId": "818bf72d6981a34a30c578c149e27774",
+  "confirmed": true,
+  "messageId": "f6a214f7-a5fc-da0c-2cee-9660b7fc29f5",
+  "source": "read_only_original_result"
+}
+--- PASS: TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen (0.02s)
+    --- PASS: TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen/committed_false (0.01s)
+    --- PASS: TestForwardUnknownResultsUseOnlyOriginalReferencesAfterSQLiteReopen/committed_true (0.01s)
+=== RUN   TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof
+=== RUN   TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/FORWARD_ADMISSION_CHANGED
+=== RUN   TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/NOT_A_MEMBER
+=== RUN   TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/HISTORY_NOT_ALLOWED
+--- PASS: TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof (0.02s)
+    --- PASS: TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/FORWARD_ADMISSION_CHANGED (0.01s)
+    --- PASS: TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/NOT_A_MEMBER (0.01s)
+    --- PASS: TestForwardVersionChangesAndDefiniteRejectionNeverRefreshOldProof/HISTORY_NOT_ALLOWED (0.01s)
+=== RUN   TestForwardCacheAndPresentationCannotRetainProjectedBodyOrProof
+--- PASS: TestForwardCacheAndPresentationCannotRetainProjectedBodyOrProof (0.01s)
+=== RUN   TestObjectReceiptFullFileAndDescriptorCommittedBeforeHTTP
+--- PASS: TestObjectReceiptFullFileAndDescriptorCommittedBeforeHTTP (0.07s)
+=== RUN   TestObjectReceiptUnknownReopenPureQueryAndExplicitSameBody
+--- PASS: TestObjectReceiptUnknownReopenPureQueryAndExplicitSameBody (0.06s)
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/hash
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/short
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/long
+=== RUN   TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/good
+--- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal (0.16s)
+    --- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/hash (0.04s)
+    --- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/short (0.04s)
+    --- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/long (0.04s)
+    --- PASS: TestObjectReceiptWrongHashCountAndImportNeverMovesOriginal/good (0.05s)
+=== RUN   TestObjectReceiptSQLFailureAndOrphanCrashBoundary
+=== RUN   TestObjectReceiptSQLFailureAndOrphanCrashBoundary/process-exit-after-FULL-commit
+--- PASS: TestObjectReceiptSQLFailureAndOrphanCrashBoundary (0.12s)
+    --- PASS: TestObjectReceiptSQLFailureAndOrphanCrashBoundary/process-exit-after-FULL-commit (0.07s)
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind/modified
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind/symlink
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind/missing
+=== RUN   TestObjectReceiptReplacementSymlinkMissingNeverRebind/directory
+--- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind (0.24s)
+    --- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind/modified (0.07s)
+    --- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind/symlink (0.06s)
+    --- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind/missing (0.06s)
+    --- PASS: TestObjectReceiptReplacementSymlinkMissingNeverRebind/directory (0.06s)
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/old
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/missing
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/claim
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/flag
+=== RUN   TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/build
+--- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade (0.13s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/old (0.02s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/missing (0.02s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/claim (0.02s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/flag (0.02s)
+    --- PASS: TestObjectReceiptOldBodyContractAndCapabilityCannotUpgrade/build (0.03s)
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/pending
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/result
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/qualification
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/epoch
+=== RUN   TestObjectReceiptParentMustBeRecordedSameQualification/physical
+--- PASS: TestObjectReceiptParentMustBeRecordedSameQualification (0.12s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/pending (0.02s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/result (0.02s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/qualification (0.03s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/epoch (0.02s)
+    --- PASS: TestObjectReceiptParentMustBeRecordedSameQualification/physical (0.02s)
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/object
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/size
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/digest
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/parent
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/epoch
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/content
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/expired
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/proof
+=== RUN   TestObjectReceiptChallengeTupleDeadlineAndByteShape/target
+--- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape (0.28s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/object (0.03s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/size (0.03s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/digest (0.03s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/parent (0.03s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/epoch (0.03s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/content (0.03s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/expired (0.03s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/proof (0.03s)
+    --- PASS: TestObjectReceiptChallengeTupleDeadlineAndByteShape/target (0.03s)
+=== RUN   TestObjectReceiptExpiredMissingFileCanStillQueryHistoricalResult
+=== RUN   TestObjectReceiptExpiredMissingFileCanStillQueryHistoricalResult/pending-original-expires
+--- PASS: TestObjectReceiptExpiredMissingFileCanStillQueryHistoricalResult (1.49s)
+    --- PASS: TestObjectReceiptExpiredMissingFileCanStillQueryHistoricalResult/pending-original-expires (1.44s)
+=== RUN   TestObjectReceiptGlobalDurableCleanupCrashResume
+=== RUN   TestObjectReceiptGlobalDurableCleanupCrashResume/retained-unknown-and-pending-global
+--- PASS: TestObjectReceiptGlobalDurableCleanupCrashResume (0.13s)
+    --- PASS: TestObjectReceiptGlobalDurableCleanupCrashResume/retained-unknown-and-pending-global (0.07s)
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess/descriptor
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess/payload
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess/result
+=== RUN   TestObjectReceiptDescriptorOriginalHashAndBadSuccess/unknown
+--- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess (0.26s)
+    --- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess/descriptor (0.06s)
+    --- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess/payload (0.07s)
+    --- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess/result (0.06s)
+    --- PASS: TestObjectReceiptDescriptorOriginalHashAndBadSuccess/unknown (0.07s)
+=== RUN   TestObjectReceiptForwardAndPartialMediaRemainUnsupported
+=== RUN   TestObjectReceiptForwardAndPartialMediaRemainUnsupported/forward
+=== RUN   TestObjectReceiptForwardAndPartialMediaRemainUnsupported/partial
+--- PASS: TestObjectReceiptForwardAndPartialMediaRemainUnsupported (0.02s)
+    --- PASS: TestObjectReceiptForwardAndPartialMediaRemainUnsupported/forward (0.00s)
+    --- PASS: TestObjectReceiptForwardAndPartialMediaRemainUnsupported/partial (0.00s)
+=== RUN   TestReceiptTextAtomicCommitPrecedesHTTPAndNeverConfirmsMessageOutbox
+--- PASS: TestReceiptTextAtomicCommitPrecedesHTTPAndNeverConfirmsMessageOutbox (0.02s)
+=== RUN   TestReceiptSQLFailureRollsBodyAndIntentBackTogether
+--- PASS: TestReceiptSQLFailureRollsBodyAndIntentBackTogether (0.08s)
+=== RUN   TestReceiptUnknownReopensOriginalAndAutomatic404NeverWrites
+--- PASS: TestReceiptUnknownReopensOriginalAndAutomatic404NeverWrites (0.32s)
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-device
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-epoch
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-qualification
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-digest
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/expired
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/forward
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/attachment
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/missing-content-version
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/deleted
+=== RUN   TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/bad-signature-shape
+--- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies (0.02s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-device (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-epoch (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-qualification (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/wrong-digest (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/expired (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/forward (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/attachment (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/missing-content-version (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/deleted (0.00s)
+    --- PASS: TestReceiptChallengeRejectsWrongTupleDigestAndUnsupportedBodies/bad-signature-shape (0.00s)
+=== RUN   TestReceiptCapabilityAndQualificationCannotRebindAnUnknownIntent
+--- PASS: TestReceiptCapabilityAndQualificationCannotRebindAnUnknownIntent (0.11s)
+=== RUN   TestReceiptGlobalAndGuardPreventLateBodyInstallationOrRetry
+--- PASS: TestReceiptGlobalAndGuardPreventLateBodyInstallationOrRetry (0.05s)
+=== RUN   TestReceiptExpiredUnknownOnlyChecksOriginalAndNeverRefreshesProof
+--- PASS: TestReceiptExpiredUnknownOnlyChecksOriginalAndNeverRefreshesProof (1.92s)
+=== RUN   TestReceiptWrongIdentityAndCorruptOriginalNeverContactReceiptRoute
+--- PASS: TestReceiptWrongIdentityAndCorruptOriginalNeverContactReceiptRoute (0.03s)
+=== RUN   TestReceiptBadSuccessDoesNotCompleteAndHistoricalProofNeverCreates
+--- PASS: TestReceiptBadSuccessDoesNotCompleteAndHistoricalProofNeverCreates (0.03s)
+=== RUN   TestStorageDeclarationUnknownGETIsOnlyObservationAndOriginalPUTSurvives
+--- PASS: TestStorageDeclarationUnknownGETIsOnlyObservationAndOriginalPUTSurvives (0.03s)
+=== RUN   TestReceiptUnqualifiedAndWrongLocalDurabilityDoNotMakeDeclaration
+--- PASS: TestReceiptUnqualifiedAndWrongLocalDurabilityDoNotMakeDeclaration (0.03s)
+=== RUN   TestReceiptReplacedDatabaseAndRestoreEpochCannotInheritOriginalIntent
+--- PASS: TestReceiptReplacedDatabaseAndRestoreEpochCannotInheritOriginalIntent (0.02s)
+=== RUN   TestS2AutomaticTransitionArchivesStreamFactsAndPreservesPhysicalIdentity
+--- PASS: TestS2AutomaticTransitionArchivesStreamFactsAndPreservesPhysicalIdentity (0.01s)
+=== RUN   TestS2SchemaTransitionFailureRollsArchiveAndNonceBackTogether
+--- PASS: TestS2SchemaTransitionFailureRollsArchiveAndNonceBackTogether (0.01s)
+=== RUN   TestS2RefAndObjectCountersAreIndependentAndOwnScopeIsRequired
+--- PASS: TestS2RefAndObjectCountersAreIndependentAndOwnScopeIsRequired (0.01s)
+=== RUN   TestS2DraftDefaultEmptyAndDurableProjectionContainNoTemporaryPermission
+--- PASS: TestS2DraftDefaultEmptyAndDurableProjectionContainNoTemporaryPermission (0.01s)
+=== RUN   TestS2OriginalPreparedDraftResumesByReadonlyFactWithoutReplacingLocalInput
+--- PASS: TestS2OriginalPreparedDraftResumesByReadonlyFactWithoutReplacingLocalInput (0.01s)
+=== RUN   TestS2Lookup404InAutomaticModeNeverCreatesAndOriginalHashCannotChange
+--- PASS: TestS2Lookup404InAutomaticModeNeverCreatesAndOriginalHashCannotChange (0.01s)
+=== RUN   TestS2LocalDraftAdoptionUsesExactOriginalInputCAS
+--- PASS: TestS2LocalDraftAdoptionUsesExactOriginalInputCAS (0.01s)
+=== RUN   TestS2ReadProofRequiresOriginalObservedSetNotAClaimedMaximum
+--- PASS: TestS2ReadProofRequiresOriginalObservedSetNotAClaimedMaximum (0.01s)
+=== RUN   TestS2OriginalOperationCannotChangeMethodRouteOrRequestIdentity
+--- PASS: TestS2OriginalOperationCannotChangeMethodRouteOrRequestIdentity (0.01s)
+=== RUN   TestS2ConversationViewsApplyHiddenArchiveAndExposeRestorationEntry
+--- PASS: TestS2ConversationViewsApplyHiddenArchiveAndExposeRestorationEntry (0.01s)
+=== RUN   TestSyncSchemaSeparatesPhysicalUUIDFromLegacyAuthAndSurvivesReopen
+--- PASS: TestSyncSchemaSeparatesPhysicalUUIDFromLegacyAuthAndSurvivesReopen (0.00s)
+=== RUN   TestSyncFullManifestOriginalBytesAndFirstChangesBeforeAtomicInstall
+--- PASS: TestSyncFullManifestOriginalBytesAndFirstChangesBeforeAtomicInstall (0.01s)
+=== RUN   TestSyncUnknownSnapshotPreservesOriginalRequestAcrossReopen
+--- PASS: TestSyncUnknownSnapshotPreservesOriginalRequestAcrossReopen (0.01s)
+=== RUN   TestSyncMissingOrCorruptPageRejectsWholeBoundary
+=== RUN   TestSyncMissingOrCorruptPageRejectsWholeBoundary/missing
+=== RUN   TestSyncMissingOrCorruptPageRejectsWholeBoundary/reference
+=== RUN   TestSyncMissingOrCorruptPageRejectsWholeBoundary/body
+--- PASS: TestSyncMissingOrCorruptPageRejectsWholeBoundary (0.02s)
+    --- PASS: TestSyncMissingOrCorruptPageRejectsWholeBoundary/missing (0.01s)
+    --- PASS: TestSyncMissingOrCorruptPageRejectsWholeBoundary/reference (0.01s)
+    --- PASS: TestSyncMissingOrCorruptPageRejectsWholeBoundary/body (0.01s)
+=== RUN   TestSyncFinalWatermarkPermissionAndLocalGuardBlockLateInstall
+=== RUN   TestSyncFinalWatermarkPermissionAndLocalGuardBlockLateInstall/watermark
+=== RUN   TestSyncFinalWatermarkPermissionAndLocalGuardBlockLateInstall/permission
+=== RUN   TestSyncFinalWatermarkPermissionAndLocalGuardBlockLateInstall/guard
+--- PASS: TestSyncFinalWatermarkPermissionAndLocalGuardBlockLateInstall (0.02s)
+    --- PASS: TestSyncFinalWatermarkPermissionAndLocalGuardBlockLateInstall/watermark (0.01s)
+    --- PASS: TestSyncFinalWatermarkPermissionAndLocalGuardBlockLateInstall/permission (0.01s)
+    --- PASS: TestSyncFinalWatermarkPermissionAndLocalGuardBlockLateInstall/guard (0.01s)
+=== RUN   TestSyncSameClientIDBadResultAnd503NeverAckOrBlockVerifiedGlobal
+=== RUN   TestSyncSameClientIDBadResultAnd503NeverAckOrBlockVerifiedGlobal/404
+=== RUN   TestSyncSameClientIDBadResultAnd503NeverAckOrBlockVerifiedGlobal/503
+=== RUN   TestSyncSameClientIDBadResultAnd503NeverAckOrBlockVerifiedGlobal/200
+--- PASS: TestSyncSameClientIDBadResultAnd503NeverAckOrBlockVerifiedGlobal (0.03s)
+    --- PASS: TestSyncSameClientIDBadResultAnd503NeverAckOrBlockVerifiedGlobal/404 (0.01s)
+    --- PASS: TestSyncSameClientIDBadResultAnd503NeverAckOrBlockVerifiedGlobal/503 (0.01s)
+    --- PASS: TestSyncSameClientIDBadResultAnd503NeverAckOrBlockVerifiedGlobal/200 (0.01s)
+=== RUN   TestSyncCompleteReadonlyOriginalProofAndHashCAS
+--- PASS: TestSyncCompleteReadonlyOriginalProofAndHashCAS (0.01s)
+=== RUN   TestSyncGlobalOverridesHigherCacheVersionAndCannotRevive
+--- PASS: TestSyncGlobalOverridesHigherCacheVersionAndCannotRevive (0.01s)
+=== RUN   TestSyncUnknownRetainsOnlyVerifiedOrdinaryHistory
+--- PASS: TestSyncUnknownRetainsOnlyVerifiedOrdinaryHistory (0.01s)
+=== RUN   TestSyncCapabilityLossNeverFallsBackToHistoryOrCreate
+=== RUN   TestSyncCapabilityLossNeverFallsBackToHistoryOrCreate/no_responsibility_on_old_capability
+--- PASS: TestSyncCapabilityLossNeverFallsBackToHistoryOrCreate (0.01s)
+    --- PASS: TestSyncCapabilityLossNeverFallsBackToHistoryOrCreate/no_responsibility_on_old_capability (0.00s)
+=== RUN   TestSyncProtocolRejectsCounterGapUnknownAndWrongOriginalDigest
+--- PASS: TestSyncProtocolRejectsCounterGapUnknownAndWrongOriginalDigest (0.01s)
+=== RUN   TestSyncBodyAndCursorRollbackTogetherOnSQLFailure
+--- PASS: TestSyncBodyAndCursorRollbackTogetherOnSQLFailure (0.01s)
+=== RUN   TestSyncCrossDeviceCleanupResumesWithoutNetworkAndQuarantinesUnknownFile
+--- PASS: TestSyncCrossDeviceCleanupResumesWithoutNetworkAndQuarantinesUnknownFile (0.02s)
+=== RUN   TestSyncPhysicalGenerationMissingAfterRegistrationFailsClosed
+--- PASS: TestSyncPhysicalGenerationMissingAfterRegistrationFailsClosed (0.01s)
+PASS
+ok  	jobsim/cli/cmd/jobsim	6.625s

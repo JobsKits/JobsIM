@@ -1,0 +1,732 @@
+{
+  "startedAt": "2026-11-16T04:11:33.878824+00:00",
+  "selectedPGTopTests": [
+    "TestSyncSchemasPreserve57StateAndRepeatConstraintIDs",
+    "TestSyncSchemasConflictingBackfillRollsBackAllDDL",
+    "TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored",
+    "TestSyncSchemasScopeMismatchMakesNoColumns",
+    "TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas",
+    "TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores",
+    "TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite",
+    "TestSourcePreferencesConcurrentCASAndOriginalFact",
+    "TestSourcePreferencesConcurrentSameNonceRechecksAfterLock",
+    "TestSourcePreferencesEpochResetRetainsOriginalFacts",
+    "TestReadPointsInputOrderUnknownAndUniformVisibility",
+    "TestReadPointsNumericCreationScanAndPagination",
+    "TestReadPointsMalformedMetadataCannotAdvance",
+    "TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles",
+    "TestSelfReadPersistentHolesOriginalFactsAndLegacy",
+    "TestSelfReadConcurrentObservationUnionUsesCASRetry",
+    "TestSelfReadEpochZeroRebaseAndQualification",
+    "TestSelfViewPGDefaultCASAndOriginalFacts",
+    "TestSelfViewPGManualUnreadGenerationPreservesNewIntent",
+    "TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts"
+  ],
+  "fourGatesOnly": true,
+  "inheritedPGAndDatabaseEnvCleared": true,
+  "physicalPGClusters": 1,
+  "realHTTP": false,
+  "authAndOwnerBoundaryFixtures": true,
+  "steps": [
+    {
+      "test": "TestSyncSchemasPreserve57StateAndRepeatConstraintIDs",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSyncSchemasPreserve57StateAndRepeatConstraintIDs$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 6.244,
+      "exitCode": 0,
+      "freeBytesBefore": 13096992768,
+      "freeBytesAfter": 13033517056,
+      "outcomes": {
+        "pass": [
+          "TestSyncSchemasPreserve57StateAndRepeatConstraintIDs",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "04-TestSyncSchemasPreserve57StateAndRepeatConstraintIDs.jsonl",
+      "logSHA256": "eaf38a2ab55a9c40f1b45d6a6ff2d09828ef389e55075fdf946bbd3305f3e9f5"
+    },
+    {
+      "test": "TestSyncSchemasConflictingBackfillRollsBackAllDDL",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSyncSchemasConflictingBackfillRollsBackAllDDL$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 2.416,
+      "exitCode": 0,
+      "freeBytesBefore": 13033504768,
+      "freeBytesAfter": 13031239680,
+      "outcomes": {
+        "pass": [
+          "TestSyncSchemasConflictingBackfillRollsBackAllDDL",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "05-TestSyncSchemasConflictingBackfillRollsBackAllDDL.jsonl",
+      "logSHA256": "d73264eebb39c3980368ae48c3ae734a46d42651493135bf36bac4b866f93103"
+    },
+    {
+      "test": "TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 1.891,
+      "exitCode": 0,
+      "freeBytesBefore": 13031235584,
+      "freeBytesAfter": 13054361600,
+      "outcomes": {
+        "pass": [
+          "TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "06-TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored.jsonl",
+      "logSHA256": "75657b65fcaba7ccdfb081cb151664931854d117eaad4a2e19b56a73b62006cd"
+    },
+    {
+      "test": "TestSyncSchemasScopeMismatchMakesNoColumns",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSyncSchemasScopeMismatchMakesNoColumns$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 1.191,
+      "exitCode": 0,
+      "freeBytesBefore": 13054353408,
+      "freeBytesAfter": 13053018112,
+      "outcomes": {
+        "pass": [
+          "TestSyncSchemasScopeMismatchMakesNoColumns",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "07-TestSyncSchemasScopeMismatchMakesNoColumns.jsonl",
+      "logSHA256": "878ca28307e857f4a6016f52f826dea1db52c45049e5059466ccccd127b3a172"
+    },
+    {
+      "test": "TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 1.0,
+      "exitCode": 0,
+      "freeBytesBefore": 13053018112,
+      "freeBytesAfter": 13050437632,
+      "outcomes": {
+        "pass": [
+          "TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "08-TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas.jsonl",
+      "logSHA256": "994fe150dbd12d5b92f1b201ee9d7a04a114a0635103f5290bd1aa8fecd5955f"
+    },
+    {
+      "test": "TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.898,
+      "exitCode": 0,
+      "freeBytesBefore": 13050437632,
+      "freeBytesAfter": 13050290176,
+      "outcomes": {
+        "pass": [
+          "TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "09-TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores.jsonl",
+      "logSHA256": "c95ad626761676886ef1a93338ad8942f9ee288b71a44f5165e31620e543a6df"
+    },
+    {
+      "test": "TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.961,
+      "exitCode": 0,
+      "freeBytesBefore": 13050290176,
+      "freeBytesAfter": 13050253312,
+      "outcomes": {
+        "pass": [
+          "TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "10-TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite.jsonl",
+      "logSHA256": "f40a917f79ae3871f27ac5d5c91b34f6881c7eab41467ec3831d51a3ef9495be"
+    },
+    {
+      "test": "TestSourcePreferencesConcurrentCASAndOriginalFact",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSourcePreferencesConcurrentCASAndOriginalFact$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.856,
+      "exitCode": 0,
+      "freeBytesBefore": 13050249216,
+      "freeBytesAfter": 13050183680,
+      "outcomes": {
+        "pass": [
+          "TestSourcePreferencesConcurrentCASAndOriginalFact",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "11-TestSourcePreferencesConcurrentCASAndOriginalFact.jsonl",
+      "logSHA256": "4b47641add89759944ab31be6d6275cd7acd9a5a6108f361bc1774a39e23856e"
+    },
+    {
+      "test": "TestSourcePreferencesConcurrentSameNonceRechecksAfterLock",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSourcePreferencesConcurrentSameNonceRechecksAfterLock$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.792,
+      "exitCode": 0,
+      "freeBytesBefore": 13050183680,
+      "freeBytesAfter": 13050093568,
+      "outcomes": {
+        "pass": [
+          "TestSourcePreferencesConcurrentSameNonceRechecksAfterLock",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "12-TestSourcePreferencesConcurrentSameNonceRechecksAfterLock.jsonl",
+      "logSHA256": "c43194d955520364193e29f456bcb7d305904c8b543777e60458a1ff7571220b"
+    },
+    {
+      "test": "TestSourcePreferencesEpochResetRetainsOriginalFacts",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSourcePreferencesEpochResetRetainsOriginalFacts$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.799,
+      "exitCode": 0,
+      "freeBytesBefore": 13050093568,
+      "freeBytesAfter": 13050056704,
+      "outcomes": {
+        "pass": [
+          "TestSourcePreferencesEpochResetRetainsOriginalFacts",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "13-TestSourcePreferencesEpochResetRetainsOriginalFacts.jsonl",
+      "logSHA256": "292578a3a2be7fe52f10aae4adf5282341910d169fe66257e477b0097cee512f"
+    },
+    {
+      "test": "TestReadPointsInputOrderUnknownAndUniformVisibility",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestReadPointsInputOrderUnknownAndUniformVisibility$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.776,
+      "exitCode": 0,
+      "freeBytesBefore": 13050056704,
+      "freeBytesAfter": 13050953728,
+      "outcomes": {
+        "pass": [
+          "TestReadPointsInputOrderUnknownAndUniformVisibility",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "14-TestReadPointsInputOrderUnknownAndUniformVisibility.jsonl",
+      "logSHA256": "b6c114e06cecb782208bb1439c2b1776edebf27c1a91c363a20d616f1e5f8c10"
+    },
+    {
+      "test": "TestReadPointsNumericCreationScanAndPagination",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestReadPointsNumericCreationScanAndPagination$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.912,
+      "exitCode": 0,
+      "freeBytesBefore": 13050945536,
+      "freeBytesAfter": 13050847232,
+      "outcomes": {
+        "pass": [
+          "TestReadPointsNumericCreationScanAndPagination",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "15-TestReadPointsNumericCreationScanAndPagination.jsonl",
+      "logSHA256": "77350b036542371025681bcc904ac4604f2c2ddd287f781f5e9b1304f556eba5"
+    },
+    {
+      "test": "TestReadPointsMalformedMetadataCannotAdvance",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestReadPointsMalformedMetadataCannotAdvance$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.769,
+      "exitCode": 0,
+      "freeBytesBefore": 13050847232,
+      "freeBytesAfter": 13050740736,
+      "outcomes": {
+        "pass": [
+          "TestReadPointsMalformedMetadataCannotAdvance",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "16-TestReadPointsMalformedMetadataCannotAdvance.jsonl",
+      "logSHA256": "548af5e0880defc7ef43cd59df99f8da5156fe8b6d54f192e259a84698a7ca39"
+    },
+    {
+      "test": "TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.709,
+      "exitCode": 0,
+      "freeBytesBefore": 13050728448,
+      "freeBytesAfter": 13050855424,
+      "outcomes": {
+        "pass": [
+          "TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "17-TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles.jsonl",
+      "logSHA256": "3e5c52d67ba6946eaaefd445b1e2b14edb2cf806366c922d8fbeac1453127d2c"
+    },
+    {
+      "test": "TestSelfReadPersistentHolesOriginalFactsAndLegacy",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSelfReadPersistentHolesOriginalFactsAndLegacy$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.734,
+      "exitCode": 0,
+      "freeBytesBefore": 13050851328,
+      "freeBytesAfter": 13050773504,
+      "outcomes": {
+        "pass": [
+          "TestSelfReadPersistentHolesOriginalFactsAndLegacy",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "18-TestSelfReadPersistentHolesOriginalFactsAndLegacy.jsonl",
+      "logSHA256": "da952e42b33b57117bb0ea8aabb3a0525b270c6368d4d8bc949643a291f99969"
+    },
+    {
+      "test": "TestSelfReadConcurrentObservationUnionUsesCASRetry",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSelfReadConcurrentObservationUnionUsesCASRetry$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.8,
+      "exitCode": 0,
+      "freeBytesBefore": 13050769408,
+      "freeBytesAfter": 13054988288,
+      "outcomes": {
+        "pass": [
+          "TestSelfReadConcurrentObservationUnionUsesCASRetry",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "19-TestSelfReadConcurrentObservationUnionUsesCASRetry.jsonl",
+      "logSHA256": "737b557507379db21daef560e2633030ebe36d63587ec07bd4e2b86bd0acf609"
+    },
+    {
+      "test": "TestSelfReadEpochZeroRebaseAndQualification",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSelfReadEpochZeroRebaseAndQualification$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.706,
+      "exitCode": 0,
+      "freeBytesBefore": 13054984192,
+      "freeBytesAfter": 13054869504,
+      "outcomes": {
+        "pass": [
+          "TestSelfReadEpochZeroRebaseAndQualification",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "20-TestSelfReadEpochZeroRebaseAndQualification.jsonl",
+      "logSHA256": "dd9c789f1b6dc33ccc4966cb08627fb0b4c0abce48153d3adf15fcb6614bb8c3"
+    },
+    {
+      "test": "TestSelfViewPGDefaultCASAndOriginalFacts",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSelfViewPGDefaultCASAndOriginalFacts$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.955,
+      "exitCode": 0,
+      "freeBytesBefore": 13054869504,
+      "freeBytesAfter": 13054648320,
+      "outcomes": {
+        "pass": [
+          "TestSelfViewPGDefaultCASAndOriginalFacts",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "21-TestSelfViewPGDefaultCASAndOriginalFacts.jsonl",
+      "logSHA256": "21132b5294af3d14900df5020e6c2269d13380f21aadc47badcbda93c6e2f2c4"
+    },
+    {
+      "test": "TestSelfViewPGManualUnreadGenerationPreservesNewIntent",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSelfViewPGManualUnreadGenerationPreservesNewIntent$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.855,
+      "exitCode": 0,
+      "freeBytesBefore": 13054644224,
+      "freeBytesAfter": 13063163904,
+      "outcomes": {
+        "pass": [
+          "TestSelfViewPGManualUnreadGenerationPreservesNewIntent",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "22-TestSelfViewPGManualUnreadGenerationPreservesNewIntent.jsonl",
+      "logSHA256": "4c5939be483a5f80be164c172454e5334528cc11922ed1e2272eaca48e1302ac"
+    },
+    {
+      "test": "TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts",
+      "args": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "test",
+        "-json",
+        "-p",
+        "1",
+        "-parallel",
+        "1",
+        "-count",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/2026-11-16-S2真PG定向/测试Overlay.json",
+        "-run",
+        "^TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts$",
+        "-timeout",
+        "170s",
+        "."
+      ],
+      "elapsedSeconds": 0.998,
+      "exitCode": 0,
+      "freeBytesBefore": 13063163904,
+      "freeBytesAfter": 13062930432,
+      "outcomes": {
+        "pass": [
+          "TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts",
+          "package"
+        ],
+        "fail": [],
+        "skip": []
+      },
+      "log": "23-TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts.jsonl",
+      "logSHA256": "944f14af7c5b2a3067549a97074105422252cec8874b35cbf0244fab9bb47e9c"
+    }
+  ]
+}

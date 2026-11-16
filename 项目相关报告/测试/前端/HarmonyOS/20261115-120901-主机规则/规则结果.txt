@@ -1,0 +1,125 @@
+TAP version 13
+# Subtest: pending inbox is recipient-bound and never resurrects accepted requests
+ok 1 - pending inbox is recipient-bound and never resurrects accepted requests
+  ---
+  duration_ms: 1.149792
+  ...
+# Subtest: read-only and unavailable-owner groups reject writes
+ok 2 - read-only and unavailable-owner groups reject writes
+  ---
+  duration_ms: 0.085667
+  ...
+# Subtest: original group membership generation remains decimal text above JS safe integer
+ok 3 - original group membership generation remains decimal text above JS safe integer
+  ---
+  duration_ms: 0.250042
+  ...
+# Subtest: profile, account, device, demo and restore epochs each isolate local data
+ok 4 - profile, account, device, demo and restore epochs each isolate local data
+  ---
+  duration_ms: 0.234666
+  ...
+# Subtest: opaque history cursor is epoch-bound without integer coercion
+ok 5 - opaque history cursor is epoch-bound without integer coercion
+  ---
+  duration_ms: 0.117875
+  ...
+# Subtest: restored secure credentials require matching account, device and epoch
+ok 6 - restored secure credentials require matching account, device and epoch
+  ---
+  duration_ms: 0.073167
+  ...
+# Subtest: strict authentication JSON separates login OTP from recovery code
+ok 7 - strict authentication JSON separates login OTP from recovery code
+  ---
+  duration_ms: 0.823083
+  ...
+# Subtest: connection descriptions reject credentials, HTTP, queries and fragments
+ok 8 - connection descriptions reject credentials, HTTP, queries and fragments
+  ---
+  duration_ms: 0.453041
+  ...
+# Subtest: all ten language tables cover the current control vocabulary
+ok 9 - all ten language tables cover the current control vocabulary
+  ---
+  duration_ms: 0.232541
+  ...
+# Subtest: literal UI actions and labels resolve in every language
+ok 10 - literal UI actions and labels resolve in every language
+  ---
+  duration_ms: 6.901333
+  ...
+# Subtest: sending qualification support requires the current instance and an explicit capability
+ok 11 - sending qualification support requires the current instance and an explicit capability
+  ---
+  duration_ms: 0.127125
+  ...
+# Subtest: retries serialize the original admission and never infer missing legacy qualification
+ok 12 - retries serialize the original admission and never infer missing legacy qualification
+  ---
+  duration_ms: 0.095167
+  ...
+# Subtest: lookup paths keep search criteria and signed cursor separate, and favorites never use empty search
+ok 13 - lookup paths keep search criteria and signed cursor separate, and favorites never use empty search
+  ---
+  duration_ms: 0.467083
+  ...
+# Subtest: structured mentions require current members and owner-only all, with a copied stable selection
+ok 14 - structured mentions require current members and owner-only all, with a copied stable selection
+  ---
+  duration_ms: 0.236958
+  ...
+# Subtest: original outgoing mention IDs and all fields survive replay without a latest context rewrite
+ok 15 - original outgoing mention IDs and all fields survive replay without a latest context rewrite
+  ---
+  duration_ms: 0.092583
+  ...
+# Subtest: mention receipts do not re-alert on edit, read, block projection or later unblock
+ok 16 - mention receipts do not re-alert on edit, read, block projection or later unblock
+  ---
+  duration_ms: 0.07575
+  ...
+# Subtest: announcement references content version rather than interaction version and rejects unavailable bodies
+ok 17 - announcement references content version rather than interaction version and rejects unavailable bodies
+  ---
+  duration_ms: 0.175166
+  ...
+# Subtest: persistent announcement intent contains no copied text, attachment or credentials
+ok 18 - persistent announcement intent contains no copied text, attachment or credentials
+  ---
+  duration_ms: 0.337792
+  ...
+# Subtest: announcement clear keeps only the original CAS, generation and request identity
+ok 19 - announcement clear keeps only the original CAS, generation and request identity
+  ---
+  duration_ms: 0.099167
+  ...
+# Subtest: announcement expiration is an explicit stable native preset
+ok 20 - announcement expiration is an explicit stable native preset
+  ---
+  duration_ms: 0.230667
+  ...
+# Subtest: only a definite server rejection permits discarding an announcement intent
+ok 21 - only a definite server rejection permits discarding an announcement intent
+  ---
+  duration_ms: 0.319125
+  ...
+# Subtest: privileged writes require explicit current-instance role admission support
+ok 22 - privileged writes require explicit current-instance role admission support
+  ---
+  duration_ms: 0.109166
+  ...
+# Subtest: announcement role qualification is frozen and legacy bodies are never supplemented
+ok 23 - announcement role qualification is frozen and legacy bodies are never supplemented
+  ---
+  duration_ms: 0.212875
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 77.282917

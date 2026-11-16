@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "stage": "new_private_main_pg_start",
+  "cause": "AF_UNIX socket path exceeds macOS 103-byte limit",
+  "apiRequests": 0,
+  "applicationStarted": false,
+  "schemaMigrated": false,
+  "postgresShutDownItself": true,
+  "productionSourceUnchanged": true
+}

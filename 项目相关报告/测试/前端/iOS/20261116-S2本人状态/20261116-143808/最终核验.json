@@ -1,0 +1,22 @@
+{
+  "sourceFiles": 80,
+  "sourceStableAfterTests": true,
+  "newAppFiles": 108,
+  "newAppStableAfterTests": true,
+  "oldS1AppFiles": 108,
+  "oldS1AppUnchanged": true,
+  "synchronization": 21,
+  "authenticationLocal": 12,
+  "firstRunFailuresPreserved": true,
+  "realHTTPS": false,
+  "UIExecuted": false,
+  "qualifiedAck": false,
+  "newSimulatorIdentity": {
+    "udid": "870CE7EA-610E-4F2F-A484-614BDA16576B",
+    "name": "JobsIM Self State 20261116-143808",
+    "priorUDID": "927610A5-305F-41F5-BA69-7DA273F4C47E",
+    "reason": "user clean removed prior test simulator; new identity, not recovered data",
+    "dataRecovered": false
+  },
+  "firstRunFailure": "schema selection incorrectly used ordinary immutable registration/position advancement; fixed only the dedicated transition; ordinary guard retained"
+}

@@ -1,0 +1,84 @@
+{
+  "status": "host-rules-and-builds-passed",
+  "testedAtUTC": "2026-11-15T03:57:03.602611+00:00",
+  "hostRules": {
+    "executed": 21,
+    "passed": 21,
+    "failed": 0,
+    "report": "主机规则结果.txt",
+    "sha256": "436177462b140c66ac3cb6d0a4bc3e15f5fdc6dcde5d264da6c0eff62395b340"
+  },
+  "hypium": {
+    "compiled": 22,
+    "executedOnTarget": 0
+  },
+  "artifacts": [
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-default-unsigned.hap",
+      "size": 645616,
+      "sha256": "ddd45b7e4500cc43b50bab34a396fda0ddb78116adb839ed61fbc33784bb35a9",
+      "signed": false,
+      "arkBytecode": [
+        {
+          "entry": "ets/modules.abc",
+          "size": 454620,
+          "sha256": "eb1936b4549a9fbaa5b1986a65c5eec93dd591c93ef5a3a8f3f6f36045195128"
+        }
+      ]
+    },
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-ohosTest-unsigned.hap",
+      "size": 1331634,
+      "sha256": "f16bcff62cfc286f8f2048137419456316a7053331024d2982bd45401dfc0b18",
+      "signed": false,
+      "arkBytecode": [
+        {
+          "entry": "ets/modules.abc",
+          "size": 359332,
+          "sha256": "8341b93ee46627284fef2f9983adbdd2ebb6353af74a7a9ce9eaf7cecd785364"
+        }
+      ]
+    }
+  ],
+  "builds": [
+    {
+      "log": "测试/前端/HarmonyOS/报告/20261115-115419-32625/运行日志.txt",
+      "manifest": "测试/前端/HarmonyOS/报告/20261115-115419-32625/source-manifest.json",
+      "sha256": "ff57a58ac0f6fbf40d6f90ff462e05649cd7e0d5e1100681d7e108513632fc48",
+      "currentArkTSSourcesMatch": 8
+    },
+    {
+      "log": "测试/前端/HarmonyOS/报告/20261115-115449-33701/运行日志.txt",
+      "manifest": "测试/前端/HarmonyOS/报告/20261115-115449-33701/source-manifest.json",
+      "sha256": "ff57a58ac0f6fbf40d6f90ff462e05649cd7e0d5e1100681d7e108513632fc48",
+      "currentArkTSSourcesMatch": 8
+    }
+  ],
+  "sourceSHA256": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Api.ets": "f0f5e2a32c3aeff4611fa47dd4e27c3c7656d744ed48661b7991bcb2afd71257",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "1d10234fde385cea8a84caaffa398bba42d80844c1a34b9df9126600b3e4cba3",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeServices.ets": "4c361c405df95e93ae195e701eeedce70dde40cc5e69c675d582cc342b394033",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Store.ets": "3646c842ed5557138400d01dc01c2a32b8419f3856fad763541f0582693debfe",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets": "77c01f25836ff0a6e61f04c19521124c3f5ed8a05fea009417753be70ed06ad2",
+    "代码/前端/HarmonyOS/entry/src/main/ets/entryability/EntryAbility.ets": "620dea51502e2ac25c7cba6b4b9975e27ebc3ffbe9510edb18c9035384085665",
+    "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets": "2d284a496342f536d8b4f5746a22ecc8c8edbd9e4b8d18eef41470ae60f71a00",
+    "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets": "90ef699ebd728df033b863b16ae8bdcf5f591bfbb35c3d83bea8ac0739c5ff1c"
+  },
+  "languages": 10,
+  "keysPerLanguage": 144,
+  "deviceInventory": "HDC list targets -> [Empty]",
+  "verifiedScope": [
+    "Current own ArkTS pure rules on host",
+    "Application and external Hypium HAP compiled with existing offline mirror CLT",
+    "Original mention fields and reference-only announcement intents",
+    "Current source manifests and actual Ark bytecode hashes"
+  ],
+  "notExecuted": [
+    "Device or emulator installation",
+    "ArkUI gestures or screenshots",
+    "HarmonyOS real HTTPS integration",
+    "Native RDB crash durability and notification behavior",
+    "Full phase I or 243 acceptance"
+  ],
+  "previousEvidencePreserved": true
+}

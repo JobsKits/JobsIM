@@ -1,0 +1,77 @@
+{
+  "at": "2026-11-15T16:40:37.650Z",
+  "status": "failed",
+  "scope": "Real Chrome modules/IndexedDB with simulated projections and proof callback; all /api network blocked; not real backend reconciliation",
+  "passedGroups": 13,
+  "failedGroups": 1,
+  "blockedPageBootstrapAPIRequests": 2,
+  "checks": [
+    {
+      "name": "sync self message alone never acknowledges original Outbox",
+      "status": "passed"
+    },
+    {
+      "name": "peer forged clientId never clears or hides local pending",
+      "status": "passed"
+    },
+    {
+      "name": "snapshot history is not all-new local unread",
+      "status": "passed"
+    },
+    {
+      "name": "new peer delta adds unread and structured mention once",
+      "status": "passed"
+    },
+    {
+      "name": "currently read conversation clears old and new local unread",
+      "status": "passed"
+    },
+    {
+      "name": "own delta and old edits do not create new unread",
+      "status": "passed"
+    },
+    {
+      "name": "minimal global object clears body and sidecars",
+      "status": "passed"
+    },
+    {
+      "name": "known global cannot be reopened by same old newer or unknown source",
+      "status": "passed"
+    },
+    {
+      "name": "fresh forward stays in RAM but durable view only contains placeholder",
+      "status": "passed"
+    },
+    {
+      "name": "late exact source refresh cannot reopen current global row",
+      "status": "failed",
+      "error": "late exact source reopened global"
+    },
+    {
+      "name": "exact original body route and owner proof clears only acknowledged Outbox",
+      "status": "passed"
+    },
+    {
+      "name": "same clientId with changed text admission or route never acknowledges",
+      "status": "passed"
+    },
+    {
+      "name": "foreign sender and missing proof keep original queue",
+      "status": "passed"
+    },
+    {
+      "name": "Engine callback sees original body and latest-queue CAS rejects changed payload",
+      "status": "passed"
+    }
+  ],
+  "sourceSHA256": {
+    "代码/前端/Web/Src/SyncView.ts": "f07439eeb02c94592e7ba5481cd154c3ec0457047ac954dc60b55c912e7ed0d0",
+    "代码/前端/Web/Src/SyncStore.ts": "98830915a8fbae59e9dc82039c17543cfdd3a5e860aa9bef7338b85282c774c6",
+    "代码/前端/Web/Src/SyncEngine.ts": "37961f8de0431f4ec7190c7f6188996f7340650c8a20ea16e3b1d17659764a78",
+    "代码/前端/Web/Src/SyncProtocol.ts": "1d0d12037829b69605482e4f046fb71cf00b72b39769800d4314bce657463bee",
+    "代码/前端/Web/Src/storage.ts": "19d49548213d5de1c1d3207c48dc48fe7b4c07f234240f7de51ead2cbb10fc41",
+    "代码/前端/Web/Src/types.ts": "cab4d98ca58a2c6cb78ccc83122a54878061bb160e70f035e277d31646d4d340",
+    "代码/前端/Web/Src/forward.ts": "688de48c837608a7f36f1452fe79155d819946f97499e8bead0e7872ebfa9e0d",
+    "测试/前端/Web/sync-view.cjs/sync-view.cjs": "40572049e7e16eb2e10cfa84a0d0d5d650d3a53e3c66a6440cfe3db3e037a1f0"
+  }
+}

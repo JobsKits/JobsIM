@@ -1,0 +1,25 @@
+{
+  "createdAt": "2026-11-16T12:40:25.465184+00:00",
+  "status": "source-only; no Gradle/API/device started",
+  "sourceSHA256": {
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportWire.kt": "35dbc4e5ca539ab96795d1371e05bc420e5b2da8d21ddb8ee7a5fa2df594c049",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportFiles.kt": "fa92040cbbafc9702290d2b39a7611d1dd8c180c21c9f281541d3a2ced7dff95",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStore.kt": "649481ca82a68ca08f08f89a73308434a770a627c4e0603bf9dfecf2611de1c2",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStrings.kt": "221b9ffa6259c202fb0119d598717c8cfbef637c4447134c29065b0b27321ed7",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportModel.kt": "ad8e9a8940f33e80cb16cb2f01b39604e3761cef8b1f8e61cb205b7345b0f774",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportScreen.kt": "6ac407e9316c6bac51ad6e7cc7fba8ae568099d2794a6b21d6485a4d807810db",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt": "5da021ae71bd1f8a6f6267ae034cb8d76f2525a054d457d8ae685d5d47aee07a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt": "a46c9e5a017b7c0b463a15046e1ad6a9cd34b99a474df41c8f3e7ed072f3204e",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Transport.kt": "5d2d7d2bb35c70f2fa6a8db92aafdcb0d0143e0999624423db5f4ffc1fc8840b",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SessionCoordinator.kt": "183aeb2c56a4aa4d1d3293930ffbc19af7c636ec71b6217636fa14c7e97cddcc",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncGuardApi.kt": "bc6be9a5a96c70185ce25b6e25ce37bd76d803f58dfe523feb19549372bb0679",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Strings.kt": "0292c77200af36d828bee1206eb7f6fa8565b046d467319f3fd845a92f38fd79",
+    "测试/前端/Android/Unit/PersonalExportFileTest.kt": "0a03e0f5b0d106146faf2542bdceb171b6e05eae3fcacb8a6ee1abbedb4a46c2",
+    "测试/前端/Android/Instrumentation/PersonalExportLifecycleTest.kt": "d1cd087bc60b5ad4bfa9bb6eb91de359c0659f6ca63f8f50847e3b74063e8044"
+  },
+  "testsWritten": {
+    "newJVMMethods": 5,
+    "newInjectedNativeMethods": 5
+  },
+  "baseline": "No old APK/report bytes replaced"
+}

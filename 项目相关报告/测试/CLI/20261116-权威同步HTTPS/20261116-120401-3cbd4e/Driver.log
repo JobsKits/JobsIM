@@ -1,0 +1,10 @@
+PASS strict-ca-fixed57-bootstrap
+PASS real-tty-two-process-only-accounts
+PASS two-way-authoritative-snapshot-and-delta
+PASS peer-real-same-client-id-never-acks-own-original
+PASS verified-global-clears-body-without-consuming-other-original
+PASS first-alice-tty-normal-quit
+PASS same-profile-new-device-isolates-queue-and-cleans-old-holder
+PASS removed-member-legal-ordinary-local-history-only
+PASS global-clears-historical-holder-after-cloud-membership-revoked
+PASS fixed-instance-and-epoch-unchanged

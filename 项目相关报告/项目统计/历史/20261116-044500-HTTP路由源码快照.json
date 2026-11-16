@@ -1,0 +1,1342 @@
+{
+  "at": "2026-11-16T04:45:00.564608+00:00",
+  "method": "Static reachable registration inventory; candidate compilation and bounded S2 runtime validation are separate, not exhaustive coverage of all routes",
+  "evidence": "../测试/后端/2026-11-16-S2本人状态-源码检查点/源SHA.json",
+  "evidenceSHA256": "bd913f0c6cc325931d0d2434a5e4bfdb2477ffd4f808bb32281a22ff9c410f50",
+  "counts": {
+    "admin": 10,
+    "ordinary": 79,
+    "experimental": 5,
+    "health": 1
+  },
+  "routeInventory": {
+    "status": "static_registered_inventory_not_exhaustive_runtime_coverage",
+    "unit": "unique public HTTP method/path reachable from App.Handler; GET implicit HEAD is not another registration",
+    "counts": {
+      "admin": 10,
+      "ordinary": 79,
+      "experimental": 5,
+      "health": 1
+    },
+    "totalExperimentalOn": 95,
+    "totalExperimentalOff": 90,
+    "ordinaryByRole": {
+      "directory": 16,
+      "media": 3,
+      "control": 2,
+      "conversation": 11,
+      "message": 15,
+      "identity": 17,
+      "governance": 2,
+      "sync": 13
+    },
+    "adminDefinition": "/api/admin/ prefix (8) plus administrator-only capability PUT and auth step-up (2)",
+    "literalPublicExcludingHealth": 86,
+    "dynamicExpandedPublic": 8,
+    "sharedHealth": 1,
+    "excluded": [
+      "all /internal routes",
+      "unregistered route functions",
+      "gateway prefix proxies",
+      "static Web file handler",
+      "404/405 generated responses",
+      "implicit HEAD",
+      "draft path classification helper without a registered handler"
+    ],
+    "handlerEntry": {
+      "file": "代码/后端/Go/server.go",
+      "line": 234
+    },
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/api/admin/status",
+        "category": "admin",
+        "role": "control",
+        "file": "代码/后端/Go/control.go",
+        "line": 218,
+        "registrationFunction": "controlRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/capabilities/{name}",
+        "category": "admin",
+        "role": "control",
+        "file": "代码/后端/Go/control.go",
+        "line": 113,
+        "registrationFunction": "controlRoutes",
+        "expansion": "literal",
+        "adminGate": {
+          "file": "代码/后端/Go/control.go",
+          "line": 118
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/report-operations/{id}",
+        "category": "admin",
+        "role": "governance",
+        "file": "代码/后端/Go/reports.go",
+        "line": 43,
+        "registrationFunction": "governanceRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/reports",
+        "category": "admin",
+        "role": "governance",
+        "file": "代码/后端/Go/reports.go",
+        "line": 41,
+        "registrationFunction": "governanceRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/admin/reports/{id}",
+        "category": "admin",
+        "role": "governance",
+        "file": "代码/后端/Go/reports.go",
+        "line": 42,
+        "registrationFunction": "governanceRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/operations/{id}",
+        "category": "admin",
+        "role": "identity",
+        "file": "代码/后端/Go/admin_identity.go",
+        "line": 57,
+        "registrationFunction": "adminIdentityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/admin/users",
+        "category": "admin",
+        "role": "identity",
+        "file": "代码/后端/Go/admin_identity.go",
+        "line": 28,
+        "registrationFunction": "adminIdentityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/admin/users/{id}/reset-grants",
+        "category": "admin",
+        "role": "identity",
+        "file": "代码/后端/Go/admin_identity.go",
+        "line": 56,
+        "registrationFunction": "adminIdentityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/admin/users/{id}/state",
+        "category": "admin",
+        "role": "identity",
+        "file": "代码/后端/Go/admin_identity.go",
+        "line": 55,
+        "registrationFunction": "adminIdentityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/step-up",
+        "category": "admin",
+        "role": "identity",
+        "file": "代码/后端/Go/mfa.go",
+        "line": 147,
+        "registrationFunction": "mfaRoutes",
+        "expansion": "literal",
+        "adminGate": {
+          "file": "代码/后端/Go/mfa.go",
+          "line": 152
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/api/me/exports",
+        "category": "experimental",
+        "role": "governance",
+        "file": "代码/后端/Go/export.go",
+        "line": 107,
+        "registrationFunction": "exportRoutes",
+        "expansion": "literal",
+        "registrationCondition": "Config.ExperimentalExports == true; server.go:303-304"
+      },
+      {
+        "method": "GET",
+        "path": "/api/me/exports/{id}",
+        "category": "experimental",
+        "role": "governance",
+        "file": "代码/后端/Go/export.go",
+        "line": 108,
+        "registrationFunction": "exportRoutes",
+        "expansion": "literal",
+        "registrationCondition": "Config.ExperimentalExports == true; server.go:303-304"
+      },
+      {
+        "method": "POST",
+        "path": "/api/me/exports/{id}/cancel",
+        "category": "experimental",
+        "role": "governance",
+        "file": "代码/后端/Go/export.go",
+        "line": 109,
+        "registrationFunction": "exportRoutes",
+        "expansion": "literal",
+        "registrationCondition": "Config.ExperimentalExports == true; server.go:303-304"
+      },
+      {
+        "method": "GET",
+        "path": "/api/me/exports/{id}/download",
+        "category": "experimental",
+        "role": "governance",
+        "file": "代码/后端/Go/export.go",
+        "line": 111,
+        "registrationFunction": "exportRoutes",
+        "expansion": "literal",
+        "registrationCondition": "Config.ExperimentalExports == true; server.go:303-304"
+      },
+      {
+        "method": "POST",
+        "path": "/api/me/exports/{id}/download-ticket",
+        "category": "experimental",
+        "role": "governance",
+        "file": "代码/后端/Go/export.go",
+        "line": 110,
+        "registrationFunction": "exportRoutes",
+        "expansion": "literal",
+        "registrationCondition": "Config.ExperimentalExports == true; server.go:303-304"
+      },
+      {
+        "method": "GET",
+        "path": "/api/health",
+        "category": "health",
+        "role": "shared",
+        "file": "代码/后端/Go/server.go",
+        "line": 244,
+        "registrationFunction": "Handler",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/bootstrap",
+        "category": "ordinary",
+        "role": "control",
+        "file": "代码/后端/Go/control.go",
+        "line": 57,
+        "registrationFunction": "controlRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/capabilities",
+        "category": "ordinary",
+        "role": "control",
+        "file": "代码/后端/Go/control.go",
+        "line": 69,
+        "registrationFunction": "controlRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/conversations",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/conversation.go",
+        "line": 38,
+        "registrationFunction": "conversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/conversations",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/conversation.go",
+        "line": 39,
+        "registrationFunction": "conversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/conversations/{id}",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/search.go",
+        "line": 50,
+        "registrationFunction": "searchScopeRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/conversations/{id}",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/conversation.go",
+        "line": 43,
+        "registrationFunction": "conversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/conversations/{id}/announcement",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/mentions_announcements.go",
+        "line": 183,
+        "registrationFunction": "mentionAnnouncementConversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/conversations/{id}/announcement",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/mentions_announcements.go",
+        "line": 181,
+        "registrationFunction": "mentionAnnouncementConversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/conversations/{id}/announcement",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/mentions_announcements.go",
+        "line": 182,
+        "registrationFunction": "mentionAnnouncementConversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/conversations/{id}/announcement/operations/{requestId}",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/mentions_announcements.go",
+        "line": 184,
+        "registrationFunction": "mentionAnnouncementConversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/conversations/{id}/members",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/conversation.go",
+        "line": 40,
+        "registrationFunction": "conversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/conversations/{id}/members",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/conversation.go",
+        "line": 41,
+        "registrationFunction": "conversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/conversations/{id}/members/{userId}",
+        "category": "ordinary",
+        "role": "conversation",
+        "file": "代码/后端/Go/conversation.go",
+        "line": 42,
+        "registrationFunction": "conversationRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/blocks/{userId}",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 149,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/blocks/{userId}",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 148,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/contacts",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 142,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/contacts/requests",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 144,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/contacts/requests/{id}/accept",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 145,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/contacts/requests/{id}/reject",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 146,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/contacts/{userId}",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 147,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/contacts/{userId}/relationship",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 143,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/contacts/{userId}/reopen",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 150,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/me",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/directory.go",
+        "line": 92,
+        "registrationFunction": "directoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/me/avatar",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/avatar.go",
+        "line": 70,
+        "registrationFunction": "avatarDirectoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/me/avatar/operations/{id}",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/avatar.go",
+        "line": 71,
+        "registrationFunction": "avatarDirectoryRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/me/preferences",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/source_preferences.go",
+        "line": 67,
+        "registrationFunction": "sourcePreferencesRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/me/preferences",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/source_preferences.go",
+        "line": 79,
+        "registrationFunction": "sourcePreferencesRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/me/preferences-results",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/source_preferences.go",
+        "line": 107,
+        "registrationFunction": "sourcePreferencesRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/me/preferences/operations/{requestId}",
+        "category": "ordinary",
+        "role": "directory",
+        "file": "代码/后端/Go/source_preferences.go",
+        "line": 95,
+        "registrationFunction": "sourcePreferencesRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/reports",
+        "category": "ordinary",
+        "role": "governance",
+        "file": "代码/后端/Go/reports.go",
+        "line": 40,
+        "registrationFunction": "governanceRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/reports",
+        "category": "ordinary",
+        "role": "governance",
+        "file": "代码/后端/Go/reports.go",
+        "line": 39,
+        "registrationFunction": "governanceRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/confirm",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 140,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/auth/context",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 94,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/auth/csrf",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 133,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/login",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 78,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/logout",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 150,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/reauthenticate",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/session_refresh.go",
+        "line": 23,
+        "registrationFunction": "sessionRefreshRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/recover",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 177,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/recovery-codes",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 176,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/refresh",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/session_refresh.go",
+        "line": 22,
+        "registrationFunction": "sessionRefreshRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/auth/refresh-context",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/session_refresh.go",
+        "line": 21,
+        "registrationFunction": "sessionRefreshRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/register",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 77,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/auth/reset-password",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 178,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/auth/sessions",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 174,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/auth/sessions/{deviceId}",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 175,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/me",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 81,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/me/export",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 116,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/users",
+        "category": "ordinary",
+        "role": "identity",
+        "file": "代码/后端/Go/identity.go",
+        "line": 132,
+        "registrationFunction": "identityRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/avatars/{id}",
+        "category": "ordinary",
+        "role": "media",
+        "file": "代码/后端/Go/avatar_media.go",
+        "line": 31,
+        "registrationFunction": "avatarMediaRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/media",
+        "category": "ordinary",
+        "role": "media",
+        "file": "代码/后端/Go/media.go",
+        "line": 17,
+        "registrationFunction": "mediaRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/media/{id}",
+        "category": "ordinary",
+        "role": "media",
+        "file": "代码/后端/Go/media.go",
+        "line": 18,
+        "registrationFunction": "mediaRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/conversations/{id}/message-results",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 99,
+        "registrationFunction": "messageRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/conversations/{id}/messages",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 97,
+        "registrationFunction": "messageRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/conversations/{id}/messages",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 98,
+        "registrationFunction": "messageRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/favorites",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/search.go",
+        "line": 32,
+        "registrationFunction": "searchRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/messages/{id}",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 101,
+        "registrationFunction": "messageRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/messages/{id}",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/search.go",
+        "line": 33,
+        "registrationFunction": "searchRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/messages/{id}",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 100,
+        "registrationFunction": "messageRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/messages/{id}/attachment",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/forward_media.go",
+        "line": 93,
+        "registrationFunction": "forwardAttachmentRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/messages/{id}/favorite",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 108,
+        "registrationFunction": "messageRoutes",
+        "expansion": "kind in [pin,favorite]",
+        "loopLine": 105
+      },
+      {
+        "method": "PUT",
+        "path": "/api/messages/{id}/favorite",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 107,
+        "registrationFunction": "messageRoutes",
+        "expansion": "kind in [pin,favorite]",
+        "loopLine": 105
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/messages/{id}/pin",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 108,
+        "registrationFunction": "messageRoutes",
+        "expansion": "kind in [pin,favorite]",
+        "loopLine": 105
+      },
+      {
+        "method": "PUT",
+        "path": "/api/messages/{id}/pin",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 107,
+        "registrationFunction": "messageRoutes",
+        "expansion": "kind in [pin,favorite]",
+        "loopLine": 105
+      },
+      {
+        "method": "POST",
+        "path": "/api/messages/{id}/reactions",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 103,
+        "registrationFunction": "messageRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/messages/{id}/reactions/{emoji}",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 104,
+        "registrationFunction": "messageRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/search",
+        "category": "ordinary",
+        "role": "message",
+        "file": "代码/后端/Go/message.go",
+        "line": 102,
+        "registrationFunction": "messageRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/conversations/{id}/read",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/self_read.go",
+        "line": 192,
+        "registrationFunction": "selfReadRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/conversations/{id}/read",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/self_read.go",
+        "line": 205,
+        "registrationFunction": "selfReadRoutes",
+        "expansion": "result/proof bool loop"
+      },
+      {
+        "method": "POST",
+        "path": "/api/conversations/{id}/read-results",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/self_read.go",
+        "line": 207,
+        "registrationFunction": "selfReadRoutes",
+        "expansion": "result/proof bool loop"
+      },
+      {
+        "method": "GET",
+        "path": "/api/conversations/{id}/view",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/self_views.go",
+        "line": 142,
+        "registrationFunction": "selfViewRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/conversations/{id}/view",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/self_views.go",
+        "line": 161,
+        "registrationFunction": "selfViewRoutes",
+        "expansion": "result/proof bool loop"
+      },
+      {
+        "method": "POST",
+        "path": "/api/conversations/{id}/view-results",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/self_views.go",
+        "line": 163,
+        "registrationFunction": "selfViewRoutes",
+        "expansion": "result/proof bool loop"
+      },
+      {
+        "method": "GET",
+        "path": "/api/sync/changes",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/sync_service.go",
+        "line": 69,
+        "registrationFunction": "syncRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/sync/classifications",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/sync_service.go",
+        "line": 70,
+        "registrationFunction": "syncRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/sync/context",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/sync_service.go",
+        "line": 65,
+        "registrationFunction": "syncRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "PUT",
+        "path": "/api/sync/device",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/sync_service.go",
+        "line": 64,
+        "registrationFunction": "syncRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/sync/snapshots",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/sync_service.go",
+        "line": 66,
+        "registrationFunction": "syncRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "GET",
+        "path": "/api/sync/snapshots/{id}/pages/{page}",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/sync_service.go",
+        "line": 67,
+        "registrationFunction": "syncRoutes",
+        "expansion": "literal"
+      },
+      {
+        "method": "POST",
+        "path": "/api/sync/snapshots/{id}/validate",
+        "category": "ordinary",
+        "role": "sync",
+        "file": "代码/后端/Go/sync_service.go",
+        "line": 68,
+        "registrationFunction": "syncRoutes",
+        "expansion": "literal"
+      }
+    ]
+  },
+  "productionGoCount": 69,
+  "sources": [
+    {
+      "path": "代码/后端/Go/admin_identity.go",
+      "sha256": "2d190871a402043ab019e498088a6af3ab4f7cb9cd39a40cbfe256b8326c61b2"
+    },
+    {
+      "path": "代码/后端/Go/asset_migrations.go",
+      "sha256": "a134b1f2de14973d1eb92b7584b82bdcdde889f4677d733e8242f3a257f71179"
+    },
+    {
+      "path": "代码/后端/Go/avatar.go",
+      "sha256": "9ab68cd2c236120dbb2bcbaef12526fa29a0738abff6b5074179349d1b323a31"
+    },
+    {
+      "path": "代码/后端/Go/avatar_media.go",
+      "sha256": "b11459bbbc7aa1200210736670cf72d7a6be3ec9c49e1897443cf827ccf6010c"
+    },
+    {
+      "path": "代码/后端/Go/cmd/jobsimd/main.go",
+      "sha256": "320e0026f6a763db780bb130b308975b596dd895c35c2016e5a81a1deee7dfdb"
+    },
+    {
+      "path": "代码/后端/Go/cmd/jobsimops/main.go",
+      "sha256": "b2f8bfce929ab40e63faa3e006e7fa0e7d15eb1be031c43fe25ba38c987f5f66"
+    },
+    {
+      "path": "代码/后端/Go/contact_relationship.go",
+      "sha256": "ccdb8ac8fec13f2344ea159d62a1d66425f567056f102f04d254855d480ae976"
+    },
+    {
+      "path": "代码/后端/Go/control.go",
+      "sha256": "db58bede77b4ac21e5a2264885a27459b485ac00ca5d77dce28976ba27206eb8"
+    },
+    {
+      "path": "代码/后端/Go/conversation.go",
+      "sha256": "f2d1ce277571015f53025a9656ee75f8b7fff0df69b45f4205188ca759786f0e"
+    },
+    {
+      "path": "代码/后端/Go/directory.go",
+      "sha256": "80a962f036bb9a26b1fa0a6d37c310ae4f812d8717a5da44242548fc16cb54da"
+    },
+    {
+      "path": "代码/后端/Go/draft_reply.go",
+      "sha256": "62b1613038d82fa53b21da3e615687c1e3a442d6d010a16c98f731c317fbcd3f"
+    },
+    {
+      "path": "代码/后端/Go/draft_reply_holders.go",
+      "sha256": "d349f351dddad7938857a3831f1054bcfb8367f63767ddc22b62f9b9fbf17789"
+    },
+    {
+      "path": "代码/后端/Go/export.go",
+      "sha256": "f071ccd348c60fffab82e5d4b9cf16d6a9821e2ec34f8caee4ccd9d5cc234f43"
+    },
+    {
+      "path": "代码/后端/Go/export_identity.go",
+      "sha256": "542c1f9dea354d434ed0f23b646d76dad890fd134aa7262a0bdc10675b49b4b8"
+    },
+    {
+      "path": "代码/后端/Go/export_lock_unix.go",
+      "sha256": "945aab26432f3e0ba8d46e7c687c267b209f3fb439a7380f162e40363ede3812"
+    },
+    {
+      "path": "代码/后端/Go/export_lock_windows.go",
+      "sha256": "0a2ebf2546b37d15cf75a4dfccd1eb06f43624eeb768f75d00bbf3610e10adb5"
+    },
+    {
+      "path": "代码/后端/Go/export_restore.go",
+      "sha256": "9c04fa9409aacd99a042bb5cabb55413a0c5dd531ce400acdde668acd081832b"
+    },
+    {
+      "path": "代码/后端/Go/export_worker.go",
+      "sha256": "2b0252e62fee7398473e32a50c81acc277afe74a60722a9670fe18f880c301b9"
+    },
+    {
+      "path": "代码/后端/Go/forward_media.go",
+      "sha256": "e04223b18860c861e1d81e3b0371bf721721d320bb677060209c1d08e52b71ce"
+    },
+    {
+      "path": "代码/后端/Go/forward_projection.go",
+      "sha256": "e3325307858d248a9ec8f45de7058c48e358e2c7e95f42797de93b1e7bd345a5"
+    },
+    {
+      "path": "代码/后端/Go/forward_revocation.go",
+      "sha256": "9e6660b6a55492cf6bb6ad275b1471fc0fb60c9e191223e97aafd13ceac33b18"
+    },
+    {
+      "path": "代码/后端/Go/identity.go",
+      "sha256": "a375d3bbce82e3f7b67aa22e42ba6d0697e155980fcab96620faa5ca8efe1b62"
+    },
+    {
+      "path": "代码/后端/Go/journal.go",
+      "sha256": "1063b1459430af788f97f18cc05b4f3903d28183ab697af2994031eb7afc42bf"
+    },
+    {
+      "path": "代码/后端/Go/media.go",
+      "sha256": "54b7dedaab50bb1163a17cbf01a54720f3bda2c51ec54377862a13a09da402e0"
+    },
+    {
+      "path": "代码/后端/Go/media_export.go",
+      "sha256": "f8c2fab705d066db72cf423ce1128c3f9037ed011dd935decd8d949709c70049"
+    },
+    {
+      "path": "代码/后端/Go/media_format.go",
+      "sha256": "439fd425c2fda2ae4e60731b9150410dbee4bdeb195c6b564f3c3c44fa9c36b0"
+    },
+    {
+      "path": "代码/后端/Go/mentions_announcements.go",
+      "sha256": "54cb181d54b231161b843c4c66eded95c176f0633010e7b9b33060e9caff6d1a"
+    },
+    {
+      "path": "代码/后端/Go/message.go",
+      "sha256": "02835f94d9a1279af77c4b4ebb311ad13c9f3508866a047f41aa1c3b09af4fb7"
+    },
+    {
+      "path": "代码/后端/Go/message_export.go",
+      "sha256": "01ecd6e3a949b07b785191a91ffd7ca21ada7699edb4818d050ee72492ea0f01"
+    },
+    {
+      "path": "代码/后端/Go/message_lifecycle.go",
+      "sha256": "ae5808a853f96f418bfbf4762fceebd385741bcff226637871f4bb032729b329"
+    },
+    {
+      "path": "代码/后端/Go/message_read_points.go",
+      "sha256": "75df5f23b075a0c93f3670c4e8705c2f6631072e18a320c9509975b0ff7608e7"
+    },
+    {
+      "path": "代码/后端/Go/message_read_summary.go",
+      "sha256": "acb1d4a1beb736b047feb1de20e77f06ff5812b6c3fff069a683d9a5a823c61d"
+    },
+    {
+      "path": "代码/后端/Go/mfa.go",
+      "sha256": "e076d75bcd6548bf528964a6b2bee1d37fd15a1f72f2a880701d1c6fadef7a79"
+    },
+    {
+      "path": "代码/后端/Go/migrations.go",
+      "sha256": "22d08c0b9fad6deb91b558a9794191a2f8bf3db081a39666cc9bc908664a52c5"
+    },
+    {
+      "path": "代码/后端/Go/operations.go",
+      "sha256": "2136bb96bec0fe93928a4e5a1e2af97d69166bccf9451f446d8715bf956a6bd9"
+    },
+    {
+      "path": "代码/后端/Go/owner_lifecycle.go",
+      "sha256": "450911cba96de2bfe0523a4208a7f9965fd1d81bd11cec647ddc59de383bb24d"
+    },
+    {
+      "path": "代码/后端/Go/reports.go",
+      "sha256": "ec31ee2999e6ecfbd469f20935a2d473cbaf45466be541f449fe5d8394e3d434"
+    },
+    {
+      "path": "代码/后端/Go/request_gate.go",
+      "sha256": "fc2d396272d4ae4b0c8e348f227795e3059139b6dac7557c22c1a3bacec85199"
+    },
+    {
+      "path": "代码/后端/Go/reset_grant.go",
+      "sha256": "d284b9b49e12ae0d96ed23476775230f1d6dbe0ef7cf425f828c44f011dd2835"
+    },
+    {
+      "path": "代码/后端/Go/restore_runner.go",
+      "sha256": "f7c3af874402523ceb8006166da01306c0ae8bd39d2eb73b4c59ba0f5dfac22b"
+    },
+    {
+      "path": "代码/后端/Go/search.go",
+      "sha256": "4428c6b89247dc4e7dbee194ef86f879aaf08cb0f44eaeb859aa850b2ed0fb4f"
+    },
+    {
+      "path": "代码/后端/Go/security.go",
+      "sha256": "156d165e4e9317ef5cc4941d893bcead210da9c33cf3e1c71da9b09e735c8c30"
+    },
+    {
+      "path": "代码/后端/Go/self_draft_floor.go",
+      "sha256": "d3cc3e59eefc0ddb9708a08beac3f782406e219ddfe9fbd16546c0138825a47b"
+    },
+    {
+      "path": "代码/后端/Go/self_read.go",
+      "sha256": "55409a068ab9bd5aad51e2d66da1c00157fb6038e3dc25453980455b625226c0"
+    },
+    {
+      "path": "代码/后端/Go/self_state.go",
+      "sha256": "829f650898f841282757399b46755ebe572db2a9d6f8bd6cb546348961f4c9ea"
+    },
+    {
+      "path": "代码/后端/Go/self_unread.go",
+      "sha256": "e8140f0e91c9c62f54edd196d23007cf4d2db776c0a1d542112fac133268fdc5"
+    },
+    {
+      "path": "代码/后端/Go/self_views.go",
+      "sha256": "eb1d5d17a7f754f66bded0183bead35b8e2751b76892ba79add875300bdfab33"
+    },
+    {
+      "path": "代码/后端/Go/send_admission.go",
+      "sha256": "f485f7391f53f9a59698ebf470b4bfdf57b10a489911c885856f9225bc33c324"
+    },
+    {
+      "path": "代码/后端/Go/server.go",
+      "sha256": "721d42a62f586967e2784a39846f856d28a42a40608387286364e9acff990b5e"
+    },
+    {
+      "path": "代码/后端/Go/session_auth_retirement.go",
+      "sha256": "426bcee0fb6a85088ca012760ccba34e25fd8b3028c50e70c0ea4e09ec7a8a11"
+    },
+    {
+      "path": "代码/后端/Go/session_bff.go",
+      "sha256": "55ff21e427c697c2fe869311132bce7ca9a63ac71107e8e18f414a0ef13cb854"
+    },
+    {
+      "path": "代码/后端/Go/session_refresh.go",
+      "sha256": "79a96511e38d56dfd809616f96c68068ef5f91c9d54adb8b36d967bf2714b7af"
+    },
+    {
+      "path": "代码/后端/Go/session_refresh_model.go",
+      "sha256": "274a4fff519cb1be2018c6f11de554d2cafa55813defe00723bbc4b7c2567a43"
+    },
+    {
+      "path": "代码/后端/Go/source_preferences.go",
+      "sha256": "9da6fd7c1f67b8c4df0f527ec429a5db421e169479e448e1e395813a83a993b2"
+    },
+    {
+      "path": "代码/后端/Go/sync_classification.go",
+      "sha256": "01d1a009b1d5272c707bf832afa845fe0c15a4344b6c8cc7686f07f8d755f98e"
+    },
+    {
+      "path": "代码/后端/Go/sync_kinds.go",
+      "sha256": "ccef1e6e5bd5475ab29eed4d8b27f115d70262cd7e991a2e7e141b8e911162a5"
+    },
+    {
+      "path": "代码/后端/Go/sync_nats.go",
+      "sha256": "6fde3203d73ebb711d1faaba3055d76fb2fb595efcc480cbe23ba366165e2852"
+    },
+    {
+      "path": "代码/后端/Go/sync_origin.go",
+      "sha256": "726c93add53d9d20fa0f59984146025af564465c679f7cf554f4fc0432207107"
+    },
+    {
+      "path": "代码/后端/Go/sync_outbox.go",
+      "sha256": "3339a2a0f0273b70f6b4ca748b56c7bdc25afade349e10ee0bf07cafcfbcf46b"
+    },
+    {
+      "path": "代码/后端/Go/sync_owner.go",
+      "sha256": "b38a02987f900df991acb92de501d3c4bf733dfc4759079b6aabde178e7768a2"
+    },
+    {
+      "path": "代码/后端/Go/sync_private_unix.go",
+      "sha256": "24ab4b0ea6ed424050b2a575abec7230b9308fa29dace99c9ccf70d3a7114562"
+    },
+    {
+      "path": "代码/后端/Go/sync_private_windows.go",
+      "sha256": "3b5e6e3d9e277ecd50337ec49d3cadff159e3247deed56a22de59e6ea0dd7ed9"
+    },
+    {
+      "path": "代码/后端/Go/sync_protocol.go",
+      "sha256": "89fd0ba822b13adab336dc2003e19732321297a39b19267f9bf2b1250c4ccf22"
+    },
+    {
+      "path": "代码/后端/Go/sync_schemas.go",
+      "sha256": "e5890ba11de7cd826f726c4f37908aef0ccc6692a1f05078f1ea8a11dfeb28f3"
+    },
+    {
+      "path": "代码/后端/Go/sync_self.go",
+      "sha256": "6cd4c10763d5fed49799b1b8a00af4b14b5b3fded4376fe1e2c3b8a4b45029ec"
+    },
+    {
+      "path": "代码/后端/Go/sync_service.go",
+      "sha256": "4b8ecd22ea0be90c02cb33ca5b4a86d2e96895da515a22930a968d54b90a67df"
+    },
+    {
+      "path": "代码/后端/Go/sync_validation.go",
+      "sha256": "17e4367c2c95d731afc9e02da6dafb9a1decf646b8a32b5d537325c2af056bfc"
+    },
+    {
+      "path": "代码/后端/Go/types.go",
+      "sha256": "484f1a4c9561edd4b179c1a72b2b780823d70cb50f460081c4422c4f5c5e873d"
+    },
+    {
+      "path": "代码/后端/Go/web.go",
+      "sha256": "7f022cfb049090a6ab70ac099533c9df69287291afff53c5753ec0143b6955ce"
+    }
+  ],
+  "roles": {
+    "owners": [
+      "identity",
+      "directory",
+      "conversation",
+      "message",
+      "media",
+      "control",
+      "journal",
+      "governance",
+      "sync"
+    ],
+    "ownerSchemaAlias": {
+      "identity": "auth"
+    },
+    "ownerCount": 9,
+    "gatewayCount": 1,
+    "logicalHTTPUnits": 10,
+    "roleAllOSProcessCount": 1,
+    "roleAllListenerCount": 10,
+    "source": {
+      "file": "代码/后端/Go/cmd/jobsimd/main.go",
+      "line": 54
+    },
+    "syncSourceOwnersSchema1": [
+      "auth",
+      "directory",
+      "conversation",
+      "message"
+    ],
+    "syncSourceOwnersSchema2": [
+      "auth",
+      "directory",
+      "conversation",
+      "message",
+      "sync"
+    ]
+  },
+  "runtimeVerification": {
+    "candidateSHA256": "25de7285297c3773ee09cb90bf00b3e92f8c9319153befd7878cc274ea954001",
+    "report": "../测试/后端/2026-11-16-S2双PG与真实同步/README.md",
+    "scope": "8 bounded S2 groups including schema1 compatibility; not full 95-route or phase-one acceptance"
+  }
+}

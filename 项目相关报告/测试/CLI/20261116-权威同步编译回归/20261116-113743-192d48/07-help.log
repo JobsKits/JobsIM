@@ -1,0 +1,9 @@
+Usage of /Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/jobsim-final:
+  -ca string
+    	Instance-specific trusted CA PEM
+  -data-dir string
+    	Private local state root; defaults to the user configuration directory
+  -insecure-loopback
+    	Allow HTTP on loopback for development; TLS verification is never disabled
+  -server string
+    	JobsIM instance HTTPS URL (default "https://127.0.0.1:8443")

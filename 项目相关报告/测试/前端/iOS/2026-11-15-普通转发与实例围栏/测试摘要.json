@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "date": "2026-11-15",
+  "scope": "native reference-only forwarding and deployment identity fence",
+  "results": [
+    {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-24-57-6c38bf56.xcresult",
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "runtimeWarnings": []
+    },
+    {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-27-42-d9ece641.xcresult",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "runtimeWarnings": []
+    }
+  ],
+  "testExecutions": 9,
+  "testMethods": [
+    "testReferenceWireAndExportNeverCopyProjection",
+    "testDeploymentMismatchRejectsOriginalQueueWithoutChangingPayload",
+    "testReferenceOutboxUnknownAndExplicitOriginalRetry",
+    "testChangedSourceRequiresReselectionAndOriginalProofFreezes",
+    "testSourceRejoinHistoryDenialPermanentlyFreezesOriginalForward",
+    "testForwardAttachmentProjectionOfflineAndRevocationPurge",
+    "testPrepareNativeForwardUIFixture",
+    "testNativeReferenceForwardAndOwnRecall",
+    "testVerifyNativeForwardUIAndRecallOnServer"
+  ],
+  "endpoint": "https://127.0.0.1:28443",
+  "deploymentId": "c2a6a394-a383-4164-bd54-f04f4af59c12",
+  "restoreEpoch": "1",
+  "trust": "instance-scoped explicit CA; no system root install or disabled TLS",
+  "device": "JobsIM Picker iOS26.5 / iPhone 17 Pro simulator",
+  "localizedKeyCount": 142,
+  "languages": 10,
+  "allLocalizedKeySetsIdentical": true,
+  "concreteViewControllers": 9,
+  "checks": [
+    "original source reference, contentVersion, reader proof and destination admission durable before HTTP; no body or attachment copied into Outbox",
+    "committed response loss resolves read-only; unsent first POST returns read-only 404, then explicit same-ID same-body retry creates exactly one",
+    "source content change requires explicit reselection; old source proof never patched",
+    "source membership leave/rejoin history denial permanently freezes original intent",
+    "destination reader receives current projection without source conversation membership",
+    "real UTF-8 file proxy download SHA256 matches; source attachmentId absent",
+    "offline forwarded projection and sidecar are cleared, never read back; source revocation clears them again",
+    "ordinary local export strips temporary proof and forwarded body or attachment",
+    "native target selection, accepted forwarded bubble, edit hidden, own recall; peer confirms one recalled target and unchanged source",
+    "deployment mismatch revokes local authentication before old proof lookup, preserves old namespace Outbox byte value"
+  ],
+  "affectedPriorTests": {
+    "firstRun": {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-17-12-3304fa67.xcresult",
+      "passed": 4,
+      "failed": 1,
+      "correction": "old group test expected send rejection rather than new pure lookup MESSAGE_RESULT_NOT_FOUND"
+    },
+    "groupRetest": {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-19-43-6aead052.xcresult",
+      "passed": 1,
+      "failed": 0
+    },
+    "distinctMethods": 5
+  },
+  "preliminaryFailuresRetained": [
+    {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-03-52-4f16a601.xcresult",
+      "reason": "fixture put membershipGeneration in body; actual API requires query"
+    },
+    {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-06-37-88a0878e.xcresult",
+      "reason": "UI fixture looked for Delete instead of existing Recall message label"
+    }
+  ],
+  "audit": {
+    "systemConstructorFiles": 65,
+    "systemConstructorIssues": 0,
+    "staticUIDetectorFindings": 0,
+    "chainAudit": "heuristic findings retained; not claimed clean"
+  },
+  "sourceSHA256": {
+    "代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift": "3b0a984bf29ce61c71505d777d2a524e1de6b620c25b27ee21aadfff62987e6b",
+    "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift": "0b24aa94517f3b710f26f85ffe3eecd56dab6a4ac01c8ba4467fbdb63181c464",
+    "代码/前端/iOS/JobsIM/Services/IMMediaCache/IMMediaCache.swift": "2bf7f49d052e6f7e3238e64628d4dc49bda672abfe0b35e7d2c437d316b31b04",
+    "代码/前端/iOS/JobsIM/Services/IMMediaLoader/IMMediaLoader.swift": "e8b0abf139412a178a93c9652e0b7e7ff51b7c925c62b6ba52e3335e4c93ebfa",
+    "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessageListService.swift": "3f0edfbbc9ca0d14d6b7707a297219f0b9de064cdbee1a7dc454b738c3409dc6",
+    "代码/前端/iOS/JobsIM/Services/IMHistoryExport/IMHistoryExport.swift": "974505cb05180433b078980b54bc6ac6961724ff674afccc465c5a89fa637979",
+    "代码/前端/iOS/JobsIM/Services/IMAvatarLoader/IMAvatarLoader.swift": "d2fd2b1a620bc7b4d5b2140495fd892bb3cf555cab6acf305275e537f72dda56",
+    "代码/前端/iOS/JobsIM/Services/IMNotifications/IMNotifications.swift": "6dbc8e1e99477562c22f7da5c1b1b28f87723fbaacfb77e958d88071cad5413c",
+    "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift": "463c8f41f1bb03fa94a10a0a1d7a8c3b7e91a479c2847c8e6623755dca3f0db9",
+    "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift": "59cddda0f39c13ce349901fb6801f6b20d488db3049ca20b7c71e62fa3ff8ee4",
+    "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift": "b49b5510a19dd9df95ee27ecca601bf3994017d1239ec96d1672b56a53fbda2c",
+    "代码/前端/iOS/JobsIM/UI/IMAvatarVC/IMAvatarVC.swift": "82e15a8be784ab5a1eccec5100ffa3fd171d0cb99fbda58f888445e8a1a527a5",
+    "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift": "367e376b07462783e8c63010da3dce35820dd739bce621b476fd8f755c5701c6",
+    "测试/前端/iOS/IMForwardTests.swift": "d2ca3a0eb443afc04d6fff139b5df83cbf4e9ba82bbbf7c85a1c8639abfe5214",
+    "测试/前端/iOS/IMSendAdmissionTests.swift": "4355ad2211621b0f189862d1f60ff64564d5dca6feaef789983b32593966db17",
+    "测试/前端/iOS/IMCompletionTests.swift": "a7cb262c61db47f748f912e8bd7a77712eca886edebd6288defbdccfcd2ac69a",
+    "测试/前端/iOS/UI/IMMessageListUITests.swift": "99a71db2c7c49324e836bb3979f3b83535ec6b7997a40722cba92c011d8e5d0c"
+  },
+  "notClaimed": [
+    "old 30/4 rerun",
+    "physical device",
+    "iPad",
+    "forwarded audio/video playback",
+    "all themes/fonts/languages",
+    "complete I",
+    "cloud deletion qualification ACK or controlled migration"
+  ]
+}

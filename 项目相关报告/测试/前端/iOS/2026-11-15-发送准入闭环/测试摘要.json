@@ -1,0 +1,171 @@
+{
+  "scope": "iOS sendAdmission P0 increment only; no full30/4 rerun; no new UI gesture or physical-device claim",
+  "date": "2026-11-15",
+  "environment": "Xcode27.2 / SDK27.2 / JobsIM Picker iOS26.5 arm64 simulator",
+  "runs": {
+    "legacyPreparation": {
+      "xcresult": "代码/前端/iOS/build/Results/Test-2026.11.15_10-34-15-692be91b.xcresult",
+      "infoPlistSHA256": "8309801ab8043aa91acf127382a4da57a7068ff8a9d0b9516be1d0267cd28b5d",
+      "result": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "B9C6B6F5-0E7A-4A5D-8CDB-ECF41E01031D",
+              "deviceName": "JobsIM Picker iOS26.5",
+              "modelName": "iPhone 17 Pro",
+              "osBuildNumber": "23F77",
+              "osVersion": "26.5",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 1,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1794710088.746,
+        "passedTests": 1,
+        "result": "Passed",
+        "runtimeWarnings": [],
+        "skippedTests": 0,
+        "startTime": 1794710055.996,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - JobsIM",
+        "topInsights": [],
+        "totalTestCount": 1
+      }
+    },
+    "storageAndState": {
+      "xcresult": "代码/前端/iOS/build/Results/Test-2026.11.15_10-36-44-7653f51a.xcresult",
+      "infoPlistSHA256": "4d29125bfe38fca5d6f51e4024b1eeb35cdb4f9d57a59064a9ed5ea128a69a1f",
+      "result": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "B9C6B6F5-0E7A-4A5D-8CDB-ECF41E01031D",
+              "deviceName": "JobsIM Picker iOS26.5",
+              "modelName": "iPhone 17 Pro",
+              "osBuildNumber": "23F77",
+              "osVersion": "26.5",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 7,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1794710244.773,
+        "passedTests": 7,
+        "result": "Passed",
+        "runtimeWarnings": [],
+        "skippedTests": 0,
+        "startTime": 1794710206.298,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - JobsIM",
+        "topInsights": [],
+        "totalTestCount": 7
+      }
+    },
+    "realHTTPS": {
+      "xcresult": "代码/前端/iOS/build/Results/Test-2026.11.15_10-44-36-184c8baa.xcresult",
+      "infoPlistSHA256": "dc784f9657560e1f950dcf66f04849d05264c400fa21ba47c74ccbf26db1717b",
+      "result": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "B9C6B6F5-0E7A-4A5D-8CDB-ECF41E01031D",
+              "deviceName": "JobsIM Picker iOS26.5",
+              "modelName": "iPhone 17 Pro",
+              "osBuildNumber": "23F77",
+              "osVersion": "26.5",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 3,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1794710706.47,
+        "passedTests": 3,
+        "result": "Passed",
+        "runtimeWarnings": [],
+        "skippedTests": 0,
+        "startTime": 1794710677.448,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - JobsIM",
+        "topInsights": [],
+        "totalTestCount": 3
+      }
+    }
+  },
+  "executions": 11,
+  "newTestMethods": 9,
+  "existingOutboxRegressionMethods": 2,
+  "contract": {
+    "Conversation": "membershipGeneration:string; sendAdmission:string, empty when not currently allowed",
+    "newMessage": "capture original sendAdmission before enqueue (before attachment upload); preserve with original restoreEpoch and clientMsgId",
+    "featureGate": "fresh bootstrap.features.send_admission=true before POST or legacy reconciliation; old binary fails closed",
+    "legacy": "missing snapshot permanently excludes automatic pending, original BLOB unchanged; explicit original-body POST may return an already committed fact under current read ACL, never create a missing old intent",
+    "changed": "409 SEND_ADMISSION_CHANGED freezes permanently; refresh/rejoin/reaccept never rewrites original payload or uses new ID",
+    "schema": "send-admission-freeze adds freeze_reason and freezes old missing values without destructive rebuild"
+  },
+  "coverage": [
+    "old SQLite schema upgrade, exact Outbox BLOB hex unchanged, restart and immutable ID",
+    "same original enqueue cannot unfreeze; changing original admission conflicts",
+    "formal missing snapshot frozen, demo queue isolated",
+    "missing fresh snapshot retains draft; upload snapshot stays original after metadata refresh",
+    "frozen native message component does not display server acceptance",
+    "unobserved group leave/rejoin changes current member generation and admission; old intent stays frozen and absent from server history, new explicit intent succeeds",
+    "direct delete and block/unblock/reopen/reaccept: committed original can reconcile while new sending is forbidden; uncommitted original does not revive",
+    "pre-upgrade real legacy body commits on old8443; same body/ID succeeds after upgrade; no-snapshot uncommitted ID returns SEND_ADMISSION_CHANGED without history insertion"
+  ],
+  "sourceSHA256": {
+    "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift": "64d3aeee0e85e04b2b9e64e3066d1a14c6258ca788ebb3415d7d64b0ed543ea3",
+    "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift": "f74ec6dfcbd8eba17947a4041185222f565bd50a547d0208bd09cce06faf958c",
+    "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift": "8c0e5ed72f2fd556ca9f29170f69cb9a2d1f53617b036613e34bbc5947d02b79",
+    "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift": "16635750d5faafa243e408db5fa607bdb715e76e2c5c70b8d3029c07228398dd",
+    "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift": "fe69a75f38bc4f6dad3bcb282b192cac9bafa02131b771ac8656478a21b3fa54",
+    "代码/前端/iOS/JobsIM/Services/IMHistoryExport/IMHistoryExport.swift": "b857b6f1489c7bedb227033e7729e0c497bf09adeb2917a2c4c19af9325eb8f2"
+  },
+  "testsSHA256": "e1860fc3a37dc9c4209f7c45e8b8995566ed1c34e20a8ca93866649db9f9ce9a",
+  "boundaries": [
+    "previous30/4/1 and18+4 external reports unchanged; their results are earlier baselines",
+    "new gate does not implement full sync, qualified receipt/global deletion, transfer/backup, account cancellation or advanced features",
+    "native component assertions are not a full new UI gesture run",
+    "backend atomic fence and multi-host limits are evidenced by backend owner, not inferred from these iOS tests",
+    "test preparation bearer is Keychain-only; no credentials or admission opaque values emitted into report"
+  ],
+  "uiStrings": {
+    "languages": 10,
+    "keysPerLanguage": 121
+  }
+}

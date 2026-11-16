@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "failure": null,
+  "lastCompletedStage": "verified",
+  "httpChecks": 46,
+  "semanticAssertions": 22,
+  "binarySHA256": "aea1ca1985ad0b2b7d3e5b1e7d843895cb04990ab08996951dd0380cdfaa0116",
+  "operatorBinarySHA256": "8c5f8f7aa5d6d9fa8ddab58f4442aee627c4a0f956cd5791707b3f111be5225a",
+  "scriptSHA256": "5b73c3c4b8275d508f502fdf6e27187afb21b17dd3e40689676fff309cbba5cc",
+  "privateProgressPreserved": true,
+  "checkedAt": "2026-11-16T09:15:04.948721+00:00",
+  "assertions": [
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "real corrupted encrypted artifact emits zero ZIP plaintext",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "real truncateed encrypted artifact emits zero ZIP plaintext",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "explicit owned SQL ticket-expiry fixture denies old grant without plaintext",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "restored exact encrypted artifact remains fully authenticated and usable",
+      "passed": true
+    },
+    {
+      "assertion": "real source global recall clears reply authority while retaining independently authored draft text",
+      "passed": true
+    },
+    {
+      "assertion": "source global recall drains the original ready personal artifact before acknowledging success",
+      "passed": true
+    },
+    {
+      "assertion": "member exit and re-entry never restore the old export key or source qualification",
+      "passed": true
+    },
+    {
+      "assertion": "actual encrypted restore preserves deployment identity and advances authoritative epoch once",
+      "passed": true
+    },
+    {
+      "assertion": "old full create body remains metadata-only and cannot restore completed delivery",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "old unsubmitted export intent remains rejected without epoch or nonce repair",
+      "passed": true
+    },
+    {
+      "assertion": "restore retires every old sealed export key, ticket and artifact state",
+      "passed": true
+    },
+    {
+      "assertion": "no old prepared or active metadata/avatar holder regains authority from the backup",
+      "passed": true
+    },
+    {
+      "assertion": "journal replay retains matching own draft ciphertext but never resurrects the globally recalled source reference",
+      "passed": true
+    }
+  ],
+  "backupSHA256": "abfb9a0832cba2ba40d41197f40748f543a1610c7efd6e29cf2db5d11a80a31f",
+  "backupBytes": 17125283
+}

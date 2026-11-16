@@ -1,0 +1,26 @@
+{
+  "command": [
+    "xcodebuild",
+    "-xctestrun",
+    "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Cleanup-20261116-185804/现包收尾-公开参数.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=0EE39534-95F7-4624-A395-D51F65B70E7F",
+    "-parallel-testing-enabled",
+    "NO",
+    "-only-testing:JobsIMTests/IMSelfStateIntegrationTests/testVerifyNativeUIFixtureClosed",
+    "-resultBundlePath",
+    "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2原生界面/Cleanup-20261116-185804/结果.xcresult",
+    "test-without-building"
+  ],
+  "purpose": "Original family cleanup only; public arguments replace lost test preferences; no compile or new authentication",
+  "ownedTestContainer": "/Users/jobs/Library/Developer/CoreSimulator/Devices/0EE39534-95F7-4624-A395-D51F65B70E7F/data/Containers/Data/Application/8FBB2FC8-2DC1-4FC2-A299-E57544008A26",
+  "hostPublicIntentJournal": {
+    "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/PublicIntentJournals/7b984019-a8a3-470b-aed9-3c47844ff54c/8e003172278be98e087a484deef42a39353dff1a524d98fc18dc268e79e73fb7.json",
+    "sha256": "8e003172278be98e087a484deef42a39353dff1a524d98fc18dc268e79e73fb7",
+    "accountCount": 6
+  },
+  "exitCode": 65,
+  "seconds": 37.71,
+  "allSixFamiliesClosed": true,
+  "status": "closed"
+}

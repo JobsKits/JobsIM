@@ -1,0 +1,27 @@
+{
+  "command": [
+    "xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/Authoritative-20261116-120521-20600.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=927610A5-305F-41F5-BA69-7DA273F4C47E",
+    "-parallel-testing-enabled",
+    "NO",
+    "-only-testing:JobsIMTests/IMAuthoritativeSyncTests",
+    "-resultBundlePath",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/Sync-20261116-120521-20600.xcresult"
+  ],
+  "injectedTestEnvironment": true,
+  "selectedSuite": "IMAuthoritativeSyncTests",
+  "xctestrunSHA256": "f3ba5b15df5a6edee606cb8885d1650dd6a2d89f743fc6d4c1c7ed032c545001",
+  "result": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/Sync-20261116-120521-20600.xcresult",
+  "previousBuild": "../20261116-115745-14618/构建结果.json",
+  "scope": "real simulator and GRDB; injected protocol, no real HTTPS",
+  "exitCode": 65,
+  "stopped": null,
+  "seconds": 153.34533791599097,
+  "minFreeBytes": 11355586560,
+  "finalFreeBytes": 11646021632,
+  "logSHA256": "0268fcd7ae1536df1d48d8ba4b9fc5c90049d59306aa67c3831ba2b69ae5dd5c"
+}

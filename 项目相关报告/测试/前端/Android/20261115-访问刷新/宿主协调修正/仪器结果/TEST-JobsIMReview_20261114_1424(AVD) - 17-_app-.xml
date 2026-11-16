@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="9" failures="2" errors="0" skipped="0" time="128.106" timestamp="2026-11-15T12:52:26" hostname="localhost">
+  <testsuite name="com.jobs.im.NativeSessionLifecycleTest" tests="5" failures="0" errors="0" skipped="0" time="1.18" timestamp="2026-11-15T12:52:26" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="lateExpiredBusinessCannotBorrowReplacementFamilyAndOther401NeverRefreshes" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.375" />
+    <testcase name="initialUnknownChainKeepsOriginalIdsAndRejectsLateDelivery" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.032" />
+    <testcase name="committedPairHandoffRecoversAndRetiresOriginalOutboxWithoutChangingPayload" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.2" />
+    <testcase name="concurrentExpiredRequestsShareOneRotationAndPublishOnlyDurablePair" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.43" />
+    <testcase name="secureWriteFailureAndUnknownRefreshStayBlockedAcrossRestart" classname="com.jobs.im.NativeSessionLifecycleTest" time="0.143" />
+  </testsuite>
+  <testsuite name="com.jobs.im.StorageLifecycleTest" tests="1" failures="0" errors="0" skipped="0" time="0.144" timestamp="2026-11-15T12:52:26" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="versionTwoUpgradePreservesOriginalPendingIdentity" classname="com.jobs.im.StorageLifecycleTest" time="0.144" />
+  </testsuite>
+  <testsuite name="com.jobs.im.NativeSessionHttpsTest" tests="3" failures="2" errors="0" skipped="0" time="116.006" timestamp="2026-11-15T12:52:26" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope" classname="com.jobs.im.NativeSessionHttpsTest" time="84.257">
+      <failure>kotlinx.coroutines.TimeoutCancellationException: Timed out waiting for 15000 ms
+at kotlinx.coroutines.TimeoutKt.TimeoutCancellationException(Timeout.kt:189)
+at kotlinx.coroutines.TimeoutCoroutine.run(Timeout.kt:157)
+at kotlinx.coroutines.EventLoopImplBase$DelayedRunnableTask.run(EventLoop.common.kt:505)
+at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:105)
+at java.lang.Thread.run(Thread.java:1572)
+</failure>
+    </testcase>
+    <testcase name="realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair" classname="com.jobs.im.NativeSessionHttpsTest" time="13.049">
+      <failure>org.junit.ComparisonFailure: expected:&lt;[b076d811-52ed-4f69-84ec-0907ce9c6c9a]&gt; but was:&lt;[]&gt;
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at com.jobs.im.NativeSessionHttpsTest.expireOnlyThisAccess(NativeSessionHttpsTest.kt:62)
+at com.jobs.im.NativeSessionHttpsTest.access$expireOnlyThisAccess(NativeSessionHttpsTest.kt:21)
+at com.jobs.im.NativeSessionHttpsTest$expireOnlyThisAccess$1.invokeSuspend(NativeSessionHttpsTest.kt:15)
+at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:35)
+at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
+at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:47)
+at kotlinx.coroutines.DispatchedTaskKt.resume(DispatchedTask.kt:233)
+at kotlinx.coroutines.DispatchedTaskKt.dispatch(DispatchedTask.kt:152)
+at kotlinx.coroutines.CancellableContinuationImpl.dispatchResume(CancellableContinuationImpl.kt:470)
+at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$kotlinx_coroutines_core(CancellableContinuationImpl.kt:504)
+at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$kotlinx_coroutines_core$default(CancellableContinuationImpl.kt:493)
+at kotlinx.coroutines.CancellableContinuationImpl.resumeUndispatched(CancellableContinuationImpl.kt:596)
+at kotlinx.coroutines.EventLoopImplBase$DelayedResumeTask.run(EventLoop.common.kt:497)
+at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+at com.jobs.im.NativeSessionHttpsTest.realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair(NativeSessionHttpsTest.kt:67)
+</failure>
+    </testcase>
+    <testcase name="realLostRefreshAndThreeIntentClosureRetireUnknownAncestors" classname="com.jobs.im.NativeSessionHttpsTest" time="18.7" />
+  </testsuite>
+</testsuites>

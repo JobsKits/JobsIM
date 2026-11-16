@@ -1,0 +1,35 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "870CE7EA-610E-4F2F-A484-614BDA16576B",
+        "deviceName" : "JobsIM Self State 20261116-143808",
+        "exportedFileName" : "A3B23AAF-20EE-4218-A71F-DAD28CAF8EAA.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "03-native-explicit-adoption_0_DA18E89F-33BE-4C0A-A6FB-94DF7BC4B91C.png",
+        "timestamp" : 1794821237.903
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "870CE7EA-610E-4F2F-A484-614BDA16576B",
+        "deviceName" : "JobsIM Self State 20261116-143808",
+        "exportedFileName" : "5DF30F09-4128-42F1-B3A8-23BE58F5FA2D.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "02-native-cloud-draft_0_0CBCF915-64DA-4B82-A337-620D9E390CE6.png",
+        "timestamp" : 1794821228.24
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "870CE7EA-610E-4F2F-A484-614BDA16576B",
+        "deviceName" : "JobsIM Self State 20261116-143808",
+        "exportedFileName" : "315A1C90-DA35-4DEF-88B4-057286F7E208.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "01-native-self-state_0_DACCB228-0C53-4071-B9BE-E2C1C527FD3F.png",
+        "timestamp" : 1794821208.958
+      }
+    ],
+    "testIdentifier" : "IMSelfStateUITests/testNativeSelfStateViewsCloudDraftAndExplicitAdoption()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMSelfStateUITests/testNativeSelfStateViewsCloudDraftAndExplicitAdoption"
+  }
+]

@@ -1,0 +1,79 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/SelfState-20261116-143808.xctestrun" -destination "platform=iOS Simulator,id=870CE7EA-610E-4F2F-A484-614BDA16576B" -parallel-testing-enabled NO -maximum-concurrent-test-simulator-destinations 1 -resultBundlePath "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/SelfState-20261116-143808-认证本地12.xcresult" "-only-testing:JobsIMTests/IMAuthCredentialTests" "-only-testing:JobsIMTests/IMAuthCoordinatorTests"
+
+Writing result bundle at path:
+	/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/SelfState-20261116-143808-认证本地12.xcresult
+
+2026-11-16 14:43:24.540797+0800 JobsIM[54909:8095266] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/870CE7EA-610E-4F2F-A484-614BDA16576B/data/Containers/Bundle/Application/454651B4-8C77-452C-977D-81891CF9DC7C/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-16 14:43:24.540998+0800 JobsIM[54909:8095266] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/870CE7EA-610E-4F2F-A484-614BDA16576B/data/Containers/Bundle/Application/454651B4-8C77-452C-977D-81891CF9DC7C/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-16 14:43:24.563024+0800 JobsIM[54909:8095266] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-16 14:43:24.563207+0800 JobsIM[54909:8095266] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-16 14:43:24.682686+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.682785+0800 JobsIM[54909:8095266] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.682878+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.786792+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.786893+0800 JobsIM[54909:8095266] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.787019+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.790579+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.790687+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.790775+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.790845+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.791319+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.791406+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.791557+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.791645+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.804478+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.804594+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.804682+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.804828+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.830261+0800 JobsIM[54909:8095266] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+2026-11-16 14:43:24.856193+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.856306+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.856477+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-16 14:43:24.856658+0800 JobsIM[54909:8095266] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+Test Suite 'Selected tests' started at 2026-11-16 14:43:24.921.
+Test Suite 'JobsIMTests.xctest' started at 2026-11-16 14:43:24.922.
+Test Suite 'IMAuthCoordinatorTests' started at 2026-11-16 14:43:24.922.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace]' passed (0.075 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testFreshProofRetiresCompleteSavedChainWithoutChangingOldBodies]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testFreshProofRetiresCompleteSavedChainWithoutChangingOldBodies]' passed (0.047 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testMissingRetirementCapabilityKeepsOriginalIntentAndMakesNoRequest]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testMissingRetirementCapabilityKeepsOriginalIntentAndMakesNoRequest]' passed (0.018 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRestartFinishesSecuredInitialPairBeforeExposingNewNamespace]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRestartFinishesSecuredInitialPairBeforeExposingNewNamespace]' passed (0.033 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily]' passed (0.024 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testStaleOldFamilyCannotInvalidateReplacementDevice]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testStaleOldFamilyCannotInvalidateReplacementDevice]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownInitialUsesOriginalIDThenExplicitReauthLinksAndFreezesOldDevice]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownInitialUsesOriginalIDThenExplicitReauthLinksAndFreezesOldDevice]' passed (0.039 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret]' passed (0.019 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRegistrationCannotBecomeUnlinkedFreshAuthentication]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRegistrationCannotBecomeUnlinkedFreshAuthentication]' passed (0.017 seconds).
+Test Suite 'IMAuthCoordinatorTests' passed at 2026-11-16 14:43:25.214.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.286 (0.292) seconds
+Test Suite 'IMAuthCredentialTests' started at 2026-11-16 14:43:25.214.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testKeychainStoresCompletePairAsSingleItem]' started.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testKeychainStoresCompletePairAsSingleItem]' passed (0.013 seconds).
+Test Case '-[JobsIMTests.IMAuthCredentialTests testNamespaceHandoffFreezesOldOutboxAndRollsBackPartialCommit]' started.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testNamespaceHandoffFreezesOldOutboxAndRollsBackPartialCommit]' passed (0.008 seconds).
+Test Case '-[JobsIMTests.IMAuthCredentialTests testPairStrictnessAndRotationKeepsDeviceNamespace]' started.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testPairStrictnessAndRotationKeepsDeviceNamespace]' passed (0.014 seconds).
+Test Suite 'IMAuthCredentialTests' passed at 2026-11-16 14:43:25.251.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.036 (0.037) seconds
+Test Suite 'JobsIMTests.xctest' passed at 2026-11-16 14:43:25.251.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.322 (0.330) seconds
+Test Suite 'Selected tests' passed at 2026-11-16 14:43:25.251.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.322 (0.331) seconds
+2026-11-16 14:43:25.590 xcodebuild[54855:8094880] [MT] IDETestOperationsObserverDebug: 6.943 elapsed -- Testing started completed.
+2026-11-16 14:43:25.590 xcodebuild[54855:8094880] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-16 14:43:25.590 xcodebuild[54855:8094880] [MT] IDETestOperationsObserverDebug: 6.943 sec, +6.943 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Library/Application Support/JobsIM/Build/iOS/Results/SelfState-20261116-143808-认证本地12.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

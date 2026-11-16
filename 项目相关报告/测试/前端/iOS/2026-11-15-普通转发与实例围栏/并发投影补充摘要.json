@@ -1,0 +1,79 @@
+{
+  "scope": "iOS forwarded projection late-response fence; separate increment preserving prior 8 + peer1 evidence",
+  "status": "passed",
+  "date": "2026-11-15",
+  "finalResult": {
+    "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-59-25-5fe004d1.xcresult",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "runtimeWarnings": []
+  },
+  "testMethods": [
+    "testProjectionFencePersistsAndAcknowledgementsCannotUnmask",
+    "testRealHTTPSLateForwardResponsesCannotReviveProjection",
+    "testForwardAttachmentProjectionOfflineAndRevocationPurge"
+  ],
+  "endpoint": "https://127.0.0.1:28443",
+  "deploymentId": "c2a6a394-a383-4164-bd54-f04f4af59c12",
+  "binarySHA256": "bb1e9c527dedf0aee3a5f66b548b0a361801fe183f2c980d2d42e51e88aac79a",
+  "checks": [
+    "persistent per-message local projection generation survives SQLite reopen",
+    "late successful POST can acknowledge the original intent without unmasking the same-version temporary placeholder",
+    "real HTTPS history and message-results bodies cannot clear a local uncertainty barrier",
+    "an exact GET started before a later redaction fails the local generation CAS",
+    "a later exact GET with matching generation restores a temporary placeholder without increasing server message version",
+    "HTTP200 unavailable projection is current unavailability, not a permanent client latch; same-version new exact GET can recover",
+    "server content edit produces higher-version unavailable projection; stale lower-version result cannot restore it",
+    "forward attachment offline/authorization purge still passes"
+  ],
+  "injectionBoundary": {
+    "realNetwork": "source/destination registration, original message, forward POST, history, message-results, exact GET, source edit and file download use strict-CA real HTTPS",
+    "controlledClientLayer": "success responses are held at the client read/send boundary; 503 error and HTTP200-shaped unavailable projection are injected in the projection read seam",
+    "notClaimed": "the backend itself was stopped or emitted the injected 503/200 temporary response"
+  },
+  "priorExploratoryRuns": [
+    {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-48-06-17cbc74e.xcresult",
+      "passed": 2,
+      "failed": 1,
+      "reason": "attachment test first registration had transport/TLS validation failure; no relaxed validation"
+    },
+    {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-51-56-cbebda2f.xcresult",
+      "passed": 1,
+      "failed": 0,
+      "scope": "attachment test rerun"
+    },
+    {
+      "path": "代码/前端/iOS/build/Results/Test-2026.11.15_13-55-37-6beacf2e.xcresult",
+      "passed": 0,
+      "failed": 1,
+      "reason": "first registration transport/TLS validation failure during candidate retest"
+    }
+  ],
+  "sourceSHA256": {
+    "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift": "dd9134a7a48f713855d68ee39ce4bf709c253686da15336290e4ee0ec7bd703f",
+    "代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift": "d54fb633c2d2c2934c45911515bb0b608e1fbedbe4de7b305c1dabf2b417cf4d",
+    "测试/前端/iOS/IMForwardTests.swift": "c3315f842a94769368c17989ca8052fb8facc8c20053ad973342553c7afa7f7e"
+  },
+  "priorOriginalEvidenceSHA256": {
+    "测试摘要.json": "0d4fbda0e9286fe0d1b910b659606e2ce8d874fcabdc6d373b6c0c1e317e9374",
+    "SHA256SUMS": "779d4c169161910a30d5a05b88f7b38e84ac97ea8e07271d388fa7e21498904f",
+    "正式转发当前投影-原生UI.png": "9526450c2b6dfbbaf8c9180a8cd4d31e3904b8c8210b4112ce5a9d1b3cdbe7a0"
+  },
+  "unchanged": [
+    "backend",
+    "UI screens",
+    "original request snapshot and permanent forward intent rejection semantics",
+    "third-party dependencies",
+    "language keys",
+    "prior 8 + peer1 original JSON and SHA files"
+  ],
+  "notClaimed": [
+    "full old suite rerun",
+    "physical device",
+    "all UI/device matrix",
+    "new permanent forwardUnavailable DTO meaning"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "blocked_before_test_directory_or_execution",
+  "command": "Node24 Unit/RunExport.mjs",
+  "error": "Error: 4 GiB disk gate",
+  "newTargetGroups": 18,
+  "newTargetExecuted": false,
+  "preservedPrior": "Host-ulwapl 15/15; not retroactively attributed to changed inputs",
+  "runtimeChanges": false
+}

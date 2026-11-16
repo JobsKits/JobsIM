@@ -1,0 +1,557 @@
+{
+  "root": "/Users/jobs/Documents/GitHub/JobsIM",
+  "candidates": [
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/实现进度/20261116-基础剩余能力核对/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "1d5a8cc8cbdf7da00cf1a27efc90f5507bd11716af709ad83b8e304c6acfb3a3",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/owned-web-runtime.cjs/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "67cc5f55daaf7b34682986d5b9bc8e8fc1e343b9dd0ecd9c0737b7abe98c58b7",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/self-state.cjs/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "8b920c480343c22195b928ffc2460b7b95919d08fb2085fb51bf25074b4c54ec",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/draft-recovery.cjs/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "37106c2a7b729fc731321a94cd1ef7a39a5a3966276fec99af2ef9a236e1e5a2",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/cloud_drafts.py/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "b8dc98563c42c54f3ffbbe2a0c93110b6ff96c8e6fddd37827c2a61ba188279a",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/self-state-https.cjs/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "a923cd8206fde1de711a409b60270cee06be727ff715d3c2a1130a50923122b5",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/personal_exports.py/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "90b2575deb1f1e265e584d94bb9896ec142ae6d37485e4130b5c92ab463a41fa",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/接口/object_receipts.mjs/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "7130ce95b4e95328bf83497141f9bda9a2223e86afd40a19d99ce62b4dd2495e",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Android/self_state_https.py/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "99b1923af31330cc652e58d14ef5f7a9db11397d52bd9d9ab7009cefb5207c66",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/iOS/personal_state.py/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "68d67d38f36feb57f156b6db6d107292bb9daa1d9d1ca0b7090dc073a06e23f9",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/20261116-收讫与草稿实现/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "bcab9fe96c111313a59b82434a621749f9079fd9ceb1e5439b97a2c38aeb9d66",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/20261116-云草稿/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "6b5889c8ccc739ff757cb5ec36ef718036a56b6d14d03c28ce5bc287729daaed",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/20261116-云草稿/132820/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "3692b8b3a8c2fa7e48e74b9a3c94b4915961ccfb89b4614cfa7e266111da39e5",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/后端/20261116-正式本人导出/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "e569b2cf5b4ea1d6aa5d34a2b999b6e8b6be4f39b5c6f60ff6f653f71d9b9bee",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/CLI/20261116-正文收讫/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "c3d02ef1bdfba12d6a4ead68097cb22d0fa1f570179a89fb9383f7f0d45c9327",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/Web/20261116-S2本人状态/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "524d9e14f4de3a5873eb1222798ee44b74aa7e432756e75d5674128af0687214",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/Web/20261116-独立草稿恢复/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "fcb3d213550861b322b9093f6166c1270f82b9e6c705d580fbb67dd9b7776e00",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/Android/20261116-S2本人状态/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "6ac291444cb04a75e610752e6587ec18156d825f2e974b8843ad1c0fc362904d",
+      "approved": true
+    },
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/iOS/20261116-S2本人状态/README.md",
+      "repoRoot": "/Users/jobs/Documents/GitHub/JobsIM",
+      "sha256": "5768b136583a1d2f41b0443d63ec897892dc09f6698d05c9b7050394294df8c3",
+      "approved": true
+    }
+  ],
+  "excluded": [
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/部署/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/Android/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/CLI/原生助手/Keychain/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/HarmonyOS/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/Web/Scripts/准备环境.command/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/Web/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/后端/Go/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/需求/实现进度/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/需求/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/项目相关报告/资产盘点/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-引用转发/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-访问刷新/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-基础闭环/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-发送准入围栏/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-搜索协作/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-200占位恢复/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/iOS/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-提及公告与分页/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-原发信资格/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-原角色资格/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-普通转发/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/forward.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/报告/20261115-普通转发/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/报告/20261115-登录续期HTTPS/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/报告/20261115-登录续期浏览器/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/部署/MacOS/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/forward_restore.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/后端/20261116-完整对象收讫/README.md",
+      "reason": "当前证据仍在写，最终稳定后单独增量登记"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/role_qualification.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/forward_compatibility.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/forward_refs.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/session_refresh_restore.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/session_refresh.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/forward_fences.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-CLI治理/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-普通转发/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-刷新家族/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-搜索协作/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/工具/统计项目.mjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261116-独立草稿恢复/输入源码/代码/前端/Web/代码地图/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261116-独立草稿恢复/输入源码/代码/前端/Web/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/项目相关报告/资产盘点/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/前端/Android/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/前端/HarmonyOS/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/前端/Web/admin-integration.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-S2本人状态/源码快照-665c历史/代码/前端/CLI/代码地图/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-S2本人状态/源码快照-665c历史/代码/前端/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261116-独立草稿恢复/输入源码/测试/前端/Web/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261116-独立草稿恢复/输入源码/测试/前端/Web/draft-recovery.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/前端/Web/auth-https.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/前端/Web/browser.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/前端/Web/integration.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/前端/Web/auth-session.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/前端/Web/forward.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-正文收讫/源码快照/代码/前端/CLI/代码地图/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-正文收讫/源码快照/代码/前端/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-正文收讫/源码快照/测试/CLI/运行测试.mjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/后端/接口/forward_restore.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/后端/接口/role_qualification.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/后端/接口/forward_compatibility.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/后端/接口/forward_refs.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/后端/接口/session_refresh_restore.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/后端/接口/session_refresh.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-S2本人状态/源码快照/代码/前端/CLI/代码地图/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-S2本人状态/源码快照/代码/前端/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/后端/接口/forward_fences.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/CLI/collaboration-https.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/CLI/运行测试.mjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/CLI/https-integration.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261115-集中报告/修改前工具与导航/测试/CLI/forward-https.cjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-正文收讫/源码快照/测试/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/项目相关报告/资产盘点/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/项目相关报告/实现进度/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/项目相关报告/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/项目相关报告/测试/前端/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步交叉编译/20261116-123709-093a23/源码快照/代码/前端/CLI/代码地图/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步交叉编译/20261116-123709-093a23/源码快照/代码/前端/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步HTTPS/20261116-120401-3cbd4e/源码快照/代码/前端/CLI/代码地图/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步HTTPS/20261116-120401-3cbd4e/源码快照/代码/前端/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步HTTPS/20261116-120401-3cbd4e/源码快照/测试/CLI/sync-https.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步HTTPS/20261116-120401-3cbd4e/源码快照/测试/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步交叉编译/20261116-123709-093a23/源码快照/测试/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/项目相关报告/测试/前端/iOS/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/项目相关报告/测试/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/项目相关报告/测试/后端/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/项目相关报告/测试/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/项目相关报告/项目统计/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/迁移归档/20261116-编译回归导航/修改前/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步/认证源码基线/代码地图/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步/认证源码基线/原生助手/Keychain/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步/认证源码基线/Scripts/Build.py/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步/认证源码基线/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261115-认证输入保护/生产包基线/资源出处.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步编译回归/20261116-113743-192d48/源码快照/代码/前端/CLI/代码地图/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步编译回归/20261116-113743-192d48/源码快照/代码/前端/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步编译回归/20261116-113743-192d48/源码快照/测试/CLI/运行测试.mjs/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/CLI/20261116-权威同步编译回归/20261116-113743-192d48/源码快照/测试/CLI/README.md",
+      "reason": "历史输入或第三方原件，保持原字节，不登记发布目录"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261116-S2原生界面/README.md",
+      "reason": "当前证据仍在写，最终稳定后单独增量登记"
+    }
+  ],
+  "toolBaseline": {
+    "deployer": "Jobs自有部署器原字节执行副本",
+    "template": "当前JobsIM自包含三件套；保留现有2026-10升级逻辑和README，不用较旧Skill模板回退"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "scope": "final gateway public JSON fence, monotonic and temporary unavailable projection recovery",
+  "status": "passed",
+  "sources": [
+    {
+      "file": "代码/前端/Web/Src/AdminPanel.tsx",
+      "sha256": "84a9903f345372b1f0b8efc787f600a2d0c90bfebafbaf887c8afce40555169e"
+    },
+    {
+      "file": "代码/前端/Web/Src/AnnouncementPanel.tsx",
+      "sha256": "3a5b0d49a3b39e32997b9ac39a4553ed04af0a1e9a84aefe03867ab7dc0c1e55"
+    },
+    {
+      "file": "代码/前端/Web/Src/App.tsx",
+      "sha256": "9961883dc33b09f398f3beea81592131d9d24a5fc19827ee52d728c19b10847c"
+    },
+    {
+      "file": "代码/前端/Web/Src/GroupControls.tsx",
+      "sha256": "136ac32a4bc9be1645b97e0d7644c17fab600f60d26a99ae8c897f3bfb39b326"
+    },
+    {
+      "file": "代码/前端/Web/Src/MentionPicker.tsx",
+      "sha256": "b371b091cfe600b1dbcaf10f081e01801a41a4e66da7a40ea8ee4dbd9c3aca53"
+    },
+    {
+      "file": "代码/前端/Web/Src/MessageLookup.tsx",
+      "sha256": "700bdae3f148954dcf7b0d1e6a3def9e77be555438929d7cd8c4537bd49e7f12"
+    },
+    {
+      "file": "代码/前端/Web/Src/PeerControls.tsx",
+      "sha256": "0e5d91aaba10f8fb3c3d43e5e5327eba57b1e9cec3aa4d95ed6140a57d8642a5"
+    },
+    {
+      "file": "代码/前端/Web/Src/ReportPanel.tsx",
+      "sha256": "9887915b07c63dd5358b9009fa8eb0493d5c96e45b246b30520c2655014489b1"
+    },
+    {
+      "file": "代码/前端/Web/Src/api.ts",
+      "sha256": "bbe4d20178de2c9636a2a4a9f82fd72352bf99a1d3b12c137535b6523adb5b00"
+    },
+    {
+      "file": "代码/前端/Web/Src/demo.ts",
+      "sha256": "4b11d1b2d1757fdfb95e720e0f08730c07e9f33237ba330ab26f0fc85f1db62b"
+    },
+    {
+      "file": "代码/前端/Web/Src/env.d.ts",
+      "sha256": "9bf140f3a5154723b62d993f482744357ab6b908d89ff9a5777f3f8e3642f634"
+    },
+    {
+      "file": "代码/前端/Web/Src/forward.ts",
+      "sha256": "688de48c837608a7f36f1452fe79155d819946f97499e8bead0e7872ebfa9e0d"
+    },
+    {
+      "file": "代码/前端/Web/Src/i18n.ts",
+      "sha256": "1025a0a0a30e57c8fa7ba3df3b9a9301fe9db30ae3ec6ed4a409081f5e85f5c9"
+    },
+    {
+      "file": "代码/前端/Web/Src/main.tsx",
+      "sha256": "7dd0ec7c005211dc0191dbe92115cb395ec8f04c2591d2259039a5d7b42fb3c0"
+    },
+    {
+      "file": "代码/前端/Web/Src/storage.ts",
+      "sha256": "4e26e0e3d565b5c679787a02c5b7606060a030c5fad7e50bf35befbe0c53d701"
+    },
+    {
+      "file": "代码/前端/Web/Src/styles.css",
+      "sha256": "86c3583e6ba4be08d0d9d4d7aac0ef60cd0ff25382c2ee83f886104f8867e263"
+    },
+    {
+      "file": "代码/前端/Web/Src/types.ts",
+      "sha256": "3e91074005b969081a9bd3b48eea291e2fcd0090a7bb8a54cb9cc01e51ddd3d6"
+    },
+    {
+      "file": "测试/前端/Web/forward.cjs/forward.cjs",
+      "sha256": "ba9f4f020ad0c0af8dc451d631967339dcacb11a873ede6a7bca679604b56a89"
+    },
+    {
+      "file": "测试/前端/Web/browser.cjs/browser.cjs",
+      "sha256": "642f4ab9e0ce2f6451902bc44191bea6cfa7a15ecf87c6db6448963c4e9dfed7"
+    },
+    {
+      "file": "测试/前端/Web/integration.cjs/integration.cjs",
+      "sha256": "d880a2a558bf8f750f4981982cf5fb1c868922d8663a9b2731885076f19dfc0b"
+    }
+  ],
+  "managedLocalBaseline": {
+    "directory": "/Users/jobs/Library/Caches/JobsIM/Web/Baselines/20261115-forward-projection-7bdd37093d89",
+    "sourceArchiveSha256": "cf9bf167ec1c17015554d4cbca64506e0195cdff636c8425bfcdb4c30c8e0d7c",
+    "purpose": "preserve current owned inputs and built Dist before next auth module; no secrets or dependencies copied"
+  }
+}

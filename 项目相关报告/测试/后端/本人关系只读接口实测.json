@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "httpAssertions": 50,
+  "ownerOnlyMetadata": true,
+  "noPeerPrivateGateProjection": true,
+  "blockedByMeIsOwnerScoped": true,
+  "queryOwnerOverrideIgnored": true,
+  "defaultReadCreatesNoRows": true,
+  "currentReopenGenerationOnly": true,
+  "largeGenerationStaysDecimalString": true,
+  "avatarACLUnchanged": true,
+  "scope": "real HTTPS/two-account PostgreSQL relationship metadata; no full I acceptance"
+}

@@ -1,0 +1,215 @@
+TAP version 13
+# Subtest: compact complete pair keeps precise generation and all context fields
+ok 1 - compact complete pair keeps precise generation and all context fields
+  ---
+  duration_ms: 1.226333
+  ...
+# Subtest: concurrent expired requests consume one original RT
+ok 2 - concurrent expired requests consume one original RT
+  ---
+  duration_ms: 1.468791
+  ...
+# Subtest: unknown refresh survives coordinator reconstruction and never reuses old RT
+ok 3 - unknown refresh survives coordinator reconstruction and never reuses old RT
+  ---
+  duration_ms: 0.506292
+  ...
+# Subtest: secure store failure never publishes the issued credential pair
+ok 4 - secure store failure never publishes the issued credential pair
+  ---
+  duration_ms: 0.157416
+  ...
+# Subtest: unknown initial request keeps original ID/body and rejects changed proof before send
+ok 5 - unknown initial request keeps original ID/body and rejects changed proof before send
+  ---
+  duration_ms: 0.592166
+  ...
+# Subtest: new current proof freezes a complete unknown ancestor closure without changing old body
+ok 6 - new current proof freezes a complete unknown ancestor closure without changing old body
+  ---
+  duration_ms: 0.40725
+  ...
+# Subtest: late failure of original authentication cannot clear its verified successor
+ok 7 - late failure of original authentication cannot clear its verified successor
+  ---
+  duration_ms: 2.671
+  ...
+# Subtest: late old logout cannot erase a newly authenticated family
+ok 8 - late old logout cannot erase a newly authenticated family
+  ---
+  duration_ms: 1.14825
+  ...
+# Subtest: secured pair plus interrupted RDB handoff resumes with no new authentication
+ok 9 - secured pair plus interrupted RDB handoff resumes with no new authentication
+  ---
+  duration_ms: 0.634084
+  ...
+# Subtest: missing live auth capability stops before secret reads or HTTP auth
+ok 10 - missing live auth capability stops before secret reads or HTTP auth
+  ---
+  duration_ms: 0.084416
+  ...
+# Subtest: late cold-start context must not clear a newer authenticated device
+ok 11 - late cold-start context must not clear a newer authenticated device
+  ---
+  duration_ms: 0.914541
+  ...
+# Subtest: business JSON, upload, attachment and avatar share one expiry coordination path
+ok 12 - business JSON, upload, attachment and avatar share one expiry coordination path
+  ---
+  duration_ms: 2.627583
+  ...
+# Subtest: retired API binding stops before file read and network
+ok 13 - retired API binding stops before file read and network
+  ---
+  duration_ms: 0.856959
+  ...
+# Subtest: late successful business response cannot cross a new session namespace
+ok 14 - late successful business response cannot cross a new session namespace
+  ---
+  duration_ms: 0.410542
+  ...
+# Subtest: transport unknown never consumes a refresh token or silently repeats a write
+ok 15 - transport unknown never consumes a refresh token or silently repeats a write
+  ---
+  duration_ms: 0.335459
+  ...
+# Subtest: public initial authentication never attaches an existing access token
+ok 16 - public initial authentication never attaches an existing access token
+  ---
+  duration_ms: 0.282416
+  ...
+# Subtest: pending inbox is recipient-bound and never resurrects accepted requests
+ok 17 - pending inbox is recipient-bound and never resurrects accepted requests
+  ---
+  duration_ms: 0.564458
+  ...
+# Subtest: read-only and unavailable-owner groups reject writes
+ok 18 - read-only and unavailable-owner groups reject writes
+  ---
+  duration_ms: 0.048042
+  ...
+# Subtest: original group membership generation remains decimal text above JS safe integer
+ok 19 - original group membership generation remains decimal text above JS safe integer
+  ---
+  duration_ms: 0.144916
+  ...
+# Subtest: profile, account, device, demo and restore epochs each isolate local data
+ok 20 - profile, account, device, demo and restore epochs each isolate local data
+  ---
+  duration_ms: 0.074458
+  ...
+# Subtest: opaque history cursor is epoch-bound without integer coercion
+ok 21 - opaque history cursor is epoch-bound without integer coercion
+  ---
+  duration_ms: 0.07675
+  ...
+# Subtest: restored secure credentials require matching account, device and epoch
+ok 22 - restored secure credentials require matching account, device and epoch
+  ---
+  duration_ms: 0.046417
+  ...
+# Subtest: strict authentication JSON separates login OTP from recovery code
+ok 23 - strict authentication JSON separates login OTP from recovery code
+  ---
+  duration_ms: 0.269958
+  ...
+# Subtest: connection descriptions reject credentials, HTTP, queries and fragments
+ok 24 - connection descriptions reject credentials, HTTP, queries and fragments
+  ---
+  duration_ms: 0.138875
+  ...
+# Subtest: all ten language tables cover the current control vocabulary
+ok 25 - all ten language tables cover the current control vocabulary
+  ---
+  duration_ms: 0.164
+  ...
+# Subtest: literal UI actions and labels resolve in every language
+ok 26 - literal UI actions and labels resolve in every language
+  ---
+  duration_ms: 5.994083
+  ...
+# Subtest: sending qualification support requires the current instance and an explicit capability
+ok 27 - sending qualification support requires the current instance and an explicit capability
+  ---
+  duration_ms: 0.082458
+  ...
+# Subtest: retries serialize the original admission and never infer missing legacy qualification
+ok 28 - retries serialize the original admission and never infer missing legacy qualification
+  ---
+  duration_ms: 0.079625
+  ...
+# Subtest: lookup paths keep search criteria and signed cursor separate, and favorites never use empty search
+ok 29 - lookup paths keep search criteria and signed cursor separate, and favorites never use empty search
+  ---
+  duration_ms: 0.301541
+  ...
+# Subtest: structured mentions require current members and owner-only all, with a copied stable selection
+ok 30 - structured mentions require current members and owner-only all, with a copied stable selection
+  ---
+  duration_ms: 0.173458
+  ...
+# Subtest: original outgoing mention IDs and all fields survive replay without a latest context rewrite
+ok 31 - original outgoing mention IDs and all fields survive replay without a latest context rewrite
+  ---
+  duration_ms: 0.066542
+  ...
+# Subtest: mention receipts do not re-alert on edit, read, block projection or later unblock
+ok 32 - mention receipts do not re-alert on edit, read, block projection or later unblock
+  ---
+  duration_ms: 0.058125
+  ...
+# Subtest: announcement references content version rather than interaction version and rejects unavailable bodies
+ok 33 - announcement references content version rather than interaction version and rejects unavailable bodies
+  ---
+  duration_ms: 0.118583
+  ...
+# Subtest: persistent announcement intent contains no copied text, attachment or credentials
+ok 34 - persistent announcement intent contains no copied text, attachment or credentials
+  ---
+  duration_ms: 0.241666
+  ...
+# Subtest: announcement clear keeps only the original CAS, generation and request identity
+ok 35 - announcement clear keeps only the original CAS, generation and request identity
+  ---
+  duration_ms: 0.068958
+  ...
+# Subtest: announcement expiration is an explicit stable native preset
+ok 36 - announcement expiration is an explicit stable native preset
+  ---
+  duration_ms: 0.130208
+  ...
+# Subtest: only a definite server rejection permits discarding an announcement intent
+ok 37 - only a definite server rejection permits discarding an announcement intent
+  ---
+  duration_ms: 0.04875
+  ...
+# Subtest: privileged writes require explicit current-instance role admission support
+ok 38 - privileged writes require explicit current-instance role admission support
+  ---
+  duration_ms: 0.038542
+  ...
+# Subtest: announcement role qualification is frozen and legacy bodies are never supplemented
+ok 39 - announcement role qualification is frozen and legacy bodies are never supplemented
+  ---
+  duration_ms: 0.066916
+  ...
+# Subtest: forward intents freeze only source references and never copy source content
+ok 40 - forward intents freeze only source references and never copy source content
+  ---
+  duration_ms: 0.107167
+  ...
+# Subtest: unavailable forward projection removes body and any source media authority
+ok 41 - unavailable forward projection removes body and any source media authority
+  ---
+  duration_ms: 0.085042
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 50.910833

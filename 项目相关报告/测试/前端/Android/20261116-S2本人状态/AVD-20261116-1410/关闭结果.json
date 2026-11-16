@@ -1,0 +1,7 @@
+{
+  "ownedPid": 21924,
+  "shutdown": "adb -s emulator-5582 emu kill",
+  "exitObserved": true,
+  "noSnapshotSave": true,
+  "wipeOrUninstallOrClear": false
+}

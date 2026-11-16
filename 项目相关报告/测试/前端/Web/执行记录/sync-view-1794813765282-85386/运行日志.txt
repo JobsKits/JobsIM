@@ -1,0 +1,16 @@
+PASSED sync self message alone never acknowledges original Outbox
+PASSED peer forged clientId never clears or hides local pending
+PASSED snapshot history is not all-new local unread
+PASSED new peer delta adds unread and structured mention once
+PASSED currently read conversation clears old and new local unread
+PASSED own delta and old edits do not create new unread
+PASSED minimal global object clears body and sidecars
+PASSED known global cannot be reopened by same old newer or unknown source
+PASSED fresh forward stays in RAM but durable view only contains placeholder
+PASSED late exact source refresh cannot reopen current global row
+PASSED exact original body route and owner proof clears only acknowledged Outbox
+PASSED same clientId with changed text admission or route never acknowledges
+PASSED foreign sender and missing proof keep original queue
+PASSED Engine callback sees original body and latest-queue CAS rejects changed payload
+PASSED durable global stamp is terminal even for higher owner revision
+PASSED single retained holder never resurrects global body

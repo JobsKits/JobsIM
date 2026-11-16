@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:58.81542+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:58.990755+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts"}
+{"Time":"2026-11-16T12:11:58.990831+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts","Output":"=== RUN   TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:59.122546+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts","Output":"--- PASS: TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts (0.13s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:59.122587+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts","Elapsed":0.13}
+{"Time":"2026-11-16T12:11:59.122618+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:59.123261+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.308s\n"}
+{"Time":"2026-11-16T12:11:59.123285+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.308}

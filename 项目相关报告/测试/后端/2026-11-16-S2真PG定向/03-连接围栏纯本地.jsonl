@@ -1,0 +1,12 @@
+{"Time":"2026-11-16T12:10:39.901843+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:10:40.077674+08:00","Action":"run","Package":"jobsim/backend","Test":"TestS2PGGuardRejectsForeignConnections"}
+{"Time":"2026-11-16T12:10:40.077781+08:00","Action":"output","Package":"jobsim/backend","Test":"TestS2PGGuardRejectsForeignConnections","Output":"=== RUN   TestS2PGGuardRejectsForeignConnections\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:10:40.078116+08:00","Action":"output","Package":"jobsim/backend","Test":"TestS2PGGuardRejectsForeignConnections","Output":"--- PASS: TestS2PGGuardRejectsForeignConnections (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:10:40.078148+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestS2PGGuardRejectsForeignConnections","Elapsed":0}
+{"Time":"2026-11-16T12:10:40.078168+08:00","Action":"run","Package":"jobsim/backend","Test":"TestS2PGGuardRequiresCanonicalPrivatePassfile"}
+{"Time":"2026-11-16T12:10:40.078178+08:00","Action":"output","Package":"jobsim/backend","Test":"TestS2PGGuardRequiresCanonicalPrivatePassfile","Output":"=== RUN   TestS2PGGuardRequiresCanonicalPrivatePassfile\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:10:40.080251+08:00","Action":"output","Package":"jobsim/backend","Test":"TestS2PGGuardRequiresCanonicalPrivatePassfile","Output":"--- PASS: TestS2PGGuardRequiresCanonicalPrivatePassfile (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:10:40.080289+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestS2PGGuardRequiresCanonicalPrivatePassfile","Elapsed":0}
+{"Time":"2026-11-16T12:10:40.080342+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:10:40.081048+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.179s\n"}
+{"Time":"2026-11-16T12:10:40.081082+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.179}

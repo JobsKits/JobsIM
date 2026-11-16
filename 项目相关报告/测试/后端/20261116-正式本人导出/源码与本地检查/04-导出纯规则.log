@@ -1,0 +1,32 @@
+=== RUN   TestPersonalExportRouteFenceClassification
+--- PASS: TestPersonalExportRouteFenceClassification (0.00s)
+=== RUN   TestPersonalExportNestedFenceRequiresAuthenticProof
+--- PASS: TestPersonalExportNestedFenceRequiresAuthenticProof (0.04s)
+=== RUN   TestPersonalExportSourceBufferDoesNotPartiallyDeliver
+--- PASS: TestPersonalExportSourceBufferDoesNotPartiallyDeliver (0.00s)
+=== RUN   TestPersonalExportPrivateProofCannotBypassServiceAuthentication
+--- PASS: TestPersonalExportPrivateProofCannotBypassServiceAuthentication (0.00s)
+=== RUN   TestPersonalExportProofScopeDrainsInflightAndRejectsLateRPC
+--- PASS: TestPersonalExportProofScopeDrainsInflightAndRejectsLateRPC (0.03s)
+=== RUN   TestPersonalExportCompleteAuthentication
+=== RUN   TestPersonalExportCompleteAuthentication/valid
+=== RUN   TestPersonalExportCompleteAuthentication/final_tag_corrupt
+=== RUN   TestPersonalExportCompleteAuthentication/middle_tag_corrupt
+=== RUN   TestPersonalExportCompleteAuthentication/truncated_final
+=== RUN   TestPersonalExportCompleteAuthentication/trailing_bytes
+=== RUN   TestPersonalExportCompleteAuthentication/wrong_key
+=== RUN   TestPersonalExportCompleteAuthentication/wrong_artifact_digest
+--- PASS: TestPersonalExportCompleteAuthentication (0.02s)
+    --- PASS: TestPersonalExportCompleteAuthentication/valid (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/final_tag_corrupt (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/middle_tag_corrupt (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/truncated_final (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/trailing_bytes (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/wrong_key (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/wrong_artifact_digest (0.00s)
+=== RUN   TestPersonalExportCancelledBeforePlaintext
+--- PASS: TestPersonalExportCancelledBeforePlaintext (0.01s)
+=== RUN   TestPersonalExportOriginalBodyAndNoAuthority
+--- PASS: TestPersonalExportOriginalBodyAndNoAuthority (0.00s)
+PASS
+ok  	jobsim/backend	0.576s

@@ -1,0 +1,150 @@
+{
+  "status": "source-only",
+  "atUTC": "2026-11-16T12:31:37.074696+00:00",
+  "inputScope": "22 selected export-module and directly affected inputs, not a full build manifest",
+  "inputsSHA256": {
+    "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportService.swift": "1cb4ff48a939de6a3cc0ebdc3023bad95b513a1f392986c67fa7571b5ef6ad2a",
+    "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportArchive.swift": "b6bf0a4b0b6030c90cec39d8e7ba9f2c4d2796c496e85c9e8cea1aab3ed5886f",
+    "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportProtocol.swift": "8a4c408e101f077c8611762b3d23532d152f49f9075c2711c12144059e4f6ebf",
+    "代码/前端/iOS/JobsIM/UI/IMDataExportVC/IMDataExportVC.swift": "ecb836164d84d82bb0302aa71e978e75fc37ff93efd8bcbef8a95d5c56636bef",
+    "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift": "56aea243a6db44b63578ddfdf88612c41548c26aff0c1b5ed35e0c0d08039b71",
+    "代码/前端/iOS/JobsIM/UI/Factories/FileHandle/FileHandle+Make.swift": "dcfa30524365d79d3af1a7b14650108db25afb0ecdfb4b39da312aa41321d05c",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift": "88fcb808d027aafa8721db1e030156abf5fcb655854c84dfcb43546958c12763",
+    "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift": "4ac2dc8c97bf0025d793f9701e9efde14717f6dbf782247a09e4563400c61dd2",
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIClient/IMAPIClient.swift": "123de460940768fa08544e9b1c839a3b5f3bc80d975c15d83510d43797ade7c9",
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift": "e054f8e29bf61945c5c739093b2588b27b353f10fe48a6cd539f08b4b20a88d0",
+    "测试/前端/iOS/IMDataExportTests.swift": "dc0603dca2b7191f3a05dca52b8d808b004f3ac831a9ea884d8f49f5aa08be26",
+    "代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj": "8b48c8d3e6daae5e0e05ba20385856ec0ca45455ff7d7dc7e56d26b481e9f304",
+    "代码/前端/iOS/JobsIM/Resource/de.lproj/Localizable.strings": "78bec02382ecf2fca7ab1dd2baf6f70d24dc061c422f96deaa3965cf90ad0e91",
+    "代码/前端/iOS/JobsIM/Resource/zh-Hans.lproj/Localizable.strings": "636ea9f42f5ab43ecf86fe852d440b7808bf2b873183cd64adcf7a5bc2ee6e30",
+    "代码/前端/iOS/JobsIM/Resource/ja.lproj/Localizable.strings": "f44dd826be38abf83272e8e3a55285bcf932b344bb69ffc86817f154d440bfa4",
+    "代码/前端/iOS/JobsIM/Resource/en.lproj/Localizable.strings": "35378719961c1b6e7e03786b376227a0c9569feb5a3d4c3cf3814b993230c7fe",
+    "代码/前端/iOS/JobsIM/Resource/es.lproj/Localizable.strings": "e59d7547dc96926dd267725d7aa032c5966cfd06ba2254b02cfce4c2fde84ba5",
+    "代码/前端/iOS/JobsIM/Resource/ko.lproj/Localizable.strings": "d2e79ed33a2cc509da0367feeabd6520f60a3eee9aa1f371d3e7a08850043cda",
+    "代码/前端/iOS/JobsIM/Resource/zh-Hant.lproj/Localizable.strings": "ff6841d53cf9531c779428c3f57622cfaa84608fc618950972827d5c31e185f7",
+    "代码/前端/iOS/JobsIM/Resource/bo.lproj/Localizable.strings": "eeba9d598d66b962a6a5d70e8eec2784d65616f5cc0ae5ef2ae53bcc372a6bc6",
+    "代码/前端/iOS/JobsIM/Resource/ru.lproj/Localizable.strings": "4aea6a843329a7efadb005924e5bf857f1db2625bc72dee7cd6d5b93ecff1620",
+    "代码/前端/iOS/JobsIM/Resource/fr.lproj/Localizable.strings": "bb0f2eb144c8847e5c116f09019103f78cf8b55de511e3b6f1b785c9f9233460"
+  },
+  "byteCheck": {
+    "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportService.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportArchive.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportProtocol.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/UI/IMDataExportVC/IMDataExportVC.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/UI/Factories/FileHandle/FileHandle+Make.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIClient/IMAPIClient.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift": {
+      "live": true,
+      "archived": true
+    },
+    "测试/前端/iOS/IMDataExportTests.swift": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/de.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/zh-Hans.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/ja.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/en.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/es.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/ko.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/zh-Hant.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/bo.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/ru.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    },
+    "代码/前端/iOS/JobsIM/Resource/fr.lproj/Localizable.strings": {
+      "live": true,
+      "archived": true
+    }
+  },
+  "swiftParse": {
+    "exitCode": 0,
+    "files": 11
+  },
+  "projectPlistExitCode": 0,
+  "languages": 10,
+  "keysPerLanguage": 209,
+  "constructionAudit": "issues=0 issue_files=0 factory_hits=24 scanned=76 sdk_classes=3512",
+  "chainAudit": {
+    "exitCode": 2,
+    "summary": "bare_assignments=0 repeat_groups=86 issue_files=26 scanned=76 dsl_methods=0",
+    "notAllPassed": true
+  },
+  "testMethods": [
+    "testViewStrictCountersAndMetadataDoesNotRetainUnknownSecretFields",
+    "testOriginalNonceIsOpaqueAndRawWhitespaceHashCannotBeRewritten",
+    "testCASPreservesFirstCancelBodyAndOriginalAgainstLateWriter",
+    "testUnknownCreationOnlyChecksOriginalUntilExplicitSameBodyRetry",
+    "testCapabilityWithdrawalStillAllowsOriginalLookupAndSameCancelBody",
+    "testLateIdentityResponseDoesNotBindOriginalJob",
+    "testTicketDeadlineAndTypeAreStrictWithoutPersistingTheToken",
+    "testCompleteZIPAndZIP64DirectoryAreRequiredBeforeSystemSave",
+    "testUnsafeOrMissingExportDirectoryEntriesAreRejected",
+    "testReopenKeepsOnlyOriginalPublicMetadataAndDoesNotCreateSyncResponsibility"
+  ],
+  "compiled": false,
+  "nativeExecuted": false,
+  "apiExecuted": false,
+  "visualChecked": false,
+  "noNewAuthentication": true,
+  "noSimulatorBoot": true
+}

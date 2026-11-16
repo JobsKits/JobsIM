@@ -1,0 +1,23 @@
+{
+  "step": "full-local-tests-direct-overlay",
+  "status": "completed",
+  "exitCode": 1,
+  "seconds": 10.08,
+  "minimumFreeGiB": 13.67,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "test",
+    "-p=1",
+    "-overlay",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/overlay.json",
+    "-timeout",
+    "120s",
+    "-count=1",
+    "-v",
+    "./..."
+  ],
+  "realAPIEnabled": false,
+  "passed": 38,
+  "failed": 7,
+  "skipped": 2
+}

@@ -1,0 +1,183 @@
+{
+  "observedAt": "2026-11-15T02:46:22.893211+00:00",
+  "scope": "Android native foundation and immutable original send admission fence",
+  "platform": {
+    "avd": "JobsIMReview_20261114_1424",
+    "serial": "emulator-5582",
+    "api": 37,
+    "abi": "arm64-v8a"
+  },
+  "jvm": {
+    "tests": 6,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "instrumentation": {
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "apk": {
+    "path": "代码/前端/Android/Dist/JobsIM-debug.apk",
+    "sha256": "e5eeee8506b63bc70554b621ed916a87dfeb40f69cdde23c978193100e7d0cbb",
+    "bytes": 18827119
+  },
+  "sourceFiles": [
+    {
+      "path": "代码/前端/Android/.gitignore",
+      "sha256": "470a7652df9de0b8bf47661349d3e11cbffed8ce35fcf70866b555e84a1f75c4"
+    },
+    {
+      "path": "代码/前端/Android/app/build.gradle.kts",
+      "sha256": "42f72292c838e62bf31b1d7de08e1ee6a22aeac36c63bccdbda4bde7c5c37a23"
+    },
+    {
+      "path": "代码/前端/Android/app/schemas/com.jobs.im.ChatDatabase/1.json",
+      "sha256": "8a44645acf69e5526c57f39d3e4d0f592aa0d9ce81a0f90a1a585df4383c9acb"
+    },
+    {
+      "path": "代码/前端/Android/app/schemas/com.jobs.im.ChatDatabase/2.json",
+      "sha256": "ef5fbe6c5ce5b063007534c39e2ea0d8e4ad18da4cabafc87526abb8bf5306e8"
+    },
+    {
+      "path": "代码/前端/Android/app/schemas/com.jobs.im.ChatDatabase/3.json",
+      "sha256": "a683cfe7fbfb0e6ba84c0d406e17d147b1d9d369273eabeba9911de895b027f7"
+    },
+    {
+      "path": "代码/前端/Android/app/schemas/com.jobs.im.ChatDatabase/4.json",
+      "sha256": "399545f0aa5f17fe62508e5bc0ad49a707fe199901bec4b6f5e78a170c533d6b"
+    },
+    {
+      "path": "代码/前端/Android/app/schemas/com.jobs.im.ChatDatabase/5.json",
+      "sha256": "e50e0c8fedc2b18d153f4999b59ac729590ee8f7efa3af218a7b6017d6c9c999"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/AndroidManifest.xml",
+      "sha256": "346f76e3b13d1f499c60b51234c96324176b878003c79d7a04c71232d2c51763"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Assets.kt",
+      "sha256": "9900fa046e40e2e4b85769a6e55bb0d4aa366b75ceb314feea75872cde097e5d"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+      "sha256": "2cf147bbbc611df41ade7c13b3ae92742fff12f124c43ba50519e43c5943e3af"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt",
+      "sha256": "91b85c429eac96fa239b29a30bece9100f5b76e454a6c04bd8de86a38073a055"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ExtraStrings.kt",
+      "sha256": "8ae5c3bfe802a3f54f299d945ba4df56306db22d2e3d7dc7f7789cb8a5844558"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/LocalAlerts.kt",
+      "sha256": "8d374b5462fddc090f4759ad3bf70591bb94466e9ffe1abfbd2668989a7e643a"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt",
+      "sha256": "43e2afeab8ae5c26dc451db7518df11ec679a4ec499ab0237fc22fe639ee366c"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ManagementScreens.kt",
+      "sha256": "2e3448bf120602ce1458869bc80c5f7f12e0d456c7d0ad18e1f5bc4eef4a87d4"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ProfileAvatar.kt",
+      "sha256": "993d097d594ba1c1256b81067f00e481814809fda6b663d740d5847ba729f030"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt",
+      "sha256": "8ee7a77805c7b2825ff0d58769885e3ede17932c659248f5a9aec63f162377e3"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Strings.kt",
+      "sha256": "0c178a3002656a5b207bf54aa4b8ad8f9f527aec4bfe21eaf3cedd1699924c56"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Transport.kt",
+      "sha256": "23b82af4e2c88f963c164efe4324ee7472f7067729b3db3bd90c08ed13257942"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/res/drawable/jobsim_logo.xml",
+      "sha256": "73fc41665b5c3612e61c9864e0be5e9eb5bc3e79bb16f6362f34ec159361c3a3"
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/res/xml/file_paths.xml",
+      "sha256": "42d9e0335da31c8e3eae67d463b1ade6ce2065df876264a153234cf5687633ee"
+    },
+    {
+      "path": "代码/前端/Android/build.gradle.kts",
+      "sha256": "3e9a92f7cc44f4c440fdd4634125f9f4d2864bee5983604f76503dbd4831efb6"
+    },
+    {
+      "path": "代码/前端/Android/gradle.properties",
+      "sha256": "e43a00491832254a35cf5a979ef6de17f78c4e159d446be39319d2e3d3e46325"
+    },
+    {
+      "path": "代码/前端/Android/gradle/wrapper/gradle-wrapper.jar",
+      "sha256": "497c8c2a7e5031f6aa847f88104aa80a93532ec32ee17bdb8d1d2f67a194a9c7"
+    },
+    {
+      "path": "代码/前端/Android/gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "c67b97cdfe41822dbc8dc4614460f4ae0d2eef937d873f4b9011e892b1875c0d"
+    },
+    {
+      "path": "代码/前端/Android/gradlew",
+      "sha256": "ab5c0cad16305af2e619c159c1f58dd68d07fab9c11e36701e109c0277407f7a"
+    },
+    {
+      "path": "代码/前端/Android/gradlew.bat",
+      "sha256": "475c4f08cd57cf2faa819e7f36d72aa93f0ad646ea23a8f7fa3ef54dee1cbc52"
+    },
+    {
+      "path": "代码/前端/Android/settings.gradle.kts",
+      "sha256": "85cac4dd99f37f4ad3ca4685f02bd109128486cb4b4f5d27c22603121676101c"
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/AdmissionFenceTest.kt",
+      "sha256": "fb49c03309a39e87c7ff04eb0ce320d3f5ffac64967421d8a0fbc1ad9a31e855"
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ApiFixtures.kt",
+      "sha256": "9499fdcd1b07063220cb8a7236726c57cd36a5d48ab22dbf042ec561114574e9"
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/DatabaseIsolationTest.kt",
+      "sha256": "ef4e8751b9db568fad1bf83a38987092348339d354ad6f2a1ce2a3decd1a7b8f"
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/LiveApiTest.kt",
+      "sha256": "128195c031aa48b015ea7d2d66ad2b2281e403701b5e87571b5bc1ce9c9d4f73"
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ModelClosureTest.kt",
+      "sha256": "86c50fa16c0b75b4f114e5f71ca645049c21a01bc9de07c04eadde8411473590"
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeUiTest.kt",
+      "sha256": "1943de47cf65fcbbd39e63a50f0e6bb5534fb5633343867a1a200d02ae2a2e1b"
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NotificationPrivacyTest.kt",
+      "sha256": "691b801afae097d3b2bdb4a7f63a0af94d27ea10e0f25dc9567215411795a762"
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/StorageLifecycleTest.kt",
+      "sha256": "93f12d8bf9cc8cceaca7f5d33c3245bcf8d1ecf0c0df215710ef317440802242"
+    },
+    {
+      "path": "测试/前端/Android/Unit/IsolationTest.kt",
+      "sha256": "4e480f70c218b6cd833125a6813d864b5be29de1edeb0d26f9e6d9c039ad3edb"
+    }
+  ],
+  "limitations": [
+    "No real hardware",
+    "No full I or 243 acceptance",
+    "ViewModel recreation and database reopen; not OS process kill",
+    "Missing old-service capability simulated in test transport; business operations use real HTTPS server"
+  ]
+}

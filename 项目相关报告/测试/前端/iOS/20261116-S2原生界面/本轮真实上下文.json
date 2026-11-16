@@ -1,0 +1,9 @@
+{
+  "runID": "14651d82-e35a-4a0b-bb33-6c593c2dee87",
+  "simulator": "870CE7EA-610E-4F2F-A484-614BDA16576B",
+  "deploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+  "epoch": "2",
+  "startedAt": "2026-11-16T09:10:52.306876+00:00",
+  "plannedAccounts": 6,
+  "scope": "2 native real HTTP methods + 1 secure UI preparation + 1 XCUITest + 1 explicit family closure verification"
+}

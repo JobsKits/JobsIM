@@ -1,0 +1,94 @@
+{
+  "results": [
+    {
+      "label": "完整10项",
+      "xcresultRepositoryPath": "代码/前端/iOS/build/DerivedData/Logs/Test/Test-JobsIM-2026.11.15_00-02-41-+0800.xcresult",
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "B2A099DB-15B4-4F5C-9051-C777D4FD2848",
+              "deviceName": "JobsIM Native",
+              "modelName": "iPhone 17 Pro",
+              "osBuildNumber": "24B8117",
+              "osVersion": "27.2",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 10,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1794672256.076,
+        "passedTests": 10,
+        "result": "Passed",
+        "runtimeWarnings": [
+          {
+            "issueType": "Runtime Warning",
+            "message": "This method can lead to UI unresponsiveness if called on the main thread. Consider using the asynchronous activate/deactivate API instead for calls from the main thread."
+          }
+        ],
+        "skippedTests": 0,
+        "startTime": 1794672161.725,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - JobsIM",
+        "topInsights": [],
+        "totalTestCount": 10
+      },
+      "xcresultInfoPlistSHA256": "e7ec136b5daf8253a7d0fd72cf9d91e5caf03c5e9ad349c3ae9756afd0d2fcd0"
+    },
+    {
+      "label": "唯一消息实际可见及重启复核",
+      "xcresultRepositoryPath": "代码/前端/iOS/build/DerivedData/Logs/Test/Test-JobsIM-2026.11.15_00-09-10-+0800.xcresult",
+      "summary": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "B2A099DB-15B4-4F5C-9051-C777D4FD2848",
+              "deviceName": "JobsIM Native",
+              "modelName": "iPhone 17 Pro",
+              "osBuildNumber": "24B8117",
+              "osVersion": "27.2",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 1,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1794672606.798,
+        "passedTests": 1,
+        "result": "Passed",
+        "runtimeWarnings": [],
+        "skippedTests": 0,
+        "startTime": 1794672550.423,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - JobsIM",
+        "topInsights": [],
+        "totalTestCount": 1
+      },
+      "xcresultInfoPlistSHA256": "85a2f02ed1a7360d51347f4062a1f38143912473498b99a7225f6a6671ebe1e5"
+    }
+  ],
+  "scope": "原生第一阶段局部实现，不代表243项或全I验收。"
+}

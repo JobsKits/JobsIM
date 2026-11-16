@@ -1,0 +1,99 @@
+{
+  "startedAt": "2026-11-16T03:57:54.702362+00:00",
+  "status": "passed",
+  "instrumentationExecuted": false,
+  "apiUsed": false,
+  "exitCode": 0,
+  "stopReason": "completed",
+  "inputSHA256": {
+    "代码/前端/Android/app/build.gradle.kts": "42f72292c838e62bf31b1d7de08e1ee6a22aeac36c63bccdbda4bde7c5c37a23",
+    "代码/前端/Android/app/src/main/AndroidManifest.xml": "346f76e3b13d1f499c60b51234c96324176b878003c79d7a04c71232d2c51763",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/AnnouncementModel.kt": "63be036049525c321954524c4a5697a6c8ab21f71ac2b9845a07e22cf28b0db7",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Assets.kt": "9900fa046e40e2e4b85769a6e55bb0d4aa366b75ceb314feea75872cde097e5d",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt": "cbd57784fa818478ca81f5e9989ddfb26ef8559673c7622abce86c36eb4f52dd",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/CollaborationScreens.kt": "07ee7b28f325e33e12aec3ae4f812a2bd724488c089cc786200758bc11fcb7c3",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/DiscoveryScreens.kt": "781aaca24f02eef9f55ac4feecaaf9b8cedb75090fe4ba531fc939b2e415b630",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt": "04580cca737a6f9d4ca1f5d78f90fe6fa8a3eb415a41f76d2590b66faecff2a4",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ExtraStrings.kt": "8ae5c3bfe802a3f54f299d945ba4df56306db22d2e3d7dc7f7789cb8a5844558",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/FeatureStrings.kt": "a341c5ec4a99105fee4490b58398ae3525c8e672d2ddeac5f613044d127263fa",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ForwardScreens.kt": "0fb2d5cea01d33e6c3c2dbb352cbc5a3ab4e1f82c7bc7e14564e0e430bcd5ba7",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Forwarding.kt": "4d1a7ca373ddd12681706c9845439bd05d49d83312cffaed248b4d7b78732fae",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/LocalAlerts.kt": "8d374b5462fddc090f4759ad3bf70591bb94466e9ffe1abfbd2668989a7e643a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt": "d95d61380f11a54f4dde32d73aab528fac1025e38ef1aa00d47e40b868c27d0f",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ManagementScreens.kt": "4f53e42c82854e5e59fe0f09f7da99473047e3be515f037d8ac1fdba2e7efa45",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MessageDiscovery.kt": "23ab6b08d5500d9d74d9a1b532c908039dd445235e2da171e421edc52129c42a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/NativeSession.kt": "4c81e9583cf6ca68cbec82f8cf90a0f6d090995815044baaa1dc740345e3829b",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ProfileAvatar.kt": "993d097d594ba1c1256b81067f00e481814809fda6b663d740d5847ba729f030",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SessionCoordinator.kt": "edbbca48b9352933b36501a8cebee8a5286c56141efeac5f8b7120afd7ec5ee5",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SessionStrings.kt": "8287793aa4232e514a4f7d5bef75c4691f3270929d750f6c23850d462fc37ab8",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt": "d020575dc4008f255eaed04bdfadd4ad5f9d8203128ccc786ca08a5871790660",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Strings.kt": "d36a6535c737c02d9de5b0058a6dc225d2f470e3b43c59004723109a457d9123",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt": "d2c54f5b9e439cd429165e8ae086c2b32744cd329ee077707332822ab6b92635",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncEngine.kt": "17d4406e4fc9b1f7241d5f85d860f37ebfb4313dd229449d73638a9c20e3e79e",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncGuardApi.kt": "a91aa0083dd1840180390b32eef0ec3eab8f4755da6cc2d5940716141bbf6e11",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt": "7c11b08543cb0eb6272b5a0c90ae73b87d825a523878794b96071fc8a0760523",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncStore.kt": "7f58aaf637e59ae7fa30c18e1e2cc68af3dea3a53b631c0db3ee9559285efcf7",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Transport.kt": "1086881c3eb99b96a42fece28675e15e5ad973cad07887bc3d86debfed8586c1",
+    "代码/前端/Android/app/src/main/res/drawable/jobsim_logo.xml": "73fc41665b5c3612e61c9864e0be5e9eb5bc3e79bb16f6362f34ec159361c3a3",
+    "代码/前端/Android/app/src/main/res/xml/file_paths.xml": "42d9e0335da31c8e3eae67d463b1ade6ce2065df876264a153234cf5687633ee",
+    "代码/前端/Android/build.gradle.kts": "3e9a92f7cc44f4c440fdd4634125f9f4d2864bee5983604f76503dbd4831efb6",
+    "代码/前端/Android/gradle/wrapper/gradle-wrapper.jar": "497c8c2a7e5031f6aa847f88104aa80a93532ec32ee17bdb8d1d2f67a194a9c7",
+    "代码/前端/Android/gradle/wrapper/gradle-wrapper.properties": "c67b97cdfe41822dbc8dc4614460f4ae0d2eef937d873f4b9011e892b1875c0d",
+    "代码/前端/Android/gradle.properties": "e43a00491832254a35cf5a979ef6de17f78c4e159d446be39319d2e3d3e46325",
+    "代码/前端/Android/gradlew": "ab5c0cad16305af2e619c159c1f58dd68d07fab9c11e36701e109c0277407f7a",
+    "代码/前端/Android/settings.gradle.kts": "85cac4dd99f37f4ad3ca4685f02bd109128486cb4b4f5d27c22603121676101c",
+    "测试/前端/Android/Instrumentation/AdmissionFenceTest.kt": "fb49c03309a39e87c7ff04eb0ce320d3f5ffac64967421d8a0fbc1ad9a31e855",
+    "测试/前端/Android/Instrumentation/ApiFixtures.kt": "9499fdcd1b07063220cb8a7236726c57cd36a5d48ab22dbf042ec561114574e9",
+    "测试/前端/Android/Instrumentation/AuthoritativeSyncTest.kt": "ed08e097caf1fa55b61a11fa189e0f6e53e609fd1a1fbaea3d69d2647061789d",
+    "测试/前端/Android/Instrumentation/CollaborationLifecycleTest.kt": "7b2bd18bca144e13cb761a7ac98f94ec4e77d3be9fcad014bd84ad17f0de97a7",
+    "测试/前端/Android/Instrumentation/DatabaseIsolationTest.kt": "ef4e8751b9db568fad1bf83a38987092348339d354ad6f2a1ce2a3decd1a7b8f",
+    "测试/前端/Android/Instrumentation/DiscoveryCollaborationUiTest.kt": "57ba05a8fcedcb664403f8785c9d62cf1c86c9c2585298e24c39c3bc0b2acef2",
+    "测试/前端/Android/Instrumentation/DiscoveryLifecycleTest.kt": "674d46596a52e4098577f519b976f09ccde13ebdfbbb9ffd9b57cc5ccf177016",
+    "测试/前端/Android/Instrumentation/ForwardLifecycleTest.kt": "6ee435a59b6139089861efaa9af79219ea86b43d9cd19ae81755e3a0d80309df",
+    "测试/前端/Android/Instrumentation/ForwardUiTest.kt": "478fa7cca2a2061dc63b5cabe5eeef23db283fcc94c940897c97f6323d6d83e9",
+    "测试/前端/Android/Instrumentation/LiveApiTest.kt": "128195c031aa48b015ea7d2d66ad2b2281e403701b5e87571b5bc1ce9c9d4f73",
+    "测试/前端/Android/Instrumentation/ModelClosureTest.kt": "86c50fa16c0b75b4f114e5f71ca645049c21a01bc9de07c04eadde8411473590",
+    "测试/前端/Android/Instrumentation/NativeForwardActions.kt": "944b0202b6e811c2b138766e4455d45db87a1c3baf60335a89524e4521973f2d",
+    "测试/前端/Android/Instrumentation/NativeSessionHttpsTest.kt": "025342d0648d69c2a385fcb9b471fe085ddb46ec3766d054e65704aae22f11da",
+    "测试/前端/Android/Instrumentation/NativeSessionLifecycleTest.kt": "cf86112fd91afc47e53067291a1bcc51f4defa1d35a663fb31f073c0f69d4ba3",
+    "测试/前端/Android/Instrumentation/NativeUiTest.kt": "1943de47cf65fcbbd39e63a50f0e6bb5534fb5633343867a1a200d02ae2a2e1b",
+    "测试/前端/Android/Instrumentation/NotificationPrivacyTest.kt": "691b801afae097d3b2bdb4a7f63a0af94d27ea10e0f25dc9567215411795a762",
+    "测试/前端/Android/Instrumentation/RoleAdmissionLifecycleTest.kt": "03ac748ed60e239da418c445f01fbf459661c193819b50e97d9b8343baa8f31a",
+    "测试/前端/Android/Instrumentation/StorageLifecycleTest.kt": "7a7e2d75bb468a4ce02696b473675bfb89f3d88cd5835886365e97f7c4c7e9c8",
+    "测试/前端/Android/Unit/IsolationTest.kt": "4e480f70c218b6cd833125a6813d864b5be29de1edeb0d26f9e6d9c039ad3edb",
+    "测试/前端/Android/Unit/SyncWireTest.kt": "1c94f261f15bcb5f56a8dc569fc762daeca436bf7d17da616e49b71a726ce0de",
+    "测试/前端/Android/sync_build.py/sync_build.py": "6e366fb8fe885fdc447f95e54cd61f651c6129bd3058f73d9ca7fc05a51ac3a1"
+  },
+  "inputsUnchanged": true,
+  "authBaselineSHA256": {
+    "代码/前端/Android/Dist/JobsIM-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+    "代码/前端/Android/Dist/Baselines/20261115-native-auth-refresh-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3"
+  },
+  "jvmSuites": [
+    {
+      "name": "com.jobs.im.IsolationTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.SyncWireTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "artifacts": {
+    "app-debug.apk": {
+      "sha256": "978b9f9c54e4fa22b8adbc92211610f10cb8238bf297c83bfa4517de922f7d08",
+      "bytes": 18827119
+    },
+    "app-debug-androidTest.apk": {
+      "sha256": "2054b38d28de451b2f8db6bbca9881a9633b68c4cd22488fd3c1a5d14d391060",
+      "bytes": 947565
+    }
+  },
+  "finishedAt": "2026-11-16T03:58:32.943539+00:00"
+}

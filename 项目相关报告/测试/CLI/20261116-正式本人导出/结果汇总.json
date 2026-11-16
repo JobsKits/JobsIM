@@ -1,0 +1,19 @@
+{
+  "passedGroups": 88,
+  "failedGroups": 0,
+  "skippedGroups": 2,
+  "binary": {
+    "binary": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-DataExport/20261116-1794831562465/Products/jobsim-personal-data-export",
+    "sha256": "13cd243875f318fc8f53811866f24e912a7466291b2fb0a5caf259f15e8fe714",
+    "platform": "darwin/arm64 CGO_ENABLED=0",
+    "executed": false
+  },
+  "binarySHA256": "13cd243875f318fc8f53811866f24e912a7466291b2fb0a5caf259f15e8fe714",
+  "typedSourceCount": 35,
+  "allTypedInputsMatchCurrent": true,
+  "realAPI": false,
+  "PG": false,
+  "operatingSystemVaultPositive": false,
+  "temporaryTicketPersisted": false,
+  "scope": "real SQLite/file fsync + injected HTTP; no live export service"
+}

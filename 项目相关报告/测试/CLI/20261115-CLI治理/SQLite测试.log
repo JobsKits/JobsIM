@@ -1,0 +1,156 @@
+=== RUN   TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen
+=== RUN   TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/request
+{
+  "operationId": "3db06a7a80742103fef601f0b42bf178",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "id": "request-fact",
+    "state": "pending"
+  },
+  "state": "completed"
+}
+{
+  "operationId": "3db06a7a80742103fef601f0b42bf178",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "id": "request-fact",
+    "state": "pending"
+  },
+  "state": "completed"
+}
+=== RUN   TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/reopen
+{
+  "operationId": "871327e468c3d6e4a24ece0142107bc0",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "current": false,
+    "generation": "1",
+    "status": "opened"
+  },
+  "state": "completed"
+}
+{
+  "operationId": "871327e468c3d6e4a24ece0142107bc0",
+  "relationship": {
+    "blockedByMe": false,
+    "friend": false,
+    "generation": "9007199254740993123",
+    "inboundGate": "denied",
+    "inboundReopened": false,
+    "peerId": "peer"
+  },
+  "relationshipStatus": "current",
+  "result": {
+    "current": false,
+    "generation": "1",
+    "status": "opened"
+  },
+  "state": "completed"
+}
+--- PASS: TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen (0.05s)
+    --- PASS: TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/request (0.02s)
+    --- PASS: TestGovernanceOriginalOperationsSurviveUnknownResultAndReopen/reopen (0.03s)
+=== RUN   TestRelationshipFreezeTargetsOnlyCorrespondingDirectAndKeepsPayloadBytes
+--- PASS: TestRelationshipFreezeTargetsOnlyCorrespondingDirectAndKeepsPayloadBytes (0.01s)
+=== RUN   TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory
+=== RUN   TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/leave
+{
+  "message": {
+    "clientMsgId": "original-group",
+    "conversationId": "group",
+    "createdAt": "2026-11-15T03:18:40.276534Z",
+    "id": "original-success",
+    "senderId": "user",
+    "sequence": "9007199254740993123",
+    "text": "authoritative",
+    "version": "1"
+  },
+  "source": "read_only_reconciliation"
+}
+=== RUN   TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/remove-member
+{
+  "message": {
+    "clientMsgId": "original-group",
+    "conversationId": "group",
+    "createdAt": "2026-11-15T03:18:40.294224Z",
+    "id": "original-success",
+    "senderId": "user",
+    "sequence": "9007199254740993123",
+    "text": "authoritative",
+    "version": "1"
+  },
+  "source": "read_only_reconciliation"
+}
+--- PASS: TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory (0.03s)
+    --- PASS: TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/leave (0.01s)
+    --- PASS: TestLeavePurgesAtomicallyBeforeUnknownDeleteAndReconcileCannotRefillHistory/remove-member (0.02s)
+=== RUN   TestLeaveFailureRollsBackFreezeHistoryAndCursorTogether
+--- PASS: TestLeaveFailureRollsBackFreezeHistoryAndCursorTogether (0.01s)
+=== RUN   TestGroupCommandsKeepExactContractAndDoNotReplayUnknownPatch
+{
+  "items": []
+}
+{
+  "status": "added"
+}
+{
+  "status": "removed"
+}
+--- PASS: TestGroupCommandsKeepExactContractAndDoNotReplayUnknownPatch (0.01s)
+=== RUN   TestSchemaOneMigrationPreservesPendingAndAddsIndependentFreezeReason
+--- PASS: TestSchemaOneMigrationPreservesPendingAndAddsIndependentFreezeReason (0.01s)
+=== RUN   TestUnknownLocalRevocationCannotCreateAnOldIntentDuringReconciliation
+--- PASS: TestUnknownLocalRevocationCannotCreateAnOldIntentDuringReconciliation (0.01s)
+=== RUN   TestUnavailableContentNeverExposesOlderBodyInPresentation
+--- PASS: TestUnavailableContentNeverExposesOlderBodyInPresentation (0.00s)
+=== RUN   TestOutboxPersistsBeforeSendAndKeepsUnknownIdentity
+Pending original ID: stable-original-id
+{
+  "clientMsgId": "stable-original-id",
+  "conversationId": "conversation",
+  "createdAt": "2026-11-15T03:18:40.355224Z",
+  "id": "server-message",
+  "senderId": "user",
+  "sequence": "9007199254740993123",
+  "text": "authoritative",
+  "version": "1"
+}
+--- PASS: TestOutboxPersistsBeforeSendAndKeepsUnknownIdentity (0.02s)
+=== RUN   TestOutboxCrashReopenAndRestoreFreeze
+Pending original ID: original
+--- PASS: TestOutboxCrashReopenAndRestoreFreeze (0.02s)
+=== RUN   TestCursorAndMessagesCommitTogetherWithoutVersionRollback
+--- PASS: TestCursorAndMessagesCommitTogetherWithoutVersionRollback (0.02s)
+=== RUN   TestLegacyImportIsExplicitAtomicAndRetainsOriginal
+--- PASS: TestLegacyImportIsExplicitAtomicAndRetainsOriginal (0.01s)
+=== RUN   TestSendingAdmissionSurvivesRestartAndNeverUpgradesOriginalIntent
+Pending original ID: original-id
+--- PASS: TestSendingAdmissionSurvivesRestartAndNeverUpgradesOriginalIntent (0.01s)
+=== RUN   TestAdmissionLookupFailureKeepsDraftWithoutInventingQualification
+--- PASS: TestAdmissionLookupFailureKeepsDraftWithoutInventingQualification (0.01s)
+PASS
+ok  	jobsim/cli/cmd/jobsim	0.500s

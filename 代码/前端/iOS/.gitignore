@@ -1,0 +1,6 @@
+Pods/
+build/
+Vendor/*/
+Vendor/*.tar.gz
+*.xcuserstate
+xcuserdata/

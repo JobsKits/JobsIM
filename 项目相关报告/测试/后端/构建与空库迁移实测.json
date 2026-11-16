@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "verifiedOn": "2026-11-15",
+  "goToolchain": "1.27.4",
+  "build": true,
+  "vet": true,
+  "freshIndependentPostgresDatabasesMigrateAllEightOwners": true,
+  "secondMigrationRunIdempotent": true,
+  "externalSecurityAndAvatarAndExportFenceTests": true,
+  "linuxAmd64BinariesCompile": true,
+  "windowsAmd64BinariesCompile": true,
+  "nativeRuntimeOtherOperatingSystems": "unverified",
+  "scope": "build and isolated schema/protocol test evidence; no full I acceptance"
+}

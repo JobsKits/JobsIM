@@ -1,0 +1,116 @@
+{
+  "status": "upgrade-not-performed-protection-refused",
+  "reason": "Existing backup rejected Safety governance owner deployment/epoch baseline mismatch",
+  "fixedBinarySHA256Verified": "bb1e9c527dedf0aee3a5f66b548b0a361801fe183f2c980d2d42e51e88aac79a",
+  "servicesStopped": false,
+  "binariesReplaced": false,
+  "privateEnvPrinted": false,
+  "otherRealmsTouched": false,
+  "realms": [
+    {
+      "realm": "primary",
+      "serverURL": "https://127.0.0.1:8443",
+      "pid": 61473,
+      "gatewayHealth": {
+        "service": "gateway",
+        "status": "ok"
+      },
+      "internalRolesHealthy": [
+        "identity",
+        "directory",
+        "conversation",
+        "message",
+        "media",
+        "control",
+        "journal",
+        "governance"
+      ],
+      "deploymentId": "db7781a8-91c7-42a3-84c2-3d5771e53570",
+      "restoreEpoch": "1",
+      "forwarding": false,
+      "textForward": false,
+      "actualBinarySHA256": "6830750b31368ba206a8e933854400cb5ac53d1a99bb7308de972b52b7055c1d",
+      "privateEnvironmentByteIdentical": true,
+      "ownProbeSessionCleanup": "logged_out",
+      "upgraded": false
+    },
+    {
+      "realm": "safety",
+      "serverURL": "https://127.0.0.1:18443",
+      "pid": 61488,
+      "gatewayHealth": {
+        "service": "gateway",
+        "status": "ok"
+      },
+      "internalRolesHealthy": [
+        "identity",
+        "directory",
+        "conversation",
+        "message",
+        "media",
+        "control",
+        "journal",
+        "governance"
+      ],
+      "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+      "restoreEpoch": "2",
+      "forwarding": false,
+      "textForward": false,
+      "actualBinarySHA256": "6830750b31368ba206a8e933854400cb5ac53d1a99bb7308de972b52b7055c1d",
+      "privateEnvironmentByteIdentical": true,
+      "ownProbeSessionCleanup": "logged_out",
+      "upgraded": false,
+      "ownerBaselines": [
+        {
+          "schema": "auth",
+          "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+          "restoreEpoch": "2"
+        },
+        {
+          "schema": "directory",
+          "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+          "restoreEpoch": "2"
+        },
+        {
+          "schema": "conversation",
+          "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+          "restoreEpoch": "2"
+        },
+        {
+          "schema": "message",
+          "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+          "restoreEpoch": "2"
+        },
+        {
+          "schema": "media",
+          "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+          "restoreEpoch": "2"
+        },
+        {
+          "schema": "control",
+          "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+          "restoreEpoch": "2"
+        },
+        {
+          "schema": "governance",
+          "deploymentId": "a7efe5e8-74cd-40d5-a049-68bd38beecee",
+          "restoreEpoch": "1"
+        }
+      ]
+    }
+  ],
+  "privateRollbackAndBackupRoot": "/Users/jobs/Library/Caches/JobsIM/Integration/run-ld8td0a0/Upgrades/Forward-20261115-142817-90d22a44",
+  "backupScope": {
+    "primary": "existing authenticated encrypted business database/media/instance/TLS backup passed; independent journal custom dump and pg_restore TOC passed",
+    "safety": "existing backup rejected governance baseline; no bypass",
+    "journal": "separate private 0600 PostgreSQL custom dump; independent live journal never rolled back",
+    "recoveryKeys": "separate 0600 key directory outside backup directory; never printed"
+  },
+  "limitations": [
+    "No upgrade or new forwarding enabled on 8443/18443",
+    "No full restore or rollback execution was performed",
+    "No cross-host disaster recovery or production approval claimed",
+    "18443 owner mismatch requires separate authorized diagnosis/remediation before retry"
+  ],
+  "testedAtUTC": "2026-11-15T06:32:45.261388+00:00"
+}

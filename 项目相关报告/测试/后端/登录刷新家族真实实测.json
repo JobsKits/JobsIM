@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "httpAssertions": 86,
+  "semanticAssertions": 43,
+  "strictHTTPS": true,
+  "realOldSchemaMigration": true,
+  "singleConsumeConcurrentReuseFamilyOnly": true,
+  "realLostSuccessResponseThenVerifiedReauth": true,
+  "absoluteIdleBoundaries": "explicit per-test SQL deadline fixtures, not ninety days of wall-clock waiting",
+  "webBFFSecretsNeverReachJavaScript": true,
+  "scope": "Isolated same-host PostgreSQL functional lifecycle; no full I or strong-protection acceptance",
+  "testedAtUTC": "2026-11-15T07:15:00.575293+00:00",
+  "binarySHA256": "1e469962a46ed510a5cc61db097c8f755d44c9e47383e0658ca2eea462b6a786",
+  "scriptSHA256": "9da59b083d2587581d447b0e3eb93619b2a11e5519ebbf04b2547fd897a48279"
+}

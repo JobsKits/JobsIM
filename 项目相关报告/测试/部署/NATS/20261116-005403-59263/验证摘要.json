@@ -1,0 +1,17 @@
+{
+  "exit": 0,
+  "sourceUnchanged": true,
+  "newSelfOwnedBroker": true,
+  "storeType": "file",
+  "restartMessageReadback": true,
+  "missingAndWrongTokenRejected": true,
+  "originalTokenRetained": true,
+  "secretAbsentFromBrokerArgvAndLog": true,
+  "secretAbsentFromReports": true,
+  "configDriftRejected": true,
+  "foreignPIDPreserved": true,
+  "brokerStopped": true,
+  "LinuxNative": false,
+  "WindowsNative": false,
+  "fullEightDBAppBackupOrRestoreRetested": false
+}

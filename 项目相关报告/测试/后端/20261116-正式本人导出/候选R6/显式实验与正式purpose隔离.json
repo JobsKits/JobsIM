@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "failure": null,
+  "group": "purpose",
+  "httpChecks": 26,
+  "semanticAssertions": 6,
+  "binarySHA256": "aea1ca1985ad0b2b7d3e5b1e7d843895cb04990ab08996951dd0380cdfaa0116",
+  "scriptSHA256": "775ebd7aa856fe9fef43fd570b69c9ef55b5528f1d607287b610d9317128d5b9",
+  "checkedAt": "2026-11-16T09:22:30.830060+00:00",
+  "notAPreUpgradeMigrationTest": true,
+  "assertions": [
+    {
+      "assertion": "enabled experimental creation cannot reuse a formal request identity or expose its key",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "explicit experimental key protocol stays separate and still builds its ordinary authorized chat",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "formal endpoint still delivers its independently sealed valid ZIP while experiments are enabled",
+      "passed": true
+    }
+  ]
+}

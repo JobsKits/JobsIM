@@ -1,0 +1,67 @@
+JOBS_SDK_PROBE getHmosSdkComponents {"api":"6.1.1","version":24,"fullVersion":"24","items":["toolchains","ets","js","native","previewer"],"dir":"/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk"}
+JOBS_SDK_PROBE getHmsSdkComponents {"api":"6.1.1","version":24,"fullVersion":"24","items":["toolchains","ets","native"],"dir":"/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk"}
+> hvigor [32mFinished :entry:clean... after 3 ms [39m
+> hvigor [33mWARN: The version number of the 'entry' module does not comply with the SemVer specification.
+               This will affect the installation and publication by ohpm.
+               Make sure the value of version in the oh-package.json5 file of the module complies with the SemVer specification.[39m
+> hvigor [32mFinished :entry:default@PreBuild... after 221 ms [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GenerateMetadata... after 2 ms [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:default@MergeProfile... after 3 ms [39m
+> hvigor [32mFinished :entry:default@CreateBuildProfile... after 2 ms [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgContextInfo... after 8 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 2 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:default@MakePackInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mFinished :entry:default@ProcessProfile... after 719 ms [39m
+> hvigor [32mFinished :entry:default@ProcessRouterMap... after 4 ms [39m
+> hvigor [32mFinished :entry:default@ProcessShareConfig... after 2 ms [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 1 ms [39m
+> hvigor [32mFinished :entry:default@ProcessResource... after 4 ms [39m
+> hvigor [32mFinished :entry:default@GenerateLoaderJson... after 5 ms [39m
+> hvigor [32mFinished :entry:default@ProcessLibs... after 10 ms [39m
+> hvigor [91mERROR: Failed :entry:default@CompileResource... [39m
+> hvigor [91mERROR: Tools execution failed.
+Error Code: 11201001
+Error: Dependency Error
+Error Message: Failed to load the library '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/libimage_transcoder_shared.dylib', dlopen(/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/libimage_transcoder_shared.dylib, 0x0001): Library not loaded: @rpath/libsec_shared.dylib
+  Referenced from: <DA074230-9F3A-32B4-9CA8-5BE2EB6F47B7> /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/libimage_transcoder_shared.dylib
+  Reason: tried: '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/../../../openharmony/previewer/common/bin/libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/./libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/../../../libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/../../../openharmony/previewer/common/bin/libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/./libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/../../../libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/openharmony/toolchains/./libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/openharmony/toolchains/../../../libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/openharmony/toolchains/./libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/openharmony/toolchains/../../../libsec_shared.dylib' (no such file), '/usr/lib/libsec_shared.dylib' (no such file, not in dyld cache)
+* Try the following:
+  > Make sure the library path is correct and has access permissions.
+  > Install the missing third-party dependency libraries displayed in the error information.
+  > Adding the path 'openharmony\previewer\common\bin' in your SDK path to environment variables.
+  > More info: https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs/faqs-compiling-and-building-181
+	 Detail: Please check the message from tools.
+
+[31m* Try:
+> Run with --debug option to get more log output.
+[39m
+> hvigor [91mERROR: Error: Tools execution failed.
+Error Code: 11201001
+Error: Dependency Error
+Error Message: Failed to load the library '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/libimage_transcoder_shared.dylib', dlopen(/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/libimage_transcoder_shared.dylib, 0x0001): Library not loaded: @rpath/libsec_shared.dylib
+  Referenced from: <DA074230-9F3A-32B4-9CA8-5BE2EB6F47B7> /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/libimage_transcoder_shared.dylib
+  Reason: tried: '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/../../../openharmony/previewer/common/bin/libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/./libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/../../../libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/../../../openharmony/previewer/common/bin/libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/./libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/hms/toolchains/lib/../../../libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/openharmony/toolchains/./libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/openharmony/toolchains/../../../libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/openharmony/toolchains/./libsec_shared.dylib' (no such file), '/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/openharmony/toolchains/../../../libsec_shared.dylib' (no such file), '/usr/lib/libsec_shared.dylib' (no such file, not in dyld cache)
+* Try the following:
+  > Make sure the library path is correct and has access permissions.
+  > Install the missing third-party dependency libraries displayed in the error information.
+  > Adding the path 'openharmony\previewer\common\bin' in your SDK path to environment variables.
+  > More info: https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs/faqs-compiling-and-building-181
+	 Detail: Please check the message from tools.
+    at OhosLogger.errorMessageExit (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor/src/base/log/hvigor-log.js:1:3497)
+    at OhosLogger._printErrorAndExit (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/utils/log/ohos-logger.js:1:2024)
+    at ProcessUtils.handleException (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/utils/process-utils.js:1:5247)
+    at ProcessUtils.execute (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/utils/process-utils.js:1:3547)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CompileResource.executeCommand (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/tasks/abstract/abstract-compile-resource.js:1:3537)
+    at async CompileResource.invokeRestool (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/tasks/compile-resource.js:1:4235)
+    at async CompileResource.compilationProcess (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/tasks/abstract/abstract-compile-resource.js:1:2832)
+    at async Promise.all (index 0)
+    at async CompileResource.doTaskAction (/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/hvigor/hvigor-ohos-plugin/src/tasks/compile-resource.js:1:3859)[39m
+> hvigor [91mERROR: BUILD FAILED in 3 s 856 ms [39m

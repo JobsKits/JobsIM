@@ -1,0 +1,33 @@
+{
+  "status": "build-passed-tests-not-executed",
+  "inputCount": 123,
+  "allLiveAndArchivedInputsMatch": true,
+  "binarySHA256": {
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Build-20261116-205705-4c8f38/Debug-iphonesimulator/JobsIM.app/JobsIM": "89e027360aae25ea66521e68eb4737bc0e6edc3fdcbda6fd664cbce3cfeef8f1",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Build-20261116-205705-4c8f38/Debug-iphonesimulator/JobsIM.app/PlugIns/JobsIMTests.xctest/JobsIMTests": "94a1cbb88479e42fce297f9d2a55d56742cd213602fee956dde2a865f9a83b93"
+  },
+  "allPhysicalBinariesMatch": true,
+  "completeProductTrees": {
+    "JobsIM.app": {
+      "files": 109,
+      "sameBytes": true,
+      "treeDigest": "f8567fbb97e0d893e552337863f8ca954af2f4eac82c979d3d6ee1ed84a21745"
+    },
+    "JobsIMUITests-Runner.app": {
+      "files": 7,
+      "sameBytes": true,
+      "treeDigest": "34b6ada68240163f24cffecbab236a8ce3e6cdc2743be9256f3dd87235505fa1"
+    }
+  },
+  "oldFrozenBinaryCount": 2,
+  "oldFrozenBinariesUnchanged": true,
+  "compilerDriverInvocations": 45,
+  "allDriverJobsOne": true,
+  "minimumFreeBytes": 5604089856,
+  "simulator": "0EE39534-95F7-4624-A395-D51F65B70E7F",
+  "simulatorState": "Shutdown",
+  "nativeMethodsPlanned": 41,
+  "nativeMethodsExecuted": 0,
+  "apiUsed": false,
+  "testConfigurationSHA256Matches": true
+}

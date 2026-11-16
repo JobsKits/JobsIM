@@ -1,0 +1,49 @@
+{
+  "passedGroups": 55,
+  "failedGroups": 0,
+  "skippedGroups": 2,
+  "actualS2HTTPSChecksPassed": 13,
+  "actualS2HTTPSChecksFailed": 0,
+  "realHTTPSReport": "HTTPS-04/result.json",
+  "retainedPreviousFailedRounds": [
+    "HTTPS-01",
+    "HTTPS-02"
+  ],
+  "retainedPriorPassedRound": "HTTPS-03",
+  "platform": "MacOS arm64",
+  "GoVersion": "1.27.4",
+  "nativeVaultPositive": false,
+  "LinuxWindowsCurrentSourceBuild": false,
+  "qualifiedAck": false,
+  "afterReceipt": false,
+  "binary": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-S2/20261116-self-state/Products/jobsim-s2-current-proof",
+  "binarySHA256": "15a4c053c7d82a60c57adfea5910aa3f32e5810b3b45e0813b6e0985e6dfe1cf",
+  "sourceFileCount": 33,
+  "familyCleanupEvidence": [
+    {
+      "kind": "own-tty",
+      "label": "A",
+      "normalExit": true,
+      "logoutSuccessState": true,
+      "deviceAbsentFromActiveSessions": true
+    },
+    {
+      "kind": "own-tty",
+      "label": "B",
+      "normalExit": true,
+      "logoutSuccessState": true,
+      "deviceAbsentFromActiveSessions": true
+    },
+    {
+      "kind": "owned-control-family",
+      "logoutHTTP200": true,
+      "originalAT401": true
+    },
+    {
+      "kind": "owned-control-family",
+      "logoutHTTP200": true,
+      "originalAT401": true
+    }
+  ],
+  "originalS1BinaryModified": false
+}

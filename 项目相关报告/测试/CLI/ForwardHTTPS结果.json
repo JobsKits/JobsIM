@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "at": "2026-11-15T05:24:58.470Z",
+  "binarySHA256": "ecd708106af3db4e2a1a4243632d9ea87857c70a72bb25fc196313b8830e52c5",
+  "checks": [
+    "exact source version must be explicitly selected",
+    "reference-only text and file forward",
+    "destination draft retained",
+    "temporary source proof excluded from CLI presentation",
+    "authenticated message attachment proxy downloads exact bytes and protects existing files",
+    "persistent cache stores only forward placeholders across process restart",
+    "source edit invalidates projection and own forward can still be recalled"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "observedAt": "2026-11-15T06:11:24.521793+00:00",
+  "instrumentation": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "class": "ForwardLifecycleTest",
+  "testSource": {
+    "path": "测试/前端/Android/Instrumentation/ForwardLifecycleTest.kt",
+    "sha256": "6ee435a59b6139089861efaa9af79219ea86b43d9cd19ae81755e3a0d80309df"
+  },
+  "productInputsUnchanged": 36,
+  "targetApkUnchanged": true,
+  "targetApkSHA256": "624785dc9619898162917aad32c443ab19a992129895f87d25c1d5e3523078e1",
+  "testApkSHA256": "dc0b6769a619e6aadeb8565797209d3e3f489971bb646f1098d738e903972953",
+  "service": {
+    "url": "https://127.0.0.1:28443",
+    "deploymentId": "c2a6a394-a383-4164-bd54-f04f4af59c12",
+    "restoreEpoch": "1"
+  },
+  "scope": [
+    "Real HTTPS valid body transformed by test transport into HTTP200 temporary forwardUnavailable=true with unchanged version",
+    "Old same-version history/ack simulated through actual Room and redraw barrier do not unlock text/URL",
+    "Fresh exact GET restores available body at same version; no permanent local latch"
+  ],
+  "limitations": [
+    "HTTP200 dependency-unavailable body is injected; does not claim a real backend dependency outage",
+    "History/ack reinsertion simulated in real Room, not actual packet reordering",
+    "Only this one lifecycle test rerun; prior 6 JVM/10 instrument report unchanged; no new count addition"
+  ]
+}

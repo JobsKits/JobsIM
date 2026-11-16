@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:56.085633+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:56.235724+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSelfReadEpochZeroRebaseAndQualification"}
+{"Time":"2026-11-16T12:11:56.235786+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfReadEpochZeroRebaseAndQualification","Output":"=== RUN   TestSelfReadEpochZeroRebaseAndQualification\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:56.319758+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfReadEpochZeroRebaseAndQualification","Output":"--- PASS: TestSelfReadEpochZeroRebaseAndQualification (0.08s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:56.319786+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSelfReadEpochZeroRebaseAndQualification","Elapsed":0.08}
+{"Time":"2026-11-16T12:11:56.319807+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:56.320434+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.234s\n"}
+{"Time":"2026-11-16T12:11:56.320451+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.235}

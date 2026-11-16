@@ -1,0 +1,345 @@
+[
+  {
+    "path": "README.md",
+    "oldLocation": "README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/README.md",
+    "beforeSHA256": "39deecef4fea9318bc4ca6e3cdf32fcc5e18cc74047c809298c5a023b813aecc",
+    "afterSHA256": "bf66e20243c26d37d928f83685615eeb41f8b044ce7fb6c683761ad588635f50"
+  },
+  {
+    "path": "测试/CLI/README.md",
+    "oldLocation": "测试/CLI/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/README.md",
+    "beforeSHA256": "8992da3558f4ab65a79a6915ccd438a791a1baf6c4cf3fe81fe78b5455f5b257",
+    "afterSHA256": "b0ab66e961a9df7bb4253bbdd33c5adc5add6f8104d08ec388967111ee1530c2"
+  },
+  {
+    "path": "测试/后端/README.md",
+    "oldLocation": "测试/后端/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/README.md",
+    "beforeSHA256": "d54406317eb64eefe19093400b0d3836de8c7947dbd4332f710733a42f16591c",
+    "afterSHA256": "bf0a9e53b61368c15298d7ab213c62cf9c7d7606661c2e64934fcc000744dae3"
+  },
+  {
+    "path": "测试/后端/接口/forward_fences.py/README.md",
+    "oldLocation": "测试/后端/接口/forward_fences.py/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/forward_fences.py/README.md",
+    "beforeSHA256": "393b03da59c613ad1709cce9a5d47600f137289279ec4f7dd54c9dcd1cc81216",
+    "afterSHA256": "cbadad981475844c5fee5e54e08bdd5d6c7069be672e7c3b29792f355302df52"
+  },
+  {
+    "path": "测试/后端/接口/session_refresh.py/README.md",
+    "oldLocation": "测试/后端/接口/session_refresh.py/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/session_refresh.py/README.md",
+    "beforeSHA256": "bf7438cda112e6402e4c26817090d1ae18f8806a3cce8bdb4be0db23c00869c4",
+    "afterSHA256": "730960ee1001e27598ebf99c39c5e8db36a7b389f3427c87bf76f8ca13bc3e87"
+  },
+  {
+    "path": "测试/后端/接口/session_refresh_restore.py/README.md",
+    "oldLocation": "测试/后端/接口/session_refresh_restore.py/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/session_refresh_restore.py/README.md",
+    "beforeSHA256": "3f37ffe02c6198d1b7f008df5c870d78b702f442eb3e2a702bf38bb5a7e954bf",
+    "afterSHA256": "b822520ed5a485f875e61ba5f3a8063e26e2ef18b2ea4cf509e94fa36cfbd2cf"
+  },
+  {
+    "path": "测试/后端/接口/forward_refs.py/README.md",
+    "oldLocation": "测试/后端/接口/forward_refs.py/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/forward_refs.py/README.md",
+    "beforeSHA256": "130f761e1bb37e916a7ddc174b1fa6478383878dd979124e93f2f7feae8cc1da",
+    "afterSHA256": "94ccc3cf9d19e3a2c99218b9ecd751df37500fc5d113d96549078c12f9c25c1e"
+  },
+  {
+    "path": "测试/后端/接口/forward_compatibility.py/README.md",
+    "oldLocation": "测试/后端/接口/forward_compatibility.py/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/forward_compatibility.py/README.md",
+    "beforeSHA256": "0de21fc590edcbf39a775be06f203a184cc3af282ea1a39b9f2fde256ed4cc39",
+    "afterSHA256": "5840cb5396fa3e01d658d52d0c9e43c695bdc2a94ba069ff0cf661688c68cc32"
+  },
+  {
+    "path": "测试/后端/接口/role_qualification.py/README.md",
+    "oldLocation": "测试/后端/接口/role_qualification.py/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/role_qualification.py/README.md",
+    "beforeSHA256": "4caea63a524ec05a2b4dcd31a04adc65c813d9eaf10e9ba3499c62c67131098e",
+    "afterSHA256": "1f89f0a543ee00017fe53420cad381cb44902e8fbd10aa3b7e20b401913a3fd3"
+  },
+  {
+    "path": "测试/后端/接口/forward_restore.py/README.md",
+    "oldLocation": "测试/后端/接口/forward_restore.py/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/接口/forward_restore.py/README.md",
+    "beforeSHA256": "a4a70b0f81b58d9d995829c63e9067e9dc963b4d05ff698deeefd4195cabcd5b",
+    "afterSHA256": "34305f2213678f4837139e2113fd93c24fa98d53ceb0bdc1606009f7d5ed7026"
+  },
+  {
+    "path": "测试/部署/MacOS/README.md",
+    "oldLocation": "测试/部署/MacOS/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/部署/MacOS/README.md",
+    "beforeSHA256": "cae51cb212545b69e5b0d4e97f8048ea5be7ccc03cf85690cf927dfa6819ade3",
+    "afterSHA256": "382dea72ce00efcc172ad7f53146e79af7febbdc37a11de3ad7b2b599253cd00"
+  },
+  {
+    "path": "测试/前端/Web/README.md",
+    "oldLocation": "测试/前端/Web/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/README.md",
+    "beforeSHA256": "9479d16506fe595da3904baefd0adaed7d2f7dbc10478e0f64c1058ec4db42c6",
+    "afterSHA256": "e5b8ed5062700485547717089c07c6b906f7638fb8c0573fe68799e73d30f4ae"
+  },
+  {
+    "path": "测试/前端/Web/forward.cjs/README.md",
+    "oldLocation": "测试/前端/Web/forward.cjs/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/forward.cjs/README.md",
+    "beforeSHA256": "351ab83967dd49e749f2876048b0d8907afb859e18c2511b16cdbbda41c3a7f9",
+    "afterSHA256": "b677189c395afd0f5650b36a2dd9e5f8e1ae9700105fddc43a076de56a378428"
+  },
+  {
+    "path": "测试/前端/HarmonyOS/README.md",
+    "oldLocation": "测试/前端/HarmonyOS/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/README.md",
+    "beforeSHA256": "1bb5ee383e8d3293cf7a41db6ce6420153b873db0da19603de060876fdc93558",
+    "afterSHA256": "fc3442cfe54a7254360bf744a906c99a0f970405d2fab8d245562f9b18924ca3"
+  },
+  {
+    "path": "测试/前端/iOS/README.md",
+    "oldLocation": "测试/前端/iOS/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/iOS/README.md",
+    "beforeSHA256": "5bc912c7854fb215522e2b9871ffdec346eeda9f82522f934984ff0df1fe42aa",
+    "afterSHA256": "6ccec1dcdc53dad226533ec08848881294c3566c4ebffe28d30ba8a31d553b8e"
+  },
+  {
+    "path": "测试/前端/Android/README.md",
+    "oldLocation": "测试/前端/Android/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/README.md",
+    "beforeSHA256": "95f5c222b217703957a61092d4f41de66a82e3d243c02ebea8c9883072964c57",
+    "afterSHA256": "bb891b8df6f3d00f39ddb24d090673665d62b440d8c5dcc4f263a076273af026"
+  },
+  {
+    "path": "项目相关报告/测试/CLI/20261115-搜索协作/README.md",
+    "oldLocation": "测试/CLI/报告/20261115-搜索协作/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-搜索协作/README.md",
+    "beforeSHA256": "08f0ebfb45dd24ed688aa3e747152e974594602a7732fbb695e6ec964d15d6c7",
+    "afterSHA256": "5a7bac887a21e6be64d007de864575371f382b9dc770cc1afe099fbf5e8a1128"
+  },
+  {
+    "path": "项目相关报告/测试/前端/Web/20261115-登录续期浏览器/README.md",
+    "oldLocation": "测试/前端/Web/报告/20261115-登录续期浏览器/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/报告/20261115-登录续期浏览器/README.md",
+    "beforeSHA256": "cb4f6d948b102f0f03990df1f0919f1a4b327b68c078c9e9318bcc78602afda3",
+    "afterSHA256": "3a099c963576f349a611b98608df12a63cd02d390b9bbc3713e4388f7c8a818b"
+  },
+  {
+    "path": "项目相关报告/测试/前端/Web/20261115-登录续期HTTPS/README.md",
+    "oldLocation": "测试/前端/Web/报告/20261115-登录续期HTTPS/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/报告/20261115-登录续期HTTPS/README.md",
+    "beforeSHA256": "beb5b3b65eb1eee3f3a7f843c89eeb5c0c36ab453a2b07ee51843b818c77248c",
+    "afterSHA256": "b29dc2c201c1e36e322725bf2e4810060ae520eb9f9e519725fb86e9fcd6a968"
+  },
+  {
+    "path": "项目相关报告/测试/前端/Web/20261115-普通转发/README.md",
+    "oldLocation": "测试/前端/Web/报告/20261115-普通转发/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/报告/20261115-普通转发/README.md",
+    "beforeSHA256": "c6c87ca7e8c91e40e95d81ed32e8891f99249b91e6889e1d3e49b3eab4d2d2df",
+    "afterSHA256": "e838dee10a23d8582ad7fae7435ee31bd19d0d76e543eb14e159e0f523d67e70"
+  },
+  {
+    "path": "项目相关报告/测试/前端/HarmonyOS/20261115-原角色资格/README.md",
+    "oldLocation": "测试/前端/HarmonyOS/报告/20261115-原角色资格/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-原角色资格/README.md",
+    "beforeSHA256": "ee0007870859e730360faa084aabe0b57b71fd51ca0a67f0a3ad493aebcf26ae",
+    "afterSHA256": "deb43eadeef5b5f34c4d1e2e97b0e5b511b72692865e757d356ff8464a3e5d03"
+  },
+  {
+    "path": "项目相关报告/测试/前端/HarmonyOS/20261115-原发信资格/README.md",
+    "oldLocation": "测试/前端/HarmonyOS/报告/20261115-原发信资格/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-原发信资格/README.md",
+    "beforeSHA256": "a8b6c8c35d87e06a0fd188ed5064dff85b88c4432b9af667a8001a98ef7f23f1",
+    "afterSHA256": "24eea9ef35335db15942b13304d618dd56d0fc04d74c0552f67d63d999a8f0c8"
+  },
+  {
+    "path": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/README.md",
+    "oldLocation": "测试/前端/Android/报告/20261115-发送准入围栏/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-发送准入围栏/README.md",
+    "beforeSHA256": "1edf141e76ff41db930e352b6c26a2e8d271b2b0ad5d5d166b576b0f00ef8720",
+    "afterSHA256": "ab07122d1bcc258cfbbeff9c9a05f8fad4d8becaf92df54f03e727a0d141377d"
+  },
+  {
+    "path": "项目相关报告/测试/前端/Android/20261115-访问刷新/README.md",
+    "oldLocation": "测试/前端/Android/报告/20261115-访问刷新/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-访问刷新/README.md",
+    "beforeSHA256": "920166ea83511b9bb09f86ce9ea611f435cabb75156a3d996b0727d63b17a965",
+    "afterSHA256": "f459141cb1019cc021e24c5ba6cee3b916170ad668a8ad108b66fc303029d959"
+  },
+  {
+    "path": "项目相关报告/实现进度/README.md",
+    "oldLocation": "需求/实现进度/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/需求/实现进度/README.md",
+    "beforeSHA256": "571b0ae187394f7c4eaebb9cbb290d072920175e4b7facf1a5600bd75140b074",
+    "afterSHA256": "5069bcb7094eb5e6ac2105d319b4cde59c3daeaf4546bb2b814646e9906554f4"
+  },
+  {
+    "path": "项目相关报告/资产盘点/README.md",
+    "oldLocation": "项目相关报告/资产盘点/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/项目相关报告/资产盘点/README.md",
+    "beforeSHA256": "ac8a7726ba2aef1a65731f7ffdadf3bc9215fc9dcc36c76fe63c05a2c0b466ce",
+    "afterSHA256": "8399c7e0a00f1d1d32f2a29fd90101b9c080752383b5184aced7bb3b80b79ca6"
+  },
+  {
+    "path": "需求/README.md",
+    "oldLocation": "需求/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/需求/README.md",
+    "beforeSHA256": "f30f5da657311ba660f8fd35415dfa46946c3e7a0e05ad7f8517387e0fe2bbd6",
+    "afterSHA256": "9c5539a81e6429a3f56688d60a04372ede6690ed0062711f33be723f073de015"
+  },
+  {
+    "path": "代码/README.md",
+    "oldLocation": "代码/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/README.md",
+    "beforeSHA256": "d1bb1fcfdd15de1e9f88240a32a2091f286b068f8701b673d78f83a962cdd751",
+    "afterSHA256": "2628309fa2c3d7a4ba8fe9222ae020602fbce93d58052890a5884ef36b0b1d29"
+  },
+  {
+    "path": "代码/后端/Go/README.md",
+    "oldLocation": "代码/后端/Go/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/后端/Go/README.md",
+    "beforeSHA256": "32c0f509281b1944367d32a4741462b78f521bcd6dae4c56f51535ab845a130a",
+    "afterSHA256": "33c5865b9e767ef678c849700a1c3e977b334f1d14bb5719ad4411f8c7d112c5"
+  },
+  {
+    "path": "代码/前端/Web/README.md",
+    "oldLocation": "代码/前端/Web/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/Web/README.md",
+    "beforeSHA256": "3c455e7b3b84a87e9b4fd844445af56fade7f3aa68004b3720292f58e2d8bf5a",
+    "afterSHA256": "7ec4b085e1f00506763ce9c49b0219c59c79eb55a883830d0beae597f9bdac74"
+  },
+  {
+    "path": "代码/前端/Web/Scripts/准备环境.command/README.md",
+    "oldLocation": "代码/前端/Web/Scripts/准备环境.command/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/Web/Scripts/准备环境.command/README.md",
+    "beforeSHA256": "d0c14f0bab76bfa52ec11c8a08ab835da37cffc3985ccd4eac40cf88d5cf2ddb",
+    "afterSHA256": "32bfbe57bc4ac816cf4c645ed999064acafdb7a6ca2c8821fb005fa46f2bed62"
+  },
+  {
+    "path": "代码/前端/HarmonyOS/README.md",
+    "oldLocation": "代码/前端/HarmonyOS/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/HarmonyOS/README.md",
+    "beforeSHA256": "d02ac6ca56f06446eaf976cd43ca42acc0b7c77d8b8657a9d41c825126233b28",
+    "afterSHA256": "1aab7a48e90580e20fd2b600447a28d2f1c894df5e8dc61a982ec4463c8a71d8"
+  },
+  {
+    "path": "代码/前端/HarmonyOS/代码地图/README.md",
+    "oldLocation": "代码/前端/HarmonyOS/代码地图/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/HarmonyOS/代码地图/README.md",
+    "beforeSHA256": "25bf7a10f63736bf4e9d6bb610c2fcc76da3da8193789b0157fc516d3ac1137c",
+    "afterSHA256": "0a288eff4a7e88056ca952888d86a44ba71e2ab1c53a0b78d22aad699961151c"
+  },
+  {
+    "path": "代码/前端/CLI/README.md",
+    "oldLocation": "代码/前端/CLI/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/CLI/README.md",
+    "beforeSHA256": "82184e5fc32ddd4c8d358b5730caf2af7973c1a319f22c1a8e50b1157b387f7b",
+    "afterSHA256": "01cd32a88c873e428549447bb26dead896b9341eb991d0d35a67b8f692ac87fa"
+  },
+  {
+    "path": "代码/前端/CLI/原生助手/Keychain/README.md",
+    "oldLocation": "代码/前端/CLI/原生助手/Keychain/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/CLI/原生助手/Keychain/README.md",
+    "beforeSHA256": "e5147f41bc6f667a5aec6e5182f8563e1d9e386faeec59b851213b2bbdc84619",
+    "afterSHA256": "4e7782381105b8b1d4efb1f58e8404840f5f2a30e9b6bd2458fe6c95ef45bf5b"
+  },
+  {
+    "path": "代码/前端/iOS/README.md",
+    "oldLocation": "代码/前端/iOS/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/README.md",
+    "beforeSHA256": "3cac28d46fb646e525f3572ee211177a7b425c4dd8c877415644861eebdb8e8a",
+    "afterSHA256": "a27f04f2f6d9f98e0d605a4043c876411397bcb32c6b8975bb78b2eb54dd8b32"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/ESPullToRefresh-2.9.3/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/ESPullToRefresh-2.9.3/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/ESPullToRefresh-2.9.3/README.md",
+    "beforeSHA256": "ee43f3d6bfa8047a65bf8ea10ffc597aec3c8226d26c20345a8325257daf0186",
+    "afterSHA256": "9b5a60a40d4ea129f3824ba38aebda6e1a525839b9347116b003fe9a18302f59"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/GRDB.swift-7.11.1/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/GRDB.swift-7.11.1/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/GRDB.swift-7.11.1/README.md",
+    "beforeSHA256": "edf1f711627c07e48c453ad45530be50f3967be811dd0df314a17893beb3864f",
+    "afterSHA256": "04dccad03a6aa3b02bbd325c19061838255e7047f0406b8856f9ab44501b45a0"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/GRDB.swift-7.11.1/Documentation/DemoApps/GRDBDemo/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/GRDB.swift-7.11.1/Documentation/DemoApps/GRDBDemo/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/GRDB.swift-7.11.1/Documentation/DemoApps/GRDBDemo/README.md",
+    "beforeSHA256": "a7ee7b2fd717d4cdea56257a1cf82ae652a9109221572652705d1be081e4de48",
+    "afterSHA256": "77c267452f14813010ede3e84281342754ddb11321e58210aca5c7ae88426e11"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/RxSwift-6.9.0/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/RxSwift-6.9.0/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/RxSwift-6.9.0/README.md",
+    "beforeSHA256": "8c266ce1e6100abaa8332b34b48cc38367ae4914aa174e8661466e122779d354",
+    "afterSHA256": "d2c786affa7e5824dfe66115f309326f52fa5608c4b755651e6cd77ff0149434"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/CocoaLumberjack-3.10.0/README.md",
+    "beforeSHA256": "453fc4b008ba4374d59fcb003b0926ed71ed3b21626d9793c727059934308508",
+    "afterSHA256": "a47380448c56fe0b2b22b9ed170fb392060c8a0123a1e0adbe565d61724a3869"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/YTKNetwork-3.0.6/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/YTKNetwork-3.0.6/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/YTKNetwork-3.0.6/README.md",
+    "beforeSHA256": "ce3a2bf7ea560df31dd2a95e9289bbb826505b390766b1aacf8092c8b8b1e29b",
+    "afterSHA256": "9e0a503354ff8867d9bb2352f18f7859f151dc668149e29562a9d9633c5370fb"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/SkeletonView-1.30.4/README.md",
+    "beforeSHA256": "08a7d4e839bf4c1fac081268defb41c59b6d79ff73810b8690665bf3b16cec24",
+    "afterSHA256": "9bc395694a8f42f3b5987831900899e9ea08edef9cf0b06354d8ba112fd4794b"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/lottie-ios-4.6.1/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/lottie-ios-4.6.1/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/lottie-ios-4.6.1/README.md",
+    "beforeSHA256": "c037e965e3bd61be5ddbb408825a5763cac3aaeb8cf9a6e04860a43ad198b8a3",
+    "afterSHA256": "0646664bbca6b21cf7a3e766bd0ba4a79e99be32b966448014e49e7ca4684188"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/PromiseKit-8.2.0/README.md",
+    "beforeSHA256": "e95659f753187f0ddd55bdea3cf80984eb285780e0c4494d4edab8d2c1c3d244",
+    "afterSHA256": "992b3dfead4c190bd0db8f5ff3684f52a3130dc48b7e6e2c716dacd6918355f2"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/RxCocoa-6.9.0/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/RxCocoa-6.9.0/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/RxCocoa-6.9.0/README.md",
+    "beforeSHA256": "8c266ce1e6100abaa8332b34b48cc38367ae4914aa174e8661466e122779d354",
+    "afterSHA256": "d2c786affa7e5824dfe66115f309326f52fa5608c4b755651e6cd77ff0149434"
+  },
+  {
+    "path": "代码/前端/iOS/Vendor/RxRelay-6.9.0/README.md",
+    "oldLocation": "代码/前端/iOS/Vendor/RxRelay-6.9.0/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/iOS/Vendor/RxRelay-6.9.0/README.md",
+    "beforeSHA256": "8c266ce1e6100abaa8332b34b48cc38367ae4914aa174e8661466e122779d354",
+    "afterSHA256": "d2c786affa7e5824dfe66115f309326f52fa5608c4b755651e6cd77ff0149434"
+  },
+  {
+    "path": "代码/前端/Android/README.md",
+    "oldLocation": "代码/前端/Android/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/代码/前端/Android/README.md",
+    "beforeSHA256": "c409dccadd8715ba756b8d815f48ca65fc3b0cd7f8f93e9358a435e6f4bfb1b1",
+    "afterSHA256": "e42f6e09ebfff618e0e2725e615c8f73da68ba048dde595648cea60125504657"
+  },
+  {
+    "path": "部署/README.md",
+    "oldLocation": "部署/README.md",
+    "originalArchive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/部署/README.md",
+    "beforeSHA256": "58fd3130c2ad10c3766be543266b85ab8538112020119802ad96a9b2706db49b",
+    "afterSHA256": "615214bbb0804c988242e9a3d4e8f671a96de2935eff8f21499b5e4aabc1425b"
+  }
+]

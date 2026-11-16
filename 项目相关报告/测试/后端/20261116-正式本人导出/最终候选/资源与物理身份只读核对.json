@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "resources": {
+    "app": {
+      "pid": 963,
+      "controllerRSSKiB": 26096
+    },
+    "nats": {
+      "pid": 4141,
+      "controllerRSSKiB": 12496
+    },
+    "businessPG": {
+      "pid": 2290,
+      "controllerRSSKiB": 4560,
+      "systemIdentifier": "7708672205778385125",
+      "connections": 24,
+      "maxConnections": 80
+    },
+    "journalPG": {
+      "pid": 2317,
+      "controllerRSSKiB": 4080,
+      "systemIdentifier": "7708672209776122119",
+      "connections": 11,
+      "maxConnections": 16
+    }
+  },
+  "rssScope": "controller process RSS only; PostgreSQL shared-memory pages not summed as unique resident bytes",
+  "freeGiB": 11.272,
+  "strictCADigest": "2525e7ffef7c386e34f9535c9de8cdf83e80b3312de1f51595a947ea7fc8d000",
+  "leafDigest": "486cdd9363ba5434e9cd05757828bed639267ecfc2fde5203373619a93e8aca9",
+  "sameOwnedRealmOnly": true,
+  "freshPhysicalBusinessAndJournal": true,
+  "restoreEpoch": "3",
+  "binarySHA256": "2b58586428a345309f3dcdca651d35de6b24f122ac717b8b8397d357901e5c87"
+}

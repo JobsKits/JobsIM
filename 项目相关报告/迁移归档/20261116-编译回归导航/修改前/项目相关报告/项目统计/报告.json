@@ -1,0 +1,1824 @@
+{
+  "at": "2026-11-15T19:52:54.496Z",
+  "method": "Physical lines including comments and blank lines; owned code/test/config only; symlinks, dependencies, resources, locks, generated/build outputs and evidence excluded.",
+  "totals": {
+    "business": {
+      "files": 219,
+      "lines": 53927,
+      "percent": 65.56
+    },
+    "tests": {
+      "files": 95,
+      "lines": 22843,
+      "percent": 27.77
+    },
+    "configuration": {
+      "files": 46,
+      "lines": 5488,
+      "percent": 6.67
+    }
+  },
+  "totalLines": 82258,
+  "files": [
+    {
+      "path": "代码/前端/Android/app/build.gradle.kts",
+      "category": "configuration",
+      "lines": 40
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/AndroidManifest.xml",
+      "category": "configuration",
+      "lines": 10
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/AnnouncementModel.kt",
+      "category": "business",
+      "lines": 355
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Assets.kt",
+      "category": "business",
+      "lines": 53
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+      "category": "business",
+      "lines": 2179
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/CollaborationScreens.kt",
+      "category": "business",
+      "lines": 302
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/DiscoveryScreens.kt",
+      "category": "business",
+      "lines": 114
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt",
+      "category": "business",
+      "lines": 116
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ExtraStrings.kt",
+      "category": "business",
+      "lines": 39
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/FeatureStrings.kt",
+      "category": "business",
+      "lines": 36
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ForwardScreens.kt",
+      "category": "business",
+      "lines": 85
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Forwarding.kt",
+      "category": "business",
+      "lines": 80
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/LocalAlerts.kt",
+      "category": "business",
+      "lines": 49
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt",
+      "category": "business",
+      "lines": 1168
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ManagementScreens.kt",
+      "category": "business",
+      "lines": 422
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MessageDiscovery.kt",
+      "category": "business",
+      "lines": 194
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/NativeSession.kt",
+      "category": "business",
+      "lines": 293
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ProfileAvatar.kt",
+      "category": "business",
+      "lines": 33
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SessionCoordinator.kt",
+      "category": "business",
+      "lines": 379
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SessionStrings.kt",
+      "category": "business",
+      "lines": 22
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt",
+      "category": "business",
+      "lines": 555
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Strings.kt",
+      "category": "business",
+      "lines": 63
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt",
+      "category": "business",
+      "lines": 35
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncEngine.kt",
+      "category": "business",
+      "lines": 122
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncGuardApi.kt",
+      "category": "business",
+      "lines": 70
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt",
+      "category": "business",
+      "lines": 258
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncStore.kt",
+      "category": "business",
+      "lines": 326
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Transport.kt",
+      "category": "business",
+      "lines": 270
+    },
+    {
+      "path": "代码/前端/Android/build.gradle.kts",
+      "category": "configuration",
+      "lines": 5
+    },
+    {
+      "path": "代码/前端/Android/gradle/wrapper/gradle-wrapper.properties",
+      "category": "configuration",
+      "lines": 9
+    },
+    {
+      "path": "代码/前端/Android/gradle.properties",
+      "category": "configuration",
+      "lines": 3
+    },
+    {
+      "path": "代码/前端/Android/gradlew.bat",
+      "category": "configuration",
+      "lines": 82
+    },
+    {
+      "path": "代码/前端/Android/settings.gradle.kts",
+      "category": "configuration",
+      "lines": 4
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth.go",
+      "category": "business",
+      "lines": 779
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go",
+      "category": "business",
+      "lines": 47
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go",
+      "category": "business",
+      "lines": 53
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go",
+      "category": "business",
+      "lines": 171
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go",
+      "category": "business",
+      "lines": 127
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_other.go",
+      "category": "business",
+      "lines": 12
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go",
+      "category": "business",
+      "lines": 102
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+      "category": "business",
+      "lines": 628
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "category": "business",
+      "lines": 62
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/forward.go",
+      "category": "business",
+      "lines": 107
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "category": "business",
+      "lines": 304
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/local.go",
+      "category": "business",
+      "lines": 352
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/main.go",
+      "category": "business",
+      "lines": 633
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/store.go",
+      "category": "business",
+      "lines": 629
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_engine.go",
+      "category": "business",
+      "lines": 595
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_protocol.go",
+      "category": "business",
+      "lines": 600
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_store.go",
+      "category": "business",
+      "lines": 989
+    },
+    {
+      "path": "代码/前端/CLI/go.mod",
+      "category": "configuration",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/CLI/原生助手/Keychain/JobsIMKeychain.swift",
+      "category": "business",
+      "lines": 145
+    },
+    {
+      "path": "代码/前端/HarmonyOS/AppScope/app.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/build-profile.json5",
+      "category": "configuration",
+      "lines": 41
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/build-profile.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/hvigorfile.ts",
+      "category": "business",
+      "lines": 2
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/oh-package.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Api.ets",
+      "category": "business",
+      "lines": 128
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/AuthCoordinator.ets",
+      "category": "business",
+      "lines": 330
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets",
+      "category": "business",
+      "lines": 294
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeServices.ets",
+      "category": "business",
+      "lines": 89
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Store.ets",
+      "category": "business",
+      "lines": 157
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets",
+      "category": "business",
+      "lines": 11
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/entryability/EntryAbility.ets",
+      "category": "business",
+      "lines": 7
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets",
+      "category": "business",
+      "lines": 1401
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/module.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/hvigor/hvigor-config.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/hvigorfile.ts",
+      "category": "business",
+      "lines": 2
+    },
+    {
+      "path": "代码/前端/HarmonyOS/oh-package.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/工具链/【MacOS】准备工具链.command/【MacOS】准备工具链.command",
+      "category": "configuration",
+      "lines": 79
+    },
+    {
+      "path": "代码/前端/Web/Scripts/准备环境.command/准备环境.command",
+      "category": "configuration",
+      "lines": 42
+    },
+    {
+      "path": "代码/前端/Web/Src/AdminPanel.tsx",
+      "category": "business",
+      "lines": 430
+    },
+    {
+      "path": "代码/前端/Web/Src/AnnouncementPanel.tsx",
+      "category": "business",
+      "lines": 346
+    },
+    {
+      "path": "代码/前端/Web/Src/App.tsx",
+      "category": "business",
+      "lines": 4124
+    },
+    {
+      "path": "代码/前端/Web/Src/AuthSession.ts",
+      "category": "business",
+      "lines": 374
+    },
+    {
+      "path": "代码/前端/Web/Src/GlobalMessages.ts",
+      "category": "business",
+      "lines": 169
+    },
+    {
+      "path": "代码/前端/Web/Src/GroupControls.tsx",
+      "category": "business",
+      "lines": 175
+    },
+    {
+      "path": "代码/前端/Web/Src/MentionPicker.tsx",
+      "category": "business",
+      "lines": 83
+    },
+    {
+      "path": "代码/前端/Web/Src/MessageFacts.ts",
+      "category": "business",
+      "lines": 121
+    },
+    {
+      "path": "代码/前端/Web/Src/MessageLookup.tsx",
+      "category": "business",
+      "lines": 292
+    },
+    {
+      "path": "代码/前端/Web/Src/PeerControls.tsx",
+      "category": "business",
+      "lines": 289
+    },
+    {
+      "path": "代码/前端/Web/Src/PrivateMedia.tsx",
+      "category": "business",
+      "lines": 136
+    },
+    {
+      "path": "代码/前端/Web/Src/ReportPanel.tsx",
+      "category": "business",
+      "lines": 235
+    },
+    {
+      "path": "代码/前端/Web/Src/StorageDatabase.ts",
+      "category": "business",
+      "lines": 6
+    },
+    {
+      "path": "代码/前端/Web/Src/SyncEngine.ts",
+      "category": "business",
+      "lines": 163
+    },
+    {
+      "path": "代码/前端/Web/Src/SyncProtocol.ts",
+      "category": "business",
+      "lines": 236
+    },
+    {
+      "path": "代码/前端/Web/Src/SyncStore.ts",
+      "category": "business",
+      "lines": 342
+    },
+    {
+      "path": "代码/前端/Web/Src/SyncView.ts",
+      "category": "business",
+      "lines": 167
+    },
+    {
+      "path": "代码/前端/Web/Src/api.ts",
+      "category": "business",
+      "lines": 419
+    },
+    {
+      "path": "代码/前端/Web/Src/demo.ts",
+      "category": "business",
+      "lines": 102
+    },
+    {
+      "path": "代码/前端/Web/Src/env.d.ts",
+      "category": "business",
+      "lines": 4
+    },
+    {
+      "path": "代码/前端/Web/Src/forward.ts",
+      "category": "business",
+      "lines": 85
+    },
+    {
+      "path": "代码/前端/Web/Src/i18n.ts",
+      "category": "business",
+      "lines": 50
+    },
+    {
+      "path": "代码/前端/Web/Src/main.tsx",
+      "category": "business",
+      "lines": 9
+    },
+    {
+      "path": "代码/前端/Web/Src/storage.ts",
+      "category": "business",
+      "lines": 380
+    },
+    {
+      "path": "代码/前端/Web/Src/styles.css",
+      "category": "business",
+      "lines": 1752
+    },
+    {
+      "path": "代码/前端/Web/Src/types.ts",
+      "category": "business",
+      "lines": 86
+    },
+    {
+      "path": "代码/前端/Web/package.json",
+      "category": "configuration",
+      "lines": 25
+    },
+    {
+      "path": "代码/前端/Web/tsconfig.json",
+      "category": "configuration",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/Web/vite.config.ts",
+      "category": "business",
+      "lines": 23
+    },
+    {
+      "path": "代码/前端/iOS/Dependencies/GRDB.source.json",
+      "category": "configuration",
+      "lines": 7
+    },
+    {
+      "path": "代码/前端/iOS/Dependencies/JobsTemplateSources.json",
+      "category": "configuration",
+      "lines": 87
+    },
+    {
+      "path": "代码/前端/iOS/Dependencies/TemplateThirdPartySources.json",
+      "category": "configuration",
+      "lines": 171
+    },
+    {
+      "path": "代码/前端/iOS/Dependencies/ThirdPartyLicenses.json",
+      "category": "configuration",
+      "lines": 337
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMCursor/IMCursor.swift",
+      "category": "business",
+      "lines": 48
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMJSON/IMJSON.swift",
+      "category": "business",
+      "lines": 105
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMNamespace/IMNamespace.swift",
+      "category": "business",
+      "lines": 44
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/ISO8601DateFormatter/ISO8601DateFormatter+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONDecoder/JSONDecoder+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONEncoder/JSONEncoder+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/NSDecimalNumber/NSDecimalNumber+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/JobsIMCore.podspec",
+      "category": "configuration",
+      "lines": 13
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift",
+      "category": "business",
+      "lines": 1158
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMStorage/JobsIMStorage.podspec",
+      "category": "configuration",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIClient/IMAPIClient.swift",
+      "category": "business",
+      "lines": 107
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIError/IMAPIError.swift",
+      "category": "business",
+      "lines": 25
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift",
+      "category": "business",
+      "lines": 152
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceCertificate/IMInstanceCertificate.swift",
+      "category": "business",
+      "lines": 58
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceEvaluator/IMInstanceEvaluator.swift",
+      "category": "business",
+      "lines": 34
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/URLRequest/URLRequest+Make.swift",
+      "category": "business",
+      "lines": 21
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/JobsIMTransport.podspec",
+      "category": "configuration",
+      "lines": 15
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/App/AppDelegate/AppDelegate.swift",
+      "category": "business",
+      "lines": 91
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/App/SceneDelegate/SceneDelegate.swift",
+      "category": "business",
+      "lines": 39
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAnnouncementService/IMAnnouncementService.swift",
+      "category": "business",
+      "lines": 151
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift",
+      "category": "business",
+      "lines": 600
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMCredentialPair.swift",
+      "category": "business",
+      "lines": 111
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMAuthoritativeSync.swift",
+      "category": "business",
+      "lines": 288
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMSyncProtocol.swift",
+      "category": "business",
+      "lines": 388
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAvatarLoader/IMAvatarLoader.swift",
+      "category": "business",
+      "lines": 44
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAvatarService/IMAvatarService.swift",
+      "category": "business",
+      "lines": 105
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMContactService/IMContactService.swift",
+      "category": "business",
+      "lines": 49
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift",
+      "category": "business",
+      "lines": 221
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMHistoryExport/IMHistoryExport.swift",
+      "category": "business",
+      "lines": 56
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMKeychain/IMKeychain.swift",
+      "category": "business",
+      "lines": 70
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMediaCache/IMMediaCache.swift",
+      "category": "business",
+      "lines": 175
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMediaLoader/IMMediaLoader.swift",
+      "category": "business",
+      "lines": 23
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessageListService.swift",
+      "category": "business",
+      "lines": 144
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessagePage.swift",
+      "category": "business",
+      "lines": 32
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMNotifications/IMNotifications.swift",
+      "category": "business",
+      "lines": 110
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReportService/IMReportService.swift",
+      "category": "business",
+      "lines": 43
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift",
+      "category": "business",
+      "lines": 875
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMStrings/IMStrings.swift",
+      "category": "business",
+      "lines": 23
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMSyncCoordinator/IMSyncCoordinator.swift",
+      "category": "business",
+      "lines": 33
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMTrustStore/IMTrustStore.swift",
+      "category": "business",
+      "lines": 32
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/AVAudioRecorder/AVAudioRecorder+Make.swift",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/NSAttributedString/NSAttributedString+Make.swift",
+      "category": "business",
+      "lines": 15
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerConfiguration/PHPickerConfiguration+Make.swift",
+      "category": "business",
+      "lines": 17
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerViewController/PHPickerViewController+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIActivityViewController/UIActivityViewController+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertAction/UIAlertAction+Make.swift",
+      "category": "business",
+      "lines": 22
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertController/UIAlertController+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIColor/UIColor+Make.swift",
+      "category": "business",
+      "lines": 24
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIContextMenuConfiguration/UIContextMenuConfiguration+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift",
+      "category": "business",
+      "lines": 23
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIImage/UIImage+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UINavigationController/UINavigationController+Make.swift",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UISegmentedControl/UISegmentedControl+Make.swift",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UITabBarItem/UITabBarItem+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UITableView/UITableView+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIView/UIView+DSL.swift",
+      "category": "business",
+      "lines": 17
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIWindow/UIWindow+Make.swift",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UNNotificationRequest/UNNotificationRequest+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift",
+      "category": "business",
+      "lines": 241
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAvatarVC/IMAvatarVC.swift",
+      "category": "business",
+      "lines": 78
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAvatarView/IMAvatarView.swift",
+      "category": "business",
+      "lines": 60
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMBaseVC/IMBaseVC.swift",
+      "category": "business",
+      "lines": 92
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift",
+      "category": "business",
+      "lines": 926
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactRequestsVC/IMContactRequestsVC.swift",
+      "category": "business",
+      "lines": 95
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMConversationCell/IMConversationCell.swift",
+      "category": "business",
+      "lines": 90
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMDevicesVC/IMDevicesVC.swift",
+      "category": "business",
+      "lines": 96
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift",
+      "category": "business",
+      "lines": 306
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift",
+      "category": "business",
+      "lines": 554
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift",
+      "category": "business",
+      "lines": 160
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportVC/IMReportVC.swift",
+      "category": "business",
+      "lines": 94
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift",
+      "category": "business",
+      "lines": 226
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMUI/IMUI.swift",
+      "category": "business",
+      "lines": 134
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj",
+      "category": "configuration",
+      "lines": 1003
+    },
+    {
+      "path": "代码/前端/iOS/Podfile",
+      "category": "configuration",
+      "lines": 37
+    },
+    {
+      "path": "代码/前端/iOS/Podfile.deps",
+      "category": "configuration",
+      "lines": 46
+    },
+    {
+      "path": "代码/前端/iOS/Scripts/Build.rb",
+      "category": "configuration",
+      "lines": 39
+    },
+    {
+      "path": "代码/前端/iOS/Scripts/GenerateProject.rb",
+      "category": "configuration",
+      "lines": 72
+    },
+    {
+      "path": "代码/前端/iOS/Scripts/PrepareDependencies.rb",
+      "category": "configuration",
+      "lines": 38
+    },
+    {
+      "path": "代码/后端/Go/admin_identity.go",
+      "category": "business",
+      "lines": 277
+    },
+    {
+      "path": "代码/后端/Go/asset_migrations.go",
+      "category": "business",
+      "lines": 24
+    },
+    {
+      "path": "代码/后端/Go/avatar.go",
+      "category": "business",
+      "lines": 361
+    },
+    {
+      "path": "代码/后端/Go/avatar_media.go",
+      "category": "business",
+      "lines": 297
+    },
+    {
+      "path": "代码/后端/Go/cmd/jobsimd/main.go",
+      "category": "business",
+      "lines": 153
+    },
+    {
+      "path": "代码/后端/Go/cmd/jobsimops/main.go",
+      "category": "business",
+      "lines": 90
+    },
+    {
+      "path": "代码/后端/Go/contact_relationship.go",
+      "category": "business",
+      "lines": 44
+    },
+    {
+      "path": "代码/后端/Go/control.go",
+      "category": "business",
+      "lines": 233
+    },
+    {
+      "path": "代码/后端/Go/conversation.go",
+      "category": "business",
+      "lines": 511
+    },
+    {
+      "path": "代码/后端/Go/directory.go",
+      "category": "business",
+      "lines": 483
+    },
+    {
+      "path": "代码/后端/Go/draft_reply.go",
+      "category": "business",
+      "lines": 35
+    },
+    {
+      "path": "代码/后端/Go/draft_reply_holders.go",
+      "category": "business",
+      "lines": 246
+    },
+    {
+      "path": "代码/后端/Go/export.go",
+      "category": "business",
+      "lines": 560
+    },
+    {
+      "path": "代码/后端/Go/export_identity.go",
+      "category": "business",
+      "lines": 112
+    },
+    {
+      "path": "代码/后端/Go/export_lock_unix.go",
+      "category": "business",
+      "lines": 33
+    },
+    {
+      "path": "代码/后端/Go/export_lock_windows.go",
+      "category": "business",
+      "lines": 35
+    },
+    {
+      "path": "代码/后端/Go/export_restore.go",
+      "category": "business",
+      "lines": 97
+    },
+    {
+      "path": "代码/后端/Go/export_worker.go",
+      "category": "business",
+      "lines": 500
+    },
+    {
+      "path": "代码/后端/Go/forward_media.go",
+      "category": "business",
+      "lines": 204
+    },
+    {
+      "path": "代码/后端/Go/forward_projection.go",
+      "category": "business",
+      "lines": 248
+    },
+    {
+      "path": "代码/后端/Go/forward_revocation.go",
+      "category": "business",
+      "lines": 358
+    },
+    {
+      "path": "代码/后端/Go/go.mod",
+      "category": "configuration",
+      "lines": 21
+    },
+    {
+      "path": "代码/后端/Go/identity.go",
+      "category": "business",
+      "lines": 1064
+    },
+    {
+      "path": "代码/后端/Go/journal.go",
+      "category": "business",
+      "lines": 260
+    },
+    {
+      "path": "代码/后端/Go/media.go",
+      "category": "business",
+      "lines": 185
+    },
+    {
+      "path": "代码/后端/Go/media_export.go",
+      "category": "business",
+      "lines": 145
+    },
+    {
+      "path": "代码/后端/Go/media_format.go",
+      "category": "business",
+      "lines": 243
+    },
+    {
+      "path": "代码/后端/Go/mentions_announcements.go",
+      "category": "business",
+      "lines": 558
+    },
+    {
+      "path": "代码/后端/Go/message.go",
+      "category": "business",
+      "lines": 632
+    },
+    {
+      "path": "代码/后端/Go/message_export.go",
+      "category": "business",
+      "lines": 371
+    },
+    {
+      "path": "代码/后端/Go/message_lifecycle.go",
+      "category": "business",
+      "lines": 11
+    },
+    {
+      "path": "代码/后端/Go/message_read_points.go",
+      "category": "business",
+      "lines": 284
+    },
+    {
+      "path": "代码/后端/Go/message_read_summary.go",
+      "category": "business",
+      "lines": 118
+    },
+    {
+      "path": "代码/后端/Go/mfa.go",
+      "category": "business",
+      "lines": 373
+    },
+    {
+      "path": "代码/后端/Go/migrations.go",
+      "category": "business",
+      "lines": 147
+    },
+    {
+      "path": "代码/后端/Go/operations.go",
+      "category": "business",
+      "lines": 735
+    },
+    {
+      "path": "代码/后端/Go/owner_lifecycle.go",
+      "category": "business",
+      "lines": 57
+    },
+    {
+      "path": "代码/后端/Go/reports.go",
+      "category": "business",
+      "lines": 294
+    },
+    {
+      "path": "代码/后端/Go/request_gate.go",
+      "category": "business",
+      "lines": 101
+    },
+    {
+      "path": "代码/后端/Go/reset_grant.go",
+      "category": "business",
+      "lines": 199
+    },
+    {
+      "path": "代码/后端/Go/restore_runner.go",
+      "category": "business",
+      "lines": 451
+    },
+    {
+      "path": "代码/后端/Go/search.go",
+      "category": "business",
+      "lines": 250
+    },
+    {
+      "path": "代码/后端/Go/security.go",
+      "category": "business",
+      "lines": 91
+    },
+    {
+      "path": "代码/后端/Go/self_draft_floor.go",
+      "category": "business",
+      "lines": 590
+    },
+    {
+      "path": "代码/后端/Go/self_read.go",
+      "category": "business",
+      "lines": 582
+    },
+    {
+      "path": "代码/后端/Go/self_state.go",
+      "category": "business",
+      "lines": 15
+    },
+    {
+      "path": "代码/后端/Go/self_unread.go",
+      "category": "business",
+      "lines": 116
+    },
+    {
+      "path": "代码/后端/Go/self_views.go",
+      "category": "business",
+      "lines": 358
+    },
+    {
+      "path": "代码/后端/Go/send_admission.go",
+      "category": "business",
+      "lines": 345
+    },
+    {
+      "path": "代码/后端/Go/server.go",
+      "category": "business",
+      "lines": 395
+    },
+    {
+      "path": "代码/后端/Go/session_auth_retirement.go",
+      "category": "business",
+      "lines": 93
+    },
+    {
+      "path": "代码/后端/Go/session_bff.go",
+      "category": "business",
+      "lines": 128
+    },
+    {
+      "path": "代码/后端/Go/session_refresh.go",
+      "category": "business",
+      "lines": 242
+    },
+    {
+      "path": "代码/后端/Go/session_refresh_model.go",
+      "category": "business",
+      "lines": 175
+    },
+    {
+      "path": "代码/后端/Go/source_preferences.go",
+      "category": "business",
+      "lines": 342
+    },
+    {
+      "path": "代码/后端/Go/sync_classification.go",
+      "category": "business",
+      "lines": 96
+    },
+    {
+      "path": "代码/后端/Go/sync_kinds.go",
+      "category": "business",
+      "lines": 75
+    },
+    {
+      "path": "代码/后端/Go/sync_nats.go",
+      "category": "business",
+      "lines": 444
+    },
+    {
+      "path": "代码/后端/Go/sync_origin.go",
+      "category": "business",
+      "lines": 37
+    },
+    {
+      "path": "代码/后端/Go/sync_outbox.go",
+      "category": "business",
+      "lines": 254
+    },
+    {
+      "path": "代码/后端/Go/sync_owner.go",
+      "category": "business",
+      "lines": 397
+    },
+    {
+      "path": "代码/后端/Go/sync_private_unix.go",
+      "category": "business",
+      "lines": 13
+    },
+    {
+      "path": "代码/后端/Go/sync_private_windows.go",
+      "category": "business",
+      "lines": 50
+    },
+    {
+      "path": "代码/后端/Go/sync_protocol.go",
+      "category": "business",
+      "lines": 128
+    },
+    {
+      "path": "代码/后端/Go/sync_schemas.go",
+      "category": "business",
+      "lines": 219
+    },
+    {
+      "path": "代码/后端/Go/sync_self.go",
+      "category": "business",
+      "lines": 79
+    },
+    {
+      "path": "代码/后端/Go/sync_service.go",
+      "category": "business",
+      "lines": 854
+    },
+    {
+      "path": "代码/后端/Go/sync_validation.go",
+      "category": "business",
+      "lines": 265
+    },
+    {
+      "path": "代码/后端/Go/types.go",
+      "category": "business",
+      "lines": 122
+    },
+    {
+      "path": "代码/后端/Go/web.go",
+      "category": "business",
+      "lines": 74
+    },
+    {
+      "path": "代码/后端/Go/第三方依赖/NATS模块校验.json",
+      "category": "configuration",
+      "lines": 42
+    },
+    {
+      "path": "代码/后端/Go/第三方依赖/许可证来源.json",
+      "category": "configuration",
+      "lines": 112
+    },
+    {
+      "path": "测试/CLI/KeychainDiagnostic.swift",
+      "category": "tests",
+      "lines": 34
+    },
+    {
+      "path": "测试/CLI/auth_https_test.go",
+      "category": "tests",
+      "lines": 228
+    },
+    {
+      "path": "测试/CLI/auth_test.go",
+      "category": "tests",
+      "lines": 427
+    },
+    {
+      "path": "测试/CLI/collaboration-https.cjs/collaboration-https.cjs",
+      "category": "tests",
+      "lines": 126
+    },
+    {
+      "path": "测试/CLI/collaboration_test.go",
+      "category": "tests",
+      "lines": 400
+    },
+    {
+      "path": "测试/CLI/forward-https.cjs/forward-https.cjs",
+      "category": "tests",
+      "lines": 28
+    },
+    {
+      "path": "测试/CLI/governance_test.go",
+      "category": "tests",
+      "lines": 407
+    },
+    {
+      "path": "测试/CLI/https-integration.cjs/https-integration.cjs",
+      "category": "tests",
+      "lines": 91
+    },
+    {
+      "path": "测试/CLI/outbox_test.go",
+      "category": "tests",
+      "lines": 574
+    },
+    {
+      "path": "测试/CLI/sync_test.go",
+      "category": "tests",
+      "lines": 698
+    },
+    {
+      "path": "测试/CLI/运行测试.mjs/运行测试.mjs",
+      "category": "tests",
+      "lines": 62
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/AdmissionFenceTest.kt",
+      "category": "tests",
+      "lines": 251
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ApiFixtures.kt",
+      "category": "tests",
+      "lines": 10
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/AuthoritativeSyncTest.kt",
+      "category": "tests",
+      "lines": 306
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/CollaborationLifecycleTest.kt",
+      "category": "tests",
+      "lines": 359
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/DatabaseIsolationTest.kt",
+      "category": "tests",
+      "lines": 53
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/DiscoveryCollaborationUiTest.kt",
+      "category": "tests",
+      "lines": 390
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/DiscoveryLifecycleTest.kt",
+      "category": "tests",
+      "lines": 230
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ForwardLifecycleTest.kt",
+      "category": "tests",
+      "lines": 587
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ForwardUiTest.kt",
+      "category": "tests",
+      "lines": 226
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/LiveApiTest.kt",
+      "category": "tests",
+      "lines": 126
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ModelClosureTest.kt",
+      "category": "tests",
+      "lines": 391
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeForwardActions.kt",
+      "category": "tests",
+      "lines": 172
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeSessionHttpsTest.kt",
+      "category": "tests",
+      "lines": 337
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeSessionLifecycleTest.kt",
+      "category": "tests",
+      "lines": 328
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeUiTest.kt",
+      "category": "tests",
+      "lines": 171
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NotificationPrivacyTest.kt",
+      "category": "tests",
+      "lines": 56
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/RoleAdmissionLifecycleTest.kt",
+      "category": "tests",
+      "lines": 311
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/StorageLifecycleTest.kt",
+      "category": "tests",
+      "lines": 171
+    },
+    {
+      "path": "测试/前端/Android/Unit/IsolationTest.kt",
+      "category": "tests",
+      "lines": 83
+    },
+    {
+      "path": "测试/前端/Android/Unit/SyncWireTest.kt",
+      "category": "tests",
+      "lines": 43
+    },
+    {
+      "path": "测试/前端/Android/运行测试.command/运行测试.command",
+      "category": "tests",
+      "lines": 68
+    },
+    {
+      "path": "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets",
+      "category": "tests",
+      "lines": 220
+    },
+    {
+      "path": "测试/前端/HarmonyOS/OhosTest/ets/testability/TestAbility.ets",
+      "category": "tests",
+      "lines": 2
+    },
+    {
+      "path": "测试/前端/HarmonyOS/OhosTest/ets/testrunner/OpenHarmonyTestRunner.ets",
+      "category": "tests",
+      "lines": 10
+    },
+    {
+      "path": "测试/前端/HarmonyOS/OhosTest/module.json5",
+      "category": "tests",
+      "lines": 24
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Auth.test.cjs",
+      "category": "tests",
+      "lines": 25
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/AuthApi.test.cjs",
+      "category": "tests",
+      "lines": 58
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Policies.test.mjs",
+      "category": "tests",
+      "lines": 173
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/RunAuth.mjs",
+      "category": "tests",
+      "lines": 58
+    },
+    {
+      "path": "测试/前端/HarmonyOS/【MacOS】运行规则测试.command/【MacOS】运行规则测试.command",
+      "category": "tests",
+      "lines": 28
+    },
+    {
+      "path": "测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+      "category": "tests",
+      "lines": 158
+    },
+    {
+      "path": "测试/前端/Web/admin-integration.cjs/admin-integration.cjs",
+      "category": "tests",
+      "lines": 398
+    },
+    {
+      "path": "测试/前端/Web/auth-https.cjs/auth-https.cjs",
+      "category": "tests",
+      "lines": 246
+    },
+    {
+      "path": "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+      "category": "tests",
+      "lines": 306
+    },
+    {
+      "path": "测试/前端/Web/browser.cjs/browser.cjs",
+      "category": "tests",
+      "lines": 313
+    },
+    {
+      "path": "测试/前端/Web/business-global.cjs/business-global.cjs",
+      "category": "tests",
+      "lines": 150
+    },
+    {
+      "path": "测试/前端/Web/forward.cjs/forward.cjs",
+      "category": "tests",
+      "lines": 713
+    },
+    {
+      "path": "测试/前端/Web/global-facts.cjs/global-facts.cjs",
+      "category": "tests",
+      "lines": 152
+    },
+    {
+      "path": "测试/前端/Web/integration.cjs/integration.cjs",
+      "category": "tests",
+      "lines": 1786
+    },
+    {
+      "path": "测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs",
+      "category": "tests",
+      "lines": 97
+    },
+    {
+      "path": "测试/前端/Web/sync-https.cjs/sync-https.cjs",
+      "category": "tests",
+      "lines": 258
+    },
+    {
+      "path": "测试/前端/Web/sync-protocol.cjs/sync-protocol.cjs",
+      "category": "tests",
+      "lines": 113
+    },
+    {
+      "path": "测试/前端/Web/sync-store.cjs/sync-store.cjs",
+      "category": "tests",
+      "lines": 202
+    },
+    {
+      "path": "测试/前端/Web/sync-view.cjs/sync-view.cjs",
+      "category": "tests",
+      "lines": 183
+    },
+    {
+      "path": "测试/前端/iOS/Fixtures/AuthRefreshPublic.json",
+      "category": "tests",
+      "lines": 6
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthCoordinatorTests.swift",
+      "category": "tests",
+      "lines": 412
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthCredentialTests.swift",
+      "category": "tests",
+      "lines": 105
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthRefreshIntegrationTests.swift",
+      "category": "tests",
+      "lines": 315
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthoritativeSyncTests.swift",
+      "category": "tests",
+      "lines": 698
+    },
+    {
+      "path": "测试/前端/iOS/IMCompletionTests.swift",
+      "category": "tests",
+      "lines": 404
+    },
+    {
+      "path": "测试/前端/iOS/IMForwardTests.swift",
+      "category": "tests",
+      "lines": 750
+    },
+    {
+      "path": "测试/前端/iOS/IMIntegrationFixture.swift",
+      "category": "tests",
+      "lines": 40
+    },
+    {
+      "path": "测试/前端/iOS/IMLifecycleTests.swift",
+      "category": "tests",
+      "lines": 243
+    },
+    {
+      "path": "测试/前端/iOS/IMMediaTests.swift",
+      "category": "tests",
+      "lines": 89
+    },
+    {
+      "path": "测试/前端/iOS/IMMessageListTests.swift",
+      "category": "tests",
+      "lines": 514
+    },
+    {
+      "path": "测试/前端/iOS/IMNotificationTests.swift",
+      "category": "tests",
+      "lines": 51
+    },
+    {
+      "path": "测试/前端/iOS/IMSendAdmissionTests.swift",
+      "category": "tests",
+      "lines": 389
+    },
+    {
+      "path": "测试/前端/iOS/IMSessionTests.swift",
+      "category": "tests",
+      "lines": 61
+    },
+    {
+      "path": "测试/前端/iOS/IMStorageTests.swift",
+      "category": "tests",
+      "lines": 172
+    },
+    {
+      "path": "测试/前端/iOS/UI/IMMessageListUITests.swift",
+      "category": "tests",
+      "lines": 196
+    },
+    {
+      "path": "测试/前端/iOS/UI/IMUITests.swift",
+      "category": "tests",
+      "lines": 358
+    },
+    {
+      "path": "测试/后端/security_test.go",
+      "category": "tests",
+      "lines": 135
+    },
+    {
+      "path": "测试/后端/接口/avatar_codec_test.go",
+      "category": "tests",
+      "lines": 83
+    },
+    {
+      "path": "测试/后端/接口/draft_reply_test.go",
+      "category": "tests",
+      "lines": 32
+    },
+    {
+      "path": "测试/后端/接口/export_fence_test.go",
+      "category": "tests",
+      "lines": 388
+    },
+    {
+      "path": "测试/后端/接口/forward_gateway_test.go",
+      "category": "tests",
+      "lines": 338
+    },
+    {
+      "path": "测试/后端/接口/fresh_migrations_test.go",
+      "category": "tests",
+      "lines": 100
+    },
+    {
+      "path": "测试/后端/接口/message_read_points_test.go",
+      "category": "tests",
+      "lines": 244
+    },
+    {
+      "path": "测试/后端/接口/message_read_summary_test.go",
+      "category": "tests",
+      "lines": 80
+    },
+    {
+      "path": "测试/后端/接口/search_test.go",
+      "category": "tests",
+      "lines": 34
+    },
+    {
+      "path": "测试/后端/接口/self_draft_floor_test.go",
+      "category": "tests",
+      "lines": 387
+    },
+    {
+      "path": "测试/后端/接口/self_read_test.go",
+      "category": "tests",
+      "lines": 328
+    },
+    {
+      "path": "测试/后端/接口/self_views_test.go",
+      "category": "tests",
+      "lines": 71
+    },
+    {
+      "path": "测试/后端/接口/send_admission_test.go",
+      "category": "tests",
+      "lines": 377
+    },
+    {
+      "path": "测试/后端/接口/session_refresh_test.go",
+      "category": "tests",
+      "lines": 157
+    },
+    {
+      "path": "测试/后端/接口/source_preferences_test.go",
+      "category": "tests",
+      "lines": 323
+    },
+    {
+      "path": "测试/后端/接口/sync_outbox_test.go",
+      "category": "tests",
+      "lines": 351
+    },
+    {
+      "path": "测试/后端/接口/sync_schema_protocol_test.go",
+      "category": "tests",
+      "lines": 67
+    },
+    {
+      "path": "测试/后端/接口/sync_schemas_test.go",
+      "category": "tests",
+      "lines": 272
+    },
+    {
+      "path": "测试/后端/接口/sync_snapshot_test.go",
+      "category": "tests",
+      "lines": 569
+    },
+    {
+      "path": "测试/部署/MacOS/ContractSmoke.mjs",
+      "category": "tests",
+      "lines": 35
+    },
+    {
+      "path": "测试/部署/MacOS/NATS专项.command/NATS专项.command",
+      "category": "tests",
+      "lines": 103
+    },
+    {
+      "path": "测试/部署/MacOS/NATS协议.mjs/NATS协议.mjs",
+      "category": "tests",
+      "lines": 78
+    },
+    {
+      "path": "测试/部署/MacOS/运行测试.command/运行测试.command",
+      "category": "tests",
+      "lines": 71
+    },
+    {
+      "path": "部署/Linux/【Linux】快捷入口_停止备份.sh",
+      "category": "configuration",
+      "lines": 5
+    },
+    {
+      "path": "部署/Linux/【Linux】快捷入口_部署运行.sh",
+      "category": "configuration",
+      "lines": 5
+    },
+    {
+      "path": "部署/Linux/停止备份.sh/停止备份.sh",
+      "category": "configuration",
+      "lines": 509
+    },
+    {
+      "path": "部署/Linux/部署运行.sh/部署运行.sh",
+      "category": "configuration",
+      "lines": 509
+    },
+    {
+      "path": "部署/MacOS/【MacOS】快捷入口_停止备份.command",
+      "category": "configuration",
+      "lines": 9
+    },
+    {
+      "path": "部署/MacOS/【MacOS】快捷入口_部署运行.command",
+      "category": "configuration",
+      "lines": 9
+    },
+    {
+      "path": "部署/MacOS/停止备份.command/停止备份.command",
+      "category": "configuration",
+      "lines": 515
+    },
+    {
+      "path": "部署/MacOS/部署运行.command/部署运行.command",
+      "category": "configuration",
+      "lines": 515
+    },
+    {
+      "path": "部署/WindowsOS/停止备份.ps1/停止备份.ps1",
+      "category": "configuration",
+      "lines": 418
+    },
+    {
+      "path": "部署/WindowsOS/部署运行.ps1/部署运行.ps1",
+      "category": "configuration",
+      "lines": 418
+    },
+    {
+      "path": "工具/统计项目.mjs/统计项目.mjs",
+      "category": "configuration",
+      "lines": 136
+    }
+  ]
+}

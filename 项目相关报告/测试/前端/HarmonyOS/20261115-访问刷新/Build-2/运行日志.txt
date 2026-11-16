@@ -1,0 +1,365 @@
+ASCII源码快照=/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K
+[33mohpm WARN: [93m[1mSource code dependencies in project-level "oh-package.json5" are as follows, which could lead to circular dependencies reference.[22m[39m[33m
+	 - "@ohos/hypium@file:./MirrorHypium"
+[39m[39m
+[32minstall completed in 0s 279ms[39m
+> hvigor [32mFinished :entry:clean... after 2 ms [39m
+> hvigor [33mWARN: The version number of the 'entry' module does not comply with the SemVer specification.
+               This will affect the installation and publication by ohpm.
+               Make sure the value of version in the oh-package.json5 file of the module complies with the SemVer specification.[39m
+> hvigor [32mFinished :entry:default@PreBuild... after 1 s 17 ms [39m
+> hvigor [32mFinished :entry:default@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GenerateMetadata... after 132 ms [39m
+> hvigor [32mFinished :entry:default@ConfigureCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:default@MergeProfile... after 3 ms [39m
+> hvigor [32mFinished :entry:default@CreateBuildProfile... after 2 ms [39m
+> hvigor [32mFinished :entry:default@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgContextInfo... after 9 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgSdkInfo... after 6 ms [39m
+> hvigor [32mFinished :entry:default@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:default@MakePackInfo... after 60 ms [39m
+> hvigor [32mFinished :entry:default@SyscapTransform... after 2 ms [39m
+> hvigor [32mFinished :entry:default@ProcessProfile... after 211 ms [39m
+> hvigor [32mFinished :entry:default@ProcessRouterMap... after 5 ms [39m
+> hvigor [32mFinished :entry:default@ProcessShareConfig... after 2 ms [39m
+> hvigor [32mFinished :entry:default@ProcessStartupConfig... after 2 ms [39m
+> hvigor [32mFinished :entry:default@BuildNativeWithNinja... after 1 ms [39m
+> hvigor [32mFinished :entry:default@ProcessResource... after 3 ms [39m
+> hvigor [32mFinished :entry:default@GenerateLoaderJson... after 8 ms [39m
+> hvigor [32mFinished :entry:default@ProcessLibs... after 9 ms [39m
+> hvigor [33mWARN: Warning: 'app_name' conflict, first declared.
+at /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/AppScope/resources/base/element/string.json
+but declared again.
+at /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/resources/base/element/string.json
+[39m
+> hvigor [32mFinished :entry:default@CompileResource... after 2 s 821 ms [39m
+> hvigor [32mFinished :entry:default@DoNativeStrip... after 2 ms [39m
+> hvigor [32mFinished :entry:default@BuildJS... after 21 ms [39m
+> hvigor [32mFinished :entry:default@CacheNativeLibs... after 47 ms [39m
+> hvigor [33mWARN: [33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/entryability/EntryAbility.ets:5:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/NativeServices.ets:28:17
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/NativeServices.ets:63:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/NativeServices.ets:66:17
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/NativeServices.ets:71:17
+ 'notification' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/NativeServices.ets:71:30
+ 'SlotType' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/NativeServices.ets:71:39
+ 'SOCIAL_COMMUNICATION' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/NativeServices.ets:77:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Api.ets:20:12
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Api.ets:78:18
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Api.ets:81:20
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Api.ets:84:20
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Api.ets:86:17
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Api.ets:113:18
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Api.ets:116:20
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Api.ets:119:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Api.ets:120:17
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:9:23
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:10:23
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:15:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:16:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:17:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:18:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:19:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:20:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:36:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:37:76
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:42:26
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:44:18
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:44:63
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:44:80
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:45:15
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:58:26
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:60:18
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:60:63
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:60:80
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:61:15
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:74:26
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:75:18
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:75:42
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:75:59
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:75:109
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:81:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:89:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:101:23
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:107:26
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:108:47
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:113:26
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:115:18
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:115:51
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:115:68
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/Data/Store.ets:115:113
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:112:23
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:225:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:225:46
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:229:21
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:231:5
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:241:22
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:242:13
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:243:28
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:246:23
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:248:20
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:249:13
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:249:48
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:249:83
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:253:118
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:283:46
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:402:41
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:524:21
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:572:21
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:676:17
+ 'show' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:749:17
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:751:20
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:751:62
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:752:38
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:758:23
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:814:21
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:816:18
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:817:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:817:47
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:817:82
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:819:21
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:823:18
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:824:35
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:825:15
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:825:117
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:826:16
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:826:58
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:827:30
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:832:21
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:836:20
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:839:20
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:842:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:843:22
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:844:13
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:844:45
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:844:82
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:845:17
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:868:34
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:868:114
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:876:19
+ 'getContext' has been deprecated.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:877:18
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:878:11
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:878:59
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.dXnO0K/entry/src/main/ets/pages/Index.ets:1142:87
+ 'getContext' has been deprecated.
+[39m[39m
+[39m
+> hvigor [32mFinished :entry:default@CompileArkTS... after 47 s 636 ms [39m
+> hvigor [32mFinished :entry:default@GeneratePkgModuleJson... after 5 ms [39m
+> hvigor [32mFinished :entry:default@ProcessCompiledResources... after 2 ms [39m
+> hvigor [32mFinished :entry:default@PackageHap... after 1 s 518 ms [39m
+> hvigor [32mFinished :entry:default@PackingCheck... after 8 ms [39m
+> hvigor [33mWARN: No signingConfig found for product default[39m
+> hvigor [32mFinished :entry:default@SignHap... after 2 ms [39m
+> hvigor [32mFinished :entry:default@CollectDebugSymbol... after 1 ms [39m
+> hvigor [32mFinished :entry:assembleHap... after 1 ms [39m
+> hvigor [32mBUILD SUCCESSFUL in 1 min 3 s 670 ms [39m

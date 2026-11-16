@@ -1,0 +1,128 @@
+{
+  "generatedAt": "2026-11-16T05:58:35.241105+00:00",
+  "nativeBuildAndSixPureRuleGroupsPassed": true,
+  "initialOwnedTextHTTP": {
+    "httpChecks": 9,
+    "semanticAssertions": 3
+  },
+  "sixFunctionalGroups": {
+    "httpChecks": 89,
+    "semanticAssertions": 114,
+    "verifiedPages": 6,
+    "expectedCASConflictSeparately": 1,
+    "productFailures": 0
+  },
+  "preparedResume": "prepared-成功续验.json",
+  "preparedHostFailureRetained": "prepared-中断续跑.json",
+  "encryptedRestore": "恢复-首次结果.json",
+  "finalFlagOnlyChecks": "final-窄HTTP.json",
+  "runtimeHeldForParentNativeMatrices": true,
+  "APIReadySeedIsRestoredEnvironmentNotRetiredSource": true,
+  "actualDeploymentId": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+  "actualRestoreEpoch": "2",
+  "finalBinarySHA256": "dea37a66395b0b2c503ba934bafef327d3d87b407c73a10595e770f46948a2cd",
+  "e69ArchiveSHA256": "c747ca8734b91a3fb40d807e2f0a0768387e194d760525cc7a9553e7444d7371",
+  "finalArchiveSHA256": "a937d84733050e1de7e3ed599c74ecefe743c94cbc06deebe0937c04a8b36c9b",
+  "systemTrustChanged": false,
+  "afterReceiptEnabled": false,
+  "formalExportCompleted": false,
+  "cloudAttachmentQueueDelivered": false,
+  "fiveClientAcceptance": false,
+  "privateLogs": [
+    {
+      "name": "01-新CA.log",
+      "bytes": 706,
+      "sha256": "c86ce8b8e57d192c0ef20012915173e2eda9dd256918c24dabfa41da201c7298"
+    },
+    {
+      "name": "02-新CSR.log",
+      "bytes": 2023,
+      "sha256": "2f90716bf30c261793da34688d4e84cfc45e62cc020bc5892c0a450ecf0842ce"
+    },
+    {
+      "name": "03-新证书.log",
+      "bytes": 59,
+      "sha256": "0867f8872496fcdb52d0a23ce7dca874dd26d943e1a01d4cf66e273954c88544"
+    },
+    {
+      "name": "04-离线CA核验.log",
+      "bytes": 128,
+      "sha256": "c4fce51ca4d5ca6d8081a2c2e56026b8d6f17b6441ae7ebe877d2f1f67e80940"
+    },
+    {
+      "name": "05-启动主PG.log",
+      "bytes": 52,
+      "sha256": "66afd0411ccc09366e99fdd99b85f21899c8d2d064f5835126859618802153ad"
+    },
+    {
+      "name": "06-启动独立journal.log",
+      "bytes": 52,
+      "sha256": "66afd0411ccc09366e99fdd99b85f21899c8d2d064f5835126859618802153ad"
+    },
+    {
+      "name": "07-身份-journal.log",
+      "bytes": 166,
+      "sha256": "049398aaae3c7410daa59616b0f2b1cbfbcd976b21e0063a18e5883750be7c3e"
+    },
+    {
+      "name": "07-身份-main.log",
+      "bytes": 164,
+      "sha256": "0a39b0e2a8762ab9b9968a3a33486cf1bc47a019b4250deb6fb222e7080a5a0c"
+    },
+    {
+      "name": "08-新DB-journal.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "08-新DB-main.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "09-NATS配置核验.log",
+      "bytes": 242,
+      "sha256": "5b29bb117080c73adda5798e696988abb0c593fb30b828023146fd16ca919da0"
+    },
+    {
+      "name": "app.log",
+      "bytes": 522,
+      "sha256": "ad6d791a564a2d028d67ff1314f07a37ef2e19c0ba754b4021d3bf8a4107282b"
+    },
+    {
+      "name": "draft-backup.log",
+      "bytes": 57,
+      "sha256": "da4a1743ddeaab2ac58581c04818ba170dbb7aaf9509745ac39554d6fff89528"
+    },
+    {
+      "name": "draft-isolated-restore.log",
+      "bytes": 75,
+      "sha256": "e07e279a0036e6ea567c2ac0ad4e0e1ae861ae62960ac895e94869742fb24ecb"
+    },
+    {
+      "name": "draft-target-create.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "journal-postgres.log",
+      "bytes": 7773,
+      "sha256": "579d9bd5a1746e8f50381b7a59d9883d28bb290c4173ab35424efe2d865f06f7"
+    },
+    {
+      "name": "main-postgres.log",
+      "bytes": 563002,
+      "sha256": "f5f2c686b6245770840094c2492c6edd04a933f5791751fd6f3219bcf637da20"
+    },
+    {
+      "name": "nats.log",
+      "bytes": 2136,
+      "sha256": "13622371e690b7cd22586cfd33e8e373edff66c1c0b31ef5f4c98c8507caee08"
+    },
+    {
+      "name": "restored-app.log",
+      "bytes": 1338,
+      "sha256": "0e17308b2cff83e3a780df87cee1d5b1f4bba344e9772dc11f04cfa2dd52a5ac"
+    }
+  ]
+}

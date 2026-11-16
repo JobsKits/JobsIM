@@ -1,0 +1,29 @@
+{
+  "boundary": "actual zsh assignment lines executed only; no mkdir/build/API",
+  "checks": [
+    {
+      "entry": "测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+      "mode": "default",
+      "path": "项目相关报告/测试/前端/HarmonyOS/20261115-225702-10615",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+      "mode": "explicit",
+      "path": "项目相关报告/测试/前端/HarmonyOS/显式路径检查",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/HarmonyOS/【MacOS】运行规则测试.command/【MacOS】运行规则测试.command",
+      "mode": "default",
+      "path": "项目相关报告/测试/前端/HarmonyOS/20261115-225702-主机规则",
+      "status": "passed"
+    },
+    {
+      "entry": "测试/前端/HarmonyOS/【MacOS】运行规则测试.command/【MacOS】运行规则测试.command",
+      "mode": "explicit",
+      "path": "项目相关报告/测试/前端/HarmonyOS/显式路径检查",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "name": "本地规则",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedSeconds": 18.616,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "realPG": false,
+      "ownerDependencies": "none",
+      "liveHTTPS": false,
+      "realRestore": false
+    }
+  ],
+  "changedInputs": [],
+  "withPG": false,
+  "HTTPS": false,
+  "deviceDurability": false,
+  "deletionEligible": false
+}

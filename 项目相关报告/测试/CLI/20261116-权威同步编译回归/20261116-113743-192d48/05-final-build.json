@@ -1,0 +1,20 @@
+{
+  "step": "05-final-build",
+  "status": "completed",
+  "exitCode": 0,
+  "seconds": 3.01,
+  "minimumFreeGiB": 13.47,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "build",
+    "-p=1",
+    "-o",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/CLI/20261116-113743-192d48/Products/jobsim-final",
+    "./cmd/jobsim"
+  ],
+  "realAPIEnabled": false,
+  "passed": 0,
+  "failed": 0,
+  "skipped": 0,
+  "binarySHA256": "18738c34228b3318a7a68c8eb34854cb9c3a84fc0351d405a69d16d365f12929"
+}

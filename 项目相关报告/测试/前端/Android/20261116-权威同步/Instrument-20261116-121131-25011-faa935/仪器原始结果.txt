@@ -1,0 +1,196 @@
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.AuthoritativeSyncTest:
+INSTRUMENTATION_STATUS: test=incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.NativeSessionLifecycleTest:
+INSTRUMENTATION_STATUS: test=retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.Migration8To9Test
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.Migration8To9Test:
+INSTRUMENTATION_STATUS: test=originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.Migration8To9Test
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=10
+INSTRUMENTATION_STATUS: stack=org.json.JSONException: No value for indices
+	at org.json.JSONObject.get(JSONObject.java:398)
+	at org.json.JSONObject.getJSONArray(JSONObject.java:593)
+	at com.jobs.im.Migration8To9Test$originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification$1.invokeSuspend(Migration8To9Test.kt:94)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.Migration8To9Test.originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification(Migration8To9Test.kt:67)
+
+INSTRUMENTATION_STATUS: stream=
+Error in originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification(com.jobs.im.Migration8To9Test):
+org.json.JSONException: No value for indices
+	at org.json.JSONObject.get(JSONObject.java:398)
+	at org.json.JSONObject.getJSONArray(JSONObject.java:593)
+	at com.jobs.im.Migration8To9Test$originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification$1.invokeSuspend(Migration8To9Test.kt:94)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.Migration8To9Test.originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification(Migration8To9Test.kt:67)
+
+INSTRUMENTATION_STATUS: test=originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 3.965
+There was 1 failure:
+1) originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification(com.jobs.im.Migration8To9Test)
+org.json.JSONException: No value for indices
+	at org.json.JSONObject.get(JSONObject.java:398)
+	at org.json.JSONObject.getJSONArray(JSONObject.java:593)
+	at com.jobs.im.Migration8To9Test$originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification$1.invokeSuspend(Migration8To9Test.kt:94)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.Migration8To9Test.originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification(Migration8To9Test.kt:67)
+
+FAILURES!!!
+Tests run: 10,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-15",
+  "applicationBuild": "passed",
+  "testHapBuild": "passed",
+  "hostRuleTests": {
+    "passed": 12,
+    "failed": 0,
+    "skipped": 0
+  },
+  "deviceHypiumCasesCompiled": 13,
+  "deviceHypiumExecuted": false,
+  "hardwareOrEmulatorExecuted": false,
+  "realHarmonyHTTPSExecuted": false,
+  "packages": [
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-default-unsigned.hap",
+      "bytes": 482332,
+      "sha256": "8d43d78109691596aec1d569492e8a54985f34a548a0ce469512550901b0f811"
+    },
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-ohosTest-unsigned.hap",
+      "bytes": 1286601,
+      "sha256": "2cb36dd274423c27181c0802d8ff2ede18bad5d6fb88e2a5a0332721711a31f2"
+    }
+  ],
+  "sources": [
+    {
+      "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets",
+      "sha256": "f52025b6cfa959010eeec2b4c32abd5b06394b53e072f1721bbd7552e4399a51"
+    },
+    {
+      "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets",
+      "sha256": "080be307cedf8f5076af282f2dbdadf02377817db5aa7e479ad135ebd1eb02a2"
+    },
+    {
+      "file": "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets",
+      "sha256": "a1a29a5e92187ae20e06c8381f27e34630f66227243f1a7a9ca8b4dcdf5b83bb"
+    },
+    {
+      "file": "测试/前端/HarmonyOS/Unit/Policies.test.mjs",
+      "sha256": "b48598c3eaa2f0d539b317d8b9377c1ebc7db0be0bc309286508518ac606d8aa"
+    },
+    {
+      "file": "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets",
+      "sha256": "6020eccf317946c6856bab683c05067ca3d3a70f47bb41424b8dfd92f1da777e"
+    }
+  ]
+}

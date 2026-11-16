@@ -1,0 +1,42 @@
+{
+  "group": "membership",
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 13,
+  "semanticAssertions": 7,
+  "expectedCASConflictsSeparate": 0,
+  "verifiedPages": 0,
+  "elapsedSeconds": 0.457,
+  "checkedAt": "2026-11-16T05:37:02.734983+00:00",
+  "binarySHA256": "e69e51d2f0620752005df9ee8656fc6ce77511ae1939d994707615b63f2e7214",
+  "assertions": [
+    {
+      "assertion": "reply selection freezes the current same-conversation source proof",
+      "passed": true
+    },
+    {
+      "assertion": "original owned text draft reached positive durable commit",
+      "passed": true
+    },
+    {
+      "assertion": "reply selection freezes the current same-conversation source proof",
+      "passed": true
+    },
+    {
+      "assertion": "former member keeps only private authored text without cloud reply grant",
+      "passed": true
+    },
+    {
+      "assertion": "membership ABA cannot repair an unsent original draft admission",
+      "passed": true
+    },
+    {
+      "assertion": "new membership never revives the old reply holder",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    }
+  ]
+}

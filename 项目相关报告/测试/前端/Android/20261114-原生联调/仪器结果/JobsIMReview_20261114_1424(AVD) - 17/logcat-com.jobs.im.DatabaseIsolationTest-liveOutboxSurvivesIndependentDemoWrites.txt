@@ -1,0 +1,4 @@
+11-14 22:42:00.693  4167  4180 I TestRunner: started: liveOutboxSurvivesIndependentDemoWrites(com.jobs.im.DatabaseIsolationTest)
+11-14 22:42:00.753  4167  4182 D nativeloader: Load /data/app/~~9T8XgrQIT9xHPTAOHphjfg==/com.jobs.im-BssHppnHCwtRZ0vWLGRfiA==/base.apk!/lib/arm64-v8a/libsqliteJni.so using class loader ns clns-9 (caller=/data/app/~~9T8XgrQIT9xHPTAOHphjfg==/com.jobs.im-BssHppnHCwtRZ0vWLGRfiA==/base.apk!classes5.dex): ok
+11-14 22:42:00.776  4167  4182 I JobsIMTest: SQLite=3.50.1
+11-14 22:42:00.807  4167  4180 I TestRunner: finished: liveOutboxSurvivesIndependentDemoWrites(com.jobs.im.DatabaseIsolationTest)

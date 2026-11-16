@@ -1,0 +1,20 @@
+{
+  "node": "v18.20.1",
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Harmony/AuthRules-LzwvNr",
+  "hashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "cddbd504aa8fe99ac865b8e48137234dc04915631faa84afbafd506149d1f5a3",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets": "f8070229568cab15d7113784d2a602eea10c57a3f71fda57a36b010a80ad0db2",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/AuthCoordinator.ets": "35ddfa9ab3f1203ba5a38dafa5eebc9351b32ca6b49e20eab6b520c586588506",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Api.ets": "94d5be315e297b5629b0a658cbeb7245474d8f97b20307e4cc1aceaf8300f220",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Store.ets": "b8660b30de7972a8137686dc354328e85cc9f999fe9793630c92cdba49490e48",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeServices.ets": "378549e0133cd5edc2e8212e3fe94a01b2f2192b907b7e38c551806f4db9e52e",
+    "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets": "3bef382ae6ecebe5fb8ee9eb7374c0eb9a1ea3414684740e9d2f22d1a03095f2",
+    "代码/前端/HarmonyOS/entry/src/main/ets/entryability/EntryAbility.ets": "9e1266f4455e211de75909d6d7f47f7812b9676e2365bab9cbfbd76bfa26afb8",
+    "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets": "63c8499a85e4f73f33a4c72e9f41727b18921a8da80f08ccb8622c6f0e34da56",
+    "测试/前端/HarmonyOS/Unit/RunAuth.mjs": "4c4d76b44e4239d9134fc360d6ac335a4879ba910eb72c31fd68af6b89948f24",
+    "测试/前端/HarmonyOS/Unit/Policies.test.mjs": "f2bcb36b295cc06b661fc39317649a503aac7f69b3b79647e71a1c3d2b27b55c",
+    "测试/前端/HarmonyOS/Unit/Auth.test.cjs": "7d866d27d2bf0c00b00ee66274caedff351ecb379a812b6b431e85a19d4ce2e9",
+    "测试/前端/HarmonyOS/Unit/AuthApi.test.cjs": "ef878f2cc0394de04238322b1f45f946edcf8a4524b4ce31713146fe1fd83c9e"
+  },
+  "native": false
+}

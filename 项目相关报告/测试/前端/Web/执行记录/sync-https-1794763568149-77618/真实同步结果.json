@@ -1,0 +1,24 @@
+{
+  "realBackend": true,
+  "productionDist": true,
+  "strictNodeCAAndBrowserSPKIPin": true,
+  "checks": [
+    "a missing real snapshot page leaves staging intact and commits neither cloud projection nor boundary",
+    "all original envelopes, final validation and first permission-confirming delta install one complete persistent baseline",
+    "real peer append and author edit advance a continuous durable cursor without legacy history polling",
+    "a real committed UI send with a lost response is reconciled once by its own original client ID without resending",
+    "a cold UI restores the same physical-store registration and resumes its committed sync cursor",
+    "an opaque cookie with a new empty IndexedDB is refused as the old physical store and requests fresh proof without sending",
+    "membership revocation restricts cloud projections while preserving a previously lawful ordinary local copy outside the visible cloud view",
+    "a later authoritative global tombstone reaches a former member and erases its retained body and media sidecars",
+    "JavaScript stores contain no credentials and authoritative sync never falls back to legacy history GETs"
+  ],
+  "errors": [],
+  "snapshots": 3,
+  "initialSnapshotRequestCount": 1,
+  "totalSnapshotRequestIDs": 2,
+  "fixtureMessages": 96,
+  "unknownMessagePosts": 1,
+  "legacyHistoryGets": 0,
+  "date": "2026-11-15T17:26:37.081Z"
+}

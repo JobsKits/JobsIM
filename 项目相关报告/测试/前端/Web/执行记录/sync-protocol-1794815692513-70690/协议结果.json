@@ -1,0 +1,20 @@
+{
+  "runtime": "Node WebCrypto and TypeScript transpile; no browser, API or device",
+  "checks": [
+    "exact positions beyond JavaScript safe integer remain strings",
+    "snapshot identity, complete ordered manifest and expiry are required",
+    "original Go-style escaped body bytes are hashed before decoding",
+    "valid digest cannot authorize a different refs array or body",
+    "installable flag cannot override missing or contradictory revision binding",
+    "unknown, redacted and incomplete pages cannot become a baseline",
+    "unrelated append may advance classification watermark without invalidating refs",
+    "explicit redacted range advances only the continuous boundary",
+    "gaps, duplicate origins and a false end position stop cursor advancement",
+    "permission and restore changes stop all ordinary delta installation",
+    "delta may hydrate a newer current revision without changing immutable origin",
+    "unknown hydration cannot silently advance past an unresolved event"
+  ],
+  "errors": [],
+  "sourceSHA256": "9f9dc0866de08fc5f2e39dd5c5bbc16e520537b2f210fa6d8570acb30783ddc6",
+  "date": "2026-11-16T07:54:52.513Z"
+}

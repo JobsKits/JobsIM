@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "realEncryptedBackupAndOfflineRestore": true,
+  "backupSHA256": "74fdf3e25b195d661fd350f2a39b10c19fbcb409d4fcd659e275f9fea2ff5c03",
+  "backupBytes": 295566,
+  "scopeRetainedEpochAdvanced": true,
+  "clearDigestAndReplyFloorsReplayed": true,
+  "oldTextAndOldAdmissionNotRevived": true,
+  "matchingOwnedTextSurvivesSourceRecall": true,
+  "S2NewEpochSnapshotAndNewTextCommit": true,
+  "httpChecks": 51,
+  "semanticAssertions": 130,
+  "verifiedPages": 9,
+  "binarySHA256": "e69e51d2f0620752005df9ee8656fc6ce77511ae1939d994707615b63f2e7214",
+  "operatorBinarySHA256": "69fb4a4a80807e5bae4cadb2cc06e02a3812f5b8fd589ee97714db4dc2af2d63",
+  "targetSeedPath": "/Users/jobs/Library/Application Support/JobsIM/Integration/draft-3f8ad559-d5a4-47e7-aef8-9d71db2e406a/Safety/restored-environment.json",
+  "privateSteps": [
+    {
+      "step": "draft-backup",
+      "exitCode": 0,
+      "privateLog": "draft-backup.log",
+      "logSHA256": "da4a1743ddeaab2ac58581c04818ba170dbb7aaf9509745ac39554d6fff89528"
+    },
+    {
+      "step": "draft-target-create",
+      "exitCode": 0,
+      "privateLog": "draft-target-create.log",
+      "logSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "draft-isolated-restore",
+      "exitCode": 0,
+      "privateLog": "draft-isolated-restore.log",
+      "logSHA256": "e07e279a0036e6ea567c2ac0ad4e0e1ae861ae62960ac895e94869742fb24ecb"
+    }
+  ]
+}

@@ -1,0 +1,3021 @@
+{
+  "scope": "historical report originals; artifact bytes preserved; navigation may change only with original archived",
+  "files": [
+    {
+      "old": "测试/CLI/报告/20261115-CLI治理/HTTPS测试.log",
+      "new": "项目相关报告/测试/CLI/20261115-CLI治理/HTTPS测试.log",
+      "sha256": "7db3a5e21e9ea788be28cb837db30dab9c960bc632f8813def0dfd57782696a0",
+      "bytes": 54
+    },
+    {
+      "old": "测试/CLI/报告/20261115-CLI治理/HTTPS结果.json",
+      "new": "项目相关报告/测试/CLI/20261115-CLI治理/HTTPS结果.json",
+      "sha256": "49bcb62d8cc92b76784d980d1ecbf2ec7484596680fb32a3b6fc8521ba811522",
+      "bytes": 1050
+    },
+    {
+      "old": "测试/CLI/报告/20261115-CLI治理/README.md",
+      "new": "项目相关报告/测试/CLI/20261115-CLI治理/README.md",
+      "sha256": "d9f90eab35a7bcf59e899c35ae5429a539db921a5549559cb6c87ef26d11fde7",
+      "bytes": 3630
+    },
+    {
+      "old": "测试/CLI/报告/20261115-CLI治理/SHA256SUMS",
+      "new": "项目相关报告/测试/CLI/20261115-CLI治理/SHA256SUMS",
+      "sha256": "a69649eb7910ca992b98239b038c9e1081b8f8580eafd03446361cf580838b8e",
+      "bytes": 492
+    },
+    {
+      "old": "测试/CLI/报告/20261115-CLI治理/SQLite测试.log",
+      "new": "项目相关报告/测试/CLI/20261115-CLI治理/SQLite测试.log",
+      "sha256": "153ab13d4c87034f259944b9d6ed3b327f0833f02ba0d4f3e573678940075b2d",
+      "bytes": 5500
+    },
+    {
+      "old": "测试/CLI/报告/20261115-CLI治理/SQLite结果.json",
+      "new": "项目相关报告/测试/CLI/20261115-CLI治理/SQLite结果.json",
+      "sha256": "19a0b3feb39f4084eb20e4ebcb591c33a811c5a06e0711b1db886e4b8c161585",
+      "bytes": 2565
+    },
+    {
+      "old": "测试/CLI/报告/20261115-CLI治理/验证摘要.json",
+      "new": "项目相关报告/测试/CLI/20261115-CLI治理/验证摘要.json",
+      "sha256": "106b47419fb3b91b5f6e213121cce9005d757397ff6c04af3e69c3277f886dec",
+      "bytes": 2468
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/HTTPS协调器测试.log",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/HTTPS协调器测试.log",
+      "sha256": "f856e107af2a7cfc20ca1d7ea5a0ea067b7f960a067988584edd9bbfbc7dbb1e",
+      "bytes": 139
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/HTTPS协调器结果.json",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/HTTPS协调器结果.json",
+      "sha256": "e9b14557f689106e499317139305226a74083e143d8e697243e5d2f4e2130e3e",
+      "bytes": 659
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/HTTPS协调器首次时钟夹具.log",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/HTTPS协调器首次时钟夹具.log",
+      "sha256": "da8a7b8a0c4b5fc037cb6653e2cf889763cd0cb253dc29f950be0b1b9b78d477",
+      "bytes": 205
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/Mac系统库独立状态码.json",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/Mac系统库独立状态码.json",
+      "sha256": "90854fb06432889e6525d994568aab522202a0e86cf8be86651884a03ad6b9e4",
+      "bytes": 112
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/Mac系统库诊断.json",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/Mac系统库诊断.json",
+      "sha256": "e2204be4c84abe33538ba68cf0a6d69f89eb6e33147e5ee29d03b4d4023f115a",
+      "bytes": 261
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/README.md",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/README.md",
+      "sha256": "59f7e7c29e8f5774b57fc0bd3b68644f1ce08dd99472c8fd1b52cd48263b5966",
+      "bytes": 2849
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/SHA256SUMS",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/SHA256SUMS",
+      "sha256": "7e5ffd2c15d0eb36878fa9d034d815343383174ff8528b64b6c3a3378882f065",
+      "bytes": 1162
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/SQLite测试.log",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/SQLite测试.log",
+      "sha256": "cf14c2a28218dfa97162f30f9c77d0b68e71c16002d2702d6ad774dcaf63e155",
+      "bytes": 11004
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/SQLite结果.json",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/SQLite结果.json",
+      "sha256": "af28002c127453af4626343544d9d1669ffff0bba16b025beea5aad01d9a47b8",
+      "bytes": 4427
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/终端HTTPS测试.log",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/终端HTTPS测试.log",
+      "sha256": "76509716362eb7eed53f555bba7b88cbfb904c06e19d3d974bfc16504ef6887d",
+      "bytes": 902
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/终端HTTPS结果.json",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/终端HTTPS结果.json",
+      "sha256": "ae6d651982f6e50a789d50007df79a319d04f8cc388c158a2b864e860e3694c7",
+      "bytes": 936
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/终端HTTPS结果.json.sha256",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/终端HTTPS结果.json.sha256",
+      "sha256": "aae39846e37705ef0d9a908a35e5484b6938060aee052dfbdcfad5c140e43c3d",
+      "bytes": 89
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/跨平台构建.json",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/跨平台构建.json",
+      "sha256": "b13e5b94f6bf2916f67997d9a79694cd31c293ca1629915ca24a54836aa138ef",
+      "bytes": 539
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/验证摘要.json",
+      "new": "项目相关报告/测试/CLI/20261115-刷新家族/验证摘要.json",
+      "sha256": "695b7647be10c17c5a08ef84cf9f3fde68876a5a65e8af24342cebc2d600a8a1",
+      "bytes": 3898
+    },
+    {
+      "old": "测试/CLI/报告/20261115-搜索协作/CollaborationHTTPS测试.log",
+      "new": "项目相关报告/测试/CLI/20261115-搜索协作/CollaborationHTTPS测试.log",
+      "sha256": "0c8fdcdd9ef8eefccfc2036b0306a831bc8ec9dba32f7d68250160c2e3f7df98",
+      "bytes": 821
+    },
+    {
+      "old": "测试/CLI/报告/20261115-搜索协作/CollaborationHTTPS结果.json",
+      "new": "项目相关报告/测试/CLI/20261115-搜索协作/CollaborationHTTPS结果.json",
+      "sha256": "0dbf560a071302f49a896d7db6b6fb6eeb908cea413e4661483dd87a2e6e0db1",
+      "bytes": 880
+    },
+    {
+      "old": "测试/CLI/报告/20261115-搜索协作/README.md",
+      "new": "项目相关报告/测试/CLI/20261115-搜索协作/README.md",
+      "sha256": "08f0ebfb45dd24ed688aa3e747152e974594602a7732fbb695e6ec964d15d6c7",
+      "bytes": 5374
+    },
+    {
+      "old": "测试/CLI/报告/20261115-搜索协作/SHA256SUMS",
+      "new": "项目相关报告/测试/CLI/20261115-搜索协作/SHA256SUMS",
+      "sha256": "55cd6934b36125f21d39aeeae67f559f6afc4c884c09dbc75d3ade4cfc9a48cd",
+      "bytes": 518
+    },
+    {
+      "old": "测试/CLI/报告/20261115-搜索协作/SQLite测试.log",
+      "new": "项目相关报告/测试/CLI/20261115-搜索协作/SQLite测试.log",
+      "sha256": "be807e83964f5d2c08a497405a8b9b4f843e503ecf6c45ce3365e5204d889c0f",
+      "bytes": 9025
+    },
+    {
+      "old": "测试/CLI/报告/20261115-搜索协作/SQLite结果.json",
+      "new": "项目相关报告/测试/CLI/20261115-搜索协作/SQLite结果.json",
+      "sha256": "96d5bc7efbba4288364ec214e40a918cfc6caf629d70f2940972ded583fd60be",
+      "bytes": 3023
+    },
+    {
+      "old": "测试/CLI/报告/20261115-搜索协作/验证摘要.json",
+      "new": "项目相关报告/测试/CLI/20261115-搜索协作/验证摘要.json",
+      "sha256": "99621f65916475bb10a8e2f8757eb1406b7b02047a1a63d469928c2eaca10e8d",
+      "bytes": 4367
+    },
+    {
+      "old": "测试/CLI/报告/20261115-普通转发/ForwardHTTPS测试.log",
+      "new": "项目相关报告/测试/CLI/20261115-普通转发/ForwardHTTPS测试.log",
+      "sha256": "1297beab3a5d4ed1deddff873eb98cef31b922ea8e4104243670a1541d09be1c",
+      "bytes": 60
+    },
+    {
+      "old": "测试/CLI/报告/20261115-普通转发/ForwardHTTPS结果.json",
+      "new": "项目相关报告/测试/CLI/20261115-普通转发/ForwardHTTPS结果.json",
+      "sha256": "d0ede5d7ef7e5d96f6fd76d2ac5bfc1b828973b43342a7395e3e4726bed71abe",
+      "bytes": 615
+    },
+    {
+      "old": "测试/CLI/报告/20261115-普通转发/README.md",
+      "new": "项目相关报告/测试/CLI/20261115-普通转发/README.md",
+      "sha256": "2b42c80b0f609ad4b02392fb2cc78cfea720ce87e5137c8634766042e84e3c30",
+      "bytes": 2294
+    },
+    {
+      "old": "测试/CLI/报告/20261115-普通转发/SQLite测试.log",
+      "new": "项目相关报告/测试/CLI/20261115-普通转发/SQLite测试.log",
+      "sha256": "0c8e30f344dca4e919673c8fd51a23a6c2d79a4a7ae6a9cc6c479beb3c9ddcba",
+      "bytes": 7507
+    },
+    {
+      "old": "测试/CLI/报告/20261115-普通转发/SQLite结果.json",
+      "new": "项目相关报告/测试/CLI/20261115-普通转发/SQLite结果.json",
+      "sha256": "6aee348ddc73e158720b0b17266af26a3f0aefc69f2327b4e050d53456d4a3be",
+      "bytes": 2718
+    },
+    {
+      "old": "测试/CLI/报告/20261115-普通转发/验证摘要.json",
+      "new": "项目相关报告/测试/CLI/20261115-普通转发/验证摘要.json",
+      "sha256": "71c73f2d0d65d6e3e718b1349414728d2d70a2700b2c8eabf4c5b26064522ae5",
+      "bytes": 1498
+    },
+    {
+      "old": "测试/CLI/报告/ForwardHTTPS结果.json",
+      "new": "项目相关报告/测试/CLI/ForwardHTTPS结果.json",
+      "sha256": "d0ede5d7ef7e5d96f6fd76d2ac5bfc1b828973b43342a7395e3e4726bed71abe",
+      "bytes": 615
+    },
+    {
+      "old": "测试/CLI/报告/HTTPS结果.json",
+      "new": "项目相关报告/测试/CLI/HTTPS结果.json",
+      "sha256": "a5613592100c0dd03b11114e3b36a47dd06d7f56996ba2f36bf1d868268add9f",
+      "bytes": 1050
+    },
+    {
+      "old": "测试/CLI/报告/SQLite测试.log",
+      "new": "项目相关报告/测试/CLI/SQLite测试.log",
+      "sha256": "0c8e30f344dca4e919673c8fd51a23a6c2d79a4a7ae6a9cc6c479beb3c9ddcba",
+      "bytes": 7507
+    },
+    {
+      "old": "测试/CLI/报告/SQLite结果.json",
+      "new": "项目相关报告/测试/CLI/SQLite结果.json",
+      "sha256": "6aee348ddc73e158720b0b17266af26a3f0aefc69f2327b4e050d53456d4a3be",
+      "bytes": 2718
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223428-619/单元测试/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261114-223428-619/单元测试/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "97f6bc81ab12127b43e47f70e1ea125c747a5a215dca44ccc721279a465f3b5f",
+      "bytes": 753
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223428-619/单元测试/binary/output-events.bin",
+      "new": "项目相关报告/测试/前端/Android/20261114-223428-619/单元测试/binary/output-events.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223428-619/单元测试/binary/results-generic.bin",
+      "new": "项目相关报告/测试/前端/Android/20261114-223428-619/单元测试/binary/results-generic.bin",
+      "sha256": "9eee39866add8106d1b867dec826e60e2c1eba50b07771923857468c87416499",
+      "bytes": 516
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223428-619/运行日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-223428-619/运行日志.txt",
+      "sha256": "705a310359be7b6246343106ed029fdc496a6aeb860f00dba907d429ab92f9d9",
+      "bytes": 3365
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223510-1023/启动截图.png",
+      "new": "项目相关报告/测试/前端/Android/20261114-223510-1023/启动截图.png",
+      "sha256": "f2662fdf5b2e24d9f0f5f13ca81521a23a06e807f34d88c5760c6a97cb9695f4",
+      "bytes": 1381940
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223510-1023/系统版本.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-223510-1023/系统版本.txt",
+      "sha256": "54183f4323f377b737433a1e98229ead0fdc686f93bab057ecb612daa94002b5",
+      "bytes": 3
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223510-1023/运行日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-223510-1023/运行日志.txt",
+      "sha256": "933a261a8f919a5c5145f287e2586905a9000101ab0628e8194081752b6ebeb2",
+      "bytes": 4818
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223555-1886/启动截图.png",
+      "new": "项目相关报告/测试/前端/Android/20261114-223555-1886/启动截图.png",
+      "sha256": "e8e29e417bcb74a8906e846e38b9da31ebb6e51df1350f903f237ac8b647819a",
+      "bytes": 72584
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223555-1886/系统版本.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-223555-1886/系统版本.txt",
+      "sha256": "54183f4323f377b737433a1e98229ead0fdc686f93bab057ecb612daa94002b5",
+      "bytes": 3
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-223555-1886/运行日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-223555-1886/运行日志.txt",
+      "sha256": "e303b938a0b1f605b2c940dabefe4f3df730f8385b1a4e73c967e0384e288448",
+      "bytes": 4924
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-234258-88087/单元测试/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261114-234258-88087/单元测试/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "d87c35ff89d44e06e571599a64e2a0ef39bf69eeee5e189cfdadbc16c1121d49",
+      "bytes": 865
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-234258-88087/单元测试/binary/output-events.bin",
+      "new": "项目相关报告/测试/前端/Android/20261114-234258-88087/单元测试/binary/output-events.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-234258-88087/单元测试/binary/results-generic.bin",
+      "new": "项目相关报告/测试/前端/Android/20261114-234258-88087/单元测试/binary/results-generic.bin",
+      "sha256": "b296a9736215a049de663a3f98ae849d73dec1aa339b80c0ada7153ecc2e041f",
+      "bytes": 609
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-234258-88087/运行日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-234258-88087/运行日志.txt",
+      "sha256": "804d74e0fae40f4af471d5b73c8c4e1bda58bb20086423c244dd688591992600",
+      "bytes": 3206
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生截图/01-登录.png",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生截图/01-登录.png",
+      "sha256": "5362d4f2b82328a0add8dd0c10640ba0406a4704b91dff5c9cec487276183fa9",
+      "bytes": 142410
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生截图/02-会话.png",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生截图/02-会话.png",
+      "sha256": "1d21b54b5419337d148f66e355f3820ec78e47a887e46d82c26d0687bad94a22",
+      "bytes": 115123
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生截图/03-群聊空态.png",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生截图/03-群聊空态.png",
+      "sha256": "a4f169156b4c23f24fbbc804273cad135bc5ea792c69bd378bb1da83375b94c8",
+      "bytes": 99616
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生截图/04-设置白天.png",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生截图/04-设置白天.png",
+      "sha256": "d2a48aa5d7c5e49b5f9da421449534bb5386428fd50e003ef89acda76e1c2be0",
+      "bytes": 152571
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生截图/05-设置黑夜.png",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生截图/05-设置黑夜.png",
+      "sha256": "fdbdfe780241e236bc9df7b9d8f8c1894545db74a8762d79c390f820737c851b",
+      "bytes": 153157
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生截图/06-设置跟随系统.png",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生截图/06-设置跟随系统.png",
+      "sha256": "8c285ccc2616ddcab3e333d201ad86c36679b87bb9a434cecdc1121e0154a2f9",
+      "bytes": 152729
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生截图/07-实例CA核对.png",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生截图/07-实例CA核对.png",
+      "sha256": "299c7678456039598993989c866f2668fd79f2245cb3c479ed503edd277d55e1",
+      "bytes": 191065
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/README.md",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/README.md",
+      "sha256": "271395e43ff89ddb4048d63e899796ea5320771b07c19c9b6938a4fefc264fee",
+      "bytes": 1732
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/aapt.1.ok.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/aapt.1.ok.txt",
+      "sha256": "c7a848af6de0049aa585be2510ee560c8f800cd6878d4abf674bd27f25238b69",
+      "bytes": 4604
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/aapt.2.ok.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/aapt.2.ok.txt",
+      "sha256": "990dfaf50249a95a5c366ec9b2865a84f202a4c124899f751bcc85bfe14359b7",
+      "bytes": 1202
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/cpuinfo",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/cpuinfo",
+      "sha256": "bfb66ce9d0da0c430b8aee917c8d027d9d9800a57524d03687794e3939cc5394",
+      "bytes": 1359
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/device-info.pb",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/device-info.pb",
+      "sha256": "5bcffce1d13dcd59d92a227c8620a5e42304f4b7e8f3b9a47c5b5be54900baa6",
+      "bytes": 130
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/logcat-com.jobs.im.DatabaseIsolationTest-liveOutboxSurvivesIndependentDemoWrites.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/logcat-com.jobs.im.DatabaseIsolationTest-liveOutboxSurvivesIndependentDemoWrites.txt",
+      "sha256": "95935b25f0c7fc76d05cb4e1631287233c9cbb0d0610992bc45059fe458b0e42",
+      "bytes": 622
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/logcat-com.jobs.im.LiveApiTest-verifiedTlsTwoAccountMessageContract.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/logcat-com.jobs.im.LiveApiTest-verifiedTlsTwoAccountMessageContract.txt",
+      "sha256": "8c27cb423657d62e3cf213e61cdf8d07986b73f707b9d09b61eccc22cad30b04",
+      "bytes": 3470
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/meminfo",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/meminfo",
+      "sha256": "27a07cec0f492bea5a25aab4d33e1838ff9f807f3c9817dbbf8bd71bf7d53a26",
+      "bytes": 1262
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/test-result.pb",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/test-result.pb",
+      "sha256": "79ca1555c7949801a073d76a2971a82ad26c36b920de30cdc8a5b416bd8205f6",
+      "bytes": 2282
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/test-result.textproto",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/test-result.textproto",
+      "sha256": "3be3352eea1697bff3cf12f1d1e68dac4244cbea2bf35974b303f5ac49d1a47c",
+      "bytes": 4284
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/testlog/test-results.log",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/JobsIMReview_20261114_1424(AVD) - 17/testlog/test-results.log",
+      "sha256": "1cd5434e4832de27c409cc9fb74e9705ff0123d1ff5a78ae49dfa9410aebbbc0",
+      "bytes": 1367
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "0ed143d7037c7ab3f60963d5a2dadf889719447a9dfa93714d837830e545a594",
+      "bytes": 1186
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/test-result-exit-code.txt",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/test-result-exit-code.txt",
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "bytes": 1
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/仪器结果/test-result.pb",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/仪器结果/test-result.pb",
+      "sha256": "c8cc3c1d001dd00806fcecac474c4466d0099ff33b9f728a7a7aa9d8c775c747",
+      "bytes": 2256
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/单元结果.xml",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/单元结果.xml",
+      "sha256": "97f6bc81ab12127b43e47f70e1ea125c747a5a215dca44ccc721279a465f3b5f",
+      "bytes": 753
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/最终单元5项.xml",
+      "new": "项目相关报告/测试/前端/Android/20261114-原生联调/最终单元5项.xml",
+      "sha256": "399e461417e19a46bc006620f4fa35bc82ca77718df812c8c81519a3edd3802c",
+      "bytes": 865
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-200占位恢复/README.md",
+      "new": "项目相关报告/测试/前端/Android/20261115-200占位恢复/README.md",
+      "sha256": "7f891358be110f372f0a31333861177678896615dce8cecdd0e8bbfebb2ea888",
+      "bytes": 2195
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-200占位恢复/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/Android/20261115-200占位恢复/SHA256SUMS",
+      "sha256": "e3b294b226a831351536f19affa4cf571fda280cf38e55af12181a13423e99ba",
+      "bytes": 468
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-200占位恢复/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-200占位恢复/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "8c2d84ca3777dffc14b41d1e258519340a9129c43b37104637058d382b1d0567",
+      "bytes": 727
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-200占位恢复/单条仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-200占位恢复/单条仪器日志.txt",
+      "sha256": "0e8e7f1f5934ed8c65c5c4982836a7917001f37d4bbd134ebb3efddfd5104420",
+      "bytes": 7095
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-200占位恢复/首次编译方法大小诊断.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-200占位恢复/首次编译方法大小诊断.txt",
+      "sha256": "9011dd9b5f319192bbb93ebe5ae79614386ef3ccf8fbe6c0529a0d634846b080",
+      "bytes": 22359
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-200占位恢复/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-200占位恢复/验证摘要.json",
+      "sha256": "a2df52ace0b20c0dca3da49c5f7618767c928f82838f2ae5ad209ba45a66262f",
+      "bytes": 1411
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "0d58fe4ee2b8d1098f4236b30a4362f3e9069c83bd3b77164b89994802cf3401",
+      "bytes": 985
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/README.md",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/README.md",
+      "sha256": "1edf141e76ff41db930e352b6c26a2e8d271b2b0ad5d5d166b576b0f00ef8720",
+      "bytes": 4094
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/SHA256SUMS",
+      "sha256": "373afdbf0458b9cbb192bc3b1cdeb4cbb8b33e07ca0e1cbbbfe50b0589852fc5",
+      "bytes": 1643
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/主题修复前/04-Native-Dark-Settings.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/主题修复前/04-Native-Dark-Settings.png",
+      "sha256": "22f624b2ec07a474c259057adfe5482109fae9e8b54095d85099b7c5e1ab4a73",
+      "bytes": 131741
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/主题修复前/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/主题修复前/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "9b3f3caa78c8a6308078fc881ea48cf58d4b5ce6e3043443d4b88bd3770ebfe6",
+      "bytes": 4088
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/主题修复前/构建测试日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/主题修复前/构建测试日志.txt",
+      "sha256": "cf6dd0ec6bb8c652d333441fdfa48c475c2cc121e052f344a10105fdb236ecb5",
+      "bytes": 5253
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/主题修复前/源码及测试包构建日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/主题修复前/源码及测试包构建日志.txt",
+      "sha256": "82b4492657dc41064a39c9854cf384b72fe8946d35baa874ab5d6572505c5ac9",
+      "bytes": 5002
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/主题修复前/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/主题修复前/验证摘要.json",
+      "sha256": "24cdfd7cdf14563dd5a447dca2911985abbb85840ad7f65fe31eec25a0ea9377",
+      "bytes": 7217
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "821a8e49c23650a64559bea37437876a21bb7d2296b235fca92461abf73e6a0d",
+      "bytes": 4086
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/原生UI/01-Native-Chat.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/原生UI/01-Native-Chat.png",
+      "sha256": "c964f32ba15ee82e62d6cd2e2e504b42188b64b0ffb4fc5291efbdd6193a8226",
+      "bytes": 64604
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/原生UI/02-Native-Group.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/原生UI/02-Native-Group.png",
+      "sha256": "43336e2dc767df3e2c362b2137ef73daa01ed08d35363b50f1f6b6a1e5312313",
+      "bytes": 125469
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/原生UI/03-Native-Settings.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/原生UI/03-Native-Settings.png",
+      "sha256": "957f2aa4e7debdbeaf34fc5d7a0f83b56ae8dc2b5f5ab5f4d81b581f5a32491a",
+      "bytes": 143732
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/原生UI/04-Native-Dark-Settings.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/原生UI/04-Native-Dark-Settings.png",
+      "sha256": "0729aaa170b8f2951ddb91a169caf1be06ef13f4ada4ce644ab8d13d53fd73ed",
+      "bytes": 144062
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/原生UI/05-Native-System-Settings.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/原生UI/05-Native-System-Settings.png",
+      "sha256": "6304549d82ec7e90ed279d8ac41cb219f5c6a988a5078c77790371c1548bdd4c",
+      "bytes": 143768
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/原生UI/99-Before-Cleanup.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/原生UI/99-Before-Cleanup.png",
+      "sha256": "6304549d82ec7e90ed279d8ac41cb219f5c6a988a5078c77790371c1548bdd4c",
+      "bytes": 143768
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/构建测试日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/构建测试日志.txt",
+      "sha256": "9bd7dd3ce3fda7c89e4713fa51c734d3dfbbf3846c6c708997b892dbb9c2bf2c",
+      "bytes": 5133
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-发送准入围栏/验证摘要.json",
+      "sha256": "12d9e7b8ce28878bfcbcf0526d773538508bd9e36a9429d65c9c01e01218214f",
+      "bytes": 7410
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "763876b080f78a00940ad4e7a10abbb94de19819d8fcbc680d8b4049e2122ff5",
+      "bytes": 990
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/README.md",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/README.md",
+      "sha256": "8a5026ccfe74a06d828e04fec9a4fae30ff30c76f183be5a7828d6e4e4cf9c2c",
+      "bytes": 4494
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/SHA256SUMS",
+      "sha256": "9c5252d9bb068cbcb17009104168f81e5f036efa6365e642e75d48a95dd5b1b5",
+      "bytes": 1077
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "5524eb86fa8a47913b46328eeddcf61ee2bb388569abebe0b3d269735d3bbbcd",
+      "bytes": 3552
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/原生UI/01-Native-Chat.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/原生UI/01-Native-Chat.png",
+      "sha256": "552220ce424646513d54dd0753890296050b610dffdb2200216a8def4661c941",
+      "bytes": 62724
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/原生UI/02-Native-Group.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/原生UI/02-Native-Group.png",
+      "sha256": "9b99a65307dad6b4b8b0120ebf932805b42d579fb9be7fd1dd33ed91244345b6",
+      "bytes": 125142
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/原生UI/03-Native-Settings.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/原生UI/03-Native-Settings.png",
+      "sha256": "37c63705c64fc790c23db7409136f1a649c14656148e6a6cb21b6e160966ddd6",
+      "bytes": 143156
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/原生UI/04-Native-Dark-Settings.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/原生UI/04-Native-Dark-Settings.png",
+      "sha256": "a6bd1d35c6599c83aa1427f9f839e71f468367429074bd1ff34da9bdc6aa54d3",
+      "bytes": 143529
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/原生UI/05-Native-System-Settings.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/原生UI/05-Native-System-Settings.png",
+      "sha256": "59d0dd1752cd1f3301a882f2e02889df2589106eaf1caeac916d7c9fb22150e4",
+      "bytes": 143161
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/原生UI/99-Before-Cleanup.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/原生UI/99-Before-Cleanup.png",
+      "sha256": "59d0dd1752cd1f3301a882f2e02889df2589106eaf1caeac916d7c9fb22150e4",
+      "bytes": 143161
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/构建测试日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/构建测试日志.txt",
+      "sha256": "75e61bbbad7ce1e74f9674400811870db0a5391b04eaf38bd3b40aa76574ac90",
+      "bytes": 5089
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-基础闭环/验证摘要.json",
+      "sha256": "402a078b84cc05a2cb939878b56884bbb74e08b07037a13e15823c6bd0dd38bf",
+      "bytes": 6669
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "c092d3d553441c2118048d74ccc92c6352a4b7393cf5586004ef41711cb20d8a",
+      "bytes": 986
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/README.md",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/README.md",
+      "sha256": "7d24b6706d2bbbf46dc5dc057e904d1427f0f708683613c86de2ee439a2f86d5",
+      "bytes": 7226
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/SHA256SUMS",
+      "sha256": "fbf6ffcf02258a854316df3b13e7af384a0b4cb87ea624ca9bb7d0deba8df321",
+      "bytes": 2582
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "200ee39f61a3cd84bc9659ae038437ca88474abc061cdc245cf39cf3ac68e925",
+      "bytes": 4824
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/搜索协作/01-Native-Favorites.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/搜索协作/01-Native-Favorites.png",
+      "sha256": "0b459076f7a323063f0c4553b4268a8cb20b8eb7a30c0de504f1b8d6f8e3bdf6",
+      "bytes": 105844
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/搜索协作/02-Exact-Source-Mention.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/搜索协作/02-Exact-Source-Mention.png",
+      "sha256": "651cccbe5dfa50b2c0db2937c115c8f64a465e79533fef715e9ec9d4e13802ea",
+      "bytes": 110727
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/搜索协作/03-Native-Announcement.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/搜索协作/03-Native-Announcement.png",
+      "sha256": "4410df09d8eda39ccae80dbd21e243243d5aee477c4d00a2b67028d1cfdbe884",
+      "bytes": 140236
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/搜索协作/03a-Group-Before-Announcement.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/搜索协作/03a-Group-Before-Announcement.png",
+      "sha256": "c788be012bb5f572a9936925995df5e2329c0eca3f43c14dc3b1921ac3d76527",
+      "bytes": 141635
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/搜索协作/03b-After-Announcement-Click.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/搜索协作/03b-After-Announcement-Click.png",
+      "sha256": "feaaa992aaab3257abd71c4c05d451d3efe7f8129ceca9f164e1d51b158f3ae4",
+      "bytes": 140190
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/搜索协作/04-Native-Cleared-Announcement.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/搜索协作/04-Native-Cleared-Announcement.png",
+      "sha256": "742ea97d89e1895acc2d600bad1e27b9f0f96335d81e525cddb0836ba0f157e5",
+      "bytes": 142994
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/搜索协作/05-Native-Search.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/搜索协作/05-Native-Search.png",
+      "sha256": "a370022c0bc67fb6009e0042a8d6724b8ae1baf55f642e28a22121438627caad",
+      "bytes": 123037
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/搜索协作/06-Native-Dark-Favorites.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/搜索协作/06-Native-Dark-Favorites.png",
+      "sha256": "13b8fcec55fee5a623a115dfa6954a24f8f85aab323489b428081258cf8dfa2b",
+      "bytes": 144169
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/搜索协作/99-Before-Cleanup.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/搜索协作/99-Before-Cleanup.png",
+      "sha256": "0cceff571d0a5a16b553a0e07bf8933968f969ef01c3e3ff330b8ebe821a64a0",
+      "bytes": 145500
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/转发/01-Native-Forward-Selection-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/转发/01-Native-Forward-Selection-Dark.png",
+      "sha256": "b812bd799f2be2f36d0a7bad3cafa6a1b8a122985c66123caa526dd20c92a789",
+      "bytes": 114464
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/转发/02-Native-Forward-Unknown.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/转发/02-Native-Forward-Unknown.png",
+      "sha256": "7770c82f47502c3e873938d7a5644b2530f4cba634be4dc87d6765ad4f5f0ccb",
+      "bytes": 112922
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/转发/03-Native-Forward-Explicit-Retry.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/转发/03-Native-Forward-Explicit-Retry.png",
+      "sha256": "b440560f5df867ed3039aea237b00cf0ff9c42038e7187edada4d206574f471b",
+      "bytes": 135761
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/转发/04-Native-Forward-Delivered.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/转发/04-Native-Forward-Delivered.png",
+      "sha256": "3e7784852d20c88c001aee9b1d0b6e2dbbb4e13f3b4e5307e87aaffbe73c1206",
+      "bytes": 117931
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/原生UI/转发/99-Forward-Before-Cleanup.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/原生UI/转发/99-Forward-Before-Cleanup.png",
+      "sha256": "854a39ece83eb2839b3bfe5e14d38cdff79ad24eefecdd2fe6b3351f75de06d4",
+      "bytes": 117931
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/投影并发围栏前/APK-SHA256.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/投影并发围栏前/APK-SHA256.txt",
+      "sha256": "05dd7b310c25e5b2d94faf96a3eca21160f4b9c5fbde7405981f600a80dcd837",
+      "bytes": 154
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/投影并发围栏前/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/投影并发围栏前/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "7d6928631ebfb28d55115af632235ff3eb5ce6e511f7609ed71b0bda335e552f",
+      "bytes": 4825
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/投影并发围栏前/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/投影并发围栏前/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "6627d93255c1fdfe8a0ea6014364de31c37209c9369301af0ec08c83fbcc58c5",
+      "bytes": 990
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/投影并发围栏前/通过10项日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/投影并发围栏前/通过10项日志.txt",
+      "sha256": "4aa1860041f701f4768a9ac39b776bcf523dc33a120f9144a94238737a7ff2fa",
+      "bytes": 5551
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/构建测试日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/构建测试日志.txt",
+      "sha256": "67f879883c9a80a829d5e295ecb57354a76c1f1e53fd0c3cc9d87fee18de1a82",
+      "bytes": 7908
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-引用转发/验证摘要.json",
+      "sha256": "b3428c9e37aca5c81b41939154ff92962b4c50815107db7ffa0df76addc88505",
+      "bytes": 11293
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "327f47cd36a699e698a0a512485e3f0a262f0e0de28fb441c364815bc7c3ea2b",
+      "bytes": 989
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/README.md",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/README.md",
+      "sha256": "61d71dfdeedd937f8ae316a9a220075c9204ab61c94482227713de5d9d0d650e",
+      "bytes": 4854
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/SHA256SUMS",
+      "sha256": "bf82830795210011a176147f5db1d4738e8c586e114170a04350aece9c1cb999",
+      "bytes": 2439
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "d308f2882e0d6e9af5d2db193791320e05c81671c0f068288747d2332b9f8f8b",
+      "bytes": 3749
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI/01-Native-Favorites.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI/01-Native-Favorites.png",
+      "sha256": "9d89e0fb6f5b63b49bbd8d8f72a5f630d3dde5a535b4bef57ebadfdfda4b1939",
+      "bytes": 105196
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI/02-Exact-Source-Mention.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI/02-Exact-Source-Mention.png",
+      "sha256": "76aaf630e2ae2e9af7ce28be2c3e92755c908775b0349848dcde1875e7325b6b",
+      "bytes": 113149
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI/03-Native-Announcement.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI/03-Native-Announcement.png",
+      "sha256": "9d8f7860866a8a1d519800f55b63c06def9168e6f41cc5fb59062156269c5ca6",
+      "bytes": 140678
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI/03a-Group-Before-Announcement.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI/03a-Group-Before-Announcement.png",
+      "sha256": "867d8d9a111bb0232aba5feffd17f37403cec0ee6aabc3016170cc5b6c998049",
+      "bytes": 143984
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI/03b-After-Announcement-Click.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI/03b-After-Announcement-Click.png",
+      "sha256": "a541572d1140040deba53716459cbf2f927cee73eb4177345420ea7fcc9958ef",
+      "bytes": 130002
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI/04-Native-Cleared-Announcement.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI/04-Native-Cleared-Announcement.png",
+      "sha256": "9d1d16a147e3f39366fb5b3f8c32272227f128392e6fd7220983b9e143fc8dd2",
+      "bytes": 143420
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI/05-Native-Search.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI/05-Native-Search.png",
+      "sha256": "93574d696db65da583138d5fb82e115b8ce64ac386d48d3ab603d8760fd6726a",
+      "bytes": 122477
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI/06-Native-Dark-Favorites.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI/06-Native-Dark-Favorites.png",
+      "sha256": "e7c8965978cc8d06731d379c7b43693b8b7609eb33a9f997311073482292ed1c",
+      "bytes": 143567
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI/99-Before-Cleanup.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI/99-Before-Cleanup.png",
+      "sha256": "ea7b00efaf1b6c84481a22e3e99774d13eb11c431c36d0571b41d884218a8079",
+      "bytes": 145788
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI首轮诊断/01-Native-Favorites.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI首轮诊断/01-Native-Favorites.png",
+      "sha256": "e2fe0abd6cdb09f2c60d2eedeab43ee9fcb29a912a9bbf65a14042ac4ed55552",
+      "bytes": 105782
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI首轮诊断/02-Exact-Source-Mention.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI首轮诊断/02-Exact-Source-Mention.png",
+      "sha256": "ee7270a50b22a407d45c06dec831de9ffe1da902b294b590a4765afd4aa487c4",
+      "bytes": 113290
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI首轮诊断/99-Before-Cleanup.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI首轮诊断/99-Before-Cleanup.png",
+      "sha256": "05fd8dae2ba1d78ea55e81636d9bc28ae8f964ae1f562188a5d077d01110d347",
+      "bytes": 134241
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/原生UI首轮诊断/首轮UI与重入源定向.log",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/原生UI首轮诊断/首轮UI与重入源定向.log",
+      "sha256": "d1ff5e52207a092be0e01ebeb1c9ee0ede27d6ac2178b01bff98c5cfafe76b3b",
+      "bytes": 9263
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/构建测试日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/构建测试日志.txt",
+      "sha256": "02182ab55f1f3f3eb8c0254d55374bf1214556c6f12e12960352bba3208d3486",
+      "bytes": 5282
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/角色围栏前/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/角色围栏前/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "c87d6d0e92f9ed11a94a7d92f5ad03ed3cb91d781ed48e459025f4b60e452ab2",
+      "bytes": 748
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/角色围栏前/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/角色围栏前/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "4ec13828f5fcc790128768597d0dbb17b2237e1503328d61fd7c6f4f142cc164",
+      "bytes": 987
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/角色围栏前/协作定向构建测试.log",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/角色围栏前/协作定向构建测试.log",
+      "sha256": "b15f35d58d9e5b88e2c8be7ae11f48a1ea02647705096d16c327471e0321bcf3",
+      "bytes": 5000
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/角色围栏前/此前搜索分页定向.log",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/角色围栏前/此前搜索分页定向.log",
+      "sha256": "cd72cf82e3b963fa3031dc42e5bf73b67cf13c0900876531a9012d40f51a0bad",
+      "bytes": 5008
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/角色围栏前/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/角色围栏前/验证摘要.json",
+      "sha256": "607c3d82cefa879025db6cafc45f1b62aceb0743c2c233f9f070ea761aab937c",
+      "bytes": 8220
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-搜索协作/验证摘要.json",
+      "sha256": "522ee70218e953c0feca10270378028e423c4c821fc8dadb3c0c50f876f44110",
+      "bytes": 9522
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/README.md",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/README.md",
+      "sha256": "920166ea83511b9bb09f86ce9ea611f435cabb75156a3d996b0727d63b17a965",
+      "bytes": 5779
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/SHA256SUMS",
+      "sha256": "d8c37c5670c7f0e88fb23bbc2661e66ecc43b7ff1a5b5822e795626e3e29c3df",
+      "bytes": 4992
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/三项HTTPS复核/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/三项HTTPS复核/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "70a3671d13610ca3522091f683491e8e5fcaee4757d3e50464eecb910b7cb9c9",
+      "bytes": 976
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/三项HTTPS复核/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/三项HTTPS复核/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "6f01b18516de5eb6e5bf845d75bf651bf7f70b5e13161ef1c0f360f7732b504d",
+      "bytes": 1024
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/三项HTTPS复核/原生UI/Auth-01-Unknown-Light.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/三项HTTPS复核/原生UI/Auth-01-Unknown-Light.png",
+      "sha256": "e220d8ef66e1d67edd2cc76b392cea67e544807bce99743be6bdda50c6b3b287",
+      "bytes": 171436
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/三项HTTPS复核/原生UI/Auth-02-Unknown-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/三项HTTPS复核/原生UI/Auth-02-Unknown-Dark.png",
+      "sha256": "e220d8ef66e1d67edd2cc76b392cea67e544807bce99743be6bdda50c6b3b287",
+      "bytes": 171436
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/三项HTTPS复核/原生UI/Auth-03-Verified-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/三项HTTPS复核/原生UI/Auth-03-Verified-Dark.png",
+      "sha256": "9091786d684e88c5d888850801aa579cd4d00ae99938f219acf970e260c13e40",
+      "bytes": 83053
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/三项HTTPS复核/原生UI/Auth-04-Restored-Light.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/三项HTTPS复核/原生UI/Auth-04-Restored-Light.png",
+      "sha256": "2463a07e053ebd810bfda5a94e8daffbfa959e495d0c10c9046fe42c4183f47e",
+      "bytes": 87135
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/三项HTTPS复核/构建仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/三项HTTPS复核/构建仪器日志.txt",
+      "sha256": "a1bb19df0791490e27887c6615086f8e5698f428095ea62d5bcdd95200197e1e",
+      "bytes": 5824
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/三项HTTPS复核/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/三项HTTPS复核/验证摘要.json",
+      "sha256": "0c7fdce47f7a715465316b54bbb509bc69b183b69ebaa41ae906d4d1c339e6fa",
+      "bytes": 5564
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/受控运行/构建仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/受控运行/构建仪器日志.txt",
+      "sha256": "6b32404f5f007f2a69ae316498c1153fabfc492876f261131994efa5581885f3",
+      "bytes": 4310
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/定向重跑/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/定向重跑/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "70a3671d13610ca3522091f683491e8e5fcaee4757d3e50464eecb910b7cb9c9",
+      "bytes": 976
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/定向重跑/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/定向重跑/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "91018252e418f7720bc91b8ada9bdc3e1bb8a46b1e2ecf64c5177ff8f19014b0",
+      "bytes": 3943
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/定向重跑/构建仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/定向重跑/构建仪器日志.txt",
+      "sha256": "f3de1bb7563659d420b23424b7bed54d546bce2d1e45d0748862ebadb0e20af1",
+      "bytes": 9599
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/定向重跑/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/定向重跑/验证摘要.json",
+      "sha256": "95706750e742857eed2286383c0567de8e1ea5ad4fa8ad6824707486fb083fcb",
+      "bytes": 5564
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/宿主协调修正/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/宿主协调修正/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "70a3671d13610ca3522091f683491e8e5fcaee4757d3e50464eecb910b7cb9c9",
+      "bytes": 976
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/宿主协调修正/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/宿主协调修正/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "8168d3f8c8d3d5990a9d2b991cc94b33346ba3a5c3f35a6aab5bd6ed3098d1cb",
+      "bytes": 5443
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/宿主协调修正/原生UI/Auth-01-Unknown-Light.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/宿主协调修正/原生UI/Auth-01-Unknown-Light.png",
+      "sha256": "1f271b76af65b6b6120f26c8fa3f493e2d70949d9890adfd447d52e5c4e78cee",
+      "bytes": 171081
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/宿主协调修正/原生UI/Auth-02-Unknown-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/宿主协调修正/原生UI/Auth-02-Unknown-Dark.png",
+      "sha256": "1f271b76af65b6b6120f26c8fa3f493e2d70949d9890adfd447d52e5c4e78cee",
+      "bytes": 171081
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/宿主协调修正/原生UI/Auth-03-Verified-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/宿主协调修正/原生UI/Auth-03-Verified-Dark.png",
+      "sha256": "6d4f304be268c082a211d53ac16cc095375437276f2812db0bdf1142607df294",
+      "bytes": 83372
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/宿主协调修正/原生UI/Auth-04-Restored-Light.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/宿主协调修正/原生UI/Auth-04-Restored-Light.png",
+      "sha256": "ef3ab7f42e81b00b77c9c9aac136aeb939af8dbadeb89d9321835b5d7e63a179",
+      "bytes": 87546
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/宿主协调修正/构建仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/宿主协调修正/构建仪器日志.txt",
+      "sha256": "48a8a036331699ed6f04de6c532202d0a75f01e799f4e1dfcbc0b7f20a2b594d",
+      "bytes": 12842
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/宿主协调修正/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/宿主协调修正/验证摘要.json",
+      "sha256": "cfb8fece622c56d20d49c967c8890453fa3f4ba047bcb0b2ad1aca452458fc5d",
+      "bytes": 5564
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "e054f4ee7e34913d640ed2f7a1e2ee9fbf6579c34dcc366cf2eab854c7c01b4b",
+      "bytes": 974
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "6f01b18516de5eb6e5bf845d75bf651bf7f70b5e13161ef1c0f360f7732b504d",
+      "bytes": 1024
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包/原生UI/Auth-01-Unknown-Light.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包/原生UI/Auth-01-Unknown-Light.png",
+      "sha256": "e220d8ef66e1d67edd2cc76b392cea67e544807bce99743be6bdda50c6b3b287",
+      "bytes": 171436
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包/原生UI/Auth-02-Unknown-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包/原生UI/Auth-02-Unknown-Dark.png",
+      "sha256": "e220d8ef66e1d67edd2cc76b392cea67e544807bce99743be6bdda50c6b3b287",
+      "bytes": 171436
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包/原生UI/Auth-03-Verified-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包/原生UI/Auth-03-Verified-Dark.png",
+      "sha256": "9091786d684e88c5d888850801aa579cd4d00ae99938f219acf970e260c13e40",
+      "bytes": 83053
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包/原生UI/Auth-04-Restored-Light.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包/原生UI/Auth-04-Restored-Light.png",
+      "sha256": "2463a07e053ebd810bfda5a94e8daffbfa959e495d0c10c9046fe42c4183f47e",
+      "bytes": 87135
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包/构建仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包/构建仪器日志.txt",
+      "sha256": "950a5f213dee511f5abbc4e20140802b4aed7cd7a3009229cbe047b48de708e7",
+      "bytes": 5480
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包/验证摘要.json",
+      "sha256": "75a7b6969d56939306d04e35adab3f53c0fe1ed0cded0334a6d7ceecd8d55a37",
+      "bytes": 5564
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/JVM/TEST-com.jobs.im.IsolationTest.xml",
+      "sha256": "e054f4ee7e34913d640ed2f7a1e2ee9fbf6579c34dcc366cf2eab854c7c01b4b",
+      "bytes": 974
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/仪器结果/TEST-JobsIMReview_20261114_1424(AVD) - 17-_app-.xml",
+      "sha256": "c5300cfb07910dddc62eae51246d4f30673d900df8a6527764fc5f6ae7091161",
+      "bytes": 2868
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/原生UI/Auth-01-Unknown-Light.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/原生UI/Auth-01-Unknown-Light.png",
+      "sha256": "42f3db7a7eb012536e39ce3a8864725727e4afa92de80bb06ee5d0f7c2158b99",
+      "bytes": 170600
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/原生UI/Auth-02-Unknown-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/原生UI/Auth-02-Unknown-Dark.png",
+      "sha256": "a78fdb852b0f2f3d1a1b4b37ab5eba8dc52bd5584e7f36c44b1fdf8252efa4e1",
+      "bytes": 170697
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/原生UI/Auth-02b-Unknown-Actions-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/原生UI/Auth-02b-Unknown-Actions-Dark.png",
+      "sha256": "9db0b722e89090f245422267d78df5bde1f93f0644bcb63da44ba30ac0a36efb",
+      "bytes": 168085
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/原生UI/Auth-03-Verified-Dark.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/原生UI/Auth-03-Verified-Dark.png",
+      "sha256": "4433bd95fd6f3778b99904ca3a6e97fbfdb3b64f48ee41c01e29eb1d6798f218",
+      "bytes": 82681
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/原生UI/Auth-04-Restored-Light.png",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/原生UI/Auth-04-Restored-Light.png",
+      "sha256": "8229c584a90b19402e205373a5f887b64e3ec769d1c911016fa7091eef53c79f",
+      "bytes": 86700
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/安装读回核验.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/安装读回核验.json",
+      "sha256": "ace3b8ab3fca4563badf3fc9d2e384b4f5307b04266ad232db13550a64aab86e",
+      "bytes": 375
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/构建仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/构建仪器日志.txt",
+      "sha256": "142b7f0fcca40dc1e35f0437ded085eac1204dd8f19548465a696ce602230efe",
+      "bytes": 7939
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/最终同包复核/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/最终同包复核/验证摘要.json",
+      "sha256": "b792aebb5824b9acbd725f92b5ca5a25172846ef181e65394bf915b137570e04",
+      "bytes": 5565
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/期限代际修正/构建仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/期限代际修正/构建仪器日志.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/真实联调/构建仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/真实联调/构建仪器日志.txt",
+      "sha256": "16977aff3fb185409c0593296909cf89e00acce092a85db5346b2493e1a60a49",
+      "bytes": 5376
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/首次定向/构建仪器日志.txt",
+      "new": "项目相关报告/测试/前端/Android/20261115-访问刷新/首次定向/构建仪器日志.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261114-223055-99171/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261114-223055-99171/运行日志.txt",
+      "sha256": "c826475206a656db37340c1d6fbb273939eb5fcd7b3bd788d9ee400df23aca95",
+      "bytes": 132
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-003342-61725/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-003342-61725/source-manifest.json",
+      "sha256": "9f6707f40a5e54b9e3621c391addae72e215517b2a2720b566fdbfb16c398f0d",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-003342-61725/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-003342-61725/运行日志.txt",
+      "sha256": "5170564ece554f9e0798a493aef095b41ba0ee82cf30ccfa5eb3006484d9bb95",
+      "bytes": 680
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-003526-62192/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-003526-62192/运行日志.txt",
+      "sha256": "3fac3aad99825cefcfdf870d3e38e95b9b89a3f488b5d104b84700b885685029",
+      "bytes": 121
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-013013-31992/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-013013-31992/source-manifest.json",
+      "sha256": "00cead0e1f4a7f67a3ce816853df3f727d04ea25bd5fe4644458a977baa1e4da",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-013013-31992/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-013013-31992/运行日志.txt",
+      "sha256": "b8bf771754df6db98944111eb07c888c068b9efef6fb2087d8ffd34939ca1278",
+      "bytes": 2377
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-013911-38046/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-013911-38046/source-manifest.json",
+      "sha256": "bd43a1d80362a094b920f141c66f52576ce6199398e983864dbb2c996036cc64",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-013911-38046/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-013911-38046/运行日志.txt",
+      "sha256": "64861b5a11631673af5e89e5fa36081e7bb407be641b914ec85bc9096130f902",
+      "bytes": 270
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-013921-41729/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-013921-41729/source-manifest.json",
+      "sha256": "bd43a1d80362a094b920f141c66f52576ce6199398e983864dbb2c996036cc64",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-013921-41729/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-013921-41729/运行日志.txt",
+      "sha256": "bc782863e414dd0cdc11b286c04c1bc80cdd86057c92af64e58cf85c3ec9c412",
+      "bytes": 5519
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014100-49831/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014100-49831/source-manifest.json",
+      "sha256": "36404df74fb5cbebb0431f67e34209cea3b766d48c3def670734b11e4555aa82",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014100-49831/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014100-49831/运行日志.txt",
+      "sha256": "aa939a4c0cf14d5948b6e638e63d42900de582e106217b729234d58968155cf9",
+      "bytes": 5906
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014139-51447/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014139-51447/source-manifest.json",
+      "sha256": "36404df74fb5cbebb0431f67e34209cea3b766d48c3def670734b11e4555aa82",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014139-51447/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014139-51447/运行日志.txt",
+      "sha256": "645af00783c0ae886ebc847691cfde31d320501968548ef76df9bec3749b51fe",
+      "bytes": 14357
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014517-52362/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014517-52362/source-manifest.json",
+      "sha256": "21d4c65e72b7b290df283f6308cedfd8e59b6005e0f9f19ae4504feb4b9515de",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014517-52362/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014517-52362/运行日志.txt",
+      "sha256": "2263fea42ab4a825ab9b97193498c53f5c86bccd339e0fbbaf8a768c341e2c2f",
+      "bytes": 12995
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014610-53029/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014610-53029/source-manifest.json",
+      "sha256": "28d91337020098abc8a44abec2d2595645e461d74b2da849713b244c3e765959",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014610-53029/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014610-53029/运行日志.txt",
+      "sha256": "2ac4c197bd96e53eb0642fc2d754734bbc7abbe0e8e4aec388b61c6901ce5908",
+      "bytes": 12724
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014705-56371/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014705-56371/source-manifest.json",
+      "sha256": "28d91337020098abc8a44abec2d2595645e461d74b2da849713b244c3e765959",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014705-56371/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014705-56371/运行日志.txt",
+      "sha256": "ef821a6ea4db9a0681f7689e900ef5b6745e655479ef913c581ffd16229a4f2e",
+      "bytes": 2062
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014813-56684/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014813-56684/source-manifest.json",
+      "sha256": "a36e04a6d44f0a390c08508e24562ee7cce8a38c2ab71c770aa9798a5b50dbf6",
+      "bytes": 7645
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-014813-56684/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-014813-56684/运行日志.txt",
+      "sha256": "4c6ad50edae3ccf38b484a2068d8e1aacabf2b6328c03493ca76e4d3de6b4200",
+      "bytes": 4250
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-015008-57254/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-015008-57254/source-manifest.json",
+      "sha256": "71e8903cceb57c365a2293363fcb90669f547059bce88e033699cde1f8f35fb8",
+      "bytes": 7717
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-015008-57254/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-015008-57254/运行日志.txt",
+      "sha256": "ce2c86684f78a7c43048d7c6f894850b508b5e338b12180e1ec3a6bdbabf38d2",
+      "bytes": 85894
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-015111-58456/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-015111-58456/source-manifest.json",
+      "sha256": "e9f54ce6290876195d00c6d2f31000aa83deca11cd9c2b65fc2b63fe1b8f2931",
+      "bytes": 7717
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-015111-58456/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-015111-58456/运行日志.txt",
+      "sha256": "153a619a6d13cec425e299fd281b1dbd0fbfb15fc851fe0ae5a1dfb31ad14482",
+      "bytes": 3795
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-015240-58976/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-015240-58976/source-manifest.json",
+      "sha256": "2200e541ea7f2cceba5fbfaf730de3f2d6520ada2a5fadff421cf28bf59bbb89",
+      "bytes": 7717
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-015240-58976/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-015240-58976/运行日志.txt",
+      "sha256": "2c3cb09ad895a1bb0089529663cddb8ff43958a481d5c570c1f492b5d1f65f0f",
+      "bytes": 12724
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-015424-59648/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-015424-59648/source-manifest.json",
+      "sha256": "5ef4fbdf98a2d4376038c6f95f688cf028efc73bd816c2e8f5b24b2a98b4a0ea",
+      "bytes": 7717
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-015424-59648/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-015424-59648/运行日志.txt",
+      "sha256": "61e04daf901f5baa62e612be047fb2c114caa6e781b80bab8f7fa9f9b2baed5e",
+      "bytes": 3795
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-022455-67968/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-022455-67968/source-manifest.json",
+      "sha256": "255c795fce028ae8537df0d498eba5d8144d468757633034cfe9a4b252c1cfc8",
+      "bytes": 7717
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-022455-67968/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-022455-67968/运行日志.txt",
+      "sha256": "72f3337324e2d399148d434eedba04529ebfae0852aff09cdfba12e94118c74f",
+      "bytes": 14365
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-022704-68660/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-022704-68660/source-manifest.json",
+      "sha256": "a1e991ef84c6dbf966b85c46c3800d2adcfaf1c8da517704ebfd791ddbf846f2",
+      "bytes": 7717
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-022704-68660/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-022704-68660/运行日志.txt",
+      "sha256": "79eede864d10f5eb6e641d2034c9a1c01b306f0ae04f85c696223ad63fe3bcdb",
+      "bytes": 3795
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-022758-69065/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-022758-69065/source-manifest.json",
+      "sha256": "e5fb24238973c0e1475f70d7b28b97e53d6cf4c268d7438b5bb654bbbdc587c7",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-022758-69065/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-022758-69065/运行日志.txt",
+      "sha256": "19f36de150a5d015e0fd5939861a2b18218b5a1e16a6a0a45a2d29a29ce10190",
+      "bytes": 14367
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-023354-70440/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-023354-70440/source-manifest.json",
+      "sha256": "be89c4849e3ae6c518bde9f388e7c5b48d92cecdab90bf71abc926f072c8837f",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-023354-70440/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-023354-70440/运行日志.txt",
+      "sha256": "4be0ebb7470cd69c24331c4cee7ff614246f49b0249ac57105ba2758a17af341",
+      "bytes": 25568
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-091918-31177/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-091918-31177/source-manifest.json",
+      "sha256": "7ea3455b0e014f44f7576c4a7712fcfca0faa9e3cb866b840ee9f60f24699959",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-091918-31177/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-091918-31177/运行日志.txt",
+      "sha256": "57fcc042afdfed43831b6857a852709394c7f32c54fa062d666650c6db102fdd",
+      "bytes": 25363
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-092327-32439/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-092327-32439/source-manifest.json",
+      "sha256": "885c12848fc77c2d6185a9d729a05eb1e6bbe4fa56dc382d107b50233e106719",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-092327-32439/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-092327-32439/运行日志.txt",
+      "sha256": "153a630723d1088af702e66d9687fa7f1dbe16109413a67bb4d445f39fbe8ebe",
+      "bytes": 24782
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-092726-70206/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-092726-70206/source-manifest.json",
+      "sha256": "2ac59d70d18ea8fc888cb8976c3803ac2e826f75d5c18ab24cf329c85828bd11",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-092726-70206/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-092726-70206/运行日志.txt",
+      "sha256": "9aac3f0736862696025f5a0d2696d46a72b710a9c2b18ad185708e547e013af7",
+      "bytes": 25018
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-092951-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-092951-主机规则/规则结果.txt",
+      "sha256": "1503aa4675a335ed52fb1d170a4d2102763bf9c9bce41bbab34bfbf9c39dbfed",
+      "bytes": 1826
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-093153-85972/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-093153-85972/source-manifest.json",
+      "sha256": "f5d4ef3b0ff0c0cf04b1e0ce26a934a251c81468178758e09d29cd6567fc87ab",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-093153-85972/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-093153-85972/运行日志.txt",
+      "sha256": "7e9ec4d76e65932dc274a4b489319c864763f0dedffb3c2a02ed274379cf3b63",
+      "bytes": 25220
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-093431-91154/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-093431-91154/source-manifest.json",
+      "sha256": "03e64c8da2348f499989530610c90e7ef285d69c95e7c3ce12e3cb5534162225",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-093431-91154/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-093431-91154/运行日志.txt",
+      "sha256": "93c392b76c148988b29096b621d7dd49904800bb26fca18bf5bd94dbb0831d7a",
+      "bytes": 25221
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-093625-95891/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-093625-95891/source-manifest.json",
+      "sha256": "ab773918a4c3d85217860660124ec42eab51cc30600bfda9aeae116d8c88d3b5",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-093625-95891/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-093625-95891/运行日志.txt",
+      "sha256": "840196660dc3cfaba961ee40d85a790c682896a7f1774c997162e21c896fbbe0",
+      "bytes": 3795
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-093807-99787/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-093807-99787/source-manifest.json",
+      "sha256": "023e19ac7cbc659c28fc9b8be427f8d9c4e7b85d9444738921bd8c468263aa33",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-093807-99787/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-093807-99787/运行日志.txt",
+      "sha256": "670a5ed7f472cc7c093f733633d2fbcb92dc2d9726f2507e8e2998483b1b7a94",
+      "bytes": 26165
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-094008-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-094008-主机规则/规则结果.txt",
+      "sha256": "23979696d7cbd05cec4d655ff901bbddfaca5588fbe71e92c9efa34d9bf99157",
+      "bytes": 1995
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-094557-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-094557-主机规则/规则结果.txt",
+      "sha256": "1d9663fbc5a3be8c79f0e51ad28a6b8737a35aa247c2d7e34e080b66abcd45d2",
+      "bytes": 1984
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-094904-19213/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-094904-19213/运行日志.txt",
+      "sha256": "e64f4de05488f011af1a72077bcb16c9d61a4983c66abb890602303cef11e06c",
+      "bytes": 109
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-103503-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-103503-主机规则/规则结果.txt",
+      "sha256": "d298fb5e7964142b1a2a76e490c6bad25073c292d6b0959fe0b50b4faacce70c",
+      "bytes": 2452
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-103529-55476/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-103529-55476/source-manifest.json",
+      "sha256": "93b3cdaae83d93cf88386338a786ce5b313219486837b6820354e2d1de43d0ef",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-103529-55476/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-103529-55476/运行日志.txt",
+      "sha256": "0af824bc7de1f9e23ba378a37cd602ebb7655471b431031619b1503f8f6300ef",
+      "bytes": 26460
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-103612-55990/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-103612-55990/source-manifest.json",
+      "sha256": "dd8451c914c2be80465e2d7d1e68df6c412721f9f9b8105f8a81aafd7df74e87",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-103612-55990/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-103612-55990/运行日志.txt",
+      "sha256": "305b513488118ed60c74774d2d6a23e3a94af59cdda2b4e669a060a12561ae30",
+      "bytes": 26539
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-103714-56562/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-103714-56562/source-manifest.json",
+      "sha256": "7fc5ed4232d375576484cde1b72e50edf7b8ee854fc4714cb9c8f947acd6c005",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-103714-56562/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-103714-56562/运行日志.txt",
+      "sha256": "08add612889b473d8d875e8ef0551bbf46a7ddd48a26aa0ac839ff08ca6081d9",
+      "bytes": 26171
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-103810-57018/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-103810-57018/source-manifest.json",
+      "sha256": "7fc5ed4232d375576484cde1b72e50edf7b8ee854fc4714cb9c8f947acd6c005",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-103810-57018/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-103810-57018/运行日志.txt",
+      "sha256": "ab62d190115c1e79395cb57845c70f0a57ea66e99f38ad60619f169f72623bf7",
+      "bytes": 3796
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-111444-82485/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-111444-82485/source-manifest.json",
+      "sha256": "f2521fd665f3a8a94fc9f01fd74c4b3f7ecd48fc1559a5f377a21715cfd99cb3",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-111444-82485/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-111444-82485/运行日志.txt",
+      "sha256": "de30537dd96fa1a64e9dacf394916ceb2f46bf8610da043a9b44aa146015c3b2",
+      "bytes": 26165
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-111444-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-111444-主机规则/规则结果.txt",
+      "sha256": "502459f2830fc98f0bd78f04ac808dd5dbc7c5b3ea6d6d30463f7a074efddb77",
+      "bytes": 2701
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-114505-19219/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-114505-19219/source-manifest.json",
+      "sha256": "ce0db317dc1501f81599db5727b795cba25f350aa88031e97cceb153413a83cb",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-114505-19219/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-114505-19219/运行日志.txt",
+      "sha256": "f73a4c24f46a59db6c1db2d60015bc4f0366b2cd5838d13cb8bc522ba8231126",
+      "bytes": 28037
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-114505-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-114505-主机规则/规则结果.txt",
+      "sha256": "9ef942ff76a4b38c276cd93689747bdf3c3a494b734829cc1c7f78d9cc1ce68f",
+      "bytes": 2704
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-114906-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-114906-主机规则/规则结果.txt",
+      "sha256": "412973d3307403c09069de62030fd3d0156fb6e73f04c3bd234e1cd9dfd5790f",
+      "bytes": 4479
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-114952-26911/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-114952-26911/source-manifest.json",
+      "sha256": "713e7ce64261747332fdc4a88b182c79dd45c223d0eed534e7abb65d0b48c473",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-114952-26911/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-114952-26911/运行日志.txt",
+      "sha256": "62777ecd298e44ed1a0c0fd296b166254ea4f3176b054ccf500723d70e4fcf02",
+      "bytes": 29443
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-115100-27816/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-115100-27816/source-manifest.json",
+      "sha256": "713e7ce64261747332fdc4a88b182c79dd45c223d0eed534e7abb65d0b48c473",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-115100-27816/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-115100-27816/运行日志.txt",
+      "sha256": "a23ad7b9f1285c0b2fd765f6218d28675c05c34a526155a7615f4e94dcc69375",
+      "bytes": 3794
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-115419-32625/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-115419-32625/source-manifest.json",
+      "sha256": "ff57a58ac0f6fbf40d6f90ff462e05649cd7e0d5e1100681d7e108513632fc48",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-115419-32625/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-115419-32625/运行日志.txt",
+      "sha256": "4a70f19949253c9a7c6705d7d790b580c7f9320d45e91514f7e95466a8df3d86",
+      "bytes": 29453
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-115420-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-115420-主机规则/规则结果.txt",
+      "sha256": "cc64496009ad06d36a20af98414608552e226cda277f25cc641b8a8eb2ec12e0",
+      "bytes": 4484
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-115449-33701/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-115449-33701/source-manifest.json",
+      "sha256": "ff57a58ac0f6fbf40d6f90ff462e05649cd7e0d5e1100681d7e108513632fc48",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-115449-33701/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-115449-33701/运行日志.txt",
+      "sha256": "c6cbeab6665221e03ef5c007525704c322e25c5ba314197d9e01d68e3ebaacd5",
+      "bytes": 3803
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-120901-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-120901-主机规则/规则结果.txt",
+      "sha256": "dc0b5d3e726b2434072234f49e1073764336ae7e005054c4499924bf583b82ac",
+      "bytes": 4910
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-120902-65997/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-120902-65997/source-manifest.json",
+      "sha256": "7b29e7bf920e1f298c6fc2d25266c0704c925a3387dfb45678f40196d51a6fc3",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-120902-65997/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-120902-65997/运行日志.txt",
+      "sha256": "aefc74c9df1ff4f1bd6af41cf020fd2de173c2d26f9dd09eb149c7ff806d612a",
+      "bytes": 29443
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-121031-97776/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-121031-97776/source-manifest.json",
+      "sha256": "7b29e7bf920e1f298c6fc2d25266c0704c925a3387dfb45678f40196d51a6fc3",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-121031-97776/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-121031-97776/运行日志.txt",
+      "sha256": "8f39109c54481803dc031f0057397369f54761ea0d062c71fbd3a2b4bd5fa14e",
+      "bytes": 3803
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-124832-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-124832-主机规则/规则结果.txt",
+      "sha256": "49b4946d5510231ef25d55d016553e3defb56fad83a32cded61da94572e580fa",
+      "bytes": 5316
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-124833-26765/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-124833-26765/source-manifest.json",
+      "sha256": "b7c79968035ce3b1ced44c91e01674dfbb832ffa4df096214da47fe831233545",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-124833-26765/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-124833-26765/运行日志.txt",
+      "sha256": "65f6c2f57425280e9d242d423cfcd9c9c630a280f7d3ac36b77fab209bd7f161",
+      "bytes": 29657
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-124930-27619/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-124930-27619/source-manifest.json",
+      "sha256": "b7c79968035ce3b1ced44c91e01674dfbb832ffa4df096214da47fe831233545",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-124930-27619/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-124930-27619/运行日志.txt",
+      "sha256": "4b82a573184ea20a2866c14c2f931e953f779c85f8a592cc9ecc8821fac954af",
+      "bytes": 3805
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-131831-主机规则/规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-131831-主机规则/规则结果.txt",
+      "sha256": "06825a19446f1e7951ce48b14c9e2d886ed495aad7fa2966398b0dd8a58ffd49",
+      "bytes": 5321
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-131832-70850/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-131832-70850/source-manifest.json",
+      "sha256": "478bc91e7f7bf5f08d3827d1bc569ba177a31f6af53d5d40c7cd47842f73c021",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-131832-70850/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-131832-70850/运行日志.txt",
+      "sha256": "fd41b546066751d2511937490b2547d4656d7f33068f800f4f1516da84b98680",
+      "bytes": 29652
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-131844-70783/source-manifest.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-131844-70783/source-manifest.json",
+      "sha256": "478bc91e7f7bf5f08d3827d1bc569ba177a31f6af53d5d40c7cd47842f73c021",
+      "bytes": 7958
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-131844-70783/运行日志.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-131844-70783/运行日志.txt",
+      "sha256": "66e88b0a83b824dd980ea22f8b62266efb3649a49719d9583090524fd0822227",
+      "bytes": 3801
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-I原生补齐/HAP摘要.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-I原生补齐/HAP摘要.json",
+      "sha256": "eaec2caf1c9b267c51746b36b58b5b49a50ce66dfce8048d2a62672c86b09d18",
+      "bytes": 799
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-I原生补齐/README.md",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-I原生补齐/README.md",
+      "sha256": "aca8ed7bb542eab7ff86a5222a86981f4a8be8dd0c22c650ab5bb93405ac556d",
+      "bytes": 2810
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-I原生补齐/主机规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-I原生补齐/主机规则结果.txt",
+      "sha256": "1d9663fbc5a3be8c79f0e51ad28a6b8737a35aa247c2d7e34e080b66abcd45d2",
+      "bytes": 1984
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-原发信资格/README.md",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-原发信资格/README.md",
+      "sha256": "a8b6c8c35d87e06a0fd188ed5064dff85b88c4432b9af667a8001a98ef7f23f1",
+      "bytes": 1701
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-原发信资格/结果.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-原发信资格/结果.json",
+      "sha256": "f73948f2349800f35ebd4ae649bc2bc7aee7bff7ca782326b945a22a89e51763",
+      "bytes": 1580
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-原角色资格/README.md",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-原角色资格/README.md",
+      "sha256": "ee0007870859e730360faa084aabe0b57b71fd51ca0a67f0a3ad493aebcf26ae",
+      "bytes": 1604
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-原角色资格/结果.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-原角色资格/结果.json",
+      "sha256": "e403f3df1a35d96f2031da564812ef41bf11d0863d26dcfe2580cb1515696b00",
+      "bytes": 1982
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-提及公告与分页/README.md",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-提及公告与分页/README.md",
+      "sha256": "ef03f46aec88dd4f89caa1bc572d7e5210493b7bf63ad55f8e69b7ff17876dd6",
+      "bytes": 2397
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-提及公告与分页/主机规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-提及公告与分页/主机规则结果.txt",
+      "sha256": "436177462b140c66ac3cb6d0a4bc3e15f5fdc6dcde5d264da6c0eff62395b340",
+      "bytes": 4596
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-提及公告与分页/结果.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-提及公告与分页/结果.json",
+      "sha256": "7c7a315993c4926d53f76be8200f091be7e5c11c7cdf039619bf51c3558a9647",
+      "bytes": 3638
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-提及公告与分页/结果.json.sha256",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-提及公告与分页/结果.json.sha256",
+      "sha256": "a77d935b523933a23a90ff5e387bb06edafda841bcc2a127821c458f1ab01360",
+      "bytes": 78
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-普通转发/README.md",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-普通转发/README.md",
+      "sha256": "dcb62ff7dc2df5ff028d9645c050b6d9df5749de247a4fe11c9f011feb731bda",
+      "bytes": 1839
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-普通转发/主机规则结果.txt",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-普通转发/主机规则结果.txt",
+      "sha256": "e10603ff3d05c40753e46189e5ba979251009a825e1b8853357d628287293a5a",
+      "bytes": 5433
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-普通转发/结果.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-普通转发/结果.json",
+      "sha256": "73192313c9f8604ebef9778dc104c37f1f6b6516f0c9c38bb1787613668f58c0",
+      "bytes": 2029
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-普通转发/结果.json.sha256",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-普通转发/结果.json.sha256",
+      "sha256": "45c934be78569b05648ca205601a6c2f006804f5a5655bd747587093c22d43a2",
+      "bytes": 78
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-镜像原生构建/HAP摘要.json",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-镜像原生构建/HAP摘要.json",
+      "sha256": "a3a460472e28775bf0ac830ada7be6d2e1985e463dbce1010f982f55a15dda4f",
+      "bytes": 809
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-镜像原生构建/README.md",
+      "new": "项目相关报告/测试/前端/HarmonyOS/20261115-镜像原生构建/README.md",
+      "sha256": "1c141f8558da7b625a1199cb8c7c5dc89a34938fb89993857b14b50e85463730",
+      "bytes": 1708
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-普通转发/README.md",
+      "new": "项目相关报告/测试/前端/Web/20261115-普通转发/README.md",
+      "sha256": "c6c87ca7e8c91e40e95d81ed32e8891f99249b91e6889e1d3e49b3eab4d2d2df",
+      "bytes": 1711
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-普通转发/Web-Forward-Source-Unavailable.png",
+      "new": "项目相关报告/测试/前端/Web/20261115-普通转发/Web-Forward-Source-Unavailable.png",
+      "sha256": "1a0490bc5bc44c6efa2e5dd73d5cc1040937ac0f96c3c8fa43a6e5df47a7815d",
+      "bytes": 64822
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-普通转发/forward-result.json",
+      "new": "项目相关报告/测试/前端/Web/20261115-普通转发/forward-result.json",
+      "sha256": "c1c0728c808518593fd2162449188bc98f0e07183a50b6ecfab97d1ff9ba491d",
+      "bytes": 994
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-普通转发/既有链回归.log",
+      "new": "项目相关报告/测试/前端/Web/20261115-普通转发/既有链回归.log",
+      "sha256": "19a8889e279a83634e5dec806f89c78939be4a0128c3aa40897b3df2bde0ffe8",
+      "bytes": 19217
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-普通转发/真实联调.log",
+      "new": "项目相关报告/测试/前端/Web/20261115-普通转发/真实联调.log",
+      "sha256": "a6e41a74f118c71af6be70a1d6a6c0bbcb5b29779ef12bde92c514fbc96bedbd",
+      "bytes": 496
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-普通转发/验证摘要.json",
+      "new": "项目相关报告/测试/前端/Web/20261115-普通转发/验证摘要.json",
+      "sha256": "a4284cfc31e09c1cae987254b103b22ea1328be67aadb3456c7ac10285ce7fcf",
+      "bytes": 3488
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-登录续期HTTPS/README.md",
+      "new": "项目相关报告/测试/前端/Web/20261115-登录续期HTTPS/README.md",
+      "sha256": "beb5b3b65eb1eee3f3a7f843c89eeb5c0c36ab453a2b07ee51843b818c77248c",
+      "bytes": 1199
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-登录续期HTTPS/Web-真实续期与重新认证.png",
+      "new": "项目相关报告/测试/前端/Web/20261115-登录续期HTTPS/Web-真实续期与重新认证.png",
+      "sha256": "17a45e36c82c4ce925713b8e203bce1805887f1056110b7c20fbaca02e6c6880",
+      "bytes": 46537
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-登录续期HTTPS/代码构建快照.json",
+      "new": "项目相关报告/测试/前端/Web/20261115-登录续期HTTPS/代码构建快照.json",
+      "sha256": "b79fc92cc63b3d7a68aa5cd51543af2880bde8cd49a1d4824445d97a6c90ae8f",
+      "bytes": 2716
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-登录续期HTTPS/真实联调结果.json",
+      "new": "项目相关报告/测试/前端/Web/20261115-登录续期HTTPS/真实联调结果.json",
+      "sha256": "b7b8f1a5c891bb6f15244ff2c48a711ecd7db17433ece8c1bc84be1e80712c29",
+      "bytes": 768
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-登录续期浏览器/README.md",
+      "new": "项目相关报告/测试/前端/Web/20261115-登录续期浏览器/README.md",
+      "sha256": "cb4f6d948b102f0f03990df1f0919f1a4b327b68c078c9e9318bcc78602afda3",
+      "bytes": 1014
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-登录续期浏览器/代码构建快照.json",
+      "new": "项目相关报告/测试/前端/Web/20261115-登录续期浏览器/代码构建快照.json",
+      "sha256": "b79fc92cc63b3d7a68aa5cd51543af2880bde8cd49a1d4824445d97a6c90ae8f",
+      "bytes": 2716
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-登录续期浏览器/浏览器协议结果.json",
+      "new": "项目相关报告/测试/前端/Web/20261115-登录续期浏览器/浏览器协议结果.json",
+      "sha256": "ab0622c6362b6b5682103bb1829b32088e4a9cdfbd9618c4743438df45c96061",
+      "bytes": 1528
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-Admin-HTTPS.png",
+      "new": "项目相关报告/测试/前端/Web/Web-Admin-HTTPS.png",
+      "sha256": "f4bab95a7eca6c0d83f4c3dea1d876bbb90963c73ad707b5c359ecfe944d97a3",
+      "bytes": 95604
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-Announcement-HTTPS.png",
+      "new": "项目相关报告/测试/前端/Web/Web-Announcement-HTTPS.png",
+      "sha256": "c9f6de7423df71effd4a03a62431301bd99728e1dd0d5fb2c6f2722d2d4f0fca",
+      "bytes": 127562
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-Dark-Settings.png",
+      "new": "项目相关报告/测试/前端/Web/Web-Dark-Settings.png",
+      "sha256": "caa2b560b03ed6993777d3c1569543349629f7b8bde26c3cb14ae54a27b6264b",
+      "bytes": 75546
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-Forward-Source-Unavailable.png",
+      "new": "项目相关报告/测试/前端/Web/Web-Forward-Source-Unavailable.png",
+      "sha256": "1a0490bc5bc44c6efa2e5dd73d5cc1040937ac0f96c3c8fa43a6e5df47a7815d",
+      "bytes": 64822
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-Group-HTTPS.png",
+      "new": "项目相关报告/测试/前端/Web/Web-Group-HTTPS.png",
+      "sha256": "8b7c945bde9b3c00dbe01657d7c78c03a01793a29c2f5636458da71aa4be53b9",
+      "bytes": 89941
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-Light.png",
+      "new": "项目相关报告/测试/前端/Web/Web-Light.png",
+      "sha256": "4c52b9517e99317fca9f2550041c1af11a2d65387d7fe294171579cbe7fa3c11",
+      "bytes": 117382
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-Live-HTTPS.png",
+      "new": "项目相关报告/测试/前端/Web/Web-Live-HTTPS.png",
+      "sha256": "39a6303993c3da19cdcf5cf83cffe8f2e54a590b434c2c646efc03d4e135959a",
+      "bytes": 94327
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-Lookup-HTTPS.png",
+      "new": "项目相关报告/测试/前端/Web/Web-Lookup-HTTPS.png",
+      "sha256": "291e5ab5fda9d9143d5ceba275906339d9cee550fd1bc7ab4bf81651800c903a",
+      "bytes": 96300
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-Mobile-Settings.png",
+      "new": "项目相关报告/测试/前端/Web/Web-Mobile-Settings.png",
+      "sha256": "8934c5fdabc6c3c58cadb8348524bd974ddf9601113c546f8969b171583d6a05",
+      "bytes": 24857
+    },
+    {
+      "old": "测试/前端/Web/报告/Web-System-Settings.png",
+      "new": "项目相关报告/测试/前端/Web/Web-System-Settings.png",
+      "sha256": "31b3c95776ccb0b486b73106cfd28ac325f02f0695cb591f71401578ab740afa",
+      "bytes": 75550
+    },
+    {
+      "old": "测试/前端/Web/报告/admin-result.json",
+      "new": "项目相关报告/测试/前端/Web/admin-result.json",
+      "sha256": "4dba2b93ca846043357b10b901aabb969ae0e5c4346e4cd1bd2d9418d8497f6c",
+      "bytes": 548
+    },
+    {
+      "old": "测试/前端/Web/报告/browser-result.json",
+      "new": "项目相关报告/测试/前端/Web/browser-result.json",
+      "sha256": "3b716680f156eb12dc2b3c4cdfc22eb8b2a8142186498ffcb506a92ed83b3ccb",
+      "bytes": 76
+    },
+    {
+      "old": "测试/前端/Web/报告/forward-result.json",
+      "new": "项目相关报告/测试/前端/Web/forward-result.json",
+      "sha256": "c1c0728c808518593fd2162449188bc98f0e07183a50b6ecfab97d1ff9ba491d",
+      "bytes": 994
+    },
+    {
+      "old": "测试/前端/Web/报告/integration-result.json",
+      "new": "项目相关报告/测试/前端/Web/integration-result.json",
+      "sha256": "ca7d22143f4963c0aed495e525bf344c3af21a89d4e73ff3ca4aa0d3c529b522",
+      "bytes": 2503
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-发送准入闭环/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-发送准入闭环/SHA256SUMS",
+      "sha256": "e8f3bbaffd2dce736b7e985f5ab90c80d96a37a7a1676dc55e5128a59472ff0a",
+      "bytes": 84
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-发送准入闭环/测试摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-发送准入闭环/测试摘要.json",
+      "sha256": "00a7490dac234b1db70233341dd3fd0b3309bf0e9ed0cd61582faee07405e134",
+      "bytes": 7913
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-基础闭环/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-基础闭环/SHA256SUMS",
+      "sha256": "35013b8da60811d3c885e7893d5911629ff6470f4460e8e862b29248c87e0f5b",
+      "bytes": 576
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-基础闭环/正式HTTPS消息-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-基础闭环/正式HTTPS消息-原生UI.png",
+      "sha256": "8fa42fc108b7ce2ab3ca220df362d9ef62170df476cf96749d54005185ea7dc2",
+      "bytes": 232598
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-基础闭环/测试摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-基础闭环/测试摘要.json",
+      "sha256": "fbe7b0dbdc69400e17f823b70685bcccaa2f48068c7150387e338538f671639b",
+      "bytes": 4392
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-基础闭环/白天中文聊天-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-基础闭环/白天中文聊天-原生UI.png",
+      "sha256": "9544882d173c7718f1c2e26973a682e356dd5c89c97e15e07fad1c4333fdc423",
+      "bytes": 273923
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-基础闭环/群主转让-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-基础闭环/群主转让-原生UI.png",
+      "sha256": "9a9341100aeaa141740e5cb463c2ea4b944bd3257e5af6ca07c694de20914400",
+      "bytes": 176518
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-基础闭环/通知授权与默认隐私-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-基础闭环/通知授权与默认隐私-原生UI.png",
+      "sha256": "f5d858e742c528530a26556a015b0b14cc830e4a3826ac5e904aeb23a65564ea",
+      "bytes": 357152
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-基础闭环/黑夜英文会话-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-基础闭环/黑夜英文会话-原生UI.png",
+      "sha256": "ff40e76da8c64c34a01880c3e863ed7a41a2f4391c0ca1bd0b685022be6a9c46",
+      "bytes": 248141
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-头像与本地闭环/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-头像与本地闭环/SHA256SUMS",
+      "sha256": "b05af75ca8a6fb3c672f51fcdedacdf97313c228df421cbef1f765872924853a",
+      "bytes": 697
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-头像与本地闭环/iOS27-文件选择器受阻-观测.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-头像与本地闭环/iOS27-文件选择器受阻-观测.png",
+      "sha256": "8303b60de6b2d4f2ff873e47a3bf2ec4a4ce991316a28e8f83dde65732380064",
+      "bytes": 167743
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-头像与本地闭环/头像发布完成-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-头像与本地闭环/头像发布完成-原生UI.png",
+      "sha256": "69ca4996de8c2fe4ec1b5db0a212854b77e26631a23825801146a6d418a5380f",
+      "bytes": 316575
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-头像与本地闭环/实例指纹确认-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-头像与本地闭环/实例指纹确认-原生UI.png",
+      "sha256": "5b7e7ec02c056f1ed866faae246428d503558d28ed68814121c3ceaab677af99",
+      "bytes": 268235
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-头像与本地闭环/本地历史导出分享-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-头像与本地闭环/本地历史导出分享-原生UI.png",
+      "sha256": "1c74ef7c346a916eca4e3e42e540b156ed0248cb1ed65542ff04f92d8ca36369",
+      "bytes": 480098
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-头像与本地闭环/测试摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-头像与本地闭环/测试摘要.json",
+      "sha256": "72190a8f3286d77bf20e764335fdf14ce5d22471bd987bb36de6009137bf6559",
+      "bytes": 6911
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-头像与本地闭环/群成员鉴权头像-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-头像与本地闭环/群成员鉴权头像-原生UI.png",
+      "sha256": "67b5fe34e04397713152d0accb0944fdd54ace78a623c6832a43196af1917e2f",
+      "bytes": 217820
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-头像与本地闭环/鉴权图片与草稿恢复-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-头像与本地闭环/鉴权图片与草稿恢复-原生UI.png",
+      "sha256": "be7985eb6a9a3cd7c931328d7c330fc90d614ccbb81a4d6ff6b53ee1d3c62bd0",
+      "bytes": 212846
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-搜索收藏与群互动/SHA256SUMS",
+      "sha256": "47b6a43ae8553aff0b96f71b1692594ffe601bdf0b85072f32845e8e4c26572d",
+      "bytes": 724
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/搜索收藏测试摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-搜索收藏与群互动/搜索收藏测试摘要.json",
+      "sha256": "d274c5d7aa3a8c3fc7e9a02d89775d094270e376baa4597e43233994feae602c",
+      "bytes": 1882
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/收藏分页与精确来源-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-搜索收藏与群互动/收藏分页与精确来源-原生UI.png",
+      "sha256": "002b7b6c0c7a4dcfe513c532a4e4e09ce36af1f6821ba32a3e6ef99e7b00814f",
+      "bytes": 293114
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/服务端搜索与来源复验-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-搜索收藏与群互动/服务端搜索与来源复验-原生UI.png",
+      "sha256": "5118a41fe1cfa49f8b7412c33605c57d908134c10f9864c62f145e84336f674b",
+      "bytes": 294808
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/结构化成员与全员提及-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-搜索收藏与群互动/结构化成员与全员提及-原生UI.png",
+      "sha256": "e9ab3e28633de58353abac10395c44cba506a16d3d1ab982cfed13c903e0a998",
+      "bytes": 305063
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/群互动测试摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-搜索收藏与群互动/群互动测试摘要.json",
+      "sha256": "1ce65732d3dc2e803a2edb02e48ff7db43cc47742fd597ddec378fc2180ebf3c",
+      "bytes": 2839
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/群公告清除确认-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-搜索收藏与群互动/群公告清除确认-原生UI.png",
+      "sha256": "9ab493e02e343f7157d017239d462770967b7b2704f1f2df2fb0098a83c1b3c3",
+      "bytes": 284343
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/群公告重启查原操作-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-搜索收藏与群互动/群公告重启查原操作-原生UI.png",
+      "sha256": "4960417a7343f1d4fa4f02f62cb9354901667fa82eec9a682e33c96d39fb7832",
+      "bytes": 321564
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-普通转发与实例围栏/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-普通转发与实例围栏/SHA256SUMS",
+      "sha256": "779d4c169161910a30d5a05b88f7b38e84ac97ea8e07271d388fa7e21498904f",
+      "bytes": 188
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-普通转发与实例围栏/并发投影补充SHA256SUMS",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-普通转发与实例围栏/并发投影补充SHA256SUMS",
+      "sha256": "7fb4cd1daf96b3b2a2ecdb9955f1e5885306a8de7751d8f13cb1108d34b8fea2",
+      "bytes": 96
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-普通转发与实例围栏/并发投影补充摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-普通转发与实例围栏/并发投影补充摘要.json",
+      "sha256": "68ecd7e5af1b3cf35c2a2abbcec9775280fafb6c8adaa835889a33b59d925461",
+      "bytes": 3971
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-普通转发与实例围栏/正式转发当前投影-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-普通转发与实例围栏/正式转发当前投影-原生UI.png",
+      "sha256": "9526450c2b6dfbbaf8c9180a8cd4d31e3904b8c8210b4112ce5a9d1b3cdbe7a0",
+      "bytes": 179114
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-普通转发与实例围栏/测试摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-普通转发与实例围栏/测试摘要.json",
+      "sha256": "0d4fbda0e9286fe0d1b910b659606e2ce8d874fcabdc6d373b6c0c1e317e9374",
+      "bytes": 6279
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-认证刷新与家族隔离/HTTPS4项-xcresult摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-认证刷新与家族隔离/HTTPS4项-xcresult摘要.json",
+      "sha256": "9a6c25130716aa7c2acc4174b728676eb49ca2c23edb5eb3ea0dedd0ebc05800",
+      "bytes": 956
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-认证刷新与家族隔离/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-认证刷新与家族隔离/SHA256SUMS",
+      "sha256": "10d21f022920f00ef296e38b78d5159c678740563ebda34b91d9776dec9352ab",
+      "bytes": 469
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-认证刷新与家族隔离/启动过渡帧-未作验收.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-认证刷新与家族隔离/启动过渡帧-未作验收.png",
+      "sha256": "b9d01912765604fb19606adfe5a51f4c8a6716f1653df945bf7bc0451d31e664",
+      "bytes": 71547
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-认证刷新与家族隔离/本机12项-xcresult摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-认证刷新与家族隔离/本机12项-xcresult摘要.json",
+      "sha256": "e88ec2330f02465d3c3da05aab458fa17be8ee48cc699055446908ab07d20ad5",
+      "bytes": 959
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-认证刷新与家族隔离/测试摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-认证刷新与家族隔离/测试摘要.json",
+      "sha256": "3be2676249c7e087352a7bb918451c5c818ba0b24b530013e48f488b5ae51d93",
+      "bytes": 10769
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-认证刷新与家族隔离/认证入口-原生UI.png",
+      "new": "项目相关报告/测试/前端/iOS/2026-11-15-认证刷新与家族隔离/认证入口-原生UI.png",
+      "sha256": "1970642794e1b5f3b114c25b00fd7ecd190b78120c63276fae87411861834d07",
+      "bytes": 192812
+    },
+    {
+      "old": "测试/前端/iOS/报告/JobsIM-Native-Chat-Light-Chinese.png",
+      "new": "项目相关报告/测试/前端/iOS/JobsIM-Native-Chat-Light-Chinese.png",
+      "sha256": "47af3569518ebc4b613ff910128af08bdfef6b2dcd51fb9b86d268729a8433b5",
+      "bytes": 277514
+    },
+    {
+      "old": "测试/前端/iOS/报告/JobsIM-Native-Conversations-Dark-English.png",
+      "new": "项目相关报告/测试/前端/iOS/JobsIM-Native-Conversations-Dark-English.png",
+      "sha256": "be2cbcc9654b544d1fc0e762afe981d696f1ed3c9b8b8379187635990a0d55c9",
+      "bytes": 258366
+    },
+    {
+      "old": "测试/前端/iOS/报告/JobsIM-Native-Formal-HTTPS.png",
+      "new": "项目相关报告/测试/前端/iOS/JobsIM-Native-Formal-HTTPS.png",
+      "sha256": "84b7273867645ecd7db9bf6aeaf47f47795b906ad4f79352afdee5c526aecb59",
+      "bytes": 232322
+    },
+    {
+      "old": "测试/前端/iOS/报告/SHA256SUMS",
+      "new": "项目相关报告/测试/前端/iOS/SHA256SUMS",
+      "sha256": "0fb36ae979bd3c476278513a397e2b54ca7ce1056df233fd3159379b094ea4c8",
+      "bytes": 395
+    },
+    {
+      "old": "测试/前端/iOS/报告/测试摘要.json",
+      "new": "项目相关报告/测试/前端/iOS/测试摘要.json",
+      "sha256": "e613a15607cdf6d71e25425592b2b15a317356a7ed605278ae697af83ca9000e",
+      "bytes": 3314
+    },
+    {
+      "old": "测试/后端/报告/刷新持久环境Go原始日志.txt",
+      "new": "项目相关报告/测试/后端/刷新持久环境Go原始日志.txt",
+      "sha256": "13187d9a6163a20df7a0216438046c5de7ec45d466338db862152ff076d5233f",
+      "bytes": 159
+    },
+    {
+      "old": "测试/后端/报告/刷新数据库并发单消费实测.json",
+      "new": "项目相关报告/测试/后端/刷新数据库并发单消费实测.json",
+      "sha256": "2995daa6bc7333a6196157e94ccb7bd3cc2411ad08bfb2ee5df917cf1891bf3e",
+      "bytes": 401
+    },
+    {
+      "old": "测试/后端/报告/刷新数据库并发单消费实测.json.sha256",
+      "new": "项目相关报告/测试/后端/刷新数据库并发单消费实测.json.sha256",
+      "sha256": "44e4fb76b3e127c9350170614c710db6ca686a119e71b05f5815493f27ca800e",
+      "bytes": 108
+    },
+    {
+      "old": "测试/后端/报告/刷新数据库并发原始日志.txt",
+      "new": "项目相关报告/测试/后端/刷新数据库并发原始日志.txt",
+      "sha256": "5678d7088aa98ff45168cf030f7c34404dfc2c265de85f4922915a12a98ff077",
+      "bytes": 278
+    },
+    {
+      "old": "测试/后端/报告/刷新数据库并发原始日志.txt.sha256",
+      "new": "项目相关报告/测试/后端/刷新数据库并发原始日志.txt.sha256",
+      "sha256": "b695b4ad8cd628ca65bffd60c82ff54af304b307c2e0b2257dca713e79675568",
+      "bytes": 104
+    },
+    {
+      "old": "测试/后端/报告/刷新数据库并发持久环境实测.json",
+      "new": "项目相关报告/测试/后端/刷新数据库并发持久环境实测.json",
+      "sha256": "2995daa6bc7333a6196157e94ccb7bd3cc2411ad08bfb2ee5df917cf1891bf3e",
+      "bytes": 401
+    },
+    {
+      "old": "测试/后端/报告/刷新构建既有接口回归.json",
+      "new": "项目相关报告/测试/后端/刷新构建既有接口回归.json",
+      "sha256": "3a21cd89b1bdc4da2e60c81f59459978730ef4366b02ba5f8bd8bb8e9d43129d",
+      "bytes": 1496
+    },
+    {
+      "old": "测试/后端/报告/刷新构建既有接口回归.json.sha256",
+      "new": "项目相关报告/测试/后端/刷新构建既有接口回归.json.sha256",
+      "sha256": "b76cfcaa621cde19b4f40e623d71bfa253f928a1da94c01978495194abb8d4ff",
+      "bytes": 102
+    },
+    {
+      "old": "测试/后端/报告/发送准入代际实测.json",
+      "new": "项目相关报告/测试/后端/发送准入代际实测.json",
+      "sha256": "6d848683f1c4deb6c79c1d42747338d88a35cf9fd545b80074e3d5d242ee8841",
+      "bytes": 494
+    },
+    {
+      "old": "测试/后端/报告/发送围栏与未知提交实测.json",
+      "new": "项目相关报告/测试/后端/发送围栏与未知提交实测.json",
+      "sha256": "d2c716aa4c5958aa8b7736945ffb5db31e6c113e7892c3d55a18c1c15468cc49",
+      "bytes": 729
+    },
+    {
+      "old": "测试/后端/报告/受控导出协议与写入栅栏实测.json",
+      "new": "项目相关报告/测试/后端/受控导出协议与写入栅栏实测.json",
+      "sha256": "19c6d5bf97ff9b95fc997586bdf48250448bf3253dea994f227823c6ea14801f",
+      "bytes": 591
+    },
+    {
+      "old": "测试/后端/报告/备份恢复与音频实测.json",
+      "new": "项目相关报告/测试/后端/备份恢复与音频实测.json",
+      "sha256": "e47e1a68fa39207ad20606e87595f1895fff1a077cdb13189ecdc4a162c56f33",
+      "bytes": 684
+    },
+    {
+      "old": "测试/后端/报告/实验导出公开生命周期实测.json",
+      "new": "项目相关报告/测试/后端/实验导出公开生命周期实测.json",
+      "sha256": "5e312f659257d331844bf3d02419efec15b8ec973a77b3f508cb65c95cd41617",
+      "bytes": 503
+    },
+    {
+      "old": "测试/后端/报告/提及与公告实测.json",
+      "new": "项目相关报告/测试/后端/提及与公告实测.json",
+      "sha256": "a1a45132cc75e3ac83fd01bf24663678093f0e8359661e4c9704e35db4b70a78",
+      "bytes": 1632
+    },
+    {
+      "old": "测试/后端/报告/提及与公告实测.json.sha256",
+      "new": "项目相关报告/测试/后端/提及与公告实测.json.sha256",
+      "sha256": "f4c126ffe4c36ef2bc35df5242005cfd92b6cb3a4eaab783687f3ad34c148d9a",
+      "bytes": 93
+    },
+    {
+      "old": "测试/后端/报告/搜索与本人收藏分页实测.json",
+      "new": "项目相关报告/测试/后端/搜索与本人收藏分页实测.json",
+      "sha256": "41f4b56181978c6777d81ed5a2839d9c890b1318647c2c4b723a863542aed875",
+      "bytes": 521
+    },
+    {
+      "old": "测试/后端/报告/普通转发固定构建快照.json",
+      "new": "项目相关报告/测试/后端/普通转发固定构建快照.json",
+      "sha256": "5962abdb8ae297385c6a44ef8ea9c150b45961c4b8cc494ca87d71045db64b67",
+      "bytes": 9054
+    },
+    {
+      "old": "测试/后端/报告/普通转发固定构建快照.json.sha256",
+      "new": "项目相关报告/测试/后端/普通转发固定构建快照.json.sha256",
+      "sha256": "f5cfe52b01e9cfd49d8c1e925d006ee13513cddeffa3e3e373b1ce1438564083",
+      "bytes": 102
+    },
+    {
+      "old": "测试/后端/报告/普通转发恢复代际实测.json",
+      "new": "项目相关报告/测试/后端/普通转发恢复代际实测.json",
+      "sha256": "7dd10f5988d894f7bafdb963755ecfa3a87550e2df0202be2a807cf1f3933e3b",
+      "bytes": 895
+    },
+    {
+      "old": "测试/后端/报告/普通转发恢复代际实测.json.sha256",
+      "new": "项目相关报告/测试/后端/普通转发恢复代际实测.json.sha256",
+      "sha256": "abf5457c3d92d8de4676281aa0e5634360834066a3360813e367f786781331ed",
+      "bytes": 102
+    },
+    {
+      "old": "测试/后端/报告/普通转发真实闭环.json",
+      "new": "项目相关报告/测试/后端/普通转发真实闭环.json",
+      "sha256": "b9a6bcf53d0630e6e8abf0a37a0e62ee421ee55d2ebc205a364ec1294fea2633",
+      "bytes": 860
+    },
+    {
+      "old": "测试/后端/报告/普通转发真实闭环.json.sha256",
+      "new": "项目相关报告/测试/后端/普通转发真实闭环.json.sha256",
+      "sha256": "0d991e0e390bcf74ed2d26a316b08d76ceb61f275bd19bf4834b360b27ec10d6",
+      "bytes": 96
+    },
+    {
+      "old": "测试/后端/报告/本人关系只读接口实测.json",
+      "new": "项目相关报告/测试/后端/本人关系只读接口实测.json",
+      "sha256": "dbf2befd96272a4c0a5733f6aa2794e3b3659592d98204d9a7da67b9ea0a2b93",
+      "bytes": 432
+    },
+    {
+      "old": "测试/后端/报告/本地主域固定转发升级保护摘要.json",
+      "new": "项目相关报告/测试/后端/本地主域固定转发升级保护摘要.json",
+      "sha256": "96e60b257414b5eae592e2810663dcce505b6659e41b9a3d8f187476a6dace04",
+      "bytes": 3914
+    },
+    {
+      "old": "测试/后端/报告/本地主域固定转发升级摘要.json",
+      "new": "项目相关报告/测试/后端/本地主域固定转发升级摘要.json",
+      "sha256": "b58da7b9c14707b816a572796baa98599f9ae88854e297ad077fde7dca17cfe4",
+      "bytes": 4916
+    },
+    {
+      "old": "测试/后端/报告/构建与空库迁移实测.json",
+      "new": "项目相关报告/测试/后端/构建与空库迁移实测.json",
+      "sha256": "c47c467cdf13eeb3e987cce3525897d61d2c39336efd530a23245b8fa60610a7",
+      "bytes": 491
+    },
+    {
+      "old": "测试/后端/报告/核心HTTP回归.json",
+      "new": "项目相关报告/测试/后端/核心HTTP回归.json",
+      "sha256": "422d18c18cc17e4889728f80e713c11c2b301a5b317c358c6c32c2ea17bbf5bd",
+      "bytes": 644
+    },
+    {
+      "old": "测试/后端/报告/登录刷新家族真实实测.json",
+      "new": "项目相关报告/测试/后端/登录刷新家族真实实测.json",
+      "sha256": "fc6bc928e80caa47ce4304b81ca30e46f421d3cfae8fd49dd904e4849564274f",
+      "bytes": 725
+    },
+    {
+      "old": "测试/后端/报告/登录刷新家族真实实测.json.sha256",
+      "new": "项目相关报告/测试/后端/登录刷新家族真实实测.json.sha256",
+      "sha256": "c7289440b362e65bcd6c2abb53fc94b7b5faec2a2b0256fabcfd0cfc9411f31b",
+      "bytes": 102
+    },
+    {
+      "old": "测试/后端/报告/登录刷新恢复拒旧实测.json",
+      "new": "项目相关报告/测试/后端/登录刷新恢复拒旧实测.json",
+      "sha256": "1a7b9f27e8538d2f08369b7793449f4ae70a9e401741dc10d7145abba9a1eca7",
+      "bytes": 824
+    },
+    {
+      "old": "测试/后端/报告/登录刷新恢复拒旧实测.json.sha256",
+      "new": "项目相关报告/测试/后端/登录刷新恢复拒旧实测.json.sha256",
+      "sha256": "40705c77939063f5df3e7bdec4a1b85452fb2e88cc1355b5ef8052c76a319e93",
+      "bytes": 102
+    },
+    {
+      "old": "测试/后端/报告/登录刷新持久环境与完整退休链实测.json",
+      "new": "项目相关报告/测试/后端/登录刷新持久环境与完整退休链实测.json",
+      "sha256": "bdc7ec0ce846e8ed4b4a264bd59bff1357d5427249a448b816bb7c4c86a77694",
+      "bytes": 809
+    },
+    {
+      "old": "测试/后端/报告/登录刷新持久环境与完整退休链实测.json.sha256",
+      "new": "项目相关报告/测试/后端/登录刷新持久环境与完整退休链实测.json.sha256",
+      "sha256": "f3996429c4aad11e09d04470b2d8e8637ed73e0655f3569743bd229ca1e23aff",
+      "bytes": 120
+    },
+    {
+      "old": "测试/后端/报告/登录刷新持久环境固定构建快照.json",
+      "new": "项目相关报告/测试/后端/登录刷新持久环境固定构建快照.json",
+      "sha256": "61951705135ff274d157b1b267a263b9e7d5c0117a0c364361f2e112d62199c5",
+      "bytes": 7371
+    },
+    {
+      "old": "测试/后端/报告/登录刷新持久环境固定构建快照.json.sha256",
+      "new": "项目相关报告/测试/后端/登录刷新持久环境固定构建快照.json.sha256",
+      "sha256": "57da266dfe98bdf5bf772b5de6384fb2882e04f9cd7ae45c0290438c8eef0f70",
+      "bytes": 114
+    },
+    {
+      "old": "测试/后端/报告/登录刷新持久环境恢复拒旧实测.json",
+      "new": "项目相关报告/测试/后端/登录刷新持久环境恢复拒旧实测.json",
+      "sha256": "f364c78d66cf3033d2476eb2499f0f02dd90f9fb2214d082d35b4560ad576dc5",
+      "bytes": 824
+    },
+    {
+      "old": "测试/后端/报告/登录刷新持久环境恢复拒旧实测.json.sha256",
+      "new": "项目相关报告/测试/后端/登录刷新持久环境恢复拒旧实测.json.sha256",
+      "sha256": "a780c9f461551e5ec711b0f72e140681b0323ecaef4c54ca7230eeeb1b83ca5f",
+      "bytes": 114
+    },
+    {
+      "old": "测试/后端/报告/登录刷新续跑快照.json",
+      "new": "项目相关报告/测试/后端/登录刷新续跑快照.json",
+      "sha256": "92c0e840fa29431402f274e36cd10125a979dc34eedd709a47d8b70f530c4f3a",
+      "bytes": 4106
+    },
+    {
+      "old": "测试/后端/报告/登录刷新续跑快照.json.sha256",
+      "new": "项目相关报告/测试/后端/登录刷新续跑快照.json.sha256",
+      "sha256": "10fbfb8fc0d3d53412d4150d3a52f112f1db7f68daab4eb811fca6fa1133f205",
+      "bytes": 96
+    },
+    {
+      "old": "测试/后端/报告/管理员MFA与状态实测.json",
+      "new": "项目相关报告/测试/后端/管理员MFA与状态实测.json",
+      "sha256": "63e4248cd094b114ddbb1947782319f09ebaa759e7881e8d23318fe101838824",
+      "bytes": 538
+    },
+    {
+      "old": "测试/后端/报告/管理员重置凭证实测.json",
+      "new": "项目相关报告/测试/后端/管理员重置凭证实测.json",
+      "sha256": "ff950c3a11c0bd231ad87199364990266395f09becc58b192d18920d099284fd",
+      "bytes": 369
+    },
+    {
+      "old": "测试/后端/报告/角色准入代际实测.json",
+      "new": "项目相关报告/测试/后端/角色准入代际实测.json",
+      "sha256": "5f97ee26efe2cbe5c661c6b0d7f79453185826c922c39cc843e98bdfac188008",
+      "bytes": 1266
+    },
+    {
+      "old": "测试/后端/报告/角色准入代际实测.json.sha256",
+      "new": "项目相关报告/测试/后端/角色准入代际实测.json.sha256",
+      "sha256": "97bdfee2c04ff65a8da465cf6a1007945ae7f146267d38ef853e178e0a1e2895",
+      "bytes": 96
+    },
+    {
+      "old": "测试/后端/报告/设备关闭受限续跑实测.json",
+      "new": "项目相关报告/测试/后端/设备关闭受限续跑实测.json",
+      "sha256": "8468fce0a98e8e34bdc08e46ca3be4b1f6346aea993fa63ac158902bd4bb2a03",
+      "bytes": 310
+    },
+    {
+      "old": "测试/后端/报告/转发临时资格投影原始日志.txt",
+      "new": "项目相关报告/测试/后端/转发临时资格投影原始日志.txt",
+      "sha256": "67b430b7ef6961a06761d5c00c0cf459085fffa8bfbe31dbf0d72d652d66520a",
+      "bytes": 262
+    },
+    {
+      "old": "测试/后端/报告/转发临时资格投影原始日志.txt.sha256",
+      "new": "项目相关报告/测试/后端/转发临时资格投影原始日志.txt.sha256",
+      "sha256": "2fa1380aaf895c744f037aef6687f9b303bbc5cdaa7265f6673142e0d4d34b86",
+      "bytes": 107
+    },
+    {
+      "old": "测试/后端/报告/转发临时资格投影恢复实测.json",
+      "new": "项目相关报告/测试/后端/转发临时资格投影恢复实测.json",
+      "sha256": "88b8f3fb31dd49f2908ddd67a4a4e10d65547caa24f1423fa676ad2e8213728f",
+      "bytes": 390
+    },
+    {
+      "old": "测试/后端/报告/转发临时资格投影恢复实测.json.sha256",
+      "new": "项目相关报告/测试/后端/转发临时资格投影恢复实测.json.sha256",
+      "sha256": "13821bab3635c5a988be68219050a2d13568396dbb99584635609811369432f1",
+      "bytes": 108
+    },
+    {
+      "old": "测试/后端/报告/转发公共JSON与持久续跑.json",
+      "new": "项目相关报告/测试/后端/转发公共JSON与持久续跑.json",
+      "sha256": "d2bb0bb9452221f5a19c8102965427121ac6647624f7a2a08d8bcb55ed2adf24",
+      "bytes": 686
+    },
+    {
+      "old": "测试/后端/报告/转发公共JSON与持久续跑.json.sha256",
+      "new": "项目相关报告/测试/后端/转发公共JSON与持久续跑.json.sha256",
+      "sha256": "6236197071e41d65466fcfd2b3e5ee5ae22e1e3960678b7a0211b17534908c59",
+      "bytes": 103
+    },
+    {
+      "old": "测试/后端/报告/转发公共JSON持锁与私有证明.json",
+      "new": "项目相关报告/测试/后端/转发公共JSON持锁与私有证明.json",
+      "sha256": "5fb029b520230fc7238b67f3e5a5cdaf8e7349b7f116c27f0431ad64c572baa3",
+      "bytes": 377
+    },
+    {
+      "old": "测试/后端/报告/转发公共JSON持锁与私有证明.json.sha256",
+      "new": "项目相关报告/测试/后端/转发公共JSON持锁与私有证明.json.sha256",
+      "sha256": "026056bc86e6a52aa3883c99f4ef8c4315ab0fd6c801014f49b5d0f0c38b264f",
+      "bytes": 109
+    },
+    {
+      "old": "测试/后端/报告/转发公共JSON持锁原始日志.txt",
+      "new": "项目相关报告/测试/后端/转发公共JSON持锁原始日志.txt",
+      "sha256": "b83cc8d032c4a827d10334b22186f7b4673c723bda53a4344ed540b7d9c33a45",
+      "bytes": 1749
+    },
+    {
+      "old": "测试/后端/报告/转发公共JSON持锁原始日志.txt.sha256",
+      "new": "项目相关报告/测试/后端/转发公共JSON持锁原始日志.txt.sha256",
+      "sha256": "30231f560fafac1dc1e137cae5e1aa37f0b3468df503fdd4e43ed82b1e5328e0",
+      "bytes": 105
+    },
+    {
+      "old": "测试/后端/报告/转发导出明确拒绝实测.json",
+      "new": "项目相关报告/测试/后端/转发导出明确拒绝实测.json",
+      "sha256": "d4f17ac612ada540cafc9e3be381e0e1058262d2931bbc0835c4147863086299",
+      "bytes": 539
+    },
+    {
+      "old": "测试/后端/报告/转发导出明确拒绝实测.json.sha256",
+      "new": "项目相关报告/测试/后端/转发导出明确拒绝实测.json.sha256",
+      "sha256": "7a64159e85e8183efa60eabe69d47ab7cdcfb7cc3f15d0ff7339bc5666b22b96",
+      "bytes": 102
+    },
+    {
+      "old": "测试/后端/报告/转发构建既有接口回归.json",
+      "new": "项目相关报告/测试/后端/转发构建既有接口回归.json",
+      "sha256": "bb1f0a3c409098a5364ae176f870042f4ae3b7ad6db643826bf8e016de9938d0",
+      "bytes": 1642
+    },
+    {
+      "old": "测试/后端/报告/转发构建既有接口回归.json.sha256",
+      "new": "项目相关报告/测试/后端/转发构建既有接口回归.json.sha256",
+      "sha256": "c528c3e73b319742e03da734537b1636f160eb194aca8689c6282f7f1c8aba66",
+      "bytes": 102
+    },
+    {
+      "old": "测试/后端/报告/静态头像与最小举报实测.json",
+      "new": "项目相关报告/测试/后端/静态头像与最小举报实测.json",
+      "sha256": "3016c809c83b97c3341490aaf208c889ae8936c1f6f4488f5c872121bd8d23dc",
+      "bytes": 473
+    },
+    {
+      "old": "测试/部署/MacOS/报告/20261114-233934/backup-stop.log",
+      "new": "项目相关报告/测试/部署/MacOS/20261114-233934/backup-stop.log",
+      "sha256": "27b460a34f599e673a99271455d6e2bc56383039efd2e37dd3f238f7c2202cf1",
+      "bytes": 1135
+    },
+    {
+      "old": "测试/部署/MacOS/报告/20261114-233934/bootstrap.json",
+      "new": "项目相关报告/测试/部署/MacOS/20261114-233934/bootstrap.json",
+      "sha256": "05ab4a67c9c6421aa3d50be2379cf9452c109f6ff3cd9c356d23b5faea0826f0",
+      "bytes": 501
+    },
+    {
+      "old": "测试/部署/MacOS/报告/20261114-233934/result.txt",
+      "new": "项目相关报告/测试/部署/MacOS/20261114-233934/result.txt",
+      "sha256": "e2687c122531eb9b70651575b24423539574b96886ca463dc61d87c56b660f2e",
+      "bytes": 136
+    },
+    {
+      "old": "测试/部署/MacOS/报告/20261114-233934/run.log",
+      "new": "项目相关报告/测试/部署/MacOS/20261114-233934/run.log",
+      "sha256": "d78d44a12d0bb200eb4e97b75f14b3d3aef3db278a518e3c97d99c1467764c6e",
+      "bytes": 3441
+    },
+    {
+      "old": "测试/部署/MacOS/报告/20261114-233934/smoke.log",
+      "new": "项目相关报告/测试/部署/MacOS/20261114-233934/smoke.log",
+      "sha256": "4545a07692a41912b38771cd2a2d7e559f10771b829ab6281337862f4121cb7d",
+      "bytes": 180
+    },
+    {
+      "old": "需求/实现进度/README.md",
+      "new": "项目相关报告/实现进度/README.md",
+      "sha256": "571b0ae187394f7c4eaebb9cbb290d072920175e4b7facf1a5600bd75140b074",
+      "bytes": 6999
+    },
+    {
+      "old": "工具/统计项目.mjs/报告.json",
+      "new": "项目相关报告/项目统计/历史/20261115-迁移前统计.json",
+      "sha256": "3919edfe203d5bb90c05bfff590e46b80f254b7142bf854c1ecac2077bc242c9",
+      "bytes": 36847
+    }
+  ],
+  "archivedNavigationAndChecksums": [
+    {
+      "old": "测试/CLI/报告/20261115-CLI治理/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-CLI治理/README.md",
+      "sha256": "d9f90eab35a7bcf59e899c35ae5429a539db921a5549559cb6c87ef26d11fde7"
+    },
+    {
+      "old": "测试/CLI/报告/20261115-CLI治理/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-CLI治理/SHA256SUMS",
+      "sha256": "a69649eb7910ca992b98239b038c9e1081b8f8580eafd03446361cf580838b8e"
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-刷新家族/README.md",
+      "sha256": "59f7e7c29e8f5774b57fc0bd3b68644f1ce08dd99472c8fd1b52cd48263b5966"
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-刷新家族/SHA256SUMS",
+      "sha256": "7e5ffd2c15d0eb36878fa9d034d815343383174ff8528b64b6c3a3378882f065"
+    },
+    {
+      "old": "测试/CLI/报告/20261115-刷新家族/终端HTTPS结果.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-刷新家族/终端HTTPS结果.json.sha256",
+      "sha256": "aae39846e37705ef0d9a908a35e5484b6938060aee052dfbdcfad5c140e43c3d"
+    },
+    {
+      "old": "测试/CLI/报告/20261115-搜索协作/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-搜索协作/README.md",
+      "sha256": "08f0ebfb45dd24ed688aa3e747152e974594602a7732fbb695e6ec964d15d6c7"
+    },
+    {
+      "old": "测试/CLI/报告/20261115-搜索协作/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-搜索协作/SHA256SUMS",
+      "sha256": "55cd6934b36125f21d39aeeae67f559f6afc4c884c09dbc75d3ade4cfc9a48cd"
+    },
+    {
+      "old": "测试/CLI/报告/20261115-普通转发/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/CLI/报告/20261115-普通转发/README.md",
+      "sha256": "2b42c80b0f609ad4b02392fb2cc78cfea720ce87e5137c8634766042e84e3c30"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261114-原生联调/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261114-原生联调/README.md",
+      "sha256": "271395e43ff89ddb4048d63e899796ea5320771b07c19c9b6938a4fefc264fee"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-200占位恢复/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-200占位恢复/README.md",
+      "sha256": "7f891358be110f372f0a31333861177678896615dce8cecdd0e8bbfebb2ea888"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-200占位恢复/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-200占位恢复/SHA256SUMS",
+      "sha256": "e3b294b226a831351536f19affa4cf571fda280cf38e55af12181a13423e99ba"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-发送准入围栏/README.md",
+      "sha256": "1edf141e76ff41db930e352b6c26a2e8d271b2b0ad5d5d166b576b0f00ef8720"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-发送准入围栏/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-发送准入围栏/SHA256SUMS",
+      "sha256": "373afdbf0458b9cbb192bc3b1cdeb4cbb8b33e07ca0e1cbbbfe50b0589852fc5"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-基础闭环/README.md",
+      "sha256": "8a5026ccfe74a06d828e04fec9a4fae30ff30c76f183be5a7828d6e4e4cf9c2c"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-基础闭环/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-基础闭环/SHA256SUMS",
+      "sha256": "9c5252d9bb068cbcb17009104168f81e5f036efa6365e642e75d48a95dd5b1b5"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-引用转发/README.md",
+      "sha256": "7d24b6706d2bbbf46dc5dc057e904d1427f0f708683613c86de2ee439a2f86d5"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-引用转发/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-引用转发/SHA256SUMS",
+      "sha256": "fbf6ffcf02258a854316df3b13e7af384a0b4cb87ea624ca9bb7d0deba8df321"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-搜索协作/README.md",
+      "sha256": "61d71dfdeedd937f8ae316a9a220075c9204ab61c94482227713de5d9d0d650e"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-搜索协作/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-搜索协作/SHA256SUMS",
+      "sha256": "bf82830795210011a176147f5db1d4738e8c586e114170a04350aece9c1cb999"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-访问刷新/README.md",
+      "sha256": "920166ea83511b9bb09f86ce9ea611f435cabb75156a3d996b0727d63b17a965"
+    },
+    {
+      "old": "测试/前端/Android/报告/20261115-访问刷新/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Android/报告/20261115-访问刷新/SHA256SUMS",
+      "sha256": "d8c37c5670c7f0e88fb23bbc2661e66ecc43b7ff1a5b5822e795626e3e29c3df"
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-I原生补齐/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-I原生补齐/README.md",
+      "sha256": "aca8ed7bb542eab7ff86a5222a86981f4a8be8dd0c22c650ab5bb93405ac556d"
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-原发信资格/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-原发信资格/README.md",
+      "sha256": "a8b6c8c35d87e06a0fd188ed5064dff85b88c4432b9af667a8001a98ef7f23f1"
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-原角色资格/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-原角色资格/README.md",
+      "sha256": "ee0007870859e730360faa084aabe0b57b71fd51ca0a67f0a3ad493aebcf26ae"
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-提及公告与分页/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-提及公告与分页/README.md",
+      "sha256": "ef03f46aec88dd4f89caa1bc572d7e5210493b7bf63ad55f8e69b7ff17876dd6"
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-提及公告与分页/结果.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-提及公告与分页/结果.json.sha256",
+      "sha256": "a77d935b523933a23a90ff5e387bb06edafda841bcc2a127821c458f1ab01360"
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-普通转发/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-普通转发/README.md",
+      "sha256": "dcb62ff7dc2df5ff028d9645c050b6d9df5749de247a4fe11c9f011feb731bda"
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-普通转发/结果.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-普通转发/结果.json.sha256",
+      "sha256": "45c934be78569b05648ca205601a6c2f006804f5a5655bd747587093c22d43a2"
+    },
+    {
+      "old": "测试/前端/HarmonyOS/报告/20261115-镜像原生构建/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/HarmonyOS/报告/20261115-镜像原生构建/README.md",
+      "sha256": "1c141f8558da7b625a1199cb8c7c5dc89a34938fb89993857b14b50e85463730"
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-普通转发/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/报告/20261115-普通转发/README.md",
+      "sha256": "c6c87ca7e8c91e40e95d81ed32e8891f99249b91e6889e1d3e49b3eab4d2d2df"
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-登录续期HTTPS/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/报告/20261115-登录续期HTTPS/README.md",
+      "sha256": "beb5b3b65eb1eee3f3a7f843c89eeb5c0c36ab453a2b07ee51843b818c77248c"
+    },
+    {
+      "old": "测试/前端/Web/报告/20261115-登录续期浏览器/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/Web/报告/20261115-登录续期浏览器/README.md",
+      "sha256": "cb4f6d948b102f0f03990df1f0919f1a4b327b68c078c9e9318bcc78602afda3"
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-发送准入闭环/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/iOS/报告/2026-11-15-发送准入闭环/SHA256SUMS",
+      "sha256": "e8f3bbaffd2dce736b7e985f5ab90c80d96a37a7a1676dc55e5128a59472ff0a"
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-基础闭环/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/iOS/报告/2026-11-15-基础闭环/SHA256SUMS",
+      "sha256": "35013b8da60811d3c885e7893d5911629ff6470f4460e8e862b29248c87e0f5b"
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-头像与本地闭环/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/iOS/报告/2026-11-15-头像与本地闭环/SHA256SUMS",
+      "sha256": "b05af75ca8a6fb3c672f51fcdedacdf97313c228df421cbef1f765872924853a"
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/iOS/报告/2026-11-15-搜索收藏与群互动/SHA256SUMS",
+      "sha256": "47b6a43ae8553aff0b96f71b1692594ffe601bdf0b85072f32845e8e4c26572d"
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-普通转发与实例围栏/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/iOS/报告/2026-11-15-普通转发与实例围栏/SHA256SUMS",
+      "sha256": "779d4c169161910a30d5a05b88f7b38e84ac97ea8e07271d388fa7e21498904f"
+    },
+    {
+      "old": "测试/前端/iOS/报告/2026-11-15-认证刷新与家族隔离/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/iOS/报告/2026-11-15-认证刷新与家族隔离/SHA256SUMS",
+      "sha256": "10d21f022920f00ef296e38b78d5159c678740563ebda34b91d9776dec9352ab"
+    },
+    {
+      "old": "测试/前端/iOS/报告/SHA256SUMS",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/前端/iOS/报告/SHA256SUMS",
+      "sha256": "0fb36ae979bd3c476278513a397e2b54ca7ce1056df233fd3159379b094ea4c8"
+    },
+    {
+      "old": "测试/后端/报告/刷新数据库并发单消费实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/刷新数据库并发单消费实测.json.sha256",
+      "sha256": "44e4fb76b3e127c9350170614c710db6ca686a119e71b05f5815493f27ca800e"
+    },
+    {
+      "old": "测试/后端/报告/刷新数据库并发原始日志.txt.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/刷新数据库并发原始日志.txt.sha256",
+      "sha256": "b695b4ad8cd628ca65bffd60c82ff54af304b307c2e0b2257dca713e79675568"
+    },
+    {
+      "old": "测试/后端/报告/刷新构建既有接口回归.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/刷新构建既有接口回归.json.sha256",
+      "sha256": "b76cfcaa621cde19b4f40e623d71bfa253f928a1da94c01978495194abb8d4ff"
+    },
+    {
+      "old": "测试/后端/报告/提及与公告实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/提及与公告实测.json.sha256",
+      "sha256": "f4c126ffe4c36ef2bc35df5242005cfd92b6cb3a4eaab783687f3ad34c148d9a"
+    },
+    {
+      "old": "测试/后端/报告/普通转发固定构建快照.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/普通转发固定构建快照.json.sha256",
+      "sha256": "f5cfe52b01e9cfd49d8c1e925d006ee13513cddeffa3e3e373b1ce1438564083"
+    },
+    {
+      "old": "测试/后端/报告/普通转发恢复代际实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/普通转发恢复代际实测.json.sha256",
+      "sha256": "abf5457c3d92d8de4676281aa0e5634360834066a3360813e367f786781331ed"
+    },
+    {
+      "old": "测试/后端/报告/普通转发真实闭环.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/普通转发真实闭环.json.sha256",
+      "sha256": "0d991e0e390bcf74ed2d26a316b08d76ceb61f275bd19bf4834b360b27ec10d6"
+    },
+    {
+      "old": "测试/后端/报告/登录刷新家族真实实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/登录刷新家族真实实测.json.sha256",
+      "sha256": "c7289440b362e65bcd6c2abb53fc94b7b5faec2a2b0256fabcfd0cfc9411f31b"
+    },
+    {
+      "old": "测试/后端/报告/登录刷新恢复拒旧实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/登录刷新恢复拒旧实测.json.sha256",
+      "sha256": "40705c77939063f5df3e7bdec4a1b85452fb2e88cc1355b5ef8052c76a319e93"
+    },
+    {
+      "old": "测试/后端/报告/登录刷新持久环境与完整退休链实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/登录刷新持久环境与完整退休链实测.json.sha256",
+      "sha256": "f3996429c4aad11e09d04470b2d8e8637ed73e0655f3569743bd229ca1e23aff"
+    },
+    {
+      "old": "测试/后端/报告/登录刷新持久环境固定构建快照.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/登录刷新持久环境固定构建快照.json.sha256",
+      "sha256": "57da266dfe98bdf5bf772b5de6384fb2882e04f9cd7ae45c0290438c8eef0f70"
+    },
+    {
+      "old": "测试/后端/报告/登录刷新持久环境恢复拒旧实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/登录刷新持久环境恢复拒旧实测.json.sha256",
+      "sha256": "a780c9f461551e5ec711b0f72e140681b0323ecaef4c54ca7230eeeb1b83ca5f"
+    },
+    {
+      "old": "测试/后端/报告/登录刷新续跑快照.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/登录刷新续跑快照.json.sha256",
+      "sha256": "10fbfb8fc0d3d53412d4150d3a52f112f1db7f68daab4eb811fca6fa1133f205"
+    },
+    {
+      "old": "测试/后端/报告/角色准入代际实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/角色准入代际实测.json.sha256",
+      "sha256": "97bdfee2c04ff65a8da465cf6a1007945ae7f146267d38ef853e178e0a1e2895"
+    },
+    {
+      "old": "测试/后端/报告/转发临时资格投影原始日志.txt.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/转发临时资格投影原始日志.txt.sha256",
+      "sha256": "2fa1380aaf895c744f037aef6687f9b303bbc5cdaa7265f6673142e0d4d34b86"
+    },
+    {
+      "old": "测试/后端/报告/转发临时资格投影恢复实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/转发临时资格投影恢复实测.json.sha256",
+      "sha256": "13821bab3635c5a988be68219050a2d13568396dbb99584635609811369432f1"
+    },
+    {
+      "old": "测试/后端/报告/转发公共JSON与持久续跑.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/转发公共JSON与持久续跑.json.sha256",
+      "sha256": "6236197071e41d65466fcfd2b3e5ee5ae22e1e3960678b7a0211b17534908c59"
+    },
+    {
+      "old": "测试/后端/报告/转发公共JSON持锁与私有证明.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/转发公共JSON持锁与私有证明.json.sha256",
+      "sha256": "026056bc86e6a52aa3883c99f4ef8c4315ab0fd6c801014f49b5d0f0c38b264f"
+    },
+    {
+      "old": "测试/后端/报告/转发公共JSON持锁原始日志.txt.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/转发公共JSON持锁原始日志.txt.sha256",
+      "sha256": "30231f560fafac1dc1e137cae5e1aa37f0b3468df503fdd4e43ed82b1e5328e0"
+    },
+    {
+      "old": "测试/后端/报告/转发导出明确拒绝实测.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/转发导出明确拒绝实测.json.sha256",
+      "sha256": "7a64159e85e8183efa60eabe69d47ab7cdcfb7cc3f15d0ff7339bc5666b22b96"
+    },
+    {
+      "old": "测试/后端/报告/转发构建既有接口回归.json.sha256",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/测试/后端/报告/转发构建既有接口回归.json.sha256",
+      "sha256": "c528c3e73b319742e03da734537b1636f160eb194aca8689c6282f7f1c8aba66"
+    },
+    {
+      "old": "需求/实现进度/README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/需求/实现进度/README.md",
+      "sha256": "571b0ae187394f7c4eaebb9cbb290d072920175e4b7facf1a5600bd75140b074"
+    },
+    {
+      "old": "README.md",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/README.md",
+      "sha256": "39deecef4fea9318bc4ca6e3cdf32fcc5e18cc74047c809298c5a023b813aecc"
+    },
+    {
+      "old": ".jobs-markdown-toc/manifest.json",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/.jobs-markdown-toc/manifest.json",
+      "sha256": "2bbc6439d234d02a6cf6e542c38732a5789301255d74851a74c8d81d27e805b4"
+    },
+    {
+      "old": ".gitattributes",
+      "archive": "项目相关报告/迁移归档/20261115-集中报告/原导航与校验清单/.gitattributes",
+      "sha256": "2ef89a51e0acd7e4369bbb87b2b9dd9b62d23b92aaa5699477482d4dc218fd52"
+    }
+  ]
+}

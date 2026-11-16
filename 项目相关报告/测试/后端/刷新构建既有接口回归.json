@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "testedAtUTC": "2026-11-15T12:46:08.510355+00:00",
+  "strictHTTPS": true,
+  "runs": {
+    "core": {
+      "status": "passed",
+      "httpAssertions": 55,
+      "evidence": "integration.py actual strict HTTPS stdout; independently executed immediately before this aggregation"
+    },
+    "searchFavorites": {
+      "status": "passed",
+      "httpAssertions": 279,
+      "foreignRecentHits": 110,
+      "ownedConversationsBeyondPublicTop100": true,
+      "qualifyBeforeSQLLimit": true,
+      "stableOwnerEpochQueryBoundCursor": true,
+      "favoritesNeedNoSearchQuery": true,
+      "favoriteSourceACLAndRejoinFloor": true,
+      "retractedAndUnfavoritedSourcesOmitted": true,
+      "exactSourceLookupRechecksReadACL": true,
+      "strictHTTPS": true,
+      "scope": "functional PostgreSQL substring search and source references; no full-text performance or complete I claim"
+    },
+    "roleMentionsAnnouncement": {
+      "httpAssertions": 77,
+      "semanticAssertions": 23,
+      "roleBoomerang": true,
+      "immutableOriginalOperations": true,
+      "structuredMentionsAndBlocks": true,
+      "interactionKeepsContentVersion": true,
+      "sourceEditRecallExpiryAndClear": true,
+      "parentRowSourceEditFenceRace": true
+    }
+  },
+  "binarySHA256": "7ef53be2fe9004fd66978a7313dac016dfdf146a66e3116767a61bdf0dcd40c9",
+  "scope": "Current refresh candidate core55, signed pagination and role/announcement regression; independent accounts, no shared service restart"
+}

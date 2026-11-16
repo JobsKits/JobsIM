@@ -1,0 +1,10 @@
+{
+  "exitCode": 0,
+  "elapsedSeconds": 2.923,
+  "binarySHA256": "dea37a66395b0b2c503ba934bafef327d3d87b407c73a10595e770f46948a2cd",
+  "changedSinceE69": [
+    "代码/后端/Go/control.go"
+  ],
+  "productionInputUnchangedDuringBuild": true,
+  "freeBytesAfter": 8539873280
+}

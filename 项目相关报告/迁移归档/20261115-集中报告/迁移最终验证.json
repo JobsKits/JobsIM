@@ -1,0 +1,100 @@
+{
+  "at": "2026-11-15T15:26:30.060587+00:00",
+  "status": "passed",
+  "boundary": "migration/navigation/default output checks only; no App build, business API or product test rerun",
+  "historicalOriginalFiles": 449,
+  "unchangedBytesAtNewPath": 440,
+  "changedNavigationWithExactOriginalArchive": [
+    "项目相关报告/测试/CLI/20261115-搜索协作/README.md",
+    "项目相关报告/测试/前端/Android/20261115-发送准入围栏/README.md",
+    "项目相关报告/测试/前端/Android/20261115-访问刷新/README.md",
+    "项目相关报告/测试/前端/HarmonyOS/20261115-原发信资格/README.md",
+    "项目相关报告/测试/前端/HarmonyOS/20261115-原角色资格/README.md",
+    "项目相关报告/测试/前端/Web/20261115-普通转发/README.md",
+    "项目相关报告/测试/前端/Web/20261115-登录续期HTTPS/README.md",
+    "项目相关报告/测试/前端/Web/20261115-登录续期浏览器/README.md",
+    "项目相关报告/实现进度/README.md"
+  ],
+  "allOriginalsRecoverable": 449,
+  "differentByteCollisionOverwrites": 0,
+  "relativeDirectoryCompatibility": [
+    {
+      "path": "测试/CLI/报告",
+      "target": "../../项目相关报告/测试/CLI",
+      "status": "passed"
+    },
+    {
+      "path": "测试/前端/Android/报告",
+      "target": "../../../项目相关报告/测试/前端/Android",
+      "status": "passed"
+    },
+    {
+      "path": "测试/前端/HarmonyOS/报告",
+      "target": "../../../项目相关报告/测试/前端/HarmonyOS",
+      "status": "passed"
+    },
+    {
+      "path": "测试/前端/Web/报告",
+      "target": "../../../项目相关报告/测试/前端/Web",
+      "status": "passed"
+    },
+    {
+      "path": "测试/前端/iOS/报告",
+      "target": "../../../项目相关报告/测试/前端/iOS",
+      "status": "passed"
+    },
+    {
+      "path": "测试/后端/报告",
+      "target": "../../项目相关报告/测试/后端",
+      "status": "passed"
+    },
+    {
+      "path": "测试/部署/MacOS/报告",
+      "target": "../../../项目相关报告/测试/部署/MacOS",
+      "status": "passed"
+    },
+    {
+      "path": "需求/实现进度",
+      "target": "../项目相关报告/实现进度",
+      "status": "passed"
+    }
+  ],
+  "relativeStatFileCompatibility": "../../项目相关报告/项目统计/报告.json",
+  "ownedReadmeNavigationDocuments": 106,
+  "localTargetsChecked": 1001,
+  "brokenTargets": [],
+  "exactTocDocuments": 95,
+  "tocScope": "workspace token, byte roundtrip, idempotence and effective attributes; no staging or remote rendering",
+  "syntaxEntries": 27,
+  "actualDefaultPathChecks": {
+    "python": 13,
+    "nodeIncludingStatistics": 9,
+    "webAuthDefaultAndEnv": 4,
+    "harmonyDefaultAndEnv": 4,
+    "androidAndDeployment": 2
+  },
+  "thirdPartyNavigationRestoredExact": 11,
+  "androidFrozenPackages": [
+    {
+      "path": "代码/前端/Android/Dist/JobsIM-debug.apk",
+      "sha256": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+      "status": "unchanged"
+    },
+    {
+      "path": "代码/前端/Android/Dist/Baselines/20261115-native-auth-refresh-debug.apk",
+      "sha256": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+      "status": "unchanged"
+    },
+    {
+      "path": "代码/前端/Android/Dist/Baselines/20261115-forward-projection-fence-debug.apk",
+      "sha256": "624785dc9619898162917aad32c443ab19a992129895f87d25c1d5e3523078e1",
+      "status": "unchanged"
+    }
+  ],
+  "sealedWebSnapshotFilesMatched": 26,
+  "notes": [
+    "Historical SHA256SUMS bytes unchanged; changed README originals checked in archive, new navigation sealed separately.",
+    "The 70 ordinary route source snapshot includes unverified sync, not the deployed 62 API baseline; admin method/path unit differs from historical management semantics.",
+    "Parallel owner new central reports retained and excluded from the 449 historical-original migration count."
+  ]
+}

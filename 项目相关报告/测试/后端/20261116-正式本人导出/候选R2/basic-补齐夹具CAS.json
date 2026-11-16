@@ -1,0 +1,65 @@
+{
+  "group": "basic",
+  "status": "failed",
+  "failure": "own read point and original sparse observations exported",
+  "httpChecks": 27,
+  "semanticAssertions": 13,
+  "elapsedSeconds": 0.746,
+  "binarySHA256": "c3d1128f246361f10f72711a545f7a9af5892e1db9b4b915d363bbc774326d34",
+  "scriptSHA256": "795b4a1f5a00a34fef0107d19af0ffa2fd192923be5da1814d4a596b4f28db4f",
+  "checkedAt": "2026-11-16T08:05:28.247692+00:00",
+  "assertions": [
+    {
+      "assertion": "unknown full-body lookup creates neither job nor key",
+      "passed": true
+    },
+    {
+      "assertion": "unread create response reuses the same nonce, task and sealed key",
+      "passed": true
+    },
+    {
+      "assertion": "task metadata never delivers a ZIP key",
+      "passed": true
+    },
+    {
+      "assertion": "ready artifact keeps only an instance-sealed server key until cleanup",
+      "passed": true
+    },
+    {
+      "assertion": "ordinary access/refresh rotation does not invalidate stable public device metadata",
+      "passed": true
+    },
+    {
+      "assertion": "unauthorized metadata mutation does not revoke another owner's package",
+      "passed": true
+    },
+    {
+      "assertion": "binary route expected status; data redacted",
+      "passed": true
+    },
+    {
+      "assertion": "controlled gateway delivers usable ZIP, never a plaintext decryption key",
+      "passed": true
+    },
+    {
+      "assertion": "all downloaded ZIP entries pass their complete CRC",
+      "passed": true
+    },
+    {
+      "assertion": "original file name never becomes an unsafe ZIP path",
+      "passed": true
+    },
+    {
+      "assertion": "own current profile exported",
+      "passed": true
+    },
+    {
+      "assertion": "own source font preference exported",
+      "passed": true
+    },
+    {
+      "assertion": "own independent manual unread view exported",
+      "passed": true
+    }
+  ]
+}

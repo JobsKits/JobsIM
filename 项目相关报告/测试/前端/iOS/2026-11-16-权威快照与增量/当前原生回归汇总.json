@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-16T04:27:27.264573+00:00",
+  "status": "partial_phase_one_validation",
+  "build": "执行记录/20261116-121027-24344/构建结果.json",
+  "syncInjected": {
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "result": "执行记录/20261116-121027-24344/测试结果.json",
+    "artifactAndSourceDetails": "原生编译与18项注入验证.json"
+  },
+  "authLocalRegression": {
+    "passed": 12,
+    "failed": 0,
+    "skipped": 0,
+    "methods": [
+      "testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace",
+      "testFreshProofRetiresCompleteSavedChainWithoutChangingOldBodies",
+      "testMissingRetirementCapabilityKeepsOriginalIntentAndMakesNoRequest",
+      "testRestartFinishesSecuredInitialPairBeforeExposingNewNamespace",
+      "testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily",
+      "testStaleOldFamilyCannotInvalidateReplacementDevice",
+      "testUnknownInitialUsesOriginalIDThenExplicitReauthLinksAndFreezesOldDevice",
+      "testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret",
+      "testUnknownRegistrationCannotBecomeUnlinkedFreshAuthentication",
+      "testKeychainStoresCompletePairAsSingleItem",
+      "testNamespaceHandoffFreezesOldOutboxAndRollsBackPartialCommit",
+      "testPairStrictnessAndRotationKeepsDeviceNamespace"
+    ],
+    "result": "执行记录/20261116-122209-31755/认证本地回归结果.json",
+    "sameCandidateAppFiles": 108,
+    "appHashMismatches": []
+  },
+  "isolationClarification": {
+    "flag": "JOBS_IM_SYNC_INJECTED_TESTS=1",
+    "scope": "DEBUG shared IMSession init uses a memory store and skips existing real profile/Keychain/message restore; verifyRestoreEpoch refuses real traffic",
+    "notGlobalHTTPInterceptor": true,
+    "actualSelectedRequests": "18 sync fixtures and 9 auth coordinator tests use explicit injected request closures; credential tests use only fresh random test Keychain keys",
+    "httpsIntegrationSuiteExcluded": true
+  },
+  "failuresRetained": {
+    "compile": "执行记录/20261116-114953-10012/构建结果.json",
+    "firstSyncRuntime": "执行记录/20261116-120521-20600/测试结果.json",
+    "recoveredOriginalSourceProvenance": "执行记录/首轮输入补存/来源核对.json"
+  },
+  "limits": [
+    "Old 4 real auth HTTPS tests not rerun against this candidate",
+    "No new native sync HTTPS or UI flow in this round",
+    "No physical device, qualified ACK, after_receipt or full phase-one acceptance"
+  ]
+}

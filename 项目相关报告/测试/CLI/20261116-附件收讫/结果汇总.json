@@ -1,0 +1,16 @@
+{
+  "status": "local_passed",
+  "passedGroups": 79,
+  "failedGroups": 0,
+  "skippedGroups": 2,
+  "binary": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-ObjectReceipts/20261116-1794825944953/Products/jobsim-object-receipts",
+  "binarySHA256": "39506f4efe51059d1efe82f3281f39b78ea7640c690ed8d3dbab4d61102915db",
+  "approvedVerificationFile": "03-final-full/SQLite结果.json",
+  "verificationSHA256": "fea47bc11fc3b17156dd731dd4353381ac456d60105b32a69ada206de9dd1527",
+  "realAPI": false,
+  "PG": false,
+  "afterReceiptEnabled": false,
+  "targetRangeComplete": false,
+  "deletionEligible": false,
+  "inputs": 36
+}

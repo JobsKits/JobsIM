@@ -1,0 +1,73 @@
+{
+  "at": "2026-11-15T06:31:50.450Z",
+  "status": "passed",
+  "exitCode": 0,
+  "error": null,
+  "passedGroups": 21,
+  "failedGroups": 0,
+  "sourceFiles": [
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+      "sha256": "379fb31e54b9568a3d986b90dd2306a8338a4bd32ad2976c1f0a883fd6b8353d"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "sha256": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/forward.go",
+      "sha256": "747de459652d091dfb32f882448147963a64dddd6e798355f08e42bfc3a557e6"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "sha256": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/local.go",
+      "sha256": "c21212f980c929626e28ba2c4b58690d4c948619c7eb7ad939cd33c67757e610"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/main.go",
+      "sha256": "ed80b33e98d896f5f596c6a7614109e2a07bbd27c1bd3c0094d00326cca4e144"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/store.go",
+      "sha256": "1b645828921ed30c5006e0bace63449f8481f50a05a6672eeff9dc588cb72215"
+    },
+    {
+      "path": "代码/前端/CLI/go.mod",
+      "sha256": "3909e75826adbcd87c321b2a2acd03bcb5240334035d03bd47174f1b71c7b46e"
+    },
+    {
+      "path": "代码/前端/CLI/go.sum",
+      "sha256": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030"
+    },
+    {
+      "path": "测试/CLI/collaboration_test.go",
+      "sha256": "6174741808763c247b25264fa1709013f31549e289479af181c114e3eb10d030"
+    },
+    {
+      "path": "测试/CLI/governance_test.go",
+      "sha256": "aae050ed8b6c7783019efa3a4b6216f38ba3fc37951e7d462bbf5e34f1ca2e7f"
+    },
+    {
+      "path": "测试/CLI/outbox_test.go",
+      "sha256": "a0b3c4756c3b5907c759615acca8c3df8c33b62770482ee5a933397ffc590952"
+    }
+  ],
+  "checks": [
+    "durable commit before HTTP; original ID/payload after unknown results",
+    "real SQLite reopen, namespace/restore isolation, WAL/FULL",
+    "message/cursor atomicity and large string version monotonicity",
+    "explicit atomic legacy import; unavailable content never exposes old body",
+    "original send admission retained; absent capability receives no POST",
+    "request/reopen original operation persisted before HTTP and reused after reopen",
+    "completed operations query current inbound policy without new POST",
+    "only corresponding direct is frozen before relationship write; raw payload/hash unchanged",
+    "leave/member-self removal atomically withdraws history/cursor before HTTP and retains draft",
+    "SQL fault rolls leave freeze/history/cursor back together",
+    "explicit original member generations; PATCH/DELETE unknown results not replayed",
+    "schema1 to schema2 retains original Outbox bytes and independent reason",
+    "governance frozen reconciliation only reads current authorized history, never creates an old intent"
+  ]
+}

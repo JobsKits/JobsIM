@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:45.306437+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:45.480885+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSyncSchemasScopeMismatchMakesNoColumns"}
+{"Time":"2026-11-16T12:11:45.480978+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSchemasScopeMismatchMakesNoColumns","Output":"=== RUN   TestSyncSchemasScopeMismatchMakesNoColumns\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:45.59586+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSchemasScopeMismatchMakesNoColumns","Output":"--- PASS: TestSyncSchemasScopeMismatchMakesNoColumns (0.11s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:45.595891+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSyncSchemasScopeMismatchMakesNoColumns","Elapsed":0.11}
+{"Time":"2026-11-16T12:11:45.595915+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:45.596623+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.290s\n"}
+{"Time":"2026-11-16T12:11:45.596685+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.29}

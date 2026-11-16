@@ -1,0 +1,23 @@
+{
+  "results": [
+    {
+      "command": [
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exitCode": 0,
+      "seconds": 0.25505762500688434
+    },
+    {
+      "command": [
+        "node_modules/vite/bin/vite.js",
+        "build"
+      ],
+      "exitCode": 0,
+      "seconds": 0.5160124169924529
+    }
+  ],
+  "freeBytes": 2531028992,
+  "runtimeVersion": "v24.22.1",
+  "nodeBinary": "/Users/jobs/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node"
+}

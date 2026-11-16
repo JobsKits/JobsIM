@@ -1,0 +1,163 @@
+{
+  "scope": "iOS native phase-I increment; simulator verification, not full product acceptance",
+  "date": "2026-11-15",
+  "toolchain": "Xcode 27.2 / SDK27.2; arm64 iOS26.5 runtime23F77",
+  "device": {
+    "name": "JobsIM Picker iOS26.5",
+    "id": "B9C6B6F5-0E7A-4A5D-8CDB-ECF41E01031D",
+    "systemCAInstalled": false
+  },
+  "fullRun": {
+    "xcresult": "代码/前端/iOS/build/Results/Test-JobsIM-2026.11.15_10-02-58-+0800.xcresult",
+    "infoPlistSHA256": "4f58fd86fa8de72d07b70c8a600020fd50aebec059c4489961ada7650c340dbc",
+    "result": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "B9C6B6F5-0E7A-4A5D-8CDB-ECF41E01031D",
+            "deviceName": "JobsIM Picker iOS26.5",
+            "modelName": "iPhone 17 Pro",
+            "osBuildNumber": "23F77",
+            "osVersion": "26.5",
+            "platform": "iOS Simulator"
+          },
+          "expectedFailures": 0,
+          "failedTests": 0,
+          "passedTests": 30,
+          "skippedTests": 0,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1794708410.78,
+      "passedTests": 30,
+      "result": "Passed",
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "This method should not be called on the main thread as it may lead to UI unresponsiveness."
+        }
+      ],
+      "skippedTests": 0,
+      "startTime": 1794708178.486,
+      "statistics": [],
+      "testFailures": [],
+      "title": "Test - JobsIM",
+      "topInsights": [
+        {
+          "category": "Longest Test Runs",
+          "impact": "30% of duration",
+          "text": "1 longest test run with outlier durations exceeding 2.01s (three standard deviations)"
+        }
+      ],
+      "totalTestCount": 30
+    },
+    "groups": {
+      "nativeDataAndAPI": 24,
+      "nativeUI": 6
+    }
+  },
+  "finalFocusedRun": {
+    "xcresult": "代码/前端/iOS/build/Results/Test-JobsIM-2026.11.15_10-07-10-+0800.xcresult",
+    "infoPlistSHA256": "f8b99c82e819052f7cc10945a1bd8ccdf96c7050c47a7d594df279d9c49f4b78",
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "covers": [
+      "actual unreachable endpoint cache fallback after matching scoped CA policy",
+      "confirmed revoked identity returns to auth and old401 cannot logout new identity",
+      "durable enqueue before clearing input",
+      "read-only keeps draft without enqueue"
+    ]
+  },
+  "evidenceRetention": {
+    "previousExternalPNGsJSONAndSHA": "retained unchanged",
+    "oldXcodeRawBundles": "Xcode default Logs/Test retention automatically pruned all but last three bundles during repeated testing; prior18+4/20 and iOS27 failure raw bundles no longer present",
+    "currentRawBundles": "three remaining bundles copied to build/Results; Build.rb now supplies unique explicit resultBundlePath outside rotating Logs/Test",
+    "noManualCleanup": true
+  },
+  "observedAndPreservedFailures": [
+    {
+      "originalRun": "09-38-53",
+      "rawBundleAvailable": false,
+      "detail": "iOS27.2 remote Files AX readable but taps/search did not accept input. Passing26.5 does not fix27.2. Screenshot is an observation only; action failure diagnosed during actual test calls."
+    },
+    {
+      "originalRun": "09-53-51",
+      "passed": 28,
+      "failed": 1,
+      "rawBundleAvailable": false,
+      "detail": "demo restart UILabel AX type drift; stable original-ID cell selector and explicit root wait fixed it; final30 passed"
+    },
+    {
+      "xcresult": "代码/前端/iOS/build/Results/Test-JobsIM-2026.11.15_09-57-51-+0800.xcresult",
+      "infoPlistSHA256": "be207fc8623a580dee19359c12fd3e0e13e7ce31569f9e75d3777f7d61c5a6d5",
+      "passed": 28,
+      "failed": 1,
+      "detail": "export UI test queried Copy as button; actual native activity cell selector corrected; final30 passed"
+    }
+  ],
+  "staticChecks": {
+    "constructionAudit": "issues=0 issue_files=0 factory_hits=22 scanned=60 sdk_classes=3512",
+    "concreteUIViewControllers": 9,
+    "languageCount": 10,
+    "keysPerLanguage": 119,
+    "thirdPartyLicenseRecords": 22,
+    "logo": {
+      "source": "代码/前端/Web/Public/Logo.svg",
+      "bundled": "代码/前端/iOS/JobsIM/Resource/Assets.xcassets/Logo.imageset/Logo.svg",
+      "SHA256": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f"
+    }
+  },
+  "screenshots": [
+    {
+      "file": "群成员鉴权头像-原生UI.png",
+      "SHA256": "67b5fe34e04397713152d0accb0944fdd54ace78a623c6832a43196af1917e2f",
+      "sourceAttachment": "95DED707-CBAD-4A87-9D60-8293175D9931.png"
+    },
+    {
+      "file": "鉴权图片与草稿恢复-原生UI.png",
+      "SHA256": "be7985eb6a9a3cd7c931328d7c330fc90d614ccbb81a4d6ff6b53ee1d3c62bd0",
+      "sourceAttachment": "9A2F8FD4-7FF4-4531-B0CD-AD21A1A3213C.png"
+    },
+    {
+      "file": "头像发布完成-原生UI.png",
+      "SHA256": "69ca4996de8c2fe4ec1b5db0a212854b77e26631a23825801146a6d418a5380f",
+      "sourceAttachment": "19231996-2EB2-46A2-86A6-EDA5C4577851.png"
+    },
+    {
+      "file": "实例指纹确认-原生UI.png",
+      "SHA256": "5b7e7ec02c056f1ed866faae246428d503558d28ed68814121c3ceaab677af99",
+      "sourceAttachment": "92066DFA-AC3A-4F6C-A434-E287C3CFFA90.png"
+    },
+    {
+      "file": "本地历史导出分享-原生UI.png",
+      "SHA256": "1c74ef7c346a916eca4e3e42e540b156ed0248cb1ed65542ff04f92d8ca36369",
+      "sourceAttachment": "8D5A904D-CF02-4F59-97DD-6C1436A26284.png"
+    }
+  ],
+  "boundaries": [
+    "no device or macOS global CA install; hostname and validity enforced",
+    "local export is ordinary cached JSON without credentials/outbox/media bytes and cannot be imported",
+    "media copies permit transport failure fallback only; known HTTP auth denial and deleted/unavailable bodies do not fallback",
+    "UI tests chose files in native Files; no picker delegate injection",
+    "real H264/AAC video and PNG/file byte roundtrip is not camera or video-player UI proof",
+    "iOS27.2 Files, physical devices, complete sync/qualified ACK/global deletion/account cancellation/controlled migration/server backup not accepted",
+    "no remote push/RTC/map/payment/E2EE/SDK scope"
+  ],
+  "retainedRuntimeWarning": "AVAudioSession synchronous activation reports main-thread responsiveness warning; not suppressed",
+  "resultPathProbe": {
+    "xcresult": "代码/前端/iOS/build/Results/Test-2026.11.15_10-10-26-f07f4c15.xcresult",
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "infoPlistSHA256": "5e016bbe2fd9e091bd49654fa6d716f7ca28fff9ccc89502c9a5ac639f637d65",
+    "purpose": "Verify Build.rb explicit unique resultBundlePath prevents default result rotation"
+  }
+}

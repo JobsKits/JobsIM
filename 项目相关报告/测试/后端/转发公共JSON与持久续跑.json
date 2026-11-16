@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "httpAssertions": 218,
+  "semanticAssertions": 12,
+  "slowPublicTLSJSON": true,
+  "disconnectReleasesFence": true,
+  "publicFakeHeaderCannotBypass": true,
+  "over100DescendantsDurablyResume": true,
+  "sameOriginalSourceOperationContinues": true,
+  "membershipPendingBeforeOutboundRPCRecovered": true,
+  "invalidReferencesCannotCrowdLookup": true,
+  "scope": "Isolated same-host real HTTPS/PG; membership pending window is an explicit SQL fixture followed by the actual source-owner API; no TTL, UI or cross-host claim",
+  "testedAtUTC": "2026-11-15T05:37:03.948884+00:00",
+  "scriptSHA256": "f9167bb258f2d4439812cd176988e19542357bf0d873a5ba78784eb9d4e7d43b"
+}

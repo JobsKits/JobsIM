@@ -1,0 +1,365 @@
+{
+  "group": "e",
+  "status": "passed",
+  "httpChecks": 4,
+  "semanticAssertions": 87,
+  "verifiedPages": 0,
+  "elapsedSeconds": 0.825,
+  "checkedAt": "2026-11-16T04:28:49.491119+00:00",
+  "binarySHA256": "25de7285297c3773ee09cb90bf00b3e92f8c9319153befd7878cc274ea954001",
+  "failure": null,
+  "assertions": [
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    },
+    {
+      "assertion": "all own sync source kinds emitted real transaction Outbox rows",
+      "passed": true
+    },
+    {
+      "assertion": "preference trigger committed its own owner pointers",
+      "passed": true
+    },
+    {
+      "assertion": "sparse read compaction publishes removed observations",
+      "passed": true
+    },
+    {
+      "assertion": "network import and allocation do not recursively mutate the sync source clock",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "unknown projection does not retain an old body",
+      "passed": true
+    },
+    {
+      "assertion": "exact stream positions never move backward",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "exact stream positions never move backward",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "exact stream positions never move backward",
+      "passed": true
+    },
+    {
+      "assertion": "schema-two replays every new private kind from the original boundary",
+      "passed": true
+    },
+    {
+      "assertion": "network import allocates one visible position per immutable origin",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "exact stream positions never move backward",
+      "passed": true
+    },
+    {
+      "assertion": "schema-one changes continue to filter new private events",
+      "passed": true
+    }
+  ],
+  "strictHTTPS": true,
+  "realPhysicalPGClusters": 2,
+  "qualifiedAck": false,
+  "draftsActivated": false
+}

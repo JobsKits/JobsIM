@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="2" failures="0" errors="0" skipped="0" time="1.64" timestamp="2026-11-14T14:42:02" hostname="localhost">
+  <testsuite name="com.jobs.im.DatabaseIsolationTest" tests="1" failures="0" errors="0" skipped="0" time="0.105" timestamp="2026-11-14T14:42:02" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="liveOutboxSurvivesIndependentDemoWrites" classname="com.jobs.im.DatabaseIsolationTest" time="0.105" />
+  </testsuite>
+  <testsuite name="com.jobs.im.LiveApiTest" tests="1" failures="0" errors="0" skipped="0" time="0.945" timestamp="2026-11-14T14:42:02" hostname="localhost">
+    <properties>
+      <property name="device" value="JobsIMReview_20261114_1424(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="verifiedTlsTwoAccountMessageContract" classname="com.jobs.im.LiveApiTest" time="0.945" />
+  </testsuite>
+</testsuites>

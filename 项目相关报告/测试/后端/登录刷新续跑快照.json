@@ -1,0 +1,56 @@
+{
+  "status": "interrupted_runtime_missing",
+  "recordedAtUTC": "2026-11-15T07:33:44.739620+00:00",
+  "lastVerifiedRuntimeBinarySHA256": "1e469962a46ed510a5cc61db097c8f755d44c9e47383e0658ca2eea462b6a786",
+  "lastVerifiedBinaryFilePresent": false,
+  "historicalValidation": {
+    "refreshHTTP": 86,
+    "refreshSemantic": 43,
+    "realRestoreHTTP": 22,
+    "realRestoreSemantic": 9,
+    "directSQLConcurrentConsumeGo": "passed; no outer OS fence in test",
+    "goVetBeforeLastNarrowChanges": "passed"
+  },
+  "currentSourceIsNotFullyVerified": true,
+  "remainingValidation": [
+    "Recreate a new persistent isolated runtime/namespace with an explicit CA and real independent business/journal PG clusters; do not impersonate the missing instance.",
+    "Compile current source and run new exact-session mapping/secret-clear SQL and pending browser logout-without-family rejection cases.",
+    "Rerun current refresh API suite, external SQL concurrent-consume test, real restore with retirement replay and existing core HTTP baseline.",
+    "Only then announce a new client test window; no new refresh client API/UI integration has passed against this latest source yet."
+  ],
+  "observedIncident": {
+    "missingPath": "/Users/jobs/Library/Caches/JobsIM",
+    "goToolchainMissing": true,
+    "testCAAndPrivateStateMissing": true,
+    "postgresNotObservedRunning": true,
+    "jobsimdProcessesStillObserved": true,
+    "cause": "not established by this agent; parent coordinating"
+  },
+  "sourceSHA256": {
+    "代码/后端/Go/session_refresh_model.go": "274a4fff519cb1be2018c6f11de554d2cafa55813defe00723bbc4b7c2567a43",
+    "代码/后端/Go/session_refresh.go": "79a96511e38d56dfd809616f96c68068ef5f91c9d54adb8b36d967bf2714b7af",
+    "代码/后端/Go/session_bff.go": "55ff21e427c697c2fe869311132bce7ca9a63ac71107e8e18f414a0ef13cb854",
+    "代码/后端/Go/identity.go": "cc823ec8ad9c70afaff7f451cd9b929dc77427b98360193497703ddcf7835129",
+    "代码/后端/Go/types.go": "b2837f096570c5d4ea4fe0cf8e94032e05842c5cc39bd56b2d2060b58d612a77",
+    "代码/后端/Go/migrations.go": "c5cb14b892979519a486ab667155e55a397284b6eb9874e4ae9fff3e7cf4f007",
+    "代码/后端/Go/control.go": "6558882466aa9be74c618379143e20686b170ec597f96d5753fc854d30fce0c2",
+    "代码/后端/Go/server.go": "f529021a8efeb6c151250622886eaf43eb112963f1bb08115c1610cb77e6208f",
+    "代码/后端/Go/send_admission.go": "97c331b0377d687dbc02b866ddbd3e82d592accb5c96e3352caabdc11b441809",
+    "代码/后端/Go/export.go": "f071ccd348c60fffab82e5d4b9cf16d6a9821e2ec34f8caee4ccd9d5cc234f43",
+    "代码/后端/Go/export_identity.go": "542c1f9dea354d434ed0f23b646d76dad890fd134aa7262a0bdc10675b49b4b8",
+    "代码/后端/Go/journal.go": "1063b1459430af788f97f18cc05b4f3903d28183ab697af2994031eb7afc42bf",
+    "代码/后端/Go/operations.go": "2136bb96bec0fe93928a4e5a1e2af97d69166bccf9451f446d8715bf956a6bd9",
+    "代码/后端/Go/cmd/jobsimd/main.go": "bd8e0f715cf3d7f9fa14f774b47907a4fb857ec1dc3a8b0e6d2fdaa45eb3eb68",
+    "测试/后端/接口/session_refresh.py/session_refresh.py": "f1b4527905701cbb3d285d229c9607fe37509c49f58f4c0fc7fb2d62f3294d95",
+    "测试/后端/接口/session_refresh_restore.py/session_refresh_restore.py": "551d8fabb03a5c071ec27997908b7cff72b0b8229246b1fb79e7c0d5246f8e82",
+    "测试/后端/接口/session_refresh_test.go": "f3fb3576a8c836593c63735c02bfe7e727fd7c5c5e46f33f3b65897d4cabaaac",
+    "测试/后端/运行测试.py": "dee6f3a698c9c9f04b2e9b391fd12db88f730cdb48e44c45892abcc9bbddc264"
+  },
+  "historicalEvidenceSHA256": {
+    "登录刷新家族真实实测.json": "fc6bc928e80caa47ce4304b81ca30e46f421d3cfae8fd49dd904e4849564274f",
+    "登录刷新恢复拒旧实测.json": "1a7b9f27e8538d2f08369b7793449f4ae70a9e401741dc10d7145abba9a1eca7",
+    "刷新数据库并发单消费实测.json": "2995daa6bc7333a6196157e94ccb7bd3cc2411ad08bfb2ee5df917cf1891bf3e",
+    "刷新数据库并发原始日志.txt": "5678d7088aa98ff45168cf030f7c34404dfc2c265de85f4922915a12a98ff077"
+  },
+  "scope": "No full I/DBC-05/243 acceptance, no credential values or private environment contents stored"
+}

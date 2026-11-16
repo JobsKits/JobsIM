@@ -1,0 +1,54 @@
+[
+  {
+    "closed": "true",
+    "requestID": "9c0951f8-cc1b-4eb6-bc5b-bc5bd7338b29",
+    "userID": "375e864d-a0f9-4856-bd61-2fcc075625e6",
+    "epoch": "2",
+    "deviceID": "6d8b20be-0ba2-4b15-84ad-63e787e4ec1b",
+    "runID": "14651d82-e35a-4a0b-bb33-6c593c2dee87",
+    "username": "s2_ios_096acb1e49ef4c35",
+    "deployment": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "profile": "s2-ios-89ccdeff-ca56-4077-98b4-beffa703b1a7",
+    "accessExpiresAt": "2026-11-16T09:26:36.944173Z",
+    "familyID": "23b02530-a7b9-4479-99bc-146eb2bc52c9"
+  },
+  {
+    "closed": "true",
+    "userID": "ddc85529-7827-4baa-af65-b7c6eaa90e39",
+    "requestID": "fbfd45a2-8acf-461d-be4f-b58539f38860",
+    "epoch": "2",
+    "runID": "14651d82-e35a-4a0b-bb33-6c593c2dee87",
+    "deviceID": "986cfbaa-5e08-40b7-ab9c-a874001b9eac",
+    "username": "s2_ios_8ecb06f00da94e22",
+    "deployment": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "profile": "s2-ios-13eed060-fd28-4431-85cc-81dcb57e3972",
+    "accessExpiresAt": "2026-11-16T09:26:37.103972Z",
+    "familyID": "2d3659fc-d89b-4c74-b90c-b018fba1b2dd"
+  },
+  {
+    "userID": "e2dca13d-bcd6-48f3-bc43-950f0c0484c7",
+    "requestID": "8a724a94-1085-4c2e-8ccf-63eaffc270a1",
+    "closed": "true",
+    "epoch": "2",
+    "runID": "14651d82-e35a-4a0b-bb33-6c593c2dee87",
+    "deviceID": "18171886-70fb-4cfa-ba33-6087f3746432",
+    "username": "s2_ios_88fbfae00ca74536",
+    "deployment": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "profile": "s2-ios-8e28db66-3de2-48bc-b60e-4eb118d7ceb4",
+    "accessExpiresAt": "2026-11-16T09:26:37.544215Z",
+    "familyID": "c2178024-13db-4f3d-9a41-2e557fa12062"
+  },
+  {
+    "userID": "9bffe9c1-793b-4f99-b14d-0c768c69c455",
+    "requestID": "e0f5e552-058d-4089-9407-1aa0474991bc",
+    "closed": "true",
+    "epoch": "2",
+    "deviceID": "b6f515bb-7f5a-4fc8-8235-b82513b404fd",
+    "runID": "14651d82-e35a-4a0b-bb33-6c593c2dee87",
+    "username": "s2_ios_cb2eef4586714a57",
+    "deployment": "24fb0a3c-99a0-4ada-9d01-07467724e829",
+    "familyID": "1a2b65fb-40b7-44b4-bc63-817c2765b94a",
+    "accessExpiresAt": "2026-11-16T09:26:37.69118Z",
+    "profile": "s2-ios-e38e7979-7c56-40dc-b61b-5d3f7dc7dbc5"
+  }
+]

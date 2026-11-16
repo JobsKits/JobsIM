@@ -1,0 +1,253 @@
+{
+  "group": "h",
+  "status": "passed",
+  "httpChecks": 20,
+  "semanticAssertions": 59,
+  "verifiedPages": 3,
+  "elapsedSeconds": 3.589,
+  "checkedAt": "2026-11-16T04:28:53.700838+00:00",
+  "binarySHA256": "25de7285297c3773ee09cb90bf00b3e92f8c9319153befd7878cc274ea954001",
+  "failure": null,
+  "assertions": [
+    {
+      "assertion": "real write committed before socket closed without consuming response bytes",
+      "passed": true
+    },
+    {
+      "assertion": "only complete original-body lookup reconciles the lost success",
+      "passed": true
+    },
+    {
+      "assertion": "unknown read-only lookup cannot create or duplicate an original fact",
+      "passed": true
+    },
+    {
+      "assertion": "real write committed before socket closed without consuming response bytes",
+      "passed": true
+    },
+    {
+      "assertion": "only complete original-body lookup reconciles the lost success",
+      "passed": true
+    },
+    {
+      "assertion": "unknown read-only lookup cannot create or duplicate an original fact",
+      "passed": true
+    },
+    {
+      "assertion": "real write committed before socket closed without consuming response bytes",
+      "passed": true
+    },
+    {
+      "assertion": "only complete original-body lookup reconciles the lost success",
+      "passed": true
+    },
+    {
+      "assertion": "unknown read-only lookup cannot create or duplicate an original fact",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    },
+    {
+      "assertion": "original S2 manifest is stable on retry",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "final validation does not claim local commit or ACK",
+      "passed": true
+    },
+    {
+      "assertion": "installation returns the original cut boundary",
+      "passed": true
+    },
+    {
+      "assertion": "exact stream positions never move backward",
+      "passed": true
+    },
+    {
+      "assertion": "only this explicitly owned NATS process can be stopped",
+      "passed": true
+    },
+    {
+      "assertion": "broker outage retains a durable unacknowledged owner pointer",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "exact stream positions never move backward",
+      "passed": true
+    },
+    {
+      "assertion": "authenticated owner HTTP replay compensates a real NATS outage",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    },
+    {
+      "assertion": "exact stream positions never move backward",
+      "passed": true
+    },
+    {
+      "assertion": "actual NATS restart and duplicate ingest allocate no additional position",
+      "passed": true
+    }
+  ],
+  "strictHTTPS": true,
+  "realPhysicalPGClusters": 2,
+  "qualifiedAck": false,
+  "draftsActivated": false
+}

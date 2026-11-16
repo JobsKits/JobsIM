@@ -1,0 +1,41 @@
+{
+  "group": "source_finalize",
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 13,
+  "semanticAssertions": 7,
+  "elapsedSeconds": 0.26,
+  "binarySHA256": "b129ee7dbf0898a99f62f2354326470deb26c0bf3ec761d96784b0e70ef6e9c5",
+  "scriptSHA256": "bee42b3c1f4e9cdff467dca6c817d0782f725f78affaede6afcdfa6f114e3519",
+  "checkedAt": "2026-11-16T08:39:42.950283+00:00",
+  "assertions": [
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "real elapsed ACCESS_EXPIRED rotates its one current refresh generation without reauthentication",
+      "passed": true
+    },
+    {
+      "assertion": "original committed source nonce waits for the complete governance handoff, including concurrent cancellation facts",
+      "passed": true
+    },
+    {
+      "assertion": "source continuation did not rewrite its committed CAS fact",
+      "passed": true
+    },
+    {
+      "assertion": "expired unknown initial delivery retired its exact previous family through new verified authentication",
+      "passed": true
+    },
+    {
+      "assertion": "controlled BFF recovery publishes only its own cookie after the prior cleanup barrier",
+      "passed": true
+    }
+  ]
+}

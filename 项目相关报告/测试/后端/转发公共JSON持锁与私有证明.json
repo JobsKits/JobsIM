@@ -1,0 +1,11 @@
+{
+  "cases": 5,
+  "clientCancellationDrains": true,
+  "markerFixtureRemovedBeforeRelease": true,
+  "markerInjectedAfterOuterSH": true,
+  "publicForgedProofCannotBypass": true,
+  "publicGatewayWriterBlocked": true,
+  "realRoleHTTP": true,
+  "scope": "Current gateway handler and real isolated HTTP roles/PG; separate real TLS slow-client check required",
+  "status": "passed"
+}

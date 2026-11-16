@@ -1,0 +1,88 @@
+{
+  "startedAt": "2026-11-16T04:04:01.368168+00:00",
+  "status": "passed",
+  "binarySHA256": "18738c34228b3318a7a68c8eb34854cb9c3a84fc0351d405a69d16d365f12929",
+  "serverBinarySHA256": "57a86767d12f005da08c728ff544a2b66076b2db03a203e3221d3490e355f290",
+  "checks": [
+    {
+      "name": "strict-ca-fixed57-bootstrap",
+      "passed": true
+    },
+    {
+      "name": "real-tty-two-process-only-accounts",
+      "passed": true,
+      "groupId": "42687530-165f-4358-88b9-4fdf0a6db899"
+    },
+    {
+      "name": "two-way-authoritative-snapshot-and-delta",
+      "passed": true,
+      "alicePosition": "12",
+      "bobPosition": "12"
+    },
+    {
+      "name": "peer-real-same-client-id-never-acks-own-original",
+      "passed": true,
+      "clientMsgId": "53ac874697f453cbecc9a1edcbffc579",
+      "originalBodySHA256": "b6dde2d75cea72c437302425a750eb29598c4f39e49b5453cd5d6976e4283306",
+      "actualRejection": {
+        "status": 403,
+        "code": "OBJECT_NOT_OWNED"
+      }
+    },
+    {
+      "name": "verified-global-clears-body-without-consuming-other-original",
+      "passed": true
+    },
+    {
+      "name": "first-alice-tty-normal-quit",
+      "passed": true
+    },
+    {
+      "name": "same-profile-new-device-isolates-queue-and-cleans-old-holder",
+      "passed": true,
+      "namespaceChanged": true,
+      "oldOriginalPreserved": true
+    },
+    {
+      "name": "removed-member-legal-ordinary-local-history-only",
+      "passed": true,
+      "exactCloudHTTPStatus": 403,
+      "exactCloudCode": "NOT_A_MEMBER"
+    },
+    {
+      "name": "global-clears-historical-holder-after-cloud-membership-revoked",
+      "passed": true
+    },
+    {
+      "name": "fixed-instance-and-epoch-unchanged",
+      "passed": true
+    }
+  ],
+  "nativeCredentialStorePositive": false,
+  "pgUsed": false,
+  "serviceChanged": false,
+  "rawTTYRecorded": false,
+  "cliCreationHTTPCountMeasured": false,
+  "deploymentId": "5ff51e9e-a6fa-4ff1-83ce-23ee15125682",
+  "restoreEpoch": "1",
+  "origin": "https://127.0.0.1:44443",
+  "finishedAt": "2026-11-16T04:04:02.252408+00:00",
+  "cleanup": [
+    {
+      "kind": "owned-peer-control-family",
+      "logout": true
+    },
+    {
+      "kind": "own-tty",
+      "normalQuit": true
+    },
+    {
+      "kind": "own-tty",
+      "normalQuit": true
+    },
+    {
+      "kind": "own-tty",
+      "normalQuit": true
+    }
+  ]
+}

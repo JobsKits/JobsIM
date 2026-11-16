@@ -1,0 +1,8 @@
+{"Time":"2026-11-16T12:11:57.807947+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-16T12:11:57.977859+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSelfViewPGManualUnreadGenerationPreservesNewIntent"}
+{"Time":"2026-11-16T12:11:57.977957+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfViewPGManualUnreadGenerationPreservesNewIntent","Output":"=== RUN   TestSelfViewPGManualUnreadGenerationPreservesNewIntent\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:58.119051+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSelfViewPGManualUnreadGenerationPreservesNewIntent","Output":"--- PASS: TestSelfViewPGManualUnreadGenerationPreservesNewIntent (0.14s)\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:58.119108+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSelfViewPGManualUnreadGenerationPreservesNewIntent","Elapsed":0.14}
+{"Time":"2026-11-16T12:11:58.119135+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-16T12:11:58.119974+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.311s\n"}
+{"Time":"2026-11-16T12:11:58.120002+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.312}

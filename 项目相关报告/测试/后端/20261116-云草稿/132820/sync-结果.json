@@ -1,0 +1,322 @@
+{
+  "group": "sync",
+  "status": "passed",
+  "failure": null,
+  "httpChecks": 14,
+  "semanticAssertions": 77,
+  "expectedCASConflictsSeparate": 0,
+  "verifiedPages": 6,
+  "elapsedSeconds": 0.517,
+  "checkedAt": "2026-11-16T05:37:04.394942+00:00",
+  "binarySHA256": "e69e51d2f0620752005df9ee8656fc6ce77511ae1939d994707615b63f2e7214",
+  "assertions": [
+    {
+      "assertion": "registration retries retain the same transport-only fact",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    },
+    {
+      "assertion": "original S2 manifest is stable on retry",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "immutable page digest hashes exact reference bytes",
+      "passed": true
+    },
+    {
+      "assertion": "verified refs match response refs and manifest count",
+      "passed": true
+    },
+    {
+      "assertion": "hydration is bound to the same immutable refs",
+      "passed": true
+    },
+    {
+      "assertion": "every complete page is currently installable",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "S2 drafts synchronize only own bodies without reusable admission proof",
+      "passed": true
+    },
+    {
+      "assertion": "final validation does not claim local commit or ACK",
+      "passed": true
+    },
+    {
+      "assertion": "installation returns the original cut boundary",
+      "passed": true
+    },
+    {
+      "assertion": "original owned text draft reached positive durable commit",
+      "passed": true
+    },
+    {
+      "assertion": "actual PubAck and network consumer commit precede any HTTP replay",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "event digest binds the original envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display event equals the verified pointer envelope",
+      "passed": true
+    },
+    {
+      "assertion": "body digest hashes exact envelope bytes",
+      "passed": true
+    },
+    {
+      "assertion": "display object matches the verified body envelope",
+      "passed": true
+    },
+    {
+      "assertion": "exact stream positions never move backward",
+      "passed": true
+    },
+    {
+      "assertion": "real draft trigger and JetStream originate the current S2 body projection",
+      "passed": true
+    },
+    {
+      "assertion": "neither sync pointers nor independent safety journal duplicate owned draft plaintext",
+      "passed": true
+    }
+  ]
+}

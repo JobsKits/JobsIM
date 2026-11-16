@@ -1,0 +1,30 @@
+11-14 22:42:00.810  4167  4180 I TestRunner: started: verifiedTlsTwoAccountMessageContract(com.jobs.im.LiveApiTest)
+11-14 22:42:00.825  4167  4180 D CompatChangeReporter: Compat change id reported: 418924588; UID 10166; state: ENABLED
+11-14 22:42:01.389  1202  1316 D SatelliteController: isInCarrierRoamingNbIotNtn: satellite is disabled
+11-14 22:42:01.389  1202  1316 D SatelliteController: getCarrierRoamingNtnConnectType: Checking connect type from PLMN config for subId: 1
+11-14 22:42:01.389  1202  1316 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+11-14 22:42:01.389  1202  1316 V SatelliteController: satelliteConfigParser is not ready
+11-14 22:42:01.389  1202  1316 D SatelliteController: isSatelliteAttachSupportedViaConfigupdater: return null (satelliteConfig is null)
+11-14 22:42:01.392  1202  1316 D SatelliteController: getSatellitePerPlmnConfiguration: invalid subId or not supported via carrier.
+11-14 22:42:01.392  1202  1316 D SatelliteController: getCarrierRoamingNtnConnectType: config: null
+11-14 22:42:01.392  1202  1316 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+11-14 22:42:01.392  1202  1316 V SatelliteController: satelliteConfigParser is not ready
+11-14 22:42:01.392  1202  1316 D SatelliteController: getCarrierRoamingNtnConnectTypeViaConfigUpdater: return null (satelliteConfig is null)
+11-14 22:42:01.392  1202  1316 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+11-14 22:42:01.392  1202  1316 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+11-14 22:42:01.392  1202  1316 V SatelliteController: satelliteConfigParser is not ready
+11-14 22:42:01.392  1202  1316 D SatelliteController: isSatelliteAttachSupportedViaConfigupdater: return null (satelliteConfig is null)
+11-14 22:42:01.392  1202  1316 D SatelliteController: getCarrierRoamingNtnConnectType: Checking connect type from PLMN config for subId: 1
+11-14 22:42:01.392  1202  1316 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+11-14 22:42:01.392  1202  1316 V SatelliteController: satelliteConfigParser is not ready
+11-14 22:42:01.392  1202  1316 D SatelliteController: isSatelliteAttachSupportedViaConfigupdater: return null (satelliteConfig is null)
+11-14 22:42:01.393  1202  1316 D SatelliteController: getSatellitePerPlmnConfiguration: invalid subId or not supported via carrier.
+11-14 22:42:01.393  1202  1316 D SatelliteController: getCarrierRoamingNtnConnectType: config: null
+11-14 22:42:01.393  1202  1316 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+11-14 22:42:01.393  1202  1316 V SatelliteController: satelliteConfigParser is not ready
+11-14 22:42:01.393  1202  1316 D SatelliteController: getCarrierRoamingNtnConnectTypeViaConfigUpdater: return null (satelliteConfig is null)
+11-14 22:42:01.393  1202  1316 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+11-14 22:42:01.393  1202  1316 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+11-14 22:42:01.393  1202  1316 V SatelliteController: satelliteConfigParser is not ready
+11-14 22:42:01.393  1202  1316 D SatelliteController: isSatelliteAttachSupportedViaConfigupdater: return null (satelliteConfig is null)
+11-14 22:42:01.776  4167  4180 I TestRunner: finished: verifiedTlsTwoAccountMessageContract(com.jobs.im.LiveApiTest)

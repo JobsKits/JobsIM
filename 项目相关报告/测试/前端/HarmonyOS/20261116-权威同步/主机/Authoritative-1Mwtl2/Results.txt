@@ -1,0 +1,131 @@
+TAP version 13
+# Subtest: exact counters and opaque cross-end client IDs, explicit full DTO
+ok 1 - exact counters and opaque cross-end client IDs, explicit full DTO
+  ---
+  duration_ms: 47.681541
+  ...
+# Subtest: raw envelope bytes SHA and structural deep equality both required
+ok 2 - raw envelope bytes SHA and structural deep equality both required
+  ---
+  duration_ms: 0.728917
+  ...
+# Subtest: all pages plus final validation and first changes precede atomic publication
+ok 3 - all pages plus final validation and first changes precede atomic publication
+  ---
+  duration_ms: 37.337667
+  ...
+# Subtest: missing page item cannot publish partial body/cursor
+ok 4 - missing page item cannot publish partial body/cursor
+  ---
+  duration_ms: 33.750375
+  ...
+# Subtest: raw body hash mismatch cannot publish partial body/cursor
+ok 5 - raw body hash mismatch cannot publish partial body/cursor
+  ---
+  duration_ms: 34.159833
+  ...
+# Subtest: outer object mismatch cannot publish partial body/cursor
+ok 6 - outer object mismatch cannot publish partial body/cursor
+  ---
+  duration_ms: 32.742625
+  ...
+# Subtest: permission ABA cannot publish partial body/cursor
+ok 7 - permission ABA cannot publish partial body/cursor
+  ---
+  duration_ms: 32.428834
+  ...
+# Subtest: reference current revision mismatch cannot publish partial body/cursor
+ok 8 - reference current revision mismatch cannot publish partial body/cursor
+  ---
+  duration_ms: 31.694167
+  ...
+# Subtest: classification watermark regression rejects complete snapshot
+ok 9 - classification watermark regression rejects complete snapshot
+  ---
+  duration_ms: 31.604125
+  ...
+# Subtest: durable original registration and snapshot request survive failed round
+ok 10 - durable original registration and snapshot request survive failed round
+  ---
+  duration_ms: 36.536416
+  ...
+# Subtest: same client ID from peer never acknowledges own original
+ok 11 - same client ID from peer never acknowledges own original
+  ---
+  duration_ms: 36.047292
+  ...
+# Subtest: auxiliary 503 and corrupt original evidence are zero proof but verified global still installs
+not ok 12 - auxiliary 503 and corrupt original evidence are zero proof but verified global still installs
+  ---
+  duration_ms: 41.736583
+  location: '/Users/jobs/Documents/GitHub/JobsIM/测试/前端/HarmonyOS/Unit/Sync.test.cjs:163:1'
+  failureType: 'testCodeFailure'
+  error: 'SYNC_ORIGINAL_BODY_CHANGED'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    SyncStore.originalNow (/Users/jobs/Library/Application Support/JobsIM/Build/Harmony/Authoritative-1Mwtl2/SyncStore.js:216:23)
+    process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    async /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/Authoritative-1Mwtl2/SyncStore.js:145:17
+    async /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/Authoritative-1Mwtl2/SyncStore.js:41:17
+  ...
+# Subtest: full readonly original result confirms only matching sender route/body hash
+ok 13 - full readonly original result confirms only matching sender route/body hash
+  ---
+  duration_ms: 40.264625
+  ...
+# Subtest: malformed complete 200 and wrong sender never confirm queue
+ok 14 - malformed complete 200 and wrong sender never confirm queue
+  ---
+  duration_ms: 36.820125
+  ...
+# Subtest: late context and SQLite transaction failure never publish body/cursor
+not ok 15 - late context and SQLite transaction failure never publish body/cursor
+  ---
+  duration_ms: 36.639958
+  location: '/Users/jobs/Documents/GitHub/JobsIM/测试/前端/HarmonyOS/Unit/Sync.test.cjs:180:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected rejection.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'rejects'
+  stack: |-
+    process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    async /Users/jobs/Documents/GitHub/JobsIM/测试/前端/HarmonyOS/Unit/Sync.test.cjs:184:3
+    async withFixture (/Users/jobs/Documents/GitHub/JobsIM/测试/前端/HarmonyOS/Unit/Sync.test.cjs:119:71)
+    async Test.run (node:internal/test_runner/test:632:9)
+    async Test.processPendingSubtests (node:internal/test_runner/test:374:7)
+  ...
+# Subtest: ordinary retained copies stay isolated and global dominates newer resurrection
+ok 16 - ordinary retained copies stay isolated and global dominates newer resurrection
+  ---
+  duration_ms: 35.5245
+  ...
+# Subtest: forward and announcement source body are never durable projections
+ok 17 - forward and announcement source body are never durable projections
+  ---
+  duration_ms: 35.41
+  ...
+# Subtest: terminal cleanup intent survives failure and retries without new events
+ok 18 - terminal cleanup intent survives failure and retries without new events
+  ---
+  duration_ms: 39.151083
+  ...
+# Subtest: capability absence does not create responsibility; disappearance never legacy falls back
+ok 19 - capability absence does not create responsibility; disappearance never legacy falls back
+  ---
+  duration_ms: 36.68075
+  ...
+# Subtest: registered physical UUID loss is refused instead of silently regenerating
+ok 20 - registered physical UUID loss is refused instead of silently regenerating
+  ---
+  duration_ms: 33.142958
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 18
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 741.995667

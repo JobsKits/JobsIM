@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2026-11-16T04:13:04.489442+00:00",
+  "remainingOwnedRandomDatabases": 0,
+  "remainingDatabases": [
+    "postgres",
+    "template0",
+    "template1"
+  ],
+  "verifiedExactPIDDataDirectoryAndPortBeforeStop": true,
+  "newOwnPostmasterStopped": true,
+  "pgDataAndLogsRetained": true,
+  "allDurableSettingsOn": true,
+  "fixedDomainsTouched": false,
+  "freeBytesAfter": 13000957952,
+  "stopElapsedSeconds": 0.125,
+  "logs": [
+    {
+      "path": "24-清理与durable核验.log",
+      "sha256": "54c28747186cb15b10e6a241d36e6eb3c7cf39fd187a2d4e22b6716f9b33ba08"
+    },
+    {
+      "path": "25-仅停止自有PG.log",
+      "sha256": "ca19178a35ab4153b75b494963b66ce8243e1b94c173107c87b44d09db23652d"
+    }
+  ]
+}

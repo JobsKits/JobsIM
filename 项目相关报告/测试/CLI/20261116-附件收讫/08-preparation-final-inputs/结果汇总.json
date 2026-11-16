@@ -1,0 +1,13 @@
+{
+  "passed": 80,
+  "failed": 0,
+  "skipped": 2,
+  "binary": "/Users/jobs/Library/Application Support/JobsIM/Build/CLI-ObjectReceipts/20261116-1794825944953/Products/jobsim-object-preparations",
+  "binarySHA256": "eb42a9e1a019c84328855eab25ea0c7d355746d17c06b9e46ca850a5ca62d3ce",
+  "verificationFile": "../06-preparation-full/SQLite结果.json",
+  "verificationSHA256": "70ca9113b533d629cd67d3b8d017b0567fc621fba758630567ac0232b87538c3",
+  "realAPI": false,
+  "PG": false,
+  "preparedCrashExit92": true,
+  "lateGlobalFileAndSQLFence": true
+}

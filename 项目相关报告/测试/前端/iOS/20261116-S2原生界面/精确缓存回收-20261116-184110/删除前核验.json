@@ -1,0 +1,41 @@
+{
+  "status": "needs_review",
+  "processes": [
+    {
+      "pid": 34925,
+      "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild"
+    }
+  ],
+  "targets": [
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Index.noindex",
+      "bytes": 60621728,
+      "files": 8152,
+      "symlinks": []
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/ModuleCache.noindex",
+      "bytes": 961053070,
+      "files": 6869,
+      "symlinks": []
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Intermediates.noindex",
+      "bytes": 741370521,
+      "files": 14394,
+      "symlinks": []
+    }
+  ],
+  "frozenBinaryChecks": [
+    {
+      "file": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Debug-iphonesimulator/JobsIM.app/JobsIM",
+      "sha256": "89542d2016018a5c6c124c8ce8d8e7ec9c6b19b893340e77177733dcd6f8e415",
+      "frozenCopyMatches": true
+    },
+    {
+      "file": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/PersonalStateUI/Products/Debug-iphonesimulator/JobsIM.app/PlugIns/JobsIMTests.xctest/JobsIMTests",
+      "sha256": "e7b3e24f37424b5a24d9d9cf74a87836639c148df2b8631b1ba4b3ddee35f213",
+      "frozenCopyMatches": true
+    }
+  ]
+}

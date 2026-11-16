@@ -1,0 +1,87 @@
+{
+  "templateRepository": "JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo",
+  "HEAD": "090d51b43c976c5d31851864069edfdc31d1b190",
+  "currentWorkingTreeSources": {
+    "JobsByQuartzCore@Pods": {
+      "sha256": "53365c9e24fdca242b7cd1144758f135fa6f585c112eea70864f33f109f99488",
+      "files": 7
+    },
+    "JobsByUIKit@Pods": {
+      "sha256": "a6085618934922013cde0ba76f2eae87f6b3688f2abb98bedac90d21ffe5d587",
+      "files": 172
+    },
+    "JobsByWebKit@Pods": {
+      "sha256": "9926bb111d00f745a7cd2b5d6677546e4ea549c9dbb8882a9244957ae0b667b2",
+      "files": 7
+    },
+    "JobsGetWindow@Pods": {
+      "sha256": "ea0a5e7f1601d4d3663581ce35acac8851405128dc8ad29eb21e5aae8702615b",
+      "files": 9
+    },
+    "JobsImageTools@Pods": {
+      "sha256": "a31ff8d8115094e695d216324cac3e6b9dcebef46d3b1ec1073e499e2185c445",
+      "files": 9
+    },
+    "JobsInheritance@Pods": {
+      "sha256": "81d0ece30c6ddd4da82f8685ceff7113ae0158e234e0fd2e6006899af6789249",
+      "files": 29
+    },
+    "JobsNavBar@Pods": {
+      "sha256": "2e2aed59e1ce65d9fc5adaaba016b7ea059d1167a8a6653bbf01a9aa966507ff",
+      "files": 10
+    },
+    "JobsNetworking@Pods": {
+      "sha256": "6db42674acfb88d85099ef01d624172e1f387c03c75ab479711a80c430655f7c",
+      "files": 51
+    },
+    "JobsScale@Pods": {
+      "sha256": "e299deffe68b843fb7a8e46c00333cb002e5294d783579cf9b165f14353913f4",
+      "files": 7
+    },
+    "JobsSwiftBaseDefines@Pods": {
+      "sha256": "e7a56f9a5a9532d10cf1659f79da898f8b0fc0444699d5bfe0d8eb6dc48ace78",
+      "files": 22
+    },
+    "JobsSwiftBlock@Pods": {
+      "sha256": "d07224bb8d3dd4049af3f5828ed758a3d2f2e8d5841099fb1ddb29fbe4c15e73",
+      "files": 11
+    },
+    "JobsSwiftDSL@Pods": {
+      "sha256": "cad2e9fa582dbe41c67da78d81650643e77d9ce2f90813488b1de4071d212a0f",
+      "files": 80
+    },
+    "JobsSwiftDebugTools@Pods": {
+      "sha256": "436037d7cccf57bd7407049f245bb65fe0d064152fa9348b0859560e58672961",
+      "files": 10
+    },
+    "JobsSwiftFoundation@Pods": {
+      "sha256": "874cf4338d92273cb8cca6d53b42ffdaae009f59799b4213c12c04c56acf505d",
+      "files": 13
+    },
+    "JobsSwiftStandardLibrary@Pods": {
+      "sha256": "2e24423b807a6d08b8b880a7b30e8b9a33a51a659dfed653efa36e4411e2b7d3",
+      "files": 14
+    },
+    "JobsSwiftTimer@Pods": {
+      "sha256": "5e119039cb0b9409cd0558d2e9d199d0fe7f5ff795885fe54df6a8f846025fed",
+      "files": 13
+    },
+    "JobsTextTools@Pods": {
+      "sha256": "1c899904ef70f7afb34940f4fcf0c125e025729a611cba3f51e8150b629ceed5",
+      "files": 8
+    },
+    "JobsToast@Pods": {
+      "sha256": "f371ac982ee67526f129aae9058f00e820d3834783e661e3aa480aa98a106e1d",
+      "files": 7
+    },
+    "JobsViewPush@Pods": {
+      "sha256": "efb53854f6f23220b031cbdd068589f4ef9372fa1f27ab03e8a333dfd67f35c0",
+      "files": 5
+    },
+    "Jobsl10n@Pods": {
+      "sha256": "20ae3bce30a6c801c6ece92bf4dc37cd34c4beefe8b86bc540283485721a6bb1",
+      "files": 36
+    }
+  },
+  "policy": "Readonly reuse; hashes describe actual current sources and do not claim a clean template working tree."
+}

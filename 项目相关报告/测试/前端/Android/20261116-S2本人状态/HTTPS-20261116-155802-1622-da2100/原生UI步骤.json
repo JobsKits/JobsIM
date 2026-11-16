@@ -1,0 +1,103 @@
+[
+  {
+    "stage": "pressed:Native S2 UI conversation",
+    "busy": true,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": ""
+  },
+  {
+    "stage": "pressed:My synced state",
+    "busy": true,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": ""
+  },
+  {
+    "stage": "pressed:Mark unread",
+    "busy": true,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": ""
+  },
+  {
+    "stage": "server-manual-unread-confirmed",
+    "busy": true,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": ""
+  },
+  {
+    "stage": "pressed:Close",
+    "busy": false,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": ""
+  },
+  {
+    "stage": "pressed:My synced state",
+    "busy": true,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": ""
+  },
+  {
+    "stage": "pressed:Save cloud draft",
+    "busy": true,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": ""
+  },
+  {
+    "stage": "pressed:Close",
+    "busy": false,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": ""
+  },
+  {
+    "stage": "pressed:My synced state",
+    "busy": true,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": ""
+  },
+  {
+    "stage": "pressed:Load cloud draft into editor",
+    "busy": true,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": "SYNC_LOCAL_RESTRICTION_CHANGED"
+  },
+  {
+    "stage": "pressed:Close",
+    "busy": false,
+    "selected": "33da029a-b26f-441f-afc8-4300c7d1fd7b",
+    "selfEnabled": true,
+    "errorCode": "SYNC_LOCAL_RESTRICTION_CHANGED"
+  },
+  {
+    "stage": "pressed:Back",
+    "busy": false,
+    "selfEnabled": true,
+    "errorCode": "SYNC_LOCAL_RESTRICTION_CHANGED"
+  },
+  {
+    "stage": "pressed:Settings",
+    "busy": false,
+    "selfEnabled": true,
+    "errorCode": "SYNC_LOCAL_RESTRICTION_CHANGED"
+  },
+  {
+    "stage": "pressed:Large",
+    "busy": true,
+    "selfEnabled": true,
+    "errorCode": "SYNC_LOCAL_RESTRICTION_CHANGED"
+  },
+  {
+    "stage": "pressed:Dark",
+    "busy": false,
+    "selfEnabled": true,
+    "errorCode": "SYNC_LOCAL_RESTRICTION_CHANGED"
+  }
+]
