@@ -1,0 +1,943 @@
+{
+  "time": "2026-11-18T17:05:34.523425+08:00",
+  "build": "build-for-testing-17.log",
+  "files": [
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMCursor/IMCursor.swift",
+      "bytes": 1362,
+      "sha256": "3915274c5d488c3680a423acf43632dcd51c09817c3c70cd58c1c4640acd29e5"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMJSON/IMJSON.swift",
+      "bytes": 2638,
+      "sha256": "0ed97d370038e94ae2cfd489838fc66883f1f94c7501d299e72e9aedab2a54dc"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMNamespace/IMNamespace.swift",
+      "bytes": 1327,
+      "sha256": "4cdb9367113b58ce7c8e480ea24ca298372f9b7552950e6a511c74a510307221"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/ISO8601DateFormatter/ISO8601DateFormatter+Make.swift",
+      "bytes": 420,
+      "sha256": "3676c995da8a68f9aac5b30f87657a7d71ff05fff6a9c513d10454d5082e69a8"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONDecoder/JSONDecoder+Make.swift",
+      "bytes": 233,
+      "sha256": "27bef2eb06e3c530c3b80b0095156998b382dda85944fb158245f8b7350e0907"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONEncoder/JSONEncoder+Make.swift",
+      "bytes": 233,
+      "sha256": "348b6f8224e19b2b7217b8ce7a7b00fadf1ea5c9529334ffc6bd196719ae5c26"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/NSDecimalNumber/NSDecimalNumber+Make.swift",
+      "bytes": 281,
+      "sha256": "76db6be5c2150985e70241b07c461e617d6dd93b1dad38931b4e342e324097e3"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/JobsIMCore.podspec",
+      "bytes": 393,
+      "sha256": "0ce3ccebf2f0a82ebbad80d537da7fdf291d17cab52216fb6d0c4ad42aa75ccf"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift",
+      "bytes": 145103,
+      "sha256": "0e7a09e0b11b34f4073a417595e0a4a0139556b499e80024e51fe5b47dcd6683"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMStorage/JobsIMStorage.podspec",
+      "bytes": 466,
+      "sha256": "9aa13a5bc16a9b5388a49bdff6a0289d95cac922ac3cfc544fc7f51f0dc6977e"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIClient/IMAPIClient.swift",
+      "bytes": 11483,
+      "sha256": "5393f398d9b83e6563ef67c32a7fd06bbd82b5c4716edb069bac1cbae09aaa65"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIError/IMAPIError.swift",
+      "bytes": 486,
+      "sha256": "9549b5c6f851fc28cca031a03cc6b25673b7b4706d2e63dc28a413c974ca3415"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift",
+      "bytes": 22692,
+      "sha256": "1f72fe4ebb7fb7383b1d059f70f7948e2fe109fc4c407539689e197332c296de"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceCertificate/IMInstanceCertificate.swift",
+      "bytes": 2613,
+      "sha256": "b038d39ebc12a94461b2f86e767fe7022ce76a93010abc96b13d253554e53146"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceEvaluator/IMInstanceEvaluator.swift",
+      "bytes": 1420,
+      "sha256": "0651b78ccd4d83519b75ab8bbdd968fdba0deae6b71beefeee714aaefaf7e1b1"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/URLRequest/URLRequest+Make.swift",
+      "bytes": 604,
+      "sha256": "3fe446c96aa4f98b199e0ae68e6d5c0b4000f0bc12d14c6f17dfab0786614e4e"
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/JobsIMTransport.podspec",
+      "bytes": 494,
+      "sha256": "8714e9dcb0c6654317ec97d0a8c7320c3c368beb883413aa24b6848053947fec"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj",
+      "bytes": 41618,
+      "sha256": "a53f7113c8aff9415c1c011cfcc9e352ea4b7bc19f83b998351b74de1945c852"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/App/AppDelegate/AppDelegate.swift",
+      "bytes": 6775,
+      "sha256": "d6214a79442921a2dbdb28170e223588a65f5a5fb1689cfeb68dd0f50f09ef9e"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/App/SceneDelegate/SceneDelegate.swift",
+      "bytes": 1052,
+      "sha256": "ada504a82395b8dcf19305572dd036efb632fb67c1ca6fbd277d852622a5c280"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+      "bytes": 11293,
+      "sha256": "94a642d716e8f494f4ea9a132fdc55fa9f828c93a71324d35f15a8a73adfec53"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "bytes": 203,
+      "sha256": "852920cb36e95beb53771138a4b8195a16fcce1cc31250632f246081cc638f9a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/Assets.xcassets/Contents.json",
+      "bytes": 38,
+      "sha256": "3a290f57c8e19a188587be1a8d0fa548d2144b0e2f852df408faa2393ff9d609"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/Assets.xcassets/Logo.imageset/Contents.json",
+      "bytes": 215,
+      "sha256": "9cfd4d0549a6ae7e6cbd75fb99c8cd7573ab7ee9bf859a284a3e11936443bf2d"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/AuthMedia/AuthBackground.jpg",
+      "bytes": 2304808,
+      "sha256": "0bd4c5b27d0026f5416bcbfeba6a0c4f08b062be5f5c1688252ec66ce27ab163"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/DemoHost/demo-host.json",
+      "bytes": 1310,
+      "sha256": "ec1ed3dab0c7b4810129cac993263b6ac7913e8561460cd53ed85a50813a5904"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/Info.plist",
+      "bytes": 1802,
+      "sha256": "3cc4b369913d082ae3bc96d3f60d052f223ca85628d2463662c9b6e3bf8d0460"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/Simulator.entitlements",
+      "bytes": 338,
+      "sha256": "c48318ed6c54c83d77db5286e98443f503119a8f6a49a8df3a72157daa4c253a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/bo.lproj/Localizable.strings",
+      "bytes": 49017,
+      "sha256": "d6c78e30041e740f466d1e4f73eb93ba952e4ee56f6bb8f2b0dae33ee2a2f9e9"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/de.lproj/Localizable.strings",
+      "bytes": 26284,
+      "sha256": "d381561a1f5d15af292832c93bf41d93bd16b3f2b3e6d5743fa734e42fea17a7"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/en.lproj/Localizable.strings",
+      "bytes": 24440,
+      "sha256": "6509e78dce7b9723815ec24b89addb66784ad77c80d13728dfe474b68bb458e4"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/es.lproj/Localizable.strings",
+      "bytes": 25752,
+      "sha256": "887b64048ef2d55ae37cf3f87985f2ed353df98a4f02413b65db60d8a6f708e1"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/fr.lproj/Localizable.strings",
+      "bytes": 26757,
+      "sha256": "bb18bf26c0bbaf090881e06c4e78ceaa1daf5a79901d7c278a48185a04c3f424"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/ja.lproj/Localizable.strings",
+      "bytes": 28083,
+      "sha256": "cc0826c20ec3c6121851d2616ef8aa61a68c27f2793cd5182e95867aa13d0492"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/ko.lproj/Localizable.strings",
+      "bytes": 26710,
+      "sha256": "1f40bc6cbc68e12ff1e06e9907fe0bc78645cf329e482f088664ce3ac78b2e12"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/ru.lproj/Localizable.strings",
+      "bytes": 37168,
+      "sha256": "836011fcc8f15a7090afc3cfd6210990453133ad195d2a2c0b9b84e0b229a3fe"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/zh-Hans.lproj/Localizable.strings",
+      "bytes": 22348,
+      "sha256": "6663acd46d4445266667d9a8b3a71ee5fd8cff2db632c03ecb4f27ea141dc91e"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Resource/zh-Hant.lproj/Localizable.strings",
+      "bytes": 22447,
+      "sha256": "88f21724f721baf099680c26722d90978fa78cef7c1ffa63a14de63b40de1dc1"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionFiles.swift",
+      "bytes": 5765,
+      "sha256": "a0b6d0e61e00495de76093f041c49646778baf9681b1b0e016de9bbdf3c81332"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionService.swift",
+      "bytes": 22594,
+      "sha256": "04b093a8613d334b603a5efccf341671e2db85bb16244bdeaf1275cd4952dc8d"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAccountUIService/IMAccountUIService.swift",
+      "bytes": 7971,
+      "sha256": "039d6e9e30c0011a40bc4f9af74014ad545aaad8f629a5329afb7739856dad85"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAnnouncementService/IMAnnouncementService.swift",
+      "bytes": 6834,
+      "sha256": "26e309237271aff306ac6e8e3b26153b81b18bc937e8cf0750479ae1cd9abda0"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift",
+      "bytes": 32159,
+      "sha256": "aa6687643520bf5ea1222afcf05c4b896b3a7331de5845bce2d3ed121bd6640a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMCredentialPair.swift",
+      "bytes": 4952,
+      "sha256": "51eefd5e23c4d8c71735df591e7839de5abb490975507a807da3b2e56c57c2b5"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMAuthoritativeSync.swift",
+      "bytes": 13986,
+      "sha256": "45f037ac2464665f9d09ded2512100dfd800a445ce7b587214556b5fba289eef"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMSyncProtocol.swift",
+      "bytes": 21114,
+      "sha256": "bcfe6b0d115cfdc6dc2d9b5c80bc692c150bbe8127355e57f7608d996e558fb3"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAvatarLoader/IMAvatarLoader.swift",
+      "bytes": 1586,
+      "sha256": "b32385c4263addac410ebc08d1c53cf9cebff25c091b7ee6500472466b2f04f0"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAvatarService/IMAvatarService.swift",
+      "bytes": 5048,
+      "sha256": "d59441eb2ea4855657e8ec82bb4673563fc514b8330ef562cc80bec6431088e5"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMContactService/IMContactService.swift",
+      "bytes": 3923,
+      "sha256": "d1f975ceae92d104667af11e80a1e77c4baf95a227cf14adc4ef866e00ae9c25"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportArchive.swift",
+      "bytes": 5652,
+      "sha256": "b6bf0a4b0b6030c90cec39d8e7ba9f2c4d2796c496e85c9e8cea1aab3ed5886f"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportProtocol.swift",
+      "bytes": 5300,
+      "sha256": "8a4c408e101f077c8611762b3d23532d152f49f9075c2711c12144059e4f6ebf"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportService.swift",
+      "bytes": 10839,
+      "sha256": "c141999f3095244c06c893e1c73c46446a3d65a8687a0cea40cdd60911dad05a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMDemoEnvironmentService/IMDemoEnvironmentService.swift",
+      "bytes": 11287,
+      "sha256": "275033d4c94819c34ea013edcc5e1455996a72be71c8e4fe39e64e14c0b2fc93"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift",
+      "bytes": 10086,
+      "sha256": "4fec8b320c95873dbc91d36d5894a5c316d3e206e10a50a83682ed61cd289a66"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMGroupGovernanceService/IMGroupGovernanceService.swift",
+      "bytes": 14049,
+      "sha256": "f0f4edc1b926b867e8f7f72172ab7ce4a62815b93951ec40daff97aa4e4a5dcb"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMHistoryExport/IMHistoryExport.swift",
+      "bytes": 2501,
+      "sha256": "974505cb05180433b078980b54bc6ac6961724ff674afccc465c5a89fa637979"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMKeychain/IMKeychain.swift",
+      "bytes": 2423,
+      "sha256": "52486c05587fdd0000f163cb91ab3fd7b952ffdbd51a8d3a9469ee55feb682be"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMediaCache/IMMediaCache.swift",
+      "bytes": 8726,
+      "sha256": "1779aa8afc45a46b7dadf23b93daf22d395ce19d3ab12b1dd45ba805e6ffa80d"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMediaLoader/IMMediaLoader.swift",
+      "bytes": 567,
+      "sha256": "e8b0abf139412a178a93c9652e0b7e7ff51b7c925c62b6ba52e3335e4c93ebfa"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMessageEditingService/IMMessageEditingService.swift",
+      "bytes": 4766,
+      "sha256": "e979b36342d43cb3de1c08873f564757277cd1f11f4fb265c81c18487d1a538c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessageListService.swift",
+      "bytes": 5960,
+      "sha256": "3f0edfbbc9ca0d14d6b7707a297219f0b9de064cdbee1a7dc454b738c3409dc6"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessagePage.swift",
+      "bytes": 821,
+      "sha256": "f6f627cdf3bd3c2fe5bedf6295c8906a2b39fa487d737f2d5f1753dfe5853cc1"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationJSON.swift",
+      "bytes": 8275,
+      "sha256": "46bc11d58ed3b03708dcd11becb59687998607083d7d38463b2652a4b8e96c38"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationProtocol.swift",
+      "bytes": 14012,
+      "sha256": "b9d0bda158415d6d8af3008746e34c04084dbd96f4eb25828bb11a24d6367309"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationService.swift",
+      "bytes": 47689,
+      "sha256": "0ab316f75ebd76c81595eec7bdf996c4a0aa724340ef5eb74a3f4a6069d22064"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMNotifications/IMNotifications.swift",
+      "bytes": 4881,
+      "sha256": "1008bf967f34e52c9de3c6b56304b631e1fd3c9c269a136fea5ab8506bb330d9"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMPasswordChangeService/IMPasswordChangeService.swift",
+      "bytes": 12616,
+      "sha256": "8bc436115ab33c550fcce6317e9ce36b3daa013514bd840f97dcca19e02dfb7b"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMPersonalStateService/IMPersonalStateService.swift",
+      "bytes": 16340,
+      "sha256": "4351eaf0640bedda43251703e38be0937da23bd50bcf35c90251ee5ea8dd0ad9"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMProfileEditingService/IMProfileEditingService.swift",
+      "bytes": 5635,
+      "sha256": "b72b356ff7324b36b37c7ab5144b7b2c6ca787ba7a71f0ac5ea49c29c58a26fb"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptBuild.swift",
+      "bytes": 9119,
+      "sha256": "0cd86c88e9e72a7482d13037268fe7f1b0be74c5b5fef96f9acba5d248bbd922"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptCoordinator.swift",
+      "bytes": 11672,
+      "sha256": "e18cd76071efd2132363fd57532fa7a30c37b8d0147581c3109c0305e502d193"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptProtocol.swift",
+      "bytes": 18199,
+      "sha256": "41d477927d78c78b4d55d5bf72760833dcba2f2d0a36ec093f2f47461e0939bb"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptService.swift",
+      "bytes": 34384,
+      "sha256": "a807b5d5038c4f9a1e10347e92a65e8e88d907deefcdc332e91d43be468b7542"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMRememberedLoginStore/IMRememberedLoginStore.swift",
+      "bytes": 4612,
+      "sha256": "f921155113ee5b199724353017361a2131ac686efd5687587946e087ecd62da0"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReportCompositionService/IMReportCompositionService.swift",
+      "bytes": 17225,
+      "sha256": "886ca866e4c7c22b50d78382e3412b1672a8088fe23e2ce1735104f7c2941367"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReportService/IMReportService.swift",
+      "bytes": 1590,
+      "sha256": "5830615fd5a5255a944849c487f92f0fbfdbeb58cf3b2c3fa74757db0a4770b0"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift",
+      "bytes": 55145,
+      "sha256": "2d8af2e928828005f2d8d7fc51273d2236c8e53b73f5de5a72168f95796d0c1e"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMStrings/IMStrings.swift",
+      "bytes": 777,
+      "sha256": "a8ab98b2a10a0b013f220e7a0da541b71bd3f8e8f7e4c303516a4bd5c4f861d1"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMSyncCoordinator/IMSyncCoordinator.swift",
+      "bytes": 842,
+      "sha256": "881e125a7c656a016a6956f164eb796dbd7255eff69e621752cd4a5291819f3c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMTrustStore/IMTrustStore.swift",
+      "bytes": 1019,
+      "sha256": "3d44db4b19cf7788cce87a7ef90b6df98e390bbb38e53201d9575997b26d166f"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/AVAudioRecorder/AVAudioRecorder+Make.swift",
+      "bytes": 488,
+      "sha256": "34ebc78c05d3c2d961dbb23880187b9bf41de8ddd11ef91b48557654aa487140"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/AVPlayer/AVPlayer+Make.swift",
+      "bytes": 345,
+      "sha256": "79a14a2655682248a5a635653bf8bf8f1cc0c8a8c4abd329d545f560e95f6ff9"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/AVPlayerLayer/AVPlayerLayer+Make.swift",
+      "bytes": 406,
+      "sha256": "26a30efd8fb3944389fbc2d5d609d682527275995c610c7ee687dc8de6f50d28"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/FileHandle/FileHandle+Make.swift",
+      "bytes": 266,
+      "sha256": "dcfa30524365d79d3af1a7b14650108db25afb0ecdfb4b39da312aa41321d05c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/NSAttributedString/NSAttributedString+Make.swift",
+      "bytes": 346,
+      "sha256": "00735281d3d81ee162f7b01406338888799c66a1a454254fd89224d1bc816e31"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerConfiguration/PHPickerConfiguration+Make.swift",
+      "bytes": 426,
+      "sha256": "c88d947fc6509ec7a6f4c28c2aa4a41ae114e45f3fb07e0f4cb4b3246322d1e6"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerViewController/PHPickerViewController+Make.swift",
+      "bytes": 328,
+      "sha256": "f8b6bab9e0e75b84789979c0ebe40840cbf37faad7b473bdf0aa6b1f96d9a10c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/QLPreviewController/QLPreviewController+Make.swift",
+      "bytes": 421,
+      "sha256": "9e1ae387c833584210cc16cee990547e50462febe8a8bf7d06ec94afadb1ad72"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIActivityViewController/UIActivityViewController+Make.swift",
+      "bytes": 374,
+      "sha256": "02395eb87d8919299e04643351070d2f0da69813a664f7e2a8cd83f9c41714e3"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertAction/UIAlertAction+Make.swift",
+      "bytes": 430,
+      "sha256": "2039989497d095ff0cf27f7cefcf4e76f7a5719331899f9db848322866b8153d"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertController/UIAlertController+Make.swift",
+      "bytes": 401,
+      "sha256": "6c1c51f777f84448920026a18e9bd09a254dcdd6f1dd7bbaec96d02061124333"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIBlurEffect/UIBlurEffect+Make.swift",
+      "bytes": 259,
+      "sha256": "e1ca166964b70caf0326fd849d8b5d46415a2021a3c874cde25477b3aace41d9"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIButton/UIButton+IMDemo.swift",
+      "bytes": 374,
+      "sha256": "ffa6dac199e0936104b3ca06c2da602511ef602c34ba79720c775b3d49e8e907"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIColor/UIColor+Make.swift",
+      "bytes": 459,
+      "sha256": "f692681c023daeb725188d768764f5c561a171f039b235d0a94bb201a1b13e5c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIContextMenuConfiguration/UIContextMenuConfiguration+Make.swift",
+      "bytes": 385,
+      "sha256": "1d890efb7393dc288640332d79319d5c6b38b18a0e3f512d3c5fa9e086ffd794"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIContextualAction/UIContextualAction+Make.swift",
+      "bytes": 473,
+      "sha256": "40e33538c350cb86de03580a510d4094f44d72e344d435c5c42c750b397afa01"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift",
+      "bytes": 1682,
+      "sha256": "079ae45e0f3ee0ea4eb46fa95428e2c27522be6a5c0dd083ea66595c45b937da"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIGraphicsImageRenderer/UIGraphicsImageRenderer+Make.swift",
+      "bytes": 287,
+      "sha256": "43036e7f42c513f463eda587d3809ad0bdbbc69997f63d58f17c0fb102d92977"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIImage/IMAuthThumbnail+Make.swift",
+      "bytes": 891,
+      "sha256": "81c37c9915d930735c04e6f4fa582b503ffa3006a17ce3da06cf113df20cff5c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIImage/UIImage+Make.swift",
+      "bytes": 3764,
+      "sha256": "cb9560e740d458882b270d1baeb5d032df183ced72f767c03368f1b74ec67e82"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UINavigationBarAppearance/UINavigationBarAppearance+Make.swift",
+      "bytes": 1419,
+      "sha256": "035f91cafd33438de0cdb8bf1754d2aea399f751ee6ea49b161f2a42a9eae115"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UINavigationController/UINavigationController+Make.swift",
+      "bytes": 460,
+      "sha256": "7d41021b699066d4a9c913d782e4172e518451d03972a1984e20eee78e6f0606"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UISegmentedControl/UISegmentedControl+Make.swift",
+      "bytes": 397,
+      "sha256": "68cb6197c89282e0dab54bf5031e46621dea38d23f4a5f4e4c128c0c02b4817a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UISwipeActionsConfiguration/UISwipeActionsConfiguration+Make.swift",
+      "bytes": 462,
+      "sha256": "4af58810a5adc45ba8c181fae5d0c6b2865b75a4f3e28feaae5cefa0b1fb226e"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UITabBarItem/UITabBarItem+Make.swift",
+      "bytes": 349,
+      "sha256": "3a587ac9b1116e3b658f0e2a83cf0cca3c6cfeea646ff1f128e3fabb1000fddd"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UITableView/UITableView+Make.swift",
+      "bytes": 319,
+      "sha256": "82d9a099577651028b00e141c25007ca56058ca23282f80612fe146db21c119d"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UITableViewCell/UITableViewCell+IMBackground.swift",
+      "bytes": 1393,
+      "sha256": "2245975f245e735685f077297e414365a6c0e2cfb5d23d9aaa34cf3756f259c8"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UITextField/UITextField+DSL.swift",
+      "bytes": 287,
+      "sha256": "859c4d5e26fa8d529cb1fac23ce4d05c92e06f38eab506ef9aad64ad653cb12b"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIView/UIView+DSL.swift",
+      "bytes": 254,
+      "sha256": "25fa9bfe3e4815665d67ab3215f4458c112419bfe665a2b5a1d3c1ec45797467"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIViewController/UIViewController+IMNavigationAppearance.swift",
+      "bytes": 3147,
+      "sha256": "7ebfbd006c887be51e2cca20d7e0f4b4d4ac5ecd8d81a0bf298e53eefd8dfc59"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIViewController/UIViewController+Navigation.swift",
+      "bytes": 309,
+      "sha256": "fb9f552a64778bf03e5c85073cf921a60488eab15b71d298b8975eca30454a90"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIVisualEffectView/UIVisualEffectView+Make.swift",
+      "bytes": 283,
+      "sha256": "89025b2a608c5df2e42605792896dc6ef5ad1df6708717a1e990dffa812236ab"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIWindow/UIWindow+Make.swift",
+      "bytes": 359,
+      "sha256": "cfaace340dc3a91ee39df76355ecea4872103203293634ab6daea9506993c705"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UNNotificationRequest/UNNotificationRequest+Make.swift",
+      "bytes": 373,
+      "sha256": "acd270ecdc7acb107e787746890b424468a8dbfc9abc430f46dd9023644cad07"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAccountDeletionVC/IMAccountDeletionVC.swift",
+      "bytes": 11353,
+      "sha256": "82ff53b42ab1ceb35efff730232fa31c4bc704105e0ed9c0d5b7870e10619586"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAddFriendVC/IMAddFriendVC.swift",
+      "bytes": 337,
+      "sha256": "0f0a7a6c5c780e815a70989dbc71d178f30331d94b442c7a4fd0d1c0c770ee9c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAuthSettingsVC/IMAuthSettingsVC.swift",
+      "bytes": 8916,
+      "sha256": "6dc07eae588fcb4d9c41d057cd4fb4caafde37ef499fcbccf95b89c959cda6c8"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthAppearance.swift",
+      "bytes": 2370,
+      "sha256": "bef3c6ad42216609b7b87cd3abb41c0fa14e3b45f9c46041f79f0e94e3cff7e9"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthBackgroundView.swift",
+      "bytes": 7420,
+      "sha256": "3936a41f970ead02b5465e3da64625c177e6d06a239d2de756c7aa2e0a5c4634"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthTextField.swift",
+      "bytes": 3323,
+      "sha256": "713c1e1fef9c80dbbad41fa62ceeb2f6bdfffd0fa58d2a4b199adad68223f701"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift",
+      "bytes": 22480,
+      "sha256": "e11056165ae4b6be79e1a43dbd45811b4e6174a7f435485e79a12db95601f883"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAvatarVC/IMAvatarVC.swift",
+      "bytes": 2842,
+      "sha256": "6a9e63122b07639871a6e686246267c0cc941010fc596bbbdfee1429693944ac"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAvatarView/IMAvatarView.swift",
+      "bytes": 2127,
+      "sha256": "04c77f8f26ca51398b40b0d87f590f63df76c434b7f9de53d858df27c1f63bc7"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMBaseVC/IMBaseVC.swift",
+      "bytes": 3203,
+      "sha256": "3a52b7e5c8594df8497baed6d8a6dc4961d15017156fda1852a2efd21edf7942"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatSettingsVC/IMChatSettingsVC.swift",
+      "bytes": 6121,
+      "sha256": "15747c38aa296f85a8bdf591cdf6dedae31a68104ca50ede25095c87b3fc51ee"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatSettingsVC/IMSavedEditingDraftsVC.swift",
+      "bytes": 2414,
+      "sha256": "7feffc0df4d5670de0b082d4580f8d86ea4352b7e8872a21e2f6abf5b6cd1c7a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift",
+      "bytes": 56113,
+      "sha256": "4878168eeb4043ced10740dc61bf6b44799f2c637cd5cc7ab7f76902dd560aed"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactLocalStars/IMContactLocalStars.swift",
+      "bytes": 855,
+      "sha256": "f45527c5d805d99ba85b18e56f8edf03b5b25ccef59943026dd5e9eb3ca42f71"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactRequestsVC/IMContactRequestsVC.swift",
+      "bytes": 3700,
+      "sha256": "2ab47aab75e97d873ba2d6c62ae8de2fc20d9300310f6c56621b7f891740db20"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactSearchVC/IMContactSearchVC.swift",
+      "bytes": 379,
+      "sha256": "31cc3f907ed65b62a23d75d9bd7631b5b850440f8d50ec8aa088981d49681797"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactsVC/IMContactUX.swift",
+      "bytes": 908,
+      "sha256": "e78348f464aec7274d827e3f3226bd733425afa8190c16455d07f7bf4a52bc84"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactsVC/IMContactsVC.swift",
+      "bytes": 12618,
+      "sha256": "3434bc9f179ef1271c5be736fee0a65f3f187b445346512c13254ab060c03a27"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMConversationCell/IMConversationCell.swift",
+      "bytes": 3382,
+      "sha256": "abd75cfbac3c008e43e89ddd55b290f269ba23abe7ff11161d4bc3121becbd5c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMConversationsVC/IMConversationsVC.swift",
+      "bytes": 325,
+      "sha256": "fdd201c0eac501b30af1647f2fbc359517b1f18190cd6832ec11dea9c9e9556a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMDataExportVC/IMDataExportVC.swift",
+      "bytes": 12207,
+      "sha256": "340072cd3769fa1d38f588ac9dbf26a0ee0ab414fff69339f2b6eb2ff6d8aaf4"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMDemoEnvironmentOverlay/IMDemoEnvironmentOverlay.swift",
+      "bytes": 5385,
+      "sha256": "f9b958797e7e4e9f81d7f14ddbf050360c235c8918eb7e02593a5abc1bd0354a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMDevicesVC/IMDevicesVC.swift",
+      "bytes": 3517,
+      "sha256": "1c22b2ba16acb01d897a3abb9bdd011dae78cb92422aab0b0dd3d118397c2068"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMEmptyStateCell/IMEmptyStateCell.swift",
+      "bytes": 1125,
+      "sha256": "b382f0b7257fabc1e64a698e84138695e516bf6e87737786f4304b69e0746a55"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMFriendSearchVC/IMFriendSearchVC.swift",
+      "bytes": 6200,
+      "sha256": "d9560bc4e85869d947ac9a993354901c138f49abbc163392cda0a346de85101e"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMGroupGovernanceVC/IMGroupGovernanceVC.swift",
+      "bytes": 17703,
+      "sha256": "b0309c3f531f55e57898b5047647200d65b1790b8b83cba828a7a25a5e117b65"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift",
+      "bytes": 15821,
+      "sha256": "fa722fbb02b92c74832de040f9cc68424832eee307d4fc5e537f849832ff2e0a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift",
+      "bytes": 19578,
+      "sha256": "1f667bcf7b7a83b99ba1acd8bc78a4058dc3172c4e5a5fffb4bab097441c1da8"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift",
+      "bytes": 7316,
+      "sha256": "3a3a261e8edeb82259bfc86aeb9a19baca2fcf2ccdcd69c1c5cd9439b85673a4"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMMigrationVC/IMMigrationVC.swift",
+      "bytes": 29706,
+      "sha256": "7ecb944307d8e5dc9e5adb263334bcc6e374df3d516ae191691462b22d4473e8"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMPasswordChangeVC/IMPasswordChangeVC.swift",
+      "bytes": 7843,
+      "sha256": "4ed2454fbfadec17ba10e980e0b3e4ea10187be316f1ada46b7070ef4ff7aa08"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMPersonalCenterVC/IMPersonalCenterVC.swift",
+      "bytes": 5075,
+      "sha256": "0b5ec969e7398dc0581e4f10b43c122a56117eb620912f61e7643760db66b6a4"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMPersonalStateVC/IMPersonalStateVC.swift",
+      "bytes": 14960,
+      "sha256": "00ee92e74d4f9c00fcea86156669893c029361113f9e4e234e1c2a4c991f6b77"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReceiptVC/IMReceiptVC.swift",
+      "bytes": 20141,
+      "sha256": "bb8af19c872ac1fe2737ec53c066b922fa42c9edd057bf09f196342e37205f69"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportComposerVC/IMReportComposerVC.swift",
+      "bytes": 17477,
+      "sha256": "5479b6101a2c7c217274240c84edd62b8bfbfed526174358c865d24e286b3b8c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportComposerVC/IMReportPickerContext.swift",
+      "bytes": 693,
+      "sha256": "667ef4c6aaea5dafa346392c4dc5f4671ae62c7093453d6865184af766d172f6"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportMessageSelectionVC/IMReportMessageSelectionVC.swift",
+      "bytes": 3967,
+      "sha256": "bf7b2c723e4c29dbee5f79d8f730a585cc8f757bad693e0fc6a72792febc3497"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportVC/IMReportVC.swift",
+      "bytes": 4266,
+      "sha256": "4ced3b8a67d8a397e390372b0de4dca1f8efd346ba0c1ba766d766a246fff201"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMRootVC/IMRootVC.swift",
+      "bytes": 4785,
+      "sha256": "2ea33dff13d1b75c172bd2105024dce7cf8ec4060eb958c5923343600f62185a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift",
+      "bytes": 14673,
+      "sha256": "850b354e5ada877c70a842ae723fd4c527c88a22af7cb16e01f12f1a2f87cca7"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMUI/IMUI.swift",
+      "bytes": 6534,
+      "sha256": "683326fe64e9560a62424123f37d9d2437ace43a37caad41edeb670bf0bd0427"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMUserProfileVC/IMUserProfileVC.swift",
+      "bytes": 10945,
+      "sha256": "3232014c51ac1c507676e2a51070d4587fecdbce20617d1c54fefd4219c57611"
+    },
+    {
+      "path": "测试/前端/iOS/Fixtures/AuthRefreshPublic.json",
+      "bytes": 823,
+      "sha256": "bc896d5ef4ce20df08fd02e0e42cd279eceb329942ae37fbd486233ef454ab64"
+    },
+    {
+      "path": "测试/前端/iOS/Fixtures/SelfStatePublic.json",
+      "bytes": 1520,
+      "sha256": "7ac19521cae5a2d87ac4ace5552f4ac2876747ca065f39c135132611b683f722"
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthCoordinatorTests.swift",
+      "bytes": 50866,
+      "sha256": "eaa7ee35f8cf461e16dc7e19952f69b3dbace5304d8f09d714f8f1b63aa38876"
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthCredentialTests.swift",
+      "bytes": 5533,
+      "sha256": "a09449a8da1a616ddef3e638e9585b7738e743619d86c9c387955c9484e4c6e4"
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthRefreshIntegrationTests.swift",
+      "bytes": 15510,
+      "sha256": "74d2fae6dd5206db6e02306a01018a27a67f1a9e82ab59ff8afc4e53a8f2d485"
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthoritativeSyncTests.swift",
+      "bytes": 38684,
+      "sha256": "d8fcf9b2d858053a6dc7c34681cd3615ccb5f10fd00fe5fee7670a1c0c4bc97a"
+    },
+    {
+      "path": "测试/前端/iOS/IMCompletionTests.swift",
+      "bytes": 21486,
+      "sha256": "a7cb262c61db47f748f912e8bd7a77712eca886edebd6288defbdccfcd2ac69a"
+    },
+    {
+      "path": "测试/前端/iOS/IMDataExportTests.swift",
+      "bytes": 14596,
+      "sha256": "dc0603dca2b7191f3a05dca52b8d808b004f3ac831a9ea884d8f49f5aa08be26"
+    },
+    {
+      "path": "测试/前端/iOS/IMForwardTests.swift",
+      "bytes": 40680,
+      "sha256": "c3315f842a94769368c17989ca8052fb8facc8c20053ad973342553c7afa7f7e"
+    },
+    {
+      "path": "测试/前端/iOS/IMIntegrationFixture.swift",
+      "bytes": 1486,
+      "sha256": "a6c1a0f529a09f837ea8c542ab62fbeaa114efd1009daa91fa9d4eb5218b83f7"
+    },
+    {
+      "path": "测试/前端/iOS/IMLifecycleTests.swift",
+      "bytes": 14094,
+      "sha256": "e793b0b096a31926fff36e39c164f8e5fe548e47f455af363df63fa45392fa8b"
+    },
+    {
+      "path": "测试/前端/iOS/IMMediaTests.swift",
+      "bytes": 4356,
+      "sha256": "e4c3023d23e1a5301307f19dc311b1581f588d9987a82c5d8905684e017e2ad2"
+    },
+    {
+      "path": "测试/前端/iOS/IMMessageListTests.swift",
+      "bytes": 27254,
+      "sha256": "b041e3bbc0a0a9533d7402c832d8be4ba22ef2b46aaa2eceb82b33384486d6bb"
+    },
+    {
+      "path": "测试/前端/iOS/IMMigrationServiceTests.swift",
+      "bytes": 19872,
+      "sha256": "01c1b40da168e7ae4a2821e77e4d44a369a795ce676790b3bbb1c9a10c32240e"
+    },
+    {
+      "path": "测试/前端/iOS/IMMigrationTests.swift",
+      "bytes": 18255,
+      "sha256": "70fd61edf61add4848a9d47a56c629911e5f295799d1a83a2187f0961b062561"
+    },
+    {
+      "path": "测试/前端/iOS/IMNotificationTests.swift",
+      "bytes": 2274,
+      "sha256": "41ba5efb12c4fad73abc21d7494ef27e228fcd75311a42c16357a8e7bd3aa96b"
+    },
+    {
+      "path": "测试/前端/iOS/IMPersonalStateTests.swift",
+      "bytes": 15362,
+      "sha256": "cc811f4e20fa2a2b19f134d67951a9570d02fcbdf5850cc5cfa4d1b5602f10c7"
+    },
+    {
+      "path": "测试/前端/iOS/IMReceiptServiceTests.swift",
+      "bytes": 36890,
+      "sha256": "737746e3c8649cc5d9903811b4bf17be6e9ad64cdb94a66112068a3893ec811f"
+    },
+    {
+      "path": "测试/前端/iOS/IMReceiptStorageTests.swift",
+      "bytes": 16259,
+      "sha256": "1bca785886cf2f6b8bb5035a2e340dafc984940ff4ecb37bd9ee2372055fca9a"
+    },
+    {
+      "path": "测试/前端/iOS/IMRememberedLoginTests.swift",
+      "bytes": 10412,
+      "sha256": "a2ff461ad9af52173e578df23ef9b3a363bcbd1e0bc3617e43005351854e702f"
+    },
+    {
+      "path": "测试/前端/iOS/IMSelfStateIntegrationTests.swift",
+      "bytes": 23291,
+      "sha256": "786110539f2e1ee06114e4460309c05ee124434d96d079454c6c96159a43ee86"
+    },
+    {
+      "path": "测试/前端/iOS/IMSendAdmissionTests.swift",
+      "bytes": 22492,
+      "sha256": "4355ad2211621b0f189862d1f60ff64564d5dca6feaef789983b32593966db17"
+    },
+    {
+      "path": "测试/前端/iOS/IMSessionTests.swift",
+      "bytes": 4149,
+      "sha256": "eed892fe7162d95ff693460ef5bdab462c6ac887de2efcbd77aa823efd8c30f4"
+    },
+    {
+      "path": "测试/前端/iOS/IMStorageTests.swift",
+      "bytes": 9124,
+      "sha256": "fcf8b21e44acc8eb06421918f121d214a2c497fd994fccedf31338e23ddf47c9"
+    },
+    {
+      "path": "测试/前端/iOS/UI/IMMessageListUITests.swift",
+      "bytes": 9260,
+      "sha256": "99a71db2c7c49324e836bb3979f3b83535ec6b7997a40722cba92c011d8e5d0c"
+    },
+    {
+      "path": "测试/前端/iOS/UI/IMSelfStateUITests.swift",
+      "bytes": 6057,
+      "sha256": "3411033964e1358da1031383c59f62b49445999d2a3188841660a347677397a3"
+    },
+    {
+      "path": "测试/前端/iOS/UI/IMUITests.swift",
+      "bytes": 52116,
+      "sha256": "4c819e99fafe4e48fb3b87eb43fd86b38306d662dddd43d0efe273f9c37f2753"
+    }
+  ],
+  "simulatorProducts": [
+    {
+      "path": "JobsIM",
+      "bytes": 40400,
+      "sha256": "a03aae5f011607a02b4d6ceeff5106347c0df4f3a14df4a4774c4db529f1602b"
+    },
+    {
+      "path": "AuthBackground.jpg",
+      "bytes": 2304808,
+      "sha256": "0bd4c5b27d0026f5416bcbfeba6a0c4f08b062be5f5c1688252ec66ce27ab163"
+    },
+    {
+      "path": "demo-host.json",
+      "bytes": 1310,
+      "sha256": "ec1ed3dab0c7b4810129cac993263b6ac7913e8561460cd53ed85a50813a5904"
+    },
+    {
+      "path": "PlugIns/JobsIMTests.xctest/JobsIMTests",
+      "bytes": 5122720,
+      "sha256": "98657511208f189da23e355c5b73f5a93661551f85ae3cb4639b624ecb3bd62f"
+    }
+  ]
+}

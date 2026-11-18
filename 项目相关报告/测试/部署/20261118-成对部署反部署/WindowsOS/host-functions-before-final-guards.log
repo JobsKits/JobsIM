@@ -1,0 +1,114 @@
+已撤回本项目清单内本地程序/文件/证书/JetStream；审计=/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsFunctionFixtures/JobsIM-Windows-Undo-ab76226c6fce46eb9d924189e7874e89/clear/backups/undeployment-20261118T005738433-38fa12c5285040c39ede62c56e82f443.json
+部分完成：外部PostgreSQL及共享工具仍由维护者保留/处置，未声称数据库已清零或环境完全回原点。
+已撤回本项目清单内本地程序/文件/证书/JetStream；审计=/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsFunctionFixtures/JobsIM-Windows-Undo-ab76226c6fce46eb9d924189e7874e89/empty-before/backups/undeployment-20261118T005738777-45761237b6514337a22a21a7828aa1bd.json
+部分完成：外部PostgreSQL及共享工具仍由维护者保留/处置，未声称数据库已清零或环境完全回原点。
+已撤回本项目清单内本地程序/文件/证书/JetStream；审计=/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsFunctionFixtures/JobsIM-Windows-Undo-ab76226c6fce46eb9d924189e7874e89/resume/backups/undeployment-20261118T005739692-5f565ea873db468e9d47793e0cc9070c.json
+部分完成：外部PostgreSQL及共享工具仍由维护者保留/处置，未声称数据库已清零或环境完全回原点。
+本地业务已撤回；独立journal及匹配恢复材料保留在/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsFunctionFixtures/JobsIM-Windows-Undo-ab76226c6fce46eb9d924189e7874e89/journal-retained/instance/Postgres/journal*；外置备份/解密钥不清理，未声称完全回原点。
+本轮业务资源已撤回；独立journal/匹配恢复材料仍保留，无需重复清理。
+已加密并解密目录验真：/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsFunctionFixtures/JobsIM-Windows-Undo-ab76226c6fce46eb9d924189e7874e89/cms-backup/backups/JobsIM-20261118-085742-f1a25a5feac54cc68efb2be60eac190d.cms
+恢复私钥位于state之外：/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsFunctionFixtures/JobsIM-Windows-Undo-ab76226c6fce46eb9d924189e7874e89/cms-backup/recovery/key.pem
+不回滚/删除外部journal。此处解密验真不等同隔离数据库恢复演练。
+/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsFunctionFixtures/JobsIM-Windows-Undo-ab76226c6fce46eb9d924189e7874e89/server-tls/input-certificates/server.crt: OK
+Certificate will not expire
+{
+  "scope": "host-isolated PowerShell functions; Windows SID/ACL/process probes explicitly shimmed",
+  "passed": 23,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "PowerShell pair parses and lifecycle bodies are identical except default action",
+      "status": "passed"
+    },
+    {
+      "name": "clear performs an actual local inverse and retains external backup/key files",
+      "status": "passed"
+    },
+    {
+      "name": "original empty directory survives inverse cleanup",
+      "status": "passed"
+    },
+    {
+      "name": "legacy state without origin refuses destructive cleanup",
+      "status": "passed"
+    },
+    {
+      "name": "unknown resource added after seal blocks every removal",
+      "status": "passed"
+    },
+    {
+      "name": "changed owned file is preserved with original origin",
+      "status": "passed"
+    },
+    {
+      "name": "symbolic directory and file resources refuse traversal",
+      "status": "passed"
+    },
+    {
+      "name": "missing original backup blocks interrupted inverse retry",
+      "status": "passed"
+    },
+    {
+      "name": "interrupted cleanup resumes only its unchanged remaining entries",
+      "status": "passed"
+    },
+    {
+      "name": "source mutation during backup prevents all source cleanup",
+      "status": "passed"
+    },
+    {
+      "name": "backup verification failure preserves source and creates no undo journal",
+      "status": "passed"
+    },
+    {
+      "name": "exclusive transaction lock rejects a concurrent writer",
+      "status": "passed"
+    },
+    {
+      "name": "server configuration rejects credential/path/port confusion and accepts explicit HTTPS origin",
+      "status": "passed"
+    },
+    {
+      "name": "asset wire contract rejects forged checksum and foreign release source",
+      "status": "passed"
+    },
+    {
+      "name": "C# native process bridge compiles on host without executing Win32 calls",
+      "status": "passed"
+    },
+    {
+      "name": "independent recovery journal and matching credentials survive clear and repeat inverse",
+      "status": "passed"
+    },
+    {
+      "name": "foreign owner and path-injected managed PG profiles are refused",
+      "status": "passed"
+    },
+    {
+      "name": "unknown transaction-lock file is a conflict and is never implicitly deleted",
+      "status": "passed"
+    },
+    {
+      "name": "Yes does not bypass the independent destructive choice",
+      "status": "passed"
+    },
+    {
+      "name": "Quick tunnel launch has empty session config and explicit trusted origin CA/SAN",
+      "status": "passed"
+    },
+    {
+      "name": "encrypted backup decrypts to identical bytes and retains its matching external key",
+      "status": "passed"
+    },
+    {
+      "name": "server certificate SAN and matching key are checked before copying originals",
+      "status": "passed"
+    },
+    {
+      "name": "an existing external-data instance cannot silently switch to a new managed database",
+      "status": "passed"
+    }
+  ],
+  "windowsNativeExecuted": false,
+  "fixture": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsFunctionFixtures/JobsIM-Windows-Undo-ab76226c6fce46eb9d924189e7874e89"
+}

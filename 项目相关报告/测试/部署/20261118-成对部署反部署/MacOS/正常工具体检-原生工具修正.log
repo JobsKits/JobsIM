@@ -1,0 +1,18 @@
+本轮工具检查与诊断：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-deploy-session.7wdFgr
+依赖检查｜准备本轮官方稳定版本解析器；不会修改源码或全局工具。
+工具版本｜go｜当前 1.27.4｜官方稳定目标 1.27.4
+采用工具｜go 1.27.4｜/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go
+工具版本｜fzf｜当前 0.75.0｜官方稳定目标 0.75.0
+采用工具｜fzf 0.75.0｜/opt/homebrew/bin/fzf
+go version go1.27.4 darwin/arm64
+pg_ctl (PostgreSQL) 18.7 (Postgres.app)
+OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+nats-server: v2.15.3
+工具核验：node；实际=26.13.1；官方目标=26.13.1；时间=2026-11-18T00:40:01Z；位置=/opt/homebrew/bin/node
+工具核验：nats-server；实际=2.15.3；官方目标=2.15.3；时间=2026-11-18T00:40:03Z；位置=/Users/jobs/Library/Application Support/JobsIM/Toolchains/NATS-v2.15.3/nats-server-v2.15.3-darwin-arm64/nats-server
+工具核验：postgres；实际=18.7；官方目标=18.7；时间=2026-11-18T00:40:04Z；位置=/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/pg_ctl
+业务依赖检查｜backend｜最多30秒，仅检查当前模块路径；源码依赖锁保持不变。
+业务依赖检查未完成或超时｜backend｜按现有锁构建，不视为已确认最新；详见日志。
+业务依赖检查｜qr｜最多30秒，仅检查当前模块路径；源码依赖锁保持不变。
+业务依赖检查未完成或超时｜qr｜按现有锁构建，不视为已确认最新；详见日志。
+TOOLS_PROBE_PASSED

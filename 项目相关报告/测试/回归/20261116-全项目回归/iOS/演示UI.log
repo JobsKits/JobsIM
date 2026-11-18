@@ -1,0 +1,155 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -workspace /Users/jobs/Documents/GitHub/JobsIM/代码/前端/iOS/JobsIM.xcworkspace -scheme JobsIM -destination "platform=iOS Simulator,id=98F8960B-E8D2-40A8-BF46-68EBB95FAD0C" -derivedDataPath "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData" -resultBundlePath /Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/iOS/演示UI.xcresult -jobs 1 -parallel-testing-enabled NO "-only-testing:JobsIMUITests/IMUITests/testDemoMessageAndAppearanceLanguageControls" CODE_SIGN_IDENTITY=- test-without-building
+
+Build settings from command line:
+    CODE_SIGN_IDENTITY = -
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/iOS/演示UI.xcresult
+
+2026-11-16 23:06:59.791223+0800 JobsIMUITests-Runner[86001:568489] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-11-16 23:07:13.104.
+Test Suite 'JobsIMUITests.xctest' started at 2026-11-16 23:07:13.105.
+Test Suite 'IMUITests' started at 2026-11-16 23:07:13.106.
+Test Case '-[JobsIMUITests.IMUITests testDemoMessageAndAppearanceLanguageControls]' started.
+    t =     0.04s Start Test at 2026-11-16 23:07:13.150
+    t =     0.35s Set Up
+    t =     0.36s Open com.jobs.im
+    t =     0.36s     Launch com.jobs.im
+2026-11-16 23:07:13.968 xcodebuild[85388:563915] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-16 23:07:13.968 xcodebuild[85388:563915] [MT] IDELaunchParametersSnapshot: no debugger version
+objc[86001]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.hmoq8f/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x10a4c8310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.hmoq8f/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x10a51c398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =    10.12s         Setting up automation session
+    t =    13.79s         Wait for com.jobs.im to idle
+    t =    15.61s Waiting 10.0s for "演示空间" StaticText to exist
+    t =    16.62s     Checking `Expect predicate `existsNoRetry == 1` for object "演示空间" StaticText`
+    t =    16.62s         Checking existence of `"演示空间" StaticText`
+    t =    16.98s Waiting 5.0s for "conversation.lin" Cell to exist
+    t =    17.98s     Checking `Expect predicate `existsNoRetry == 1` for object "conversation.lin" Cell`
+    t =    17.98s         Checking existence of `"conversation.lin" Cell`
+    t =    18.11s Tap "conversation.lin" Cell
+    t =    18.11s     Wait for com.jobs.im to idle
+    t =    18.11s     Find the "conversation.lin" Cell
+    t =    18.18s     Check for interrupting elements affecting "conversation.lin" Cell
+    t =    18.24s     Synthesize event
+    t =    18.81s     Wait for com.jobs.im to idle
+    t =    19.21s Waiting 5.0s for "写一条消息…" TextField to exist
+    t =    20.32s     Checking `Expect predicate `existsNoRetry == 1` for object "写一条消息…" TextField`
+    t =    20.32s         Checking existence of `"写一条消息…" TextField`
+    t =    20.39s Tap "写一条消息…" TextField
+    t =    20.39s     Wait for com.jobs.im to idle
+    t =    20.40s     Find the "写一条消息…" TextField
+    t =    20.44s     Check for interrupting elements affecting "写一条消息…" TextField
+    t =    20.55s     Synthesize event
+    t =    20.94s     Wait for com.jobs.im to idle
+    t =    23.84s Type 'Native durable 6AE...' into "写一条消息…" TextField
+    t =    23.86s     Wait for com.jobs.im to idle
+    t =    24.17s     Find the "写一条消息…" TextField
+    t =    24.42s     Check for interrupting elements affecting "写一条消息…" TextField
+    t =    24.61s     Synthesize event
+    t =    25.24s     Wait for com.jobs.im to idle
+    t =    25.26s Tap "发送" Button
+    t =    25.26s     Wait for com.jobs.im to idle
+    t =    25.29s     Find the "发送" Button
+    t =    25.38s     Check for interrupting elements affecting "发送" Button
+    t =    25.43s     Synthesize event
+    t =    25.74s     Wait for com.jobs.im to idle
+    t =    25.80s Waiting 5.0s for "Native durable 6AE5DCCA" StaticText to exist
+    t =    26.87s     Checking `Expect predicate `existsNoRetry == 1` for object "Native durable 6AE5DCCA" StaticText`
+    t =    26.87s         Checking existence of `"Native durable 6AE5DCCA" StaticText`
+    t =    27.04s Find the "Native durable 6AE5DCCA" StaticText
+    t =    27.32s Find the Target Application 'com.jobs.im'
+    t =    27.60s Added attachment named 'native-message-light'
+    t =    27.60s Terminate com.jobs.im:88090
+    t =    28.63s Open com.jobs.im
+    t =    28.63s     Launch com.jobs.im
+2026-11-16 23:07:41.774 xcodebuild[85388:563915] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-16 23:07:41.774 xcodebuild[85388:563915] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =    29.67s         Setting up automation session
+    t =    33.10s         Wait for com.jobs.im to idle
+    t =    34.66s Waiting 10.0s for "conversation.lin" Cell to exist
+    t =    35.71s     Checking `Expect predicate `existsNoRetry == 1` for object "conversation.lin" Cell`
+    t =    35.71s         Checking existence of `"conversation.lin" Cell`
+    t =    35.85s Tap "conversation.lin" Cell
+    t =    35.85s     Wait for com.jobs.im to idle
+    t =    35.88s     Find the "conversation.lin" Cell
+    t =    36.05s     Check for interrupting elements affecting "conversation.lin" Cell
+    t =    36.10s     Synthesize event
+    t =    36.50s     Wait for com.jobs.im to idle
+    t =    36.68s Waiting 5.0s for "Native durable 6AE5DCCA" StaticText to exist
+    t =    37.75s     Checking `Expect predicate `existsNoRetry == 1` for object "Native durable 6AE5DCCA" StaticText`
+    t =    37.75s         Checking existence of `"Native durable 6AE5DCCA" StaticText`
+    t =    37.81s Find the "Native durable 6AE5DCCA" StaticText
+    t =    37.88s Terminate com.jobs.im:91258
+    t =    38.96s Open com.jobs.im
+    t =    38.96s     Launch com.jobs.im
+2026-11-16 23:07:52.065 xcodebuild[85388:563915] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-16 23:07:52.065 xcodebuild[85388:563915] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =    40.35s         Setting up automation session
+    t =    43.00s         Wait for com.jobs.im to idle
+    t =    44.48s Waiting 10.0s for "设置" Button to exist
+    t =    45.54s     Checking `Expect predicate `existsNoRetry == 1` for object "设置" Button`
+    t =    45.55s         Checking existence of `"设置" Button`
+    t =    45.68s Tap "设置" Button
+    t =    45.68s     Wait for com.jobs.im to idle
+    t =    45.69s     Find the "设置" Button
+    t =    45.77s     Check for interrupting elements affecting "设置" Button
+    t =    45.84s     Synthesize event
+    t =    46.18s     Wait for com.jobs.im to idle
+    t =    48.07s Tap Cell (First Match)
+    t =    48.07s     Wait for com.jobs.im to idle
+    t =    48.08s     Find the Cell (First Match)
+    t =    48.26s     Check for interrupting elements affecting Cell
+    t =    48.34s     Synthesize event
+    t =    48.66s     Wait for com.jobs.im to idle
+    t =    48.98s Tap "黑夜" Button
+    t =    48.98s     Wait for com.jobs.im to idle
+    t =    48.99s     Find the "黑夜" Button
+    t =    49.10s     Check for interrupting elements affecting "黑夜" Button
+    t =    49.22s     Synthesize event
+    t =    49.58s     Wait for com.jobs.im to idle
+    t =    49.79s Waiting 5.0s for "演示空间" StaticText to exist
+    t =    50.83s     Checking `Expect predicate `existsNoRetry == 1` for object "演示空间" StaticText`
+    t =    50.83s         Checking existence of `"演示空间" StaticText`
+    t =    50.88s Tap "设置" Button
+    t =    50.88s     Wait for com.jobs.im to idle
+    t =    50.88s     Find the "设置" Button
+    t =    50.93s     Check for interrupting elements affecting "设置" Button
+    t =    50.98s     Synthesize event
+    t =    51.33s     Wait for com.jobs.im to idle
+    t =    53.02s Tap Cell (First Match)
+    t =    53.02s     Wait for com.jobs.im to idle
+    t =    53.03s     Find the Cell (First Match)
+    t =    53.23s     Check for interrupting elements affecting Cell
+    t =    53.38s     Synthesize event
+    t =    53.69s     Wait for com.jobs.im to idle
+    t =    54.10s Tap "English" Button
+    t =    54.10s     Wait for com.jobs.im to idle
+    t =    54.10s     Find the "English" Button
+    t =    54.29s     Check for interrupting elements affecting "English" Button
+    t =    54.36s     Synthesize event
+    t =    54.67s     Wait for com.jobs.im to idle
+    t =    54.89s Waiting 5.0s for "Messages" Button to exist
+    t =    55.93s     Checking `Expect predicate `existsNoRetry == 1` for object "Messages" Button`
+    t =    55.93s         Checking existence of `"Messages" Button`
+    t =    56.01s Find the Target Application 'com.jobs.im'
+    t =    56.22s Added attachment named 'native-message-dark-English'
+    t =    56.22s Tear Down
+Test Case '-[JobsIMUITests.IMUITests testDemoMessageAndAppearanceLanguageControls]' passed (60.475 seconds).
+Test Suite 'IMUITests' passed at 2026-11-16 23:08:13.611.
+	 Executed 1 test, with 0 failures (0 unexpected) in 60.475 (60.505) seconds
+Test Suite 'JobsIMUITests.xctest' passed at 2026-11-16 23:08:13.613.
+	 Executed 1 test, with 0 failures (0 unexpected) in 60.475 (60.507) seconds
+Test Suite 'Selected tests' passed at 2026-11-16 23:08:13.613.
+	 Executed 1 test, with 0 failures (0 unexpected) in 60.475 (60.509) seconds
+2026-11-16 23:08:13.982 xcodebuild[85388:563915] [MT] IDETestOperationsObserverDebug: 131.545 elapsed -- Testing started completed.
+2026-11-16 23:08:13.982 xcodebuild[85388:563915] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-16 23:08:13.982 xcodebuild[85388:563915] [MT] IDETestOperationsObserverDebug: 131.545 sec, +131.545 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/iOS/演示UI.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

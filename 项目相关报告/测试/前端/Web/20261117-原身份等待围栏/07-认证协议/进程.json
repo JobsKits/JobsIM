@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-11-17T00:51:16.462Z",
+  "finishedAt": "2026-11-17T00:51:18.391Z",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "stopped": "",
+  "freeBefore": 4950978560,
+  "minimumFree": 4939259904,
+  "freeAfter": 4940763136,
+  "inputsUnchanged": true,
+  "actualAPI": false,
+  "dependencyInstall": false
+}

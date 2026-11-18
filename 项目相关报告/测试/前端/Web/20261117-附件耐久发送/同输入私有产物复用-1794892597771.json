@@ -1,0 +1,123 @@
+{
+  "at": "2026-11-17T05:16:37.707Z",
+  "production": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/Receipt/1794892045242/Production",
+  "originalBuildReport": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/02-私有构建执行.json",
+  "originalBuildReportSHA": "14aa3a56487be82df2e5352e73d21161067ffc245a7edb201b4ca71426aba031",
+  "currentFullSrc": 77,
+  "missingSourceInputs": [],
+  "currentBuildInputsUnchanged": true,
+  "originalInputsUnchanged": true,
+  "publicRows": [
+    {
+      "file": "代码/前端/Web/Public/Fonts/OFL.txt",
+      "artifact": "Fonts/OFL.txt",
+      "sourceSHA": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "artifactSHA": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "originalArtifactSHA": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "file": "代码/前端/Web/Public/Fonts/SourceSans3.ttf",
+      "artifact": "Fonts/SourceSans3.ttf",
+      "sourceSHA": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "artifactSHA": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "originalArtifactSHA": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9"
+    },
+    {
+      "file": "代码/前端/Web/Public/Licenses/Lucide.txt",
+      "artifact": "Licenses/Lucide.txt",
+      "sourceSHA": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "artifactSHA": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "originalArtifactSHA": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "file": "代码/前端/Web/Public/Licenses/react-dom.txt",
+      "artifact": "Licenses/react-dom.txt",
+      "sourceSHA": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "artifactSHA": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "originalArtifactSHA": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "代码/前端/Web/Public/Licenses/react.txt",
+      "artifact": "Licenses/react.txt",
+      "sourceSHA": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "artifactSHA": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "originalArtifactSHA": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "代码/前端/Web/Public/Logo.svg",
+      "artifact": "Logo.svg",
+      "sourceSHA": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+      "artifactSHA": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+      "originalArtifactSHA": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f"
+    },
+    {
+      "file": "代码/前端/Web/Public/资源出处.md",
+      "artifact": "资源出处.md",
+      "sourceSHA": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82",
+      "artifactSHA": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82",
+      "originalArtifactSHA": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "Fonts/OFL.txt",
+      "expected": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "current": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "file": "Fonts/SourceSans3.ttf",
+      "expected": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "current": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9"
+    },
+    {
+      "file": "Licenses/Lucide.txt",
+      "expected": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "current": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "file": "Licenses/react-dom.txt",
+      "expected": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "current": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "Licenses/react.txt",
+      "expected": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "current": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "Logo.svg",
+      "expected": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+      "current": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f"
+    },
+    {
+      "file": "assets/index-CCqfIXzK.js",
+      "expected": "d3dff62c24c3a6febffe7018b38ad416f2149e881cafe82d5aabc54754599cfa",
+      "current": "d3dff62c24c3a6febffe7018b38ad416f2149e881cafe82d5aabc54754599cfa"
+    },
+    {
+      "file": "assets/index-CCqfIXzK.js.map",
+      "expected": "f0284a8f53cb77f1ad126a629b23f571b437d69009ec41515e00a64a0e28c679",
+      "current": "f0284a8f53cb77f1ad126a629b23f571b437d69009ec41515e00a64a0e28c679"
+    },
+    {
+      "file": "assets/index-Cavxj1zD.css",
+      "expected": "3e3ef20c2c45176a9e23ef8cdefa2e81bc51f815772497fb1e2483c801e94a2c",
+      "current": "3e3ef20c2c45176a9e23ef8cdefa2e81bc51f815772497fb1e2483c801e94a2c"
+    },
+    {
+      "file": "index.html",
+      "expected": "fec18e54b5f320811b2f8939dd06e70091d1ee243e875c13764e98440acea52a",
+      "current": "fec18e54b5f320811b2f8939dd06e70091d1ee243e875c13764e98440acea52a"
+    },
+    {
+      "file": "资源出处.md",
+      "expected": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82",
+      "current": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82"
+    }
+  ],
+  "publicMatched": true,
+  "artifactsMatched": true,
+  "ownBuildExecuted": false,
+  "ownTypeExecuted": false,
+  "scope": "Reused exact current 77 Src with build five config/locks and byte-matched all Public/11 current original output artifacts; first type report freezes Src only."
+}

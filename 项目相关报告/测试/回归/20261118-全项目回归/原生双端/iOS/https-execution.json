@@ -1,0 +1,26 @@
+{
+  "exitCode": 0,
+  "seconds": 4.03,
+  "stopReason": "completed",
+  "resourceSamples": [
+    {
+      "seconds": 0.0,
+      "freeBytes": 21485867008
+    },
+    {
+      "seconds": 1.0,
+      "freeBytes": 21480570880
+    },
+    {
+      "seconds": 2.0,
+      "freeBytes": 21480271872
+    },
+    {
+      "seconds": 3.0,
+      "freeBytes": 21479829504
+    }
+  ],
+  "artifactMismatches": [],
+  "isolatedProducts": "/Users/jobs/Library/Application Support/JobsIM/Regression/20261118-iOS-HTTPS-Products",
+  "originalBuildUntouched": true
+}

@@ -1,0 +1,249 @@
+{
+  "classes": {
+    "com.jobs.im.AdmissionFenceTest": [
+      "missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox"
+    ],
+    "com.jobs.im.AuthoritativeSyncTest": [
+      "incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart",
+      "sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof",
+      "localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody",
+      "globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive",
+      "changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult",
+      "exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives",
+      "auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage",
+      "globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval"
+    ],
+    "com.jobs.im.CollaborationLifecycleTest": [
+      "realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference"
+    ],
+    "com.jobs.im.DatabaseIsolationTest": [
+      "liveOutboxSurvivesIndependentDemoWrites"
+    ],
+    "com.jobs.im.DiscoveryCollaborationUiTest": [
+      "nativeFavoritesExactSourceMentionsAndAnnouncementControlsReachRealBackend"
+    ],
+    "com.jobs.im.DiscoveryLifecycleTest": [
+      "realLookupPagesKeepOpaqueCursorsAndReauthorizeAnUnlistedSource"
+    ],
+    "com.jobs.im.ForwardLifecycleTest": [
+      "originalForwardSurvivesUnknownRepliesWithoutNewProofAndScrubsLostSources"
+    ],
+    "com.jobs.im.ForwardUiTest": [
+      "nativeSourceSelectionAndExplicitOriginalRetryCreateRealReferences"
+    ],
+    "com.jobs.im.GroupLifecycleTest": [
+      "originalTransferNeverRebasesAfterConfirmation",
+      "lostMutationUsesOnlyOriginalResultAndTokensRemainRamOnly",
+      "coldJoinReusesOneNonceAndRequiresTheOriginalReenteredCode",
+      "lateSuccessfulMutationCannotPublishIntoAnotherIdentity",
+      "roleWithdrawalClearsVisibleInvitesAndRamTokens",
+      "laterFamilyOrDeviceCannotPublishTheOriginal404AtSameEpoch",
+      "legacyResponsibilityWithoutOriginalFamilyStaysReadOnly"
+    ],
+    "com.jobs.im.LiveApiTest": [
+      "verifiedTlsTwoAccountMessageContract"
+    ],
+    "com.jobs.im.Migration8To9Test": [
+      "originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification"
+    ],
+    "com.jobs.im.MigrationHistoryLifecycleTest": [
+      "validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody",
+      "newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait",
+      "durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200"
+    ],
+    "com.jobs.im.ModelClosureTest": [
+      "realNativeModelKeepsOriginalOperationsAndRelationshipGenerations"
+    ],
+    "com.jobs.im.NativeSessionHttpsTest": [
+      "realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair",
+      "realLostRefreshAndThreeIntentClosureRetireUnknownAncestors",
+      "nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope"
+    ],
+    "com.jobs.im.NativeSessionLifecycleTest": [
+      "retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch",
+      "concurrentExpiredRequestsShareOneRotationAndPublishOnlyDurablePair",
+      "secureWriteFailureAndUnknownRefreshStayBlockedAcrossRestart",
+      "committedPairHandoffRecoversAndRetiresOriginalOutboxWithoutChangingPayload",
+      "initialUnknownChainKeepsOriginalIdsAndRejectsLateDelivery",
+      "lateExpiredBusinessCannotBorrowReplacementFamilyAndOther401NeverRefreshes",
+      "lateEpochInvalidationAndLegacyCommitCannotEraseRecoveredPair"
+    ],
+    "com.jobs.im.NativeUiTest": [
+      "realConversationGroupAndSettingsRenderInNativeActivity"
+    ],
+    "com.jobs.im.NotificationPrivacyTest": [
+      "localAlertHidesBodyAndRejectsAnotherNamespace"
+    ],
+    "com.jobs.im.OwnDeletionLifecycleTest": [
+      "unknownSurvivesReopenWithoutPasswordOtpOrFamilyToken",
+      "preparedDependency403CannotReleaseTheOriginalGate",
+      "withdrawnCapabilityKeepsUnknownLookupReadonly",
+      "unknownCancellationRetainsOneNonceAndQueriesItsOriginalResult",
+      "finalLocalErasureKeepsOtherAccountsAndThePublicResponsibility",
+      "unknownCancelRequiresQueryBeforeAnyNewProofAndKeepsOriginalVersion",
+      "repeatedNewerQueriesNeverRebaseOriginalCancellation",
+      "legacyCancelWithoutVersionRemainsReadOnlyAcrossReload",
+      "pendingOriginalCanPersistUnknownBeforeResumingTheSameRequest"
+    ],
+    "com.jobs.im.OwnPasswordLifecycleTest": [
+      "unknownSurvivesReconstructionAndContainsNoPasswordsOrOtp",
+      "wrongProofCannotUnpauseUnknownOrCreateAnotherOperation",
+      "explicitRetryNeverBorrowsSuccessorFamilyToken",
+      "lateReplyCannotClearAChangedIdentity",
+      "withdrawnCapabilityAndChangedEpochAllowLookupButNoPendingOrUnseenMutation",
+      "preparedDependency403KeepsOriginalPaused"
+    ],
+    "com.jobs.im.PersonalExportLifecycleTest": [
+      "lostCreateReconcilesOriginalWithoutSecondCreatingPost",
+      "unreachedOriginalNeedsExplicitSameBodyRetry",
+      "capabilityWithdrawalKeepsOriginalCancellationButNoNewCreateOrDownload",
+      "cancellationUnknownRetainsNonceAndReadOnlyCheckNeverResendsIt",
+      "cancelledSystemSelectionIsNeverSavedAndOldFamilyCannotPublishPreparedFile"
+    ],
+    "com.jobs.im.ReceiptStorageLifecycleTest": [
+      "fullTransactionPreservesExactBodyAndIntentOnReopenAndRollsBothBackOnFailure",
+      "zeroOriginalFsyncSharesItsDescriptorIntentTransactionAndGlobalCleansOnlyOwnedBytes",
+      "actualProbeReopensItsCurrentPhysicalDatabaseAndMeasuresInstalledApk",
+      "trustedOsRootAliasDoesNotPermitAnUntrustedGeneratedChildSymlink"
+    ],
+    "com.jobs.im.RoleAdmissionLifecycleTest": [
+      "ownerRoundTripCannotReviveOldAllMentionOrAnnouncementAndMissingFlagNeverWrites"
+    ],
+    "com.jobs.im.SelfStateTest": [
+      "schemaUpgradeRetainsPhysicalRegistrationAndSeparatesOriginalSchemaCursor",
+      "wrongPrincipalOrNumericCountersRollbackSelfProjectionAndCursorTogether",
+      "unknownPreferenceSurvivesColdReopenAndReadonlyResultNeverReplaysWrite",
+      "unknownNotFoundRequiresExplicitRetryAndUsesIdenticalOriginalRequest",
+      "sparseVisibleObservationDoesNotClearIndependentManualUnreadAndConflictFreezesOriginal",
+      "draftCapturesIndependentTextAndDistinctOriginalProofsWithoutChangingLocalMessageOutbox",
+      "changedDraftReplyRequiresReselectionAndCreatesNoCloudWrite",
+      "lateIdentityOrChangedProjectionGuardCannotPublishSelfState",
+      "firstActivationRemainsEnabledAndSameIdentityResetRejectsLateResponse",
+      "s2ProjectionAndCursorShareTransactionAndWrongSubjectCannotPartiallyPublish",
+      "queuedUiIntentCapturesLifecycleBeforeMutexAndCannotAdoptResetIdentity",
+      "retiredDraftIsNotRecordedAsAppliedAndIndependentTextRequiresExplicitRecovery",
+      "viewRfc3339OffsetsAreParsedWithoutReencodingOriginalServerFields"
+    ],
+    "com.jobs.im.StorageLifecycleTest": [
+      "versionTwoUpgradePreservesOriginalPendingIdentity",
+      "anonymousReconnectFreezesEveryAccountOfOnlyTheOldInstanceEpoch",
+      "durableQueueDraftRevisionAndCursorRemainAtomic"
+    ],
+    "com.jobs.im.VoiceRecordingNativeTest": [
+      "realAacStopProducesPreviewWithoutStartingUpload",
+      "cancelReleasesRecorderAndDeletesOnlyTheOwnedClip",
+      "changedFamilyRejectsClipAndReturningToOriginalCannotRestoreIt"
+    ],
+    "com.jobs.im.VoiceUploadApiNativeTest": [
+      "missingResultIsReadOnlyAndKeepsExactOriginalTuple",
+      "preparedNeverBecomesAUsableMediaUrl",
+      "committedRequiresOriginalDigestSizeNameAndCanonicalUrl",
+      "lateFamilyChangeCannotPromoteTheOriginalResult"
+    ],
+    "com.jobs.im.VoiceUploadGlobalFloorNativeTest": [
+      "conflictingObjectPreservesClipAndPendingCleanupUntilVerifiedHolderIsRepaired",
+      "verifiedGlobalCreatesDenyAfterTerminalReceiptWasAlreadyGc",
+      "globalDenySurvivesTerminalReceiptGcAndRejectsLateOriginalPrepare"
+    ],
+    "com.jobs.im.VoiceUploadQueueNativeTest": [
+      "durableManifestStageRecoversTheSameTaskWithoutSending",
+      "clipOnlyFailureIsRetainedAndBlocksNewHttpResponsibility",
+      "uploadAndEnqueueUnknownKeepOriginalIdsAndReplyAcrossReconstruction",
+      "changedFamilyCannotReusePreparedBytesAndDoesNotEraseTheOnlyClip",
+      "tornNewManifestDoesNotReplaceTheOriginalAtomicBody",
+      "erasureRemovesExactAccountAndPreservesAnotherUsersTask",
+      "publicationFailureRetriesTheSameIdsAndRejectsAChangedOriginalBody",
+      "globalCleanupUsesOriginalSenderAndExactClientMapping",
+      "interruptedCopyRemainsAttributableForExactAccountErasure",
+      "completedAccountFloorRejectsLatePrepareAndLateObjectPromotion",
+      "durableTerminalBeforeUnlinkResumesLocalCleanupWithoutHttp"
+    ]
+  },
+  "installedSHA256": {
+    "app-debug.apk": "9660aa3856ceb28d06ac1212ca1a82a54e4c0fbcd272b82f9440c503c7e45c45",
+    "app-debug-androidTest.apk": "7b3f14b431e42a5745fbe3b2f269cfb34aba9dfb573847223a1d257e1b010e04"
+  },
+  "commands": [
+    {
+      "label": "avd-owner",
+      "command": [
+        "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5584",
+        "emu",
+        "avd",
+        "name"
+      ]
+    },
+    {
+      "label": "install-app-debug.apk",
+      "command": [
+        "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5584",
+        "install",
+        "-r",
+        "-t",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/原生双端/Android/Build-20261118-064142-80568-75fca3/app-debug.apk"
+      ]
+    },
+    {
+      "label": "install-app-debug-androidTest.apk",
+      "command": [
+        "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5584",
+        "install",
+        "-r",
+        "-t",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/原生双端/Android/Build-20261118-064142-80568-75fca3/app-debug-androidTest.apk"
+      ]
+    },
+    {
+      "label": "path-com.jobs.im",
+      "command": [
+        "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5584",
+        "shell",
+        "pm",
+        "path",
+        "com.jobs.im"
+      ]
+    },
+    {
+      "label": "pull-com.jobs.im",
+      "command": [
+        "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5584",
+        "pull",
+        "/data/app/~~WVZwsggH5SvlZg9f0ai4Pw==/com.jobs.im-C7oG1QimQRafJQzLkEZCyQ==/base.apk",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/原生双端/Android/installed-app-debug.apk"
+      ]
+    },
+    {
+      "label": "path-com.jobs.im.test",
+      "command": [
+        "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5584",
+        "shell",
+        "pm",
+        "path",
+        "com.jobs.im.test"
+      ]
+    },
+    {
+      "label": "pull-com.jobs.im.test",
+      "command": [
+        "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+        "-s",
+        "emulator-5584",
+        "pull",
+        "/data/app/~~pGmtF7SDpCOdCIemXZLKig==/com.jobs.im.test-Sy_6JpcZDjlXCMzMK7a5aQ==/base.apk",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/原生双端/Android/installed-app-debug-androidTest.apk"
+      ]
+    }
+  ]
+}

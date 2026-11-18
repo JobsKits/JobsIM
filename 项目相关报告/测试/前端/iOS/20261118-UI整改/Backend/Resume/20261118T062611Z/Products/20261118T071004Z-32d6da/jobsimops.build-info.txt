@@ -1,0 +1,28 @@
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/Products/20261118T071004Z-32d6da/jobsimops: go1.27.4
+	path	jobsim/backend/cmd/jobsimops
+	mod	jobsim/backend	(devel)	
+	dep	github.com/jackc/pgpassfile	v1.0.0	h1:/6Hmqy13Ss2zCq62VdNG8tM1wchn8zjSGOBJ6icpsIM=
+	dep	github.com/jackc/pgservicefile	v0.0.0-20240606120523-5a60cdf6a761	h1:iCEnooe7UlwOQYpKFhBabPMi4aNAfoODPEFNiAnClxo=
+	dep	github.com/jackc/pgx/v5	v5.13.0	h1:Hl08k64maU0nrRyVUEbwCnK6/gT0EhMrtAqBHz9/gA4=
+	dep	github.com/jackc/puddle/v2	v2.2.3	h1:f8HoREISb3l5eO9coPgK7U3hKLhWGokOFVcThl5jrao=
+	dep	github.com/klauspost/compress	v1.20.0	h1:a3C1ke2ohxFymNlb2HWAHjDeKCI90scRskErZkR0ezA=
+	dep	github.com/nats-io/nats.go	v1.55.0	h1:Ng8QKHdvdHIWoaiq0+d/aH1BWkxvcJxWJ0Y/9BPKx3M=
+	dep	github.com/nats-io/nkeys	v0.4.16	h1:rd5oAuLOb8mnAycB0xleuEBNS1pVVnN0fv/FF34Eypg=
+	dep	github.com/nats-io/nuid	v1.0.1	h1:5iA8DT8V7q8WK2EScv2padNa/rTESc1KdnPw4TC2paw=
+	dep	golang.org/x/crypto	v0.59.0	h1:xS2jhqYbzNrpvkWP2YTDf4TJwBy3ykR03i8vFDxEc7c=
+	dep	golang.org/x/sync	v0.25.0	h1:dJnifr0nMV8/SBnBvdo4eSGGnrc3O4FFx6IqvtLcmRs=
+	dep	golang.org/x/text	v0.44.0	h1:YItdp/mQNGnsmrgpcdA5yQ3bnRxCfo/Tj/iByGW9GGo=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	CGO_ENABLED=1
+	build	CGO_CFLAGS=
+	build	CGO_CPPFLAGS=
+	build	CGO_CXXFLAGS=
+	build	CGO_LDFLAGS=
+	build	GOARCH=arm64
+	build	GOOS=darwin
+	build	GOARM64=v8.0
+	build	vcs=git
+	build	vcs.revision=35dc0283adfe282e4925757dd3ba66eeb0a64afa
+	build	vcs.time=2026-11-16T14:00:48Z
+	build	vcs.modified=true

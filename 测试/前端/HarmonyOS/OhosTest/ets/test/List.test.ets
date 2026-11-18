@@ -6,8 +6,104 @@ import { SelfRules, SelfOperation } from '../../../../../../代码/前端/Harmon
 import { SelfText } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfText';
 import { ExportRules, ExportIntent } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportProtocol';
 import { ExportText } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportText';
+import { PasswordRules, PasswordIntent } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordChange';
+import { DeletionRules, DeletionIntent } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/Deletion';
+import { DeletionText } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionText';
+import { PasswordText } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordText';
+import { GroupRules, GroupIntent } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools';
+import { GroupText } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupText';
+import { MigrationNative } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationNative';
+import { MigrationRules } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol';
+import { MigrationText } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationText';
+import { ReceiptRules } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol';
+import { ReceiptText } from '../../../../../../代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptText';
 export default function testsuite(): void {
   describe('JobsIMIsolation', () => {
+    it('nativeMigrationEmptyOriginalHashIsARealObjectDigest', 0, async () => {
+      const codec=MigrationNative.codec();expect(await codec.hash(new Uint8Array(0))).assertEqual('e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855');
+      expect(codec.encode(new Uint8Array(0),false)).assertEqual('');expect(MigrationRules.decode('',64,true,codec).length).assertEqual(0);
+    });
+    it('nativeMigrationGcmUsesIndependentKnownCipherAndClearsKey', 0, async () => {
+      const key=new Uint8Array(32);const iv=new Uint8Array(12);for(let at=0;at<key.length;at++){key[at]=at;}for(let at=0;at<iv.length;at++){iv[at]=at;}
+      const codec=MigrationNative.codec();const encrypted=fixtureHex('2f67ba77aa5897f7ad632671d58c461ac6e0489643');const plain=await codec.decrypt(key,iv,codec.bytes('JobsIM fixture v1'),encrypted);
+      expect(codec.text(plain)).assertEqual('hello');expect(key.every((byte:number)=>byte===0)).assertTrue();plain.fill(0);
+    });
+    it('nativeMigrationGcmRejectsModifiedTagAndClearsKey', 0, async () => {
+      const key=new Uint8Array(32);const iv=new Uint8Array(12);for(let at=0;at<key.length;at++){key[at]=at;}for(let at=0;at<iv.length;at++){iv[at]=at;}
+      const codec=MigrationNative.codec();const encrypted=fixtureHex('2f67ba77aa5897f7ad632671d58c461ac6e0489643');encrypted[encrypted.length-1]^=1;let denied=false;
+      try{await codec.decrypt(key,iv,codec.bytes('JobsIM fixture v1'),encrypted);}catch(_){denied=true;}expect(denied).assertTrue();expect(key.every((byte:number)=>byte===0)).assertTrue();
+    });
+    it('nativeMigrationSlicesOriginalObjectWithoutReencodingCounters', 0, () => {
+      const body='{"text":"quoted } ]","contentVersion":"9007199254740993"}';const raw='{"format":"x","manifestDigest":"x","messages":['+body+'],"objects":[]}';
+      expect(MigrationRules.rawMessages(raw)[0]).assertEqual(body);let denied=false;try{MigrationRules.rawMessages(raw+'{}');}catch(_){denied=true;}expect(denied).assertTrue();
+    });
+    it('nativeReceiptGenerationAndManifestCannotBeSeparated', 0, () => {
+      let denied=false;try{ReceiptRules.pair(SyncJSON.parse('{"deliveryGeneration":"9007199254740993"}'));}catch(_){denied=true;}expect(denied).assertTrue();
+      expect(ReceiptRules.pair(SyncJSON.parse('{"deliveryGeneration":"9007199254740993","manifestDigest":"'+ 'a'.repeat(64)+'"}'))[0]).assertEqual('9007199254740993');
+    });
+    it('migrationAndReceiptControlsCoverTenLanguages', 0, () => {
+      for(const language of Strings.languages){for(const key of ['title','help','archive','original','unknown','local','connect']){expect(MigrationText.text(language,key)!==key).assertTrue();}for(const key of ['title','verify','automatic','automaticHelp','report','notComplete']){expect(ReceiptText.text(language,key)!==key).assertTrue();}}
+    });
+
+    it('groupControlsCoverTenLanguages', 0, () => {
+      for (const language of Strings.languages) { expect(GroupText.rows[language].length).assertEqual(GroupText.keys.length); expect(GroupText.rows[language].every((value: string) => value.length > 0)).assertTrue(); }
+    });
+    it('groupPublicResponsibilityRejectsInviteSecrets', 0, () => {
+      const row = groupFixture(); GroupRules.validate(row); row.body = row.body.slice(0,-1) + ',"token":"must-not-persist"}'; let denied = false;
+      try { GroupRules.validate(row); } catch (_) { denied = true; } expect(denied).assertTrue();
+    });
+    it('groupResponsibilityBindsExactOriginalRoute', 0, () => {
+      const row = groupFixture(); GroupRules.validate(row); row.lookup += '/other'; let denied = false;
+      try { GroupRules.validate(row); } catch (_) { denied = true; } expect(denied).assertTrue();
+    });
+    it('readOnlyGroupCannotExposeManagerControls', 0, () => {
+      expect(GroupRules.manager('{"role":"owner","readOnly":false}')).assertTrue();
+      expect(GroupRules.manager('{"role":"owner","readOnly":true}')).assertFalse();
+      expect(GroupRules.manager('{"role":"member","readOnly":false}')).assertFalse();
+    });
+    it('unknownCancellationNeedsPureQueryBeforeFurtherProof', 0, () => {
+      const row = deletionCancelFixture(); DeletionRules.validate(row); expect(DeletionRules.cancelReady(row)).assertFalse(); row.cancelState = 'prepared'; expect(DeletionRules.cancelReady(row)).assertTrue(); row.result = row.result.replace('"requestVersion":"1"','"requestVersion":"2"'); expect(DeletionRules.cancelReady(row)).assertFalse(); expect(DeletionRules.cancelFrozen(row)).assertTrue();
+    });
+    it('legacyCancellationCannotInferOriginalVersion', 0, () => {
+      const original = deletionCancelFixture(); const row: DeletionIntent = { meta: original.meta, attempts: original.attempts, state: original.state, result: original.result, cancelId: original.cancelId, cancelState: 'prepared' }; DeletionRules.validate(row); expect(DeletionRules.cancelReady(row)).assertFalse(); expect(DeletionRules.cancelFrozen(row)).assertTrue();
+    });
+    it('unknownResumeRetainsLastPublicPendingResult', 0, () => {
+      const source = deletionCancelFixture(); const row: DeletionIntent = { meta: source.meta, attempts: 1, state: 'unknown', result: source.result.replace('"status":"requested"','"status":"pending"'), cancelId: '', cancelState: '' }; DeletionRules.validate(row); expect(DeletionRules.blocked(row)).assertTrue();
+    });
+    it('deletionControlsCoverTenLanguagesAndNfcPassword', 0, () => {
+      for (const language of Strings.languages) { expect(DeletionText.rows[language].length).assertEqual(DeletionText.keys.length); expect(DeletionText.rows[language].every((value: string) => value.length > 0)).assertTrue(); }
+      expect(DeletionRules.password('cafe\u0301')).assertEqual('caf\u00e9');
+    });
+    it('deletionMetadataKeepsCancelledFamiliesPaused', 0, () => {
+      const row: DeletionIntent = { meta: passwordFixture(), attempts: 1, state: 'cancelled', result: '', cancelId: '', cancelState: '' }; DeletionRules.validate(row); expect(DeletionRules.blocked(row)).assertTrue();
+    });
+    it('deletionResultBindsOriginalIdentityAndVersion', 0, () => {
+      const row: DeletionIntent = { meta: passwordFixture(), attempts: 1, state: 'requested', result: '', cancelId: '', cancelState: '' };
+      const raw = '{"deletionId":"' + row.meta.id + '","requestId":"' + row.meta.id + '","restoreEpoch":"1","status":"requested","requestVersion":"1","cancelUntil":"2026-11-24T12:00:00Z","cancelRequestId":"","requiresNewLogin":true}';
+      row.result = raw; DeletionRules.validate(row); let denied = false; try { DeletionRules.result(raw.replace('"requestVersion":"1"','"requestVersion":1'), row); } catch (_) { denied = true; } expect(denied).assertTrue();
+    });
+    it('deletionAndPasswordPreparedDependencyErrorsRemainUnknown', 0, () => {
+      expect(DeletionRules.definiteRejection(403, 'DEPENDENCY_FORBIDDEN')).assertFalse(); expect(PasswordRules.definiteRejection(403, 'DEPENDENCY_FORBIDDEN')).assertFalse();
+      expect(DeletionRules.definiteRejection(403, 'DATA_RIGHTS_REJECTED')).assertTrue(); expect(PasswordRules.definiteRejection(403, 'PASSWORD_CHANGE_REJECTED')).assertTrue();
+    });
+
+    it('passwordProofUsesNfcAndNeverReusesTheCurrentPassword', 0, () => {
+      expect(PasswordRules.normalized('original-password', 'abcdefghijklmn' + 'e\u0301', 'abcdefghijklmn\u00e9', '').newPassword).assertEqual('abcdefghijklmn\u00e9');
+      let denied = false; try { PasswordRules.normalized('same-password-123', 'same-password-123', 'same-password-123', ''); } catch (_) { denied = true; } expect(denied).assertTrue();
+    });
+    it('passwordOriginalMetadataRejectsUnexpectedFieldsAndUnknownPausesBusiness', 0, () => {
+      const row = passwordFixture(); PasswordRules.validate(row); row.state = 'unknown'; row.attempts = 1; expect(PasswordRules.blocked(row)).assertTrue();
+      const value = JSON.parse(JSON.stringify(row)) as Record<string, Object>; value['password'] = 'forbidden'; let denied = false;
+      try { PasswordRules.validate(JSON.parse(JSON.stringify(value)) as PasswordIntent); } catch (_) { denied = true; } expect(denied).assertTrue();
+    });
+    it('passwordResultRequiresExactNonceEpochAndTextCounters', 0, () => {
+      const row = passwordFixture(); const raw = '{"requestId":"' + row.id + '","restoreEpoch":"1","status":"changed","credentialGeneration":"9007199254740993","securityVersion":"3","current":true,"requiresNewLogin":true}';
+      expect(PasswordRules.result(raw, row).credentialGeneration).assertEqual('9007199254740993'); let denied = false;
+      try { PasswordRules.result(raw.replace('"securityVersion":"3"', '"securityVersion":3'), row); } catch (_) { denied = true; } expect(denied).assertTrue();
+    });
+    it('passwordControlsExistInEveryNativeLanguage', 0, () => {
+      for (const language of Strings.languages) { expect(PasswordText.rows[language].length).assertEqual(PasswordText.keys.length); expect(PasswordText.rows[language].every((value: string) => value.length > 0)).assertTrue(); }
+    });
     it('formalExportTenLanguagesHaveNativeDeviceScope', 0, () => {
       for (const language of Strings.languages) { expect(ExportText.rows[language].length).assertEqual(ExportText.keys.length); expect(ExportText.rows[language].every((value: string) => value.length > 0)).assertTrue(); }
       expect(ExportText.text('en', 'exportLocalList').includes('device')).assertTrue();
@@ -271,6 +367,10 @@ export default function testsuite(): void {
 function mentionFixture(): Message {
   return { id: 'source', conversationId: 'g', senderId: 'peer', clientMsgId: 'original', type: 'text', text: 'fixture', createdAt: '2026-11-15T00:00:00Z', version: '1', sequence: '1', deleted: false, pinned: false, favorite: false, reactions: [] };
 }
+function passwordFixture(): PasswordIntent {
+  const id = '11111111-1111-4111-8111-111111111111';
+  return { id: id, profile: id, origin: 'https://fixture.invalid', deployment: id, epoch: '1', user: id, username: 'fixture_user', device: id, family: id, namespace: 'fixture', created: '2026-11-16T12:00:00Z', attempts: 0, state: 'unsent', result: '' };
+}
 
 function authConnection(): AuthConnection {
   return { base: 'https://instance.example.test', caPath: '', profile: '11111111-1111-4111-8111-111111111111', deployment: '22222222-2222-4222-8222-222222222222', epoch: '1' };
@@ -278,4 +378,17 @@ function authConnection(): AuthConnection {
 
 function authFixture(): AuthResult {
   return { token: 'fixture-access', refreshToken: 'fixture-refresh', familyId: '44444444-4444-4444-8444-444444444444', refreshGeneration: '1', deviceId: '66666666-6666-4666-8666-666666666666', user: { id: '33333333-3333-4333-8333-333333333333', username: 'alice', displayName: 'Alice' }, restoreEpoch: '1', sourceContextId: 'personal', accessExpiresAt: '2026-11-15T12:15:00Z', idleExpiresAt: '2026-12-15T12:00:00Z', absoluteExpiresAt: '2027-02-13T12:00:00Z' };
+}
+
+function groupFixture(): GroupIntent {
+  const id = '11111111-1111-4111-8111-111111111111'; const base = '/conversations/' + id + '/governance';
+  return { id: id, conversation: id, namespace: 'live|fixture', epoch: '1', kind: 'governance', method: 'POST', path: base, lookup: base + '/operations/' + id, body: '{"requestId":"' + id + '","action":"dissolve","version":"9007199254740993","membershipGeneration":"2","roleGeneration":"3"}', created: '2026-11-17T00:00:00Z', attempts: 0, state: 'unsent', result: '' };
+}
+
+function deletionCancelFixture(): DeletionIntent {
+  const meta = passwordFixture(); return { meta: meta, attempts: 1, state: 'requested', result: '{"deletionId":"' + meta.id + '","requestId":"' + meta.id + '","restoreEpoch":"1","status":"requested","requestVersion":"1","cancelUntil":"2026-11-24T12:00:00Z","cancelRequestId":"","requiresNewLogin":true}', cancelId: meta.id, cancelState: 'unknown', cancelVersion: '1' };
+}
+
+function fixtureHex(raw:string):Uint8Array {
+  const bytes=new Uint8Array(raw.length/2);for(let at=0;at<bytes.length;at++){bytes[at]=Number.parseInt(raw.slice(at*2,at*2+2),16);}return bytes;
 }

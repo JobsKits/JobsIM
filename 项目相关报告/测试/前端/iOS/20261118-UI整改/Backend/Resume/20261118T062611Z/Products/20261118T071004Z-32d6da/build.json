@@ -1,0 +1,81 @@
+{
+  "schema": "jobsim-backend-products-build-v1",
+  "status": "built-not-started",
+  "createdAt": "2026-11-18T07:10:11.554884+00:00",
+  "sourceManifest": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/build-inputs.sha256.json",
+  "sourceManifestSHA256": "6671fef04ee75c6602ad0b47cee3b9a1c755a877045182d6b31ddf5d530874dc",
+  "productionInputs": 142,
+  "sourceBeforeAfterEqual": true,
+  "beforeManifest": "source-before.json",
+  "afterManifest": "source-after.json",
+  "products": [
+    {
+      "name": "jobsimd",
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "-C",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/后端/Go",
+        "build",
+        "-p",
+        "1",
+        "-o",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/Products/20261118T071004Z-32d6da/jobsimd",
+        "./cmd/jobsimd"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 5.082,
+      "executed": false,
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/Products/20261118T071004Z-32d6da/jobsimd",
+      "bytes": 22719010,
+      "allocatedBytes": 22720512,
+      "sha256": "68ecf69cc980ccb3fcd0862d9b2a8b058ff90fbbde9aadb9d62e8836eb78d937",
+      "mode": "0o755",
+      "fileType": "Mach-O 64-bit executable arm64",
+      "buildInfoFile": "jobsimd.build-info.txt"
+    },
+    {
+      "name": "jobsimops",
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "-C",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/后端/Go",
+        "build",
+        "-p",
+        "1",
+        "-o",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/Products/20261118T071004Z-32d6da/jobsimops",
+        "./cmd/jobsimops"
+      ],
+      "exit": 0,
+      "elapsedSeconds": 1.524,
+      "executed": false,
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/Products/20261118T071004Z-32d6da/jobsimops",
+      "bytes": 17611426,
+      "allocatedBytes": 17612800,
+      "sha256": "51669dc9ee431c64430547973ba632c742a99cef689ce1b20ae3db4a8bded337",
+      "mode": "0o755",
+      "fileType": "Mach-O 64-bit executable arm64",
+      "buildInfoFile": "jobsimops.build-info.txt"
+    }
+  ],
+  "offline": true,
+  "cacheReused": true,
+  "sourceDataOrExistingProductsDeleted": false,
+  "newProgramsStarted": false,
+  "defaultInstanceTouched": false,
+  "pgStarted": false,
+  "noCommitOrPush": true,
+  "resources": {
+    "budgetBytes": 268435456,
+    "cachePositiveAllocatedGrowthBytes": 19206144,
+    "newProductsAndLogsAllocatedBytes": 40390656,
+    "peakObservedOwnAllocatedBytes": 40529920,
+    "peakObservedScratchAllocatedBytes": 19095552,
+    "conservativeBudgetBoundBytes": 59736064,
+    "measurementNote": "Positive Go-cache allocated growth plus peak observed new Products tree; conservative retained-size sum, with temporary allocation sampled each0.5s. Global free-space also reflects concurrent iOS work.",
+    "diskBeforeKiB": 15618272,
+    "diskMinimumObservedKiB": 15565304,
+    "diskAfterKiB": 15565420
+  },
+  "elapsedSeconds": 6.78
+}

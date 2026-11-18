@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-17T04:58:41.758Z",
+  "freeBytes": 1330647040,
+  "requiredFreeBytes": 4294967296,
+  "webOriginalOwnershipRules": {
+    "record": "项目相关报告/测试/前端/Web/20261117-注销本机清理/规则-1794888586629/结果.json",
+    "inputs": 4,
+    "changed": []
+  },
+  "androidSourceOnly": {
+    "record": "项目相关报告/实现进度/20261117-Android原生录音/并发整合待验源清单-20261117-125639.json",
+    "inputs": 23,
+    "changed": [
+      "项目相关报告/实现进度/20261117-Android原生录音/README.md"
+    ]
+  },
+  "webSyntax": {
+    "record": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/廉价语法-1794890800076/结果.json",
+    "inputs": 8,
+    "changed": []
+  },
+  "checkedLinks": 306,
+  "brokenLinks": [],
+  "webCurrentSyntaxScope": "8 .ts syntax only; imports/tsx/types/IDB excluded",
+  "repairCounterexample": "written and syntax checked; NOT browser executed",
+  "newHeavy": {
+    "typeCheck": false,
+    "browser": false,
+    "Gradle": false,
+    "devices": false,
+    "build": false
+  },
+  "currentDurableProductDelivered": false,
+  "wholePhaseIComplete": false,
+  "defaultInstance": "not modified or restarted by this task"
+}

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Users/jobs/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager",
+    "create",
+    "avd",
+    "--name",
+    "JobsIM_Regression_20261117_153544_d52437",
+    "--path",
+    "/Users/jobs/Library/Application Support/JobsIM/Regression/Android-20261117-153544-d52437/avds/JobsIM_Regression_20261117_153544_d52437.avd",
+    "--package",
+    "system-images;android-37.0;default;arm64-v8a",
+    "--device",
+    "pixel_7",
+    "--abi",
+    "arm64-v8a"
+  ],
+  "environment": {
+    "ANDROID_AVD_HOME": "/Users/jobs/Library/Application Support/JobsIM/Regression/Android-20261117-153544-d52437/avds"
+  },
+  "serial": "emulator-5580",
+  "noDownload": true,
+  "dataPartition": "6GiB",
+  "minimumHostFreeBytes": 4294967296
+}

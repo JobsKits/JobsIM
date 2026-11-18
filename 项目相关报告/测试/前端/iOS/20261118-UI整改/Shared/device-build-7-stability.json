@@ -1,0 +1,30 @@
+{
+  "device": "00008110-000625583EE3801E",
+  "bundleID": "com.jobs.im",
+  "elapsedSeconds": 60.284,
+  "samePID": true,
+  "pid": 90411,
+  "observations": [
+    {
+      "evidence": "device-build-7-process-initial.json",
+      "time": "2026-11-18T10:23:45.452Z",
+      "processes": [
+        {
+          "executable": "file:///private/var/containers/Bundle/Application/BA934C8A-7820-4BF2-96EE-0B7FF157ED7A/JobsIM.app/JobsIM",
+          "processIdentifier": 90411
+        }
+      ]
+    },
+    {
+      "evidence": "device-build-7-process-stable.json",
+      "time": "2026-11-18T10:24:45.736Z",
+      "processes": [
+        {
+          "executable": "file:///private/var/containers/Bundle/Application/BA934C8A-7820-4BF2-96EE-0B7FF157ED7A/JobsIM.app/JobsIM",
+          "processIdentifier": 90411
+        }
+      ]
+    }
+  ],
+  "limitations": "Only installation, normal launch and process presence observed; complete physical-device UI and background lifecycle not exercised."
+}

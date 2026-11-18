@@ -1,0 +1,78 @@
+Application, 0x10ece8b40, pid: 73754, label: 'JobsIM' <App element pid: 73754>
+  Window (Main), 0x10ece8c80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4394270720.4>
+    Other, 0x10ecea1c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4408086272.6>
+      Other, 0x10ece9e00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4408086912.8>
+    Other, 0x10ece9f40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4408084992.7>
+      Button, 0x10eceabc0, {{290.0, 642.0}, {100.0, 44.0}}, identifier: 'demo.environment', label: '演示环境' <AX element pid: 73754, elementOrHash.elementID: 4395205504.9>
+        StaticText, 0x10ecea080, {{316.0, 656.7}, {48.0, 14.3}}, label: '演示环境' <AX element pid: 73754, elementOrHash.elementID: 4404808192.11>
+    Other, 0x10ecea940, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4895858816.353>
+      Other, 0x10ecc5a40, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'QLPreviewControllerView' <AX element pid: 73754, elementOrHash.elementID: 4404087296.354>
+        Other, 0x10ed04000, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4404090368.355>
+          Other, 0x10ed04140, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4917098048.356>
+            Other, 0x10ed04280, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4404328960.358>
+              Other, 0x10ed043c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4919800512.360>
+                Other, 0x10ed04500, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4919465984.361>
+                  Other, 0x10ed04640, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4927008160.362>
+                    Other, 0x10ed048c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4404276224.363>
+                      Other, 0x10ed04a00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4919787968.364>
+                        Other, 0x10ed04b40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4404434432.365>
+                          Other, 0x10ed04c80, {{0.0, 0.0}, {804.0, 1748.0}} <AX element pid: 73754, elementOrHash.elementID: 4916200064.366>
+                            Other, 0x10ed04dc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 7540645217209606223.9999>
+                              Other, 0x10ed04f00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4448184320.6>
+                                Other, 0x10ed05040, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4448184960.7>
+                                  Other, 0x10ed05180, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4445060608.8>
+                                    Other, 0x10ed052c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4467967296.9>
+                                      Other, 0x10ed05400, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4467966400.10>
+                                        Other, 0x10ed05540, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4443242496.11>
+                                          Other, 0x10ed05680, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4399598240.12>
+                                            Other, 0x10ed057c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4467970432.13>
+                                              Other, 0x10ed05900, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4448371200.14>
+                                                ScrollView, 0x10ed05a40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4444602368.15>
+                                                  Other, 0x10ed05b80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4467969536.16>
+                                                    Other, 0x10ed05cc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4467973120.17>
+                                                      Other, 0x10ed05e00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4468024512.18>
+                                                        Other, 0x10ed05f40, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'QLMarkupImageItemViewControllerMarkupImageViewAccessibilityIdentifier' <AX element pid: 74475, elementOrHash.elementID: 4467975808.19>
+                                                          Other, 0x10ed07e80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4467974464.20>
+                                                            Other, 0x10ed07d40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4467974912.21>
+                                                              Other, 0x10ed06080, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4468017344.22>
+                                                                Other, 0x10ed07700, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4400873472.23>
+                                                                  ScrollView, 0x10ed075c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4444604928.24>
+                                                                    Other, 0x10ed07840, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'com.apple.pencilkit.tiledView' <AX element pid: 74475, elementOrHash.elementID: 4401308416.25>
+                                                                      Other, 0x10ed06d00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4448355328.33>
+                                                                      Other, 0x10ed07ac0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 74475, elementOrHash.elementID: 4448357888.34>
+                                                                    Other, 0x10ed07980, {{0.0, 236.0}, {402.0, 402.0}}, label: '图像画布' <AX element pid: 74475, elementOrHash.elementID: 4468020480.4>
+                                                                      Other, 0x10ed06580, {{0.0, 236.0}, {402.0, 402.0}}, identifier: 'com.apple.paper.imageCanvasElementView' <AX element pid: 74475, elementOrHash.elementID: 4401310976.35>
+                                                                        Other, 0x10ed07200, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4468020928.39>
+                                                                          Other, 0x10ed07340, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4448333312.44>
+                                                                            Other, 0x10ed07480, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4482922240.47>
+                                                                              Other, 0x10ed06bc0, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4448235520.49>
+                                                                                Image, 0x10ed070c0, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4480784640.51>
+                                                                              Other, 0x10ed06f80, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4482920320.50>
+                                                                        Other, 0x10ed06e40, {{0.0, 236.0}, {402.0, 402.0}}, identifier: 'com.apple.paper.canvasElementDrawingView' <AX element pid: 74475, elementOrHash.elementID: 4468334464.40>
+                                                                          Other, 0x10ed07c00, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4468032832.45>
+                                                                      Other, 0x10ed066c0, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4498233344.36>
+                                                                        Other, 0x10ed06a80, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4448224768.41>
+                                                                        Image, 0x10ed06800, {{0.0, 236.0}, {402.0, 402.0}}, label: '有主体可提取' <AX element pid: 74475, elementOrHash.elementID: 4498236416.42>
+                                                                        Other, 0x10ed06940, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4448225536.43>
+                                                                          Other, 0x10ed06300, {{12.0, 567.0}, {378.0, 59.0}} <AX element pid: 74475, elementOrHash.elementID: 4468027648.46>
+                                                                            Other, 0x10ed061c0, {{12.0, 567.0}, {378.0, 59.0}} <AX element pid: 74475, elementOrHash.elementID: 4448305664.48>
+                                                                    Other, 0x10ed06440, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4448359936.26>
+                                                                    Other, 0x10ed14000, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4448360448.27>
+                                                                    Other, 0x10ed14140, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4448359424.28>
+                                                                    Other, 0x10ed14280, {{0.0, 236.0}, {402.0, 402.0}}, identifier: 'com.apple.paper.canvasElementResizeView' <AX element pid: 74475, elementOrHash.elementID: 4468330880.29>
+                                                                    TextView, 0x10ed143c0, {{0.0, 236.0}, {402.0, 402.0}} <AX element pid: 74475, elementOrHash.elementID: 4402671616.30>
+                                                                    Other, 0x10ed14500, {{369.0, 62.0}, {30.0, 750.0}}, label: '垂直滚动条, 2页', value: 65% <AX element pid: 74475, elementOrHash.elementID: 4448309248.31>
+                                                                      Other, 0x10ed14640, {{396.0, 3.0}, {3.0, 868.0}} <AX element pid: 74475, elementOrHash.elementID: 4468029888.37>
+                                                                    Other, 0x10ed14780, {{62.0, 841.0}, {278.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 74475, elementOrHash.elementID: 4448308224.32>
+                                                                      Other, 0x10ed148c0, {{3.0, 868.0}, {396.0, 3.0}} <AX element pid: 74475, elementOrHash.elementID: 4468029440.38>
+                                                                    Other, 0x10ed14a00, {{369.0, 62.0}, {30.0, 750.0}}, label: '垂直滚动条, 2页', value: 65% <AX element pid: 74475, elementOrHash.elementID: 4448309248.31>
+                                                                      Other, 0x10ed14b40, {{396.0, 3.0}, {3.0, 868.0}} <AX element pid: 74475, elementOrHash.elementID: 4468029888.37>
+                                                                    Other, 0x10ed14c80, {{62.0, 841.0}, {278.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 74475, elementOrHash.elementID: 4448308224.32>
+                                                                      Other, 0x10ed14dc0, {{3.0, 868.0}, {396.0, 3.0}} <AX element pid: 74475, elementOrHash.elementID: 4468029440.38>
+          Toolbar, 0x10ed14f00, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: '工具栏' <AX element pid: 73754, elementOrHash.elementID: 4404099072.357>
+            Other, 0x10ed15040, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4895865216.359>
+  Window, 0x10ed15180, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4924774656.339>
+    Other, 0x10ed152c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4404091392.340>
+  Window, 0x10ed15400, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4394490112.108>
+    Other, 0x10ed15540, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4404504064.109>
+      Other, 0x10ed15680, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 73754, elementOrHash.elementID: 4404505088.110>

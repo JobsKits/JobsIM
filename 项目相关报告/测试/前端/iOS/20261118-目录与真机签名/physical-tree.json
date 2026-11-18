@@ -1,0 +1,862 @@
+{
+  "name": "JobsIM",
+  "type": "directory",
+  "children": [
+    {
+      "name": "App",
+      "type": "directory",
+      "children": [
+        {
+          "name": "AppDelegate",
+          "type": "directory",
+          "children": [
+            {
+              "name": "AppDelegate.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "SceneDelegate",
+          "type": "directory",
+          "children": [
+            {
+              "name": "SceneDelegate.swift",
+              "type": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Resource",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Assets.xcassets",
+          "type": "directory"
+        },
+        {
+          "name": "Info.plist",
+          "type": "file"
+        },
+        {
+          "name": "Simulator.entitlements",
+          "type": "file"
+        },
+        {
+          "name": "bo.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "de.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "en.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "es.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "fr.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "ja.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "ko.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "ru.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "zh-Hans.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "zh-Hant.lproj",
+          "type": "directory",
+          "children": [
+            {
+              "name": "Localizable.strings",
+              "type": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "type": "directory",
+      "children": [
+        {
+          "name": "IMAccountDeletionService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAccountDeletionFiles.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMAccountDeletionService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMAnnouncementService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAnnouncementService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMAuthCredentials",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAuthCoordinator.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMCredentialPair.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMAuthoritativeSync",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAuthoritativeSync.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMSyncProtocol.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMAvatarLoader",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAvatarLoader.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMAvatarService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAvatarService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMContactService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMContactService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMDataExportService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMDataExportArchive.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMDataExportProtocol.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMDataExportService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMForwardService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMForwardService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMGroupGovernanceService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMGroupGovernanceService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMHistoryExport",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMHistoryExport.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMKeychain",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMKeychain.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMMediaCache",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMMediaCache.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMMediaLoader",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMMediaLoader.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMMessageListService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMMessageListService.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMMessagePage.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMMigrationService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMMigrationJSON.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMMigrationProtocol.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMMigrationService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMNotifications",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMNotifications.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMPasswordChangeService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMPasswordChangeService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMPersonalStateService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMPersonalStateService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMReceiptService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMReceiptBuild.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMReceiptCoordinator.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMReceiptProtocol.swift",
+              "type": "file"
+            },
+            {
+              "name": "IMReceiptService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMReportService",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMReportService.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMSession",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMSession.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMStrings",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMStrings.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMSyncCoordinator",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMSyncCoordinator.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMTrustStore",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMTrustStore.swift",
+              "type": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "UI",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Factories",
+          "type": "directory",
+          "children": [
+            {
+              "name": "AVAudioRecorder",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "AVAudioRecorder+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "FileHandle",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "FileHandle+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "NSAttributedString",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "NSAttributedString+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "PHPickerConfiguration",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "PHPickerConfiguration+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "PHPickerViewController",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "PHPickerViewController+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UIActivityViewController",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UIActivityViewController+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UIAlertAction",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UIAlertAction+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UIAlertController",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UIAlertController+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UIColor",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UIColor+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UIContextMenuConfiguration",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UIContextMenuConfiguration+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UIDocumentPickerViewController",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UIDocumentPickerViewController+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UIImage",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UIImage+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UINavigationController",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UINavigationController+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UISegmentedControl",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UISegmentedControl+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UITabBarItem",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UITabBarItem+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UITableView",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UITableView+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UIView",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UIView+DSL.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UIWindow",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UIWindow+Make.swift",
+                  "type": "file"
+                }
+              ]
+            },
+            {
+              "name": "UNNotificationRequest",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "UNNotificationRequest+Make.swift",
+                  "type": "file"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IMAccountDeletionVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAccountDeletionVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMAuthVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAuthVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMAvatarVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAvatarVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMAvatarView",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMAvatarView.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMBaseVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMBaseVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMChatVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMChatVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMContactRequestsVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMContactRequestsVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMConversationCell",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMConversationCell.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMDataExportVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMDataExportVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMDevicesVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMDevicesVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMGroupGovernanceVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMGroupGovernanceVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMGroupVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMGroupVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMListVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMListVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMMessageCell",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMMessageCell.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMMigrationVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMMigrationVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMPasswordChangeVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMPasswordChangeVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMPersonalStateVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMPersonalStateVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMReceiptVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMReceiptVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMReportVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMReportVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMSettingsVC",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMSettingsVC.swift",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "IMUI",
+          "type": "directory",
+          "children": [
+            {
+              "name": "IMUI.swift",
+              "type": "file"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

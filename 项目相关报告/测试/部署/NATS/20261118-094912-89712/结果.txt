@@ -1,0 +1,4 @@
+exit=0
+privateState=/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/NATS-script.txSHWB
+NATSPort=53802
+roles=identity directory conversation message media control journal governance sync

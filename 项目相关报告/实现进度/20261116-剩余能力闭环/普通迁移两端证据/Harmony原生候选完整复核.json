@@ -1,0 +1,97 @@
+{
+  "checkedAt": "2026-11-17T06:38:34.285765+00:00",
+  "sourceRoot": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM",
+  "nativeBuilds": [
+    {
+      "mode": "default",
+      "exitCode": 0,
+      "inputCount": 69,
+      "currentSourceDifferences": [
+        "代码/前端/HarmonyOS/README.md"
+      ],
+      "stagedInputDifferences": [],
+      "artifacts": [
+        {
+          "file": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Harmony类型修复后-default/entry-default-unsigned.hap",
+          "sha256": "3fa942157ab087fd06a2fd2d21501470729cf6e4d48e5b74a784b213cc4610bf",
+          "bytes": 2630304,
+          "crcOK": true,
+          "abcEntries": [
+            "ets/modules.abc"
+          ],
+          "signed": false
+        }
+      ],
+      "warningLocations": 384,
+      "noSigningConfigWarning": true
+    },
+    {
+      "mode": "ohosTest",
+      "exitCode": 0,
+      "inputCount": 69,
+      "currentSourceDifferences": [
+        "代码/前端/HarmonyOS/README.md"
+      ],
+      "stagedInputDifferences": [],
+      "artifacts": [
+        {
+          "file": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Harmony类型修复后-ohosTest/entry-ohosTest-unsigned.hap",
+          "sha256": "8d842e892f466683244e3edb62617868a529c21bb7850374b225906e550f00c5",
+          "bytes": 1943753,
+          "crcOK": true,
+          "abcEntries": [
+            "ets/modules.abc"
+          ],
+          "signed": false
+        }
+      ],
+      "warningLocations": 47,
+      "noSigningConfigWarning": true
+    }
+  ],
+  "deviceExecuted": false,
+  "hypiumMethodsCompiled": 63,
+  "hypiumExecuted": 0,
+  "androidTargets": {
+    "command": [
+      "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+      "devices",
+      "-l"
+    ],
+    "exitCode": 0,
+    "stdout": "List of devices attached\n\n",
+    "stderr": "",
+    "newDeviceCreated": false
+  },
+  "harmonyTargets": {
+    "command": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk/default/openharmony/toolchains/hdc",
+      "list",
+      "targets"
+    ],
+    "exitCode": 0,
+    "stdout": "[Empty]\n",
+    "stderr": "",
+    "newDeviceCreated": false
+  },
+  "oldDistInventory": [
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-ohosTest-unsigned.hap",
+      "sha256": "d8c72d9fe4d18955ef93c9f12fb18797636668b7a3c54e5297e8bfc7d0d678bb",
+      "bytes": 1500789,
+      "mtimeNs": 1794817266006632837
+    },
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-default-unsigned.hap",
+      "sha256": "3db7f8c87b3ede705228ea0363ccd38d24af03de9877c744134312b2de9e9384",
+      "bytes": 1252390,
+      "mtimeNs": 1794817259352935077
+    }
+  ],
+  "distWritePerformed": false,
+  "hypiumNamesInABC": {
+    "sourceNames": 63,
+    "matched": 63,
+    "missing": []
+  }
+}

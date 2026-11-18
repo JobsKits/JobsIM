@@ -1,0 +1,11 @@
+本轮工具检查与诊断：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-deploy-session.L9VV9Q
+依赖检查｜准备本轮官方稳定版本解析器；不会修改源码或全局工具。
+工具版本｜go｜当前 1.27.4｜官方稳定目标 1.27.4
+采用工具｜go 1.27.4｜/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go
+工具版本｜fzf｜当前 0.75.0｜官方稳定目标 0.75.0
+采用工具｜fzf 0.75.0｜/opt/homebrew/bin/fzf
+go version go1.27.4 darwin/arm64
+pg_ctl (PostgreSQL) 18.7 (Postgres.app)
+OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+nats-server: v2.15.3
+官方资产来源与稳定版本不匹配。

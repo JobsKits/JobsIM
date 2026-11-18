@@ -1,0 +1,6 @@
+{
+  "file": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/修前-活动原单messageId.ts",
+  "sha256": "4c32c8374cbe957cf5d401f959bcf36a5d9b6ab7f240c3fbb9fc99c27176f7bd",
+  "replacedModule": "only the frozen current GlobalMessages import of AttachmentSendProtocol; Actions and Store remain current",
+  "dependencies": "current frozen Src imports; actual IndexedDB"
+}

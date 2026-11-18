@@ -1,0 +1,46 @@
+{
+  "label": "receipt-fixtures-fixed",
+  "exit": 0,
+  "elapsedSeconds": 6.023,
+  "diskBeforeKiB": 16210756,
+  "diskAfterKiB": 16192064,
+  "diskMinimumKiB": 16207392,
+  "topLevel": {
+    "pass": [
+      "TestObjectReceiptProofIsPurposeAndByteBound",
+      "TestReceiptProofBindsExactContentStoreAndRestoreEpoch"
+    ],
+    "fail": [],
+    "skip": []
+  },
+  "packageResults": [
+    {
+      "Time": "2026-11-18T14:48:25.205832+08:00",
+      "Action": "pass",
+      "Package": "jobsim/backend",
+      "Elapsed": 0.414
+    }
+  ],
+  "stdout": "receipt-fixtures-fixed.stdout.jsonl",
+  "stderr": "receipt-fixtures-fixed.stderr.log",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "-C",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/后端/Go",
+    "test",
+    "-overlay",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/overlay.json",
+    "-p",
+    "1",
+    "-parallel",
+    "1",
+    "-count",
+    "1",
+    "-timeout",
+    "12m",
+    "-json",
+    "-run",
+    "^(TestObjectReceiptProofIsPurposeAndByteBound|TestReceiptProofBindsExactContentStoreAndRestoreEpoch)$",
+    "."
+  ]
+}

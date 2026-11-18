@@ -1,0 +1,19 @@
+{
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Android/VoiceUpload/20261117-112821-bc3d7406",
+  "command": [
+    "/Users/jobs/.gradle/wrapper/dists/gradle-9.5.0-bin/bvnork1r7n8i6kp5cnkibsc9q/gradle-9.5.0/bin/gradle",
+    "--offline",
+    "--no-daemon",
+    "--max-workers=1",
+    "-Dorg.gradle.jvmargs=-Xmx2g -Dfile.encoding=UTF-8",
+    "-Pkotlin.compiler.execution.strategy=in-process",
+    ":app:testDebugUnitTest",
+    ":app:assembleDebug",
+    ":app:assembleDebugAndroidTest"
+  ],
+  "JAVA_HOME": "/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home",
+  "ANDROID_HOME": "/Users/jobs/Library/Android/sdk",
+  "maxSeconds": 900,
+  "diskGateBytes": 4294967296,
+  "deviceInventory": "adb devices -l: empty; no emulator/device started or installed"
+}

@@ -1,0 +1,49 @@
+{
+  "verifiedAt": "2026-11-16T17:32:59.179394+00:00",
+  "pgTopLevelPass": [
+    "TestAccountDeletionPGRevokesFamiliesAndOriginalLookupNeverCreates",
+    "TestAccountDeletionPGPurposeProofAndCancelPreserveIndependentDenials",
+    "TestAccountDeletionPGCancelUnknownWaitsForJournalResult",
+    "TestAccountDeletionPGZeroCooldownCleansOwnerDataAndCannotCancel",
+    "TestAccountDeletionPGRecoveryCodeIsOneUseAndPurposeCannotAuthorizeChat",
+    "TestAccountDeletionPGSafetyCancelIntentCannotReopenAndCompletedCannotResurrect",
+    "TestAccountDeletionPGExpiredAndOldEpochProofCannotMutate",
+    "TestAccountDeletionPGInitialJournalUnknownKeepsOriginalAndWorkerResumes",
+    "TestAccountDeletionPGMultipleOwnerPagesAndRestoredMediaStayErased"
+  ],
+  "pgFail": 0,
+  "pgSkip": 0,
+  "rpcTransport": "in-process production handlers",
+  "journalTopology": "same isolated PostgreSQL, separate schema; not independent cluster",
+  "sourceSnapshotTiming": "post-test current owned sources; mtime checked against test start",
+  "inputs": {
+    "代码/后端/Go/account_deletion.go": {
+      "sha256": "9bdc4fb2985207791b80b25b31784042f5ca3b23c1036da95824eea03e7f3f1a",
+      "mtimeBeforeTestStart": true
+    },
+    "代码/后端/Go/account_deletion_proof.go": {
+      "sha256": "7e70d52f239ca05a9527d4dbdc666efdc580d9e90076d7fa13e75543571ff272",
+      "mtimeBeforeTestStart": false
+    },
+    "代码/后端/Go/account_deletion_owner.go": {
+      "sha256": "0d2a2679f39599398bb4b06fbbf9d786da06b757aea90afcd401da1ba856ffb4",
+      "mtimeBeforeTestStart": true
+    },
+    "代码/后端/Go/account_deletion_safety.go": {
+      "sha256": "f64675a5790ec9d691fabef7a7adc67b6f42a2abc4dc85a863fb0275ae8536ec",
+      "mtimeBeforeTestStart": true
+    },
+    "代码/后端/Go/account_deletion_governance.go": {
+      "sha256": "294bc575f02587731ac06fe1e8766ad72276a18865bc12c10bf5961ea8944956",
+      "mtimeBeforeTestStart": true
+    },
+    "代码/后端/Go/account_deletion_identity.go": {
+      "sha256": "3013d63fe54e551a48517560c1d732f75504af0234d96f5d78823a31fb8d1d40",
+      "mtimeBeforeTestStart": true
+    },
+    "测试/后端/接口/account_deletion_pg_test.go": {
+      "sha256": "135602e845bff7daef7bf22da78365f243a4906d04965905a63068efd3c5fece",
+      "mtimeBeforeTestStart": true
+    }
+  }
+}

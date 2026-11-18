@@ -1,0 +1,4 @@
+JobsIM鸿蒙原生测试：check只检查；build/test-build在ASCII快照构建HAP；emulator/device需要镜像配套SDK与对应开发签名，安装测试HAP并运行Hypium。Ctrl+C取消。
+6.24.2
+SDK=/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools/sdk
+退出码=0；日志=/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-check

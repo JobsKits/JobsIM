@@ -1,0 +1,4 @@
+将清理原点中本实例新建的程序、业务数据库和运行资料：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-反部署 空格.gpQqNN/0-11/实例
+保留：独立JournalDatabase、Application/instance.json、Secrets、TLS、归属审计、共享工具链、源码、外置备份和恢复钥。
+数据方式：clear；未知、复用或并发变化对象均保留并报告未完成。
+按回车执行以上清理；输入任意文字或输入结束取消：

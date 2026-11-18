@@ -25,6 +25,15 @@ func main() {
 }
 func run() error {
 	exports := flag.Bool("experimental-exports", false, "Controlled export protocol validation only; not full I data export")
+	cooldownDefault := 7
+	if text := os.Getenv("JOBS_IM_ACCOUNT_DELETION_COOLDOWN_DAYS"); text != "" {
+		value, err := strconv.Atoi(text)
+		if err != nil || value < 0 || value > 30 {
+			return fmt.Errorf("JOBS_IM_ACCOUNT_DELETION_COOLDOWN_DAYS must be an integer 0..30")
+		}
+		cooldownDefault = value
+	}
+	deletionCooldown := flag.Int("account-deletion-cooldown-days", cooldownDefault, "Account erasure cooldown in days, 0..30; original request deadline never changes")
 	receiptPolicy := flag.String("receipt-policy-file", os.Getenv("JOBS_IM_RECEIPT_POLICY_FILE"), "Deployment-approved exact native builds and storage verification digests; empty keeps every store transport-only")
 	webDir := flag.String("web-dir", os.Getenv("JOBS_IM_WEB_DIR"), "Same-origin built Web distribution directory")
 	role := flag.String("service", "all", "gateway|identity|directory|conversation|message|media|control|journal|governance|sync|all")
@@ -60,7 +69,7 @@ func run() error {
 	if e != nil {
 		return e
 	}
-	cfg, e := jobsim.PrepareConfig(jobsim.Config{ReceiptProfiles: profiles, ExperimentalExports: *exports, JournalDatabaseURL: os.Getenv("JOBS_IM_JOURNAL_DATABASE_URL"), WebDir: *webDir, DatabaseURL: os.Getenv("JOBS_IM_DATABASE_URL"), StateDir: *state, Name: os.Getenv("JOBS_IM_NAME"), PublicURL: public, InsecureLoopback: *insecure, RoleURLs: urls})
+	cfg, e := jobsim.PrepareConfig(jobsim.Config{AccountDeletionCooldownDays: deletionCooldown, ReceiptProfiles: profiles, ExperimentalExports: *exports, JournalDatabaseURL: os.Getenv("JOBS_IM_JOURNAL_DATABASE_URL"), WebDir: *webDir, DatabaseURL: os.Getenv("JOBS_IM_DATABASE_URL"), StateDir: *state, Name: os.Getenv("JOBS_IM_NAME"), PublicURL: public, InsecureLoopback: *insecure, RoleURLs: urls})
 	if e != nil {
 		return e
 	}
@@ -129,6 +138,12 @@ func run() error {
 	}
 	for _, app := range apps {
 		app.StartSyncWorkers(ctx)
+		app.StartReceiptDeliveryWorkers(ctx)
+		app.StartRetentionWorkers(ctx)
+		app.StartMediaRetentionWorkers(ctx)
+		app.StartAccountDeletionWorkers(ctx)
+		app.StartMigrationWorkers(ctx)
+		app.StartMigrationOwnerWorkers(ctx)
 		app.StartPersonalExportOwnerWorkers(ctx)
 		if app.Role == "sync" {
 			app.StartSelfDraftWorkers(ctx)

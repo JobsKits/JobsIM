@@ -1,0 +1,10 @@
+10:39:36 AM [vite] (client) [Unhandled error] InvalidStateError: Failed to execute 'abort' on 'IDBTransaction': The transaction has finished.
+ > read.onsuccess Src/MigrationStore.ts:49:42
+    47 |          rows.forEach(row => validateMigrationIntent(row, context)); value = operation(rows, store); rows.forEach(row ...
+    48 |          if (!context.isCurrent()) migrationFailure("MIGRATION_CONTEXT_CHANGED"); store.put(rows, key);
+    49 |        } catch (error) { cause = error; tx.abort(); }
+       |                                            ^
+    50 |      };
+    51 |      tx.oncomplete = () => context.isCurrent() ? resolve(value!) : reject(Error("MIGRATION_CONTEXT_CHANGED")); tx.oner...
+
+{"directory":"/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/Web普通迁移/02-新增反例","passed":30}

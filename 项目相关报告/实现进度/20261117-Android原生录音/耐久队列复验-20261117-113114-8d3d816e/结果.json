@@ -1,0 +1,21 @@
+{
+  "exitCode": 143,
+  "stopReason": "disk_below_4GiB",
+  "seconds": 67.725,
+  "minimumFreeBytes": 4251209728,
+  "diskSamples": 68,
+  "inputCount": 142,
+  "inputUnchanged": true,
+  "currentSourceDifferences": [],
+  "results": [],
+  "totals": {
+    "tests": 0,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "artifacts": {},
+  "deviceTests": "not executed; adb inventory empty",
+  "report": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/耐久队列复验-20261117-113114-8d3d816e",
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Android/VoiceUpload/20261117-113114-8d3d816e"
+}

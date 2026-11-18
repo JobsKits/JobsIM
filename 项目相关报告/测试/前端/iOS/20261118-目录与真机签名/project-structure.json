@@ -1,0 +1,75 @@
+{
+  "objectVersion": "77",
+  "group": [
+    {
+      "uuid": "3FB4A8B0216F067801050990",
+      "path": "JobsIM",
+      "exceptions": [
+        [
+          "JobsIM",
+          [
+            "Resource/Info.plist",
+            "Resource/Simulator.entitlements"
+          ]
+        ]
+      ]
+    }
+  ],
+  "explicitAppSourceCount": 0,
+  "explicitAppResourceCount": 0,
+  "targetUUIDsPreserved": true,
+  "podsAndTestPhasesPreserved": true,
+  "testReferencesPreserved": true,
+  "baseConfigsPreserved": true,
+  "signing": [
+    [
+      "JobsIM",
+      "Release",
+      "YES",
+      null,
+      "Automatic",
+      "K5692KLW75"
+    ],
+    [
+      "JobsIM",
+      "Debug",
+      "YES",
+      null,
+      "Automatic",
+      "K5692KLW75"
+    ],
+    [
+      "JobsIMTests",
+      "Release",
+      "YES",
+      null,
+      "Automatic",
+      "K5692KLW75"
+    ],
+    [
+      "JobsIMTests",
+      "Debug",
+      "YES",
+      null,
+      "Automatic",
+      "K5692KLW75"
+    ],
+    [
+      "JobsIMUITests",
+      "Release",
+      "YES",
+      null,
+      "Automatic",
+      "K5692KLW75"
+    ],
+    [
+      "JobsIMUITests",
+      "Debug",
+      "YES",
+      null,
+      "Automatic",
+      "K5692KLW75"
+    ]
+  ],
+  "idempotent": true
+}

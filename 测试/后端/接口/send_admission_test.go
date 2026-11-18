@@ -329,7 +329,15 @@ func TestSendAdmissionWithIndependentRoleDatabases(t *testing.T) {
 		servers = append(servers, server)
 		urls[role] = server.URL
 	}
-	public := httptest.NewTLSServer((&App{Config: cfg, Role: "gateway"}).Handler())
+	// Use production initialization so the gateway and role proofs bind the same
+	// canonical StateDir, including on hosts whose temporary directory is a link.
+	gateway, e := NewApp(ctx, cfg, "gateway")
+	if e != nil {
+		t.Fatal("isolated gateway initialization failed")
+	}
+	apps = append(apps, gateway)
+	public := httptest.NewTLSServer(gateway.Handler())
+	public.Client().Timeout = 15 * time.Second
 	servers = append(servers, public)
 	request := func(method, path string, body any, token string, status int) map[string]any {
 		b, _ := json.Marshal(body)

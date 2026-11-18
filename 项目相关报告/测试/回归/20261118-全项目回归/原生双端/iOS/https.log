@@ -1,0 +1,29 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun "/Users/jobs/Library/Application Support/JobsIM/Regression/20261118-iOS-HTTPS-Products/HTTPSPassword.xctestrun" -destination "platform=iOS Simulator,id=736D4534-6DBF-42A9-97A9-8DABFC208987" -parallel-testing-enabled NO -maximum-concurrent-test-simulator-destinations 1 -resultBundlePath /Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/原生双端/iOS/https.xcresult
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/原生双端/iOS/https.xcresult
+
+2026-11-18 06:48:34.543870+0800 JobsIM[7222:304707] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-18 06:48:34.543975+0800 JobsIM[7222:304707] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+Test Suite 'Selected tests' started at 2026-11-18 06:48:34.730.
+Test Suite 'JobsIMTests.xctest' started at 2026-11-18 06:48:34.731.
+Test Suite 'IMAuthCoordinatorTests' started at 2026-11-18 06:48:34.731.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily]' passed (0.863 seconds).
+Test Suite 'IMAuthCoordinatorTests' passed at 2026-11-18 06:48:35.594.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.863 (0.864) seconds
+Test Suite 'JobsIMTests.xctest' passed at 2026-11-18 06:48:35.594.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.863 (0.864) seconds
+Test Suite 'Selected tests' passed at 2026-11-18 06:48:35.595.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.863 (0.865) seconds
+2026-11-18 06:48:35.876 xcodebuild[7202:304368] [MT] IDETestOperationsObserverDebug: 2.657 elapsed -- Testing started completed.
+2026-11-18 06:48:35.876 xcodebuild[7202:304368] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-18 06:48:35.876 xcodebuild[7202:304368] [MT] IDETestOperationsObserverDebug: 2.657 sec, +2.657 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/原生双端/iOS/https.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

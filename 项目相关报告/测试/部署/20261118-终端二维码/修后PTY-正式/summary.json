@@ -1,0 +1,194 @@
+{
+  "source": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "d136a5d1dc2993b9bca0b63790f1393b4c49675f84e55e702a2e8cfe9ec9bf68",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "131b5528c22e985f745a998a97b87d3b699e9862979c525283cde3af3a909d6a",
+    "部署/公共组件/地址二维码/main.go": "08bd2252846bba0e94da82789d520265bc149b319d81ae3d21b3ce65669c509f",
+    "部署/公共组件/地址二维码/go.mod": "d5e0aa717a0ca7ae4fe288ca03687110a0988152cc88052aa05d656396219107",
+    "部署/公共组件/地址二维码/go.sum": "7221a09241e81ea6133d0bb49d1dd62b7a9e205272525ec9f21d4e7c20464df4"
+  },
+  "scope": "QR-only; no Go application, PG, NATS, tunnels or user instance",
+  "cases": [
+    {
+      "script": 0,
+      "name": "80列",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": false,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 0,
+      "name": "窄32列",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 32,
+      "glyphs": false,
+      "localPNGPreviewRequested": true,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 0,
+      "name": "矮12行",
+      "status": "passed",
+      "ttyRows": 12,
+      "ttyColumns": 80,
+      "glyphs": false,
+      "localPNGPreviewRequested": true,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 0,
+      "name": "NO_COLOR空值",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": true,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 0,
+      "name": "TERM-dumb",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": true,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 0,
+      "name": "双地址",
+      "status": "passed",
+      "ttyRows": 36,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": false,
+      "pngDecodedURL": "https://fixture.trycloudflare.com/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 0,
+      "name": "扫码停留与回车菜单",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": false,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": true
+    },
+    {
+      "script": 0,
+      "name": "非TTY",
+      "status": "passed",
+      "noBlockingInput": true,
+      "noANSIOrGUI": true
+    },
+    {
+      "script": 1,
+      "name": "80列",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": false,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 1,
+      "name": "窄32列",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 32,
+      "glyphs": false,
+      "localPNGPreviewRequested": true,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 1,
+      "name": "矮12行",
+      "status": "passed",
+      "ttyRows": 12,
+      "ttyColumns": 80,
+      "glyphs": false,
+      "localPNGPreviewRequested": true,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 1,
+      "name": "NO_COLOR空值",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": true,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 1,
+      "name": "TERM-dumb",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": true,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 1,
+      "name": "双地址",
+      "status": "passed",
+      "ttyRows": 36,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": false,
+      "pngDecodedURL": "https://fixture.trycloudflare.com/",
+      "menuNotShownBeforeEnter": false
+    },
+    {
+      "script": 1,
+      "name": "扫码停留与回车菜单",
+      "status": "passed",
+      "ttyRows": 30,
+      "ttyColumns": 80,
+      "glyphs": true,
+      "localPNGPreviewRequested": false,
+      "pngDecodedURL": "https://127.0.0.1:19443/",
+      "menuNotShownBeforeEnter": true
+    },
+    {
+      "script": 1,
+      "name": "非TTY",
+      "status": "passed",
+      "noBlockingInput": true,
+      "noANSIOrGUI": true
+    }
+  ],
+  "nativePreview": {
+    "requestedOwnPNG": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/部署/20261118-终端二维码/修后PTY-正式/0-窄32列/AccessQR/01.png",
+    "decodedURL": "https://127.0.0.1:19443/",
+    "requestExit": 0
+  },
+  "after": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "d136a5d1dc2993b9bca0b63790f1393b4c49675f84e55e702a2e8cfe9ec9bf68",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "131b5528c22e985f745a998a97b87d3b699e9862979c525283cde3af3a909d6a",
+    "部署/公共组件/地址二维码/main.go": "08bd2252846bba0e94da82789d520265bc149b319d81ae3d21b3ce65669c509f",
+    "部署/公共组件/地址二维码/go.mod": "d5e0aa717a0ca7ae4fe288ca03687110a0988152cc88052aa05d656396219107",
+    "部署/公共组件/地址二维码/go.sum": "7221a09241e81ea6133d0bb49d1dd62b7a9e205272525ec9f21d4e7c20464df4"
+  },
+  "status": "passed",
+  "pass": 16
+}

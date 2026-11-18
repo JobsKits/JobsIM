@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-18T16:43:15.847560+08:00",
+  "changes": [
+    "DemoService等待阶段userID/token/family围栏",
+    "Remember默认关闭、Keychain绑定profile/UID/username和completed精准注销",
+    "新隔离单元配置工具README精确TOC登记"
+  ],
+  "tocDocumentsVerified": 269,
+  "acceptanceIDsScopeStateUnchanged": 243,
+  "newToolLinksChecked": 0,
+  "runtimeBoundary": "Mac独立实例ready和公开描述由主流程确认，iOS新包集成仍待验；新增5个记住密码方法尚未计通过",
+  "noSourceChanges": true
+}

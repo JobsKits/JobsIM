@@ -1,0 +1,126 @@
+{
+  "at": "2026-11-18T03:33:07.140Z",
+  "status": "passed",
+  "commands": [
+    {
+      "name": "sync",
+      "executable": "/usr/bin/time",
+      "args": [
+        "-l",
+        "/opt/homebrew/bin/codegraph",
+        "sync",
+        "."
+      ],
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "status-strict",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "status",
+        "--json",
+        "--strict",
+        "."
+      ],
+      "exitCode": 0,
+      "signal": null
+    }
+  ],
+  "changesSinceFullRebuild": [],
+  "semanticInputsUnchanged": true,
+  "sourceStable": true,
+  "sourceInputs": 775,
+  "sourceDigest": "49b8768f29e2cb504ce827c7390b75b88fe60e506d7e4dc3ca405c13e8b99427",
+  "indexStatus": {
+    "initialized": true,
+    "version": "1.6.3",
+    "projectPath": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM",
+    "indexPath": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/.codegraph",
+    "lastIndexed": "2026-11-18T03:28:54.581Z",
+    "fileCount": 720,
+    "nodeCount": 17464,
+    "edgeCount": 62550,
+    "dbSizeBytes": 92360704,
+    "walSizeBytes": 0,
+    "backend": "node-sqlite",
+    "journalMode": "wal",
+    "nodesByKind": {
+      "class": 429,
+      "constant": 944,
+      "enum": 29,
+      "enum_member": 31,
+      "field": 931,
+      "file": 718,
+      "function": 2540,
+      "import": 4629,
+      "interface": 132,
+      "method": 4074,
+      "namespace": 111,
+      "property": 1759,
+      "route": 6,
+      "struct": 323,
+      "type_alias": 152,
+      "variable": 656
+    },
+    "languages": [
+      "arkts",
+      "go",
+      "javascript",
+      "kotlin",
+      "properties",
+      "python",
+      "ruby",
+      "swift",
+      "tsx",
+      "typescript",
+      "xml"
+    ],
+    "filesByLanguage": {
+      "arkts": 46,
+      "go": 243,
+      "javascript": 63,
+      "kotlin": 114,
+      "properties": 2,
+      "python": 51,
+      "ruby": 3,
+      "swift": 118,
+      "tsx": 22,
+      "typescript": 57,
+      "xml": 1
+    },
+    "parsedFilesByLanguage": {
+      "arkts": 46,
+      "go": 243,
+      "javascript": 63,
+      "kotlin": 111,
+      "python": 51,
+      "ruby": 3,
+      "swift": 118,
+      "tsx": 22,
+      "typescript": 57
+    },
+    "unparsedLanguages": [],
+    "pendingChanges": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "worktreeMismatch": null,
+    "rebuildInProgress": false,
+    "index": {
+      "builtWithVersion": "1.6.3",
+      "builtWithExtractionVersion": 28,
+      "currentExtractionVersion": 28,
+      "reindexRecommended": false,
+      "frameworksChangedSinceIndex": null,
+      "state": "complete",
+      "pendingRefs": 0,
+      "filesNeedingReindex": 0,
+      "filesWithParseErrors": 0
+    }
+  },
+  "hooksReinstalled": false,
+  "sourceManifest": "最终Shell增量同步/源码-之后.json",
+  "scope": "The last QR freeze notification arrived after the full rebuild captured its final bytes. All eight Linux Shell sources match the final QR SHA record; this follow-up sync had zero input changes. Supported semantic inputs and the eight real queries remain current."
+}

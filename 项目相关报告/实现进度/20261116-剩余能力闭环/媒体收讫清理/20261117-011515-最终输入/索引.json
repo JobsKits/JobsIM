@@ -1,0 +1,162 @@
+{
+  "inputs": [
+    {
+      "path": "代码/后端/Go/media.go",
+      "sha256": "e54de71c9e5ed5ac7debdd4db919352d825753b2877f07e4a51f8d885befb6ea",
+      "bytes": 6469
+    },
+    {
+      "path": "代码/后端/Go/media_receipts.go",
+      "sha256": "4a43d28cc86b10bb158ebf1c9f1561f74c8452a37f431f542db7b90dfef3628b",
+      "bytes": 3007
+    },
+    {
+      "path": "代码/后端/Go/media_export.go",
+      "sha256": "ea16bed40b67df43ec028f49ab9cc688cc755f424fb3dbd5f5bba9de4efda14d",
+      "bytes": 6924
+    },
+    {
+      "path": "代码/后端/Go/forward_media.go",
+      "sha256": "823b4ac2c5a4aad054253ceddef675ffeaaa6ab014e96fe4f49fe66bb747f529",
+      "bytes": 9127
+    },
+    {
+      "path": "代码/后端/Go/media_retention.go",
+      "sha256": "a6065a397a551433d5d44b4c8b0255e769523b32b63a58f43ba58c45ac75282c",
+      "bytes": 20304
+    },
+    {
+      "path": "代码/后端/Go/media_legacy_erasure.go",
+      "sha256": "6c0ea10ed87eb8933de0b25f453684cd67178249e58b61a43b335c7535308703",
+      "bytes": 5372
+    },
+    {
+      "path": "代码/后端/Go/retention_policy.go",
+      "sha256": "9be3bddcda420a868092dd5162068f4b999d49186027283cc80f397d5346e4a0",
+      "bytes": 26752
+    },
+    {
+      "path": "代码/后端/Go/retention_legacy.go",
+      "sha256": "972eb4f55301a384fff4dda50f25b4eaf76a9f6d99a48fe1c28507e91ff5eb50",
+      "bytes": 2898
+    },
+    {
+      "path": "代码/后端/Go/retention_access.go",
+      "sha256": "b6c82cfc5c60f1f2be9ff000487db6fd03da9aba201ce9518e0355c45a53bff8",
+      "bytes": 3506
+    },
+    {
+      "path": "代码/后端/Go/retention_clock.go",
+      "sha256": "97a445deab46141dfdf0249894d251bf50ff153f9ae03b8b6e8e74de2e0f5a1b",
+      "bytes": 2028
+    },
+    {
+      "path": "代码/后端/Go/receipt_delivery.go",
+      "sha256": "dbaf56b3f6487d58a49049c1b86f5dddb799dc39b7019f8b9d51b3fd8a76cc4c",
+      "bytes": 19648
+    },
+    {
+      "path": "代码/后端/Go/sync_object_receipts.go",
+      "sha256": "3eb3de1d435760052c97cd9d9cac35398fe13e1aba8e9ebb855249f7161b0dce",
+      "bytes": 17992
+    },
+    {
+      "path": "代码/后端/Go/journal.go",
+      "sha256": "8d96a80e2612a5e9f02080dab95415f3068fe03d6ae9a80c3ad3e750f3598da8",
+      "bytes": 12045
+    },
+    {
+      "path": "代码/后端/Go/operations.go",
+      "sha256": "e2f37f45b98f5e377bc158e0bbf49a08e0141ab42913c2bee643c1e91ed25626",
+      "bytes": 26407
+    },
+    {
+      "path": "代码/后端/Go/cmd/jobsimd/main.go",
+      "sha256": "e2cf0313026c114f7477fcafb4596d7912063e561a35e5cd4e7db008a6252d5e",
+      "bytes": 5862
+    },
+    {
+      "path": "代码/后端/Go/go.mod",
+      "sha256": "ec36829e562534c65761f66950e6b48529d55e52aa682e59552e1cc734d7fb4a",
+      "bytes": 564
+    },
+    {
+      "path": "代码/后端/Go/go.sum",
+      "sha256": "9d454b55d6bcff8a6be33c58dac9c225621a8c2ebc3211e52820cdb0199e047a",
+      "bytes": 3299
+    },
+    {
+      "path": "测试/后端/接口/media_retention_pg_test.go",
+      "sha256": "6982fdaf69de7bd4de1021f547d79e2c2604dd615dd29752ad03413f017b5a17",
+      "bytes": 20367
+    },
+    {
+      "path": "测试/后端/接口/sync_object_receipts_test.go",
+      "sha256": "650ec5f610c6bcbb4b3d5868a81ffcb2852bcae284bf3379f9f5eefa292a0232",
+      "bytes": 18753
+    },
+    {
+      "path": "测试/后端/接口/retention_pg_test.go",
+      "sha256": "e6bf1e742430fd9c48636622be4cce24eb8e2a0d76a11655da5204b30a232455",
+      "bytes": 26512
+    },
+    {
+      "path": "测试/后端/运行测试.py",
+      "sha256": "30161deee771c3935f4f91ab16544b573d1169bebf60fa96eb87f1fb1b7e1a48",
+      "bytes": 1614
+    }
+  ],
+  "sourceFrozenAt": "2026-11-17 01:15:15 +0800",
+  "pgLog": "项目相关报告/实现进度/20261116-剩余能力闭环/收讫清理证据/最终联合专项真实PG.jsonl",
+  "pgLogSHA256": "61e67fc80f0783f871d139cef662d4e7844894c994ae054468acbe3356fce33b",
+  "mediaChecks": [
+    {
+      "test": "TestMediaRetentionIndependentModesRejectImplicitDelay",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionStableTimestampAndStreamingDeadline",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGCloudOnlyExactDeviceResumeAndRange",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGDescriptorRequiresOriginalPhysicalTuple",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGDeadlineNeverExtendsAndJournalFailurePreservesBytes",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGArchivesBlockUnlinkUntilExactCancellation",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGObjectReceiptZeroAndSiblingIsolation",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGReplayKeepsOldSnapshotClosed",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGCleanupWaitsForLiveProjectionAndRefusesSymlink",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGLegacyRequiresExplicitOwnerWhitelist",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGClockAlarmSurvivesRestartAndPreservesBytes",
+      "action": "pass"
+    },
+    {
+      "test": "TestMediaRetentionPGLegacyGlobalErasureNeedsConfirmedSourceEvent",
+      "action": "pass"
+    }
+  ]
+}

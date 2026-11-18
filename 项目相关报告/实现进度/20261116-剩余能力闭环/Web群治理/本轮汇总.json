@@ -1,0 +1,30 @@
+{
+  "steps": [
+    {
+      "label": "04-最终浏览器",
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/group-governance.cjs/group-governance.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 2.02,
+      "minimumFreeBytes": 5751857152,
+      "reason": null
+    },
+    {
+      "label": "05-构建",
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/Web/node_modules/vite/bin/vite.js",
+        "build",
+        "--outDir",
+        "/Users/jobs/Library/Application Support/JobsIM/Build/Web/GroupGovernance/1794874112975-22930/Production"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.01,
+      "minimumFreeBytes": 5752446976,
+      "reason": null
+    }
+  ],
+  "buildDirectory": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/GroupGovernance/1794874112975-22930/Production"
+}

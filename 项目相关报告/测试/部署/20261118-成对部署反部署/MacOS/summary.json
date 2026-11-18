@@ -1,0 +1,211 @@
+{
+  "format": "JobsIM-MacOS-paired-deployment-verification-v1",
+  "time": "2026-11-18T02:20:09.471855+00:00",
+  "status": "passed-with-explicit-scope",
+  "scope": "MacOS native paired deployment/undeployment; real isolated server and local-only paths; final H5 production asset binding",
+  "currentSource": {
+    "deployment": {
+      "path": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "sha256": "09a7537be9b83240f7e26e3bba577cea99926d9a22d419963f51fb0f77cc679a"
+    },
+    "undeployment": {
+      "path": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "sha256": "88d3409151b2f68d35627317a2df1905d9ebd1dfbdc496d8ca7a8a76fe6b03e4"
+    },
+    "implementationsIdenticalExceptDefaultAction": true,
+    "manifest": "当前Mac源码SHA256.json",
+    "buildInputs": "最终H5静态增量/summary.json",
+    "buildInputCount": 232,
+    "finalH5CSSSHA256": "972a706c44ab376d40591542b914928e88ffa3523d7e535f8c1dd93c63616927"
+  },
+  "evidenceComposition": {
+    "fullIntegrationSourceIsPreserved": true,
+    "fullIntegrationToFinalChanges": [
+      {
+        "path": "代码/前端/Web/Src/styles.css",
+        "testedSHA256": "ed11b57af6b679e84955b4dba719bfcb2d40e4af9a1ee1683345b6c5c2caca4f",
+        "finalSHA256": "972a706c44ab376d40591542b914928e88ffa3523d7e535f8c1dd93c63616927"
+      },
+      {
+        "path": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+        "testedSHA256": "1f37b06919add4e87d83aa020d774250becf644699a623242c799fe77dccc6be",
+        "finalSHA256": "09a7537be9b83240f7e26e3bba577cea99926d9a22d419963f51fb0f77cc679a"
+      },
+      {
+        "path": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+        "testedSHA256": "afac444af942b8796c0ebd7848f3da5a1c9759d08782dc2a8c42f570ae9f3303",
+        "finalSHA256": "88d3409151b2f68d35627317a2df1905d9ebd1dfbdc496d8ca7a8a76fe6b03e4"
+      }
+    ],
+    "productionScriptChanges": "Only three display strings: private-default mode/header, no invented admin webpage, startup description. No lifecycle/control-flow change after fixed-source full integration.",
+    "scriptCopyDiff": "最终文案差异.diff",
+    "finalDisplayAndSafetyRecheck": "安全夹具-1794966695960/summary.json",
+    "finalWebDelta": "最终H5静态增量/summary.json",
+    "finalWebBuildInputStable": true,
+    "oldWebDistDoesNotProveFinalH5": true
+  },
+  "verified": [
+    {
+      "name": "real-server-native-deploy-backup-undeploy",
+      "report": "原生集成-d24d23cbd9f54ff6926450c8ed4ae927/summary.json",
+      "status": "passed-partial-protected-retained",
+      "details": "Actual PTY/fzf server selection, explicit SAN TLS/URL, two physical PG18 clusters, seven main domain DBs plus independent journal, authenticated NATS/JetStream, Go+Web build, strict HTTPS two-account chat, encrypted backup/decrypt listing requires broker manifest and all eight dumps, backup selected by default, separate final enter confirmation, controlled business cleanup, protected journal/instance-key/Secrets/TLS/external recovery retained.",
+      "buildInputCount": 232,
+      "buildInputsStable": true,
+      "contractSmokeExit": 0,
+      "actualUndeploymentChildExit": 0,
+      "exitCodeMeaning": "Actual /bin/zsh undeployment process status returned by os.waitpid/os.waitstatus_to_exitcode in wait_pty; not the Python wrapper status. MacOS returns0 when the selected cleanup succeeds, while the business result remains partial-protected-retained because protected journal/identity/keys remain. Exit2 is reserved for verification/ownership/failure rejection; no partial=2 claim."
+    },
+    {
+      "name": "real-local-private-start-stop",
+      "report": "原生集成-30b83fdf26ae47c1a65f199f59e394ca/summary.json",
+      "status": "passed-local-private-stop",
+      "details": "Actual outer local and default private fzf path, no cloudflared or tunnel process, strict local TLS two-account smoke, compatible maintenance stop --yes --no-backup, all data/identity/keys retained.",
+      "contractSmokeExit": 0,
+      "stopExit": 0
+    },
+    {
+      "name": "filesystem-and-injected-safety",
+      "report": "安全夹具-1794966695960/summary.json",
+      "pass": 50,
+      "fail": 0,
+      "skip": 0,
+      "casesPerImplementation": 25,
+      "details": "Real isolated files: ownership/ledger, created/reused/protected resources, journal and instance identity, symlink/unknown/inode/content/new-child protection, interrupted resume, reference matching, nonempty/EOF confirmation cancellation, backup/broker-manifest/dump failure retention; conditional prepare_clusters identity failure returns42; host4GiB guard; injected Quick prep/start/late exit restores strict loopback and preserves local service. Public network is not exercised."
+    },
+    {
+      "name": "portable-native-gates",
+      "report": "最终搬迁门禁/结果.json",
+      "pass": 16,
+      "fail": 0,
+      "details": "MacOS gates and all target script syntax recorded separately; no Linux runtime claim. Final script display-only delta covered by final syntax and selector assertion."
+    },
+    {
+      "name": "real-isolated-NATS-protocol",
+      "log": "最终NATS专项.log",
+      "report": "../../NATS/20261118-094912-89712/结果.txt",
+      "exit": 0,
+      "details": "Missing/wrong token rejected, authenticated persistent file publication and broker restart readback, drift/foreign PID preserved, scoped sleep terminated."
+    },
+    {
+      "name": "final-current-H5-real-Go-HTTPS-assets",
+      "report": "最终H5静态增量/summary.json",
+      "status": "passed",
+      "details": "Reused only own stopped local fixture; npm production build (TypeScript+Vite), original backend binary and every Go input match full local test, strict CA/SAN health and same deploymentId/bootstrap, homepage plus JS/CSS bytes equal current Dist and new persistent runtime, no account/backup/undeploy business replay.",
+      "servedAssets": [
+        {
+          "route": "/assets/index-Dlf9ADqw.js",
+          "sha256": "f572aefddb9263a2b056f3b52eca2ddedef0ae7a7aa44666266888797e86533e",
+          "bytes": 840290,
+          "runtimeAndCurrentDistBytesMatch": true
+        },
+        {
+          "route": "/assets/index-C3ICObUd.css",
+          "sha256": "c0573b74be429118f8572e3728e81bb564b57b264c96942789688e21f4bb5f55",
+          "bytes": 34739,
+          "runtimeAndCurrentDistBytesMatch": true
+        }
+      ],
+      "controllerExit": 0,
+      "buildInputsStable": true
+    }
+  ],
+  "undeploymentResult": {
+    "status": "partial-protected-retained",
+    "protected": [
+      "JournalDatabase",
+      "Application/instance.json and Application directory",
+      "Secrets",
+      "TLS",
+      "external existing backups/offline sets and matching recovery keys",
+      "ownership/origin/undeploy audit"
+    ],
+    "clearDoesNotAuthorizeJournalOrMatchingKeyDestruction": true,
+    "wholeMachineRestoredClaimed": false,
+    "oldUnknownWithoutLedger": "preserve and report incomplete",
+    "noWholeStateRecursiveDelete": true,
+    "actualSuccessfulCleanupScriptExit": 0,
+    "protectedPartialIsBusinessOutcome": true
+  },
+  "resourceBudget": {
+    "hostReserveBytes": 4294967296,
+    "measuredFinalBuildAvailableBytes": 14470201344,
+    "extraDownloadLimit": "actual remaining host allowance; archive decompressed bytes checked before extraction",
+    "backupExtraBytes": "twice measured physical selected subtree bytes; actual full-run budget logged",
+    "cacheCleaningPerformed": false,
+    "minimumRAMOrMachineSupportMeasured": false
+  },
+  "closure": {
+    "report": "最终进程端口收尾.json",
+    "allOwnControllersGoPGNATSTunnelsFzfStopped": true,
+    "checkedUniquePorts": 46,
+    "allOwnPortsReleased": true,
+    "knownPrivateFixtures": 10,
+    "userDefaultInstanceTouched": false,
+    "defaultReferenceSHA256BeforeAndAfter": "17bf63fd75e64996495767349776954afc01533e28cf7aaa4463373ef751cee8",
+    "defaultReferenceUnchanged": true,
+    "defaultStateBoundary": "All mutation entry arguments used listed explicit private fixture state; final H5 delta additionally verifies default instance.ref before/after SHA. Existing default instance was neither started, stopped, cleaned nor used for smoke tests. No whole-default-state before snapshot exists, so no byte-for-byte unchanged claim is made.",
+    "privateTestDataAndExternalBackupsRetained": true
+  },
+  "preservedRejectedEvidence": {
+    "report": "原生集成-45414c65212c482581f154275b43e709/后续审计.json",
+    "originalSummaryUnmodified": true,
+    "reason": "Original green exit did not prove complete backup: broker manifest failed under a conditional caller. Audit excludes it; explicit command propagation and required decrypted entries subsequently covered by red/green fixtures and real fixed-source integration.",
+    "otherFailedAttempts": "All 原生集成-* original logs/summaries remain in place; only fixed successful runs cited above establish current behavior."
+  },
+  "unverified": [
+    "Real public Quick access and externally reachable production server/reverse proxy/firewall",
+    "End-user GUI Terminal close or hard SIGKILL/OS crash/power loss recovery",
+    "Cold-machine download/bootstrap installation across all native dependencies",
+    "Database restore/disaster recovery, cross-machine recovery, rollback, media completeness after restore",
+    "Production strong-protection/RPO0 and measured minimum memory/hardware",
+    "iOS/Android/desktop import of new Quick system-trust descriptor; these are separate platform scope"
+  ],
+  "nonBlockingBuildWarnings": [
+    "Vite bundle exceeds500kB advisory",
+    "lucide-react module-level use-client bundler advisory"
+  ],
+  "evidenceIntegrity": [
+    {
+      "path": "原生集成-d24d23cbd9f54ff6926450c8ed4ae927/summary.json",
+      "sha256": "516f4296605a5b8f10f87378d04136839223d0ec0aab969515909d0dae6bd059"
+    },
+    {
+      "path": "原生集成-30b83fdf26ae47c1a65f199f59e394ca/summary.json",
+      "sha256": "40f3557b5ba6e7e1c450c728a00f9bf5baac473a9b881624f7db817154049c78"
+    },
+    {
+      "path": "安全夹具-1794966695960/summary.json",
+      "sha256": "58fa61644e4d51daf7b88eae3e887dcc919e3bdf5fae9fdc1324810e6338a0de"
+    },
+    {
+      "path": "最终H5静态增量/summary.json",
+      "sha256": "58e8d91001f3f9c7f32769b12215c80a5b2efd9d17697600a56878c3b88f1ec2"
+    },
+    {
+      "path": "最终搬迁门禁/结果.json",
+      "sha256": "ac73e8086b81bcdae7c7ca0996df39b8626811eed2852f3f6f0e7b1162d39be0"
+    },
+    {
+      "path": "最终NATS专项.log",
+      "sha256": "1c5cffe1b3c82e0c2830cb98ee56501b92168c1cf273edae9bf9a15bcad8b458"
+    },
+    {
+      "path": "原生集成-45414c65212c482581f154275b43e709/后续审计.json",
+      "sha256": "a1eea6c15f7671f19370694546a76656d2afe622d83ba6dfc1e07be33b49cadf"
+    },
+    {
+      "path": "最终进程端口收尾.json",
+      "sha256": "47ba526bad63a73975d334c982876937da1394334a4f4310ec32a92e8f176c56"
+    },
+    {
+      "path": "最终文案差异.diff",
+      "sha256": "570269cdadd7c19b9e554d014f49013bc5b005f3c98038643a797694551d9c35"
+    },
+    {
+      "path": "当前Mac源码SHA256.json",
+      "sha256": "b3d9f4dc964e8fa051cf667d64550c78d551f2711999c8061a3d8f299d8c1c22"
+    }
+  ],
+  "noCommitOrPush": true
+}

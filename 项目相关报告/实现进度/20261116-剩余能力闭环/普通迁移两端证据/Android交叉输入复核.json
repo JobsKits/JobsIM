@@ -1,0 +1,36 @@
+{
+  "inputCount": 145,
+  "currentSourceDifferences": [
+    "代码/前端/Android/README.md",
+    "代码/前端/Android/代码地图/README.md"
+  ],
+  "actualJvm": {
+    "suites": 9,
+    "passed": 46,
+    "failed": 0,
+    "skipped": 0,
+    "migrationMethods": [
+      "allMigrationLanguagesHaveEveryEntry",
+      "base64RequiresCanonicalWireEncoding",
+      "duplicateRootOrTrailingDataIsRejected",
+      "hashUsesOriginalBytes",
+      "invalidUtf8AndOversizedDecodeFailClosed",
+      "originalJsonSlicesPreserveEscapedBracesAndNestedArrays"
+    ]
+  },
+  "instrumentation": "98 compiled only; no device execution",
+  "artifacts": {
+    "app-debug.apk": {
+      "path": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/app-debug.apk",
+      "sha256": "c035189d580f806c8e9bb89bc05d4d596ba822f87c346feeb145124401b18ffb",
+      "matchesDeclared": true,
+      "crcOK": true
+    },
+    "app-debug-androidTest.apk": {
+      "path": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/app-debug-androidTest.apk",
+      "sha256": "841c540cbc254693d2063e040f973db555ed71fb253cb178ab598cbc2b7fcdb2",
+      "matchesDeclared": true,
+      "crcOK": true
+    }
+  }
+}

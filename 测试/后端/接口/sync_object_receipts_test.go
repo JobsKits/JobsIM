@@ -47,8 +47,7 @@ func TestObjectReceiptProofIsPurposeAndByteBound(t *testing.T) {
 	}
 	_, err = app.decodeObjectReceiptProof(token, now.Add(time.Hour))
 	receiptTestError(t, err, "RECEIPT_PROOF_EXPIRED")
-	other := *app
-	other.Config.DeploymentID = newID()
+	other := &App{Config: Config{DeploymentID: newID(), Key: app.Config.Key}}
 	if _, err = other.decodeObjectReceiptProof(token, now); err == nil {
 		t.Fatal("another deployment accepted the object proof")
 	}
@@ -76,10 +75,13 @@ type objectReceiptOwnerFixture struct {
 }
 
 func (f *objectReceiptOwnerFixture) RoundTrip(request *http.Request) (*http.Response, error) {
-	if request.URL.Path != "/internal/receipts/object" && request.URL.Path != "/internal/attachment-confirm" {
+	if request.URL.Path != "/internal/receipts/object" && request.URL.Path != "/internal/attachment-confirm" && request.URL.Path != "/internal/retention/receipt-source" {
 		return f.base.RoundTrip(request)
 	}
 	var value any = f.object
+	if request.URL.Path == "/internal/retention/receipt-source" {
+		value = f.base.message
+	}
 	if request.URL.Path == "/internal/receipts/object" && f.observed != nil {
 		select {
 		case f.observed <- struct{}{}:
@@ -236,24 +238,11 @@ func TestObjectReceiptPGSQLiteApprovalNeedsNewQualificationAndParent(t *testing.
 }
 
 func TestObjectReceiptPGMediaChecksRealOriginalFile(t *testing.T) {
-	app, fixture, _, _, _ := newObjectReceiptPGApp(t)
-	app.Role = "media"
-	if _, err := app.DB.Exec(t.Context(), `CREATE SCHEMA media; CREATE TABLE media.objects(id uuid PRIMARY KEY,message_id uuid,purpose text,storage_key text,size_bytes bigint,sha256 bytea,content_type text)`); err != nil {
-		t.Fatal("owned media metadata fixture unavailable")
-	}
-	data := []byte("data")
-	if os.MkdirAll(filepath.Join(app.Config.StateDir, "Media"), 0700) != nil {
-		t.Fatal("owned media directory unavailable")
-	}
-	path := filepath.Join(app.Config.StateDir, "Media", fixture.object.ID)
-	if os.WriteFile(path, data, 0600) != nil {
-		t.Fatal("owned original media fixture unavailable")
-	}
-	if _, err := app.DB.Exec(t.Context(), `INSERT INTO media.objects VALUES($1,$2,'chat_attachment',$4,4,decode($3,'hex'),'application/octet-stream')`, fixture.object.ID, fixture.base.message.ID, fixture.object.Digest, fixture.object.ID); err != nil {
-		t.Fatal("owned original media fixture metadata unavailable")
-	}
+	_, app, fixture, data := newMediaRetentionPG(t)
+	expected := receiptObject{ID: fixture.plan.Object, Size: str(int64(len(data))), Digest: syncDigest(data), ContentType: "text/plain"}
+	path := filepath.Join(app.Config.StateDir, "Media", fixture.plan.Object)
 	call := func(caller string) (*httptest.ResponseRecorder, error) {
-		raw, _ := json.Marshal(map[string]string{"userId": fixture.base.user.ID, "messageId": fixture.base.message.ID, "objectId": fixture.object.ID})
+		raw, _ := json.Marshal(map[string]string{"userId": fixture.user.ID, "deviceId": fixture.user.DeviceID, "storeGeneration": fixture.store, "restoreEpoch": fixture.user.RestoreEpoch, "contentVersion": fixture.plan.Content, "messageId": fixture.plan.Message, "objectId": fixture.plan.Object})
 		r := httptest.NewRequest("POST", "/internal/receipts/object", bytes.NewReader(raw))
 		r.Header.Set("X-JobsIM-Caller", caller)
 		r.Header.Set("X-JobsIM-Projection-Fence-Mode", "shared")
@@ -263,12 +252,12 @@ func TestObjectReceiptPGMediaChecksRealOriginalFile(t *testing.T) {
 	}
 	w, err := call("sync")
 	var descriptor receiptObject
-	if err != nil || json.Unmarshal(w.Body.Bytes(), &descriptor) != nil || descriptor != fixture.object {
+	if err != nil || json.Unmarshal(w.Body.Bytes(), &descriptor) != nil || descriptor != expected {
 		t.Fatal("real original file descriptor differs from verified bytes")
 	}
 	_, err = call("message")
 	receiptTestError(t, err, "RECEIPT_OWNER_REQUIRED")
-	if os.WriteFile(path, []byte("EDIT"), 0600) != nil {
+	if os.WriteFile(path, bytes.Repeat([]byte("!"), len(data)), 0600) != nil {
 		t.Fatal("same-size corruption fixture unavailable")
 	}
 	w, err = call("sync")
@@ -368,17 +357,7 @@ func (w *objectReceiptBlockedWriter) Write(raw []byte) (int, error) {
 }
 
 func TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite(t *testing.T) {
-	app, fixture, _, _, _ := newObjectReceiptPGApp(t)
-	app.Role = "media"
-	if _, err := app.DB.Exec(t.Context(), `CREATE SCHEMA media; CREATE TABLE media.objects(id uuid PRIMARY KEY,owner_id uuid,name text,content_type text,storage_key text,message_id uuid,purpose text,size_bytes bigint,sha256 bytea)`); err != nil {
-		t.Fatal("owned download metadata fixture unavailable")
-	}
-	if _, err := app.DB.Exec(t.Context(), `INSERT INTO media.objects VALUES($1,$2,'original.bin','application/octet-stream',$3,$4,'chat_attachment',4,decode($5,'hex'))`, fixture.object.ID, fixture.base.user.ID, fixture.object.ID, fixture.base.message.ID, fixture.object.Digest); err != nil {
-		t.Fatal("owned bound download metadata unavailable")
-	}
-	if os.MkdirAll(filepath.Join(app.Config.StateDir, "Media"), 0700) != nil || os.WriteFile(filepath.Join(app.Config.StateDir, "Media", fixture.object.ID), []byte("data"), 0600) != nil {
-		t.Fatal("owned bound download bytes unavailable")
-	}
+	_, app, fixture, data := newMediaRetentionPG(t)
 	w := &objectReceiptBlockedWriter{ResponseRecorder: httptest.NewRecorder(), entered: make(chan struct{}), release: make(chan struct{})}
 	var release sync.Once
 	unblock := func() { release.Do(func() { close(w.release) }) }
@@ -386,10 +365,13 @@ func TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite(t *testing.T) {
 	finished := make(chan struct{})
 	go func() {
 		defer close(finished)
-		app.Handler().ServeHTTP(w, httptest.NewRequest("GET", "/api/media/"+fixture.object.ID, nil))
+		app.Handler().ServeHTTP(w, httptest.NewRequest("GET", "/api/media/"+fixture.plan.Object, nil))
 	}()
 	select {
 	case <-w.entered:
+		if w.Header().Get("Content-Type") != "text/plain" {
+			t.Fatal("fixture reached an error response instead of original media bytes")
+		}
 	case <-finished:
 		t.Fatal("production media handler did not reach original object bytes")
 	case <-time.After(3 * time.Second):
@@ -411,7 +393,7 @@ func TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite(t *testing.T) {
 	case <-time.After(3 * time.Second):
 		t.Fatal("production media response failed to drain")
 	}
-	if w.Code != 200 || w.Body.String() != "data" {
+	if w.Code != 200 || !bytes.Equal(w.Body.Bytes(), data) {
 		t.Fatal("production media response did not preserve original complete bytes")
 	}
 	ctx, stop = context.WithTimeout(t.Context(), time.Second)

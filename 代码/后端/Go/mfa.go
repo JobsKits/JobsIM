@@ -162,7 +162,7 @@ func (a *App) mfaRoutes(h func(string, func(http.ResponseWriter, *http.Request) 
 		if e = decode(r, &q); e != nil {
 			return e
 		}
-		actions := map[string]bool{"capability.update": true, "account.state": true, "report.resolve": true, "account.reset_grant": true}
+		actions := map[string]bool{"capability.update": true, "account.state": true, "report.resolve": true, "account.reset_grant": true, "group.recover": true}
 		if !actions[q.Action] || q.TargetID == "" || len(q.RequestID) < 8 || len(q.RequestID) > 128 {
 			return fail(400, "INVALID_STEP_UP_TARGET", "Known action, target and stable requestId required")
 		}

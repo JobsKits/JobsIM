@@ -1,0 +1,15 @@
+管理入口：https://127.0.0.1:53397（管理写入口尚未交付，不生成假后台URL）
+deploymentId：cad1c1c9-52ed-41b6-a55a-a45b801e95f4
+CA SHA256：67:03:A3:9F:67:0B:BE:D3:41:9E:57:20:70:3A:3C:DD:AE:CE:75:CF:D1:48:97:C4:36:A2:DB:18:B1:7C:4C:17
+公开连接描述：/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/Paired/30b83fdf26ae47c1a65f199f59e394ca/State/connection.json
+Web须按系统/浏览器受控信任本CA或另用公信HTTPS；未信任时阻断，不能绕过证书警告。脚本不自动安装全局CA。
+离线二维码由本项目锁定的本地编码器生成；见本轮扫码页。
+关闭此运行终端，服务将结束
+
+仅本机，手机不可用
+https://127.0.0.1:53397/
+终端未显示方块码，请打开下方本地二维码页面。
+
+本地二维码页面（浏览器打开）：
+/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-deploy-session.nz57Hy/AccessQR/index.html
+服务退出；已将PG收尾交给持锁的本实例控制事务。

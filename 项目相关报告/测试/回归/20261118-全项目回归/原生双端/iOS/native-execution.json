@@ -1,0 +1,76 @@
+{
+  "exitCode": 0,
+  "seconds": 17.06,
+  "stopReason": "completed",
+  "resourceSamples": [
+    {
+      "seconds": 0.0,
+      "freeBytes": 22402519040
+    },
+    {
+      "seconds": 1.0,
+      "freeBytes": 22405492736
+    },
+    {
+      "seconds": 2.0,
+      "freeBytes": 22365646848
+    },
+    {
+      "seconds": 3.0,
+      "freeBytes": 22307561472
+    },
+    {
+      "seconds": 4.0,
+      "freeBytes": 22305484800
+    },
+    {
+      "seconds": 5.0,
+      "freeBytes": 22283608064
+    },
+    {
+      "seconds": 6.0,
+      "freeBytes": 22267572224
+    },
+    {
+      "seconds": 7.0,
+      "freeBytes": 22268936192
+    },
+    {
+      "seconds": 8.0,
+      "freeBytes": 22265683968
+    },
+    {
+      "seconds": 9.0,
+      "freeBytes": 22166310912
+    },
+    {
+      "seconds": 10.0,
+      "freeBytes": 22156394496
+    },
+    {
+      "seconds": 11.0,
+      "freeBytes": 22153854976
+    },
+    {
+      "seconds": 12.0,
+      "freeBytes": 22101835776
+    },
+    {
+      "seconds": 13.0,
+      "freeBytes": 22079455232
+    },
+    {
+      "seconds": 14.0,
+      "freeBytes": 22061051904
+    },
+    {
+      "seconds": 15.1,
+      "freeBytes": 22001729536
+    },
+    {
+      "seconds": 16.1,
+      "freeBytes": 22039482368
+    }
+  ],
+  "artifactMismatches": []
+}

@@ -54,6 +54,16 @@ class SyncGuardApi(
         return result
     }
 
+    override suspend fun migration(path:String,method:String,data:JSONObject?,store:String,current:()->Boolean):JSONObject {
+        val stamp=before(path);val result=try{delegate.migration(path,method,data,store,current)}catch(error:Exception){after(stamp);throw error};after(stamp);return result
+    }
+    override suspend fun receipt(path:String,method:String,data:JSONObject?,store:String,current:()->Boolean):JSONObject {
+        val stamp=before(path);val result=try{delegate.receipt(path,method,data,store,current)}catch(error:Exception){after(stamp);throw error};after(stamp);return result
+    }
+    override suspend fun migrationBytes(path:String,store:String,limit:Int,current:()->Boolean):ByteArray {
+        val stamp=before(path);val result=try{delegate.migrationBytes(path,store,limit,current)}catch(error:Exception){after(stamp);throw error};try{after(stamp);return result}catch(error:Exception){result.fill(0);throw error}
+    }
+
     override suspend fun upload(name: String, mime: String, bytes: ByteArray, path: String, fields: Map<String, String>): JSONObject {
         val stamp = before(path)
         val result = try { delegate.upload(name, mime, bytes, path, fields) } catch (error: Exception) { after(stamp); throw error }

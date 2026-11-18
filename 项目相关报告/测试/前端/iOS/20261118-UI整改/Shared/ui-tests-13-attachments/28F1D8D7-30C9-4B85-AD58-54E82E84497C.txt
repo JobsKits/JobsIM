@@ -1,0 +1,5 @@
+Query chain:
+ →Find: Target Application 'com.jobs.im'
+  ↪︎Find: Descendants matching type Button
+    ↪︎Find: Elements matching predicate 'label IN {"完成", "Done", "关闭", "Close"}'
+      ↪︎Find: First Match

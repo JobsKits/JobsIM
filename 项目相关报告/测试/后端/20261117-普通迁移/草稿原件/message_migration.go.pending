@@ -1,0 +1,38 @@
+package jobsim
+
+import (
+ "net/http"
+ "os"
+ "path/filepath"
+ "time"
+ "encoding/hex"
+
+ "github.com/jackc/pgx/v5"
+)
+
+type migrationSourceRequest struct{Message string `json:"messageId"`;User string `json:"userId"`;Device string `json:"deviceId"`;Store string `json:"storeGeneration"`;Epoch string `json:"restoreEpoch"`}
+func(a *App)migrationSourceRoutes(h func(string,func(http.ResponseWriter,*http.Request)error),internal func(func(http.ResponseWriter,*http.Request)error)func(http.ResponseWriter,*http.Request)error){if a.Role=="message"{h("POST /internal/migrations/source",internal(a.messageMigrationSource))};if a.Role=="media"{h("POST /internal/migrations/object",internal(a.mediaMigrationObject))}}
+func(a *App)messageMigrationSource(w http.ResponseWriter,r *http.Request)error{
+ caller:=r.Header.Get("X-JobsIM-Caller");if caller!="sync"&&caller!="media"{return fail(403,"MIGRATION_OWNER_REQUIRED","Private migration source protocol required")};var q migrationSourceRequest;if err:=decodeMigrationRequest(r,&q,16<<10);err!=nil{return err};if !syncValidationID(q.Message)||!syncValidationID(q.User)||!syncValidationID(q.Device)||!syncValidationID(q.Store)||!syncValidationCounter(q.Epoch,false){return fail(400,"INVALID_MIGRATION_SOURCE","Original source and current personal physical store required")}
+ m,err:=scanMessage(a.DB.QueryRow(r.Context(),`SELECT `+messageColumns+` FROM message.messages WHERE id=$1`,q.Message));if err==pgx.ErrNoRows{return fail(409,"MIGRATION_SOURCE_UNKNOWN","Missing source classification cannot release old content")};if err!=nil{return err}
+ var epoch,attachment string;var erased bool
+ if err=a.DB.QueryRow(r.Context(),`SELECT i.restore_epoch::text,COALESCE(m.attachment_id::text,''),EXISTS(SELECT 1 FROM message.account_erasure_floors f WHERE f.user_id=m.sender_id) FROM message.messages m CROSS JOIN message.instance i WHERE i.singleton AND m.id=$1`,q.Message).Scan(&epoch,&attachment,&erased);err!=nil{return err};if epoch!=q.Epoch{return fail(409,"RESTORE_EPOCH_CHANGED","Old restored classification cannot authorize migration")}
+ meta,err:=a.member(r.Context(),q.User,m.ConversationID);if err!=nil{return err};membership:=stringValue(meta,"membershipGeneration");if !syncValidationCounter(membership,false){return fail(503,"MIGRATION_SOURCE_UNKNOWN","Current membership classification unavailable")};if meta["kind"]=="group"{joined,e:=time.Parse(time.RFC3339Nano,stringValue(meta,"joinedAt"));if e!=nil||m.CreatedAt.Before(joined){return fail(403,"HISTORY_NOT_ALLOWED","The current membership cannot inherit an earlier history interval")}}
+ if erased||m.Deleted{return fail(403,"MIGRATION_GLOBAL_SOURCE","Global erasure cannot be imported from an old package")};if m.sourcePending{return fail(409,"MIGRATION_SOURCE_PENDING","Source withdrawal must finish before a migration may be created")}
+ if err=a.retentionReadState(r.Context(),&m);err!=nil{return err};if m.Deleted{return fail(403,"MIGRATION_GLOBAL_SOURCE","A due global trigger rejects all old packages")}
+ state:="available";if m.ContentUnavailable{state="cloud_only";m.AttachmentID=attachment}else{a.projectMessage(r.Context(),&m,q.User,meta);if m.ForwardUnavailable||m.forwardUncertain{return fail(409,"MIGRATION_SOURCE_UNKNOWN","Uncertain or withdrawn reference content cannot migrate")}}
+ var boundary *time.Time
+ if state=="cloud_only"{err=a.DB.QueryRow(r.Context(),`SELECT min(due_at) FROM message.lifecycle_jobs WHERE scope_id=$1 AND message_id=$2 AND delete_scope='global'`,a.Config.DeploymentID,m.ID).Scan(&boundary)}else{err=a.DB.QueryRow(r.Context(),`SELECT min(due_at) FROM message.lifecycle_jobs WHERE scope_id=$1 AND message_id=$2`,a.Config.DeploymentID,m.ID).Scan(&boundary)};if err!=nil{return err};if boundary!=nil&&!boundary.After(time.Now()){return fail(409,"MIGRATION_SOURCE_EXPIRED","The source has no remaining transfer authorization window")}
+ m.ForwardAdmission,m.ReplyAdmission,m.ClientMsgID,m.AttachmentURL="","","","";respond(w,200,migrationSource{Message:m,Membership:membership,Classification:state,Deadline:boundary});return nil
+}
+func(a *App)mediaMigrationObject(w http.ResponseWriter,r *http.Request)error{
+ if r.Header.Get("X-JobsIM-Caller")!="sync"{return fail(403,"MIGRATION_OWNER_REQUIRED","Private migration owner required")};var q struct{migrationSourceRequest;Object string `json:"objectId"`;Content string `json:"contentVersion"`};if err:=decodeMigrationRequest(r,&q,16<<10);err!=nil{return err};if !syncValidationID(q.Object)||!syncValidationCounter(q.Content,false){return fail(400,"INVALID_MIGRATION_OBJECT","Original bound object version required")}
+ var source migrationSource;if err:=a.rpc(r.Context(),"message","/internal/migrations/source",q.migrationSourceRequest,&source);err!=nil{return err};if source.Message.AttachmentID!=q.Object||source.Message.ContentVersion!=q.Content{return fail(409,"MIGRATION_SOURCE_CHANGED","Object binding or content version changed")}
+ var owner,key,contentType string;var size int64;var digest []byte;var erased,retired bool
+ err:=a.DB.QueryRow(r.Context(),`SELECT o.owner_id::text,o.storage_key,o.content_type,o.size_bytes,o.sha256,EXISTS(SELECT 1 FROM media.account_erasure_floors f WHERE f.user_id=o.owner_id),EXISTS(SELECT 1 FROM media.retention_floors f WHERE f.object_id=o.id AND f.message_id=o.message_id AND (f.terminal OR f.due_at<=clock_timestamp())) OR EXISTS(SELECT 1 FROM media.legacy_erasure_tasks e WHERE e.object_id=o.id AND e.message_id=o.message_id) FROM media.objects o WHERE o.id=$1 AND o.message_id=$2 AND o.purpose='chat_attachment'`,q.Object,q.Message).Scan(&owner,&key,&contentType,&size,&digest,&erased,&retired)
+ if err!=nil{return fail(409,"MIGRATION_OBJECT_UNKNOWN","Original object classification unavailable")};if erased{return fail(403,"MIGRATION_GLOBAL_SOURCE","Erased owner media cannot be imported")};if key!=q.Object||size<0||size>67108864||len(digest)!=32{return fail(503,"MIGRATION_OBJECT_INTEGRITY","Original object descriptor cannot be verified")}
+ var plan retentionMediaPlan;if err=a.rpc(r.Context(),"message","/internal/retention/media-plan",map[string]string{"messageId":q.Message,"objectId":q.Object},&plan);err!=nil{return err};if plan.DeleteScope=="global"||plan.ErasureOnly{return fail(403,"MIGRATION_GLOBAL_SOURCE","Global object deletion cannot be reversed")}
+ classification:="available";var boundary *time.Time;if !plan.Legacy{due,e:=mediaPlanDeadline(plan,time.Now());if e!=nil{return e};if !due.After(time.Now()){retired=true}else{boundary=&due}}
+ if retired{classification="cloud_only";boundary=nil}else{info,e:=os.Lstat(filepath.Join(a.Config.StateDir,"Media",key));if e!=nil||!info.Mode().IsRegular(){return fail(409,"MIGRATION_OBJECT_UNKNOWN","Missing bytes alone are not a cloud-only authorization fact")}}
+ respond(w,200,migrationObjectReference{Object:q.Object,Message:q.Message,Size:str(size),Digest:hex.EncodeToString(digest),ContentType:contentType,Classification:classification,Deadline:boundary});return nil
+}

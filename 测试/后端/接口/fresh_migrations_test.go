@@ -65,7 +65,7 @@ func TestFreshPostgresDomainsMigrateFromEmptyDatabases(t *testing.T) {
 	if e != nil {
 		t.Fatal(e)
 	}
-	for _, role := range []string{"identity", "directory", "conversation", "message", "media", "control", "journal", "governance"} {
+	for _, role := range []string{"identity", "directory", "conversation", "message", "media", "control", "journal", "governance", "sync"} {
 		app, e := NewApp(ctx, config, role)
 		if e != nil {
 			t.Fatalf("fresh %s migration failed: %v", role, e)

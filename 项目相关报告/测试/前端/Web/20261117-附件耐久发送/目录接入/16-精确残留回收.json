@@ -1,0 +1,18 @@
+{
+  "at": "2026-11-17T04:43:48.759Z",
+  "removedOnly": [
+    "index.jobs-toc-99422-1794890439642",
+    "index.lock"
+  ],
+  "pidConfirmedExited": 99422,
+  "temporaryIndexGone": true,
+  "lockGone": true,
+  "indexSHAUnchanged": true,
+  "stagedUnchanged": true,
+  "flagsUnchanged": true,
+  "verificationRetry": {
+    "first": "execFileSync git ls-files default output buffer ENOBUFS after exact cleanup; no index mutation",
+    "second": "read-only verification with explicit 16MiB bounded buffer"
+  },
+  "installRetry": false
+}

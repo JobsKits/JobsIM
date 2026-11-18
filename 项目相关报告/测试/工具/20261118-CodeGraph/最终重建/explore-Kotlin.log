@@ -1,0 +1,134 @@
+**Exploration: 代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt**
+
+Found 11 symbols across 1 file. 1 file pinned from the query.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt`** — com.jobs.im(namespace), Conversation(class), Person(class), ContactRequest(class), DeviceSession(class), Relationship(class), ReportRecord(class), globalMessagePlaceholder(function), conversation(function), person(function), +1 more
+
+```kotlin
+1	package com.jobs.im
+2	
+3	import java.time.Instant
+4	import org.json.JSONObject
+5	
+6	data class Conversation(
+7	    val id: String,
+8	    val title: String,
+9	    val kind: String = "direct",
+10	    val ownerId: String = "",
+11	    val memberIds: List<String> = emptyList(),
+12	    val readOnly: Boolean = false,
+13	    val membershipGeneration: String = "",
+14	    val sendAdmission: String = "",
+15	    val roleGeneration: String = "",
+16	)
+17	
+18	data class Person(
+19	    val id: String,
+20	    val name: String,
+21	    val username: String,
+22	    val avatar: String = "",
+23	    val membershipGeneration: String = "",
+24	    val role: String = "",
+25	    val profileVersion: String = "1",
+26	    val state: String = "active",
+27	    val roleGeneration: String = "",
+28	)
+29	
+30	data class ContactRequest(
+31	    val id: String,
+32	    val requesterId: String,
+33	    val name: String,
+34	    val username: String,
+35	)
+36	
+37	data class DeviceSession(val id: String, val name: String)
+38	
+39	data class Relationship(val blockedByMe: Boolean, val friend: Boolean, val inboundGate: String)
+40	
+41	data class ReportRecord(val id: String, val targetId: String, val state: String, val reason: String)
+42	
+43	fun globalMessagePlaceholder(row: MessageRow) = row.copy(text = "", attachmentId = "", attachmentURL = "",
+44	    forwardAdmission = "", forwardPayload = "", replyToId = "", reaction = "", pinned = false, favorite = false,
+45	    mentionedUserIds = "[]", mentionAll = false, mentionedMe = false, contentUnavailable = false, retracted = true)
+46	
+47	fun conversation(value: JSONObject, fallback: String) =
+48	    Conversation(
+49	        value.getString("id"),
+50	        value.optString("title").ifBlank { fallback },
+51	        value.getString("kind"),
+52	        value.optString("ownerId"),
+53	        value
+54	            .optJSONArray("memberIds")
+55	            ?.let { ids -> (0 until ids.length()).map { ids.getString(it) } }
+56	            .orEmpty(),
+57	        value.optBoolean("readOnly"),
+58	        value.optString("membershipGeneration"),
+59	        value.optString("sendAdmission"),
+60	        value.optString("roleGeneration"),
+61	    )
+62	
+63	fun person(value: JSONObject) =
+64	    Person(
+65	        value.getString("id"),
+66	        value.optString("displayName").ifBlank { value.optString("username") },
+67	        value.optString("username"),
+68	        value.optString("avatarThumbnailURL").ifBlank { value.optString("avatarURL") },
+69	        value.optString("membershipGeneration"),
+70	        value.optString("role"),
+71	        value.optString("profileVersion", "1"),
+72	        value.optString("state", "active"),
+73	        value.optString("roleGeneration"),
+74	    )
+75	
+76	fun message(value: JSONObject, ns: String, epoch: String): MessageRow {
+77	    val id = value.getString("id")
+78	    val unavailable = value.optBoolean("forwardUnavailable")
+79	    return MessageRow(
+80	        key = "$ns|$id",
+81	        namespace = ns,
+82	        conversationId = value.getString("conversationId"),
+83	        id = id,
+84	        clientMsgId = value.optString("clientMsgId"),
+85	        senderId = value.getString("senderId"),
+86	        type = value.optString("type", "text"),
+87	        text = if (unavailable) "" else value.optString("text"),
+88	        attachmentId =
+89	            if (unavailable) ""
+90	            else value.optString("attachmentId").takeUnless { it == "null" }.orEmpty(),
+91	        replyToId = value.optString("replyToId").takeUnless { it == "null" }.orEmpty(),
+92	        createdAt =
+93	            runCatching { Instant.parse(value.getString("createdAt")).toEpochMilli() }
+94	                .getOrDefault(0),
+95	        pinned = value.optBoolean("pinned"),
+96	        favorite = value.optBoolean("favorite"),
+97	        version = value.optString("version", "1"),
+98	        edited = value.optString("version", "1") != "1",
+99	        retracted = value.optBoolean("deleted"),
+100	        restoreEpoch = epoch,
+101	        sequence = value.optString("sequence", "0"),
+102	        contentUnavailable = value.optBoolean("contentUnavailable"),
+103	        mentionedUserIds = value.optJSONArray("mentionedUserIds")?.toString() ?: "[]",
+104	        mentionAll = value.optBoolean("mentionAll"),
+105	        mentionedMe = value.optBoolean("mentionedMe"),
+106	        contentVersion =
+107	            value.optString("contentVersion").ifBlank { value.optString("version", "1") },
+108	        forwarded = value.optBoolean("forwarded"),
+109	        forwardUnavailable = unavailable,
+110	        forwardAdmission = if (unavailable) "" else value.optString("forwardAdmission"),
+111	        attachmentURL = if (unavailable) "" else value.optString("attachmentURL"),
+112	        reaction =
+113	            value.optJSONArray("reactions")?.takeIf { it.length() > 0 }?.let { "👍" }.orEmpty(),
+114	        projectionGuard = value.optString("_jobsProjectionGuard"),
+115	    )
+116	}
+```
+
+
+---
+> **Complete source for 1 file is included above — do NOT re-read them.** If your question also needs files/symbols listed under "Not shown above" (or any area this call didn't cover), make ANOTHER codegraph_explore targeting those names — it returns the same source with line numbers and is cheaper and more complete than reading.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~720 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

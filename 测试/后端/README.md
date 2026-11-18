@@ -27,7 +27,7 @@
 
 ## <span id="jobs-toc-heading-2" data-jobs-toc="v2">一、离线单元测试与编译</span><!-- jobs-toc:heading-end -->
 
-从仓库根目录运行 `python3 测试/后端/运行测试.py --go <Go可执行文件>`。运行器用临时 Go overlay 挂载 [安全测试](./security_test.go)与[头像编解码测试](./接口/avatar_codec_test.go)，校验用户名／密码规范、Argon2id参数边界、凭据加密用途、TOTP向量、管理员载荷规范化、非法路径不能污染恢复日志、认证归档截断／换序／尾随拒绝及真实头像规范化；随后兼容运行 CLI 外置测试。不会将测试写入工程源目录。
+从仓库根目录运行 `python3 测试/后端/运行测试.py --go <Go可执行文件>`。运行器用临时 Go overlay 挂载 [安全测试](./security_test.go)与 `接口/` 内全部 `*_test.go`，当前共49份，覆盖安全、头像、发送围栏、刷新、同步、本人状态／草稿、收讫、正式导出、改密及注销普通准入门禁。重复文件名会拒绝覆盖；没有显式隔离环境时，数据库／真实角色用例仍按各自门禁跳过。默认随后兼容运行 CLI 的 `outbox_test.go` 冒烟测试，CLI完整15份外置用例应使用[独立入口](../CLI/运行测试.mjs/运行测试.mjs)；`--backend-only` 可仅运行后端，避免跨端任务重复执行。不会将测试写入工程源目录。
 
 显式设置`JOBS_IM_MIGRATION_TEST_ENV=<私密环境文件>`才运行[空库迁移测试](./接口/fresh_migrations_test.go)，创建随机专用业务／journal数据库、验证全部角色从空库迁移及幂等重跑并只清理本测试数据库。显式设置`JOBS_IM_EXPORT_TEST_ENV=<独立协议域环境文件>`才运行[导出协议／文件栅栏测试](./接口/export_fence_test.go)，用真实PG、TLS测试角色、1.68MB附件和文件锁验证取消后无晚写复活；该私有harness不与运行中的实验worker共用业务数据库。
 
@@ -43,15 +43,15 @@
 
 | 入口 | 执行与范围 | 已记录证据 |
 | --- | --- | --- |
-| [核心接口回归](./接口/integration.py) | `python3 测试/后端/接口/integration.py --server https://127.0.0.1:<端口> --ca-file <显式CA.pem>`；检查注册、联系人、稳定消息ID、异参冲突、编辑回复、反应／置顶／收藏、拉黑、收件人明确新代际reopen、Cookie／CSRF及恢复码，finally撤本轮会话。 | [核心 HTTP 报告](../../项目相关报告/测试/后端/核心HTTP回归.json) |
-| [本人关系只读接口](./接口/contact_relationship.py) | `python3 测试/后端/接口/contact_relationship.py --environment-file <私密环境JSON>`；两个真实账号验证owner隔离、门禁／重开代际、伪造owner查询无效、GET不创建记录、大代际保持字符串及头像ACL保持。 | [本人关系报告](../../项目相关报告/测试/后端/本人关系只读接口实测.json) |
+| [核心接口回归](./接口/integration.py) | `python3 测试/后端/接口/integration.py --server https://127.0.0.1:<端口> --ca-file <显式CA.pem>`；检查注册、联系人、稳定消息ID、异参冲突、编辑回复、反应／置顶／收藏、拉黑保联系人／双向direct阻断、解黑新代际准入、删除后新轮申请不需reopen、Cookie／CSRF及恢复码，finally撤本轮会话。 | [核心 HTTP 报告](../../项目相关报告/测试/后端/核心HTTP回归.json) |
+| [本人关系只读接口](./接口/contact_relationship.py) | `python3 测试/后端/接口/contact_relationship.py --environment-file <私密环境JSON>`；两个真实账号验证owner隔离、旧reopen兼容原单、拒绝／删除后新申请无需reopen、拉黑保好友且头像仍拒绝、解除后当前好友恢复、伪造owner查询无效、GET不创建记录及大代际保持字符串。 | [本人关系报告](../../项目相关报告/测试/后端/本人关系只读接口实测.json) |
 | [登录刷新家族](./接口/session_refresh.py/README.md) | 独立新域，真实旧7天schema迁移、AT／RT单代旋转／并发／重用／多设备、实际丢成功响应、初始未知关联撤旧与持久退休、BFF密封／CSRF／原family header；期限和代际有明确SQL夹具，非90天实等。 | [86 HTTP／43语义](../../项目相关报告/测试/后端/登录刷新家族真实实测.json)、[无外层OS锁的PG并发](../../项目相关报告/测试/后端/刷新数据库并发单消费实测.json) |
 | [刷新持久环境续验](./接口/session_refresh.py/README.md) | 新CA／身份／两套物理PG，补完整多层未知退休闭包与迟到拒建；旧binary已丢失，本轮不称真实旧schema迁移，BFF进程重启也未重复。 | [102 HTTP／48语义](../../项目相关报告/测试/后端/登录刷新持久环境与完整退休链实测.json)、[新PG并发](../../项目相关报告/测试/后端/刷新数据库并发持久环境实测.json)、[Go原始日志](../../项目相关报告/测试/后端/刷新持久环境Go原始日志.txt) |
 | [刷新恢复拒旧](./接口/session_refresh_restore.py/README.md) | 新建独占源／目标及独立journal；真实加密backup、offline restore、原恢复操作续跑，旧AT／RT／Cookie拒、密文清，备份后退休事实重放不复活旧认证。 | [22 HTTP／9语义](../../项目相关报告/测试/后端/登录刷新恢复拒旧实测.json) |
 | [刷新持久环境恢复](./接口/session_refresh_restore.py/README.md) | 独立持久namespace重跑，Documents备份与运行目录key分离，保留历史报告。 | [新22 HTTP／9语义](../../项目相关报告/测试/后端/登录刷新持久环境恢复拒旧实测.json) |
 | [权威快照与增量](./接口/sync_snapshot.py/README.md) | 新隔离域；511消息跨owner500页界，完整manifest与refs／body／event原字节envelope，final validate、新append、权限ABA、合法历史global墓碑、真实NATS断开后HTTP补偿及同存储重连去重。510行SQL只用于分页夹具，不当发送API证据。 | [100 HTTP／1282语义／32页](../../项目相关报告/测试/后端/权威同步底座/真实HTTPS.json)、[7组＋9子项Go](../../项目相关报告/测试/后端/权威同步底座/Go定向.json) |
 | [同步真实恢复](./接口/sync_restore.py/README.md) | 同固定binary另建源／目标及独立journal，真实backup／offline restore E1→E2，旧凭据／边界／页拒旧、原创建tuple保留、global和缺新编辑正文占位、新快照／delta；原E1 wire网络重投不入target、不增加E2位置。 | [22 HTTP／56语义／2页成功续验](../../项目相关报告/测试/后端/权威同步底座/真实恢复.json)，[raw保留包装FAIL＋RESUME](../../项目相关报告/测试/后端/权威同步底座/真实恢复.log) |
-| [原发送准入与提交围栏](./接口/send_admission.py) | `python3 测试/后端/接口/send_admission.py --environment-file <私密环境JSON>`；真实HTTPS检查旧摘要回放、缺快照不新建、peer token不能借用、direct撤权新接受／群退重入、当前read ACL及真实PG阻塞提交时撤权等待。 | [52项HTTP报告](../../项目相关报告/测试/后端/发送准入代际实测.json) |
+| [原发送准入与提交围栏](./接口/send_admission.py) | `python3 测试/后端/接口/send_admission.py --environment-file <私密环境JSON>`；真实HTTPS检查旧摘要回放、缺快照不新建、peer token不能借用、direct删除新接受／拉黑保好友双向拒绝／解黑新准入／群退重入、当前read ACL及真实PG阻塞提交时撤权等待。 | [52项HTTP报告](../../项目相关报告/测试/后端/发送准入代际实测.json) |
 | [搜索与本人收藏分页](./接口/search_favorites.py) | `python3 测试/后端/接口/search_favorites.py --environment-file <私密环境JSON>`；较新110条他人命中不挤本人结果、本人会话超公共前100、签名游标隔离、收藏源撤回／失权／退重入及原会话／消息定位ACL；[游标测试](./接口/search_test.go)核原owner／查询／恢复代际。 | [搜索收藏报告](../../项目相关报告/测试/后端/搜索与本人收藏分页实测.json) |
 | [结构化提及与群公告](./接口/mentions_announcements.py/README.md) | `python3 测试/后端/接口/mentions_announcements.py/mentions_announcements.py --environment-file <私密环境JSON>`；真实成员代际／block／独立限频、内容版本与互动版本分离、引用源变化／到期／重入占位、原操作immutable及只读原消息查结果绝不新建；父群锁与源编辑真实竞态。 | [提及公告报告](../../项目相关报告/测试/后端/提及与公告实测.json) |
 | [群角色准入代际](./接口/role_qualification.py/README.md) | 先在真实旧无role服务准备已提交原公告，原实例受控升级后验证owner转出／转回、旧@all／普通待发／公告PUT和DELETE拒未建、已成旧摘要兼容、成员与joinedAt不变、无关成员与no-op不抬授权；大数role字段仅SQL精度夹具。 | [角色代际报告](../../项目相关报告/测试/后端/角色准入代际实测.json) |
@@ -78,3 +78,8 @@
 工程说明见 [后端 README](../../代码/后端/Go/README.md)，实际接口字段见 [接口契约](../../代码/后端/Go/接口契约/README.md)。
 
 新 Python 接口执行默认输出直接进入工程根 `项目相关报告/测试/后端/执行记录/<UUID>/`，保留旧固定 JSON 证据；显式 `--report` 仍按用户指定位置。Go 外置用例只在显式报告环境变量存在时写出，调用方应指定中央域的新子项。
+
+
+完整注销新增外置 `接口/account_deletion_pg_test.go`，复用既有显式隔离PG门禁与随机专属数据库；`TestAccountDeletionPG*`覆盖全部family撤销、匿名原体不创建、用途证明／单次恢复码、独立封禁不被取消覆盖、取消journal结果未知续跑、0天最终清理以及恢复时取消intent不降闸。RPC明确为内存传输，journal在测试PG独立schema，不称真实HTTPS／双集群恢复或原生端通过。默认runner会自动发现；实际结果与失败修复保留中央实现证据，不能用未开启PG门禁的skip当执行成功。
+
+联系人／改名／举报材料的增量测试为[ui_contract_test.go](./接口/ui_contract_test.go)，后端运行器动态纳入外置overlay。新增8项（2纯规则／6隔离PG）已实际通过；必要既有17项与锁复制夹具2项补验，共27个不同顶层方法通过，完整overlay／生产包go vet均通过。范围、原失败／修正／skip补验与当前源码SHA见[恢复窗口清单](../../项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/summary.json)，低磁盘[源码阶段原件](../../项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/summary.json)冻结保留。核心HTTP／本人关系／发送准入脚本仅同步当前合同并通过AST解析，未执行真实HTTP；PG为本轮专属集群、每例随机DB、角色同库schema／进程内RPC，不冒充真实HTTPS或独立双PG灾备。

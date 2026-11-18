@@ -1,0 +1,41 @@
+{
+  "exitCode": 0,
+  "typeErrors": 0,
+  "native": false,
+  "https": false,
+  "inputUnchanged": true,
+  "hashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeStorageBudget.ets": "01d02c0b41f7121bc0859c69f80550efae937ac94bcf93f1a278d4a8d1ee7847",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "cb5e3567f6da62dc2d916b05b94156b041e0bcd59f1e91fde87b4a0acd3864e7",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets": "ab99d04444fe4bbe60d056a89520711d40d734696a2fa7767efa9c5a17a8eb41",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets": "fe30ef4c7739bd5135d92706e8279a558a18c43f32cc0bf12950d96aa9e9220c",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol.ets": "d759bb21325b3bfb6e8b5ad8f102c91db0758affb6deef58ee49d59414df0363",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptStore.ets": "6ac9bd00e8bd352745162782b02586c417dc2a57434e92db2c8e07be86129831",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets": "7bc079e25554546a83e611c2b2e4ad66beb8cfe268f576649fb7af2f41baabfe",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCoordinator.ets": "ce501a4a8def98f8c6d60b272ac4184d2c39a2c4f2fea610ca63064570e20e9f",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCleanup.ets": "b6494934d492097642622faad3112ba92f1dbf48b1a35fc709385d595c409270",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptText.ets": "5b5dbb2ffe2e14b0891acca3922b2e542e00f4394b16890509dc561fc189030b",
+    "测试/前端/HarmonyOS/Unit/RunReceipt.mjs/RunReceipt.mjs": "d9f6d86623fba8cdda4893793b4ff6c8941ff766847810ba6f03eb240060a9cc",
+    "测试/前端/HarmonyOS/Unit/Receipt.test.cjs/Receipt.test.cjs": "03859a5152d7aeffb4a801dc4fcf8d1702b80e8c04464b3f620c0cbaaef89650",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee"
+  },
+  "afterHashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeStorageBudget.ets": "01d02c0b41f7121bc0859c69f80550efae937ac94bcf93f1a278d4a8d1ee7847",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "cb5e3567f6da62dc2d916b05b94156b041e0bcd59f1e91fde87b4a0acd3864e7",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets": "ab99d04444fe4bbe60d056a89520711d40d734696a2fa7767efa9c5a17a8eb41",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets": "fe30ef4c7739bd5135d92706e8279a558a18c43f32cc0bf12950d96aa9e9220c",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol.ets": "d759bb21325b3bfb6e8b5ad8f102c91db0758affb6deef58ee49d59414df0363",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptStore.ets": "6ac9bd00e8bd352745162782b02586c417dc2a57434e92db2c8e07be86129831",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets": "7bc079e25554546a83e611c2b2e4ad66beb8cfe268f576649fb7af2f41baabfe",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCoordinator.ets": "ce501a4a8def98f8c6d60b272ac4184d2c39a2c4f2fea610ca63064570e20e9f",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCleanup.ets": "b6494934d492097642622faad3112ba92f1dbf48b1a35fc709385d595c409270",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptText.ets": "5b5dbb2ffe2e14b0891acca3922b2e542e00f4394b16890509dc561fc189030b",
+    "测试/前端/HarmonyOS/Unit/RunReceipt.mjs/RunReceipt.mjs": "d9f6d86623fba8cdda4893793b4ff6c8941ff766847810ba6f03eb240060a9cc",
+    "测试/前端/HarmonyOS/Unit/Receipt.test.cjs/Receipt.test.cjs": "03859a5152d7aeffb4a801dc4fcf8d1702b80e8c04464b3f620c0cbaaef89650",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee"
+  }
+}

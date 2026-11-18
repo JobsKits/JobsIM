@@ -1,0 +1,4 @@
+FAIL	jobsim/cli/cmd/jobsim [build failed]
+FAIL
+# jobsim/cli/cmd/jobsim [jobsim/cli/cmd/jobsim.test]
+cmd/jobsim/group_governance.go:187:2: syntax error: unexpected keyword case, expected }

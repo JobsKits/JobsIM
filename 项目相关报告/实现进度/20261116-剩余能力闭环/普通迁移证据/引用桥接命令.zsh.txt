@@ -1,0 +1,17 @@
+#!/bin/zsh
+set -eu
+setopt PIPE_FAIL
+umask 077
+local_run="$HOME/Library/Application Support/JobsIM/Integration/66bf4668-aa47-4668-b583-925a7ac93cc0/Safety"
+pgbin="$HOME/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin"
+export PGPASSFILE="$local_run/Secrets/pgpass" GOMAXPROCS=2 GOPROXY=off GOTOOLCHAIN=local
+finish(){ local code=$?; trap - EXIT; "$pgbin/pg_ctl" -D "$local_run/MainDatabase" -m fast -w -t 30 stop >> /tmp/jobsim-retention-pg-life.log 2>&1 || true; printf 'testExit=%s\n' "$code" >> /tmp/jobsim-retention-pg-life.log; exit "$code"; }
+trap finish EXIT
+"$pgbin/pg_ctl" -D "$local_run/MainDatabase" -l "$local_run/Logs/pg-Main.log" -w -t 30 -o "-p 62381 -h 127.0.0.1 -k '' -c max_connections=100 -c shared_buffers=64MB -c fsync=on -c full_page_writes=on -c synchronous_commit=on" start >> /tmp/jobsim-retention-pg-life.log 2>&1
+export JOBS_IM_SYNC_SCHEMAS_TEST=1 JOBS_IM_SYNC_SCHEMAS_REALM_URL=https://127.0.0.1:59443 JOBS_IM_SYNC_SCHEMAS_ADMIN_URL=postgresql://s2_owner_66bf4668aa47@127.0.0.1:62381/postgres?sslmode=disable
+python3 - <<'PY'
+import json,pathlib
+root=pathlib.Path.cwd();tests=[root/'测试/后端/security_test.go',*sorted((root/'测试/后端/接口').glob('*_test.go'))]
+pathlib.Path('/tmp/jobsim-retention-overlay.json').write_text(json.dumps({'Replace':{str(root/'代码/后端/Go'/x.name):str(x) for x in tests}}))
+PY
+"$HOME/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go" -C 代码/后端/Go test -p 1 -count=1 -json -overlay /tmp/jobsim-retention-overlay.json -run '^TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage$' -timeout 90s . > /tmp/jobsim-retention-pg.jsonl 2> /tmp/jobsim-retention-pg.stderr

@@ -1,0 +1,209 @@
+**Exploration: 测试/部署/二维码/终端二维码.py/终端二维码.py**
+
+Found 6 symbols across 1 file. 1 file pinned from the query.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`测试/部署/二维码/终端二维码.py/终端二维码.py`** — ROOT(variable), MAC(variable), sha(function), pty_run(function), decode_png(function), main(function)
+
+```python
+1	#!/usr/bin/env python3
+2	"""只运行二维码/PTY夹具，不启动业务服务，不使用已有实例。"""
+3	import argparse
+4	import fcntl
+5	import hashlib
+6	import json
+7	import os
+8	from pathlib import Path
+9	import pty
+10	import re
+11	import select
+12	import struct
+13	import subprocess
+14	import termios
+15	import time
+16	
+17	
+18	ROOT = Path(__file__).resolve().parents[4]
+19	MAC = [ROOT / "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command", ROOT / "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command"]
+20	
+21	
+22	def sha(path):
+23	    return hashlib.sha256(path.read_bytes()).hexdigest()
+24	
+25	
+26	def pty_run(script, arguments, rows, columns, environment, menu=False):
+27	    """保留实际PTY字节；菜单用本轮短sleep代替业务，只验证扫码停留和回车。"""
+28	    pid, fd = pty.fork()
+29	    if pid == 0:
+30	        os.execve("/bin/zsh", ["/bin/zsh", str(script)] + arguments, environment)
+31	    fcntl.ioctl(fd, termios.TIOCSWINSZ, struct.pack("HHHH", rows, columns, 0, 0))
+32	    result = b""
+33	    deadline = time.monotonic() + 30
+34	    ready = None
+35	    entered = False
+36	    menu_seen = False
+37	    while time.monotonic() < deadline:
+38	        readable, _, _ = select.select([fd], [], [], .1)
+39	        if readable:
+40	            try:
+41	                data = os.read(fd, 65536)
+42	            except OSError:
+43	                break
+44	            if not data:
+45	                break
+46	            result += data
+47	            if b"\x1b[6n" in data:
+48	                os.write(fd, b"\x1b[30;1R")
+49	        if menu and b"QR-READY" in result:
+50	            if ready is None:
+51	                ready = time.monotonic()
+52	            if not entered and time.monotonic() - ready > .6:
+53	                assert "打开网页 >" not in result.decode("utf-8", "replace"), "未回车便弹出fzf遮住二维码"
+54	                os.write(fd, b"\r")
+55	                entered = True
+56	            if entered and "打开网页 >" in result.decode("utf-8", "replace") and not menu_seen:
+57	                menu_seen = True
+58	                os.write(fd, b"\x1b")
+59	    else:
+60	        os.kill(pid, 15)
+61	        raise RuntimeError("二维码PTY等待超时")
+62	    _, status = os.waitpid(pid, 0)
+63	    os.close(fd)
+64	    if os.waitstatus_to_exitcode(status) != 0:
+65	        failure = script.parent / "last-failed-PTY.log"
+66	        failure.write_bytes(result)
+67	        raise RuntimeError(f"PTY退出{os.waitstatus_to_exitcode(status)}；原件见{failure}")
+68	    if menu:
+69	        assert entered and menu_seen
+70	    return result
+71	
+72	
+73	def decode_png(path):
+74	    source = """ObjC.import('AppKit');ObjC.import('CoreImage');function run(argv){var d=$.CIDetector.detectorOfTypeContextOptions($.CIDetectorTypeQRCode,$.CIContext.contextWithOptions($.NSDictionary.dictionary),$({CIDetectorAccuracy:'CIDetectorAccuracyHigh'}));var i=$.CIImage.imageWithContentsOfURL($.NSURL.fileURLWithPath(argv[0]));var a=d.featuresInImage(i);if(Number(a.count)!==1)throw Error('cannot decode '+argv[0]);return ObjC.unwrap(a.objectAtIndex(0).messageString);}"""
+75	    return subprocess.check_output(["/usr/bin/osascript", "-l", "JavaScript", "-e", source, str(path)], text=True).strip()
+76	
+77	
+78	def main():
+79	    parser = argparse.ArgumentParser(description=__doc__)
+80	    parser.add_argument("--report", type=Path, required=True)
+81	    parser.add_argument("--native-preview", action="store_true", help="仅请求预览本轮生成的一张PNG")
+82	    args = parser.parse_args()
+83	    report = args.report.resolve()
+84	    report.mkdir(parents=True, exist_ok=False)
+85	    go = Path(os.environ["JOBS_IM_GO"])
+86	    inputs = MAC + [ROOT / "部署/公共组件/地址二维码" / name for name in ["main.go", "go.mod", "go.sum"]]
+87	    before = {str(path.relative_to(ROOT)): sha(path) for path in inputs}
+88	    result = {"source": before, "scope": "QR-only; no Go application, PG, NATS, tunnels or user instance", "cases": []}
+89	    body = r'''
+90	setopt NO_NOMATCH PIPE_FAIL
+91	set -eu
+92	TRAPEXIT(){ return 0; }
+93	TRAPZERR(){ exit $?; }
+94	REPO="$1"; GO_TOOL="$2"; RUN_DIR="$3"
+95	STATE="$RUN_DIR/state"; HTTPS_PORT=19443; PUBLIC_HOST=127.0.0.1
+96	PUBLIC_URL="$4"; JOBS_IM_PUBLIC_URL=https://127.0.0.1:19443
+97	COLUMNS=0; QR_PAGE=""; QR_BINARY=""
+98	BROWSER_MENU_PID=""; TUNNEL_PID=""; DEPLOY_MODE=local
+99	FZF_EXECUTABLE=/opt/homebrew/bin/fzf
+100	open(){ printf '%s\n' "$@" > "$RUN_DIR/open-args"; }
+101	prepare_im_qr
+102	print QR-READY
+103	if [[ "$5" == menu ]]; then
+104	    sleep 3 & SERVER_PID=$!
+105	    monitor_im_session
+106	    stop_browser_menu
+107	fi
+108	'''
+109	    fixtures = [
+110	        ("80列50行", 50, 80, {}, "", False),
+111	        ("80列30行", 30, 80, {}, "", False),
+112	        ("窄32列", 30, 32, {}, "", False),
+113	        ("矮12行", 12, 80, {}, "", False),
+114	        ("NO_COLOR空值", 30, 80, {"NO_COLOR": ""}, "", False),
+115	        ("TERM-dumb", 30, 80, {"TERM": "dumb"}, "", False),
+116	        ("双地址", 50, 100, {}, "https://fixture.trycloudflare.com", False),
+117	        ("扫码停留与回车菜单", 50, 80, {}, "", True),
+118	    ]
+119	    try:
+120	        for index, source in enumerate(MAC):
+121	            loader = report / f"{index}-生产二维码函数.zsh"
+122	            text = source.read_text()
+123	            assert text.endswith('main "$@"\n')
+124	            loader.write_text(text[:-len('main "$@"\n')] + body)
+125	            for name, rows, columns, extra, public, menu in fixtures:
+126	                directory = report / f"{index}-{name}"
+127	                directory.mkdir()
+128	                environment = dict(os.environ, TERM="xterm-256color", GOPROXY="off", GOTOOLCHAIN="local")
+129	                environment.pop("NO_COLOR", None)
+130	                environment.update(extra)
+131	                raw = pty_run(loader, [str(ROOT), str(go), str(directory), public, "menu" if menu else "qr"], rows, columns, environment, menu)
+132	                (directory / "PTY.log").write_bytes(raw)
+133	                output = raw.decode("utf-8", "replace")
+134	                plain = re.sub(r"\x1b\[[0-9;?]*[A-Za-z]", "", output).replace("\r", "")
+135	                glyphs = "终端二维码（" in plain
+136	                preview = (directory / "open-args").exists()
+137	                assert b"\x1b" not in (directory / "qr-output.txt").read_bytes()
+138	                assert "仅本机，手机不可用" in plain
+139	                expect_preview = name in {"80列30行", "窄32列", "矮12行", "NO_COLOR空值", "TERM-dumb"}
+140	                assert preview == expect_preview
+141	                assert glyphs == (name not in {"80列30行", "窄32列", "矮12行"})
+142	                if name in {"NO_COLOR空值", "TERM-dumb"}:
+143	                    assert "\x1b" not in output
+144	                expected = (public or "https://127.0.0.1:19443") + "/"
+145	                assert decode_png(directory / "AccessQR/01.png") == expected
+146	                if glyphs:
+147	                    groups = []
+148	                    group = []
+149	                    for line in output.replace("\r", "").splitlines():
+150	                        clean = re.sub(r"\x1b\[[0-9;?]*[A-Za-z]", "", line)
+151	                        if re.fullmatch(r"[ █▀▄]+", clean) and len(clean) >= 29:
+152	                            group.append(line)
+153	                        elif group:
+154	                            groups.append(group)
+155	                            group = []
+156	                    assert groups and len(groups[-1]) > 10
+157	                    cells = directory / "terminal-cells.txt"
+158	                    cells.write_text("\n".join(groups[-1]) + "\n")
+159	                    if name not in {"NO_COLOR空值", "TERM-dumb"}:
+160	                        for background in ["dark", "light"]:
+161	                            image = directory / ("终端字体-" + background + ".png")
+162	                            rendered = subprocess.check_output(["/usr/bin/osascript", "-l", "JavaScript", str(Path(__file__).with_name("渲染终端码.js")), str(cells), str(image), background, "ansi"], text=True)
+163	                            decoded = json.loads(rendered)
+164	                            assert decoded["decoded"] == [expected], decoded
+165	                result["cases"].append({"script": index, "name": name, "status": "passed", "ttyRows": rows, "ttyColumns": columns, "glyphs": glyphs, "localPNGPreviewRequested": preview, "pngDecodedURL": expected, "menuNotShownBeforeEnter": menu})
+166	            directory = report / f"{index}-非TTY"
+167	            directory.mkdir()
+168	            done = subprocess.run(["/bin/zsh", str(loader), str(ROOT), str(go), str(directory), "", "qr"], env=dict(os.environ, TERM="xterm-256color", COLUMNS="80", GOPROXY="off", GOTOOLCHAIN="local"), check=True, capture_output=True)
+169	            assert b"\x1b" not in done.stdout and not (directory / "open-args").exists()
+170	            (directory / "output.log").write_bytes(done.stdout)
+171	            result["cases"].append({"script": index, "name": "非TTY", "status": "passed", "noBlockingInput": True, "noANSIOrGUI": True})
+172	        result["nativePreview"] = "not-requested"
+173	        if args.native_preview:
+174	            image = report / "0-窄32列/AccessQR/01.png"
+175	            subprocess.run(["/usr/bin/open", "-a", "Preview", str(image)], check=True)
+176	            result["nativePreview"] = {"requestedOwnPNG": str(image), "decodedURL": decode_png(image), "requestExit": 0}
+177	        result["after"] = {str(path.relative_to(ROOT)): sha(path) for path in inputs}
+178	        assert result["source"] == result["after"]
+179	        result["status"] = "passed"
+180	    except Exception as error:
+181	        result["status"] = "failed"
+182	        result["error"] = str(error)
+183	        raise
+184	    finally:
+185	        result["pass"] = sum(case["status"] == "passed" for case in result["cases"])
+186	        (report / "summary.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+187	        print(json.dumps({key: value for key, value in result.items() if key not in {"source", "after", "cases"}}, ensure_ascii=False))
+188	
+189	
+190	if __name__ == "__main__":
+191	    main()
+```
+
+
+---
+> **Complete source for 1 file is included above — do NOT re-read them.** If your question also needs files/symbols listed under "Not shown above" (or any area this call didn't cover), make ANOTHER codegraph_explore targeting those names — it returns the same source with line numbers and is cheaper and more complete than reading.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~720 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

@@ -1,0 +1,19 @@
+{
+  "production": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/Receipt/1794892045242/Production",
+  "checks": [
+    "production App boots with API blocked",
+    "actual settings receipt entry opens",
+    "browser explicitly remains unverified transport-only",
+    "English light and Tibetan dark actual screenshots",
+    "390px no horizontal overflow",
+    "no uncaught JavaScript errors"
+  ],
+  "pageErrors": [],
+  "layout": {
+    "overflow": false,
+    "theme": "dark",
+    "language": "bo",
+    "buttons": 5
+  },
+  "scope": "Real built assets, Chrome and React; API unavailable/demo, no actual credentials or durability qualification"
+}

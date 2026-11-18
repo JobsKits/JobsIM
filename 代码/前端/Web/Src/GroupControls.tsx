@@ -12,6 +12,9 @@ export default function GroupControls({
   avatar,
   onReload,
   onAction,
+  governance,
+  hasMore,
+  onLoadMore,
 }: {
   conversation: Conversation;
   members: User[];
@@ -25,6 +28,9 @@ export default function GroupControls({
     target?: User,
     title?: string,
   ) => Promise<void>;
+  governance?: ReactNode;
+  hasMore?: boolean;
+  onLoadMore?: () => void;
 }) {
   const [title, setTitle] = useState(conversation.title),
     [successor, setSuccessor] = useState("");
@@ -108,6 +114,7 @@ export default function GroupControls({
           )}
         </div>
       ))}
+      {hasMore && <button className="secondary" disabled={busy} onClick={onLoadMore}>{t("loadMore")}</button>}
       {!members.length && (
         <div className="empty">
           <div className="empty-icon">
@@ -119,7 +126,7 @@ export default function GroupControls({
           </button>
         </div>
       )}
-      {owner && !conversation.readOnly && (
+      {owner && !conversation.readOnly && !governance && (
         <form
           onSubmit={(event) => {
             event.preventDefault();
@@ -152,6 +159,7 @@ export default function GroupControls({
           </button>
         </form>
       )}
+      {governance}
       {!owner && !conversation.readOnly && (
         <button
           className="text-danger"

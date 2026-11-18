@@ -1,0 +1,8 @@
+{
+  "source": "代码/前端/iOS/JobsIM/Resource/Assets.xcassets/Logo.imageset/Logo.svg",
+  "sourceSHA256": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+  "output": "代码/前端/iOS/JobsIM/Resource/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+  "outputSHA256": "94a642d716e8f494f4ea9a132fdc55fa9f828c93a71324d35f15a8a73adfec53",
+  "adaptation": "Existing JobsIM owned logo; same message paths/brand colors, opaque square background; rounding delegated to iOS mask",
+  "renderer": "installed rsvg-convert; no download"
+}

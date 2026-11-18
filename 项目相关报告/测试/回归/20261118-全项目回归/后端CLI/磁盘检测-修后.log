@@ -1,0 +1,6 @@
+=== RUN   TestDeploymentDiskReserveIgnoresShadowedDF
+--- PASS: TestDeploymentDiskReserveIgnoresShadowedDF (0.01s)
+PASS
+ok  	jobsim/backend	0.324s
+?   	jobsim/backend/cmd/jobsimd	[no test files]
+?   	jobsim/backend/cmd/jobsimops	[no test files]

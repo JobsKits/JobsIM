@@ -1,0 +1,15 @@
+{
+  "brokenReportLinks": [],
+  "compiledCodeConfigAssetsDifferences": [],
+  "documentationOnlyChanges": [
+    "代码/前端/Android/README.md",
+    "测试/前端/Android/README.md",
+    "代码/前端/HarmonyOS/README.md"
+  ],
+  "currentUniqueNative": {
+    "SKIP_ASSUMPTION": 16,
+    "PASS": 89
+  },
+  "fullManifestUnmodified": true,
+  "oldDistWritten": false
+}

@@ -5,13 +5,11 @@
 //  Created by Jobs on 2026年11月15日，星期日.
 //
 
-import UIKit
-
 import JobsByUIKit
 import JobsIMCore
 import JobsSwiftDSL
-
 import SnapKit
+import UIKit
 
 @MainActor
 final class IMAvatarView: UIView {
@@ -44,17 +42,27 @@ final class IMAvatarView: UIView {
         accessibilityIdentifier = "avatar.fallback"
         let stamp = revision
         let ns = IMSession.shared.namespace
-        let path = profile.firstText("avatarThumbnailURL", "avatarURL")
-        guard !path.isEmpty else {
+        let paths = [profile["avatarURL"].text, profile["avatarThumbnailURL"].text].filter {
+            !$0.isEmpty
+        }
+        guard !paths.isEmpty else {
             return
         }
+        let points = max(96, max(bounds.width, bounds.height))
+        let pixels = min(512, max(32, Int(points * traitCollection.displayScale)))
         loading = Task { [weak self] in
-            let image = await IMAvatarLoader.image(path, namespace: ns)
-            guard let self, self.revision == stamp, IMSession.shared.namespace == ns, let image else {
-                return
+            for path in paths {
+                let image = await IMAvatarLoader.image(path, namespace: ns, maxPixelSize: pixels)
+                guard let self, !Task.isCancelled, self.revision == stamp, IMSession.shared.namespace == ns
+                else {
+                    return
+                }
+                if let image {
+                    self.picture.byImage(image)
+                    self.accessibilityIdentifier = "avatar.remote"
+                    return
+                }
             }
-            self.picture.byImage(image)
-            self.accessibilityIdentifier = "avatar.remote"
         }
     }
 }

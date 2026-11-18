@@ -103,6 +103,9 @@ func (s *localStore) freezeAdmission(p pending) error {
 var decimal = regexp.MustCompile(`^[1-9][0-9]*$`)
 
 func openStore(path string, identity localIdentity, epoch string) (*localStore, error) {
+	if err := ownDeletionStoreGate(path, identity); err != nil {
+		return nil, err
+	}
 	if !decimal.MatchString(epoch) {
 		return nil, fmt.Errorf("invalid restore epoch")
 	}
@@ -135,7 +138,7 @@ func openStore(path string, identity localIdentity, epoch string) (*localStore, 
 	}
 	uri := url.URL{Scheme: "file", Path: filepath.ToSlash(absolute)}
 	query := uri.Query()
-	for _, pragma := range []string{"busy_timeout(5000)", "journal_mode(WAL)", "synchronous(FULL)", "foreign_keys(ON)"} {
+	for _, pragma := range []string{"busy_timeout(5000)", "journal_mode(WAL)", "synchronous(FULL)", "foreign_keys(ON)", "secure_delete(ON)"} {
 		query.Add("_pragma", pragma)
 	}
 	uri.RawQuery = query.Encode()
@@ -373,7 +376,15 @@ func writeCached(tx *sql.Tx, epoch string, raw json.RawMessage) (cacheMessage, e
 	delete(projection, "forwardAdmission")
 	delete(projection, "replyAdmission")
 	delete(projection, "draftAdmission")
+	if global {
+		if err := cliMigrationEraseTx(tx, epoch, id); err != nil {
+			return cacheMessage{}, err
+		}
+	}
 	if projection["forwarded"] == true {
+		if err := cliMigrationRedactForwardTx(tx, epoch, id); err != nil {
+			return cacheMessage{}, err
+		}
 		maskForward(projection)
 	}
 	var sanitizeErr error

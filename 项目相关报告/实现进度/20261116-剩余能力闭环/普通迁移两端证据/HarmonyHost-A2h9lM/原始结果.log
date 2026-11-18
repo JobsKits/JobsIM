@@ -1,0 +1,28 @@
+✔ raw Go JSON slices preserve escapes, nested quoted delimiters and large string counters (3.540333ms)
+✔ real AES-GCM and raw primary digest decode text without Go reencoding (1.448875ms)
+✔ original attachment bytes match independent manifest size and digest (0.652417ms)
+✔ capsule tampering, wrong target and AAD never release plaintext (0.314542ms)
+✔ manifest envelope cannot be replaced by equivalent reencoded JSON or qualified flags (0.266ms)
+✔ install token binds original physical target, epoch, digest and five second window (0.293583ms)
+✔ unknown pairing first performs pure lookup and never creates automatically (0.707166ms)
+✔ lost first mutation retains original nonce and no password or proof in metadata (0.6955ms)
+✔ successor family may query but cannot create original unseen operation (0.35075ms)
+✔ forwarded text is reference-only; definitive revoke erases, unknown hides body (0.460209ms)
+✔ forwarded text durable selection is allowed, secret metadata fields are rejected (0.207625ms)
+✔ installed_reported with local committed digest does not fetch a new key (0.38675ms)
+✔ stopped service accepts neither list publication nor networking (0.112416ms)
+✔ production SQLite repository installs readable original text plus a lawful zero-byte object in one batch (34.078541ms)
+✔ lawful cloud_only archive may replace a cloud-unavailable local placeholder, never a deleted floor (32.643ms)
+✔ known global floor blocks staging any private object and exposes no partial history (30.902709ms)
+✔ history transaction failure publishes no batch and stale-context cleanup removes only unindexed owned staging (32.243625ms)
+✔ valid late 200 cannot republish actual installed forward or preceding owned archive after durable global (42.838958ms)
+✔ final history read rejects a newer local content version or deleted floor while valid forward GET is pending (58.33075ms)
+✔ ordinary durable forward placeholder is not a permanent revocation floor for a fresh legitimate 200 (29.828375ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 385.737458

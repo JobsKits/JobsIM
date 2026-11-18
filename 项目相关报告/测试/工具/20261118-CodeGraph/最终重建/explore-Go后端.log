@@ -1,0 +1,62 @@
+**Exploration: 代码/后端/Go/deployment_disk.go**
+
+Found 1 symbol across 1 file. 1 file pinned from the query.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/后端/Go/deployment_disk.go`** — deploymentRequireSpace(function)
+
+```go
+1	package jobsim
+2	
+3	import (
+4		"context"
+5		"fmt"
+6		"os/exec"
+7		"path/filepath"
+8		"runtime"
+9		"strconv"
+10		"strings"
+11	)
+12	
+13	func deploymentRequireSpace(ctx context.Context, path string, additional int64) error {
+14		var raw []byte
+15		var err error
+16		var free uint64
+17		if runtime.GOOS == "windows" {
+18			literal := strings.ReplaceAll(filepath.Clean(path), "'", "''")
+19			raw, err = exec.CommandContext(ctx, "powershell.exe", "-NoProfile", "-NonInteractive", "-Command", "[System.IO.DriveInfo]::new([System.IO.Path]::GetPathRoot('"+literal+"')).AvailableFreeSpace").Output()
+20			if err == nil {
+21				free, err = strconv.ParseUint(strings.TrimSpace(string(raw)), 10, 64)
+22			}
+23		} else {
+24			// Deployment shells may shadow df with a user command of the same name.
+25			raw, err = exec.CommandContext(ctx, "/bin/df", "-Pk", path).Output()
+26			if err == nil {
+27				lines := strings.Split(strings.TrimSpace(string(raw)), "\n")
+28				parts := strings.Fields(lines[len(lines)-1])
+29				if len(parts) < 4 {
+30					err = fmt.Errorf("unknown disk capacity response")
+31				} else {
+32					free, err = strconv.ParseUint(parts[3], 10, 64)
+33					free *= 1024
+34				}
+35			}
+36		}
+37		if err != nil {
+38			return fmt.Errorf("cannot verify the 4 GiB restore disk reserve")
+39		}
+40		if additional < 0 || free < 4<<30 || uint64(additional) > free-(4<<30) {
+41			return fmt.Errorf("restore requires an untouched 4 GiB disk reserve")
+42		}
+43		return nil
+44	}
+```
+
+
+---
+> **Complete source for 1 file is included above — do NOT re-read them.** If your question also needs files/symbols listed under "Not shown above" (or any area this call didn't cover), make ANOTHER codegraph_explore targeting those names — it returns the same source with line numbers and is cheaper and more complete than reading.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~720 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

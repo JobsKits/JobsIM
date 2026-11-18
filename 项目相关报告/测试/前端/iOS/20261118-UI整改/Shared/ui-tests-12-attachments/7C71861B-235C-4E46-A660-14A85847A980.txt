@@ -1,0 +1,74 @@
+Application, 0x106b9a440, pid: 57366, label: 'JobsIM' <App element pid: 57366>
+  Window (Main), 0x106b9a6c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4402708480.4>
+    Other, 0x106b9a800, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4403538432.5>
+    Other, 0x106b9a940, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4425044992.6>
+      Other, 0x106b9aa80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4425045632.8>
+        Other, 0x106b9abc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4403529216.10>
+          Other, 0x106b9ad00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4409111040.12>
+            Other, 0x106b9ae40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4409017856.16>
+              Other, 0x106b9b0c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4403540480.18>
+                Other, 0x106b9b200, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4402210880.21>
+                  Other, 0x106b9b340, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4408995840.25>
+                    Other, 0x106b9b5c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4899580416.195>
+                      NavigationBar, 0x106b9b700, {{0.0, 0.0}, {402.0, 116.0}}, identifier: '举报' <AX element pid: 57366, elementOrHash.elementID: 4851213312.196>
+                        Button, 0x106b9b840, {{30.0, 72.7}, {16.0, 22.7}}, label: '返回' <AX element pid: 57366, elementOrHash.elementID: 4900396928.198>
+                        StaticText, 0x106b9b980, {{183.0, 73.0}, {36.0, 22.0}}, label: '举报' <AX element pid: 57366, elementOrHash.elementID: 4408470016.199>
+                      Other, 0x106b9bac0, {{0.0, 116.0}, {402.0, 724.0}} <AX element pid: 57366, elementOrHash.elementID: 4899584896.197>
+                        ScrollView, 0x106b9bc00, {{0.0, 116.0}, {402.0, 724.0}} <AX element pid: 57366, elementOrHash.elementID: 4402227200.200>
+                          Other, 0x106b9bd40, {{20.0, 136.0}, {362.0, 503.0}} <AX element pid: 57366, elementOrHash.elementID: 4408502272.201>
+                            Button, 0x106b9be80, {{20.0, 136.0}, {362.0, 34.3}}, label: '未完成举报' <AX element pid: 57366, elementOrHash.elementID: 4900397824.204>
+                              StaticText, 0x106b9b480, {{158.7, 143.0}, {84.3, 20.3}}, label: '未完成举报' <AX element pid: 57366, elementOrHash.elementID: 4408502784.213>
+                            StaticText, 0x106b9af80, {{20.0, 186.3}, {362.0, 20.3}}, label: '填写举报原因' <AX element pid: 57366, elementOrHash.elementID: 4408503296.205>
+                            TextView, 0x106b9ef80, {{20.0, 222.7}, {362.0, 120.0}}, value: UI demo report fix... <AX element pid: 57366, elementOrHash.elementID: 4403615744.206>
+                              Other, 0x106bb0000, {{20.0, 222.7}, {0.0, 0.0}}, identifier: '_UITextSelectionRangeAdjustmentContainerView' <AX element pid: 57366, elementOrHash.elementID: 4901429376.316>
+                                Other, 0x106bb0140, {{20.0, 222.7}, {0.0, 0.0}}, identifier: 'com.apple.text.grabber.leading' <AX element pid: 57366, elementOrHash.elementID: 4408413184.327>
+                                  Other, 0x106bb0280, {{12.8, 209.2}, {16.5, 16.5}} <AX element pid: 57366, elementOrHash.elementID: 4901384896.329>
+                                  Other, 0x106bb03c0, {{20.0, 222.7}, {2.0, 0.0}} <AX element pid: 57366, elementOrHash.elementID: 4901384448.330>
+                                Other, 0x106bb0500, {{20.0, 222.7}, {0.0, 0.0}}, identifier: 'com.apple.text.grabber.leading' <AX element pid: 57366, elementOrHash.elementID: 4408413696.328>
+                                  Other, 0x106bb0640, {{12.8, 209.2}, {16.5, 16.5}} <AX element pid: 57366, elementOrHash.elementID: 4901385792.331>
+                                  Other, 0x106bb0780, {{20.0, 222.7}, {2.0, 0.0}} <AX element pid: 57366, elementOrHash.elementID: 4901385344.332>
+                              Other, 0x106bb08c0, {{349.0, 222.7}, {30.0, 120.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 57366, elementOrHash.elementID: 4408460288.214>
+                                Other, 0x106bb0a00, {{376.0, 306.7}, {3.0, 33.0}} <AX element pid: 57366, elementOrHash.elementID: 4901377280.221>
+                              Other, 0x106bb0b40, {{20.0, 309.7}, {362.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 57366, elementOrHash.elementID: 4408459264.215>
+                                Other, 0x106bb0c80, {{-22.0, 336.7}, {36.0, 3.0}} <AX element pid: 57366, elementOrHash.elementID: 4901376832.222>
+                            StaticText, 0x106bb0dc0, {{20.0, 358.7}, {362.0, 20.3}}, label: '举报材料' <AX element pid: 57366, elementOrHash.elementID: 4408656896.207>
+                            Button, 0x106bb0f00, {{20.0, 395.0}, {362.0, 44.0}}, label: '添加图片或视频' <AX element pid: 57366, elementOrHash.elementID: 4900398720.208>
+                              StaticText, 0x106bb1040, {{142.0, 406.7}, {118.0, 20.3}}, label: '添加图片或视频' <AX element pid: 57366, elementOrHash.elementID: 4408657408.216>
+                            Table, 0x106bb1180, {{20.0, 455.0}, {362.0, 64.0}} <AX element pid: 57366, elementOrHash.elementID: 4403653120.345>
+                              Cell, 0x106bb12c0, {{20.0, 455.0}, {362.0, 64.0}} <AX element pid: 57366, elementOrHash.elementID: 4939885504.346>
+                                Other, 0x106bb1400, {{20.0, 455.0}, {362.0, 64.0}} <AX element pid: 57366, elementOrHash.elementID: 4920732288.349>
+                                  Other, 0x106bb1540, {{20.0, 455.0}, {362.0, 64.0}} <AX element pid: 57366, elementOrHash.elementID: 4923980224.356>
+                                StaticText, 0x106bb1680, {{36.0, 470.0}, {166.0, 34.0}}, label: 'JobsIM-UI-Report-Fixture-20261118.png' <AX element pid: 57366, elementOrHash.elementID: 4403982336.350>
+                                StaticText, 0x106bb17c0, {{36.0, 504.0}, {142.0, 0.0}}, label: 'image/png · 11293 B' <AX element pid: 57366, elementOrHash.elementID: 4403978752.351>
+                                Other, 0x106bb1900, {{40.0, 518.0}, {334.0, 1.0}} <AX element pid: 57366, elementOrHash.elementID: 4403974656.352>
+                                Button, 0x106bb1a40, {{351.7, 480.0}, {10.3, 14.0}}, label: 'chevron', Disabled <AX element pid: 57366, elementOrHash.elementID: 4921632384.353>
+                              Other, 0x106bb1b80, {{349.0, 455.0}, {30.0, 64.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 57366, elementOrHash.elementID: 4408462336.347>
+                                Other, 0x106bb1cc0, {{376.0, 416.0}, {3.0, 36.0}} <AX element pid: 57366, elementOrHash.elementID: 4901378176.354>
+                              Other, 0x106bb1e00, {{20.0, 486.0}, {362.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 57366, elementOrHash.elementID: 4408461312.348>
+                                Other, 0x106bb1f40, {{-19.0, 513.0}, {36.0, 3.0}} <AX element pid: 57366, elementOrHash.elementID: 4901377728.355>
+                            Button, 0x106bb2080, {{20.0, 535.0}, {362.0, 44.0}}, label: '选择聊天记录 (0/50)' <AX element pid: 57366, elementOrHash.elementID: 4900399616.209>
+                              StaticText, 0x106bb21c0, {{124.3, 546.7}, {153.0, 20.3}}, label: '选择聊天记录 (0/50)' <AX element pid: 57366, elementOrHash.elementID: 4408671744.217>
+                            Button, 0x106bb2300, {{20.0, 595.0}, {362.0, 44.0}}, label: '提交举报' <AX element pid: 57366, elementOrHash.elementID: 4900400512.210>
+                              StaticText, 0x106bb2440, {{167.0, 606.7}, {67.7, 20.3}}, label: '提交举报' <AX element pid: 57366, elementOrHash.elementID: 4408593920.218>
+                          Other, 0x106bb2580, {{369.0, 116.0}, {30.0, 696.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 57366, elementOrHash.elementID: 4408464384.202>
+                            Other, 0x106bb26c0, {{396.0, 364.0}, {3.0, 445.0}} <AX element pid: 57366, elementOrHash.elementID: 4901379072.211>
+                          Other, 0x106bb2800, {{28.0, 807.0}, {346.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 57366, elementOrHash.elementID: 4408463360.203>
+                            Other, 0x106bb2940, {{31.0, 834.0}, {340.0, 3.0}} <AX element pid: 57366, elementOrHash.elementID: 4901378624.212>
+                          Other, 0x106bb2a80, {{369.0, 116.0}, {30.0, 696.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 57366, elementOrHash.elementID: 4408464384.202>
+                            Other, 0x106bb2bc0, {{396.0, 364.0}, {3.0, 445.0}} <AX element pid: 57366, elementOrHash.elementID: 4901379072.211>
+                          Other, 0x106bb2d00, {{28.0, 807.0}, {346.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 57366, elementOrHash.elementID: 4408463360.203>
+                            Other, 0x106bb2e40, {{31.0, 834.0}, {340.0, 3.0}} <AX element pid: 57366, elementOrHash.elementID: 4901378624.212>
+                Toolbar, 0x106bb2f80, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: '工具栏' <AX element pid: 57366, elementOrHash.elementID: 4409050112.22>
+                  Other, 0x106bb30c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4411901824.26>
+          Other, 0x106bb3200, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4402709504.13>
+            Other, 0x106bb3340, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 57366, elementOrHash.elementID: 4403537408.17>
+              Other, 0x106bb3480, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4402207296.19>
+              Other, 0x106bb35c0, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 57366, elementOrHash.elementID: 4403537920.20>
+    Other, 0x106bb3700, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4425043712.7>
+      Button, 0x106bb3840, {{290.0, 642.0}, {100.0, 44.0}}, identifier: 'demo.environment', label: '演示环境' <AX element pid: 57366, elementOrHash.elementID: 4403594112.9>
+        StaticText, 0x106bb3980, {{316.0, 656.7}, {48.0, 14.3}}, label: '演示环境' <AX element pid: 57366, elementOrHash.elementID: 4409018880.11>
+  Window, 0x106bb3ac0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4936916480.343>
+    Other, 0x106bb3c00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4403977216.344>
+  Window, 0x106bb3d40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4402829568.108>
+    Other, 0x106bb3e80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4408665600.109>
+      Other, 0x106bb4000, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 57366, elementOrHash.elementID: 4408666624.110>

@@ -1,0 +1,5427 @@
+[
+  {
+    "file": ".gitignore",
+    "size": 474,
+    "mode": "644",
+    "sha256": "ad72b4e61114906961e6158c33602f36fcc50f33236e78c19f36b9df2bd38c68",
+    "kind": "metadata"
+  },
+  {
+    "file": ".jobs-markdown-toc/MarkdownToc.mjs",
+    "size": 27126,
+    "mode": "644",
+    "sha256": "10ee06bd277b2b739754d233764baf94fd5de733954c8ec6aeedb8448c6061f5",
+    "kind": "javascript"
+  },
+  {
+    "file": "codegraph.json",
+    "size": 922,
+    "mode": "644",
+    "sha256": "8f4a68a2674a37c871dbf7223d4eef6f31ab38f742055a471dbd17e8939e6962",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/Android/.gitignore",
+    "size": 51,
+    "mode": "644",
+    "sha256": "470a7652df9de0b8bf47661349d3e11cbffed8ce35fcf70866b555e84a1f75c4",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/Android/app/build.gradle.kts",
+    "size": 1870,
+    "mode": "644",
+    "sha256": "3024dd9b8dbf15a0040e3ee68390cdac8a27726a3c3707be8fefd5610bea794b",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/AndroidManifest.xml",
+    "size": 1185,
+    "mode": "644",
+    "sha256": "00efada43c57a77acb90380b8f5301a0328a2e0f1f0fd8b6178260bdf19e6157",
+    "kind": "xml"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/AnnouncementModel.kt",
+    "size": 13324,
+    "mode": "644",
+    "sha256": "63be036049525c321954524c4a5697a6c8ab21f71ac2b9845a07e22cf28b0db7",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/Assets.kt",
+    "size": 2020,
+    "mode": "644",
+    "sha256": "9900fa046e40e2e4b85769a6e55bb0d4aa366b75ceb314feea75872cde097e5d",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+    "size": 113425,
+    "mode": "644",
+    "sha256": "9e7181132dcb6fe37fae6665d5d10534cb007526f9a2dc2064ec43146b6ab388",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/CollaborationScreens.kt",
+    "size": 14639,
+    "mode": "644",
+    "sha256": "07ee7b28f325e33e12aec3ae4f812a2bd724488c089cc786200758bc11fcb7c3",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/DiscoveryScreens.kt",
+    "size": 5314,
+    "mode": "644",
+    "sha256": "781aaca24f02eef9f55ac4feecaaf9b8cedb75090fe4ba531fc939b2e415b630",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt",
+    "size": 4570,
+    "mode": "644",
+    "sha256": "04580cca737a6f9d4ca1f5d78f90fe6fa8a3eb415a41f76d2590b66faecff2a4",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ExtraStrings.kt",
+    "size": 14595,
+    "mode": "644",
+    "sha256": "8ae5c3bfe802a3f54f299d945ba4df56306db22d2e3d7dc7f7789cb8a5844558",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/FeatureStrings.kt",
+    "size": 11024,
+    "mode": "644",
+    "sha256": "a341c5ec4a99105fee4490b58398ae3525c8e672d2ddeac5f613044d127263fa",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/Forwarding.kt",
+    "size": 2725,
+    "mode": "644",
+    "sha256": "4d1a7ca373ddd12681706c9845439bd05d49d83312cffaed248b4d7b78732fae",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ForwardScreens.kt",
+    "size": 3415,
+    "mode": "644",
+    "sha256": "0fb2d5cea01d33e6c3c2dbb352cbc5a3ab4e1f82c7bc7e14564e0e430bcd5ba7",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/GroupScreen.kt",
+    "size": 13102,
+    "mode": "644",
+    "sha256": "16d71d55a8a9b2b4f54de2c62beb9c3a438832b2101c7d30d135744280e4d436",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/GroupText.kt",
+    "size": 13721,
+    "mode": "644",
+    "sha256": "12a6a59452dac4a70c43c49e0dd36c191d75d02daeab1ead209d8d4e9edfe7e1",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/GroupTools.kt",
+    "size": 18830,
+    "mode": "644",
+    "sha256": "8142599ff0301df90763b87ff241bcc2ea065eb282ebca977b6ff91c219d28e5",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/LocalAlerts.kt",
+    "size": 1794,
+    "mode": "644",
+    "sha256": "8d374b5462fddc090f4759ad3bf70591bb94466e9ffe1abfbd2668989a7e643a",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt",
+    "size": 54728,
+    "mode": "644",
+    "sha256": "78d14be0accfc4305669c6845149c96eb6c9ea811ab9178d5e9b54986b07e788",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ManagementScreens.kt",
+    "size": 18090,
+    "mode": "644",
+    "sha256": "2cfb62f47590adc2df469555c94bea196b668c16f494fb7f08fed12a161562de",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/MessageDiscovery.kt",
+    "size": 7108,
+    "mode": "644",
+    "sha256": "23ab6b08d5500d9d74d9a1b532c908039dd445235e2da171e421edc52129c42a",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationProtocol.kt",
+    "size": 15411,
+    "mode": "644",
+    "sha256": "c70cddbecc088217dd8020206bd8089885ef092414fd260351fbf4eb7462de22",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationScreen.kt",
+    "size": 13309,
+    "mode": "644",
+    "sha256": "d87036494ff6d0abbf63be282ce6f0ab9fc4a9a4f418de55d76cd08f29821d5a",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationService.kt",
+    "size": 17699,
+    "mode": "644",
+    "sha256": "c52fd07934b27c094c1e4bffd94578809f83d723de41c1d3d9dd2dd120832c06",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt",
+    "size": 18750,
+    "mode": "644",
+    "sha256": "e5e998439953f48478bd03c074e07d7f860e3dddace679672f3430ecf4f3ea33",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationText.kt",
+    "size": 15068,
+    "mode": "644",
+    "sha256": "19a778c37aad5e8db365b18cee50763e8efc59e1acd924fbe5d4b3d6fc39ba4e",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/NativeSession.kt",
+    "size": 11342,
+    "mode": "644",
+    "sha256": "4c81e9583cf6ca68cbec82f8cf90a0f6d090995815044baaa1dc740345e3829b",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/NativeStorageBudget.kt",
+    "size": 505,
+    "mode": "644",
+    "sha256": "718f7ad677970814da20f6784966ca5ba4180fa7617c3f8d26d51b84676e4852",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletion.kt",
+    "size": 15502,
+    "mode": "644",
+    "sha256": "b25da4bea169969c60f4509b3be74433489e7fec6ee934bb7057138b0aa1a5ea",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionCleanup.kt",
+    "size": 2193,
+    "mode": "644",
+    "sha256": "175d2cb8069c5bec28783c8b90770a2065b9fdafc4e80297a2cdffa3d41e7919",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionScreen.kt",
+    "size": 7039,
+    "mode": "644",
+    "sha256": "56783f70546ae75f3b354ac61d2752b40189b4e97cc136812a076012bbd77f19",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionText.kt",
+    "size": 12051,
+    "mode": "644",
+    "sha256": "7201439fb091b4213047c6920afbca6e2cc64460007fabf772a09207bfb9bb3f",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnPassword.kt",
+    "size": 12512,
+    "mode": "644",
+    "sha256": "83518305d6a03a7da7c7041fd7e473bd8b215a6c37366766a5071d98fd9967b4",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnPasswordScreen.kt",
+    "size": 6353,
+    "mode": "644",
+    "sha256": "002f7346d4b4ac6e3069bd3ffcff9bf926fb93d979a22ad9d0e25168bafa1d42",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnPasswordText.kt",
+    "size": 12103,
+    "mode": "644",
+    "sha256": "f45e31cf7019a7c33375ff4c4b421eda80583ae0b22d90c4950999a17933662c",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportFiles.kt",
+    "size": 12050,
+    "mode": "644",
+    "sha256": "59c0d4f669c58624dd6d21b25ccaaf0ca0ae6af6d1d38c9d8fba3b688d6e584a",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportModel.kt",
+    "size": 13062,
+    "mode": "644",
+    "sha256": "ad8e9a8940f33e80cb16cb2f01b39604e3761cef8b1f8e61cb205b7345b0f774",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportScreen.kt",
+    "size": 9664,
+    "mode": "644",
+    "sha256": "6ac407e9316c6bac51ad6e7cc7fba8ae568099d2794a6b21d6485a4d807810db",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStore.kt",
+    "size": 5419,
+    "mode": "644",
+    "sha256": "649481ca82a68ca08f08f89a73308434a770a627c4e0603bf9dfecf2611de1c2",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStrings.kt",
+    "size": 25113,
+    "mode": "644",
+    "sha256": "5db6bfed3c232e124212ba62911305fc9c5fb368f2265136dc4d68c007f830c1",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportWire.kt",
+    "size": 4806,
+    "mode": "644",
+    "sha256": "35dbc4e5ca539ab96795d1371e05bc420e5b2da8d21ddb8ee7a5fa2df594c049",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ProfileAvatar.kt",
+    "size": 1311,
+    "mode": "644",
+    "sha256": "993d097d594ba1c1256b81067f00e481814809fda6b663d740d5847ba729f030",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptCoordinator.kt",
+    "size": 1774,
+    "mode": "644",
+    "sha256": "3eb82aa84bca34e5165a68b069e19a8dabca69e3c7b346b5add502fa5deebad7",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptProtocol.kt",
+    "size": 11785,
+    "mode": "644",
+    "sha256": "e2a43100c2f4c3e3903d7a695bc1254f6d3bd1d77b052bef94bd4abe2d87ddfa",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt",
+    "size": 10000,
+    "mode": "644",
+    "sha256": "76b10221554117bb3d39a5463c61ff227ed4943dd1c208b24c61b8dc656c9cfd",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptService.kt",
+    "size": 13895,
+    "mode": "644",
+    "sha256": "c691e420520ee456e960b5be756f55cfd853cd179b90187bc8e47797784a7e45",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptStore.kt",
+    "size": 15299,
+    "mode": "644",
+    "sha256": "92a5187f56bdff4e1f5d4ea6e488da97e7004a096861a4eda46135c06f5447a2",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptText.kt",
+    "size": 16198,
+    "mode": "644",
+    "sha256": "b318095243afd280b68012ba18e2eb8358747f3cdc3fad1a6294e8785f78ff87",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfState.kt",
+    "size": 16370,
+    "mode": "644",
+    "sha256": "adc7ac10430c4f073c6c2d1e0f63e2fffdbe52a3512d230bf167d6efb2935186",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateModel.kt",
+    "size": 14216,
+    "mode": "644",
+    "sha256": "04c11493812da8b66acd83d9b66221f01e8f97ea6b3d25fbbea747ae5b039bdb",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateStrings.kt",
+    "size": 16371,
+    "mode": "644",
+    "sha256": "19638e5cb381e60ccfa998838e9595240e2f2e2e60b95ca7207b737c92f40479",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateUi.kt",
+    "size": 7163,
+    "mode": "644",
+    "sha256": "34f27f6c5416aa779564e1293d56d53034567c2077dcff3a235a9a12471a2a50",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SessionCoordinator.kt",
+    "size": 18277,
+    "mode": "644",
+    "sha256": "a690ebc4c58160f7989197b58158707e8b7b262110273bf81009eb655cb58368",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SessionStrings.kt",
+    "size": 5502,
+    "mode": "644",
+    "sha256": "8287793aa4232e514a4f7d5bef75c4691f3270929d750f6c23850d462fc37ab8",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt",
+    "size": 27257,
+    "mode": "644",
+    "sha256": "32fec90ad66ce797e53ed8dd7ab60153137cfbb4847f7314d148743fb2e2fd17",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/Strings.kt",
+    "size": 15032,
+    "mode": "644",
+    "sha256": "0292c77200af36d828bee1206eb7f6fa8565b046d467319f3fd845a92f38fd79",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt",
+    "size": 1566,
+    "mode": "644",
+    "sha256": "40b54b4528558a295b7a1706e9ea545b3b22caec5040d977f5417a06a57f3f43",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncEngine.kt",
+    "size": 8976,
+    "mode": "644",
+    "sha256": "5a153faf67971467236861ef9cbc7f74d263a4da036551450c189a9311a493ed",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncGuardApi.kt",
+    "size": 4397,
+    "mode": "644",
+    "sha256": "0e98fc3e6e8e72df5544e2551e421ed400c6d2c8478a1463629aa775862f56d3",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt",
+    "size": 16164,
+    "mode": "644",
+    "sha256": "9064fda3e28b1209f2e92f4263ec538451887b305e0b3c64ad609c3a9e5cc535",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncStore.kt",
+    "size": 26118,
+    "mode": "644",
+    "sha256": "bc43eb1f4b849c62b786cd4501bb674fb82f3cd0d4a29c6062933392a188d9b7",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/Transport.kt",
+    "size": 18547,
+    "mode": "644",
+    "sha256": "3566569b2b546b25059e8764a4ca39c32c272c6940f1df06747138e07264104a",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingComposer.kt",
+    "size": 7809,
+    "mode": "644",
+    "sha256": "8649dfca6ccda7350f423087449fb978a2b4e2fc80ec1b4e3725232487c4eea9",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingEngine.kt",
+    "size": 10021,
+    "mode": "644",
+    "sha256": "6c166cb8e82be460486d6711ebb1f8b99d0ad33280eebd403deef1d0753dc6d2",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingFiles.kt",
+    "size": 2677,
+    "mode": "644",
+    "sha256": "ea6271f8c7f6d63ffea2e738ec253e524871a2a91decf90ae0dd05c841be80e3",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingRules.kt",
+    "size": 1215,
+    "mode": "644",
+    "sha256": "e671faf511baf5a9b17bd628174c234ea5113bc1b840a98a8890f32ec0218818",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingText.kt",
+    "size": 13819,
+    "mode": "644",
+    "sha256": "41ff2271bce756cbf022415604b0b5af9deaf2d53a45b633f95134a49197fdc5",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadApi.kt",
+    "size": 4366,
+    "mode": "644",
+    "sha256": "c02ead24ddfb7e6e828db7774a343eb3f73582a871253539b6ed47be55ee1a6b",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadCoordinator.kt",
+    "size": 4959,
+    "mode": "644",
+    "sha256": "ba46081d4522ec08a2737ce3be9c53a7ec4ac214defaa4f87f86202cb7a4251a",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadProtocol.kt",
+    "size": 10961,
+    "mode": "644",
+    "sha256": "68903660ed208523a5f9a157d3939a3c3e03542a1b63714b0c8feca8991dfc7d",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt",
+    "size": 25291,
+    "mode": "644",
+    "sha256": "f9a47b7dba6b52a17d0859414af6e7c3cfae1c4474925a351f7d0bbe56f3face",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadScreen.kt",
+    "size": 6908,
+    "mode": "644",
+    "sha256": "b537ea115163b6b402c2b86784dd0c91522894c5e52a2a9ccf7d639b616ed9ed",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadText.kt",
+    "size": 13453,
+    "mode": "644",
+    "sha256": "d9b2abbb321e7e59a7e0d36008e0c98dcb0450b626aa2a9fbb844586c853836b",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/res/drawable/jobsim_logo.xml",
+    "size": 625,
+    "mode": "644",
+    "sha256": "73fc41665b5c3612e61c9864e0be5e9eb5bc3e79bb16f6362f34ec159361c3a3",
+    "kind": "xml"
+  },
+  {
+    "file": "代码/前端/Android/app/src/main/res/xml/file_paths.xml",
+    "size": 128,
+    "mode": "644",
+    "sha256": "42d9e0335da31c8e3eae67d463b1ade6ce2065df876264a153234cf5687633ee",
+    "kind": "xml"
+  },
+  {
+    "file": "代码/前端/Android/build.gradle.kts",
+    "size": 212,
+    "mode": "644",
+    "sha256": "3e9a92f7cc44f4c440fdd4634125f9f4d2864bee5983604f76503dbd4831efb6",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/Android/gradle.properties",
+    "size": 100,
+    "mode": "644",
+    "sha256": "e43a00491832254a35cf5a979ef6de17f78c4e159d446be39319d2e3d3e46325",
+    "kind": "properties"
+  },
+  {
+    "file": "代码/前端/Android/gradle/wrapper/gradle-wrapper.properties",
+    "size": 281,
+    "mode": "644",
+    "sha256": "c67b97cdfe41822dbc8dc4614460f4ae0d2eef937d873f4b9011e892b1875c0d",
+    "kind": "properties"
+  },
+  {
+    "file": "代码/前端/Android/gradlew.bat",
+    "size": 2846,
+    "mode": "644",
+    "sha256": "475c4f08cd57cf2faa819e7f36d72aa93f0ad646ea23a8f7fa3ef54dee1cbc52",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "代码/前端/Android/settings.gradle.kts",
+    "size": 275,
+    "mode": "644",
+    "sha256": "85cac4dd99f37f4ad3ca4685f02bd109128486cb4b4f5d27c22603121676101c",
+    "kind": "kotlin"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go",
+    "size": 1274,
+    "mode": "644",
+    "sha256": "99aba4b84a204208ec607d925415470c18a0a90f29626b2be37b7c9b43682a70",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go",
+    "size": 1722,
+    "mode": "644",
+    "sha256": "802f2dc215b0716db0389a0483989de6c25446fd700781976558af4801ad8bd4",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go",
+    "size": 4795,
+    "mode": "644",
+    "sha256": "0165ee54098f1b4e223d3005cf54445ea945e88ddb5f5800f148985402a57a06",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go",
+    "size": 3693,
+    "mode": "644",
+    "sha256": "f85527dd37bddc1d7e1c17da398b6bf12ca7d42ed94a0517ab87d50bb4c17f2a",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/auth_vault_other.go",
+    "size": 299,
+    "mode": "644",
+    "sha256": "232842a24f0efa8691c222c8ad616146db98f5a45acb417526e0679589f2e4fd",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go",
+    "size": 3088,
+    "mode": "644",
+    "sha256": "863cb2ed0ca254473fa11a8b2dfe2f8fb5c2414d6846ca316cfbfc8ace69fc51",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/auth.go",
+    "size": 27807,
+    "mode": "644",
+    "sha256": "f292de628476749c8eafc13a96f71a08049137c42cba4d59bdd18dbb8ce6e5dd",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+    "size": 23152,
+    "mode": "644",
+    "sha256": "805f1dfd0f440aba5da175f7becec66360f832fdb13e7aabc558ff31a635d043",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/credentials.go",
+    "size": 1556,
+    "mode": "644",
+    "sha256": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/data_export_file.go",
+    "size": 8530,
+    "mode": "644",
+    "sha256": "f945f1548bd2c95a63aa884deb42cd5d853270a64a7fcc78f34e72bc3949eeff",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/data_export.go",
+    "size": 15356,
+    "mode": "644",
+    "sha256": "b7fb644093c2a25fbdfb68d56575f5a9aa69e8de25e67695e6c0bd8b31fabf39",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/forward.go",
+    "size": 4012,
+    "mode": "644",
+    "sha256": "ef4692138b5458d003c5df06983e2fde187a464da5eae5451d2283dbe9f3a157",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/governance.go",
+    "size": 10745,
+    "mode": "644",
+    "sha256": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/group_governance.go",
+    "size": 17209,
+    "mode": "644",
+    "sha256": "3b8a65218b6ab2caf5baaa2bb465ae06d115164805bd98a5e8622cfa1f9be5c8",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/local.go",
+    "size": 10713,
+    "mode": "644",
+    "sha256": "f067618d3f4073fd5915f2d870aaeb66d9d7b6ff4c5fb9eebc27a8c5b07bb7e9",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/main.go",
+    "size": 21102,
+    "mode": "644",
+    "sha256": "fcf1dc912c440ba16e8e3655acbc102af2ee3eb3f05d60f536651040a8c74b04",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/migration_command.go",
+    "size": 25265,
+    "mode": "644",
+    "sha256": "2920ff5969276086d5e27fd774e939910dcbdbab6459e24de2edba2ec07274bd",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/migration_history.go",
+    "size": 7073,
+    "mode": "644",
+    "sha256": "fa5161f800310362a520dc8805108a23d39575501f2a1b34b8f0f1da017ba14c",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/migration_protocol.go",
+    "size": 13980,
+    "mode": "644",
+    "sha256": "008dd0431a88dd2258ef396ad2c678053fedced40a34408dfdbca8aa78841e5f",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/migration_store.go",
+    "size": 11952,
+    "mode": "644",
+    "sha256": "e8ab2db5da713a50283bb056464b8ac699c7645819989a6f3d8a8c337f669a55",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/own_deletion_cleanup.go",
+    "size": 7979,
+    "mode": "644",
+    "sha256": "dec328f09247830a33690de3f6a14b6e62fded8b3ec566a9caad54dcff54edf1",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/own_deletion_command.go",
+    "size": 8712,
+    "mode": "644",
+    "sha256": "f9359cd5fe8f6b140b6bb6bbf7a15419447f42c8287bc4c2bbb5b7eeb2e01eb0",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/own_deletion.go",
+    "size": 18481,
+    "mode": "644",
+    "sha256": "97a4657ad17609c43ed8ae1b8af02a4fb1c473796d7c7c30c052d3b8fc833e7b",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/password_change.go",
+    "size": 23236,
+    "mode": "644",
+    "sha256": "8f32c0deacc138902462cd2e75b1683a340575d297b17546f90d89e532fa608c",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/receipt_cleanup.go",
+    "size": 8298,
+    "mode": "644",
+    "sha256": "78b4d57078293ad7627e3d18802dc5af90a8847916b5f0108e2389d30d7243c2",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/receipt_migration_source.go",
+    "size": 8692,
+    "mode": "644",
+    "sha256": "34bc1f36ad426c463d4c72131baf09da082ca201a139c176369e3d3ed5cefb19",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/receipt_negotiation.go",
+    "size": 12051,
+    "mode": "644",
+    "sha256": "1a8008d89ab30ad5009944e51b46091a3ee5420d29e9ee32fd71e2250ef15be7",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/receipt_objects.go",
+    "size": 25126,
+    "mode": "644",
+    "sha256": "5921cc58db2d9fd5c69dff483c0b8039933120b636a077eae677f50fc7d7add5",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/receipt_policy.go",
+    "size": 10655,
+    "mode": "644",
+    "sha256": "63aa18b33bd875e8ba678203c19dba048dbc88ba7d18374f87a00378e7c77784",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/receipt.go",
+    "size": 35836,
+    "mode": "644",
+    "sha256": "1ffd4602e059bc7adbfd90a14af005a1f287205aef196c6c9ee20d0239b2bd2a",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/self_state.go",
+    "size": 37191,
+    "mode": "644",
+    "sha256": "54981ba71cad940d8aa1d28581be86c8155b524aa4078cd9880e234b6e7df186",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/store.go",
+    "size": 23853,
+    "mode": "644",
+    "sha256": "c83fe4c10e05c50cb4841e83107d15eacdd81197a99fabe45b4a22e98568d447",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/sync_engine.go",
+    "size": 19959,
+    "mode": "644",
+    "sha256": "f953c1d50c01f317c164aaf10ee7300877b1446351d31dc62efae3d6d179ace0",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/sync_protocol.go",
+    "size": 22184,
+    "mode": "644",
+    "sha256": "cb2371cf70babc00f1d70b39faff551d8f77f9de7b0f464ddaeab229b798ca14",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/cmd/jobsim/sync_store.go",
+    "size": 35762,
+    "mode": "644",
+    "sha256": "6cefdde58f5c88e0af6b7f9ed3dfafdd9363e6ee7fc6e4a33d042063e303281b",
+    "kind": "go"
+  },
+  {
+    "file": "代码/前端/CLI/go.mod",
+    "size": 528,
+    "mode": "644",
+    "sha256": "4ca83c3741ef64a504e79ed56281a7d583b968273ea284786ee89248a013db39",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/CLI/go.sum",
+    "size": 4350,
+    "mode": "644",
+    "sha256": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/CLI/Scripts/Build.py/Build.py",
+    "size": 4704,
+    "mode": "644",
+    "sha256": "cb65a3a13157fa60712bc5845baaf406fb4d95857b377bb1800529b9364a62a2",
+    "kind": "python"
+  },
+  {
+    "file": "代码/前端/CLI/原生助手/Keychain/JobsIMKeychain.swift",
+    "size": 5316,
+    "mode": "644",
+    "sha256": "155f11edd08138caf3e4367c74aa066cd8bd4233e8713d92f0e1b58711ac954d",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/.gitignore",
+    "size": 66,
+    "mode": "644",
+    "sha256": "6884aa42c3fcb9d8febe3fcedaaa6ae501e7d40d12993dc91a0bbf25ed01ae9d",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/build-profile.json5",
+    "size": 737,
+    "mode": "644",
+    "sha256": "010b2307aad2255373dd8b844ad07fce7897e5761fb61041130bdcc102266e18",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/build-profile.json5",
+    "size": 92,
+    "mode": "644",
+    "sha256": "6d7a700b77bc3ae334ee654a8ed561388480a19375f8e62bb33839acf1b160eb",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/hvigorfile.ts",
+    "size": 103,
+    "mode": "644",
+    "sha256": "f547983dcab9c8fff87cc3ddedb22bb98063663c5b8afe18bb32e131311ec289",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/oh-package.json5",
+    "size": 104,
+    "mode": "644",
+    "sha256": "f6e290480c4a763f46f737853f7703000026e27a0a914a398e13101175349963",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Api.ets",
+    "size": 14721,
+    "mode": "644",
+    "sha256": "d3564cb1b488d8da4a389b28d3dd98a824d2a216a1294d1a037860add6246987",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/AuthCoordinator.ets",
+    "size": 24054,
+    "mode": "644",
+    "sha256": "120ee6f8e71841f3a297c7a6d8b90cb45e6705baba8b36051303e9ac7ad6b217",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Deletion.ets",
+    "size": 12955,
+    "mode": "644",
+    "sha256": "c7ba167d85538f6c95f64330f49ed6e63a599849aa365367f1bd9a10674bae14",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionFiles.ets",
+    "size": 2598,
+    "mode": "644",
+    "sha256": "573c9da4575cf02daa5378a0d0303ad4606923fa765932309efdd9186545b1e4",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionStore.ets",
+    "size": 7236,
+    "mode": "644",
+    "sha256": "f52fb58e1b78c7a67bacee2deb3fe68634102f2b2af9c112c648543a89c1c8e4",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionText.ets",
+    "size": 12419,
+    "mode": "644",
+    "sha256": "fd818201add827b0cd774e47a098a01f6893f5e448048f79feb7bd7ff516aaa2",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportFiles.ets",
+    "size": 6625,
+    "mode": "644",
+    "sha256": "271604c881a0865e14acfc891d0542977cf8804ff51da3aeda7e63d76c557cb0",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportProtocol.ets",
+    "size": 8961,
+    "mode": "644",
+    "sha256": "15d34dd49d5c53f867a992901fa95e4c97913389c40ae158be2c2d9cb8a7f321",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportService.ets",
+    "size": 5742,
+    "mode": "644",
+    "sha256": "97cd2298eaacb7bd7904eb9c875463ad800b0d8aad208eec048a972eb918fa9e",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportStore.ets",
+    "size": 4013,
+    "mode": "644",
+    "sha256": "c1b259a3d0609bead61d79195dcbce4b02de8c31d137967fbd51e46534a9adab",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportText.ets",
+    "size": 27965,
+    "mode": "644",
+    "sha256": "1a4a76bdb7043c35d6185430092734f731e14ae08662564ae3df9a8e3b20e3ed",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupStore.ets",
+    "size": 3134,
+    "mode": "644",
+    "sha256": "2559ada4628fe306794ffc7e036b671c2a2a1b8b9d54a6ec1208ae8f97e1d07d",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupText.ets",
+    "size": 14831,
+    "mode": "644",
+    "sha256": "f9a8f0166bc54e7c3b173cd17aeaba0bff780eea562addb63462f25ad8c60206",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools.ets",
+    "size": 16229,
+    "mode": "644",
+    "sha256": "91460e1baf2e65bb87cfb6bcb164cff1b1c9d1357f4f768dabc22e12ef2a94f5",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationNative.ets",
+    "size": 8002,
+    "mode": "644",
+    "sha256": "30c5fa9b26be7c9b28ef0f3e0d350220774883b3c77ad143aa385172db93d9f9",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets",
+    "size": 19096,
+    "mode": "644",
+    "sha256": "ab99d04444fe4bbe60d056a89520711d40d734696a2fa7767efa9c5a17a8eb41",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationService.ets",
+    "size": 21823,
+    "mode": "644",
+    "sha256": "c286ad2f4f513d9ca0e6ff89abcef4579b7a7ec29359ef489d9c11b1b5a6a50c",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets",
+    "size": 21514,
+    "mode": "644",
+    "sha256": "fe30ef4c7739bd5135d92706e8279a558a18c43f32cc0bf12950d96aa9e9220c",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationText.ets",
+    "size": 15383,
+    "mode": "644",
+    "sha256": "9a0d8868087b0554fb8b078b8489e0043c97299e186cb19b2128eed15cf7c1cb",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets",
+    "size": 23218,
+    "mode": "644",
+    "sha256": "cb5e3567f6da62dc2d916b05b94156b041e0bcd59f1e91fde87b4a0acd3864e7",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeServices.ets",
+    "size": 6237,
+    "mode": "644",
+    "sha256": "378549e0133cd5edc2e8212e3fe94a01b2f2192b907b7e38c551806f4db9e52e",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeStorageBudget.ets",
+    "size": 750,
+    "mode": "644",
+    "sha256": "01d02c0b41f7121bc0859c69f80550efae937ac94bcf93f1a278d4a8d1ee7847",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordChange.ets",
+    "size": 8728,
+    "mode": "644",
+    "sha256": "f13bee654b85bb39d262ebc20769f45e33d1c6bbb9dbda913007218a6ea8dc42",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordStore.ets",
+    "size": 3767,
+    "mode": "644",
+    "sha256": "1fc65181e311c8a02e1194d272039d41e92e054d24d6d316ba2fb93952876544",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordText.ets",
+    "size": 13481,
+    "mode": "644",
+    "sha256": "3c68c3c53a74651965cd1c3e08ac78645bab4977ac52309e2b43d305c2d49ae9",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCleanup.ets",
+    "size": 2696,
+    "mode": "644",
+    "sha256": "b6494934d492097642622faad3112ba92f1dbf48b1a35fc709385d595c409270",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCoordinator.ets",
+    "size": 2434,
+    "mode": "644",
+    "sha256": "ce501a4a8def98f8c6d60b272ac4184d2c39a2c4f2fea610ca63064570e20e9f",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptNative.ets",
+    "size": 6901,
+    "mode": "644",
+    "sha256": "90b6dc8537a9f8eb72b71039a186a4c50e481788d900a965e76e4785e6aa7e30",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol.ets",
+    "size": 12441,
+    "mode": "644",
+    "sha256": "d759bb21325b3bfb6e8b5ad8f102c91db0758affb6deef58ee49d59414df0363",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets",
+    "size": 18150,
+    "mode": "644",
+    "sha256": "7bc079e25554546a83e611c2b2e4ad66beb8cfe268f576649fb7af2f41baabfe",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptStore.ets",
+    "size": 17308,
+    "mode": "644",
+    "sha256": "6ac9bd00e8bd352745162782b02586c417dc2a57434e92db2c8e07be86129831",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptText.ets",
+    "size": 16416,
+    "mode": "644",
+    "sha256": "5b5dbb2ffe2e14b0891acca3922b2e542e00f4394b16890509dc561fc189030b",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets",
+    "size": 11898,
+    "mode": "644",
+    "sha256": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfState.ets",
+    "size": 16696,
+    "mode": "644",
+    "sha256": "233673f5b738311621db2185740ba469bf9f5a73be82bba39834252aad30df5e",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfText.ets",
+    "size": 10565,
+    "mode": "644",
+    "sha256": "63554f0f9b55e928538daf285db5e7fdc7b2ccb29df5b6d0b70617979f2ff776",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Store.ets",
+    "size": 13595,
+    "mode": "644",
+    "sha256": "b8660b30de7972a8137686dc354328e85cc9f999fe9793630c92cdba49490e48",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets",
+    "size": 56212,
+    "mode": "644",
+    "sha256": "2ade51ff9d4c9c032433bf815ec46fa90af0fa79b94f074b61f34feef35caf47",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncEngine.ets",
+    "size": 11968,
+    "mode": "644",
+    "sha256": "07f592dfbf8bc914a62d01e89d82df2dc9a0b7b13f578dba26e7ed1eaa06e538",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets",
+    "size": 19511,
+    "mode": "644",
+    "sha256": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncStore.ets",
+    "size": 34057,
+    "mode": "644",
+    "sha256": "d4efdcb28cb4f1f0b26c300161f7b899c295cd394f60facabb5eda69308d7b9b",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncText.ets",
+    "size": 2903,
+    "mode": "644",
+    "sha256": "cbdc1ff61579cffaf504bcd9a0f0720b91fb71660f336675169410a7cb8885e7",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/entryability/EntryAbility.ets",
+    "size": 418,
+    "mode": "644",
+    "sha256": "9e1266f4455e211de75909d6d7f47f7812b9676e2365bab9cbfbd76bfa26afb8",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets",
+    "size": 220159,
+    "mode": "644",
+    "sha256": "fa6f2299f9bcd917ae1cde09efdc8ac2d8f37a35f8cf361c9e2d58cfd5175a8c",
+    "kind": "arkts"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/hvigorfile.ts",
+    "size": 103,
+    "mode": "644",
+    "sha256": "2378c5e0c5246005ada73a67e8c9834fa08adb9ffd6fb6c219051456753bed5a",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/oh-package.json5",
+    "size": 167,
+    "mode": "644",
+    "sha256": "386462ef10c6944a8c049c65fa7afde46bf572fcf25a3df25f165b6d17c349a5",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/HarmonyOS/工具链/【MacOS】准备工具链.command/【MacOS】准备工具链.command",
+    "size": 5251,
+    "mode": "755",
+    "sha256": "48e532c8a2708566cb8df75cefe8f2ebaffae5efdfc7a171c1ebfc59bc404f32",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "代码/前端/iOS/.gitignore",
+    "size": 65,
+    "mode": "644",
+    "sha256": "17bb877e787e58de0381d05e8fd099b0a0e04a97c9af112968cd9346a29bd5e4",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMCursor/IMCursor.swift",
+    "size": 1362,
+    "mode": "644",
+    "sha256": "3915274c5d488c3680a423acf43632dcd51c09817c3c70cd58c1c4640acd29e5",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMJSON/IMJSON.swift",
+    "size": 2638,
+    "mode": "644",
+    "sha256": "0ed97d370038e94ae2cfd489838fc66883f1f94c7501d299e72e9aedab2a54dc",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMNamespace/IMNamespace.swift",
+    "size": 1327,
+    "mode": "644",
+    "sha256": "4cdb9367113b58ce7c8e480ea24ca298372f9b7552950e6a511c74a510307221",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/ISO8601DateFormatter/ISO8601DateFormatter+Make.swift",
+    "size": 420,
+    "mode": "644",
+    "sha256": "3676c995da8a68f9aac5b30f87657a7d71ff05fff6a9c513d10454d5082e69a8",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONDecoder/JSONDecoder+Make.swift",
+    "size": 233,
+    "mode": "644",
+    "sha256": "27bef2eb06e3c530c3b80b0095156998b382dda85944fb158245f8b7350e0907",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONEncoder/JSONEncoder+Make.swift",
+    "size": 233,
+    "mode": "644",
+    "sha256": "348b6f8224e19b2b7217b8ce7a7b00fadf1ea5c9529334ffc6bd196719ae5c26",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/NSDecimalNumber/NSDecimalNumber+Make.swift",
+    "size": 281,
+    "mode": "644",
+    "sha256": "76db6be5c2150985e70241b07c461e617d6dd93b1dad38931b4e342e324097e3",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMCore/JobsIMCore.podspec",
+    "size": 393,
+    "mode": "644",
+    "sha256": "0ce3ccebf2f0a82ebbad80d537da7fdf291d17cab52216fb6d0c4ad42aa75ccf",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift",
+    "size": 145103,
+    "mode": "644",
+    "sha256": "0e7a09e0b11b34f4073a417595e0a4a0139556b499e80024e51fe5b47dcd6683",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMStorage/JobsIMStorage.podspec",
+    "size": 466,
+    "mode": "644",
+    "sha256": "9aa13a5bc16a9b5388a49bdff6a0289d95cac922ac3cfc544fc7f51f0dc6977e",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIClient/IMAPIClient.swift",
+    "size": 11438,
+    "mode": "644",
+    "sha256": "9dcdf2c178b21a9baaa5666e44146cf95cfca46d0b82661c66f0c4489db130a2",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIError/IMAPIError.swift",
+    "size": 486,
+    "mode": "644",
+    "sha256": "9549b5c6f851fc28cca031a03cc6b25673b7b4706d2e63dc28a413c974ca3415",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift",
+    "size": 22692,
+    "mode": "644",
+    "sha256": "1f72fe4ebb7fb7383b1d059f70f7948e2fe109fc4c407539689e197332c296de",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceCertificate/IMInstanceCertificate.swift",
+    "size": 2613,
+    "mode": "644",
+    "sha256": "b038d39ebc12a94461b2f86e767fe7022ce76a93010abc96b13d253554e53146",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceEvaluator/IMInstanceEvaluator.swift",
+    "size": 1420,
+    "mode": "644",
+    "sha256": "0651b78ccd4d83519b75ab8bbdd968fdba0deae6b71beefeee714aaefaf7e1b1",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/URLRequest/URLRequest+Make.swift",
+    "size": 604,
+    "mode": "644",
+    "sha256": "3fe446c96aa4f98b199e0ae68e6d5c0b4000f0bc12d14c6f17dfab0786614e4e",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsByPods/JobsIMTransport/JobsIMTransport.podspec",
+    "size": 494,
+    "mode": "644",
+    "sha256": "8714e9dcb0c6654317ec97d0a8c7320c3c368beb883413aa24b6848053947fec",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj",
+    "size": 40929,
+    "mode": "600",
+    "sha256": "66cc4e4e1a29e6b52643d054d56b4966959b484b03a70d0cebfe21309ca91b1a",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/App/AppDelegate/AppDelegate.swift",
+    "size": 6384,
+    "mode": "644",
+    "sha256": "00c1694024480335efe8f2bdbcc5a9ebe45e76f2f81ba33388dde89d26bb167a",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/App/SceneDelegate/SceneDelegate.swift",
+    "size": 926,
+    "mode": "644",
+    "sha256": "d61fdb998d38cdeca792925e4b86b94c10ad74faba3fd13c9d47de38a59b011d",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionFiles.swift",
+    "size": 3963,
+    "mode": "644",
+    "sha256": "b3ed75ab92e9877e4f89864fe10d836b16fe4481f0835715e1a067c48addc33d",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionService.swift",
+    "size": 22416,
+    "mode": "644",
+    "sha256": "c79fcba0e5f2918f9e40b5d9719b4542666e74bdc8a8bfce9f3d15690ce4a42b",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMAnnouncementService/IMAnnouncementService.swift",
+    "size": 6834,
+    "mode": "644",
+    "sha256": "26e309237271aff306ac6e8e3b26153b81b18bc937e8cf0750479ae1cd9abda0",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift",
+    "size": 29642,
+    "mode": "644",
+    "sha256": "e3924506a60a195e8013ecb51c8405040e550c1dce7efbd6bae1e77d0f2de87a",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMCredentialPair.swift",
+    "size": 4536,
+    "mode": "644",
+    "sha256": "b6f0fa031c77b6885f67de6f38088fe805e3a2eeedf3e481b51377429016f6bb",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMAuthoritativeSync.swift",
+    "size": 13986,
+    "mode": "644",
+    "sha256": "45f037ac2464665f9d09ded2512100dfd800a445ce7b587214556b5fba289eef",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMSyncProtocol.swift",
+    "size": 21114,
+    "mode": "644",
+    "sha256": "bcfe6b0d115cfdc6dc2d9b5c80bc692c150bbe8127355e57f7608d996e558fb3",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMAvatarLoader/IMAvatarLoader.swift",
+    "size": 1527,
+    "mode": "644",
+    "sha256": "43f6b6053d9d2c475ddd77bfabdf289995a05ada25078b4c84ef444dc01d9e43",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMAvatarService/IMAvatarService.swift",
+    "size": 4889,
+    "mode": "644",
+    "sha256": "74ce0187e8ce33e2d6cde4a62326f86ab08c9b9cdd5e59509969a1f147208b34",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMContactService/IMContactService.swift",
+    "size": 1854,
+    "mode": "644",
+    "sha256": "2c121a90c269a452a05be90ed3a54f70c3e962888fc4348e844be504b06a2adf",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportArchive.swift",
+    "size": 5652,
+    "mode": "644",
+    "sha256": "b6bf0a4b0b6030c90cec39d8e7ba9f2c4d2796c496e85c9e8cea1aab3ed5886f",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportProtocol.swift",
+    "size": 5300,
+    "mode": "644",
+    "sha256": "8a4c408e101f077c8611762b3d23532d152f49f9075c2711c12144059e4f6ebf",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportService.swift",
+    "size": 10839,
+    "mode": "644",
+    "sha256": "c141999f3095244c06c893e1c73c46446a3d65a8687a0cea40cdd60911dad05a",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift",
+    "size": 10086,
+    "mode": "644",
+    "sha256": "4fec8b320c95873dbc91d36d5894a5c316d3e206e10a50a83682ed61cd289a66",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMGroupGovernanceService/IMGroupGovernanceService.swift",
+    "size": 14049,
+    "mode": "644",
+    "sha256": "f0f4edc1b926b867e8f7f72172ab7ce4a62815b93951ec40daff97aa4e4a5dcb",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMHistoryExport/IMHistoryExport.swift",
+    "size": 2501,
+    "mode": "644",
+    "sha256": "974505cb05180433b078980b54bc6ac6961724ff674afccc465c5a89fa637979",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMKeychain/IMKeychain.swift",
+    "size": 2423,
+    "mode": "644",
+    "sha256": "52486c05587fdd0000f163cb91ab3fd7b952ffdbd51a8d3a9469ee55feb682be",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMMediaCache/IMMediaCache.swift",
+    "size": 8726,
+    "mode": "644",
+    "sha256": "1779aa8afc45a46b7dadf23b93daf22d395ce19d3ab12b1dd45ba805e6ffa80d",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMMediaLoader/IMMediaLoader.swift",
+    "size": 567,
+    "mode": "644",
+    "sha256": "e8b0abf139412a178a93c9652e0b7e7ff51b7c925c62b6ba52e3335e4c93ebfa",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessageListService.swift",
+    "size": 5960,
+    "mode": "644",
+    "sha256": "3f0edfbbc9ca0d14d6b7707a297219f0b9de064cdbee1a7dc454b738c3409dc6",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessagePage.swift",
+    "size": 821,
+    "mode": "644",
+    "sha256": "f6f627cdf3bd3c2fe5bedf6295c8906a2b39fa487d737f2d5f1753dfe5853cc1",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationJSON.swift",
+    "size": 8275,
+    "mode": "644",
+    "sha256": "46bc11d58ed3b03708dcd11becb59687998607083d7d38463b2652a4b8e96c38",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationProtocol.swift",
+    "size": 14012,
+    "mode": "644",
+    "sha256": "b9d0bda158415d6d8af3008746e34c04084dbd96f4eb25828bb11a24d6367309",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationService.swift",
+    "size": 47689,
+    "mode": "644",
+    "sha256": "0ab316f75ebd76c81595eec7bdf996c4a0aa724340ef5eb74a3f4a6069d22064",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMNotifications/IMNotifications.swift",
+    "size": 4881,
+    "mode": "644",
+    "sha256": "1008bf967f34e52c9de3c6b56304b631e1fd3c9c269a136fea5ab8506bb330d9",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMPasswordChangeService/IMPasswordChangeService.swift",
+    "size": 12616,
+    "mode": "644",
+    "sha256": "8bc436115ab33c550fcce6317e9ce36b3daa013514bd840f97dcca19e02dfb7b",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMPersonalStateService/IMPersonalStateService.swift",
+    "size": 16340,
+    "mode": "644",
+    "sha256": "4351eaf0640bedda43251703e38be0937da23bd50bcf35c90251ee5ea8dd0ad9",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptBuild.swift",
+    "size": 9119,
+    "mode": "644",
+    "sha256": "0cd86c88e9e72a7482d13037268fe7f1b0be74c5b5fef96f9acba5d248bbd922",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptCoordinator.swift",
+    "size": 11672,
+    "mode": "644",
+    "sha256": "e18cd76071efd2132363fd57532fa7a30c37b8d0147581c3109c0305e502d193",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptProtocol.swift",
+    "size": 18199,
+    "mode": "644",
+    "sha256": "41d477927d78c78b4d55d5bf72760833dcba2f2d0a36ec093f2f47461e0939bb",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptService.swift",
+    "size": 34384,
+    "mode": "644",
+    "sha256": "a807b5d5038c4f9a1e10347e92a65e8e88d907deefcdc332e91d43be468b7542",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMReportService/IMReportService.swift",
+    "size": 1590,
+    "mode": "644",
+    "sha256": "5830615fd5a5255a944849c487f92f0fbfdbeb58cf3b2c3fa74757db0a4770b0",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift",
+    "size": 53502,
+    "mode": "644",
+    "sha256": "d84fc8beee4ee4ff5333d99aaf35b44dcac082b7a114e4fb53852e5a6f258cc4",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMStrings/IMStrings.swift",
+    "size": 777,
+    "mode": "644",
+    "sha256": "a8ab98b2a10a0b013f220e7a0da541b71bd3f8e8f7e4c303516a4bd5c4f861d1",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMSyncCoordinator/IMSyncCoordinator.swift",
+    "size": 842,
+    "mode": "644",
+    "sha256": "881e125a7c656a016a6956f164eb796dbd7255eff69e621752cd4a5291819f3c",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/Services/IMTrustStore/IMTrustStore.swift",
+    "size": 1019,
+    "mode": "644",
+    "sha256": "3d44db4b19cf7788cce87a7ef90b6df98e390bbb38e53201d9575997b26d166f",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/AVAudioRecorder/AVAudioRecorder+Make.swift",
+    "size": 488,
+    "mode": "644",
+    "sha256": "34ebc78c05d3c2d961dbb23880187b9bf41de8ddd11ef91b48557654aa487140",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/FileHandle/FileHandle+Make.swift",
+    "size": 266,
+    "mode": "644",
+    "sha256": "dcfa30524365d79d3af1a7b14650108db25afb0ecdfb4b39da312aa41321d05c",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/NSAttributedString/NSAttributedString+Make.swift",
+    "size": 346,
+    "mode": "644",
+    "sha256": "00735281d3d81ee162f7b01406338888799c66a1a454254fd89224d1bc816e31",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerConfiguration/PHPickerConfiguration+Make.swift",
+    "size": 426,
+    "mode": "644",
+    "sha256": "c88d947fc6509ec7a6f4c28c2aa4a41ae114e45f3fb07e0f4cb4b3246322d1e6",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerViewController/PHPickerViewController+Make.swift",
+    "size": 328,
+    "mode": "644",
+    "sha256": "f8b6bab9e0e75b84789979c0ebe40840cbf37faad7b473bdf0aa6b1f96d9a10c",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UIActivityViewController/UIActivityViewController+Make.swift",
+    "size": 374,
+    "mode": "644",
+    "sha256": "02395eb87d8919299e04643351070d2f0da69813a664f7e2a8cd83f9c41714e3",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertAction/UIAlertAction+Make.swift",
+    "size": 430,
+    "mode": "644",
+    "sha256": "2039989497d095ff0cf27f7cefcf4e76f7a5719331899f9db848322866b8153d",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertController/UIAlertController+Make.swift",
+    "size": 401,
+    "mode": "644",
+    "sha256": "6c1c51f777f84448920026a18e9bd09a254dcdd6f1dd7bbaec96d02061124333",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UIColor/UIColor+Make.swift",
+    "size": 459,
+    "mode": "644",
+    "sha256": "f692681c023daeb725188d768764f5c561a171f039b235d0a94bb201a1b13e5c",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UIContextMenuConfiguration/UIContextMenuConfiguration+Make.swift",
+    "size": 385,
+    "mode": "644",
+    "sha256": "1d890efb7393dc288640332d79319d5c6b38b18a0e3f512d3c5fa9e086ffd794",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift",
+    "size": 1270,
+    "mode": "644",
+    "sha256": "216f84c8abaaf78890ea3809a35abc82bea8b90ef166c2dc7df46cb14dbabd88",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UIImage/UIImage+Make.swift",
+    "size": 347,
+    "mode": "644",
+    "sha256": "c031aaa7ac1e0a7cc62e875070870a69d6b397bc7a000778891501d05f97e9a0",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UINavigationController/UINavigationController+Make.swift",
+    "size": 460,
+    "mode": "644",
+    "sha256": "7d41021b699066d4a9c913d782e4172e518451d03972a1984e20eee78e6f0606",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UISegmentedControl/UISegmentedControl+Make.swift",
+    "size": 397,
+    "mode": "644",
+    "sha256": "68cb6197c89282e0dab54bf5031e46621dea38d23f4a5f4e4c128c0c02b4817a",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UITabBarItem/UITabBarItem+Make.swift",
+    "size": 349,
+    "mode": "644",
+    "sha256": "3a587ac9b1116e3b658f0e2a83cf0cca3c6cfeea646ff1f128e3fabb1000fddd",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UITableView/UITableView+Make.swift",
+    "size": 319,
+    "mode": "644",
+    "sha256": "82d9a099577651028b00e141c25007ca56058ca23282f80612fe146db21c119d",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UIView/UIView+DSL.swift",
+    "size": 254,
+    "mode": "644",
+    "sha256": "25fa9bfe3e4815665d67ab3215f4458c112419bfe665a2b5a1d3c1ec45797467",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UIWindow/UIWindow+Make.swift",
+    "size": 359,
+    "mode": "644",
+    "sha256": "cfaace340dc3a91ee39df76355ecea4872103203293634ab6daea9506993c705",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/Factories/UNNotificationRequest/UNNotificationRequest+Make.swift",
+    "size": 373,
+    "mode": "644",
+    "sha256": "acd270ecdc7acb107e787746890b424468a8dbfc9abc430f46dd9023644cad07",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMAccountDeletionVC/IMAccountDeletionVC.swift",
+    "size": 11353,
+    "mode": "644",
+    "sha256": "82ff53b42ab1ceb35efff730232fa31c4bc704105e0ed9c0d5b7870e10619586",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift",
+    "size": 10914,
+    "mode": "644",
+    "sha256": "737823272527ceeccdaf5df931bb53aa5f6a26e3d1700c4e0ebaff491acbae55",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMAvatarVC/IMAvatarVC.swift",
+    "size": 2531,
+    "mode": "644",
+    "sha256": "82e15a8be784ab5a1eccec5100ffa3fd171d0cb99fbda58f888445e8a1a527a5",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMAvatarView/IMAvatarView.swift",
+    "size": 1727,
+    "mode": "644",
+    "sha256": "fec45b3b6bdefbd18aa2d694e84cf1e764b88d78e93e881aec7e27b554a8b72e",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMBaseVC/IMBaseVC.swift",
+    "size": 2742,
+    "mode": "644",
+    "sha256": "d470eea3906b5095c07cd25483774614531ec6dfc2541fcbde83858da40536bd",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift",
+    "size": 46198,
+    "mode": "644",
+    "sha256": "593eb24a6be23e1ae679f74b7bf1c53d8b2cae7fac6d45463a1ea33c446cc9a9",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMContactRequestsVC/IMContactRequestsVC.swift",
+    "size": 3754,
+    "mode": "644",
+    "sha256": "6c20737a58f6e12d2f11d966952338d98b97561cead6c0545cd57ea839b1b70c",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMConversationCell/IMConversationCell.swift",
+    "size": 3382,
+    "mode": "644",
+    "sha256": "abd75cfbac3c008e43e89ddd55b290f269ba23abe7ff11161d4bc3121becbd5c",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMDataExportVC/IMDataExportVC.swift",
+    "size": 12222,
+    "mode": "644",
+    "sha256": "463273500c4864d41be1a735a2b777114363a08bdae9d025ee8060a07d5b304c",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMDevicesVC/IMDevicesVC.swift",
+    "size": 3564,
+    "mode": "644",
+    "sha256": "0c93ad9fc0afd7f61ae895cac646aedf613db655f164c3970d4d503db0e8423d",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMGroupGovernanceVC/IMGroupGovernanceVC.swift",
+    "size": 17664,
+    "mode": "644",
+    "sha256": "1ad691001f00d9840d52bcce61d0890c2105fb9db2694ca2c25c0a0c31a2d70d",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift",
+    "size": 15875,
+    "mode": "644",
+    "sha256": "45e74bbec2b3cb4e610b1ece5f252b87e0e7c68cce0c63b0f51bbfb2c081da6b",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift",
+    "size": 23959,
+    "mode": "644",
+    "sha256": "42c8254bc0d6fec0cb91d516344e7617de9a638553ff3fcd39dca346f315d132",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift",
+    "size": 6314,
+    "mode": "644",
+    "sha256": "e8ec6f2b27d40508ef2483ac0186bc5207d9fb383bf68453246cfac64dbeca57",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMMigrationVC/IMMigrationVC.swift",
+    "size": 29721,
+    "mode": "644",
+    "sha256": "21da8d598e45838098cbc48b9d46244f954f9b726ff7affab073bc49260319d1",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMPasswordChangeVC/IMPasswordChangeVC.swift",
+    "size": 7843,
+    "mode": "644",
+    "sha256": "4ed2454fbfadec17ba10e980e0b3e4ea10187be316f1ada46b7070ef4ff7aa08",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMPersonalStateVC/IMPersonalStateVC.swift",
+    "size": 15007,
+    "mode": "644",
+    "sha256": "51825fb0414be6bd541c6d6820889e1b944b1a8397b935b323d4527b5ce28522",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMReceiptVC/IMReceiptVC.swift",
+    "size": 20156,
+    "mode": "644",
+    "sha256": "ba7e607f640666ff96778a4c1d7dc64329b5f0d90d7501751f49b9f2d0b7b6cd",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMReportVC/IMReportVC.swift",
+    "size": 3458,
+    "mode": "644",
+    "sha256": "b1ee6dc57f7ba857dc67a8fe60615a22674c37053f459a03782ed66f6e05c0dc",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift",
+    "size": 13957,
+    "mode": "644",
+    "sha256": "fba7163e067686bb03a9e98d299524e38096afb937d817b562ad64a2484807f5",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/JobsIM/UI/IMUI/IMUI.swift",
+    "size": 5019,
+    "mode": "644",
+    "sha256": "fc7a02646831d1fbc18fbb1bbf89ae189dc627d35d4332f3e1bc3f1423ed8c6b",
+    "kind": "swift"
+  },
+  {
+    "file": "代码/前端/iOS/Podfile",
+    "size": 2427,
+    "mode": "644",
+    "sha256": "b1c062108b2bdaa7a3fa2bf5af58a6c175f3946a77be26ffa0221efe65b9d5fb",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/iOS/Podfile.deps",
+    "size": 3061,
+    "mode": "644",
+    "sha256": "c2fea7fdedf05dd99aae56a42c96ae9e3f8bb47a0effa69e3eaa2bc71a431806",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/iOS/Podfile.lock",
+    "size": 15333,
+    "mode": "644",
+    "sha256": "cc9d7a0b19ea948c8021a8428c35575efb43611105d9e2dff715c779c49f9dae",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/iOS/Scripts/Build.rb",
+    "size": 1794,
+    "mode": "644",
+    "sha256": "5092d4104019dc83261a773074f0db3691d75a8608e49bea792abd012bf6c35d",
+    "kind": "ruby"
+  },
+  {
+    "file": "代码/前端/iOS/Scripts/GenerateProject.rb",
+    "size": 5833,
+    "mode": "644",
+    "sha256": "24911c1bd838d9e1709f4b9c4c7fc7ff1e6c9f5ba9c4bcf773f50ce56d682beb",
+    "kind": "ruby"
+  },
+  {
+    "file": "代码/前端/iOS/Scripts/PrepareDependencies.rb",
+    "size": 2493,
+    "mode": "644",
+    "sha256": "319ed5d5b89f4a7c06082915baa43be0aee637ddefa305f666389e1cde072d13",
+    "kind": "ruby"
+  },
+  {
+    "file": "代码/前端/iOS/ScriptsByPods/【MacOS@Xcode】🫘当前工程Pod Install.command/【MacOS@Xcode】🫘当前工程Pod Install.command",
+    "size": 32736,
+    "mode": "755",
+    "sha256": "906d5c0ac10111aceec2f84b38431559311f47f3f85e005d9be0d029d049ad05",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "代码/前端/iOS/ScriptsByPods/【MacOS@Xcode】🫘当前工程Pod Update.command/【MacOS@Xcode】🫘当前工程Pod Update.command",
+    "size": 32760,
+    "mode": "755",
+    "sha256": "fedd366440bbc67e1bf6b5fbf9f326f2a6805df5de78928f9b13210ad7489ce3",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "代码/前端/Web/package-lock.json",
+    "size": 44005,
+    "mode": "644",
+    "sha256": "847cceff82a4dccb8381bc4ed50aad29a62eac52924d9758bad05d37cee72da6",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/Web/package.json",
+    "size": 521,
+    "mode": "644",
+    "sha256": "6c78092501a5ab5cd4d1de0c3f9ed7d44ca99d21ef895ba083ea0f09f57e00a0",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/Web/Scripts/准备环境.command/准备环境.command",
+    "size": 1722,
+    "mode": "755",
+    "sha256": "3507f30dcec8bff95325eeddc06fd957c613ae83dfc49aa3a76260e313003175",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "代码/前端/Web/Src/AccountDeletionActions.ts",
+    "size": 11035,
+    "mode": "644",
+    "sha256": "97a2ef48e168ce7036aececd101903b12f9544fd4be852bb97f89927387e74d9",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AccountDeletionCleanup.ts",
+    "size": 6282,
+    "mode": "644",
+    "sha256": "54e239333dc15e7624fb722dfd52361943e7a28c6d9a8d72baea714463668cf9",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AccountDeletionLabels.ts",
+    "size": 23731,
+    "mode": "644",
+    "sha256": "6140a65fe4ff61b5b8413fd57bac40a624e11e82b70e7dbde869bcd4da5d5a76",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AccountDeletionPanel.tsx",
+    "size": 11889,
+    "mode": "644",
+    "sha256": "a5f7ee9b6f52261d7923ac37779866c5f6c0db21eb3d6fe40e7038f9ed9f77c7",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/AccountDeletionProtocol.ts",
+    "size": 6783,
+    "mode": "644",
+    "sha256": "508da0ab727400b7882d2ef973639319691962dee33f15a5396a86d6076b8395",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AccountDeletionStore.ts",
+    "size": 6714,
+    "mode": "644",
+    "sha256": "7c24205b3f841f56862fa21aaa6facafa71e1f00a9c6a18ec6ad9152e3bed3fe",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AdminPanel.tsx",
+    "size": 13718,
+    "mode": "644",
+    "sha256": "84a9903f345372b1f0b8efc787f600a2d0c90bfebafbaf887c8afce40555169e",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/AnnouncementPanel.tsx",
+    "size": 10298,
+    "mode": "644",
+    "sha256": "3a5b0d49a3b39e32997b9ac39a4553ed04af0a1e9a84aefe03867ab7dc0c1e55",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/api.ts",
+    "size": 19819,
+    "mode": "644",
+    "sha256": "319dec1d73e4355b7f43517e4d5615302be20f21b45ed624d69c5317e447a89f",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/App.tsx",
+    "size": 176713,
+    "mode": "644",
+    "sha256": "ce7bdcb8d0a8d0c6ccb749db931208a37a2d962c473df2cc37758beb0392d884",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/AttachmentErasureProtocol.ts",
+    "size": 3189,
+    "mode": "644",
+    "sha256": "73c4b5cb2a64b0b2e9486f84dc0c1472e02ef7160229427adf2f7e68f7096725",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AttachmentSendActions.ts",
+    "size": 8977,
+    "mode": "644",
+    "sha256": "74cc9cae7f0447243cb2b40e4df4e1098e1549fe1b8b2bb180085cfc4826ea5b",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AttachmentSendLabels.ts",
+    "size": 16408,
+    "mode": "644",
+    "sha256": "22776d45cb964d6de6ce49e6c8420488303fdef681480c9af07e0ed995e3320b",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AttachmentSendPanel.tsx",
+    "size": 6594,
+    "mode": "644",
+    "sha256": "6ba16691d048bcb512d20587a6492f0aac3f9abfb42d59bfe23e309b4f1f8e0f",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/AttachmentSendProtocol.ts",
+    "size": 12323,
+    "mode": "644",
+    "sha256": "8ac647e74a52f53bd3fc16dd6dc30c6a0137f01a5648b78dcad87f336bf843aa",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AttachmentSendStore.ts",
+    "size": 16717,
+    "mode": "644",
+    "sha256": "c33b15255cdbbcaa6fa60ff8c60122da4a06ab13f734cf033a56627858707a7a",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AudioMessageLabels.ts",
+    "size": 13704,
+    "mode": "644",
+    "sha256": "19b4e242dbf8adbfeac77b4622a25a8c62164d4ef7495142972268d856d02ea6",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AudioRecorderController.ts",
+    "size": 6228,
+    "mode": "644",
+    "sha256": "386c6c4ea76e107e7398a051a76c3cd7e9459eab08ce5ec4d762c1865d84ab40",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/AudioRecorderPanel.tsx",
+    "size": 7045,
+    "mode": "644",
+    "sha256": "8d9951b6359d3388fc9547b5ddbd1dfb09262e3523567e1ec3b2e529c55a2619",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/AuthSession.ts",
+    "size": 13857,
+    "mode": "644",
+    "sha256": "b3073d6f452a2164953d626814b3330a63daa7724d610507a906b758dda0f25e",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/DataExportActions.ts",
+    "size": 5320,
+    "mode": "644",
+    "sha256": "3b02f6729b72fed976ef8f676f82e3189c7b500021f40d01aa36df3c0264c987",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/DataExportArchive.ts",
+    "size": 4505,
+    "mode": "644",
+    "sha256": "9288da3f62c09d533e9af219adcf63ee9fc9f445b9c56756c90f9ee07e09670d",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/DataExportLabels.ts",
+    "size": 21217,
+    "mode": "644",
+    "sha256": "39e7c9c64b2797df4959d20213d3c07c90032550fd470401d56012d409efb1c0",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/DataExportPanel.tsx",
+    "size": 10051,
+    "mode": "644",
+    "sha256": "b943cfcf8b9a1b3df30bc0f2b8053d2f5a596bf4532847fcb0bd255b323d9c8c",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/DataExportProtocol.ts",
+    "size": 4092,
+    "mode": "644",
+    "sha256": "048c02c83af44eebcc02d5db4fe003e737133bbf59d87e00f1f66a3d0583a136",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/DataExportStore.ts",
+    "size": 4445,
+    "mode": "644",
+    "sha256": "b33f7f0c6b1685ea9a3edaab6062e13b3b6e40fa6d340b0daeecdb2f34e740bd",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/demo.ts",
+    "size": 2761,
+    "mode": "644",
+    "sha256": "4b11d1b2d1757fdfb95e720e0f08730c07e9f33237ba330ab26f0fc85f1db62b",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/env.d.ts",
+    "size": 108,
+    "mode": "644",
+    "sha256": "9bf140f3a5154723b62d993f482744357ab6b908d89ff9a5777f3f8e3642f634",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/forward.ts",
+    "size": 2596,
+    "mode": "644",
+    "sha256": "688de48c837608a7f36f1452fe79155d819946f97499e8bead0e7872ebfa9e0d",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/GlobalMessages.ts",
+    "size": 15661,
+    "mode": "644",
+    "sha256": "e0478fcdcfcd0d3c733fd64a99e7c2a0e66ad28a27edea1f3c85a15dc20e3eae",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/GroupControls.tsx",
+    "size": 5448,
+    "mode": "644",
+    "sha256": "76995535cd83cbb9ab81d5ccb804397e78bbe48912c0bf0a8cef3be983517c75",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/GroupGovernanceActions.ts",
+    "size": 11128,
+    "mode": "644",
+    "sha256": "c52a369145f041c20b2b4e88db373f0adfe4e21dd27f7332fe608339c98848be",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/GroupGovernanceLabels.ts",
+    "size": 14333,
+    "mode": "644",
+    "sha256": "b5e91974567be69409836958f81af48190adb807c4a23a75891af8d624f9e769",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/GroupGovernancePanel.tsx",
+    "size": 16617,
+    "mode": "644",
+    "sha256": "d05f296ceba288dae742a488383f0e5993c21e0015c74f35372848b40c681942",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/GroupGovernanceProtocol.ts",
+    "size": 8463,
+    "mode": "644",
+    "sha256": "97f1320af84f38d79bcdb687d13255ee9733bc876bc8eaf3725172b2177a1a1b",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/GroupGovernanceStore.ts",
+    "size": 6766,
+    "mode": "644",
+    "sha256": "d906c241b05623f44639024b538eba58434da53dc25e2f545e24e640d9c4bc4a",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/GroupJoinPanel.tsx",
+    "size": 5654,
+    "mode": "644",
+    "sha256": "c1c3c022292d8d2747b447ed1a8b855ff93036f95330c671eeb2cac9a3f8d0f5",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/i18n.ts",
+    "size": 56367,
+    "mode": "644",
+    "sha256": "8e0c6f80ce6ffa09d86147350a88eb79a315ebb671853ae36230a30042300ef5",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/main.tsx",
+    "size": 234,
+    "mode": "644",
+    "sha256": "7dd0ec7c005211dc0191dbe92115cb395ec8f04c2591d2259039a5d7b42fb3c0",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/MentionPicker.tsx",
+    "size": 2258,
+    "mode": "644",
+    "sha256": "b371b091cfe600b1dbcaf10f081e01801a41a4e66da7a40ea8ee4dbd9c3aca53",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/MessageFacts.ts",
+    "size": 6757,
+    "mode": "644",
+    "sha256": "9b632494d74bb22a1b71f1c0c6bd573ad73d0808c6cd0045be4ff7459221eee8",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/MessageLookup.tsx",
+    "size": 8491,
+    "mode": "644",
+    "sha256": "700bdae3f148954dcf7b0d1e6a3def9e77be555438929d7cd8c4537bd49e7f12",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/MessagePlayback.tsx",
+    "size": 10542,
+    "mode": "644",
+    "sha256": "ae627e51288701410f3fbdbbdb3ddbfe3de1c9e8d65f5b6d80b0951f99930b22",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/MigrationActions.ts",
+    "size": 20599,
+    "mode": "644",
+    "sha256": "c85ed69035986f0c214c310fcf037784cb5f5f3c7cd16ebdb7033f17c11895ca",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/MigrationArchive.ts",
+    "size": 16579,
+    "mode": "644",
+    "sha256": "137c21bb7c9ff87167292bbaf12b927553af77cc374d9ae68c673d7eaeafcd09",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/MigrationHistoryStore.ts",
+    "size": 13631,
+    "mode": "644",
+    "sha256": "69a3fcb2957c389df4ecb990e191287566ed1f15d10a0820c604a28742b65117",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/MigrationLabels.ts",
+    "size": 22110,
+    "mode": "644",
+    "sha256": "2b335d9dad84efa60eb41e972c54592ddff6c25434a919de8a511135f1605b76",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/MigrationPanel.tsx",
+    "size": 19863,
+    "mode": "644",
+    "sha256": "44187495c832fd2e63fcf4ceba2d2520f5d8d4ccf0b05cf72bbe076085b8f227",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/MigrationProtocol.ts",
+    "size": 5696,
+    "mode": "644",
+    "sha256": "2b2574f274d17149af158a2701f5f38332e87b488aa096264dbde5d1e720505b",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/MigrationStore.ts",
+    "size": 7244,
+    "mode": "644",
+    "sha256": "456c50c9441551f97495499bd6220dcc3085a5b3a7c6410e1c84d65b4d7eb62f",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/PasswordChangeActions.ts",
+    "size": 9141,
+    "mode": "644",
+    "sha256": "026534a43c122ec72f19ac08119f87a8b00a3733f74db34b97162e53aaaa65df",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/PasswordChangeLabels.ts",
+    "size": 17464,
+    "mode": "644",
+    "sha256": "a99c34af23c1d410f750b6aedf179b35875924a0b58584e325354f9e7c9ad1e9",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/PasswordChangePanel.tsx",
+    "size": 8934,
+    "mode": "644",
+    "sha256": "8891d7e8964fecf3bee1127530511bee374e3ad32d43576581f3e4a0e10ed1d8",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/PasswordChangeProtocol.ts",
+    "size": 3982,
+    "mode": "644",
+    "sha256": "ed87a153f66568dae955c70b5a2cb2c9341db8bc07f88932d5c87053437d1303",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/PasswordChangeStore.ts",
+    "size": 4465,
+    "mode": "644",
+    "sha256": "fa721d44b9d59d1f68a796a327fb6bcc7638cf3c14dca9735c33aa011c4ed2ec",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/PeerControls.tsx",
+    "size": 8551,
+    "mode": "644",
+    "sha256": "0e5d91aaba10f8fb3c3d43e5e5327eba57b1e9cec3aa4d95ed6140a57d8642a5",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/PlaybackCheckpointProtocol.ts",
+    "size": 5251,
+    "mode": "644",
+    "sha256": "99647dc2c5b74d082ce20191824edc0e3641d6b080c97d6017fd61a98d00766f",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/PlaybackCheckpointStore.ts",
+    "size": 2796,
+    "mode": "644",
+    "sha256": "fd2e38dae6857fb2a751fb15510aaddbddfa4ca8c67eb74b569c90a6f268d16c",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/PrivateMedia.tsx",
+    "size": 4714,
+    "mode": "644",
+    "sha256": "8f7155ea9b2a48e0ac348ef78e84601894a48a0fdbc718dca98d993013902e35",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/ReceiptContext.ts",
+    "size": 15196,
+    "mode": "644",
+    "sha256": "0d406758f79b635043891567472981bad90db6a4a3e59028cba78ebc7bd660cb",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/ReceiptLabels.ts",
+    "size": 14417,
+    "mode": "644",
+    "sha256": "3c119a125e843a88541e9e147fa280674a980c3839b0daffec6175c665e2c629",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/ReceiptPanel.tsx",
+    "size": 7345,
+    "mode": "644",
+    "sha256": "e0be7cc30c33c377b22ac05392e28c6290d5a493c98208f3f7c34d07ed803386",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/ReportPanel.tsx",
+    "size": 6804,
+    "mode": "644",
+    "sha256": "9887915b07c63dd5358b9009fa8eb0493d5c96e45b246b30520c2655014489b1",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/SelfDraftRecovery.tsx",
+    "size": 12099,
+    "mode": "644",
+    "sha256": "1e4eab59c04c443b50b24d96f524df97194292e5cebba6e5cb7cea480ce37747",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/SelfStateActions.ts",
+    "size": 16121,
+    "mode": "644",
+    "sha256": "37bed10ac5c1cdc1d82ed92ec0be60ec8102b80ab6f9a7ba2021a4c8cd629518",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/SelfStateLabels.ts",
+    "size": 19207,
+    "mode": "644",
+    "sha256": "f8d6fa451c3409a45f383f76665a8354a9b9ef744ddba20fefddaa610e8cd92b",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/SelfStatePanel.tsx",
+    "size": 7331,
+    "mode": "644",
+    "sha256": "5fe83d0e720f0a868a2d95199b00c7e62e2cdf388d3907d39a607eb7d7620427",
+    "kind": "tsx"
+  },
+  {
+    "file": "代码/前端/Web/Src/SelfStateProtocol.ts",
+    "size": 5812,
+    "mode": "644",
+    "sha256": "ff06896bb7326fa730a0befad1edbbe9d5dff6fa6b7f3aef11c39c14aa2cd00a",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/storage.ts",
+    "size": 16143,
+    "mode": "644",
+    "sha256": "3f31b557235bf788c7a30aa7cec878eb1cca893ff4f2c0d308580f100715fe87",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/StorageDatabase.ts",
+    "size": 310,
+    "mode": "644",
+    "sha256": "93b3badb1aa759c06e13bc07982a9e69803fdcc41752c56374171b12414579aa",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/SyncEngine.ts",
+    "size": 10788,
+    "mode": "644",
+    "sha256": "3998511d10cf14a406a6d8c5d6e4818ac3179f8da1ef0efdf34fd9b076e0bfe5",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/SyncProtocol.ts",
+    "size": 13813,
+    "mode": "644",
+    "sha256": "9f9dc0866de08fc5f2e39dd5c5bbc16e520537b2f210fa6d8570acb30783ddc6",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/SyncStore.ts",
+    "size": 30264,
+    "mode": "644",
+    "sha256": "ad92f57aa06ba5a78201728fe0e86ebaa05c94d37565c5e8c686e49c158759ac",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/SyncView.ts",
+    "size": 13599,
+    "mode": "644",
+    "sha256": "cea1be4b73b5143d27abeb3cff780bca8b7ab00ab14dbadbe791c1b8a63dd533",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/types.ts",
+    "size": 2290,
+    "mode": "644",
+    "sha256": "5c5a6b984e2a7e0591fec3c47ed5bd9bfe36b2aba60f3a25e1164df0cdd21ce7",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/Src/useVisibleViewport.ts",
+    "size": 2552,
+    "mode": "644",
+    "sha256": "3d37c4706204c146a35e9ff2133e5146306b69519f6d66cd499da3e385d68ee6",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/前端/Web/tsconfig.json",
+    "size": 342,
+    "mode": "644",
+    "sha256": "740232283c8e8275d96bb6f3c438e9c7fb281818e5fb5cb6573678456b64fb93",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/前端/Web/vite.config.ts",
+    "size": 575,
+    "mode": "644",
+    "sha256": "ca8677504e6bccd13922735c79c22ba7d6b0ab46e3c6168617c4fab96133678c",
+    "kind": "typescript"
+  },
+  {
+    "file": "代码/后端/Go/account_deletion_governance.go",
+    "size": 11981,
+    "mode": "644",
+    "sha256": "d7f4ff616c1747100a01e098e3414bcb931431ca74db6b3f99c4a55b556d18c1",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/account_deletion_identity.go",
+    "size": 11598,
+    "mode": "644",
+    "sha256": "22764daa364d8b216f70626d8d00a05a2f9e9e5320afb6d30f832ee26929015e",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/account_deletion_owner.go",
+    "size": 11472,
+    "mode": "644",
+    "sha256": "75ace432022f44af206626ef4211c696c43ee889ecbba31f3f5ca0b5fd273920",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/account_deletion_proof.go",
+    "size": 11948,
+    "mode": "644",
+    "sha256": "bb25f85b990d348ca653612658e4dddaf921b18ec9633ab082d06ba2c267ce67",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/account_deletion_safety.go",
+    "size": 8643,
+    "mode": "644",
+    "sha256": "f64675a5790ec9d691fabef7a7adc67b6f42a2abc4dc85a863fb0275ae8536ec",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/account_deletion.go",
+    "size": 14661,
+    "mode": "644",
+    "sha256": "a67fd995b086277f7025732b0d25725044cd8668009a8c2cf4b92dedbda4fe00",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/admin_identity.go",
+    "size": 10674,
+    "mode": "644",
+    "sha256": "2d190871a402043ab019e498088a6af3ab4f7cb9cd39a40cbfe256b8326c61b2",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/asset_migrations.go",
+    "size": 3075,
+    "mode": "644",
+    "sha256": "a134b1f2de14973d1eb92b7584b82bdcdde889f4677d733e8242f3a257f71179",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/avatar_media.go",
+    "size": 10883,
+    "mode": "644",
+    "sha256": "7abfe51a6abe7382d9a5b7d2254af35d04c6a11f9852e32f56ee67ea4998a6af",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/avatar.go",
+    "size": 14083,
+    "mode": "644",
+    "sha256": "5d0855484044dec49ebe34ea1ed839443a2c069e2ffe83ba00fdac7ac46adbfa",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/cmd/jobsimd/main.go",
+    "size": 5933,
+    "mode": "644",
+    "sha256": "5007009d6d1ba0142a5e49fa00b5d9c48b47bf68cbe6880aee87741fbbcc4243",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/cmd/jobsimops/main.go",
+    "size": 5408,
+    "mode": "644",
+    "sha256": "e66a7be4e88defd925503b7726081fd525226ee7db71b7cbe05d338273381406",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/contact_relationship.go",
+    "size": 1877,
+    "mode": "644",
+    "sha256": "ccdb8ac8fec13f2344ea159d62a1d66425f567056f102f04d254855d480ae976",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/control.go",
+    "size": 8881,
+    "mode": "644",
+    "sha256": "22254bf0d6419fe5b8a7f0c153bcddfe5c9ecf5fc26b1895fd224e62504ecaf1",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/conversation.go",
+    "size": 18767,
+    "mode": "644",
+    "sha256": "0a4d58b444b17593ec93d11de5d07473f533f73f4ea93f7372967ea79abf4f9a",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/deployment_disk.go",
+    "size": 1348,
+    "mode": "644",
+    "sha256": "6acd2d6e7d64b784e6f1816de28518471abb9dd1bbd7a1909d763822938a858a",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/deployment_handoff.go",
+    "size": 2398,
+    "mode": "644",
+    "sha256": "09a96b700739770f3ac879d770c23a4db3e61343ca6397803ba3e55798575f17",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/deployment_restore_finalize.go",
+    "size": 10607,
+    "mode": "644",
+    "sha256": "cead86d31c2076dbe1bad8e81cdb48a1e8eda3afb80f6581d52030231b987fde",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/deployment_restore_spec.go",
+    "size": 13911,
+    "mode": "644",
+    "sha256": "0bd1b7c779b2600d8c5a8bafc0ca1dda864a066ba4c1c6475e9a9fe73587e927",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/deployment_restore.go",
+    "size": 21967,
+    "mode": "644",
+    "sha256": "da36f8c4af06ffd2b7f1661be40ccd465c4d21bfef35148a7534ce07ccd712eb",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/directory.go",
+    "size": 17800,
+    "mode": "644",
+    "sha256": "80a962f036bb9a26b1fa0a6d37c310ae4f812d8717a5da44242548fc16cb54da",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/draft_reply_holders.go",
+    "size": 14397,
+    "mode": "644",
+    "sha256": "cd87283c49e25a5d86ab799dc42c6f41616d5defc1a611fc54b5b14639efa6b4",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/draft_reply_revocation.go",
+    "size": 8869,
+    "mode": "644",
+    "sha256": "c61f3fb43a9fb952fca269f6e3b91d1d6c1371d8218534c283a022d2bf5e6af2",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/draft_reply.go",
+    "size": 1607,
+    "mode": "644",
+    "sha256": "62b1613038d82fa53b21da3e615687c1e3a442d6d010a16c98f731c317fbcd3f",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/export_identity.go",
+    "size": 5670,
+    "mode": "644",
+    "sha256": "4f90a090d18556070f4088c82a19d61974b6ae75fc05254e557bc9a250f99ab4",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/export_lock_unix.go",
+    "size": 671,
+    "mode": "644",
+    "sha256": "945aab26432f3e0ba8d46e7c687c267b209f3fb439a7380f162e40363ede3812",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/export_lock_windows.go",
+    "size": 736,
+    "mode": "644",
+    "sha256": "0a2ebf2546b37d15cf75a4dfccd1eb06f43624eeb768f75d00bbf3610e10adb5",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/export_restore.go",
+    "size": 4335,
+    "mode": "644",
+    "sha256": "8551fae1f02b158e7c1678b53b5e78dc49e6b0ba792fffe2829418b3e1114b82",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/export_worker.go",
+    "size": 16590,
+    "mode": "644",
+    "sha256": "7dff206b50d93c5d8950711fee055450b1c3af5eee2f7d1aaa75f17ec0a224c1",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/export.go",
+    "size": 22840,
+    "mode": "644",
+    "sha256": "313767b7b6e148cd944e794f6c83613d4d31735ed42b75cb8a308fe82bec1289",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/forward_media.go",
+    "size": 9441,
+    "mode": "644",
+    "sha256": "fc4fa2b9dc74d7ec2f5eb3b72b913c6a07cb6b355af01b97d2c0363ebbbb2bee",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/forward_projection.go",
+    "size": 10340,
+    "mode": "644",
+    "sha256": "534d07126f6fe22a65fc6d31243bb2e316f49e36964099b0f41c5149f71c7aaa",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/forward_revocation.go",
+    "size": 13677,
+    "mode": "644",
+    "sha256": "918209d28afb1284e35cd1c4597f4aa3a9ec27fdebcddbb01c62f04783bce509",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/go.mod",
+    "size": 564,
+    "mode": "644",
+    "sha256": "ec36829e562534c65761f66950e6b48529d55e52aa682e59552e1cc734d7fb4a",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/后端/Go/go.sum",
+    "size": 3299,
+    "mode": "644",
+    "sha256": "9d454b55d6bcff8a6be33c58dac9c225621a8c2ebc3211e52820cdb0199e047a",
+    "kind": "metadata"
+  },
+  {
+    "file": "代码/后端/Go/group_delegate.go",
+    "size": 1659,
+    "mode": "644",
+    "sha256": "639c3c6e1f7bb913a0600df697f8d0a07da426c0933da8033b0ac2097715d254",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/group_invites.go",
+    "size": 28608,
+    "mode": "644",
+    "sha256": "79de84770020c76022e69d13c310a1a5540069304664daadcc71b7f2a8443fcb",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/group_operator.go",
+    "size": 3706,
+    "mode": "644",
+    "sha256": "ff30a2db1fee0ae8e37a4af5606625fd61deb952dd2e8789093b53a512a818eb",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/group_policy.go",
+    "size": 19245,
+    "mode": "644",
+    "sha256": "d82e50582c807ca1d380e24440187087a20836203812797fa7539f3546e279e8",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/group_safety.go",
+    "size": 6054,
+    "mode": "644",
+    "sha256": "196b50ac78ae1ca0b30a0890c608f09160a5bb69d617ac0ad270c814eb90137d",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/identity.go",
+    "size": 41853,
+    "mode": "644",
+    "sha256": "4152cdf6a772e1e1feae7d232398730ba11f61f6c639b02bd4cfd34c2a4a06e4",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/journal_receipt_readiness.go",
+    "size": 1243,
+    "mode": "644",
+    "sha256": "08e33a26408d90f166063395a75cd7b12aa14f8b0241e0805c5096e112ce0d01",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/journal.go",
+    "size": 12384,
+    "mode": "644",
+    "sha256": "e8f1b565cfc970795dde6b7ed9fbde229ac9b1a4740573cacafd907736ae46ca",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_export.go",
+    "size": 6924,
+    "mode": "644",
+    "sha256": "ea16bed40b67df43ec028f49ab9cc688cc755f424fb3dbd5f5bba9de4efda14d",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_format.go",
+    "size": 6371,
+    "mode": "644",
+    "sha256": "003a2b9d56287572afe672d9ef10d3e32cd287437b2f50363e72a940d8712278",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_legacy_erasure.go",
+    "size": 5372,
+    "mode": "644",
+    "sha256": "6c0ea10ed87eb8933de0b25f453684cd67178249e58b61a43b335c7535308703",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_read_floor.go",
+    "size": 639,
+    "mode": "644",
+    "sha256": "dcfca7cb85f48195e2e74aa899281a63b028df4cc0dab6280b5befcb80784628",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_receipts.go",
+    "size": 3007,
+    "mode": "644",
+    "sha256": "4a43d28cc86b10bb158ebf1c9f1561f74c8452a37f431f542db7b90dfef3628b",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_restore.go",
+    "size": 2986,
+    "mode": "644",
+    "sha256": "7828328f2d70db4c55c8147f3a9e0a842aab735fb15e4f43a95d3d24a35e8c14",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_retention.go",
+    "size": 20487,
+    "mode": "644",
+    "sha256": "e4216a2bb6d0d79e90c1558a31d97fa7a168003482541bf3cf61bd968f86ebc1",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_upload_cleanup.go",
+    "size": 5317,
+    "mode": "644",
+    "sha256": "fb1b03e891ffeb326f55db998bf7c4afaf33417c75ae0a2e49c7e32660ed13a6",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_upload_identity.go",
+    "size": 3114,
+    "mode": "644",
+    "sha256": "096f178477a4c2332253880031a95a4bd7c770f1d27782d1e1f43dd3ffa7ef82",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_upload_model.go",
+    "size": 7728,
+    "mode": "644",
+    "sha256": "22747d6b81b68cda60719f35ab7426be4c9c7210e7a93b447b97cd5214734baf",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_upload_safety.go",
+    "size": 3492,
+    "mode": "644",
+    "sha256": "ad32fa5ce4e21ef6ae18e4045ab78b4547aaeb171830c08085681a64fe2b55b4",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_upload.go",
+    "size": 11194,
+    "mode": "644",
+    "sha256": "2f4df35879fcbadaf55688d82ee2a93f196a4bc05cd92858405532a75c676e0b",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media_webm.go",
+    "size": 11301,
+    "mode": "644",
+    "sha256": "0969ed215bca4cb1fd5c9c149e18b79fd721a12225e3e03c01212194a96521e5",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/media.go",
+    "size": 6831,
+    "mode": "644",
+    "sha256": "ec9f9dc701f551bd392b87f498c8591ca3840fd0451a22e1fdff8757784cdb04",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/mentions_announcements.go",
+    "size": 22641,
+    "mode": "644",
+    "sha256": "54cb181d54b231161b843c4c66eded95c176f0633010e7b9b33060e9caff6d1a",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/message_export.go",
+    "size": 18510,
+    "mode": "644",
+    "sha256": "9cf6ad58686f4850a9404ac0b1afae5016c6a87b8ece738eb1a45583ec22b8a9",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/message_lifecycle.go",
+    "size": 419,
+    "mode": "644",
+    "sha256": "ae5808a853f96f418bfbf4762fceebd385741bcff226637871f4bb032729b329",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/message_migration.go",
+    "size": 8103,
+    "mode": "644",
+    "sha256": "dd56a099767d678dc5df7c22ed5554c4e1216497b92f410d37ad66447cd17593",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/message_read_points.go",
+    "size": 11405,
+    "mode": "644",
+    "sha256": "75df5f23b075a0c93f3670c4e8705c2f6631072e18a320c9509975b0ff7608e7",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/message_read_summary.go",
+    "size": 5314,
+    "mode": "644",
+    "sha256": "acb1d4a1beb736b047feb1de20e77f06ff5812b6c3fff069a683d9a5a823c61d",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/message.go",
+    "size": 23289,
+    "mode": "644",
+    "sha256": "d27afc5c0b6b29ae52c95da933eb32b92a0831772ad8feb7067ff62e1400d612",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/mfa.go",
+    "size": 14209,
+    "mode": "644",
+    "sha256": "2bbe2c7351536d7c8eca6ed885ea89e46362ef8a3c22468886b7324db20dcccb",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/migration_identity.go",
+    "size": 4697,
+    "mode": "644",
+    "sha256": "ab606209c12f25279f7da98feeb79e82b97abfea0f81908455b004ed7d53e9d9",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/migration_interest.go",
+    "size": 3456,
+    "mode": "644",
+    "sha256": "b4fb59045eb047aa202d39eb267714816b709d91c32b2b9aece2d4f36bd6d5a4",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/migration_invalidation.go",
+    "size": 9062,
+    "mode": "644",
+    "sha256": "88db350304884db3b2c1bbd4fa03669472fe7f3be0a3e9fa596e4d508b9f8bc6",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/migrations.go",
+    "size": 14833,
+    "mode": "644",
+    "sha256": "100c2e9741b74a620320db59a81952f91942fa342d607bd36851454ee0eeada6",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/operations.go",
+    "size": 27604,
+    "mode": "644",
+    "sha256": "85f66507de0109d33c4c458ae9258cb5ab1520debdbaba8673d73ea47c8d2ca7",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/owner_lifecycle.go",
+    "size": 2128,
+    "mode": "644",
+    "sha256": "450911cba96de2bfe0523a4208a7f9965fd1d81bd11cec647ddc59de383bb24d",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/password_change_worker.go",
+    "size": 6758,
+    "mode": "644",
+    "sha256": "79f9e7377fc3e9821fa4682edf9d782d1e0557781f43ede9415df0f726fff774",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/password_change.go",
+    "size": 12573,
+    "mode": "644",
+    "sha256": "93d1c4cdca8dbadc0b3eaf51ed8a409e1416cae6ff5b886e0d3a31035368fb61",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/personal_export_crypto.go",
+    "size": 3435,
+    "mode": "644",
+    "sha256": "82d2a03463f09c49da0cf4718753718ecba6d7ace3f9455b28adfa914eed5683",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/personal_export_fence.go",
+    "size": 6091,
+    "mode": "644",
+    "sha256": "d517837566ded5229f48be90ed6b5fb510ccc731fcddf3137fe168d7e17640de",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/personal_export_media.go",
+    "size": 8054,
+    "mode": "644",
+    "sha256": "eb9ce79b732cc802abb05120368cf0f4a8533e09e0b8f22b9b115c690c51e374",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/personal_export_owner.go",
+    "size": 23834,
+    "mode": "644",
+    "sha256": "daf23ca1bece0d7800863b1aea16d931c725fe37711ebd8393fadbdc2e4af63a",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/personal_export_safety.go",
+    "size": 2210,
+    "mode": "644",
+    "sha256": "b78f09ce5351fb3c67d4e0cb8e224888b456c5da7753f34c6a156c7871c5ffb6",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/personal_export_worker.go",
+    "size": 24841,
+    "mode": "644",
+    "sha256": "f87074aebcc65aee8446277737be358a9c4c71091d433d26e673e4087cfd2ff9",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/personal_export.go",
+    "size": 14366,
+    "mode": "644",
+    "sha256": "973dbb7670c611e5cbadcaa6e7864cb58620fd8468e1da99ac83ea3664ac544e",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/receipt_capabilities.go",
+    "size": 14669,
+    "mode": "644",
+    "sha256": "93ba0ca89fe54b6510794452732089a1a456c04e5fe5f8c5fad542eee07e4c8c",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/receipt_delivery_worker.go",
+    "size": 10598,
+    "mode": "644",
+    "sha256": "12cdf63e4a425136c465f1024b7e2b1ec49c28003b09b34e97b17f876eae062e",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/receipt_delivery.go",
+    "size": 19648,
+    "mode": "644",
+    "sha256": "dbaf56b3f6487d58a49049c1b86f5dddb799dc39b7019f8b9d51b3fd8a76cc4c",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/reports.go",
+    "size": 11122,
+    "mode": "644",
+    "sha256": "ec31ee2999e6ecfbd469f20935a2d473cbaf45466be541f449fe5d8394e3d434",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/request_gate.go",
+    "size": 4091,
+    "mode": "644",
+    "sha256": "fc2d396272d4ae4b0c8e348f227795e3059139b6dac7557c22c1a3bacec85199",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/reset_grant.go",
+    "size": 8613,
+    "mode": "644",
+    "sha256": "9bccd9ef44ce8aece1d48ebd90b143c5c84d8cb1cedd35a82e8cd9e525448e72",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/restore_runner.go",
+    "size": 16476,
+    "mode": "644",
+    "sha256": "84a883206c965ab1367f87d3eb8508f1ebe7b5cb8ea431f6ace3860ae3fe13d2",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/retention_access.go",
+    "size": 3506,
+    "mode": "644",
+    "sha256": "b6c82cfc5c60f1f2be9ff000487db6fd03da9aba201ce9518e0355c45a53bff8",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/retention_clock.go",
+    "size": 2028,
+    "mode": "644",
+    "sha256": "97a445deab46141dfdf0249894d251bf50ff153f9ae03b8b6e8e74de2e0f5a1b",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/retention_edit.go",
+    "size": 3710,
+    "mode": "644",
+    "sha256": "4b0c60bce39103ed5bbd18aacbeb423d617da1f5f5c67bf6a8b9d605df54f681",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/retention_legacy.go",
+    "size": 2898,
+    "mode": "644",
+    "sha256": "972eb4f55301a384fff4dda50f25b4eaf76a9f6d99a48fe1c28507e91ff5eb50",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/retention_policy.go",
+    "size": 28234,
+    "mode": "644",
+    "sha256": "32c1e8a2b9e254827e419e1b496c4e57e53e070eb85762bd1a07552a6ef99a45",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/retention_read.go",
+    "size": 1807,
+    "mode": "644",
+    "sha256": "ee7ea229e1f1ff6768c4a1c9197c8d1eb02922955dc15bcbb7acf9467318105c",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/retention_readiness.go",
+    "size": 2158,
+    "mode": "644",
+    "sha256": "0e7a1cdc2ae1a372f56c420a8404b7269de204fd5f6263a12ae34b80a8e39dd3",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/retention_safety.go",
+    "size": 4203,
+    "mode": "644",
+    "sha256": "622aa0a52434bf86541c0bca20f8f9fd59c544a92e69106c00763b53c21e64ad",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/retention_worker.go",
+    "size": 13260,
+    "mode": "644",
+    "sha256": "c5eb13cea62087b6251de597db89c920adcaf4e8f54008ed124cbb0190f8214d",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/search.go",
+    "size": 8730,
+    "mode": "644",
+    "sha256": "8a76126bd5816e92d485a6f5ae687b12201d2fcf055085a4ebcfaaae9515a5b6",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/security.go",
+    "size": 2838,
+    "mode": "644",
+    "sha256": "156d165e4e9317ef5cc4941d893bcead210da9c33cf3e1c71da9b09e735c8c30",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/self_draft_floor.go",
+    "size": 28536,
+    "mode": "644",
+    "sha256": "d3cc3e59eefc0ddb9708a08beac3f782406e219ddfe9fbd16546c0138825a47b",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/self_draft_safety.go",
+    "size": 9723,
+    "mode": "644",
+    "sha256": "432b1bc09282a5f1cebc664d10042039bab1e19d70697aa58af400c4ea00554a",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/self_draft_sync.go",
+    "size": 1783,
+    "mode": "644",
+    "sha256": "1c1ba0e744ebe1c44e0ea67a0c6d65260d3fbabd476101c9e62f36c938ed0c53",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/self_draft.go",
+    "size": 34815,
+    "mode": "644",
+    "sha256": "2d558eb21047c44c417e76b142fb840eb5f1a6ff8c84c9be10f55f583bfb6d6a",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/self_read.go",
+    "size": 28432,
+    "mode": "644",
+    "sha256": "75108a645e5829568bba5c08ddd0e9f77b4ecda56ea047a639bfc86dd523d9c0",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/self_state.go",
+    "size": 346,
+    "mode": "644",
+    "sha256": "829f650898f841282757399b46755ebe572db2a9d6f8bd6cb546348961f4c9ea",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/self_unread.go",
+    "size": 4769,
+    "mode": "644",
+    "sha256": "e8140f0e91c9c62f54edd196d23007cf4d2db776c0a1d542112fac133268fdc5",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/self_views.go",
+    "size": 17179,
+    "mode": "644",
+    "sha256": "eb1d5d17a7f754f66bded0183bead35b8e2751b76892ba79add875300bdfab33",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/send_admission.go",
+    "size": 15918,
+    "mode": "644",
+    "sha256": "e70a630d4ad7f8e190be013157c15a57bcd4533aea086371e606c68d553017f6",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/server.go",
+    "size": 16176,
+    "mode": "644",
+    "sha256": "0e26c1a4224098e3a90680d32c95e48cdb337cae7e5cf69ecd7035539373a5cc",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/session_auth_retirement.go",
+    "size": 4061,
+    "mode": "644",
+    "sha256": "426bcee0fb6a85088ca012760ccba34e25fd8b3028c50e70c0ea4e09ec7a8a11",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/session_bff.go",
+    "size": 6255,
+    "mode": "644",
+    "sha256": "1bec80fb5453530e9ed9979d26f09fa6593b339b484f410267f66896dd14cfe1",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/session_refresh_model.go",
+    "size": 11534,
+    "mode": "644",
+    "sha256": "274a4fff519cb1be2018c6f11de554d2cafa55813defe00723bbc4b7c2567a43",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/session_refresh.go",
+    "size": 12515,
+    "mode": "644",
+    "sha256": "c167bd8e5fc2b70ab564aadbd791c15b3e7d89c66745762b0b355c27118b70bb",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/source_preferences.go",
+    "size": 15453,
+    "mode": "644",
+    "sha256": "9da6fd7c1f67b8c4df0f527ec429a5db421e169479e448e1e395813a83a993b2",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_classification.go",
+    "size": 3833,
+    "mode": "644",
+    "sha256": "01d1a009b1d5272c707bf832afa845fe0c15a4344b6c8cc7686f07f8d755f98e",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_kinds.go",
+    "size": 3554,
+    "mode": "644",
+    "sha256": "ccef1e6e5bd5475ab29eed4d8b27f115d70262cd7e991a2e7e141b8e911162a5",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_migration_cleanup.go",
+    "size": 8614,
+    "mode": "644",
+    "sha256": "fce3d452bf3021b5ee32829b2f1ddc9d8a785fc0a4299fcb76788cfe4ff21907",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_migration_delivery.go",
+    "size": 6394,
+    "mode": "644",
+    "sha256": "fd8d3385d841b755a23c10e57a533cfdd926ec4a840d17af2f83b9bf9f4a5b5e",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_migration_model.go",
+    "size": 15893,
+    "mode": "644",
+    "sha256": "15f2637be8a91202f1b21576de897f1fef0a9bcd299cd93e97050a7ae6b490df",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_migration_validate.go",
+    "size": 14432,
+    "mode": "644",
+    "sha256": "ec16adff68463dc14fcb4543fc326eedc6645d910a8619041c0062a2e1172d73",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_migration.go",
+    "size": 19294,
+    "mode": "644",
+    "sha256": "137939c5ec81d452dc7e8a391128dab1353b01dfcee65a7035f0a5cf65112b3d",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_nats.go",
+    "size": 16919,
+    "mode": "644",
+    "sha256": "6fde3203d73ebb711d1faaba3055d76fb2fb595efcc480cbe23ba366165e2852",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_object_receipts.go",
+    "size": 19099,
+    "mode": "644",
+    "sha256": "6f2c1ba8c5129a83bb1abe4050193d5ad371e553d053fff26aa8a278b6776ebc",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_origin.go",
+    "size": 1455,
+    "mode": "644",
+    "sha256": "726c93add53d9d20fa0f59984146025af564465c679f7cf554f4fc0432207107",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_outbox.go",
+    "size": 15217,
+    "mode": "644",
+    "sha256": "3339a2a0f0273b70f6b4ca748b56c7bdc25afade349e10ee0bf07cafcfbcf46b",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_owner.go",
+    "size": 17579,
+    "mode": "644",
+    "sha256": "07b08dd4e6a84e6393e82de3bb0e01ca77349efe3179196723e2cfca09fb2b9b",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_private_unix.go",
+    "size": 250,
+    "mode": "644",
+    "sha256": "24ab4b0ea6ed424050b2a575abec7230b9308fa29dace99c9ccf70d3a7114562",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_private_windows.go",
+    "size": 1411,
+    "mode": "644",
+    "sha256": "3b5e6e3d9e277ecd50337ec49d3cadff159e3247deed56a22de59e6ea0dd7ed9",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_protocol.go",
+    "size": 4169,
+    "mode": "644",
+    "sha256": "89fd0ba822b13adab336dc2003e19732321297a39b19267f9bf2b1250c4ccf22",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_receipt_policy.go",
+    "size": 2869,
+    "mode": "644",
+    "sha256": "2678232977e993dd2909a4aabe3ea5641a1fbabfbfdccbde576c5c27ff57adb0",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_receipts.go",
+    "size": 25178,
+    "mode": "644",
+    "sha256": "bccf34bf6b81006d0fc83ff0151389c94138251100da1a8788dd0d5891fa15b0",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_schemas.go",
+    "size": 9583,
+    "mode": "644",
+    "sha256": "e5890ba11de7cd826f726c4f37908aef0ccc6692a1f05078f1ea8a11dfeb28f3",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_self.go",
+    "size": 3765,
+    "mode": "644",
+    "sha256": "6cd4c10763d5fed49799b1b8a00af4b14b5b3fded4376fe1e2c3b8a4b45029ec",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_service.go",
+    "size": 35963,
+    "mode": "644",
+    "sha256": "1d5df0e786070b131e98f27edd17efefcfcb026bb8e73e2e857ac4df0e9e5aa8",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/sync_validation.go",
+    "size": 9867,
+    "mode": "644",
+    "sha256": "17e4367c2c95d731afc9e02da6dafb9a1decf646b8a32b5d537325c2af056bfc",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/types.go",
+    "size": 5082,
+    "mode": "644",
+    "sha256": "4435a689849cb497da45d9aedfce2058713afc9c25948490104f2d4e14880005",
+    "kind": "go"
+  },
+  {
+    "file": "代码/后端/Go/web.go",
+    "size": 2101,
+    "mode": "644",
+    "sha256": "7f022cfb049090a6ab70ac099533c9df69287291afff53c5753ec0143b6955ce",
+    "kind": "go"
+  },
+  {
+    "file": "工具/统计项目.mjs/统计项目.mjs",
+    "size": 3374,
+    "mode": "644",
+    "sha256": "27d6f75adfc1bd1351d92476650200833108d260ebe20cbb7de19332bff34ba4",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/CLI/auth_https_test.go",
+    "size": 9975,
+    "mode": "644",
+    "sha256": "9ef8c4042dcf0d747df4d1d12c171e3e224b027c1e41bd5f3c24a55085db56b7",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/auth_test.go",
+    "size": 15409,
+    "mode": "644",
+    "sha256": "f481c34188d7c3ac6da8ac08592ae97e2a376d69de369749f01735cc2ff8302f",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/auth-https.py/auth-https.py",
+    "size": 8843,
+    "mode": "644",
+    "sha256": "7134ee75fdb26dcc13ca62e4278c0214a19e336b67acea83a3dfbeba79d3a1c6",
+    "kind": "python"
+  },
+  {
+    "file": "测试/CLI/collaboration_test.go",
+    "size": 15422,
+    "mode": "644",
+    "sha256": "5a2d25be12c8c82b87c1bfe0e6af31c64a214bcc5eff56cc20078defeb607364",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/collaboration-https.cjs/collaboration-https.cjs",
+    "size": 12124,
+    "mode": "644",
+    "sha256": "029a5873bb404272bbc8f705738722b5d340d76cbbccd2c5dc641da3e8937065",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/CLI/data_export_test.go",
+    "size": 12068,
+    "mode": "644",
+    "sha256": "5ae0a5cfb6e9658446a786f72376f51dd4d1957bc367a238bc91ffdd81e7c787",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/forward-https.cjs/forward-https.cjs",
+    "size": 7161,
+    "mode": "644",
+    "sha256": "f310f618c2d36c0ab0e90a2b887ea0d6f2339104f769cf28bf4bb7f8c2bd735a",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/CLI/governance_test.go",
+    "size": 17200,
+    "mode": "644",
+    "sha256": "5cf5d3d311a2ba11bf8f33eb7199275c5db2bf1c1e63cfb98a34b5c22559c8ab",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/group_governance_test.go",
+    "size": 10039,
+    "mode": "644",
+    "sha256": "31ced356c3ca0bc3db54fcc74b153d78378c01a8de740589cbd82c40eeafb14d",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/https-integration.cjs/https-integration.cjs",
+    "size": 13116,
+    "mode": "644",
+    "sha256": "9958a9e010ab7747a28097853325824095e72cf8c69622ed50084c574c9395a4",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/CLI/KeychainDiagnostic.swift",
+    "size": 1307,
+    "mode": "644",
+    "sha256": "a5766ecc9837a5d2a7f4b5bb658934ce54022d7b0765d2568d01f2dc0668e0a9",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/CLI/migration_test.go",
+    "size": 15466,
+    "mode": "644",
+    "sha256": "baa3f800a8470cc3990a87805df0bf1cac9a62b6ccf39b6752f295b3e2599b65",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/object-receipt-https.py/object-receipt-https.py",
+    "size": 13137,
+    "mode": "644",
+    "sha256": "9cdf1fd0e2589c302e5c9158329f30b8ea9aa51eb5a825c56db75710cd054495",
+    "kind": "python"
+  },
+  {
+    "file": "测试/CLI/outbox_test.go",
+    "size": 24305,
+    "mode": "644",
+    "sha256": "16b8b0ce8397d029c7ceb33239230cc005114134b8f78138949c7e2f58287ce8",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/own_deletion_test.go",
+    "size": 14267,
+    "mode": "644",
+    "sha256": "49dd6a97b8ee264d82e5ae3df5c15a5eee81aebb39726a14fe61d428caf48452",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/password_change_test.go",
+    "size": 14312,
+    "mode": "644",
+    "sha256": "543062811d55843fc40e3af06c0b45314489e2e2369d7675b03a4dc33e8f3d7e",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/receipt_negotiation_test.go",
+    "size": 23758,
+    "mode": "644",
+    "sha256": "795891c49e0a258be3f2f0adc9214d0410e2a785bb2f1f2133d2e60310959650",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/receipt_objects_test.go",
+    "size": 26113,
+    "mode": "644",
+    "sha256": "915180bb5ae12b37f95fbbe4a3b3e0361395aa0a1839e45e96daf532cc886666",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/receipt_test.go",
+    "size": 19106,
+    "mode": "644",
+    "sha256": "3bfddb066344065d350bce2d199b6eda7380c276d479964de1af8a169ac05dcd",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/self_state_test.go",
+    "size": 14958,
+    "mode": "644",
+    "sha256": "11eb70266ed308956aef40107e5326bc0ac6a64a97bb5984ea31767fa625dbd0",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/self-state-https.py/self-state-https.py",
+    "size": 15006,
+    "mode": "644",
+    "sha256": "330295e1e6727dbf9f16babca4bedb242dda88558c1e72d18048d9c8b842a53b",
+    "kind": "python"
+  },
+  {
+    "file": "测试/CLI/sync_test.go",
+    "size": 26166,
+    "mode": "644",
+    "sha256": "db6d111e3723c44f82ef1f2e00717723a46b2f06f9aff14882b25e8ca0a3e598",
+    "kind": "go"
+  },
+  {
+    "file": "测试/CLI/sync-https.py/sync-https.py",
+    "size": 17482,
+    "mode": "644",
+    "sha256": "cae545b8dda07b97f32ec07685d90c9cd1467eb90063ab629f916480834947d0",
+    "kind": "python"
+  },
+  {
+    "file": "测试/CLI/运行测试.mjs/运行测试.mjs",
+    "size": 4289,
+    "mode": "644",
+    "sha256": "8cc58a3cc4d5e05311ec8ec7a3fe6397da35e26ac1e1a55c5558547f0459634a",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/AdmissionFenceTest.kt",
+    "size": 11597,
+    "mode": "644",
+    "sha256": "fb49c03309a39e87c7ff04eb0ce320d3f5ffac64967421d8a0fbc1ad9a31e855",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/ApiFixtures.kt",
+    "size": 310,
+    "mode": "644",
+    "sha256": "9499fdcd1b07063220cb8a7236726c57cd36a5d48ab22dbf042ec561114574e9",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/AuthoritativeSyncTest.kt",
+    "size": 20417,
+    "mode": "644",
+    "sha256": "ed08e097caf1fa55b61a11fa189e0f6e53e609fd1a1fbaea3d69d2647061789d",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/CollaborationLifecycleTest.kt",
+    "size": 18197,
+    "mode": "644",
+    "sha256": "7b2bd18bca144e13cb761a7ac98f94ec4e77d3be9fcad014bd84ad17f0de97a7",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/DatabaseIsolationTest.kt",
+    "size": 2006,
+    "mode": "644",
+    "sha256": "ef4e8751b9db568fad1bf83a38987092348339d354ad6f2a1ce2a3decd1a7b8f",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/DiscoveryCollaborationUiTest.kt",
+    "size": 16780,
+    "mode": "644",
+    "sha256": "57ba05a8fcedcb664403f8785c9d62cf1c86c9c2585298e24c39c3bc0b2acef2",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/DiscoveryLifecycleTest.kt",
+    "size": 10259,
+    "mode": "644",
+    "sha256": "674d46596a52e4098577f519b976f09ccde13ebdfbbb9ffd9b57cc5ccf177016",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/ForwardLifecycleTest.kt",
+    "size": 28255,
+    "mode": "644",
+    "sha256": "6ee435a59b6139089861efaa9af79219ea86b43d9cd19ae81755e3a0d80309df",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/ForwardUiTest.kt",
+    "size": 10052,
+    "mode": "644",
+    "sha256": "478fa7cca2a2061dc63b5cabe5eeef23db283fcc94c940897c97f6323d6d83e9",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/GroupLifecycleTest.kt",
+    "size": 8653,
+    "mode": "644",
+    "sha256": "a1fc468c9ea74a59417e039e4c18264fb182fbcbc430912228df4e504e67ea8c",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/LiveApiTest.kt",
+    "size": 5380,
+    "mode": "644",
+    "sha256": "128195c031aa48b015ea7d2d66ad2b2281e403701b5e87571b5bc1ce9c9d4f73",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/Migration8To9Test.kt",
+    "size": 12927,
+    "mode": "644",
+    "sha256": "e19618e3a8e4c742ece0ffce84f1f6ba1e0c714f002384142c6964ca92150433",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/MigrationHistoryLifecycleTest.kt",
+    "size": 6255,
+    "mode": "644",
+    "sha256": "07e2778e466cdcc5f22cb36d855035c850b7734c4d0e7c5982c3ebada647449f",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/ModelClosureTest.kt",
+    "size": 18463,
+    "mode": "644",
+    "sha256": "86c50fa16c0b75b4f114e5f71ca645049c21a01bc9de07c04eadde8411473590",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/NativeForwardActions.kt",
+    "size": 6061,
+    "mode": "644",
+    "sha256": "944b0202b6e811c2b138766e4455d45db87a1c3baf60335a89524e4521973f2d",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/NativeSelfStateHttpsTest.kt",
+    "size": 22141,
+    "mode": "644",
+    "sha256": "0b5ea8bce6a8e7b071fce037ad5d603538528fcdd51d2962cfe6d3a8f6160d0c",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/NativeSessionHttpsTest.kt",
+    "size": 21272,
+    "mode": "644",
+    "sha256": "025342d0648d69c2a385fcb9b471fe085ddb46ec3766d054e65704aae22f11da",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/NativeSessionLifecycleTest.kt",
+    "size": 21223,
+    "mode": "644",
+    "sha256": "cf86112fd91afc47e53067291a1bcc51f4defa1d35a663fb31f073c0f69d4ba3",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/NativeUiTest.kt",
+    "size": 7191,
+    "mode": "644",
+    "sha256": "1943de47cf65fcbbd39e63a50f0e6bb5534fb5633343867a1a200d02ae2a2e1b",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/NotificationPrivacyTest.kt",
+    "size": 2275,
+    "mode": "644",
+    "sha256": "691b801afae097d3b2bdb4a7f63a0af94d27ea10e0f25dc9567215411795a762",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/OwnDeletionLifecycleTest.kt",
+    "size": 10476,
+    "mode": "644",
+    "sha256": "5442e4e53c2e762f11fe46da06f4cfa66afa437f7dbb1358b76e54308a2438f8",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/OwnPasswordLifecycleTest.kt",
+    "size": 7002,
+    "mode": "644",
+    "sha256": "f8ae8f97cb436681c27e5dce1c7d9475406f2f44205d711b60346bf91c88b336",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/PersonalExportLifecycleTest.kt",
+    "size": 9239,
+    "mode": "644",
+    "sha256": "a91884bfb521c8a6dd1c312af489ba1d698d951edeb185867d52176e45af720f",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/ReceiptStorageLifecycleTest.kt",
+    "size": 8644,
+    "mode": "644",
+    "sha256": "b3f906c8a20ae10992aa90f26e23db29b57dc9566bcae5ec8d0401b45b989ae8",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/RoleAdmissionLifecycleTest.kt",
+    "size": 14649,
+    "mode": "644",
+    "sha256": "03ac748ed60e239da418c445f01fbf459661c193819b50e97d9b8343baa8f31a",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/SelfStateTest.kt",
+    "size": 24266,
+    "mode": "644",
+    "sha256": "5a974ce4a16e55a48ba3003c317f808a827d2f052efbacba1089313da5ebb6cf",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/StorageLifecycleTest.kt",
+    "size": 8000,
+    "mode": "644",
+    "sha256": "7a7e2d75bb468a4ce02696b473675bfb89f3d88cd5835886365e97f7c4c7e9c8",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/VoiceRecordingNativeTest.kt",
+    "size": 5119,
+    "mode": "644",
+    "sha256": "a0efdda0ee8f25e0a2236265cb9b9835c8097737062b8ad14dc8c89d0ee601d8",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/VoiceUploadApiNativeTest.kt",
+    "size": 5142,
+    "mode": "644",
+    "sha256": "d94be97544e8c6f4b3d4f9fbe51eb94ba68b390cb8a4e8fa89dffca5fd89ca26",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/VoiceUploadGlobalFloorNativeTest.kt",
+    "size": 9083,
+    "mode": "644",
+    "sha256": "a83aac511429fa65ccbce8c001cad3b85520916d64e557db40b8f69606d77218",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Instrumentation/VoiceUploadQueueNativeTest.kt",
+    "size": 13373,
+    "mode": "644",
+    "sha256": "36c7221b5153fa69a9eaddab316caa064a1614fb3d5072bb5c8c8337d4967015",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/native_refresh.py/native_refresh.py",
+    "size": 11998,
+    "mode": "644",
+    "sha256": "864a7c40d9b2cca2be2016ead181518ec95586b0b8aaaa8318d98b8ee6dbe758",
+    "kind": "python"
+  },
+  {
+    "file": "测试/前端/Android/self_state_https.py/self_state_https.py",
+    "size": 16134,
+    "mode": "644",
+    "sha256": "5adb214744509f43117b97a11274628e3b36ee421903ed8c6e67a0441fdfe3eb",
+    "kind": "python"
+  },
+  {
+    "file": "测试/前端/Android/sync_build.py/sync_build.py",
+    "size": 10099,
+    "mode": "644",
+    "sha256": "24f32cc1124dc0ec08ad9e01001e12f0cd4180622043208657f3293a0c9eb4b7",
+    "kind": "python"
+  },
+  {
+    "file": "测试/前端/Android/sync_instrument.py/sync_instrument.py",
+    "size": 12368,
+    "mode": "644",
+    "sha256": "42450d81d04b5bfbcc300a41d4ef3767a244c5f07a0a6e4550524dc22c7c874b",
+    "kind": "python"
+  },
+  {
+    "file": "测试/前端/Android/Unit/GroupRulesTest.kt",
+    "size": 672,
+    "mode": "644",
+    "sha256": "710b7f8a7f259c67c44266251713d7933cb687fbd78b5fa2b8b4df59d33ec6f3",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/IsolationTest.kt",
+    "size": 2758,
+    "mode": "644",
+    "sha256": "4e480f70c218b6cd833125a6813d864b5be29de1edeb0d26f9e6d9c039ad3edb",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/MigrationRulesTest.kt",
+    "size": 2062,
+    "mode": "644",
+    "sha256": "bab445ef23da59c8b20fd1002748989058b4d71807737a69f57713eeb9d2fba0",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/NativeStorageBudgetTest.kt",
+    "size": 1429,
+    "mode": "644",
+    "sha256": "963abc1e5a0e7ef83f2f77cfda9edf670b592b74213a5f0877e8116f345d7199",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/OwnDeletionRulesTest.kt",
+    "size": 1377,
+    "mode": "644",
+    "sha256": "45145dd058ad5a475c74115b2345221f570b0121cca67ee4f3c3065d676c2fa4",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/OwnPasswordRulesTest.kt",
+    "size": 2293,
+    "mode": "644",
+    "sha256": "76e142a010ee4c28892d6e2c49d37c126110329f0fa984f22075c4a02c250f5f",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/PersonalExportFileTest.kt",
+    "size": 4413,
+    "mode": "644",
+    "sha256": "0a03e0f5b0d106146faf2542bdceb171b6e05eae3fcacb8a6ee1abbedb4a46c2",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/ReceiptRulesTest.kt",
+    "size": 2870,
+    "mode": "644",
+    "sha256": "e2d04a94fcceaf65b5147d862d4dbb10e88ea1860b4d8c956573ca41bb40bc7f",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/SyncWireTest.kt",
+    "size": 2437,
+    "mode": "644",
+    "sha256": "9a6e6380569c3eb3ac41db37fd7eb6d0a399df12e19aea1e7ad57e850896b57d",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/VoiceRecordingRulesTest.kt",
+    "size": 2175,
+    "mode": "644",
+    "sha256": "938fff98be0b9d9e8d14b12efb0aaaee698e1b1dc8fc029e37459e565b5e6aad",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/Unit/VoiceUploadRulesTest.kt",
+    "size": 5826,
+    "mode": "644",
+    "sha256": "e934c8521af26aeb4398cd8fd6cb423b77a964e7189720ab96fa2f9fbcd38aec",
+    "kind": "kotlin"
+  },
+  {
+    "file": "测试/前端/Android/运行测试.command/运行测试.command",
+    "size": 4346,
+    "mode": "755",
+    "sha256": "df66cd39fd528308cb00daeb074a661d879cc2e89b2e55c9315b05f44314b1bf",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/【MacOS】运行规则测试.command/【MacOS】运行规则测试.command",
+    "size": 1911,
+    "mode": "755",
+    "sha256": "1a8698504f6095fda161009d6fc705deeeaa1f2e7730f3fca77cc6f36e6618d3",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets",
+    "size": 33625,
+    "mode": "644",
+    "sha256": "bad8d36fadedb08d22f679950e40145752c94afbda7f76617a259b04c905c51f",
+    "kind": "arkts"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/OhosTest/ets/testability/TestAbility.ets",
+    "size": 107,
+    "mode": "644",
+    "sha256": "80290bf630eda782dffa05c050eba7718642a892347909b998be3b91c0708f46",
+    "kind": "arkts"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/OhosTest/ets/testrunner/OpenHarmonyTestRunner.ets",
+    "size": 457,
+    "mode": "644",
+    "sha256": "77a44f6c92751bff55704c8e8724f9fd5ca7db46915ea43ba0887fc02b35e448",
+    "kind": "arkts"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/Auth.test.cjs",
+    "size": 12633,
+    "mode": "644",
+    "sha256": "f2ca3c6037692bd1f142d4906e10d4d54753f2a3fbe29100a4acba8702085e69",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/AuthApi.test.cjs",
+    "size": 4692,
+    "mode": "644",
+    "sha256": "d205651fb30b97effb8c93c234bbf93d734d4a92495ed31328d3570f82434484",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/Deletion.test.cjs/Deletion.test.cjs",
+    "size": 16097,
+    "mode": "644",
+    "sha256": "33ec8ba2e7839a76eb5da142af3c2bedecd564c4416bc6e83989635d87dd4269",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/Export.test.cjs",
+    "size": 21440,
+    "mode": "644",
+    "sha256": "73b3c48f70e106b07d2fc6b6019d6366dc84d275954c50b63fb0573b3fe37c69",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/Group.test.cjs/Group.test.cjs",
+    "size": 15947,
+    "mode": "644",
+    "sha256": "c6ad7044a8c17c412257210bb517dd7a631cc60cb07ea9fe54cc985b7e9b926f",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/Migration.test.cjs/Migration.test.cjs",
+    "size": 21796,
+    "mode": "644",
+    "sha256": "59b6544573cf9cdac4ad7e8029809a462d1fcc101a0cc4f50cbfc0f162450b85",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/Password.test.cjs/Password.test.cjs",
+    "size": 13251,
+    "mode": "644",
+    "sha256": "8048e3cfa19aee08b0154a52d36cf7763d17e8be38c4233fb8dc06400bd913fc",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/Policies.test.mjs",
+    "size": 15533,
+    "mode": "644",
+    "sha256": "f2bcb36b295cc06b661fc39317649a503aac7f69b3b79647e71a1c3d2b27b55c",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/Receipt.test.cjs/Receipt.test.cjs",
+    "size": 26142,
+    "mode": "644",
+    "sha256": "03859a5152d7aeffb4a801dc4fcf8d1702b80e8c04464b3f620c0cbaaef89650",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/RunAuth.mjs",
+    "size": 3937,
+    "mode": "644",
+    "sha256": "73638d73bc6d2272c8dcb992358302c2899fe771541e8b4c6f28dab7f6760d42",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/RunDeletion.mjs/RunDeletion.mjs",
+    "size": 3318,
+    "mode": "644",
+    "sha256": "f759f59adcae5e7e528ae51af9e2aaf2112bac1df69258d35f14a833871b7f25",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/RunExport.mjs",
+    "size": 4174,
+    "mode": "644",
+    "sha256": "430066ee89874aff32108461352659071abbaf0b4389f31a3220ee51082066dc",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/RunGroup.mjs/RunGroup.mjs",
+    "size": 3281,
+    "mode": "644",
+    "sha256": "9ff0bc9f7084b150b0be6b2b95806d0576bc565f2833b5782f6caeb321e91816",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/RunMigration.mjs/RunMigration.mjs",
+    "size": 3786,
+    "mode": "644",
+    "sha256": "5369c41d13255fc474c302d71966878873d4956df6d2b9644b84666ddbde00e2",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/RunPassword.mjs/RunPassword.mjs",
+    "size": 3271,
+    "mode": "644",
+    "sha256": "30a74e6159d92041b029a206f34033bb63f720941a5c122ef095e4044dce9c96",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/RunReceipt.mjs/RunReceipt.mjs",
+    "size": 3686,
+    "mode": "644",
+    "sha256": "d9f6d86623fba8cdda4893793b4ff6c8941ff766847810ba6f03eb240060a9cc",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/RunSync.mjs",
+    "size": 3812,
+    "mode": "644",
+    "sha256": "3fa3e04aaec193353a0bf9c29daf139f54f47e0d68e95b10321b127cffa0bf25",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/Sync.test.cjs",
+    "size": 34347,
+    "mode": "644",
+    "sha256": "04565cbadc06c4acf18b8d596f518cd485ec5b73adb3a0c537d447dfa7373e9c",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/Unit/SyncSqlite.py",
+    "size": 760,
+    "mode": "644",
+    "sha256": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee",
+    "kind": "python"
+  },
+  {
+    "file": "测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+    "size": 9591,
+    "mode": "755",
+    "sha256": "30ce691c6400044f79e15d83d2bb2a2fae1294d716502f3c333f26ba2ed281e2",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "测试/前端/iOS/IMAuthCoordinatorTests.swift",
+    "size": 50866,
+    "mode": "644",
+    "sha256": "eaa7ee35f8cf461e16dc7e19952f69b3dbace5304d8f09d714f8f1b63aa38876",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMAuthCredentialTests.swift",
+    "size": 5533,
+    "mode": "644",
+    "sha256": "a09449a8da1a616ddef3e638e9585b7738e743619d86c9c387955c9484e4c6e4",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMAuthoritativeSyncTests.swift",
+    "size": 38684,
+    "mode": "644",
+    "sha256": "d8fcf9b2d858053a6dc7c34681cd3615ccb5f10fd00fe5fee7670a1c0c4bc97a",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMAuthRefreshIntegrationTests.swift",
+    "size": 15510,
+    "mode": "644",
+    "sha256": "74d2fae6dd5206db6e02306a01018a27a67f1a9e82ab59ff8afc4e53a8f2d485",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMCompletionTests.swift",
+    "size": 21486,
+    "mode": "644",
+    "sha256": "a7cb262c61db47f748f912e8bd7a77712eca886edebd6288defbdccfcd2ac69a",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMDataExportTests.swift",
+    "size": 14596,
+    "mode": "644",
+    "sha256": "dc0603dca2b7191f3a05dca52b8d808b004f3ac831a9ea884d8f49f5aa08be26",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMForwardTests.swift",
+    "size": 40680,
+    "mode": "644",
+    "sha256": "c3315f842a94769368c17989ca8052fb8facc8c20053ad973342553c7afa7f7e",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMIntegrationFixture.swift",
+    "size": 1486,
+    "mode": "644",
+    "sha256": "a6c1a0f529a09f837ea8c542ab62fbeaa114efd1009daa91fa9d4eb5218b83f7",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMLifecycleTests.swift",
+    "size": 14094,
+    "mode": "644",
+    "sha256": "e793b0b096a31926fff36e39c164f8e5fe548e47f455af363df63fa45392fa8b",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMMediaTests.swift",
+    "size": 4356,
+    "mode": "644",
+    "sha256": "e4c3023d23e1a5301307f19dc311b1581f588d9987a82c5d8905684e017e2ad2",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMMessageListTests.swift",
+    "size": 27254,
+    "mode": "644",
+    "sha256": "b041e3bbc0a0a9533d7402c832d8be4ba22ef2b46aaa2eceb82b33384486d6bb",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMMigrationServiceTests.swift",
+    "size": 19872,
+    "mode": "644",
+    "sha256": "01c1b40da168e7ae4a2821e77e4d44a369a795ce676790b3bbb1c9a10c32240e",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMMigrationTests.swift",
+    "size": 18255,
+    "mode": "644",
+    "sha256": "70fd61edf61add4848a9d47a56c629911e5f295799d1a83a2187f0961b062561",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMNotificationTests.swift",
+    "size": 2274,
+    "mode": "644",
+    "sha256": "41ba5efb12c4fad73abc21d7494ef27e228fcd75311a42c16357a8e7bd3aa96b",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMPersonalStateTests.swift",
+    "size": 15362,
+    "mode": "644",
+    "sha256": "cc811f4e20fa2a2b19f134d67951a9570d02fcbdf5850cc5cfa4d1b5602f10c7",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMReceiptServiceTests.swift",
+    "size": 36890,
+    "mode": "644",
+    "sha256": "737746e3c8649cc5d9903811b4bf17be6e9ad64cdb94a66112068a3893ec811f",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMReceiptStorageTests.swift",
+    "size": 16259,
+    "mode": "644",
+    "sha256": "1bca785886cf2f6b8bb5035a2e340dafc984940ff4ecb37bd9ee2372055fca9a",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMSelfStateIntegrationTests.swift",
+    "size": 23291,
+    "mode": "644",
+    "sha256": "786110539f2e1ee06114e4460309c05ee124434d96d079454c6c96159a43ee86",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMSendAdmissionTests.swift",
+    "size": 22492,
+    "mode": "644",
+    "sha256": "4355ad2211621b0f189862d1f60ff64564d5dca6feaef789983b32593966db17",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMSessionTests.swift",
+    "size": 4149,
+    "mode": "644",
+    "sha256": "eed892fe7162d95ff693460ef5bdab462c6ac887de2efcbd77aa823efd8c30f4",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/IMStorageTests.swift",
+    "size": 9124,
+    "mode": "644",
+    "sha256": "fcf8b21e44acc8eb06421918f121d214a2c497fd994fccedf31338e23ddf47c9",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/personal_state.py/personal_state.py",
+    "size": 18273,
+    "mode": "644",
+    "sha256": "f0ae2c6f47e2012ae8d73eb419ae94f766ea28b9c240ef5ba3ce0a194b193cde",
+    "kind": "python"
+  },
+  {
+    "file": "测试/前端/iOS/UI/IMMessageListUITests.swift",
+    "size": 9260,
+    "mode": "644",
+    "sha256": "99a71db2c7c49324e836bb3979f3b83535ec6b7997a40722cba92c011d8e5d0c",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/UI/IMSelfStateUITests.swift",
+    "size": 6057,
+    "mode": "644",
+    "sha256": "3411033964e1358da1031383c59f62b49445999d2a3188841660a347677397a3",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/iOS/UI/IMUITests.swift",
+    "size": 18636,
+    "mode": "644",
+    "sha256": "3a7461b56bc915cf915f3cc903010f148af012a07dfe73f08d5c4ee88ce6ec62",
+    "kind": "swift"
+  },
+  {
+    "file": "测试/前端/Web/account-deletion-cleanup.cjs/account-deletion-cleanup.cjs",
+    "size": 7750,
+    "mode": "644",
+    "sha256": "be9a138eee42dd8ad4ba77e90ba78c31eea80d27c7eb71ce9fc32fd6350d51da",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/account-deletion.cjs/account-deletion.cjs",
+    "size": 25676,
+    "mode": "644",
+    "sha256": "7401276fba9774184db429b280a418593354499efe03f5e00ab76a743a7f9605",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/admin-integration.cjs/admin-integration.cjs",
+    "size": 14086,
+    "mode": "644",
+    "sha256": "bb166a23e7f3bc032a7e4cf54da3b1c58778c7cf2032b8cfd0aa17cff01c45ec",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs",
+    "size": 61469,
+    "mode": "644",
+    "sha256": "e7f67a58031be1d356c9d7782f51357bceeb5d88a9b5191e5cbfed69e219e1b9",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/attachment-rules.cjs/attachment-rules.cjs",
+    "size": 14910,
+    "mode": "644",
+    "sha256": "27ca5badb59246db18636e48764cc6f6dc3dd01635e9191317aeae29bc13622f",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/audio-browser.cjs/audio-browser.cjs",
+    "size": 22873,
+    "mode": "644",
+    "sha256": "51f1b6f7061551f52b7b0e0488a2dc5ce06e20bed5fdfd032b2a9be45b2f1f95",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/audio-rules.cjs/audio-rules.cjs",
+    "size": 12994,
+    "mode": "644",
+    "sha256": "1d778c4c96b1ed950b05b518e68bfe390ccaf718800eed20a77b4d243cbe4f99",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/auth-https.cjs/auth-https.cjs",
+    "size": 16598,
+    "mode": "644",
+    "sha256": "d72e8b57309796d1a7d84638e357790e5260dbf3ec8e2ca309b4a07ec7238bd1",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+    "size": 29159,
+    "mode": "644",
+    "sha256": "59b82faa4f11140859202b4ea4ecc4f13ca7e367cdcf53cd3ab2ad6983dc082c",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/browser.cjs/browser.cjs",
+    "size": 11448,
+    "mode": "644",
+    "sha256": "9710ac6f28972e0f2f901f1cbdb8bc9619ef1096d4e9367efa0bf1df3ba56d4f",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/business-global.cjs/business-global.cjs",
+    "size": 12879,
+    "mode": "644",
+    "sha256": "3c7aa5a1dec193ee683355a71a255c32368c352b5ecda59769ca860672de1e07",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/data-export.cjs/data-export.cjs",
+    "size": 29046,
+    "mode": "644",
+    "sha256": "782cca8c9a80096a6a823ceb3e7a51a65161d1aa089ab1f95f800a57f18701b5",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/draft-recovery.cjs/draft-recovery.cjs",
+    "size": 22253,
+    "mode": "644",
+    "sha256": "64606a1f18d2f7b72e9f470de038d2ea6a7633c1d1097c20c69261e376c89fc6",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/forward.cjs/forward.cjs",
+    "size": 23440,
+    "mode": "644",
+    "sha256": "131a75b0334b46727838ffdb78c51a790917b7563c70d86ca54bc098ac157dd9",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/global-facts.cjs/global-facts.cjs",
+    "size": 14891,
+    "mode": "644",
+    "sha256": "80e46d0aab94089709368e788a59cfa038f4b56151bb9140e99dbd3f34eb9c22",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/group-governance.cjs/group-governance.cjs",
+    "size": 32720,
+    "mode": "644",
+    "sha256": "2cb3fc6a24acede59d07cf34a77d95ac9fa40657369b1acd055fc6b6f66345d1",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/h5-browser.cjs/h5-browser.cjs",
+    "size": 12013,
+    "mode": "644",
+    "sha256": "04eea742fb339e84aa9bd4ffb9dc0eba0a3130b76b20ceb80c6d0a75513a94fb",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/integration.cjs/integration.cjs",
+    "size": 64447,
+    "mode": "644",
+    "sha256": "25880ac7d47270062b75cb2ab1c68ac583a83fb2165b4af2c09445f9b4885cb2",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/migration.cjs/migration.cjs",
+    "size": 44086,
+    "mode": "644",
+    "sha256": "3e9bb1c7be69d3ca573d7213664ee89ac299ad3b1096ee6ce80fa21d42d2db6a",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs",
+    "size": 9725,
+    "mode": "644",
+    "sha256": "567d73b59fc4d306a8d060a85e9ba609ac5967d1d5287d6cb444b191fb1af3c2",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/owned-web-runtime.cjs/owned-web-runtime.cjs",
+    "size": 9581,
+    "mode": "644",
+    "sha256": "85ab13e68ad92f346b698f0e23e1729ae2f51f6d6d41c5ef463aa4b3625fc5cf",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/password-change.cjs/password-change.cjs",
+    "size": 28159,
+    "mode": "644",
+    "sha256": "96b8b71f3fd7fe1d51b3ef2161d3265b94487bd15197385477cdcca34694e7b8",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/receipt-context.cjs/receipt-context.cjs",
+    "size": 18065,
+    "mode": "644",
+    "sha256": "ab0660afb114978712560df0c46a165a26945202b1afa7711b36d1ae80085068",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/self-state-https.cjs/self-state-https.cjs",
+    "size": 28364,
+    "mode": "644",
+    "sha256": "732d463589a1132f17cb4eef27c40249592094cab7d4e530ea1b0c8e1f1f8416",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/self-state.cjs/self-state.cjs",
+    "size": 30376,
+    "mode": "644",
+    "sha256": "3e9b671a91536d903e7f6933241d31f2b9bf7bdad64dcc61c8f7a89c705d7131",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/sync-https.cjs/sync-https.cjs",
+    "size": 18633,
+    "mode": "644",
+    "sha256": "7bf9ac5b6fb229b1bcdf15c70fd24e8ed10e6a66fab97375222361fcf34e8ece",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/sync-protocol.cjs/sync-protocol.cjs",
+    "size": 10558,
+    "mode": "644",
+    "sha256": "c0fac15ef0f19113ac88e3808c9bbd309931de5851a3c156332fb1c83155d9a1",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/sync-store.cjs/sync-store.cjs",
+    "size": 19735,
+    "mode": "644",
+    "sha256": "44bc2772f44de1c8b9bfd3e9486ba37285288d5f05b00d79a22c7494656106d6",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/前端/Web/sync-view.cjs/sync-view.cjs",
+    "size": 19336,
+    "mode": "644",
+    "sha256": "70866918d5d4f195b986d9fed0604a7cb6d136f8fbc3335dcf2511c59e8f817b",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/后端/security_test.go",
+    "size": 4870,
+    "mode": "644",
+    "sha256": "d1b66d9214d7baa3c7b5d0bde0e8cda020c21f5e9319a61397300abc9683a636",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/account_deletion_admission_test.go",
+    "size": 12822,
+    "mode": "644",
+    "sha256": "5b852a07511e404db623f3643a6100eb67d9f3d1f6c9c1b6ffb9ef34df810fa6",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/account_deletion_admission.mjs/account_deletion_admission.mjs",
+    "size": 4775,
+    "mode": "644",
+    "sha256": "67f78174e644d9f03db7975ab33f0d5a6f36482fbee0b6c6e7a77f2b7536f3f8",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/后端/接口/account_deletion_pg_test.go",
+    "size": 24271,
+    "mode": "644",
+    "sha256": "f73289e713b5fd67f558ac4c7333bbe63af77244d4101a8976c318e2f2b93f53",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/account_deletion_read_floor_test.go",
+    "size": 2391,
+    "mode": "644",
+    "sha256": "b07337572c21ba8f965a3720a2069405fc34361c3fa854a291ed5fab9930a9b6",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/admin_mfa.py",
+    "size": 9139,
+    "mode": "644",
+    "sha256": "7ab1db636b9d4e6eca0c36309eb900c5445b84467bc79069799ff46e6238b963",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/avatar_codec_test.go",
+    "size": 2637,
+    "mode": "644",
+    "sha256": "bdc8e55490428edb114e071e1de53eae12e6257e37e2af3c817143d23a626e77",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/avatar_reports.py",
+    "size": 10048,
+    "mode": "644",
+    "sha256": "59763b0f29f0245952032b46b70afa4709544ca434ae6f0502385b37eb0730d6",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/backup_restore.py",
+    "size": 12275,
+    "mode": "644",
+    "sha256": "826f98c26a61039288a3ba4c54d5dceecd7621025c4de85a6586a64dde9d796b",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/closure_audit_completed_receipt_test.go",
+    "size": 6811,
+    "mode": "644",
+    "sha256": "c509e60004c9a649c663c76baff21462c52fa4dfaeeec3acd4d9d05a79f6345b",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/closure_audit_deletion_fairness_test.go",
+    "size": 5437,
+    "mode": "644",
+    "sha256": "9fcaf4d39a2175bdeb56f4ec45e78597a70fe7d302bd85922a3020e07a2de730",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/cloud_drafts.py/cloud_drafts.py",
+    "size": 14507,
+    "mode": "644",
+    "sha256": "94cff920e7694034dca2a3c36adf7b48e5fd86c766b082a4fadaca3ffb3773de",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/cloud_drafts.py/restore.py",
+    "size": 12357,
+    "mode": "644",
+    "sha256": "db15c84fec54bbc4ce6616ce7eb892a466acf1583b68cc748f33b1ae113e34de",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/contact_relationship.py",
+    "size": 8039,
+    "mode": "644",
+    "sha256": "0bd0f2e59c0079f507b948d27cef8ede5b8e1aee734835f2c09647facdc6d70c",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/deployment_disk_test.go",
+    "size": 1329,
+    "mode": "644",
+    "sha256": "8cadd0bd971099aecffd2b02f77699e5928a74901d70849101b84c3686c7c5f7",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/deployment_restore_pg_test.go",
+    "size": 22635,
+    "mode": "644",
+    "sha256": "0b41037546d435a3ba551dfb7b9df164d3d956155d5775c0c691785a45224bc7",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/draft_reply_test.go",
+    "size": 1513,
+    "mode": "644",
+    "sha256": "c1688cf8e7dd12fdb67b92e54c742a2d85d2380b189f50ddcb626bf8b90699d8",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/export_fence_test.go",
+    "size": 13919,
+    "mode": "644",
+    "sha256": "f24f7216be1360654b4d03b32baee92db501496020b7be548f541349d774ea61",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/export_public.py",
+    "size": 8904,
+    "mode": "644",
+    "sha256": "40c4e0288bebbecdf879a735690e52b36a3af5ee79a51d48d35aaf2cc36d1a17",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/forward_compatibility.py/forward_compatibility.py",
+    "size": 13301,
+    "mode": "644",
+    "sha256": "964785f3eeb4b9df1860be3398c98468aac11b1d4eaa6a7eec4c9f6524e91917",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/forward_fences.py/forward_fences.py",
+    "size": 10283,
+    "mode": "644",
+    "sha256": "5f3d93c86eae19c3b9f0fac5f30b0780e2c9b43882edb0fd88205d9555f64a0f",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/forward_gateway_test.go",
+    "size": 14345,
+    "mode": "644",
+    "sha256": "aec33fe12c1efe588cd15e6fc7c579539b46feb3cef0d50e3d27aefa74da0faa",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/forward_refs.py/forward_refs.py",
+    "size": 20116,
+    "mode": "644",
+    "sha256": "d87176a0134037927f65f546468d8c871f7f0f310748b32be2342818bda8b232",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/forward_restore.py/forward_restore.py",
+    "size": 12274,
+    "mode": "644",
+    "sha256": "cae19868b3d887bbd8a19c2526e82841cfd78b4407914fac5d8ed3c6b0d4e51a",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/fresh_migrations_test.go",
+    "size": 4169,
+    "mode": "644",
+    "sha256": "8411f06fdb223876489dae1ded88daf61ea17ac34c190370cc3dae7b420653db",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/group_governance_test.go",
+    "size": 8726,
+    "mode": "644",
+    "sha256": "425527475946919a218a3c0a9189219f90867ca303aefe0fb0e11ceda557c950",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/group_manager_original_test.go",
+    "size": 12918,
+    "mode": "644",
+    "sha256": "90973c28cf89f8efe40bbb456dda3c25353e1e5ecec204ad6e60e95ea0ac6871",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/integration.py",
+    "size": 7862,
+    "mode": "644",
+    "sha256": "f2bca465f852240651d1ba05657d4e1d3561ef3f561c61c24d9a3ac8d68dc956",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/media_owner_floor_test.go",
+    "size": 2695,
+    "mode": "644",
+    "sha256": "1b8251ca3b4070b9c2d34326e23a7154f6e617fa08d480c094cf87b7f8cd5b0d",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/media_retention_pg_test.go",
+    "size": 21962,
+    "mode": "644",
+    "sha256": "91ff332ccf594519bfa385d1c91401848b5e191692b145657c419557cc6ee92b",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/media_upload_pg_test.go",
+    "size": 18146,
+    "mode": "644",
+    "sha256": "3dd20ee91adc4139f61570626c2549311b066dc0c2bb98e5a904122da8ac44b4",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/media_webm_browser_test.go",
+    "size": 1853,
+    "mode": "644",
+    "sha256": "a7603b85123f47e3acaff1c4d0ea02648721134ef009ff6d3a82c0258f7dd12a",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/media_webm_test.go",
+    "size": 12855,
+    "mode": "644",
+    "sha256": "ac7d29a424fb87222f226cc2c2526ab80532ff51c7acaaf36d8e34aed1310ddc",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/mentions_announcements.py/mentions_announcements.py",
+    "size": 26125,
+    "mode": "644",
+    "sha256": "3b99e2caa24a9106195e94d5f4bc4dce54ec373434a00bdc5b0509b4e13a5a56",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/message_read_points_test.go",
+    "size": 12871,
+    "mode": "644",
+    "sha256": "c8f41169681ec23641cc3ea5e486bfc710061e5962952bce20a179074eb777bb",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/message_read_summary_test.go",
+    "size": 4380,
+    "mode": "644",
+    "sha256": "df20056e8cfbd44de61ee69a8a401465ba8e194879cba2991abd11630bb1678d",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/object_receipts.mjs/https.py",
+    "size": 10092,
+    "mode": "644",
+    "sha256": "be0eaa8f997b0e4b9f2df751933ba4c7e0bcb730749110210a6d94496207a8d9",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/object_receipts.mjs/object_receipts.mjs",
+    "size": 4930,
+    "mode": "644",
+    "sha256": "fa4dd865ae37f507064e9c9367c10fcb80ce46f64a81a6cc7e4014f123f29a46",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/后端/接口/object_receipts.mjs/realm.py",
+    "size": 12162,
+    "mode": "644",
+    "sha256": "facee4659f1a6fda7b26f76045c4d485d83e1238424d9ffd9e3eab6e8c38b1a3",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/password_change_pg_test.go",
+    "size": 23074,
+    "mode": "644",
+    "sha256": "af1c05a1211c32301828c8f432da3eb293146e3c0c6fd6b2cf9ce369ca2a0288",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/password_change_test.go",
+    "size": 4257,
+    "mode": "644",
+    "sha256": "72608d7320b5a06f7766827512f6571ac6c116f641e5613d557a538514d90985",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/password_change.mjs/password_change.mjs",
+    "size": 4693,
+    "mode": "644",
+    "sha256": "6f3d2969064288ca53cd17105cb4c5cd9b59d8a8a8a0b425a79d5d3adbcfb4e8",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/后端/接口/personal_export_inventory_test.go",
+    "size": 3034,
+    "mode": "644",
+    "sha256": "f725bff5ebb588a112e3176538e9cf2a133f18d88b9bf42583fd313507fb173c",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/personal_export_test.go",
+    "size": 10788,
+    "mode": "644",
+    "sha256": "38bd8bb5e26ac9ea58f532ae5d5050f59aca8df48f8969dc0721784bbcb47ca6",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/personal_exports.py/all_media.py",
+    "size": 4485,
+    "mode": "644",
+    "sha256": "453147737e50fbf508e9efb2d30f039e82a1404490c0b5a9b1d1d3c1357b3a82",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/personal_exports.py/compatibility.py",
+    "size": 9260,
+    "mode": "644",
+    "sha256": "775ebd7aa856fe9fef43fd570b69c9ef55b5528f1d607287b610d9317128d5b9",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/personal_exports.py/final.py",
+    "size": 5022,
+    "mode": "644",
+    "sha256": "3b77d70fab444f2e4f2000eedb2ef70dc1dec1c6b322ceb7ca59e6539b7b43b8",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/personal_exports.py/negative.py",
+    "size": 5696,
+    "mode": "644",
+    "sha256": "3f710a50907d9ffa3c2a0c530a3475c8d4bfeb1ffb65ef54f40bc42bf4bb64b0",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/personal_exports.py/personal_exports.py",
+    "size": 39228,
+    "mode": "644",
+    "sha256": "7295747b84225d97ddc8bf31a35e4af3b48358e50968025c409e3f2281817cbd",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/personal_exports.py/realm.py",
+    "size": 19069,
+    "mode": "644",
+    "sha256": "643654f75d5942ecf4c89c5681a21cb794fe63be24cc98b40ed4e62431ee533f",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/personal_exports.py/report_restore.py",
+    "size": 8987,
+    "mode": "644",
+    "sha256": "6e12033f0fa91d4ffed827e89eae59a7ade61d0ab40b09073743f301cac56089",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/personal_exports.py/reports.py",
+    "size": 8125,
+    "mode": "644",
+    "sha256": "82f65cb18cc47a08f9489bba3a4e0d8f1fd44c214e82fc9c2b7a57dc2f779cf1",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/personal_exports.py/restore.py",
+    "size": 17112,
+    "mode": "644",
+    "sha256": "5b73c3c4b8275d508f502fdf6e27187afb21b17dd3e40689676fff309cbba5cc",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/receipt_capabilities_pg_test.go",
+    "size": 19171,
+    "mode": "644",
+    "sha256": "ab48df957a9e46f151f5456408494a350d866d6826485eaf03c0e5f2ae871660",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/reset_grant.py",
+    "size": 6200,
+    "mode": "644",
+    "sha256": "45598a69d88892b694e390d00b4bebac2ef0f444cd022eef13889a8bf00dd01a",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/retention_pg_test.go",
+    "size": 26512,
+    "mode": "644",
+    "sha256": "e6bf1e742430fd9c48636622be4cce24eb8e2a0d76a11655da5204b30a232455",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/role_qualification.py/role_qualification.py",
+    "size": 11772,
+    "mode": "644",
+    "sha256": "a1265424037cff97badf72f5d44e721e17eb1586b7b0cfd482c9773a2defb0a4",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/s2_pg_guard_test.go",
+    "size": 5836,
+    "mode": "644",
+    "sha256": "5a6c33e4f90446e9073cc8fb0ee6b1f72c64e6ee7966f6f45e7363f2e638284a",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/search_favorites.py",
+    "size": 7249,
+    "mode": "644",
+    "sha256": "ad5f8bcf797ff7658093ef7ff089e4efe1eb910f8deb1359b78881bfe5eca972",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/search_test.go",
+    "size": 1126,
+    "mode": "644",
+    "sha256": "d24f193669479c406ef139bfb490e4347be41da70d76d191c29ad188d56bbaa5",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/self_draft_floor_test.go",
+    "size": 18922,
+    "mode": "644",
+    "sha256": "b49891eb1969ff6b83fd04ad61de7e8172fa7865568c8670c94ffc7ee5c21ebd",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/self_draft_test.go",
+    "size": 4712,
+    "mode": "644",
+    "sha256": "445deb86cea44db2750926fa3d717ae9b53c46d75eb333255861ee04b9992827",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/self_read_test.go",
+    "size": 16563,
+    "mode": "644",
+    "sha256": "3125e3b6dd6b8e255e8e9553b050f75d918756cf941cbf4a1de9e25c25760345",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/self_state_sync.py/self_state_sync.py",
+    "size": 26391,
+    "mode": "644",
+    "sha256": "4e2b90dc199d665cc256fbfa545b7f25c953e5a953591ff8d0481bd86de531e4",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/self_views_pg_test.go",
+    "size": 12486,
+    "mode": "644",
+    "sha256": "c0b081fd7053dca2cff9fac2a9d05d202c0c1d99fe89235397dad0cf8cf09a52",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/self_views_test.go",
+    "size": 3763,
+    "mode": "644",
+    "sha256": "82ee3dce3585869d66246759941b70aebf6ccc27384ecc0512e8eb7a6d49ca14",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/send_admission_test.go",
+    "size": 13319,
+    "mode": "644",
+    "sha256": "bbd8cdd13a92c428ac9f0bb370d5c11a8a7c79f70c068487b8e75845dbdd6a1e",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/send_admission.py",
+    "size": 8298,
+    "mode": "644",
+    "sha256": "23178228c4d0d207e29f17ce115ae84996eb88f4a7c8cad5490177326b813eb8",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/session_closure.py",
+    "size": 3592,
+    "mode": "644",
+    "sha256": "592c0f1eefe82c753a6fcc5524352044caa42c45faa0f7db1cecbbd1f4f2c6c7",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/session_refresh_restore.py/session_refresh_restore.py",
+    "size": 9163,
+    "mode": "644",
+    "sha256": "18e61e18a570646e8f46e98db5fb1cc06627a61e30832001ee455f122ecde95f",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/session_refresh_test.go",
+    "size": 6164,
+    "mode": "644",
+    "sha256": "04d223aeac7d2fefe37f118df28739347f06937281ef60007159dbc4eb04b3da",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/session_refresh.py/session_refresh.py",
+    "size": 33784,
+    "mode": "644",
+    "sha256": "8a979a66d80693b6aa6c566cd92c161f5a0f153124994873707a745c792b92da",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/source_preferences_test.go",
+    "size": 14731,
+    "mode": "644",
+    "sha256": "8b8386cdc997d11e8959c0feb4339d889329c6e91569ed69bea8c57ad67c2747",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_migration_fair_pg_test.go",
+    "size": 4436,
+    "mode": "644",
+    "sha256": "ff2857683f3735feaa7c71ad27de9b4f92a6689d4d9c914f9659a67516077d62",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_migration_forward_pg_test.go",
+    "size": 2133,
+    "mode": "644",
+    "sha256": "4991282121fb27091e067248db7d951a2ff51ea162d3e4005d9db5b78ed7fda1",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_migration_pg_test.go",
+    "size": 21818,
+    "mode": "644",
+    "sha256": "672a1b4d706755804b4daa8b5abef545dba3c73d8bd6179876e32aa6a0c15029",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_object_receipts_test.go",
+    "size": 18753,
+    "mode": "644",
+    "sha256": "650ec5f610c6bcbb4b3d5868a81ffcb2852bcae284bf3379f9f5eefa292a0232",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_outbox_test.go",
+    "size": 16991,
+    "mode": "644",
+    "sha256": "86febb41cc2260f71cd59c1d3eabb2de4ff85e8736512edfae69b6436c3a1a60",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_receipts_pg_test.go",
+    "size": 11306,
+    "mode": "644",
+    "sha256": "f93b515dbf3913445cceab2160727b9099504f495dd8da87e710f5c37420f169",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_receipts_test.go",
+    "size": 5392,
+    "mode": "644",
+    "sha256": "cb9488a53b2bfe39ecc89b516643996084e6551f669a20e481edfb8c515eae55",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_register_pg_test.go",
+    "size": 6122,
+    "mode": "644",
+    "sha256": "6258ecf93cd6b92c98fc8fd152c83e75bd89ceccd33b8542a0e2c35ff77b00b8",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_restore.py/sync_restore.py",
+    "size": 37513,
+    "mode": "644",
+    "sha256": "ebaa7bb8102420bd8ecfd8370655e854592837c6ace0ac887d780b8dc64072cd",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/接口/sync_schema_protocol_test.go",
+    "size": 3316,
+    "mode": "644",
+    "sha256": "f69ac90b87f4e1a8e94a4bed83d4e5fb3cbc59a20562d2c95ef6a5d6ea61c172",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_schemas_test.go",
+    "size": 17818,
+    "mode": "644",
+    "sha256": "b30a678a99d15bec07a0123b98e3fd1ed1362e75775600e00bd13f392e90a2f3",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_snapshot_test.go",
+    "size": 24710,
+    "mode": "644",
+    "sha256": "34da337f6234f0409263baa06e2033cde5a3abadd3fe82038935d4e9dd78b6df",
+    "kind": "go"
+  },
+  {
+    "file": "测试/后端/接口/sync_snapshot.py/sync_snapshot.py",
+    "size": 18924,
+    "mode": "644",
+    "sha256": "c5132cd5c35c9372fd6b1207265a4a8464a043d72cb4eaf240ddda9fea06fc89",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/规范入口HTTPS.py/规范入口HTTPS.py",
+    "size": 8439,
+    "mode": "644",
+    "sha256": "bfed54bb174649fc96e92b222b67aff48a204228e4be5d2aed29a31ccca621d0",
+    "kind": "python"
+  },
+  {
+    "file": "测试/后端/运行测试.py",
+    "size": 1614,
+    "mode": "644",
+    "sha256": "30161deee771c3935f4f91ab16544b573d1169bebf60fa96eb87f1fb1b7e1a48",
+    "kind": "python"
+  },
+  {
+    "file": "测试/部署/Linux/验证入口.mjs/验证入口.mjs",
+    "size": 17945,
+    "mode": "644",
+    "sha256": "aee44b4f37c9db614a8144cb07d5a8be0b958f4f41f11cdd61977485475d6d6f",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/部署/MacOS/ContractSmoke.mjs",
+    "size": 2622,
+    "mode": "644",
+    "sha256": "5a896c6147f5310ead4dff913c2fa625130c3e937819099c6f158664cec5de0c",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/部署/MacOS/NATS专项.command/NATS专项.command",
+    "size": 5837,
+    "mode": "644",
+    "sha256": "0d1a6d518c19a6ac89e2e8eb0ed9af772b62f53533abf0e727c0346bade15b34",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "测试/部署/MacOS/NATS协议.mjs/NATS协议.mjs",
+    "size": 4567,
+    "mode": "644",
+    "sha256": "40457242337426cd0e6e54dae328afdddd8b1bb15e599e557c8eb29ac2a0652a",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/部署/MacOS/反部署安全.mjs/反部署安全.mjs",
+    "size": 11109,
+    "mode": "644",
+    "sha256": "e007d0991dc4393d28ae137c541a2c1254ec4ead8007b40822668650d8924743",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/部署/MacOS/工作树搬迁.py/工作树搬迁.py",
+    "size": 4793,
+    "mode": "644",
+    "sha256": "2ed89982ad0ec0f8d00c15bec064468f1036f8e6707cf7aaf360c5c588c65659",
+    "kind": "python"
+  },
+  {
+    "file": "测试/部署/MacOS/成对原生集成.py/成对原生集成.py",
+    "size": 14744,
+    "mode": "644",
+    "sha256": "4f0cec81ae4dfbe48ada6828cb4c31d5f0d0e302c5b88b20cd8996c6cd13eab4",
+    "kind": "python"
+  },
+  {
+    "file": "测试/部署/MacOS/菜单缩放.py/菜单缩放.py",
+    "size": 10044,
+    "mode": "644",
+    "sha256": "c7648f5aa0590d540800d621ab929f041a3be282b2ad9385840cecd61a871eb4",
+    "kind": "python"
+  },
+  {
+    "file": "测试/部署/MacOS/运行测试.command/运行测试.command",
+    "size": 2807,
+    "mode": "755",
+    "sha256": "8aae7884fdab258ac9892263059b31ea60a5780bc9051b0c63e57090dc115459",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "测试/部署/Windows/生命周期.ps1/生命周期.ps1",
+    "size": 37621,
+    "mode": "644",
+    "sha256": "db4bb2f6d65a1a4b51ec012ef31543999f55c443a15d9344ab1cd484be1feb53",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "测试/部署/二维码/终端二维码.py/渲染终端码.js",
+    "size": 3659,
+    "mode": "644",
+    "sha256": "122c9ad815c39d92433873c205f61633a2c2b7e24431306124488619c955b524",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/部署/二维码/终端二维码.py/终端二维码.py",
+    "size": 9727,
+    "mode": "644",
+    "sha256": "429779e9f4ddcc8b0c6442c745da856683feb854e0fd6eff128e10b5aafd04ee",
+    "kind": "python"
+  },
+  {
+    "file": "测试/部署/二维码/验证二维码.mjs/验证二维码.mjs",
+    "size": 2355,
+    "mode": "644",
+    "sha256": "56e3d0500a493d1b615d42af7666ede1ee88d1135fad35f6fc0f889c3b1cb4dd",
+    "kind": "javascript"
+  },
+  {
+    "file": "测试/部署/依赖版本/jobsim_tools_test.go",
+    "size": 3148,
+    "mode": "644",
+    "sha256": "03584f27eb9ca470faf1b48cc44738da1ab19ce420c5999fe39b7dff13faa1f0",
+    "kind": "go"
+  },
+  {
+    "file": "测试/部署/依赖版本/main_test.go",
+    "size": 14397,
+    "mode": "644",
+    "sha256": "e91fd719ff41fab9e29d47b8ac2da168d7c677c10336c9f460d0dc0e426d46ad",
+    "kind": "go"
+  },
+  {
+    "file": "测试/部署/依赖版本/module_report_test.go",
+    "size": 8349,
+    "mode": "644",
+    "sha256": "c5f234d0dbf44625ac710a500ce5bd8b9cd50deb256eb482c31c7d567d8bb3d2",
+    "kind": "go"
+  },
+  {
+    "file": "测试/部署/依赖版本/module_report_unix_test.go",
+    "size": 1622,
+    "mode": "644",
+    "sha256": "10b1087ffeac6a53f7388436d61d05e8a93c69347d9f25a0f85d28b09ea3d237",
+    "kind": "go"
+  },
+  {
+    "file": "测试/部署/依赖版本/运行测试.mjs/运行测试.mjs",
+    "size": 1142,
+    "mode": "644",
+    "sha256": "709ecb3e7ba25c46a9ab9226994281f70fefcbd2203f7bbddd6fd62a66a83c1c",
+    "kind": "javascript"
+  },
+  {
+    "file": "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh",
+    "size": 127577,
+    "mode": "755",
+    "sha256": "901237ec9639c1272a6eb1f2cf420c30ca4f0bd3b22bf350a4c9dd90a28b7027",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh",
+    "size": 127581,
+    "mode": "755",
+    "sha256": "5097f9b8d33ee63f476be11f9ae481f5778deada9f5a6f95a77c722bf3b576c6",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh",
+    "size": 127566,
+    "mode": "755",
+    "sha256": "45bbcb6790c4f9005f5b3a98365f67e196148a3408a1ef7c4f48d7ebfb3d72d7",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh",
+    "size": 127570,
+    "mode": "755",
+    "sha256": "c6ee981d2fa109965830b8c2fbb6120453a47586944a52cdeb53868aa33754b3",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/MacOS/【MacOS】双击反部署（快捷入口）.command",
+    "size": 295,
+    "mode": "755",
+    "sha256": "edc0f03526dc971b305aa34113c39881707e5da125a0f138e8b0827584d3ae78",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/MacOS/【MacOS】双击部署（快捷入口）.command",
+    "size": 282,
+    "mode": "755",
+    "sha256": "282e219c3e2754d71d2a1c974282825702c8eead172e7d0d54f6294b6774a3fc",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+    "size": 110456,
+    "mode": "755",
+    "sha256": "955ba7f9d2197e8a1a79a1360be3643867714c88f6f7750eaf5a86a99a6eec6b",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+    "size": 110461,
+    "mode": "755",
+    "sha256": "ea390066e9e2514651164ac7f088c2f6673e441ba97caf7a6b9129c1b46c91c9",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh",
+    "size": 127570,
+    "mode": "755",
+    "sha256": "f2fe2126681bc4a729d1ee33544d3dc3415b63fc29c99d4fc3cf8801ba39be8e",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh",
+    "size": 127574,
+    "mode": "755",
+    "sha256": "38189a7be0e95348393595d67ddc3625b3bbedb388b9a5d0a9f33e463b71ec92",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh",
+    "size": 127566,
+    "mode": "755",
+    "sha256": "2ebec3687ad9e5963cf4b93c5743d23b383911b36b38f3a2e78fe8282535a2c1",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh",
+    "size": 127570,
+    "mode": "755",
+    "sha256": "c40761d1ce3e81de7bbeea75f63f8b16a38cc5cfe0e5d1f2b5e6d56025a5bcd9",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/Windows/【Windows】双击反部署（快捷入口）.cmd",
+    "size": 660,
+    "mode": "644",
+    "sha256": "54df276fcc07c9a6c46ff6589ac95c5445ad697ca6cc1ba27aa373cedcb7d626",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/Windows/【Windows】双击部署（快捷入口）.cmd",
+    "size": 658,
+    "mode": "644",
+    "sha256": "674c1756ef9e2b1f3db5ba5b20770577182b5736cbf1a02f1d2dffc84e1b212e",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/Windows/Deployment/【Windows】部署.ps1/【Windows】部署.ps1",
+    "size": 122075,
+    "mode": "644",
+    "sha256": "aca45e9e2359fae4509e6c707916ebb295231e7e7cb44689da3663630638fa9c",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/Windows/Undeployment/【Windows】反部署.ps1/【Windows】反部署.ps1",
+    "size": 122080,
+    "mode": "644",
+    "sha256": "15200ad33ace951e7d0dcf926e16a190d08e8303d82eb7e0e99f3c8da85920ff",
+    "kind": "unsupported-script"
+  },
+  {
+    "file": "部署/公共组件/依赖版本/go.mod",
+    "size": 44,
+    "mode": "644",
+    "sha256": "abd77e5f17adec87003767a23642c8c47ed9bf8d84bf2f86c01a5c356685aff0",
+    "kind": "metadata"
+  },
+  {
+    "file": "部署/公共组件/依赖版本/jobsim_tools.go",
+    "size": 3944,
+    "mode": "644",
+    "sha256": "a94448eb87515c7bcc765689fd69a8667a6c4dc574227f49b26ee3785043d78f",
+    "kind": "go"
+  },
+  {
+    "file": "部署/公共组件/依赖版本/main.go",
+    "size": 16222,
+    "mode": "644",
+    "sha256": "41568f6fca9d250a8f6d5de918813a623573e939e08a763c24b4eb34c27235c9",
+    "kind": "go"
+  },
+  {
+    "file": "部署/公共组件/依赖版本/module_report.go",
+    "size": 8805,
+    "mode": "644",
+    "sha256": "5d7cb7b1eb60b35f4ad78217a991570d2a14dccd69f5ca58d853be90caea4a4c",
+    "kind": "go"
+  },
+  {
+    "file": "部署/公共组件/依赖版本/process_unix.go",
+    "size": 541,
+    "mode": "644",
+    "sha256": "4bc9a985b47ca3e6897ab93c57ba6598ea3cff3f31b830c4ec0a19ca44759002",
+    "kind": "go"
+  },
+  {
+    "file": "部署/公共组件/依赖版本/process_windows.go",
+    "size": 3824,
+    "mode": "644",
+    "sha256": "b97df06e1aa040b0d4b3e52e98ccd02bef3c0935ab01af8795dd83955248b620",
+    "kind": "go"
+  },
+  {
+    "file": "部署/公共组件/地址二维码/go.mod",
+    "size": 109,
+    "mode": "644",
+    "sha256": "d5e0aa717a0ca7ae4fe288ca03687110a0988152cc88052aa05d656396219107",
+    "kind": "metadata"
+  },
+  {
+    "file": "部署/公共组件/地址二维码/go.sum",
+    "size": 227,
+    "mode": "644",
+    "sha256": "7221a09241e81ea6133d0bb49d1dd62b7a9e205272525ec9f21d4e7c20464df4",
+    "kind": "metadata"
+  },
+  {
+    "file": "部署/公共组件/地址二维码/main.go",
+    "size": 9488,
+    "mode": "644",
+    "sha256": "402d2d6025bd9fa96fbd07b351a716646f3e034e7355fd29eb23ad51d83854da",
+    "kind": "go"
+  }
+]

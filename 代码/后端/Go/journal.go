@@ -62,6 +62,9 @@ func (a *App) journalRoutes(h func(string, func(http.ResponseWriter, *http.Reque
 		return nil
 	}))
 	h("POST /internal/state", internal(func(w http.ResponseWriter, r *http.Request) error {
+		if err := a.journalHandoffAllowed(r.Context()); err != nil {
+			return err
+		}
 		var epoch int64
 		if e := a.DB.QueryRow(r.Context(), `SELECT restore_epoch FROM journal.restore_epochs WHERE singleton`).Scan(&epoch); e != nil {
 			return e
@@ -70,6 +73,9 @@ func (a *App) journalRoutes(h func(string, func(http.ResponseWriter, *http.Reque
 		return nil
 	}))
 	h("POST /internal/append", internal(func(w http.ResponseWriter, r *http.Request) error {
+		if err := a.journalHandoffAllowed(r.Context()); err != nil {
+			return err
+		}
 		var q journalRecord
 		if e := decode(r, &q); e != nil {
 			return e
@@ -83,10 +89,25 @@ func (a *App) journalRoutes(h func(string, func(http.ResponseWriter, *http.Reque
 		allowed["conversation.owner_unavailable"] = []string{"conversationId", "userId"}
 		allowed["message.content_floor"] = []string{"messageId", "version"}
 		allowed["auth.retire_authentication"] = []string{"userId", "requestKey", "replacementKey"}
+		for kind, fields := range accountDeletionJournalKinds() {
+			allowed[kind] = fields
+		}
 		for kind, fields := range draftJournalKinds() {
 			allowed[kind] = fields
 		}
 		for kind, fields := range personalExportJournalKinds() {
+			allowed[kind] = fields
+		}
+		for kind, fields := range groupJournalKinds() {
+			allowed[kind] = fields
+		}
+		for kind, fields := range mediaRetentionJournalKinds() {
+			allowed[kind] = fields
+		}
+		for kind, fields := range mediaUploadJournalKinds() {
+			allowed[kind] = fields
+		}
+		for kind, fields := range retentionJournalKinds() {
 			allowed[kind] = fields
 		}
 		if _, current := q.Payload["membershipGeneration"]; q.Kind == "conversation.leave" && current {
@@ -192,6 +213,18 @@ func validObjectID(value string) bool {
 	return e == nil
 }
 func validateJournalField(field string, raw any) error {
+	if handled, err := validateMediaUploadJournalField(field, raw); handled {
+		return err
+	}
+	if handled, err := validateAccountDeletionJournalField(field, raw); handled {
+		return err
+	}
+	if handled, err := validateGroupJournalField(field, raw); handled {
+		return err
+	}
+	if handled, err := validateRetentionJournalField(field, raw); handled {
+		return err
+	}
 	if handled, err := validatePersonalExportJournalField(field, raw); handled {
 		return err
 	}
@@ -211,12 +244,14 @@ func validateJournalField(field string, raw any) error {
 		valid = e == nil && key == value
 	case field == "requestKey" || field == "replacementKey":
 		valid = len(value) >= 8 && len(value) <= 128 && !strings.ContainsAny(value, "\r\n\x00")
-	case field == "generation" || field == "membershipGeneration" || field == "securityVersion" || field == "version" || field == "step" || field == "restoreEpoch" || field == "buildGeneration" || field == "sourceVersion":
+	case field == "contentVersion" || field == "receiptGeneration" || field == "generation" || field == "membershipGeneration" || field == "securityVersion" || field == "version" || field == "step" || field == "restoreEpoch" || field == "buildGeneration" || field == "sourceVersion":
 		n, e := strconv.ParseInt(value, 10, 64)
 		valid = e == nil && n >= 0 && str(n) == value
 		if field != "step" {
 			valid = valid && n > 0
 		}
+	case field == "manifestDigest":
+		valid = syncValidationDigest(value)
 	case field == "state":
 		valid = value == "active" || value == "banned" || value == "tombstoned" || value == "cancelling" || value == "invalidated" || value == "expired" || value == "cleared" || value == "cancelled" || value == "failed"
 	case field == "stateBefore":

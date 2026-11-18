@@ -1,0 +1,9 @@
+
+[!] Invalid `Podfile` file: 请设置 JOBS_SWIFT_TEMPLATE 指向本人 Swift 基础工程.
+
+ #  from /Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/Podfile:8
+ #  -------------------------------------------
+ #  JOBS_TEMPLATE_ROOT = ENV.fetch('JOBS_SWIFT_TEMPLATE', File.expand_path('../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo', __dir__))
+ >  raise '请设置 JOBS_SWIFT_TEMPLATE 指向本人 Swift 基础工程' unless File.file?(File.join(JOBS_TEMPLATE_ROOT, 'Podfile.deps'))
+ #  JOBS_PODS_PATH = Pathname.new(File.join(JOBS_TEMPLATE_ROOT, 'JobsByPods')).relative_path_from(Pathname.new(__dir__)).to_s
+ #  -------------------------------------------

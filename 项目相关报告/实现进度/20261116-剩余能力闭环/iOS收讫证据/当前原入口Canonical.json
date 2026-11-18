@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-17T14:37:07.265954",
+  "entry": "部署/MacOS/部署运行.command/部署运行.command run --yes",
+  "sameDeploymentId": true,
+  "samePublicCA": true,
+  "sourceCompilationReplacedWithVerifiedArtifact": false,
+  "actualServerSHA256": "c384a329f0686dda9947aeb441ddc47e586c9da2dff825c4d462953eb38071a8",
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 200,
+      "bytes": 36,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/api/bootstrap",
+      "status": 200,
+      "bytes": 931,
+      "contentType": "application/json; charset=utf-8"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 446,
+      "contentType": "text/html; charset=utf-8"
+    }
+  ],
+  "freeBytes": 13808091136,
+  "productionA4Touched": false
+}

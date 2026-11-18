@@ -24,7 +24,9 @@ func (a *App) features(ctx context.Context) (map[string]bool, error) {
 	items["cloud_drafts"] = a.Config.NATSURL != ""
 	items["durable_receipt_protocol"] = a.Config.NATSURL != ""
 	items["durable_object_receipt_protocol"] = a.Config.NATSURL != ""
+	items["qualified_receipt_negotiation"] = a.Config.NATSURL != ""
 	items["own_password_change"] = true
+	items["own_account_deletion"] = true
 	for k, v := range initialFeatures {
 		items[k] = v
 	}

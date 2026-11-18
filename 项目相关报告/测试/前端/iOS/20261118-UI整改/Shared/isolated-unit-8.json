@@ -1,0 +1,23 @@
+{
+  "configuration": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/isolated-unit-8.xctestrun",
+  "template": "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Products/JobsIM_iphonesimulator27.2-arm64.xctestrun",
+  "products": "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Products",
+  "classes": [
+    "IMAuthCredentialTests",
+    "IMAuthoritativeSyncTests",
+    "IMDataExportTests",
+    "IMMigrationServiceTests",
+    "IMMigrationTests",
+    "IMPersonalStateTests",
+    "IMReceiptServiceTests",
+    "IMReceiptStorageTests",
+    "IMSessionTests",
+    "IMStorageTests",
+    "IMRememberedLoginTests"
+  ],
+  "apiUsed": false,
+  "testExecuted": false,
+  "injection": "JOBS_IM_SYNC_INJECTED_TESTS=1 in both host environment dictionaries",
+  "hostSHA256": "04b7660071509e814c5d58e3a036b44d6c85b5b9dc56c293bef2d96756dd9c84",
+  "testSHA256": "37eba7c623cc53e0b62a1764ef15fd8ebfbcd2584124df99ca73d131d30410ab"
+}

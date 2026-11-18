@@ -1,0 +1,19 @@
+{
+  "documents": 74,
+  "localLinks": 1394,
+  "issues": [
+    {
+      "file": "测试/部署/MacOS/README.md",
+      "target": "../../../项目相关报告/测试/部署/20261118-成对部署反部署/MacOS/summary.json",
+      "reason": "missing"
+    },
+    {
+      "file": "项目相关报告/测试/部署/20261118-成对部署反部署/README.md",
+      "target": "./MacOS/summary.json",
+      "reason": "missing"
+    }
+  ],
+  "duplicateIds": [],
+  "parentAddedLinks": 2,
+  "parentTrailingWhitespace": []
+}

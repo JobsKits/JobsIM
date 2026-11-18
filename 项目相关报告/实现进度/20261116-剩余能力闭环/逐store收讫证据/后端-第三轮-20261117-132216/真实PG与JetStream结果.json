@@ -1,0 +1,21 @@
+{
+  "topLevel": {
+    "pass": 3,
+    "fail": 0,
+    "skip": 0
+  },
+  "passEventsIncludingSubtests": 3,
+  "failures": [],
+  "skips": [],
+  "package": [
+    {
+      "Time": "2026-11-17T13:22:25.933155+08:00",
+      "Action": "pass",
+      "Package": "jobsim/backend",
+      "Elapsed": 4.853
+    }
+  ],
+  "changedInputs": [],
+  "inputCount": 184,
+  "binarySHA256": "67e8d35b0a4cac5fdd690cc815f4ef500192e7f45b321cdb8a9cdf72e750f391"
+}

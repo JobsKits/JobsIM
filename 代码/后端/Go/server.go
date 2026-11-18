@@ -14,6 +14,7 @@ import (
 	"net/url"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"sync"
 	"sync/atomic"
@@ -21,22 +22,23 @@ import (
 )
 
 type Config struct {
-	ReceiptProfiles     []ReceiptProfile
-	ExperimentalExports bool
-	WebDir              string
-	JournalDatabaseURL  string
-	DatabaseURL         string
-	StateDir            string
-	DeploymentID        string
-	Name                string
-	Key                 []byte
-	PublicURL           string
-	InsecureLoopback    bool
-	RoleURLs            map[string]string
-	AdminUsername       string
-	AdminPassword       string
-	NATSURL             string
-	NATSTokenFile       string
+	AccountDeletionCooldownDays *int
+	ReceiptProfiles             []ReceiptProfile
+	ExperimentalExports         bool
+	WebDir                      string
+	JournalDatabaseURL          string
+	DatabaseURL                 string
+	StateDir                    string
+	DeploymentID                string
+	Name                        string
+	Key                         []byte
+	PublicURL                   string
+	InsecureLoopback            bool
+	RoleURLs                    map[string]string
+	AdminUsername               string
+	AdminPassword               string
+	NATSURL                     string
+	NATSTokenFile               string
 }
 type App struct {
 	Config                 Config
@@ -51,6 +53,9 @@ type App struct {
 }
 
 func PrepareConfig(c Config) (Config, error) {
+	if c.AccountDeletionCooldownDays != nil && (*c.AccountDeletionCooldownDays < 0 || *c.AccountDeletionCooldownDays > 30) {
+		return c, fmt.Errorf("account deletion cooldown must be zero to thirty days")
+	}
 	if err := validateReceiptProfiles(c.ReceiptProfiles); err != nil {
 		return c, err
 	}
@@ -164,6 +169,12 @@ func NewApp(ctx context.Context, c Config, role string) (*App, error) {
 			a.DB.Close()
 			return nil, err
 		}
+		if role == "journal" {
+			if err = a.journalHandoffAllowed(ctx); err != nil {
+				a.DB.Close()
+				return nil, err
+			}
+		}
 	}
 	return a, nil
 }
@@ -201,7 +212,7 @@ func (a *App) rpc(ctx context.Context, role, path string, body any, out any) err
 		return fail(503, "DEPENDENCY_UNAVAILABLE", role+" service unavailable")
 	}
 	defer res.Body.Close()
-	if path == "/internal/member" || path == "/internal/relationship" || path == "/internal/admission/recover" || path == "/internal/read-scopes" || path == "/internal/read-boundaries" || path == "/internal/read-summary" || path == "/internal/announcement-source" || path == "/internal/mentions/snapshot" || strings.HasPrefix(path, "/internal/forwards/") || strings.HasPrefix(path, "/internal/sync/") || strings.HasPrefix(path, "/internal/drafts/") || strings.HasPrefix(path, "/internal/receipts/") || strings.HasPrefix(path, "/internal/personal-exports/") {
+	if path == "/internal/member" || path == "/internal/relationship" || path == "/internal/admission/recover" || path == "/internal/read-scopes" || path == "/internal/read-boundaries" || path == "/internal/read-summary" || path == "/internal/announcement-source" || path == "/internal/mentions/snapshot" || strings.HasPrefix(path, "/internal/forwards/") || strings.HasPrefix(path, "/internal/sync/") || strings.HasPrefix(path, "/internal/drafts/") || strings.HasPrefix(path, "/internal/receipts/") || strings.HasPrefix(path, "/internal/retention/") || strings.HasPrefix(path, "/internal/groups/") || strings.HasPrefix(path, "/internal/deletion/") || strings.HasPrefix(path, "/internal/migrations/") || strings.HasPrefix(path, "/internal/personal-exports/") {
 		if !hmac.Equal([]byte(res.Header.Get("X-JobsIM-Admission-Fence")), []byte(a.admissionFenceIdentity())) {
 			return fail(503, "ADMISSION_FENCE_MISMATCH", "Roles must share the same canonical local instance directory")
 		}
@@ -291,10 +302,19 @@ func (a *App) Handler() http.Handler {
 		a.syncHistoricalAccessRoute(handle, internal)
 	}
 	a.personalExportOwnerRoutes(handle, internal)
+	a.receiptDeliveryRoutes(handle, internal)
+	a.journalReceiptReadinessRoutes(handle, internal)
+	a.retentionRoutes(handle, internal)
+	a.accountDeletionRoutes(handle, internal)
+	a.migrationIdentityRoutes(handle, internal)
+	a.migrationSourceRoutes(handle, internal)
+	a.migrationInterestRoutes(handle, internal)
 	switch a.Role {
 	case "sync":
 		a.syncRoutes(handle)
+		a.syncMigrationRoutes(handle, internal)
 		a.syncReceiptRoutes(handle)
+		a.receiptCapabilityRoutes(handle, internal)
 		a.selfViewRoutes(handle)
 		a.selfReadRoutes(handle)
 		a.selfDraftRoutes(handle, internal)
@@ -358,6 +378,8 @@ func (a *App) gateway() http.Handler {
 		role := "identity"
 		p := r.URL.Path
 		switch {
+		case reportMediaPath(p):
+			role = "media"
 		case strings.HasPrefix(p, "/api/sync/"):
 			role = "sync"
 		case selfStatePublicPath(p):
@@ -382,6 +404,8 @@ func (a *App) gateway() http.Handler {
 			role = "media"
 		case strings.Contains(p, "/messages"), strings.HasSuffix(p, "/message-results"), strings.HasPrefix(p, "/api/search"), p == "/api/favorites":
 			role = "message"
+		case strings.HasPrefix(p, "/api/conversations/") && strings.HasSuffix(p, "/retention"):
+			role = "message"
 		case strings.HasPrefix(p, "/api/conversations"):
 			role = "conversation"
 		case p == "/api/bootstrap", strings.HasPrefix(p, "/api/capabilities"), strings.HasPrefix(p, "/api/admin/"):
@@ -401,11 +425,17 @@ func (a *App) gateway() http.Handler {
 		r.Header.Del("X-JobsIM-Forward-Stream-Fence")
 		r.Header.Del("X-JobsIM-Projection-Fence")
 		r.Header.Del("X-JobsIM-Projection-Fence-Mode")
+		r.Header.Del("X-JobsIM-Migration-TLS-Time")
+		r.Header.Del("X-JobsIM-Migration-TLS-Proof")
 		if mode := gatewayProjectionMode(r); mode != "" {
 			projection := a.withAdmissionFence("gateway:"+mode+"-projection", func(w http.ResponseWriter, request *http.Request) error {
 				forward := request.Clone(request.Context())
 				forward.Header.Set("X-JobsIM-Projection-Fence-Mode", mode)
 				forward.Header.Set("X-JobsIM-Projection-Fence", a.gatewayProjectionProof(forward, mode))
+				if request.TLS != nil && strings.HasPrefix(request.URL.Path, "/api/sync/migration") {
+					forward.Header.Set("X-JobsIM-Migration-TLS-Time", strconv.FormatInt(time.Now().Unix(), 10))
+					forward.Header.Set("X-JobsIM-Migration-TLS-Proof", migrationPrivateTLSProof(a, forward))
+				}
 				proxy.ServeHTTP(w, forward)
 				return nil
 			})

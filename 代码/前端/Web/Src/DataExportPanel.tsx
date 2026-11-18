@@ -92,8 +92,15 @@ export default function DataExportPanel({ context, enabled, locale, t, onConnect
     setNotice(label("saved")); await refresh(source);
   });
   const time = (value: string) => {
-    try { return new Intl.DateTimeFormat(locale, { dateStyle: "medium", timeStyle: "short" }).format(new Date(value)); }
-    catch { return new Date(value).toLocaleString("en"); }
+    const date = new Date(value);
+    try {
+      if (Intl.DateTimeFormat.supportedLocalesOf([locale]).length) {
+        return new Intl.DateTimeFormat(locale, { dateStyle: "medium", timeStyle: "short" }).format(date);
+      }
+    } catch {}
+    // Partial Intl builds must not silently replace the selected language with the host language.
+    const pad = (number: number) => String(number).padStart(2, "0");
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())} ${pad(date.getHours())}:${pad(date.getMinutes())}`;
   };
   const available = !!context;
   if (context && !context.isCurrent()) return null;

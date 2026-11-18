@@ -1,0 +1,46 @@
+{
+  "status": "latest source-ready only; floor/global/terminal additions not compiled or executed",
+  "sourceSHA": {
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingRules.kt": "e671faf511baf5a9b17bd628174c234ea5113bc1b840a98a8890f32ec0218818",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingFiles.kt": "ea6271f8c7f6d63ffea2e738ec253e524871a2a91decf90ae0dd05c841be80e3",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingComposer.kt": "8649dfca6ccda7350f423087449fb978a2b4e2fc80ec1b4e3725232487c4eea9",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingText.kt": "41ff2271bce756cbf022415604b0b5af9deaf2d53a45b633f95134a49197fdc5",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingEngine.kt": "6c166cb8e82be460486d6711ebb1f8b99d0ad33280eebd403deef1d0753dc6d2",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadText.kt": "d9b2abbb321e7e59a7e0d36008e0c98dcb0450b626aa2a9fbb844586c853836b",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadScreen.kt": "8668ae3d867a07c52aaf779204e0ba031b90d1f807cd54d9fb3501e7d784dab4",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadApi.kt": "c02ead24ddfb7e6e828db7774a343eb3f73582a871253539b6ed47be55ee1a6b",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadProtocol.kt": "aad8f631b1d893ea559320b588a3064ba276ddd60d12e0c7fc9ef5b19d960efb",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadCoordinator.kt": "ba46081d4522ec08a2737ce3be9c53a7ec4ac214defaa4f87f86202cb7a4251a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt": "97d8c9c7384b5ca8ee2d9e9c75734fcb0cd38a8070441a43f18350908346e55f",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt": "57f57e5c0c9ae44d1c5a889b4bec2073feb98dcc19965f24d085e4ecc2294346",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt": "4c6ec04fb2a4048cf35d08456a9f1d24fe786be0d6e9bd73bce88ae005240507",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionCleanup.kt": "9a1ec292e22923013736a84a57bad9da0907aff3db66a4bacb16d9a1496cc887",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt": "40b54b4528558a295b7a1706e9ea545b3b22caec5040d977f5417a06a57f3f43",
+    "代码/前端/Android/app/src/main/AndroidManifest.xml": "00efada43c57a77acb90380b8f5301a0328a2e0f1f0fd8b6178260bdf19e6157",
+    "测试/前端/Android/Unit/VoiceRecordingRulesTest.kt": "938fff98be0b9d9e8d14b12efb0aaaee698e1b1dc8fc029e37459e565b5e6aad",
+    "测试/前端/Android/Instrumentation/VoiceRecordingNativeTest.kt": "a0efdda0ee8f25e0a2236265cb9b9835c8097737062b8ad14dc8c89d0ee601d8",
+    "测试/前端/Android/Unit/VoiceUploadRulesTest.kt": "3401714a0cd596b26afe0824a1d5d021bae8c6ed5e6d2aa136cf2dc0b9ecbf8f",
+    "测试/前端/Android/Instrumentation/VoiceUploadApiNativeTest.kt": "d94be97544e8c6f4b3d4f9fbe51eb94ba68b390cb8a4e8fa89dffca5fd89ca26",
+    "测试/前端/Android/Instrumentation/VoiceUploadGlobalFloorNativeTest.kt": "e61f73a9304914cb2cd9d2e1c3d159cd176189f1ffc4585e858a2509200742b7",
+    "测试/前端/Android/Instrumentation/VoiceUploadQueueNativeTest.kt": "7ab785ee5982bd3a492be2d90be2da7fd0d6c5def1b47d721e66833f98c80885"
+  },
+  "checks": [
+    "new source whitespace",
+    "ten-language 22+24 labels",
+    "report relative file targets"
+  ],
+  "methodSourceCounts": {
+    "VoiceRecordingRulesTest.kt": 5,
+    "VoiceRecordingNativeTest.kt": 3,
+    "VoiceUploadRulesTest.kt": 7,
+    "VoiceUploadApiNativeTest.kt": 4,
+    "VoiceUploadGlobalFloorNativeTest.kt": 1,
+    "VoiceUploadQueueNativeTest.kt": 11
+  },
+  "knownBuilds": {
+    "initial": "33 JVM and two APKs passed on 131 frozen inputs",
+    "durable142first": "compile failed O_DIRECTORY; 0 tests/0 artifacts",
+    "durable142retry": "watchdog exit143 disk<4GiB; 0 tests/0 artifacts"
+  },
+  "laterDiskGate": "no new heavy run"
+}

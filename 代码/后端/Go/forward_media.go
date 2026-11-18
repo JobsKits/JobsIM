@@ -42,10 +42,16 @@ func gatewayProjectionMode(r *http.Request) string {
 		method = "GET"
 	}
 	parts := strings.Split(strings.TrimPrefix(r.URL.Path, "/api/"), "/")
-	if len(parts) == 2 && parts[0] == "media" && method == "GET" {
+	if r.URL.Path == "/api/media" && method == "POST" || r.URL.Path == "/api/media/upload-results" && method == "POST" || r.URL.Path == "/api/media/capabilities" && method == "GET" {
+		return "shared"
+	}
+	if len(parts) == 2 && (parts[0] == "media" || parts[0] == "avatars") && method == "GET" {
 		return "shared"
 	}
 	if len(parts) >= 2 && parts[0] == "sync" {
+		if r.URL.Path == "/api/sync/storage" && method == "PUT" {
+			return "exclusive"
+		}
 		return "shared"
 	}
 	if selfStatePublicPath(r.URL.Path) {
@@ -122,6 +128,14 @@ func (a *App) forwardAttachment(w http.ResponseWriter, r *http.Request) error {
 	request.Header.Set("Content-Type", "application/json")
 	request.Header.Set("X-JobsIM-Service-Key", base64.RawURLEncoding.EncodeToString(a.Config.Key))
 	request.Header.Set("X-JobsIM-Caller", a.Role)
+	if held, ok := r.Context().Value(heldAdmissionContextKey{}).(heldAdmissionContext); ok && held.Scope != nil && held.Identity == a.admissionFenceIdentity() {
+		held.Scope.mu.RLock()
+		if held.Scope.active {
+			request.Header.Set("X-JobsIM-Projection-Fence-Mode", held.Mode)
+			request.Header.Set("X-JobsIM-Projection-Fence", a.gatewayProjectionProof(request, held.Mode))
+		}
+		held.Scope.mu.RUnlock()
+	}
 	if r.Method == "HEAD" {
 		request.Header.Set("X-JobsIM-Forward-Head", "1")
 	}
@@ -163,6 +177,18 @@ func (a *App) forwardMediaRoutes(h func(string, func(http.ResponseWriter, *http.
 		if r.Header.Get("X-JobsIM-Caller") != "message" || !validObjectID(q.ObjectID) || !validObjectID(q.SourceMessageID) {
 			return fail(403, "FORWARD_MEDIA_SOURCE_REQUIRED", "Verified source message owner required")
 		}
+		mode := "shared"
+		if a.hasGatewayProjectionFence(r, true) {
+			mode = "exclusive"
+		} else if !a.hasGatewayProjectionFence(r, false) {
+			return fail(503, "ADMISSION_FENCE_REQUIRED", "Forward bytes require their caller's live source fence")
+		}
+		ctx, expire := a.heldAdmissionScope(r.Context(), mode)
+		defer expire()
+		r = r.WithContext(ctx)
+		if e := a.requireMediaRetention(r.Context(), q.SourceMessageID, q.ObjectID); e != nil {
+			return e
+		}
 		var name, contentType, key string
 		var size int64
 		var digest []byte
@@ -170,7 +196,7 @@ func (a *App) forwardMediaRoutes(h func(string, func(http.ResponseWriter, *http.
 		if e != nil {
 			return fail(404, "OBJECT_NOT_FOUND", "Original bound chat attachment unavailable")
 		}
-		if key != filepath.Base(key) || strings.ContainsAny(key, "/\\") {
+		if key != q.ObjectID || key != filepath.Base(key) || strings.ContainsAny(key, "/\\") {
 			return fail(500, "STORAGE_INTEGRITY", "Original storage identity invalid")
 		}
 		file, e := os.Open(filepath.Join(a.Config.StateDir, "Media", key))
@@ -199,12 +225,16 @@ func (a *App) forwardMediaRoutes(h func(string, func(http.ResponseWriter, *http.
 		w.Header().Set("ETag", `"`+hex.EncodeToString(digest)+`"`)
 		w.Header().Set("X-Content-SHA256", hex.EncodeToString(digest))
 		w.Header().Set("X-Content-Size", strconv.FormatInt(size, 10))
+		due, deadlineError := a.mediaReadDeadline(r.Context(), q.SourceMessageID, q.ObjectID)
+		if deadlineError != nil {
+			return deadlineError
+		}
 		get := r.Clone(r.Context())
 		get.Method = http.MethodGet
 		if r.Header.Get("X-JobsIM-Forward-Head") == "1" {
 			get.Method = http.MethodHead
 		}
-		http.ServeContent(w, get, name, info.ModTime(), file)
+		http.ServeContent(w, get, name, info.ModTime(), &mediaRetainedReader{File: file, ctx: r.Context(), due: due})
 		return nil
 	}))
 }

@@ -1,0 +1,126 @@
+**Exploration: 代码/前端/Web/Src/useVisibleViewport.ts isRectInVisibleViewport**
+
+Found 4 symbols across 1 file. 1 file pinned from the query.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `isRectInVisibleViewport` (代码/前端/Web/Src/useVisibleViewport.ts:4) — 3 callers in `测试/前端/Web/h5-browser.cjs/h5-browser.cjs`, `代码/前端/Web/Src/App.tsx`; no tests found within 3 caller hops
+- `visible` (代码/前端/Web/Src/MigrationHistoryStore.ts:27) — 2 callers in `代码/前端/Web/Src/MigrationHistoryStore.ts`; no tests found within 3 caller hops
+- `visibleRows` (代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets:975) — 4 callers in `代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets`; no tests found within 3 caller hops
+- `visibleMessages` (代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift:170) — 2 callers in `代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift`; no tests found within 3 caller hops
+
+**Relationships**
+
+**calls:**
+- App → isRectInVisibleViewport
+- App → signOut
+- App → markRead
+- App → resolveRequest
+- App → setModal
+- App → refreshMembers
+- App → sync
+- App → observing
+- App → displayUser
+- App → changeFont
+- ... and 168 more
+
+**references:**
+- App → setModal
+- App → update
+- App → sync
+- App → observing
+- App → chooseLookup
+- App → required
+- App → resize
+- visible → Space
+- visible → DurableSyncState
+- visible → MigrationHistoryEntry
+- ... and 51 more
+
+**instantiates:**
+- IMSession → IMSession
+- migrationService → MigrationStore
+- migrationService → ReceiptStore
+- migrationService → MigrationIdentity
+- migrationService → MigrationService
+- receiptService → ReceiptService
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/前端/Web/Src/useVisibleViewport.ts`** — isRectInVisibleViewport(function), useVisibleViewport(function), update(function), schedule(function)
+
+```typescript
+1	// Created by Jobs on 2026年11月18日，星期三.
+2	import { useLayoutEffect } from "react";
+3	
+4	export function isRectInVisibleViewport(rect: DOMRect, container: DOMRect): boolean {
+5	  const viewport = window.visualViewport;
+6	  const top = viewport?.offsetTop ?? 0, left = viewport?.offsetLeft ?? 0;
+7	  const bottom = top + (viewport?.height ?? window.innerHeight), right = left + (viewport?.width ?? window.innerWidth);
+8	  return rect.height > 0 && rect.width > 0 && rect.top >= Math.max(top, container.top) && rect.bottom <= Math.min(bottom, container.bottom)
+9	    && rect.left >= Math.max(left, container.left) && rect.right <= Math.min(right, container.right);
+10	}
+11	
+12	export function useVisibleViewport() {
+13	  useLayoutEffect(() => {
+14	    const root = document.documentElement;
+15	    const viewport = window.visualViewport;
+16	    let frame = 0;
+17	    const update = () => {
+18	      // Pinch zoom must keep its document layout rather than reflow every gesture.
+19	      if (viewport && viewport.scale !== 1) return;
+20	      const height = viewport?.height ?? window.innerHeight;
+21	      if (!Number.isFinite(height) || height <= 0) return;
+22	      root.style.setProperty("--visible-height", `${height}px`);
+23	      root.style.setProperty("--visible-top", `${Math.max(0, viewport?.offsetTop ?? 0)}px`);
+24	      const editing = document.activeElement?.matches("input, textarea, [contenteditable='true']");
+25	      root.dataset.compact = height < 500 ? "true" : "false";
+26	      // Some mobile browsers shrink both viewports when the keyboard opens.
+27	      root.dataset.keyboard = editing && (window.innerHeight - height > 100 || height < 500) ? "open" : "closed";
+28	    };
+29	    const schedule = () => {
+30	      cancelAnimationFrame(frame);
+31	      frame = requestAnimationFrame(update);
+32	    };
+33	    update();
+34	    viewport?.addEventListener("resize", schedule);
+35	    viewport?.addEventListener("scroll", schedule);
+36	    window.addEventListener("resize", schedule);
+37	    document.addEventListener("focusin", schedule);
+38	    document.addEventListener("focusout", schedule);
+39	    return () => {
+40	      cancelAnimationFrame(frame);
+41	      viewport?.removeEventListener("resize", schedule);
+42	      viewport?.removeEventListener("scroll", schedule);
+43	      window.removeEventListener("resize", schedule);
+44	      document.removeEventListener("focusin", schedule);
+45	      document.removeEventListener("focusout", schedule);
+46	      root.style.removeProperty("--visible-height");
+47	      root.style.removeProperty("--visible-top");
+48	      delete root.dataset.keyboard;
+49	      delete root.dataset.compact;
+50	    };
+51	  }, []);
+52	}
+```
+
+**Not shown above — explore these names for their source**
+
+- 代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets: visibleRows:975, observeVisibility:720, Index:55, namespace:374, syncConversation:963, submit:987, +23 more
+- 代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt: migrationService:147, receiptService:159, ChatModel:19, api:238, ownerTag:113, loadAuthenticationState:294, +17 more
+- 测试/后端/接口/avatar_reports.py: visible:88, call:10, upload:32, register:46, group:59, c_request:58, +14 more
+- 代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift: visibleMessages:170, IMSession:13, cachedMessages:56, messageHistory:1081, shared:16, SessionError:1154, +18 more
+- 代码/前端/Web/Src/MigrationHistoryStore.ts: visible:27, publishMigration:79, migrationHistory:70, MigrationHistoryEntry:10, validCurrent:15, existing:19, +4 more
+- 代码/前端/Web/Src/App.tsx: App:304, signOut:2406, markRead:486, resolveRequest:1162, setModal:337, refreshMembers:2000, +19 more
+- 代码/前端/Web/Src/types.ts: Space:71, User:2, Conversation:16, Message:30
+- 代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt: binding:45, MigrationStore:15
+- 代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt: one:232, syncRecords:463
+- 代码/前端/Android/app/src/main/java/com/jobs/im/MigrationService.kt: MigrationService:12, clear:17
+- ... and 21 more files
+
+---
+> **Complete source for 1 file is included above — do NOT re-read them.** If your question also needs files/symbols listed under "Not shown above" (or any area this call didn't cover), make ANOTHER codegraph_explore targeting those names — it returns the same source with line numbers and is cheaper and more complete than reading.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~717 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

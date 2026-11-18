@@ -1,0 +1,72 @@
+{
+  "backend": {
+    "evidence": "项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/后端-第三轮-20261117-132216",
+    "inputCount": 184,
+    "changedInputs": [],
+    "testBinarySHA256": "67e8d35b0a4cac5fdd690cc815f4ef500192e7f45b321cdb8a9cdf72e750f391"
+  },
+  "cli": {
+    "evidence": "项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-升级门禁最终-20261117-142600",
+    "inputCount": 52,
+    "changedInputs": [],
+    "testBinarySHA256": "7e10c4f003c2d2007d59b13377f527a70dc3d1d1a42dedc5bbeb792c3f406ba6",
+    "nativeExecutable": {
+      "exitCode": 0,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "build",
+        "-p",
+        "1",
+        "-trimpath",
+        "-buildvcs=false",
+        "-o",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-升级门禁最终-20261117-142600/jobsim-darwin-arm64",
+        "./cmd/jobsim"
+      ],
+      "binarySHA256": "e17f5340cfabe6b5b3e4ced7ab3100107f594a8c155bc9131066af1c5e7e2c25",
+      "productionGoAndLockInputs": {
+        "代码/前端/CLI/cmd/jobsim/auth.go": "f292de628476749c8eafc13a96f71a08049137c42cba4d59bdd18dbb8ce6e5dd",
+        "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go": "99aba4b84a204208ec607d925415470c18a0a90f29626b2be37b7c9b43682a70",
+        "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go": "802f2dc215b0716db0389a0483989de6c25446fd700781976558af4801ad8bd4",
+        "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go": "0165ee54098f1b4e223d3005cf54445ea945e88ddb5f5800f148985402a57a06",
+        "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go": "f85527dd37bddc1d7e1c17da398b6bf12ca7d42ed94a0517ab87d50bb4c17f2a",
+        "代码/前端/CLI/cmd/jobsim/auth_vault_other.go": "232842a24f0efa8691c222c8ad616146db98f5a45acb417526e0679589f2e4fd",
+        "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go": "863cb2ed0ca254473fa11a8b2dfe2f8fb5c2414d6846ca316cfbfc8ace69fc51",
+        "代码/前端/CLI/cmd/jobsim/collaboration.go": "805f1dfd0f440aba5da175f7becec66360f832fdb13e7aabc558ff31a635d043",
+        "代码/前端/CLI/cmd/jobsim/credentials.go": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea",
+        "代码/前端/CLI/cmd/jobsim/data_export.go": "b7fb644093c2a25fbdfb68d56575f5a9aa69e8de25e67695e6c0bd8b31fabf39",
+        "代码/前端/CLI/cmd/jobsim/data_export_file.go": "f945f1548bd2c95a63aa884deb42cd5d853270a64a7fcc78f34e72bc3949eeff",
+        "代码/前端/CLI/cmd/jobsim/forward.go": "ef4692138b5458d003c5df06983e2fde187a464da5eae5451d2283dbe9f3a157",
+        "代码/前端/CLI/cmd/jobsim/governance.go": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84",
+        "代码/前端/CLI/cmd/jobsim/group_governance.go": "3b8a65218b6ab2caf5baaa2bb465ae06d115164805bd98a5e8622cfa1f9be5c8",
+        "代码/前端/CLI/cmd/jobsim/local.go": "f067618d3f4073fd5915f2d870aaeb66d9d7b6ff4c5fb9eebc27a8c5b07bb7e9",
+        "代码/前端/CLI/cmd/jobsim/main.go": "fcf1dc912c440ba16e8e3655acbc102af2ee3eb3f05d60f536651040a8c74b04",
+        "代码/前端/CLI/cmd/jobsim/migration_command.go": "2920ff5969276086d5e27fd774e939910dcbdbab6459e24de2edba2ec07274bd",
+        "代码/前端/CLI/cmd/jobsim/migration_history.go": "fa5161f800310362a520dc8805108a23d39575501f2a1b34b8f0f1da017ba14c",
+        "代码/前端/CLI/cmd/jobsim/migration_protocol.go": "008dd0431a88dd2258ef396ad2c678053fedced40a34408dfdbca8aa78841e5f",
+        "代码/前端/CLI/cmd/jobsim/migration_store.go": "e8ab2db5da713a50283bb056464b8ac699c7645819989a6f3d8a8c337f669a55",
+        "代码/前端/CLI/cmd/jobsim/own_deletion.go": "97a4657ad17609c43ed8ae1b8af02a4fb1c473796d7c7c30c052d3b8fc833e7b",
+        "代码/前端/CLI/cmd/jobsim/own_deletion_cleanup.go": "dec328f09247830a33690de3f6a14b6e62fded8b3ec566a9caad54dcff54edf1",
+        "代码/前端/CLI/cmd/jobsim/own_deletion_command.go": "f9359cd5fe8f6b140b6bb6bbf7a15419447f42c8287bc4c2bbb5b7eeb2e01eb0",
+        "代码/前端/CLI/cmd/jobsim/password_change.go": "8f32c0deacc138902462cd2e75b1683a340575d297b17546f90d89e532fa608c",
+        "代码/前端/CLI/cmd/jobsim/receipt.go": "1ffd4602e059bc7adbfd90a14af005a1f287205aef196c6c9ee20d0239b2bd2a",
+        "代码/前端/CLI/cmd/jobsim/receipt_cleanup.go": "78b4d57078293ad7627e3d18802dc5af90a8847916b5f0108e2389d30d7243c2",
+        "代码/前端/CLI/cmd/jobsim/receipt_migration_source.go": "34bc1f36ad426c463d4c72131baf09da082ca201a139c176369e3d3ed5cefb19",
+        "代码/前端/CLI/cmd/jobsim/receipt_negotiation.go": "1a8008d89ab30ad5009944e51b46091a3ee5420d29e9ee32fd71e2250ef15be7",
+        "代码/前端/CLI/cmd/jobsim/receipt_objects.go": "5921cc58db2d9fd5c69dff483c0b8039933120b636a077eae677f50fc7d7add5",
+        "代码/前端/CLI/cmd/jobsim/receipt_policy.go": "63aa18b33bd875e8ba678203c19dba048dbc88ba7d18374f87a00378e7c77784",
+        "代码/前端/CLI/cmd/jobsim/self_state.go": "54981ba71cad940d8aa1d28581be86c8155b524aa4078cd9880e234b6e7df186",
+        "代码/前端/CLI/cmd/jobsim/store.go": "c83fe4c10e05c50cb4841e83107d15eacdd81197a99fabe45b4a22e98568d447",
+        "代码/前端/CLI/cmd/jobsim/sync_engine.go": "f953c1d50c01f317c164aaf10ee7300877b1446351d31dc62efae3d6d179ace0",
+        "代码/前端/CLI/cmd/jobsim/sync_protocol.go": "cb2371cf70babc00f1d70b39faff551d8f77f9de7b0f464ddaeab229b798ca14",
+        "代码/前端/CLI/cmd/jobsim/sync_store.go": "6cefdde58f5c88e0af6b7f9ed3dfafdd9363e6ee7fc6e4a33d042063e303281b",
+        "代码/前端/CLI/go.mod": "4ca83c3741ef64a504e79ed56281a7d583b968273ea284786ee89248a013db39",
+        "代码/前端/CLI/go.sum": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030"
+      },
+      "productionGoAndLockAggregateSHA256": "e3f70ca8aca35763dbee116e7b1154a08d718aa14f4a11603b13f7300193e114",
+      "fileFormat": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-升级门禁最终-20261117-142600/jobsim-darwin-arm64: Mach-O 64-bit executable arm64",
+      "signing": "local native candidate; not an installer/signing/vault approval or a production receipt profile",
+      "changedInputs": []
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-18T02:23:53.369349+00:00",
+  "sourceChecks": {
+    "groups": {
+      "MacOS": 24,
+      "Linux": 43,
+      "Windows": 13,
+      "辅助组件": 17,
+      "H5": 5
+    },
+    "checked": 102,
+    "mismatches": []
+  },
+  "MacEvidenceIntegrity": {
+    "checked": 10,
+    "mismatches": []
+  },
+  "documents": {
+    "documents": 74,
+    "localLinks": 1395,
+    "issues": [],
+    "duplicateIds": [],
+    "parentAddedLinks": 2,
+    "parentTrailingWhitespace": []
+  },
+  "scope": "Final source/receipt/link audit only; existing suite results remain scoped to their frozen inputs and native/host boundaries.",
+  "markdownToc": {
+    "documents": 248,
+    "roundtripPassed": true,
+    "stagingChanged": false
+  }
+}

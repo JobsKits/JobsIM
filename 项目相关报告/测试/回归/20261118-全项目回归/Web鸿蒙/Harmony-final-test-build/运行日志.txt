@@ -1,0 +1,192 @@
+ASCII源码快照=/Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH
+[33mohpm WARN: [93m[1mSource code dependencies in project-level "oh-package.json5" are as follows, which could lead to circular dependencies reference.[22m[39m[33m
+	 - "@ohos/hypium@file:./MirrorHypium"
+[39m[39m
+[32minstall completed in 0s 38ms[39m
+> hvigor [32mFinished :entry:clean... after 1 ms [39m
+> hvigor [33mWARN: The version number of the 'entry' module does not comply with the SemVer specification.
+               This will affect the installation and publication by ohpm.
+               Make sure the value of version in the oh-package.json5 file of the module complies with the SemVer specification.[39m
+> hvigor [32mFinished :entry:ohosTest@PreBuild... after 61 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CreateModuleInfo... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GenerateMetadata... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ConfigureCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@MergeProfile... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CreateBuildProfile... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgContextInfo... after 4 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgSdkInfo... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@BuildNativeWithCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@MakePackInfo... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@SyscapTransform... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessProfile... after 40 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessRouterMap... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessShareConfig... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessStartupConfig... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@BuildNativeWithNinja... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessResource... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GenerateLoaderJson... after 3 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessLibs... after 3 ms [39m
+> hvigor [33mWARN: Warning: 'app_name' conflict, first declared.
+at /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/AppScope/resources/base/element/string.json
+but declared again.
+at /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/resources/base/element/string.json
+[39m
+> hvigor [32mFinished :entry:ohosTest@CompileResource... after 58 ms [39m
+> hvigor [32mFinished :entry:ohosTest@DoNativeStrip... after 1 ms [39m
+> hvigor [33mWARN: [33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:31:363
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:31:385
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:31:466
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:31:489
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:31:509
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:32:185
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:32:217
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:32:240
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:32:255
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:32:324
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:33:16
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:33:65
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:33:96
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:38:40
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:38:61
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:38:139
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:38:162
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:38:182
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:39:44
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:39:88
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:39:118
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:40:74
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:41:191
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:41:212
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:41:212
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:43:155
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:44:76
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:44:258
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:44:316
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:44:349
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:44:370
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:45:97
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:45:118
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:48:124
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:48:174
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:48:250
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:48:385
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:48:478
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:50:98
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:50:123
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:50:123
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:50:198
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:51:81
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:52:86
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:52:141
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:52:257
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Toolchains/HarmonyMirror/Workspaces/Build.hNHkwH/entry/src/main/ets/Data/MigrationNative.ets:52:350
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestCompileArkTS... after 3 s 134 ms [39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestBuildJS... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CacheNativeLibs... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestCopyMockConfigJson... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgModuleJson... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessCompiledResources... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PackageHap... after 275 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PackingCheck... after 2 ms [39m
+> hvigor [33mWARN: No signingConfig found for product default[39m
+> hvigor [32mFinished :entry:ohosTest@SignHap... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CollectDebugSymbol... after 1 ms [39m
+> hvigor [32mFinished :entry:assembleHap... after 1 ms [39m
+> hvigor [32mBUILD SUCCESSFUL in 4 s 250 ms [39m

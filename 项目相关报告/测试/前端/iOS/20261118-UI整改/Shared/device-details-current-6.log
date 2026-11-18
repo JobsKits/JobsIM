@@ -1,0 +1,39 @@
+Current device information:
+• Identifier: FE8207C9-DB32-564B-8990-44C558C044A6
+▿ Connection:
+    • Authentication Type: manualPairing
+    • Device State: unavailable
+    • Last Connection Date: Nov 18, 2026 at 18:24:00
+    • Pairing State: paired
+▿ Hardware:
+    • CPU Count: 6 cores (6 logical, 1 package(s))
+    • CPU Type: arm64e
+    • Device Reality: physical
+    • Device Type: iPhone
+    • ECID: 1729910802710558
+    • Has Action Button: false
+    • Internal Storage Capacity: 128000000000
+    • Marketing Name: iPhone 13
+    • Platform: iOS
+    • Product Type: iPhone14,5
+    • Serial Number: RM7FN2X1FQ
+    • Supported Biometrics: Face ID
+    ▿ Supported CPU Types:
+        • arm64e
+        • arm64
+    • Supported Device Families: • 1
+    • Supports Siri: true
+    • Thinning Product Type: iPhone14,5
+    • UDID: 00008110-000625583EE3801E
+▿ Software:
+    • OS Build Update: 24B156
+    • OS Version: 27.2.1
+    • Supports Checked Allocations: false
+▿ State:
+    • Developer Mode Status: Enabled (1)
+    • Device Name: Jobs的iPhone
+
+Capabilities:
+    • Modify Credentials for Default Users for a Device (com.apple.coredevice.feature.default.user.credentials)
+    • Modify Tags (com.apple.coredevice.feature.tags)
+    • Unpair Device (com.apple.coredevice.feature.unpairdevice)

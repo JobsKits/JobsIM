@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-11-17T08:26:57.992208+00:00",
+  "frozenUniqueInputs": 220,
+  "sourceManifest": "最终当前两端输入SHA256.json",
+  "sourceManifestSHA256": "9169e5e2ea899dedf2f456680add58a49c1766db401f43937ac0044c634cb8a0",
+  "documentationOnlyDifferences": [
+    {
+      "file": "代码/前端/Android/README.md",
+      "frozenSha256": "4f2e0d7ba4cd89bdafbe9f9d7543f01e7843cc85556f5fa0f09190a8bc2b280e",
+      "currentSha256": "51bbd798215537f89099f57c8bacaf331a8b92d918e36f2220dbdcbc807fd588"
+    },
+    {
+      "file": "测试/前端/Android/README.md",
+      "frozenSha256": "72c37b7df553f32067e2d6f4ebdf2ba2be44661f714a98f70eaf6d3bcfcf589c",
+      "currentSha256": "f09945c6203cb68c519abfd17d2b4100c37427e3f2dcb64c94af248c0468425d"
+    },
+    {
+      "file": "代码/前端/HarmonyOS/README.md",
+      "frozenSha256": "59ddb5c83f4145de27baa51be6733b53cae2bfd432616d386af325fbf84904af",
+      "currentSha256": "60a6d1a849f1477250c35873d0c1f0d2e6552c9b6512db0518919602b53fdabc"
+    }
+  ],
+  "codeConfigAssetsDifferences": [],
+  "nativeMethods": "Android独立AVD-20261117-153544-d52437/最终105逐方法实际核对.json",
+  "nativeStop": "Android独立AVD-20261117-153544-d52437/最终102后自有AVD精确停止.json",
+  "originalFrozenManifestUnmodified": true
+}

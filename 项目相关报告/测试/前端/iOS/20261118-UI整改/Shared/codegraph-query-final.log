@@ -1,0 +1,299 @@
+**Exploration: IMContactsRefresh**
+
+Found 25 symbols across 1 file.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `contacts` (代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets:1901) — 1 caller in `代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets`; no tests found within 3 caller hops
+- `contacts` (代码/后端/Go/directory.go:127) — 1 caller in `代码/后端/Go/directory.go`; tested via callers: `测试/后端/接口/sync_snapshot_test.go`, `测试/后端/接口/send_admission_test.go` +16
+- `refresh` (代码/前端/Web/Src/MigrationPanel.tsx:62) — 1 caller in `代码/前端/Web/Src/MigrationPanel.tsx`; no tests found within 3 caller hops
+- `refresh` (代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptCoordinator.swift:191) — 1 caller in `代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptCoordinator.swift`; tested via callers: `测试/前端/iOS/IMReceiptServiceTests.swift`
+- `refresh` (代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift:369) — 8 callers in `代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift`; tests: `测试/前端/iOS/IMAuthRefreshIntegrationTests.swift`, `测试/前端/iOS/IMAuthCoordinatorTests.swift`, `测试/前端/iOS/IMReceiptServiceTests.swift`
+
+**Relationships**
+
+**calls:**
+- contacts → directConversation
+- contacts → empty
+- contacts → action
+- contacts → t
+- contacts → run
+- contacts → bubble
+- contacts → requestAction
+- contacts → searchPeople
+- contacts → foreground
+- contacts → confirmChange
+- ... and 301 more
+
+**references:**
+- directoryRoutes → contacts
+- MigrationPanel → refresh
+- MigrationPanel → current
+- MigrationPanel → reloadPanel
+- IMReceiptCoordinator → IMSession
+- IMReceiptCoordinator → IMReceiptService
+- IMReceiptCoordinator → State
+- IMReceiptCoordinator → IMJSON
+- IMReceiptCoordinator → IMNamespace
+- IMReceiptCoordinator → Factory
+- ... and 42 more
+
+**instantiates:**
+- IMReceiptCoordinator → IMReceiptCoordinator
+- IMReceiptCoordinator → IMReceiptService
+- coordinator → IMReceiptCoordinator
+- testRealHTTPSLostRefreshRequiresReauthAndPreservesIndependentFamily → IMAuthCoordinator
+- testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret → IMAuthCoordinator
+- testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily → IMAuthCoordinator
+- testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace → IMAuthCoordinator
+- refresh → IMMessageListService
+- capture → DataExportActions
+- realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference → ChatModel
+- ... and 5 more
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets`** — calls(calls), t(calls), foreground(calls), run(calls), action(calls), bubble(calls), references(references), requestAction(calls), receiptAction(method), action(method), +32 more
+
+```arkts
+897	      await this.store.put(this.namespace(), { id: 'hello', conversationId: 'welcome', senderId: 'guide', clientMsgId: '', type: 'text', text: this.t('demoNote'), createdAt: new Date().toISOString(), version: '1', sequence: '0', deleted: false, pinned: false, favorite: false, reactions: [], state: 'demo' }, true);
+898	    }
+899	  }
+900	  private async reload(): Promise<void> {
+901	    if (this.demo || !this.token) { return; }
+902	    const namespace = this.namespace();
+903	    await this.verifyEpoch();
+904	    await this.ensureSync().run();
+905	    if (namespace !== this.namespace()) { return; }
+906	    this.forwardViews.clear(); this.lookupRows = this.lookupRows.map((row: Message) => row.forwarded ? Rules.unavailableForward(row) : row);
+907	    this.syncRestricted = false;
+908	    await this.loadSelfMetadata();
+909	    if (this.localEntries) {
+910	      const selected = this.conversation;
+911	      this.conversations = (await this.syncData.retainedConversations(this.syncIdentity())).map((raw: string) => JSON.parse(raw) as Conversation);
+912	      if (selected?.state === 'local_only') { this.rows = await this.syncData.retained(this.syncIdentity(), selected.id); }
+913	      return;
+914	    }
+915	    this.conversations = this.orderSelfConversations((await this.syncData.objects(this.syncIdentity(), 'conversation')).map((raw: string) => JSON.parse(raw) as Conversation));
+916	    if (this.conversation) {
+917	      const current = this.conversations.find((row: Conversation) => row.id === this.conversation?.id);
+918	      if (current) { this.conversation = current; this.rows = await this.store.list(namespace, current.id, false); }
+919	      else { this.conversation = undefined; this.rows = []; this.page = 'chats'; }
+920	    }
+921	    // Peer display enrichment is freshly authorized; it is not the authority for message installation.
+922	    const contacts = await this.api().request<ContactsResult>('/contacts');
+923	    if (namespace !== this.namespace()) { return; }
+924	    this.people = contacts.items; this.requests = contacts.requests.filter((row: ContactRequest) => Rules.incoming(row, this.userId));
+925	    const counts: Record<string, number> = {}; const mentions: Record<string, number> = {};
+926	    for (const row of this.conversations) { counts[row.id] = await this.syncData.unread(this.syncIdentity(), row.id); mentions[row.id] = await this.store.mentionCount(namespace, row.id, false); }
+927	    const newlyObserved = Object.keys(counts).some((id: string) => counts[id] > (this.unread[id] ?? 0) && !this.selfMuted(id));
+928	    this.unread = counts; this.mentionUnread = mentions;
+929	    if (newlyObserved && this.notificationsEnabled && namespace === this.namespace()) { await NativeServices.notify(getContext(this) as common.UIAbilityContext, NativeServices.notificationText(this.language)); }
+930	    if (this.conversation) { await this.refreshForwardProjections(this.conversation); this.rows = await this.visibleRows(this.conversation.id); }
+931	    if (this.page === 'lookup') { await this.refreshLookupForwards(); }
+932	    this.me = await this.api().request<User>('/me');
+933	    if ((this.me.avatarThumbnailURL ?? '') !== this.ownAvatarRef) { await this.loadOwnAvatar(); }
+934	    this.avatarPending = (await this.store.value(this.operationNamespace(), 'avatar')).length > 0;
+935	  }
+936	  private async open(conversation: Conversation): Promise<void> {
+937	    this.lookupFocusId = '';
+938	    const changing = this.conversation?.id !== conversation.id;
+
+... (gap) ...
+
+1171	    const type = result.contentType.startsWith('image/') ? 'image' : result.contentType.startsWith('audio/') ? 'audio' : result.contentType.startsWith('video/') ? 'video' : 'file';
+1172	    await this.send(type, result.id, result.name, conversation);
+1173	  }
+1174	  private async searchPeople(): Promise<void> {
+1175	    if (!this.demo) { this.results = (await this.api().request<UserList>('/users?q=' + encodeURIComponent(this.query))).items; }
+1176	  }
+1177	  private async showLookup(kind: string, scoped: boolean = false): Promise<void> {
+1178	    this.lookupScope = scoped ? (this.conversation?.id ?? '') : '';
+1179	    this.lookupKind = kind; this.lookupRows = []; this.lookupCursor = ''; this.lookupMore = false;
+
+... (gap) ...
+
+1270	  private async finishOperation(key: string): Promise<void> {
+1271	    await this.store.setValue(this.operationNamespace(), 'operation:' + key, '');
+1272	  }
+1273	  private confirmChange(label: string, action: () => Promise<void>, detail: string = ''): void {
+1274	    const namespace = this.namespace();
+1275	    AlertDialog.show({
+1276	      title: this.t(label), message: this.t('confirmChange') + (detail.length > 0 ? '\n' + detail : ''),
+1277	      primaryButton: { value: this.t('cancel'), action: () => {} },
+1278	      secondaryButton: { value: this.t('continue'), action: () => { if (namespace === this.namespace()) { this.run(action); } } }
+1279	    });
+1280	  }
+1281	  private async directConversation(person: User): Promise<void> {
+1282	    if (this.demo) { return; }
+1283	    let draft: ConversationDraft = { kind: 'direct', title: person.displayName, memberIds: [person.id] };
+1284	    const key = 'direct:' + person.id;
+1285	    const previous = await this.store.value(this.operationNamespace(), 'operation:' + key);
+1286	    if (previous.length > 0) { draft = JSON.parse((JSON.parse(previous) as PendingOperation).payload) as ConversationDraft; }
+1287	    const operation = await this.beginOperation(key, JSON.stringify(draft));
+1288	    const row = await this.api().request<Conversation>('/conversations', 'POST', JSON.stringify({ kind: draft.kind, title: draft.title, memberIds: draft.memberIds, requestId: operation.requestId }));
+1289	    await this.finishOperation(key); this.page = 'chats'; await this.open(row);
+1290	  }
+1291	  private async contactAction(peer: string, action: string): Promise<void> {
+1292	    if (this.demo) { this.info = this.t('demoNote'); return; }
+1293	    if (peer.length === 0 || peer === this.userId) { throw new Error(this.t('members')); }
+1294	    const key = action + ':' + peer;
+1295	    const operation = await this.beginOperation(key, JSON.stringify({ userId: peer }));
+1296	    if (action === 'add') {
+1297	      await this.api().request<Object>('/contacts/requests', 'POST', JSON.stringify({ userId: peer, requestId: operation.requestId }));
+1298	    } else if (action === 'reopen') {
+1299	      const result = await this.api().request<ReopenResult>('/contacts/' + encodeURIComponent(peer) + '/reopen', 'POST', JSON.stringify({ requestId: operation.requestId }));
+1300	      this.info = this.t(result.current ? 'gateOpened' : 'originalOnly');
+1301	    } else {
+1302	      const path = action === 'deleteContact' ? '/contacts/' : '/blocks/';
+1303	      await this.api().request<Object>(path + encodeURIComponent(peer), action === 'block' ? 'PUT' : 'DELETE');
+1304	    }
+1305	    await this.finishOperation(key);
+1306	    if (action === 'block') { this.blockedIds = this.blockedIds.filter((id: string) => id !== peer).concat([peer]); }
+1307	    if (action === 'unblock') { this.blockedIds = this.blockedIds.filter((id: string) => id !== peer); }
+1308	    await this.store.setValue(this.namespace(), 'blockedIds', JSON.stringify(this.blockedIds));
+1309	    this.results = [];
+1310	    await this.reload();
+1311	  }
+
+... (gap) ...
+
+1695	      ForEach(this.reports, (report: Report) => { Column({ space: 6 }) { Text(report.targetType + ' · ' + report.targetId).fontColor(this.foreground()); Text(report.reason).fontColor(this.foreground()); Text(report.state + ' · ' + report.createdAt).fontColor(this.foreground()) }.width('100%').padding(12).backgroundColor(this.bubble()) }, (report: Report) => report.id)
+1696	    }.padding(20).width('100%')
+1697	  }
+1698	  @Builder private action(label: string, handler: () => void) {
+1699	    Button(this.t(label)).type(ButtonType.Normal).borderRadius(10).height(48).fontSize(14 * this.fontScale).backgroundColor('#287C66').fontColor('#FFFFFF').enabled(!this.busy).onClick(handler)
+1700	  }
+1701	  @Builder private empty() {
+1702	    Column({ space: 12 }) { Text(this.t('empty')).fontSize(22 * this.fontScale).fontColor(this.foreground()); Text(this.t('emptyHelp')).fontColor(this.foreground()); this.action('refresh', () => this.run(async () => this.reload())) }.width('100%').padding(32)
+1703	  }
+1704	  @Builder private emptyWith(retry: () => void) {
+1705	    Column({ space: 12 }) {
+1706	      Text(this.t('empty')).fontSize(22 * this.fontScale).fontColor(this.foreground())
+1707	      Text(this.t('emptyHelp')).fontColor(this.foreground())
+1708	      this.action('refresh', retry)
+1709	    }.width('100%').padding(32)
+1710	  }
+1711	  @Builder private authentication() {
+1712	    Column({ space: 18 }) {
+1713	      Text(this.t('welcome')).fontSize(32 * this.fontScale).fontWeight(FontWeight.Bold).fontColor(this.foreground()).width('100%')
+
+... (gap) ...
+
+1898	      ForEach(this.conversations, (row: Conversation) => { Row({ space: 16 }) { Text(row.title.slice(0, 1)).fontSize(24).width(48).height(48).textAlign(TextAlign.Center).backgroundColor(this.bubble()).borderRadius(12); Column({ space: 6 }) { Text(row.title + (this.selfViews[row.id]?.manualUnread ? ' ●' : '') + ((this.unread[row.id] ?? 0) > 0 ? ' · ' + String(this.unread[row.id]) : '')).fontSize(18 * this.fontScale).fontColor(this.foreground()).width('100%'); Text(this.t(row.kind === 'group' ? 'group' : 'private') + (this.selfViews[row.id]?.manualUnread ? ' · ' + this.s('manual') : '') + ((this.mentionUnread[row.id] ?? 0) > 0 ? ' · ' + this.t('mentionUnread') + ' ' + String(this.mentionUnread[row.id]) : '')).fontSize(13 * this.fontScale).fontColor(this.foreground()).width('100%') }.layoutWeight(1) }.width('100%').padding({ top: 12, bottom: 12 }).onClick(() => this.run(async () => this.open(row))) }, (row: Conversation) => row.id)
+1899	    }.padding(20).width('100%')
+1900	  }
+1901	  @Builder private contacts() {
+1902	    Column({ space: 16 }) {
+1903	      this.action('refresh', () => this.run(async () => this.reload()))
+1904	      Text(this.t('requests')).fontSize(22 * this.fontScale).fontColor(this.foreground())
+1905	      if (this.requests.length === 0) { this.empty() }
+1906	      ForEach(this.requests, (request: ContactRequest) => {
+1907	        Column({ space: 8 }) {
+1908	          Text(request.requester?.displayName ?? this.t('unavailableUser')).fontColor(this.foreground())
+1909	          Text(request.requester?.username ?? request.requesterId).fontColor(this.foreground())
+1910	          Row({ space: 8 }) {
+1911	            if (request.requester) { this.action('accept', () => this.run(async () => this.requestAction(request, 'accept'))) }
+1912	            this.action('reject', () => this.run(async () => this.requestAction(request, 'reject')))
+1913	          }
+1914	        }.width('100%').padding(12).backgroundColor(this.bubble())
+1915	      }, (request: ContactRequest) => request.id)
+1916	      Text(this.t('contacts')).fontSize(22 * this.fontScale).fontColor(this.foreground())
+1917	      if (this.people.length === 0) { this.empty() }
+1918	      ForEach(this.people, (person: User) => {
+1919	        Column({ space: 8 }) {
+1920	          Text(person.displayName + ' · @' + person.username).fontColor(this.foreground())
+1921	          Flex({ wrap: FlexWrap.Wrap }) {
+1922	            this.action('newChat', () => this.run(async () => this.directConversation(person)))
+1923	            this.action('report', () => { this.reportType = 'user'; this.reportTarget = person.id; this.reportReason = ''; this.page = 'reports'; })
+1924	            this.action('deleteContact', () => this.confirmChange('deleteContact', async () => this.contactAction(person.id, 'deleteContact')))
+1925	            this.action('block', () => this.confirmChange('block', async () => this.contactAction(person.id, 'block')))
+1926	          }
+1927	        }.width('100%')
+1928	      }, (person: User) => person.id)
+1929	      TextInput({ placeholder: this.t('search'), text: this.query }).height(52).onChange((value: string) => this.query = value)
+1930	      this.action('search', () => this.run(async () => this.searchPeople()))
+1931	      if (this.query.length > 0 && this.results.length === 0) { this.emptyWith(() => this.run(async () => this.searchPeople())) }
+1932	      ForEach(this.results, (person: User) => {
+1933	        Row() {
+1934	          Text(person.displayName + ' · @' + person.username).layoutWeight(1).fontColor(this.foreground())
+1935	          this.action('add', () => this.run(async () => this.contactAction(person.id, 'add')))
+1936	        }
+1937	      }, (person: User) => person.id)
+1938	      Text(this.t('localBlocks')).fontColor(this.foreground())
+1939	      ForEach(this.blockedIds, (id: string) => {
+1940	        Row() { Text(id).layoutWeight(1).fontColor(this.foreground()); this.action('unblock', () => this.run(async () => this.contactAction(id, 'unblock'))) }
+1941	      })
+1942	      TextInput({ placeholder: this.t('peerId'), text: this.managedPeer }).onChange((value: string) => this.managedPeer = value)
+1943	      Flex({ wrap: FlexWrap.Wrap }) {
+1944	        this.action('unblock', () => this.run(async () => this.contactAction(this.managedPeer, 'unblock')))
+1945	        this.action('reopen', () => this.run(async () => this.contactAction(this.managedPeer, 'reopen')))
+1946	      }
+1947	      Text(this.t('reopenHelp')).fontColor(this.foreground())
+1948	    }.padding(20)
+1949	  }
+1950	  @Builder private receiptButton(key:string,handler:()=>void){Button(this.r(key)).height(48).width('100%').type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).enabled(!this.receiptBusy&&Boolean(this.receiptService)).onClick(handler)}
+1951	  @Builder private receiptPage(){
+1952	    Column({space:12}){
+
+... (gap) ...
+
+2317	      }, (item: SelfOperationItem) => item.id)
+2318	    }.padding(20).width('100%')
+2319	  }
+2320	  build() {
+2321	    Column() {
+2322	      Row() { Text('JobsIM').fontSize(25).fontWeight(FontWeight.Bold).fontColor(this.foreground()).layoutWeight(1); Button(this.t('connect')).height(48).type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).onClick(() => this.page = 'connect') }.padding({ left: 20, right: 20, top: 12, bottom: 12 }).width('100%')
+2323	      if (this.busy) { LoadingProgress().width(28).height(28).color('#287C66') }
+2324	      if (this.demo || this.offline) { Text(this.t(this.demo ? 'demoNote' : 'offline')).fontSize(13 * this.fontScale).fontColor(this.foreground()).padding(12).width('100%').backgroundColor(this.bubble()) }
+2325	      if (this.info.length > 0) { Text(this.info).fontSize(13 * this.fontScale).fontColor(this.foreground()).padding(8).width('100%') }
+2326	      Scroll() { Column() {
+2327	        if (this.page === 'connect') { this.connectionForm() }
+2328	        else if (this.page === 'settings') { this.settings() }
+2329	        else if (this.page === 'exports') { this.exportsPage() }
+2330	        else if (this.page === 'password') { this.passwordPage() }
+2331	        else if (this.page === 'deletion') { this.deletionPage() }
+2332	        else if (this.page === 'groupTools') { this.groupToolsPage() }
+2333	        else if (this.page === 'migration') { this.migrationPage() }
+2334	        else if(this.page==='receipts'){this.receiptPage()}
+2335	        else if (this.userId.length === 0) { this.authentication() }
+2336	        else if (this.page === 'sessions') { this.sessionsView() }
+2337	        else if (this.page === 'reports') { this.reportsView() }
+2338	        else if (this.page === 'group') { this.groupView() }
+2339	        else if (this.page === 'lookup') { this.lookupView() }
+2340	        else if (this.page === 'forward') { this.forwardView() }
+2341	        else if (this.page === 'mentions') { this.mentionsView() }
+2342	        else if (this.page === 'announcement') { this.announcementView() }
+2343	        else if (this.page === 'self') { this.selfPage() }
+2344	        else if (this.conversation) { this.conversationView() }
+2345	        else if (this.page === 'contacts') { this.contacts() }
+2346	        else if (this.page === 'new') { this.createForm() }
+2347	        else { this.chats() }
+2348	      }.width('100%') }.layoutWeight(1).width('100%')
+2349	      Row() { ForEach(['chats', 'contacts', 'settings'], (page: string) => { Button(this.t(page)).layoutWeight(1).height(56).type(ButtonType.Normal).backgroundColor(this.page === page ? this.bubble() : this.surface()).fontColor(this.foreground()).onClick(() => { this.page = page; this.conversation = undefined; }) }) }.width('100%')
+2350	    }.height('100%').width('100%').backgroundColor(this.surface()).padding({ top: 24, bottom: 16 })
+2351	  }
+2352	}
+2353	
+```
+
+**Not shown above — explore these names for their source**
+
+- 代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptCoordinator.swift: refresh:191, IMReceiptCoordinator:12, wake:196, enable:105, shared:20, State:16, +14 more
+- 代码/前端/Web/Src/MigrationPanel.tsx: refresh:62, MigrationPanel:18, copy:116, save:117, empty:122, submit:95, +10 more
+- 代码/前端/Web/Src/DataExportPanel.tsx: refresh:29, DataExportPanel:9, check:76, cancel:81, create:75, download:85, +6 more
+- 代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift: refresh:369, IMAuthCoordinator:12, read:56, beginRefresh:385, reauthenticationRequired:616, logout:632, +13 more
+- 代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift: refresh:357, IMChatVC:20, scrollToLatest:578, updateConversationTitle:156, messageAction:823, sendFile:1276, +12 more
+- 代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt: refresh:1088, ChatModel:19, job:344, loadMessages:1368, reload:799, loadAuthenticationState:294, +5 more
+- 代码/后端/Go/directory.go: contacts:127, directoryRoutes:24
+- 代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift: IMSession:13, accountOperationBlocked:834, flushPending:1133, retainedMessages:152, messageHistory:1118, action:804, +1 more
+- 代码/前端/Web/Src/DataExportActions.ts: status:52, rows:23, DataExportActions:8, DataExportContext:5, request:11, check:43, +1 more
+- 代码/后端/Go/server.go: App:43, rpc:186, current:250
+- ... and 42 more files
+
+---
+> **Verbatim source for 1 file is included above — treat it as already Read.** Trimmed for size: `Index.ets`; gap markers and file headers name what was elided. For those, or anything under "Not shown above", make ANOTHER codegraph_explore with those exact names instead of reading the files — it returns their source with line numbers.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~788 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

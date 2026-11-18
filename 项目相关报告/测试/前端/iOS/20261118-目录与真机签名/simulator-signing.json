@@ -1,0 +1,11 @@
+[
+  {
+    "target": "JobsIM",
+    "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk",
+    "CODE_SIGNING_ALLOWED": "YES",
+    "CODE_SIGN_IDENTITY": "-",
+    "CODE_SIGN_ENTITLEMENTS": "JobsIM/Resource/Simulator.entitlements",
+    "CODE_SIGN_STYLE": "Automatic",
+    "DEVELOPMENT_TEAM": "K5692KLW75"
+  }
+]

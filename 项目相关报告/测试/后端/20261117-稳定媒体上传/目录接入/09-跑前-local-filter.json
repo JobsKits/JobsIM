@@ -1,0 +1,12 @@
+{
+  "clean": [
+    "'/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node' '.jobs-markdown-toc/MarkdownToc.mjs' clean"
+  ],
+  "smudge": [
+    "'/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node' '.jobs-markdown-toc/MarkdownToc.mjs' smudge"
+  ],
+  "required": [
+    "true"
+  ],
+  "process": []
+}

@@ -1,0 +1,249 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -xctestrun /Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Products/JobsIM_iphonesimulator27.2-arm64.xctestrun -destination "platform=iOS Simulator,id=42873992-9F78-40D2-B55D-9EBF66B9684D" -resultBundlePath 项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/ui-tests-17.xcresult -parallel-testing-enabled NO -jobs 2 "-only-testing:JobsIMUITests/IMUITests/testAuthSettingsPasswordEyesAndRememberLayout" "-only-testing:JobsIMUITests/IMUITests/testDemoExitToUnauthenticatedAppDoorLoginRegistrationRail" test-without-building
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/ui-tests-17.xcresult
+
+2026-11-18 18:38:31.810016+0800 JobsIMUITests-Runner[80158:870930] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-11-18 18:38:34.871.
+Test Suite 'JobsIMUITests.xctest' started at 2026-11-18 18:38:34.871.
+Test Suite 'IMUITests' started at 2026-11-18 18:38:34.872.
+Test Case '-[JobsIMUITests.IMUITests testAuthSettingsPasswordEyesAndRememberLayout]' started.
+    t =     0.00s Start Test at 2026-11-18 18:38:34.874
+    t =     0.02s Set Up
+    t =     0.02s Open com.jobs.im
+    t =     0.02s     Launch com.jobs.im
+2026-11-18 18:38:34.953 xcodebuild[80117:870643] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-18 18:38:34.953 xcodebuild[80117:870643] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     0.50s         Setting up automation session
+objc[80158]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.DwzPF1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x1057a8310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.DwzPF1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x1057dc398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     2.59s         Wait for com.jobs.im to idle
+    t =     4.10s Waiting 10.0s for "demo.environment" Button to exist
+    t =     5.12s     Checking `Expect predicate `existsNoRetry == 1` for object "demo.environment" Button`
+    t =     5.13s         Checking existence of `"demo.environment" Button`
+    t =     5.21s Tap "demo.environment" Button
+    t =     5.21s     Wait for com.jobs.im to idle
+    t =     5.22s     Find the "demo.environment" Button
+    t =     5.23s     Check for interrupting elements affecting "demo.environment" Button
+    t =     5.25s     Synthesize event
+    t =     5.54s     Wait for com.jobs.im to idle
+    t =     5.63s Waiting 2.0s for Alert (First Match) to exist
+    t =     6.66s     Checking `Expect predicate `existsNoRetry == 1` for object Alert (First Match)`
+    t =     6.66s         Checking existence of `Alert (First Match)`
+    t =     6.67s Checking existence of `"取消" Button`
+    t =     6.69s Checking existence of `"跳转设置" Button`
+    t =     7.72s Checking `Expect predicate `exists == 1` for object Alert (First Match)`
+    t =     7.73s     Checking existence of `Alert (First Match)`
+    t =     7.74s Tap "取消" Button
+    t =     7.74s     Wait for com.jobs.im to idle
+    t =     7.74s     Find the "取消" Button
+    t =     7.75s     Check for interrupting elements affecting "取消" Button
+    t =     7.77s     Synthesize event
+    t =     8.06s     Wait for com.jobs.im to idle
+    t =     8.29s Waiting 5.0s for "auth.settings" Button to exist
+    t =     9.31s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.settings" Button`
+    t =     9.31s         Checking existence of `"auth.settings" Button`
+    t =     9.33s Checking existence of `"auth.address" TextField`
+    t =     9.34s Find the "auth.rememberPassword" Button
+    t =     9.36s Find the "auth.recover" Button
+    t =     9.37s Find the "auth.rememberPassword" Button
+    t =     9.39s Find the "auth.recover" Button
+    t =     9.40s Find the "auth.password" SecureTextField
+    t =     9.41s Find the "auth.cardTitle" StaticText
+    t =     9.43s Find the "auth.password" SecureTextField
+    t =     9.44s Find the "auth.cardTitle" StaticText
+    t =     9.45s Tap "auth.password" SecureTextField
+    t =     9.45s     Wait for com.jobs.im to idle
+    t =     9.46s     Find the "auth.password" SecureTextField
+    t =     9.47s     Check for interrupting elements affecting "auth.password" SecureTextField
+    t =     9.48s     Synthesize event
+    t =     9.76s     Wait for com.jobs.im to idle
+    t =     9.88s Type '<redacted>' into "auth.password" SecureTextField
+    t =     9.88s     Wait for com.jobs.im to idle
+    t =    10.24s     Find the "auth.password" SecureTextField
+    t =    10.26s     Check for interrupting elements affecting "auth.password" SecureTextField
+    t =    10.28s     Synthesize event
+    t =    10.66s     Wait for com.jobs.im to idle
+    t =    10.66s Tap "auth.password.visibility" Button
+    t =    10.66s     Wait for com.jobs.im to idle
+    t =    10.67s     Find the "auth.password.visibility" Button
+    t =    10.69s     Check for interrupting elements affecting "auth.password.visibility" Button
+    t =    10.71s     Synthesize event
+    t =    10.99s     Wait for com.jobs.im to idle
+    t =    11.38s Waiting 3.0s for "auth.password" TextField to exist
+    t =    12.42s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.password" TextField`
+    t =    12.42s         Checking existence of `"auth.password" TextField`
+    t =    12.47s Find the "auth.password" TextField
+    t =    12.49s Tap "auth.password.visibility" Button
+    t =    12.49s     Wait for com.jobs.im to idle
+    t =    12.49s     Find the "auth.password.visibility" Button
+    t =    12.52s     Check for interrupting elements affecting "auth.password.visibility" Button
+    t =    12.54s     Synthesize event
+    t =    12.83s     Wait for com.jobs.im to idle
+    t =    13.16s Checking existence of `"auth.password" SecureTextField`
+    t =    13.19s Tap "auth.cardTitle" StaticText
+    t =    13.19s     Wait for com.jobs.im to idle
+    t =    13.19s     Find the "auth.cardTitle" StaticText
+    t =    13.21s     Check for interrupting elements affecting "auth.cardTitle" StaticText
+    t =    13.23s     Synthesize event
+    t =    13.51s     Wait for com.jobs.im to idle
+    t =    13.69s Tap "auth.rememberPassword" Button
+    t =    13.69s     Wait for com.jobs.im to idle
+    t =    13.69s     Find the "auth.rememberPassword" Button
+    t =    13.72s     Check for interrupting elements affecting "auth.rememberPassword" Button
+    t =    13.74s     Synthesize event
+    t =    14.03s     Wait for com.jobs.im to idle
+    t =    14.09s Find the "auth.rememberPassword" Button
+    t =    14.13s Tap "auth.rememberPassword" Button
+    t =    14.13s     Wait for com.jobs.im to idle
+    t =    14.13s     Find the "auth.rememberPassword" Button
+    t =    14.17s     Check for interrupting elements affecting "auth.rememberPassword" Button
+    t =    14.21s     Synthesize event
+    t =    14.50s     Wait for com.jobs.im to idle
+    t =    14.56s Find the "auth.rememberPassword" Button
+    t =    14.59s Tap "auth.settings" Button
+    t =    14.59s     Wait for com.jobs.im to idle
+    t =    14.59s     Find the "auth.settings" Button
+    t =    14.61s     Check for interrupting elements affecting "auth.settings" Button
+    t =    14.63s     Synthesize event
+    t =    14.93s     Wait for com.jobs.im to idle
+    t =    15.31s Waiting 5.0s for "auth.address" TextField to exist
+    t =    16.34s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.address" TextField`
+    t =    16.34s         Checking existence of `"auth.address" TextField`
+    t =    16.36s Checking existence of `"auth.settings.demo" Switch`
+    t =    16.37s Find the Target Application 'com.jobs.im'
+    t =    16.45s Added attachment named 'auth-settings-separate-connection-and-demo-switch'
+    t =    16.45s Tap Button (First Match)
+    t =    16.45s     Wait for com.jobs.im to idle
+    t =    16.45s     Find the Button (First Match)
+    t =    16.46s     Check for interrupting elements affecting "返回" Button
+    t =    16.47s     Synthesize event
+    t =    16.77s     Wait for com.jobs.im to idle
+    t =    17.07s Tap "auth.modeSwitch" Button
+    t =    17.07s     Wait for com.jobs.im to idle
+    t =    17.07s     Find the "auth.modeSwitch" Button
+    t =    17.08s     Check for interrupting elements affecting "auth.modeSwitch" Button
+    t =    17.10s     Synthesize event
+    t =    17.39s     Wait for com.jobs.im to idle
+    t =    18.00s Waiting 5.0s for "auth.confirmPassword" SecureTextField to exist
+    t =    19.03s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.confirmPassword" SecureTextField`
+    t =    19.03s         Checking existence of `"auth.confirmPassword" SecureTextField`
+    t =    19.06s Tap "auth.confirmPassword.visibility" Button
+    t =    19.06s     Wait for com.jobs.im to idle
+    t =    19.06s     Find the "auth.confirmPassword.visibility" Button
+    t =    19.07s     Check for interrupting elements affecting "auth.confirmPassword.visibility" Button
+    t =    19.08s     Synthesize event
+    t =    19.37s     Wait for com.jobs.im to idle
+    t =    19.43s Checking existence of `"auth.confirmPassword" TextField`
+    t =    19.44s Find the Target Application 'com.jobs.im'
+    t =    19.56s Added attachment named 'auth-frosted-card-photo-background-centered-register-eyes'
+    t =    19.56s Terminate com.jobs.im:80352
+    t =    20.61s Tear Down
+Test Case '-[JobsIMUITests.IMUITests testAuthSettingsPasswordEyesAndRememberLayout]' passed (20.687 seconds).
+Test Case '-[JobsIMUITests.IMUITests testDemoExitToUnauthenticatedAppDoorLoginRegistrationRail]' started.
+    t =     0.00s Start Test at 2026-11-18 18:38:55.562
+    t =     0.01s Set Up
+    t =     0.01s Open com.jobs.im
+    t =     0.01s     Launch com.jobs.im
+2026-11-18 18:38:55.574 xcodebuild[80117:870643] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-18 18:38:55.575 xcodebuild[80117:870643] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     0.22s         Setting up automation session
+    t =     1.75s         Wait for com.jobs.im to idle
+    t =     3.21s Waiting 10.0s for TabBar (First Match) to exist
+    t =     4.24s     Checking `Expect predicate `existsNoRetry == 1` for object TabBar (First Match)`
+    t =     4.24s         Checking existence of `TabBar (First Match)`
+    t =     4.27s Waiting 5.0s for "demo.environment" Button to exist
+    t =     5.30s     Checking `Expect predicate `existsNoRetry == 1` for object "demo.environment" Button`
+    t =     5.30s         Checking existence of `"demo.environment" Button`
+    t =     5.35s Find the "demo.environment" Button
+    t =     5.37s Press "demo.environment" Button[0.50, 0.50] for 0.1 seconds, then drag to "demo.environment" Button[0.50, 0.50] -> (-70.0, 80.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =     5.37s     Wait for com.jobs.im to idle
+    t =     5.37s     Find the "demo.environment" Button
+    t =     5.39s     Check for interrupting elements affecting "demo.environment" Button
+    t =     5.40s     Synthesize event
+    t =     5.40s         Find the "demo.environment" Button
+    t =     5.42s         Find the "demo.environment" Button
+    t =     5.44s         Find the "demo.environment" Button
+    t =     5.46s         Find the "demo.environment" Button
+    t =     5.48s         Find the "demo.environment" Button
+    t =     6.04s     Wait for com.jobs.im to idle
+    t =     6.05s Find the "demo.environment" Button
+    t =     6.06s Checking existence of `"演示空间" StaticText`
+    t =     6.08s Tap "demo.environment" Button
+    t =     6.08s     Wait for com.jobs.im to idle
+    t =     6.08s     Find the "demo.environment" Button
+    t =     6.10s     Check for interrupting elements affecting "demo.environment" Button
+    t =     6.11s     Synthesize event
+    t =     6.40s     Wait for com.jobs.im to idle
+    t =     6.43s Waiting 2.0s for Alert (First Match) to exist
+    t =     7.46s     Checking `Expect predicate `existsNoRetry == 1` for object Alert (First Match)`
+    t =     7.46s         Checking existence of `Alert (First Match)`
+    t =     7.48s Checking existence of `"取消" Button`
+    t =     7.49s Checking existence of `"跳转设置" Button`
+    t =     7.50s Tap "取消" Button
+    t =     7.50s     Wait for com.jobs.im to idle
+    t =     7.50s     Find the "取消" Button
+    t =     7.51s     Check for interrupting elements affecting "取消" Button
+    t =     7.54s     Synthesize event
+    t =     7.83s     Wait for com.jobs.im to idle
+    t =     8.07s Waiting 10.0s for "auth.primary" Button to exist
+    t =     9.09s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.primary" Button`
+    t =     9.09s         Checking existence of `"auth.primary" Button`
+    t =     9.10s Find the "auth.primary" Button
+    t =     9.11s Find the "auth.username" TextField
+    t =     9.13s Find the "auth.password" SecureTextField
+    t =     9.15s Find the "auth.confirmPassword" SecureTextField
+    t =    10.16s     Find the "auth.confirmPassword" SecureTextField (retry 1)
+    t =    11.19s     Find the "auth.confirmPassword" SecureTextField (retry 2)
+    t =    11.21s Find the "auth.modeSwitch" Button
+    t =    11.23s Find the Target Application 'com.jobs.im'
+    t =    11.34s Added attachment named 'demo-exit-unauthenticated-AppDoor-login-right-rail'
+    t =    11.34s Tap "auth.modeSwitch" Button
+    t =    11.34s     Wait for com.jobs.im to idle
+    t =    11.34s     Find the "auth.modeSwitch" Button
+    t =    11.35s     Check for interrupting elements affecting "auth.modeSwitch" Button
+    t =    11.37s     Synthesize event
+    t =    11.66s     Wait for com.jobs.im to idle
+    t =    12.27s Waiting 5.0s for "auth.confirmPassword" SecureTextField to exist
+    t =    13.30s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.confirmPassword" SecureTextField`
+    t =    13.30s         Checking existence of `"auth.confirmPassword" SecureTextField`
+    t =    13.32s Find the "auth.confirmPassword" SecureTextField
+    t =    13.34s Find the "auth.primary" Button
+    t =    13.35s Find the "auth.modeSwitch" Button
+    t =    13.36s Find the "auth.username" TextField
+    t =    13.37s Find the Target Application 'com.jobs.im'
+    t =    13.49s Added attachment named 'AppDoor-registration-left-rail-confirm-password-visible'
+    t =    13.49s Tap "auth.modeSwitch" Button
+    t =    13.49s     Wait for com.jobs.im to idle
+    t =    13.49s     Find the "auth.modeSwitch" Button
+    t =    13.50s     Check for interrupting elements affecting "auth.modeSwitch" Button
+    t =    13.51s     Synthesize event
+    t =    13.80s     Wait for com.jobs.im to idle
+    t =    14.41s Find the "auth.primary" Button
+    t =    14.43s Find the "auth.confirmPassword" SecureTextField
+    t =    15.44s     Find the "auth.confirmPassword" SecureTextField (retry 1)
+    t =    16.47s     Find the "auth.confirmPassword" SecureTextField (retry 2)
+    t =    16.49s Find the "auth.modeSwitch" Button
+    t =    16.50s Find the "auth.username" TextField
+    t =    16.51s Find the Target Application 'com.jobs.im'
+    t =    16.63s Added attachment named 'AppDoor-login-restored-confirm-password-hidden'
+    t =    16.63s Terminate com.jobs.im:81191
+    t =    17.67s Tear Down
+Test Case '-[JobsIMUITests.IMUITests testDemoExitToUnauthenticatedAppDoorLoginRegistrationRail]' passed (17.707 seconds).
+Test Suite 'IMUITests' passed at 2026-11-18 18:39:13.269.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 38.394 (38.397) seconds
+Test Suite 'JobsIMUITests.xctest' passed at 2026-11-18 18:39:13.269.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 38.394 (38.398) seconds
+Test Suite 'Selected tests' passed at 2026-11-18 18:39:13.270.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 38.394 (38.399) seconds
+2026-11-18 18:39:13.542 xcodebuild[80117:870643] [MT] IDETestOperationsObserverDebug: 42.932 elapsed -- Testing started completed.
+2026-11-18 18:39:13.542 xcodebuild[80117:870643] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-18 18:39:13.542 xcodebuild[80117:870643] [MT] IDETestOperationsObserverDebug: 42.932 sec, +42.932 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/ui-tests-17.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

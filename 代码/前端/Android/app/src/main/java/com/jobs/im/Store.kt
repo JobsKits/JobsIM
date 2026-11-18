@@ -134,6 +134,20 @@ data class NativeScope(
 
 @Dao
 abstract class Messages {
+    @Query("SELECT * FROM messages WHERE namespace=:namespace AND id>:after AND state NOT IN('pending','frozen') AND retracted=0 AND forwarded=0 AND contentUnavailable=0 AND contentVersion!='' ORDER BY id LIMIT :limit")
+    abstract suspend fun receiptCandidates(namespace:String,after:String,limit:Int):List<MessageRow>
+    @Query("SELECT namespace FROM messages WHERE substr(namespace,1,length(:prefix))=:prefix UNION SELECT namespace FROM conversation_state WHERE substr(namespace,1,length(:prefix))=:prefix UNION SELECT namespace FROM operations WHERE substr(namespace,1,length(:prefix))=:prefix UNION SELECT namespace FROM sync_records WHERE substr(namespace,1,length(:prefix))=:prefix UNION SELECT namespace FROM native_scopes WHERE substr(namespace,1,length(:prefix))=:prefix")
+    abstract suspend fun accountNamespaces(prefix: String): List<String>
+    @Query("DELETE FROM messages WHERE substr(namespace,1,length(:prefix))=:prefix")
+    abstract suspend fun eraseAccountMessages(prefix: String)
+    @Query("DELETE FROM conversation_state WHERE substr(namespace,1,length(:prefix))=:prefix")
+    abstract suspend fun eraseAccountStates(prefix: String)
+    @Query("DELETE FROM operations WHERE substr(namespace,1,length(:prefix))=:prefix")
+    abstract suspend fun eraseAccountOperations(prefix: String)
+    @Query("DELETE FROM sync_records WHERE substr(namespace,1,length(:prefix))=:prefix")
+    abstract suspend fun eraseAccountSync(prefix: String)
+    @Query("DELETE FROM native_scopes WHERE substr(namespace,1,length(:prefix))=:prefix")
+    abstract suspend fun eraseAccountScopes(prefix: String)
     @Query("SELECT * FROM messages WHERE namespace=:namespace")
     abstract suspend fun all(namespace: String): List<MessageRow>
 

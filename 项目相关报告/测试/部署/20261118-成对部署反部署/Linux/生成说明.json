@@ -1,0 +1,6 @@
+{
+  "developmentOnlyGenerator": true,
+  "template": "部署/Linux/部署运行.sh/部署运行.sh",
+  "deliveredScriptsSelfContained": true,
+  "platforms": 4
+}

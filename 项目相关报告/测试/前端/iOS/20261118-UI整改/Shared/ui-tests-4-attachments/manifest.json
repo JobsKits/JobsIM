@@ -1,0 +1,206 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "3B766633-49DB-41C4-AB24-EBF27AFD6B92.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-peer-avatar-long-press-read-only-profile_0_6E87F0C2-1F16-4908-B69A-6D64F216661E.png",
+        "timestamp" : 1794984012.787
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoAvatarLongPressOpensReadOnlyPeerProfile()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoAvatarLongPressOpensReadOnlyPeerProfile"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "0838B2D7-7172-4A2A-8DE8-CF998DE8C5A0.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-contact-delete-left-right-cancel-protection_0_6C0E03D6-7A1C-4806-8DD9-FA67CCC218D7.png",
+        "timestamp" : 1794984034.705
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "DC55AEB2-8EAC-40FB-945F-7AB1B0ADF9C8.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-block-preserves-contact-and-remove-action_0_CCE2C79C-6404-4C5D-B649-AA95F3813D66.png",
+        "timestamp" : 1794984023.683
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoContactBlockPreservesFriendAndDeletionCancel()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoContactBlockPreservesFriendAndDeletionCancel"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "A82E61B2-C7B5-41BE-836F-1ADE6D59582D.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-direct-chat-hidden-tab-cell-tap-dismisses-keyboard_0_77BEB350-A583-4ADD-B016-E90CF3548EF9.png",
+        "timestamp" : 1794984057.742
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "0BDB1DFF-0635-4280-B383-37C0C09839A6.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-contacts-first-three-tabs-no-duplicate-title_0_DB220831-F770-4E9D-B9C2-7E247C9E3FA4.png",
+        "timestamp" : 1794984050.516
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoContactsFirstNavigationAndKeyboardDismissal()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoContactsFirstNavigationAndKeyboardDismissal"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "AC2975C6-80E7-4842-865C-BD788DED6EFF.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "App UI hierarchy for com.jobs_0_F847633F-9E24-45F5-9962-96553BFA997C.im",
+        "timestamp" : 1794984076.218
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "376C8935-D9A6-4C9D-9766-8571369A2C63",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "UI Snapshot 2026-11-18 at 02.41.16 下午",
+        "timestamp" : 1794984076.218
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "4D25C16C-C005-4A13-A0A7-601C96E057C0.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"UI recall original 2842E7CA\" StaticText`_0_EBC6179C-74A1-4C23-9240-893A7B5D4C2B.txt",
+        "timestamp" : 1794984076.172
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "A580D1C8-2CB0-4113-928B-145ADC2A0D65.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"UI recall original 2842E7CA\" StaticText`_0_313E68A0-85CB-4013-9868-82DA38B20C10.txt",
+        "timestamp" : 1794984075.222
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "58E8B148-09E3-4476-88D8-66F8EDCECB36.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"UI recall original 2842E7CA\" StaticText`_0_F56B8167-E7F8-48A3-8E67-70100ACD90D1.txt",
+        "timestamp" : 1794984074.172
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "57F92FA1-B582-4781-8CE3-56A95D21A268.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"UI recall original 2842E7CA\" StaticText`_0_CD986413-65DA-441C-87C9-895940FFC87E.txt",
+        "timestamp" : 1794984073.23
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "70959C9C-83B9-484B-91F5-EA788D2066EF.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Debug description for `\"UI recall original 2842E7CA\" StaticText`_0_A313ABFE-221D-4A8B-8566-451281CD42DC.txt",
+        "timestamp" : 1794984072.19
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "74CC2758-A270-47EF-9D1C-646873BAAA23",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-11-18 at 02.41.10 下午",
+        "timestamp" : 1794984070.918
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "2E6BD71D-B410-4553-9D10-7E7C16825306",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-11-18 at 02.41.10 下午",
+        "timestamp" : 1794984070.553
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "9BD07782-D40C-47BF-AEA4-4A7455CF41F0",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-11-18 at 02.41.09 下午",
+        "timestamp" : 1794984069.835
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "92CCD35C-E9F0-437D-84D4-393EB0CD3600",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-11-18 at 02.41.08 下午",
+        "timestamp" : 1794984068.66
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "AB881B23-74B2-473E-A2AA-581EA1A127E9",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-11-18 at 02.41.06 下午",
+        "timestamp" : 1794984066.462
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "BBB29C17-D661-4641-83B3-9013F77B5E00",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-11-18 at 02.41.04 下午",
+        "timestamp" : 1794984064.26
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "97AF8922-85E7-4945-AF46-95E0AB6A9E76",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Synthesized Event 2026-11-18 at 02.41.02 下午",
+        "timestamp" : 1794984062.484
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "3D3600E9-D52F-4D2C-AE6A-0F9BA99DFC8C.mp4",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "Screen Recording 2026-11-18 at 02.40.58 下午.mp4",
+        "timestamp" : 1794984058.802
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoRecallKeepsExistingDraftAndCanRestoreIt()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoRecallKeepsExistingDraftAndCanRestoreIt"
+  }
+]

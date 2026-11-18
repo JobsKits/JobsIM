@@ -1,0 +1,620 @@
+{
+  "at": "2026-11-17T15:03:11+0800",
+  "executed": 122,
+  "passed": 122,
+  "failed": 0,
+  "skipped": 0,
+  "inputMismatches": [],
+  "tests": [
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testDeletionFloorBlocksLateWritersAcrossEpochsPreservesOtherAccountsAndProfiles",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testDeletionUnknownCancelKeepsOriginalNonceAndRejectsWrongPurpose",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testDeletionUnknownDoesNotBorrowSuccessorFamilyOrStoreProof",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testFreshProofRetiresCompleteSavedChainWithoutChangingOldBodies",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testGroupInvitationCapabilityStaysInMemoryAcrossColdResume",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testGroupJoinRejectsAnotherDeploymentAndSecretMetadata",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testGroupSuccessorFamilyOnlyQueriesHistoricalOriginalAndTypedTargetMustMatch",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testGroupUnknownReusesOriginalNonceAndObservedPermission",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testMissingRetirementCapabilityKeepsOriginalIntentAndMakesNoRequest",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testPasswordChangeLateResultCannotSignOutSuccessorFamily",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testPasswordChangeOriginalRemainsQueryableAfterCapabilityWithdrawalAndRestore",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testPasswordChangeProofValidationAndMetadataRejectSecrets",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testPasswordChangeTransportRefusesPlainHTTPBeforeSendingProof",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testPasswordChangeUnknownUsesOriginalAndNeverPersistsProof",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testRestartFinishesSecuredInitialPairBeforeExposingNewNamespace",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testStaleOldFamilyCannotInvalidateReplacementDevice",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testUnknownInitialUsesOriginalIDThenExplicitReauthLinksAndFreezesOldDevice",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCoordinatorTests",
+      "method": "testUnknownRegistrationCannotBecomeUnlinkedFreshAuthentication",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCredentialTests",
+      "method": "testKeychainStoresCompletePairAsSingleItem",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCredentialTests",
+      "method": "testNamespaceHandoffFreezesOldOutboxAndRollsBackPartialCommit",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthCredentialTests",
+      "method": "testPairStrictnessAndRotationKeepsDeviceNamespace",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testAnnouncementPersistsOnlyReferenceWithoutSourceBodyOrProof",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testCapabilityLossCannotReturnToLegacyPollOrCreateRoutes",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testDeltaOriginConflictRollsBackBodyAndContinuousPosition",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testGlobalIsTerminalAcrossDeviceRetainedSavedAndUnreadHolders",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testLateAccountContextCannotPublishSnapshot",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testLocalGuardChangedAfterValidatePreventsLateAtomicCommit",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testMissingOrCorruptedSecondPageNeverInstallsFirstPage",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testOpaqueCLIClientNonceIsNotRequiredToBeAServerUUID",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testOrdinaryCopiesRetainedWhileForwardBodyAndProofNeverPersistInSyncStore",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testOriginalReadOnlyProofClosesOutboxOnlyWithAtomicOriginalBodyMatch",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testRetainedEntryRequiresPreviouslyValidatedExactBodyAndSameIdentity",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testSchemaTwoNegotiationArchivesOldResponsibilityAndKeepsOriginalQueue",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testSchemaTwoPersonalEnvelopeIsExplicitAndOwnerBound",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testSchemaTwoPersonalStateAndCursorRollbackOnWrongScope",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testStoreGenerationSurvivesReopenAndCannotSilentlyReplaceARegisteredStore",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testStrictCountersOriginalBodyDigestAndContinuousRedactions",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testSyncMatchingClientIDIsNotOutboxProofAndNeverPostsCreate",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testUnknownDeltaCannotAdvanceCursorOrEraseLawfulOrdinaryCopy",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testUnknownSnapshotRetriesIdenticalDurableIntentAfterReopen",
+      "status": "passed"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "method": "testValidationWatermarkRegressionAndPermissionABARefuseInstallation",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testCapabilityWithdrawalStillAllowsOriginalLookupAndSameCancelBody",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testCASPreservesFirstCancelBodyAndOriginalAgainstLateWriter",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testCompleteZIPAndZIP64DirectoryAreRequiredBeforeSystemSave",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testLateIdentityResponseDoesNotBindOriginalJob",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testOriginalNonceIsOpaqueAndRawWhitespaceHashCannotBeRewritten",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testReopenKeepsOnlyOriginalPublicMetadataAndDoesNotCreateSyncResponsibility",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testTicketDeadlineAndTypeAreStrictWithoutPersistingTheToken",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testUnknownCreationOnlyChecksOriginalUntilExplicitSameBodyRetry",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testUnsafeOrMissingExportDirectoryEntriesAreRejected",
+      "status": "passed"
+    },
+    {
+      "class": "IMDataExportTests",
+      "method": "testViewStrictCountersAndMetadataDoesNotRetainUnknownSecretFields",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testCredentialNFCAndSignificantSpacesStayInRam",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testIdentityChangeWhileLookupWaitsPreventsFirstCreatingPost",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testLateForwardReadCannotRefillGloballyClearedArchive",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testLateForwardReadCannotUndoCurrentUnavailableProjection",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testMissingRegistrationDoesNotCreateStoreOrQualification",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testPairingPostsOnlyAfterDurableOriginalAndDoesNotPersistSecrets",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testSourceFreezesVersionAndDropsMutableDisplayAndAdmissionFields",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testSuccessorFamilyCanQueryButCannotPublishUnseenOriginal",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testToxicDurableMetadataRejectsBeforeAnyCreatingHttp",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "method": "testUnknownLookupCreatesNothingAndExplicitRetryKeepsNonce",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testEncryptedPacketAndFullOriginalPreserveExactCountersWithoutQualification",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testEncryptedStageIsClearedByGlobalAndLateStageCannotReturn",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testExpiredPublishAndChangedGuardLeaveWholeArchiveUnpublished",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testForwardReobservationInvalidatesIndependentProjectionCopy",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testGlobalDeniesInitialPublishAndClearsCommittedOriginalBytes",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testGoFractionalNanosecondExpiryStagesAndPublishes",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testManifestEnvelopeIsHashedAsOriginalBytesAndCrossTargetRejected",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testNewerLocalContentAndMembershipChangeDenyStaleWholeImport",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testOwnerUnavailableReadOnlyHistoryRemainsArchivable",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testPrimaryMessageDigestUsesAuthenticatedRawObjectBytes",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testUnknownSecretFieldsAndOriginalObjectDigestRejectWholePacket",
+      "status": "passed"
+    },
+    {
+      "class": "IMMigrationTests",
+      "method": "testWrongAADOrTamperedCapsuleNeverOpens",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testCoveredOrModalMessageCellIsNotAnObservation",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testCurrentGuardCanFinishOriginalPendingAfterReopenWithoutRebindingBody",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testDraftReadonlyQueryPreservesFullBodyAndMethodWithoutNewProof",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testEditorAdoptionRejectsLateLocalTextReplyAndMentionChanges",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testExactDraftValidatesPrincipalEpochOriginalStringsAndSeparateAdmission",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testPreparedAndRetiredAreDistinctFromAppliedAndDoNotCarryOldText",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testPublicNativeFixtureSurvivesMissingPreferencesAndRejectsExtraSecretKeys",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testReadServerOperationUUIDDoesNotNeedToEqualClientNonceAndIDsStayExact",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testRecoveryListsHideByDefaultKeepManualUnreadAndSortOriginalPinRank",
+      "status": "passed"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "method": "testRejectedArchiveIsOriginalBodyCASAndRetiredNeverBecomesCurrentCloudText",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testApprovedServerQualificationDoesNotReplaceLocalProbe",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testAutomaticConsentRecoversExistingUnacknowledgedFrozenTargetWithoutNewDeclaration",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testAutomaticPauseBlocksNewWorkAndSameFamilyResumeReprobesWithoutDeclaring",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testAutomaticUnknownOnlyQueriesAndSuccessorDoesNotInheritConsent",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testBuildMeasurementIncludesDebugAndStorageCodeChanges",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testBuildMeasurementRejectsUnverifiedCodeAndExternalSymlink",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testCloudOnlyFullMigrationCannotBorrowContentReceiptAsOriginalObjectProof",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testCloudOnlyMigrationUsesExactQualifiedRawBytesWithoutExpandingOldTarget",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testLostReceiptResultOnlyQueriesOriginalNonceAndRetainsRawBytes",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testOrdinarySyncAdvanceDoesNotInvalidateSameStoreMeasuredReport",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testRealLocalProbeExplicitDeclarationAndContentAtomicReceipt",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testSecretDurableBodyIsRejectedBeforeQueryHttp",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testSuccessorFamilyCannotFirstPublishUnknownOriginal",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "method": "testUnpairedDeliveryManifestRefusesBeforeLocalStageOrAck",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptStorageTests",
+      "method": "testCompleteOriginalFsyncDescriptorAndNonceSurviveReopen",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptStorageTests",
+      "method": "testContentOriginalBytesAndIntentCommitWithoutCursorOrOutboxChanges",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptStorageTests",
+      "method": "testGlobalErasesRawBodyAndOriginalButPreservesFrozenOriginalQueryMetadata",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptStorageTests",
+      "method": "testGlobalSQLFailureLeavesCompleteOriginalAndReceiptRowsRecoverable",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptStorageTests",
+      "method": "testGuardMemberAndDigestFailuresPublishNoPartialIntent",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptStorageTests",
+      "method": "testLivePhysicalStoreProbeProducesBoundEvidenceWithoutQualification",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptStorageTests",
+      "method": "testQueuedCleanupCannotUnlinkSameNameSuccessorInode",
+      "status": "passed"
+    },
+    {
+      "class": "IMReceiptStorageTests",
+      "method": "testReceiptIntentCannotChangeOriginalTupleOrBorrowSuccessorFamily",
+      "status": "passed"
+    },
+    {
+      "class": "IMSessionTests",
+      "method": "testInputMayClearOnlyAfterOutboxCommit",
+      "status": "passed"
+    },
+    {
+      "class": "IMSessionTests",
+      "method": "testReadableThemeColorsKeepAccentAndWhitePrimaryTextDistinct",
+      "status": "passed"
+    },
+    {
+      "class": "IMSessionTests",
+      "method": "testReadOnlyDoesNotQueueOrConsumeDraft",
+      "status": "passed"
+    },
+    {
+      "class": "IMStorageTests",
+      "method": "testCompleteEmptyListReplacesStaleProjection",
+      "status": "passed"
+    },
+    {
+      "class": "IMStorageTests",
+      "method": "testEpochCursorIsExactAndRejectsWrongEpochOrRegression",
+      "status": "passed"
+    },
+    {
+      "class": "IMStorageTests",
+      "method": "testIncomingUnreadIsAtomicDeduplicatedAndCursorCannotRegress",
+      "status": "passed"
+    },
+    {
+      "class": "IMStorageTests",
+      "method": "testMessageCursorAndProjectionCommitTogetherWithoutVersionRegression",
+      "status": "passed"
+    },
+    {
+      "class": "IMStorageTests",
+      "method": "testNamespacesIsolateAccountsInstancesAndDemo",
+      "status": "passed"
+    },
+    {
+      "class": "IMStorageTests",
+      "method": "testOutboxIdentityIsStableAndCommitIsAtomic",
+      "status": "passed"
+    },
+    {
+      "class": "IMStorageTests",
+      "method": "testOutboxSurvivesReopeningStore",
+      "status": "passed"
+    },
+    {
+      "class": "IMStorageTests",
+      "method": "testStringIdentifiersKeepLargeValuesExact",
+      "status": "passed"
+    },
+    {
+      "class": "IMStorageTests",
+      "method": "testUnreadAndDraftSurviveReopeningWithoutReadReceipt",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup",
+    "reason": "    deployment_restore_pg_test.go:201: explicit owned eight-domain restore/native-start fixture required"
+  },
+  {
+    "name": "TestExportRealProtocolAndWriterFence",
+    "reason": "    export_fence_test.go:31: explicit isolated export test environment required"
+  },
+  {
+    "name": "TestForwardTemporaryProjectionRecoversAtSameVersion",
+    "reason": "    forward_gateway_test.go:51: explicit private isolated forward fixture required"
+  },
+  {
+    "name": "TestGatewayJSONFlushCancellationAndUntrustedProof",
+    "reason": "    forward_gateway_test.go:212: explicit private isolated forward fixture required"
+  },
+  {
+    "name": "TestRefreshTransactionSingleConsumeWithoutOuterProcessFence",
+    "reason": "    session_refresh_test.go:22: explicit isolated refresh environment required"
+  },
+  {
+    "name": "TestSyncSnapshotCaptureRejectsChangingCommittedOwners",
+    "reason": "    sync_snapshot_test.go:204: explicit ready window for the fresh sync realm required"
+  },
+  {
+    "name": "TestSyncSnapshotNATSDuplicateAndBodyRejection",
+    "reason": "    sync_snapshot_test.go:271: explicit ready window for the fresh sync realm required"
+  },
+  {
+    "name": "TestSyncSnapshotMetadataAndEncryptedPagesContainReferencesOnly",
+    "reason": "    sync_snapshot_test.go:347: explicit ready window for the fresh sync realm required"
+  },
+  {
+    "name": "TestSyncSnapshotCursorPreservesIntegersAboveFloatPrecision",
+    "reason": "    sync_snapshot_test.go:432: explicit source execution window required"
+  },
+  {
+    "name": "TestSyncSnapshotOwnedOutboxTransactions",
+    "reason": "    sync_snapshot_test.go:502: explicit ready window for the fresh sync realm required"
+  },
+  {
+    "name": "TestSyncSnapshotReplayDoesNotCrossMissingCommittedOrigin",
+    "reason": "    sync_snapshot_test.go:509: explicit ready window for the fresh sync realm required"
+  }
+]

@@ -23,6 +23,7 @@ func (a *App) relationship(ctx context.Context, first, second string) (bool, boo
 }
 func (a *App) directoryRoutes(h func(string, func(http.ResponseWriter, *http.Request) error), internal func(func(http.ResponseWriter, *http.Request) error) func(http.ResponseWriter, *http.Request) error) {
 	a.avatarDirectoryRoutes(h, internal)
+	a.profileDirectoryRoutes(h, internal)
 	h("POST /internal/profiles", internal(func(w http.ResponseWriter, r *http.Request) error {
 		var q struct {
 			IDs []string `json:"ids"`
@@ -89,33 +90,7 @@ func (a *App) directoryRoutes(h func(string, func(http.ResponseWriter, *http.Req
 		respond(w, 200, profile)
 		return nil
 	}))
-	h("PATCH /api/me", func(w http.ResponseWriter, r *http.Request) error {
-		u, e := a.current(r)
-		if e != nil {
-			return e
-		}
-		var q struct {
-			DisplayName string `json:"displayName"`
-		}
-		if e = decode(r, &q); e != nil {
-			return e
-		}
-		if len([]rune(q.DisplayName)) < 1 || len([]rune(q.DisplayName)) > 64 {
-			return fail(400, "DISPLAY_NAME_LIMIT", "Display name requires 1–64 characters")
-		}
-		_, e = a.DB.Exec(r.Context(), `INSERT INTO directory.profiles(user_id,display_name) VALUES($1,$2) ON CONFLICT(user_id) DO UPDATE SET display_name=EXCLUDED.display_name,row_version=directory.profiles.row_version+1,updated_at=now()`, u.ID, q.DisplayName)
-		if e != nil {
-			return e
-		}
-		u.DisplayName = q.DisplayName
-		profile, e := a.avatarProfileFields(r.Context(), u.ID)
-		if e != nil {
-			return e
-		}
-		applyUserProfile(&u, profile)
-		respond(w, 200, u)
-		return nil
-	})
+	h("PATCH /api/me", a.patchOwnProfile)
 	h("POST /internal/export", internal(func(w http.ResponseWriter, r *http.Request) error {
 		var q struct {
 			UserID string `json:"userId"`
@@ -307,8 +282,8 @@ func (a *App) contactRequest(w http.ResponseWriter, r *http.Request) error {
 		if priorPeer != q.UserID {
 			return fail(409, "IDEMPOTENCY_CONFLICT", "Original contact request targeted another peer")
 		}
-		if blocked || gate == "denied" || priorGeneration != gen || priorState != "pending" && !(priorState == "accepted" && state == "friend") {
-			return fail(409, "REQUEST_STALE", "Use a new explicit request after the recipient reopens its inbound gate")
+		if blocked || priorGeneration != gen || priorState != "pending" && !(priorState == "accepted" && state == "friend") {
+			return fail(409, "REQUEST_STALE", "The old request is settled or revoked; a new explicit requestId is required")
 		}
 		respond(w, 200, map[string]string{"id": priorID, "state": priorState})
 		return nil
@@ -316,7 +291,7 @@ func (a *App) contactRequest(w http.ResponseWriter, r *http.Request) error {
 	if lookup != pgx.ErrNoRows {
 		return lookup
 	}
-	if blocked || gate == "denied" {
+	if blocked {
 		return fail(403, "REQUEST_NOT_ALLOWED", "Contact request is not allowed")
 	}
 	if state == "friend" {
@@ -325,7 +300,18 @@ func (a *App) contactRequest(w http.ResponseWriter, r *http.Request) error {
 	}
 	var id string
 	e = tx.QueryRow(r.Context(), `SELECT id::text FROM directory.contact_requests WHERE requester_id=$1 AND recipient_id=$2 AND state='pending' AND generation=$3`, u.ID, q.UserID, gen).Scan(&id)
+	if e == nil {
+		return fail(409, "CONTACT_REQUEST_PENDING", "An application is already pending; reload its original request")
+	}
 	if e == pgx.ErrNoRows {
+		if e = contactRequestRate(r.Context(), tx, u.ID, q.UserID); e != nil {
+			return e
+		}
+		if gate != "open" {
+			if _, e = tx.Exec(r.Context(), `UPDATE directory.contacts SET request_gate='open' WHERE owner_id=$1 AND peer_id=$2`, q.UserID, u.ID); e != nil {
+				return e
+			}
+		}
 		id = newID()
 		_, e = tx.Exec(r.Context(), `INSERT INTO directory.contact_requests(id,request_id,requester_id,recipient_id,state,generation) VALUES($1,$2,$3,$4,'pending',$5)`, id, q.RequestID, u.ID, q.UserID, gen)
 	}
@@ -373,13 +359,13 @@ func (a *App) resolveContact(w http.ResponseWriter, r *http.Request, accept bool
 		desired = "accepted"
 	}
 	if state == desired {
-		if accept && (blocked || gate == "denied" || requestGen != currentGen) {
+		if accept && (blocked || requestGen != currentGen) {
 			return fail(409, "REQUEST_STALE", "Original acceptance has been revoked")
 		}
 		respond(w, 200, map[string]string{"state": state})
 		return nil
 	}
-	if state != "pending" || blocked || gate == "denied" || requestGen != currentGen {
+	if state != "pending" || blocked || requestGen != currentGen {
 		return fail(409, "REQUEST_STALE", "Request is no longer actionable")
 	}
 	_, e = tx.Exec(r.Context(), `UPDATE directory.contact_requests SET state=$2 WHERE id=$1`, r.PathValue("id"), desired)
@@ -389,9 +375,12 @@ func (a *App) resolveContact(w http.ResponseWriter, r *http.Request, accept bool
 	if accept {
 		_, e = tx.Exec(r.Context(), `UPDATE directory.contacts SET state='friend',permission_generation=permission_generation+1,updated_at=now() WHERE ((owner_id=$1 AND peer_id=$2)OR(owner_id=$2 AND peer_id=$1)) AND state<>'friend'`, requester, recipient)
 	} else {
-		_, e = tx.Exec(r.Context(), `UPDATE directory.contacts SET request_gate='denied',request_generation=request_generation+1 WHERE owner_id=$1 AND peer_id=$2`, recipient, requester)
+		_, e = tx.Exec(r.Context(), `UPDATE directory.contacts SET request_gate='open',request_generation=request_generation+1 WHERE owner_id=$1 AND peer_id=$2`, recipient, requester)
 	}
 	if e != nil {
+		return e
+	}
+	if _, e = tx.Exec(r.Context(), `UPDATE directory.contact_requests SET state='rejected' WHERE ((requester_id=$1 AND recipient_id=$2)OR(requester_id=$2 AND recipient_id=$1)) AND state='pending'`, requester, recipient); e != nil {
 		return e
 	}
 	if e = tx.Commit(r.Context()); e != nil {
@@ -413,8 +402,11 @@ func (a *App) removeContact(w http.ResponseWriter, r *http.Request) error {
 	if e = relationLock(r.Context(), tx, u.ID, r.PathValue("userId")); e != nil {
 		return e
 	}
-	_, e = tx.Exec(r.Context(), `UPDATE directory.contacts SET state='removed',permission_generation=permission_generation+1,updated_at=now() WHERE ((owner_id=$1 AND peer_id=$2)OR(owner_id=$2 AND peer_id=$1)) AND state<>'removed'`, u.ID, r.PathValue("userId"))
+	_, e = tx.Exec(r.Context(), `UPDATE directory.contacts SET state='removed',request_gate='open',request_generation=request_generation+1,permission_generation=permission_generation+1,updated_at=now() WHERE ((owner_id=$1 AND peer_id=$2)OR(owner_id=$2 AND peer_id=$1)) AND (state<>'removed' OR EXISTS(SELECT 1 FROM directory.contact_requests WHERE ((requester_id=$1 AND recipient_id=$2)OR(requester_id=$2 AND recipient_id=$1)) AND state='pending'))`, u.ID, r.PathValue("userId"))
 	if e != nil {
+		return e
+	}
+	if _, e = tx.Exec(r.Context(), `UPDATE directory.contact_requests SET state='rejected' WHERE ((requester_id=$1 AND recipient_id=$2)OR(requester_id=$2 AND recipient_id=$1)) AND state='pending'`, u.ID, r.PathValue("userId")); e != nil {
 		return e
 	}
 	if e = tx.Commit(r.Context()); e != nil {
@@ -460,14 +452,18 @@ func (a *App) block(w http.ResponseWriter, r *http.Request, block bool) error {
 			if inserted.RowsAffected() > 0 {
 				advance = 1
 			}
-			_, e = tx.Exec(r.Context(), `INSERT INTO directory.contacts(owner_id,peer_id,state,request_gate) VALUES($1,$2,'removed','denied') ON CONFLICT(owner_id,peer_id) DO UPDATE SET state='removed',request_gate='denied',request_generation=directory.contacts.request_generation+1,permission_generation=directory.contacts.permission_generation+$3`, p[0], p[1], advance)
+			_, e = tx.Exec(r.Context(), `INSERT INTO directory.contacts(owner_id,peer_id,state,request_gate) VALUES($1,$2,'removed','open') ON CONFLICT(owner_id,peer_id) DO UPDATE SET request_gate='open',request_generation=directory.contacts.request_generation+$3,permission_generation=directory.contacts.permission_generation+$3`, p[0], p[1], advance)
 			if e != nil {
 				return e
 			}
 		}
 		_, e = tx.Exec(r.Context(), `UPDATE directory.contact_requests SET state='rejected' WHERE ((requester_id=$1 AND recipient_id=$2) OR(requester_id=$2 AND recipient_id=$1)) AND state='pending'`, u.ID, peer)
 	} else {
-		_, e = tx.Exec(r.Context(), `DELETE FROM directory.blocks WHERE owner_id=$1 AND peer_id=$2`, u.ID, peer)
+		removed, err := tx.Exec(r.Context(), `DELETE FROM directory.blocks WHERE owner_id=$1 AND peer_id=$2`, u.ID, peer)
+		e = err
+		if e == nil && removed.RowsAffected() > 0 {
+			_, e = tx.Exec(r.Context(), `UPDATE directory.contacts SET permission_generation=permission_generation+1,request_gate='open',updated_at=now() WHERE(owner_id=$1 AND peer_id=$2)OR(owner_id=$2 AND peer_id=$1)`, u.ID, peer)
+		}
 	}
 	if e != nil {
 		return e

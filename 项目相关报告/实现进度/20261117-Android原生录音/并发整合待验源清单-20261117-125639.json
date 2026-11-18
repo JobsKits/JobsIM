@@ -1,0 +1,100 @@
+{
+  "status": "appended integrated source manifest only; NOT compiled/tested",
+  "supersedesForCurrentIntegratedSource": "项目相关报告/实现进度/20261117-Android原生录音/最终待验源清单-20261117-125047.json",
+  "priorManifestPreserved": true,
+  "priorManifestSHA256": "803463bcc237094a41ec383fa4599b7dca9ba629376cc215fbfadc97a5fae2f4",
+  "sourceEntries": 23,
+  "differenceAgainstPriorManifest": [
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+      "previousSHA256": "8e1a4cfdd083759c81ff4921fd64e2326549ddebc7d47ba319c3af80129b5d73",
+      "currentSHA256": "9f8bc0a7c3522476870e4cc7b9d3dd26a461710345b7ee56aaf33b282924c38b"
+    }
+  ],
+  "SHA256": {
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingRules.kt": "e671faf511baf5a9b17bd628174c234ea5113bc1b840a98a8890f32ec0218818",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingFiles.kt": "ea6271f8c7f6d63ffea2e738ec253e524871a2a91decf90ae0dd05c841be80e3",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingComposer.kt": "8649dfca6ccda7350f423087449fb978a2b4e2fc80ec1b4e3725232487c4eea9",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingText.kt": "41ff2271bce756cbf022415604b0b5af9deaf2d53a45b633f95134a49197fdc5",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingEngine.kt": "6c166cb8e82be460486d6711ebb1f8b99d0ad33280eebd403deef1d0753dc6d2",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadText.kt": "d9b2abbb321e7e59a7e0d36008e0c98dcb0450b626aa2a9fbb844586c853836b",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadScreen.kt": "b537ea115163b6b402c2b86784dd0c91522894c5e52a2a9ccf7d639b616ed9ed",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadApi.kt": "c02ead24ddfb7e6e828db7774a343eb3f73582a871253539b6ed47be55ee1a6b",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadProtocol.kt": "68903660ed208523a5f9a157d3939a3c3e03542a1b63714b0c8feca8991dfc7d",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadCoordinator.kt": "ba46081d4522ec08a2737ce3be9c53a7ec4ac214defaa4f87f86202cb7a4251a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt": "f9a47b7dba6b52a17d0859414af6e7c3cfae1c4474925a351f7d0bbe56f3face",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt": "9f8bc0a7c3522476870e4cc7b9d3dd26a461710345b7ee56aaf33b282924c38b",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt": "78d14be0accfc4305669c6845149c96eb6c9ea811ab9178d5e9b54986b07e788",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionCleanup.kt": "9a1ec292e22923013736a84a57bad9da0907aff3db66a4bacb16d9a1496cc887",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt": "40b54b4528558a295b7a1706e9ea545b3b22caec5040d977f5417a06a57f3f43",
+    "代码/前端/Android/app/src/main/AndroidManifest.xml": "00efada43c57a77acb90380b8f5301a0328a2e0f1f0fd8b6178260bdf19e6157",
+    "测试/前端/Android/Unit/VoiceRecordingRulesTest.kt": "938fff98be0b9d9e8d14b12efb0aaaee698e1b1dc8fc029e37459e565b5e6aad",
+    "测试/前端/Android/Instrumentation/VoiceRecordingNativeTest.kt": "a0efdda0ee8f25e0a2236265cb9b9835c8097737062b8ad14dc8c89d0ee601d8",
+    "测试/前端/Android/Unit/VoiceUploadRulesTest.kt": "e934c8521af26aeb4398cd8fd6cb423b77a964e7189720ab96fa2f9fbcd38aec",
+    "测试/前端/Android/Instrumentation/VoiceUploadApiNativeTest.kt": "d94be97544e8c6f4b3d4f9fbe51eb94ba68b390cb8a4e8fa89dffca5fd89ca26",
+    "测试/前端/Android/Instrumentation/VoiceUploadGlobalFloorNativeTest.kt": "a83aac511429fa65ccbce8c001cad3b85520916d64e557db40b8f69606d77218",
+    "测试/前端/Android/Instrumentation/VoiceUploadQueueNativeTest.kt": "36c7221b5153fa69a9eaddab316caa064a1614fb3d5072bb5c8c8337d4967015",
+    "项目相关报告/实现进度/20261117-Android原生录音/README.md": "84fdf6fcabde45798c27d321816aa6f4efbff4236773fd38676298cd9d3124bb"
+  },
+  "reviewedChatModelHooks": {
+    "status": "read-only current-source review; all required voice hooks remain present",
+    "anchors": {
+      "private fun clearIdentity(": 381,
+      "fun closeConversation()": 1109,
+      "fun onForeground(": 1124,
+      "private suspend fun submit(": 1492,
+      "fun stableVoiceUploadOwner()": 2050,
+      "fun mayResumeVoiceUpload(": 2057,
+      "private fun voiceUploadCoordinator(": 2086,
+      "fun saveVoiceRecording(": 2130
+    },
+    "exactSourceStrings": {
+      "queueConstruction": "private val voiceUploadQueue = VoiceUploadQueue(app)",
+      "identityLossCancel": "voiceUploadWork?.cancel()",
+      "identityLossFreeze": "voiceUploadQueue.freezeAccount(oldVoiceProfile, oldVoiceDeployment, oldVoiceUser)",
+      "globalCleanupQueueHook": "SyncMediaCleanup(liveDb, getApplication<Application>().cacheDir, voiceUploadQueue).drain(plans)",
+      "ordinaryAudioFloor": "voiceUploadQueue.assertMessageWritable(it, row.conversationId, row.clientMsgId)",
+      "beforeAfterRoomFloor": "voiceUploadQueue.assertNetworkAllowed(intent.requestId, intent.source.owner)",
+      "durableOriginalIds": "recording.durableRequestId, recording.durableClientMsgId)",
+      "durablePrepareBeforeCoordinator": "voiceUploadQueue.prepare(source, bytes, durationMillis,",
+      "originalReplySnapshot": "conversation.membershipGeneration, reply?.id.orEmpty(),",
+      "leaseAfterSuspension": "check(recording.lease.permits(voiceRecordingOwner()))",
+      "stableOwnerFamilyEpoch": "VoiceUploadOwner(namespace, profile, url, deployment, userId, native.deviceId, native.familyId, restoreEpoch)",
+      "savedOnlyCopy": "info = VoiceUploadText.text(language, \"saved\")"
+    }
+  },
+  "unchangedByteForByteAgainstPriorManifest": [
+    "VoiceUploadQueue.kt",
+    "VoiceUploadProtocol.kt",
+    "VoiceUploadCoordinator.kt",
+    "OwnDeletionCleanup.kt",
+    "SyncCleanup.kt",
+    "VoiceRecordingComposer.kt",
+    "MainActivity.kt"
+  ],
+  "reviewConclusion": [
+    "explicit send snapshots original reply and stable owner, then prepares same requestId/clientMsgId before HTTP",
+    "Room enqueue checks original body/owner and durable network floor before and after writer work",
+    "global cleanup includes queue and blocks outer completion on conflict; own-deletion queue floor precedes Room index erase",
+    "clearIdentity cancels work, clears visible task metadata, freezes former scope; close chat/background cancel in-flight work",
+    "account/message floor and ENQUEUE_UNKNOWN implementations unchanged from 125047 source-ready"
+  ],
+  "testSourceMethods": {
+    "VoiceRecordingRulesTest.kt": 5,
+    "VoiceRecordingNativeTest.kt": 3,
+    "VoiceUploadRulesTest.kt": 7,
+    "VoiceUploadApiNativeTest.kt": 4,
+    "VoiceUploadGlobalFloorNativeTest.kt": 3,
+    "VoiceUploadQueueNativeTest.kt": 11
+  },
+  "newExecution": {
+    "Gradle": 0,
+    "JVM": 0,
+    "instrumentation": 0,
+    "APKs": 0,
+    "devices": 0,
+    "services": 0
+  },
+  "limitation": "old 125047 JSON no longer equals current 23-file integrated source because only ChatModel changed; old 33 JVM/two APK remain initial131-input evidence only; newest durable source has no passing build/runtime evidence",
+  "rootDriftEvidence": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/并发输入差异-1794891284810.json"
+}

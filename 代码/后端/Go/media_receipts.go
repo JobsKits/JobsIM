@@ -22,14 +22,18 @@ func (a *App) receiptMediaObject(w http.ResponseWriter, r *http.Request) error {
 		User    string `json:"userId"`
 		Message string `json:"messageId"`
 		Object  string `json:"objectId"`
+		Device  string `json:"deviceId"`
+		Store   string `json:"storeGeneration"`
+		Epoch   string `json:"restoreEpoch"`
+		Content string `json:"contentVersion"`
 	}
 	if err := decodeReceiptRequest(r, &q); err != nil {
 		return err
 	}
-	if !syncValidationID(q.User) || !syncValidationID(q.Message) || !syncValidationID(q.Object) {
+	if !syncValidationID(q.User) || !syncValidationID(q.Message) || !syncValidationID(q.Object) || !syncValidationCounter(q.Content, false) {
 		return fail(400, "INVALID_RECEIPT_OBJECT", "Canonical source, object and recipient identities required")
 	}
-	if err := a.rpc(r.Context(), "message", "/internal/attachment-confirm", map[string]string{"userId": q.User, "messageId": q.Message, "objectId": q.Object}, nil); err != nil {
+	if err := a.mediaAttachmentAccess(r.Context(), q.Message, q.Object, q.User, q.Device, q.Store, q.Epoch, q.Content); err != nil {
 		return err
 	}
 	var key, contentType string

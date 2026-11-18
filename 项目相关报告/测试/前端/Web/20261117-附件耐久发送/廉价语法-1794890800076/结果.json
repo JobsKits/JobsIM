@@ -1,0 +1,88 @@
+{
+  "at": "2026-11-17T04:46:40.076Z",
+  "method": "Node --check with native type stripping; no imports executed; .tsx and static type checking excluded",
+  "results": [
+    {
+      "file": "代码/前端/Web/Src/AccountDeletionCleanup.ts",
+      "status": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "代码/前端/Web/Src/AccountDeletionStore.ts",
+      "status": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "代码/前端/Web/Src/GlobalMessages.ts",
+      "status": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "代码/前端/Web/Src/storage.ts",
+      "status": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "代码/前端/Web/Src/AttachmentSendProtocol.ts",
+      "status": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "代码/前端/Web/Src/AttachmentSendActions.ts",
+      "status": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "代码/前端/Web/Src/AttachmentSendStore.ts",
+      "status": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "代码/前端/Web/Src/AttachmentErasureProtocol.ts",
+      "status": 0,
+      "signal": null,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "passed": true,
+  "sourceBefore": {
+    "代码/前端/Web/Src/AccountDeletionCleanup.ts": "f9047fcbaf38295a6e4ad44649401548b0f2ddadd021293b98e1f461e7987451",
+    "代码/前端/Web/Src/AccountDeletionStore.ts": "7c24205b3f841f56862fa21aaa6facafa71e1f00a9c6a18ec6ad9152e3bed3fe",
+    "代码/前端/Web/Src/GlobalMessages.ts": "e0478fcdcfcd0d3c733fd64a99e7c2a0e66ad28a27edea1f3c85a15dc20e3eae",
+    "代码/前端/Web/Src/storage.ts": "3f31b557235bf788c7a30aa7cec878eb1cca893ff4f2c0d308580f100715fe87",
+    "代码/前端/Web/Src/AttachmentSendProtocol.ts": "8ac647e74a52f53bd3fc16dd6dc30c6a0137f01a5648b78dcad87f336bf843aa",
+    "代码/前端/Web/Src/AttachmentSendActions.ts": "74cc9cae7f0447243cb2b40e4df4e1098e1549fe1b8b2bb180085cfc4826ea5b",
+    "代码/前端/Web/Src/AttachmentSendStore.ts": "c07cfc2050ef5e2c377fcf364f141050a36382c6ec5459c050769a199dcd7b03",
+    "代码/前端/Web/Src/AttachmentErasureProtocol.ts": "73c4b5cb2a64b0b2e9486f84dc0c1472e02ef7160229427adf2f7e68f7096725"
+  },
+  "sourceAfter": {
+    "代码/前端/Web/Src/AccountDeletionCleanup.ts": "f9047fcbaf38295a6e4ad44649401548b0f2ddadd021293b98e1f461e7987451",
+    "代码/前端/Web/Src/AccountDeletionStore.ts": "7c24205b3f841f56862fa21aaa6facafa71e1f00a9c6a18ec6ad9152e3bed3fe",
+    "代码/前端/Web/Src/GlobalMessages.ts": "e0478fcdcfcd0d3c733fd64a99e7c2a0e66ad28a27edea1f3c85a15dc20e3eae",
+    "代码/前端/Web/Src/storage.ts": "3f31b557235bf788c7a30aa7cec878eb1cca893ff4f2c0d308580f100715fe87",
+    "代码/前端/Web/Src/AttachmentSendProtocol.ts": "8ac647e74a52f53bd3fc16dd6dc30c6a0137f01a5648b78dcad87f336bf843aa",
+    "代码/前端/Web/Src/AttachmentSendActions.ts": "74cc9cae7f0447243cb2b40e4df4e1098e1549fe1b8b2bb180085cfc4826ea5b",
+    "代码/前端/Web/Src/AttachmentSendStore.ts": "c07cfc2050ef5e2c377fcf364f141050a36382c6ec5459c050769a199dcd7b03",
+    "代码/前端/Web/Src/AttachmentErasureProtocol.ts": "73c4b5cb2a64b0b2e9486f84dc0c1472e02ef7160229427adf2f7e68f7096725"
+  },
+  "inputsUnchanged": true,
+  "indexedDB": false,
+  "browser": false,
+  "typeCheck": false,
+  "build": false
+}

@@ -1,0 +1,318 @@
+{
+  "status": "passed",
+  "passed": 48,
+  "failed": 0,
+  "inputStable": true,
+  "before": [
+    {
+      "path": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "sha256": "e5c04b76589b48b419d49c29df022d2af598902bfaf12e609fb9153f58f74b0d"
+    },
+    {
+      "path": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "sha256": "877e621a465e3c035253c879210ae00daa14cb1b24802cdf62d7abf12de794bf"
+    }
+  ],
+  "after": [
+    {
+      "path": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "sha256": "e5c04b76589b48b419d49c29df022d2af598902bfaf12e609fb9153f58f74b0d"
+    },
+    {
+      "path": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "sha256": "877e621a465e3c035253c879210ae00daa14cb1b24802cdf62d7abf12de794bf"
+    }
+  ],
+  "results": [
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "原点与新建资源",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "默认保护独立journal和密钥",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "未知顶层拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "嵌套链接拒绝且目标保留",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "目录对象替换拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "确认后正文变化拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "确认后新增子项拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "中断断点续删不重初始化",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "仅移除匹配本机reference",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "错误reference保留",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "显式隔离state不处理默认reference",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "yes不能旁路EOF清理确认",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "非空输入取消",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "空行确认保留实际选择",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "旧缺原点不得追认清理",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "备份失败不进入删除",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "条件调用也必须传播broker清单失败",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "dump失败不生成完整备份",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "实际磁盘4GiB门禁及超大预算拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "本地默认仅本机不准备穿透",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "公开确认EOF不触发穿透",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "穿透准备失败保持本地",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "穿透启动失败恢复严格本机Origin",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "name": "穿透晚退进入恢复路径",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "原点与新建资源",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "默认保护独立journal和密钥",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "未知顶层拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "嵌套链接拒绝且目标保留",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "目录对象替换拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "确认后正文变化拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "确认后新增子项拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "中断断点续删不重初始化",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "仅移除匹配本机reference",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "错误reference保留",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "显式隔离state不处理默认reference",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "yes不能旁路EOF清理确认",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "非空输入取消",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "空行确认保留实际选择",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "旧缺原点不得追认清理",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "备份失败不进入删除",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "条件调用也必须传播broker清单失败",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "dump失败不生成完整备份",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "实际磁盘4GiB门禁及超大预算拒绝",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "本地默认仅本机不准备穿透",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "公开确认EOF不触发穿透",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "穿透准备失败保持本地",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "穿透启动失败恢复严格本机Origin",
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "script": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "name": "穿透晚退进入恢复路径",
+      "exitCode": 0,
+      "error": null
+    }
+  ],
+  "privateFixture": "/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-反部署 空格.gpQqNN",
+  "liveInstanceTouched": false
+}

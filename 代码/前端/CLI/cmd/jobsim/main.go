@@ -54,7 +54,7 @@ func main() {
 }
 func run() error {
 	dataDirectory := flag.String("data-dir", "", "Private local state root; defaults to the user configuration directory")
-	base := flag.String("server", "https://127.0.0.1:8443", "JobsIM instance HTTPS URL")
+	base := flag.String("server", "https://127.0.0.1:9443", "JobsIM instance HTTPS URL")
 	ca := flag.String("ca", "", "Instance-specific trusted CA PEM")
 	dev := flag.Bool("insecure-loopback", false, "Allow HTTP on loopback for development; TLS verification is never disabled")
 	flag.Parse()
@@ -97,11 +97,14 @@ func run() error {
 	fmt.Println("JobsIM instance:", boot["name"], c.deployment)
 	args := flag.Args()
 	if len(args) == 0 || args[0] == "help" {
-		fmt.Println("jobsim --server URL [--ca CA.pem] login|register|reauthenticate|recover|bootstrap|password-changes|password-change-reconcile ID|password-change-retry ID\nAfter login: password-change, password-changes, password-change-reconcile, password-change-retry, users, contacts, relationship, request, reopen, operations, resume, accept, reject, remove-contact, block, unblock, direct, group, members, add-member, remove-member, rename, transfer, leave, conversations, history, sync, sync-status, sync-schema, local-history, cached, draft, drafts, font, view, read, cloud-draft, cloud-draft-set, cloud-draft-reply, cloud-draft-clear, cloud-draft-adopt, cloud-draft-recover, self-operations, resume-self, data-export, data-exports, data-export-status, data-export-reconcile, data-export-retry, data-export-cancel, data-export-download, storage-status, storage-declare, receive-text, receive-message, receive-object, receive-object-file, receipt-file-status, receipts, reconcile-receipt, retry-receipt, message, send, forward, retry, reconcile, outbox, upload, download, download-forward, edit, retract, react, pin, favorite, search, favorites, more, open-result, mention, announcement, announce, clear-announcement, announcement-operations, resume-announcement, logout, quit")
+		fmt.Println("jobsim --server URL [--ca CA.pem] login|register|reauthenticate|recover|bootstrap|password-changes|password-change-reconcile ID|password-change-retry ID\nAfter login: account-delete, account-deletions, deletion-reconcile, deletion-retry, deletion-query, deletion-cancel, deletion-cancel-retry, password-change, password-changes, password-change-reconcile, password-change-retry, users, contacts, relationship, request, reopen, operations, resume, accept, reject, remove-contact, block, unblock, direct, group, members, add-member, remove-member, rename, transfer, group-policy, group-change, group-recover, group-operations, group-check, group-retry, group-invites, invite-code, create-invite, revoke-invite, join-group, group-applications, group-approve, group-reject, leave, conversations, history, sync, sync-status, sync-schema, local-history, cached, draft, drafts, font, view, read, cloud-draft, cloud-draft-set, cloud-draft-reply, cloud-draft-clear, cloud-draft-adopt, cloud-draft-recover, self-operations, resume-self, data-export, data-exports, data-export-status, data-export-reconcile, data-export-retry, data-export-cancel, data-export-download, migration-capabilities, migration-pair, migration-create, migration-import, migration-list, migration-status, migration-retry, migration-cancel, migration-history, migration-file, receipt-context, receipt-profiles, receipt-target, retention, retention-set, retention-operations, retention-retry, storage-status, storage-declare, receive-text, receive-message, receive-object, receive-object-file, receipt-file-status, receipts, reconcile-receipt, retry-receipt, message, send, forward, retry, reconcile, outbox, upload, download, download-forward, edit, retract, react, pin, favorite, search, favorites, more, open-result, mention, announcement, announce, clear-announcement, announcement-operations, resume-announcement, logout, quit")
 		return nil
 	}
 	if args[0] == "bootstrap" {
 		return printJSON(boot)
+	}
+	if oneOf(args[0], "account-deletions", "deletion-reconcile", "deletion-retry", "deletion-query", "deletion-cancel", "deletion-cancel-retry") {
+		return c.runOwnDeletionResume(*dataDirectory, *ca, args, bufio.NewReader(os.Stdin))
 	}
 	if oneOf(args[0], "password-change-reconcile", "password-change-retry", "password-changes") {
 		return c.runPasswordChangeResume(*dataDirectory, *ca, args, bufio.NewReader(os.Stdin))
@@ -236,6 +239,9 @@ func (c *client) callWithToken(method, path string, body any, out any, token str
 		return e
 	}
 	req.Header.Set("Content-Type", "application/json")
+	if err := c.receiptRequestHeaders(req); err != nil {
+		return err
+	}
 	if token != "" {
 		req.Header.Set("Authorization", "Bearer "+token)
 	}
@@ -320,6 +326,15 @@ func projectUnavailable(value any) {
 	}
 }
 func (c *client) command(cmd, args string) error {
+	if handled, err := c.migrationCommand(cmd, args); handled {
+		return err
+	}
+	if handled, err := c.ownDeletionCommand(cmd, args); handled {
+		return err
+	}
+	if handled, err := c.groupCommand(cmd, args); handled {
+		return err
+	}
 	if handled, err := c.passwordChangeCommand(cmd, args); handled {
 		return err
 	}
@@ -402,10 +417,13 @@ func (c *client) command(cmd, args string) error {
 	case "conversations":
 		path = "/api/conversations"
 	case "members":
-		if len(parts) != 1 {
-			return fmt.Errorf("members CONVERSATION_ID")
+		if len(parts) < 1 || len(parts) > 2 {
+			return fmt.Errorf("members CONVERSATION_ID [CURSOR]")
 		}
-		path = "/api/conversations/" + url.PathEscape(parts[0]) + "/members"
+		path = "/api/conversations/" + url.PathEscape(parts[0]) + "/members?limit=50"
+		if len(parts) == 2 {
+			path += "&after=" + url.QueryEscape(parts[1])
+		}
 	case "add-member":
 		if len(parts) != 2 {
 			return fmt.Errorf("add-member CONVERSATION_ID USER_ID")
@@ -440,12 +458,6 @@ func (c *client) command(cmd, args string) error {
 		}
 		method, path = "PATCH", "/api/conversations/"+url.PathEscape(conversation)
 		body = map[string]string{"title": strings.TrimSpace(title)}
-	case "transfer":
-		if len(parts) != 2 {
-			return fmt.Errorf("transfer CONVERSATION_ID NEW_OWNER_ID")
-		}
-		method, path = "PATCH", "/api/conversations/"+url.PathEscape(parts[0])
-		body = map[string]string{"ownerId": parts[1]}
 	case "sync", "history":
 		if len(parts) < 1 {
 			return fmt.Errorf("history CONVERSATION_ID [CURSOR] | sync CONVERSATION_ID")

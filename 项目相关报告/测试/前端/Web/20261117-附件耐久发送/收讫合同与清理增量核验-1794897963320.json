@@ -1,0 +1,121 @@
+{
+  "at": "2026-11-17T06:46:03.319Z",
+  "type": {
+    "record": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/12-声明兼容类型执行.json",
+    "exit": 0,
+    "inputsUnchanged": true
+  },
+  "receiptTarget": {
+    "record": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/13-声明兼容浏览器执行.json",
+    "exit": 0,
+    "inputsUnchanged": true
+  },
+  "build": {
+    "record": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/14-声明兼容构建执行.json",
+    "exit": 0,
+    "inputsUnchanged": true,
+    "production": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/ReceiptDeclaration/1794897541275/Production"
+  },
+  "inputCount": 82,
+  "currentInputDrift": [],
+  "deltaAgainstPrior82": [
+    "代码/前端/Web/Src/AccountDeletionCleanup.ts",
+    "代码/前端/Web/Src/ReceiptContext.ts"
+  ],
+  "artifacts": [
+    {
+      "file": "Fonts/OFL.txt",
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "matches": true
+    },
+    {
+      "file": "Fonts/SourceSans3.ttf",
+      "sha256": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "matches": true
+    },
+    {
+      "file": "Licenses/Lucide.txt",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "matches": true
+    },
+    {
+      "file": "Licenses/react-dom.txt",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "matches": true
+    },
+    {
+      "file": "Licenses/react.txt",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "matches": true
+    },
+    {
+      "file": "Logo.svg",
+      "sha256": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+      "matches": true
+    },
+    {
+      "file": "assets/index-B3U1AnNU.js",
+      "sha256": "ba564110169077f714cd2ece90cb18bc64ba2a1911754ccc54de5687cd16839b",
+      "matches": true
+    },
+    {
+      "file": "assets/index-B3U1AnNU.js.map",
+      "sha256": "b96b479df441ee688051ba1853d2eca4353d1da736738685991845d6a80e6655",
+      "matches": true
+    },
+    {
+      "file": "assets/index-Cavxj1zD.css",
+      "sha256": "3e3ef20c2c45176a9e23ef8cdefa2e81bc51f815772497fb1e2483c801e94a2c",
+      "matches": true
+    },
+    {
+      "file": "index.html",
+      "sha256": "bcddb207f7c589e3d6310d1cdd37b70ca17568e4485184e8bdd3802e408c2379",
+      "matches": true
+    },
+    {
+      "file": "资源出处.md",
+      "sha256": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82",
+      "matches": true
+    }
+  ],
+  "publicFiles": [
+    {
+      "file": "Fonts/OFL.txt",
+      "matches": true
+    },
+    {
+      "file": "Fonts/SourceSans3.ttf",
+      "matches": true
+    },
+    {
+      "file": "Licenses/Lucide.txt",
+      "matches": true
+    },
+    {
+      "file": "Licenses/react-dom.txt",
+      "matches": true
+    },
+    {
+      "file": "Licenses/react.txt",
+      "matches": true
+    },
+    {
+      "file": "Logo.svg",
+      "matches": true
+    },
+    {
+      "file": "资源出处.md",
+      "matches": true
+    }
+  ],
+  "cleanupTarget": "08-收讫查询注销清理-1794897771473-27751/浏览器/结果.json",
+  "cleanupPassed": 3,
+  "pureCleanupRulesPassed": 14,
+  "prior41Preserved": true,
+  "prior41Reexecuted": false,
+  "realAPI": false,
+  "microphone": false,
+  "defaultInstanceChanged": false,
+  "valid": true
+}

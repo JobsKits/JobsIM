@@ -1,0 +1,11 @@
+{
+  "label": "06-注销回归",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/account-deletion.cjs/account-deletion.cjs"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 2.01,
+  "minimumFreeBytes": 5730226176,
+  "reason": null
+}

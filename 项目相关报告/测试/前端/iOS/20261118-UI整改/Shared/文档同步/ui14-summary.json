@@ -1,0 +1,31 @@
+{
+  "time": "2026-11-18T17:56:41.372492+08:00",
+  "docs": [
+    "README.md",
+    "../README.md",
+    "代码/前端/iOS/README.md",
+    "项目相关报告/资产盘点/README.md"
+  ],
+  "UI14": {
+    "passed": [
+      "own-profile-complete-save-frame",
+      "native-PHPicker-private-copy-MIME-size-QuickLook-close-delete-reselect-demo-submit"
+    ],
+    "failed": "realMac switch/prefill/auth complete but contacts empty"
+  },
+  "backendSyncFix": {
+    "PG": "valid pre-fix red to green",
+    "schema2Requests": 9,
+    "installable": true,
+    "friends": 2,
+    "scope": "strict/capture specific; not rerun old30"
+  },
+  "clientSyncFix": {
+    "source": "IMContactsRefresh/Session/AuthoritativeSync",
+    "additionalUnitMethods": 6,
+    "candidateTotal": 111,
+    "actualTests": "pending"
+  },
+  "phone": "new signed build in progress; upgrade verification waits reconnection; oldbuild5 not evidence",
+  "centralUnchanged": true
+}

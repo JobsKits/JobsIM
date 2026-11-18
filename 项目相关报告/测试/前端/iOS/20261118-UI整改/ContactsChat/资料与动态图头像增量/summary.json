@@ -1,0 +1,52 @@
+{
+  "timeUTC": "2026-11-18T07:48:17.667575+00:00",
+  "status": "source-and-parse-complete-runtime-pending",
+  "sources": [
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMUserProfileVC/IMUserProfileVC.swift",
+      "sha256": "2dae3317c475936389b7b73e632d07ffcca28746b4f3d774a8c8e38ad4c59088"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAvatarLoader/IMAvatarLoader.swift",
+      "sha256": "b32385c4263addac410ebc08d1c53cf9cebff25c091b7ee6500472466b2f04f0"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAvatarService/IMAvatarService.swift",
+      "sha256": "d59441eb2ea4855657e8ec82bb4673563fc514b8330ef562cc80bec6431088e5"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAvatarView/IMAvatarView.swift",
+      "sha256": "04c77f8f26ca51398b40b0d87f590f63df76c434b7f9de53d858df27c1f63bc7"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAvatarVC/IMAvatarVC.swift",
+      "sha256": "9759813a1e31638494f18bf5930d81592e452c8e2cb2841c8a9bfeb876cd1ad1"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIImage/UIImage+Make.swift",
+      "sha256": "cb9560e740d458882b270d1baeb5d032df183ced72f767c03368f1b74ec67e82"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift",
+      "sha256": "079ae45e0f3ee0ea4eb46fa95428e2c27522be6a5c0dd083ea66595c45b937da"
+    }
+  ],
+  "changes": [
+    "profile avatar tap for self; remove static-avatar text button and refresh button",
+    "readonly UID/real createdAt and contactBindings bound/unbound/hidden/unavailable states",
+    "editable own username/displayName/signature<=200 scalars; Save last; preserve draft edits against late profile fetch",
+    "GIF accepted in avatar document picker and original upload MIME, preserve original operation nonce/version/retry",
+    "authenticated main avatar first; ImageIO multi-frame decode with real per-frame delays; independently authorized static preview fallback",
+    "namespace/revision checks retained after awaits; packaged Logo on denial/failure"
+  ],
+  "limits": [
+    "max120 frames, max512 pixels, 32MP decoded budget, 10min total, max12000 timing references; overbudget returns nil and static preview fallback",
+    "no URL-extension GIF guessing; ImageIO detects actual bytes",
+    "animation screenshots, exact timings/loop behavior and actual upload/query/namespace tests pending",
+    "root shared service must expose signature overload and new profile endpoint; not edited by this agent"
+  ],
+  "parseExitCode": 0,
+  "built": false,
+  "deviceVerified": false,
+  "externalSourceEdited": false
+}

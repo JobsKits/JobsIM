@@ -1,0 +1,14 @@
+[
+  {
+    "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+    "returnCode": 0,
+    "output": "CAPABILITY_PASS\n",
+    "error": ""
+  },
+  {
+    "source": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+    "returnCode": 0,
+    "output": "CAPABILITY_PASS\n",
+    "error": ""
+  }
+]

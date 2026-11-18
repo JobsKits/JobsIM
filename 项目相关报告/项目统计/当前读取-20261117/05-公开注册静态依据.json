@@ -1,0 +1,95 @@
+{
+  "algorithm": "Literal h/handle registrations in App methods; reviewed bounded public loop expansions; registration call paths from App.Handler; no Go execution",
+  "dynamicEvidence": [
+    {
+      "file": "代码/后端/Go/message.go",
+      "function": "messageRoutes",
+      "line": 113,
+      "expression": "\"PUT /api/messages/{id}/\"+k",
+      "patterns": [
+        "PUT /api/messages/{id}/pin",
+        "PUT /api/messages/{id}/favorite"
+      ]
+    },
+    {
+      "file": "代码/后端/Go/message.go",
+      "function": "messageRoutes",
+      "line": 114,
+      "expression": "\"DELETE /api/messages/{id}/\"+k",
+      "patterns": [
+        "DELETE /api/messages/{id}/pin",
+        "DELETE /api/messages/{id}/favorite"
+      ]
+    },
+    {
+      "file": "代码/后端/Go/self_draft.go",
+      "function": "selfDraftRoutes",
+      "line": 611,
+      "expression": "method+\" /api/conversations/{id}/draft\"",
+      "patterns": [
+        "PUT /api/conversations/{id}/draft",
+        "DELETE /api/conversations/{id}/draft"
+      ]
+    },
+    {
+      "file": "代码/后端/Go/self_read.go",
+      "function": "selfReadRoutes",
+      "line": 209,
+      "expression": "pattern",
+      "patterns": [
+        "PUT /api/conversations/{id}/read",
+        "POST /api/conversations/{id}/read-results"
+      ]
+    },
+    {
+      "file": "代码/后端/Go/self_views.go",
+      "function": "selfViewRoutes",
+      "line": 165,
+      "expression": "pattern",
+      "patterns": [
+        "PATCH /api/conversations/{id}/view",
+        "POST /api/conversations/{id}/view-results"
+      ]
+    }
+  ],
+  "excludedInternalDynamic": [
+    {
+      "file": "代码/后端/Go/draft_reply_holders.go",
+      "function": "draftReplyHolderRoutes",
+      "line": 136,
+      "expression": "\"POST /internal/drafts/\"+action+\"-reply\""
+    },
+    {
+      "file": "代码/后端/Go/forward_revocation.go",
+      "function": "forwardRevocationRoutes",
+      "line": 196,
+      "expression": "\"POST \"+path"
+    },
+    {
+      "file": "代码/后端/Go/message_export.go",
+      "function": "exportMessageRoutes",
+      "line": 45,
+      "expression": "\"POST \"+endpoint"
+    },
+    {
+      "file": "代码/后端/Go/mfa.go",
+      "function": "mfaRoutes",
+      "line": 210,
+      "expression": "\"POST \"+endpoint"
+    },
+    {
+      "file": "代码/后端/Go/personal_export_owner.go",
+      "function": "personalExportOwnerRoutes",
+      "line": 118,
+      "expression": "\"POST /internal/personal-exports/\"+path"
+    },
+    {
+      "file": "代码/后端/Go/sync_owner.go",
+      "function": "syncOwnerRoutes",
+      "line": 28,
+      "expression": "\"POST /internal/sync/\"+p"
+    }
+  ],
+  "unresolved": [],
+  "unreachable": []
+}

@@ -24,7 +24,7 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
     var language by mutableStateOf(preferences.getString("language", "zh-Hans")!!)
     var theme by mutableStateOf(preferences.getString("theme", "system")!!)
     var font by mutableFloatStateOf(preferences.getFloat("font", 1f))
-    var url by mutableStateOf(preferences.getString("url", "https://localhost:8443")!!)
+    var url by mutableStateOf(preferences.getString("url", "https://localhost:9443")!!)
     var deployment by mutableStateOf(preferences.getString("deployment", "")!!)
     var restoreEpoch by mutableStateOf(preferences.getString("restoreEpoch", "1")!!)
     var profile by mutableStateOf(preferences.getString("profile", UUID.randomUUID().toString())!!)
@@ -70,6 +70,7 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
     val contacts = mutableStateListOf<Person>()
     val requests = mutableStateListOf<ContactRequest>()
     val members = mutableStateListOf<Person>()
+    var membersNext by mutableStateOf(""); private set
     val devices = mutableStateListOf<DeviceSession>()
     val reports = mutableStateListOf<ReportRecord>()
     val messages = mutableStateListOf<MessageRow>()
@@ -103,13 +104,84 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
     private var nativeDevice = ""
     private var nativeSource = ""
     private var generation = 0
+    private val voiceUploadQueue = VoiceUploadQueue(app)
+    private var voiceUploadWork: Job? = null
+    val voiceUploadEntries = mutableStateListOf<VoiceUploadEntry>()
+    var voiceUploadProblem by mutableStateOf("")
+        private set
     private fun sessionBinding() = SessionBinding(profile, url, deployment, restoreEpoch)
-    private fun ownerTag() = "$generation|$profile|$url|$deployment|$restoreEpoch"
-    private val sessions = SessionCoordinator(
+    private fun ownerTag(): String = "$generation|$profile|$url|$deployment|$restoreEpoch|${passwordChanges.blocked(sessions.session?.familyId.orEmpty())}|${ownDeletions.blocked(sessions.session?.familyId.orEmpty())}"
+    private val sessions: SessionCoordinator = SessionCoordinator(
         vault, sessionMarkers, { liveDb.messages() },
         { binding, credential -> makeApi(binding.origin, credential, caBytes?.copyOf()) },
         { ownerTag() },
     )
+    val passwordChanges: OwnPasswordModel = OwnPasswordModel(liveDb, viewModelScope,
+        { PasswordEnvironment(profile, url, deployment, restoreEpoch, "$generation|$profile|$url|$deployment|$restoreEpoch") },
+        { sessions.session?.takeIf { !demo }?.let { PasswordOwner(it.userId, it.username, it.deviceId, it.familyId, namespace, it.token) } },
+        { credential -> makeApi(url, credential, caBytes?.copyOf()) },
+        { original ->
+            val active = sessions.session
+            if (active != null && active.familyId == original.family && active.deviceId == original.device && active.userId == original.user) {
+                try { sessions.clearKnown(active) }
+                finally { clearIdentity(); demo = false; loadAuthenticationState() }
+            }
+        }, { api().request("/auth/context"); Unit })
+    val ownDeletions: OwnDeletionModel = OwnDeletionModel(liveDb, viewModelScope,
+        { PasswordEnvironment(profile, url, deployment, restoreEpoch, "$generation|$profile|$url|$deployment|$restoreEpoch") },
+        { sessions.session?.takeIf { !demo }?.let { PasswordOwner(it.userId, it.username, it.deviceId, it.familyId, namespace, it.token) } },
+        { credential -> makeApi(url, credential, caBytes?.copyOf()) },
+        { original ->
+            if (original.state == "completed") OwnDeletionCleanup.erase(getApplication(), liveDb, original)
+            val active = sessions.session
+            if (active != null && active.familyId == original.meta.family && active.deviceId == original.meta.device && active.userId == original.meta.user) {
+                try { sessions.clearKnown(active) }
+                finally { clearIdentity(); demo = false; loadAuthenticationState() }
+            }
+        }, { api().request("/auth/context"); Unit })
+    val groupTools: GroupTools = GroupTools(liveDb, viewModelScope,
+        { GroupEnvironment(profile, deployment, userId, restoreEpoch, namespace, ownerTag(), sessions.session?.familyId.orEmpty()) }, { api() }, { reload() })
+    var migrationsVisible by mutableStateOf(false)
+    var migrationReadRevision by mutableLongStateOf(0L)
+        private set
+    suspend fun migrationService(visible:()->Boolean):MigrationService {
+        migrationsVisible=true
+        withTimeout(30000){while(polling||busy){delay(25)}}
+        val native=sessions.session?:error("MIGRATION_NATIVE_SESSION_REQUIRED")
+        val tag=ownerTag();val ns=namespace;val family=native.familyId;val readRevision=migrationReadRevision
+        require(!demo&&foreground&&visible()&&syncReady)
+        val control=liveDb.syncRecords().one("$ns|sync-control")?.let{JSONObject(it.payload)}?:error("MIGRATION_STORE_NOT_READY")
+        val identity=MigrationIdentity(profile,deployment,userId,native.deviceId,family,restoreEpoch,ns,control.getString("storeGeneration"),control.getString("guardGeneration"))
+        val current={visible()&&migrationsVisible&&foreground&&!demo&&ownerTag()==tag&&namespace==ns&&sessions.session?.familyId==family&&migrationReadRevision==readRevision}
+        val store=MigrationStore(getApplication(),liveDb);store.binding(identity,current)
+        return MigrationService(store,identity,{api()},current,ReceiptStore(getApplication(),liveDb,identity,current))
+    }
+    suspend fun receiptService(visible:()->Boolean):ReceiptService {
+        val capture=migrationService(visible);val i=capture.identity;capture.clear();val tag=ownerTag()
+        return ReceiptService(getApplication(),liveDb,i,{api()}){visible()&&migrationsVisible&&foreground&&!demo&&ownerTag()==tag&&namespace==i.namespace&&sessions.session?.familyId==i.family}
+    }
+    var receiptAutoEnabled by mutableStateOf(false)
+        private set
+    private var receiptAutoIdentity:MigrationIdentity?=null
+    private val receiptAutomatic=ReceiptCoordinator(viewModelScope,{receiptAutomaticCurrent()},
+        {owned->backgroundReceiptService(owned)},
+        {after,limit->val i=receiptAutoIdentity?:error("RECEIPT_NOT_ENABLED");liveDb.messages().receiptCandidates(i.namespace,after,limit).map{ReceiptCandidate(it.id,it.contentVersion)}})
+    private fun receiptAutomaticCurrent():Boolean {
+        val i=receiptAutoIdentity?:return false
+        return receiptAutoEnabled&&foreground&&!migrationsVisible&&!demo&&namespace==i.namespace&&profile==i.profile&&deployment==i.deployment&&restoreEpoch==i.epoch&&sessions.session?.familyId==i.family&&sessions.session?.deviceId==i.device&&!passwordChanges.blocked(i.family)&&!ownDeletions.blocked(i.family)
+    }
+    fun receiptAutomaticFor(i:MigrationIdentity?):Boolean=receiptAutoEnabled&&i!=null&&receiptAutoIdentity?.let{MigrationStore.samePrincipal(it,i)}==true
+    fun setReceiptAutomatic(enabled:Boolean,i:MigrationIdentity){
+        if(!enabled){receiptAutoEnabled=false;receiptAutoIdentity=null;receiptAutomatic.stop();return}
+        require(!demo&&foreground&&namespace==i.namespace&&sessions.session?.familyId==i.family&&sessions.session?.deviceId==i.device)
+        receiptAutomatic.stop();receiptAutoIdentity=i;receiptAutoEnabled=true
+    }
+    private suspend fun backgroundReceiptService(owned:()->Boolean):ReceiptService {
+        val original=receiptAutoIdentity?:error("RECEIPT_NOT_ENABLED");require(receiptAutomaticCurrent()&&owned());val tag=ownerTag()
+        val c=liveDb.syncRecords().one("${original.namespace}|sync-control")?.let{JSONObject(it.payload)}?:error("RECEIPT_STORE_NOT_READY")
+        require(c.opt("storeGeneration")==original.store);val i=original.copy(guard=c.getString("guardGeneration"))
+        return ReceiptService(getApplication(),liveDb,i,{api()}){owned()&&receiptAutomaticCurrent()&&ownerTag()==tag&&receiptAutoIdentity?.let{MigrationStore.samePrincipal(it,i)}==true}
+    }
     private var polling = false
     private var notifySince = System.currentTimeMillis()
     private var peopleQuery = ""
@@ -164,6 +236,7 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
     val storageNamespace get() = namespace
 
     private fun api(): Api {
+        check(!passwordChanges.blocked(sessions.session?.familyId.orEmpty()) && !ownDeletions.blocked(sessions.session?.familyId.orEmpty())) { "ACCOUNT_SECURITY_RESULT_UNKNOWN" }
         val stamp = generation
         val ns = namespace
         val native = sessions.session
@@ -292,7 +365,7 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
                 runCatching { restoreSession() }.onFailure { if (it is Exception) showFailure(it) }
             while (isActive) {
                 delay(5000)
-                if (!busy && !polling && !demo && token.isNotBlank()) {
+                if (!busy && !polling && !migrationsVisible && !demo && token.isNotBlank() && !passwordChanges.blocked(sessions.session?.familyId.orEmpty()) && !ownDeletions.blocked(sessions.session?.familyId.orEmpty())) {
                     polling = true
                     val stamp = generation
                     try {
@@ -308,6 +381,17 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
     }
 
     private fun clearIdentity(forgetSession: Boolean = true) {
+        receiptAutomatic.stop();receiptAutoEnabled=false;receiptAutoIdentity=null
+        voiceUploadWork?.cancel()
+        voiceUploadEntries.clear()
+        voiceUploadProblem = ""
+        val oldVoiceProfile = profile
+        val oldVoiceDeployment = deployment
+        val oldVoiceUser = userId
+        if (oldVoiceUser.isNotBlank() && oldVoiceDeployment.isNotBlank()) viewModelScope.launch {
+            try { voiceUploadQueue.freezeAccount(oldVoiceProfile, oldVoiceDeployment, oldVoiceUser) }
+            catch (_: Exception) { voiceUploadProblem = "VOICE_QUEUE_RECOVERY_REQUIRED" }
+        }
         personalExports.reset()
         selfState.reset()
         font = preferences.getFloat("font", 1f)
@@ -497,6 +581,9 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
     }
 
     private suspend fun restoreSession() {
+        passwordChanges.load()
+        ownDeletions.load()
+        ownDeletions.rows.filter { it.state == "completed" }.forEach { OwnDeletionCleanup.erase(getApplication(), liveDb, it) }
         val stamp = generation
         val binding = sessionBinding()
         val trustedCa = caBytes?.copyOf()
@@ -514,6 +601,22 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
             val restored = sessions.restore(binding, ownerTag())
             if (restored == null) {
                 if (vault.loadLegacy(profile) != null) verificationRequired = true
+                return
+            }
+            if (ownDeletions.blocked(restored.familyId)) {
+                if (ownDeletions.rows.any { it.meta.family == restored.familyId && it.state !in setOf("unknown", "pending") }) {
+                    try { sessions.clearKnown(restored) } finally { clearIdentity() }
+                    return
+                }
+                publishSession(restored); restrictCloud(); return
+            }
+            if (passwordChanges.blocked(restored.familyId)) {
+                if (passwordChanges.rows.any { it.family == restored.familyId && it.state == "changed" }) {
+                    try { sessions.clearKnown(restored) } finally { clearIdentity() }
+                    return
+                }
+                publishSession(restored)
+                restrictCloud()
                 return
             }
             val context = api().request("/auth/context")
@@ -823,7 +926,9 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
         }
         if (!current()) throw CancellationException("SYNC_CONTEXT_CHANGED")
         syncReady = true
+        if(result.globalIds.isNotEmpty()||result.messages.isNotEmpty())migrationReadRevision++
         syncLifecycle++
+        receiptAutomatic.offer(result.messages.filter{!it.retracted&&!it.forwarded&&!it.contentUnavailable&&it.state !in setOf("pending","frozen")&&it.contentVersion.isNotEmpty()}.map{ReceiptCandidate(it.id,it.contentVersion)})
         selfState.activate(features["sync_self_state"] == true, features["cloud_drafts"] == true)
         if (!current()) throw CancellationException("SYNC_CONTEXT_CHANGED")
         selfObservationRevision++
@@ -1005,6 +1110,7 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
     }
 
     fun closeConversation() {
+        voiceUploadWork?.cancel()
         clearForwardApprovals()
         announcement.reset()
         selected = null
@@ -1020,6 +1126,8 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
 
     fun onForeground(value: Boolean) {
         foreground = value
+        if(!value)receiptAutomatic.stop()
+        if (!value) voiceUploadWork?.cancel()
         clearForwardApprovals()
         for (i in messages.indices) if (messages[i].forwarded)
             messages[i] = Forwarding.hidden(messages[i])
@@ -1188,6 +1296,8 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
     private suspend fun drainGlobalCleanup() {
         val stamp = generation
         // Verified local cleanup is independent of the active login, so a profile switch cannot strand it.
+        MigrationStore(getApplication(),liveDb).drainCleanup(profile,deployment)
+        ReceiptStore.drain(getApplication(),liveDb)
         val plans = syncStore.pendingCleanup()
         requireCurrent(stamp)
         if (plans.isEmpty()) return
@@ -1203,7 +1313,7 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
             for (index in messages.indices) if (messages[index].forwarded) messages[index] = Forwarding.hidden(messages[index])
             if (reply?.id in currentIds || reply?.forwarded == true) reply = null
         }
-        SyncMediaCleanup(liveDb, getApplication<Application>().cacheDir).drain(plans)
+        SyncMediaCleanup(liveDb, getApplication<Application>().cacheDir, voiceUploadQueue).drain(plans)
     }
 
     private suspend fun refreshForwardProjections(conversation: Conversation, stamp: Int) {
@@ -1396,6 +1506,10 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
         verifyEpoch()
         requireCurrent(stamp)
         require(features["send_admission"] == true) { "SEND_ADMISSION_UNSUPPORTED" }
+        if (row.type == "audio") stableVoiceUploadOwner()?.let {
+            voiceUploadQueue.assertMessageWritable(it, row.conversationId, row.clientMsgId)
+        }
+        requireCurrent(stamp)
         val result =
             try {
                 api()
@@ -1863,17 +1977,23 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
         loadMessages(selected!!, loadDraft = true)
     }
 
-    fun loadMembers() = job {
+    fun loadMembers(more: Boolean = false) = job {
         val conversation = selected ?: return@job
         val stamp = generation
-        val items =
-            if (demo) JSONArray()
-            else
-                api().request("/conversations/${conversation.id}/members").optJSONArray("items")
-                    ?: JSONArray()
+        val cursor = if (more) membersNext else ""
+        if (more && cursor.isEmpty()) return@job
+        if (cursor.isNotEmpty()) SyncWire.id(cursor)
+        val response = if (demo) JSONObject().put("items", JSONArray()).put("nextCursor", "") else
+            api().request("/conversations/${conversation.id}/members?limit=50" + if (cursor.isNotEmpty()) "&after=$cursor" else "")
         requireCurrent(stamp)
-        members.clear()
-        members.addAll((0 until items.length()).map { person(items.getJSONObject(it)) })
+        if (selected?.id != conversation.id) return@job
+        val next = response.optString("nextCursor")
+        if (next.isNotEmpty()) SyncWire.id(next)
+        require(next.isEmpty() || next != cursor)
+        val items=response.getJSONArray("items"); require(items.length() <= 50)
+        if (!more) members.clear()
+        for (i in 0 until items.length()) { val row=person(items.getJSONObject(i));members.removeAll { it.id==row.id };members.add(row) }
+        membersNext=next
     }
 
     fun groupChange(action: String, value: String = "", member: Person? = null) = job {
@@ -1888,13 +2008,7 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
                         "PATCH",
                         JSONObject().put("title", value),
                     )
-            "transfer" ->
-                api()
-                    .request(
-                        "/conversations/${conversation.id}",
-                        "PATCH",
-                        JSONObject().put("ownerId", member!!.id),
-                    )
+            "transfer" -> error("GROUP_ORIGINAL_PERMISSION_REQUIRED")
             "add" ->
                 api()
                     .request(
@@ -1917,26 +2031,184 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
         if (action == "leave") closeConversation()
         reload()
         if (selected != null) {
-            val items =
-                api().request("/conversations/${conversation.id}/members").getJSONArray("items")
+            val page = api().request("/conversations/${conversation.id}/members?limit=50")
+            val items = page.getJSONArray("items")
+            membersNext = page.optString("nextCursor")
             requireCurrent(stamp)
             members.clear()
             members.addAll((0 until items.length()).map { person(items.getJSONObject(it)) })
         }
     }
 
+    fun voiceRecordingOwner(): VoiceRecordingOwner? {
+        val conversation = selected ?: return null
+        if (!foreground || conversation.readOnly || (!demo && (features["media"] != true || conversation.sendAdmission.isBlank())) ||
+            passwordChanges.blocked(sessions.session?.familyId.orEmpty()) ||
+            ownDeletions.blocked(sessions.session?.familyId.orEmpty())) return null
+        return VoiceRecordingOwner(namespace, conversation.id,
+            ownerTag() + "|" + sessions.session?.familyId.orEmpty(),
+            conversation.sendAdmission, conversation.membershipGeneration)
+    }
+
+    fun stableVoiceUploadOwner(): VoiceUploadOwner? {
+        val native = sessions.session ?: return null
+        if (demo || native.userId != userId || native.deviceId != nativeDevice ||
+            native.binding != sessionBinding()) return null
+        return VoiceUploadOwner(namespace, profile, url, deployment, userId, native.deviceId, native.familyId, restoreEpoch)
+    }
+
+    fun mayResumeVoiceUpload(intent: VoiceUploadIntent): Boolean {
+        val conversation = selected ?: return false
+        return foreground && !intent.frozen && stableVoiceUploadOwner() == intent.source.owner &&
+            conversation.id == intent.source.conversation && !conversation.readOnly &&
+            conversation.sendAdmission == intent.source.admission && conversation.membershipGeneration == intent.source.membership &&
+            features["media"] == true && !passwordChanges.blocked(sessions.session?.familyId.orEmpty()) &&
+            !ownDeletions.blocked(sessions.session?.familyId.orEmpty())
+    }
+
+    private suspend fun loadVoiceUploads() {
+        val listing = voiceUploadQueue.list()
+        val owner = stableVoiceUploadOwner()
+        voiceUploadEntries.clear()
+        if (owner != null) voiceUploadEntries.addAll(listing.entries.filter { entry ->
+            val stored = entry.intent?.source?.owner
+            stored != null && stored.profile == owner.profile && stored.origin == owner.origin &&
+                stored.deployment == owner.deployment && stored.user == owner.user
+        })
+        if (owner != null && (listing.unrecognized > 0 || listing.entries.any { it.problem.isNotEmpty() }))
+            voiceUploadProblem = "VOICE_QUEUE_RECOVERY_REQUIRED"
+    }
+
+    fun reloadVoiceUploads() = job { voiceUploadProblem = ""; loadVoiceUploads() }
+
+    fun cancelUnsubmittedVoiceUpload(id: String) = job {
+        voiceUploadQueue.cancelUnsubmitted(id, checkNotNull(stableVoiceUploadOwner()))
+        loadVoiceUploads()
+    }
+
+    private fun voiceUploadCoordinator(stamp: Int) = VoiceUploadCoordinator(voiceUploadQueue,
+        { stableVoiceUploadOwner() }, { mayResumeVoiceUpload(it) }, { api() },
+        local = { intent ->
+            requireCurrent(stamp)
+            liveDb.messages().one(intent.source.owner.namespace, intent.clientMsgId)
+        },
+        enqueue = { intent ->
+            val row = intent.row()
+            var outbound = row
+            liveDb.withTransaction {
+                requireCurrent(stamp)
+                check(mayResumeVoiceUpload(intent)) { "VOICE_QUEUE_ORIGINAL_CHAT_REQUIRED" }
+                voiceUploadQueue.assertNetworkAllowed(intent.requestId, intent.source.owner)
+                val old = liveDb.messages().one(row.namespace, row.id)
+                check(old == null || VoiceUploadRules.sameMessage(intent, old)) { "VOICE_QUEUE_OUTBOX_CHANGED" }
+                if (old == null) liveDb.messages().enqueue(row)
+                else outbound = old
+                requireCurrent(stamp)
+                check(mayResumeVoiceUpload(intent)) { "VOICE_QUEUE_ORIGINAL_CHAT_REQUIRED" }
+                voiceUploadQueue.assertNetworkAllowed(intent.requestId, intent.source.owner)
+            }
+            outbound
+        },
+        accept = { intent, accepted ->
+            requireCurrent(stamp)
+            acceptOriginalResult(intent.row(), accepted, stamp)
+        },
+        submit = { row ->
+            requireCurrent(stamp)
+            submit(row)
+        })
+
+    fun actVoiceUpload(id: String, retryOriginal: Boolean): Job {
+        voiceUploadWork?.cancel()
+        val work = job {
+            voiceUploadProblem = ""
+            try { voiceUploadCoordinator(generation).act(id, retryOriginal) }
+            catch (failure: Exception) { voiceUploadProblem = "VOICE_TASK_UNCONFIRMED"; throw failure }
+            finally { loadVoiceUploads() }
+        }
+        voiceUploadWork = work
+        return work
+    }
+
+    fun saveVoiceRecording(recording: VoiceRecordingUpload, durationMillis: Long, saved: () -> Unit, failed: () -> Unit): Job {
+        voiceUploadWork?.cancel()
+        val work = job {
+            voiceUploadProblem = ""
+            var durable = false
+            try {
+                val original = checkNotNull(voiceRecordingOwner())
+                check(recording.lease.permits(original)) { "VOICE_CONTEXT_CHANGED" }
+                val owner = checkNotNull(stableVoiceUploadOwner())
+                val conversation = checkNotNull(selected)
+                // Snapshot reply before the first suspension; it never follows model.reply after upload.
+                val observedSource = VoiceUploadSource(owner, conversation.id, conversation.sendAdmission,
+                    conversation.membershipGeneration, reply?.id.orEmpty(),
+                    conversation.title.replace('\n', ' ').replace('\r', ' ').take(256))
+                val source = recording.durableSource ?: observedSource
+                if (recording.durableSource == null) recording.durableSource = source
+                check(source == observedSource.copy(conversationTitle = source.conversationTitle)) { "VOICE_QUEUE_ORIGINAL_BODY_CHANGED" }
+                val stamp = generation
+                val (_, _, bytes) = VoiceRecordingFiles.read(getApplication<Application>(), recording)
+                requireCurrent(stamp)
+                check(recording.lease.permits(voiceRecordingOwner())) { "VOICE_CONTEXT_CHANGED" }
+                val digest = VoiceUploadRules.digest(bytes)
+                if (recording.durableHash.isEmpty()) recording.durableHash = digest
+                check(recording.durableHash == digest) { "VOICE_QUEUE_ORIGINAL_BODY_CHANGED" }
+                val intent = voiceUploadQueue.prepare(source, bytes, durationMillis,
+                    recording.durableRequestId, recording.durableClientMsgId)
+                durable = true
+                saved()
+                if (stableVoiceUploadOwner() != owner) voiceUploadQueue.freeze(intent.requestId)
+                requireCurrent(stamp)
+                info = VoiceUploadText.text(language, "saved")
+                loadVoiceUploads()
+                voiceUploadCoordinator(stamp).act(intent.requestId, true)
+            } catch (failure: Exception) {
+                voiceUploadProblem = "VOICE_TASK_UNCONFIRMED"
+                if (!durable) failed()
+                throw failure
+            } finally { loadVoiceUploads() }
+        }
+        voiceUploadWork = work
+        return work
+    }
+
     fun upload(context: Context, uri: Uri) = job {
-        val conversation = selected ?: return@job
+        uploadAsset { readAsset(context, uri, 64 * 1024 * 1024) }
+    }
+
+    fun uploadVoice(recording: VoiceRecordingUpload, queued: () -> Unit, failed: () -> Unit) = job {
+        check(demo) { "VOICE_DURABLE_QUEUE_REQUIRED" }
+        try {
+            uploadAsset(recording, queued) { VoiceRecordingFiles.read(getApplication<Application>(), recording) }
+        } catch (error: Exception) {
+            failed()
+            throw error
+        }
+    }
+
+    private suspend fun uploadAsset(
+        voice: VoiceRecordingUpload? = null,
+        queued: () -> Unit = {},
+        read: suspend () -> Triple<String, String, ByteArray>,
+    ) {
+        val conversation = selected ?: if (voice == null) return else error("VOICE_CONTEXT_CHANGED")
         require(!conversation.readOnly) { "READ_ONLY" }
         require(demo || conversation.sendAdmission.isNotBlank()) { "SEND_ADMISSION_CHANGED" }
         val stamp = generation
-        val (name, mime, bytes) = readAsset(context, uri, 64 * 1024 * 1024)
-        requireCurrent(stamp)
+        fun guard() {
+            requireCurrent(stamp)
+            if (voice != null) check(voice.lease.permits(voiceRecordingOwner())) { "VOICE_CONTEXT_CHANGED" }
+        }
+        guard()
+        val (name, mime, bytes) = read()
+        guard()
         val attachment =
             if (demo) "demo-" + UUID.randomUUID()
             else api().upload(name, mime, bytes).getString("id")
-        requireCurrent(stamp)
+        guard()
         if (!demo) verifyEpoch()
+        guard()
         val ns = namespace
         val id = UUID.randomUUID().toString()
         val kind =
@@ -1963,7 +2235,14 @@ class ChatModel(app: Application, private val makeApi: (String, String, ByteArra
                 membershipGeneration = conversation.membershipGeneration,
                 sendAdmission = conversation.sendAdmission,
             )
-        db.messages().enqueue(row)
+        val targetDb = db
+        if (voice == null) targetDb.messages().enqueue(row)
+        else targetDb.withTransaction {
+            guard()
+            targetDb.messages().enqueue(row)
+            guard()
+        }
+        queued()
         requireCurrent(stamp)
         reply = null
         refreshVisible(conversation, ns, stamp)

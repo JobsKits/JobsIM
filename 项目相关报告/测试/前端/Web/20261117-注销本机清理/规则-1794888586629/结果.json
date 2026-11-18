@@ -1,0 +1,34 @@
+{
+  "passed": 13,
+  "checks": [
+    "erasure requires the exact original deployment/user/device/epoch namespace",
+    "numeric, zero, padded and overflowing epochs do not authorize cleanup",
+    "boxed identifiers cannot authorize deletion by implicit string coercion",
+    "all original devices and epochs, including legacy and retained archives, belong to the same personal account",
+    "every maintained payload holder, including Blob queues and failed-cleanup markers, is in the erasure inventory",
+    "snapshot, schema and migration stages require an exact namespace and an actual UUID stage",
+    "original operation suffixes never change the namespace owner",
+    "other users, deployments, origins and nonpersonal sources remain separate",
+    "data-rights receipts, shared authentication history and global facts are never blanket-deleted",
+    "the original auth fence is retained while payload holders are removed",
+    "array keys, invalid namespaces and owner-like substrings cannot trigger deletion",
+    "the permanent write barrier is shared by old epochs and retained archives",
+    "a matching username alone cannot establish original local ownership"
+  ],
+  "sourceBefore": {
+    "代码/前端/Web/Src/AccountDeletionCleanup.ts": "f9047fcbaf38295a6e4ad44649401548b0f2ddadd021293b98e1f461e7987451",
+    "代码/前端/Web/Src/AccountDeletionStore.ts": "7c24205b3f841f56862fa21aaa6facafa71e1f00a9c6a18ec6ad9152e3bed3fe",
+    "代码/前端/Web/Src/storage.ts": "3f31b557235bf788c7a30aa7cec878eb1cca893ff4f2c0d308580f100715fe87",
+    "测试/前端/Web/account-deletion-cleanup.cjs/account-deletion-cleanup.cjs": "671b387052156110d6206d31948589a13530774ba70425ecc0fea88f5a438c47"
+  },
+  "sourceAfter": {
+    "代码/前端/Web/Src/AccountDeletionCleanup.ts": "f9047fcbaf38295a6e4ad44649401548b0f2ddadd021293b98e1f461e7987451",
+    "代码/前端/Web/Src/AccountDeletionStore.ts": "7c24205b3f841f56862fa21aaa6facafa71e1f00a9c6a18ec6ad9152e3bed3fe",
+    "代码/前端/Web/Src/storage.ts": "3f31b557235bf788c7a30aa7cec878eb1cca893ff4f2c0d308580f100715fe87",
+    "测试/前端/Web/account-deletion-cleanup.cjs/account-deletion-cleanup.cjs": "671b387052156110d6206d31948589a13530774ba70425ecc0fea88f5a438c47"
+  },
+  "indexedDB": false,
+  "browser": false,
+  "typeCheck": false,
+  "scope": "actual production key/ownership rules only; no claim of transaction, erasure or UI execution"
+}

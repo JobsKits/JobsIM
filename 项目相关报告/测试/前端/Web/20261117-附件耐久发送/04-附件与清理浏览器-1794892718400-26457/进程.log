@@ -1,0 +1,29 @@
+1:18:40 PM [vite] (client) [optimizer] bundling dependencies...
+1:18:45 PM [vite] (client) [Unhandled rejection] AbortError: signal is aborted without reason
+ > Module.resetRequestContext Src/api.ts:490:17
+    488 |  }
+    489 |  export function resetRequestContext() {
+    490 |    requestContext.abort();
+        |                   ^
+    491 |    requestContext = new AbortController();
+    492 |    bindMessageNamespace("");
+
+1:18:46 PM [vite] (client) [Unhandled error] InvalidStateError: Failed to execute 'abort' on 'IDBTransaction': The transaction has finished.
+ > cursor.onsuccess Src/AttachmentSendStore.ts:96:42
+    94 |        }
+    95 |        const prepared = prepareAttachmentHolders(holders, entry); check(); for (const value of prepared) store.put(val...
+    96 |      } catch (error) { failure = error; tx.abort(); }
+       |                                            ^
+    97 |    };
+    98 |    return finish(tx, () => entry, context.isCurrent, () => failure);
+
+1:18:50 PM [vite] (client) [Unhandled error] Error: injected linked failure
+ > read.onsuccess Src/storage.ts:188:14
+    186 |        read.onsuccess = () => {
+    187 |          const existing: Message[] = read.result ?? value.outbox;
+    188 |          store.put(
+        |                ^
+    189 |            guarded([
+    190 |              ...existing.filter((m) => m.clientMsgId !== message.clientMsgId),
+
+{"out":"/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/Web/20261117-附件耐久发送/04-附件与清理浏览器-1794892718400-26457/浏览器","passed":41}

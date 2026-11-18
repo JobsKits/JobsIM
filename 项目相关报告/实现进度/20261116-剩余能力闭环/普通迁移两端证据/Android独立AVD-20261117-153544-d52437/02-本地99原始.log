@@ -1,0 +1,1819 @@
+INSTRUMENTATION_STATUS: class=com.jobs.im.AdmissionFenceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.AdmissionFenceTest:
+INSTRUMENTATION_STATUS: test=missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AdmissionFenceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at com.jobs.im.AdmissionFenceTest$missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox$1.invokeSuspend(AdmissionFenceTest.kt:26)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.AdmissionFenceTest.missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox(AdmissionFenceTest.kt:21)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.AdmissionFenceTest:
+INSTRUMENTATION_STATUS: test=missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.AuthoritativeSyncTest:
+INSTRUMENTATION_STATUS: test=incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.AuthoritativeSyncTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.CollaborationLifecycleTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.CollaborationLifecycleTest:
+INSTRUMENTATION_STATUS: test=realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.CollaborationLifecycleTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at com.jobs.im.CollaborationLifecycleTest$realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference$1.invokeSuspend(CollaborationLifecycleTest.kt:29)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.CollaborationLifecycleTest.realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference(CollaborationLifecycleTest.kt:24)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.CollaborationLifecycleTest:
+INSTRUMENTATION_STATUS: test=realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.DatabaseIsolationTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.DatabaseIsolationTest:
+INSTRUMENTATION_STATUS: test=liveOutboxSurvivesIndependentDemoWrites
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.DatabaseIsolationTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=liveOutboxSurvivesIndependentDemoWrites
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.DiscoveryCollaborationUiTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.DiscoveryCollaborationUiTest:
+INSTRUMENTATION_STATUS: test=nativeFavoritesExactSourceMentionsAndAnnouncementControlsReachRealBackend
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.DiscoveryCollaborationUiTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at com.jobs.im.DiscoveryCollaborationUiTest$nativeFavoritesExactSourceMentionsAndAnnouncementControlsReachRealBackend$1.invokeSuspend(DiscoveryCollaborationUiTest.kt:34)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.DiscoveryCollaborationUiTest.nativeFavoritesExactSourceMentionsAndAnnouncementControlsReachRealBackend(DiscoveryCollaborationUiTest.kt:29)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.DiscoveryCollaborationUiTest:
+INSTRUMENTATION_STATUS: test=nativeFavoritesExactSourceMentionsAndAnnouncementControlsReachRealBackend
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.DiscoveryLifecycleTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.DiscoveryLifecycleTest:
+INSTRUMENTATION_STATUS: test=realLookupPagesKeepOpaqueCursorsAndReauthorizeAnUnlistedSource
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.DiscoveryLifecycleTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at com.jobs.im.DiscoveryLifecycleTest$realLookupPagesKeepOpaqueCursorsAndReauthorizeAnUnlistedSource$1.invokeSuspend(DiscoveryLifecycleTest.kt:26)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.DiscoveryLifecycleTest.realLookupPagesKeepOpaqueCursorsAndReauthorizeAnUnlistedSource(DiscoveryLifecycleTest.kt:21)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.DiscoveryLifecycleTest:
+INSTRUMENTATION_STATUS: test=realLookupPagesKeepOpaqueCursorsAndReauthorizeAnUnlistedSource
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.ForwardLifecycleTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.ForwardLifecycleTest:
+INSTRUMENTATION_STATUS: test=originalForwardSurvivesUnknownRepliesWithoutNewProofAndScrubsLostSources
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.ForwardLifecycleTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at com.jobs.im.ForwardLifecycleTest$originalForwardSurvivesUnknownRepliesWithoutNewProofAndScrubsLostSources$1.invokeSuspend(ForwardLifecycleTest.kt:96)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.ForwardLifecycleTest.originalForwardSurvivesUnknownRepliesWithoutNewProofAndScrubsLostSources(ForwardLifecycleTest.kt:91)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.ForwardLifecycleTest:
+INSTRUMENTATION_STATUS: test=originalForwardSurvivesUnknownRepliesWithoutNewProofAndScrubsLostSources
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.ForwardUiTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.ForwardUiTest:
+INSTRUMENTATION_STATUS: test=nativeSourceSelectionAndExplicitOriginalRetryCreateRealReferences
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.ForwardUiTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at com.jobs.im.ForwardUiTest$nativeSourceSelectionAndExplicitOriginalRetryCreateRealReferences$1.invokeSuspend(ForwardUiTest.kt:25)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.ForwardUiTest.nativeSourceSelectionAndExplicitOriginalRetryCreateRealReferences(ForwardUiTest.kt:20)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.ForwardUiTest:
+INSTRUMENTATION_STATUS: test=nativeSourceSelectionAndExplicitOriginalRetryCreateRealReferences
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.GroupLifecycleTest:
+INSTRUMENTATION_STATUS: test=lostMutationUsesOnlyOriginalResultAndTokensRemainRamOnly
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lostMutationUsesOnlyOriginalResultAndTokensRemainRamOnly
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=roleWithdrawalClearsVisibleInvitesAndRamTokens
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=roleWithdrawalClearsVisibleInvitesAndRamTokens
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=coldJoinReusesOneNonceAndRequiresTheOriginalReenteredCode
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=coldJoinReusesOneNonceAndRequiresTheOriginalReenteredCode
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=laterFamilyOrDeviceCannotPublishTheOriginal404AtSameEpoch
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=laterFamilyOrDeviceCannotPublishTheOriginal404AtSameEpoch
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=lateSuccessfulMutationCannotPublishIntoAnotherIdentity
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lateSuccessfulMutationCannotPublishIntoAnotherIdentity
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=legacyResponsibilityWithoutOriginalFamilyStaysReadOnly
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=legacyResponsibilityWithoutOriginalFamilyStaysReadOnly
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=originalTransferNeverRebasesAfterConfirmation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.GroupLifecycleTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=originalTransferNeverRebasesAfterConfirmation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.LiveApiTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.LiveApiTest:
+INSTRUMENTATION_STATUS: test=verifiedTlsTwoAccountMessageContract
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.LiveApiTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Live service and test CA are explicit inputs
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at com.jobs.im.LiveApiTest$verifiedTlsTwoAccountMessageContract$1.invokeSuspend(LiveApiTest.kt:21)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.LiveApiTest.verifiedTlsTwoAccountMessageContract(LiveApiTest.kt:17)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.LiveApiTest:
+INSTRUMENTATION_STATUS: test=verifiedTlsTwoAccountMessageContract
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.Migration8To9Test
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.Migration8To9Test:
+INSTRUMENTATION_STATUS: test=originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.Migration8To9Test
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.MigrationHistoryLifecycleTest:
+INSTRUMENTATION_STATUS: test=validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(MigrationHistoryLifecycleTest.kt:37)
+
+INSTRUMENTATION_STATUS: stream=
+Error in validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(com.jobs.im.MigrationHistoryLifecycleTest):
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(MigrationHistoryLifecycleTest.kt:37)
+
+INSTRUMENTATION_STATUS: test=validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(MigrationHistoryLifecycleTest.kt:56)
+
+INSTRUMENTATION_STATUS: stream=
+Error in durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(com.jobs.im.MigrationHistoryLifecycleTest):
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(MigrationHistoryLifecycleTest.kt:56)
+
+INSTRUMENTATION_STATUS: test=durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(MigrationHistoryLifecycleTest.kt:47)
+
+INSTRUMENTATION_STATUS: stream=
+Error in newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(com.jobs.im.MigrationHistoryLifecycleTest):
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(MigrationHistoryLifecycleTest.kt:47)
+
+INSTRUMENTATION_STATUS: test=newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.ModelClosureTest
+INSTRUMENTATION_STATUS: current=28
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.ModelClosureTest:
+INSTRUMENTATION_STATUS: test=realNativeModelKeepsOriginalOperationsAndRelationshipGenerations
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.ModelClosureTest
+INSTRUMENTATION_STATUS: current=28
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at com.jobs.im.ModelClosureTest$realNativeModelKeepsOriginalOperationsAndRelationshipGenerations$1.invokeSuspend(ModelClosureTest.kt:29)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.ModelClosureTest.realNativeModelKeepsOriginalOperationsAndRelationshipGenerations(ModelClosureTest.kt:24)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.ModelClosureTest:
+INSTRUMENTATION_STATUS: test=realNativeModelKeepsOriginalOperationsAndRelationshipGenerations
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionHttpsTest
+INSTRUMENTATION_STATUS: current=29
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.NativeSessionHttpsTest:
+INSTRUMENTATION_STATUS: test=nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionHttpsTest
+INSTRUMENTATION_STATUS: current=29
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Explicit native refresh scope is required
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at com.jobs.im.NativeSessionHttpsTest.fixture(NativeSessionHttpsTest.kt:29)
+	at com.jobs.im.NativeSessionHttpsTest.access$fixture(NativeSessionHttpsTest.kt:21)
+	at com.jobs.im.NativeSessionHttpsTest$nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope$1.invokeSuspend(NativeSessionHttpsTest.kt:218)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeSessionHttpsTest.nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope(NativeSessionHttpsTest.kt:217)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.NativeSessionHttpsTest:
+INSTRUMENTATION_STATUS: test=nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionHttpsTest
+INSTRUMENTATION_STATUS: current=30
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionHttpsTest
+INSTRUMENTATION_STATUS: current=30
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Explicit native refresh scope is required
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at com.jobs.im.NativeSessionHttpsTest.fixture(NativeSessionHttpsTest.kt:29)
+	at com.jobs.im.NativeSessionHttpsTest.access$fixture(NativeSessionHttpsTest.kt:21)
+	at com.jobs.im.NativeSessionHttpsTest$realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair$1.invokeSuspend(NativeSessionHttpsTest.kt:68)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeSessionHttpsTest.realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair(NativeSessionHttpsTest.kt:67)
+
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionHttpsTest
+INSTRUMENTATION_STATUS: current=31
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=realLostRefreshAndThreeIntentClosureRetireUnknownAncestors
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionHttpsTest
+INSTRUMENTATION_STATUS: current=31
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Explicit native refresh scope is required
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at com.jobs.im.NativeSessionHttpsTest.fixture(NativeSessionHttpsTest.kt:29)
+	at com.jobs.im.NativeSessionHttpsTest.access$fixture(NativeSessionHttpsTest.kt:21)
+	at com.jobs.im.NativeSessionHttpsTest$realLostRefreshAndThreeIntentClosureRetireUnknownAncestors$1.invokeSuspend(NativeSessionHttpsTest.kt:146)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeSessionHttpsTest.realLostRefreshAndThreeIntentClosureRetireUnknownAncestors(NativeSessionHttpsTest.kt:145)
+
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=realLostRefreshAndThreeIntentClosureRetireUnknownAncestors
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=32
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.NativeSessionLifecycleTest:
+INSTRUMENTATION_STATUS: test=retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=32
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=33
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=lateEpochInvalidationAndLegacyCommitCannotEraseRecoveredPair
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=33
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lateEpochInvalidationAndLegacyCommitCannotEraseRecoveredPair
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=34
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=lateExpiredBusinessCannotBorrowReplacementFamilyAndOther401NeverRefreshes
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=34
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lateExpiredBusinessCannotBorrowReplacementFamilyAndOther401NeverRefreshes
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=35
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=initialUnknownChainKeepsOriginalIdsAndRejectsLateDelivery
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=35
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=initialUnknownChainKeepsOriginalIdsAndRejectsLateDelivery
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=36
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=committedPairHandoffRecoversAndRetiresOriginalOutboxWithoutChangingPayload
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=36
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=committedPairHandoffRecoversAndRetiresOriginalOutboxWithoutChangingPayload
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=37
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=concurrentExpiredRequestsShareOneRotationAndPublishOnlyDurablePair
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=37
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=concurrentExpiredRequestsShareOneRotationAndPublishOnlyDurablePair
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=38
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=secureWriteFailureAndUnknownRefreshStayBlockedAcrossRestart
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeSessionLifecycleTest
+INSTRUMENTATION_STATUS: current=38
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=secureWriteFailureAndUnknownRefreshStayBlockedAcrossRestart
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeUiTest
+INSTRUMENTATION_STATUS: current=39
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.NativeUiTest:
+INSTRUMENTATION_STATUS: test=realConversationGroupAndSettingsRenderInNativeActivity
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NativeUiTest
+INSTRUMENTATION_STATUS: current=39
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at com.jobs.im.NativeUiTest$realConversationGroupAndSettingsRenderInNativeActivity$1.invokeSuspend(NativeUiTest.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.NativeUiTest.realConversationGroupAndSettingsRenderInNativeActivity(NativeUiTest.kt:23)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.NativeUiTest:
+INSTRUMENTATION_STATUS: test=realConversationGroupAndSettingsRenderInNativeActivity
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.NotificationPrivacyTest
+INSTRUMENTATION_STATUS: current=40
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.NotificationPrivacyTest:
+INSTRUMENTATION_STATUS: test=localAlertHidesBodyAndRejectsAnotherNamespace
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.NotificationPrivacyTest
+INSTRUMENTATION_STATUS: current=40
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=localAlertHidesBodyAndRejectsAnotherNamespace
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=41
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.OwnDeletionLifecycleTest:
+INSTRUMENTATION_STATUS: test=unknownCancelRequiresQueryBeforeAnyNewProofAndKeepsOriginalVersion
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=41
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unknownCancelRequiresQueryBeforeAnyNewProofAndKeepsOriginalVersion
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=42
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unknownCancellationRetainsOneNonceAndQueriesItsOriginalResult
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=42
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unknownCancellationRetainsOneNonceAndQueriesItsOriginalResult
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=43
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=preparedDependency403CannotReleaseTheOriginalGate
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=43
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=preparedDependency403CannotReleaseTheOriginalGate
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=44
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unknownSurvivesReopenWithoutPasswordOtpOrFamilyToken
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=44
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unknownSurvivesReopenWithoutPasswordOtpOrFamilyToken
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=45
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=legacyCancelWithoutVersionRemainsReadOnlyAcrossReload
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=45
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=legacyCancelWithoutVersionRemainsReadOnlyAcrossReload
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=46
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=pendingOriginalCanPersistUnknownBeforeResumingTheSameRequest
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=46
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=pendingOriginalCanPersistUnknownBeforeResumingTheSameRequest
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=47
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=withdrawnCapabilityKeepsUnknownLookupReadonly
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=47
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=withdrawnCapabilityKeepsUnknownLookupReadonly
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=48
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=repeatedNewerQueriesNeverRebaseOriginalCancellation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=48
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=repeatedNewerQueriesNeverRebaseOriginalCancellation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=49
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=finalLocalErasureKeepsOtherAccountsAndThePublicResponsibility
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnDeletionLifecycleTest
+INSTRUMENTATION_STATUS: current=49
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: DELETION_STORAGE_BINDING_CHANGED
+	at com.jobs.im.OwnDeletionCleanup.eraseOwned(OwnDeletionCleanup.kt:34)
+	at com.jobs.im.OwnDeletionCleanup.access$eraseOwned(OwnDeletionCleanup.kt:8)
+	at com.jobs.im.OwnDeletionCleanup$erase$4.invokeSuspend(OwnDeletionCleanup.kt:20)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: stream=
+Error in finalLocalErasureKeepsOtherAccountsAndThePublicResponsibility(com.jobs.im.OwnDeletionLifecycleTest):
+java.lang.IllegalArgumentException: DELETION_STORAGE_BINDING_CHANGED
+	at com.jobs.im.OwnDeletionCleanup.eraseOwned(OwnDeletionCleanup.kt:34)
+	at com.jobs.im.OwnDeletionCleanup.access$eraseOwned(OwnDeletionCleanup.kt:8)
+	at com.jobs.im.OwnDeletionCleanup$erase$4.invokeSuspend(OwnDeletionCleanup.kt:20)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+INSTRUMENTATION_STATUS: test=finalLocalErasureKeepsOtherAccountsAndThePublicResponsibility
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=50
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.OwnPasswordLifecycleTest:
+INSTRUMENTATION_STATUS: test=withdrawnCapabilityAndChangedEpochAllowLookupButNoPendingOrUnseenMutation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=50
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=withdrawnCapabilityAndChangedEpochAllowLookupButNoPendingOrUnseenMutation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=51
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=wrongProofCannotUnpauseUnknownOrCreateAnotherOperation
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=51
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=wrongProofCannotUnpauseUnknownOrCreateAnotherOperation
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=52
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=lateReplyCannotClearAChangedIdentity
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=52
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lateReplyCannotClearAChangedIdentity
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=53
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=explicitRetryNeverBorrowsSuccessorFamilyToken
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=53
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=explicitRetryNeverBorrowsSuccessorFamilyToken
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=54
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unknownSurvivesReconstructionAndContainsNoPasswordsOrOtp
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=54
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unknownSurvivesReconstructionAndContainsNoPasswordsOrOtp
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=55
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=preparedDependency403KeepsOriginalPaused
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.OwnPasswordLifecycleTest
+INSTRUMENTATION_STATUS: current=55
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=preparedDependency403KeepsOriginalPaused
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=56
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.PersonalExportLifecycleTest:
+INSTRUMENTATION_STATUS: test=cancellationUnknownRetainsNonceAndReadOnlyCheckNeverResendsIt
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=56
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=cancellationUnknownRetainsNonceAndReadOnlyCheckNeverResendsIt
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=57
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=capabilityWithdrawalKeepsOriginalCancellationButNoNewCreateOrDownload
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=57
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=capabilityWithdrawalKeepsOriginalCancellationButNoNewCreateOrDownload
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=58
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=lostCreateReconcilesOriginalWithoutSecondCreatingPost
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=58
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lostCreateReconcilesOriginalWithoutSecondCreatingPost
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=59
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unreachedOriginalNeedsExplicitSameBodyRetry
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=59
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unreachedOriginalNeedsExplicitSameBodyRetry
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=60
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=cancelledSystemSelectionIsNeverSavedAndOldFamilyCannotPublishPreparedFile
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.PersonalExportLifecycleTest
+INSTRUMENTATION_STATUS: current=60
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=cancelledSystemSelectionIsNeverSavedAndOldFamilyCannotPublishPreparedFile
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.RoleAdmissionLifecycleTest
+INSTRUMENTATION_STATUS: current=61
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.RoleAdmissionLifecycleTest:
+INSTRUMENTATION_STATUS: test=ownerRoundTripCannotReviveOldAllMentionOrAnnouncementAndMissingFlagNeverWrites
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.RoleAdmissionLifecycleTest
+INSTRUMENTATION_STATUS: current=61
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at com.jobs.im.RoleAdmissionLifecycleTest$ownerRoundTripCannotReviveOldAllMentionOrAnnouncementAndMissingFlagNeverWrites$1.invokeSuspend(RoleAdmissionLifecycleTest.kt:27)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.RoleAdmissionLifecycleTest.ownerRoundTripCannotReviveOldAllMentionOrAnnouncementAndMissingFlagNeverWrites(RoleAdmissionLifecycleTest.kt:22)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.RoleAdmissionLifecycleTest:
+INSTRUMENTATION_STATUS: test=ownerRoundTripCannotReviveOldAllMentionOrAnnouncementAndMissingFlagNeverWrites
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=62
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.SelfStateTest:
+INSTRUMENTATION_STATUS: test=viewRfc3339OffsetsAreParsedWithoutReencodingOriginalServerFields
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=62
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=viewRfc3339OffsetsAreParsedWithoutReencodingOriginalServerFields
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=63
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=retiredDraftIsNotRecordedAsAppliedAndIndependentTextRequiresExplicitRecovery
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=63
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=retiredDraftIsNotRecordedAsAppliedAndIndependentTextRequiresExplicitRecovery
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=64
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unknownNotFoundRequiresExplicitRetryAndUsesIdenticalOriginalRequest
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=64
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unknownNotFoundRequiresExplicitRetryAndUsesIdenticalOriginalRequest
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=65
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=changedDraftReplyRequiresReselectionAndCreatesNoCloudWrite
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=65
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=changedDraftReplyRequiresReselectionAndCreatesNoCloudWrite
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=66
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=firstActivationRemainsEnabledAndSameIdentityResetRejectsLateResponse
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=66
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=firstActivationRemainsEnabledAndSameIdentityResetRejectsLateResponse
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=67
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=wrongPrincipalOrNumericCountersRollbackSelfProjectionAndCursorTogether
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=67
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=wrongPrincipalOrNumericCountersRollbackSelfProjectionAndCursorTogether
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=68
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=schemaUpgradeRetainsPhysicalRegistrationAndSeparatesOriginalSchemaCursor
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=68
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=schemaUpgradeRetainsPhysicalRegistrationAndSeparatesOriginalSchemaCursor
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=69
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sparseVisibleObservationDoesNotClearIndependentManualUnreadAndConflictFreezesOriginal
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=69
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sparseVisibleObservationDoesNotClearIndependentManualUnreadAndConflictFreezesOriginal
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=70
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=lateIdentityOrChangedProjectionGuardCannotPublishSelfState
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=70
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lateIdentityOrChangedProjectionGuardCannotPublishSelfState
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=71
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=draftCapturesIndependentTextAndDistinctOriginalProofsWithoutChangingLocalMessageOutbox
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=71
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=draftCapturesIndependentTextAndDistinctOriginalProofsWithoutChangingLocalMessageOutbox
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=72
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=unknownPreferenceSurvivesColdReopenAndReadonlyResultNeverReplaysWrite
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=72
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=unknownPreferenceSurvivesColdReopenAndReadonlyResultNeverReplaysWrite
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=73
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=s2ProjectionAndCursorShareTransactionAndWrongSubjectCannotPartiallyPublish
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=73
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=s2ProjectionAndCursorShareTransactionAndWrongSubjectCannotPartiallyPublish
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=74
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=queuedUiIntentCapturesLifecycleBeforeMutexAndCannotAdoptResetIdentity
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.SelfStateTest
+INSTRUMENTATION_STATUS: current=74
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=queuedUiIntentCapturesLifecycleBeforeMutexAndCannotAdoptResetIdentity
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.StorageLifecycleTest
+INSTRUMENTATION_STATUS: current=75
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.StorageLifecycleTest:
+INSTRUMENTATION_STATUS: test=durableQueueDraftRevisionAndCursorRemainAtomic
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.StorageLifecycleTest
+INSTRUMENTATION_STATUS: current=75
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=durableQueueDraftRevisionAndCursorRemainAtomic
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.StorageLifecycleTest
+INSTRUMENTATION_STATUS: current=76
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=anonymousReconnectFreezesEveryAccountOfOnlyTheOldInstanceEpoch
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.StorageLifecycleTest
+INSTRUMENTATION_STATUS: current=76
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=anonymousReconnectFreezesEveryAccountOfOnlyTheOldInstanceEpoch
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.StorageLifecycleTest
+INSTRUMENTATION_STATUS: current=77
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=versionTwoUpgradePreservesOriginalPendingIdentity
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.StorageLifecycleTest
+INSTRUMENTATION_STATUS: current=77
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=versionTwoUpgradePreservesOriginalPendingIdentity
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceRecordingNativeTest
+INSTRUMENTATION_STATUS: current=78
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.VoiceRecordingNativeTest:
+INSTRUMENTATION_STATUS: test=cancelReleasesRecorderAndDeletesOnlyTheOwnedClip
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceRecordingNativeTest
+INSTRUMENTATION_STATUS: current=78
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Real microphone capture needs explicit voiceCapture=true on an isolated installation
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at com.jobs.im.VoiceRecordingNativeTest.prerequisites(VoiceRecordingNativeTest.kt:30)
+	at com.jobs.im.VoiceRecordingNativeTest.capture(VoiceRecordingNativeTest.kt:46)
+	at com.jobs.im.VoiceRecordingNativeTest.cancelReleasesRecorderAndDeletesOnlyTheOwnedClip(VoiceRecordingNativeTest.kt:80)
+
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.VoiceRecordingNativeTest:
+INSTRUMENTATION_STATUS: test=cancelReleasesRecorderAndDeletesOnlyTheOwnedClip
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceRecordingNativeTest
+INSTRUMENTATION_STATUS: current=79
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=changedFamilyRejectsClipAndReturningToOriginalCannotRestoreIt
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceRecordingNativeTest
+INSTRUMENTATION_STATUS: current=79
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Real microphone capture needs explicit voiceCapture=true on an isolated installation
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at com.jobs.im.VoiceRecordingNativeTest.prerequisites(VoiceRecordingNativeTest.kt:30)
+	at com.jobs.im.VoiceRecordingNativeTest.capture(VoiceRecordingNativeTest.kt:46)
+	at com.jobs.im.VoiceRecordingNativeTest.changedFamilyRejectsClipAndReturningToOriginalCannotRestoreIt(VoiceRecordingNativeTest.kt:92)
+
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=changedFamilyRejectsClipAndReturningToOriginalCannotRestoreIt
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceRecordingNativeTest
+INSTRUMENTATION_STATUS: current=80
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=realAacStopProducesPreviewWithoutStartingUpload
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceRecordingNativeTest
+INSTRUMENTATION_STATUS: current=80
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Real microphone capture needs explicit voiceCapture=true on an isolated installation
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at com.jobs.im.VoiceRecordingNativeTest.prerequisites(VoiceRecordingNativeTest.kt:30)
+	at com.jobs.im.VoiceRecordingNativeTest.capture(VoiceRecordingNativeTest.kt:46)
+	at com.jobs.im.VoiceRecordingNativeTest.realAacStopProducesPreviewWithoutStartingUpload(VoiceRecordingNativeTest.kt:60)
+
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=realAacStopProducesPreviewWithoutStartingUpload
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadApiNativeTest
+INSTRUMENTATION_STATUS: current=81
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.VoiceUploadApiNativeTest:
+INSTRUMENTATION_STATUS: test=committedRequiresOriginalDigestSizeNameAndCanonicalUrl
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadApiNativeTest
+INSTRUMENTATION_STATUS: current=81
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=committedRequiresOriginalDigestSizeNameAndCanonicalUrl
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadApiNativeTest
+INSTRUMENTATION_STATUS: current=82
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=missingResultIsReadOnlyAndKeepsExactOriginalTuple
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadApiNativeTest
+INSTRUMENTATION_STATUS: current=82
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=missingResultIsReadOnlyAndKeepsExactOriginalTuple
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadApiNativeTest
+INSTRUMENTATION_STATUS: current=83
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=preparedNeverBecomesAUsableMediaUrl
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadApiNativeTest
+INSTRUMENTATION_STATUS: current=83
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=preparedNeverBecomesAUsableMediaUrl
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadApiNativeTest
+INSTRUMENTATION_STATUS: current=84
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=lateFamilyChangeCannotPromoteTheOriginalResult
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadApiNativeTest
+INSTRUMENTATION_STATUS: current=84
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lateFamilyChangeCannotPromoteTheOriginalResult
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadGlobalFloorNativeTest
+INSTRUMENTATION_STATUS: current=85
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.VoiceUploadGlobalFloorNativeTest:
+INSTRUMENTATION_STATUS: test=conflictingObjectPreservesClipAndPendingCleanupUntilVerifiedHolderIsRepaired
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadGlobalFloorNativeTest
+INSTRUMENTATION_STATUS: current=85
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=conflictingObjectPreservesClipAndPendingCleanupUntilVerifiedHolderIsRepaired
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadGlobalFloorNativeTest
+INSTRUMENTATION_STATUS: current=86
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=globalDenySurvivesTerminalReceiptGcAndRejectsLateOriginalPrepare
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadGlobalFloorNativeTest
+INSTRUMENTATION_STATUS: current=86
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=globalDenySurvivesTerminalReceiptGcAndRejectsLateOriginalPrepare
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadGlobalFloorNativeTest
+INSTRUMENTATION_STATUS: current=87
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=verifiedGlobalCreatesDenyAfterTerminalReceiptWasAlreadyGc
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadGlobalFloorNativeTest
+INSTRUMENTATION_STATUS: current=87
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=verifiedGlobalCreatesDenyAfterTerminalReceiptWasAlreadyGc
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=88
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.VoiceUploadQueueNativeTest:
+INSTRUMENTATION_STATUS: test=completedAccountFloorRejectsLatePrepareAndLateObjectPromotion
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=88
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=completedAccountFloorRejectsLatePrepareAndLateObjectPromotion
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=89
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=changedFamilyCannotReusePreparedBytesAndDoesNotEraseTheOnlyClip
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=89
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=changedFamilyCannotReusePreparedBytesAndDoesNotEraseTheOnlyClip
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=90
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=globalCleanupUsesOriginalSenderAndExactClientMapping
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=90
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=globalCleanupUsesOriginalSenderAndExactClientMapping
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=91
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=clipOnlyFailureIsRetainedAndBlocksNewHttpResponsibility
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=91
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=clipOnlyFailureIsRetainedAndBlocksNewHttpResponsibility
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=92
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=publicationFailureRetriesTheSameIdsAndRejectsAChangedOriginalBody
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=92
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=publicationFailureRetriesTheSameIdsAndRejectsAChangedOriginalBody
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=93
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=durableTerminalBeforeUnlinkResumesLocalCleanupWithoutHttp
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=93
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=durableTerminalBeforeUnlinkResumesLocalCleanupWithoutHttp
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=94
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=interruptedCopyRemainsAttributableForExactAccountErasure
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=94
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=interruptedCopyRemainsAttributableForExactAccountErasure
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=95
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=tornNewManifestDoesNotReplaceTheOriginalAtomicBody
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=95
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=tornNewManifestDoesNotReplaceTheOriginalAtomicBody
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=96
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=durableManifestStageRecoversTheSameTaskWithoutSending
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=96
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=durableManifestStageRecoversTheSameTaskWithoutSending
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=97
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=erasureRemovesExactAccountAndPreservesAnotherUsersTask
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=97
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=erasureRemovesExactAccountAndPreservesAnotherUsersTask
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=98
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=uploadAndEnqueueUnknownKeepOriginalIdsAndReplyAcrossReconstruction
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.VoiceUploadQueueNativeTest
+INSTRUMENTATION_STATUS: current=98
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=98
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=uploadAndEnqueueUnknownKeepOriginalIdsAndReplyAcrossReconstruction
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 2.396
+There were 4 failures:
+1) validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(com.jobs.im.MigrationHistoryLifecycleTest)
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(MigrationHistoryLifecycleTest.kt:37)
+2) durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(com.jobs.im.MigrationHistoryLifecycleTest)
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(MigrationHistoryLifecycleTest.kt:56)
+3) newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(com.jobs.im.MigrationHistoryLifecycleTest)
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(MigrationHistoryLifecycleTest.kt:47)
+4) finalLocalErasureKeepsOtherAccountsAndThePublicResponsibility(com.jobs.im.OwnDeletionLifecycleTest)
+java.lang.IllegalArgumentException: DELETION_STORAGE_BINDING_CHANGED
+	at com.jobs.im.OwnDeletionCleanup.eraseOwned(OwnDeletionCleanup.kt:34)
+	at com.jobs.im.OwnDeletionCleanup.access$eraseOwned(OwnDeletionCleanup.kt:8)
+	at com.jobs.im.OwnDeletionCleanup$erase$4.invokeSuspend(OwnDeletionCleanup.kt:20)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+FAILURES!!!
+Tests run: 98,  Failures: 4
+
+
+INSTRUMENTATION_CODE: -1

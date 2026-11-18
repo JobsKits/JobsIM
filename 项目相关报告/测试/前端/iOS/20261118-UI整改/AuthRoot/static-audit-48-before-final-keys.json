@@ -1,0 +1,56 @@
+{
+  "languageCount": 10,
+  "keyCounts": {
+    "zh-Hans": 408,
+    "zh-Hant": 408,
+    "bo": 408,
+    "en": 408,
+    "ja": 408,
+    "fr": 408,
+    "es": 408,
+    "de": 408,
+    "ru": 408,
+    "ko": 408
+  },
+  "newKeys": {
+    "zh-Hans": 48,
+    "zh-Hant": 48,
+    "bo": 48,
+    "en": 48,
+    "ja": 48,
+    "fr": 48,
+    "es": 48,
+    "de": 48,
+    "ru": 48,
+    "ko": 48
+  },
+  "duplicates": {},
+  "keySetDifferences": {},
+  "errors": [],
+  "staticContrast": {
+    "light": {
+      "foreground/background": 15.844,
+      "foreground/panel": 16.682,
+      "foreground/selection": 14.53,
+      "secondary/background": 4.762,
+      "secondary/panel": 5.014,
+      "secondary/selection": 4.367,
+      "green/background": 4.789,
+      "green/panel": 5.042,
+      "green/selection": 4.392
+    },
+    "dark": {
+      "foreground/background": 16.509,
+      "foreground/panel": 14.247,
+      "foreground/selection": 11.071,
+      "secondary/background": 8.889,
+      "secondary/panel": 7.671,
+      "secondary/selection": 5.961,
+      "green/background": 9.141,
+      "green/panel": 7.889,
+      "green/selection": 6.131
+    },
+    "white_on_greenFill": 5.042
+  },
+  "contrastBoundary": "Numeric static tokens only; no runtime/theme/accessibility screenshot verification"
+}

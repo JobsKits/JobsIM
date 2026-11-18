@@ -136,6 +136,8 @@ fun GroupDialog(model: ChatModel, onDismiss: () -> Unit) {
     var name by remember(conversation.id) { mutableStateOf(conversation.title) }
     var memberId by remember(conversation.id) { mutableStateOf("") }
     var announcement by remember(conversation.id) { mutableStateOf(false) }
+    var governance by remember(conversation.id) { mutableStateOf(false) }
+    if (governance) GroupScreen(model, conversation.id) { governance = false }
     LaunchedEffect(conversation.id) { model.loadMembers() }
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -143,6 +145,7 @@ fun GroupDialog(model: ChatModel, onDismiss: () -> Unit) {
         text = {
             LazyColumn(modifier = Modifier.fillMaxWidth().heightIn(max = 520.dp)) {
                 if (conversation.readOnly) item { Text(t("readOnly")) }
+                if (conversation.kind=="group" && !model.demo) item { TextButton(onClick={governance=true},enabled=!model.busy){Text(GroupText.text(model.language,"title"))} }
                 if (
                     !model.demo &&
                         conversation.kind == "group" &&
@@ -201,7 +204,7 @@ fun GroupDialog(model: ChatModel, onDismiss: () -> Unit) {
                         )
                             Row {
                                 TextButton(
-                                    onClick = { model.groupChange("transfer", member = person) },
+                                    onClick = { governance = true },
                                     enabled = !model.busy,
                                 ) {
                                     Text(t("transfer"))
@@ -216,6 +219,7 @@ fun GroupDialog(model: ChatModel, onDismiss: () -> Unit) {
                     }
                 }
                 if (model.members.isEmpty()) item { EmptyPanel(model) { model.loadMembers() } }
+                if (model.membersNext.isNotEmpty()) item { TextButton(onClick={model.loadMembers(true)},enabled=!model.busy){Text(t("loadMore"))} }
                 if (
                     conversation.kind == "group" &&
                         conversation.ownerId != model.userId &&

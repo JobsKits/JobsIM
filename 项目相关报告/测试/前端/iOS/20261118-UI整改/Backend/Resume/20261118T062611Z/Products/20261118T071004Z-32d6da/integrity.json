@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "path": "build.json",
+      "bytes": 3378,
+      "sha256": "d457b2d843d093fd63297d5e25fceffa0726a7409bbb03f5b938c8bf04436a73"
+    },
+    {
+      "path": "jobsimd",
+      "bytes": 22719010,
+      "sha256": "68ecf69cc980ccb3fcd0862d9b2a8b058ff90fbbde9aadb9d62e8836eb78d937"
+    },
+    {
+      "path": "jobsimd.build-info.txt",
+      "bytes": 1554,
+      "sha256": "b19cf2c8e10059b54d39ee145197e41532d6ae95f2f4fbb9e0956c0bb79943f8"
+    },
+    {
+      "path": "jobsimd.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "jobsimd.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "jobsimops",
+      "bytes": 17611426,
+      "sha256": "51669dc9ee431c64430547973ba632c742a99cef689ce1b20ae3db4a8bded337"
+    },
+    {
+      "path": "jobsimops.build-info.txt",
+      "bytes": 1558,
+      "sha256": "54c3b8ae8a272fd6b278303f54369c1f9fc1ae48f5f8038986f2c7bd7bf0c2d7"
+    },
+    {
+      "path": "jobsimops.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "jobsimops.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source-after.json",
+      "bytes": 22796,
+      "sha256": "9621529ecacbde2fcc080263c9625ba1c97be2919c71cc5dfdf9a504aa5c53e6"
+    },
+    {
+      "path": "source-before.json",
+      "bytes": 22796,
+      "sha256": "9621529ecacbde2fcc080263c9625ba1c97be2919c71cc5dfdf9a504aa5c53e6"
+    }
+  ]
+}

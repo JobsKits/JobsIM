@@ -23,13 +23,19 @@
 
 本工程是[现行需求](../../../需求/IM需求明细表.md/IM需求明细表.md)的首批可执行实现。使用[**Go**](https://go.dev/)及真实[**PostgreSQL**](https://www.postgresql.org/)，没有内存或SQLite服务端替代。它提供独立角色启动和开发联调；当前未达到完整I验收或强保护生产准入。
 
-收讫链路当前区分正文描述和完整原件：[对象协议](./接口契约/README.md#durable-object-receipts)需新的文件耐久批准、同物理库既成正文事实及独立原件字节证明。实现／固定输入／待验证项见[中央检查点](../../../项目相关报告/测试/后端/20261116-完整对象收讫/README.md)；尚无完整冻结目标、累计ACK及云清理worker，`after_receipt`保持关闭。正式本人导出已有独立后端验证，五端入口仍须接线，不能与收讫能力合并宣称基础版完成。
+收讫链路当前区分正文描述和完整原件：[对象协议](./接口契约/README.md#durable-object-receipts)需新的文件耐久批准、同物理库既成正文事实及独立原件字节证明。实现／固定输入／待验证项见[中央检查点](../../../项目相关报告/测试/后端/20261116-完整对象收讫/README.md)；发送时冻结目标、累计ACK、编辑代际与云清理worker已实现，启用值由实际物理库批准、JetStream和独立删除事实就绪派生；未满足时仍关闭。当前验证及边界见[收讫清理](../../../项目相关报告/实现进度/20261116-剩余能力闭环/收讫清理.md)及[媒体物理清理](../../../项目相关报告/实现进度/20261116-剩余能力闭环/媒体收讫清理.md)。旧件只读白名单不补造期限；既成global按原job/event独立事实清理。正式本人导出已有独立后端验证，五端入口仍须接线，不能与收讫能力合并宣称基础版完成。
+
+[逐store合格协商](./接口契约/合格收讫/README.md)使用独立`receipt-context/profiles/targets`和声明原单`storage-results`，不再借永恒false的旧`after_receipt`开关阻断实际资格。运行保护核当前message／journal的真实PG system identifier、fsync／full_page_writes／同步提交、相同epoch和JetStream发布／消费连接；同PG两库不能冒充独立journal。正文与原件分别批准，策略仅当前actor原store与相应实时保护齐备才能新建，已成原nonce仍先查原结果。rc1／ro1及结果沿原DG／manifest绑定，旧传输接口保持兼容false。源码和当前验证边界见[新协商报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/逐store合格收讫.md)，不自动批准任何生产端。
 
 本人[主动改密](./接口契约/README.md#own-password-change)后端已接两条入口、原责任恢复和全family撤销，4纯／12真实PG及生产构建通过；[实际边界](../../../项目相关报告/测试/后端/20261116-本人主动改密/README.md)保留原Cookie反例失败及源冻结。五端产品入口、真实HTTPS与新改密独立恢复仍待验。
+
+[稳定媒体上传](./接口契约/README.md#stable-media-upload)提供能力查询、固定nonce／原身份／真实SHA绑定、纯查原结果与明确重试，旧无nonce上传继续兼容。prepared原体、no-replace发布、owner有界擦除与恢复拒复活已接通；[本批验证](../../../项目相关报告/测试/后端/20261117-稳定媒体上传/README.md)覆盖真实浏览器容器的实际分类与进程内上传、隔离数据库反例及双cmd构建，真实HTTPS与两端持久队列重启仍另验，不与前序注销数量累计。
 
 ## 一、<span id="run">构建与运行</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 构建采用Go 1.27.4；依赖锁在`go.mod`和`go.sum`，公共SDK与模块缓存放在项目外。5个直接模块的版本、许可原文和来源见[第三方依赖清单](./第三方依赖/README.md)；x/sys由Windows文件锁直接使用，nats.go用于自托管JetStream指针事件。依赖选取核验入口：[Go发行](https://go.dev/dl/)、[pgx v5.13.0](https://github.com/jackc/pgx/releases/tag/v5.13.0)、[x/crypto](https://pkg.go.dev/golang.org/x/crypto@v0.59.0)、[x/text](https://pkg.go.dev/golang.org/x/text@v0.44.0)、[nats.go v1.55.0](https://github.com/nats-io/nats.go/releases/tag/v1.55.0)。版本锁表示本次采用，不代表以后无需复检。
+
+恢复与普通迁移构建均保留实例4GiB磁盘余量。[**MacOS**](https://www.apple.com/macos/)／[**Linux**](https://www.kernel.org/)容量探针使用系统`/bin/df`，不依赖`PATH`中可能同名的用户命令；Windows沿用系统磁盘接口查询。容量无法确认、预算为负、余量不足或请求取消时保持拒绝，不以探针失败放宽门禁。验证入口与限定范围见[本轮回归](../../../项目相关报告/测试/回归/20261118-全项目回归/README.md)。
 
 ```shell
 go build -o /选择的外置目录/jobsimd ./cmd/jobsimd
@@ -143,6 +149,13 @@ jobsimops --mode restore --offline --operation-id 原稳定维护操作ID \
 
 引用式转发新增185项HTTP／104语义、慢公共JSON与持久续跑218项HTTP／12语义、隔离真实备份恢复33项HTTP／16语义；外置Go核5类JSON响应持锁／取消／伪造证明及200临时占位同version恢复。最终候选构建另复跑核心55、分页279、当前role／提及／公告77与实验导出明确拒绝11项HTTP，历史报告未覆盖写回。报告范围有重叠，不能累加成产品验收项；每份证据记录其源码／二进制快照，后续修改只可沿实际验证范围解释。
 
-尚未完成完整I的独立interaction部署、细粒度服务身份／最小权限、全部账号数据域覆盖与设备耐久收讫、完整群角色／禁言与独立治理接管、陌生文本消息请求与完整隐私矩阵、举报证据／申诉、MFA登记轮换及受控MFA恢复、五端正式导出接线与普通迁移、账号注销、全文拼音搜索、转发链级导出holder及全媒体跨引用物理清理。固定schema1同步覆盖不含read／云草稿／偏好及完整peer资料流；候选S2只补上述本人状态后端切片，五端接线、真实S2恢复、原子安装与存储资格仍须实际验证。消息收藏暂借共享展示版本，细分个人同步版本仍需补；跨owner旧准入工作的全量排空／精确历史重放及全部离线副本／备份覆盖也须继续验。当前不标生产准入完成，`safe_restore`／`strong_protection`继续关闭。
+尚未完成完整I的独立interaction部署、细粒度服务身份／最小权限、全部账号数据域覆盖与设备耐久收讫、完整群角色／禁言与独立治理接管、陌生文本消息请求与完整隐私矩阵、举报证据／申诉、MFA登记轮换及受控MFA恢复、五端正式导出接线与普通迁移、五端注销接线／本地与离线副本清理、全文拼音搜索、转发链级导出holder及全媒体跨引用物理清理。固定schema1同步覆盖不含read／云草稿／偏好及完整peer资料流；候选S2只补上述本人状态后端切片，五端接线、真实S2恢复、原子安装与存储资格仍须实际验证。消息收藏暂借共享展示版本，细分个人同步版本仍需补；跨owner旧准入工作的全量排空／精确历史重放及全部离线副本／备份覆盖也须继续验。当前不标生产准入完成，`safe_restore`／`strong_protection`继续关闭。
+
+
+本人完整注销新增独立 `account_deletion*.go`：7天默认／0～30天配置的Governance冷静期，当前本人密码＋原nonce发起、匿名原体只查、5分钟用途绑定的受限密码／单次恢复码／管理员审计证明，取消与processing的同一行仲裁，以及message／media／directory／conversation／sync／governance最终清理。取消不解封、不恢复旧family；独立journal重放后仍不复活已完成注销或媒体字节。完整字段见[本人注销契约](./接口契约/README.md#own-account-deletion)。最终10项真实PG方法全过，含33源消息／33头像分页与恢复字节重清，RPC为进程内生产handler，journal在隔离PG独立schema；五端入口、真实HTTPS／设备、本地与离线副本另验，不能借此段认定全I交付。
 
 <a id="🔚" href="#前言">返回首页</a>
+
+原生八域CMS协调恢复提供 `deployment-restore-plan/deployment-restore`，保持current ledger一次epoch交接、原source拒普通启动与原单续作。隔离八域及最新事实恢复、目标规范Mac入口真实启动／原CA严格HTTPS、旧凭据／旧epoch拒绝、原媒体字节及停止保留已完成一轮主路径验证；不外推断点恢复、真实第二跳或Linux／Windows原生验证，详[恢复与精确证据](../../../项目相关报告/实现进度/20261116-剩余能力闭环/服务端恢复.md)。
+
+普通个人端侧迁移使用独立 `sync_migration*.go/message_migration.go/migration_identity.go/migration_interest.go/migration_invalidation.go`：同scope/user/personal的源目标原device/store配对、服务端核原历史及原件、AES-GCM包与独立HTTPS重新认证取钥、目标整批validate和安装报告，源保留、无新消息／无Outbox／无资格继承。独立owner失效队列接源撤交付、媒体清理与恢复退休；迁移13＋注销／改密／媒体关联共26方法同轮全过，原parent冻结退派生转发包另1方法通过。poison仍503保原责任，但公平批次已证明后续合法holder可清理。字段见[普通迁移合同](./接口契约/普通迁移/README.md)，精确输入／已验／候验分列[普通迁移报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/普通端侧迁移.md)，不借后端测试证明五端本地耐久或全I完成。

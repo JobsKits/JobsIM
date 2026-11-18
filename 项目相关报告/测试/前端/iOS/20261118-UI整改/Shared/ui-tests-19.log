@@ -1,0 +1,519 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -xctestrun /Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Products/JobsIM_iphonesimulator27.2-arm64.xctestrun -destination "platform=iOS Simulator,id=42873992-9F78-40D2-B55D-9EBF66B9684D" -resultBundlePath 项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/ui-tests-19.xcresult -parallel-testing-enabled NO -jobs 2 "-only-testing:JobsIMUITests/IMUITests/testAuthSettingsPasswordEyesAndRememberLayout" "-only-testing:JobsIMUITests/IMUITests/testDemoExitToUnauthenticatedAppDoorLoginRegistrationRail" "-only-testing:JobsIMUITests/IMUITests/testDemoReportSystemPickerPrivateCopyPreviewRemovalAndSubmit" "-only-testing:JobsIMUITests/IMUITests/testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer" test-without-building
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/ui-tests-19.xcresult
+
+2026-11-18 20:04:33.646837+0800 JobsIMUITests-Runner[97735:1322750] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-11-18 20:04:35.548.
+Test Suite 'JobsIMUITests.xctest' started at 2026-11-18 20:04:35.548.
+Test Suite 'IMUITests' started at 2026-11-18 20:04:35.548.
+Test Case '-[JobsIMUITests.IMUITests testAuthSettingsPasswordEyesAndRememberLayout]' started.
+    t =     0.00s Start Test at 2026-11-18 20:04:35.550
+    t =     0.02s Set Up
+    t =     0.02s Open com.jobs.im
+    t =     0.02s     Launch com.jobs.im
+2026-11-18 20:04:35.760 xcodebuild[97722:1322503] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-18 20:04:35.760 xcodebuild[97722:1322503] [MT] IDELaunchParametersSnapshot: no debugger version
+objc[97735]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.DwzPF1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x10a428310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.DwzPF1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x10a45c398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     0.63s         Setting up automation session
+    t =     2.45s         Wait for com.jobs.im to idle
+    t =     3.97s Waiting 10.0s for "demo.environment" Button to exist
+    t =     5.00s     Checking `Expect predicate `existsNoRetry == 1` for object "demo.environment" Button`
+    t =     5.00s         Checking existence of `"demo.environment" Button`
+    t =     5.09s Tap "demo.environment" Button
+    t =     5.09s     Wait for com.jobs.im to idle
+    t =     5.09s     Find the "demo.environment" Button
+    t =     5.11s     Check for interrupting elements affecting "demo.environment" Button
+    t =     5.13s     Synthesize event
+    t =     5.43s     Wait for com.jobs.im to idle
+    t =     5.46s Waiting 2.0s for Alert (First Match) to exist
+    t =     6.49s     Checking `Expect predicate `existsNoRetry == 1` for object Alert (First Match)`
+    t =     6.49s         Checking existence of `Alert (First Match)`
+    t =     6.51s Checking existence of `"取消" Button`
+    t =     6.52s Checking existence of `"跳转设置" Button`
+    t =     7.57s Checking `Expect predicate `exists == 1` for object Alert (First Match)`
+    t =     7.57s     Checking existence of `Alert (First Match)`
+    t =     7.58s Tap "取消" Button
+    t =     7.58s     Wait for com.jobs.im to idle
+    t =     7.58s     Find the "取消" Button
+    t =     7.59s     Check for interrupting elements affecting "取消" Button
+    t =     7.61s     Synthesize event
+    t =     7.90s     Wait for com.jobs.im to idle
+    t =     8.13s Waiting 5.0s for "auth.settings" Button to exist
+    t =     9.17s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.settings" Button`
+    t =     9.17s         Checking existence of `"auth.settings" Button`
+    t =     9.19s Checking existence of `"auth.address" TextField`
+    t =     9.20s Checking existence of `"Jobs荣誉出品" StaticText`
+    t =     9.21s Checking existence of `"重新验证身份" Button`
+    t =     9.21s Checking existence of `"核对原改密结果" Button`
+    t =     9.22s Checking existence of `"只核对原申请" Button`
+    t =     9.23s Checking existence of `"登录帮助与原操作核对" Button`
+    t =     9.24s Checking existence of `"已启用双重验证?" Button`
+    t =     9.25s Checking existence of `"auth.help" Button`
+    t =     9.26s Checking existence of `"auth.otp" TextField`
+    t =     9.26s Find the "auth.rememberPassword" Button
+    t =     9.28s Find the "auth.rememberPassword" Button
+    t =     9.29s Find the "auth.recover" Button
+    t =     9.30s Find the "auth.rememberPassword" Button
+    t =     9.32s Find the "auth.recover" Button
+    t =     9.33s Checking existence of `"auth.cardScroll" ScrollView`
+    t =     9.34s Find the "auth.cardTitle" StaticText
+    t =     9.35s Swipe up "auth.cardScroll" ScrollView
+    t =     9.35s     Wait for com.jobs.im to idle
+    t =     9.35s     Find the "auth.cardScroll" ScrollView
+    t =     9.36s     Check for interrupting elements affecting "auth.cardScroll" ScrollView
+    t =     9.37s     Synthesize event
+    t =     9.79s     Wait for com.jobs.im to idle
+    t =     9.80s Find the "auth.cardTitle" StaticText
+    t =     9.82s Swipe down "auth.cardScroll" ScrollView
+    t =     9.82s     Wait for com.jobs.im to idle
+    t =     9.82s     Find the "auth.cardScroll" ScrollView
+    t =     9.83s     Check for interrupting elements affecting "auth.cardScroll" ScrollView
+    t =     9.84s     Synthesize event
+    t =    10.27s     Wait for com.jobs.im to idle
+    t =    10.28s Find the "auth.cardTitle" StaticText
+    t =    10.29s Find the "auth.password" SecureTextField
+    t =    10.31s Find the "auth.password.visibility" Button
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/UI/IMUITests.swift:917: error: -[JobsIMUITests.IMUITests testAuthSettingsPasswordEyesAndRememberLayout] : XCTAssertGreaterThanOrEqual failed: ("37.333333333333314") is less than ("44.0")
+    t =    10.40s Tear Down
+Test Case '-[JobsIMUITests.IMUITests testAuthSettingsPasswordEyesAndRememberLayout]' failed (10.620 seconds).
+Test Case '-[JobsIMUITests.IMUITests testDemoExitToUnauthenticatedAppDoorLoginRegistrationRail]' started.
+    t =     0.00s Start Test at 2026-11-18 20:04:46.171
+    t =     0.02s Set Up
+    t =     0.02s Open com.jobs.im
+    t =     0.02s     Launch com.jobs.im
+    t =     0.02s         Terminate com.jobs.im:97853
+2026-11-18 20:04:47.236 xcodebuild[97722:1322503] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-18 20:04:47.236 xcodebuild[97722:1322503] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     1.27s         Setting up automation session
+    t =     2.77s         Wait for com.jobs.im to idle
+    t =     4.19s Waiting 10.0s for TabBar (First Match) to exist
+    t =     5.22s     Checking `Expect predicate `existsNoRetry == 1` for object TabBar (First Match)`
+    t =     5.22s         Checking existence of `TabBar (First Match)`
+    t =     5.26s Waiting 5.0s for "demo.environment" Button to exist
+    t =     6.29s     Checking `Expect predicate `existsNoRetry == 1` for object "demo.environment" Button`
+    t =     6.29s         Checking existence of `"demo.environment" Button`
+    t =     6.34s Find the "demo.environment" Button
+    t =     6.36s Press "demo.environment" Button[0.50, 0.50] for 0.1 seconds, then drag to "demo.environment" Button[0.50, 0.50] -> (-70.0, 80.0) with velocity of 500.00 pixels per second, and then hold for 0.0 seconds 
+    t =     6.36s     Wait for com.jobs.im to idle
+    t =     6.36s     Find the "demo.environment" Button
+    t =     6.38s     Check for interrupting elements affecting "demo.environment" Button
+    t =     6.39s     Synthesize event
+    t =     6.39s         Find the "demo.environment" Button
+    t =     6.41s         Find the "demo.environment" Button
+    t =     6.53s         Find the "demo.environment" Button
+    t =     6.55s         Find the "demo.environment" Button
+    t =     6.57s         Find the "demo.environment" Button
+    t =     7.13s     Wait for com.jobs.im to idle
+    t =     7.14s Find the "demo.environment" Button
+    t =     7.16s Checking existence of `"演示空间" StaticText`
+    t =     7.18s Tap "demo.environment" Button
+    t =     7.18s     Wait for com.jobs.im to idle
+    t =     7.18s     Find the "demo.environment" Button
+    t =     7.19s     Check for interrupting elements affecting "demo.environment" Button
+    t =     7.21s     Synthesize event
+    t =     7.50s     Wait for com.jobs.im to idle
+    t =     7.52s Waiting 2.0s for Alert (First Match) to exist
+    t =     8.54s     Checking `Expect predicate `existsNoRetry == 1` for object Alert (First Match)`
+    t =     8.54s         Checking existence of `Alert (First Match)`
+    t =     8.56s Checking existence of `"取消" Button`
+    t =     8.57s Checking existence of `"跳转设置" Button`
+    t =     8.58s Tap "取消" Button
+    t =     8.58s     Wait for com.jobs.im to idle
+    t =     8.58s     Find the "取消" Button
+    t =     8.59s     Check for interrupting elements affecting "取消" Button
+    t =     8.61s     Synthesize event
+    t =     8.90s     Wait for com.jobs.im to idle
+    t =     9.15s Waiting 10.0s for "auth.primary" Button to exist
+    t =    10.17s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.primary" Button`
+    t =    10.17s         Checking existence of `"auth.primary" Button`
+    t =    10.18s Find the "auth.primary" Button
+    t =    10.19s Find the "auth.username" TextField
+    t =    10.21s Find the "auth.password" SecureTextField
+    t =    10.22s Find the "auth.confirmPassword" SecureTextField
+    t =    11.24s     Find the "auth.confirmPassword" SecureTextField (retry 1)
+    t =    12.26s     Find the "auth.confirmPassword" SecureTextField (retry 2)
+    t =    12.28s Find the "auth.modeSwitch" Button
+    t =    12.30s Find the Target Application 'com.jobs.im'
+    t =    12.41s Added attachment named 'demo-exit-unauthenticated-AppDoor-login-right-rail'
+    t =    12.42s Tap "auth.modeSwitch" Button
+    t =    12.42s     Wait for com.jobs.im to idle
+    t =    12.42s     Find the "auth.modeSwitch" Button
+    t =    12.43s     Check for interrupting elements affecting "auth.modeSwitch" Button
+    t =    12.44s     Synthesize event
+    t =    12.72s     Wait for com.jobs.im to idle
+    t =    13.36s Waiting 5.0s for "auth.confirmPassword" SecureTextField to exist
+    t =    14.39s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.confirmPassword" SecureTextField`
+    t =    14.39s         Checking existence of `"auth.confirmPassword" SecureTextField`
+    t =    14.41s Find the "auth.confirmPassword" SecureTextField
+    t =    14.42s Find the "auth.primary" Button
+    t =    14.43s Find the "auth.modeSwitch" Button
+    t =    14.44s Find the "auth.username" TextField
+    t =    14.45s Find the Target Application 'com.jobs.im'
+    t =    14.57s Added attachment named 'AppDoor-registration-left-rail-confirm-password-visible'
+    t =    14.58s Tap "auth.modeSwitch" Button
+    t =    14.58s     Wait for com.jobs.im to idle
+    t =    14.58s     Find the "auth.modeSwitch" Button
+    t =    14.59s     Check for interrupting elements affecting "auth.modeSwitch" Button
+    t =    14.61s     Synthesize event
+    t =    14.90s     Wait for com.jobs.im to idle
+    t =    15.52s Find the "auth.primary" Button
+    t =    15.53s Find the "auth.confirmPassword" SecureTextField
+    t =    16.54s     Find the "auth.confirmPassword" SecureTextField (retry 1)
+    t =    17.56s     Find the "auth.confirmPassword" SecureTextField (retry 2)
+    t =    17.58s Find the "auth.modeSwitch" Button
+    t =    17.59s Find the "auth.username" TextField
+    t =    17.60s Find the Target Application 'com.jobs.im'
+    t =    17.72s Added attachment named 'AppDoor-login-restored-confirm-password-hidden'
+    t =    17.72s Terminate com.jobs.im:98260
+    t =    18.76s Tear Down
+Test Case '-[JobsIMUITests.IMUITests testDemoExitToUnauthenticatedAppDoorLoginRegistrationRail]' passed (18.798 seconds).
+Test Case '-[JobsIMUITests.IMUITests testDemoReportSystemPickerPrivateCopyPreviewRemovalAndSubmit]' started.
+    t =     0.00s Start Test at 2026-11-18 20:05:04.970
+    t =     0.01s Set Up
+    t =     0.01s Open com.jobs.im
+    t =     0.01s     Launch com.jobs.im
+2026-11-18 20:05:04.984 xcodebuild[97722:1322503] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-18 20:05:04.984 xcodebuild[97722:1322503] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     0.22s         Setting up automation session
+    t =     1.69s         Wait for com.jobs.im to idle
+    t =     3.10s Waiting 10.0s for "conversation.lin" Cell to exist
+    t =     4.13s     Checking `Expect predicate `existsNoRetry == 1` for object "conversation.lin" Cell`
+    t =     4.13s         Checking existence of `"conversation.lin" Cell`
+    t =     4.20s Tap "conversation.lin" Cell
+    t =     4.20s     Wait for com.jobs.im to idle
+    t =     4.20s     Find the "conversation.lin" Cell
+    t =     4.21s     Check for interrupting elements affecting "conversation.lin" Cell
+    t =     4.23s     Synthesize event
+    t =     4.51s     Wait for com.jobs.im to idle
+    t =     4.98s Tap "聊天设置" Button
+    t =     4.98s     Wait for com.jobs.im to idle
+    t =     4.98s     Find the "聊天设置" Button
+    t =     5.01s     Check for interrupting elements affecting "聊天设置" Button
+    t =     5.02s     Synthesize event
+    t =     5.31s     Wait for com.jobs.im to idle
+    t =     5.62s Waiting 5.0s for "举报" Button to exist
+    t =     6.64s     Checking `Expect predicate `existsNoRetry == 1` for object "举报" Button`
+    t =     6.64s         Checking existence of `"举报" Button`
+    t =     6.66s Tap "举报" Button
+    t =     6.66s     Wait for com.jobs.im to idle
+    t =     6.67s     Find the "举报" Button
+    t =     6.68s     Check for interrupting elements affecting "举报" Button
+    t =     6.69s     Synthesize event
+    t =     6.98s     Wait for com.jobs.im to idle
+    t =     7.30s Waiting 5.0s for TextView (First Match) to exist
+    t =     8.32s     Checking `Expect predicate `existsNoRetry == 1` for object TextView (First Match)`
+    t =     8.32s         Checking existence of `TextView (First Match)`
+    t =     8.35s Tap TextView (First Match)
+    t =     8.35s     Wait for com.jobs.im to idle
+    t =     8.35s     Find the TextView (First Match)
+    t =     8.36s     Check for interrupting elements affecting TextView
+    t =     8.38s     Synthesize event
+    t =     8.66s     Wait for com.jobs.im to idle
+    t =     8.85s Type 'UI demo report fix...' into TextView at {{20.0, 222.7}, {362.0, 120.0}}
+    t =     8.85s     Wait for com.jobs.im to idle
+    t =     9.22s     Find the TextView at {{20.0, 222.7}, {362.0, 120.0}}
+    t =     9.27s     Check for interrupting elements affecting TextView
+    t =     9.30s     Synthesize event
+    t =    10.02s     Wait for com.jobs.im to idle
+    t =    10.02s Waiting 5.0s for "添加图片或视频" Button to exist
+    t =    11.03s     Checking `Expect predicate `existsNoRetry == 1` for object "添加图片或视频" Button`
+    t =    11.03s         Checking existence of `"添加图片或视频" Button`
+    t =    11.09s Find the "添加图片或视频" Button
+    t =    11.12s Tap "添加图片或视频" Button
+    t =    11.12s     Wait for com.jobs.im to idle
+    t =    11.12s     Find the "添加图片或视频" Button
+    t =    11.15s     Check for interrupting elements affecting "添加图片或视频" Button
+    t =    11.17s     Synthesize event
+    t =    11.46s     Wait for com.jobs.im to idle
+    t =    11.55s Waiting 8.0s for "PXGGridLayout-Info" Image to exist
+    t =    12.57s     Checking `Expect predicate `existsNoRetry == 1` for object "PXGGridLayout-Info" Image`
+    t =    12.57s         Checking existence of `"PXGGridLayout-Info" Image`
+    t =    12.62s         Capturing element debug description
+    t =    13.55s     Checking `Expect predicate `existsNoRetry == 1` for object "PXGGridLayout-Info" Image`
+    t =    13.55s         Checking existence of `"PXGGridLayout-Info" Image`
+    t =    13.61s         Capturing element debug description
+    t =    14.64s     Checking `Expect predicate `existsNoRetry == 1` for object "PXGGridLayout-Info" Image`
+    t =    14.64s         Checking existence of `"PXGGridLayout-Info" Image`
+    t =    14.87s Get number of matches for: Elements matching predicate 'label CONTAINS "11月18日, 15:09"'
+    t =    14.91s Find the "PXGGridLayout-Info" Image
+    t =    14.96s Find the Target Application 'com.jobs.im'
+    t =    15.08s Added attachment named 'native-PHPicker-only-AppIcon-fixture-before-selection'
+    t =    15.08s Tap "PXGGridLayout-Info" Image
+    t =    15.08s     Wait for com.jobs.im to idle
+    t =    15.08s     Find the "PXGGridLayout-Info" Image
+    t =    15.13s     Check for interrupting elements affecting "PXGGridLayout-Info" Image
+    t =    15.16s     Synthesize event
+    t =    15.45s     Wait for com.jobs.im to idle
+    t =    15.45s Waiting 5.0s for Button (First Match) to exist
+    t =    16.49s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    16.49s         Checking existence of `Button (First Match)`
+    t =    16.55s Tap Button (First Match)
+    t =    16.55s     Wait for com.jobs.im to idle
+    t =    16.55s     Find the Button (First Match)
+    t =    16.60s     Check for interrupting elements affecting "Add" Button
+    t =    16.63s     Synthesize event
+    t =    16.93s     Wait for com.jobs.im to idle
+    t =    16.93s Waiting 15.0s for Cell (First Match) to exist
+    t =    17.95s     Checking `Expect predicate `existsNoRetry == 1` for object Cell (First Match)`
+    t =    17.95s         Checking existence of `Cell (First Match)`
+    t =    17.98s Checking existence of `StaticText (First Match)`
+    t =    18.00s Find the StaticText (First Match)
+    t =    18.02s Find the "image/png · 11293 B" StaticText
+    t =    18.04s Get all elements bound by index for: Descendants matching type StaticText
+    t =    18.06s Find the StaticText (Element at index 0)
+    t =    18.08s Find the StaticText (Element at index 1)
+    t =    18.10s Added attachment named 'report-staged-system-filename-MIME-and-size'
+    t =    18.10s Tap Cell (First Match)
+    t =    18.10s     Wait for com.jobs.im to idle
+    t =    18.10s     Find the Cell (First Match)
+    t =    18.13s     Check for interrupting elements affecting Cell
+    t =    18.14s     Synthesize event
+    t =    18.43s     Wait for com.jobs.im to idle
+    t =    18.89s Waiting 8.0s for "report.preview.close" Button to exist
+    t =    19.92s     Checking `Expect predicate `existsNoRetry == 1` for object "report.preview.close" Button`
+    t =    19.92s         Checking existence of `"report.preview.close" Button`
+    t =    19.94s Find the "report.preview.close" Button
+    t =    19.96s Find the "report.preview.close" Button
+    t =    19.98s Waiting 10.0s for "com.apple.paper.imageCanvasElementView" Other to exist
+    t =    21.00s     Checking `Expect predicate `existsNoRetry == 1` for object "com.apple.paper.imageCanvasElementView" Other`
+    t =    21.00s         Checking existence of `"com.apple.paper.imageCanvasElementView" Other`
+    t =    21.12s Waiting 10.0s for Image (First Match) to exist
+    t =    22.15s     Checking `Expect predicate `existsNoRetry == 1` for object Image (First Match)`
+    t =    22.15s         Checking existence of `Image (First Match)`
+    t =    22.24s Find the "com.apple.paper.imageCanvasElementView" Other
+    t =    22.29s Find the "com.apple.paper.imageCanvasElementView" Other
+    t =    22.35s Requesting snapshot of accessibility hierarchy for app with pid 98914
+    t =    22.51s Requesting snapshot of accessibility hierarchy for app with pid 98914
+    t =    22.55s Added attachment named 'report-QuickLook-rendered-accessibility-tree'
+    t =    22.55s Find the Target Application 'com.jobs.im'
+    t =    22.64s Added attachment named 'report-private-copy-QuickLook-after-PHPicker-dismissed'
+    t =    22.64s Tap "report.preview.close" Button
+    t =    22.64s     Wait for com.jobs.im to idle
+    t =    22.64s     Find the "report.preview.close" Button
+    t =    22.67s     Check for interrupting elements affecting "report.preview.close" Button
+    t =    22.70s     Synthesize event
+    t =    22.99s     Wait for com.jobs.im to idle
+    t =    23.37s Waiting 5.0s for Cell at {{20.0, 455.0}, {362.0, 88.0}} to exist
+    t =    24.39s     Checking `Expect predicate `existsNoRetry == 1` for object Cell at {{20.0, 455.0}, {362.0, 88.0}}`
+    t =    24.39s         Checking existence of `Cell at {{20.0, 455.0}, {362.0, 88.0}}`
+    t =    24.42s Swipe left Cell at {{20.0, 455.0}, {362.0, 88.0}}
+    t =    24.42s     Wait for com.jobs.im to idle
+    t =    24.42s     Find the Cell at {{20.0, 455.0}, {362.0, 88.0}}
+    t =    24.44s     Check for interrupting elements affecting Cell
+    t =    24.45s     Synthesize event
+    t =    24.89s     Wait for com.jobs.im to idle
+    t =    25.33s Waiting 5.0s for "删除" Button to exist
+    t =    26.35s     Checking `Expect predicate `existsNoRetry == 1` for object "删除" Button`
+    t =    26.36s         Checking existence of `"删除" Button`
+    t =    26.39s Tap "删除" Button
+    t =    26.39s     Wait for com.jobs.im to idle
+    t =    26.39s     Find the "删除" Button
+    t =    26.41s     Check for interrupting elements affecting "删除" Button
+    t =    26.43s     Synthesize event
+    t =    26.72s     Wait for com.jobs.im to idle
+    t =    26.72s Waiting 5.0s for Cell at {{20.0, 455.0}, {362.0, 88.0}} to not exist
+    t =    27.75s     Checking `Expect predicate `existsNoRetry == 0` for object Cell at {{20.0, 455.0}, {362.0, 88.0}}`
+    t =    27.75s         Checking existence of `Cell at {{20.0, 455.0}, {362.0, 88.0}}`
+    t =    27.78s Find the Target Application 'com.jobs.im'
+    t =    27.85s Added attachment named 'report-selected-material-removed-before-submit'
+    t =    27.85s Waiting 5.0s for "添加图片或视频" Button to exist
+    t =    28.87s     Checking `Expect predicate `existsNoRetry == 1` for object "添加图片或视频" Button`
+    t =    28.87s         Checking existence of `"添加图片或视频" Button`
+    t =    28.90s Find the "添加图片或视频" Button
+    t =    28.91s Tap "添加图片或视频" Button
+    t =    28.91s     Wait for com.jobs.im to idle
+    t =    28.92s     Find the "添加图片或视频" Button
+    t =    28.93s     Check for interrupting elements affecting "添加图片或视频" Button
+    t =    28.94s     Synthesize event
+    t =    29.23s     Wait for com.jobs.im to idle
+    t =    29.71s Waiting 8.0s for "PXGGridLayout-Info" Image to exist
+    t =    30.73s     Checking `Expect predicate `existsNoRetry == 1` for object "PXGGridLayout-Info" Image`
+    t =    30.73s         Checking existence of `"PXGGridLayout-Info" Image`
+    t =    30.81s Get number of matches for: Elements matching predicate 'label CONTAINS "11月18日, 15:09"'
+    t =    30.85s Find the "PXGGridLayout-Info" Image
+    t =    30.90s Find the Target Application 'com.jobs.im'
+    t =    31.02s Added attachment named 'native-PHPicker-only-AppIcon-fixture-before-selection'
+    t =    31.02s Tap "PXGGridLayout-Info" Image
+    t =    31.02s     Wait for com.jobs.im to idle
+    t =    31.02s     Find the "PXGGridLayout-Info" Image
+    t =    31.07s     Check for interrupting elements affecting "PXGGridLayout-Info" Image
+    t =    31.10s     Synthesize event
+    t =    31.39s     Wait for com.jobs.im to idle
+    t =    31.39s Waiting 5.0s for Button (First Match) to exist
+    t =    32.41s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    32.41s         Checking existence of `Button (First Match)`
+    t =    32.47s Tap Button (First Match)
+    t =    32.47s     Wait for com.jobs.im to idle
+    t =    32.47s     Find the Button (First Match)
+    t =    32.52s     Check for interrupting elements affecting "Add" Button
+    t =    32.55s     Synthesize event
+    t =    32.84s     Wait for com.jobs.im to idle
+    t =    33.25s Waiting 15.0s for Cell at {{20.0, 455.0}, {362.0, 88.0}} to exist
+    t =    34.27s     Checking `Expect predicate `existsNoRetry == 1` for object Cell at {{20.0, 455.0}, {362.0, 88.0}}`
+    t =    34.27s         Checking existence of `Cell at {{20.0, 455.0}, {362.0, 88.0}}`
+    t =    34.30s Checking existence of `StaticText (First Match)`
+    t =    34.32s Find the StaticText (First Match)
+    t =    34.34s Find the "image/png · 11293 B" StaticText
+    t =    34.36s Waiting 5.0s for "提交举报" Button to exist
+    t =    35.37s     Checking `Expect predicate `existsNoRetry == 1` for object "提交举报" Button`
+    t =    35.37s         Checking existence of `"提交举报" Button`
+    t =    35.40s Find the "提交举报" Button
+    t =    35.42s Tap "提交举报" Button
+    t =    35.42s     Wait for com.jobs.im to idle
+    t =    35.42s     Find the "提交举报" Button
+    t =    35.44s     Check for interrupting elements affecting "提交举报" Button
+    t =    35.45s     Synthesize event
+    t =    35.74s     Wait for com.jobs.im to idle
+    t =    36.01s Waiting 5.0s for "提交举报" Alert to exist
+    t =    37.03s     Checking `Expect predicate `existsNoRetry == 1` for object "提交举报" Alert`
+    t =    37.03s         Checking existence of `"提交举报" Alert`
+    t =    37.06s Checking existence of `"举报材料 · 1 / 0" StaticText`
+    t =    37.08s Tap "继续" Button
+    t =    37.08s     Wait for com.jobs.im to idle
+    t =    37.08s     Find the "继续" Button
+    t =    37.10s     Check for interrupting elements affecting "继续" Button
+    t =    37.13s     Synthesize event
+    t =    37.42s     Wait for com.jobs.im to idle
+    t =    37.72s Waiting 10.0s for "完成" Alert to exist
+    t =    38.74s     Checking `Expect predicate `existsNoRetry == 1` for object "完成" Alert`
+    t =    38.74s         Checking existence of `"完成" Alert`
+    t =    38.77s Checking existence of `"演示空间" StaticText`
+    t =    38.78s Find the Target Application 'com.jobs.im'
+    t =    38.85s Added attachment named 'demo-report-one-real-material-submitted-without-formal-API'
+    t =    38.85s Tap "完成" Button
+    t =    38.86s     Wait for com.jobs.im to idle
+    t =    38.86s     Find the "完成" Button
+    t =    38.87s     Check for interrupting elements affecting "完成" Button
+    t =    38.89s     Synthesize event
+    t =    39.18s     Wait for com.jobs.im to idle
+    t =    39.42s Waiting 5.0s for Cell at {{20.0, 455.0}, {362.0, 88.0}} to not exist
+    t =    40.43s     Checking `Expect predicate `existsNoRetry == 0` for object Cell at {{20.0, 455.0}, {362.0, 88.0}}`
+    t =    40.43s         Checking existence of `Cell at {{20.0, 455.0}, {362.0, 88.0}}`
+    t =    40.46s Waiting 5.0s for "举报已受理" Button to exist
+    t =    41.47s     Checking `Expect predicate `existsNoRetry == 1` for object "举报已受理" Button`
+    t =    41.47s         Checking existence of `"举报已受理" Button`
+    t =    41.50s Find the "举报已受理" Button
+    t =    41.51s Terminate com.jobs.im:98914
+    t =    42.56s Tear Down
+Test Case '-[JobsIMUITests.IMUITests testDemoReportSystemPickerPrivateCopyPreviewRemovalAndSubmit]' passed (42.642 seconds).
+Test Case '-[JobsIMUITests.IMUITests testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer]' started.
+    t =     0.00s Start Test at 2026-11-18 20:05:47.612
+    t =     0.01s Set Up
+    t =     0.01s Open com.jobs.im
+    t =     0.01s     Launch com.jobs.im
+2026-11-18 20:05:47.625 xcodebuild[97722:1322503] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-18 20:05:47.625 xcodebuild[97722:1322503] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     0.22s         Setting up automation session
+    t =     1.72s         Wait for com.jobs.im to idle
+    t =     3.16s Waiting 10.0s for "demo.environment" Button to exist
+    t =     4.18s     Checking `Expect predicate `existsNoRetry == 1` for object "demo.environment" Button`
+    t =     4.18s         Checking existence of `"demo.environment" Button`
+    t =     4.24s Tap "demo.environment" Button
+    t =     4.24s     Wait for com.jobs.im to idle
+    t =     4.24s     Find the "demo.environment" Button
+    t =     4.26s     Check for interrupting elements affecting "demo.environment" Button
+    t =     4.27s     Synthesize event
+    t =     4.56s     Wait for com.jobs.im to idle
+    t =     4.60s Waiting 2.0s for Alert (First Match) to exist
+    t =     5.62s     Checking `Expect predicate `existsNoRetry == 1` for object Alert (First Match)`
+    t =     5.62s         Checking existence of `Alert (First Match)`
+    t =     5.63s Checking existence of `"取消" Button`
+    t =     5.65s Checking existence of `"跳转设置" Button`
+    t =     5.66s Tap "跳转设置" Button
+    t =     5.66s     Wait for com.jobs.im to idle
+    t =     5.66s     Find the "跳转设置" Button
+    t =     5.67s     Check for interrupting elements affecting "跳转设置" Button
+    t =     5.70s     Synthesize event
+    t =     5.98s     Wait for com.jobs.im to idle
+    t =     6.81s Waiting 5.0s for "auth.settings.demo" Switch to exist
+    t =     7.83s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.settings.demo" Switch`
+    t =     7.83s         Checking existence of `"auth.settings.demo" Switch`
+    t =     7.85s Find the "auth.settings.demo" Switch
+    t =     7.86s Tap "auth.settings.demo" Switch
+    t =     7.86s     Wait for com.jobs.im to idle
+    t =     7.87s     Find the "auth.settings.demo" Switch
+    t =     7.88s     Check for interrupting elements affecting "auth.settings.demo" Switch
+    t =     7.89s     Synthesize event
+    t =     8.17s     Wait for com.jobs.im to idle
+    t =    10.48s Checking `Expect predicate `enabled == 1 AND value == "1"` for object "auth.settings.demo" Switch`
+    t =    10.48s     Find the "auth.settings.demo" Switch
+    t =    10.50s     Find the "auth.settings.demo" Switch
+    t =    10.51s Checking existence of `"auth.address" TextField`
+    t =    10.52s Tap Button (First Match)
+    t =    10.52s     Wait for com.jobs.im to idle
+    t =    10.52s     Find the Button (First Match)
+    t =    10.53s     Check for interrupting elements affecting "返回" Button
+    t =    10.55s     Synthesize event
+    t =    10.83s     Wait for com.jobs.im to idle
+    t =    11.14s Waiting 5.0s for "auth.username" TextField to exist
+    t =    12.16s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.username" TextField`
+    t =    12.16s         Checking existence of `"auth.username" TextField`
+    t =    12.18s Find the "auth.username" TextField
+    t =    12.19s Checking existence of `"auth.password" TextField`
+    t =    12.20s Find the "auth.password" TextField
+    t =    12.21s Find the "auth.rememberPassword" Button
+    t =    12.22s Tap "auth.primary" Button
+    t =    12.22s     Wait for com.jobs.im to idle
+    t =    12.22s     Find the "auth.primary" Button
+    t =    12.23s     Check for interrupting elements affecting "auth.primary" Button
+    t =    12.24s     Synthesize event
+    t =    12.53s     Wait for com.jobs.im to idle
+    t =    12.55s Waiting 30.0s for TabBar (First Match) to exist
+    t =    13.58s     Checking `Expect predicate `existsNoRetry == 1` for object TabBar (First Match)`
+    t =    13.58s         Checking existence of `TabBar (First Match)`
+    t =    13.60s Get number of matches for: Descendants matching type Button
+    t =    13.61s Checking existence of `"demo.environment" Button`
+    t =    13.63s Checking existence of `"演示空间" StaticText`
+    t =    13.65s Waiting 15.0s for Cell (First Match) to exist
+    t =    14.67s     Checking `Expect predicate `existsNoRetry == 1` for object Cell (First Match)`
+    t =    14.67s         Checking existence of `Cell (First Match)`
+    t =    14.70s Tap Cell (First Match)
+    t =    14.70s     Wait for com.jobs.im to idle
+    t =    14.70s     Find the Cell (First Match)
+    t =    14.71s     Check for interrupting elements affecting "conversation.9ec5bfc3-1e7f-4269-bfac-ce3df6499f42" Cell
+    t =    14.73s     Synthesize event
+    t =    15.02s     Wait for com.jobs.im to idle
+    t =    15.41s Waiting 5.0s for "小林" StaticText to exist
+    t =    16.43s     Checking `Expect predicate `existsNoRetry == 1` for object "小林" StaticText`
+    t =    16.43s         Checking existence of `"小林" StaticText`
+    t =    16.44s Find the TabBar (First Match)
+    t =    17.46s     Find the TabBar (First Match) (retry 1)
+    t =    18.50s     Find the TabBar (First Match) (retry 2)
+    t =    18.53s Find the Target Application 'com.jobs.im'
+    t =    18.59s Added attachment named 'native-Mac-demo-normal-API-login-contacts-chat-and-single-floating-exit'
+    t =    18.59s Tap "demo.environment" Button
+    t =    18.59s     Wait for com.jobs.im to idle
+    t =    18.59s     Find the "demo.environment" Button
+    t =    18.61s     Check for interrupting elements affecting "demo.environment" Button
+    t =    18.62s     Synthesize event
+    t =    18.90s     Wait for com.jobs.im to idle
+    t =    19.84s Waiting 10.0s for "auth.primary" Button to exist
+    t =    20.85s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.primary" Button`
+    t =    20.86s         Checking existence of `"auth.primary" Button`
+    t =    20.88s Checking existence of `TabBar (First Match)`
+    t =    20.91s Checking existence of `"demo.environment" Button`
+    t =    20.92s Terminate com.jobs.im:1061
+    t =    21.95s Tear Down
+Test Case '-[JobsIMUITests.IMUITests testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer]' passed (22.007 seconds).
+Test Suite 'IMUITests' failed at 2026-11-18 20:06:09.619.
+	 Executed 4 tests, with 1 failure (0 unexpected) in 94.068 (94.071) seconds
+Test Suite 'JobsIMUITests.xctest' failed at 2026-11-18 20:06:09.620.
+	 Executed 4 tests, with 1 failure (0 unexpected) in 94.068 (94.072) seconds
+Test Suite 'Selected tests' failed at 2026-11-18 20:06:09.621.
+	 Executed 4 tests, with 1 failure (0 unexpected) in 94.068 (94.073) seconds
+2026-11-18 20:06:23.686 xcodebuild[97722:1322503] [MT] IDETestOperationsObserverDebug: 110.906 elapsed -- Testing started completed.
+2026-11-18 20:06:23.686 xcodebuild[97722:1322503] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-18 20:06:23.686 xcodebuild[97722:1322503] [MT] IDETestOperationsObserverDebug: 110.906 sec, +110.906 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/ui-tests-19.xcresult
+
+Failing tests:
+	IMUITests.testAuthSettingsPasswordEyesAndRememberLayout()
+
+** TEST EXECUTE FAILED **
+
+Testing started

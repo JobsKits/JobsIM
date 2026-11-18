@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-17T05:59:25.428Z",
+  "sourceRecord": "项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入SHA256.json",
+  "sourceStableAtBuild": true,
+  "currentSourceDifferencesAtBuild": [],
+  "totals": {
+    "tests": 46,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "instrumentationCompiledOnly": 98,
+  "artifacts": [
+    {
+      "file": "/Users/jobs/Library/Application Support/JobsIM/Build/Android/VoiceUpload/20261117-132316-e249461a/代码/前端/Android/app/build/outputs/apk/debug/app-debug.apk",
+      "sha256": "c035189d580f806c8e9bb89bc05d4d596ba822f87c346feeb145124401b18ffb",
+      "bytes": 17588015
+    },
+    {
+      "file": "/Users/jobs/Library/Application Support/JobsIM/Build/Android/VoiceUpload/20261117-132316-e249461a/代码/前端/Android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk",
+      "sha256": "841c540cbc254693d2063e040f973db555ed71fb253cb178ab598cbc2b7fcdb2",
+      "bytes": 1167308
+    }
+  ],
+  "installed": false,
+  "deviceExecuted": false
+}

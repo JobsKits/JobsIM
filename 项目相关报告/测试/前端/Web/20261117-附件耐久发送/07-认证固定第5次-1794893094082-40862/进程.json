@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-11-17T05:24:54.084Z",
+  "finishedAt": "2026-11-17T05:24:55.376Z",
+  "args": [
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "expectedFailure": false,
+  "validProductReproduction": false,
+  "stopped": "",
+  "minimumFree": 23486836736,
+  "inputsUnchanged": true,
+  "realAPI": false
+}

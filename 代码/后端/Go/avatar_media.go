@@ -70,10 +70,14 @@ func (a *App) processAvatar(w http.ResponseWriter, r *http.Request) error {
 	if !bytes.Equal(original, digest[:]) || str(epoch) != q.RestoreEpoch || str(generation) != q.Generation {
 		return fail(409, "IDEMPOTENCY_CONFLICT", "Original avatar process differs")
 	}
+	processingProfile := "static-jpeg-1"
+	if isGIFAvatar(q.Content) {
+		processingProfile = "animated-gif-1"
+	}
 	for kind, id := range map[string]string{"crop_512": root, "thumbnail_128": thumb} {
 		// Each output has its own stable processing identity; neither consumes the publication operation as a job ID.
-		job := a.avatarObjectID(q.UserID, q.OperationID, "job:"+kind+":static-jpeg-1")
-		if _, e = a.DB.Exec(r.Context(), `INSERT INTO media.avatar_processing_items(job_id,owner_id,publication_operation_id,kind,profile_version,output_id,state) VALUES($1,$2,$3,$4,'static-jpeg-1',$5,'prepared') ON CONFLICT DO NOTHING`, job, q.UserID, q.OperationID, kind, id); e != nil {
+		job := a.avatarObjectID(q.UserID, q.OperationID, "job:"+kind+":"+processingProfile)
+		if _, e = a.DB.Exec(r.Context(), `INSERT INTO media.avatar_processing_items(job_id,owner_id,publication_operation_id,kind,profile_version,output_id,state) VALUES($1,$2,$3,$4,$5,$6,'prepared') ON CONFLICT DO NOTHING`, job, q.UserID, q.OperationID, kind, processingProfile, id); e != nil {
 			return e
 		}
 	}
@@ -98,7 +102,9 @@ func (a *App) processAvatar(w http.ResponseWriter, r *http.Request) error {
 			}
 		}
 		if complete {
-			if _,e=a.DB.Exec(r.Context(),`UPDATE media.avatar_processing_items SET state='completed' WHERE owner_id=$1 AND publication_operation_id=$2 AND profile_version='static-jpeg-1'`,q.UserID,q.OperationID);e!=nil{return e}
+			if _, e = a.DB.Exec(r.Context(), `UPDATE media.avatar_processing_items SET state='completed' WHERE owner_id=$1 AND publication_operation_id=$2 AND profile_version=$3`, q.UserID, q.OperationID, processingProfile); e != nil {
+				return e
+			}
 			respond(w, 200, map[string]string{"rootId": root, "thumbnailId": thumb})
 			return nil
 		}
@@ -109,18 +115,25 @@ func (a *App) processAvatar(w http.ResponseWriter, r *http.Request) error {
 	case <-r.Context().Done():
 		return r.Context().Err()
 	}
-	src, e := decodeStaticAvatar(q.Content)
+	var rootBytes, thumbBytes []byte
+	rootType, rootName := "image/jpeg", "avatar.jpg"
+	if isGIFAvatar(q.Content) {
+		rootBytes, thumbBytes, e = encodeAnimatedAvatar(q.Content)
+		rootType, rootName = "image/gif", "avatar.gif"
+	} else {
+		var src image.Image
+		src, e = decodeStaticAvatar(q.Content)
+		if e == nil {
+			rootBytes, e = encodeAvatarSquare(src, 512)
+		}
+		if e == nil {
+			thumbBytes, e = encodeAvatarSquare(src, 128)
+		}
+	}
 	if e != nil {
 		return e
 	}
-	rootBytes, e := encodeAvatarSquare(src, 512)
-	if e != nil {
-		return e
-	}
-	thumbBytes, e := encodeAvatarSquare(src, 128)
-	if e != nil {
-		return e
-	}
+
 	for id, data := range map[string][]byte{root: rootBytes, thumb: thumbBytes} {
 		if e = a.writeAvatarFile(id, data); e != nil {
 			return e
@@ -141,7 +154,11 @@ func (a *App) processAvatar(w http.ResponseWriter, r *http.Request) error {
 		if id == thumb {
 			parent = &root
 		}
-		_, e = tx.Exec(r.Context(), `INSERT INTO media.objects(id,owner_id,name,content_type,size_bytes,sha256,storage_key,purpose,owner_reference_id,owner_generation,parent_object_id) VALUES($1,$2,'avatar.jpg','image/jpeg',$3,$4,$7,'profile_avatar',$2,$5::bigint,$6) ON CONFLICT(id) DO NOTHING`, id, q.UserID, len(data), hash[:], q.Generation, parent, id)
+		name, contentType := rootName, rootType
+		if id == thumb {
+			name, contentType = "avatar.jpg", "image/jpeg"
+		}
+		_, e = tx.Exec(r.Context(), `INSERT INTO media.objects(id,owner_id,name,content_type,size_bytes,sha256,storage_key,purpose,owner_reference_id,owner_generation,parent_object_id) VALUES($1,$2,$8,$9,$3,$4,$7,'profile_avatar',$2,$5::bigint,$6) ON CONFLICT(id) DO NOTHING`, id, q.UserID, len(data), hash[:], q.Generation, parent, id, name, contentType)
 		if e != nil {
 			return e
 		}
@@ -270,28 +287,15 @@ func (a *App) downloadAvatar(w http.ResponseWriter, r *http.Request) error {
 		return e
 	}
 	id := r.PathValue("id")
+	if e = a.requireMediaOwnerReadable(r.Context(), id); e != nil {
+		return e
+	}
 	if e = a.rpc(r.Context(), "directory", "/internal/avatar/access", map[string]string{"userId": u.ID, "objectId": id}, nil); e != nil {
 		return e
 	}
-	var key, ct string
-	if e = a.DB.QueryRow(r.Context(), `SELECT storage_key,content_type FROM media.objects WHERE id=$1 AND purpose='profile_avatar'`, id).Scan(&key, &ct); e != nil {
+	var key, ct, name string
+	if e = a.DB.QueryRow(r.Context(), `SELECT storage_key,content_type,name FROM media.objects WHERE id=$1 AND purpose='profile_avatar'`, id).Scan(&key, &ct, &name); e != nil {
 		return fail(404, "AVATAR_UNAVAILABLE", "Avatar bytes unavailable")
 	}
-	if key != filepath.Base(key) {
-		return fail(500, "STORAGE_INTEGRITY", "Invalid avatar storage identity")
-	}
-	f, e := os.Open(filepath.Join(a.Config.StateDir, "Media", key))
-	if e != nil {
-		return fail(404, "AVATAR_UNAVAILABLE", "Avatar bytes unavailable")
-	}
-	defer f.Close()
-	stat, e := f.Stat()
-	if e != nil {
-		return e
-	}
-	w.Header().Set("Content-Type", ct)
-	w.Header().Set("Cache-Control", "private,no-store")
-	w.Header().Set("Content-Disposition", "inline; filename=avatar.jpg")
-	http.ServeContent(w, r, "avatar.jpg", stat.ModTime(), f)
-	return nil
+	return a.servePrivateMedia(w, r, id, name, ct, key, "")
 }

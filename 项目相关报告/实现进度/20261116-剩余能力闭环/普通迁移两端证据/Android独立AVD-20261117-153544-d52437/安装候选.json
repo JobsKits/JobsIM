@@ -1,0 +1,32 @@
+[
+  {
+    "command": [
+      "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5580",
+      "install",
+      "-r",
+      "-t",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android声明严格DTO-20261117-152503-67efeeb1/app-debug.apk"
+    ],
+    "exitCode": 0,
+    "stdout": "Performing Streamed Install\nSuccess\n",
+    "stderr": "",
+    "sha256": "31406361b74f9c2df1c420e8c391ad9a8f84ac1277cae2f8a2f85128b0939a5a"
+  },
+  {
+    "command": [
+      "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+      "-s",
+      "emulator-5580",
+      "install",
+      "-r",
+      "-t",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android声明严格DTO-20261117-152503-67efeeb1/app-debug-androidTest.apk"
+    ],
+    "exitCode": 0,
+    "stdout": "Performing Streamed Install\nSuccess\n",
+    "stderr": "",
+    "sha256": "fc2b7e960f474e15db06ef5119f38e91c27f04b6abb504a8c097b1e350d0457b"
+  }
+]

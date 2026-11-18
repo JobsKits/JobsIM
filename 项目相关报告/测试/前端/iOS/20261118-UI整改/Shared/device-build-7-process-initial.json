@@ -1,0 +1,1162 @@
+{
+  "info" : {
+    "arguments" : [
+      "devicectl",
+      "device",
+      "info",
+      "processes",
+      "--device",
+      "00008110-000625583EE3801E",
+      "--json-output",
+      "项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/device-build-7-process-initial.json"
+    ],
+    "commandType" : "devicectl.device.info.processes",
+    "environment" : {
+      "TERM" : "dumb"
+    },
+    "jsonVersion" : 5,
+    "outcome" : "success",
+    "version" : "651.32"
+  },
+  "result" : {
+    "deviceIdentifier" : "FE8207C9-DB32-564B-8990-44C558C044A6",
+    "runningProcesses" : [
+      {
+        "executable" : "file:///sbin/launchd",
+        "processIdentifier" : 1
+      },
+      {
+        "executable" : "file:///usr/libexec/UserEventAgent",
+        "processIdentifier" : 35
+      },
+      {
+        "executable" : "file:///usr/libexec/logd",
+        "processIdentifier" : 37
+      },
+      {
+        "executable" : "file:///usr/libexec/runningboardd",
+        "processIdentifier" : 38
+      },
+      {
+        "executable" : "file:///System/Library/CoreServices/SpringBoard.app/SpringBoard",
+        "processIdentifier" : 39
+      },
+      {
+        "executable" : "file:///usr/libexec/configd",
+        "processIdentifier" : 50
+      },
+      {
+        "executable" : "file:///System/Library/CoreServices/powerd.bundle/powerd",
+        "processIdentifier" : 53
+      },
+      {
+        "executable" : "file:///usr/sbin/WirelessRadioManagerd",
+        "processIdentifier" : 56
+      },
+      {
+        "executable" : "file:///usr/libexec/watchdogd",
+        "processIdentifier" : 66
+      },
+      {
+        "executable" : "file:///usr/libexec/nfcd",
+        "processIdentifier" : 67
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/IDS.framework/identityservicesd.app/identityservicesd",
+        "processIdentifier" : 68
+      },
+      {
+        "executable" : "file:///usr/libexec/thermalmonitord",
+        "processIdentifier" : 71
+      },
+      {
+        "executable" : "file:///usr/libexec/cameracaptured",
+        "processIdentifier" : 73
+      },
+      {
+        "executable" : "file:///usr/libexec/backboardd",
+        "processIdentifier" : 75
+      },
+      {
+        "executable" : "file:///usr/libexec/timed",
+        "processIdentifier" : 78
+      },
+      {
+        "executable" : "file:///usr/libexec/sharingd",
+        "processIdentifier" : 79
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/IMCore.framework/imagent.app/imagent",
+        "processIdentifier" : 84
+      },
+      {
+        "executable" : "file:///usr/libexec/rapportd",
+        "processIdentifier" : 101
+      },
+      {
+        "executable" : "file:///usr/sbin/bluetoothd",
+        "processIdentifier" : 103
+      },
+      {
+        "executable" : "file:///usr/sbin/fairplayd.H2",
+        "processIdentifier" : 105
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/CoreTelephony.framework/Support/CommCenter",
+        "processIdentifier" : 106
+      },
+      {
+        "executable" : "file:///usr/sbin/distnoted",
+        "processIdentifier" : 111
+      },
+      {
+        "executable" : "file:///usr/sbin/notifyd",
+        "processIdentifier" : 112
+      },
+      {
+        "executable" : "file:///usr/sbin/cfprefsd",
+        "processIdentifier" : 115
+      },
+      {
+        "executable" : "file:///usr/sbin/cfprefsd",
+        "processIdentifier" : 116
+      },
+      {
+        "executable" : "file:///usr/libexec/audiomxd",
+        "processIdentifier" : 119
+      },
+      {
+        "executable" : "file:///System/Library/DriverExtensions/com.apple.DriverKit-AppleBCMWLAN.dext/com.apple.DriverKit-AppleBCMWLAN",
+        "processIdentifier" : 121
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SystemStatusServer.framework/Support/systemstatusd",
+        "processIdentifier" : 125
+      },
+      {
+        "executable" : "file:///usr/libexec/biometrickitd",
+        "processIdentifier" : 134
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/ApplePushService.framework/apsd",
+        "processIdentifier" : 146
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd",
+        "processIdentifier" : 164
+      },
+      {
+        "executable" : "file:///usr/libexec/symptomsd",
+        "processIdentifier" : 201
+      },
+      {
+        "executable" : "file:///usr/sbin/mDNSResponder",
+        "processIdentifier" : 204
+      },
+      {
+        "executable" : "file:///System/Library/CoreServices/coreservicesd",
+        "processIdentifier" : 324
+      },
+      {
+        "executable" : "file:///usr/libexec/diskarbitrationd",
+        "processIdentifier" : 325
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/SystemConfiguration.framework/SCHelper",
+        "processIdentifier" : 348
+      },
+      {
+        "executable" : "file:///usr/libexec/lsd",
+        "processIdentifier" : 427
+      },
+      {
+        "executable" : "file:///Applications/InputUI.app/InputUI",
+        "processIdentifier" : 479
+      },
+      {
+        "executable" : "file:///System/Library/ExtensionKit/Extensions/MercuryPosterExtension.appex/MercuryPosterExtension",
+        "processIdentifier" : 498
+      },
+      {
+        "executable" : "file:///System/Library/TextInput/kbd",
+        "processIdentifier" : 711
+      },
+      {
+        "executable" : "file:///usr/libexec/PurpleReverseProxy",
+        "processIdentifier" : 1688
+      },
+      {
+        "executable" : "file:///usr/sbin/filecoordinationd",
+        "processIdentifier" : 2599
+      },
+      {
+        "executable" : "file:///usr/libexec/cryptexd",
+        "processIdentifier" : 3956
+      },
+      {
+        "executable" : "file:///usr/libexec/modelmanagerd",
+        "processIdentifier" : 19322
+      },
+      {
+        "executable" : "file:///usr/libexec/fseventsd",
+        "processIdentifier" : 48037
+      },
+      {
+        "executable" : "file:///usr/libexec/locationd",
+        "processIdentifier" : 57023
+      },
+      {
+        "executable" : "file:///usr/libexec/PerfPowerServices",
+        "processIdentifier" : 73818
+      },
+      {
+        "executable" : "file:///usr/sbin/wifid",
+        "processIdentifier" : 79618
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/GeoServices.framework/geod",
+        "processIdentifier" : 84255
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/HealthKit.framework/healthd",
+        "processIdentifier" : 84463
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted",
+        "processIdentifier" : 84898
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CloudKitDaemon.framework/Support/cloudd",
+        "processIdentifier" : 85667
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/UserNotificationsCore.framework/Support/usernotificationsd",
+        "processIdentifier" : 85668
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/TCC.framework/Support/tccd",
+        "processIdentifier" : 85676
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/WatchListKit.framework/Support/watchlistd",
+        "processIdentifier" : 85680
+      },
+      {
+        "executable" : "file:///usr/libexec/searchpartyd",
+        "processIdentifier" : 85681
+      },
+      {
+        "executable" : "file:///usr/libexec/securityd",
+        "processIdentifier" : 85690
+      },
+      {
+        "executable" : "file:///usr/libexec/usermanagerd",
+        "processIdentifier" : 85691
+      },
+      {
+        "executable" : "file:///usr/libexec/gamepolicyd",
+        "processIdentifier" : 85692
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AuthKit.framework/akd",
+        "processIdentifier" : 85693
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/Accounts.framework/accountsd",
+        "processIdentifier" : 85703
+      },
+      {
+        "executable" : "file:///usr/libexec/nsurlsessiond",
+        "processIdentifier" : 85707
+      },
+      {
+        "executable" : "file:///usr/libexec/nearbyd",
+        "processIdentifier" : 85708
+      },
+      {
+        "executable" : "file:///usr/libexec/safetyalertsd",
+        "processIdentifier" : 85712
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SafariSafeBrowsing.framework/com.apple.Safari.SafeBrowsing.Service",
+        "processIdentifier" : 85713
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/UserActivity.framework/Agents/useractivityd",
+        "processIdentifier" : 85715
+      },
+      {
+        "executable" : "file:///usr/libexec/videocodecd",
+        "processIdentifier" : 85716
+      },
+      {
+        "executable" : "file:///usr/libexec/duetexpertd",
+        "processIdentifier" : 85717
+      },
+      {
+        "executable" : "file:///usr/libexec/powerexceptionsd",
+        "processIdentifier" : 85720
+      },
+      {
+        "executable" : "file:///usr/libexec/aonsensed",
+        "processIdentifier" : 85721
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/ChronoCore.framework/Support/chronod",
+        "processIdentifier" : 85722
+      },
+      {
+        "executable" : "file:///usr/libexec/dasd",
+        "processIdentifier" : 85724
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/BiomeStreams.framework/Support/biomed",
+        "processIdentifier" : 85726
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/TelephonyUtilities.framework/callservicesd",
+        "processIdentifier" : 85728
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/WirelessInsights.framework/Support/wirelessinsightsd",
+        "processIdentifier" : 85729
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CoreDuetContext.framework/Resources/contextstored",
+        "processIdentifier" : 85732
+      },
+      {
+        "executable" : "file:///usr/libexec/routined",
+        "processIdentifier" : 85733
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AssistantServices.framework/assistantd",
+        "processIdentifier" : 85739
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CoreSuggestions.framework/suggestd",
+        "processIdentifier" : 85741
+      },
+      {
+        "executable" : "file:///usr/libexec/containermanagerd",
+        "processIdentifier" : 85743
+      },
+      {
+        "executable" : "file:///usr/libexec/containermanagerd_system",
+        "processIdentifier" : 85745
+      },
+      {
+        "executable" : "file:///usr/libexec/trustd",
+        "processIdentifier" : 85748
+      },
+      {
+        "executable" : "file:///System/Library/CoreServices/AccessibilityUIServer.app/AccessibilityUIServer",
+        "processIdentifier" : 85768
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CommunicationsFilter.framework/CMFSyncAgent",
+        "processIdentifier" : 85800
+      },
+      {
+        "executable" : "file:///usr/libexec/clocksyncd",
+        "processIdentifier" : 85803
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/FileIndexerDaemon.framework/Support/fileindexerd",
+        "processIdentifier" : 85825
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/iTunesCloud.framework/Support/itunescloudd",
+        "processIdentifier" : 85945
+      },
+      {
+        "executable" : "file:///private/var/containers/Bundle/Application/35D2A722-6F38-4948-9F7B-B288BA7001AB/BossZP.app/BossZP",
+        "processIdentifier" : 86064
+      },
+      {
+        "executable" : "file:///usr/libexec/audioanalyticsd",
+        "processIdentifier" : 86272
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/Search.framework/searchd",
+        "processIdentifier" : 86324
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CalendarDaemon.framework/Support/calaccessd",
+        "processIdentifier" : 86749
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/IntelligencePlatformCompute.framework/XPCServices/IntelligencePlatformComputeService.xpc/IntelligencePlatformComputeService",
+        "processIdentifier" : 86958
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/FamilyCircle.framework/familycircled",
+        "processIdentifier" : 86959
+      },
+      {
+        "executable" : "file:///usr/libexec/wifip2pd",
+        "processIdentifier" : 86964
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/Contacts.framework/Support/contactsd",
+        "processIdentifier" : 86967
+      },
+      {
+        "executable" : "file:///usr/libexec/MobileGestaltHelper",
+        "processIdentifier" : 86969
+      },
+      {
+        "executable" : "file:///usr/libexec/findmydeviced",
+        "processIdentifier" : 86974
+      },
+      {
+        "executable" : "file:///Applications/FindMyExtensionContainer.app/PlugIns/FMDMagSafeExtension.appex/FMDMagSafeExtension",
+        "processIdentifier" : 86976
+      },
+      {
+        "executable" : "file:///Applications/FindMyExtensionContainer.app/PlugIns/FindMyDeviceBluetoothExtension.appex/FindMyDeviceBluetoothExtension",
+        "processIdentifier" : 86977
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/ScreenTimeCore.framework/ScreenTimeAgent",
+        "processIdentifier" : 86989
+      },
+      {
+        "executable" : "file:///usr/libexec/coreduetd",
+        "processIdentifier" : 86990
+      },
+      {
+        "executable" : "file:///usr/libexec/spotlightknowledged.updater",
+        "processIdentifier" : 87027
+      },
+      {
+        "executable" : "file:///usr/libexec/audioaccessoryd",
+        "processIdentifier" : 87169
+      },
+      {
+        "executable" : "file:///usr/libexec/atc",
+        "processIdentifier" : 87202
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/IntelligenceFlowContextRuntime.framework/intelligencecontextd",
+        "processIdentifier" : 87691
+      },
+      {
+        "executable" : "file:///usr/libexec/gamecontrollerd",
+        "processIdentifier" : 87778
+      },
+      {
+        "executable" : "file:///usr/libexec/manageddeviced",
+        "processIdentifier" : 87784
+      },
+      {
+        "executable" : "file:///Applications/InCallService.app/InCallService",
+        "processIdentifier" : 88122
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CloudPhotoLibrary.framework/Support/cloudphotod",
+        "processIdentifier" : 88257
+      },
+      {
+        "executable" : "file:///usr/libexec/networkserviceproxy",
+        "processIdentifier" : 88386
+      },
+      {
+        "executable" : "file:///usr/libexec/nehelper",
+        "processIdentifier" : 88998
+      },
+      {
+        "executable" : "file:///usr/libexec/rtcreportingd",
+        "processIdentifier" : 89054
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SessionCore.framework/Support/liveactivitiesd",
+        "processIdentifier" : 89407
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AssistantServices.framework/assistant_service",
+        "processIdentifier" : 89448
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CoreSpeech.framework/corespeechd",
+        "processIdentifier" : 89458
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/FaceTimeMessageStore.framework/facetimemessagestored",
+        "processIdentifier" : 89534
+      },
+      {
+        "executable" : "file:///usr/libexec/mediaplaybackd",
+        "processIdentifier" : 89554
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AssetCacheServices.framework/XPCServices/AssetCacheLocatorService.xpc/AssetCacheLocatorService",
+        "processIdentifier" : 89667
+      },
+      {
+        "executable" : "file:///usr/libexec/profiled",
+        "processIdentifier" : 89698
+      },
+      {
+        "executable" : "file:///usr/libexec/adid",
+        "processIdentifier" : 89741
+      },
+      {
+        "executable" : "file:///private/var/containers/Bundle/Application/28F80598-427A-4A07-B251-0AE44DAFA20C/News.app/News",
+        "processIdentifier" : 89807
+      },
+      {
+        "executable" : "file:///private/preboot/Cryptexes/OS/System/Library/ExtensionKit/Extensions/NetworkingExtension.appex/com.apple.WebKit.Networking",
+        "processIdentifier" : 89813
+      },
+      {
+        "executable" : "file:///usr/libexec/pkd",
+        "processIdentifier" : 89836
+      },
+      {
+        "executable" : "file:///usr/libexec/linkd",
+        "processIdentifier" : 89839
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/CryptoTokenKit.framework/ctkd",
+        "processIdentifier" : 89840
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/Intents.framework/XPCServices/intents_helper.xpc/intents_helper",
+        "processIdentifier" : 89841
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/LocalAuthentication.framework/Support/coreauthd",
+        "processIdentifier" : 89842
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/DoNotDisturbServer.framework/Support/donotdisturbd",
+        "processIdentifier" : 89843
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/VoiceShortcuts.framework/Support/siriactionsd",
+        "processIdentifier" : 89848
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/PassKitCore.framework/passd",
+        "processIdentifier" : 89859
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/HomeKitDaemon.framework/Support/homed",
+        "processIdentifier" : 89866
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MapsSync.framework/mapssyncd",
+        "processIdentifier" : 89877
+      },
+      {
+        "executable" : "file:///usr/libexec/PowerUIAgent",
+        "processIdentifier" : 89902
+      },
+      {
+        "executable" : "file:///usr/libexec/mobileassetd",
+        "processIdentifier" : 89906
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CoreFollowUp.framework/followupd",
+        "processIdentifier" : 89909
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CallHistory.framework/Support/CallHistorySyncHelper",
+        "processIdentifier" : 89911
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/AssetsLibrary.framework/Support/assetsd",
+        "processIdentifier" : 89920
+      },
+      {
+        "executable" : "file:///usr/libexec/appprotectiond",
+        "processIdentifier" : 89935
+      },
+      {
+        "executable" : "file:///usr/libexec/promotedcontentd",
+        "processIdentifier" : 89936
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/IMTransferServices.framework/IMTransferAgent.app/IMTransferAgent",
+        "processIdentifier" : 89956
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/EmailDaemon.framework/maild",
+        "processIdentifier" : 89967
+      },
+      {
+        "executable" : "file:///Applications/WidgetRenderer_Default.app/WidgetRenderer_Default",
+        "processIdentifier" : 89986
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/StoreKit.framework/Support/storekitd",
+        "processIdentifier" : 90007
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/iTunesStore.framework/Support/itunesstored",
+        "processIdentifier" : 90008
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AppleCredentialManager.framework/AppleCredentialManagerDaemon",
+        "processIdentifier" : 90017
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/iCloudDriveCore.framework/bird",
+        "processIdentifier" : 90037
+      },
+      {
+        "executable" : "file:///usr/libexec/keybagd",
+        "processIdentifier" : 90043
+      },
+      {
+        "executable" : "file:///usr/libexec/milod",
+        "processIdentifier" : 90045
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SleepDaemon.framework/sleepd",
+        "processIdentifier" : 90051
+      },
+      {
+        "executable" : "file:///usr/libexec/intelligentroutingd",
+        "processIdentifier" : 90082
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SOS.framework/sosd",
+        "processIdentifier" : 90113
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/amsengagementd",
+        "processIdentifier" : 90144
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AppStoreDaemon.framework/Support/appstored",
+        "processIdentifier" : 90155
+      },
+      {
+        "executable" : "file:///System/Library/CoreServices/osanalyticshelper",
+        "processIdentifier" : 90160
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/OnDeviceStorage.framework/Support/amsondevicestoraged",
+        "processIdentifier" : 90163
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/WiFiPolicy.framework/XPCServices/ThreeBarsXPCService.xpc/ThreeBarsXPCService",
+        "processIdentifier" : 90220
+      },
+      {
+        "executable" : "file:///usr/libexec/appleaccountd",
+        "processIdentifier" : 90228
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SeymourServices.framework/fitcored",
+        "processIdentifier" : 90254
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/InstallCoordination.framework/Support/installcoordinationd",
+        "processIdentifier" : 90261
+      },
+      {
+        "executable" : "file:///private/var/containers/Bundle/Application/1B4D56F3-DF66-44DC-A757-8100D8B38AF6/WeChat.app/WeChat",
+        "processIdentifier" : 90262
+      },
+      {
+        "executable" : "file:///usr/libexec/installd",
+        "processIdentifier" : 90264
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/StatusKit.framework/StatusKitAgent",
+        "processIdentifier" : 90266
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/FontServices.framework/Support/fontservicesd",
+        "processIdentifier" : 90267
+      },
+      {
+        "executable" : "file:///usr/libexec/lockdownd",
+        "processIdentifier" : 90269
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/ReplicatorCore.framework/Support/replicatord",
+        "processIdentifier" : 90270
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CoreLocationTiles.framework/XPCServices/TilesService.xpc/TilesService",
+        "processIdentifier" : 90272
+      },
+      {
+        "executable" : "file:///usr/libexec/heartbeatd",
+        "processIdentifier" : 90273
+      },
+      {
+        "executable" : "file:///usr/libexec/metrickitd",
+        "processIdentifier" : 90274
+      },
+      {
+        "executable" : "file:///usr/libexec/wcd",
+        "processIdentifier" : 90275
+      },
+      {
+        "executable" : "file:///usr/libexec/mlhostd",
+        "processIdentifier" : 90276
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/ActionPredictionHeuristics.framework/XPCServices/HeuristicInterpreter.xpc/HeuristicInterpreter",
+        "processIdentifier" : 90280
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/MediaAccessibility.framework/XPCServices/com.apple.accessibility.mediaaccessibilityd.xpc/com.apple.accessibility.mediaaccessibilityd",
+        "processIdentifier" : 90282
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CacheDelete.framework/deleted",
+        "processIdentifier" : 90287
+      },
+      {
+        "executable" : "file:///usr/libexec/triald",
+        "processIdentifier" : 90294
+      },
+      {
+        "executable" : "file:///private/preboot/Cryptexes/App/usr/libexec/webbookmarksd",
+        "processIdentifier" : 90296
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/FileProvider.framework/Support/fileproviderd",
+        "processIdentifier" : 90298
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/PrivacyAccounting.framework/Versions/A/Resources/privacyaccountingd",
+        "processIdentifier" : 90300
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CloudDocs.framework/PlugIns/com.apple.CloudDocs.iCloudDriveFileProvider.appex/com.apple.CloudDocs.iCloudDriveFileProvider",
+        "processIdentifier" : 90307
+      },
+      {
+        "executable" : "file:///usr/libexec/nesessionmanager",
+        "processIdentifier" : 90310
+      },
+      {
+        "executable" : "file:///private/var/containers/Bundle/Application/6D78551D-3B03-4BEE-87D1-83F37756EC4A/Lark.app/PlugIns/NotificationServiceExtension.appex/NotificationServiceExtension",
+        "processIdentifier" : 90313
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/Intents.framework/XPCServices/intents_helper.xpc/intents_helper",
+        "processIdentifier" : 90314
+      },
+      {
+        "executable" : "file:///private/preboot/Cryptexes/OS/System/Library/ExtensionKit/Extensions/WebContentExtension.appex/com.apple.WebKit.WebContent",
+        "processIdentifier" : 90315
+      },
+      {
+        "executable" : "file:///usr/libexec/powerexperienced",
+        "processIdentifier" : 90316
+      },
+      {
+        "executable" : "file:///usr/libexec/ospredictiond",
+        "processIdentifier" : 90317
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/Synapse.framework/Support/contentlinkingd",
+        "processIdentifier" : 90318
+      },
+      {
+        "executable" : "file:///Applications/Spotlight.app/Spotlight",
+        "processIdentifier" : 90319
+      },
+      {
+        "executable" : "file:///private/var/containers/Bundle/Application/1CE5BF1E-42F8-4A67-ACCB-F7E3B3167F64/Weather.app/PlugIns/WeatherWidget.appex/WeatherWidget",
+        "processIdentifier" : 90320
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SiriInference.framework/Support/siriinferenced",
+        "processIdentifier" : 90321
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/DragUI.framework/Support/druid",
+        "processIdentifier" : 90322
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SyncedDefaults.framework/Support/syncdefaultsd",
+        "processIdentifier" : 90323
+      },
+      {
+        "executable" : "file:///usr/libexec/findmylocated",
+        "processIdentifier" : 90324
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CoreAccessories.framework/Support/accessoryd",
+        "processIdentifier" : 90325
+      },
+      {
+        "executable" : "file:///usr/sbin/appleh13camerad",
+        "processIdentifier" : 90326
+      },
+      {
+        "executable" : "file:///usr/libexec/mobileactivationd",
+        "processIdentifier" : 90327
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MobileAccessoryUpdater.framework/Support/accessoryupdaterd",
+        "processIdentifier" : 90328
+      },
+      {
+        "executable" : "file:///System/Library/Filesystems/apfs.fs/apfs_iosd",
+        "processIdentifier" : 90329
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MobileTimer.framework/Executables/mobiletimerd",
+        "processIdentifier" : 90330
+      },
+      {
+        "executable" : "file:///usr/libexec/batteryintelligenced",
+        "processIdentifier" : 90331
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AppleMediaServices.framework/amsaccountsd",
+        "processIdentifier" : 90332
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MobileAccessoryUpdater.framework/XPCServices/UARPUpdaterServiceUSBPD.xpc/UARPUpdaterServiceUSBPD",
+        "processIdentifier" : 90333
+      },
+      {
+        "executable" : "file:///usr/libexec/ptpd",
+        "processIdentifier" : 90334
+      },
+      {
+        "executable" : "file:///usr/libexec/remoted",
+        "processIdentifier" : 90335
+      },
+      {
+        "executable" : "file:///usr/libexec/companion_proxy",
+        "processIdentifier" : 90336
+      },
+      {
+        "executable" : "file:///usr/libexec/notification_proxy",
+        "processIdentifier" : 90337
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AppPredictionFoundation.framework/XPCServices/AppPredictionIntentsHelperService.xpc/AppPredictionIntentsHelperService",
+        "processIdentifier" : 90338
+      },
+      {
+        "executable" : "file:///usr/libexec/afcd",
+        "processIdentifier" : 90339
+      },
+      {
+        "executable" : "file:///usr/libexec/eligibilityd",
+        "processIdentifier" : 90340
+      },
+      {
+        "executable" : "file:///usr/libexec/countryd",
+        "processIdentifier" : 90341
+      },
+      {
+        "executable" : "file:///usr/libexec/remotepairingdeviced",
+        "processIdentifier" : 90342
+      },
+      {
+        "executable" : "file:///System/Library/CoreServices/iconservicesagent",
+        "processIdentifier" : 90344
+      },
+      {
+        "executable" : "file:///private/var/containers/Bundle/Application/BDAF4FC2-DC20-4581-9080-51F6AF191AFE/Tips.app/PlugIns/TipsWidget.appex/TipsWidget",
+        "processIdentifier" : 90345
+      },
+      {
+        "executable" : "file:///private/var/containers/Bundle/Application/252D7F23-3641-4FA0-BB04-80669D4A4E7C/Maps.app/PlugIns/GeneralMapsWidget.appex/GeneralMapsWidget",
+        "processIdentifier" : 90346
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MapsSuggestions.framework/destinationd",
+        "processIdentifier" : 90347
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MapsSupport.framework/navd",
+        "processIdentifier" : 90348
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/FinanceKit.framework/financed",
+        "processIdentifier" : 90349
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CloudTelemetry.framework/Support/cloudtelemetryd",
+        "processIdentifier" : 90351
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/DeviceCheckInternal.framework/devicecheckd",
+        "processIdentifier" : 90352
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MapsSupport.framework/mapspushd",
+        "processIdentifier" : 90353
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/MapKit.framework/XPCServices/com.apple.MapKit.SnapshotService.xpc/com.apple.MapKit.SnapshotService",
+        "processIdentifier" : 90354
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/GeoAnalytics.framework/geoanalyticsd",
+        "processIdentifier" : 90355
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/PowerLog.framework/XPCServices/PerfPowerTelemetryClientRegistrationService.xpc/PerfPowerTelemetryClientRegistrationService",
+        "processIdentifier" : 90356
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SiriSuggestionsSupport.framework/XPCServices/SiriSuggestionsBookkeepingService.xpc/SiriSuggestionsBookkeepingService",
+        "processIdentifier" : 90357
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/IntelligenceFlowRuntime.framework/intelligenceflowd",
+        "processIdentifier" : 90358
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CascadeSets.framework/XPCServices/SetStoreUpdateService.xpc/SetStoreUpdateService",
+        "processIdentifier" : 90359
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AppIntentsLiveEntitySupport.framework/XPCServices/AppIntentsLiveEntityService.xpc/AppIntentsLiveEntityService",
+        "processIdentifier" : 90360
+      },
+      {
+        "executable" : "file:///usr/libexec/findmybeaconingd",
+        "processIdentifier" : 90361
+      },
+      {
+        "executable" : "file:///usr/libexec/frauddefensed",
+        "processIdentifier" : 90363
+      },
+      {
+        "executable" : "file:///System/Developer/usr/libexec/dtdeviceinfod",
+        "processIdentifier" : 90364
+      },
+      {
+        "executable" : "file:///usr/libexec/mobile_assertion_agent",
+        "processIdentifier" : 90365
+      },
+      {
+        "executable" : "file:///usr/libexec/mobile_storage_proxy",
+        "processIdentifier" : 90366
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/InstallCoordination.framework/Support/installcoordination_proxy",
+        "processIdentifier" : 90367
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MobileInstallation.framework/XPCServices/com.apple.MobileInstallationHelperService.xpc/com.apple.MobileInstallationHelperService",
+        "processIdentifier" : 90368
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/CallKit.framework/XPCServices/com.apple.CallKit.CallDirectoryMaintenance.xpc/com.apple.CallKit.CallDirectoryMaintenance",
+        "processIdentifier" : 90369
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/StreamingZip.framework/XPCServices/com.apple.StreamingUnzipService.xpc/com.apple.StreamingUnzipService",
+        "processIdentifier" : 90370
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/MessagesBlastDoorSupport.framework/XPCServices/MessagesBlastDoorService.xpc/MessagesBlastDoorService",
+        "processIdentifier" : 90371
+      },
+      {
+        "executable" : "file:///usr/libexec/videosubscriptionsd",
+        "processIdentifier" : 90372
+      },
+      {
+        "executable" : "file:///usr/libexec/tvremoted",
+        "processIdentifier" : 90373
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/ManagedAppDistribution.framework/Support/managedappdistributiond",
+        "processIdentifier" : 90374
+      },
+      {
+        "executable" : "file:///Applications/PosterBoard.app/PosterBoard",
+        "processIdentifier" : 90375
+      },
+      {
+        "executable" : "file:///usr/libexec/dmd",
+        "processIdentifier" : 90376
+      },
+      {
+        "executable" : "file:///usr/libexec/coreidvd",
+        "processIdentifier" : 90377
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/AdAttributionKit.framework/Support/attributionkitd",
+        "processIdentifier" : 90378
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/ContinuousDialogManagerService.framework/assistant_cdmd",
+        "processIdentifier" : 90379
+      },
+      {
+        "executable" : "file:///System/Library/CoreServices/appplaceholdersyncd",
+        "processIdentifier" : 90380
+      },
+      {
+        "executable" : "file:///usr/libexec/MTLAssetUpgraderD",
+        "processIdentifier" : 90381
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/FamilyControls.framework/FamilyControlsAgent",
+        "processIdentifier" : 90382
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/ClipServices.framework/clipserviced",
+        "processIdentifier" : 90383
+      },
+      {
+        "executable" : "file:///usr/libexec/swcd",
+        "processIdentifier" : 90384
+      },
+      {
+        "executable" : "file:///usr/libexec/siriknowledged",
+        "processIdentifier" : 90385
+      },
+      {
+        "executable" : "file:///usr/libexec/fmflocatord",
+        "processIdentifier" : 90386
+      },
+      {
+        "executable" : "file:///usr/libexec/driverkitd",
+        "processIdentifier" : 90387
+      },
+      {
+        "executable" : "file:///usr/libexec/aned",
+        "processIdentifier" : 90388
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/GenerativeExperiencesRuntime.framework/generativeexperiencesd",
+        "processIdentifier" : 90389
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/DataMigration.framework/XPCServices/com.apple.datamigrator.xpc/com.apple.datamigrator",
+        "processIdentifier" : 90390
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/ModelCatalogRuntime.framework/modelcatalogd",
+        "processIdentifier" : 90391
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/DeviceConfiguration.framework/DeviceConfigurationAgent",
+        "processIdentifier" : 90392
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/DeviceConfiguration.framework/deviceconfigurationd",
+        "processIdentifier" : 90393
+      },
+      {
+        "executable" : "file:///usr/libexec/misagent",
+        "processIdentifier" : 90394
+      },
+      {
+        "executable" : "file:///usr/libexec/softposreaderd",
+        "processIdentifier" : 90395
+      },
+      {
+        "executable" : "file:///usr/libexec/seserviced",
+        "processIdentifier" : 90396
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CoreParsec.framework/parsec-fbf",
+        "processIdentifier" : 90397
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/NanoTimeKit.framework/nanotimekitcompaniond",
+        "processIdentifier" : 90398
+      },
+      {
+        "executable" : "file:///usr/libexec/deviceaccessd",
+        "processIdentifier" : 90399
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/AXAssetLoader.framework/Support/axassetsd",
+        "processIdentifier" : 90400
+      },
+      {
+        "executable" : "file:///usr/libexec/online-auth-agent",
+        "processIdentifier" : 90401
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/ProfileValidatedAppIdentity.framework/XPCServices/ProfileValidatedAppIdentityService.xpc/ProfileValidatedAppIdentityService",
+        "processIdentifier" : 90402
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CascadeSets.framework/XPCServices/SetStoreUpdateService.xpc/SetStoreUpdateService",
+        "processIdentifier" : 90403
+      },
+      {
+        "executable" : "file:///usr/libexec/amfid",
+        "processIdentifier" : 90404
+      },
+      {
+        "executable" : "file:///usr/libexec/splashboardd",
+        "processIdentifier" : 90405
+      },
+      {
+        "executable" : "file:///usr/libexec/assetsubscriptiond",
+        "processIdentifier" : 90406
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/SiriAppIntentsRuntime.framework/siriappintentsd",
+        "processIdentifier" : 90408
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/Pasteboard.framework/Support/pasted",
+        "processIdentifier" : 90409
+      },
+      {
+        "executable" : "file:///System/Developer/usr/libexec/dtappserviced",
+        "processIdentifier" : 90410
+      },
+      {
+        "executable" : "file:///private/var/containers/Bundle/Application/BA934C8A-7820-4BF2-96EE-0B7FF157ED7A/JobsIM.app/JobsIM",
+        "processIdentifier" : 90411
+      },
+      {
+        "executable" : "file:///usr/libexec/logd_helper",
+        "processIdentifier" : 90412
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService",
+        "processIdentifier" : 90413
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/Metal.framework/XPCServices/MTLCompilerService.xpc/MTLCompilerService",
+        "processIdentifier" : 90414
+      },
+      {
+        "executable" : "file:///System/Library/PrivateFrameworks/CascadeSets.framework/XPCServices/SetStoreUpdateService.xpc/SetStoreUpdateService",
+        "processIdentifier" : 90415
+      },
+      {
+        "executable" : "file:///System/Library/Frameworks/AudioToolbox.framework/XPCServices/AudioConverterHighCapacityService.xpc/AudioConverterHighCapacityService",
+        "processIdentifier" : 90416
+      },
+      {
+        "executable" : "file:///private/preboot/Cryptexes/App/usr/libexec/AuthenticationServicesAgent",
+        "processIdentifier" : 90417
+      },
+      {
+        "executable" : "file:///private/preboot/Cryptexes/OS/System/Library/PrivateFrameworks/SafariFoundation.framework/XPCServices/CredentialProviderExtensionHelper.xpc/CredentialProviderExtensionHelper",
+        "processIdentifier" : 90418
+      },
+      {
+        "executable" : "file:///usr/libexec/keychainsharingmessagingd",
+        "processIdentifier" : 90419
+      },
+      {
+        "executable" : "file:///Applications/StickerPickerService.app/StickerPickerService",
+        "processIdentifier" : 90420
+      },
+      {
+        "executable" : "file:///usr/libexec/biomesyncd",
+        "processIdentifier" : 90421
+      }
+    ]
+  }
+}

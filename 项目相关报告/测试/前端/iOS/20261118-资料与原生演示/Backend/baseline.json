@@ -1,0 +1,42 @@
+[
+  {
+    "path": "代码/后端/Go/types.go",
+    "sha256": "4435a689849cb497da45d9aedfce2058713afc9c25948490104f2d4e14880005"
+  },
+  {
+    "path": "代码/后端/Go/identity.go",
+    "sha256": "9efe7fb7c1767b3c5cfc4b90f92d7d8d7195412fee73798981ac9f6b343cdfe0"
+  },
+  {
+    "path": "代码/后端/Go/directory.go",
+    "sha256": "36946f63a122c41f9c7f8b6ca213cf7e53ce54dd45c38357f2c4a2f59823cb9a"
+  },
+  {
+    "path": "代码/后端/Go/avatar.go",
+    "sha256": "5d0855484044dec49ebe34ea1ed839443a2c069e2ffe83ba00fdac7ac46adbfa"
+  },
+  {
+    "path": "代码/后端/Go/avatar_media.go",
+    "sha256": "7abfe51a6abe7382d9a5b7d2254af35d04c6a11f9852e32f56ee67ea4998a6af"
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_identity.go",
+    "sha256": "22764daa364d8b216f70626d8d00a05a2f9e9e5320afb6d30f832ee26929015e"
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_owner.go",
+    "sha256": "75ace432022f44af206626ef4211c696c43ee889ecbba31f3f5ca0b5fd273920"
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_safety.go",
+    "sha256": "f64675a5790ec9d691fabef7a7adc67b6f42a2abc4dc85a863fb0275ae8536ec"
+  },
+  {
+    "path": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+    "sha256": "955ba7f9d2197e8a1a79a1360be3643867714c88f6f7750eaf5a86a99a6eec6b"
+  },
+  {
+    "path": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+    "sha256": "ea390066e9e2514651164ac7f088c2f6673e441ba97caf7a6b9129c1b46c91c9"
+  }
+]

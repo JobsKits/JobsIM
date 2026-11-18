@@ -1,0 +1,101 @@
+{
+  "inputs": [
+    {
+      "path": "代码/后端/Go/media.go",
+      "sha256": "e54de71c9e5ed5ac7debdd4db919352d825753b2877f07e4a51f8d885befb6ea"
+    },
+    {
+      "path": "代码/后端/Go/media_receipts.go",
+      "sha256": "4a43d28cc86b10bb158ebf1c9f1561f74c8452a37f431f542db7b90dfef3628b"
+    },
+    {
+      "path": "代码/后端/Go/media_export.go",
+      "sha256": "ea16bed40b67df43ec028f49ab9cc688cc755f424fb3dbd5f5bba9de4efda14d"
+    },
+    {
+      "path": "代码/后端/Go/forward_media.go",
+      "sha256": "823b4ac2c5a4aad054253ceddef675ffeaaa6ab014e96fe4f49fe66bb747f529"
+    },
+    {
+      "path": "代码/后端/Go/media_retention.go",
+      "sha256": "0cef468da453fda3dffaac0f9f294ea311de968f40948684640556b036d39e60"
+    },
+    {
+      "path": "代码/后端/Go/media_legacy_erasure.go",
+      "sha256": "6c0ea10ed87eb8933de0b25f453684cd67178249e58b61a43b335c7535308703"
+    },
+    {
+      "path": "代码/后端/Go/media_restore.go",
+      "sha256": "7828328f2d70db4c55c8147f3a9e0a842aab735fb15e4f43a95d3d24a35e8c14"
+    },
+    {
+      "path": "测试/后端/接口/media_retention_pg_test.go",
+      "sha256": "91ff332ccf594519bfa385d1c91401848b5e191692b145657c419557cc6ee92b"
+    },
+    {
+      "path": "测试/后端/接口/sync_object_receipts_test.go",
+      "sha256": "650ec5f610c6bcbb4b3d5868a81ffcb2852bcae284bf3379f9f5eefa292a0232"
+    }
+  ],
+  "mediaChecks": [
+    {
+      "name": "TestMediaRetentionIndependentModesRejectImplicitDelay",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionStableTimestampAndStreamingDeadline",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGCloudOnlyExactDeviceResumeAndRange",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGDescriptorRequiresOriginalPhysicalTuple",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGDeadlineNeverExtendsAndJournalFailurePreservesBytes",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGArchivesBlockUnlinkUntilExactCancellation",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGObjectReceiptZeroAndSiblingIsolation",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGReplayKeepsOldSnapshotClosed",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGCleanupWaitsForLiveProjectionAndRefusesSymlink",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGLegacyRequiresExplicitOwnerWhitelist",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGClockAlarmSurvivesRestartAndPreservesBytes",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGLegacyGlobalErasureNeedsConfirmedSourceEvent",
+      "action": "pass"
+    },
+    {
+      "name": "TestMediaRetentionPGBackupSelectionAndOfflineRestoreClear",
+      "action": "pass"
+    }
+  ],
+  "allFailedChecks": [
+    {
+      "name": "TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie",
+      "action": "fail"
+    }
+  ],
+  "logSHA256": "b2b9f65a1e810b2eacc85d7c4430373330f04bebf86a4c38eca02071fa860e7f"
+}

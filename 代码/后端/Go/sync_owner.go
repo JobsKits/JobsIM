@@ -131,7 +131,7 @@ func (a *App) syncCaptureSQL(ctx context.Context, owner, user string) (string, [
 	case "directory":
 		return `SELECT 'profile'::text kind,user_id id,user_id subject,NULL::uuid conversation,NULL::uuid target,'active'::text state FROM directory.profiles WHERE user_id=$1 UNION ALL SELECT kind,$1::uuid,$1::uuid,NULL::uuid,NULL::uuid,'active' FROM (VALUES ('contacts'),('relationship')) k(kind) UNION ALL SELECT 'contact_request',id,requester_id,NULL::uuid,recipient_id,'active' FROM directory.contact_requests WHERE requester_id=$1 OR recipient_id=$1`, args, nil
 	case "conversation":
-		return `SELECT k.kind,c.id,NULL::uuid subject,c.id conversation,NULL::uuid target,'active'::text state FROM conversation.conversations c JOIN conversation.members m ON m.conversation_id=c.id CROSS JOIN (VALUES('conversation'::text),('announcement'::text)) k(kind) WHERE m.user_id=$1 AND m.state='active' AND m.export_pending_operation_id IS NULL AND c.state IN('active','owner_unavailable')`, args, nil
+		return `SELECT k.kind,c.id,NULL::uuid subject,c.id conversation,NULL::uuid target,'active'::text state FROM conversation.conversations c JOIN conversation.members m ON m.conversation_id=c.id CROSS JOIN (VALUES('conversation'::text),('announcement'::text)) k(kind) WHERE m.user_id=$1 AND m.state='active' AND m.export_pending_operation_id IS NULL AND (k.kind='conversation' OR c.kind='group') AND (c.state IN('active','owner_unavailable') OR c.state='dissolved' AND k.kind='conversation')`, args, nil
 	case "message":
 		var scopes struct {
 			Items []readableScope `json:"items"`

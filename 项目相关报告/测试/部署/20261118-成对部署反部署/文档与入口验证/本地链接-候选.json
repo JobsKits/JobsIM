@@ -1,0 +1,62 @@
+{
+  "documents": 67,
+  "localLinks": 1362,
+  "issues": [
+    {
+      "file": "需求/IM前端架构表.md/IM前端架构表.md",
+      "target": "../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/README.md",
+      "reason": "missing"
+    },
+    {
+      "file": "需求/IM前端架构表.md/IM前端架构表.md",
+      "target": "../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile",
+      "reason": "missing"
+    },
+    {
+      "file": "需求/IM前端架构表.md/IM前端架构表.md",
+      "target": "../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile.deps",
+      "reason": "missing"
+    },
+    {
+      "file": "需求/IM前端架构表.md/IM前端架构表.md",
+      "target": "../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods",
+      "reason": "missing"
+    },
+    {
+      "file": "需求/IM前端架构表.md/IM前端架构表.md",
+      "target": "../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/SwiftDoc.md/Swift工程项目框架配置方案@Jobs.md/Swift工程项目框架配置方案@Jobs.md",
+      "reason": "missing"
+    },
+    {
+      "file": "需求/IM后端架构表.md/IM后端架构表.md",
+      "target": "../实现进度/README.md",
+      "reason": "missing"
+    },
+    {
+      "file": "需求/IM需求明细表.md/IM需求明细表.md",
+      "target": "../实现进度/README.md",
+      "reason": "missing"
+    },
+    {
+      "file": "需求/IM需求明细表.md/IM需求明细表.md",
+      "target": "../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/README.md",
+      "reason": "missing"
+    },
+    {
+      "file": "需求/README.md",
+      "target": "./IM需求明细表.md/IM需求明细表.md#前言",
+      "reason": "anchor-not-found"
+    },
+    {
+      "file": "需求/README.md",
+      "target": "./icon.png",
+      "reason": "missing"
+    },
+    {
+      "file": "项目相关报告/测试/部署/20261118-成对部署反部署/README.md",
+      "target": "./MacOS/summary.json",
+      "reason": "missing"
+    }
+  ],
+  "duplicateIds": []
+}

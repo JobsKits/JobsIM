@@ -1,0 +1,74 @@
+✔ raw Go JSON slices preserve escapes, nested quoted delimiters and large string counters (2.287291ms)
+✔ real AES-GCM and raw primary digest decode text without Go reencoding (0.918417ms)
+✔ original attachment bytes match independent manifest size and digest (0.488666ms)
+✔ capsule tampering, wrong target and AAD never release plaintext (0.236291ms)
+✔ manifest envelope cannot be replaced by equivalent reencoded JSON or qualified flags (0.220333ms)
+✔ install token binds original physical target, epoch, digest and five second window (0.235792ms)
+✔ unknown pairing first performs pure lookup and never creates automatically (1.132958ms)
+✔ lost first mutation retains original nonce and no password or proof in metadata (0.521583ms)
+✔ successor family may query but cannot create original unseen operation (0.373167ms)
+✔ forwarded text is reference-only; definitive revoke erases, unknown hides body (0.364708ms)
+✔ forwarded text durable selection is allowed, secret metadata fields are rejected (0.208458ms)
+✔ installed_reported with local committed digest does not fetch a new key (0.364542ms)
+✔ stopped service accepts neither list publication nor networking (0.098625ms)
+✔ production SQLite repository installs readable original text plus a lawful zero-byte object in one batch (33.075208ms)
+✔ lawful cloud_only archive may replace a cloud-unavailable local placeholder, never a deleted floor (31.19375ms)
+✔ known global floor blocks staging any private object and exposes no partial history (32.065ms)
+✔ history transaction failure publishes no batch and stale-context cleanup removes only unindexed owned staging (27.83475ms)
+✖ valid late 200 cannot republish actual installed forward or preceding owned archive after durable global (33.302375ms)
+✖ final history read rejects a newer local content version or deleted floor while valid forward GET is pending (27.761541ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 17
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 287.564459
+
+✖ failing tests:
+
+test at 测试/前端/HarmonyOS/Unit/Migration.test.cjs/Migration.test.cjs:28:1
+✖ valid late 200 cannot republish actual installed forward or preceding owned archive after durable global (33.302375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   '{"id":"9b2c10bb-52db-4b81-9232-f314ac151718","conversationId":"0f30c1fb-dfa2-40e5-8090-cdb11c6c81fc","senderId":"63a5152f-3de4-4a32-969c-9b99d763a513","type":"text","text":"owned archive before awaited reference","createdAt":"2026-11-16T00:00:00Z","contentVersion":"9007199254740993","creationEpoch":"1","creationSequence":"9223372036854775806","forwarded":false,"objectMode":"none"}',
+  +   '{"id":"8f470fe2-61d2-40b3-89c2-8161d0edf5b7","conversationId":"0f30c1fb-dfa2-40e5-8090-cdb11c6c81fc","senderId":"63a5152f-3de4-4a32-969c-9b99d763a513","type":"text","text":"<origin>  } ] \\\\\\" nested","createdAt":"2026-11-17T00:00:00.123456789Z","contentVersion":"9007199254740993","creationEpoch":"1","creationSequence":"9223372036854775806","forwarded":true,"objectMode":"none"}'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/Migration.test.cjs/Migration.test.cjs:28:1452)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ '{"id":"9b2c10bb-52db-4b81-9232-f314ac151718","conversationId":"0f30c1fb-dfa2-40e5-8090-cdb11c6c81fc","senderId":"63a5152f-3de4-4a32-969c-9b99d763a513","type":"text","text":"owned archive before awaited reference","createdAt":"2026-11-16T00:00:00Z","contentVersion":"9007199254740993","creationEpoch":"1","creationSequence":"9223372036854775806","forwarded":false,"objectMode":"none"}', '{"id":"8f470fe2-61d2-40b3-89c2-8161d0edf5b7","conversationId":"0f30c1fb-dfa2-40e5-8090-cdb11c6c81fc","senderId":"63a5152f-3de4-4a32-969c-9b99d763a513","type":"text","text":"<origin>  } ] \\\\\\" nested","createdAt":"2026-11-17T00:00:00.123456789Z","contentVersion":"9007199254740993","creationEpoch":"1","creationSequence":"9223372036854775806","forwarded":true,"objectMode":"none"}' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at 测试/前端/HarmonyOS/Unit/Migration.test.cjs/Migration.test.cjs:29:1
+✖ final history read rejects a newer local content version or deleted floor while valid forward GET is pending (27.761541ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   '{"id":"d0a3e3d2-dad1-45f3-b8a7-ad93474caead","conversationId":"96e4dc0c-fd22-47bd-aad7-9e764326e100","senderId":"70afebf5-5941-4705-80c5-4f786a5762f1","type":"text","text":"<origin>  } ] \\\\\\" nested","createdAt":"2026-11-17T00:00:00.123456789Z","contentVersion":"9007199254740993","creationEpoch":"1","creationSequence":"9223372036854775806","forwarded":true,"objectMode":"none"}'
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/Migration.test.cjs/Migration.test.cjs:29:967)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ '{"id":"d0a3e3d2-dad1-45f3-b8a7-ad93474caead","conversationId":"96e4dc0c-fd22-47bd-aad7-9e764326e100","senderId":"70afebf5-5941-4705-80c5-4f786a5762f1","type":"text","text":"<origin>  } ] \\\\\\" nested","createdAt":"2026-11-17T00:00:00.123456789Z","contentVersion":"9007199254740993","creationEpoch":"1","creationSequence":"9223372036854775806","forwarded":true,"objectMode":"none"}' ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

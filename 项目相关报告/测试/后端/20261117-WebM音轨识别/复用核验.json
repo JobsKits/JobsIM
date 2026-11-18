@@ -1,0 +1,54 @@
+{
+  "sourceRun": "项目相关报告/实现进度/20261116-剩余能力闭环/工作树搬迁/重启前Go纯回归",
+  "sourceArtifacts": {
+    "跑前输入.json": "edf289482073755ce2d6089f82f63cd4d043f90908d176fcb03f3f7322a652f6",
+    "原始.jsonl": "7010ae0ae33c6065c30f58413a98a6e183bf63b157d9783e163e99134d7a03ee",
+    "结果.json": "211980d8667500108abc29f9e6593f8ac4f5f6a57a11be62b01deb0c7a89a902"
+  },
+  "inputCount": 172,
+  "matchingInputs": 172,
+  "mismatches": [],
+  "sourceResult": {
+    "exitCode": 0,
+    "passed": 71,
+    "skipped": 115,
+    "failures": [],
+    "changedInputs": [],
+    "scope": "non-PG current production packages and external tests; explicit database suites remain skipped"
+  },
+  "webm": {
+    "topLevelPass": 6,
+    "subitemPass": 44,
+    "fail": 0,
+    "skip": 0,
+    "groups": {
+      "TestWebMClassifiesActualTracksInsteadOfSniffOrName": {
+        "topLevel": 1,
+        "subitems": 7
+      },
+      "TestWebMRejectsSpoofedAndMalformedTrackStructures": {
+        "topLevel": 1,
+        "subitems": 29
+      },
+      "TestWebMBoundsElementsDepthTracksAndReaderAt": {
+        "topLevel": 1,
+        "subitems": 3
+      },
+      "TestWebMRejectsMalformedContainerThroughStoredMediaEntry": {
+        "topLevel": 1,
+        "subitems": 0
+      },
+      "TestWebMSkipsLargeEncodedPacketsButBoundsMetadata": {
+        "topLevel": 1,
+        "subitems": 2
+      },
+      "TestWebMPreservesBMFFTrackClassification": {
+        "topLevel": 1,
+        "subitems": 3
+      }
+    }
+  },
+  "preservation": "Copies made after execution, each byte-verified against the original before-run SHA256; not a claim of a before-run source archive.",
+  "ownGoProcessStarted": false,
+  "checkedAt": "2026-11-17T02:14:40.083Z"
+}

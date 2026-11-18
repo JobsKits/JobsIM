@@ -14,6 +14,10 @@ import javax.crypto.spec.GCMParameterSpec
 import javax.net.ssl.HttpsURLConnection
 import javax.net.ssl.SSLContext
 import javax.net.ssl.TrustManagerFactory
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
@@ -173,6 +177,46 @@ open class Api(private val base: String, private val token: String = "", ca: Byt
                 connection.disconnect()
             }
         }
+
+    open suspend fun migration(path: String, method: String, data: JSONObject?, store: String, current: () -> Boolean = { true }): JSONObject = withContext(Dispatchers.IO) { coroutineScope {
+        require(path.matches(Regex("/sync/(migration-capabilities|migration-pairings|migration-pairing-results|migration-results|migrations(?:/[0-9a-f-]{36}(?:/(?:key|validate|installed|cancel))?)?)")))
+        SyncWire.id(store)
+        val connection=URL(base+"/api"+path).openConnection() as HttpsURLConnection
+        val watch=launch(Dispatchers.IO){while(isActive){delay(100);if(!current()){connection.disconnect();break}}}
+        try {
+            require(current());connection.instanceFollowRedirects=false;connection.connectTimeout=3500;connection.readTimeout=120000;connection.requestMethod=method
+            factory?.let{connection.sslSocketFactory=it};connection.setRequestProperty("Authorization","Bearer $token");connection.setRequestProperty("X-JobsIM-Store-Generation",store);connection.setRequestProperty("Accept","application/json");connection.setRequestProperty("Cache-Control","no-store")
+            if(data!=null){connection.doOutput=true;connection.setRequestProperty("Content-Type","application/json");val bytes=data.toString().toByteArray();try{require(bytes.size<=MigrationProtocol.limit);connection.outputStream.use{it.write(bytes)}}finally{bytes.fill(0)}}
+            val status=connection.responseCode
+            if(status !in 200..299){val bytes=connection.errorStream?.use{readLimited(it,64*1024)};throw ApiFailure(status,bytes?.let{runCatching{JSONObject(String(it)).getJSONObject("error").getString("code")}.getOrDefault("MIGRATION_UNKNOWN")}.orEmpty())}
+            val bytes=connection.inputStream.use{readLimited(it,4*1024*1024)};JSONObject(MigrationProtocol.utf8(bytes))
+        }finally{watch.cancel();connection.disconnect()}
+    } }
+    open suspend fun receipt(path: String, method: String, data: JSONObject?, store: String, current: () -> Boolean = { true }): JSONObject = withContext(Dispatchers.IO) { coroutineScope {
+        require(path.matches(Regex("/sync/(receipt-context(?:\\?schemaVersion=[12])?|receipt-profiles\\?schemaVersion=[12]&buildDigest=[0-9a-f]{64}|receipt-targets/[0-9a-f-]{36}(?:\\?schemaVersion=[12](?:&qualificationId=[0-9a-f-]{36})?)?|storage(?:-results)?|receipt-challenges|receipts|receipt-results|object-receipt-challenges|object-receipts|object-receipt-results)")))
+        SyncWire.id(store)
+        val connection=URL(base+"/api"+path).openConnection() as HttpsURLConnection
+        val watch=launch(Dispatchers.IO){while(isActive){delay(100);if(!current()){connection.disconnect();break}}}
+        try {
+            require(current());connection.instanceFollowRedirects=false;connection.connectTimeout=3500;connection.readTimeout=120000;connection.requestMethod=method
+            factory?.let{connection.sslSocketFactory=it};connection.setRequestProperty("Authorization","Bearer $token");connection.setRequestProperty("X-JobsIM-Store-Generation",store);connection.setRequestProperty("Accept","application/json");connection.setRequestProperty("Cache-Control","no-store")
+            if(data!=null){connection.doOutput=true;connection.setRequestProperty("Content-Type","application/json");val bytes=data.toString().toByteArray();try{require(bytes.size<=32*1024);connection.outputStream.use{it.write(bytes)}}finally{bytes.fill(0)}}
+            val status=connection.responseCode
+            if(status !in 200..299){val bytes=connection.errorStream?.use{readLimited(it,64*1024)};throw ApiFailure(status,bytes?.let{runCatching{JSONObject(String(it)).getJSONObject("error").getString("code")}.getOrDefault("RECEIPT_UNKNOWN")}.orEmpty())}
+            val bytes=connection.inputStream.use{readLimited(it,4*1024*1024)};JSONObject(MigrationProtocol.utf8(bytes))
+        }finally{watch.cancel();connection.disconnect()}
+    } }
+    open suspend fun migrationBytes(path: String, store: String, limit: Int, current: () -> Boolean = { true }): ByteArray = withContext(Dispatchers.IO) { coroutineScope {
+        SyncWire.id(store);require(limit in 1..(MigrationProtocol.limit+4096));require(path.matches(Regex("/sync/migrations/[0-9a-f-]{36}/capsule|/media/[0-9a-f-]{36}|/messages/[0-9a-f-]{36}/attachment")))
+        val connection=URL(base+"/api"+path).openConnection() as HttpsURLConnection
+        val watch=launch(Dispatchers.IO){while(isActive){delay(100);if(!current()){connection.disconnect();break}}}
+        try{
+            require(current());connection.instanceFollowRedirects=false;connection.connectTimeout=3500;connection.readTimeout=120000;factory?.let{connection.sslSocketFactory=it};connection.setRequestProperty("Authorization","Bearer $token");connection.setRequestProperty("X-JobsIM-Store-Generation",store);connection.setRequestProperty("Cache-Control","no-store")
+            val status=connection.responseCode;if(status!=200){val error=connection.errorStream?.use{readLimited(it,64*1024)};throw ApiFailure(status,error?.let{runCatching{JSONObject(String(it)).getJSONObject("error").getString("code")}.getOrDefault("MIGRATION_DOWNLOAD_UNKNOWN")}.orEmpty())};val rawLength=connection.getHeaderField("Content-Length");val length=rawLength?.toLongOrNull();require(rawLength==null||length!=null&&length>=0);require(length==null||length<=limit)
+            val runtime=Runtime.getRuntime();val budget=((runtime.maxMemory()-(runtime.totalMemory()-runtime.freeMemory())-8*1024*1024)/6).coerceAtMost(limit.toLong()).toInt();require(budget>0&&(length==null||length<=budget)){"MIGRATION_MEMORY_LIMIT"}
+            connection.inputStream.use{readLimited(it,budget)}.also{bytes->try{require(current()&&(length==null||bytes.size.toLong()==length))}catch(e:Throwable){bytes.fill(0);throw e}}
+        }finally{watch.cancel();connection.disconnect()}
+    } }
 
     open suspend fun upload(
         name: String,

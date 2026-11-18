@@ -1,0 +1,71 @@
+{
+  "frozenAt": "2026-11-17T08:17:07.320201+00:00",
+  "android": {
+    "report": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android本机存储修复-20261117-160529-1a455c35",
+    "inputCount": 150,
+    "currentDifferences": [],
+    "jvm": {
+      "tests": 54,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "jvmSuites": 11,
+    "instrumentationCompiled": 105,
+    "artifacts": [
+      {
+        "path": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android本机存储修复-20261117-160529-1a455c35/app-debug-androidTest.apk",
+        "sha256": "7b3f14b431e42a5745fbe3b2f269cfb34aba9dfb573847223a1d257e1b010e04",
+        "crcOK": true,
+        "bytes": 1196924
+      },
+      {
+        "path": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android本机存储修复-20261117-160529-1a455c35/app-debug.apk",
+        "sha256": "9660aa3856ceb28d06ac1212ca1a82a54e4c0fbcd272b82f9440c503c7e45c45",
+        "crcOK": true,
+        "bytes": 17604399
+      }
+    ]
+  },
+  "harmony": [
+    {
+      "mode": "default",
+      "exitCode": 0,
+      "inputCount": 70,
+      "currentDifferences": [],
+      "stagedDifferences": [],
+      "artifacts": [
+        {
+          "path": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Harmony移动端存储修复-20261117-161426-default/entry-default-unsigned.hap",
+          "sha256": "5ecddaa4e818d55fa101bd755e97a65fa2323621acdc4660fee6fb4aa0c6346e",
+          "crcOK": true,
+          "bytes": 2644750,
+          "signed": false
+        }
+      ]
+    },
+    {
+      "mode": "ohosTest",
+      "exitCode": 0,
+      "inputCount": 70,
+      "currentDifferences": [],
+      "stagedDifferences": [],
+      "artifacts": [
+        {
+          "path": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Harmony移动端存储修复-20261117-161426-ohosTest/entry-ohosTest-unsigned.hap",
+          "sha256": "7f71c4d5dc186f1aa47379b0a1251fe8c2f6f42a61e065106c9d2ca128e80c74",
+          "crcOK": true,
+          "bytes": 1950771,
+          "signed": false,
+          "compiledMethods": 63,
+          "namesInABC": 63,
+          "executed": false
+        }
+      ]
+    }
+  ],
+  "nativeEvidence": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android独立AVD-20261117-153544-d52437/当前修后逐方法实际结果.json",
+  "totalUniqueInputs": 220,
+  "inputManifestSHA256": "9169e5e2ea899dedf2f456680add58a49c1766db401f43937ac0044c634cb8a0",
+  "oldDistWritten": false
+}

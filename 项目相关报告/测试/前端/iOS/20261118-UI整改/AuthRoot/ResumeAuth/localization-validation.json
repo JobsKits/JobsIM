@@ -1,0 +1,62 @@
+{
+  "languages": {
+    "bo.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    },
+    "de.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    },
+    "en.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    },
+    "es.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    },
+    "fr.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    },
+    "ja.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    },
+    "ko.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    },
+    "ru.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    },
+    "zh-Hans.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    },
+    "zh-Hant.lproj": {
+      "keys": 437,
+      "plutilExitCode": 0
+    }
+  },
+  "keySetsEqual": true,
+  "existingChanges": {
+    "de.lproj": [],
+    "zh-Hans.lproj": [
+      "avatar"
+    ],
+    "ja.lproj": [],
+    "en.lproj": [],
+    "es.lproj": [],
+    "ko.lproj": [],
+    "zh-Hant.lproj": [
+      "avatar"
+    ],
+    "bo.lproj": [],
+    "ru.lproj": [],
+    "fr.lproj": []
+  },
+  "newKeysEach": 24
+}

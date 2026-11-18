@@ -1,0 +1,37 @@
+{"Time":"2026-11-18T14:27:02.67241+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-18T14:27:03.081585+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIReportSelectionAndUploadPurpose"}
+{"Time":"2026-11-18T14:27:03.081701+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectionAndUploadPurpose","Output":"=== RUN   TestUIReportSelectionAndUploadPurpose\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:03.082145+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectionAndUploadPurpose","Output":"--- PASS: TestUIReportSelectionAndUploadPurpose (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:03.082166+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestUIReportSelectionAndUploadPurpose","Elapsed":0}
+{"Time":"2026-11-18T14:27:03.082184+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIOptionalRetractionSnapshot"}
+{"Time":"2026-11-18T14:27:03.082192+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIOptionalRetractionSnapshot","Output":"=== RUN   TestUIOptionalRetractionSnapshot\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:03.082464+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIOptionalRetractionSnapshot","Output":"--- PASS: TestUIOptionalRetractionSnapshot (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:03.082474+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestUIOptionalRetractionSnapshot","Elapsed":0}
+{"Time":"2026-11-18T14:27:03.082483+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIContactDeletionNewRoundsAndPendingPG"}
+{"Time":"2026-11-18T14:27:03.082493+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIContactDeletionNewRoundsAndPendingPG","Output":"=== RUN   TestUIContactDeletionNewRoundsAndPendingPG\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:03.690762+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIContactDeletionNewRoundsAndPendingPG","Output":"--- PASS: TestUIContactDeletionNewRoundsAndPendingPG (0.61s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:03.690802+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestUIContactDeletionNewRoundsAndPendingPG","Elapsed":0.61}
+{"Time":"2026-11-18T14:27:03.690839+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG"}
+{"Time":"2026-11-18T14:27:03.690848+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG","Output":"=== RUN   TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:04.434195+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG","Output":"--- PASS: TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG (0.75s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:04.434479+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG","Elapsed":0.75}
+{"Time":"2026-11-18T14:27:04.434502+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIContactRateResetsWithoutPermanentGatePG"}
+{"Time":"2026-11-18T14:27:04.434516+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIContactRateResetsWithoutPermanentGatePG","Output":"=== RUN   TestUIContactRateResetsWithoutPermanentGatePG\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:05.447869+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIContactRateResetsWithoutPermanentGatePG","Output":"--- PASS: TestUIContactRateResetsWithoutPermanentGatePG (1.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:05.447907+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestUIContactRateResetsWithoutPermanentGatePG","Elapsed":1.01}
+{"Time":"2026-11-18T14:27:05.447926+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG"}
+{"Time":"2026-11-18T14:27:05.447936+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG","Output":"=== RUN   TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:06.29067+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG","Output":"--- PASS: TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG (0.84s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:06.290709+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG","Elapsed":0.84}
+{"Time":"2026-11-18T14:27:06.290722+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIUsernameCurrentIdentityAndSnapshotRetractionPG"}
+{"Time":"2026-11-18T14:27:06.290738+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIUsernameCurrentIdentityAndSnapshotRetractionPG","Output":"=== RUN   TestUIUsernameCurrentIdentityAndSnapshotRetractionPG\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:06.922074+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIUsernameCurrentIdentityAndSnapshotRetractionPG","Output":"--- PASS: TestUIUsernameCurrentIdentityAndSnapshotRetractionPG (0.63s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:06.922097+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestUIUsernameCurrentIdentityAndSnapshotRetractionPG","Elapsed":0.63}
+{"Time":"2026-11-18T14:27:06.922108+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG"}
+{"Time":"2026-11-18T14:27:06.922113+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Output":"=== RUN   TestUIReportSelectedAttachmentAndMissingEvidencePG\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:07.585964+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Output":"    ui_contract_test.go:396: selected report attachment did not use authenticated original bytes\n","OutputType":"error"}
+{"Time":"2026-11-18T14:27:07.650338+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Output":"--- FAIL: TestUIReportSelectedAttachmentAndMissingEvidencePG (0.73s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:07.650408+08:00","Action":"fail","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Elapsed":0.73}
+{"Time":"2026-11-18T14:27:07.650416+08:00","Action":"output","Package":"jobsim/backend","Output":"FAIL\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:07.65144+08:00","Action":"output","Package":"jobsim/backend","Output":"FAIL\tjobsim/backend\t4.979s\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:27:07.65146+08:00","Action":"fail","Package":"jobsim/backend","Elapsed":4.979}

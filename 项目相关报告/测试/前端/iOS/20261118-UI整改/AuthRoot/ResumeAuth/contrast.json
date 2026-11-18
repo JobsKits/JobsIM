@@ -1,0 +1,128 @@
+{
+  "scope": "Static worst-case alpha composition over any image pixel; runtime blur, control states and screenshots unverified",
+  "pairs": [
+    {
+      "theme": "light",
+      "role": "card main",
+      "foreground": "#17201B",
+      "backgroundRGB": [
+        214.2,
+        214.2,
+        214.2
+      ],
+      "contrast": 11.5002135188624
+    },
+    {
+      "theme": "light",
+      "role": "card secondary",
+      "foreground": "#485B50",
+      "backgroundRGB": [
+        214.2,
+        214.2,
+        214.2
+      ],
+      "contrast": 5.013198670487272
+    },
+    {
+      "theme": "light",
+      "role": "card links",
+      "foreground": "#1B5D47",
+      "backgroundRGB": [
+        214.2,
+        214.2,
+        214.2
+      ],
+      "contrast": 5.355319422683807
+    },
+    {
+      "theme": "light",
+      "role": "input text",
+      "foreground": "#17201B",
+      "backgroundRGB": [
+        242.0,
+        246.0,
+        243.0
+      ],
+      "contrast": 15.293143263993263
+    },
+    {
+      "theme": "light",
+      "role": "input placeholder",
+      "foreground": "#485B50",
+      "backgroundRGB": [
+        242.0,
+        246.0,
+        243.0
+      ],
+      "contrast": 6.6666210460244
+    },
+    {
+      "theme": "dark",
+      "role": "card main",
+      "foreground": "#EDF4EF",
+      "backgroundRGB": [
+        52.9,
+        64.94,
+        58.92
+      ],
+      "contrast": 9.543796198327977
+    },
+    {
+      "theme": "dark",
+      "role": "card secondary",
+      "foreground": "#BACBC0",
+      "backgroundRGB": [
+        52.9,
+        64.94,
+        58.92
+      ],
+      "contrast": 6.2946120924491265
+    },
+    {
+      "theme": "dark",
+      "role": "card links",
+      "foreground": "#8DDFC0",
+      "backgroundRGB": [
+        52.9,
+        64.94,
+        58.92
+      ],
+      "contrast": 6.831764691825158
+    },
+    {
+      "theme": "dark",
+      "role": "input text",
+      "foreground": "#EDF4EF",
+      "backgroundRGB": [
+        20.0,
+        37.0,
+        28.0
+      ],
+      "contrast": 14.329195601348017
+    },
+    {
+      "theme": "dark",
+      "role": "input placeholder",
+      "foreground": "#BACBC0",
+      "backgroundRGB": [
+        20.0,
+        37.0,
+        28.0
+      ],
+      "contrast": 9.45082292548494
+    },
+    {
+      "theme": "both",
+      "role": "solid primary/rail",
+      "foreground": "#FFFFFF",
+      "backgroundRGB": [
+        40,
+        124,
+        102
+      ],
+      "contrast": 5.0418403813881
+    }
+  ],
+  "minimum": 5.013198670487272,
+  "required": 4.5
+}

@@ -1,0 +1,12 @@
+{
+  "exit": 0,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "vet",
+    "-overlay",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-资料与原生演示/Backend/ProfileGIF/overlay.json",
+    "-p",
+    "1",
+    "."
+  ]
+}

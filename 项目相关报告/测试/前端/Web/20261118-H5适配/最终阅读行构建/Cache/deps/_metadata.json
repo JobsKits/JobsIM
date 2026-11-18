@@ -1,0 +1,38 @@
+{
+  "hash": "00865c04",
+  "configHash": "0a8c6344",
+  "lockfileHash": "71acb701",
+  "browserHash": "2be48a65",
+  "optimized": {
+    "lucide-react": {
+      "src": "../../../../../../../../../../../../.cache/JobsIM/Web/node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "file": "lucide-react.js",
+      "fileHash": "3534deb7",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../../../../../../../../../../../.cache/JobsIM/Web/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "d2225f08",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../../../../../../../../../../../.cache/JobsIM/Web/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "06f5ff50",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../../../../../../../../../../../.cache/JobsIM/Web/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "20234b40",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "react-DnQ_ghqK": {
+      "file": "react-DnQ_ghqK.js",
+      "isDynamicEntry": false
+    }
+  }
+}

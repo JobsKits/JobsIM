@@ -1,0 +1,29 @@
+{
+  "finishedAt": "2026-11-17T04:16:37.520Z",
+  "registered": [
+    "测试/前端/Web/audio-rules.cjs/README.md",
+    "测试/前端/Web/audio-browser.cjs/README.md",
+    "测试/前端/Web/account-deletion-cleanup.cjs/README.md",
+    "测试/后端/接口/media_upload/README.md",
+    "项目相关报告/测试/后端/20261117-稳定媒体上传/README.md"
+  ],
+  "total": 164,
+  "originalEntriesPreserved": true,
+  "installed": null,
+  "verified": null,
+  "rawIndexCheck": null,
+  "rawIndexCheckMeaning": "NOT passed: un-staged/old index preserved; normal whole-file staging still required",
+  "stageBefore": "6843504649c043b36a5c924eb5ff174fc449ba3e89a9083971f6aa37f7e95de1",
+  "stageAfter": "6843504649c043b36a5c924eb5ff174fc449ba3e89a9083971f6aa37f7e95de1",
+  "flagsBefore": "fb367fe4c17c0dfee1a73e825094b87b113815d30c96e019269a8b9891c69bab",
+  "flagsAfter": "fb367fe4c17c0dfee1a73e825094b87b113815d30c96e019269a8b9891c69bab",
+  "sameStage": true,
+  "sameFlags": true,
+  "changedDocuments": [],
+  "converterUnchanged": true,
+  "globalConfigModified": false,
+  "build": false,
+  "staged": false,
+  "committed": false,
+  "pushed": false
+}

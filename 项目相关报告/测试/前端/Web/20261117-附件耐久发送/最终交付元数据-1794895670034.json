@@ -1,0 +1,73 @@
+{
+  "at": "2026-11-17T06:07:49.986Z",
+  "scope": "Web local documentation and metadata closure only; no additional product tests",
+  "docs": [
+    {
+      "file": "代码/前端/Web/README.md",
+      "sha256": "52e3a3483a0e9e229123e2342b9e520ae30ab54ae27f3b199633133814a0af7f",
+      "localTOC": true,
+      "roundTrip": true,
+      "generatedValid": true
+    },
+    {
+      "file": "代码/前端/Web/代码地图/README.md",
+      "sha256": "abaf56cbaf6bbd616209a09743c5293d9e5e593dc1e549092bd691d1e31ab63b",
+      "localTOC": true,
+      "roundTrip": true,
+      "generatedValid": true
+    },
+    {
+      "file": "测试/前端/Web/auth-session.cjs/README.md",
+      "sha256": "2f526eb2ae401fb40336617b01d47e4dea32ad24ece3f96d86f8a4741f9b521b",
+      "localTOC": true,
+      "roundTrip": true,
+      "generatedValid": true
+    },
+    {
+      "file": "测试/前端/Web/attachment-browser.cjs/README.md",
+      "sha256": "d484e6baea51809aad0423f7dae260cae8570976463e73f5f42b4d44bf912d03",
+      "localTOC": true,
+      "roundTrip": true,
+      "generatedValid": true
+    },
+    {
+      "file": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/README.md",
+      "sha256": "0eaf3f2e667ed9ca9625ea909032e83a08d834322f1f810bd9ff23414c49cafa",
+      "localTOC": true,
+      "roundTrip": true,
+      "generatedValid": true
+    }
+  ],
+  "links": 161,
+  "broken": [],
+  "sourceReference": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/02-私有构建执行.json",
+  "currentProductInputs": 82,
+  "currentProductSourceDrift": [],
+  "production": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/Receipt/1794892045242/Production",
+  "artifactCount": 11,
+  "artifactDrift": [],
+  "mainJS": {
+    "file": "assets/index-CCqfIXzK.js",
+    "sha256": "d3dff62c24c3a6febffe7018b38ad416f2149e881cafe82d5aabc54754599cfa"
+  },
+  "fixtureChangesOnly": [
+    "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+    "项目相关报告/测试/前端/Web/20261117-附件耐久发送/运行器.cjs"
+  ],
+  "authFive": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/固定5次认证-1794893088191-40862.json",
+  "authOld09": "Unreproduced and unattributed; not marked fixed",
+  "productSrcModifiedInValidationWindow": false,
+  "defaultA4RuntimeModified": false,
+  "commit": false,
+  "push": false,
+  "files": {
+    "代码/前端/Web/Src/App.tsx": "980b91336c8470b0ab7085d7d31a27cfbb68776e712408298b9b764450777d4b",
+    "代码/前端/Web/Src/api.ts": "319dec1d73e4355b7f43517e4d5615302be20f21b45ed624d69c5317e447a89f",
+    "代码/前端/Web/Src/AttachmentSendStore.ts": "c07cfc2050ef5e2c377fcf364f141050a36382c6ec5459c050769a199dcd7b03",
+    "代码/前端/Web/Src/AttachmentSendActions.ts": "74cc9cae7f0447243cb2b40e4df4e1098e1549fe1b8b2bb180085cfc4826ea5b",
+    "代码/前端/Web/Src/GlobalMessages.ts": "e0478fcdcfcd0d3c733fd64a99e7c2a0e66ad28a27edea1f3c85a15dc20e3eae",
+    "代码/前端/Web/Src/AccountDeletionCleanup.ts": "f9047fcbaf38295a6e4ad44649401548b0f2ddadd021293b98e1f461e7987451",
+    "测试/前端/Web/auth-session.cjs/auth-session.cjs": "25e39ea47525c06e94f518a524a78e73e9226a4ff9f6a9b55f38d97fa43cf9d3",
+    "项目相关报告/测试/前端/Web/20261117-附件耐久发送/运行器.cjs": "6ed04419478a89a8669d50e31b3f11a0cec06b10594de40e2e2e956b52e9da5d"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "swiftSourceCount": 78,
+  "compiledSourceCount": 79,
+  "missing": [],
+  "fileLists": [
+    "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Intermediates.noindex/JobsIM.build/Debug-iphoneos/JobsIM.build/Objects-normal/arm64/JobsIM.SwiftFileList"
+  ],
+  "localizations": {
+    "bo.lproj": {
+      "exists": true,
+      "size": 31076
+    },
+    "de.lproj": {
+      "exists": true,
+      "size": 32847
+    },
+    "en.lproj": {
+      "exists": true,
+      "size": 22170
+    },
+    "es.lproj": {
+      "exists": true,
+      "size": 30920
+    },
+    "fr.lproj": {
+      "exists": true,
+      "size": 33677
+    },
+    "ja.lproj": {
+      "exists": true,
+      "size": 19026
+    },
+    "ko.lproj": {
+      "exists": true,
+      "size": 20103
+    },
+    "ru.lproj": {
+      "exists": true,
+      "size": 33393
+    },
+    "zh-Hans.lproj": {
+      "exists": true,
+      "size": 15891
+    },
+    "zh-Hant.lproj": {
+      "exists": true,
+      "size": 15921
+    }
+  },
+  "assetsPresent": true,
+  "infoProcessed": true,
+  "simulatorEntitlementsCopied": false,
+  "profileTeam": [
+    "K5692KLW75"
+  ],
+  "profileAppIdentifier": "K5692KLW75.com.jobs.im",
+  "profileIncludesDevice": true,
+  "binarySHA256": "11d0966feace9380d3852ae16b198b2281ce533f04fac9f5a963276965782a0c",
+  "inputDrift": [],
+  "xcodeGeneratedSources": [
+    "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Intermediates.noindex/JobsIM.build/Debug-iphoneos/JobsIM.build/DerivedSources/GeneratedAssetSymbols.swift"
+  ],
+  "physicalAppSourcesMatchCompiled": true
+}

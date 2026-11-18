@@ -1,0 +1,16 @@
+{
+  "originalFilesRetained": [
+    "100APPLE/IMG_0001.JPG",
+    "100APPLE/IMG_0002.JPG",
+    "100APPLE/IMG_0003.JPG",
+    "100APPLE/IMG_0004.JPG",
+    "100APPLE/IMG_0005.JPG",
+    "100APPLE/IMG_0006.HEIC"
+  ],
+  "newFiles": [
+    "100APPLE/IMG_0007.PNG"
+  ],
+  "fixture": "项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/PhotoFixture/JobsIM-UI-Report-Fixture-20261118.png",
+  "sha256": "94a642d716e8f494f4ea9a132fdc55fa9f828c93a71324d35f15a8a73adfec53",
+  "note": "Existing stock library preserved. Only the new AppIcon fixture may be chosen after actual picker screenshot/AX verification."
+}

@@ -1,0 +1,24 @@
+{
+  "ownedPgPid": 47909,
+  "ownedPgPort": 62381,
+  "ownedData": "/Users/jobs/Library/Application Support/JobsIM/Integration/67001a78-80a6-4670-98de-49058acbdc9d/Safety/PGMain",
+  "databaseNamesBeforeStop": [
+    "postgres"
+  ],
+  "otherClientConnectionsBeforeStop": 0,
+  "listenerOwnerVerified": true,
+  "stopExit": 0,
+  "statusExitAfterStop": 3,
+  "portClosed": true,
+  "postmasterPidFileAbsent": true,
+  "user9443Touched": false,
+  "dataFilesRetained": true,
+  "cacheDataNotDeleted": true,
+  "pgDataKiB": 57188,
+  "scratchKiB": 0,
+  "reportKiBBeforeFinalManifest": 200,
+  "cacheFilesWrittenSinceResume": 2882,
+  "cacheFilesWrittenAllocatedBytesUpperBound": 306069504,
+  "cacheMeasurementNote": "Conservative current allocated size of all files with mtime since runtime.json; may include overwritten preexisting cache bytes and concurrent writers; not net growth.",
+  "diskAfterKiB": 16135940
+}

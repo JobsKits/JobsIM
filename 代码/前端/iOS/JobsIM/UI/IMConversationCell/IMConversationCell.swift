@@ -53,7 +53,7 @@ final class IMConversationCell: UITableViewCell {
                 make.bottom.equalToSuperview().inset(18).priority(999)
             }
         badge
-            .byBackgroundColor(IMUI.green)
+            .byBackgroundColor(IMUI.greenFill)
             .byTextAlignment(.center)
             .byCornerRadius(10)
             .byClipsToBounds(true)

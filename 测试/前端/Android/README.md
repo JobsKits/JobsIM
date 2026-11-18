@@ -11,11 +11,14 @@
 - [二、测试来源](#jobs-toc-heading-2)
 - [三、当前证据](#jobs-toc-heading-3)
 - [四、本地 HTTPS 与截图](#jobs-toc-heading-4)
+- [群治理当前候选](#jobs-toc-heading-5)
 
 </details>
 <!-- jobs-toc:end -->
 
 ## <span id="jobs-toc-heading-1" data-jobs-toc="v2">一、入口与模式 <a href="#前言">🔼</a> <a href="#🔚">🔽</a></span><!-- jobs-toc:heading-end -->
+
+[当前全项目回归](../../../项目相关报告/测试/回归/20261116-全项目回归/Android-HarmonyOS.md)在原生导出十语文案调整后，离线执行16 JVM（0失败／错误／跳过）及应用／测试APK构建。新应用3e72d039、测试76826edf及XML只归档到本轮回归目录，旧e295／5774与原报告保持各自范围；没有ADB目标，本轮没有仪器、系统保存或真实HTTPS执行。
 
 从仓库根运行：
 
@@ -30,6 +33,8 @@
 Gradle connected 测试可能安装后清理本测试包；执行只使用独立测试实例，不在个人正式账户上测试。日志与截图生成在工程根 `项目相关报告/测试/前端/Android/`，失败保留非零退出码；APK另导出到工程 `Dist/`。报告不包含账号密码、令牌或消息秘密。
 
 ## <span id="jobs-toc-heading-2" data-jobs-toc="v2">二、测试来源 <a href="#前言">🔼</a> <a href="#🔚">🔽</a></span><!-- jobs-toc:heading-end -->
+
+- [OwnPasswordRulesTest](./Unit/OwnPasswordRulesTest.kt)：4项JVM覆盖NFC／码点／边界、拒绝复用、未知／changed家族门禁、秘密诊断脱敏及十语键；[OwnPasswordLifecycleTest](./Instrumentation/OwnPasswordLifecycleTest.kt)另有4项真实Room适配源码，覆盖重建、原责任无秘密、只读查单、错误证明、原家族／新家族隔离与迟到回包。仪器方法本轮仅编译，不写成设备已执行；[独立报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/Android-HarmonyOS改密.md)保留实际命令与当前包。
 
 - [Unit/IsolationTest.kt](./Unit/IsolationTest.kt)：不同可信连接档案隔离、演示禁止正式发送、拒绝不安全／带秘密URL、十语词条完整，以及恢复代际变化不重发旧Outbox，以及证书输入在整文件分配前受大小限制。
 - [Instrumentation/DatabaseIsolationTest.kt](./Instrumentation/DatabaseIsolationTest.kt)：在实际 Android RDB环境验证 Room 正式与演示分库、pending保持，并检查 SQLite synchronous=FULL。它不等于断电、清云或灾备资格验证。
@@ -80,4 +85,27 @@ Android 模拟器中的 127.0.0.1 属于设备本身。若隔离服务只监听�
 
 手动 Gradle 运行并需保留本测试包／截图时，可加 `-Pandroid.injected.androidTest.leaveApksInstalledAfterRun=true`；不要在个人正式账号设备上执行。NativeUiTest 图片位于本测试应用专属外部文件目录 `UiEvidence/`；搜索协作原生截图为 `DiscoveryUiEvidence/`，转发为 `ForwardUiEvidence/`，与对应测试 XML／APK 指纹一起保存。
 
+
+
+本轮追加能力撤回与恢复代际反例：旧原单允许匿名纯查询；全部续跑必须重新通过能力门禁，404 未建立原单须由原家族 AT 创建。更新验证为鸿蒙15项主机通过、两端应用与测试包重新编译；Android新增第5项 Room 反例仅已编译，未执行设备测试。
+
+
+当前新增`Unit/OwnDeletionRulesTest.kt`4项和改密第5项规则反例，全部JVM合计25项通过。`Instrumentation/OwnDeletionLifecycleTest.kt`新增5项实际Room／缓存清理反例，改密instrumentation增至6项并改正`JobsIM-test-`专用DB名；11个新增方法均在test APK DEX核到，尚未设备执行。原始日志和包见[两端注销报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/Android-HarmonyOS注销.md)。
+
+
+## <span id="jobs-toc-heading-5" data-jobs-toc="v2">群治理当前候选</span><!-- jobs-toc:heading-end -->
+
+[GroupRulesTest](./Unit/GroupRulesTest.kt)新增3项JVM（精确正整数／邀请诊断脱敏／十语完整），当前全量28项通过、无失败／错误／跳过。[GroupLifecycleTest](./Instrumentation/GroupLifecycleTest.kt)7项真实Room适配源码覆盖转让确认后不重基、未知邀请纯查／token不落盘、冷启动同码同nonce、迟到身份、角色撤回清RAM；这7项仅编译，未运行设备。应用／test APK和原始日志、源码映射归档到[群控限定报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/Android-HarmonyOS群控.md)；旧Dist不改，不能由编译推断UI、RDB生命周期或真实HTTPS通过。
+
+
+2026-11-17后增取消门禁源码：unknown取消先纯查询，同原cancelVersion才允许用新证明明确续同nonce；旧缺版本记录与查询新版都保持只读，不静默补资格。十语新增先查／冻结说明。新增Harmony4主机反例（目标16）、Android4 Room方法（目标9）及Hypium3方法（目标57）未运行／未编译，受低于4GiB磁盘门禁限制；旧APK/HAP及先前12主机结果不追认该增量。见`项目相关报告/实现进度/20261116-剩余能力闭环/注销证据/取消原版本新增源码待验.json`。
+
 <a id="🔚" href="#前言">我是有底线的➤点我回到首页</a>
+
+
+2026-11-17普通个人历史迁移已新增源码入口、原请求耐久、配对／发送／只查／接收／撤包、独立可读历史与原件保存；40键×10语言沿现有三主题。当前新增UI及文件／global清理尚未编译或设备运行；Android首次33 JVM只覆盖其归档的前期草稿和录音5项，新迁移6 JVM／Harmony13 host均待执行。原APK/HAP不追认新源码。协议、文件位置及分层验证见[两端普通迁移报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/Android-HarmonyOS普通迁移.md)。
+
+取消增量另有[Harmony16项实际host](../../../项目相关报告/实现进度/20261116-剩余能力闭环/注销证据/HarmonyHost-fMtui1/结果.json)；该轮输入冻结不包含后续迁移表清理增量，Android9 Room／Hypium57仍未在新包执行。
+
+
+当前迁移／逐store收讫最终：Android150输入、54 JVM通过，双APK9660aa38／7b3f14b4构建并设备读回一致；105仪器逐项核齐，本地102为86通过／16明确Assume跳过，同包另3真实HTTPS通过（S2／草稿／UI），0失败。迁移3、注销9和Receipt真实Room／文件4亦独立16／16通过。Harmony迁移22／receipt23／sync36 host，70输入双HAP5ecddaa4／7f71c4d5成功，63 Hypium仅编译。修复可信OS root别名、同physical probe与迟到global，移动端按本次bytes＋64MiB reserve判断；宿主4GiB门禁保持。默认不开自动收讫、不授生产资格，未知只查原单；真实迁移／receipt HTTPS、管理员矩阵、物理断电及Harmony设备另验。详见[逐store限定报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/Android-HarmonyOS逐store收讫.md)。

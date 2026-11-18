@@ -1,0 +1,14 @@
+[
+  "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+  "-s",
+  "emulator-5584",
+  "shell",
+  "am",
+  "instrument",
+  "-w",
+  "-r",
+  "-e",
+  "class",
+  "com.jobs.im.AdmissionFenceTest,com.jobs.im.AuthoritativeSyncTest,com.jobs.im.CollaborationLifecycleTest,com.jobs.im.DatabaseIsolationTest,com.jobs.im.DiscoveryCollaborationUiTest,com.jobs.im.DiscoveryLifecycleTest,com.jobs.im.ForwardLifecycleTest,com.jobs.im.ForwardUiTest,com.jobs.im.GroupLifecycleTest,com.jobs.im.LiveApiTest,com.jobs.im.Migration8To9Test,com.jobs.im.MigrationHistoryLifecycleTest,com.jobs.im.ModelClosureTest,com.jobs.im.NativeSessionHttpsTest,com.jobs.im.NativeSessionLifecycleTest,com.jobs.im.NativeUiTest,com.jobs.im.NotificationPrivacyTest,com.jobs.im.OwnDeletionLifecycleTest,com.jobs.im.OwnPasswordLifecycleTest,com.jobs.im.PersonalExportLifecycleTest,com.jobs.im.ReceiptStorageLifecycleTest,com.jobs.im.RoleAdmissionLifecycleTest,com.jobs.im.SelfStateTest,com.jobs.im.StorageLifecycleTest,com.jobs.im.VoiceRecordingNativeTest,com.jobs.im.VoiceUploadApiNativeTest,com.jobs.im.VoiceUploadGlobalFloorNativeTest,com.jobs.im.VoiceUploadQueueNativeTest",
+  "com.jobs.im.test/androidx.test.runner.AndroidJUnitRunner"
+]

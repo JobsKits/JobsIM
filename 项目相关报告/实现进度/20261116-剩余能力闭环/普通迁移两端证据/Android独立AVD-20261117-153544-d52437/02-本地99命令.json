@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+    "-s",
+    "emulator-5580",
+    "shell",
+    "am",
+    "instrument",
+    "-w",
+    "-r",
+    "-e",
+    "notClass",
+    "com.jobs.im.NativeSelfStateHttpsTest",
+    "com.jobs.im.test/androidx.test.runner.AndroidJUnitRunner"
+  ],
+  "environmentNotRun": [
+    "com.jobs.im.NativeSelfStateHttpsTest.selfStateInstallsOnOnePhysicalStoreAndUsesRealHttps",
+    "com.jobs.im.NativeSelfStateHttpsTest.cloudDraftAdoptionComparesARealIndependentStore"
+  ],
+  "reason": "No explicit nativeSelf/public fixture; original tests assert nativeSelf=true instead of Assume; not counted as SKIP or PASS"
+}

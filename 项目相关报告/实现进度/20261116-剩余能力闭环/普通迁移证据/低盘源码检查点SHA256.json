@@ -1,0 +1,30 @@
+{
+  "status": "source_checkpoint_not_test_evidence",
+  "cwd": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM",
+  "at": "2026-11-17T09:45:14.635513+08:00",
+  "files": {
+    "代码/后端/Go/sync_migration_delivery.go": "fd8d3385d841b755a23c10e57a533cfdd926ec4a840d17af2f83b9bf9f4a5b5e",
+    "代码/后端/Go/sync_migration_model.go": "15f2637be8a91202f1b21576de897f1fef0a9bcd299cd93e97050a7ae6b490df",
+    "代码/后端/Go/migration_interest.go": "217316a7cf67c368786524445c5331b948ddc7a8bda8df7be4400b0c5aba721d",
+    "代码/后端/Go/message_migration.go": "dd56a099767d678dc5df7c22ed5554c4e1216497b92f410d37ad66447cd17593",
+    "代码/后端/Go/asset_migrations.go": "a134b1f2de14973d1eb92b7584b82bdcdde889f4677d733e8242f3a257f71179",
+    "代码/后端/Go/sync_migration_validate.go": "384d199b40085b474c9be8ca0b209e8f7d072d0c839c89930b45a278dbd0a632",
+    "代码/后端/Go/migrations.go": "d7633039dab39048648df44c5543c9af37cb20bf6c0d43dc8123527ed73b7970",
+    "代码/后端/Go/sync_migration.go": "10750bb0c4b1daa1a64357d29037d1ffff25c7e30486cc7da49b403bf96641ed",
+    "代码/后端/Go/migration_identity.go": "ab606209c12f25279f7da98feeb79e82b97abfea0f81908455b004ed7d53e9d9",
+    "代码/后端/Go/migration_invalidation.go": "e0cb2d03c9905f05be554b503d6b7c35c8b2332e400072a1baa054568d4acdf8",
+    "代码/后端/Go/sync_migration_cleanup.go": "87b83e46320596e05fa765c8baf3de295e97e6b997d3caec76273e54cb4d210c",
+    "测试/后端/接口/sync_migration_pg_test.go": "39e194d8405be1d2bfbd3eef03d68485ca191750ffa50a27d936d253df1bbd95",
+    "代码/后端/Go/server.go": "97b9c52d0144d52b7a11acbd10e8c09d660c78202c47636f797cc8e596dc6f36",
+    "代码/后端/Go/message_export.go": "9cf6ad58686f4850a9404ac0b1afae5016c6a87b8ece738eb1a45583ec22b8a9",
+    "代码/后端/Go/forward_revocation.go": "918209d28afb1284e35cd1c4597f4aa3a9ec27fdebcddbb01c62f04783bce509",
+    "代码/后端/Go/personal_export_fence.go": "d517837566ded5229f48be90ed6b5fb510ccc731fcddf3137fe168d7e17640de",
+    "代码/后端/Go/send_admission.go": "61be9c4e91b085474af8537b995a930ec473e3849e96cf9d713a740c5ee86874",
+    "代码/后端/Go/forward_media.go": "4feab16c73c63cb5312e58c669cc82e3cfd35ffcb8f692be307232332ba0f5d6",
+    "代码/后端/Go/account_deletion_owner.go": "c211e0d3f8f7f2eb9223a5ed684649e78b8d41e38889826318e9c91eb4fa1c76",
+    "代码/后端/Go/media_retention.go": "e4216a2bb6d0d79e90c1558a31d97fa7a168003482541bf3cf61bd968f86ebc1",
+    "代码/后端/Go/restore_runner.go": "2bbf6d27bbc43dab202e88e736ca905a6dd91c93572555571ca7e05b365a379b",
+    "代码/后端/Go/deployment_restore_finalize.go": "cead86d31c2076dbe1bad8e81cdb48a1e8eda3afb80f6581d52030231b987fde",
+    "代码/后端/Go/cmd/jobsimd/main.go": "5007009d6d1ba0142a5e49fa00b5d9c48b47bf68cbe6880aee87741fbbcc4243"
+  }
+}

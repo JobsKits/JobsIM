@@ -1,0 +1,43 @@
+┌  Initializing CodeGraph
+│
+◆  Initialized in /Users/jobs/Documents/GitHub/JobsProds/JobsIM
+│
+◆  .codegraph/.gitignore now ignores itself, so nothing of CodeGraph's shows in git.
+│
+Scanning files...
+Parsing code...
+Resolving refs...
+Linking dynamic dispatch...
+│
+◆  Indexed 717 files
+│
+●  17,416 nodes, 62,478 edges in 9.9s
+│
+▲  Live file watching is disabled here — CODEGRAPH_NO_WATCH=1 is set.
+│
+●  Until you re-sync, the CodeGraph index stays frozen — it will not pick up edits on its own.
+│
+◆  Installed git post-commit, post-merge, post-checkout hooks — the index refreshes in the background after each.
+│
+●  Run `codegraph sync` anytime to refresh immediately.
+│
+└  Done
+
+       10.26 real        11.28 user         2.49 sys
+           775716864  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               99121  page reclaims
+                 941  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                 321  messages sent
+                 288  messages received
+                   1  signals received
+               10956  voluntary context switches
+               34378  involuntary context switches
+          1345533330  instructions retired
+           302295431  cycles elapsed
+            13863000  peak memory footprint

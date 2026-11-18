@@ -1,0 +1,22 @@
+Executable=/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/成品/20261118-最终候选/JobsIM.app/JobsIM
+Identifier=com.jobs.im
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20400 size=495 flags=0x0(none) hashes=5+7 location=embedded
+Hash type=sha256 size=32
+CandidateCDHash sha256=b79a2b8538cebbba958b8f85d51a6aeca7f64d2f
+CandidateCDHashFull sha256=b79a2b8538cebbba958b8f85d51a6aeca7f64d2f913d01d61a6acae22ea9fd95
+Hash choices=sha256
+CMSDigest=b79a2b8538cebbba958b8f85d51a6aeca7f64d2f913d01d61a6acae22ea9fd95
+CMSDigestType=2
+CDHash=b79a2b8538cebbba958b8f85d51a6aeca7f64d2f
+Signature size=4785
+Authority=Apple Development: lg295060456@gmail.com (M438BSMH63)
+Authority=Apple Worldwide Developer Relations Certification Authority
+Authority=Apple Root CA
+Signed Time=Nov 18, 2026 at 17:54:01
+Info.plist entries=31
+TeamIdentifier=K5692KLW75
+Sealed Resources version=2 rules=10 files=101
+Internal requirements count=1 size=184
+Total signatures=1
+Chosen signature=1

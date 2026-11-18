@@ -1,0 +1,128 @@
+{
+  "runID": "0a9751f3-83d2-4367-b824-6e13640f7d9d",
+  "scope": "frozen pure rules plus owned isolated PostgreSQL production-handler fixtures; in-process role RPC, no real HTTP/NATS/native/microphone",
+  "stages": [
+    {
+      "label": "01-纯规则与真实容器",
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-p=1",
+        "-count=1",
+        "-timeout=120s",
+        "-run",
+        "^Test(WebM|MediaUploadManifestAndMinimalSafetyFields$)",
+        "."
+      ],
+      "code": 0,
+      "signal": null,
+      "gate": null,
+      "pass": [
+        "TestMediaUploadManifestAndMinimalSafetyFields",
+        "TestWebMActualBrowserContainerClassification",
+        "TestWebMClassifiesActualTracksInsteadOfSniffOrName",
+        "TestWebMRejectsSpoofedAndMalformedTrackStructures",
+        "TestWebMBoundsElementsDepthTracksAndReaderAt",
+        "TestWebMRejectsMalformedContainerThroughStoredMediaEntry",
+        "TestWebMSkipsLargeEncodedPacketsButBoundsMetadata",
+        "TestWebMPreservesBMFFTrackClassification"
+      ],
+      "passEvents": 52,
+      "skip": [],
+      "fail": []
+    },
+    {
+      "label": "06-上传与注销PG",
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-p=1",
+        "-count=1",
+        "-timeout=240s",
+        "-run",
+        "^Test(MediaUploadPG|AccountDeletion|ClosureAuditDeletion)",
+        "."
+      ],
+      "code": 0,
+      "signal": null,
+      "gate": null,
+      "pass": [
+        "TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes",
+        "TestAccountDeletionAdmissionRetiresPreparedPasswordChange",
+        "TestAccountDeletionAdmissionHistoricalPasswordResultIsNotCurrent",
+        "TestAccountDeletionAdmissionPreparedAdminResetCannotReopenTarget",
+        "TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected",
+        "TestAccountDeletionPGRevokesFamiliesAndOriginalLookupNeverCreates",
+        "TestAccountDeletionPGPurposeProofAndCancelPreserveIndependentDenials",
+        "TestAccountDeletionPGCancelUnknownWaitsForJournalResult",
+        "TestAccountDeletionPGZeroCooldownCleansOwnerDataAndCannotCancel",
+        "TestAccountDeletionPGRecoveryCodeIsOneUseAndPurposeCannotAuthorizeChat",
+        "TestAccountDeletionPGSafetyCancelIntentCannotReopenAndCompletedCannotResurrect",
+        "TestAccountDeletionPGExpiredAndOldEpochProofCannotMutate",
+        "TestAccountDeletionPGOldVersionCanReverifyQueryButCannotRebaseCancellation",
+        "TestAccountDeletionPGInitialJournalUnknownKeepsOriginalAndWorkerResumes",
+        "TestAccountDeletionPGMultipleOwnerPagesAndRestoredMediaStayErased",
+        "TestAccountDeletionPGUnqueuedLastPageReadDenial",
+        "TestClosureAuditDeletionCompletedReceiptCanRenewOnlyThroughAuditedAdmin",
+        "TestClosureAuditDeletionIdentityRecoveryDoesNotStarveLaterIntent",
+        "TestClosureAuditDeletionGovernanceRecoveryDoesNotStarveLaterIntent",
+        "TestMediaUploadPGOriginalResultAndStableRetry",
+        "TestMediaUploadPGPreparedJournalUnknownAndPublishedCrashResume",
+        "TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes",
+        "TestMediaUploadPGSuccessorFamilyEpochAndBanCannotResumeOriginal",
+        "TestMediaUploadPGPreparedCannotOverwriteRegisteredOrDifferentBytes",
+        "TestMediaUploadPGReplayRetiresMissingRequestAndClearsExactUUIDs",
+        "TestMediaUploadPGOwnerErasureWaitsForEveryPreparedPage",
+        "TestMediaUploadPGActualBrowserContainerRemainsAudio"
+      ],
+      "passEvents": 40,
+      "skip": [],
+      "fail": []
+    },
+    {
+      "label": "08-两个cmd编译",
+      "command": [
+        "go",
+        "build",
+        "-p=1",
+        "-o",
+        "/Users/jobs/Library/Application Support/JobsIM/Build/MediaUpload/0a9751f3-83d2-4367-b824-6e13640f7d9d/",
+        "./cmd/jobsimd",
+        "./cmd/jobsimops"
+      ],
+      "code": 0,
+      "signal": null,
+      "gate": null,
+      "pass": [],
+      "passEvents": 0,
+      "skip": [],
+      "fail": []
+    }
+  ],
+  "inputs": {
+    "backend": 134,
+    "externalTests": 47,
+    "total": 182
+  },
+  "browser": {
+    "source": "项目相关报告/测试/前端/Web/20261117-Web基础音频/03-原生浏览器-1794882303104-90890/浏览器/原生合成音轨.webm",
+    "sha256": "3c7890c6485fcb0d914faf0c0449ae037619cdf059b36387e56f642e22b7edef",
+    "syntheticAudioTrack": true,
+    "realMicrophone": false
+  },
+  "cluster": {
+    "port": 62381,
+    "systemIdentifier": "7708939865112687365",
+    "sameOwnedDataDirectory": true,
+    "fsync": "on",
+    "synchronousCommit": "on",
+    "privatePassfileMode": "0600"
+  },
+  "ownedClusterStopped": true,
+  "passed": true,
+  "changedLiveInputs": [],
+  "minimumFreeBytes": "4960428032",
+  "finishedAt": "2026-11-17T03:09:06.614Z"
+}

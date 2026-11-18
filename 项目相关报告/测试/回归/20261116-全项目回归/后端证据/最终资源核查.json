@@ -1,0 +1,98 @@
+{
+  "ports": [
+    {
+      "port": 59443,
+      "listening": false
+    },
+    {
+      "port": 59222,
+      "listening": false
+    },
+    {
+      "port": 62381,
+      "listening": false
+    },
+    {
+      "port": 62382,
+      "listening": false
+    },
+    {
+      "port": 59101,
+      "listening": false
+    },
+    {
+      "port": 59102,
+      "listening": false
+    },
+    {
+      "port": 59103,
+      "listening": false
+    },
+    {
+      "port": 59104,
+      "listening": false
+    },
+    {
+      "port": 59105,
+      "listening": false
+    },
+    {
+      "port": 59106,
+      "listening": false
+    },
+    {
+      "port": 59107,
+      "listening": false
+    },
+    {
+      "port": 59108,
+      "listening": false
+    },
+    {
+      "port": 59109,
+      "listening": false
+    }
+  ],
+  "ownedClusters": [
+    {
+      "privateRun": "e81de379-2f87-458e-8efc-e8b5ca682c15",
+      "cluster": "Main",
+      "pgCtlStatusExit": 3,
+      "stopped": true
+    },
+    {
+      "privateRun": "e81de379-2f87-458e-8efc-e8b5ca682c15",
+      "cluster": "Journal",
+      "pgCtlStatusExit": 3,
+      "stopped": true
+    },
+    {
+      "privateRun": "79969e5d-c4c6-4a75-9aec-1717c1f25921",
+      "cluster": "Main",
+      "pgCtlStatusExit": 3,
+      "stopped": true
+    },
+    {
+      "privateRun": "79969e5d-c4c6-4a75-9aec-1717c1f25921",
+      "cluster": "Journal",
+      "pgCtlStatusExit": 3,
+      "stopped": true
+    },
+    {
+      "privateRun": "66bf4668-aa47-4668-b583-925a7ac93cc0",
+      "cluster": "Main",
+      "pgCtlStatusExit": 3,
+      "stopped": true
+    },
+    {
+      "privateRun": "66bf4668-aa47-4668-b583-925a7ac93cc0",
+      "cluster": "Journal",
+      "pgCtlStatusExit": 3,
+      "stopped": true
+    }
+  ],
+  "sourceInstanceTLSFiles": [],
+  "existingInstanceControlled": false,
+  "privateDataPreserved": true,
+  "standalonePairsSameExceptDefaultAction": true
+}

@@ -1,0 +1,14 @@
+{
+  "source": "Chrome native MediaRecorder, AudioContext synthetic 220Hz stream, no real microphone",
+  "sha256": "3c7890c6485fcb0d914faf0c0449ae037619cdf059b36387e56f642e22b7edef",
+  "type": "audio/webm",
+  "bytes": 19497,
+  "prefix": [
+    26,
+    69,
+    223,
+    163
+  ],
+  "tracksStopped": true,
+  "sends": 0
+}

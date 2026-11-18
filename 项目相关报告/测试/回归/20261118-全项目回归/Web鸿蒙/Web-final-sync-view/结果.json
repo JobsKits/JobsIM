@@ -1,0 +1,84 @@
+{
+  "at": "2026-11-17T22:53:41.343Z",
+  "status": "passed",
+  "scope": "Real Chrome modules/IndexedDB with simulated projections and proof callback; all /api network blocked; not real backend reconciliation",
+  "passedGroups": 16,
+  "failedGroups": 0,
+  "blockedPageBootstrapAPIRequests": 2,
+  "checks": [
+    {
+      "name": "sync self message alone never acknowledges original Outbox",
+      "status": "passed"
+    },
+    {
+      "name": "peer forged clientId never clears or hides local pending",
+      "status": "passed"
+    },
+    {
+      "name": "snapshot history is not all-new local unread",
+      "status": "passed"
+    },
+    {
+      "name": "new peer delta adds unread and structured mention once",
+      "status": "passed"
+    },
+    {
+      "name": "currently read conversation clears old and new local unread",
+      "status": "passed"
+    },
+    {
+      "name": "own delta and old edits do not create new unread",
+      "status": "passed"
+    },
+    {
+      "name": "minimal global object clears body and sidecars",
+      "status": "passed"
+    },
+    {
+      "name": "known global cannot be reopened by same old newer or unknown source",
+      "status": "passed"
+    },
+    {
+      "name": "fresh forward stays in RAM but durable view only contains placeholder",
+      "status": "passed"
+    },
+    {
+      "name": "late exact source refresh cannot reopen current global row",
+      "status": "passed"
+    },
+    {
+      "name": "exact original body route and owner proof clears only acknowledged Outbox",
+      "status": "passed"
+    },
+    {
+      "name": "same clientId with changed text admission or route never acknowledges",
+      "status": "passed"
+    },
+    {
+      "name": "foreign sender and missing proof keep original queue",
+      "status": "passed"
+    },
+    {
+      "name": "Engine callback sees original body and latest-queue CAS rejects changed payload",
+      "status": "passed"
+    },
+    {
+      "name": "durable global stamp is terminal even for higher owner revision",
+      "status": "passed"
+    },
+    {
+      "name": "single retained holder never resurrects global body",
+      "status": "passed"
+    }
+  ],
+  "sourceSHA256": {
+    "代码/前端/Web/Src/SyncView.ts": "cea1be4b73b5143d27abeb3cff780bca8b7ab00ab14dbadbe791c1b8a63dd533",
+    "代码/前端/Web/Src/SyncStore.ts": "ad92f57aa06ba5a78201728fe0e86ebaa05c94d37565c5e8c686e49c158759ac",
+    "代码/前端/Web/Src/SyncEngine.ts": "3998511d10cf14a406a6d8c5d6e4818ac3179f8da1ef0efdf34fd9b076e0bfe5",
+    "代码/前端/Web/Src/SyncProtocol.ts": "9f9dc0866de08fc5f2e39dd5c5bbc16e520537b2f210fa6d8570acb30783ddc6",
+    "代码/前端/Web/Src/storage.ts": "3f31b557235bf788c7a30aa7cec878eb1cca893ff4f2c0d308580f100715fe87",
+    "代码/前端/Web/Src/types.ts": "5c5a6b984e2a7e0591fec3c47ed5bd9bfe36b2aba60f3a25e1164df0cdd21ce7",
+    "代码/前端/Web/Src/forward.ts": "688de48c837608a7f36f1452fe79155d819946f97499e8bead0e7872ebfa9e0d",
+    "测试/前端/Web/sync-view.cjs/sync-view.cjs": "70866918d5d4f195b986d9fed0604a7cb6d136f8fbc3335dcf2511c59e8f817b"
+  }
+}

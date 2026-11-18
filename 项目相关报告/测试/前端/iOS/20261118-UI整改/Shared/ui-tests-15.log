@@ -1,0 +1,130 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -xctestrun /Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Products/JobsIM_iphonesimulator27.2-arm64.xctestrun -destination "platform=iOS Simulator,id=42873992-9F78-40D2-B55D-9EBF66B9684D" -resultBundlePath 项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/ui-tests-15.xcresult -parallel-testing-enabled NO -jobs 2 "-only-testing:JobsIMUITests/IMUITests/testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer" test-without-building
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/ui-tests-15.xcresult
+
+2026-11-18 18:05:04.014963+0800 JobsIMUITests-Runner[94845:684958] [Default] Running tests...
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'Selected tests' started at 2026-11-18 18:05:05.925.
+Test Suite 'JobsIMUITests.xctest' started at 2026-11-18 18:05:05.926.
+Test Suite 'IMUITests' started at 2026-11-18 18:05:05.926.
+Test Case '-[JobsIMUITests.IMUITests testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer]' started.
+    t =     0.00s Start Test at 2026-11-18 18:05:05.928
+    t =     0.02s Set Up
+    t =     0.02s Open com.jobs.im
+    t =     0.02s     Launch com.jobs.im
+2026-11-18 18:05:06.112 xcodebuild[94805:684697] [MT] IDELaunchParametersSnapshot: debugger version lookup failed for path '<nil>': noURL
+2026-11-18 18:05:06.112 xcodebuild[94805:684697] [MT] IDELaunchParametersSnapshot: no debugger version
+objc[94845]: Class UIAccessibilityLoaderWebShared is implemented in both /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.DwzPF1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x107330310) and /private/var/run/com.apple.security.cryptexd/mnt/com.apple.iPhoneOS.SimulatorRuntime-v24.2.8117.0.DwzPF1/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 27.2.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x107384398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =     0.60s         Setting up automation session
+    t =     2.48s         Wait for com.jobs.im to idle
+    t =     4.00s Waiting 10.0s for "demo.environment" Button to exist
+    t =     5.07s     Checking `Expect predicate `existsNoRetry == 1` for object "demo.environment" Button`
+    t =     5.07s         Checking existence of `"demo.environment" Button`
+    t =     5.16s Tap "demo.environment" Button
+    t =     5.16s     Wait for com.jobs.im to idle
+    t =     5.16s     Find the "demo.environment" Button
+    t =     5.18s     Check for interrupting elements affecting "demo.environment" Button
+    t =     5.20s     Synthesize event
+    t =     5.48s     Wait for com.jobs.im to idle
+    t =     5.57s Waiting 2.0s for Alert (First Match) to exist
+    t =     6.64s     Checking `Expect predicate `existsNoRetry == 1` for object Alert (First Match)`
+    t =     6.64s         Checking existence of `Alert (First Match)`
+    t =     6.65s Checking existence of `"取消" Button`
+    t =     6.67s Checking existence of `"跳转设置" Button`
+    t =     6.68s Tap "跳转设置" Button
+    t =     6.68s     Wait for com.jobs.im to idle
+    t =     6.68s     Find the "跳转设置" Button
+    t =     6.69s     Check for interrupting elements affecting "跳转设置" Button
+    t =     6.71s     Synthesize event
+    t =     7.00s     Wait for com.jobs.im to idle
+    t =     7.79s Waiting 5.0s for "auth.settings.demo" Switch to exist
+    t =     8.85s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.settings.demo" Switch`
+    t =     8.85s         Checking existence of `"auth.settings.demo" Switch`
+    t =     8.87s Find the "auth.settings.demo" Switch
+    t =     8.88s Tap "auth.settings.demo" Switch
+    t =     8.88s     Wait for com.jobs.im to idle
+    t =     8.88s     Find the "auth.settings.demo" Switch
+    t =     8.89s     Check for interrupting elements affecting "auth.settings.demo" Switch
+    t =     8.90s     Synthesize event
+    t =     9.19s     Wait for com.jobs.im to idle
+    t =    11.58s Checking `Expect predicate `enabled == 1 AND value == "1"` for object "auth.settings.demo" Switch`
+    t =    11.58s     Find the "auth.settings.demo" Switch
+    t =    11.60s     Find the "auth.settings.demo" Switch
+    t =    11.61s Checking existence of `"auth.address" TextField`
+    t =    11.62s Tap Button (First Match)
+    t =    11.62s     Wait for com.jobs.im to idle
+    t =    11.62s     Find the Button (First Match)
+    t =    11.63s     Check for interrupting elements affecting "返回" Button
+    t =    11.64s     Synthesize event
+    t =    11.93s     Wait for com.jobs.im to idle
+    t =    12.24s Waiting 5.0s for "auth.username" TextField to exist
+    t =    13.30s     Checking `Expect predicate `existsNoRetry == 1` for object "auth.username" TextField`
+    t =    13.30s         Checking existence of `"auth.username" TextField`
+    t =    13.33s Find the "auth.username" TextField
+    t =    13.34s Checking existence of `"auth.password" TextField`
+    t =    13.35s Find the "auth.password" TextField
+    t =    13.36s Find the "auth.rememberPassword" Button
+    t =    13.37s Tap "auth.primary" Button
+    t =    13.37s     Wait for com.jobs.im to idle
+    t =    13.37s     Find the "auth.primary" Button
+    t =    13.38s     Check for interrupting elements affecting "auth.primary" Button
+    t =    13.39s     Synthesize event
+    t =    13.68s     Wait for com.jobs.im to idle
+    t =    13.96s Waiting 30.0s for TabBar (First Match) to exist
+    t =    15.03s     Checking `Expect predicate `existsNoRetry == 1` for object TabBar (First Match)`
+    t =    15.03s         Checking existence of `TabBar (First Match)`
+    t =    15.05s Get number of matches for: Descendants matching type Button
+    t =    15.06s Checking existence of `"demo.environment" Button`
+    t =    15.08s Checking existence of `"演示空间" StaticText`
+    t =    15.09s Waiting 15.0s for Cell (First Match) to exist
+    t =    16.16s     Checking `Expect predicate `existsNoRetry == 1` for object Cell (First Match)`
+    t =    16.16s         Checking existence of `Cell (First Match)`
+    t =    16.19s Tap Cell (First Match)
+    t =    16.19s     Wait for com.jobs.im to idle
+    t =    16.19s     Find the Cell (First Match)
+    t =    16.21s     Check for interrupting elements affecting "conversation.9ec5bfc3-1e7f-4269-bfac-ce3df6499f42" Cell
+    t =    16.22s     Synthesize event
+    t =    16.51s     Wait for com.jobs.im to idle
+    t =    16.90s Waiting 5.0s for "小林" StaticText to exist
+    t =    17.97s     Checking `Expect predicate `existsNoRetry == 1` for object "小林" StaticText`
+    t =    17.97s         Checking existence of `"小林" StaticText`
+    t =    18.00s         Capturing element debug description
+    t =    18.96s     Checking `Expect predicate `existsNoRetry == 1` for object "小林" StaticText`
+    t =    18.96s         Checking existence of `"小林" StaticText`
+    t =    18.99s         Capturing element debug description
+    t =    19.95s     Checking `Expect predicate `existsNoRetry == 1` for object "小林" StaticText`
+    t =    19.95s         Checking existence of `"小林" StaticText`
+    t =    19.97s         Capturing element debug description
+    t =    20.94s     Checking `Expect predicate `existsNoRetry == 1` for object "小林" StaticText`
+    t =    20.94s         Checking existence of `"小林" StaticText`
+    t =    20.96s         Capturing element debug description
+    t =    21.91s     Checking `Expect predicate `existsNoRetry == 1` for object "小林" StaticText`
+    t =    21.91s         Checking existence of `"小林" StaticText`
+    t =    21.94s         Capturing element debug description
+    t =    21.94s     Checking existence of `"小林" StaticText`
+    t =    21.95s Collecting debug information to assist test failure triage
+    t =    21.95s     Requesting snapshot of accessibility hierarchy for app with pid 94971
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/UI/IMUITests.swift:1023: error: -[JobsIMUITests.IMUITests testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer] : XCTAssertTrue failed
+    t =    22.00s Tear Down
+Test Case '-[JobsIMUITests.IMUITests testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer]' failed (22.265 seconds).
+Test Suite 'IMUITests' failed at 2026-11-18 18:05:28.193.
+	 Executed 1 test, with 1 failure (0 unexpected) in 22.265 (22.267) seconds
+Test Suite 'JobsIMUITests.xctest' failed at 2026-11-18 18:05:28.193.
+	 Executed 1 test, with 1 failure (0 unexpected) in 22.265 (22.268) seconds
+Test Suite 'Selected tests' failed at 2026-11-18 18:05:28.194.
+	 Executed 1 test, with 1 failure (0 unexpected) in 22.265 (22.269) seconds
+2026-11-18 18:05:39.995 xcodebuild[94805:684697] [MT] IDETestOperationsObserverDebug: 36.990 elapsed -- Testing started completed.
+2026-11-18 18:05:39.995 xcodebuild[94805:684697] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-18 18:05:39.995 xcodebuild[94805:684697] [MT] IDETestOperationsObserverDebug: 36.990 sec, +36.990 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/ui-tests-15.xcresult
+
+Failing tests:
+	IMUITests.testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer()
+
+** TEST EXECUTE FAILED **
+
+Testing started

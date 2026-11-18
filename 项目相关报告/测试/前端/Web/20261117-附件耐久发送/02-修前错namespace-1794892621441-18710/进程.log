@@ -1,0 +1,10 @@
+1:17:04 PM [vite] (client) [optimizer] bundling dependencies...
+AssertionError [ERR_ASSERTION]: global holder identity must match its physical namespace key
+    at /Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs:103:14 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

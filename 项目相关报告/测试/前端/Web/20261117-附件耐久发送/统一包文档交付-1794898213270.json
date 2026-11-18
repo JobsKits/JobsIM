@@ -1,0 +1,148 @@
+{
+  "at": "2026-11-17T06:50:13.261Z",
+  "scope": "Four owned documentation paragraphs and read-only metadata; no tests or product source edits",
+  "sourceEvidence": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/14-声明兼容构建执行.json",
+  "sourceEvidenceSHA": "cc33b361d5f7d34e77cc155461275fb849a284908affb9ac58969caf80313c65",
+  "rootProof": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/收讫合同与清理增量核验-1794897963320.json",
+  "rootProofSHA": "f98b5cdfb7e1df2a239b69e118d4b4180316ab2c6ea8090da9394929afe78029",
+  "inputCount": 82,
+  "inputDrift": [],
+  "deltaAgainstPrior82": [
+    "代码/前端/Web/Src/AccountDeletionCleanup.ts",
+    "代码/前端/Web/Src/ReceiptContext.ts"
+  ],
+  "production": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/ReceiptDeclaration/1794897541275/Production",
+  "artifacts": [
+    {
+      "file": "Fonts/OFL.txt",
+      "expected": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "current": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "file": "Fonts/SourceSans3.ttf",
+      "expected": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "current": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9"
+    },
+    {
+      "file": "Licenses/Lucide.txt",
+      "expected": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "current": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "file": "Licenses/react-dom.txt",
+      "expected": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "current": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "Licenses/react.txt",
+      "expected": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "current": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "Logo.svg",
+      "expected": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+      "current": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f"
+    },
+    {
+      "file": "assets/index-B3U1AnNU.js",
+      "expected": "ba564110169077f714cd2ece90cb18bc64ba2a1911754ccc54de5687cd16839b",
+      "current": "ba564110169077f714cd2ece90cb18bc64ba2a1911754ccc54de5687cd16839b"
+    },
+    {
+      "file": "assets/index-B3U1AnNU.js.map",
+      "expected": "b96b479df441ee688051ba1853d2eca4353d1da736738685991845d6a80e6655",
+      "current": "b96b479df441ee688051ba1853d2eca4353d1da736738685991845d6a80e6655"
+    },
+    {
+      "file": "assets/index-Cavxj1zD.css",
+      "expected": "3e3ef20c2c45176a9e23ef8cdefa2e81bc51f815772497fb1e2483c801e94a2c",
+      "current": "3e3ef20c2c45176a9e23ef8cdefa2e81bc51f815772497fb1e2483c801e94a2c"
+    },
+    {
+      "file": "index.html",
+      "expected": "bcddb207f7c589e3d6310d1cdd37b70ca17568e4485184e8bdd3802e408c2379",
+      "current": "bcddb207f7c589e3d6310d1cdd37b70ca17568e4485184e8bdd3802e408c2379"
+    },
+    {
+      "file": "资源出处.md",
+      "expected": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82",
+      "current": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82"
+    }
+  ],
+  "publicRows": [
+    {
+      "file": "Fonts/OFL.txt",
+      "source": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "artifact": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "file": "Fonts/SourceSans3.ttf",
+      "source": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "artifact": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9"
+    },
+    {
+      "file": "Licenses/Lucide.txt",
+      "source": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "artifact": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57"
+    },
+    {
+      "file": "Licenses/react-dom.txt",
+      "source": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "artifact": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "Licenses/react.txt",
+      "source": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "artifact": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "file": "Logo.svg",
+      "source": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+      "artifact": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f"
+    },
+    {
+      "file": "资源出处.md",
+      "source": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82",
+      "artifact": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82"
+    }
+  ],
+  "docs": [
+    {
+      "file": "代码/前端/Web/README.md",
+      "sha256": "9565569416547abceac7c7b28e7e88e28456b25e4fab40346db2a5505624fbc3",
+      "localTOC": true,
+      "roundTrip": true,
+      "generatedValid": true
+    },
+    {
+      "file": "代码/前端/Web/代码地图/README.md",
+      "sha256": "067a026d690951ace3be75baba9d550d89d8c98bcaebdd99bdc092e1358fdced",
+      "localTOC": true,
+      "roundTrip": true,
+      "generatedValid": true
+    },
+    {
+      "file": "测试/前端/Web/attachment-browser.cjs/README.md",
+      "sha256": "1f7ce010aa42f341c2bb7086b19f303de02b09ebedbc4d4a1b6c43ceab963043",
+      "localTOC": true,
+      "roundTrip": true,
+      "generatedValid": true
+    },
+    {
+      "file": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/README.md",
+      "sha256": "75666647832a91e2cde30628e9acf8d464be54316e5ce0fc5daa5b70a578dce0",
+      "localTOC": true,
+      "roundTrip": true,
+      "generatedValid": true
+    }
+  ],
+  "links": 162,
+  "broken": [],
+  "old41AndCCqPreserved": true,
+  "auth09": "unreproduced and unattributed",
+  "noChromeTypeBuild": true,
+  "productSourceModified": false,
+  "defaultInstanceModified": false,
+  "commit": false,
+  "push": false
+}

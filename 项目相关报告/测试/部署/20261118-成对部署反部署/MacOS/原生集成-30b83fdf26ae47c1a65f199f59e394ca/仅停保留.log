@@ -1,0 +1,16 @@
+JobsIM部署/反部署：本地穿透或服务器双模式；undeploy仅按原点清理，独立journal/密钥默认保留；stop/backup为运维子动作。
+go version go1.27.4 darwin/arm64
+pg_ctl (PostgreSQL) 18.7 (Postgres.app)
+OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+v26.13.1
+nats-server: v2.15.3
+JobsIM MacOS · stop
+实例：/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/Paired/30b83fdf26ae47c1a65f199f59e394ca/State
+HTTPS=53397；业务PG=53395；独立journalPG=53396；内部角色=49101～49109
+只操作此收据匹配实例；不改系统CA或全局工具。反部署清理还需独立选择和最终回车确认；stop/backup保留数据。
+自托管NATS=127.0.0.1:53398；磁盘上限=536870912；内存上限=33554432。
+waiting for server to shut down.... done
+server stopped
+waiting for server to shut down.... done
+server stopped
+本实例已停止；数据库、对象、CA/私钥、独立journal与既有备份均保留。

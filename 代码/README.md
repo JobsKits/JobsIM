@@ -23,6 +23,6 @@
 - [HarmonyOS](./前端/HarmonyOS/README.md)：ArkTS/ArkUI、RDB。
 - [CLI](./前端/CLI/README.md)：Go命令行与稳定待发身份。
 
-各端实现各自原生界面，共用服务协议；各自README内维护代码地图入口。需求以[需求目录](../需求/README.md)为唯一产品目标，代码状态见[实现状态](../项目相关报告/实现进度/README.md)。
+各端实现各自原生界面，共用服务协议。AI查询使用工程根的实际`.codegraph/`机器索引与`codegraph.json`配置，重建及查询见[索引说明](../项目相关报告/测试/工具/20261118-CodeGraph/README.md)；各端README中的“代码地图”仅是人工职责导航，不代替CodeGraph。需求以[需求目录](../需求/README.md)为唯一产品目标，代码状态见[实现状态](../项目相关报告/实现进度/README.md)。
 
 <a id="🔚" href="#前言">回到首页</a>

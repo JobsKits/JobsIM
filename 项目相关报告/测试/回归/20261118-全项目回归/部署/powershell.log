@@ -1,0 +1,21 @@
+Unhandled exception. System.TypeInitializationException: The type initializer for 'System.Management.Automation.Configuration.PowerShellConfig' threw an exception.
+ ---> System.TypeInitializationException: The type initializer for 'System.Management.Automation.Platform' threw an exception.
+ ---> System.IO.IOException: The file '/Users/jobs/.cache/powershell' already exists.
+   at System.IO.FileSystem.CreateDirectory(String fullPath, UnixFileMode unixCreateMode)
+   at System.IO.Directory.CreateDirectory(String path)
+   at System.Management.Automation.Platform.SelectProductNameForDirectory(XDG_Type dirpath) in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/System.Management.Automation/CoreCLR/CorePsPlatform.cs:line 377
+   at System.Management.Automation.Platform..cctor() in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/System.Management.Automation/CoreCLR/CorePsPlatform.cs:line 166
+   at System.Runtime.CompilerServices.InitHelpers.CallClassConstructor(Void* cctor, Void* instantiatingArg, Exception* pException)
+
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.Configuration.PowerShellConfig..ctor() in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/System.Management.Automation/engine/PSConfiguration.cs:line 92
+   at System.Management.Automation.Configuration.PowerShellConfig..cctor() in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/System.Management.Automation/engine/PSConfiguration.cs:line 58
+   at System.Runtime.CompilerServices.InitHelpers.CallClassConstructor(Void* cctor, Void* instantiatingArg, Exception* pException)
+
+   --- End of inner exception stack trace ---
+   at System.Management.Automation.Utils.GetPolicySettingFromConfigFile[T](ConfigScope[] preferenceOrder) in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/System.Management.Automation/engine/Utils.cs:line 767
+   at System.Management.Automation.Utils.GetPolicySetting[T](ConfigScope[] preferenceOrder) in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/System.Management.Automation/engine/Utils.cs:line 743
+   at Microsoft.PowerShell.CommandLineParameterParser.GetConfigurationNameFromGroupPolicy() in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/Microsoft.PowerShell.ConsoleHost/host/msh/CommandLineParameterParser.cs:line 686
+   at Microsoft.PowerShell.ConsoleHost.ParseCommandLine(String[] args) in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/Microsoft.PowerShell.ConsoleHost/host/msh/ConsoleHost.cs:line 365
+   at Microsoft.PowerShell.UnmanagedPSEntry.Start(String[] args, Int32 argc) in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/Microsoft.PowerShell.ConsoleHost/host/msh/ManagedEntrance.cs:line 79
+   at Microsoft.PowerShell.ManagedPSEntry.Main(String[] args) in /private/tmp/s-y2L1DTDP/powershell-20261112-16092-svmh93/src/powershell/Program.cs:line 72

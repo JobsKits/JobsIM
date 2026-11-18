@@ -1,0 +1,185 @@
+{
+  "at": "2026-11-17T00:35:45.376Z",
+  "status": "passed",
+  "exitCode": 0,
+  "error": null,
+  "passedGroups": 102,
+  "failedGroups": 0,
+  "skippedGroups": 2,
+  "sourceFiles": [
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth.go",
+      "sha256": "a4fb64b8d99b76b8b255ed9db651ab84c0a03bc38a7e0b418ae0f05dd98814e2"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go",
+      "sha256": "99aba4b84a204208ec607d925415470c18a0a90f29626b2be37b7c9b43682a70"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go",
+      "sha256": "802f2dc215b0716db0389a0483989de6c25446fd700781976558af4801ad8bd4"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go",
+      "sha256": "0165ee54098f1b4e223d3005cf54445ea945e88ddb5f5800f148985402a57a06"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go",
+      "sha256": "f85527dd37bddc1d7e1c17da398b6bf12ca7d42ed94a0517ab87d50bb4c17f2a"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_other.go",
+      "sha256": "232842a24f0efa8691c222c8ad616146db98f5a45acb417526e0679589f2e4fd"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go",
+      "sha256": "863cb2ed0ca254473fa11a8b2dfe2f8fb5c2414d6846ca316cfbfc8ace69fc51"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+      "sha256": "805f1dfd0f440aba5da175f7becec66360f832fdb13e7aabc558ff31a635d043"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "sha256": "29aa556f38af3fa06994473ebb2173f4be2841b386ab0af35143e014102dbbea"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/data_export.go",
+      "sha256": "b7fb644093c2a25fbdfb68d56575f5a9aa69e8de25e67695e6c0bd8b31fabf39"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/data_export_file.go",
+      "sha256": "f945f1548bd2c95a63aa884deb42cd5d853270a64a7fcc78f34e72bc3949eeff"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/forward.go",
+      "sha256": "ef4692138b5458d003c5df06983e2fde187a464da5eae5451d2283dbe9f3a157"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "sha256": "5a3ea5d1779339d6569cb61718bc8185934e76c8785141a4e90f8881d767ac84"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/group_governance.go",
+      "sha256": "241ee553dea608d27056d4ed64062e080c4fd8f55ad89912c94759795a340acf"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/local.go",
+      "sha256": "f067618d3f4073fd5915f2d870aaeb66d9d7b6ff4c5fb9eebc27a8c5b07bb7e9"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/main.go",
+      "sha256": "dbee039ce35dbe9618c2104496722b0a04cfd964a4e6d6dd961551be7cf77539"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/password_change.go",
+      "sha256": "8f32c0deacc138902462cd2e75b1683a340575d297b17546f90d89e532fa608c"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/receipt.go",
+      "sha256": "73bd4f46b894c0f6f7be8148f6b4729acfecda92154585c167e80ec9de13f980"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/receipt_cleanup.go",
+      "sha256": "2bee4dc6b2dda4bb0171749d86ead773d6c11d3a073f97f4f17e9f6eecf8a034"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/receipt_objects.go",
+      "sha256": "0493889c0e50e2cf0f22b72b68929fd1ed57a1010a79fa95f784cffb68b3d3d2"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/self_state.go",
+      "sha256": "54981ba71cad940d8aa1d28581be86c8155b524aa4078cd9880e234b6e7df186"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/store.go",
+      "sha256": "124461930a5a5d92d6a7e1b18f3f343ca5aff874c061a9538cdffb6befe892b8"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_engine.go",
+      "sha256": "f953c1d50c01f317c164aaf10ee7300877b1446351d31dc62efae3d6d179ace0"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_protocol.go",
+      "sha256": "cb2371cf70babc00f1d70b39faff551d8f77f9de7b0f464ddaeab229b798ca14"
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_store.go",
+      "sha256": "ff9721527c3fc8f2c149c9e1a2230d1c2a0f65944edcab139c46f7189e5c598c"
+    },
+    {
+      "path": "代码/前端/CLI/go.mod",
+      "sha256": "4ca83c3741ef64a504e79ed56281a7d583b968273ea284786ee89248a013db39"
+    },
+    {
+      "path": "代码/前端/CLI/go.sum",
+      "sha256": "67bf00d34b39647bdecf862e28af872863334c2d6a947140d12c79696d657030"
+    },
+    {
+      "path": "测试/CLI/auth_https_test.go",
+      "sha256": "9ef8c4042dcf0d747df4d1d12c171e3e224b027c1e41bd5f3c24a55085db56b7"
+    },
+    {
+      "path": "测试/CLI/auth_test.go",
+      "sha256": "f481c34188d7c3ac6da8ac08592ae97e2a376d69de369749f01735cc2ff8302f"
+    },
+    {
+      "path": "测试/CLI/collaboration_test.go",
+      "sha256": "5a2d25be12c8c82b87c1bfe0e6af31c64a214bcc5eff56cc20078defeb607364"
+    },
+    {
+      "path": "测试/CLI/data_export_test.go",
+      "sha256": "5ae0a5cfb6e9658446a786f72376f51dd4d1957bc367a238bc91ffdd81e7c787"
+    },
+    {
+      "path": "测试/CLI/governance_test.go",
+      "sha256": "5cf5d3d311a2ba11bf8f33eb7199275c5db2bf1c1e63cfb98a34b5c22559c8ab"
+    },
+    {
+      "path": "测试/CLI/group_governance_test.go",
+      "sha256": "a8282982b6017e21757eb41febb38cbba6a8c39dfd4242b5ee990c297386eb37"
+    },
+    {
+      "path": "测试/CLI/outbox_test.go",
+      "sha256": "16b8b0ce8397d029c7ceb33239230cc005114134b8f78138949c7e2f58287ce8"
+    },
+    {
+      "path": "测试/CLI/password_change_test.go",
+      "sha256": "543062811d55843fc40e3af06c0b45314489e2e2369d7675b03a4dc33e8f3d7e"
+    },
+    {
+      "path": "测试/CLI/receipt_objects_test.go",
+      "sha256": "915180bb5ae12b37f95fbbe4a3b3e0361395aa0a1839e45e96daf532cc886666"
+    },
+    {
+      "path": "测试/CLI/receipt_test.go",
+      "sha256": "3bfddb066344065d350bce2d199b6eda7380c276d479964de1af8a169ac05dcd"
+    },
+    {
+      "path": "测试/CLI/self_state_test.go",
+      "sha256": "11eb70266ed308956aef40107e5326bc0ac6a64a97bb5984ea31767fa625dbd0"
+    },
+    {
+      "path": "测试/CLI/sync_test.go",
+      "sha256": "db6d111e3723c44f82ef1f2e00717723a46b2f06f9aff14882b25e8ca0a3e598"
+    }
+  ],
+  "checks": [
+    "durable commit before HTTP; original ID/payload after unknown results",
+    "real SQLite reopen, namespace/restore isolation, WAL/FULL",
+    "message/cursor atomicity and large string version monotonicity",
+    "explicit atomic legacy import; unavailable content never exposes old body",
+    "original send admission retained; absent capability receives no POST",
+    "request/reopen original operation persisted before HTTP and reused after reopen",
+    "completed operations query current inbound policy without new POST",
+    "only corresponding direct is frozen before relationship write; raw payload/hash unchanged",
+    "leave/member-self removal atomically withdraws history/cursor before HTTP and retains draft",
+    "SQL fault rolls leave freeze/history/cursor back together",
+    "explicit original member generations; PATCH/DELETE unknown results not replayed",
+    "schema1 to schema2 retains original Outbox bytes and independent reason",
+    "original frozen reconciliation uses full route/body read-only message-results, never creates an old intent",
+    "schema1 authoritative snapshot/change raw envelope checks, durable original registration and SQLite guard CAS",
+    "sync client ID is never an ACK; complete original read-only result and payload hash are required",
+    "terminal global cleanup and scope-proven cross-device durable cleanup do not resurrect retained bodies"
+  ]
+}

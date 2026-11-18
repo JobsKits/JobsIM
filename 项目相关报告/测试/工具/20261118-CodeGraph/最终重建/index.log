@@ -1,0 +1,31 @@
+┌  Indexing project
+│
+Scanning files...
+Parsing code...
+Resolving refs...
+Linking dynamic dispatch...
+│
+◆  Indexed 720 files
+│
+●  17,464 nodes, 62,550 edges in 11.3s
+│
+└  Done
+
+       11.58 real        13.57 user         3.26 sys
+           765771776  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               92347  page reclaims
+                 942  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                 322  messages sent
+                 302  messages received
+                   1  signals received
+                8307  voluntary context switches
+               52481  involuntary context switches
+          1352322047  instructions retired
+           314870520  cycles elapsed
+            13764648  peak memory footprint

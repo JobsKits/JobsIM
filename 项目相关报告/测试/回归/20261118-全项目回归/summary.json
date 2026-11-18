@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-18",
+  "report": "README.md",
+  "backend": {
+    "pass": 193,
+    "fail": 0,
+    "skip": 11,
+    "total": 204,
+    "summary": "后端CLI/summary.json"
+  },
+  "cli": {
+    "pass": 137,
+    "fail": 0,
+    "skip": 2,
+    "total": 139,
+    "summary": "后端CLI/summary.json"
+  },
+  "web": {
+    "commands": 23,
+    "failedCommands": 0,
+    "localSuites": 21,
+    "attachmentChecks": 41,
+    "unexpectedPageErrors": 0,
+    "summary": "Web鸿蒙/summary.json"
+  },
+  "harmony": {
+    "hostGroups": [
+      45,
+      36,
+      18,
+      16,
+      16,
+      20,
+      22,
+      23
+    ],
+    "hostFail": 0,
+    "hostSkip": 0,
+    "hapBuilds": 2,
+    "hypiumCompiledOnly": 63,
+    "deviceExecuted": false,
+    "summary": "Web鸿蒙/summary.json"
+  },
+  "iOS": {
+    "localPass": 121,
+    "initialEnvironmentSkip": 1,
+    "httpsSupplementPass": 1,
+    "demoUIPass": 1,
+    "summary": "原生双端/summary.json"
+  },
+  "android": {
+    "jvmPass": 54,
+    "instrumentPass": 86,
+    "instrumentSkip": 16,
+    "instrumentFail": 0,
+    "httpsNotSelected": 3,
+    "summary": "原生双端/summary.json"
+  },
+  "deployment": {
+    "summary": "部署/summary.json",
+    "finalIntegrationExit": 0,
+    "sourceInputs": 235,
+    "sourceDrift": [],
+    "assetMismatch": []
+  },
+  "validation": {
+    "markdownDocuments": 199,
+    "links": 31,
+    "linkIssues": []
+  },
+  "scope": "Distinct local/build/browser/native/HTTPS scopes; counts are not cumulative acceptance items",
+  "full243Accepted": false,
+  "physicalDevicesVerified": false,
+  "defaultInstanceTouched": false
+}

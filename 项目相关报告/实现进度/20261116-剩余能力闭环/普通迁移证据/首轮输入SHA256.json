@@ -1,0 +1,21 @@
+{
+  "代码/后端/Go/sync_migration_delivery.go": "3931760c9e439974353781d37134f340eeb5e01527e408c59e1ccdc4cb5685f3",
+  "代码/后端/Go/sync_migration_model.go": "5645a6da1d5e20b36255d111aafd63ccd4639de5d66f8963e115beaca4ba59b8",
+  "代码/后端/Go/migration_interest.go": "077e343d95659a9862a08e6793f7aa008ead8a9fd8f4e116dcd963a90d3ccb27",
+  "代码/后端/Go/message_migration.go": "72896d4e39675d43a02ea84884e223b5f97dcd137363e3db1584b3860eda2943",
+  "代码/后端/Go/asset_migrations.go": "a134b1f2de14973d1eb92b7584b82bdcdde889f4677d733e8242f3a257f71179",
+  "代码/后端/Go/sync_migration_validate.go": "68003fd0b170eff8f40613956df103c1761e725d58ed21d8fe28d81db5132a5b",
+  "代码/后端/Go/migrations.go": "d3f398581eea1ae4f069690cb750d77e6234354b90ac0c174be19ea3938d2295",
+  "代码/后端/Go/sync_migration.go": "a2e3d29347d3e31ba2b9f9747f337f2ea99b99a071c4ed0c1b43392fe09cf287",
+  "代码/后端/Go/migration_identity.go": "16f738c444405b7071870b0fb2f1fa189c70f8602a128f6d89ad24f99c59e9c0",
+  "代码/后端/Go/sync_migration_cleanup.go": "ae4a4054d9b71c8783a0e72e8727d32176696eff20f2ccb7a87711b85b487ede",
+  "测试/后端/接口/sync_migration_pg_test.go": "92c44f59a4cf34d96a2e4b6ad9eaf3c388a282667882a7c78e871b5f1abef802",
+  "代码/后端/Go/server.go": "97b9c52d0144d52b7a11acbd10e8c09d660c78202c47636f797cc8e596dc6f36",
+  "代码/后端/Go/message_export.go": "d40289ba042e99d9e664e1f85e9aea5148ec99c8460f1c9c6da0551fa7f5e106",
+  "代码/后端/Go/personal_export_fence.go": "d517837566ded5229f48be90ed6b5fb510ccc731fcddf3137fe168d7e17640de",
+  "代码/后端/Go/send_admission.go": "61be9c4e91b085474af8537b995a930ec473e3849e96cf9d713a740c5ee86874",
+  "代码/后端/Go/forward_media.go": "4feab16c73c63cb5312e58c669cc82e3cfd35ffcb8f692be307232332ba0f5d6",
+  "代码/后端/Go/account_deletion_owner.go": "c211e0d3f8f7f2eb9223a5ed684649e78b8d41e38889826318e9c91eb4fa1c76",
+  "代码/后端/Go/restore_runner.go": "2bbf6d27bbc43dab202e88e736ca905a6dd91c93572555571ca7e05b365a379b",
+  "代码/后端/Go/deployment_restore_finalize.go": "cead86d31c2076dbe1bad8e81cdb48a1e8eda3afb80f6581d52030231b987fde"
+}

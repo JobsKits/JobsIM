@@ -1,0 +1,24 @@
+{
+  "privateFixture": "/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/Paired/4b116278e315456dad8a1748e4bf1e6f",
+  "ports": [
+    59425,
+    59426,
+    59427,
+    59428
+  ],
+  "roleBase": 49101,
+  "inputs": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "b2a00845e53b3414f3775c89227e865c8badf8d10ac276ababa7e4a604f6c583",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "aea2c95914c0820d23a53f7fbb09ad1480a0a610d9da6f6d23df8d51e2298c8d"
+  },
+  "realInstanceTouched": false,
+  "physicalJournalDeletionAuthorized": false,
+  "deployment": {
+    "exitCode": 143,
+    "responses": [
+      0
+    ]
+  },
+  "status": "failed",
+  "error": "正式部署未启动；查看PTY原件"
+}

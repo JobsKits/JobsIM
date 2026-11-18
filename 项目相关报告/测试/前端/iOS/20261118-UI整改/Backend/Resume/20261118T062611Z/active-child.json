@@ -1,0 +1,25 @@
+{
+  "label": "receipt-fixtures-fixed",
+  "pid": 97507,
+  "started": 1794984499.513738,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "-C",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/后端/Go",
+    "test",
+    "-overlay",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/overlay.json",
+    "-p",
+    "1",
+    "-parallel",
+    "1",
+    "-count",
+    "1",
+    "-timeout",
+    "12m",
+    "-json",
+    "-run",
+    "^(TestObjectReceiptProofIsPurposeAndByteBound|TestReceiptProofBindsExactContentStoreAndRestoreEpoch)$",
+    "."
+  ]
+}

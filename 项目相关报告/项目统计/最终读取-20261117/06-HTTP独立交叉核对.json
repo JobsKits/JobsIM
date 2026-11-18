@@ -1,0 +1,27 @@
+{
+  "at": "2026-11-17T04:57:20.514Z",
+  "reviewer": "/root/deletion_retention_audit/http_inventory_crosscheck",
+  "mode": "Independent read-only source review; no file modifications or Go execution",
+  "goInputs": 134,
+  "sameSnapshotSHA": true,
+  "literalPublicRegistrations": 141,
+  "publicDynamicSites": 5,
+  "expandedDynamicPatterns": 10,
+  "uniquePublicPatterns": 151,
+  "counts": {
+    "ordinary": 134,
+    "admin": 11,
+    "experimental": 5,
+    "health": 1
+  },
+  "experimentalOff": 146,
+  "differences": [],
+  "allHandlerCallPathsReachable": true,
+  "excludedDynamicInternalSites": 6,
+  "adminGatesReviewed": [
+    "POST /api/auth/step-up",
+    "PUT /api/capabilities/{name}"
+  ],
+  "runtimeServeMux": false,
+  "HTTPSCoverage": false
+}

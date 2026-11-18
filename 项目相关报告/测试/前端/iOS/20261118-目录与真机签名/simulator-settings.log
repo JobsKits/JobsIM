@@ -1,0 +1,7 @@
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+{ platform:iOS Simulator, arch:arm64, id:736D4534-6DBF-42A9-97A9-8DABFC208987, OS:26.5, name:JobsIM-Regression-20261118 }
+{ platform:iOS Simulator, arch:arm64, id:FFB279A4-8ED8-470F-ACB0-F20E8396BD93, OS:27.2, name:JobsOCRFinalCIReview-20261118 }
+{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00008142-001C692A1E09401C, name:My Mac }
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:iOS, arch:arm64, id:00008110-000625583EE3801E, name:Jobs的iPhone }

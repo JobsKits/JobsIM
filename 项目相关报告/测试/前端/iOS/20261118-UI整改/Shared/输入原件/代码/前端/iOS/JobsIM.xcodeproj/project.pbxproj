@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 71;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0502453A983F00C0B96E6B67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9907D95526E58E638371E7D2 /* Foundation.framework */; };
+		0E228BDD78F8D4D6E345AA43 /* IMAuthCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CECCE9CF579B9A15DA51EE /* IMAuthCoordinatorTests.swift */; };
+		0E690E3469C5C3B929970632 /* Pods_JobsIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E25E4A2D664535D5CBFE62 /* Pods_JobsIM.framework */; };
+		0F1665B1EC1EAF97E20FEBAC /* IMSendAdmissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1F78870DC5BD5CD5152C /* IMSendAdmissionTests.swift */; };
+		194B3CE195946CAB633EDC19 /* IMMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F154A7FB4C96796408CE5 /* IMMigrationTests.swift */; };
+		1DFCEE5422D973217B55D584 /* IMMessageListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859832ABDB0FD175C5019621 /* IMMessageListUITests.swift */; };
+		2025F609EF2D0F29DE0BB1ED /* IMMessageListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56F29A99856FF3C40C7D7E5 /* IMMessageListTests.swift */; };
+		2223FE29BDFA1DCC4AC3058A /* AuthRefreshPublic.json in Resources */ = {isa = PBXBuildFile; fileRef = 6840B5040703665C1B5C803C /* AuthRefreshPublic.json */; };
+		2CCB9C2ABBE36D7562956799 /* SelfStatePublic.json in Resources */ = {isa = PBXBuildFile; fileRef = C81B56E07B9F83F30B160CB9 /* SelfStatePublic.json */; };
+		2E77AA6FCF84343209E4D669 /* IMReceiptStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E328C198779F8AC95590C86 /* IMReceiptStorageTests.swift */; };
+		3184420EF24F416A6B8BA53D /* Avatar.data in Resources */ = {isa = PBXBuildFile; fileRef = 66E31261B88BCA66028F727D /* Avatar.data */; };
+		40435964BB03C975F24EC8C3 /* IMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FBE26402CFC0E95A8F904A /* IMUITests.swift */; };
+		695482462BD6545A7A98E4F6 /* IMAuthCredentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEF2DB97342F0BEFDB3CF03 /* IMAuthCredentialTests.swift */; };
+		69F379AF93C14EF4C2FC4373 /* IMSelfStateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869199312CEBF371FF4C581 /* IMSelfStateUITests.swift */; };
+		6D78A0B30D024100B941F78C /* IMDataExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4E37675154203BE68557B /* IMDataExportTests.swift */; };
+		7AB9F9E21209F5BD761F2A33 /* IMStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD1394644F77C9EB1E88 /* IMStorageTests.swift */; };
+		8805547F478253573ADDD3CE /* IntegrationCA.pem in Resources */ = {isa = PBXBuildFile; fileRef = A55631C7453B74BB5D0B0184 /* IntegrationCA.pem */; };
+		93026AF526428028ED33EE12 /* IMReceiptServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917CF18442EACF5042D69F7 /* IMReceiptServiceTests.swift */; };
+		977E2E9B251CF4B105E03E03 /* IMIntegrationFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DFDFDF23EC7C780900D001 /* IMIntegrationFixture.swift */; };
+		A2E9104D804A4B72D94CDCA3 /* IMSelfStateIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99457091227A3FA87002687 /* IMSelfStateIntegrationTests.swift */; };
+		AAB016A016A016A016A01603 /* IMAuthoritativeSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB016A016A016A016A01613 /* IMAuthoritativeSyncTests.swift */; };
+		ABE82A6AEC57439D9C6DCA0D /* IMAuthRefreshIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7556B7EB0E5C962AE538080D /* IMAuthRefreshIntegrationTests.swift */; };
+		B0DFB06D45F00A0480C493D1 /* NativeVideo.data in Resources */ = {isa = PBXBuildFile; fileRef = 9C71157A9D163B0851D1FC06 /* NativeVideo.data */; };
+		B4786BF5F0DFA034232B06CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9907D95526E58E638371E7D2 /* Foundation.framework */; };
+		BF51D8BBED9A8A68E5AAAF6B /* Pods_JobsIMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134CAF859EAD94B3F63CF562 /* Pods_JobsIMTests.framework */; };
+		C4B6B9D959665CC86E728B9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9907D95526E58E638371E7D2 /* Foundation.framework */; };
+		C7CE44AEFFB225B9A74D81D0 /* IMMigrationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043BCD4226518AE60AAB64F /* IMMigrationServiceTests.swift */; };
+		C83837049FF6866233E4CFA6 /* IMMediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA674621F8D74CB14177DCD /* IMMediaTests.swift */; };
+		CAB3A0D764E6FF8C4D9964EC /* IMForwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1A4B7B796DAFDB0F3EB48D /* IMForwardTests.swift */; };
+		CDCA8C6BE956A3DC9705A4A5 /* IMNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8008BB2A3101DD7A1A3AE /* IMNotificationTests.swift */; };
+		DB559BF74475661E23CB3066 /* IMSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532FF1D1CDD1F86E2C91D29A /* IMSessionTests.swift */; };
+		DFC54205C72C5BB23F914ACD /* IMPersonalStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25678F6DFA97490C963E243 /* IMPersonalStateTests.swift */; };
+		F24A4F7B1915ED6E136C1FD5 /* IMCompletionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E7E73E71A557860020D7DD /* IMCompletionTests.swift */; };
+		F315897F4B2B76FF924C68A2 /* IntegrationServer.pem in Resources */ = {isa = PBXBuildFile; fileRef = 076FB502E18BD2C07D8DC9E0 /* IntegrationServer.pem */; };
+		F488A36E00C0B168723A4425 /* IMLifecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E1164078996A390CA903B /* IMLifecycleTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		441A382365197999C5292E64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51F3BB1FF6F6EBA3ACF38C68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77D44C64001F1619CB2CFDB2;
+			remoteInfo = JobsIM;
+		};
+		4EC0EDFA803586A20FF15DA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51F3BB1FF6F6EBA3ACF38C68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77D44C64001F1619CB2CFDB2;
+			remoteInfo = JobsIM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00FBE26402CFC0E95A8F904A /* IMUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMUITests.swift; sourceTree = "<group>"; };
+		076FB502E18BD2C07D8DC9E0 /* IntegrationServer.pem */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IntegrationServer.pem; path = Fixtures/IntegrationServer.pem; sourceTree = "<group>"; };
+		1083072C67BEF148FB1A7CC8 /* Pods-JobsIMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsIMTests.debug.xcconfig"; path = "Target Support Files/Pods-JobsIMTests/Pods-JobsIMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		134CAF859EAD94B3F63CF562 /* Pods_JobsIMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobsIMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		236E1164078996A390CA903B /* IMLifecycleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMLifecycleTests.swift; sourceTree = "<group>"; };
+		2917CF18442EACF5042D69F7 /* IMReceiptServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMReceiptServiceTests.swift; sourceTree = "<group>"; };
+		3EA674621F8D74CB14177DCD /* IMMediaTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMMediaTests.swift; sourceTree = "<group>"; };
+		47E7E73E71A557860020D7DD /* IMCompletionTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMCompletionTests.swift; sourceTree = "<group>"; };
+		4869199312CEBF371FF4C581 /* IMSelfStateUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMSelfStateUITests.swift; sourceTree = "<group>"; };
+		4E328C198779F8AC95590C86 /* IMReceiptStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMReceiptStorageTests.swift; sourceTree = "<group>"; };
+		532FF1D1CDD1F86E2C91D29A /* IMSessionTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMSessionTests.swift; sourceTree = "<group>"; };
+		53E25E4A2D664535D5CBFE62 /* Pods_JobsIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobsIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66E31261B88BCA66028F727D /* Avatar.data */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = Avatar.data; path = Fixtures/Avatar.data; sourceTree = "<group>"; };
+		6840B5040703665C1B5C803C /* AuthRefreshPublic.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = AuthRefreshPublic.json; path = Fixtures/AuthRefreshPublic.json; sourceTree = "<group>"; };
+		7556B7EB0E5C962AE538080D /* IMAuthRefreshIntegrationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAuthRefreshIntegrationTests.swift; sourceTree = "<group>"; };
+		760CC2EDDCAFB71126D82B75 /* Pods-JobsIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsIM.release.xcconfig"; path = "Target Support Files/Pods-JobsIM/Pods-JobsIM.release.xcconfig"; sourceTree = "<group>"; };
+		79CECCE9CF579B9A15DA51EE /* IMAuthCoordinatorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAuthCoordinatorTests.swift; sourceTree = "<group>"; };
+		7FF9EEEC1EA998926A0624B9 /* Pods-JobsIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsIM.debug.xcconfig"; path = "Target Support Files/Pods-JobsIM/Pods-JobsIM.debug.xcconfig"; sourceTree = "<group>"; };
+		84889C24DE8F81A1F254FD86 /* Pods-JobsIMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsIMTests.release.xcconfig"; path = "Target Support Files/Pods-JobsIMTests/Pods-JobsIMTests.release.xcconfig"; sourceTree = "<group>"; };
+		859832ABDB0FD175C5019621 /* IMMessageListUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMMessageListUITests.swift; sourceTree = "<group>"; };
+		891145B2E8AD6947FC4C20B4 /* JobsIMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobsIMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9907D95526E58E638371E7D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9C71157A9D163B0851D1FC06 /* NativeVideo.data */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = NativeVideo.data; path = Fixtures/NativeVideo.data; sourceTree = "<group>"; };
+		A4C057A3ED91FC742322AF9B /* JobsIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobsIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55631C7453B74BB5D0B0184 /* IntegrationCA.pem */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IntegrationCA.pem; path = Fixtures/IntegrationCA.pem; sourceTree = "<group>"; };
+		A5DFDFDF23EC7C780900D001 /* IMIntegrationFixture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMIntegrationFixture.swift; sourceTree = "<group>"; };
+		AAB016A016A016A016A01613 /* IMAuthoritativeSyncTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAuthoritativeSyncTests.swift; sourceTree = "<group>"; };
+		B61F154A7FB4C96796408CE5 /* IMMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMMigrationTests.swift; sourceTree = "<group>"; };
+		BDC2AD1394644F77C9EB1E88 /* IMStorageTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMStorageTests.swift; sourceTree = "<group>"; };
+		C3D8008BB2A3101DD7A1A3AE /* IMNotificationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMNotificationTests.swift; sourceTree = "<group>"; };
+		C7E4E37675154203BE68557B /* IMDataExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDataExportTests.swift; sourceTree = "<group>"; };
+		C81B56E07B9F83F30B160CB9 /* SelfStatePublic.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = SelfStatePublic.json; path = Fixtures/SelfStatePublic.json; sourceTree = "<group>"; };
+		D56F29A99856FF3C40C7D7E5 /* IMMessageListTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMMessageListTests.swift; sourceTree = "<group>"; };
+		D99457091227A3FA87002687 /* IMSelfStateIntegrationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMSelfStateIntegrationTests.swift; sourceTree = "<group>"; };
+		DEEF2DB97342F0BEFDB3CF03 /* IMAuthCredentialTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAuthCredentialTests.swift; sourceTree = "<group>"; };
+		E49A1F78870DC5BD5CD5152C /* IMSendAdmissionTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMSendAdmissionTests.swift; sourceTree = "<group>"; };
+		E5450D9467BCC679A5129EB7 /* JobsIMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobsIMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F043BCD4226518AE60AAB64F /* IMMigrationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMMigrationServiceTests.swift; sourceTree = "<group>"; };
+		F25678F6DFA97490C963E243 /* IMPersonalStateTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMPersonalStateTests.swift; sourceTree = "<group>"; };
+		FD1A4B7B796DAFDB0F3EB48D /* IMForwardTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMForwardTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		927E8B48E2AAE84DF2464E9D /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resource/Info.plist,
+			);
+			target = 77D44C64001F1619CB2CFDB2 /* JobsIM */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3FB4A8B0216F067801050990 /* JobsIM */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (927E8B48E2AAE84DF2464E9D /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = JobsIM; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E5B8422324148CB340BCC45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B6B9D959665CC86E728B9F /* Foundation.framework in Frameworks */,
+				BF51D8BBED9A8A68E5AAAF6B /* Pods_JobsIMTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4597354CA7FB03B850EB0AFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0502453A983F00C0B96E6B67 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A34D7790DDE65FD819FAD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4786BF5F0DFA034232B06CC /* Foundation.framework in Frameworks */,
+				0E690E3469C5C3B929970632 /* Pods_JobsIM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A6F2E21A3C4DF5F80C95319 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				47E7E73E71A557860020D7DD /* IMCompletionTests.swift */,
+				A5DFDFDF23EC7C780900D001 /* IMIntegrationFixture.swift */,
+				236E1164078996A390CA903B /* IMLifecycleTests.swift */,
+				3EA674621F8D74CB14177DCD /* IMMediaTests.swift */,
+				C3D8008BB2A3101DD7A1A3AE /* IMNotificationTests.swift */,
+				E49A1F78870DC5BD5CD5152C /* IMSendAdmissionTests.swift */,
+				532FF1D1CDD1F86E2C91D29A /* IMSessionTests.swift */,
+				BDC2AD1394644F77C9EB1E88 /* IMStorageTests.swift */,
+				66E31261B88BCA66028F727D /* Avatar.data */,
+				A55631C7453B74BB5D0B0184 /* IntegrationCA.pem */,
+				076FB502E18BD2C07D8DC9E0 /* IntegrationServer.pem */,
+				9C71157A9D163B0851D1FC06 /* NativeVideo.data */,
+				D56F29A99856FF3C40C7D7E5 /* IMMessageListTests.swift */,
+				FD1A4B7B796DAFDB0F3EB48D /* IMForwardTests.swift */,
+				DEEF2DB97342F0BEFDB3CF03 /* IMAuthCredentialTests.swift */,
+				79CECCE9CF579B9A15DA51EE /* IMAuthCoordinatorTests.swift */,
+				AAB016A016A016A016A01613 /* IMAuthoritativeSyncTests.swift */,
+				7556B7EB0E5C962AE538080D /* IMAuthRefreshIntegrationTests.swift */,
+				6840B5040703665C1B5C803C /* AuthRefreshPublic.json */,
+				F25678F6DFA97490C963E243 /* IMPersonalStateTests.swift */,
+				C7E4E37675154203BE68557B /* IMDataExportTests.swift */,
+				F043BCD4226518AE60AAB64F /* IMMigrationServiceTests.swift */,
+				2917CF18442EACF5042D69F7 /* IMReceiptServiceTests.swift */,
+				4E328C198779F8AC95590C86 /* IMReceiptStorageTests.swift */,
+				B61F154A7FB4C96796408CE5 /* IMMigrationTests.swift */,
+				D99457091227A3FA87002687 /* IMSelfStateIntegrationTests.swift */,
+				C81B56E07B9F83F30B160CB9 /* SelfStatePublic.json */,
+			);
+			name = Tests;
+			path = "../../../测试/前端/iOS";
+			sourceTree = "<group>";
+		};
+		A6BD32342D70DCCF73E825E6 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				00FBE26402CFC0E95A8F904A /* IMUITests.swift */,
+				859832ABDB0FD175C5019621 /* IMMessageListUITests.swift */,
+				4869199312CEBF371FF4C581 /* IMSelfStateUITests.swift */,
+			);
+			name = UITests;
+			path = "../../../测试/前端/iOS/UI";
+			sourceTree = "<group>";
+		};
+		AA07F25ED9DC8B702AF42437 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				760CC2EDDCAFB71126D82B75 /* Pods-JobsIM.release.xcconfig */,
+				7FF9EEEC1EA998926A0624B9 /* Pods-JobsIM.debug.xcconfig */,
+				84889C24DE8F81A1F254FD86 /* Pods-JobsIMTests.release.xcconfig */,
+				1083072C67BEF148FB1A7CC8 /* Pods-JobsIMTests.debug.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B30D20D7D79275A4C514EFD2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9907D95526E58E638371E7D2 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B5BE45EDC8F7ABD9FBB59FD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4C057A3ED91FC742322AF9B /* JobsIM.app */,
+				891145B2E8AD6947FC4C20B4 /* JobsIMTests.xctest */,
+				E5450D9467BCC679A5129EB7 /* JobsIMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0ABF0BBCB7B9A94D6197EC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B30D20D7D79275A4C514EFD2 /* iOS */,
+				53E25E4A2D664535D5CBFE62 /* Pods_JobsIM.framework */,
+				134CAF859EAD94B3F63CF562 /* Pods_JobsIMTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1A16031573DA947125579D3 = {
+			isa = PBXGroup;
+			children = (
+				B5BE45EDC8F7ABD9FBB59FD3 /* Products */,
+				C0ABF0BBCB7B9A94D6197EC0 /* Frameworks */,
+				4A6F2E21A3C4DF5F80C95319 /* Tests */,
+				A6BD32342D70DCCF73E825E6 /* UITests */,
+				AA07F25ED9DC8B702AF42437 /* Pods */,
+				3FB4A8B0216F067801050990 /* JobsIM */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31D32F91222E17DCEB1DA22C /* JobsIMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42FCAF3A3EE735B65E5509B3 /* Build configuration list for PBXNativeTarget "JobsIMTests" */;
+			buildPhases = (
+				024E722C55D2C1324EA9C126 /* [CP] Check Pods Manifest.lock */,
+				7D950A43B0C39EBAC9BDC204 /* Sources */,
+				1E5B8422324148CB340BCC45 /* Frameworks */,
+				120180EE1F3F6507DF4525B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A19FDF50023E82F6D9CAD75 /* PBXTargetDependency */,
+			);
+			name = JobsIMTests;
+			productName = JobsIMTests;
+			productReference = 891145B2E8AD6947FC4C20B4 /* JobsIMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		77D44C64001F1619CB2CFDB2 /* JobsIM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6A005525F75737EEF5C13FE /* Build configuration list for PBXNativeTarget "JobsIM" */;
+			buildPhases = (
+				36EF6E7D1678BF25CDCBCB61 /* [CP] Check Pods Manifest.lock */,
+				B51CC091EFBDD2B94EA03C81 /* Sources */,
+				C1A34D7790DDE65FD819FAD5 /* Frameworks */,
+				68C0F709E0A93061549975EB /* Resources */,
+				BE191653BD9E08D4631E8538 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3FB4A8B0216F067801050990 /* JobsIM */,
+			);
+			name = JobsIM;
+			productName = JobsIM;
+			productReference = A4C057A3ED91FC742322AF9B /* JobsIM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9694AEE3B703AE9E95588F26 /* JobsIMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C4E024D91801244D36FB5C /* Build configuration list for PBXNativeTarget "JobsIMUITests" */;
+			buildPhases = (
+				5FCCD4A449460F05F58FA010 /* Sources */,
+				4597354CA7FB03B850EB0AFC /* Frameworks */,
+				842E2FA1AD6781ED90769918 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48FB695F1A209BAE27FD1121 /* PBXTargetDependency */,
+			);
+			name = JobsIMUITests;
+			productName = JobsIMUITests;
+			productReference = E5450D9467BCC679A5129EB7 /* JobsIMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51F3BB1FF6F6EBA3ACF38C68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					77D44C64001F1619CB2CFDB2 = {
+						DevelopmentTeam = K5692KLW75;
+					};
+				};
+			};
+			buildConfigurationList = 87C1D2975BA201CF9B07993A /* Build configuration list for PBXProject "JobsIM" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				bo,
+				de,
+				en,
+				es,
+				fr,
+				ja,
+				ko,
+				ru,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = D1A16031573DA947125579D3;
+			productRefGroup = B5BE45EDC8F7ABD9FBB59FD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77D44C64001F1619CB2CFDB2 /* JobsIM */,
+				31D32F91222E17DCEB1DA22C /* JobsIMTests */,
+				9694AEE3B703AE9E95588F26 /* JobsIMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		120180EE1F3F6507DF4525B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3184420EF24F416A6B8BA53D /* Avatar.data in Resources */,
+				8805547F478253573ADDD3CE /* IntegrationCA.pem in Resources */,
+				F315897F4B2B76FF924C68A2 /* IntegrationServer.pem in Resources */,
+				B0DFB06D45F00A0480C493D1 /* NativeVideo.data in Resources */,
+				2223FE29BDFA1DCC4AC3058A /* AuthRefreshPublic.json in Resources */,
+				2CCB9C2ABBE36D7562956799 /* SelfStatePublic.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C0F709E0A93061549975EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842E2FA1AD6781ED90769918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		024E722C55D2C1324EA9C126 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JobsIMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36EF6E7D1678BF25CDCBCB61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JobsIM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE191653BD9E08D4631E8538 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JobsIM/Pods-JobsIM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FCCD4A449460F05F58FA010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40435964BB03C975F24EC8C3 /* IMUITests.swift in Sources */,
+				1DFCEE5422D973217B55D584 /* IMMessageListUITests.swift in Sources */,
+				69F379AF93C14EF4C2FC4373 /* IMSelfStateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D950A43B0C39EBAC9BDC204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24A4F7B1915ED6E136C1FD5 /* IMCompletionTests.swift in Sources */,
+				977E2E9B251CF4B105E03E03 /* IMIntegrationFixture.swift in Sources */,
+				F488A36E00C0B168723A4425 /* IMLifecycleTests.swift in Sources */,
+				C83837049FF6866233E4CFA6 /* IMMediaTests.swift in Sources */,
+				CDCA8C6BE956A3DC9705A4A5 /* IMNotificationTests.swift in Sources */,
+				0F1665B1EC1EAF97E20FEBAC /* IMSendAdmissionTests.swift in Sources */,
+				DB559BF74475661E23CB3066 /* IMSessionTests.swift in Sources */,
+				7AB9F9E21209F5BD761F2A33 /* IMStorageTests.swift in Sources */,
+				2025F609EF2D0F29DE0BB1ED /* IMMessageListTests.swift in Sources */,
+				CAB3A0D764E6FF8C4D9964EC /* IMForwardTests.swift in Sources */,
+				695482462BD6545A7A98E4F6 /* IMAuthCredentialTests.swift in Sources */,
+				0E228BDD78F8D4D6E345AA43 /* IMAuthCoordinatorTests.swift in Sources */,
+				AAB016A016A016A016A01603 /* IMAuthoritativeSyncTests.swift in Sources */,
+				ABE82A6AEC57439D9C6DCA0D /* IMAuthRefreshIntegrationTests.swift in Sources */,
+				DFC54205C72C5BB23F914ACD /* IMPersonalStateTests.swift in Sources */,
+				6D78A0B30D024100B941F78C /* IMDataExportTests.swift in Sources */,
+				C7CE44AEFFB225B9A74D81D0 /* IMMigrationServiceTests.swift in Sources */,
+				93026AF526428028ED33EE12 /* IMReceiptServiceTests.swift in Sources */,
+				2E77AA6FCF84343209E4D669 /* IMReceiptStorageTests.swift in Sources */,
+				194B3CE195946CAB633EDC19 /* IMMigrationTests.swift in Sources */,
+				A2E9104D804A4B72D94CDCA3 /* IMSelfStateIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B51CC091EFBDD2B94EA03C81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48FB695F1A209BAE27FD1121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JobsIM;
+			target = 77D44C64001F1619CB2CFDB2 /* JobsIM */;
+			targetProxy = 4EC0EDFA803586A20FF15DA2 /* PBXContainerItemProxy */;
+		};
+		8A19FDF50023E82F6D9CAD75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JobsIM;
+			target = 77D44C64001F1619CB2CFDB2 /* JobsIM */;
+			targetProxy = 441A382365197999C5292E64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D28039388A6A72406637483 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84889C24DE8F81A1F254FD86 /* Pods-JobsIMTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = K5692KLW75;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobsIM.app/JobsIM";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16AE1B09AEC00E17E1D2382C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3A89BB9544F337CE04A9251B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5692KLW75;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JobsIM;
+			};
+			name = Debug;
+		};
+		3B4BF6212FE2D7858D8B504B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1083072C67BEF148FB1A7CC8 /* Pods-JobsIMTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = K5692KLW75;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobsIM.app/JobsIM";
+			};
+			name = Debug;
+		};
+		3FDF24681D938C1D5EA5B1C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF9EEEC1EA998926A0624B9 /* Pods-JobsIM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = JobsIM/Resource/Simulator.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5692KLW75;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = JobsIM/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80D74F7BAF1EFE1AEBB45F6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 760CC2EDDCAFB71126D82B75 /* Pods-JobsIM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = JobsIM/Resource/Simulator.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5692KLW75;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = JobsIM/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A975A95C8AE7B8BE56942747 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K5692KLW75;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JobsIM;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D25FD109CAB89225D711489A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15C4E024D91801244D36FB5C /* Build configuration list for PBXNativeTarget "JobsIMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A975A95C8AE7B8BE56942747 /* Release */,
+				3A89BB9544F337CE04A9251B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42FCAF3A3EE735B65E5509B3 /* Build configuration list for PBXNativeTarget "JobsIMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D28039388A6A72406637483 /* Release */,
+				3B4BF6212FE2D7858D8B504B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87C1D2975BA201CF9B07993A /* Build configuration list for PBXProject "JobsIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25FD109CAB89225D711489A /* Debug */,
+				16AE1B09AEC00E17E1D2382C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6A005525F75737EEF5C13FE /* Build configuration list for PBXNativeTarget "JobsIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D74F7BAF1EFE1AEBB45F6E /* Release */,
+				3FDF24681D938C1D5EA5B1C3 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51F3BB1FF6F6EBA3ACF38C68 /* Project object */;
+}

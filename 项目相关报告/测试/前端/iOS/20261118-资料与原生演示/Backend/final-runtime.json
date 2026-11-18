@@ -1,0 +1,26 @@
+{
+  "state": "ready",
+  "deploymentId": "2cbd9bd2-1205-44fb-870c-9cad48135c48",
+  "caSha256": "32f19f9acab109242ac61b3802bfb35ba656f32f4eef17d06d56058e9158bfcb",
+  "serverURL": "https://192.168.1.16:19543",
+  "controllerURL": "https://192.168.1.16:19544",
+  "ownedController": [
+    "10409 10408 部署/MacOS/演示控制面/Products/build.qrlugmiB/JobsIMDemoHost serve"
+  ],
+  "ports": "COMMAND     PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nJobsIMDem 10409 jobs    6u  IPv4 0x8ccdc5528152fb20      0t0  TCP 192.168.1.16:19544 (LISTEN)\npostgres  10560 jobs    5u  IPv4 0xeb9372b397c74bd7      0t0  TCP 127.0.0.1:19545 (LISTEN)\npostgres  10580 jobs    5u  IPv4 0x7835a8ec99741726      0t0  TCP 127.0.0.1:19546 (LISTEN)\nnats-serv 10752 jobs    6u  IPv4 0xb2ac842c136f795a      0t0  TCP 127.0.0.1:19547 (LISTEN)\nJobsIMd   10790 jobs   24u  IPv4 0x56f820b907c3b568      0t0  TCP 192.168.1.16:19543 (LISTEN)\n",
+  "products": [
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/部署/MacOS/演示控制面/Products/build.qrlugmiB/JobsIMDemoHost",
+      "bytes": 11140066,
+      "sha256": "5b1d9741906511bd520fbc5ae35c9fc7f99cef062cd39376970cd4d1e294bdfb"
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Demo/NativeDemo-v1/Instance/Bin/JobsIMd",
+      "bytes": 22793186,
+      "sha256": "5d2735b4006c1b010026185d18953cedafb0c5a2e69dceeff532f827c8c0afc9"
+    }
+  ],
+  "statusOmitsAccounts": true,
+  "restartPreservedDeploymentAndCA": true,
+  "scope": "Actual native isolated Mac demo. Main helper remains foreground for iPhone; no changes to default9443."
+}

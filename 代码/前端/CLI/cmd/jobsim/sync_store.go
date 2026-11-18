@@ -66,6 +66,9 @@ CREATE TABLE IF NOT EXISTS self_operations(id TEXT PRIMARY KEY,kind TEXT NOT NUL
 	if err = dataExportMigrate(tx); err != nil {
 		return err
 	}
+	if err = cliMigrationMigrate(tx); err != nil {
+		return err
+	}
 	var physical string
 	err = tx.QueryRow("SELECT value FROM metadata WHERE key='sync-physical-generation'").Scan(&physical)
 	if errors.Is(err, sql.ErrNoRows) {
@@ -472,6 +475,9 @@ func (s *localStore) localHistory(conversation string) ([]json.RawMessage, error
 	return result, rows.Err()
 }
 func syncEraseTx(tx *sql.Tx, epoch, id string) error {
+	if err := cliMigrationEraseTx(tx, epoch, id); err != nil {
+		return err
+	}
 	if err := receiptEraseObjectsTx(tx, epoch, id); err != nil {
 		return err
 	}

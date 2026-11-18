@@ -1,0 +1,6 @@
+{
+  "source": "代码/前端/Web/Src/GlobalMessages.ts",
+  "file": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/修前-repair被观察清除.ts",
+  "sha256": "509c07675c43bcfb73acaac6dc8bed0482e16f0daf5f221a6b9c1fc1b426006c",
+  "reason": "Valid global observation wrongly deletes an outstanding erasure-repair marker after a raw replacement of the original corrupt floor. Source retained for a real IDB counterexample; not executed."
+}

@@ -1,0 +1,164 @@
+{
+  "at": "2026-11-17T22:56:58.374Z",
+  "status": "passed_with_explicit_skips",
+  "backend": {
+    "externalTestFiles": 49,
+    "topLevelMethods": 204,
+    "passed": 193,
+    "failed": 0,
+    "skipped": 11,
+    "exitCode": 0,
+    "rawLog": "后端-最终完整PG.jsonl",
+    "methodSet": "后端-最终顶层集合对账.json",
+    "skipList": "后端-最终11项跳过.json",
+    "initialPureRules": {
+      "passed": 75,
+      "failed": 0,
+      "skipped": 128
+    },
+    "initialPG": {
+      "passed": 174,
+      "failed": 11,
+      "skipped": 18,
+      "rawLog": "后端-隔离PG.jsonl"
+    },
+    "migrationFocused": {
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "rawLog": "后端-PG迁移定向.jsonl"
+    },
+    "earlierFixedPG": {
+      "passed": 186,
+      "failed": 0,
+      "skipped": 18,
+      "rawLog": "后端-隔离PG-修后.jsonl"
+    }
+  },
+  "cli": {
+    "externalTestFiles": 15,
+    "topLevelMethods": 139,
+    "passed": 137,
+    "failed": 0,
+    "skipped": 2,
+    "skipList": [
+      "TestAuthCoordinatorActualHTTPSAndUnknownClosure",
+      "TestAuthNativeSystemVaultSeparateDiagnostic"
+    ],
+    "methodSet": "CLI顶层集合对账.json",
+    "rawLog": "CLI完整入口.log",
+    "originalRunner": {
+      "passed": 115,
+      "failed": 0,
+      "skipped": 2,
+      "missingTestFiles": [
+        "migration_test.go",
+        "receipt_negotiation_test.go"
+      ],
+      "missingTopLevelMethods": 22,
+      "evidence": "CLI漏挂证据.json"
+    }
+  },
+  "buildVet": {
+    "initial": [
+      {
+        "name": "后端",
+        "cmd": "build",
+        "exit": 0
+      },
+      {
+        "name": "后端",
+        "cmd": "vet",
+        "exit": 0
+      },
+      {
+        "name": "CLI",
+        "cmd": "build",
+        "exit": 0
+      },
+      {
+        "name": "CLI",
+        "cmd": "vet",
+        "exit": 0
+      }
+    ],
+    "backendAfterFix": [
+      {
+        "command": "build",
+        "exit": 0,
+        "error": null
+      },
+      {
+        "command": "vet",
+        "exit": 0,
+        "error": null
+      }
+    ]
+  },
+  "fixes": [
+    {
+      "file": "代码/后端/Go/deployment_disk.go",
+      "change": "Use /bin/df on supported Unix hosts, preserving the 4 GiB reserve and cancellation rejection; avoid unrelated user df commands on PATH",
+      "test": "TestDeploymentDiskReserveIgnoresShadowedDF",
+      "before": "磁盘检测-修前.log",
+      "after": "磁盘检测-修后.log"
+    },
+    {
+      "file": "测试/CLI/运行测试.mjs/运行测试.mjs",
+      "change": "Discover regular *_test.go files dynamically instead of incomplete hand-maintained list",
+      "before": "原CLI运行器.mjs",
+      "after": "CLI完整入口.log"
+    }
+  ],
+  "sourceIntegrity": {
+    "beforeFiles": 284,
+    "afterFiles": 285,
+    "changes": [
+      {
+        "path": "代码/后端/Go/deployment_disk.go",
+        "sha256": "6acd2d6e7d64b784e6f1816de28518471abb9dd1bbd7a1909d763822938a858a"
+      },
+      {
+        "path": "测试/CLI/运行测试.mjs/运行测试.mjs",
+        "sha256": "8cc58a3cc4d5e05311ec8ec7a3fe6397da35e26ac1e1a55c5558547f0459634a"
+      },
+      {
+        "path": "测试/后端/接口/deployment_disk_test.go",
+        "sha256": "8cadd0bd971099aecffd2b02f77699e5928a74901d70849101b84c3686c7c5f7"
+      }
+    ],
+    "unexpectedChanges": [],
+    "result": "only the two intentional edits and one new regression test differ"
+  },
+  "cleanup": {
+    "markerDatabaseDropped": true,
+    "results": [
+      {
+        "name": "PGMain",
+        "port": 62381,
+        "ownedDatabaseResidue": 0,
+        "queryExit": 0,
+        "stopExit": 0,
+        "postmasterPIDRemoved": true,
+        "portClosed": true
+      },
+      {
+        "name": "PGJournal",
+        "port": 62382,
+        "ownedDatabaseResidue": 0,
+        "queryExit": 0,
+        "stopExit": 0,
+        "postmasterPIDRemoved": true,
+        "portClosed": true
+      }
+    ],
+    "privateDataPreserved": true,
+    "defaultInstanceTouched": false
+  },
+  "limitations": [
+    "Native UI/devices, OS vault and actual CLI HTTPS authentication were not exercised here",
+    "Receipt profile approvals are explicit fixtures; these tests do not approve real native client durability",
+    "Remaining 11 backend methods require separate dedicated restore/export/forward/refresh/snapshot environments; they remain skipped",
+    "Real-browser WebM fixture came from MediaRecorder synthetic audio, not a physical microphone"
+  ]
+}

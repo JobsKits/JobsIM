@@ -16,7 +16,8 @@ function fixture() {
   const compiled = process.env.JOBS_IM_HARMONY_HOST_API;
   const module = new Module(compiled);
   module.filename = compiled;
-  module.require = id => id === '@kit.RemoteCommunicationKit' ? { rcp } : id === '@ohos.file.fs' ? { default: file } : require(id === './Models' ? process.env.JOBS_IM_HARMONY_HOST_MODELS : id);
+  const nativeRequire = Module.createRequire(compiled);
+  module.require = id => id === '@kit.RemoteCommunicationKit' ? { rcp } : id === '@ohos.file.fs' ? { default: file } : nativeRequire(id);
   module._compile(fs.readFileSync(compiled, 'utf8'), compiled);
   const hooks = { stamp: () => stamp, before: async original => { assert.equal(original, stamp); return token; },
     refresh: async old => { assert.equal(old, 'original-at'); refreshes++; token = 'rotated-at'; return token; }, rejected: async () => { rejections++; } };

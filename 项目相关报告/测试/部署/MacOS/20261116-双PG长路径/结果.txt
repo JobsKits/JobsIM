@@ -1,0 +1,9 @@
+previousUnixSocketPathBytes=189
+mainPort=63315
+journalPort=63316
+pg_ctl (PostgreSQL) 18.7 (Postgres.app)
+PASS: both physical clusters start over TCP at a long Chinese/space path with Unix sockets disabled.
+PASS: standalone stop/backup copy restarts the same clusters without changing identities, password or test rows.
+PASS: both isolated cluster processes stopped; original data remains. No existing instance was controlled.
+exit=0
+privateTestState=/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/PG-path.TmRycv/长路径验证 包含空格/独立业务与日志数据库的持久状态目录

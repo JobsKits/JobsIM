@@ -1,0 +1,21 @@
+{
+  "time": "2026-11-18T17:02:36.463733+08:00",
+  "registered": [
+    {
+      "path": "部署/MacOS/演示控制面/README.md",
+      "sha256": "0ee2ba43a91edfa424f5b7106c1d2eee86ed6ed1a37f8ee88b77b888f5a53739"
+    },
+    {
+      "path": "部署/MacOS/演示控制面/【MacOS】启动演示控制面.command/README.md",
+      "sha256": "70d896cccd73b16d6926d7aee1c7ec54efcb27a7ac8c2ec3931888b18e3feebe"
+    },
+    {
+      "path": "测试/后端/接口/原生演示HTTPS.py/README.md",
+      "sha256": "69e160b5fbd16301b08c10e35f50adc65cb7dc470ef50e80034e6a0aa704cac8"
+    }
+  ],
+  "notYetExisting": [
+    "项目相关报告/测试/前端/iOS/20261118-资料与原生演示/Backend/README.md"
+  ],
+  "total": 272
+}

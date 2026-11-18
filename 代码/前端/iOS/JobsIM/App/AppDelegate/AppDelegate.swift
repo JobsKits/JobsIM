@@ -18,6 +18,7 @@ import GKNavigationBarSwift
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private lazy var demoOverlay = IMDemoEnvironmentOverlay.make()
 
     func application(
         _ application: UIApplication,
@@ -52,9 +53,11 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         IMSession.shared.changed = { [weak self] in
             self?.showRoot()
         }
+        #if DEBUG
         if ProcessInfo.processInfo.arguments.contains("--demo") {
             IMSession.shared.enterDemo()
         }
+        #endif
         return true
     }
 
@@ -108,31 +111,42 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let window else {
             return
         }
+        defer {
+            refreshDemoOverlay()
+        }
         window.byEndEditing(true)
         let mode = UserDefaults.standard.string(forKey: "theme") ?? "system"
         window.overrideUserInterfaceStyle = mode == "light" ? .light : mode == "dark" ? .dark : .unspecified
-        JobsThemeCenter.shared.setStyle(window.traitCollection.userInterfaceStyle == .dark ? .dark : .light)
+        let appearance = mode == "dark" ? UIUserInterfaceStyle.dark
+            : mode == "light" ? .light
+            : window.windowScene?.traitCollection.userInterfaceStyle ?? window.traitCollection.userInterfaceStyle
+        JobsThemeCenter.shared.setStyle(appearance == .dark ? .dark : .light)
         let session = IMSession.shared
         IMSyncCoordinator.shared.start()
         if session.demo || session.token != nil {
-            let tabs: [(String, String, UIViewController)] = [
-                ("messages", "bubble.left.and.bubble.right", IMListVC(kind: .conversations)),
-                ("contacts", "person.2", IMListVC(kind: .contacts)),
-                ("saved", "bookmark", IMListVC(kind: .saved)),
-                ("settings", "slider.horizontal.3", IMSettingsVC()),
-            ]
-            let controllers = tabs.enumerated().map { index, item in
-                let nav = UINavigationController.make(item.2)
-                nav.tabBarItem = UITabBarItem.make(IMStrings.text(item.0), symbol: item.1, tag: index)
-                return nav
+            if let root = window.rootViewController as? IMRootVC, root.representsCurrentSession {
+                root.refreshIdentity()
+                return
             }
-            let root = UITabBarController.jobsMake { tabs in
-                tabs.viewControllers = controllers
-                tabs.tabBar.tintColor = IMUI.green
+            let root = IMRootVC()
+            if let current = window.rootViewController as? IMRootVC {
+                root.preferredIndex = current.selectedIndex
+                root.restoresSettings = (current.selectedViewController as? UINavigationController)?.topViewController is IMSettingsVC
             }
             window.byRootViewController(root)
         } else {
+            if let navigation = window.rootViewController as? UINavigationController,
+                navigation.viewControllers.first is IMAuthVC {
+                return
+            }
             window.byRootViewController(UINavigationController.make(IMAuthVC()))
         }
+    }
+
+    func refreshDemoOverlay() {
+        guard let window else {
+            return
+        }
+        demoOverlay.attach(to: window, visible: IMSession.shared.isDemonstrationEnvironment)
     }
 }

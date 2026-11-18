@@ -1,0 +1,140 @@
+{
+  "at": "2026-11-17T05:15:33.748Z",
+  "output": [
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/01-类型执行.json",
+      "exitCode": 0,
+      "inputsUnchanged": true,
+      "sources": 77,
+      "changed": [],
+      "originalBeforeAfterEqual": true,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "rawSHA": "a7479afc82aa90f64bfdd3e306ecdb8d3d4ea84216f41d4c9e4fa35c836dee28"
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/02-私有构建执行.json",
+      "exitCode": 0,
+      "inputsUnchanged": true,
+      "sources": 82,
+      "changed": [],
+      "originalBeforeAfterEqual": true,
+      "production": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/Receipt/1794892045242/Production",
+      "artifacts": {
+        "Fonts/OFL.txt": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+        "Fonts/SourceSans3.ttf": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+        "Licenses/Lucide.txt": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+        "Licenses/react-dom.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+        "Licenses/react.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+        "Logo.svg": "cdaa8d42e5c40cb6917af63140ea483677c88394d89ac5e09c61cf80e7334b3f",
+        "assets/index-CCqfIXzK.js": "d3dff62c24c3a6febffe7018b38ad416f2149e881cafe82d5aabc54754599cfa",
+        "assets/index-CCqfIXzK.js.map": "f0284a8f53cb77f1ad126a629b23f571b437d69009ec41515e00a64a0e28c679",
+        "assets/index-Cavxj1zD.css": "3e3ef20c2c45176a9e23ef8cdefa2e81bc51f815772497fb1e2483c801e94a2c",
+        "index.html": "fec18e54b5f320811b2f8939dd06e70091d1ee243e875c13764e98440acea52a",
+        "资源出处.md": "00df820366b2bad224227c42b5200d532363e3028f4d0613844e50ca33bd7a82"
+      },
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "node_modules/vite/bin/vite.js",
+        "build",
+        "--outDir",
+        "/Users/jobs/Library/Application Support/JobsIM/Build/Web/Receipt/1794892045242/Production"
+      ],
+      "rawSHA": "14aa3a56487be82df2e5352e73d21161067ffc245a7edb201b4ca71426aba031"
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/03-浏览器首轮执行.json",
+      "exitCode": 0,
+      "sources": 0,
+      "changed": [],
+      "originalBeforeAfterEqual": true,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "测试/前端/Web/receipt-context.cjs/receipt-context.cjs"
+      ],
+      "rawSHA": "504637c503d003b7de2e8ab4dd2d57876a9c73d6b95f726894254f9ea6525adb"
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/04-迁移复验执行.json",
+      "exitCode": 0,
+      "inputsUnchanged": true,
+      "sources": 77,
+      "changed": [],
+      "originalBeforeAfterEqual": true,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "测试/前端/Web/migration.cjs/migration.cjs"
+      ],
+      "rawSHA": "52821f786dd2613c9d51f8770f83a4ff7709ab56c763c2af9d99a89be4664698"
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/05-群复验执行.json",
+      "exitCode": 0,
+      "inputsUnchanged": true,
+      "sources": 77,
+      "changed": [],
+      "originalBeforeAfterEqual": true,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "测试/前端/Web/group-governance.cjs/group-governance.cjs"
+      ],
+      "rawSHA": "57efe9d56f96cd368376ca584e02e0127d6ae78a036db8a5d1ec29951f534649"
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/06-改密复验执行.json",
+      "exitCode": 0,
+      "inputsUnchanged": true,
+      "sources": 77,
+      "changed": [],
+      "originalBeforeAfterEqual": true,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "测试/前端/Web/password-change.cjs/password-change.cjs"
+      ],
+      "rawSHA": "f8d7a1d0dac9d98836ab39e134a52c61fbdc5305837d0280defc2e594e612f14"
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/07-注销复验执行.json",
+      "exitCode": 0,
+      "inputsUnchanged": true,
+      "sources": 77,
+      "changed": [],
+      "originalBeforeAfterEqual": true,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "测试/前端/Web/account-deletion.cjs/account-deletion.cjs"
+      ],
+      "rawSHA": "e0a3938f8b7a30c4a15460b4655e9bbd4bb0e6ef54e73cdf02432c1ad4e82a35"
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/08-导出复验执行.json",
+      "exitCode": 0,
+      "inputsUnchanged": true,
+      "sources": 77,
+      "changed": [],
+      "originalBeforeAfterEqual": true,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "测试/前端/Web/data-export.cjs/data-export.cjs"
+      ],
+      "rawSHA": "9c5e3f107e8f486a90df9b0bc03eb02079112002f60d5cbabb4b67c503e3b94c"
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/Web逐存储收讫/09-认证复验执行.json",
+      "exitCode": 1,
+      "inputsUnchanged": true,
+      "sources": 77,
+      "changed": [],
+      "originalBeforeAfterEqual": true,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "测试/前端/Web/auth-session.cjs/auth-session.cjs"
+      ],
+      "rawSHA": "0d6889f1610cb52635da27e8c1ffd5bee0281e4b5f018302b3a620230297e4dd"
+    }
+  ],
+  "production": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/Receipt/1794892045242/Production"
+}

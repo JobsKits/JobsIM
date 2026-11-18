@@ -1,0 +1,104 @@
+{
+  "status": "failed",
+  "results": [
+    {
+      "name": "mobile conversation touch navigation",
+      "status": "passed"
+    },
+    {
+      "name": "touch send remains usable",
+      "status": "failed",
+      "error": "locator.tap: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.send-button')\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"submit\" class=\"send-button\">…</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - element is outside of the viewport\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    10 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying tap action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "keyboard visible viewport keeps composer inside",
+      "status": "passed"
+    },
+    {
+      "name": "keyboard viewport offset keeps app visible",
+      "status": "passed"
+    },
+    {
+      "name": "layout 320x568",
+      "status": "passed"
+    },
+    {
+      "name": "layout 390x844",
+      "status": "passed"
+    },
+    {
+      "name": "layout 430x932",
+      "status": "passed"
+    },
+    {
+      "name": "layout 844x390",
+      "status": "passed"
+    },
+    {
+      "name": "touch return to conversation list",
+      "status": "passed"
+    },
+    {
+      "name": "mobile authentication modal fits visible viewport",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font zh-CN",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font zh-TW",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font bo",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font en",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ja",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font fr",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font es",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font de",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ru",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ko",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme light",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme dark",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme system",
+      "status": "passed"
+    },
+    {
+      "name": "no unhandled page errors",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "scope": "Chrome mobile/touch and explicit visualViewport fixture; not physical iOS/Android keyboard"
+}

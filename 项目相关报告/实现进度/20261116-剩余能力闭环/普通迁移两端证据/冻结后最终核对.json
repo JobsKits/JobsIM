@@ -1,0 +1,31 @@
+{
+  "newReportBrokenLinks": [],
+  "checks": [
+    {
+      "mode": "default",
+      "currentDifferences": [
+        "代码/前端/HarmonyOS/README.md"
+      ],
+      "codeResourcesProjectMatch": true
+    },
+    {
+      "mode": "ohosTest",
+      "currentDifferences": [
+        "代码/前端/HarmonyOS/README.md"
+      ],
+      "codeResourcesProjectMatch": true
+    },
+    {
+      "host": "HarmonyHost-qqxxep",
+      "inputUnchangedAtRun": true,
+      "currentInputDifferences": []
+    },
+    {
+      "host": "HarmonyHost-O8hqMl",
+      "inputUnchangedAtRun": true,
+      "currentInputDifferences": []
+    }
+  ],
+  "defaultInstanceUntouched": true,
+  "newBuildsStarted": false
+}

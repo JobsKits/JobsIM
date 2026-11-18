@@ -64,6 +64,8 @@ export type Message = {
   sendAttempted?: boolean;
   attachmentName?: string;
   restoreEpoch?: string;
+  originFamilyId?: string;
+  attachmentRequestId?: string;
 };
 export type Session = { user: User; deviceId: string; restoreEpoch?: string } & Partial<PublicAuth>;
 export type Space = {

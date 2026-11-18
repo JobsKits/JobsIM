@@ -1,0 +1,54 @@
+{
+  "recordedOwnedPids": [
+    {
+      "pid": 49774,
+      "exists": false,
+      "matchesOwnedCommand": false,
+      "action": "none; already exited"
+    },
+    {
+      "pid": 89577,
+      "exists": false,
+      "matchesOwnedCommand": false,
+      "action": "none; already exited"
+    },
+    {
+      "pid": 90119,
+      "exists": false,
+      "matchesOwnedCommand": false,
+      "action": "none; already exited"
+    },
+    {
+      "pid": 90804,
+      "exists": false,
+      "matchesOwnedCommand": false,
+      "action": "none; already exited"
+    },
+    {
+      "pid": 90959,
+      "exists": false,
+      "matchesOwnedCommand": false,
+      "action": "none; already exited"
+    },
+    {
+      "pid": 96076,
+      "exists": false,
+      "matchesOwnedCommand": false,
+      "action": "none; already exited"
+    },
+    {
+      "pid": 97507,
+      "exists": false,
+      "matchesOwnedCommand": false,
+      "action": "none; already exited"
+    },
+    {
+      "pid": 47909,
+      "exists": false,
+      "matchesOwnedCommand": false,
+      "action": "none; already exited"
+    }
+  ],
+  "matchingOwnedProcessesRemaining": 0,
+  "scope": "Only recorded child/PG PIDs; no global process scan and no foreign process stopped."
+}

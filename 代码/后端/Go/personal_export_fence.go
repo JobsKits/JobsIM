@@ -55,11 +55,15 @@ func (a *App) withPersonalExportSourceDrain(pattern string, fn func(http.Respons
 		}()
 		cause := fn(staged, r)
 		drainError := a.drainPersonalExportInvalidations(r.Context())
+		migrationError := a.drainMigrations(r.Context())
 		if cause != nil {
 			return cause
 		}
 		if drainError != nil {
 			return fail(503, "EXPORT_CLEANUP_PENDING", "Source result is committed or unknown; retry its original intent while private export cleanup completes")
+		}
+		if migrationError != nil {
+			return fail(503, "MIGRATION_CLEANUP_PENDING", "Source result is committed or unknown; retry its original operation while controlled migration cleanup completes")
 		}
 		if staged.err != nil {
 			return staged.err
@@ -106,11 +110,26 @@ func (a *App) drainPersonalExportInvalidations(ctx context.Context) error {
 
 func personalExportGatewayMode(r *http.Request) string {
 	path, method := r.URL.Path, r.Method
+	if method == "PUT" && (path == "/api/sync/device" || path == "/api/sync/storage") {
+		return "exclusive"
+	}
+	if method == "POST" && strings.HasPrefix(path, "/api/sync/migrations/") && strings.HasSuffix(path, "/cancel") {
+		return "exclusive"
+	}
 	if method == "POST" && path == "/api/auth/password-change-results" {
 		return ""
 	}
 	if path == "/api/me/data-export-results" || path == "/api/me/data-exports" || strings.HasPrefix(path, "/api/me/data-exports/") {
 		return "shared"
+	}
+	if (method == "GET" || method == "HEAD") && (strings.HasPrefix(path, "/api/reports/") || strings.HasPrefix(path, "/api/admin/reports/")) {
+		return "shared"
+	}
+	if strings.HasPrefix(path, "/api/reports/evidence") {
+		return "shared"
+	}
+	if method == "PATCH" && path == "/api/me/username" {
+		return "exclusive"
 	}
 	if method == "GET" || method == "HEAD" {
 		return ""
@@ -151,6 +170,9 @@ func (a *App) personalExportOwnerFence(pattern string) (shared, exclusive bool) 
 	request.URL = &url.URL{Path: parts[1]}
 	mode := personalExportGatewayMode(request)
 	if a.Role == "governance" && strings.HasPrefix(parts[1], "/api/me/data-export") {
+		return true, false
+	}
+	if mode == "shared" && a.Role == "governance" && (strings.HasPrefix(parts[1], "/api/reports/") || strings.HasPrefix(parts[1], "/api/admin/reports/")) {
 		return true, false
 	}
 	if mode == "exclusive" && personalExportOwner(a.Role) != "" {

@@ -2,6 +2,7 @@ import { messagePayload, unavailableForward } from "./forward";
 import { emptySpace, type Space, type Message } from "./types";
 import { applyGlobalMessages, knownGlobalIDs, readGlobalFacts } from "./GlobalMessages";
 import { storageDatabase } from "./StorageDatabase";
+import { guardCompletedErasure } from "./AccountDeletionCleanup";
 export { storageDatabase } from "./StorageDatabase";
 const dbPromise = storageDatabase;
 export function persistableSpace(value: Space): Space {
@@ -25,7 +26,9 @@ export async function isolateAuthNamespace(scope: string, current: string) {
   const db = await dbPromise;
   return new Promise<void>((resolve, reject) => {
     const tx = db.transaction("spaces", "readwrite", { durability: "strict" });
-    const store = tx.objectStore("spaces"), keys = store.getAllKeys();
+    const store = tx.objectStore("spaces");
+    guardCompletedErasure(store, current);
+    const keys = store.getAllKeys();
     keys.onsuccess = () => {
       const namespaces = new Set(keys.result.filter((key): key is string => typeof key === "string")
         .map(key => key.startsWith("outbox|") ? key.substring(7) : key)
@@ -46,7 +49,7 @@ export async function isolateAuthNamespace(scope: string, current: string) {
     };
     tx.oncomplete = () => resolve();
     tx.onerror = () => reject(tx.error);
-    tx.onabort = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error ?? new DOMException("Namespace activation aborted", "AbortError"));
   });
 }
 
@@ -96,6 +99,7 @@ export async function freezeConversation(
   return new Promise<void>((resolve, reject) => {
     const tx = db.transaction("spaces", "readwrite", { durability: "strict" }),
       store = tx.objectStore("spaces");
+    guardCompletedErasure(store, key);
     const facts = readGlobalFacts(store, key);
     const read = store.get(queueKey(key));
     read.onsuccess = () => {
@@ -108,7 +112,7 @@ export async function freezeConversation(
     };
     tx.oncomplete = () => resolve();
     tx.onerror = () => reject(tx.error);
-    tx.onabort = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error ?? new DOMException("Personal transaction aborted", "AbortError"));
   });
 }
 
@@ -122,6 +126,7 @@ export async function freezeNamespace(
   return new Promise((resolve, reject) => {
     const tx = db.transaction("spaces", "readwrite", { durability: "strict" });
     const store = tx.objectStore("spaces");
+    guardCompletedErasure(store, key);
     const facts = readGlobalFacts(store, key);
     const read = store.get(queueKey(key));
     let result: Space;
@@ -140,7 +145,7 @@ export async function freezeNamespace(
     };
     tx.oncomplete = () => resolve(result);
     tx.onerror = () => reject(tx.error);
-    tx.onabort = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error ?? new DOMException("Personal transaction aborted", "AbortError"));
   });
 }
 
@@ -149,11 +154,13 @@ async function transaction(
   value: Space,
   mode: "view" | "replace" | "enqueue",
   message?: Message,
+  linked?: (store: IDBObjectStore) => void,
 ) {
   const db = await dbPromise;
   return new Promise<void>((resolve, reject) => {
     const tx = db.transaction("spaces", "readwrite", { durability: "strict" });
     const store = tx.objectStore("spaces");
+    guardCompletedErasure(store, key);
     const facts = readGlobalFacts(store, key);
     const scope = activeScopeKey(key);
     const active = scope ? store.get(scope) : undefined;
@@ -187,9 +194,10 @@ async function transaction(
         );
       };
     }
+    try { linked?.(store); } catch { tx.abort(); }
     tx.oncomplete = () => resolve();
     tx.onerror = () => reject(tx.error);
-    tx.onabort = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error ?? new DOMException("Personal transaction aborted", "AbortError"));
   });
 }
 
@@ -198,8 +206,8 @@ export const saveSpace = (key: string, value: Space) =>
 // View snapshots cannot erase a queue committed while React is rendering.
 export const saveView = (key: string, value: Space) =>
   transaction(key, value, "view");
-export const queueMessage = (key: string, value: Space, message: Message) =>
-  transaction(key, value, "enqueue", message);
+export const queueMessage = (key: string, value: Space, message: Message, linked?: (store: IDBObjectStore) => void) =>
+  transaction(key, value, "enqueue", message, linked);
 
 export async function acknowledgeOriginalOutbox(
   key: string,
@@ -344,10 +352,12 @@ export async function saveIntent<T>(key: string, purpose: string, value: T) {
   const db = await dbPromise;
   return new Promise<void>((resolve, reject) => {
     const tx = db.transaction("spaces", "readwrite", { durability: "strict" });
-    tx.objectStore("spaces").put(value, "operation|" + key + "|" + purpose);
+    const store = tx.objectStore("spaces");
+    guardCompletedErasure(store, key);
+    store.put(value, "operation|" + key + "|" + purpose);
     tx.oncomplete = () => resolve();
     tx.onerror = () => reject(tx.error);
-    tx.onabort = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error ?? new DOMException("Original intent transaction aborted", "AbortError"));
   });
 }
 export async function loadIntent<T>(

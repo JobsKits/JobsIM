@@ -1,0 +1,159 @@
+{
+  "status": "source-and-parse-complete-runtime-pending",
+  "scope": "iOS Contacts/Conversations/Chat/MessageCell/Reports (B)",
+  "timeUTC": "2026-11-18T05:42:01.454389+00:00",
+  "validation": {
+    "swiftParse": {
+      "exitCode": 0,
+      "sourceFiles": 19,
+      "typechecked": false
+    },
+    "systemConstructionAudit": {
+      "scanned": 72,
+      "issuesAllOwnSource": 1,
+      "issuesBCallsites": 0,
+      "factoryHits": 27
+    },
+    "chainAudit": {
+      "exitCode": 2,
+      "summary": "bare_assignments=34 repeat_groups=204 issue_files=54 scanned=148 dsl_methods=1027",
+      "passed": false,
+      "limitation": "heuristic candidates include factory internals, business fields and different API owners; not a typecheck"
+    },
+    "build": "not-run-disk-below-4GiB",
+    "runtime": "not-run"
+  },
+  "sources": [
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactsVC/IMContactsVC.swift",
+      "bytes": 12436,
+      "sha256": "619b539f2c9e0c12c36894590927718d8b60134e357061bc07c3bd9702c5fbf0"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactsVC/IMContactUX.swift",
+      "bytes": 908,
+      "sha256": "e78348f464aec7274d827e3f3226bd733425afa8190c16455d07f7bf4a52bc84"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMConversationsVC/IMConversationsVC.swift",
+      "bytes": 325,
+      "sha256": "fdd201c0eac501b30af1647f2fbc359517b1f18190cd6832ec11dea9c9e9556a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMFriendSearchVC/IMFriendSearchVC.swift",
+      "bytes": 6283,
+      "sha256": "cd77a3fc7c7b2b379ae3c0a6cabfee4fb49fbc009b9a5ada7837f36f265cc713"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatSettingsVC/IMChatSettingsVC.swift",
+      "bytes": 6111,
+      "sha256": "954476c5c5d804f7c8ee1a96382a29d1ae98d60fefb091405ce615631d2ee866"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatSettingsVC/IMSavedEditingDraftsVC.swift",
+      "bytes": 2468,
+      "sha256": "56588b34baff7605a2ab84716f42caaacdedcdeac8700f320a9ea391c13afec1"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportComposerVC/IMReportComposerVC.swift",
+      "bytes": 18185,
+      "sha256": "b87b144250a4fb92ae0fd1825ac75103e9ede2b4acd6c7ed77db239fc8e2e565"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift",
+      "bytes": 55718,
+      "sha256": "33c8df08d491eba4cfabacaaac9223f7036dce7206216152d4d2bf53300f6a05"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift",
+      "bytes": 7336,
+      "sha256": "2f2f129e323f317710deecb4fc383974d56b7289f798776dda2655b52b5174a7"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift",
+      "bytes": 19815,
+      "sha256": "b0eaae8d3b379db3fd97a7dd45a141bfb46597dc593ee0f15cef4bb82c2a94b8"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportVC/IMReportVC.swift",
+      "bytes": 4320,
+      "sha256": "266a909a9a08d746a8c7c57bd2894e871ad023dbfe7f5b00d0e92ade0e4e01a0"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMContactService/IMContactService.swift",
+      "bytes": 3923,
+      "sha256": "d1f975ceae92d104667af11e80a1e77c4baf95a227cf14adc4ef866e00ae9c25"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIContextualAction/UIContextualAction+Make.swift",
+      "bytes": 473,
+      "sha256": "40e33538c350cb86de03580a510d4094f44d72e344d435c5c42c750b397afa01"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UISwipeActionsConfiguration/UISwipeActionsConfiguration+Make.swift",
+      "bytes": 462,
+      "sha256": "4af58810a5adc45ba8c181fae5d0c6b2865b75a4f3e28feaae5cefa0b1fb226e"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportMessageSelectionVC/IMReportMessageSelectionVC.swift",
+      "bytes": 4014,
+      "sha256": "70d5e1617d02d1e81cfa3334ae6df8662e8fe970508e4892cf9408a301b20154"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAddFriendVC/IMAddFriendVC.swift",
+      "bytes": 337,
+      "sha256": "0f0a7a6c5c780e815a70989dbc71d178f30331d94b442c7a4fd0d1c0c770ee9c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactSearchVC/IMContactSearchVC.swift",
+      "bytes": 379,
+      "sha256": "31cc3f907ed65b62a23d75d9bd7631b5b850440f8d50ec8aa088981d49681797"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactLocalStars/IMContactLocalStars.swift",
+      "bytes": 855,
+      "sha256": "f45527c5d805d99ba85b18e56f8edf03b5b25ccef59943026dd5e9eb3ca42f71"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/QLPreviewController/QLPreviewController+Make.swift",
+      "bytes": 421,
+      "sha256": "9e1ae387c833584210cc16cee990547e50462febe8a8bf7d06ec94afadb1ad72"
+    }
+  ],
+  "documents": [
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactsVC/README.md",
+      "bytes": 1963,
+      "sha256": "19b763a25ff84c55e71c34fd05ecfa488f511605c1920acb76cf4ee8867aeb61"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatVC/README.md",
+      "bytes": 2049,
+      "sha256": "f425f4684af2f1052324d14405d50882af20fbb7bd41f113070250c7a03bcecb"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportComposerVC/README.md",
+      "bytes": 2156,
+      "sha256": "46d1dfcb7f50e2e4eddc94b5e1f2f465a53f0cb56d444f1980161f4c17c05a79"
+    }
+  ],
+  "protectedBoundaries": [
+    "Session/Core/Transport/shared-service source owned by root",
+    "IMUI/IMStrings/Base/Auth/Profile owned by A",
+    "Pods/vendor/template unchanged",
+    "no build/device/account or cleanup operation"
+  ],
+  "pending": [
+    "module typecheck and current app build",
+    "keyboard tap/media recall and long-press interaction",
+    "photos/video picker, actual report upload and official review",
+    "draft overwrite/save/restore, unknown original-intent recovery",
+    "themes, ten languages, sizing/accessibility",
+    "account-switch/logout/deletion late-picker callbacks"
+  ],
+  "incrementalRepresentationCheck": {
+    "report": "兼容表示增量/summary.json",
+    "swiftParseExitCode": 0,
+    "deviceVerified": false
+  }
+}

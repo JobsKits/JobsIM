@@ -1,0 +1,24 @@
+{
+  "versionTests": {
+    "topMethods": 21,
+    "events": 79,
+    "passed": true,
+    "productionSource": "部署/公共组件/依赖版本"
+  },
+  "qr": {
+    "buildPassed": true,
+    "realPNGDecoded": 2,
+    "credentialURLsRejected": 2,
+    "source": "部署/公共组件/地址二维码",
+    "dependencies": "pinned go.sum; copied existing cached archive then Go recomputed h1, no validation disabled"
+  },
+  "sourceReuse": {
+    "from": "啄木鸟维修平台/部署/公共组件",
+    "thirdPartyQRCodeLicenseRetained": true
+  },
+  "network": {
+    "initialOfficialGoModuleProxyTimeout": true,
+    "proxyConfigurationChanged": false
+  },
+  "scope": "Host/module/actual PNG checks only; no public tunnel or phone scan"
+}

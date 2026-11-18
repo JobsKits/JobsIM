@@ -1,0 +1,49 @@
+{
+  "verifiedAt": "2026-11-18T20:12:42+08:00",
+  "verifier": "demo_backend read-only review in current task",
+  "productionInputs": 236,
+  "sourceDrift": 0,
+  "controller": {
+    "pid": 64239,
+    "httpsPort": 19544,
+    "strictCAStatus": 200,
+    "ready": true,
+    "accountsExposedInStatus": false,
+    "sha256": "1460dfdb6151e2fcc0653a60a4790b55ca282f8ccfc867329d6f634bf0c05443"
+  },
+  "gateway": {
+    "pid": 64663,
+    "httpsPort": 19543,
+    "strictCABootstrapStatus": 200,
+    "deploymentId": "2cbd9bd2-1205-44fb-870c-9cad48135c48",
+    "epoch": 1,
+    "sha256": "745255b1cfbdbfd9c7c012b6a49e4ddd309c88fb773e6c91b1edfab200040973"
+  },
+  "postgres": [
+    {
+      "pid": 64427,
+      "port": 19545
+    },
+    {
+      "pid": 64450,
+      "port": 19546
+    }
+  ],
+  "nats": {
+    "pid": 64624,
+    "port": 19547
+  },
+  "publicDescriptorKeys": 4,
+  "descriptorCertificatePinMatches": true,
+  "httpGETRequests": 2,
+  "writeRequests": 0,
+  "restarts": 0,
+  "userDefault9443Accessed": false,
+  "verificationOnlySourceReview": {
+    "passwordChangeAndDeletionMatchBuild30Manifest": true,
+    "build31IncludesSameTwoFiles": true,
+    "originalRequestOnly": true,
+    "notFoundDoesNotCreate": true,
+    "networkVerificationFlowExercised": false
+  }
+}

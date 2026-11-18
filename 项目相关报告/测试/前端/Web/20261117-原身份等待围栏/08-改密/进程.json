@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-11-17T00:51:18.396Z",
+  "finishedAt": "2026-11-17T00:51:21.485Z",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/password-change.cjs/password-change.cjs"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "stopped": "",
+  "freeBefore": 4940750848,
+  "minimumFree": 4812910592,
+  "freeAfter": 4928389120,
+  "inputsUnchanged": true,
+  "actualAPI": false,
+  "dependencyInstall": false
+}

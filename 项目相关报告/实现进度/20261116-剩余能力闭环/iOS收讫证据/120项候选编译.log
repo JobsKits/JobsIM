@@ -1,0 +1,22 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -workspace JobsIM.xcworkspace -scheme JobsIM -destination "platform=iOS Simulator,id=98F8960B-E8D2-40A8-BF46-68EBB95FAD0C" -derivedDataPath "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData" -jobs 1 ONLY_ACTIVE_ARCH=YES ARCHS=arm64 CODE_SIGN_IDENTITY=- build-for-testing
+
+Build settings from command line:
+    ARCHS = arm64
+    CODE_SIGN_IDENTITY = -
+    ONLY_ACTIVE_ARCH = YES
+
+2026-11-17 13:11:53.901 xcodebuild[6008:5272223] Writing error result bundle to /var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/ResultBundle_2026-17-11_13-11-0053.xcresult
+xcodebuild: error: Unable to find a device matching the provided destination specifier:
+		{ platform:iOS Simulator, id:98F8960B-E8D2-40A8-BF46-68EBB95FAD0C }
+
+	The requested device could not be found because no available devices matched the request.
+
+	Destinations compatible with the "JobsIM" scheme:
+		{ platform:macOS, arch:arm64, variant:Designed for [iPad,iPhone], id:00008142-001C692A1E09401C, name:My Mac }
+		{ platform:iOS, arch:arm64, id:00008110-000625583EE3801E, name:Jobs的iPhone }
+		{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+		{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+
+	Destinations incompatible with the "JobsIM" scheme:
+		{ platform:macOS, arch:arm64e, id:00008142-001C692A1E09401C, name:My Mac, error:My Mac’s macOS platform doesn’t match JobsIM.app’s supported platforms. You can change JobsIM.app’s Base SDK or Supported Platforms to support My Mac. }

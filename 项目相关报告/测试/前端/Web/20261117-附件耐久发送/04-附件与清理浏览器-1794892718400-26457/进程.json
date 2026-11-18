@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-11-17T05:18:38.425Z",
+  "finishedAt": "2026-11-17T05:18:57.107Z",
+  "args": [
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "expectedFailure": false,
+  "validProductReproduction": false,
+  "stopped": "",
+  "minimumFree": 24623890432,
+  "inputsUnchanged": true,
+  "realAPI": false
+}

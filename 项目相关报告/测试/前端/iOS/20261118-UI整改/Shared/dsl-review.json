@@ -1,0 +1,19 @@
+{
+  "scope": "Read-only review of current Pods.xcodeproj selected Jobs Swift sources and App-local extensions",
+  "provider": "independent iOS agent",
+  "selectedJobsSources": 379,
+  "reviewedCandidateSwiftFiles": 28,
+  "distinctByMethodNames": 81,
+  "newConfirmedMissingMethods": [],
+  "receiverAndLabelsSpotChecked": [
+    "gestures",
+    "scroll views",
+    "empty state",
+    "PHPicker",
+    "TabBar",
+    "UITableViewCell"
+  ],
+  "navigationExtensionReason": "Template byHidesBottomBarWhenPushed belongs to GKNavigationBarConfigure; App-local UIViewController navigation method required.",
+  "gesture": "jobs_addGestureRetView exists on selected UIView+DSL.swift and returns Self.",
+  "limitation": "Static review only; four failed device builds remain, latest fixes not yet built."
+}

@@ -169,6 +169,9 @@ final class IMAuthCoordinator {
             if let binding { previous.append(boundNamespace(binding)) }
         }
         // 整对先进入同一个Keychain条目；命名空间交接与旧队列冻结原子完成后才向业务发布。
+        guard try !session.accountOperationBlocked(pair) else {
+            throw reauthenticationRequired()
+        }
         try secureWrite(pair.serialized(), pair.profile + ":" + pair.userID)
         let installing = metadata.filter { $0["id"].text.hasPrefix(initial ? "request:" : "refresh:") }
             .map { $0.setting("state", .string("installing")) }
@@ -188,11 +191,72 @@ final class IMAuthCoordinator {
         session.user = user
         session.token = pair.accessToken
         UserDefaults.standard.set(false, forKey: "loggedOut:" + pair.profile + ":" + pair.userID)
+        if initial {
+            UserDefaults.standard.set(false, forKey: "accountSelectionRequired:" + pair.profile)
+        }
         UserDefaults.standard.set(try JSONEncoder.make().encode(user), forKey: "user:" + pair.profile)
     }
 
-    func restore() throws {
+    func savedAccountBindings() throws -> [IMJSON] {
+        return try session.store.list("auth-state", namespace: metadataNamespace).filter {
+            $0["id"].text.hasPrefix("binding:") && $0["state"].text == "active"
+                && $0["profile"].text == session.profile
+                && $0["deploymentId"].text == session.deployment
+        }
+    }
+
+    func suspendForAccountSwitch() throws {
+        for task in refreshTasks.values {
+            task.cancel()
+        }
+        refreshTasks.removeAll()
+        initialProofs.removeAll()
+        guard !session.profile.isEmpty, !session.deployment.isEmpty else {
+            return
+        }
+        try write([
+            .object(["id": .string("active-account"), "state": .string("suspended")]),
+            .object(["id": .string("active-auth-intent"), "state": .string("superseded-local-selection")])
+        ])
+    }
+
+    func selectSavedAccount(userID: String) throws {
+        guard !loggingOut,
+            let binding = try savedAccountBindings().first(where: { $0["userId"].text == userID })
+        else {
+            throw reauthenticationRequired()
+        }
+        try write([.object([
+            "id": .string("active-account"), "userId": .string(userID), "state": .string("active")
+        ])])
+        session.user = binding["user"]
+        try restore(allowAccountSelection: true)
+        guard session.currentCredentialPair?.userID == userID else {
+            throw reauthenticationRequired()
+        }
+    }
+
+    func updateCurrentUser(_ value: IMJSON) throws {
+        guard let pair = session.currentCredentialPair,
+            value["id"].text == pair.userID, !value["username"].text.isEmpty
+        else {
+            throw reauthenticationRequired()
+        }
+        let updated = try pair.replacingUsername(value["username"].text)
+        try secureWrite(updated.serialized(), updated.profile + ":" + updated.userID)
+        try write([publicBinding(updated, user: value)])
+        session.credentialPair = updated
+        session.token = updated.accessToken
+        session.user = value
+        UserDefaults.standard.set(try JSONEncoder.make().encode(value), forKey: "user:" + pair.profile)
+    }
+
+    func restore(allowAccountSelection: Bool = false) throws {
         guard !session.profile.isEmpty, !session.deployment.isEmpty else { return }
+        if !allowAccountSelection,
+            UserDefaults.standard.bool(forKey: "accountSelectionRequired:" + session.profile) {
+            return
+        }
         let namespace = metadataNamespace
         let records = try session.store.list("auth-state", namespace: namespace)
         if let pending = records.last(where: { record in
@@ -258,6 +322,9 @@ final class IMAuthCoordinator {
             binding["refreshGeneration"].text == pair.refreshGeneration,
             binding["credentialRequestId"].text == pair.credentialRequestID
         else { throw reauthenticationRequired() }
+        guard try !session.accountOperationBlocked(pair) else {
+            throw reauthenticationRequired()
+        }
         session.credentialPair = pair
         session.user = binding["user"]
         session.token = pair.accessToken
@@ -282,6 +349,9 @@ final class IMAuthCoordinator {
             session.invalidateAuthentication(namespace: session.namespace, token: session.token)
             throw reauthenticationRequired()
         }
+        guard try !session.accountOperationBlocked(pair) else {
+            throw reauthenticationRequired()
+        }
         if let task = refreshTasks[pair.namespace.key] {
             _ = try await task.value
         } else if let pending = try read("refresh:" + pair.familyID), pending["state"].text != "completed" {
@@ -298,6 +368,9 @@ final class IMAuthCoordinator {
 
     func refresh(rejectedToken: String) async throws -> String {
         guard let pair = session.currentCredentialPair else {
+            throw reauthenticationRequired()
+        }
+        guard try !session.accountOperationBlocked(pair) else {
             throw reauthenticationRequired()
         }
         if pair.accessToken != rejectedToken { return pair.accessToken }
@@ -368,6 +441,23 @@ final class IMAuthCoordinator {
         refreshTasks[key] = task
         defer { refreshTasks.removeValue(forKey: key) }
         return try await task.value.accessToken
+    }
+
+    private static func definitelyRejectedInitial(_ error: Error) -> Bool {
+        guard let response = error as? IMAPIError else {
+            return false
+        }
+        if response.status == 403 {
+            return ["MFA_REQUIRED", "MFA_INVALID", "MFA_REPLAY", "MFA_NOT_ENROLLED"]
+                .contains(response.code)
+        }
+        if response.status == 401 {
+            return response.code == "INVALID_CREDENTIALS"
+        }
+        if response.status == 400 {
+            return ["INVALID_USERNAME", "INVALID_PASSWORD", "RESERVED_USERNAME"].contains(response.code)
+        }
+        return response.status == 409 && ["USERNAME_TAKEN", "USERNAME_RESERVED"].contains(response.code)
     }
 
     func authenticate(
@@ -463,7 +553,6 @@ final class IMAuthCoordinator {
                 message: IMStrings.text("authUnknownExplanation"))
         }
         initialProofs[requestID] = proof
-        if explicitNew, let old { initialProofs.removeValue(forKey: old["requestId"].text) }
         try write(
             [
                 .object([
@@ -496,6 +585,9 @@ final class IMAuthCoordinator {
                 metadata: try completedInitial(record),
                 namespace: namespace, initial: true)
             initialProofs.removeValue(forKey: requestID)
+            for previous in record["body"]["previousRequestIds"].list {
+                initialProofs.removeValue(forKey: previous.text)
+            }
             session.changed?()
             return result
         } catch {
@@ -513,13 +605,10 @@ final class IMAuthCoordinator {
                     namespace: session.namespace, token: session.token,
                     preserveCredentialPair: true)
             }
-            let rejected =
-                [
-                    "MFA_REQUIRED", "MFA_INVALID", "INVALID_CREDENTIALS", "INVALID_USERNAME",
-                    "INVALID_PASSWORD",
-                    "USERNAME_TAKEN", "USERNAME_RESERVED", "RESERVED_USERNAME",
-                ].contains(code)
-                && old == nil
+            // A rejected successor does not resolve its earlier unknown authentication.
+            let rejected = (old == nil || explicitNew)
+                && record["resultUser"]["id"].text.isEmpty
+                && Self.definitelyRejectedInitial(error)
             let state = code == "DELIVERY_EXPIRED" ? "delivery_expired" : rejected ? "failed" : "unknown"
             if rejected { initialProofs.removeValue(forKey: requestID) }
             let current =
@@ -529,11 +618,19 @@ final class IMAuthCoordinator {
                     .setting("errorCode", .string(code))
             ]
             if current {
+                let pointer = rejected ? old : nil
                 changes.append(
                     .object([
-                        "id": .string(pointerID(username)), "requestId": .string(requestID),
-                        "state": .string(state),
+                        "id": .string(pointerID(username)),
+                        "requestId": pointer?["requestId"] ?? .string(requestID),
+                        "state": pointer?["state"] ?? .string(state),
                     ]))
+                if let pointer {
+                    changes.append(.object([
+                        "id": .string("active-auth-intent"), "requestId": pointer["requestId"],
+                        "username": .string(username.lowercased()),
+                    ]))
+                }
             }
             try? write(changes, namespace: namespace)
             throw error

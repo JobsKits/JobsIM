@@ -111,9 +111,11 @@ func (a *App) verifyAdmissionFence(ctx context.Context) error {
 }
 func (a *App) withAdmissionFence(pattern string, fn func(http.ResponseWriter, *http.Request) error) func(http.ResponseWriter, *http.Request) error {
 	shared := a.Role == "message" && pattern == "POST /api/conversations/{id}/messages"
+	shared = shared || a.Role == "media" && strings.Contains(pattern, "/api/") && reportMediaPath(strings.SplitN(pattern, " ", 2)[1])
 	shared = shared || a.Role == "gateway" && pattern == "gateway:shared-projection"
 	shared = shared || a.Role == "sync" && strings.Contains(pattern, "/api/sync/")
-	shared = shared || a.Role == "media" && (pattern == "GET /api/media/{id}" || pattern == "POST /internal/receipts/object")
+	shared = shared || a.Role == "media" && (pattern == "GET /api/media/{id}" || pattern == "GET /api/avatars/{id}" || pattern == "POST /internal/receipts/object")
+	shared = shared || a.Role == "media" && (pattern == "POST /api/media" || pattern == "POST /api/media/upload-results" || pattern == "GET /api/media/capabilities")
 	shared = shared || a.Role == "sync" && strings.Contains(pattern, "/api/conversations/{id}/")
 	shared = shared || a.Role == "directory" && strings.Contains(pattern, "/api/me/preferences")
 	shared = shared || a.Role == "message" && pattern == "POST /api/conversations/{id}/message-results"
@@ -128,9 +130,12 @@ func (a *App) withAdmissionFence(pattern string, fn func(http.ResponseWriter, *h
 		}
 	}
 	exclusive := a.Role == "gateway" && pattern == "gateway:exclusive-projection"
+	exclusive = exclusive || strings.Contains(pattern, " /internal/deletion/")
 	exclusive = exclusive || a.Role == "identity" && (pattern == "POST /api/auth/refresh" || pattern == "POST /api/auth/reauthenticate")
 	exclusive = exclusive || a.Role == "directory" && (strings.HasPrefix(pattern, "PUT /api/blocks/") || strings.HasPrefix(pattern, "DELETE /api/blocks/") || strings.HasPrefix(pattern, "DELETE /api/contacts/") || strings.HasSuffix(pattern, "/accept"))
 	exclusive = exclusive || a.Role == "message" && (pattern == "PATCH /api/messages/{id}" || pattern == "DELETE /api/messages/{id}" || pattern == "POST /internal/forwards/revoke-principal" || pattern == "POST /internal/forwards/revoke-source")
+	exclusive = exclusive || a.Role == "message" && pattern == "PUT /api/conversations/{id}/retention"
+	exclusive = exclusive || a.Role == "sync" && pattern == "PUT /api/sync/storage"
 
 	exclusive = exclusive || a.Role == "conversation" && (strings.HasPrefix(pattern, "POST /api/conversations") || strings.HasPrefix(pattern, "PUT /api/conversations") || strings.HasPrefix(pattern, "PATCH /api/conversations") || strings.HasPrefix(pattern, "DELETE /api/conversations") || pattern == "POST /internal/owner-unavailable")
 	if personalShared, personalExclusive := a.personalExportOwnerFence(pattern); personalShared || personalExclusive {

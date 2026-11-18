@@ -1,0 +1,77 @@
+[
+  {
+    "profile": "b6428ebe-1d58-47bb-965b-dc1c40d1e969.mobileprovision",
+    "uuid": "b6428ebe-1d58-47bb-965b-dc1c40d1e969",
+    "name": "iOS Team Provisioning Profile: com.jobs.JobsSwiftBaseConfigDemo.JobsSwiftBaseConfigDemo.JobsWidgetExtension",
+    "team": [
+      "K5692KLW75"
+    ],
+    "appIdentifier": "K5692KLW75.com.jobs.JobsSwiftBaseConfigDemo.JobsSwiftBaseConfigDemo.JobsWidgetExtension",
+    "expires": "2026-11-19T02:08:44",
+    "deviceIncluded": true,
+    "certificateSHA1": [
+      "C0A571D8ECCDF8420A489655507A832290861D8E",
+      "624B5DAF975AACD47C00DCB0EEC845CCC35FD400"
+    ]
+  },
+  {
+    "profile": "ead83ac2-24d5-4187-bec6-6da84733e6ef.mobileprovision",
+    "uuid": "ead83ac2-24d5-4187-bec6-6da84733e6ef",
+    "name": "iOS Team Provisioning Profile: com.JobsOCBaseConfigDemo",
+    "team": [
+      "K5692KLW75"
+    ],
+    "appIdentifier": "K5692KLW75.com.JobsOCBaseConfigDemo",
+    "expires": "2026-11-21T09:04:09",
+    "deviceIncluded": true,
+    "certificateSHA1": [
+      "C0A571D8ECCDF8420A489655507A832290861D8E",
+      "624B5DAF975AACD47C00DCB0EEC845CCC35FD400"
+    ]
+  },
+  {
+    "profile": "f43390e0-d5f9-443e-b6a6-173baa819c9a.mobileprovision",
+    "uuid": "f43390e0-d5f9-443e-b6a6-173baa819c9a",
+    "name": "iOS Team Provisioning Profile: com.jobs.im",
+    "team": [
+      "K5692KLW75"
+    ],
+    "appIdentifier": "K5692KLW75.com.jobs.im",
+    "expires": "2026-11-25T02:54:33",
+    "deviceIncluded": true,
+    "certificateSHA1": [
+      "C0A571D8ECCDF8420A489655507A832290861D8E",
+      "624B5DAF975AACD47C00DCB0EEC845CCC35FD400"
+    ]
+  },
+  {
+    "profile": "6ac0dd24-00e0-4c85-bc99-b8ab3a69802c.mobileprovision",
+    "uuid": "6ac0dd24-00e0-4c85-bc99-b8ab3a69802c",
+    "name": "iOS Team Provisioning Profile: com.JobsOCBaseConfigDemo.JobsOCWidgetExtension",
+    "team": [
+      "K5692KLW75"
+    ],
+    "appIdentifier": "K5692KLW75.com.JobsOCBaseConfigDemo.JobsOCWidgetExtension",
+    "expires": "2026-11-21T09:04:02",
+    "deviceIncluded": true,
+    "certificateSHA1": [
+      "C0A571D8ECCDF8420A489655507A832290861D8E",
+      "624B5DAF975AACD47C00DCB0EEC845CCC35FD400"
+    ]
+  },
+  {
+    "profile": "5e8b9a3a-0dc9-40da-9ece-a701ecf1acbb.mobileprovision",
+    "uuid": "5e8b9a3a-0dc9-40da-9ece-a701ecf1acbb",
+    "name": "iOS Team Provisioning Profile: com.jobs.JobsSwiftBaseConfigDemo.JobsSwiftBaseConfigDemo",
+    "team": [
+      "K5692KLW75"
+    ],
+    "appIdentifier": "K5692KLW75.com.jobs.JobsSwiftBaseConfigDemo.JobsSwiftBaseConfigDemo",
+    "expires": "2026-11-19T02:08:40",
+    "deviceIncluded": true,
+    "certificateSHA1": [
+      "C0A571D8ECCDF8420A489655507A832290861D8E",
+      "624B5DAF975AACD47C00DCB0EEC845CCC35FD400"
+    ]
+  }
+]

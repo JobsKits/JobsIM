@@ -1,0 +1,15 @@
+{
+  "brokerRebuilt": true,
+  "canonicalNativeStartup": true,
+  "latestLedgerHandedOff": true,
+  "newDeletionReplayed": true,
+  "oldJWTRejected": true,
+  "oldJournalDumpAuthority": false,
+  "oldPasswordsRejected": true,
+  "oldUnsentEpochRejected": true,
+  "primaryTextAndMediaKept": true,
+  "restoreEpoch": "2",
+  "sourceRetained": true,
+  "status": "passed",
+  "strictHTTPS": true
+}

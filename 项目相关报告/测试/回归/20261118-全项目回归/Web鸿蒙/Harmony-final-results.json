@@ -1,0 +1,46 @@
+[
+  {
+    "mode": "Auth",
+    "code": 0,
+    "signal": null,
+    "startedAt": "2026-11-17T22:46:39.616Z",
+    "endedAt": "2026-11-17T22:46:40.334Z",
+    "executable": "/opt/homebrew/Cellar/node/26.13.1_2/bin/node",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/RunAuth.mjs"
+    ],
+    "env": {
+      "JOBS_IM_HARMONY_REPORT_DIR": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-final-Auth"
+    }
+  },
+  {
+    "mode": "build",
+    "code": 0,
+    "signal": null,
+    "startedAt": "2026-11-17T22:46:40.336Z",
+    "endedAt": "2026-11-17T22:46:51.020Z",
+    "executable": "/bin/zsh",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+      "build"
+    ],
+    "env": {
+      "JOBS_IM_HARMONY_REPORT_DIR": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-final-build"
+    }
+  },
+  {
+    "mode": "test-build",
+    "code": 0,
+    "signal": null,
+    "startedAt": "2026-11-17T22:46:51.020Z",
+    "endedAt": "2026-11-17T22:46:57.897Z",
+    "executable": "/bin/zsh",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+      "test-build"
+    ],
+    "env": {
+      "JOBS_IM_HARMONY_REPORT_DIR": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-final-test-build"
+    }
+  }
+]

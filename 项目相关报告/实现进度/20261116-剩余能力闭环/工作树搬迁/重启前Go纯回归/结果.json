@@ -1,0 +1,8 @@
+{
+  "exitCode": 0,
+  "passed": 71,
+  "skipped": 115,
+  "failures": [],
+  "changedInputs": [],
+  "scope": "non-PG current production packages and external tests; explicit database suites remain skipped"
+}

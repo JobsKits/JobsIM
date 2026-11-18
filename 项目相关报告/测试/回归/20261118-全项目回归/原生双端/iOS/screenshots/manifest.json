@@ -1,0 +1,26 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "3C2BB866-9055-426F-8386-E0324D64347B.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "native-message-dark-English_0_82A17604-FC0D-4146-A1B9-466868544617.png",
+        "timestamp" : 1794955614.253
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "736D4534-6DBF-42A9-97A9-8DABFC208987",
+        "deviceName" : "JobsIM-Regression-20261118",
+        "exportedFileName" : "1F6F0049-AB0E-472D-9142-A05F859F4025.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "native-message-light_0_2507671C-AE2E-41B3-B42E-D935C3C1CD13.png",
+        "timestamp" : 1794955595.215
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoMessageAndAppearanceLanguageControls()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoMessageAndAppearanceLanguageControls"
+  }
+]

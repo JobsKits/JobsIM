@@ -1,0 +1,11 @@
+{
+  "name": "outbox-proof",
+  "script": "测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs",
+  "code": 0,
+  "signal": null,
+  "reason": "completed",
+  "startedAt": "2026-11-16T14:59:22.112Z",
+  "finishedAt": "2026-11-16T14:59:24.244Z",
+  "minFree": 25391906816,
+  "report": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/Web-CLI/outbox-proof"
+}

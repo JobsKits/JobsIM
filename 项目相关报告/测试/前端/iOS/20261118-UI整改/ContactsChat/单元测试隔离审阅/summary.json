@@ -1,0 +1,111 @@
+{
+  "timeUTC": "2026-11-18T07:15:13.099278+00:00",
+  "mode": "read-only-source-and-test-configuration-review",
+  "run": false,
+  "build": false,
+  "wholeTargetSafe": false,
+  "safeWholeClassesWithRequiredHostFlag": [
+    {
+      "class": "IMAuthCredentialTests",
+      "methods": 3,
+      "path": "测试/前端/iOS/IMAuthCredentialTests.swift",
+      "sha256": "a09449a8da1a616ddef3e638e9585b7738e743619d86c9c387955c9484e4c6e4"
+    },
+    {
+      "class": "IMAuthoritativeSyncTests",
+      "methods": 21,
+      "path": "测试/前端/iOS/IMAuthoritativeSyncTests.swift",
+      "sha256": "d8fcf9b2d858053a6dc7c34681cd3615ccb5f10fd00fe5fee7670a1c0c4bc97a"
+    },
+    {
+      "class": "IMDataExportTests",
+      "methods": 10,
+      "path": "测试/前端/iOS/IMDataExportTests.swift",
+      "sha256": "dc0603dca2b7191f3a05dca52b8d808b004f3ac831a9ea884d8f49f5aa08be26"
+    },
+    {
+      "class": "IMMigrationServiceTests",
+      "methods": 10,
+      "path": "测试/前端/iOS/IMMigrationServiceTests.swift",
+      "sha256": "01c1b40da168e7ae4a2821e77e4d44a369a795ce676790b3bbb1c9a10c32240e"
+    },
+    {
+      "class": "IMMigrationTests",
+      "methods": 12,
+      "path": "测试/前端/iOS/IMMigrationTests.swift",
+      "sha256": "70fd61edf61add4848a9d47a56c629911e5f295799d1a83a2187f0961b062561"
+    },
+    {
+      "class": "IMPersonalStateTests",
+      "methods": 10,
+      "path": "测试/前端/iOS/IMPersonalStateTests.swift",
+      "sha256": "cc811f4e20fa2a2b19f134d67951a9570d02fcbdf5850cc5cfa4d1b5602f10c7"
+    },
+    {
+      "class": "IMReceiptServiceTests",
+      "methods": 14,
+      "path": "测试/前端/iOS/IMReceiptServiceTests.swift",
+      "sha256": "737746e3c8649cc5d9903811b4bf17be6e9ad64cdb94a66112068a3893ec811f"
+    },
+    {
+      "class": "IMReceiptStorageTests",
+      "methods": 8,
+      "path": "测试/前端/iOS/IMReceiptStorageTests.swift",
+      "sha256": "1bca785886cf2f6b8bb5035a2e340dafc984940ff4ecb37bd9ee2372055fca9a"
+    },
+    {
+      "class": "IMSessionTests",
+      "methods": 3,
+      "path": "测试/前端/iOS/IMSessionTests.swift",
+      "sha256": "eed892fe7162d95ff693460ef5bdab462c6ac887de2efcbd77aa823efd8c30f4"
+    },
+    {
+      "class": "IMStorageTests",
+      "methods": 9,
+      "path": "测试/前端/iOS/IMStorageTests.swift",
+      "sha256": "fcf8b21e44acc8eb06421918f121d214a2c497fd994fccedf31338e23ddf47c9"
+    }
+  ],
+  "sourceMethodCount": 100,
+  "requiredHostEnvironment": {
+    "JOBS_IM_SYNC_INJECTED_TESTS": "1"
+  },
+  "flagBoundary": "Debug IMSession.shared uses :memory: and skips account/keychain restore; verifyRestoreEpoch refuses HTTP, but raw IMAPIClient is not a network firewall",
+  "AppDelegateAutomaticallyInjectsFlag": false,
+  "schemeAutomaticallyInjectsFlag": false,
+  "currentProducts": "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Products",
+  "currentProductsXctestrunFound": [],
+  "currentUnitBundleExists": true,
+  "formatTemplateOnly": {
+    "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/JobsIM_iphonesimulator27.2-arm64.xctestrun",
+    "sha256": "d50eed9859ebbcce8eff93e3921539dfeedf01e276b7bb088916a794e8450555",
+    "mayNotUseOriginalProducts": true
+  },
+  "rebindPlan": [
+    "Copy official generated xctestrun into Shared/Unit; leave original unchanged",
+    "Keep JobsIMTests and __xctestrun_metadata__ entries only; remove UI entry",
+    "Recursively resolve every __TESTROOT__ to currentProducts, preserving __TESTHOST__/__PLATFORMS__/__SIMRUNTIMEROOT__ for Xcode",
+    "Retain TestHostPath=resolved Debug-iphonesimulator/JobsIM.app and TestBundlePath=__TESTHOST__/PlugIns/JobsIMTests.xctest; confirm existing current files",
+    "Set JOBS_IM_SYNC_INJECTED_TESTS=1 in both EnvironmentVariables and TestingEnvironmentVariables",
+    "Set CommandLineArguments=[]; do not add --demo",
+    "Set OnlyTestIdentifiers to exact ten classes and duplicate CLI -only-testing:JobsIMTests/ClassName restrictions",
+    "Use test-without-building on dedicated simulator only after active UI run ends; no user device, no project/scheme/global env edits",
+    "Bind current source and app/test binary SHA before execution; do not borrow old pass evidence"
+  ],
+  "knownRawHTTP": [
+    "IMIntegrationFixture fixed https://127.0.0.1:8443/api/ without env opt-in",
+    "IMForwardTests uses 28443",
+    "IMMessageListTests uses 20443",
+    "IMAuthRefreshIntegrationTests uses installed AuthRefreshPublic.json https://127.0.0.1:36443; only missing file skips",
+    "IMSelfStateIntegrationTests uses SelfStatePublic.json https://127.0.0.1:54443; sets isolation flag to 0 and requires public run UUID",
+    "IMAuthCoordinatorTests contains real password change using OwnPasswordPublic.json; sets isolation flag to 0",
+    "IMLifecycleTests/IMCompletionTests/IMMediaTests/IMSendAdmissionTests contain raw real API writes"
+  ],
+  "original9443Boundary": "No fixed9443 literal observed in unit sources; without host isolation restoring instanceURL/credentials could still activate any stored original instance. Dynamic public configs can also point elsewhere. Do not treat absence of literal9443 as protection.",
+  "existingWrapper": "personal_state.py:199-200 injects both environment dictionaries correctly; its Integration-name rejection is not a complete safe whitelist for mixed classes",
+  "otherExclusions": [
+    "IMNotificationTests changes native authorization/delivered alerts; not part of these no-network ten classes",
+    "UI targets not included",
+    "mixed test classes require method-level audit before adding"
+  ]
+}

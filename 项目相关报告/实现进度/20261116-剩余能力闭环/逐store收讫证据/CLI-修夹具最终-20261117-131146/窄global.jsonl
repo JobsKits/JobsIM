@@ -1,0 +1,7 @@
+{"Time":"2026-11-17T13:18:11.580842+08:00","Action":"start","Package":"jobsim/cli/cmd/jobsim"}
+{"Time":"2026-11-17T13:18:12.306289+08:00","Action":"run","Package":"jobsim/cli/cmd/jobsim","Test":"TestMigrationGlobalPrunesArchiveOriginalAndEncryptedStageAndBlocksLateInstall"}
+{"Time":"2026-11-17T13:18:12.306502+08:00","Action":"output","Package":"jobsim/cli/cmd/jobsim","Test":"TestMigrationGlobalPrunesArchiveOriginalAndEncryptedStageAndBlocksLateInstall","Output":"=== RUN   TestMigrationGlobalPrunesArchiveOriginalAndEncryptedStageAndBlocksLateInstall\n","OutputType":"frame"}
+{"Time":"2026-11-17T13:18:12.378293+08:00","Action":"output","Package":"jobsim/cli/cmd/jobsim","Test":"TestMigrationGlobalPrunesArchiveOriginalAndEncryptedStageAndBlocksLateInstall","Output":"--- PASS: TestMigrationGlobalPrunesArchiveOriginalAndEncryptedStageAndBlocksLateInstall (0.07s)\n","OutputType":"frame"}
+{"Time":"2026-11-17T13:18:12.378537+08:00","Action":"pass","Package":"jobsim/cli/cmd/jobsim","Test":"TestMigrationGlobalPrunesArchiveOriginalAndEncryptedStageAndBlocksLateInstall","Elapsed":0.07}
+{"Time":"2026-11-17T13:18:12.378981+08:00","Action":"output","Package":"jobsim/cli/cmd/jobsim","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-17T13:18:12.380283+08:00","Action":"pass","Package":"jobsim/cli/cmd/jobsim","Elapsed":0.799}

@@ -1,0 +1,8 @@
+{
+  "ownFixturePortsListening": {
+    "62381": false,
+    "62382": false
+  },
+  "userInstanceTouched": false,
+  "note": "Only own 66bf test clusters; main/journal stopped by explicit pg_ctl trap."
+}

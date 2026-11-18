@@ -374,31 +374,47 @@ func Backup(ctx context.Context, o BackupOptions) error {
 			return e
 		}
 	}
-	rows, e := tx.Query(ctx, `SELECT storage_key,size_bytes,sha256 FROM media.objects`)
+	rows, e := tx.Query(ctx, `SELECT id::text,storage_key,size_bytes,sha256 FROM media.objects`)
 	if e != nil {
 		return e
 	}
+	type backedMedia struct {
+		id, name string
+		size     int64
+		digest   []byte
+	}
+	mediaItems := []backedMedia{}
 	for rows.Next() {
-		var name string
-		var size int64
-		var digest []byte
-		if e = rows.Scan(&name, &size, &digest); e != nil {
+		var item backedMedia
+		if e = rows.Scan(&item.id, &item.name, &item.size, &item.digest); e != nil {
 			rows.Close()
 			return e
 		}
-		if filepath.Base(name) != name {
-			rows.Close()
+		mediaItems = append(mediaItems, item)
+	}
+	e = rows.Err()
+	rows.Close()
+	if e != nil {
+		return e
+	}
+	for _, item := range mediaItems {
+		needed, err := MediaObjectNeedsBackup(ctx, business, item.id)
+		if err != nil {
+			return err
+		}
+		if !needed {
+			continue
+		}
+		if filepath.Base(item.name) != item.name {
 			return fmt.Errorf("unsafe media storage key")
 		}
-		source := filepath.Join(o.StateDir, "Media", name)
-		actual, e := fileDigest(source)
-		if e != nil || actual.Size != size || actual.Digest != hex.EncodeToString(digest) {
-			rows.Close()
+		source := filepath.Join(o.StateDir, "Media", item.name)
+		actual, err := fileDigest(source)
+		if err != nil || actual.Size != item.size || actual.Digest != hex.EncodeToString(item.digest) {
 			return fmt.Errorf("referenced media bytes missing or corrupt")
 		}
-		sources["Media/"+name] = source
+		sources["Media/"+item.name] = source
 	}
-	rows.Close()
 	if e = tx.Commit(ctx); e != nil {
 		return e
 	}
@@ -579,6 +595,9 @@ type safetyCoverage struct {
 }
 
 func replaySafetyCovered(ctx context.Context, business, journal *pgx.Conn, baseline backupManifest) (safetyCoverage, error) {
+	return replaySafetyCoveredDomains(ctx, business, journal, baseline, nil)
+}
+func replaySafetyCoveredDomains(ctx context.Context, business, journal *pgx.Conn, baseline backupManifest, domains map[string]*pgx.Conn) (safetyCoverage, error) {
 	coverage := safetyCoverage{From: "0", Through: "0", SnapshotThrough: str(baseline.JournalThrough)}
 	jtx, e := journal.BeginTx(ctx, pgx.TxOptions{IsoLevel: pgx.RepeatableRead, AccessMode: pgx.ReadOnly})
 	if e != nil {
@@ -639,6 +658,28 @@ func replaySafetyCovered(ctx context.Context, business, journal *pgx.Conn, basel
 			coverage.SnapshotAnchorVerified = true
 		}
 		previous = chain
+		if domains != nil {
+			owner := q.Owner
+			if q.Kind == "message.export_holder" || q.Kind == "media.export_holder" || q.Kind == "governance.export_fence" || strings.HasSuffix(q.Kind, ".personal_export_holder") || q.Kind == "media.personal_export_avatar_holder" {
+				owner = "governance"
+			}
+			business = domains[owner]
+			if business == nil {
+				return coverage, fmt.Errorf("journal owner has no isolated target")
+			}
+		}
+		if handled, replayErr := ReplayMediaUploadSafety(ctx, business, q); handled {
+			if replayErr != nil {
+				return coverage, replayErr
+			}
+			continue
+		}
+		if handled, replayErr := ReplayAccountDeletionSafety(ctx, business, q); handled {
+			if replayErr != nil {
+				return coverage, replayErr
+			}
+			continue
+		}
 		if q.Phase != "intent" && !(q.Kind == "auth.account_state" && q.Payload["state"] == "active") {
 			continue
 		}
@@ -679,10 +720,16 @@ func replaySafetyCovered(ctx context.Context, business, journal *pgx.Conn, basel
 		case "directory.block":
 			_, e = business.Exec(ctx, `INSERT INTO directory.blocks(owner_id,peer_id) VALUES($1,$2) ON CONFLICT DO NOTHING`, text("userId"), text("peerId"))
 			if e == nil {
-				_, e = business.Exec(ctx, `UPDATE directory.contacts SET state='removed',request_gate='denied',request_generation=request_generation+1 WHERE(owner_id=$1 AND peer_id=$2)OR(owner_id=$2 AND peer_id=$1)`, text("userId"), text("peerId"))
+				_, e = business.Exec(ctx, `UPDATE directory.contacts SET request_gate='open',request_generation=request_generation+1,permission_generation=permission_generation+1 WHERE(owner_id=$1 AND peer_id=$2)OR(owner_id=$2 AND peer_id=$1)`, text("userId"), text("peerId"))
+			}
+			if e == nil {
+				_, e = business.Exec(ctx, `UPDATE directory.contact_requests SET state='rejected' WHERE((requester_id=$1 AND recipient_id=$2)OR(requester_id=$2 AND recipient_id=$1)) AND state='pending'`, text("userId"), text("peerId"))
 			}
 		case "directory.unblock":
 			_, e = business.Exec(ctx, `DELETE FROM directory.blocks WHERE owner_id=$1 AND peer_id=$2`, text("userId"), text("peerId"))
+			if e == nil {
+				_, e = business.Exec(ctx, `UPDATE directory.contacts SET request_gate='open',permission_generation=permission_generation+1 WHERE(owner_id=$1 AND peer_id=$2)OR(owner_id=$2 AND peer_id=$1)`, text("userId"), text("peerId"))
+			}
 		case "conversation.leave":
 			generation := text("membershipGeneration")
 			if generation == "" {
@@ -702,6 +749,15 @@ func replaySafetyCovered(ctx context.Context, business, journal *pgx.Conn, basel
 			handled, replayError := ReplayPersonalExportSafety(ctx, business, q)
 			if replayError == nil && !handled {
 				handled, replayError = ReplayDraftSafety(ctx, business, q)
+			}
+			if replayError == nil && !handled {
+				handled, replayError = ReplayGroupSafety(ctx, business, q)
+			}
+			if replayError == nil && !handled {
+				handled, replayError = ReplayRetentionSafety(ctx, business, q)
+			}
+			if replayError == nil && !handled {
+				handled, replayError = ReplayMediaRetentionSafety(ctx, business, q)
 			}
 			if replayError == nil && !handled {
 				handled, replayError = ReplayExportSafety(ctx, business, q)

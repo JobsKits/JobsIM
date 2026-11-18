@@ -13,7 +13,11 @@ const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'jobsim-cli-tests-'));
 const overlay = path.join(temporary, 'overlay.json');
 const testTimeout = process.env.JOBSIM_CLI_TEST_TIMEOUT ?? '120s';
 if (!/^[1-9][0-9]*(ms|s|m)$/.test(testTimeout)) throw new Error('Invalid JOBSIM_CLI_TEST_TIMEOUT');
-const tests = ['outbox_test.go', 'governance_test.go', 'collaboration_test.go', 'auth_test.go', 'auth_https_test.go', 'sync_test.go', 'self_state_test.go', 'receipt_test.go', 'receipt_objects_test.go', 'data_export_test.go', 'password_change_test.go'];
+// Keep new external feature tests in the default regression automatically.
+const tests = fs.readdirSync(here, { withFileTypes: true })
+  .filter(entry => entry.isFile() && entry.name.endsWith('_test.go'))
+  .map(entry => entry.name)
+  .sort();
 const replacements = Object.fromEntries(tests.map(name => [
   path.join(root, '代码/前端/CLI/cmd/jobsim', name), path.join(here, name)
 ]));

@@ -1,0 +1,46 @@
+{
+  "startedAt": "2026-11-17T04:31:03.067Z",
+  "finishedAt": "2026-11-17T04:31:03.165Z",
+  "passed": 22,
+  "checks": [
+    "permission is requested only by explicit start and repeated start does not reprompt",
+    "cancel while permission is pending closes the late stream without creating a recorder or preview",
+    "changing owner before permission arrives stops every returned track",
+    "permission refusal and missing device are visible retryable failures",
+    "unsupported containers never request the microphone",
+    "a short recording is discarded and all tracks are closed",
+    "explicit stop includes the recorder final data and only prepares a preview",
+    "device mute and ended events interrupt instead of silently sending partial audio",
+    "hidden or changed owner interrupts on the active ownership tick",
+    "an unexpected recorder stop does not become sendable audio",
+    "the duration limit stops and prepares preview without automatic upload",
+    "the byte limit discards chunks and stops tracks",
+    "checkpoint binding distinguishes account namespace, content version and exact media digest",
+    "the metadata whitelist drops unknown fields and global removes only matching messages",
+    "the first checkpoint for a new content version is installed immediately",
+    "a late old version cannot save over or delete the newer checkpoint",
+    "same-version different bytes do not erase a later legitimate binding",
+    "local heard status does not regress and late timestamps cannot rewind a checkpoint",
+    "completion keeps local heard status but resets the resume position",
+    "positions, unbounded durations, counters and duplicate IDs fail closed",
+    "checkpoint storage stays bounded at 256 entries and rejects oversized persisted holders",
+    "all ten locales expose complete nonempty recording and playback keys"
+  ],
+  "sourceBefore": {
+    "代码/前端/Web/Src/AudioRecorderController.ts": "386c6c4ea76e107e7398a051a76c3cd7e9459eab08ce5ec4d762c1865d84ab40",
+    "代码/前端/Web/Src/PlaybackCheckpointProtocol.ts": "99647dc2c5b74d082ce20191824edc0e3641d6b080c97d6017fd61a98d00766f",
+    "代码/前端/Web/Src/AudioMessageLabels.ts": "19b4e242dbf8adbfeac77b4622a25a8c62164d4ef7495142972268d856d02ea6",
+    "测试/前端/Web/audio-rules.cjs/audio-rules.cjs": "1d778c4c96b1ed950b05b518e68bfe390ccaf718800eed20a77b4d243cbe4f99"
+  },
+  "sourceAfter": {
+    "代码/前端/Web/Src/AudioRecorderController.ts": "386c6c4ea76e107e7398a051a76c3cd7e9459eab08ce5ec4d762c1865d84ab40",
+    "代码/前端/Web/Src/PlaybackCheckpointProtocol.ts": "99647dc2c5b74d082ce20191824edc0e3641d6b080c97d6017fd61a98d00766f",
+    "代码/前端/Web/Src/AudioMessageLabels.ts": "19b4e242dbf8adbfeac77b4622a25a8c62164d4ef7495142972268d856d02ea6",
+    "测试/前端/Web/audio-rules.cjs/audio-rules.cjs": "1d778c4c96b1ed950b05b518e68bfe390ccaf718800eed20a77b4d243cbe4f99"
+  },
+  "realBrowser": false,
+  "realMicrophone": false,
+  "indexedDB": false,
+  "typeCheck": false,
+  "productionBuild": false
+}

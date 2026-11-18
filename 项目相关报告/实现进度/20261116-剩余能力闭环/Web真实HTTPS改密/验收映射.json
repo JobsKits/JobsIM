@@ -1,0 +1,61 @@
+{
+  "createdAt": "2026-11-17T07:28:58.429307+00:00",
+  "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web真实HTTPS改密/1794900127874-989/结果.json",
+  "execution": "1794900127744-执行.json",
+  "driverSHA256": "d78d8326d4f3755591fc0b47e849d302bf8c051672eece85a9692450326e93e3",
+  "sourceCount": 82,
+  "currentMatchesResultAndFrozenBuild": true,
+  "production": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/ReceiptDeclaration/1794897541275/Production",
+  "servedBundleSHA256": "ba564110169077f714cd2ece90cb18bc64ba2a1911754ccc54de5687cd16839b",
+  "servedBundleMatchesFrozenBuild": true,
+  "actualCheckCount": 7,
+  "method": "Actual production React UI and own Canonical HTTPS backend; no response mocks; strict CA/host Node and browser only this leaf SPKI; no a4 requests.",
+  "priorAttempts": [
+    {
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web真实HTTPS改密/1794899722922-94698/结果.json",
+      "sha256": "25f41881463ad3a8dd0830d1348935d0fe9ea463dfad4b1a857a3c3b2b7dffc2",
+      "failure": {
+        "name": "TimeoutError",
+        "message": "locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Settings', exact: true })\u001b[22m\n"
+      },
+      "scope": "服务端偏好切回中文，驱动按英文Settings定位超时；未到改密，首个注册family未显式logout。",
+      "sourceUnchanged": true
+    },
+    {
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web真实HTTPS改密/1794899866906-97329/结果.json",
+      "sha256": "e29cca175c0f877f63b27a34c2aef619781de19bf5849deca3a7886ed65fc3ee",
+      "failure": {
+        "name": "TimeoutError",
+        "message": "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.auth-modal input[name=username]') to be visible\u001b[22m\n"
+      },
+      "scope": "驱动未等退出的React状态落地，头像打开旧profile；注册/确认/退出真实200，未到改密。",
+      "sourceUnchanged": true
+    },
+    {
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web真实HTTPS改密/1794899981555-99500/结果.json",
+      "sha256": "865b514f48e0b0c4500af545256ea7a9f0b3b3bf270893a86d02b7eb00d29811",
+      "failure": {
+        "name": "TimeoutError",
+        "message": "page.waitForResponse: Timeout 25000ms exceeded while waiting for event \"response\""
+      },
+      "scope": "真实改密/旧密拒绝/新密码reauthenticate均已成功，驱动仅等login路由超时；finally本人当前family已logout200。",
+      "sourceUnchanged": true
+    }
+  ],
+  "finalFilesSHA256": {
+    "项目相关报告/实现进度/20261116-剩余能力闭环/Web真实HTTPS改密/1794900127874-989/01-真实登录-改密空表单.png": "fb099e4463997911034d02ff1c87dd67ef8a1ee3e3d18a4ceafb2b456bcb0ce0",
+    "项目相关报告/实现进度/20261116-剩余能力闭环/Web真实HTTPS改密/1794900127874-989/02-已改密-回登录.png": "fccd84b2496a276d8a8fc0e83b4a7b1d892e1a33cd0f68a119d324e766c41ac4",
+    "项目相关报告/实现进度/20261116-剩余能力闭环/Web真实HTTPS改密/1794900127874-989/03-新登录-原结果只查.png": "c2dbb265812caa4f9bfea7f77f83ccd641eaf9306ca349c38a825d67b7f4f2e4",
+    "项目相关报告/实现进度/20261116-剩余能力闭环/Web真实HTTPS改密/1794900127874-989/结果.json": "ed9b4b21c6a841010e2568c5dce6307be52e2b77ff4a08529665c1c2b1de940b"
+  },
+  "visualReview": {
+    "01-真实登录-改密空表单.png": "内部滚动位置实际位于注销区，不能作为改密表单布局证明。",
+    "02-已改密-回登录.png": "已目视：回到登录、原改密状态可见、密码框空。",
+    "03-新登录-原结果只查.png": "已目视：新登录的原单查询表单、三个密码框清空。"
+  },
+  "boundaries": [
+    "No admin OTP, multidevice family matrix, actual lost-network recovery, password manager, mobile or all-language/theme matrix in this smoke.",
+    "Previous 147 mock checks and native122 are independent evidence, not added to these seven chain checks.",
+    "First failed attempt did not explicitly revoke its registration family; browser closure is not claimed as revocation. Subsequent own active families exited where recorded; no accounts/history deleted."
+  ]
+}

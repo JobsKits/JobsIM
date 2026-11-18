@@ -1,0 +1,20 @@
+[
+  {
+    "name": "JobsIM",
+    "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/Debug-iphonesimulator/JobsIM.app/JobsIM",
+    "sha256": "38992d97aa885dcb35f1badc1017dd4ea9fd2c9785dfb3a30a5e69f9e28151c7",
+    "size": 40400
+  },
+  {
+    "name": "JobsIMTests",
+    "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/Debug-iphonesimulator/JobsIM.app/PlugIns/JobsIMTests.xctest/JobsIMTests",
+    "sha256": "dad4799ee227599317440fe27c75136742af4a3af8ec4813129ed382ff775791",
+    "size": 3772496
+  },
+  {
+    "name": "JobsIMUITests",
+    "path": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/Debug-iphonesimulator/JobsIMUITests-Runner.app/PlugIns/JobsIMUITests.xctest/JobsIMUITests",
+    "sha256": "3b6cff4f9893300c5468a3a64c9e100f64960b293926d391b0661a295ca8ece9",
+    "size": 262176
+  }
+]

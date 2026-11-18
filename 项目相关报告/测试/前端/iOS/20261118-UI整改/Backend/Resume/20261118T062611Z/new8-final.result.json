@@ -1,0 +1,52 @@
+{
+  "label": "new8-final",
+  "exit": 0,
+  "elapsedSeconds": 6.018,
+  "diskBeforeKiB": 16344340,
+  "diskAfterKiB": 16342144,
+  "diskMinimumKiB": 16315920,
+  "topLevel": {
+    "pass": [
+      "TestUIReportSelectionAndUploadPurpose",
+      "TestUIOptionalRetractionSnapshot",
+      "TestUIContactDeletionNewRoundsAndPendingPG",
+      "TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG",
+      "TestUIContactRateResetsWithoutPermanentGatePG",
+      "TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG",
+      "TestUIUsernameCurrentIdentityAndSnapshotRetractionPG",
+      "TestUIReportSelectedAttachmentAndMissingEvidencePG"
+    ],
+    "fail": [],
+    "skip": []
+  },
+  "packageResults": [
+    {
+      "Time": "2026-11-18T14:43:21.361308+08:00",
+      "Action": "pass",
+      "Package": "jobsim/backend",
+      "Elapsed": 4.438
+    }
+  ],
+  "stdout": "new8-final.stdout.jsonl",
+  "stderr": "new8-final.stderr.log",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "-C",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/后端/Go",
+    "test",
+    "-overlay",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/overlay.json",
+    "-p",
+    "1",
+    "-parallel",
+    "1",
+    "-count",
+    "1",
+    "-timeout",
+    "12m",
+    "-json",
+    "-run",
+    "^TestUI(ReportSelectionAndUploadPurpose|OptionalRetractionSnapshot|ContactDeletionNewRoundsAndPendingPG|BlockKeepsFriendGroupAndRejectsOldDirectGrantPG|ContactRateResetsWithoutPermanentGatePG|ReportEvidenceOwnershipSelectedRefsAndRevocationPG|UsernameCurrentIdentityAndSnapshotRetractionPG|ReportSelectedAttachmentAndMissingEvidencePG)$",
+    "."
+  ]
+}

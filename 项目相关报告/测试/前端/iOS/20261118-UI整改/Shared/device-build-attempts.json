@@ -1,0 +1,45 @@
+[
+  {
+    "attempt": 1,
+    "status": "failed",
+    "errors": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMUserProfileVC/IMUserProfileVC.swift:33:20: error: value of type 'IMAvatarVC' has no member 'byHidesBottomBarWhenPushed'",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift:78:32: error: reference to property 'scroll' in closure requires explicit use of 'self' to make capture semantics explicit",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift:79:32: error: reference to property 'scroll' in closure requires explicit use of 'self' to make capture semantics explicit",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMReportComposerVC/IMReportComposerVC.swift:88:32: error: reference to property 'scroll' in closure requires explicit use of 'self' to make capture semantics explicit",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMReportComposerVC/IMReportComposerVC.swift:89:32: error: reference to property 'scroll' in closure requires explicit use of 'self' to make capture semantics explicit",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMRootVC/IMRootVC.swift:58:58: error: value of type 'IMSettingsVC' has no member 'byHidesBottomBarWhenPushed'",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMChatSettingsVC/IMChatSettingsVC.swift:89:30: error: reference to property 'scroll' in closure requires explicit use of 'self' to make capture semantics explicit",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMChatSettingsVC/IMChatSettingsVC.swift:90:30: error: reference to property 'scroll' in closure requires explicit use of 'self' to make capture semantics explicit"
+    ],
+    "log": "项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/device-build-1.log",
+    "sha256": "7edc56460404df2a80fadabfd4d1123de5a73580525f6ec4695deeeaee231ed5"
+  },
+  {
+    "attempt": 2,
+    "status": "failed",
+    "errors": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMContactsVC/IMContactsVC.swift:95:34: error: reference to property 'toolbar' in closure requires explicit use of 'self' to make capture semantics explicit"
+    ],
+    "log": "项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/device-build-2.log",
+    "sha256": "593f08f40f73c82820f015494ca8ab41cbfc0cbb8d3f06ef2664598a7549ff8f"
+  },
+  {
+    "attempt": 3,
+    "status": "failed",
+    "errors": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMReportComposerVC/IMReportComposerVC.swift:248:33: error: sending 'self' risks causing data races [#RegionIsolation::SendingRisksDataRace]"
+    ],
+    "log": "项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/device-build-3.log",
+    "sha256": "961bfc7c83e58b74b9f2ba98ba64ee9e7e83a4c4f5b27dc3dd0c02f3a110c6fd"
+  },
+  {
+    "attempt": 4,
+    "status": "failed",
+    "errors": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift:240:14: error: value of type 'UIView' has no member 'byAddGestureRecognizer'"
+    ],
+    "log": "项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/device-build-4.log",
+    "sha256": "3cf56b5492da3a24dc54f7be96823444e22dd3840ae38f91c4fc49be7078d570"
+  }
+]

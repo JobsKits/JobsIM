@@ -1,0 +1,35 @@
+{
+  "onlyTestIdentifiers": [
+    "IMAuthCredentialTests",
+    "IMAuthoritativeSyncTests",
+    "IMDataExportTests",
+    "IMMigrationServiceTests",
+    "IMMigrationTests",
+    "IMPersonalStateTests",
+    "IMReceiptServiceTests",
+    "IMReceiptStorageTests",
+    "IMSessionTests",
+    "IMStorageTests"
+  ],
+  "runnerArguments": [
+    "xcodebuild",
+    "-xctestrun",
+    "<Shared/Unit/current-only10.xctestrun>",
+    "-destination",
+    "platform=iOS Simulator,id=736D4534-6DBF-42A9-97A9-8DABFC208987",
+    "-parallel-testing-enabled",
+    "NO",
+    "-only-testing:JobsIMTests/IMAuthCredentialTests",
+    "-only-testing:JobsIMTests/IMAuthoritativeSyncTests",
+    "-only-testing:JobsIMTests/IMDataExportTests",
+    "-only-testing:JobsIMTests/IMMigrationServiceTests",
+    "-only-testing:JobsIMTests/IMMigrationTests",
+    "-only-testing:JobsIMTests/IMPersonalStateTests",
+    "-only-testing:JobsIMTests/IMReceiptServiceTests",
+    "-only-testing:JobsIMTests/IMReceiptStorageTests",
+    "-only-testing:JobsIMTests/IMSessionTests",
+    "-only-testing:JobsIMTests/IMStorageTests",
+    "test-without-building"
+  ],
+  "execution": "not executed by reviewer; root owns rebind/runtime selection and source/product matching"
+}

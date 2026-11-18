@@ -1,0 +1,31 @@
+{
+  "pid": 37478,
+  "serial": "emulator-5580",
+  "name": "JobsIM_Regression_20261117_153544_d52437",
+  "avdHome": "/Users/jobs/Library/Application Support/JobsIM/Regression/Android-20261117-153544-d52437/avds",
+  "avd": "/Users/jobs/Library/Application Support/JobsIM/Regression/Android-20261117-153544-d52437/avds/JobsIM_Regression_20261117_153544_d52437.avd",
+  "command": [
+    "/Users/jobs/Library/Android/sdk/emulator/emulator",
+    "-avd",
+    "JobsIM_Regression_20261117_153544_d52437",
+    "-port",
+    "5580",
+    "-no-window",
+    "-no-snapshot",
+    "-no-boot-anim",
+    "-no-audio",
+    "-gpu",
+    "swiftshader",
+    "-memory",
+    "2048",
+    "-cores",
+    "2",
+    "-camera-back",
+    "none",
+    "-camera-front",
+    "none"
+  ],
+  "report": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android独立AVD-20261117-153544-d52437/保数据复启-20261117-161819",
+  "stopMarker": "/Users/jobs/Library/Application Support/JobsIM/Regression/Android-20261117-153544-d52437/STOP",
+  "preserveData": true
+}

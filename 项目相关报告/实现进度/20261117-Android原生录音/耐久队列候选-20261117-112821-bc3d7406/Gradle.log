@@ -1,0 +1,36 @@
+Picked up JAVA_TOOL_OPTIONS: -XX:ActiveProcessorCount=2
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.5.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:processDebugNavigationResources
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :app:kspDebugKotlin
+
+> Task :app:compileDebugKotlin FAILED
+e: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/VoiceUpload/20261117-112821-bc3d7406/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt:48:89 Unresolved reference 'O_DIRECTORY'.
+
+[Incubating] Problems report is available at: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/VoiceUpload/20261117-112821-bc3d7406/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugKotlin' (registered by plugin 'com.android.internal.application').
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.btapi.BuildToolsApiCompilationWork
+   > Kotlin compiler: UNRESOLVED_REFERENCE
+       Kotlin compiler error
+         Unresolved reference 'O_DIRECTORY'.
+         Location: /Users/jobs/Library/Application Support/JobsIM/Build/Android/VoiceUpload/20261117-112821-bc3d7406/代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt line 48
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 24s
+8 actionable tasks: 8 executed

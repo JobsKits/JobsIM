@@ -1,0 +1,45 @@
+✔ ten languages contain every group control (2.792209ms)
+✔ share code is strict standard base64 UTF8, instance-bound and exact typed fields (0.870375ms)
+✔ staged transfer freezes actor and original target generations without later rebasing (1.755708ms)
+✔ unknown governance result is queried by original nonce without another mutation (0.249875ms)
+✔ only original lookup404 can authorize explicit retry; dependency403 never creates (0.14625ms)
+✔ prepared dependency403 leaves original unknown and preserves its body (0.126833ms)
+✔ invitation token stays only in RAM and deliberate share code; close clears it (0.192041ms)
+✔ cold join retains only nonce/inviteId and requires reentering the same code (0.360083ms)
+✔ unknown join cannot replace its invite token by another invitation (0.206666ms)
+✔ old epoch remains original-result-only even for an explicit retry (0.27675ms)
+✖ member and invitation pagination retain UUID cursor and remove invite token from public page (0.512666ms)
+✔ recovery uses canRecover and RAM-only step-up for the frozen original payload (0.217ms)
+✔ member-only and unavailable groups cannot stage manager operations (0.121709ms)
+✔ late identity change cannot publish a successful mutation into the successor (0.129792ms)
+✔ malformed result nonce or numeric generation remains unknown (0.178958ms)
+✔ shipped RDB repository CAS and owner isolation survive reopening without invite secrets (32.496417ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 15
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.895167
+
+✖ failing tests:
+
+test at 测试/前端/HarmonyOS/Unit/Group.test.cjs/Group.test.cjs:37:1
+✖ member and invitation pagination retain UUID cursor and remove invite token from public page (0.512666ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '1cb41b02-0c86-4efe-b8b8-aa038321a7c0'
+  - undefined
+  
+      at TestContext.<anonymous> (/Users/jobs/Documents/GitHub/JobsIM/测试/前端/HarmonyOS/Unit/Group.test.cjs/Group.test.cjs:37:202)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '1cb41b02-0c86-4efe-b8b8-aa038321a7c0',
+    expected: undefined,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

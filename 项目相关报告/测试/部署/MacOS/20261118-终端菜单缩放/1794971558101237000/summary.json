@@ -1,0 +1,11 @@
+{
+  "fzfVersion": "0.75.0 (Homebrew)",
+  "fixture": "/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM 菜单缩放 7_dja9jc",
+  "terminalGuiDragVerified": false,
+  "scope": "真实PTY协议/窗口尺寸/键盘；未连接Terminal图形界面，未启停现有服务",
+  "sources": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "4bdebc6686205cce92345da22b90dfc7c71f6caa7b4d67ca472e89c81a5205ee",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "dd43efa0740b31df18190af02ef03ca7379f1190e8188b41e60d823a982148c3"
+  },
+  "cases": []
+}

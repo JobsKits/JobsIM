@@ -1,0 +1,509 @@
+{
+  "schema": "jobsim-ios-ui-backend-targeted-resume-v1",
+  "status": "passed-targeted",
+  "createdAt": "2026-11-18T06:55:19.792311+00:00",
+  "phaseSourceOnly": {
+    "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/summary.json",
+    "sha256": "31f97c66aefc5719a0b7e23c955f636cdf1663f7bbcf7c3d244ac163a564b3f2",
+    "frozen": true
+  },
+  "buildInputs": {
+    "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/build-inputs.sha256.json",
+    "sha256": "6671fef04ee75c6602ad0b47cee3b9a1c755a877045182d6b31ddf5d530874dc",
+    "productionCount": 142,
+    "completeOverlayFiles": 50
+  },
+  "currentSourceFiles": [
+    {
+      "path": "代码/后端/Go/contact_policy.go",
+      "bytes": 1223,
+      "sha256": "a8fd2851518c03d767f8bc2e9791701198cddc0b29836c259bd6b686173142b2"
+    },
+    {
+      "path": "代码/后端/Go/directory.go",
+      "bytes": 19118,
+      "sha256": "36946f63a122c41f9c7f8b6ca213cf7e53ce54dd45c38357f2c4a2f59823cb9a"
+    },
+    {
+      "path": "代码/后端/Go/conversation.go",
+      "bytes": 18789,
+      "sha256": "08a5156941081ffbfe6947288941f016bc5eca6c6d992093cf61abfc53b00ac8"
+    },
+    {
+      "path": "代码/后端/Go/operations.go",
+      "bytes": 28125,
+      "sha256": "c86fcbbaf8ce7811564895c554b1f91ca8bda2ade1f47246d74d112b52d4dcaa"
+    },
+    {
+      "path": "代码/后端/Go/media.go",
+      "bytes": 7714,
+      "sha256": "d78ced295af56a71780235ea194244e3d4e85fd583da837dd525352c2dcac8c5"
+    },
+    {
+      "path": "代码/后端/Go/media_upload.go",
+      "bytes": 11959,
+      "sha256": "d71fdfd39a8ee3203e9a506c99ba897fdd48b84099f4b778d48cfe689448e5b7"
+    },
+    {
+      "path": "代码/后端/Go/media_upload_model.go",
+      "bytes": 8034,
+      "sha256": "e5f79d5585a1475c1b4f7ebf027d1ad39c38adb4d91e93cf6f3f4f20f7c126da"
+    },
+    {
+      "path": "代码/后端/Go/report_evidence.go",
+      "bytes": 4508,
+      "sha256": "2e970a258c378298c8842d86b568d728c37a2caaa06eaf69eb36c5cb05f39b35"
+    },
+    {
+      "path": "代码/后端/Go/report_evidence_model.go",
+      "bytes": 5128,
+      "sha256": "c3f5eac20c076e1b5926d1fd5a51167c3b4081890c98fcdc1b715a8fbd8dc608"
+    },
+    {
+      "path": "代码/后端/Go/report_media.go",
+      "bytes": 5543,
+      "sha256": "4b3e5ca04a6112dd4d6457c91acffd1b1c1387f09b455f6b9728b470ff6ed223"
+    },
+    {
+      "path": "代码/后端/Go/reports.go",
+      "bytes": 13370,
+      "sha256": "5f8b876cd26af03823631b40cf3dce810ded1b2c1ddaf1374e82b904278d61b4"
+    },
+    {
+      "path": "代码/后端/Go/server.go",
+      "bytes": 16221,
+      "sha256": "d8e9deb7fc44156dba9d121eff5a77c425709ce978988061513eefee4f1d8f8b"
+    },
+    {
+      "path": "代码/后端/Go/personal_export_fence.go",
+      "bytes": 6583,
+      "sha256": "bd9912dbc2286707fb95ce52add9e92a026393466417ca2082d8db006332705a"
+    },
+    {
+      "path": "代码/后端/Go/send_admission.go",
+      "bytes": 16049,
+      "sha256": "3a28303df9f59a9f45b69205ef76507588729b1090d918f02cb76f2e28cd89e8"
+    },
+    {
+      "path": "代码/后端/Go/username.go",
+      "bytes": 5775,
+      "sha256": "cb7e16dd0b529f0408c3f8c804658b9578733b2d7160351476f3696b148596e6"
+    },
+    {
+      "path": "代码/后端/Go/identity.go",
+      "bytes": 41904,
+      "sha256": "9efe7fb7c1767b3c5cfc4b90f92d7d8d7195412fee73798981ac9f6b343cdfe0"
+    },
+    {
+      "path": "代码/后端/Go/message.go",
+      "bytes": 23553,
+      "sha256": "dd294e0d9dd10fc0e4c5f27fee43333175701c60552f1c2cc9244092539946ec"
+    },
+    {
+      "path": "代码/后端/Go/message_retract_request.go",
+      "bytes": 1238,
+      "sha256": "27d70a334de8fd5d7b08acf426e56a18d7bd783082dff1b58c0eb35561fe88b9"
+    },
+    {
+      "path": "测试/后端/接口/ui_contract_test.go",
+      "bytes": 23556,
+      "sha256": "88198fb2f2a9b087778a97d942e17ebd3dae4ad0e1729ff0e33683d62e92b703"
+    },
+    {
+      "path": "测试/后端/接口/media_upload_pg_test.go",
+      "bytes": 18278,
+      "sha256": "da31a3703191ae2b1ec3b7a069cebefec2198ebe5629d2078b6446b6268f6169"
+    },
+    {
+      "path": "测试/后端/接口/contact_relationship.py",
+      "bytes": 8648,
+      "sha256": "470832a0884d600e4d7d5600d1a31390ab34075c1377ea9039ad4e54efa0e723"
+    },
+    {
+      "path": "测试/后端/接口/integration.py",
+      "bytes": 8644,
+      "sha256": "66710728ac5d996cf2650f3bdf5053d5c321e7cd8cc13de61f04e773ea37543f"
+    },
+    {
+      "path": "测试/后端/接口/send_admission.py",
+      "bytes": 8784,
+      "sha256": "fe00b91da94c21e452ec981a4f5b4ece5554c36901e770b46073716ff16a819f"
+    },
+    {
+      "path": "需求/IM后端架构表.md/IM后端架构表.md",
+      "bytes": 251558,
+      "sha256": "7236aa2ebc21f5eac1ebece0f3641ffe41afd8cedef2b9905069f249b579be1b"
+    },
+    {
+      "path": "需求/JobsIM数据库设计.md/JobsIM数据库设计.md",
+      "bytes": 178891,
+      "sha256": "900518aa625e189f5c873be3561a6545740925da744658be1398ca0dde2080fe"
+    },
+    {
+      "path": "代码/后端/Go/接口契约/README.md",
+      "bytes": 90710,
+      "sha256": "7ddd8e6e3e69a72625492ff38c09e79c2a4a2757812a2c085cc353e92da142e0"
+    },
+    {
+      "path": "测试/后端/README.md",
+      "bytes": 18259,
+      "sha256": "33d48c3dcf067e546f0c496ad29708417850a92ac852023c7af7be464586b48d"
+    },
+    {
+      "path": "测试/后端/接口/sync_object_receipts_test.go",
+      "bytes": 18776,
+      "sha256": "c01dca95a657914a7f8802f170b70da1e76e2c8ac5b714ea509dfb01df977a8e"
+    },
+    {
+      "path": "测试/后端/接口/sync_receipts_test.go",
+      "bytes": 5415,
+      "sha256": "d4c91aec925d062299e5cc65460360c964fabb8fb1d5fd7c0ff2fa79657716da"
+    }
+  ],
+  "finalTests": {
+    "uniqueTopLevelPass": 27,
+    "fail": 0,
+    "unresolvedSkip": 0,
+    "newUI": {
+      "pass": 8,
+      "fail": 0,
+      "skip": 0,
+      "pure": 2,
+      "isolatedPG": 6
+    },
+    "affectedExisting": {
+      "uniquePass": 17,
+      "note": "15 initially passed; one missing-browser-input skip was actually rerun with fixed-SHA original and its classification test, adding2 distinct passes."
+    },
+    "vetFixtureMethods": {
+      "pass": 2
+    },
+    "methods": [
+      {
+        "name": "TestAdmissionLockCancellationCrashAndStateIdentity",
+        "source": "测试/后端/接口/send_admission_test.go"
+      },
+      {
+        "name": "TestMediaRetentionIndependentModesRejectImplicitDelay",
+        "source": "测试/后端/接口/media_retention_pg_test.go"
+      },
+      {
+        "name": "TestMediaRetentionPGCloudOnlyExactDeviceResumeAndRange",
+        "source": "测试/后端/接口/media_retention_pg_test.go"
+      },
+      {
+        "name": "TestMediaRetentionPGDeadlineNeverExtendsAndJournalFailurePreservesBytes",
+        "source": "测试/后端/接口/media_retention_pg_test.go"
+      },
+      {
+        "name": "TestMediaRetentionPGDescriptorRequiresOriginalPhysicalTuple",
+        "source": "测试/后端/接口/media_retention_pg_test.go"
+      },
+      {
+        "name": "TestMediaRetentionStableTimestampAndStreamingDeadline",
+        "source": "测试/后端/接口/media_retention_pg_test.go"
+      },
+      {
+        "name": "TestMediaUploadManifestAndMinimalSafetyFields",
+        "source": "测试/后端/接口/media_upload_pg_test.go"
+      },
+      {
+        "name": "TestMediaUploadPGActualBrowserContainerRemainsAudio",
+        "source": "测试/后端/接口/media_webm_browser_test.go"
+      },
+      {
+        "name": "TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes",
+        "source": "测试/后端/接口/media_upload_pg_test.go"
+      },
+      {
+        "name": "TestMediaUploadPGOriginalResultAndStableRetry",
+        "source": "测试/后端/接口/media_upload_pg_test.go"
+      },
+      {
+        "name": "TestMediaUploadPGOwnerErasureWaitsForEveryPreparedPage",
+        "source": "测试/后端/接口/media_upload_pg_test.go"
+      },
+      {
+        "name": "TestMediaUploadPGPreparedCannotOverwriteRegisteredOrDifferentBytes",
+        "source": "测试/后端/接口/media_upload_pg_test.go"
+      },
+      {
+        "name": "TestMediaUploadPGPreparedJournalUnknownAndPublishedCrashResume",
+        "source": "测试/后端/接口/media_upload_pg_test.go"
+      },
+      {
+        "name": "TestMediaUploadPGReplayRetiresMissingRequestAndClearsExactUUIDs",
+        "source": "测试/后端/接口/media_upload_pg_test.go"
+      },
+      {
+        "name": "TestMediaUploadPGSuccessorFamilyEpochAndBanCannotResumeOriginal",
+        "source": "测试/后端/接口/media_upload_pg_test.go"
+      },
+      {
+        "name": "TestObjectReceiptProofIsPurposeAndByteBound",
+        "source": "测试/后端/接口/sync_object_receipts_test.go"
+      },
+      {
+        "name": "TestReceiptProofBindsExactContentStoreAndRestoreEpoch",
+        "source": "测试/后端/接口/sync_receipts_test.go"
+      },
+      {
+        "name": "TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG",
+        "source": "测试/后端/接口/ui_contract_test.go"
+      },
+      {
+        "name": "TestUIContactDeletionNewRoundsAndPendingPG",
+        "source": "测试/后端/接口/ui_contract_test.go"
+      },
+      {
+        "name": "TestUIContactRateResetsWithoutPermanentGatePG",
+        "source": "测试/后端/接口/ui_contract_test.go"
+      },
+      {
+        "name": "TestUIOptionalRetractionSnapshot",
+        "source": "测试/后端/接口/ui_contract_test.go"
+      },
+      {
+        "name": "TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG",
+        "source": "测试/后端/接口/ui_contract_test.go"
+      },
+      {
+        "name": "TestUIReportSelectedAttachmentAndMissingEvidencePG",
+        "source": "测试/后端/接口/ui_contract_test.go"
+      },
+      {
+        "name": "TestUIReportSelectionAndUploadPurpose",
+        "source": "测试/后端/接口/ui_contract_test.go"
+      },
+      {
+        "name": "TestUIUsernameCurrentIdentityAndSnapshotRetractionPG",
+        "source": "测试/后端/接口/ui_contract_test.go"
+      },
+      {
+        "name": "TestUsernameAndPasswordBoundaries",
+        "source": "测试/后端/security_test.go"
+      },
+      {
+        "name": "TestWebMActualBrowserContainerClassification",
+        "source": "测试/后端/接口/media_webm_browser_test.go"
+      }
+    ],
+    "counting": "Distinct top-level method names only. Diagnostic/repeat runs do not add method count; runtime subtests are not new top-level methods."
+  },
+  "runs": {
+    "new8-first": {
+      "result": "new8-first.result.json",
+      "stdout": "new8-first.stdout.jsonl",
+      "stderr": "new8-first.stderr.log",
+      "exit": 1,
+      "pass": 7,
+      "fail": 1,
+      "skip": 0
+    },
+    "attachment-diagnostic": {
+      "result": "attachment-diagnostic.result.json",
+      "stdout": "attachment-diagnostic.stdout.jsonl",
+      "stderr": "attachment-diagnostic.stderr.log",
+      "exit": 1,
+      "pass": 0,
+      "fail": 1,
+      "skip": 0
+    },
+    "attachment-fixed": {
+      "result": "attachment-fixed.result.json",
+      "stdout": "attachment-fixed.stdout.jsonl",
+      "stderr": "attachment-fixed.stderr.log",
+      "exit": 0,
+      "pass": 1,
+      "fail": 0,
+      "skip": 0
+    },
+    "new8-final": {
+      "result": "new8-final.result.json",
+      "stdout": "new8-final.stdout.jsonl",
+      "stderr": "new8-final.stderr.log",
+      "exit": 0,
+      "pass": 8,
+      "fail": 0,
+      "skip": 0
+    },
+    "affected-existing": {
+      "result": "affected-existing.result.json",
+      "stdout": "affected-existing.stdout.jsonl",
+      "stderr": "affected-existing.stderr.log",
+      "exit": 0,
+      "pass": 15,
+      "fail": 0,
+      "skip": 1
+    },
+    "browser-existing": {
+      "result": "browser-existing.result.json",
+      "stdout": "browser-existing.stdout.jsonl",
+      "stderr": "browser-existing.stderr.log",
+      "exit": 0,
+      "pass": 2,
+      "fail": 0,
+      "skip": 0
+    },
+    "receipt-fixtures-fixed": {
+      "result": "receipt-fixtures-fixed.result.json",
+      "stdout": "receipt-fixtures-fixed.stdout.jsonl",
+      "stderr": "receipt-fixtures-fixed.stderr.log",
+      "exit": 0,
+      "pass": 2,
+      "fail": 0,
+      "skip": 0
+    }
+  },
+  "originalFailuresPreserved": {
+    "newUIFirst": {
+      "pass": 7,
+      "fail": 1,
+      "skip": 0,
+      "result": "new8-first.result.json"
+    },
+    "attachmentDiagnostic": "attachment-diagnostic.result.json",
+    "fullOverlayVet": "go-vet.result.json",
+    "copyLockDiagnostics": "go-vet.stderr.log",
+    "environmentSkip": {
+      "test": "TestMediaUploadPGActualBrowserContainerRemainsAudio",
+      "original": "affected-existing.result.json",
+      "reason": "explicit original browser Blob and fixed SHA256 not initially supplied",
+      "actualRerun": "browser-existing.result.json",
+      "resolved": true
+    }
+  },
+  "fixes": [
+    {
+      "source": "代码/后端/Go/report_media.go",
+      "before": "修正前/report_media-first.go",
+      "finding": "report-bound selected attachment skipped initial requireMediaRetention before servePrivateMedia; valid first read returned410; existing retention confirmation now runs before opening bytes.",
+      "originalFailure": "new8-first.result.json",
+      "diagnosticFailure": "attachment-diagnostic.result.json",
+      "fixedProof": "attachment-fixed.result.json"
+    },
+    {
+      "source": "测试/后端/接口/ui_contract_test.go",
+      "before": "修正前/ui_contract_test-first.go",
+      "finding": "Added redacted status/byte-length/cache-header failure diagnostics; retained byte equality and no-store checks."
+    },
+    {
+      "source": "测试/后端/接口/sync_object_receipts_test.go",
+      "before": "修正前/sync_object_receipts_test.go",
+      "finding": "Replaced App value copy (atomic/mutex fields) with a fresh App containing only required DeploymentID and Key; assertions unchanged.",
+      "originalFailure": "go-vet.result.json",
+      "fixedProof": "receipt-fixtures-fixed.result.json"
+    },
+    {
+      "source": "测试/后端/接口/sync_receipts_test.go",
+      "before": "修正前/sync_receipts_test.go",
+      "finding": "Replaced App value copy (atomic/mutex fields) with a fresh App containing only required DeploymentID and Key; assertions unchanged.",
+      "originalFailure": "go-vet.result.json",
+      "fixedProof": "receipt-fixtures-fixed.result.json"
+    }
+  ],
+  "verification": {
+    "goTestCompileAndExecution": true,
+    "completeOverlayVet": {
+      "exit": 0,
+      "elapsedSeconds": 1.015,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "-C",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/后端/Go",
+        "vet",
+        "-p",
+        "1",
+        "-overlay",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/overlay.json",
+        "."
+      ],
+      "scope": "Complete external-test overlay"
+    },
+    "productionVet": {
+      "exit": 0,
+      "elapsedSeconds": 0.263,
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+        "-C",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/后端/Go",
+        "vet",
+        "-p",
+        "1",
+        "."
+      ],
+      "scope": "Production backend package only"
+    },
+    "gofmtParseFiles": 22,
+    "pythonASTFiles": 3,
+    "realHTTPThreeScriptsExecuted": false
+  },
+  "fixture": {
+    "runtime": "runtime.json",
+    "runUuid": "67001a78-80a6-4670-98de-49058acbdc9d",
+    "oneOwnedPostgresCluster": true,
+    "version": "PostgreSQL18.7 (Postgres.app)",
+    "port": 62381,
+    "perPGTestDatabase": "random jobsim_sync_schemas_<UUIDhex> created/dropped by test cleanup",
+    "nineRoles": [
+      "identity",
+      "directory",
+      "conversation",
+      "message",
+      "media",
+      "control",
+      "journal",
+      "governance",
+      "sync"
+    ],
+    "roleSeparation": "Per-test shared database with separate role schemas and in-process authenticated role RPC; no real HTTPS/NATS listener and no separate-cluster disaster recovery claim.",
+    "sourceRealmURLIsMetadataOnly": true,
+    "noUser9443Operation": true,
+    "browserInput": "browser-fixture-input.json"
+  },
+  "cleanup": {
+    "ownedPgPid": 47909,
+    "ownedPgPort": 62381,
+    "ownedData": "/Users/jobs/Library/Application Support/JobsIM/Integration/67001a78-80a6-4670-98de-49058acbdc9d/Safety/PGMain",
+    "databaseNamesBeforeStop": [
+      "postgres"
+    ],
+    "otherClientConnectionsBeforeStop": 0,
+    "listenerOwnerVerified": true,
+    "stopExit": 0,
+    "statusExitAfterStop": 3,
+    "portClosed": true,
+    "postmasterPidFileAbsent": true,
+    "user9443Touched": false,
+    "dataFilesRetained": true,
+    "cacheDataNotDeleted": true,
+    "pgDataKiB": 57188,
+    "scratchKiB": 0,
+    "reportKiBBeforeFinalManifest": 200,
+    "cacheFilesWrittenSinceResume": 2882,
+    "cacheFilesWrittenAllocatedBytesUpperBound": 306069504,
+    "cacheMeasurementNote": "Conservative current allocated size of all files with mtime since runtime.json; may include overwritten preexisting cache bytes and concurrent writers; not net growth.",
+    "diskAfterKiB": 16135940,
+    "processAudit": "process-audit.json",
+    "matchingOwnedProcessesRemaining": 0
+  },
+  "resources": {
+    "heavyGateKiB": 4194304,
+    "startKiB": 19230684,
+    "minimumRecordedKiB": 16106656,
+    "finalKiB": 16106656,
+    "plannedIncrementBudgetBytes": 1073741824,
+    "cacheWriteAllocatedUpperBoundBytes": 306069504,
+    "ownedPgBytes": 58560512,
+    "combinedCacheWriteUpperBoundAndPgBytes": 364630016,
+    "note": "Concurrent iOS builds affect global free-space delta. Conservative cache write size plus owned PG is below1GiB; no cache/data deletion."
+  },
+  "pending": [
+    "Three updated true-HTTP scripts against a current-source isolated deployment",
+    "Real iOS/official admin UI end-to-end report evidence and selected attachment viewing",
+    "Username old-snapshot/profile-RPO restore validation",
+    "Full backend product/regression scope beyond the27 targeted methods"
+  ],
+  "identityRestoreBoundary": "Daily rename reserves old names and changes the current login name without changing stable userId/device/family/epoch. Disaster recovery can restore older profile/login names according to confirmed profile RPO/snapshot; occupancy protection remains and current-epoch reauthentication is required. Existing reserve_username journal is not a latest-login-name nonrollback guarantee.",
+  "noCommitOrPush": true
+}

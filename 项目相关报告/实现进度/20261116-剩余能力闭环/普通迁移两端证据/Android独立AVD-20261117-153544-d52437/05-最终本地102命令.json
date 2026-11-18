@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+    "-s",
+    "emulator-5580",
+    "shell",
+    "am",
+    "instrument",
+    "-w",
+    "-r",
+    "-e",
+    "notClass",
+    "com.jobs.im.NativeSelfStateHttpsTest",
+    "com.jobs.im.test/androidx.test.runner.AndroidJUnitRunner"
+  ],
+  "expectedMethods": 102,
+  "sourceMethodTotal": 105,
+  "excludedRealHttpsMethodsAlreadyPassed": 3,
+  "sameOwnedAVDDataRetained": true
+}

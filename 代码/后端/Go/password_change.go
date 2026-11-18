@@ -187,7 +187,6 @@ func (a *App) changeOwnPassword(w http.ResponseWriter, r *http.Request) error {
 	if err != nil {
 		return err
 	}
-	clearBrowser := false
 	if !exists {
 		u, err := a.current(r)
 		if err != nil {
@@ -196,7 +195,6 @@ func (a *App) changeOwnPassword(w http.ResponseWriter, r *http.Request) error {
 		if u.Username != q.Username || u.DeviceID != q.DeviceID || u.RestoreEpoch != q.RestoreEpoch {
 			return fail(403, "PASSWORD_CHANGE_REJECTED", "Current authenticated owner and original device are required")
 		}
-		clearBrowser = !strings.HasPrefix(r.Header.Get("Authorization"), "Bearer ") && bearer(r) != ""
 		if err = a.rate(r.Context(), "password-change:"+u.ID, 5); err != nil {
 			return err
 		}
@@ -212,11 +210,8 @@ func (a *App) changeOwnPassword(w http.ResponseWriter, r *http.Request) error {
 	if err != nil {
 		return err
 	}
-	// Only the fresh authenticated browser submission owns its current cookie.
-	// Historical retries must not clear a later login in this browser.
-	if clearBrowser && value.State == "completed" {
-		a.clearCookie(w)
-	}
+	// A delayed HTTP response must never clear a cookie installed by a later
+	// login. Server-side family revocation already invalidates the old cookie.
 	return a.respondPasswordChange(w, r, value)
 }
 

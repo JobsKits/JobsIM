@@ -148,6 +148,9 @@ func openAuthManager(c *client, root, profile, username string, refresh, chain b
 	} else if err != sql.ErrNoRows {
 		return nil, err
 	}
+	if err = m.ownDeletionRestoreGate(); err != nil {
+		return nil, err
+	}
 	if err = m.passwordChangeRestoreGate(); err != nil {
 		return nil, err
 	}
@@ -257,6 +260,9 @@ func (m *authManager) accept(pair authPair, initial string) error {
 }
 
 func (m *authManager) restore() (bool, error) {
+	if err := m.ownDeletionRestoreGate(); err != nil {
+		return false, err
+	}
 	if err := m.passwordChangeRestoreGate(); err != nil {
 		return false, err
 	}
@@ -512,7 +518,7 @@ func (m *authManager) rotate(original authPair) (authPair, error) {
 func (m *authManager) logout() error {
 	m.mu.Lock()
 	defer m.mu.Unlock()
-	if (m.state.Status == "signed_out" || m.state.Status == "password_changed") && m.pair.Token == "" {
+	if (m.state.Status == "signed_out" || m.state.Status == "password_changed" || m.state.Status == "account_deletion_stopped" || m.state.Status == "account_deletion_unknown") && m.pair.Token == "" {
 		return nil
 	}
 	original := m.pair

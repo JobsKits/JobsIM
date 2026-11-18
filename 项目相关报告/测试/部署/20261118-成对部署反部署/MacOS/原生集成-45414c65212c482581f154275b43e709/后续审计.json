@@ -1,0 +1,6 @@
+{
+  "status": "not-valid-as-complete-backup-evidence",
+  "originalSummaryPreserved": true,
+  "reason": "Cold broker manifest rejected a zombie PID, but unchecked inner commands under a conditional caller allowed backup function to continue; raw PTY logs reveal missing broker-manifest. Positive data removal result cannot be counted as complete backup validation. Current implementation explicitly propagates each stage and requires broker manifest plus every domain dump in decrypted listing.",
+  "realInstanceTouched": false
+}

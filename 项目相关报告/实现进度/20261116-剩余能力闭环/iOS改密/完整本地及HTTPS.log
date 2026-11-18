@@ -1,0 +1,213 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/PasswordAll-20261117.xctestrun" -destination "platform=iOS Simulator,id=98F8960B-E8D2-40A8-BF46-68EBB95FAD0C" -parallel-testing-enabled NO -resultBundlePath 项目相关报告/实现进度/20261116-剩余能力闭环/iOS改密/完整本地及HTTPS.xcresult
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/iOS改密/完整本地及HTTPS.xcresult
+
+2026-11-17 01:01:43.666806+0800 JobsIM[71960:2060875] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/98F8960B-E8D2-40A8-BF46-68EBB95FAD0C/data/Containers/Bundle/Application/85415F5C-7647-4090-8430-FE2D4E246697/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-17 01:01:43.666950+0800 JobsIM[71960:2060875] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/98F8960B-E8D2-40A8-BF46-68EBB95FAD0C/data/Containers/Bundle/Application/85415F5C-7647-4090-8430-FE2D4E246697/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-17 01:01:43.682793+0800 JobsIM[71960:2060875] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-17 01:01:43.682944+0800 JobsIM[71960:2060875] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-17 01:01:43.792246+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.792334+0800 JobsIM[71960:2060875] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.792417+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.883380+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.883467+0800 JobsIM[71960:2060875] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.883559+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.886666+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.886746+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.886823+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.886876+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.887196+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.887242+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.887301+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.887340+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.896337+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.896426+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.896512+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.896549+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.907997+0800 JobsIM[71960:2060875] [API] cannot add handler to 0 from 0 - dropping
+2026-11-17 01:01:43.910722+0800 JobsIM[71960:2060875] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+2026-11-17 01:01:43.955085+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.955175+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.955256+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 01:01:43.955298+0800 JobsIM[71960:2060875] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+Test Suite 'Selected tests' started at 2026-11-17 01:01:44.231.
+Test Suite 'JobsIMTests.xctest' started at 2026-11-17 01:01:44.233.
+Test Suite 'IMAuthCoordinatorTests' started at 2026-11-17 01:01:44.233.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace]' passed (0.165 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testFreshProofRetiresCompleteSavedChainWithoutChangingOldBodies]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testFreshProofRetiresCompleteSavedChainWithoutChangingOldBodies]' passed (0.033 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testMissingRetirementCapabilityKeepsOriginalIntentAndMakesNoRequest]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testMissingRetirementCapabilityKeepsOriginalIntentAndMakesNoRequest]' passed (0.011 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeLateResultCannotSignOutSuccessorFamily]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeLateResultCannotSignOutSuccessorFamily]' passed (0.013 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeOriginalRemainsQueryableAfterCapabilityWithdrawalAndRestore]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeOriginalRemainsQueryableAfterCapabilityWithdrawalAndRestore]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeProofValidationAndMetadataRejectSecrets]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeProofValidationAndMetadataRejectSecrets]' passed (0.017 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeTransportRefusesPlainHTTPBeforeSendingProof]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeTransportRefusesPlainHTTPBeforeSendingProof]' passed (0.016 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeUnknownUsesOriginalAndNeverPersistsProof]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeUnknownUsesOriginalAndNeverPersistsProof]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily]' passed (1.455 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRestartFinishesSecuredInitialPairBeforeExposingNewNamespace]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRestartFinishesSecuredInitialPairBeforeExposingNewNamespace]' passed (0.027 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily]' passed (0.021 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testStaleOldFamilyCannotInvalidateReplacementDevice]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testStaleOldFamilyCannotInvalidateReplacementDevice]' passed (0.017 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownInitialUsesOriginalIDThenExplicitReauthLinksAndFreezesOldDevice]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownInitialUsesOriginalIDThenExplicitReauthLinksAndFreezesOldDevice]' passed (0.033 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret]' passed (0.017 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRegistrationCannotBecomeUnlinkedFreshAuthentication]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRegistrationCannotBecomeUnlinkedFreshAuthentication]' passed (0.011 seconds).
+Test Suite 'IMAuthCoordinatorTests' passed at 2026-11-17 01:01:46.098.
+	 Executed 15 tests, with 0 failures (0 unexpected) in 1.860 (1.865) seconds
+Test Suite 'IMAuthCredentialTests' started at 2026-11-17 01:01:46.098.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testKeychainStoresCompletePairAsSingleItem]' started.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testKeychainStoresCompletePairAsSingleItem]' passed (0.008 seconds).
+Test Case '-[JobsIMTests.IMAuthCredentialTests testNamespaceHandoffFreezesOldOutboxAndRollsBackPartialCommit]' started.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testNamespaceHandoffFreezesOldOutboxAndRollsBackPartialCommit]' passed (0.005 seconds).
+Test Case '-[JobsIMTests.IMAuthCredentialTests testPairStrictnessAndRotationKeepsDeviceNamespace]' started.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testPairStrictnessAndRotationKeepsDeviceNamespace]' passed (0.015 seconds).
+Test Suite 'IMAuthCredentialTests' passed at 2026-11-17 01:01:46.127.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.028 (0.029) seconds
+Test Suite 'IMAuthoritativeSyncTests' started at 2026-11-17 01:01:46.127.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testAnnouncementPersistsOnlyReferenceWithoutSourceBodyOrProof]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testAnnouncementPersistsOnlyReferenceWithoutSourceBodyOrProof]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCapabilityLossCannotReturnToLegacyPollOrCreateRoutes]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCapabilityLossCannotReturnToLegacyPollOrCreateRoutes]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions]' passed (0.009 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testDeltaOriginConflictRollsBackBodyAndContinuousPosition]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testDeltaOriginConflictRollsBackBodyAndContinuousPosition]' passed (0.012 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testGlobalIsTerminalAcrossDeviceRetainedSavedAndUnreadHolders]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testGlobalIsTerminalAcrossDeviceRetainedSavedAndUnreadHolders]' passed (0.019 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLateAccountContextCannotPublishSnapshot]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLateAccountContextCannotPublishSnapshot]' passed (0.006 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLocalGuardChangedAfterValidatePreventsLateAtomicCommit]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLocalGuardChangedAfterValidatePreventsLateAtomicCommit]' passed (0.008 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testMissingOrCorruptedSecondPageNeverInstallsFirstPage]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testMissingOrCorruptedSecondPageNeverInstallsFirstPage]' passed (0.006 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOpaqueCLIClientNonceIsNotRequiredToBeAServerUUID]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOpaqueCLIClientNonceIsNotRequiredToBeAServerUUID]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOrdinaryCopiesRetainedWhileForwardBodyAndProofNeverPersistInSyncStore]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOrdinaryCopiesRetainedWhileForwardBodyAndProofNeverPersistInSyncStore]' passed (0.009 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOriginalReadOnlyProofClosesOutboxOnlyWithAtomicOriginalBodyMatch]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOriginalReadOnlyProofClosesOutboxOnlyWithAtomicOriginalBodyMatch]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testRetainedEntryRequiresPreviouslyValidatedExactBodyAndSameIdentity]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testRetainedEntryRequiresPreviouslyValidatedExactBodyAndSameIdentity]' passed (0.013 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoNegotiationArchivesOldResponsibilityAndKeepsOriginalQueue]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoNegotiationArchivesOldResponsibilityAndKeepsOriginalQueue]' passed (0.011 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoPersonalEnvelopeIsExplicitAndOwnerBound]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoPersonalEnvelopeIsExplicitAndOwnerBound]' passed (0.002 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoPersonalStateAndCursorRollbackOnWrongScope]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoPersonalStateAndCursorRollbackOnWrongScope]' passed (0.011 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStoreGenerationSurvivesReopenAndCannotSilentlyReplaceARegisteredStore]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStoreGenerationSurvivesReopenAndCannotSilentlyReplaceARegisteredStore]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStrictCountersOriginalBodyDigestAndContinuousRedactions]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStrictCountersOriginalBodyDigestAndContinuousRedactions]' passed (0.004 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSyncMatchingClientIDIsNotOutboxProofAndNeverPostsCreate]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSyncMatchingClientIDIsNotOutboxProofAndNeverPostsCreate]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownDeltaCannotAdvanceCursorOrEraseLawfulOrdinaryCopy]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownDeltaCannotAdvanceCursorOrEraseLawfulOrdinaryCopy]' passed (0.011 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownSnapshotRetriesIdenticalDurableIntentAfterReopen]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownSnapshotRetriesIdenticalDurableIntentAfterReopen]' passed (0.023 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testValidationWatermarkRegressionAndPermissionABARefuseInstallation]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testValidationWatermarkRegressionAndPermissionABARefuseInstallation]' passed (0.012 seconds).
+Test Suite 'IMAuthoritativeSyncTests' passed at 2026-11-17 01:01:46.356.
+	 Executed 21 tests, with 0 failures (0 unexpected) in 0.224 (0.229) seconds
+Test Suite 'IMDataExportTests' started at 2026-11-17 01:01:46.356.
+Test Case '-[JobsIMTests.IMDataExportTests testCapabilityWithdrawalStillAllowsOriginalLookupAndSameCancelBody]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testCapabilityWithdrawalStillAllowsOriginalLookupAndSameCancelBody]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testCASPreservesFirstCancelBodyAndOriginalAgainstLateWriter]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testCASPreservesFirstCancelBodyAndOriginalAgainstLateWriter]' passed (0.004 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testCompleteZIPAndZIP64DirectoryAreRequiredBeforeSystemSave]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testCompleteZIPAndZIP64DirectoryAreRequiredBeforeSystemSave]' passed (0.002 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testLateIdentityResponseDoesNotBindOriginalJob]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testLateIdentityResponseDoesNotBindOriginalJob]' passed (0.004 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testOriginalNonceIsOpaqueAndRawWhitespaceHashCannotBeRewritten]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testOriginalNonceIsOpaqueAndRawWhitespaceHashCannotBeRewritten]' passed (0.005 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testReopenKeepsOnlyOriginalPublicMetadataAndDoesNotCreateSyncResponsibility]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testReopenKeepsOnlyOriginalPublicMetadataAndDoesNotCreateSyncResponsibility]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testTicketDeadlineAndTypeAreStrictWithoutPersistingTheToken]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testTicketDeadlineAndTypeAreStrictWithoutPersistingTheToken]' passed (0.003 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testUnknownCreationOnlyChecksOriginalUntilExplicitSameBodyRetry]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testUnknownCreationOnlyChecksOriginalUntilExplicitSameBodyRetry]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testUnsafeOrMissingExportDirectoryEntriesAreRejected]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testUnsafeOrMissingExportDirectoryEntriesAreRejected]' passed (0.002 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testViewStrictCountersAndMetadataDoesNotRetainUnknownSecretFields]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testViewStrictCountersAndMetadataDoesNotRetainUnknownSecretFields]' passed (0.001 seconds).
+Test Suite 'IMDataExportTests' passed at 2026-11-17 01:01:46.414.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.056 (0.058) seconds
+Test Suite 'IMPersonalStateTests' started at 2026-11-17 01:01:46.414.
+Test Case '-[JobsIMTests.IMPersonalStateTests testCoveredOrModalMessageCellIsNotAnObservation]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testCoveredOrModalMessageCellIsNotAnObservation]' passed (0.133 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testCurrentGuardCanFinishOriginalPendingAfterReopenWithoutRebindingBody]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testCurrentGuardCanFinishOriginalPendingAfterReopenWithoutRebindingBody]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testDraftReadonlyQueryPreservesFullBodyAndMethodWithoutNewProof]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testDraftReadonlyQueryPreservesFullBodyAndMethodWithoutNewProof]' passed (0.000 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testEditorAdoptionRejectsLateLocalTextReplyAndMentionChanges]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testEditorAdoptionRejectsLateLocalTextReplyAndMentionChanges]' passed (0.000 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testExactDraftValidatesPrincipalEpochOriginalStringsAndSeparateAdmission]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testExactDraftValidatesPrincipalEpochOriginalStringsAndSeparateAdmission]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testPreparedAndRetiredAreDistinctFromAppliedAndDoNotCarryOldText]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testPreparedAndRetiredAreDistinctFromAppliedAndDoNotCarryOldText]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testPublicNativeFixtureSurvivesMissingPreferencesAndRejectsExtraSecretKeys]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testPublicNativeFixtureSurvivesMissingPreferencesAndRejectsExtraSecretKeys]' passed (0.003 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testReadServerOperationUUIDDoesNotNeedToEqualClientNonceAndIDsStayExact]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testReadServerOperationUUIDDoesNotNeedToEqualClientNonceAndIDsStayExact]' passed (0.000 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testRecoveryListsHideByDefaultKeepManualUnreadAndSortOriginalPinRank]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testRecoveryListsHideByDefaultKeepManualUnreadAndSortOriginalPinRank]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testRejectedArchiveIsOriginalBodyCASAndRetiredNeverBecomesCurrentCloudText]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testRejectedArchiveIsOriginalBodyCASAndRetiredNeverBecomesCurrentCloudText]' passed (0.004 seconds).
+Test Suite 'IMPersonalStateTests' passed at 2026-11-17 01:01:46.573.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.156 (0.159) seconds
+Test Suite 'IMSessionTests' started at 2026-11-17 01:01:46.573.
+Test Case '-[JobsIMTests.IMSessionTests testInputMayClearOnlyAfterOutboxCommit]' started.
+Test Case '-[JobsIMTests.IMSessionTests testInputMayClearOnlyAfterOutboxCommit]' passed (0.005 seconds).
+Test Case '-[JobsIMTests.IMSessionTests testReadableThemeColorsKeepAccentAndWhitePrimaryTextDistinct]' started.
+Test Case '-[JobsIMTests.IMSessionTests testReadableThemeColorsKeepAccentAndWhitePrimaryTextDistinct]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMSessionTests testReadOnlyDoesNotQueueOrConsumeDraft]' started.
+Test Case '-[JobsIMTests.IMSessionTests testReadOnlyDoesNotQueueOrConsumeDraft]' passed (0.003 seconds).
+Test Suite 'IMSessionTests' passed at 2026-11-17 01:01:46.582.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.008 (0.009) seconds
+Test Suite 'IMStorageTests' started at 2026-11-17 01:01:46.582.
+Test Case '-[JobsIMTests.IMStorageTests testCompleteEmptyListReplacesStaleProjection]' started.
+Test Case '-[JobsIMTests.IMStorageTests testCompleteEmptyListReplacesStaleProjection]' passed (0.004 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testEpochCursorIsExactAndRejectsWrongEpochOrRegression]' started.
+Test Case '-[JobsIMTests.IMStorageTests testEpochCursorIsExactAndRejectsWrongEpochOrRegression]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testIncomingUnreadIsAtomicDeduplicatedAndCursorCannotRegress]' started.
+Test Case '-[JobsIMTests.IMStorageTests testIncomingUnreadIsAtomicDeduplicatedAndCursorCannotRegress]' passed (0.003 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testMessageCursorAndProjectionCommitTogetherWithoutVersionRegression]' started.
+Test Case '-[JobsIMTests.IMStorageTests testMessageCursorAndProjectionCommitTogetherWithoutVersionRegression]' passed (0.004 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testNamespacesIsolateAccountsInstancesAndDemo]' started.
+Test Case '-[JobsIMTests.IMStorageTests testNamespacesIsolateAccountsInstancesAndDemo]' passed (0.004 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testOutboxIdentityIsStableAndCommitIsAtomic]' started.
+Test Case '-[JobsIMTests.IMStorageTests testOutboxIdentityIsStableAndCommitIsAtomic]' passed (0.005 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testOutboxSurvivesReopeningStore]' started.
+Test Case '-[JobsIMTests.IMStorageTests testOutboxSurvivesReopeningStore]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testStringIdentifiersKeepLargeValuesExact]' started.
+Test Case '-[JobsIMTests.IMStorageTests testStringIdentifiersKeepLargeValuesExact]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testUnreadAndDraftSurviveReopeningWithoutReadReceipt]' started.
+Test Case '-[JobsIMTests.IMStorageTests testUnreadAndDraftSurviveReopeningWithoutReadReceipt]' passed (0.010 seconds).
+Test Suite 'IMStorageTests' passed at 2026-11-17 01:01:46.627.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.042 (0.045) seconds
+Test Suite 'JobsIMTests.xctest' passed at 2026-11-17 01:01:46.628.
+	 Executed 71 tests, with 0 failures (0 unexpected) in 2.374 (2.395) seconds
+Test Suite 'Selected tests' passed at 2026-11-17 01:01:46.628.
+	 Executed 71 tests, with 0 failures (0 unexpected) in 2.374 (2.396) seconds
+2026-11-17 01:01:46.916 xcodebuild[68973:2055173] [MT] IDETestOperationsObserverDebug: 27.141 elapsed -- Testing started completed.
+2026-11-17 01:01:46.917 xcodebuild[68973:2055173] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-17 01:01:46.917 xcodebuild[68973:2055173] [MT] IDETestOperationsObserverDebug: 27.141 sec, +27.141 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/iOS改密/完整本地及HTTPS.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

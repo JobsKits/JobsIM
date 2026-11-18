@@ -1,0 +1,156 @@
+[
+  {
+    "platform": "MacOS",
+    "entry": "Deployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "MacOS",
+    "entry": "Undeployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "Ubuntu",
+    "entry": "Deployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "Ubuntu",
+    "entry": "Undeployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "Debian",
+    "entry": "Deployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "Debian",
+    "entry": "Undeployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "RockyLinux",
+    "entry": "Deployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "RockyLinux",
+    "entry": "Undeployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "AlibabaCloudLinux",
+    "entry": "Deployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "AlibabaCloudLinux",
+    "entry": "Undeployment",
+    "syntaxExit": 0
+  },
+  {
+    "platform": "Ubuntu",
+    "entry": "Deployment",
+    "host": "MacOS Bash QR function only",
+    "callExit": 0,
+    "actualTTYSize": [
+      50,
+      100
+    ],
+    "backgroundCellsVisible": true,
+    "loopbackLabel": true,
+    "plainLog": true
+  },
+  {
+    "platform": "Ubuntu",
+    "entry": "Undeployment",
+    "host": "MacOS Bash QR function only",
+    "callExit": 0,
+    "actualTTYSize": [
+      50,
+      100
+    ],
+    "backgroundCellsVisible": true,
+    "loopbackLabel": true,
+    "plainLog": true
+  },
+  {
+    "platform": "Debian",
+    "entry": "Deployment",
+    "host": "MacOS Bash QR function only",
+    "callExit": 0,
+    "actualTTYSize": [
+      50,
+      100
+    ],
+    "backgroundCellsVisible": true,
+    "loopbackLabel": true,
+    "plainLog": true
+  },
+  {
+    "platform": "Debian",
+    "entry": "Undeployment",
+    "host": "MacOS Bash QR function only",
+    "callExit": 0,
+    "actualTTYSize": [
+      50,
+      100
+    ],
+    "backgroundCellsVisible": true,
+    "loopbackLabel": true,
+    "plainLog": true
+  },
+  {
+    "platform": "RockyLinux",
+    "entry": "Deployment",
+    "host": "MacOS Bash QR function only",
+    "callExit": 0,
+    "actualTTYSize": [
+      50,
+      100
+    ],
+    "backgroundCellsVisible": true,
+    "loopbackLabel": true,
+    "plainLog": true
+  },
+  {
+    "platform": "RockyLinux",
+    "entry": "Undeployment",
+    "host": "MacOS Bash QR function only",
+    "callExit": 0,
+    "actualTTYSize": [
+      50,
+      100
+    ],
+    "backgroundCellsVisible": true,
+    "loopbackLabel": true,
+    "plainLog": true
+  },
+  {
+    "platform": "AlibabaCloudLinux",
+    "entry": "Deployment",
+    "host": "MacOS Bash QR function only",
+    "callExit": 0,
+    "actualTTYSize": [
+      50,
+      100
+    ],
+    "backgroundCellsVisible": true,
+    "loopbackLabel": true,
+    "plainLog": true
+  },
+  {
+    "platform": "AlibabaCloudLinux",
+    "entry": "Undeployment",
+    "host": "MacOS Bash QR function only",
+    "callExit": 0,
+    "actualTTYSize": [
+      50,
+      100
+    ],
+    "backgroundCellsVisible": true,
+    "loopbackLabel": true,
+    "plainLog": true
+  }
+]

@@ -1,0 +1,3694 @@
+{
+  "at": "2026-11-17T04:48:06.070Z",
+  "method": "Physical lines including comments and blank lines; owned code/test/config only; symlinks, dependencies, resources, locks, generated/build outputs and evidence excluded.",
+  "totals": {
+    "business": {
+      "files": 448,
+      "lines": 101972,
+      "percent": 63.42
+    },
+    "tests": {
+      "files": 237,
+      "lines": 51221,
+      "percent": 31.86
+    },
+    "configuration": {
+      "files": 49,
+      "lines": 7601,
+      "percent": 4.73
+    }
+  },
+  "totalLines": 160794,
+  "files": [
+    {
+      "path": "代码/前端/Android/app/build.gradle.kts",
+      "category": "configuration",
+      "lines": 41
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/AndroidManifest.xml",
+      "category": "configuration",
+      "lines": 12
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/AnnouncementModel.kt",
+      "category": "business",
+      "lines": 355
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Assets.kt",
+      "category": "business",
+      "lines": 53
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+      "category": "business",
+      "lines": 2532
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/CollaborationScreens.kt",
+      "category": "business",
+      "lines": 302
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/DiscoveryScreens.kt",
+      "category": "business",
+      "lines": 114
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt",
+      "category": "business",
+      "lines": 116
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ExtraStrings.kt",
+      "category": "business",
+      "lines": 39
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/FeatureStrings.kt",
+      "category": "business",
+      "lines": 36
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ForwardScreens.kt",
+      "category": "business",
+      "lines": 85
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Forwarding.kt",
+      "category": "business",
+      "lines": 80
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/GroupScreen.kt",
+      "category": "business",
+      "lines": 139
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/GroupText.kt",
+      "category": "business",
+      "lines": 19
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/GroupTools.kt",
+      "category": "business",
+      "lines": 203
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/LocalAlerts.kt",
+      "category": "business",
+      "lines": 49
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt",
+      "category": "business",
+      "lines": 1213
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ManagementScreens.kt",
+      "category": "business",
+      "lines": 426
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MessageDiscovery.kt",
+      "category": "business",
+      "lines": 194
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationProtocol.kt",
+      "category": "business",
+      "lines": 113
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationScreen.kt",
+      "category": "business",
+      "lines": 147
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationService.kt",
+      "category": "business",
+      "lines": 128
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt",
+      "category": "business",
+      "lines": 110
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationText.kt",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/NativeSession.kt",
+      "category": "business",
+      "lines": 293
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletion.kt",
+      "category": "business",
+      "lines": 184
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionCleanup.kt",
+      "category": "business",
+      "lines": 38
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionScreen.kt",
+      "category": "business",
+      "lines": 88
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionText.kt",
+      "category": "business",
+      "lines": 19
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnPassword.kt",
+      "category": "business",
+      "lines": 152
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnPasswordScreen.kt",
+      "category": "business",
+      "lines": 86
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnPasswordText.kt",
+      "category": "business",
+      "lines": 19
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportFiles.kt",
+      "category": "business",
+      "lines": 198
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportModel.kt",
+      "category": "business",
+      "lines": 250
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportScreen.kt",
+      "category": "business",
+      "lines": 134
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStore.kt",
+      "category": "business",
+      "lines": 83
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStrings.kt",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportWire.kt",
+      "category": "business",
+      "lines": 91
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ProfileAvatar.kt",
+      "category": "business",
+      "lines": 33
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptProtocol.kt",
+      "category": "business",
+      "lines": 48
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt",
+      "category": "business",
+      "lines": 81
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptService.kt",
+      "category": "business",
+      "lines": 73
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptStore.kt",
+      "category": "business",
+      "lines": 68
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptText.kt",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfState.kt",
+      "category": "business",
+      "lines": 239
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateModel.kt",
+      "category": "business",
+      "lines": 257
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateStrings.kt",
+      "category": "business",
+      "lines": 39
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateUi.kt",
+      "category": "business",
+      "lines": 100
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SessionCoordinator.kt",
+      "category": "business",
+      "lines": 404
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SessionStrings.kt",
+      "category": "business",
+      "lines": 22
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt",
+      "category": "business",
+      "lines": 573
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Strings.kt",
+      "category": "business",
+      "lines": 65
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt",
+      "category": "business",
+      "lines": 37
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncEngine.kt",
+      "category": "business",
+      "lines": 129
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncGuardApi.kt",
+      "category": "business",
+      "lines": 91
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt",
+      "category": "business",
+      "lines": 261
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncStore.kt",
+      "category": "business",
+      "lines": 360
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Transport.kt",
+      "category": "business",
+      "lines": 337
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingComposer.kt",
+      "category": "business",
+      "lines": 154
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingEngine.kt",
+      "category": "business",
+      "lines": 240
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingFiles.kt",
+      "category": "business",
+      "lines": 64
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingRules.kt",
+      "category": "business",
+      "lines": 37
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingText.kt",
+      "category": "business",
+      "lines": 23
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadApi.kt",
+      "category": "business",
+      "lines": 89
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadCoordinator.kt",
+      "category": "business",
+      "lines": 95
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadProtocol.kt",
+      "category": "business",
+      "lines": 193
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt",
+      "category": "business",
+      "lines": 473
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadScreen.kt",
+      "category": "business",
+      "lines": 116
+    },
+    {
+      "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadText.kt",
+      "category": "business",
+      "lines": 21
+    },
+    {
+      "path": "代码/前端/Android/build.gradle.kts",
+      "category": "configuration",
+      "lines": 5
+    },
+    {
+      "path": "代码/前端/Android/gradle/wrapper/gradle-wrapper.properties",
+      "category": "configuration",
+      "lines": 9
+    },
+    {
+      "path": "代码/前端/Android/gradle.properties",
+      "category": "configuration",
+      "lines": 3
+    },
+    {
+      "path": "代码/前端/Android/gradlew.bat",
+      "category": "configuration",
+      "lines": 82
+    },
+    {
+      "path": "代码/前端/Android/settings.gradle.kts",
+      "category": "configuration",
+      "lines": 4
+    },
+    {
+      "path": "代码/前端/CLI/Scripts/Build.py/Build.py",
+      "category": "configuration",
+      "lines": 81
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth.go",
+      "category": "business",
+      "lines": 802
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go",
+      "category": "business",
+      "lines": 47
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go",
+      "category": "business",
+      "lines": 53
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go",
+      "category": "business",
+      "lines": 171
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go",
+      "category": "business",
+      "lines": 127
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_other.go",
+      "category": "business",
+      "lines": 12
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go",
+      "category": "business",
+      "lines": 102
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+      "category": "business",
+      "lines": 628
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+      "category": "business",
+      "lines": 62
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/data_export.go",
+      "category": "business",
+      "lines": 448
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/data_export_file.go",
+      "category": "business",
+      "lines": 254
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/forward.go",
+      "category": "business",
+      "lines": 107
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+      "category": "business",
+      "lines": 304
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/group_governance.go",
+      "category": "business",
+      "lines": 424
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/local.go",
+      "category": "business",
+      "lines": 358
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/main.go",
+      "category": "business",
+      "lines": 662
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/migration_command.go",
+      "category": "business",
+      "lines": 652
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/migration_history.go",
+      "category": "business",
+      "lines": 208
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/migration_protocol.go",
+      "category": "business",
+      "lines": 309
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/migration_store.go",
+      "category": "business",
+      "lines": 282
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/own_deletion.go",
+      "category": "business",
+      "lines": 518
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/own_deletion_cleanup.go",
+      "category": "business",
+      "lines": 292
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/own_deletion_command.go",
+      "category": "business",
+      "lines": 283
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/password_change.go",
+      "category": "business",
+      "lines": 629
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/receipt.go",
+      "category": "business",
+      "lines": 904
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/receipt_cleanup.go",
+      "category": "business",
+      "lines": 247
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/receipt_migration_source.go",
+      "category": "business",
+      "lines": 196
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/receipt_negotiation.go",
+      "category": "business",
+      "lines": 327
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/receipt_objects.go",
+      "category": "business",
+      "lines": 643
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/receipt_policy.go",
+      "category": "business",
+      "lines": 260
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/self_state.go",
+      "category": "business",
+      "lines": 1102
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/store.go",
+      "category": "business",
+      "lines": 642
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_engine.go",
+      "category": "business",
+      "lines": 640
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_protocol.go",
+      "category": "business",
+      "lines": 621
+    },
+    {
+      "path": "代码/前端/CLI/cmd/jobsim/sync_store.go",
+      "category": "business",
+      "lines": 1038
+    },
+    {
+      "path": "代码/前端/CLI/go.mod",
+      "category": "configuration",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/CLI/原生助手/Keychain/JobsIMKeychain.swift",
+      "category": "business",
+      "lines": 145
+    },
+    {
+      "path": "代码/前端/HarmonyOS/AppScope/app.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/build-profile.json5",
+      "category": "configuration",
+      "lines": 41
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/build-profile.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/hvigorfile.ts",
+      "category": "business",
+      "lines": 2
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/oh-package.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Api.ets",
+      "category": "business",
+      "lines": 180
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/AuthCoordinator.ets",
+      "category": "business",
+      "lines": 341
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Deletion.ets",
+      "category": "business",
+      "lines": 104
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionFiles.ets",
+      "category": "business",
+      "lines": 35
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionStore.ets",
+      "category": "business",
+      "lines": 71
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionText.ets",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportFiles.ets",
+      "category": "business",
+      "lines": 90
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportProtocol.ets",
+      "category": "business",
+      "lines": 83
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportService.ets",
+      "category": "business",
+      "lines": 74
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportStore.ets",
+      "category": "business",
+      "lines": 37
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportText.ets",
+      "category": "business",
+      "lines": 437
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupStore.ets",
+      "category": "business",
+      "lines": 31
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupText.ets",
+      "category": "business",
+      "lines": 19
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools.ets",
+      "category": "business",
+      "lines": 137
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationNative.ets",
+      "category": "business",
+      "lines": 52
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets",
+      "category": "business",
+      "lines": 131
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationService.ets",
+      "category": "business",
+      "lines": 103
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets",
+      "category": "business",
+      "lines": 68
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationText.ets",
+      "category": "business",
+      "lines": 6
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets",
+      "category": "business",
+      "lines": 294
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeServices.ets",
+      "category": "business",
+      "lines": 110
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordChange.ets",
+      "category": "business",
+      "lines": 92
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordStore.ets",
+      "category": "business",
+      "lines": 39
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordText.ets",
+      "category": "business",
+      "lines": 247
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCleanup.ets",
+      "category": "business",
+      "lines": 13
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptNative.ets",
+      "category": "business",
+      "lines": 35
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol.ets",
+      "category": "business",
+      "lines": 37
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets",
+      "category": "business",
+      "lines": 50
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptStore.ets",
+      "category": "business",
+      "lines": 50
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptText.ets",
+      "category": "business",
+      "lines": 6
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets",
+      "category": "business",
+      "lines": 108
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfState.ets",
+      "category": "business",
+      "lines": 171
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfText.ets",
+      "category": "business",
+      "lines": 27
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Store.ets",
+      "category": "business",
+      "lines": 205
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets",
+      "category": "business",
+      "lines": 11
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncEngine.ets",
+      "category": "business",
+      "lines": 155
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets",
+      "category": "business",
+      "lines": 224
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncStore.ets",
+      "category": "business",
+      "lines": 331
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncText.ets",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/entryability/EntryAbility.ets",
+      "category": "business",
+      "lines": 9
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets",
+      "category": "business",
+      "lines": 2331
+    },
+    {
+      "path": "代码/前端/HarmonyOS/entry/src/main/module.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/hvigor/hvigor-config.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/hvigorfile.ts",
+      "category": "business",
+      "lines": 2
+    },
+    {
+      "path": "代码/前端/HarmonyOS/oh-package.json5",
+      "category": "configuration",
+      "lines": 1
+    },
+    {
+      "path": "代码/前端/HarmonyOS/工具链/【MacOS】准备工具链.command/【MacOS】准备工具链.command",
+      "category": "configuration",
+      "lines": 79
+    },
+    {
+      "path": "代码/前端/Web/Scripts/准备环境.command/准备环境.command",
+      "category": "configuration",
+      "lines": 42
+    },
+    {
+      "path": "代码/前端/Web/Src/AccountDeletionActions.ts",
+      "category": "business",
+      "lines": 123
+    },
+    {
+      "path": "代码/前端/Web/Src/AccountDeletionCleanup.ts",
+      "category": "business",
+      "lines": 118
+    },
+    {
+      "path": "代码/前端/Web/Src/AccountDeletionLabels.ts",
+      "category": "business",
+      "lines": 16
+    },
+    {
+      "path": "代码/前端/Web/Src/AccountDeletionPanel.tsx",
+      "category": "business",
+      "lines": 115
+    },
+    {
+      "path": "代码/前端/Web/Src/AccountDeletionProtocol.ts",
+      "category": "business",
+      "lines": 51
+    },
+    {
+      "path": "代码/前端/Web/Src/AccountDeletionStore.ts",
+      "category": "business",
+      "lines": 80
+    },
+    {
+      "path": "代码/前端/Web/Src/AdminPanel.tsx",
+      "category": "business",
+      "lines": 430
+    },
+    {
+      "path": "代码/前端/Web/Src/AnnouncementPanel.tsx",
+      "category": "business",
+      "lines": 346
+    },
+    {
+      "path": "代码/前端/Web/Src/App.tsx",
+      "category": "business",
+      "lines": 4432
+    },
+    {
+      "path": "代码/前端/Web/Src/AttachmentErasureProtocol.ts",
+      "category": "business",
+      "lines": 40
+    },
+    {
+      "path": "代码/前端/Web/Src/AttachmentSendActions.ts",
+      "category": "business",
+      "lines": 109
+    },
+    {
+      "path": "代码/前端/Web/Src/AttachmentSendLabels.ts",
+      "category": "business",
+      "lines": 19
+    },
+    {
+      "path": "代码/前端/Web/Src/AttachmentSendPanel.tsx",
+      "category": "business",
+      "lines": 69
+    },
+    {
+      "path": "代码/前端/Web/Src/AttachmentSendProtocol.ts",
+      "category": "business",
+      "lines": 117
+    },
+    {
+      "path": "代码/前端/Web/Src/AttachmentSendStore.ts",
+      "category": "business",
+      "lines": 176
+    },
+    {
+      "path": "代码/前端/Web/Src/AudioMedia.css",
+      "category": "business",
+      "lines": 17
+    },
+    {
+      "path": "代码/前端/Web/Src/AudioMessageLabels.ts",
+      "category": "business",
+      "lines": 22
+    },
+    {
+      "path": "代码/前端/Web/Src/AudioRecorderController.ts",
+      "category": "business",
+      "lines": 116
+    },
+    {
+      "path": "代码/前端/Web/Src/AudioRecorderPanel.tsx",
+      "category": "business",
+      "lines": 89
+    },
+    {
+      "path": "代码/前端/Web/Src/AuthSession.ts",
+      "category": "business",
+      "lines": 374
+    },
+    {
+      "path": "代码/前端/Web/Src/DataExportActions.ts",
+      "category": "business",
+      "lines": 81
+    },
+    {
+      "path": "代码/前端/Web/Src/DataExportArchive.ts",
+      "category": "business",
+      "lines": 68
+    },
+    {
+      "path": "代码/前端/Web/Src/DataExportLabels.ts",
+      "category": "business",
+      "lines": 42
+    },
+    {
+      "path": "代码/前端/Web/Src/DataExportPanel.tsx",
+      "category": "business",
+      "lines": 137
+    },
+    {
+      "path": "代码/前端/Web/Src/DataExportProtocol.ts",
+      "category": "business",
+      "lines": 50
+    },
+    {
+      "path": "代码/前端/Web/Src/DataExportStore.ts",
+      "category": "business",
+      "lines": 68
+    },
+    {
+      "path": "代码/前端/Web/Src/GlobalMessages.ts",
+      "category": "business",
+      "lines": 272
+    },
+    {
+      "path": "代码/前端/Web/Src/GroupControls.tsx",
+      "category": "business",
+      "lines": 183
+    },
+    {
+      "path": "代码/前端/Web/Src/GroupGovernanceActions.ts",
+      "category": "business",
+      "lines": 95
+    },
+    {
+      "path": "代码/前端/Web/Src/GroupGovernanceLabels.ts",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/Web/Src/GroupGovernancePanel.tsx",
+      "category": "business",
+      "lines": 104
+    },
+    {
+      "path": "代码/前端/Web/Src/GroupGovernanceProtocol.ts",
+      "category": "business",
+      "lines": 61
+    },
+    {
+      "path": "代码/前端/Web/Src/GroupGovernanceStore.ts",
+      "category": "business",
+      "lines": 65
+    },
+    {
+      "path": "代码/前端/Web/Src/GroupJoinPanel.tsx",
+      "category": "business",
+      "lines": 42
+    },
+    {
+      "path": "代码/前端/Web/Src/MentionPicker.tsx",
+      "category": "business",
+      "lines": 83
+    },
+    {
+      "path": "代码/前端/Web/Src/MessageFacts.ts",
+      "category": "business",
+      "lines": 121
+    },
+    {
+      "path": "代码/前端/Web/Src/MessageLookup.tsx",
+      "category": "business",
+      "lines": 292
+    },
+    {
+      "path": "代码/前端/Web/Src/MessagePlayback.tsx",
+      "category": "business",
+      "lines": 127
+    },
+    {
+      "path": "代码/前端/Web/Src/MigrationActions.ts",
+      "category": "business",
+      "lines": 182
+    },
+    {
+      "path": "代码/前端/Web/Src/MigrationArchive.ts",
+      "category": "business",
+      "lines": 138
+    },
+    {
+      "path": "代码/前端/Web/Src/MigrationHistoryStore.ts",
+      "category": "business",
+      "lines": 124
+    },
+    {
+      "path": "代码/前端/Web/Src/MigrationLabels.ts",
+      "category": "business",
+      "lines": 34
+    },
+    {
+      "path": "代码/前端/Web/Src/MigrationPanel.tsx",
+      "category": "business",
+      "lines": 181
+    },
+    {
+      "path": "代码/前端/Web/Src/MigrationProtocol.ts",
+      "category": "business",
+      "lines": 51
+    },
+    {
+      "path": "代码/前端/Web/Src/MigrationStore.ts",
+      "category": "business",
+      "lines": 77
+    },
+    {
+      "path": "代码/前端/Web/Src/PasswordChangeActions.ts",
+      "category": "business",
+      "lines": 124
+    },
+    {
+      "path": "代码/前端/Web/Src/PasswordChangeLabels.ts",
+      "category": "business",
+      "lines": 27
+    },
+    {
+      "path": "代码/前端/Web/Src/PasswordChangePanel.tsx",
+      "category": "business",
+      "lines": 94
+    },
+    {
+      "path": "代码/前端/Web/Src/PasswordChangeProtocol.ts",
+      "category": "business",
+      "lines": 34
+    },
+    {
+      "path": "代码/前端/Web/Src/PasswordChangeStore.ts",
+      "category": "business",
+      "lines": 58
+    },
+    {
+      "path": "代码/前端/Web/Src/PeerControls.tsx",
+      "category": "business",
+      "lines": 289
+    },
+    {
+      "path": "代码/前端/Web/Src/PlaybackCheckpointProtocol.ts",
+      "category": "business",
+      "lines": 57
+    },
+    {
+      "path": "代码/前端/Web/Src/PlaybackCheckpointStore.ts",
+      "category": "business",
+      "lines": 33
+    },
+    {
+      "path": "代码/前端/Web/Src/PrivateMedia.tsx",
+      "category": "business",
+      "lines": 135
+    },
+    {
+      "path": "代码/前端/Web/Src/ReceiptContext.ts",
+      "category": "business",
+      "lines": 145
+    },
+    {
+      "path": "代码/前端/Web/Src/ReceiptLabels.ts",
+      "category": "business",
+      "lines": 19
+    },
+    {
+      "path": "代码/前端/Web/Src/ReceiptPanel.tsx",
+      "category": "business",
+      "lines": 55
+    },
+    {
+      "path": "代码/前端/Web/Src/ReportPanel.tsx",
+      "category": "business",
+      "lines": 235
+    },
+    {
+      "path": "代码/前端/Web/Src/SelfDraftRecovery.tsx",
+      "category": "business",
+      "lines": 172
+    },
+    {
+      "path": "代码/前端/Web/Src/SelfStateActions.ts",
+      "category": "business",
+      "lines": 217
+    },
+    {
+      "path": "代码/前端/Web/Src/SelfStateLabels.ts",
+      "category": "business",
+      "lines": 40
+    },
+    {
+      "path": "代码/前端/Web/Src/SelfStatePanel.tsx",
+      "category": "business",
+      "lines": 87
+    },
+    {
+      "path": "代码/前端/Web/Src/SelfStateProtocol.ts",
+      "category": "business",
+      "lines": 87
+    },
+    {
+      "path": "代码/前端/Web/Src/StorageDatabase.ts",
+      "category": "business",
+      "lines": 6
+    },
+    {
+      "path": "代码/前端/Web/Src/SyncEngine.ts",
+      "category": "business",
+      "lines": 176
+    },
+    {
+      "path": "代码/前端/Web/Src/SyncProtocol.ts",
+      "category": "business",
+      "lines": 248
+    },
+    {
+      "path": "代码/前端/Web/Src/SyncStore.ts",
+      "category": "business",
+      "lines": 508
+    },
+    {
+      "path": "代码/前端/Web/Src/SyncView.ts",
+      "category": "business",
+      "lines": 189
+    },
+    {
+      "path": "代码/前端/Web/Src/api.ts",
+      "category": "business",
+      "lines": 494
+    },
+    {
+      "path": "代码/前端/Web/Src/demo.ts",
+      "category": "business",
+      "lines": 102
+    },
+    {
+      "path": "代码/前端/Web/Src/env.d.ts",
+      "category": "business",
+      "lines": 4
+    },
+    {
+      "path": "代码/前端/Web/Src/forward.ts",
+      "category": "business",
+      "lines": 85
+    },
+    {
+      "path": "代码/前端/Web/Src/i18n.ts",
+      "category": "business",
+      "lines": 50
+    },
+    {
+      "path": "代码/前端/Web/Src/main.tsx",
+      "category": "business",
+      "lines": 9
+    },
+    {
+      "path": "代码/前端/Web/Src/storage.ts",
+      "category": "business",
+      "lines": 397
+    },
+    {
+      "path": "代码/前端/Web/Src/styles.css",
+      "category": "business",
+      "lines": 1814
+    },
+    {
+      "path": "代码/前端/Web/Src/types.ts",
+      "category": "business",
+      "lines": 90
+    },
+    {
+      "path": "代码/前端/Web/package.json",
+      "category": "configuration",
+      "lines": 25
+    },
+    {
+      "path": "代码/前端/Web/tsconfig.json",
+      "category": "configuration",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/Web/vite.config.ts",
+      "category": "business",
+      "lines": 23
+    },
+    {
+      "path": "代码/前端/iOS/Dependencies/GRDB.source.json",
+      "category": "configuration",
+      "lines": 7
+    },
+    {
+      "path": "代码/前端/iOS/Dependencies/JobsTemplateSources.json",
+      "category": "configuration",
+      "lines": 87
+    },
+    {
+      "path": "代码/前端/iOS/Dependencies/TemplateThirdPartySources.json",
+      "category": "configuration",
+      "lines": 171
+    },
+    {
+      "path": "代码/前端/iOS/Dependencies/ThirdPartyLicenses.json",
+      "category": "configuration",
+      "lines": 337
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMCursor/IMCursor.swift",
+      "category": "business",
+      "lines": 48
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMJSON/IMJSON.swift",
+      "category": "business",
+      "lines": 105
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMNamespace/IMNamespace.swift",
+      "category": "business",
+      "lines": 44
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/ISO8601DateFormatter/ISO8601DateFormatter+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONDecoder/JSONDecoder+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONEncoder/JSONEncoder+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/NSDecimalNumber/NSDecimalNumber+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMCore/JobsIMCore.podspec",
+      "category": "configuration",
+      "lines": 13
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift",
+      "category": "business",
+      "lines": 2479
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMStorage/JobsIMStorage.podspec",
+      "category": "configuration",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIClient/IMAPIClient.swift",
+      "category": "business",
+      "lines": 238
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIError/IMAPIError.swift",
+      "category": "business",
+      "lines": 25
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift",
+      "category": "business",
+      "lines": 428
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceCertificate/IMInstanceCertificate.swift",
+      "category": "business",
+      "lines": 58
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceEvaluator/IMInstanceEvaluator.swift",
+      "category": "business",
+      "lines": 34
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/URLRequest/URLRequest+Make.swift",
+      "category": "business",
+      "lines": 21
+    },
+    {
+      "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/JobsIMTransport.podspec",
+      "category": "configuration",
+      "lines": 15
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/App/AppDelegate/AppDelegate.swift",
+      "category": "business",
+      "lines": 138
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/App/SceneDelegate/SceneDelegate.swift",
+      "category": "business",
+      "lines": 39
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionFiles.swift",
+      "category": "business",
+      "lines": 103
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionService.swift",
+      "category": "business",
+      "lines": 424
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAnnouncementService/IMAnnouncementService.swift",
+      "category": "business",
+      "lines": 151
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift",
+      "category": "business",
+      "lines": 612
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMCredentialPair.swift",
+      "category": "business",
+      "lines": 111
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMAuthoritativeSync.swift",
+      "category": "business",
+      "lines": 316
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMSyncProtocol.swift",
+      "category": "business",
+      "lines": 512
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAvatarLoader/IMAvatarLoader.swift",
+      "category": "business",
+      "lines": 44
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAvatarService/IMAvatarService.swift",
+      "category": "business",
+      "lines": 110
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMContactService/IMContactService.swift",
+      "category": "business",
+      "lines": 49
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportArchive.swift",
+      "category": "business",
+      "lines": 132
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportProtocol.swift",
+      "category": "business",
+      "lines": 119
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportService.swift",
+      "category": "business",
+      "lines": 241
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift",
+      "category": "business",
+      "lines": 221
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMGroupGovernanceService/IMGroupGovernanceService.swift",
+      "category": "business",
+      "lines": 258
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMHistoryExport/IMHistoryExport.swift",
+      "category": "business",
+      "lines": 56
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMKeychain/IMKeychain.swift",
+      "category": "business",
+      "lines": 70
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMediaCache/IMMediaCache.swift",
+      "category": "business",
+      "lines": 175
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMediaLoader/IMMediaLoader.swift",
+      "category": "business",
+      "lines": 23
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessageListService.swift",
+      "category": "business",
+      "lines": 144
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessagePage.swift",
+      "category": "business",
+      "lines": 32
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationJSON.swift",
+      "category": "business",
+      "lines": 242
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationProtocol.swift",
+      "category": "business",
+      "lines": 265
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationService.swift",
+      "category": "business",
+      "lines": 913
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMNotifications/IMNotifications.swift",
+      "category": "business",
+      "lines": 110
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMPasswordChangeService/IMPasswordChangeService.swift",
+      "category": "business",
+      "lines": 251
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMPersonalStateService/IMPersonalStateService.swift",
+      "category": "business",
+      "lines": 336
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptProtocol.swift",
+      "category": "business",
+      "lines": 360
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptService.swift",
+      "category": "business",
+      "lines": 694
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReportService/IMReportService.swift",
+      "category": "business",
+      "lines": 43
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift",
+      "category": "business",
+      "lines": 1171
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMStrings/IMStrings.swift",
+      "category": "business",
+      "lines": 23
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMSyncCoordinator/IMSyncCoordinator.swift",
+      "category": "business",
+      "lines": 33
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMTrustStore/IMTrustStore.swift",
+      "category": "business",
+      "lines": 32
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/AVAudioRecorder/AVAudioRecorder+Make.swift",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/FileHandle/FileHandle+Make.swift",
+      "category": "business",
+      "lines": 15
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/NSAttributedString/NSAttributedString+Make.swift",
+      "category": "business",
+      "lines": 15
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerConfiguration/PHPickerConfiguration+Make.swift",
+      "category": "business",
+      "lines": 17
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerViewController/PHPickerViewController+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIActivityViewController/UIActivityViewController+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertAction/UIAlertAction+Make.swift",
+      "category": "business",
+      "lines": 22
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertController/UIAlertController+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIColor/UIColor+Make.swift",
+      "category": "business",
+      "lines": 24
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIContextMenuConfiguration/UIContextMenuConfiguration+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift",
+      "category": "business",
+      "lines": 35
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIImage/UIImage+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UINavigationController/UINavigationController+Make.swift",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UISegmentedControl/UISegmentedControl+Make.swift",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UITabBarItem/UITabBarItem+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UITableView/UITableView+Make.swift",
+      "category": "business",
+      "lines": 18
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIView/UIView+DSL.swift",
+      "category": "business",
+      "lines": 17
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIWindow/UIWindow+Make.swift",
+      "category": "business",
+      "lines": 20
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UNNotificationRequest/UNNotificationRequest+Make.swift",
+      "category": "business",
+      "lines": 14
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAccountDeletionVC/IMAccountDeletionVC.swift",
+      "category": "business",
+      "lines": 280
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift",
+      "category": "business",
+      "lines": 254
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAvatarVC/IMAvatarVC.swift",
+      "category": "business",
+      "lines": 78
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAvatarView/IMAvatarView.swift",
+      "category": "business",
+      "lines": 60
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMBaseVC/IMBaseVC.swift",
+      "category": "business",
+      "lines": 92
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift",
+      "category": "business",
+      "lines": 1059
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactRequestsVC/IMContactRequestsVC.swift",
+      "category": "business",
+      "lines": 95
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMConversationCell/IMConversationCell.swift",
+      "category": "business",
+      "lines": 90
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMDataExportVC/IMDataExportVC.swift",
+      "category": "business",
+      "lines": 330
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMDevicesVC/IMDevicesVC.swift",
+      "category": "business",
+      "lines": 96
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMGroupGovernanceVC/IMGroupGovernanceVC.swift",
+      "category": "business",
+      "lines": 396
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift",
+      "category": "business",
+      "lines": 344
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift",
+      "category": "business",
+      "lines": 578
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift",
+      "category": "business",
+      "lines": 160
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMMigrationVC/IMMigrationVC.swift",
+      "category": "business",
+      "lines": 767
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMPasswordChangeVC/IMPasswordChangeVC.swift",
+      "category": "business",
+      "lines": 198
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMPersonalStateVC/IMPersonalStateVC.swift",
+      "category": "business",
+      "lines": 334
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReceiptVC/IMReceiptVC.swift",
+      "category": "business",
+      "lines": 454
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportVC/IMReportVC.swift",
+      "category": "business",
+      "lines": 94
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift",
+      "category": "business",
+      "lines": 299
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMUI/IMUI.swift",
+      "category": "business",
+      "lines": 136
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj",
+      "category": "configuration",
+      "lines": 1126
+    },
+    {
+      "path": "代码/前端/iOS/Podfile",
+      "category": "configuration",
+      "lines": 49
+    },
+    {
+      "path": "代码/前端/iOS/Podfile.deps",
+      "category": "configuration",
+      "lines": 46
+    },
+    {
+      "path": "代码/前端/iOS/Scripts/Build.rb",
+      "category": "configuration",
+      "lines": 39
+    },
+    {
+      "path": "代码/前端/iOS/Scripts/GenerateProject.rb",
+      "category": "configuration",
+      "lines": 72
+    },
+    {
+      "path": "代码/前端/iOS/Scripts/PrepareDependencies.rb",
+      "category": "configuration",
+      "lines": 38
+    },
+    {
+      "path": "代码/前端/iOS/ScriptsByPods/【MacOS@Xcode】🫘当前工程Pod Install.command/【MacOS@Xcode】🫘当前工程Pod Install.command",
+      "category": "configuration",
+      "lines": 742
+    },
+    {
+      "path": "代码/前端/iOS/ScriptsByPods/【MacOS@Xcode】🫘当前工程Pod Update.command/【MacOS@Xcode】🫘当前工程Pod Update.command",
+      "category": "configuration",
+      "lines": 742
+    },
+    {
+      "path": "代码/后端/Go/account_deletion.go",
+      "category": "business",
+      "lines": 287
+    },
+    {
+      "path": "代码/后端/Go/account_deletion_governance.go",
+      "category": "business",
+      "lines": 327
+    },
+    {
+      "path": "代码/后端/Go/account_deletion_identity.go",
+      "category": "business",
+      "lines": 274
+    },
+    {
+      "path": "代码/后端/Go/account_deletion_owner.go",
+      "category": "business",
+      "lines": 277
+    },
+    {
+      "path": "代码/后端/Go/account_deletion_proof.go",
+      "category": "business",
+      "lines": 280
+    },
+    {
+      "path": "代码/后端/Go/account_deletion_safety.go",
+      "category": "business",
+      "lines": 170
+    },
+    {
+      "path": "代码/后端/Go/admin_identity.go",
+      "category": "business",
+      "lines": 277
+    },
+    {
+      "path": "代码/后端/Go/asset_migrations.go",
+      "category": "business",
+      "lines": 24
+    },
+    {
+      "path": "代码/后端/Go/avatar.go",
+      "category": "business",
+      "lines": 363
+    },
+    {
+      "path": "代码/后端/Go/avatar_media.go",
+      "category": "business",
+      "lines": 302
+    },
+    {
+      "path": "代码/后端/Go/cmd/jobsimd/main.go",
+      "category": "business",
+      "lines": 178
+    },
+    {
+      "path": "代码/后端/Go/cmd/jobsimops/main.go",
+      "category": "business",
+      "lines": 123
+    },
+    {
+      "path": "代码/后端/Go/contact_relationship.go",
+      "category": "business",
+      "lines": 44
+    },
+    {
+      "path": "代码/后端/Go/control.go",
+      "category": "business",
+      "lines": 240
+    },
+    {
+      "path": "代码/后端/Go/conversation.go",
+      "category": "business",
+      "lines": 527
+    },
+    {
+      "path": "代码/后端/Go/deployment_disk.go",
+      "category": "business",
+      "lines": 43
+    },
+    {
+      "path": "代码/后端/Go/deployment_handoff.go",
+      "category": "business",
+      "lines": 75
+    },
+    {
+      "path": "代码/后端/Go/deployment_restore.go",
+      "category": "business",
+      "lines": 580
+    },
+    {
+      "path": "代码/后端/Go/deployment_restore_finalize.go",
+      "category": "business",
+      "lines": 243
+    },
+    {
+      "path": "代码/后端/Go/deployment_restore_spec.go",
+      "category": "business",
+      "lines": 370
+    },
+    {
+      "path": "代码/后端/Go/directory.go",
+      "category": "business",
+      "lines": 483
+    },
+    {
+      "path": "代码/后端/Go/draft_reply.go",
+      "category": "business",
+      "lines": 35
+    },
+    {
+      "path": "代码/后端/Go/draft_reply_holders.go",
+      "category": "business",
+      "lines": 286
+    },
+    {
+      "path": "代码/后端/Go/draft_reply_revocation.go",
+      "category": "business",
+      "lines": 209
+    },
+    {
+      "path": "代码/后端/Go/export.go",
+      "category": "business",
+      "lines": 587
+    },
+    {
+      "path": "代码/后端/Go/export_identity.go",
+      "category": "business",
+      "lines": 113
+    },
+    {
+      "path": "代码/后端/Go/export_lock_unix.go",
+      "category": "business",
+      "lines": 33
+    },
+    {
+      "path": "代码/后端/Go/export_lock_windows.go",
+      "category": "business",
+      "lines": 35
+    },
+    {
+      "path": "代码/后端/Go/export_restore.go",
+      "category": "business",
+      "lines": 106
+    },
+    {
+      "path": "代码/后端/Go/export_worker.go",
+      "category": "business",
+      "lines": 512
+    },
+    {
+      "path": "代码/后端/Go/forward_media.go",
+      "category": "business",
+      "lines": 240
+    },
+    {
+      "path": "代码/后端/Go/forward_projection.go",
+      "category": "business",
+      "lines": 256
+    },
+    {
+      "path": "代码/后端/Go/forward_revocation.go",
+      "category": "business",
+      "lines": 368
+    },
+    {
+      "path": "代码/后端/Go/go.mod",
+      "category": "configuration",
+      "lines": 21
+    },
+    {
+      "path": "代码/后端/Go/group_delegate.go",
+      "category": "business",
+      "lines": 46
+    },
+    {
+      "path": "代码/后端/Go/group_invites.go",
+      "category": "business",
+      "lines": 661
+    },
+    {
+      "path": "代码/后端/Go/group_operator.go",
+      "category": "business",
+      "lines": 94
+    },
+    {
+      "path": "代码/后端/Go/group_policy.go",
+      "category": "business",
+      "lines": 367
+    },
+    {
+      "path": "代码/后端/Go/group_safety.go",
+      "category": "business",
+      "lines": 106
+    },
+    {
+      "path": "代码/后端/Go/identity.go",
+      "category": "business",
+      "lines": 1066
+    },
+    {
+      "path": "代码/后端/Go/journal.go",
+      "category": "business",
+      "lines": 307
+    },
+    {
+      "path": "代码/后端/Go/journal_receipt_readiness.go",
+      "category": "business",
+      "lines": 29
+    },
+    {
+      "path": "代码/后端/Go/media.go",
+      "category": "business",
+      "lines": 210
+    },
+    {
+      "path": "代码/后端/Go/media_export.go",
+      "category": "business",
+      "lines": 155
+    },
+    {
+      "path": "代码/后端/Go/media_format.go",
+      "category": "business",
+      "lines": 256
+    },
+    {
+      "path": "代码/后端/Go/media_legacy_erasure.go",
+      "category": "business",
+      "lines": 98
+    },
+    {
+      "path": "代码/后端/Go/media_read_floor.go",
+      "category": "business",
+      "lines": 15
+    },
+    {
+      "path": "代码/后端/Go/media_receipts.go",
+      "category": "business",
+      "lines": 71
+    },
+    {
+      "path": "代码/后端/Go/media_restore.go",
+      "category": "business",
+      "lines": 78
+    },
+    {
+      "path": "代码/后端/Go/media_retention.go",
+      "category": "business",
+      "lines": 459
+    },
+    {
+      "path": "代码/后端/Go/media_upload.go",
+      "category": "business",
+      "lines": 303
+    },
+    {
+      "path": "代码/后端/Go/media_upload_cleanup.go",
+      "category": "business",
+      "lines": 155
+    },
+    {
+      "path": "代码/后端/Go/media_upload_identity.go",
+      "category": "business",
+      "lines": 65
+    },
+    {
+      "path": "代码/后端/Go/media_upload_model.go",
+      "category": "business",
+      "lines": 172
+    },
+    {
+      "path": "代码/后端/Go/media_upload_safety.go",
+      "category": "business",
+      "lines": 83
+    },
+    {
+      "path": "代码/后端/Go/media_webm.go",
+      "category": "business",
+      "lines": 414
+    },
+    {
+      "path": "代码/后端/Go/mentions_announcements.go",
+      "category": "business",
+      "lines": 558
+    },
+    {
+      "path": "代码/后端/Go/message.go",
+      "category": "business",
+      "lines": 664
+    },
+    {
+      "path": "代码/后端/Go/message_export.go",
+      "category": "business",
+      "lines": 419
+    },
+    {
+      "path": "代码/后端/Go/message_lifecycle.go",
+      "category": "business",
+      "lines": 11
+    },
+    {
+      "path": "代码/后端/Go/message_migration.go",
+      "category": "business",
+      "lines": 182
+    },
+    {
+      "path": "代码/后端/Go/message_read_points.go",
+      "category": "business",
+      "lines": 284
+    },
+    {
+      "path": "代码/后端/Go/message_read_summary.go",
+      "category": "business",
+      "lines": 118
+    },
+    {
+      "path": "代码/后端/Go/mfa.go",
+      "category": "business",
+      "lines": 373
+    },
+    {
+      "path": "代码/后端/Go/migration_identity.go",
+      "category": "business",
+      "lines": 102
+    },
+    {
+      "path": "代码/后端/Go/migration_interest.go",
+      "category": "business",
+      "lines": 79
+    },
+    {
+      "path": "代码/后端/Go/migration_invalidation.go",
+      "category": "business",
+      "lines": 177
+    },
+    {
+      "path": "代码/后端/Go/migrations.go",
+      "category": "business",
+      "lines": 188
+    },
+    {
+      "path": "代码/后端/Go/operations.go",
+      "category": "business",
+      "lines": 791
+    },
+    {
+      "path": "代码/后端/Go/owner_lifecycle.go",
+      "category": "business",
+      "lines": 57
+    },
+    {
+      "path": "代码/后端/Go/password_change.go",
+      "category": "business",
+      "lines": 284
+    },
+    {
+      "path": "代码/后端/Go/password_change_worker.go",
+      "category": "business",
+      "lines": 154
+    },
+    {
+      "path": "代码/后端/Go/personal_export.go",
+      "category": "business",
+      "lines": 392
+    },
+    {
+      "path": "代码/后端/Go/personal_export_crypto.go",
+      "category": "business",
+      "lines": 108
+    },
+    {
+      "path": "代码/后端/Go/personal_export_fence.go",
+      "category": "business",
+      "lines": 192
+    },
+    {
+      "path": "代码/后端/Go/personal_export_media.go",
+      "category": "business",
+      "lines": 158
+    },
+    {
+      "path": "代码/后端/Go/personal_export_owner.go",
+      "category": "business",
+      "lines": 535
+    },
+    {
+      "path": "代码/后端/Go/personal_export_safety.go",
+      "category": "business",
+      "lines": 65
+    },
+    {
+      "path": "代码/后端/Go/personal_export_worker.go",
+      "category": "business",
+      "lines": 679
+    },
+    {
+      "path": "代码/后端/Go/receipt_capabilities.go",
+      "category": "business",
+      "lines": 278
+    },
+    {
+      "path": "代码/后端/Go/receipt_delivery.go",
+      "category": "business",
+      "lines": 397
+    },
+    {
+      "path": "代码/后端/Go/receipt_delivery_worker.go",
+      "category": "business",
+      "lines": 244
+    },
+    {
+      "path": "代码/后端/Go/reports.go",
+      "category": "business",
+      "lines": 294
+    },
+    {
+      "path": "代码/后端/Go/request_gate.go",
+      "category": "business",
+      "lines": 101
+    },
+    {
+      "path": "代码/后端/Go/reset_grant.go",
+      "category": "business",
+      "lines": 207
+    },
+    {
+      "path": "代码/后端/Go/restore_runner.go",
+      "category": "business",
+      "lines": 476
+    },
+    {
+      "path": "代码/后端/Go/retention_access.go",
+      "category": "business",
+      "lines": 78
+    },
+    {
+      "path": "代码/后端/Go/retention_clock.go",
+      "category": "business",
+      "lines": 54
+    },
+    {
+      "path": "代码/后端/Go/retention_edit.go",
+      "category": "business",
+      "lines": 81
+    },
+    {
+      "path": "代码/后端/Go/retention_legacy.go",
+      "category": "business",
+      "lines": 35
+    },
+    {
+      "path": "代码/后端/Go/retention_policy.go",
+      "category": "business",
+      "lines": 514
+    },
+    {
+      "path": "代码/后端/Go/retention_read.go",
+      "category": "business",
+      "lines": 55
+    },
+    {
+      "path": "代码/后端/Go/retention_readiness.go",
+      "category": "business",
+      "lines": 48
+    },
+    {
+      "path": "代码/后端/Go/retention_safety.go",
+      "category": "business",
+      "lines": 85
+    },
+    {
+      "path": "代码/后端/Go/retention_worker.go",
+      "category": "business",
+      "lines": 307
+    },
+    {
+      "path": "代码/后端/Go/search.go",
+      "category": "business",
+      "lines": 249
+    },
+    {
+      "path": "代码/后端/Go/security.go",
+      "category": "business",
+      "lines": 91
+    },
+    {
+      "path": "代码/后端/Go/self_draft.go",
+      "category": "business",
+      "lines": 777
+    },
+    {
+      "path": "代码/后端/Go/self_draft_floor.go",
+      "category": "business",
+      "lines": 590
+    },
+    {
+      "path": "代码/后端/Go/self_draft_safety.go",
+      "category": "business",
+      "lines": 229
+    },
+    {
+      "path": "代码/后端/Go/self_draft_sync.go",
+      "category": "business",
+      "lines": 30
+    },
+    {
+      "path": "代码/后端/Go/self_read.go",
+      "category": "business",
+      "lines": 582
+    },
+    {
+      "path": "代码/后端/Go/self_state.go",
+      "category": "business",
+      "lines": 15
+    },
+    {
+      "path": "代码/后端/Go/self_unread.go",
+      "category": "business",
+      "lines": 116
+    },
+    {
+      "path": "代码/后端/Go/self_views.go",
+      "category": "business",
+      "lines": 358
+    },
+    {
+      "path": "代码/后端/Go/send_admission.go",
+      "category": "business",
+      "lines": 387
+    },
+    {
+      "path": "代码/后端/Go/server.go",
+      "category": "business",
+      "lines": 447
+    },
+    {
+      "path": "代码/后端/Go/session_auth_retirement.go",
+      "category": "business",
+      "lines": 93
+    },
+    {
+      "path": "代码/后端/Go/session_bff.go",
+      "category": "business",
+      "lines": 128
+    },
+    {
+      "path": "代码/后端/Go/session_refresh.go",
+      "category": "business",
+      "lines": 273
+    },
+    {
+      "path": "代码/后端/Go/session_refresh_model.go",
+      "category": "business",
+      "lines": 175
+    },
+    {
+      "path": "代码/后端/Go/source_preferences.go",
+      "category": "business",
+      "lines": 342
+    },
+    {
+      "path": "代码/后端/Go/sync_classification.go",
+      "category": "business",
+      "lines": 96
+    },
+    {
+      "path": "代码/后端/Go/sync_kinds.go",
+      "category": "business",
+      "lines": 75
+    },
+    {
+      "path": "代码/后端/Go/sync_migration.go",
+      "category": "business",
+      "lines": 423
+    },
+    {
+      "path": "代码/后端/Go/sync_migration_cleanup.go",
+      "category": "business",
+      "lines": 283
+    },
+    {
+      "path": "代码/后端/Go/sync_migration_delivery.go",
+      "category": "business",
+      "lines": 174
+    },
+    {
+      "path": "代码/后端/Go/sync_migration_model.go",
+      "category": "business",
+      "lines": 344
+    },
+    {
+      "path": "代码/后端/Go/sync_migration_validate.go",
+      "category": "business",
+      "lines": 259
+    },
+    {
+      "path": "代码/后端/Go/sync_nats.go",
+      "category": "business",
+      "lines": 444
+    },
+    {
+      "path": "代码/后端/Go/sync_object_receipts.go",
+      "category": "business",
+      "lines": 361
+    },
+    {
+      "path": "代码/后端/Go/sync_origin.go",
+      "category": "business",
+      "lines": 37
+    },
+    {
+      "path": "代码/后端/Go/sync_outbox.go",
+      "category": "business",
+      "lines": 254
+    },
+    {
+      "path": "代码/后端/Go/sync_owner.go",
+      "category": "business",
+      "lines": 403
+    },
+    {
+      "path": "代码/后端/Go/sync_private_unix.go",
+      "category": "business",
+      "lines": 13
+    },
+    {
+      "path": "代码/后端/Go/sync_private_windows.go",
+      "category": "business",
+      "lines": 50
+    },
+    {
+      "path": "代码/后端/Go/sync_protocol.go",
+      "category": "business",
+      "lines": 128
+    },
+    {
+      "path": "代码/后端/Go/sync_receipt_policy.go",
+      "category": "business",
+      "lines": 83
+    },
+    {
+      "path": "代码/后端/Go/sync_receipts.go",
+      "category": "business",
+      "lines": 491
+    },
+    {
+      "path": "代码/后端/Go/sync_schemas.go",
+      "category": "business",
+      "lines": 219
+    },
+    {
+      "path": "代码/后端/Go/sync_self.go",
+      "category": "business",
+      "lines": 79
+    },
+    {
+      "path": "代码/后端/Go/sync_service.go",
+      "category": "business",
+      "lines": 854
+    },
+    {
+      "path": "代码/后端/Go/sync_validation.go",
+      "category": "business",
+      "lines": 265
+    },
+    {
+      "path": "代码/后端/Go/types.go",
+      "category": "business",
+      "lines": 125
+    },
+    {
+      "path": "代码/后端/Go/web.go",
+      "category": "business",
+      "lines": 74
+    },
+    {
+      "path": "代码/后端/Go/第三方依赖/NATS模块校验.json",
+      "category": "configuration",
+      "lines": 42
+    },
+    {
+      "path": "代码/后端/Go/第三方依赖/许可证来源.json",
+      "category": "configuration",
+      "lines": 112
+    },
+    {
+      "path": "测试/CLI/KeychainDiagnostic.swift",
+      "category": "tests",
+      "lines": 34
+    },
+    {
+      "path": "测试/CLI/auth-https.py/auth-https.py",
+      "category": "tests",
+      "lines": 157
+    },
+    {
+      "path": "测试/CLI/auth_https_test.go",
+      "category": "tests",
+      "lines": 228
+    },
+    {
+      "path": "测试/CLI/auth_test.go",
+      "category": "tests",
+      "lines": 427
+    },
+    {
+      "path": "测试/CLI/collaboration-https.cjs/collaboration-https.cjs",
+      "category": "tests",
+      "lines": 126
+    },
+    {
+      "path": "测试/CLI/collaboration_test.go",
+      "category": "tests",
+      "lines": 400
+    },
+    {
+      "path": "测试/CLI/data_export_test.go",
+      "category": "tests",
+      "lines": 358
+    },
+    {
+      "path": "测试/CLI/forward-https.cjs/forward-https.cjs",
+      "category": "tests",
+      "lines": 28
+    },
+    {
+      "path": "测试/CLI/governance_test.go",
+      "category": "tests",
+      "lines": 421
+    },
+    {
+      "path": "测试/CLI/group_governance_test.go",
+      "category": "tests",
+      "lines": 265
+    },
+    {
+      "path": "测试/CLI/https-integration.cjs/https-integration.cjs",
+      "category": "tests",
+      "lines": 91
+    },
+    {
+      "path": "测试/CLI/migration_test.go",
+      "category": "tests",
+      "lines": 268
+    },
+    {
+      "path": "测试/CLI/object-receipt-https.py/object-receipt-https.py",
+      "category": "tests",
+      "lines": 235
+    },
+    {
+      "path": "测试/CLI/outbox_test.go",
+      "category": "tests",
+      "lines": 594
+    },
+    {
+      "path": "测试/CLI/own_deletion_test.go",
+      "category": "tests",
+      "lines": 384
+    },
+    {
+      "path": "测试/CLI/password_change_test.go",
+      "category": "tests",
+      "lines": 428
+    },
+    {
+      "path": "测试/CLI/receipt_negotiation_test.go",
+      "category": "tests",
+      "lines": 451
+    },
+    {
+      "path": "测试/CLI/receipt_objects_test.go",
+      "category": "tests",
+      "lines": 735
+    },
+    {
+      "path": "测试/CLI/receipt_test.go",
+      "category": "tests",
+      "lines": 509
+    },
+    {
+      "path": "测试/CLI/self-state-https.py/self-state-https.py",
+      "category": "tests",
+      "lines": 276
+    },
+    {
+      "path": "测试/CLI/self_state_test.go",
+      "category": "tests",
+      "lines": 361
+    },
+    {
+      "path": "测试/CLI/sync-https.py/sync-https.py",
+      "category": "tests",
+      "lines": 388
+    },
+    {
+      "path": "测试/CLI/sync_test.go",
+      "category": "tests",
+      "lines": 698
+    },
+    {
+      "path": "测试/CLI/运行测试.mjs/运行测试.mjs",
+      "category": "tests",
+      "lines": 66
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/AdmissionFenceTest.kt",
+      "category": "tests",
+      "lines": 251
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ApiFixtures.kt",
+      "category": "tests",
+      "lines": 10
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/AuthoritativeSyncTest.kt",
+      "category": "tests",
+      "lines": 306
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/CollaborationLifecycleTest.kt",
+      "category": "tests",
+      "lines": 359
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/DatabaseIsolationTest.kt",
+      "category": "tests",
+      "lines": 53
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/DiscoveryCollaborationUiTest.kt",
+      "category": "tests",
+      "lines": 390
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/DiscoveryLifecycleTest.kt",
+      "category": "tests",
+      "lines": 230
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ForwardLifecycleTest.kt",
+      "category": "tests",
+      "lines": 587
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ForwardUiTest.kt",
+      "category": "tests",
+      "lines": 226
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/GroupLifecycleTest.kt",
+      "category": "tests",
+      "lines": 77
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/LiveApiTest.kt",
+      "category": "tests",
+      "lines": 126
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/Migration8To9Test.kt",
+      "category": "tests",
+      "lines": 179
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/ModelClosureTest.kt",
+      "category": "tests",
+      "lines": 391
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeForwardActions.kt",
+      "category": "tests",
+      "lines": 172
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeSelfStateHttpsTest.kt",
+      "category": "tests",
+      "lines": 340
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeSessionHttpsTest.kt",
+      "category": "tests",
+      "lines": 337
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeSessionLifecycleTest.kt",
+      "category": "tests",
+      "lines": 328
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NativeUiTest.kt",
+      "category": "tests",
+      "lines": 171
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/NotificationPrivacyTest.kt",
+      "category": "tests",
+      "lines": 56
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/OwnDeletionLifecycleTest.kt",
+      "category": "tests",
+      "lines": 107
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/OwnPasswordLifecycleTest.kt",
+      "category": "tests",
+      "lines": 95
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/PersonalExportLifecycleTest.kt",
+      "category": "tests",
+      "lines": 150
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/RoleAdmissionLifecycleTest.kt",
+      "category": "tests",
+      "lines": 311
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/SelfStateTest.kt",
+      "category": "tests",
+      "lines": 352
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/StorageLifecycleTest.kt",
+      "category": "tests",
+      "lines": 171
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/VoiceRecordingNativeTest.kt",
+      "category": "tests",
+      "lines": 105
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/VoiceUploadApiNativeTest.kt",
+      "category": "tests",
+      "lines": 94
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/VoiceUploadGlobalFloorNativeTest.kt",
+      "category": "tests",
+      "lines": 96
+    },
+    {
+      "path": "测试/前端/Android/Instrumentation/VoiceUploadQueueNativeTest.kt",
+      "category": "tests",
+      "lines": 216
+    },
+    {
+      "path": "测试/前端/Android/Unit/GroupRulesTest.kt",
+      "category": "tests",
+      "lines": 15
+    },
+    {
+      "path": "测试/前端/Android/Unit/IsolationTest.kt",
+      "category": "tests",
+      "lines": 83
+    },
+    {
+      "path": "测试/前端/Android/Unit/MigrationRulesTest.kt",
+      "category": "tests",
+      "lines": 35
+    },
+    {
+      "path": "测试/前端/Android/Unit/OwnDeletionRulesTest.kt",
+      "category": "tests",
+      "lines": 23
+    },
+    {
+      "path": "测试/前端/Android/Unit/OwnPasswordRulesTest.kt",
+      "category": "tests",
+      "lines": 37
+    },
+    {
+      "path": "测试/前端/Android/Unit/PersonalExportFileTest.kt",
+      "category": "tests",
+      "lines": 71
+    },
+    {
+      "path": "测试/前端/Android/Unit/SyncWireTest.kt",
+      "category": "tests",
+      "lines": 53
+    },
+    {
+      "path": "测试/前端/Android/Unit/VoiceRecordingRulesTest.kt",
+      "category": "tests",
+      "lines": 42
+    },
+    {
+      "path": "测试/前端/Android/Unit/VoiceUploadRulesTest.kt",
+      "category": "tests",
+      "lines": 81
+    },
+    {
+      "path": "测试/前端/Android/native_refresh.py/native_refresh.py",
+      "category": "tests",
+      "lines": 205
+    },
+    {
+      "path": "测试/前端/Android/self_state_https.py/self_state_https.py",
+      "category": "tests",
+      "lines": 259
+    },
+    {
+      "path": "测试/前端/Android/sync_build.py/sync_build.py",
+      "category": "tests",
+      "lines": 177
+    },
+    {
+      "path": "测试/前端/Android/sync_instrument.py/sync_instrument.py",
+      "category": "tests",
+      "lines": 212
+    },
+    {
+      "path": "测试/前端/Android/运行测试.command/运行测试.command",
+      "category": "tests",
+      "lines": 68
+    },
+    {
+      "path": "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets",
+      "category": "tests",
+      "lines": 359
+    },
+    {
+      "path": "测试/前端/HarmonyOS/OhosTest/ets/testability/TestAbility.ets",
+      "category": "tests",
+      "lines": 2
+    },
+    {
+      "path": "测试/前端/HarmonyOS/OhosTest/ets/testrunner/OpenHarmonyTestRunner.ets",
+      "category": "tests",
+      "lines": 10
+    },
+    {
+      "path": "测试/前端/HarmonyOS/OhosTest/module.json5",
+      "category": "tests",
+      "lines": 24
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Auth.test.cjs",
+      "category": "tests",
+      "lines": 59
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/AuthApi.test.cjs",
+      "category": "tests",
+      "lines": 59
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Deletion.test.cjs/Deletion.test.cjs",
+      "category": "tests",
+      "lines": 59
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Export.test.cjs",
+      "category": "tests",
+      "lines": 189
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Group.test.cjs/Group.test.cjs",
+      "category": "tests",
+      "lines": 52
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Migration.test.cjs/Migration.test.cjs",
+      "category": "tests",
+      "lines": 19
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Password.test.cjs/Password.test.cjs",
+      "category": "tests",
+      "lines": 116
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Policies.test.mjs",
+      "category": "tests",
+      "lines": 173
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/RunAuth.mjs",
+      "category": "tests",
+      "lines": 58
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/RunDeletion.mjs/RunDeletion.mjs",
+      "category": "tests",
+      "lines": 33
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/RunExport.mjs",
+      "category": "tests",
+      "lines": 38
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/RunGroup.mjs/RunGroup.mjs",
+      "category": "tests",
+      "lines": 33
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/RunMigration.mjs/RunMigration.mjs",
+      "category": "tests",
+      "lines": 33
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/RunPassword.mjs/RunPassword.mjs",
+      "category": "tests",
+      "lines": 33
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/RunSync.mjs",
+      "category": "tests",
+      "lines": 47
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/Sync.test.cjs",
+      "category": "tests",
+      "lines": 316
+    },
+    {
+      "path": "测试/前端/HarmonyOS/Unit/SyncSqlite.py",
+      "category": "tests",
+      "lines": 23
+    },
+    {
+      "path": "测试/前端/HarmonyOS/【MacOS】运行规则测试.command/【MacOS】运行规则测试.command",
+      "category": "tests",
+      "lines": 28
+    },
+    {
+      "path": "测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+      "category": "tests",
+      "lines": 158
+    },
+    {
+      "path": "测试/前端/Web/account-deletion-cleanup.cjs/account-deletion-cleanup.cjs",
+      "category": "tests",
+      "lines": 85
+    },
+    {
+      "path": "测试/前端/Web/account-deletion.cjs/account-deletion.cjs",
+      "category": "tests",
+      "lines": 126
+    },
+    {
+      "path": "测试/前端/Web/admin-integration.cjs/admin-integration.cjs",
+      "category": "tests",
+      "lines": 398
+    },
+    {
+      "path": "测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs",
+      "category": "tests",
+      "lines": 244
+    },
+    {
+      "path": "测试/前端/Web/attachment-rules.cjs/attachment-rules.cjs",
+      "category": "tests",
+      "lines": 43
+    },
+    {
+      "path": "测试/前端/Web/audio-browser.cjs/audio-browser.cjs",
+      "category": "tests",
+      "lines": 118
+    },
+    {
+      "path": "测试/前端/Web/audio-rules.cjs/audio-rules.cjs",
+      "category": "tests",
+      "lines": 50
+    },
+    {
+      "path": "测试/前端/Web/auth-https.cjs/auth-https.cjs",
+      "category": "tests",
+      "lines": 246
+    },
+    {
+      "path": "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+      "category": "tests",
+      "lines": 306
+    },
+    {
+      "path": "测试/前端/Web/browser.cjs/browser.cjs",
+      "category": "tests",
+      "lines": 313
+    },
+    {
+      "path": "测试/前端/Web/business-global.cjs/business-global.cjs",
+      "category": "tests",
+      "lines": 150
+    },
+    {
+      "path": "测试/前端/Web/data-export.cjs/data-export.cjs",
+      "category": "tests",
+      "lines": 285
+    },
+    {
+      "path": "测试/前端/Web/draft-recovery.cjs/draft-recovery.cjs",
+      "category": "tests",
+      "lines": 183
+    },
+    {
+      "path": "测试/前端/Web/forward.cjs/forward.cjs",
+      "category": "tests",
+      "lines": 713
+    },
+    {
+      "path": "测试/前端/Web/global-facts.cjs/global-facts.cjs",
+      "category": "tests",
+      "lines": 151
+    },
+    {
+      "path": "测试/前端/Web/group-governance.cjs/group-governance.cjs",
+      "category": "tests",
+      "lines": 123
+    },
+    {
+      "path": "测试/前端/Web/integration.cjs/integration.cjs",
+      "category": "tests",
+      "lines": 1786
+    },
+    {
+      "path": "测试/前端/Web/migration.cjs/migration.cjs",
+      "category": "tests",
+      "lines": 168
+    },
+    {
+      "path": "测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs",
+      "category": "tests",
+      "lines": 97
+    },
+    {
+      "path": "测试/前端/Web/owned-web-runtime.cjs/owned-web-runtime.cjs",
+      "category": "tests",
+      "lines": 107
+    },
+    {
+      "path": "测试/前端/Web/password-change.cjs/password-change.cjs",
+      "category": "tests",
+      "lines": 237
+    },
+    {
+      "path": "测试/前端/Web/receipt-context.cjs/receipt-context.cjs",
+      "category": "tests",
+      "lines": 87
+    },
+    {
+      "path": "测试/前端/Web/self-state-https.cjs/self-state-https.cjs",
+      "category": "tests",
+      "lines": 298
+    },
+    {
+      "path": "测试/前端/Web/self-state.cjs/self-state.cjs",
+      "category": "tests",
+      "lines": 278
+    },
+    {
+      "path": "测试/前端/Web/sync-https.cjs/sync-https.cjs",
+      "category": "tests",
+      "lines": 258
+    },
+    {
+      "path": "测试/前端/Web/sync-protocol.cjs/sync-protocol.cjs",
+      "category": "tests",
+      "lines": 114
+    },
+    {
+      "path": "测试/前端/Web/sync-store.cjs/sync-store.cjs",
+      "category": "tests",
+      "lines": 202
+    },
+    {
+      "path": "测试/前端/Web/sync-view.cjs/sync-view.cjs",
+      "category": "tests",
+      "lines": 183
+    },
+    {
+      "path": "测试/前端/iOS/Fixtures/AuthRefreshPublic.json",
+      "category": "tests",
+      "lines": 6
+    },
+    {
+      "path": "测试/前端/iOS/Fixtures/SelfStatePublic.json",
+      "category": "tests",
+      "lines": 8
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthCoordinatorTests.swift",
+      "category": "tests",
+      "lines": 920
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthCredentialTests.swift",
+      "category": "tests",
+      "lines": 105
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthRefreshIntegrationTests.swift",
+      "category": "tests",
+      "lines": 315
+    },
+    {
+      "path": "测试/前端/iOS/IMAuthoritativeSyncTests.swift",
+      "category": "tests",
+      "lines": 786
+    },
+    {
+      "path": "测试/前端/iOS/IMCompletionTests.swift",
+      "category": "tests",
+      "lines": 404
+    },
+    {
+      "path": "测试/前端/iOS/IMDataExportTests.swift",
+      "category": "tests",
+      "lines": 267
+    },
+    {
+      "path": "测试/前端/iOS/IMForwardTests.swift",
+      "category": "tests",
+      "lines": 750
+    },
+    {
+      "path": "测试/前端/iOS/IMIntegrationFixture.swift",
+      "category": "tests",
+      "lines": 40
+    },
+    {
+      "path": "测试/前端/iOS/IMLifecycleTests.swift",
+      "category": "tests",
+      "lines": 243
+    },
+    {
+      "path": "测试/前端/iOS/IMMediaTests.swift",
+      "category": "tests",
+      "lines": 89
+    },
+    {
+      "path": "测试/前端/iOS/IMMessageListTests.swift",
+      "category": "tests",
+      "lines": 514
+    },
+    {
+      "path": "测试/前端/iOS/IMMigrationServiceTests.swift",
+      "category": "tests",
+      "lines": 373
+    },
+    {
+      "path": "测试/前端/iOS/IMMigrationTests.swift",
+      "category": "tests",
+      "lines": 277
+    },
+    {
+      "path": "测试/前端/iOS/IMNotificationTests.swift",
+      "category": "tests",
+      "lines": 51
+    },
+    {
+      "path": "测试/前端/iOS/IMPersonalStateTests.swift",
+      "category": "tests",
+      "lines": 224
+    },
+    {
+      "path": "测试/前端/iOS/IMReceiptServiceTests.swift",
+      "category": "tests",
+      "lines": 493
+    },
+    {
+      "path": "测试/前端/iOS/IMReceiptStorageTests.swift",
+      "category": "tests",
+      "lines": 174
+    },
+    {
+      "path": "测试/前端/iOS/IMSelfStateIntegrationTests.swift",
+      "category": "tests",
+      "lines": 399
+    },
+    {
+      "path": "测试/前端/iOS/IMSendAdmissionTests.swift",
+      "category": "tests",
+      "lines": 389
+    },
+    {
+      "path": "测试/前端/iOS/IMSessionTests.swift",
+      "category": "tests",
+      "lines": 93
+    },
+    {
+      "path": "测试/前端/iOS/IMStorageTests.swift",
+      "category": "tests",
+      "lines": 172
+    },
+    {
+      "path": "测试/前端/iOS/UI/IMMessageListUITests.swift",
+      "category": "tests",
+      "lines": 196
+    },
+    {
+      "path": "测试/前端/iOS/UI/IMSelfStateUITests.swift",
+      "category": "tests",
+      "lines": 126
+    },
+    {
+      "path": "测试/前端/iOS/UI/IMUITests.swift",
+      "category": "tests",
+      "lines": 358
+    },
+    {
+      "path": "测试/前端/iOS/personal_state.py/personal_state.py",
+      "category": "tests",
+      "lines": 298
+    },
+    {
+      "path": "测试/后端/security_test.go",
+      "category": "tests",
+      "lines": 135
+    },
+    {
+      "path": "测试/后端/接口/account_deletion_admission.mjs/account_deletion_admission.mjs",
+      "category": "tests",
+      "lines": 63
+    },
+    {
+      "path": "测试/后端/接口/account_deletion_admission_test.go",
+      "category": "tests",
+      "lines": 226
+    },
+    {
+      "path": "测试/后端/接口/account_deletion_pg_test.go",
+      "category": "tests",
+      "lines": 493
+    },
+    {
+      "path": "测试/后端/接口/account_deletion_read_floor_test.go",
+      "category": "tests",
+      "lines": 45
+    },
+    {
+      "path": "测试/后端/接口/admin_mfa.py",
+      "category": "tests",
+      "lines": 93
+    },
+    {
+      "path": "测试/后端/接口/avatar_codec_test.go",
+      "category": "tests",
+      "lines": 83
+    },
+    {
+      "path": "测试/后端/接口/avatar_reports.py",
+      "category": "tests",
+      "lines": 98
+    },
+    {
+      "path": "测试/后端/接口/backup_restore.py",
+      "category": "tests",
+      "lines": 80
+    },
+    {
+      "path": "测试/后端/接口/closure_audit_completed_receipt_test.go",
+      "category": "tests",
+      "lines": 111
+    },
+    {
+      "path": "测试/后端/接口/closure_audit_deletion_fairness_test.go",
+      "category": "tests",
+      "lines": 118
+    },
+    {
+      "path": "测试/后端/接口/cloud_drafts.py/cloud_drafts.py",
+      "category": "tests",
+      "lines": 212
+    },
+    {
+      "path": "测试/后端/接口/cloud_drafts.py/restore.py",
+      "category": "tests",
+      "lines": 181
+    },
+    {
+      "path": "测试/后端/接口/contact_relationship.py",
+      "category": "tests",
+      "lines": 78
+    },
+    {
+      "path": "测试/后端/接口/deployment_restore_pg_test.go",
+      "category": "tests",
+      "lines": 476
+    },
+    {
+      "path": "测试/后端/接口/draft_reply_test.go",
+      "category": "tests",
+      "lines": 32
+    },
+    {
+      "path": "测试/后端/接口/export_fence_test.go",
+      "category": "tests",
+      "lines": 388
+    },
+    {
+      "path": "测试/后端/接口/export_public.py",
+      "category": "tests",
+      "lines": 79
+    },
+    {
+      "path": "测试/后端/接口/forward_compatibility.py/forward_compatibility.py",
+      "category": "tests",
+      "lines": 159
+    },
+    {
+      "path": "测试/后端/接口/forward_fences.py/forward_fences.py",
+      "category": "tests",
+      "lines": 154
+    },
+    {
+      "path": "测试/后端/接口/forward_gateway_test.go",
+      "category": "tests",
+      "lines": 339
+    },
+    {
+      "path": "测试/后端/接口/forward_refs.py/forward_refs.py",
+      "category": "tests",
+      "lines": 254
+    },
+    {
+      "path": "测试/后端/接口/forward_restore.py/forward_restore.py",
+      "category": "tests",
+      "lines": 182
+    },
+    {
+      "path": "测试/后端/接口/fresh_migrations_test.go",
+      "category": "tests",
+      "lines": 100
+    },
+    {
+      "path": "测试/后端/接口/group_governance_test.go",
+      "category": "tests",
+      "lines": 153
+    },
+    {
+      "path": "测试/后端/接口/group_manager_original_test.go",
+      "category": "tests",
+      "lines": 267
+    },
+    {
+      "path": "测试/后端/接口/integration.py",
+      "category": "tests",
+      "lines": 78
+    },
+    {
+      "path": "测试/后端/接口/media_owner_floor_test.go",
+      "category": "tests",
+      "lines": 53
+    },
+    {
+      "path": "测试/后端/接口/media_retention_pg_test.go",
+      "category": "tests",
+      "lines": 530
+    },
+    {
+      "path": "测试/后端/接口/media_upload_pg_test.go",
+      "category": "tests",
+      "lines": 376
+    },
+    {
+      "path": "测试/后端/接口/media_webm_browser_test.go",
+      "category": "tests",
+      "lines": 57
+    },
+    {
+      "path": "测试/后端/接口/media_webm_test.go",
+      "category": "tests",
+      "lines": 292
+    },
+    {
+      "path": "测试/后端/接口/mentions_announcements.py/mentions_announcements.py",
+      "category": "tests",
+      "lines": 377
+    },
+    {
+      "path": "测试/后端/接口/message_read_points_test.go",
+      "category": "tests",
+      "lines": 246
+    },
+    {
+      "path": "测试/后端/接口/message_read_summary_test.go",
+      "category": "tests",
+      "lines": 80
+    },
+    {
+      "path": "测试/后端/接口/object_receipts.mjs/https.py",
+      "category": "tests",
+      "lines": 151
+    },
+    {
+      "path": "测试/后端/接口/object_receipts.mjs/object_receipts.mjs",
+      "category": "tests",
+      "lines": 69
+    },
+    {
+      "path": "测试/后端/接口/object_receipts.mjs/realm.py",
+      "category": "tests",
+      "lines": 190
+    },
+    {
+      "path": "测试/后端/接口/password_change.mjs/password_change.mjs",
+      "category": "tests",
+      "lines": 63
+    },
+    {
+      "path": "测试/后端/接口/password_change_pg_test.go",
+      "category": "tests",
+      "lines": 500
+    },
+    {
+      "path": "测试/后端/接口/password_change_test.go",
+      "category": "tests",
+      "lines": 101
+    },
+    {
+      "path": "测试/后端/接口/personal_export_inventory_test.go",
+      "category": "tests",
+      "lines": 88
+    },
+    {
+      "path": "测试/后端/接口/personal_export_test.go",
+      "category": "tests",
+      "lines": 299
+    },
+    {
+      "path": "测试/后端/接口/personal_exports.py/all_media.py",
+      "category": "tests",
+      "lines": 78
+    },
+    {
+      "path": "测试/后端/接口/personal_exports.py/compatibility.py",
+      "category": "tests",
+      "lines": 135
+    },
+    {
+      "path": "测试/后端/接口/personal_exports.py/final.py",
+      "category": "tests",
+      "lines": 77
+    },
+    {
+      "path": "测试/后端/接口/personal_exports.py/negative.py",
+      "category": "tests",
+      "lines": 92
+    },
+    {
+      "path": "测试/后端/接口/personal_exports.py/personal_exports.py",
+      "category": "tests",
+      "lines": 501
+    },
+    {
+      "path": "测试/后端/接口/personal_exports.py/realm.py",
+      "category": "tests",
+      "lines": 298
+    },
+    {
+      "path": "测试/后端/接口/personal_exports.py/report_restore.py",
+      "category": "tests",
+      "lines": 136
+    },
+    {
+      "path": "测试/后端/接口/personal_exports.py/reports.py",
+      "category": "tests",
+      "lines": 110
+    },
+    {
+      "path": "测试/后端/接口/personal_exports.py/restore.py",
+      "category": "tests",
+      "lines": 244
+    },
+    {
+      "path": "测试/后端/接口/receipt_capabilities_pg_test.go",
+      "category": "tests",
+      "lines": 358
+    },
+    {
+      "path": "测试/后端/接口/reset_grant.py",
+      "category": "tests",
+      "lines": 51
+    },
+    {
+      "path": "测试/后端/接口/retention_pg_test.go",
+      "category": "tests",
+      "lines": 553
+    },
+    {
+      "path": "测试/后端/接口/role_qualification.py/role_qualification.py",
+      "category": "tests",
+      "lines": 143
+    },
+    {
+      "path": "测试/后端/接口/s2_pg_guard_test.go",
+      "category": "tests",
+      "lines": 146
+    },
+    {
+      "path": "测试/后端/接口/search_favorites.py",
+      "category": "tests",
+      "lines": 68
+    },
+    {
+      "path": "测试/后端/接口/search_test.go",
+      "category": "tests",
+      "lines": 34
+    },
+    {
+      "path": "测试/后端/接口/self_draft_floor_test.go",
+      "category": "tests",
+      "lines": 387
+    },
+    {
+      "path": "测试/后端/接口/self_draft_test.go",
+      "category": "tests",
+      "lines": 82
+    },
+    {
+      "path": "测试/后端/接口/self_read_test.go",
+      "category": "tests",
+      "lines": 330
+    },
+    {
+      "path": "测试/后端/接口/self_state_sync.py/self_state_sync.py",
+      "category": "tests",
+      "lines": 367
+    },
+    {
+      "path": "测试/后端/接口/self_views_pg_test.go",
+      "category": "tests",
+      "lines": 213
+    },
+    {
+      "path": "测试/后端/接口/self_views_test.go",
+      "category": "tests",
+      "lines": 87
+    },
+    {
+      "path": "测试/后端/接口/send_admission.py",
+      "category": "tests",
+      "lines": 72
+    },
+    {
+      "path": "测试/后端/接口/send_admission_test.go",
+      "category": "tests",
+      "lines": 385
+    },
+    {
+      "path": "测试/后端/接口/session_closure.py",
+      "category": "tests",
+      "lines": 36
+    },
+    {
+      "path": "测试/后端/接口/session_refresh.py/session_refresh.py",
+      "category": "tests",
+      "lines": 429
+    },
+    {
+      "path": "测试/后端/接口/session_refresh_restore.py/session_refresh_restore.py",
+      "category": "tests",
+      "lines": 121
+    },
+    {
+      "path": "测试/后端/接口/session_refresh_test.go",
+      "category": "tests",
+      "lines": 157
+    },
+    {
+      "path": "测试/后端/接口/source_preferences_test.go",
+      "category": "tests",
+      "lines": 326
+    },
+    {
+      "path": "测试/后端/接口/sync_migration_fair_pg_test.go",
+      "category": "tests",
+      "lines": 118
+    },
+    {
+      "path": "测试/后端/接口/sync_migration_forward_pg_test.go",
+      "category": "tests",
+      "lines": 42
+    },
+    {
+      "path": "测试/后端/接口/sync_migration_pg_test.go",
+      "category": "tests",
+      "lines": 458
+    },
+    {
+      "path": "测试/后端/接口/sync_object_receipts_test.go",
+      "category": "tests",
+      "lines": 407
+    },
+    {
+      "path": "测试/后端/接口/sync_outbox_test.go",
+      "category": "tests",
+      "lines": 351
+    },
+    {
+      "path": "测试/后端/接口/sync_receipts_pg_test.go",
+      "category": "tests",
+      "lines": 245
+    },
+    {
+      "path": "测试/后端/接口/sync_receipts_test.go",
+      "category": "tests",
+      "lines": 126
+    },
+    {
+      "path": "测试/后端/接口/sync_register_pg_test.go",
+      "category": "tests",
+      "lines": 147
+    },
+    {
+      "path": "测试/后端/接口/sync_restore.py/sync_restore.py",
+      "category": "tests",
+      "lines": 513
+    },
+    {
+      "path": "测试/后端/接口/sync_schema_protocol_test.go",
+      "category": "tests",
+      "lines": 67
+    },
+    {
+      "path": "测试/后端/接口/sync_schemas_test.go",
+      "category": "tests",
+      "lines": 274
+    },
+    {
+      "path": "测试/后端/接口/sync_snapshot.py/sync_snapshot.py",
+      "category": "tests",
+      "lines": 264
+    },
+    {
+      "path": "测试/后端/接口/sync_snapshot_test.go",
+      "category": "tests",
+      "lines": 569
+    },
+    {
+      "path": "测试/后端/规范入口HTTPS.py/规范入口HTTPS.py",
+      "category": "tests",
+      "lines": 156
+    },
+    {
+      "path": "测试/后端/运行测试.py",
+      "category": "tests",
+      "lines": 19
+    },
+    {
+      "path": "测试/部署/MacOS/ContractSmoke.mjs",
+      "category": "tests",
+      "lines": 35
+    },
+    {
+      "path": "测试/部署/MacOS/NATS专项.command/NATS专项.command",
+      "category": "tests",
+      "lines": 103
+    },
+    {
+      "path": "测试/部署/MacOS/NATS协议.mjs/NATS协议.mjs",
+      "category": "tests",
+      "lines": 78
+    },
+    {
+      "path": "测试/部署/MacOS/工作树搬迁.py/工作树搬迁.py",
+      "category": "tests",
+      "lines": 98
+    },
+    {
+      "path": "测试/部署/MacOS/运行测试.command/运行测试.command",
+      "category": "tests",
+      "lines": 71
+    },
+    {
+      "path": "部署/Linux/【Linux】快捷入口_停止备份.sh",
+      "category": "configuration",
+      "lines": 5
+    },
+    {
+      "path": "部署/Linux/【Linux】快捷入口_部署运行.sh",
+      "category": "configuration",
+      "lines": 5
+    },
+    {
+      "path": "部署/Linux/停止备份.sh/停止备份.sh",
+      "category": "configuration",
+      "lines": 607
+    },
+    {
+      "path": "部署/Linux/部署运行.sh/部署运行.sh",
+      "category": "configuration",
+      "lines": 607
+    },
+    {
+      "path": "部署/MacOS/【MacOS】快捷入口_停止备份.command",
+      "category": "configuration",
+      "lines": 9
+    },
+    {
+      "path": "部署/MacOS/【MacOS】快捷入口_部署运行.command",
+      "category": "configuration",
+      "lines": 9
+    },
+    {
+      "path": "部署/MacOS/停止备份.command/停止备份.command",
+      "category": "configuration",
+      "lines": 614
+    },
+    {
+      "path": "部署/MacOS/部署运行.command/部署运行.command",
+      "category": "configuration",
+      "lines": 614
+    },
+    {
+      "path": "部署/WindowsOS/停止备份.ps1/停止备份.ps1",
+      "category": "configuration",
+      "lines": 425
+    },
+    {
+      "path": "部署/WindowsOS/部署运行.ps1/部署运行.ps1",
+      "category": "configuration",
+      "lines": 425
+    },
+    {
+      "path": "工具/统计项目.mjs/统计项目.mjs",
+      "category": "configuration",
+      "lines": 138
+    }
+  ]
+}

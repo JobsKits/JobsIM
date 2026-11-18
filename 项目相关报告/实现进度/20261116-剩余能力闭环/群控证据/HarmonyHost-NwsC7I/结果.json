@@ -1,0 +1,19 @@
+{
+  "exitCode": 1,
+  "typeErrors": 0,
+  "native": false,
+  "https": false,
+  "hashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "cb5e3567f6da62dc2d916b05b94156b041e0bcd59f1e91fde87b4a0acd3864e7",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets": "f8070229568cab15d7113784d2a602eea10c57a3f71fda57a36b010a80ad0db2",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordText.ets": "3c68c3c53a74651965cd1c3e08ac78645bab4977ac52309e2b43d305c2d49ae9",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools.ets": "ffcc751f60f64e895f4f74114fe124184c9332b5e23adf93a6fe122f572b61de",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupText.ets": "6d0ee216691d04e96ffce9de78bf150a8caa36a9490a0c0fd595fe4aae72d87e",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupStore.ets": "2559ada4628fe306794ffc7e036b671c2a2a1b8b9d54a6ec1208ae8f97e1d07d",
+    "测试/前端/HarmonyOS/Unit/RunGroup.mjs/RunGroup.mjs": "9ff0bc9f7084b150b0be6b2b95806d0576bc565f2833b5782f6caeb321e91816",
+    "测试/前端/HarmonyOS/Unit/Group.test.cjs/Group.test.cjs": "13ce5e58c5ab6fb224d55083df1a825f41b98c0b43b58beada0ce137852f0906",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee"
+  }
+}

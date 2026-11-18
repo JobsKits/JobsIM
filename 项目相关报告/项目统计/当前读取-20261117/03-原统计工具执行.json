@@ -1,0 +1,7 @@
+{
+  "startedAt": "2026-11-17T044805381Z",
+  "status": 0,
+  "signal": null,
+  "stdout": "{\n  \"at\": \"2026-11-17T04:48:06.070Z\",\n  \"totals\": {\n    \"business\": {\n      \"files\": 448,\n      \"lines\": 101972,\n      \"percent\": 63.42\n    },\n    \"tests\": {\n      \"files\": 237,\n      \"lines\": 51221,\n      \"percent\": 31.86\n    },\n    \"configuration\": {\n      \"files\": 49,\n      \"lines\": 7601,\n      \"percent\": 4.73\n    }\n  },\n  \"totalLines\": 160794\n}\n",
+  "stderr": ""
+}

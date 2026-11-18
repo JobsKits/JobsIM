@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-17T12:06:37.050156",
+  "url": "https://127.0.0.1:9443",
+  "originalCAStrictTLS": true,
+  "checks": [
+    {
+      "path": "/healthz",
+      "status": 200,
+      "bytes": 446
+    },
+    {
+      "path": "/api/bootstrap",
+      "status": 200,
+      "bytes": 894,
+      "sameDeployment": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 446
+    }
+  ],
+  "testActorsCreated": false,
+  "sourceAfterLastBuildNotClaimed": true,
+  "healthEndpointCorrection": {
+    "incorrectProbe": "/healthz",
+    "incorrectProbeReturnedSPA": true,
+    "actualPath": "/api/health",
+    "status": 200,
+    "response": {
+      "service": "gateway",
+      "status": "ok"
+    }
+  }
+}

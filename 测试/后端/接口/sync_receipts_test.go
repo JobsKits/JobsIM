@@ -96,8 +96,7 @@ func TestReceiptProofBindsExactContentStoreAndRestoreEpoch(t *testing.T) {
 	parts[1] = parts[1][:len(parts[1])-1] + "!"
 	_, err = app.decodeReceiptProof(strings.Join(parts, "."), now)
 	receiptTestError(t, err, "INVALID_RECEIPT_PROOF")
-	other := *app
-	other.Config.DeploymentID = newID()
+	other := &App{Config: Config{DeploymentID: newID(), Key: app.Config.Key}}
 	_, err = other.decodeReceiptProof(token, now)
 	receiptTestError(t, err, "INVALID_RECEIPT_PROOF")
 	_, err = app.decodeReceiptProof(token, now.Add(time.Hour))

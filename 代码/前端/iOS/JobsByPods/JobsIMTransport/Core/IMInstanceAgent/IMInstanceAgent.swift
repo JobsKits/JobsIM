@@ -191,6 +191,221 @@ public final class IMInstanceAgent: JobsAgent, @unchecked Sendable {
     }
 }
 
+final class IMPasswordChangeTransport: @unchecked Sendable {
+
+    private let session: Session
+    private let baseURL: URL
+
+    init(baseURL: URL, certificate: IMInstanceCertificate?) {
+        self.baseURL = baseURL
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.urlCache = nil
+        configuration.urlCredentialStorage = nil
+        configuration.httpCookieStorage = nil
+        configuration.httpShouldSetCookies = false
+        let trust = certificate.map { value in
+            ServerTrustManager(evaluators: [(baseURL.host ?? ""): IMInstanceEvaluator(certificate: value)])
+        }
+        session = Session(configuration: configuration, serverTrustManager: trust,
+                          redirectHandler: Redirector(behavior: .doNotFollow))
+    }
+
+    func request(_ path: String, body: Data, token: String?, cancellation: JobsRequestToken,
+                 completion: @escaping (Result<IMJSON, JobsError>) -> Void) {
+        let box = IMCompletion<IMJSON>(completion: completion, onEvent: { _ in })
+        guard !cancellation.isCancelled, baseURL.scheme == "https", baseURL.host != nil,
+            baseURL.user == nil, baseURL.password == nil, baseURL.query == nil, baseURL.fragment == nil,
+            ["auth/password-change", "auth/password-change-results", "auth/deletion-requests",
+             "auth/deletion-results", "auth/data-rights/proofs", "auth/data-rights/query",
+             "auth/data-rights/cancel"].contains(path), body.count <= 8192 else {
+            box.complete(.failure(.invalidRequest(reason: "Verified HTTPS account-operation route required")))
+            return
+        }
+        var headers = ["Accept": "application/json"]
+        if let token {
+            headers["Authorization"] = "Bearer " + token
+        }
+        let url = baseURL.appendingPathComponent(path)
+        let prepared = URLRequest.make(url: url, method: "POST", headers: headers, body: body, timeout: 20)
+        let task = session.request(prepared)
+        cancellation.setCancel { task.cancel() }
+        task.responseData { response in
+            cancellation.setCancel {}
+            guard let status = response.response?.statusCode, let bytes = response.data,
+                bytes.count <= 32768, response.error == nil else {
+                box.complete(.failure(.transport(underlying: "Password-change result unknown")))
+                return
+            }
+            guard status == 200 else {
+                box.complete(.failure(.http(statusCode: status, data: bytes)))
+                return
+            }
+            do {
+                box.complete(.success(try JSONDecoder.make().decode(IMJSON.self, from: bytes)))
+            } catch {
+                box.complete(.failure(.decode(underlying: "Invalid password-change result", data: nil)))
+            }
+        }
+    }
+}
+
+final class IMMigrationTransport: @unchecked Sendable {
+
+    private let session: Session
+    private let baseURL: URL
+
+    init(baseURL: URL, certificate: IMInstanceCertificate?) {
+        self.baseURL = baseURL
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.urlCache = nil
+        configuration.urlCredentialStorage = nil
+        configuration.httpCookieStorage = nil
+        configuration.httpShouldSetCookies = false
+        let trust = certificate.map { value in
+            ServerTrustManager(evaluators: [(baseURL.host ?? ""): IMInstanceEvaluator(certificate: value)])
+        }
+        session = Session(configuration: configuration, serverTrustManager: trust,
+                          redirectHandler: Redirector(behavior: .doNotFollow))
+    }
+
+    func request(_ path: String, method: String, body: Data, token: String, store: String,
+                 cancellation: JobsRequestToken, completion: @escaping (Result<Data, JobsError>) -> Void) {
+        let fixed: [String: String] = ["sync/migration-capabilities": "GET", "sync/migration-pairings": "POST",
+                                       "sync/migration-pairing-results": "POST", "sync/migrations": "POST",
+                                       "sync/migration-results": "POST"]
+        let parts = path.split(separator: "/", omittingEmptySubsequences: false)
+        let dynamic = parts.count >= 3 && parts.count <= 4 && parts[0] == "sync" && parts[1] == "migrations"
+            && UUID(uuidString: String(parts[2])) != nil
+        let originalObject = parts.count == 2 && parts[0] == "media" && UUID(uuidString: String(parts[1])) != nil && method == "GET"
+        let allowed = originalObject || fixed[path] == method || dynamic && (parts.count == 3 && method == "GET"
+            || parts.count == 4 && (parts[3] == "capsule" && method == "GET"
+                || ["key", "validate", "installed", "cancel"].contains(String(parts[3])) && method == "POST"))
+        guard allowed, !cancellation.isCancelled, UUID(uuidString: store) != nil, !token.isEmpty,
+            baseURL.scheme == "https", baseURL.host != nil, baseURL.user == nil, baseURL.password == nil,
+            baseURL.query == nil, baseURL.fragment == nil, body.count <= 128 * 1024 * 1024 else {
+            completion(.failure(.invalidRequest(reason: "Verified HTTPS migration route required")))
+            return
+        }
+        let binary = path.hasSuffix("/capsule") || originalObject
+        let limit: Int64 = originalObject ? 64 * 1024 * 1024 : path.hasSuffix("/capsule") ? 128 * 1024 * 1024 + 4096 : 2 * 1024 * 1024
+        let prepared = URLRequest.make(url: baseURL.appendingPathComponent(path), method: method,
+            headers: ["Accept": binary ? "application/octet-stream" : "application/json",
+                      "Authorization": "Bearer " + token, "X-JobsIM-Store-Generation": store],
+            body: method == "GET" ? nil : body, timeout: 90)
+        let task = session.request(prepared)
+        cancellation.setCancel { task.cancel() }
+        task.downloadProgress { progress in
+            if progress.completedUnitCount > limit || progress.totalUnitCount > limit {
+                task.cancel()
+            }
+        }
+        task.responseData { response in
+            cancellation.setCancel {}
+            guard !cancellation.isCancelled, let status = response.response?.statusCode,
+                let bytes = response.data, bytes.count <= limit, response.error == nil else {
+                completion(.failure(.transport(underlying: "Migration result unknown")))
+                return
+            }
+            guard status == 200 else {
+                completion(.failure(.http(statusCode: status, data: bytes.prefix(32768))))
+                return
+            }
+            completion(.success(bytes))
+        }
+    }
+}
+
+final class IMReceiptTransport: @unchecked Sendable {
+
+    private let session: Session
+    private let baseURL: URL
+
+    init(baseURL: URL, certificate: IMInstanceCertificate?) {
+        self.baseURL = baseURL
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.urlCache = nil
+        configuration.urlCredentialStorage = nil
+        configuration.httpCookieStorage = nil
+        configuration.httpShouldSetCookies = false
+        let trust = certificate.map { value in
+            return ServerTrustManager(evaluators: [(baseURL.host ?? ""): IMInstanceEvaluator(certificate: value)])
+        }
+        session = Session(configuration: configuration, serverTrustManager: trust,
+            redirectHandler: Redirector(behavior: .doNotFollow))
+    }
+
+    func request(_ path: String, method: String, body: Data, token: String, store: String,
+                 cancellation: JobsRequestToken, completion: @escaping (Result<Data, JobsError>) -> Void) {
+        guard let parsed = URLComponents(string: path), parsed.scheme == nil, parsed.host == nil,
+            parsed.fragment == nil, !parsed.path.hasPrefix("/"), parsed.percentEncodedPath == parsed.path else {
+            completion(.failure(.invalidRequest(reason: "An exact receipt route is required")))
+            return
+        }
+        let fixed: [String: String] = ["sync/storage": "PUT", "sync/storage-results": "POST",
+            "sync/receipt-challenges": "POST", "sync/receipts": "POST", "sync/receipt-results": "POST",
+            "sync/object-receipt-challenges": "POST", "sync/object-receipts": "POST", "sync/object-receipt-results": "POST"]
+        let parts = parsed.path.split(separator: "/", omittingEmptySubsequences: false)
+        let binary = parts.count == 2 && parts[0] == "media" && UUID(uuidString: String(parts[1])) != nil
+        let target = parts.count == 3 && parts[0] == "sync" && parts[1] == "receipt-targets"
+            && UUID(uuidString: String(parts[2])) != nil
+        let query = parsed.queryItems ?? []
+        let queryKeys = query.map(\.name)
+        let readable = ["sync/receipt-context", "sync/receipt-profiles"].contains(parsed.path) || target
+        let expectedKeys: Set<String> = parsed.path == "sync/receipt-profiles" ? ["schemaVersion", "buildDigest"]
+            : target && queryKeys.contains("qualificationId") ? ["schemaVersion", "qualificationId"] : ["schemaVersion"]
+        let schema = query.first(where: { $0.name == "schemaVersion" })?.value
+        let digest = query.first(where: { $0.name == "buildDigest" })?.value ?? ""
+        let qualification = query.first(where: { $0.name == "qualificationId" })?.value
+        let validRead = readable && method == "GET" && Set(queryKeys) == expectedKeys
+            && queryKeys.count == expectedKeys.count && ["1", "2"].contains(schema ?? "")
+            && (qualification == nil || target && UUID(uuidString: qualification ?? "") != nil)
+            && (parsed.path != "sync/receipt-profiles" || digest.range(of: "^[0-9a-f]{64}$", options: .regularExpression) != nil)
+        guard validRead || query.isEmpty && (fixed[parsed.path] == method || binary && method == "GET"),
+            !cancellation.isCancelled, UUID(uuidString: store) != nil, !token.isEmpty,
+            baseURL.scheme == "https", baseURL.host != nil, baseURL.user == nil, baseURL.password == nil,
+            baseURL.query == nil, baseURL.fragment == nil, body.count <= 32768,
+            var address = URLComponents(url: baseURL.appendingPathComponent(parsed.path), resolvingAgainstBaseURL: false)
+        else {
+            completion(.failure(.invalidRequest(reason: "Verified HTTPS receipt route and original store required")))
+            return
+        }
+        address.queryItems = query.isEmpty ? nil : query
+        guard let url = address.url else {
+            completion(.failure(.invalidRequest(reason: "Invalid receipt route")))
+            return
+        }
+        let limit: Int64 = binary ? 64 * 1024 * 1024 : 2 * 1024 * 1024
+        let prepared = URLRequest.make(url: url, method: method,
+            headers: ["Accept": binary ? "application/octet-stream" : "application/json",
+                "Authorization": "Bearer " + token, "X-JobsIM-Store-Generation": store],
+            body: method == "GET" ? nil : body, timeout: binary ? 90 : 15)
+        let task = session.request(prepared)
+        cancellation.setCancel { task.cancel() }
+        task.downloadProgress { progress in
+            if progress.completedUnitCount > limit || progress.totalUnitCount > limit {
+                task.cancel()
+            }
+        }
+        task.responseData { response in
+            cancellation.setCancel {}
+            guard !cancellation.isCancelled, response.error == nil,
+                let status = response.response?.statusCode, let bytes = response.data, bytes.count <= limit else {
+                completion(.failure(.transport(underlying: "Receipt result unknown")))
+                return
+            }
+            guard status == 200 else {
+                completion(.failure(.http(statusCode: status, data: bytes.prefix(32768))))
+                return
+            }
+            guard binary || response.response?.mimeType == "application/json" else {
+                completion(.failure(.decode(underlying: "Invalid receipt response", data: nil)))
+                return
+            }
+            completion(.success(bytes))
+        }
+    }
+}
+
 private final class IMCompletion<T>: @unchecked Sendable {
     let completion: (Result<T, JobsError>) -> Void
     let onEvent: (Result<(T, JobsResponseSource), JobsError>) -> Void

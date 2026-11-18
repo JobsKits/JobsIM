@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/jobs/.gradle/wrapper/dists/gradle-9.5.0-bin/bvnork1r7n8i6kp5cnkibsc9q/gradle-9.5.0/bin/gradle",
+    "--offline",
+    "--no-daemon",
+    "--no-build-cache",
+    "--max-workers=1",
+    "--console=plain",
+    "-Dorg.gradle.jvmargs=-Xmx2g -XX:ActiveProcessorCount=2 -Dfile.encoding=UTF-8",
+    "-Pkotlin.compiler.execution.strategy=in-process",
+    "-Pandroid.builder.sdkDownload=false",
+    "--init-script",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/Android/ReceiptNative/20261117-160529-1a455c35/limits.gradle",
+    ":app:testDebugUnitTest",
+    ":app:assembleDebug",
+    ":app:assembleDebugAndroidTest"
+  ],
+  "cwd": "/Users/jobs/Library/Application Support/JobsIM/Build/Android/ReceiptNative/20261117-160529-1a455c35/代码/前端/Android",
+  "javaHome": "/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home",
+  "sdk": "/Users/jobs/Library/Android/sdk",
+  "minimumFreeBytes": 4294967296,
+  "maxSeconds": 900,
+  "initialFreeBytes": 15360221184,
+  "javaRelease": "IMPLEMENTOR=\"Homebrew\"\nIMPLEMENTOR_VERSION=\"Homebrew\"\nJAVA_RUNTIME_VERSION=\"21.0.13.0.3\"\nJAVA_VERSION=\"21.0.13.0.3\"\nJAVA_VERSION_DATE=\"2026-10-24\"\nLIBC=\"default\"\nMODULES=\"java.base java.compiler java.datatransfer java.xml java.prefs java.desktop java.instrument java.logging java.management java.security.sasl java.naming java.rmi java.management.rmi java.net.http java.scripting java.security.jgss java.transaction.xa java.sql java.sql.rowset java.xml.crypto java.se java.smartcardio jdk.accessibility jdk.internal.jvmstat jdk.attach jdk.charsets jdk.internal.opt jdk.zipfs jdk.compiler jdk.crypto.ec jdk.crypto.cryptoki jdk.dynalink jdk.internal.ed jdk.editpad jdk.hotspot.agent jdk.httpserver jdk.incubator.vector jdk.internal.le jdk.internal.vm.ci jdk.internal.vm.compiler jdk.internal.vm.compiler.management jdk.jartool jdk.javadoc jdk.jcmd jdk.management jdk.management.agent jdk.jconsole jdk.jdeps jdk.jdwp.agent jdk.jdi jdk.jfr jdk.jlink jdk.jpackage jdk.jshell jdk.jsobject jdk.jstatd jdk.localedata jdk.management.jfr jdk.naming.dns jdk.naming.rmi jdk.net jdk.nio.mapmode jdk.random jdk.sctp jdk.security.auth jdk.security.jgss jdk.unsupported jdk.unsupported.desktop jdk.xml.dom\"\nOS_ARCH=\"aarch64\"\nOS_NAME=\"Darwin\"\nSOURCE=\"\"\n",
+  "initSHA256": "a76cfe89af585eb7486ed889323ff20c550b13ed43345cf4b37c3d0ed21b3819"
+}

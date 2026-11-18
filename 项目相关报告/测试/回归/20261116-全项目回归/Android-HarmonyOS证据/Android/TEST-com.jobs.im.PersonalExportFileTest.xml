@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jobs.im.PersonalExportFileTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-16T15:19:43.003Z" hostname="JobsdeMacBook-Air.local" time="0.047">
+  <properties/>
+  <testcase name="everyLanguageDistinguishesCancelledSelectionFromSavedFile" classname="com.jobs.im.PersonalExportFileTest" time="0.006"/>
+  <testcase name="completeZipIsRequiredEvenWhenHttpResponseWasSuccessful" classname="com.jobs.im.PersonalExportFileTest" time="0.022"/>
+  <testcase name="zip64DirectoryHasExactSingleDiskBoundsWithoutWholeFileAllocation" classname="com.jobs.im.PersonalExportFileTest" time="0.007"/>
+  <testcase name="directoryLimitsAreDistinctFromMalformedDirectoryCounts" classname="com.jobs.im.PersonalExportFileTest" time="0.001"/>
+  <testcase name="serverFilenameIsRequiredAndCannotEscapeOrHideControls" classname="com.jobs.im.PersonalExportFileTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

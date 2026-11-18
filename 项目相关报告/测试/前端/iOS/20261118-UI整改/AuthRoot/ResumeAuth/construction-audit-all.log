@@ -1,0 +1,5 @@
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift	1648	ISO8601DateFormatter	ISO8601DateFormatter()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationJSON.swift	87	JSONDecoder	JSONDecoder()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptBuild.swift	16	NSLock	NSLock()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/Factories/UINavigationBarAppearance/UINavigationBarAppearance+IMTheme.swift	13	UINavigationBarAppearance	UINavigationBarAppearance()
+issues=4 issue_files=4 factory_hits=35 scanned=132 sdk_classes=3512

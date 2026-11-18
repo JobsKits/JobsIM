@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "previous": {
+    "filter.jobs-markdown-toc.clean": [],
+    "filter.jobs-markdown-toc.smudge": [],
+    "filter.jobs-markdown-toc.required": []
+  },
+  "installed": {
+    "filter.jobs-markdown-toc.clean": [
+      "'/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node' '.jobs-markdown-toc/MarkdownToc.mjs' clean"
+    ],
+    "filter.jobs-markdown-toc.smudge": [
+      "'/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node' '.jobs-markdown-toc/MarkdownToc.mjs' smudge"
+    ],
+    "filter.jobs-markdown-toc.required": [
+      "true"
+    ]
+  }
+}

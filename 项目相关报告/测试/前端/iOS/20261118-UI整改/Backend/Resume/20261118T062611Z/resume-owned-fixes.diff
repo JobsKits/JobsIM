@@ -1,0 +1,46 @@
+--- 修正前/report_media-first.go
++++ 代码/后端/Go/report_media.go
+@@ -117,5 +117,8 @@
+ 	if !validAssetID(source.MediaMessageID) {
+ 		return fail(410, "REPORT_MESSAGE_UNAVAILABLE", "Selected attachment source unavailable")
+ 	}
++	if err = a.requireMediaRetention(r.Context(), source.MediaMessageID, source.ObjectID); err != nil {
++		return err
++	}
+ 	return a.servePrivateMedia(w, r, source.ObjectID, name, ct, key, source.MediaMessageID)
+ }
+--- 修正前/ui_contract_test-first.go
++++ 测试/后端/接口/ui_contract_test.go
+@@ -393,7 +393,7 @@
+ 	deletionBody(t, uiRegressionCall(f.nodes["media"], "GET", attachment, token, nil), 403)
+ 	read := uiRegressionCall(f.nodes["media"], "GET", attachment, adminToken, nil)
+ 	if read.Code != 200 || !bytes.Equal(read.Body.Bytes(), imageBytes.Bytes()) || read.Header().Get("Cache-Control") != "private,no-store" {
+-		t.Fatal("selected report attachment did not use authenticated original bytes")
++		t.Fatalf("selected report attachment status=%d actualBytes=%d expectedBytes=%d cache=%q", read.Code, read.Body.Len(), imageBytes.Len(), read.Header().Get("Cache-Control"))
+ 	}
+ 	deletionBody(t, uiRegressionCall(f.nodes["message"], "DELETE", "/api/messages/"+message["id"].(string), f.token, nil), 200)
+ 	deletionBody(t, uiRegressionCall(f.nodes["media"], "GET", attachment, adminToken, nil), 410)
+--- 修正前/sync_object_receipts_test.go
++++ 测试/后端/接口/sync_object_receipts_test.go
+@@ -47,8 +47,7 @@
+ 	}
+ 	_, err = app.decodeObjectReceiptProof(token, now.Add(time.Hour))
+ 	receiptTestError(t, err, "RECEIPT_PROOF_EXPIRED")
+-	other := *app
+-	other.Config.DeploymentID = newID()
++	other := &App{Config: Config{DeploymentID: newID(), Key: app.Config.Key}}
+ 	if _, err = other.decodeObjectReceiptProof(token, now); err == nil {
+ 		t.Fatal("another deployment accepted the object proof")
+ 	}
+--- 修正前/sync_receipts_test.go
++++ 测试/后端/接口/sync_receipts_test.go
+@@ -96,8 +96,7 @@
+ 	parts[1] = parts[1][:len(parts[1])-1] + "!"
+ 	_, err = app.decodeReceiptProof(strings.Join(parts, "."), now)
+ 	receiptTestError(t, err, "INVALID_RECEIPT_PROOF")
+-	other := *app
+-	other.Config.DeploymentID = newID()
++	other := &App{Config: Config{DeploymentID: newID(), Key: app.Config.Key}}
+ 	_, err = other.decodeReceiptProof(token, now)
+ 	receiptTestError(t, err, "INVALID_RECEIPT_PROOF")
+ 	_, err = app.decodeReceiptProof(token, now.Add(time.Hour))

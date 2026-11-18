@@ -55,9 +55,8 @@ func (a *App) searchScopeRoutes(h func(string, func(http.ResponseWriter, *http.R
 		if !validObjectID(r.PathValue("id")) {
 			return fail(400, "INVALID_CONVERSATION_ID", "Stable conversation ID required")
 		}
-		if _, e = a.member(r.Context(), u.ID, r.PathValue("id")); e != nil {
-			return e
-		}
+		// Closed groups retain only metadata for their original active members.
+		// The body/read-scope APIs continue to require a live cloud membership.
 		conversation, e := a.conversationByID(r, r.PathValue("id"), u.ID)
 		if e != nil {
 			return e

@@ -1,0 +1,24 @@
+✔ NFC, codepoint bounds, password reuse and confirmation are checked (0.9705ms)
+✔ all ten languages contain every password control (0.635041ms)
+✔ original public responsibility is durable and paused before POST; no secret or secret hash is saved (6.879959ms)
+✔ lost success resumes by anonymous lookup only using the original nonce and pair (0.463875ms)
+✔ unknown404 lookup cannot create; explicit retry preserves the nonce and body (0.34825ms)
+✔ unseen original never creates anonymously or borrows a successor family token (0.353542ms)
+✔ disk failure sends zero creating requests (0.118959ms)
+✔ wrong proof or malformed result keeps an unknown responsibility paused (0.274291ms)
+✔ capability withdrawal still permits old lookup but cannot start a fresh change (0.269083ms)
+✔ pending is readonly until explicit same-request retry, with no new-family credentials (0.29825ms)
+✔ late identity change cannot publish or retire the successor (0.164125ms)
+✔ metadata rejects extra secret fields and changed bindings (0.164125ms)
+✔ real shipped repository atomically commits pause marker and public intent, survives reopen, rejects stale CAS (46.873458ms)
+✔ fresh change validates current family before responsibility and uses refreshed same-family AT (0.418542ms)
+✔ capability withdrawal and restore changes permit only lookup, never pending or unseen mutation (0.939958ms)
+✔ prepared dependency403 never marks a fresh original rejected or unpauses business (0.221958ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 206.179709

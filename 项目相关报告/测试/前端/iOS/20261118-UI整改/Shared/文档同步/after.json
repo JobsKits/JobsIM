@@ -1,0 +1,92 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "dd38c07587a68567b708d62797f02c35cb2b74d606492d1e6309e787eb75f7bd",
+    "bytes": 23886,
+    "changed": true
+  },
+  {
+    "path": "../README.md",
+    "sha256": "c8447aa417338a0e688c9edb8a8faf07a6b79e46795518027e9cb1955a326448",
+    "bytes": 14779,
+    "changed": true
+  },
+  {
+    "path": "PRODUCT.md",
+    "sha256": "0fe4f29120d938c17d61637e2d58e115ef1544b863881cc0172e1a6e2239718f",
+    "bytes": 2390,
+    "changed": true
+  },
+  {
+    "path": "DESIGN.md",
+    "sha256": "b08be4bb194e3871cb11d03bbd1ff5d69d6bd106ec404bc0317a5e3b31516e53",
+    "bytes": 2891,
+    "changed": true
+  },
+  {
+    "path": "代码/前端/iOS/README.md",
+    "sha256": "f69b3661dafebbd920b33bcd9637d519425c687d920346d85e0bc81296428ed5",
+    "bytes": 36906,
+    "changed": true
+  },
+  {
+    "path": "项目相关报告/资产盘点/README.md",
+    "sha256": "210a30d952e1087ad4f901c7877176a6f45ebe6ae70183b446f7efee53f1a644",
+    "bytes": 63821,
+    "changed": true
+  },
+  {
+    "path": "需求/IM功能验收表.md/IM功能验收表.md",
+    "sha256": "3bd8162140eae3400c80235edea88155c06e8dad39c68d27a6e226c63de3da0e",
+    "bytes": 120362,
+    "changed": true
+  },
+  {
+    "path": "需求/IM后端架构表.md/IM后端架构表.md",
+    "sha256": "1be0f280ab6de8a4e1d45d8cd2dfd2008ba9b76bd9d2deaecc28b5b8f745006c",
+    "bytes": 252867,
+    "changed": true
+  },
+  {
+    "path": "需求/IM前端架构表.md/IM前端架构表.md",
+    "sha256": "bd6bbb4d9ab6bba6c07c13d419a2124bc5ae6109ff4b6736a7cbb3b161598b24",
+    "bytes": 116849,
+    "changed": true
+  },
+  {
+    "path": "需求/JobsIM数据库设计.md/JobsIM数据库设计.md",
+    "sha256": "b8c2ced9af5b6569548ac3c5aa87e7760dc26d98e7ea24b0a660f5d931901c5a",
+    "bytes": 179185,
+    "changed": false
+  },
+  {
+    "path": "需求/IM需求明细表.md/IM需求明细表.md",
+    "sha256": "ec15a62da5afe1785205fcb8ea51eb4a8418d43a4c6b790d14aeac36402ecd7a",
+    "bytes": 270095,
+    "changed": true
+  },
+  {
+    "path": "需求/IM通信方式图解.md/IM通信方式图解.md",
+    "sha256": "59a48966cab000e5dfe100bfc6af1d8676c28a642547e2b7ad409b3977b738be",
+    "bytes": 36089,
+    "changed": false
+  },
+  {
+    "path": "需求/README.md",
+    "sha256": "6f4cb3ebce2f3610ad9615488c7b8145818a22eb735a4a65b8940a521442e957",
+    "bytes": 42085,
+    "changed": true
+  },
+  {
+    "path": ".jobs-markdown-toc/manifest.json",
+    "sha256": "f1824fcde9a636d7b541c865f03b9b08380bd7a3e1d938acae80e7232f9457ab",
+    "bytes": 16784,
+    "changed": true
+  },
+  {
+    "path": ".gitattributes",
+    "sha256": "7a93c9491f8264a4dfba5a9649c543af9392af6854b4593d73408d0a35317caa",
+    "bytes": 40720,
+    "changed": true
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "format": "JobsIM-terminal-QR-verification-v1",
+  "time": "2026-11-18T03:31:34.822810+00:00",
+  "status": "passed-with-scoped-platform-limits",
+  "rootCauses": [
+    "Mac and Linux omitted --ansi, so the previous helper always suppressed the code even at sufficient width; Windows always supplied width0.",
+    "COLUMNS alone could be unset/stale; stdout redirection requires the caller to pass measured TTY/Console dimensions.",
+    "Block-font leading breaks finder patterns in actual Menlo raster; the long-URL red is preserved. Final ANSI rendering uses solid background double-space modules.",
+    "Mac browser menu immediately covered the code; QR now stays visible and enter opens the existing menu. Exercising paused input exposed zsh read -t .1; corrected to0.1 in both Mac copies."
+  ],
+  "currentSource": "当前源码SHA256.json",
+  "changedProductionCallers": 12,
+  "sharedQRComponentsChanged": 1,
+  "selfContainedPairs": [
+    "Mac2 identical except default action",
+    "Linux8 QR helper functions identical",
+    "Windows2 QR functions identical"
+  ],
+  "displayContract": {
+    "ansi": "Whole QR modules use background40/47 and two spaces; required dimensions are2N+2 columns andN+6 rows, with four-module quiet zone. No block glyph dependency.",
+    "plain": "NO_COLOR including empty disables ANSI; visible character code remains but its polarity is not counted as a portable phone-scanning guarantee.",
+    "insufficientSizeOrColor": "Mac automatically opens only own generated local PNG in Preview; Linux uses xdg-open only when a graphical session exists; Windows requests own PNG only in an interactive local desktop. Unavailable preview is explicitly incomplete with PNG/URL/HTML retained.",
+    "loopback": "All loopback entries are labelled only-this-machine, phone unavailable. No instance is exposed.",
+    "multipleCards": "Primary first input is painted last so its QR remains visible after scroll; file order is unchanged.",
+    "nonTTY": "No input wait; Mac no GUI launch; URL/HTML/PNG retained."
+  },
+  "verification": {
+    "MacPTY": {
+      "report": "最终背景方格PTY/summary.json",
+      "pass": 18,
+      "fail": 0,
+      "scenarios": [
+        "80 columns50 rows",
+        "80 columns30 rows",
+        "32 columns",
+        "12 rows",
+        "NO_COLOR empty",
+        "TERM dumb",
+        "primary public plus loopback cards",
+        "real fzf only after enter",
+        "nonTTY"
+      ],
+      "realMenloRasterDeepLightDecoded": 12,
+      "sourceStable": true,
+      "nativePNGRequestExit": 0
+    },
+    "basicOfflineQR": {
+      "report": "基本二维码.json",
+      "pngDecoded": 2,
+      "credentialURLsRejected": 2
+    },
+    "MacLinuxSyntax": {
+      "report": "跨平台调用与语法.json",
+      "pass": 10
+    },
+    "LinuxQRFunctionCallsOnMacHost": {
+      "report": "跨平台调用与语法.json",
+      "pass": 8,
+      "targetNativeClaim": false
+    },
+    "WindowsPowerShell": {
+      "report": "Windows二维码合同.json",
+      "parsedScripts": 2,
+      "isolatedQRFunctionCalls": 2,
+      "NO_COLOREmptyAndOwnPNG": true,
+      "WindowsNativeClaim": false
+    },
+    "nearbyDocs": {
+      "report": "近README链接.json",
+      "links": 68,
+      "missing": 0
+    }
+  },
+  "preservedRed": [
+    "修前/summary.json",
+    "修后PTY/summary.json",
+    "修后PTY/last-failed-PTY.log",
+    "背景填色修后PTY/summary.json",
+    "背景填色修后PTY/0-双地址/终端字体-dark.png"
+  ],
+  "unverified": [
+    "Linux and Windows native terminal/desktop rendering",
+    "Physical phone camera scan and real public URL reachability",
+    "Existing user Terminal screenshot; current proof uses real PTY bytes and native Menlo/ANSI cell raster plus CoreImage decode"
+  ],
+  "cleanup": "收尾.json",
+  "heavyServicesOrExistingStateTouched": false,
+  "diskReserveBytes": 4294967296,
+  "noGlobalTerminalOrCacheConfigChanged": true,
+  "oldRegressionReportsFrozen": true,
+  "evidenceIntegrity": [
+    {
+      "path": "修前/summary.json",
+      "sha256": "943dc6a40d8c0543f8dc9a724e1f59f129959bed27bd2a07558768cecf9f32ca"
+    },
+    {
+      "path": "最终背景方格PTY/summary.json",
+      "sha256": "7e769cb513ac3e607dcf689b0eb7325a74e002314f54cf6afe20c99f4dbc43d8"
+    },
+    {
+      "path": "背景填色修后PTY/summary.json",
+      "sha256": "a803c63bc5728f292e44988cfd46e44273346134c07d18a4735c73d191e4cc30"
+    },
+    {
+      "path": "跨平台调用与语法.json",
+      "sha256": "bd1c895ac985d50ae9f31e7df0d7a498c00f093268392c5e90d0a3f1db42e168"
+    },
+    {
+      "path": "Windows二维码合同.json",
+      "sha256": "a1a9c556ae619e53519566ccbb77a6dd817fd61b813472cc600863b74bf4d90d"
+    },
+    {
+      "path": "基本二维码.json",
+      "sha256": "595cc66a10a1753b9740102915bea6152d09a5cca2678a737a9bab1df638792e"
+    },
+    {
+      "path": "收尾.json",
+      "sha256": "b2afb7e6bb052191b10290089ce68c18058dcc00dbd10311e7cdf3ff0f8c94d7"
+    },
+    {
+      "path": "近README链接.json",
+      "sha256": "35015540259710fa2d85854ec9296dd4bd19f3b6572b3a5df09c2c30ecbb3a7d"
+    },
+    {
+      "path": "当前源码SHA256.json",
+      "sha256": "9df791c506427d35b033b692e963766fb35081633f66547cbfc701cc21cd91d6"
+    },
+    {
+      "path": "原生预览收尾.json",
+      "sha256": "d799704ccac276f9052c2a6abba0e387ab26671292a943b3eb9f8b49940f4d0e"
+    }
+  ]
+}

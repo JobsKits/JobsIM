@@ -23,3 +23,37 @@ test('secured pair plus interrupted RDB handoff resumes with no new authenticati
 test('missing live auth capability stops before secret reads or HTTP auth',async()=>{const f=fixture();f.boot={deploymentId:c.deployment,protocolVersion:'1',restoreEpoch:'1',features:{}};await assert.rejects(login(f),/AUTH_REFRESH_UNSUPPORTED/);assert.equal(f.calls.length,0);assert.equal(f.data.events.length,0);});
 
 test('late cold-start context must not clear a newer authenticated device',async()=>{const f=fixture();const first=await login(f);const restored=fixture(f.data);restored.latest=f.latest;const held=gate();let entered=false;restored.ports.context=async()=>{entered=true;await held.promise;return {user,deviceId:first.deviceId,restoreEpoch:'1'};};const pendingRestore=restored.coordinator.restore();for(let i=0;i<50&&!entered;i++)await new Promise(r=>setImmediate(r));assert.ok(entered);await restored.coordinator.authenticate('login','alice','new-proof','',id(),false);const newest=restored.view;held.release();await assert.rejects(pendingRestore);assert.equal(restored.view?.token,newest.token);});
+
+test('password-change unknown blocks ordinary bearer and refresh across reconstruction without deleting the original pair', async () => {
+ const f=fixture(), original=await login(f), scope=Isolation.namespace(c.profile,c.deployment,'__auth__',false,c.epoch,'metadata','personal');
+ await f.ports.write(scope,[{key:'password-change:'+original.familyId,value:id()}]); f.coordinator.passwordPause(original.familyId,true);
+ await assert.rejects(f.coordinator.before(f.coordinator.stamp()),/PASSWORD_CHANGE_RESULT_UNKNOWN/);
+ await assert.rejects(f.coordinator.refresh(original.token,f.coordinator.stamp()),/PASSWORD_CHANGE_RESULT_UNKNOWN/);
+ assert.equal(f.calls.filter(x=>x.path==='/auth/refresh').length,0);
+ const restored=fixture(f.data); restored.latest=f.latest; restored.ports.context=async()=>{throw Error('must not query business context');};
+ await restored.coordinator.restore(); assert.equal(restored.view,undefined); assert.equal(restored.coordinator.passwordOwner().familyId,original.familyId);
+});
+test('old password marker cannot pause or erase a later independent family', async () => {
+ const f=fixture(), original=await login(f), scope=Isolation.namespace(c.profile,c.deployment,'__auth__',false,c.epoch,'metadata','personal');
+ await f.ports.write(scope,[{key:'password-change:'+original.familyId,value:id()}]); f.coordinator.passwordPause(original.familyId,true);
+ await f.coordinator.authenticate('login','alice','fixture-proof-long','',id(),false);
+ assert.notEqual(f.view.familyId,original.familyId); assert.equal(await f.coordinator.before(f.coordinator.stamp()),f.view.token);
+ f.coordinator.passwordPause(original.familyId,true); assert.equal(await f.coordinator.before(f.coordinator.stamp()),f.view.token);
+});
+
+test('account-deletion unknown blocks ordinary bearer and refresh across reconstruction without deleting the original pair', async () => {
+ const f=fixture(), original=await login(f), scope=Isolation.namespace(c.profile,c.deployment,'__auth__',false,c.epoch,'metadata','personal');
+ await f.ports.write(scope,[{key:'account-deletion:'+original.familyId,value:id()}]); f.coordinator.deletionPause(original.familyId,true);
+ await assert.rejects(f.coordinator.before(f.coordinator.stamp()),/PASSWORD_CHANGE_RESULT_UNKNOWN/);
+ await assert.rejects(f.coordinator.refresh(original.token,f.coordinator.stamp()),/PASSWORD_CHANGE_RESULT_UNKNOWN/);
+ assert.equal(f.calls.filter(x=>x.path==='/auth/refresh').length,0);
+ const restored=fixture(f.data); restored.latest=f.latest; restored.ports.context=async()=>{throw Error('must not query business context');};
+ await restored.coordinator.restore(); assert.equal(restored.view,undefined); assert.equal(restored.coordinator.passwordOwner().familyId,original.familyId);
+});
+test('old deletion marker cannot pause or erase a later independent family', async () => {
+ const f=fixture(), original=await login(f), scope=Isolation.namespace(c.profile,c.deployment,'__auth__',false,c.epoch,'metadata','personal');
+ await f.ports.write(scope,[{key:'account-deletion:'+original.familyId,value:id()}]); f.coordinator.deletionPause(original.familyId,true);
+ await f.coordinator.authenticate('login','alice','fixture-proof-long','',id(),false);
+ assert.notEqual(f.view.familyId,original.familyId); assert.equal(await f.coordinator.before(f.coordinator.stamp()),f.view.token);
+ f.coordinator.deletionPause(original.familyId,true); assert.equal(await f.coordinator.before(f.coordinator.stamp()),f.view.token);
+});

@@ -1,0 +1,4 @@
+Query chain:
+ →Find: Target Application 'com.jobs.im'
+  ↪︎Find: Descendants matching type StaticText
+    ↪︎Find: Elements matching predicate '"UI recall original 5705CA40" IN identifiers'

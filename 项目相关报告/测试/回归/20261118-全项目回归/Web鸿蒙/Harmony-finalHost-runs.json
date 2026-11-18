@@ -1,0 +1,82 @@
+[
+  {
+    "label": "Harmony-finalHost-Auth",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/RunAuth.mjs"
+    ],
+    "startedAt": "2026-11-17T22:53:59.686Z",
+    "endedAt": "2026-11-17T22:54:00.490Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Harmony-finalHost-Sync",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/RunSync.mjs"
+    ],
+    "startedAt": "2026-11-17T22:54:00.491Z",
+    "endedAt": "2026-11-17T22:54:02.788Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Harmony-finalHost-Export",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/RunExport.mjs"
+    ],
+    "startedAt": "2026-11-17T22:54:02.788Z",
+    "endedAt": "2026-11-17T22:54:03.618Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Harmony-finalHost-Password",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/RunPassword.mjs/RunPassword.mjs"
+    ],
+    "startedAt": "2026-11-17T22:54:03.619Z",
+    "endedAt": "2026-11-17T22:54:04.370Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Harmony-finalHost-Deletion",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/RunDeletion.mjs/RunDeletion.mjs"
+    ],
+    "startedAt": "2026-11-17T22:54:04.371Z",
+    "endedAt": "2026-11-17T22:54:05.425Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Harmony-finalHost-Group",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/RunGroup.mjs/RunGroup.mjs"
+    ],
+    "startedAt": "2026-11-17T22:54:05.426Z",
+    "endedAt": "2026-11-17T22:54:06.174Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Harmony-finalHost-Migration",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/RunMigration.mjs/RunMigration.mjs"
+    ],
+    "startedAt": "2026-11-17T22:54:06.174Z",
+    "endedAt": "2026-11-17T22:54:07.267Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Harmony-finalHost-Receipt",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/HarmonyOS/Unit/RunReceipt.mjs/RunReceipt.mjs"
+    ],
+    "startedAt": "2026-11-17T22:54:07.267Z",
+    "endedAt": "2026-11-17T22:54:08.191Z",
+    "code": 0,
+    "signal": null
+  }
+]

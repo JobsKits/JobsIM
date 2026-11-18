@@ -1,0 +1,22 @@
+{
+  "startedAt": "2026-11-17T00:51:15.938Z",
+  "finishedAt": "2026-11-17T00:51:16.309Z",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/Web/node_modules/typescript/bin/tsc",
+    "--noEmit",
+    "-p",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/Web/tsconfig.json"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "stopped": "",
+  "freeBefore": 4951449600,
+  "minimumFree": 4951449600,
+  "freeAfter": 4951207936,
+  "inputsUnchanged": true,
+  "actualAPI": false,
+  "dependencyInstall": false
+}

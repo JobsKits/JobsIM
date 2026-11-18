@@ -1,0 +1,78 @@
+{
+  "exitCode": 0,
+  "stopReason": "",
+  "seconds": 66.465,
+  "minimumFreeBytes": 10556985344,
+  "diskSamples": 66,
+  "inputUnchanged": true,
+  "results": [
+    {
+      "suite": "com.jobs.im.GroupRulesTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.jobs.im.IsolationTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.jobs.im.OwnDeletionRulesTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.jobs.im.OwnPasswordRulesTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.jobs.im.PersonalExportFileTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.jobs.im.SyncWireTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "suite": "com.jobs.im.VoiceRecordingRulesTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "totals": {
+    "tests": 33,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "artifacts": {
+    "app/build/outputs/apk/debug/app-debug.apk": {
+      "sha256": "0401c3b2f1e333ad6b530e1c7e4b12008aaf386ecd12dbc1d50bc01856818ba4",
+      "bytes": 17293103
+    },
+    "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk": {
+      "sha256": "7cd8e53ce5c3df7140c27c2b3f523a2c75f6975a6a102083362e17c9e590a3ce",
+      "bytes": 1122596
+    }
+  },
+  "deviceTests": "not executed",
+  "report": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/初始候选编译-20261117-103046-c74bc250",
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Android/VoiceRecording/20261117-103046-c74bc250"
+}

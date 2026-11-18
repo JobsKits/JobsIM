@@ -1,0 +1,375 @@
+{
+  "date": "2026-11-18",
+  "iOS": {
+    "build": {
+      "exitCode": 0,
+      "seconds": 34.18,
+      "stopReason": "completed",
+      "sourceInputs": 133,
+      "inputMismatches": [],
+      "freeBytesAfter": 22815174656,
+      "resourceSamples": [
+        {
+          "seconds": 0.0,
+          "freeBytes": 24525115392
+        },
+        {
+          "seconds": 1.0,
+          "freeBytes": 24499392512
+        },
+        {
+          "seconds": 2.0,
+          "freeBytes": 24492408832
+        },
+        {
+          "seconds": 3.0,
+          "freeBytes": 24474931200
+        },
+        {
+          "seconds": 4.0,
+          "freeBytes": 24466309120
+        },
+        {
+          "seconds": 5.0,
+          "freeBytes": 24445812736
+        },
+        {
+          "seconds": 6.0,
+          "freeBytes": 24427921408
+        },
+        {
+          "seconds": 7.1,
+          "freeBytes": 24415199232
+        },
+        {
+          "seconds": 8.1,
+          "freeBytes": 24403128320
+        },
+        {
+          "seconds": 9.1,
+          "freeBytes": 24393715712
+        },
+        {
+          "seconds": 10.1,
+          "freeBytes": 24359747584
+        },
+        {
+          "seconds": 11.1,
+          "freeBytes": 24353853440
+        },
+        {
+          "seconds": 12.1,
+          "freeBytes": 24344621056
+        },
+        {
+          "seconds": 13.1,
+          "freeBytes": 24323235840
+        },
+        {
+          "seconds": 14.1,
+          "freeBytes": 24296980480
+        },
+        {
+          "seconds": 15.1,
+          "freeBytes": 24301260800
+        },
+        {
+          "seconds": 16.1,
+          "freeBytes": 24301015040
+        },
+        {
+          "seconds": 17.1,
+          "freeBytes": 24288038912
+        },
+        {
+          "seconds": 18.1,
+          "freeBytes": 24279117824
+        },
+        {
+          "seconds": 19.1,
+          "freeBytes": 24256868352
+        },
+        {
+          "seconds": 20.1,
+          "freeBytes": 24236171264
+        },
+        {
+          "seconds": 21.1,
+          "freeBytes": 24229273600
+        },
+        {
+          "seconds": 22.1,
+          "freeBytes": 24209408000
+        },
+        {
+          "seconds": 23.1,
+          "freeBytes": 24185958400
+        },
+        {
+          "seconds": 24.1,
+          "freeBytes": 24167456768
+        },
+        {
+          "seconds": 25.1,
+          "freeBytes": 24149512192
+        },
+        {
+          "seconds": 26.1,
+          "freeBytes": 24084557824
+        },
+        {
+          "seconds": 27.1,
+          "freeBytes": 24064438272
+        },
+        {
+          "seconds": 28.1,
+          "freeBytes": 24050778112
+        },
+        {
+          "seconds": 29.1,
+          "freeBytes": 24003584000
+        },
+        {
+          "seconds": 30.1,
+          "freeBytes": 23983554560
+        },
+        {
+          "seconds": 31.1,
+          "freeBytes": 22867214336
+        },
+        {
+          "seconds": 32.1,
+          "freeBytes": 22849814528
+        },
+        {
+          "seconds": 33.1,
+          "freeBytes": 22836465664
+        }
+      ]
+    },
+    "local": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "736D4534-6DBF-42A9-97A9-8DABFC208987",
+            "deviceName": "JobsIM-Regression-20261118",
+            "modelName": "iPhone 17 Pro",
+            "osBuildNumber": "23F77",
+            "osVersion": "26.5",
+            "platform": "iOS Simulator"
+          },
+          "expectedFailures": 0,
+          "failedTests": 0,
+          "passedTests": 121,
+          "skippedTests": 1,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1794955485.3,
+      "passedTests": 121,
+      "result": "Passed",
+      "runtimeWarnings": [],
+      "skippedTests": 1,
+      "startTime": 1794955470.043,
+      "statistics": [],
+      "testFailures": [],
+      "title": "Test - JobsIM",
+      "topInsights": [
+        {
+          "category": "Longest Test Runs",
+          "impact": "40% of duration",
+          "text": "5 longest test runs with outlier durations exceeding 0.31s (three standard deviations)"
+        }
+      ],
+      "totalTestCount": 122
+    },
+    "demoUI": {
+      "devicesAndConfigurations": [
+        {
+          "device": {
+            "architecture": "arm64",
+            "deviceId": "736D4534-6DBF-42A9-97A9-8DABFC208987",
+            "deviceName": "JobsIM-Regression-20261118",
+            "modelName": "iPhone 17 Pro",
+            "osBuildNumber": "23F77",
+            "osVersion": "26.5",
+            "platform": "iOS Simulator"
+          },
+          "expectedFailures": 0,
+          "failedTests": 0,
+          "passedTests": 1,
+          "skippedTests": 0,
+          "testPlanConfiguration": {
+            "configurationId": "1",
+            "configurationName": "Test Scheme Action"
+          }
+        }
+      ],
+      "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "finishTime": 1794955614.818,
+      "passedTests": 1,
+      "result": "Passed",
+      "runtimeWarnings": [],
+      "skippedTests": 0,
+      "startTime": 1794955582.199,
+      "statistics": [],
+      "testFailures": [],
+      "title": "Test - JobsIM",
+      "topInsights": [],
+      "totalTestCount": 1
+    },
+    "sourceInputs": 133,
+    "sourceMismatches": [],
+    "skippedReason": "testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily: Explicit current canonical HTTPS fixture not installed",
+    "device": "JobsIM-Regression-20261118/736D4534-6DBF-42A9-97A9-8DABFC208987/iOS26.5",
+    "httpsSupplement": {
+      "result": {
+        "devicesAndConfigurations": [
+          {
+            "device": {
+              "architecture": "arm64",
+              "deviceId": "736D4534-6DBF-42A9-97A9-8DABFC208987",
+              "deviceName": "JobsIM-Regression-20261118",
+              "modelName": "iPhone 17 Pro",
+              "osBuildNumber": "23F77",
+              "osVersion": "26.5",
+              "platform": "iOS Simulator"
+            },
+            "expectedFailures": 0,
+            "failedTests": 0,
+            "passedTests": 1,
+            "skippedTests": 0,
+            "testPlanConfiguration": {
+              "configurationId": "1",
+              "configurationName": "Test Scheme Action"
+            }
+          }
+        ],
+        "environmentDescription": "JobsIM · Built with macOS 27.2.1",
+        "expectedFailures": 0,
+        "failedTests": 0,
+        "finishTime": 1794955715.877,
+        "passedTests": 1,
+        "result": "Passed",
+        "runtimeWarnings": [],
+        "skippedTests": 0,
+        "startTime": 1794955713.179,
+        "statistics": [],
+        "testFailures": [],
+        "title": "Test - JobsIM",
+        "topInsights": [],
+        "totalTestCount": 1
+      },
+      "execution": {
+        "exitCode": 0,
+        "seconds": 4.03,
+        "stopReason": "completed",
+        "resourceSamples": [
+          {
+            "seconds": 0.0,
+            "freeBytes": 21485867008
+          },
+          {
+            "seconds": 1.0,
+            "freeBytes": 21480570880
+          },
+          {
+            "seconds": 2.0,
+            "freeBytes": 21480271872
+          },
+          {
+            "seconds": 3.0,
+            "freeBytes": 21479829504
+          }
+        ],
+        "artifactMismatches": [],
+        "isolatedProducts": "/Users/jobs/Library/Application Support/JobsIM/Regression/20261118-iOS-HTTPS-Products",
+        "originalBuildUntouched": true
+      },
+      "test": "IMAuthCoordinatorTests/testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily",
+      "fixture": "HTTPS-public-fixture.json",
+      "separateSignedProductCopy": true,
+      "originalSkippedRunRetained": true,
+      "backendBinding": {
+        "deployment": "19443 first isolated deployment candidate in this regression",
+        "sourceInputs": 235,
+        "laterDeploymentDiskFixCovered": false,
+        "note": "Executed before the later PATH/df fix; it validates password-change route on the first isolated backend package, not a later rebuilt binary."
+      }
+    },
+    "screenshots": {
+      "visuallyInspected": true,
+      "count": 2,
+      "files": {
+        "screenshots/3C2BB866-9055-426F-8386-E0324D64347B.png": "fb22e8d9bd2c5fb18c2c478b774b22c45ebbcb7ed428f19663493e39f5325b8e",
+        "screenshots/1F6F0049-AB0E-472D-9142-A05F859F4025.png": "0a2c67b5870bbd80a3debfe014271f413878c51c8dedc47d11f55f4403db3f61"
+      },
+      "observed": "Local demo message visible, restart persistence checked by XCTest; light Chinese chat and dark English shell visible. User message/person names remain business text."
+    },
+    "sourceMismatchesAfterAllRuns": [],
+    "originalBuildArtifactMismatchesAfterAllRuns": []
+  },
+  "Android": {
+    "buildReport": "项目相关报告/测试/回归/20261118-全项目回归/原生双端/Android/Build-20261118-064142-80568-75fca3",
+    "sourceInputs": 124,
+    "inputsUnchanged": true,
+    "jvm": {
+      "tests": 54,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "freshTaskExecution": true
+    },
+    "artifacts": {
+      "app-debug.apk": {
+        "sha256": "9660aa3856ceb28d06ac1212ca1a82a54e4c0fbcd272b82f9440c503c7e45c45",
+        "bytes": 17604399
+      },
+      "app-debug-androidTest.apk": {
+        "sha256": "7b3f14b431e42a5745fbe3b2f269cfb34aba9dfb573847223a1d257e1b010e04",
+        "bytes": 1196924
+      }
+    },
+    "instrumentation": {
+      "selected": 102,
+      "passed": 86,
+      "skipped": 16,
+      "failed": 0,
+      "actualMethodsMatchSourceSelection": true,
+      "seconds": 5.02,
+      "notSelected": [
+        "NativeSelfStateHttpsTest (3 current explicit HTTPS tests)"
+      ]
+    },
+    "device": "read-only JobsIMReview_20261114_1424 overlay/emulator-5584",
+    "defaultDataUntouched": true,
+    "sourceMismatchesAfterAllRuns": []
+  },
+  "sourceChanges": [],
+  "limitations": [
+    "No physical device, power-loss or complete product acceptance",
+    "HTTP/foreground fixtures remain bounded to their tests; no real receipt/migration HTTPS inferred"
+  ],
+  "cleanup": {
+    "iOS": {
+      "shutdownExitCode": 0,
+      "deviceRetainedForReview": true,
+      "onlyTaskDeviceTouched": true
+    },
+    "Android": {
+      "readOnlyOverlayStopped": true,
+      "baseAVDChangesNotSaved": true
+    }
+  },
+  "status": "bounded_regression_passed",
+  "updatedAt": "2026-11-17T22:50:00.600198+00:00"
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "--input-type=module",
+    "-e",
+    "import {pathToFileURL} from \"node:url\";import {spawn} from \"node:child_process\";import fs from \"node:fs\";import os from \"node:os\";import path from \"node:path\";\nconst root=process.env.JOBSIM_PROJECT_ROOT,web=path.join(root,\"代码/前端/Web\"),{createServer}=await import(pathToFileURL(path.join(web,\"node_modules/vite/dist/node/index.js\")).href);const work=fs.mkdtempSync(path.join(os.tmpdir(),\"JobsIM-Deletion-Regression-\"));const vite=await createServer({root:web,configFile:false,publicDir:\"Public\",cacheDir:path.join(work,\"Vite\"),server:{host:\"127.0.0.1\",port:0}});try{await vite.listen();for(const test of [\"auth-session.cjs/auth-session.cjs\",\"browser.cjs/browser.cjs\"]){const child=spawn(process.execPath,[path.join(root,\"测试/前端/Web\",test)],{env:{...process.env,JOBSIM_WEB_URL:vite.resolvedUrls.local[0]},stdio:\"inherit\"});const status=await new Promise(resolve=>child.on(\"exit\",resolve));if(status!==0){process.exitCode=status??1;break}}}finally{await vite.close()}"
+  ],
+  "exitCode": 0,
+  "minimumFreeBytes": 7877451776,
+  "elapsedSeconds": 5.03,
+  "reason": null
+}

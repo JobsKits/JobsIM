@@ -1,0 +1,30 @@
+{
+  "timeUTC": "2026-11-18T06:08:31.415245+00:00",
+  "source": "测试/前端/iOS/UI/IMUITests.swift",
+  "sha256": "213df247e42959998360c0db78a3d22e2e9ca50d82edfc041bf40eb75b215b3c",
+  "existingBodyPreserved": true,
+  "newTests": [
+    "testDemoContactsFirstNavigationAndKeyboardDismissal",
+    "testDemoRecallKeepsExistingDraftAndCanRestoreIt",
+    "testDemoContactBlockPreservesFriendAndDeletionCancel",
+    "testDemoAvatarLongPressOpensReadOnlyPeerProfile"
+  ],
+  "launchArgumentsOnly": [
+    "--demo",
+    "--language",
+    "zh-Hans",
+    "--theme",
+    "light|dark"
+  ],
+  "parseExitCode": 0,
+  "built": false,
+  "run": false,
+  "targetSimulatorOnly": "736D4534-6DBF-42A9-97A9-8DABFC208987",
+  "evidence": "XCTAttachment screenshots retained keepAlways when tests actually execute",
+  "limitations": [
+    "demo interaction tests do not prove formal API/backend behavior",
+    "delete only tests explicit cancellation protection; does not remove shared demo contact",
+    "peer-profile assertion covers navigation/read-only permissions, not fetched formal profile contents",
+    "XCUITest syntax parsed; module typecheck/build/run owned by root"
+  ]
+}

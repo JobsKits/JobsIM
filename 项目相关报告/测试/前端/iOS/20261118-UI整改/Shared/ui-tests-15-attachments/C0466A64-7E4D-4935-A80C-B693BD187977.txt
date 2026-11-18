@@ -1,0 +1,45 @@
+Application, 0x10aab5a40, pid: 94971, label: 'JobsIM' <App element pid: 94971>
+  Window (Main), 0x10aab5cc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4364779520.4>
+    Other, 0x10aab5e00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4371341824.229>
+    Other, 0x10aab5f40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4860352768.230>
+      Other, 0x10aab6080, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4860360448.231>
+        Other, 0x10aab61c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4371338240.232>
+          Other, 0x10aab6300, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4389091712.233>
+            Other, 0x10aab6440, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4371058688.235>
+              Other, 0x10aab6580, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4371246592.237>
+                Other, 0x10aab66c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4364128640.240>
+                  Other, 0x10aab6a80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4371369984.262>
+                    Other, 0x10aab6940, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4388771520.324>
+                      NavigationBar, 0x10aab6800, {{0.0, 0.0}, {402.0, 116.0}}, identifier: '0d35d87b-155e-4b15-b659-fa5b405f114c' <AX element pid: 94971, elementOrHash.elementID: 4819763200.325>
+                        Button, 0x10aab7d40, {{30.0, 72.7}, {16.0, 22.7}}, label: '返回' <AX element pid: 94971, elementOrHash.elementID: 4859283200.327>
+                        StaticText, 0x10aab7e80, {{72.3, 73.0}, {249.7, 22.0}}, label: '0d35d87b-155e-4b15-b659-fa5b405f114c' <AX element pid: 94971, elementOrHash.elementID: 4371099136.328>
+                        Button, 0x107688f00, {{338.0, 66.0}, {44.0, 36.0}}, label: '聊天设置' <AX element pid: 94971, elementOrHash.elementID: 4859282304.329>
+                      Other, 0x107688780, {{0.0, 116.0}, {402.0, 724.0}} <AX element pid: 94971, elementOrHash.elementID: 4388773760.326>
+                        Button, 0x10a426f80, {{24.0, 116.0}, {354.0, 44.0}}, identifier: 'self.open', label: '我的同步状态' <AX element pid: 94971, elementOrHash.elementID: 4859295744.330>
+                          StaticText, 0x10a427340, {{150.3, 127.7}, {101.3, 20.3}}, label: '我的同步状态' <AX element pid: 94971, elementOrHash.elementID: 4370876928.333>
+                        Table, 0x10a426440, {{0.0, 168.0}, {402.0, 600.0}} <AX element pid: 94971, elementOrHash.elementID: 4365884416.331>
+                          Cell, 0x10a4266c0, {{0.0, 168.0}, {402.0, 121.7}} <AX element pid: 94971, elementOrHash.elementID: 4890055120.349>
+                            Other, 0x10a426800, {{12.0, 175.0}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '头像' <AX element pid: 94971, elementOrHash.elementID: 4890063920.350>
+                              Image, 0x10a426580, {{12.0, 175.0}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 94971, elementOrHash.elementID: 4821953792.347>
+                            StaticText, 0x10a426940, {{64.0, 187.0}, {190.0, 64.3}}, label: '欢迎来到真实原生演示。这里的登录、联系人和消息均来自专用后端。' <AX element pid: 94971, elementOrHash.elementID: 4371065344.343>
+                            StaticText, 0x10a426bc0, {{52.0, 268.3}, {29.7, 13.3}}, label: '16:34' <AX element pid: 94971, elementOrHash.elementID: 4371070464.344>
+                          Other, 0x10a426d00, {{369.0, 168.0}, {30.0, 600.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 94971, elementOrHash.elementID: 4371373056.335>
+                            Other, 0x10a426a80, {{396.0, 129.0}, {3.0, 36.0}} <AX element pid: 94971, elementOrHash.elementID: 4858962240.345>
+                          Other, 0x10a426e40, {{0.0, 735.0}, {402.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 94971, elementOrHash.elementID: 4371372032.336>
+                            Other, 0x10a4270c0, {{-39.0, 762.0}, {36.0, 3.0}} <AX element pid: 94971, elementOrHash.elementID: 4858962688.346>
+                        Other, 0x10aad0000, {{0.0, 768.0}, {402.0, 72.0}} <AX element pid: 94971, elementOrHash.elementID: 4388779584.332>
+                          Button, 0x10aad0140, {{12.0, 782.0}, {44.0, 44.0}}, label: '添加附件' <AX element pid: 94971, elementOrHash.elementID: 4859284096.337>
+                          TextField, 0x10aad0280, {{60.0, 780.0}, {280.0, 48.0}}, label: '写一条消息…', placeholderValue: '写一条消息…' <AX element pid: 94971, elementOrHash.elementID: 4364949760.338>
+                          Button, 0x10aad03c0, {{344.0, 782.0}, {44.0, 44.0}}, label: '发送' <AX element pid: 94971, elementOrHash.elementID: 4859284992.339>
+                Toolbar, 0x10aad0500, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: '工具栏' <AX element pid: 94971, elementOrHash.elementID: 4371249152.241>
+                  Other, 0x10aad0640, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4389087872.263>
+          Other, 0x10aad0780, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4364788736.234>
+            Other, 0x10aad08c0, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 94971, elementOrHash.elementID: 4371342336.236>
+              Other, 0x10aad0a00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4364129536.238>
+              Other, 0x10aad0b40, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 94971, elementOrHash.elementID: 4371346432.239>
+    Other, 0x10aad0c80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4387460736.7>
+      Button, 0x10aad0dc0, {{290.0, 642.0}, {100.0, 44.0}}, identifier: 'demo.environment', label: '演示环境' <AX element pid: 94971, elementOrHash.elementID: 4365779840.9>
+        StaticText, 0x10aad0f00, {{316.0, 656.7}, {48.0, 14.3}}, label: '演示环境' <AX element pid: 94971, elementOrHash.elementID: 4371371008.11>
+  Window, 0x10aad1040, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4364956160.107>
+    Other, 0x10aad1180, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4370888192.110>
+      Other, 0x10aad12c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 94971, elementOrHash.elementID: 4370889216.145>

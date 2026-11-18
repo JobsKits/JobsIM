@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-17T07:31:47.420045+00:00",
+  "readOnly": true,
+  "rerun": false,
+  "productionMutation": false,
+  "originalExecution": "09-认证复验执行.json",
+  "originalLog": "09-认证复验.log",
+  "productionFilesUnchangedSinceFailure": true,
+  "productionSHA256": {
+    "代码/前端/Web/Src/api.ts": "319dec1d73e4355b7f43517e4d5615302be20f21b45ed624d69c5317e447a89f",
+    "代码/前端/Web/Src/AuthSession.ts": "b3073d6f452a2164953d626814b3330a63daa7724d610507a906b758dda0f25e"
+  },
+  "observations": [
+    "Original failure occurred at auth-session.cjs line100 during the two-tab concurrent read section, after the preceding twelve-write single-refresh assertions.",
+    "The available original log contains client boundary Authentication required with no retained code/status/tab/module URL/auth snapshot; its diagnostic log is empty.",
+    "Current diagnostic harness records resolved AuthSession and api import URLs and per-request code/status, but these later diagnostics do not reconstruct the original failing runtime.",
+    "Later repeated passes use the same api/AuthSession source bytes; no production authentication change can be attributed to those passes."
+  ],
+  "unprovenHypotheses": [
+    "Vite cold dependency/import identity timing or harness page routing is possible but no effective failing trace identifies it.",
+    "A product cross-tab authentication defect also cannot be excluded from this single underspecified failure."
+  ],
+  "conclusion": "Unresolved original failure. Preserve failure and later independent passes; do not claim a cause or a fix from five or six green runs. No production change or weakened identity guard is justified by current read-only evidence."
+}

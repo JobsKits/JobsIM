@@ -1,0 +1,41 @@
+# JobsIM Product
+
+<!-- impeccable:product-schema 1 -->
+
+## Platform
+
+adaptive
+
+## Stack
+
+用户已确认原生优先：iOS Swift/UIKit、Android Kotlin/Compose、HarmonyOS ArkTS/ArkUI；Web沿既定React/TypeScript，CLI和后端Go。具体选型与验证由Codex负责。
+
+## Users
+
+自托管实例的日常聊天用户与部署管理员。
+
+## Product Purpose
+
+免费、完整源码公开、可独立部署的即时通讯。当前明确开始实现I基础自托管，先身份、会话与真实收发，再覆盖媒体、群、互动和五端。
+
+## Capabilities and Constraints
+
+单一现行需求见IM需求明细表.md/IM需求明细表.md；支付、SDK、地图、RTC、E2EE专项不在I。各端原生UI，不采用Flutter/React Native或WebView壳替代。所有正式写请求正常调用API，断网保留真实上下文、稳定待发身份和缓存；iOS登录设置启用当前Mac的独立原生演示服务和Web，专用非管理员账号密码明文预填后仍正常登录；界面仅一个可拖环境浮标，点击退出至登录且不自动恢复正式账户，演示不回放至正式服务。具备简繁中、藏、英、日、法、西、德、俄、韩十语言及白天/黑夜/系统三主题。不能以构建或模拟器结果代替全量验收。
+
+## Brand Commitments
+
+名称JobsIM。iOS认证采用用户指定的本人AppDoor Style1、图片／视频背景、毛玻璃卡片与实色侧栏；标题居中、克制字号、描边输入框及双密码眼睛。连接集中右上齿轮独立设置，异常用取消／跳转设置持久弹框。资料页点头像设置、支持静态／GIF动态，保存最末；空列表统一图片／主标题／副标题竖排可重载按钮。其余视觉参数是Codex的可逆工程默认。
+
+## Evidence on Hand
+
+既有需求／架构／验收台账、本人Swift／UIKit模板和项目相关报告中的冻结输入、构建及运行证据。当前243项基础验收仍未完成；每份证据只覆盖对应源码和环境，旧包不追认新UI。原始xlsx保留不覆盖。
+
+## Product Principles
+
+- 消息和会话是主角，跨端遵守同一授权/幂等合同。
+- 安全资格按真实保护档启用，未实现不伪装成功。
+- 正式账号与演示数据隔离。
+
+## Accessibility & Inclusion
+
+原生平台习惯、键盘/读屏、字号缩放、完整空态与重载、长文案与减少动效。

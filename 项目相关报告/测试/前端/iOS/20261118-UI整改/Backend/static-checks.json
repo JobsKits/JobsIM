@@ -1,0 +1,40 @@
+{
+  "status": "static-only",
+  "time": "2026-11-18T05:47:49.796880+00:00",
+  "gofmt": {
+    "exit": 0,
+    "files": 20,
+    "unformatted": [],
+    "scope": "parser/format only; no type check or compile"
+  },
+  "pythonAST": {
+    "files": [
+      "测试/后端/接口/contact_relationship.py",
+      "测试/后端/接口/integration.py",
+      "测试/后端/接口/send_admission.py"
+    ],
+    "parsed": 3,
+    "executed": false
+  },
+  "externalRunnerDiscovery": {
+    "files": 50,
+    "newFileIncluded": true,
+    "newTests": [
+      "TestUIReportSelectionAndUploadPurpose",
+      "TestUIOptionalRetractionSnapshot",
+      "TestUIContactDeletionNewRoundsAndPendingPG",
+      "TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG",
+      "TestUIContactRateResetsWithoutPermanentGatePG",
+      "TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG",
+      "TestUIUsernameCurrentIdentityAndSnapshotRetractionPG",
+      "TestUIReportSelectedAttachmentAndMissingEvidencePG"
+    ]
+  },
+  "lexicalImportReview": {
+    "unusedCandidates": [],
+    "notTypeChecking": true
+  },
+  "goTestsExecuted": false,
+  "pgExecuted": false,
+  "httpExecuted": false
+}

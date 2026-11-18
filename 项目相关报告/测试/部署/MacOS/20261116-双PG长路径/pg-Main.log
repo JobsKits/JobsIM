@@ -1,0 +1,22 @@
+2026-11-16 22:52:51.198 CST [22170] LOG:  starting PostgreSQL 18.7 (Postgres.app) on aarch64-apple-darwin23.6.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2026-11-16 22:52:51.198 CST [22170] LOG:  listening on IPv4 address "127.0.0.1", port 63315
+2026-11-16 22:52:51.202 CST [22176] LOG:  database system was shut down at 2026-11-16 22:52:51 CST
+2026-11-16 22:52:51.203 CST [22170] LOG:  database system is ready to accept connections
+2026-11-16 22:52:52.063 CST [22170] LOG:  received fast shutdown request
+2026-11-16 22:52:52.063 CST [22170] LOG:  aborting any active transactions
+2026-11-16 22:52:52.064 CST [22170] LOG:  background worker "logical replication launcher" (PID 22179) exited with exit code 1
+2026-11-16 22:52:52.064 CST [22174] LOG:  shutting down
+2026-11-16 22:52:52.064 CST [22174] LOG:  checkpoint starting: shutdown immediate
+2026-11-16 22:52:52.067 CST [22174] LOG:  checkpoint complete: wrote 32 buffers (0.2%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.003 s; sync files=28, longest=0.001 s, average=0.001 s; distance=185 kB, estimate=185 kB; lsn=0/17C9DA8, redo lsn=0/17C9DA8
+2026-11-16 22:52:52.069 CST [22170] LOG:  database system is shut down
+2026-11-16 22:52:52.209 CST [22278] LOG:  starting PostgreSQL 18.7 (Postgres.app) on aarch64-apple-darwin23.6.0, compiled by Apple clang version 15.0.0 (clang-1500.3.9.4), 64-bit
+2026-11-16 22:52:52.210 CST [22278] LOG:  listening on IPv4 address "127.0.0.1", port 63315
+2026-11-16 22:52:52.215 CST [22285] LOG:  database system was shut down at 2026-11-16 22:52:52 CST
+2026-11-16 22:52:52.216 CST [22278] LOG:  database system is ready to accept connections
+2026-11-16 22:52:52.638 CST [22278] LOG:  received fast shutdown request
+2026-11-16 22:52:52.638 CST [22278] LOG:  aborting any active transactions
+2026-11-16 22:52:52.639 CST [22278] LOG:  background worker "logical replication launcher" (PID 22288) exited with exit code 1
+2026-11-16 22:52:52.639 CST [22283] LOG:  shutting down
+2026-11-16 22:52:52.639 CST [22283] LOG:  checkpoint starting: shutdown immediate
+2026-11-16 22:52:52.641 CST [22283] LOG:  checkpoint complete: wrote 4 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.003 s; sync files=6, longest=0.001 s, average=0.001 s; distance=17 kB, estimate=17 kB; lsn=0/17CE368, redo lsn=0/17CE368
+2026-11-16 22:52:52.644 CST [22278] LOG:  database system is shut down

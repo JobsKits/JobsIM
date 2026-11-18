@@ -1,6 +1,9 @@
 import { storageDatabase } from "./StorageDatabase";
 import { unavailableForward } from "./forward";
 import { SyncProtocolError } from "./SyncProtocol";
+import { pruneCheckpointEntries } from "./PlaybackCheckpointProtocol";
+import { attachmentHolderForKey, pruneGlobalAttachmentHolder, type ConfirmedAttachmentMessage } from "./AttachmentSendProtocol";
+import { attachmentErasureKey, attachmentErasureRepairKey, mergeAttachmentErasureFloor } from "./AttachmentErasureProtocol";
 import type { Message, Space } from "./types";
 
 type Namespace = { value: string; scope: string; modern: boolean };
@@ -79,16 +82,89 @@ export async function loadVerifiedGlobals(namespace: string): Promise<string[]> 
   });
 }
 
-function holder(key: IDBValidKey): { namespace: Namespace; kind: "view" | "state" | "stage" } | undefined {
+function holder(key: IDBValidKey): { namespace: Namespace; kind: "view" | "state" | "stage" | "migration" | "migration-stage" | "playback" | "attachment" } | undefined {
   if (typeof key !== "string") return;
-  for (const [prefix, kind] of [["sync-retained|", "view"], ["sync-state|", "state"], ["sync-stage|", "stage"]] as const) {
+  for (const [prefix, kind] of [["sync-retained|", "view"], ["sync-state|", "state"], ["sync-stage|", "stage"], ["migration-history|", "migration"], ["migration-stage|", "migration-stage"], ["playback-checkpoints|", "playback"], ["attachment-sends|", "attachment"]] as const) {
     if (!key.startsWith(prefix)) continue;
     const raw = key.substring(prefix.length);
-    const namespace = personalNamespace(kind === "stage" ? raw.substring(0, raw.lastIndexOf("|")) : raw, kind === "view");
+    const namespace = personalNamespace(kind === "stage" || kind === "migration-stage" ? raw.substring(0, raw.lastIndexOf("|")) : raw, kind === "view" || kind === "playback" || kind === "attachment");
     return namespace ? { namespace, kind } : undefined;
   }
   const namespace = personalNamespace(key, true);
   return namespace ? { namespace, kind: "view" } : undefined;
+}
+
+function collectConfirmedAttachments(
+  store: IDBObjectStore,
+  scope: string,
+  globals: ReadonlySet<string>,
+  isCurrent: () => boolean,
+  complete: (messages: ReadonlyMap<string, ConfirmedAttachmentMessage>) => void,
+): void {
+  const confirmed = new Map<string, ConfirmedAttachmentMessage>(), conflicts = new Set<string>();
+  const userId = scope.split("|")[2], cursor = store.openCursor();
+  const remember = (clientMsgId: string, value: ConfirmedAttachmentMessage) => {
+    const key = value.conversationId + "|" + clientMsgId;
+    if (conflicts.has(key)) return;
+    if (confirmed.has(key) && confirmed.get(key)!.messageId !== value.messageId) {
+      confirmed.delete(key); conflicts.add(key);
+    } else confirmed.set(key, value);
+  };
+  cursor.onsuccess = () => {
+    try {
+      if (!isCurrent()) throw new SyncProtocolError("SYNC_CONTEXT_CHANGED");
+      const row = cursor.result;
+      if (!row) { complete(confirmed); return; }
+      const identified = holder(row.key);
+      if (identified?.namespace.scope === scope && identified.kind === "view" && row.value?.messages && typeof row.value.messages === "object") {
+        for (const messages of Object.values(row.value.messages)) {
+          if (!Array.isArray(messages)) continue;
+          for (const message of messages) {
+            if (!message || message.pending || message.forwarded || message.senderId !== userId ||
+                typeof message.id !== "string" || !uuid.test(message.id) || !globals.has(message.id) ||
+                typeof message.conversationId !== "string" || !uuid.test(message.conversationId) ||
+                typeof message.clientMsgId !== "string" || !uuid.test(message.clientMsgId)) continue;
+            remember(message.clientMsgId, { messageId: message.id, conversationId: message.conversationId, userId });
+          }
+        }
+      } else if (identified?.namespace.scope === scope && identified.kind === "attachment") {
+        try {
+          const verified = attachmentHolderForKey(String(row.key), row.value);
+          for (const entry of verified.entries) {
+            if (entry.state === "accepted" && !entry.blob && entry.messageId && globals.has(entry.messageId))
+              remember(entry.clientMsgId, { messageId: entry.messageId, conversationId: entry.message.conversationId, userId: entry.identity.userId });
+          }
+        } catch { /* The cleanup pass preserves malformed original holders and records a repair marker. */ }
+      }
+      row.continue();
+    } catch { store.transaction.abort(); }
+  };
+}
+
+function retainAttachmentErasureFacts(
+  store: IDBObjectStore,
+  scope: string,
+  confirmed: ReadonlyMap<string, ConfirmedAttachmentMessage>,
+  isCurrent: () => boolean,
+  complete: () => void,
+): void {
+  const read = store.get(attachmentErasureKey(scope));
+  read.onsuccess = () => {
+    if (!isCurrent()) { store.transaction.abort(); return; }
+    const facts = [...confirmed].map(([key, value]) => ({
+      userId: value.userId, conversationId: value.conversationId, clientMsgId: key.substring(key.indexOf("|") + 1), serverId: value.messageId,
+    }));
+    try {
+      store.put(mergeAttachmentErasureFloor(read.result, scope, facts), attachmentErasureKey(scope));
+      // A later valid floor cannot prove that aliases lost before repair were
+      // recovered. Ordinary observations must preserve an outstanding fence.
+    } catch {
+      // Preserve an invalid old floor. Writers fail closed while authoritative
+      // global facts and independently identifiable cleanup can still commit.
+      store.put({ schema: "1", scope, reason: "ATTACHMENT_ERASURE_INVALID" }, attachmentErasureRepairKey(scope));
+    }
+    complete();
+  };
 }
 
 function projectionMetadata(value: unknown, ids: ReadonlySet<string>): unknown {
@@ -115,31 +191,58 @@ export function writeVerifiedGlobals(
   const all = new Set([...previouslyKnown, ...ids]);
   const advanced = [...ids].some(id => !previouslyKnown.has(id));
   if (advanced) store.put({ schema: "1", scope: parsed.scope, generation: crypto.randomUUID(), ids: [...all] } satisfies GlobalFacts, factsKey(parsed.scope));
-  const cursor = store.openCursor();
-  cursor.onsuccess = () => {
-    try {
-      if (!isCurrent()) throw new SyncProtocolError("SYNC_CONTEXT_CHANGED");
-      const row = cursor.result;
-      if (!row) return;
-      const identified = holder(row.key);
-      if (identified?.namespace.scope === parsed.scope && row.value && typeof row.value === "object") {
-        if (identified.kind === "view" && row.value.messages && typeof row.value.messages === "object") {
-          row.update(applyGlobalMessages(row.value as Space, all));
-        } else if (identified.kind === "state" && row.value.schema === "1" && row.value.projections) {
-          row.update({ ...row.value,
-            ...(advanced ? { guardGeneration: crypto.randomUUID() } : {}),
-            projections: Object.fromEntries(Object.entries(row.value.projections).map(([key, value]) => [key, projectionMetadata(value, all)])),
-          });
-        } else if (identified.kind === "stage" && row.value.pages) {
-          row.update({ ...row.value, pages: Object.fromEntries(Object.entries(row.value.pages).map(([key, value]) => {
-            const page = value as { projections?: unknown[] };
-            return [key, { ...page, projections: page.projections?.map(value => projectionMetadata(value, all)) }];
-          })) });
-        }
-      }
-      row.continue();
-    } catch { store.transaction.abort(); }
-  };
+  // Establish original client/server mappings before any view is replaced by a
+  // global placeholder. Both scans remain in the caller's strict transaction.
+  collectConfirmedAttachments(store, parsed.scope, all, isCurrent, confirmed => {
+    retainAttachmentErasureFacts(store, parsed.scope, confirmed, isCurrent, () => {
+      const cursor = store.openCursor();
+      cursor.onsuccess = () => {
+        try {
+          if (!isCurrent()) throw new SyncProtocolError("SYNC_CONTEXT_CHANGED");
+          const row = cursor.result;
+          if (!row) return;
+          const identified = holder(row.key);
+          if (identified?.namespace.scope === parsed.scope && (identified.kind === "attachment" || row.value && typeof row.value === "object")) {
+            if (identified.kind === "view" && row.value.messages && typeof row.value.messages === "object") {
+              row.update(applyGlobalMessages(row.value as Space, all));
+            } else if (identified.kind === "state" && row.value.schema === "1" && row.value.projections) {
+              row.update({ ...row.value,
+                ...(advanced ? { guardGeneration: crypto.randomUUID() } : {}),
+                projections: Object.fromEntries(Object.entries(row.value.projections).map(([key, value]) => [key, projectionMetadata(value, all)])),
+              });
+            } else if (identified.kind === "stage" && row.value.pages) {
+              row.update({ ...row.value, pages: Object.fromEntries(Object.entries(row.value.pages).map(([key, value]) => {
+                const page = value as { projections?: unknown[] };
+                return [key, { ...page, projections: page.projections?.map(value => projectionMetadata(value, all)) }];
+              })) });
+            } else if (identified.kind === "migration" && row.value.schema === "1" && Array.isArray(row.value.entries)) {
+              row.update({ ...row.value, entries: row.value.entries.filter((entry: { message?: { id?: string } }) => !entry.message?.id || !all.has(entry.message.id)) });
+            } else if (identified.kind === "migration-stage" && row.value.schema === "1" && Array.isArray(row.value.messageIds) && row.value.messageIds.some((id: string) => all.has(id))) {
+              row.delete();
+            } else if (identified.kind === "playback") {
+              try {
+                row.update(pruneCheckpointEntries(row.value, all));
+              } catch {
+                row.delete();
+              }
+            } else if (identified.kind === "attachment") {
+              const pendingKey = "attachment-cleanup-pending|" + String(row.key).substring("attachment-sends|".length);
+              try {
+                const verified = attachmentHolderForKey(String(row.key), row.value);
+                row.update(pruneGlobalAttachmentHolder(verified, all, confirmed));
+                store.delete(pendingKey);
+              } catch {
+                // A malformed holder may contain the only original recording.
+                // Preserve it for recovery without blocking authoritative globals.
+                store.put({ schema: "1", scope: parsed.scope, holderKey: row.key, reason: "ATTACHMENT_CLEANUP_PENDING" }, pendingKey);
+              }
+            }
+          }
+          row.continue();
+        } catch { store.transaction.abort(); }
+      };
+    });
+  });
 }
 
 export async function observeVerifiedGlobals(namespace: string, ids: readonly string[], isCurrent: () => boolean): Promise<{ scope: string; ids: string[] }> {

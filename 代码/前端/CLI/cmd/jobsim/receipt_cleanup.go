@@ -11,6 +11,9 @@ import (
 // Only managed receipt files participate; user-selected import/download files
 // remain outside this private holder and are never unlinked by cloud events.
 func receiptEraseObjectsTx(tx *sql.Tx, epoch, message string) error {
+	if _, err := tx.Exec("DELETE FROM receipt_bodies WHERE epoch=? AND message_id=?", epoch, message); err != nil {
+		return err
+	}
 	if err := receiptRetirePreparationsTx(tx, epoch, "", message); err != nil {
 		return err
 	}

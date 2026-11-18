@@ -1,0 +1,38 @@
+{
+  "verifiedAt": "2026-11-17T08:35:40.246622",
+  "topLevelPassed": 12,
+  "failed": 0,
+  "skipped": 0,
+  "sourceBeforeAfterCurrentUnchanged": true,
+  "sources": {
+    "代码/后端/Go/account_deletion.go": "9bdc4fb2985207791b80b25b31784042f5ca3b23c1036da95824eea03e7f3f1a",
+    "代码/后端/Go/account_deletion_owner.go": "0d1e41ac1e00144fec48b42fce0c4fc73d5d1ddfa17d7dfcc53249a9d5e2ccb1",
+    "代码/后端/Go/account_deletion_proof.go": "e9a0272cef0a4ab6772c11172640c7d95d1f735dbe9a6b313a5f3ccfce92b04f",
+    "代码/后端/Go/account_deletion_safety.go": "f64675a5790ec9d691fabef7a7adc67b6f42a2abc4dc85a863fb0275ae8536ec",
+    "代码/后端/Go/retention_read.go": "ee7ea229e1f1ff6768c4a1c9197c8d1eb02922955dc15bcbb7acf9467318105c",
+    "代码/后端/Go/media_read_floor.go": "dcfca7cb85f48195e2e74aa899281a63b028df4cc0dab6280b5befcb80784628",
+    "代码/后端/Go/media_retention.go": "63a1671267e4e240c59c8e688a849755e40a67ecde1262c0d846a28911b25b40",
+    "代码/后端/Go/media.go": "bc29489b9995d73a1032fd799e1d3a1af65e5bf052774d7eee0474c0450648ca",
+    "代码/后端/Go/avatar_media.go": "7abfe51a6abe7382d9a5b7d2254af35d04c6a11f9852e32f56ee67ea4998a6af",
+    "测试/后端/接口/account_deletion_pg_test.go": "f73289e713b5fd67f558ac4c7333bbe63af77244d4101a8976c318e2f2b93f53",
+    "测试/后端/接口/account_deletion_read_floor_test.go": "b07337572c21ba8f965a3720a2069405fc34361c3fa854a291ed5fab9930a9b6",
+    "测试/后端/接口/media_owner_floor_test.go": "1b8251ca3b4070b9c2d34326e23a7154f6e617fa08d480c094cf87b7f8cd5b0d"
+  },
+  "methods": [
+    "TestAccountDeletionPGRevokesFamiliesAndOriginalLookupNeverCreates",
+    "TestAccountDeletionPGPurposeProofAndCancelPreserveIndependentDenials",
+    "TestAccountDeletionPGCancelUnknownWaitsForJournalResult",
+    "TestAccountDeletionPGZeroCooldownCleansOwnerDataAndCannotCancel",
+    "TestAccountDeletionPGRecoveryCodeIsOneUseAndPurposeCannotAuthorizeChat",
+    "TestAccountDeletionPGSafetyCancelIntentCannotReopenAndCompletedCannotResurrect",
+    "TestAccountDeletionPGExpiredAndOldEpochProofCannotMutate",
+    "TestAccountDeletionPGOldVersionCanReverifyQueryButCannotRebaseCancellation",
+    "TestAccountDeletionPGInitialJournalUnknownKeepsOriginalAndWorkerResumes",
+    "TestAccountDeletionPGMultipleOwnerPagesAndRestoredMediaStayErased",
+    "TestAccountDeletionPGUnqueuedLastPageReadDenial",
+    "TestMediaRetentionPGProcessingOwnerFloorDeniesUnqueuedOriginals"
+  ],
+  "rpc": "in-process role transport",
+  "journal": "isolated same-PG separate schema",
+  "https": false
+}

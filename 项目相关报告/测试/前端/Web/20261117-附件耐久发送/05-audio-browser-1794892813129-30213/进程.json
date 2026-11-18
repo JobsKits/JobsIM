@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-11-17T05:20:13.140Z",
+  "finishedAt": "2026-11-17T05:20:28.596Z",
+  "args": [
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/audio-browser.cjs/audio-browser.cjs"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "expectedFailure": false,
+  "validProductReproduction": false,
+  "stopped": "",
+  "minimumFree": 24382468096,
+  "inputsUnchanged": true,
+  "realAPI": false
+}

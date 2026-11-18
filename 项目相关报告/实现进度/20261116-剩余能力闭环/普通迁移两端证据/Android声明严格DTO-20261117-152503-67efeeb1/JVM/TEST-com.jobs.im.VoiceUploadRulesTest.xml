@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jobs.im.VoiceUploadRulesTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-17T07:25:42.761Z" hostname="JobsdeAir" time="0.01">
+  <properties/>
+  <testcase name="globalRequiresConversationSenderClientObjectAndCanonicalScopeButCrossesEpoch" classname="com.jobs.im.VoiceUploadRulesTest" time="0.007"/>
+  <testcase name="originalReplyAndBodyAreFixedBeforeMediaUploadCompletes" classname="com.jobs.im.VoiceUploadRulesTest" time="0.0"/>
+  <testcase name="preparedOrUnknownObjectCannotBeConvertedToAnOutgoingMessage" classname="com.jobs.im.VoiceUploadRulesTest" time="0.001"/>
+  <testcase name="quotaAndDiskShortageRefuseNewTaskBeforeHttp" classname="com.jobs.im.VoiceUploadRulesTest" time="0.0"/>
+  <testcase name="originalOwnerIsStableAcrossProcessObjectsButNeverAcrossFamilyOrEpoch" classname="com.jobs.im.VoiceUploadRulesTest" time="0.0"/>
+  <testcase name="everyLanguageIncludesQueueAndExplicitRecoveryActions" classname="com.jobs.im.VoiceUploadRulesTest" time="0.001"/>
+  <testcase name="namespaceMustExactlyMatchStableOwnerAndCannotContainAnInjectedComponent" classname="com.jobs.im.VoiceUploadRulesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

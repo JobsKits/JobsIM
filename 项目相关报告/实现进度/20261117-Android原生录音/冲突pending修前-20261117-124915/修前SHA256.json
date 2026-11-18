@@ -1,0 +1,21 @@
+{
+  "status": "source snapshot only; no build/tests",
+  "files": {
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt": {
+      "SHA256": "fe53d9bf092f0fcbe507a1151e3f5ff4f3a3ceaaaf91e8add08acc8e048eaad5",
+      "mtimeNs": 1794890740258527171
+    },
+    "测试/前端/Android/Instrumentation/VoiceUploadQueueNativeTest.kt": {
+      "SHA256": "0d468d276d9a1757315008d769f54c5038b616efc696ef278130d48c6ca1b232",
+      "mtimeNs": 1794890789019421764
+    },
+    "测试/前端/Android/Instrumentation/VoiceUploadGlobalFloorNativeTest.kt": {
+      "SHA256": "df79737f146c81f11cac095b7c547d75ec23d38a433f86cf5033dce74dc85439",
+      "mtimeNs": 1794890789019941684
+    },
+    "项目相关报告/实现进度/20261117-Android原生录音/README.md": {
+      "SHA256": "3b2c6b8472fa60434a19c3bd1002c8f0c9d7e10ea916b21ba099632e69f95270",
+      "mtimeNs": 1794890869472026722
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "scope": "Node/actual production protocol functions and localization; no browser or live admin API",
+  "passed": 16,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "empty and combined report filters use only the two UUID query parameters",
+      "status": "passed"
+    },
+    {
+      "name": "malformed filters cannot add query fields or invoke another path",
+      "status": "passed"
+    },
+    {
+      "name": "evidence route binds both the exact object and report",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate query, extra parameters and fragments are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "foreign, absolute and traversal media addresses never receive current auth",
+      "status": "passed"
+    },
+    {
+      "name": "selected attachments bind the exact report and message without extra query",
+      "status": "passed"
+    },
+    {
+      "name": "detail refuses a different report or any whole-conversation declaration",
+      "status": "passed"
+    },
+    {
+      "name": "unavailable selected messages strip stale body, metadata and attachment URL",
+      "status": "passed"
+    },
+    {
+      "name": "unavailable evidence strips even an old valid media URL",
+      "status": "passed"
+    },
+    {
+      "name": "negative sizes, forged hashes and duplicate objects are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "selected content versions retain canonical decimal string semantics",
+      "status": "passed"
+    },
+    {
+      "name": "PNG JPEG and MP4 signatures can be previewed with matching declared kinds",
+      "status": "passed"
+    },
+    {
+      "name": "HTML SVG unknown bytes and declared media mismatch are never rendered",
+      "status": "passed"
+    },
+    {
+      "name": "image and video bounds preserve the valid 32-to-64MiB video range",
+      "status": "passed"
+    },
+    {
+      "name": "all ten admin-report locales contain the same eleven nonempty keys",
+      "status": "passed"
+    },
+    {
+      "name": "the existing MFA apply and unknown-result retry flow remains byte-identical",
+      "status": "passed"
+    }
+  ]
+}

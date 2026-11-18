@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "hostFunctions": {
+    "passed": 23,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "inputCount": 13,
+  "inputMismatches": [],
+  "entryChecks": [
+    {
+      "label": "deploy",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "stateNotCreated": true,
+      "cwd": "/",
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/最终中文 空格 改名[入口]-8d480eff"
+    },
+    {
+      "label": "undeploy",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "stateNotCreated": true,
+      "cwd": "/",
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/最终中文 空格 改名[入口]-8d480eff"
+    },
+    {
+      "label": "deploy-server",
+      "exitCode": 0,
+      "expectedExitCode": 0,
+      "stateNotCreated": true,
+      "cwd": "/",
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/最终中文 空格 改名[入口]-8d480eff"
+    },
+    {
+      "label": "deploy-platform",
+      "exitCode": 2,
+      "expectedExitCode": 2,
+      "stateNotCreated": true,
+      "cwd": "/",
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/最终中文 空格 改名[入口]-8d480eff"
+    },
+    {
+      "label": "undeploy-platform",
+      "exitCode": 2,
+      "expectedExitCode": 2,
+      "stateNotCreated": true,
+      "cwd": "/",
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/最终中文 空格 改名[入口]-8d480eff"
+    }
+  ],
+  "missingWindowsDocLinks": [],
+  "windowsNativeExecuted": false,
+  "actualWindowsInstanceTouched": false,
+  "retainedBoundary": "Independent recovery journal, matching credentials, old backups/offline sets and matching recovery keys are not destroyed.",
+  "inputBinding": "SHA captured immediately before and after this exact final host function invocation"
+}

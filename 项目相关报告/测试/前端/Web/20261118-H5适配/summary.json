@@ -1,0 +1,108 @@
+{
+  "at": "2026-11-18T01:55:33.629Z",
+  "status": "passed",
+  "source": [
+    {
+      "file": "代码/前端/Web/Src/App.tsx",
+      "sha256": "ce7bdcb8d0a8d0c6ccb749db931208a37a2d962c473df2cc37758beb0392d884"
+    },
+    {
+      "file": "代码/前端/Web/Src/styles.css",
+      "sha256": "972a706c44ab376d40591542b914928e88ffa3523d7e535f8c1dd93c63616927"
+    },
+    {
+      "file": "代码/前端/Web/Src/useVisibleViewport.ts",
+      "sha256": "3d37c4706204c146a35e9ff2133e5146306b69519f6d66cd499da3e385d68ee6"
+    },
+    {
+      "file": "代码/前端/Web/index.html",
+      "sha256": "23b8f03d3ac531ef4344062d468754aaae0cb8903b2605178a85ccee1f0797ad"
+    },
+    {
+      "file": "测试/前端/Web/h5-browser.cjs/h5-browser.cjs",
+      "sha256": "04eea742fb339e84aa9bd4ffb9dc0eba0a3130b76b20ceb80c6d0a75513a94fb"
+    }
+  ],
+  "suites": [
+    {
+      "name": "Chrome H5",
+      "pass": 52,
+      "fail": 0,
+      "skip": 0,
+      "report": "最终阅读行验证/summary.json"
+    },
+    {
+      "name": "self-state",
+      "pass": 22,
+      "fail": 0,
+      "skip": 0,
+      "log": "最终阅读行构建/self-state.log"
+    },
+    {
+      "name": "desktop browser",
+      "pass": 8,
+      "fail": 0,
+      "skip": 0,
+      "log": "最终阅读行构建/browser.log"
+    }
+  ],
+  "checks": [
+    {
+      "name": "TypeScript",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "cwd": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web",
+      "code": 0
+    },
+    {
+      "name": "Vite",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/node_modules/vite/bin/vite.js",
+        "build",
+        "--outDir",
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/Web/20261118-H5适配/最终阅读行构建/Dist"
+      ],
+      "cwd": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web",
+      "code": 0
+    },
+    {
+      "name": "self-state",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/self-state.cjs/self-state.cjs"
+      ],
+      "cwd": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM",
+      "code": 0
+    },
+    {
+      "name": "browser",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/browser.cjs/browser.cjs"
+      ],
+      "cwd": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM",
+      "code": 0
+    }
+  ],
+  "preservedRed": [
+    "阅读区反例/summary.json",
+    "修前有效/summary.json",
+    "置顶遮挡反例/summary.json"
+  ],
+  "limits": [
+    "Chrome mobile/touch emulation with explicit visualViewport fixture, not physical iOS/Android keyboard or safe-area hardware.",
+    "Synthetic microphone uses actual browser MediaRecorder; physical microphone/HTTPS acceptance separate.",
+    "Read-observation clipping verified at current viewport bounds; original message identity and persistence protocol unchanged.",
+    "Extremely short viewports keep a scrollable reading strip; tested complete text line after explicit scroll, not comfortable full-conversation reading."
+  ],
+  "visualReview": [
+    "紧凑输入-首验/chat-844x390.png",
+    "紧凑输入-首验/chat-320x568.png",
+    "紧凑输入-完整验证/keyboard-390x230.png",
+    "紧凑输入-完整验证/settings-320-large.png",
+    "最终阅读行验证/keyboard-390x230-message-line.png"
+  ],
+  "preservedEarlierGreen": [
+    "最终浏览器-可见读取/summary.json"
+  ]
+}

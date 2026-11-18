@@ -1,6 +1,8 @@
 // Created by Jobs on 2026年11月16日，星期一.
 import relationalStore from '@ohos.data.relationalStore';
 import { LocalStore } from './Store';
+import { MigrationStore } from './MigrationStore';
+import { ReceiptCleanup } from './ReceiptCleanup';
 import { SyncStorePort } from './SyncEngine';
 import { SelfRules } from './SelfProtocol';
 import { Message, Rules } from './Models';
@@ -177,6 +179,8 @@ export class SyncStore implements SyncStorePort {
   private async terminal(db: relationalStore.RdbStore, scope: string, id: string): Promise<boolean> { return (await this.values(db, 'SELECT id FROM sync_terminal WHERE scope=? AND id=?', [scope, id])).length > 0; }
   private async global(db: relationalStore.RdbStore, identity: SyncIdentity, id: string): Promise<void> {
     const scope = SyncRules.scope(identity); await db.executeSql('INSERT OR IGNORE INTO sync_terminal VALUES(?,?)', [scope, id]);
+    await MigrationStore.eraseGlobal(db,identity.profile,identity.deployment,identity.user,id);
+    await ReceiptCleanup.global(db,identity.profile,identity.deployment,identity.user,id);
     const holders: string[] = [identity.namespace];
     for (const raw of await this.values(db, "SELECT value FROM local_state WHERE key='sync:control'")) {
       const control = JSON.parse(raw) as SyncControl;

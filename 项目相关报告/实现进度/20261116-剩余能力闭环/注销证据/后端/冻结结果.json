@@ -1,0 +1,30 @@
+{
+  "verifiedAt": "2026-11-16T17:42:51.871083+00:00",
+  "pgTopLevelPass": [
+    "TestAccountDeletionPGRevokesFamiliesAndOriginalLookupNeverCreates",
+    "TestAccountDeletionPGPurposeProofAndCancelPreserveIndependentDenials",
+    "TestAccountDeletionPGCancelUnknownWaitsForJournalResult",
+    "TestAccountDeletionPGZeroCooldownCleansOwnerDataAndCannotCancel",
+    "TestAccountDeletionPGRecoveryCodeIsOneUseAndPurposeCannotAuthorizeChat",
+    "TestAccountDeletionPGSafetyCancelIntentCannotReopenAndCompletedCannotResurrect",
+    "TestAccountDeletionPGExpiredAndOldEpochProofCannotMutate",
+    "TestAccountDeletionPGOldVersionCanReverifyQueryButCannotRebaseCancellation",
+    "TestAccountDeletionPGInitialJournalUnknownKeepsOriginalAndWorkerResumes",
+    "TestAccountDeletionPGMultipleOwnerPagesAndRestoredMediaStayErased"
+  ],
+  "fail": 0,
+  "skip": 0,
+  "jointTopLevelPass": 23,
+  "jointTopLevelFail": 1,
+  "jointFailureOwnedBy": "unrelated fresh browser fixture; parent tracks correction",
+  "sourceFrozenBeforeAndAfter": true,
+  "inputs": {
+    "代码/后端/Go/account_deletion.go": "9bdc4fb2985207791b80b25b31784042f5ca3b23c1036da95824eea03e7f3f1a",
+    "代码/后端/Go/account_deletion_governance.go": "294bc575f02587731ac06fe1e8766ad72276a18865bc12c10bf5961ea8944956",
+    "代码/后端/Go/account_deletion_identity.go": "3013d63fe54e551a48517560c1d732f75504af0234d96f5d78823a31fb8d1d40",
+    "代码/后端/Go/account_deletion_owner.go": "0d2a2679f39599398bb4b06fbbf9d786da06b757aea90afcd401da1ba856ffb4",
+    "代码/后端/Go/account_deletion_proof.go": "e9a0272cef0a4ab6772c11172640c7d95d1f735dbe9a6b313a5f3ccfce92b04f",
+    "代码/后端/Go/account_deletion_safety.go": "f64675a5790ec9d691fabef7a7adc67b6f42a2abc4dc85a863fb0275ae8536ec",
+    "测试/后端/接口/account_deletion_pg_test.go": "57eed004391e9e58dfbaef79b9d9963844f1686de37b02f8c68864fa0b8ef769"
+  }
+}

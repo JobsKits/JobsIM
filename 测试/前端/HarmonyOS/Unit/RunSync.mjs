@@ -9,6 +9,7 @@ import { spawnSync } from 'node:child_process';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '../../../..');
+if(fs.statfsSync(root).bavail*fs.statfsSync(root).bsize<4*1024**3)throw Error('4 GiB disk gate');
 const clt = process.env.JOBS_IM_HARMONY_CLT_HOME || path.join(os.homedir(), 'Library/Application Support/JobsIM/Toolchains/HarmonyMirror/ArkTS-6.1.1.280/command-line-tools');
 const require = createRequire(import.meta.url);
 const ts = require(path.join(clt, 'sdk/default/openharmony/ets/build-tools/ets-loader/node_modules/typescript'));
@@ -17,7 +18,7 @@ fs.mkdirSync(base, { recursive: true });
 const work = fs.mkdtempSync(path.join(base, 'Authoritative-'));
 const data = path.join(root, '代码/前端/HarmonyOS/entry/src/main/ets/Data');
 const hashes = {};
-for (const name of ['Models', 'SyncProtocol', 'SelfProtocol', 'SelfState', 'SelfText', 'SyncEngine', 'SyncStore', 'SyncText']) {
+for (const name of ['NativeStorageBudget', 'Models', 'SyncProtocol', 'SelfProtocol', 'SelfState', 'SelfText', 'SyncEngine', 'SyncStore', 'SyncText', 'MigrationProtocol', 'MigrationStore', 'ReceiptCleanup']) {
   const file = path.join(data, name + '.ets');
   const source = fs.readFileSync(file, 'utf8');
   hashes[path.relative(root, file)] = crypto.createHash('sha256').update(source).digest('hex');

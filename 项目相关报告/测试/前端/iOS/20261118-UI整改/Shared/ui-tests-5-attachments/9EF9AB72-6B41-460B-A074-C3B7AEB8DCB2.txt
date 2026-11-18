@@ -1,0 +1,128 @@
+Application, 0x1065b6440, pid: 97524, label: 'JobsIM' <App element pid: 97524>
+  Window (Main), 0x1065b5540, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4410590208.4>
+    Other, 0x1065b5680, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4419653632.5>
+      Other, 0x1065b57c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4419298048.6>
+        Other, 0x1065b5900, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4417079936.7>
+          Other, 0x1065b5a40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4417540096.8>
+            Other, 0x1065b5b80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4412126336.10>
+              Other, 0x1065b5cc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4417089344.13>
+                Other, 0x1065b5e00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4417092480.16>
+                  Other, 0x1065b5f40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4412185600.20>
+                    Other, 0x1065b6080, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4412317120.96>
+                      NavigationBar, 0x1065b61c0, {{0.0, 0.0}, {402.0, 116.0}}, identifier: '林间' <AX element pid: 97524, elementOrHash.elementID: 4897817344.97>
+                        Button, 0x1065b6300, {{20.0, 72.7}, {36.0, 22.7}}, label: '返回' <AX element pid: 97524, elementOrHash.elementID: 4897819648.99>
+                        StaticText, 0x1065b6580, {{183.0, 73.0}, {36.0, 22.0}}, label: '林间' <AX element pid: 97524, elementOrHash.elementID: 4898406400.100>
+                        Button, 0x1065b66c0, {{338.0, 66.0}, {44.0, 36.0}}, label: '聊天设置' <AX element pid: 97524, elementOrHash.elementID: 4897816576.101>
+                      Other, 0x1065b6800, {{0.0, 116.0}, {402.0, 724.0}} <AX element pid: 97524, elementOrHash.elementID: 4412391872.98>
+                        Other, 0x1065b6940, {{24.0, 116.0}, {354.0, 14.3}} <AX element pid: 97524, elementOrHash.elementID: 4412397696.102>
+                          StaticText, 0x1065b6a80, {{24.0, 116.0}, {354.0, 14.3}}, label: '演示空间' <AX element pid: 97524, elementOrHash.elementID: 4884295936.105>
+                        Table, 0x1065b6bc0, {{0.0, 182.3}, {402.0, 283.7}} <AX element pid: 97524, elementOrHash.elementID: 4882586624.103>
+                          Cell, 0x1065b6d00, {{0.0, -32.3}, {402.0, 99.7}} <AX element pid: 97524, elementOrHash.elementID: 4981067120.259>
+                            Other, 0x1065b6e40, {{0.0, -32.3}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '静态头像' <AX element pid: 97524, elementOrHash.elementID: 4981066640.273>
+                              Image, 0x1065b6f80, {{0.0, -32.3}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 97524, elementOrHash.elementID: 4949786112.132>
+                            StaticText, 0x1065b70c0, {{0.0, -32.3}, {190.0, 42.3}}, label: '有时候，把事情说清楚， 就已经往前走了一大步。' <AX element pid: 97524, elementOrHash.elementID: 4898414464.124>
+                            StaticText, 0x1065b7200, {{0.0, -32.3}, {31.3, 13.3}}, label: '08:20' <AX element pid: 97524, elementOrHash.elementID: 4898415360.125>
+                          Cell, 0x1065b7340, {{0.0, 67.3}, {402.0, 99.7}} <AX element pid: 97524, elementOrHash.elementID: 4981066880.260>
+                            Other, 0x1065b7480, {{358.0, 74.3}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '静态头像' <AX element pid: 97524, elementOrHash.elementID: 4981072080.265>
+                              Image, 0x1065b75c0, {{358.0, 74.3}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 97524, elementOrHash.elementID: 4949778432.131>
+                            StaticText, 0x1065b7700, {{148.0, 86.3}, {190.0, 42.3}}, label: '是的。让消息回到人与人之间。' <AX element pid: 97524, elementOrHash.elementID: 4898412672.122>
+                            StaticText, 0x1065b7840, {{270.3, 145.7}, {79.7, 13.3}}, label: '08:21  演示空间' <AX element pid: 97524, elementOrHash.elementID: 4898413568.123>
+                          Cell, 0x1065b7980, {{0.0, 167.0}, {402.0, 77.7}} <AX element pid: 97524, elementOrHash.elementID: 4981067200.261>
+                            Other, 0x1065b7ac0, {{12.0, 174.0}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '静态头像' <AX element pid: 97524, elementOrHash.elementID: 4981069360.266>
+                              Image, 0x1065b7c00, {{12.0, 174.0}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 97524, elementOrHash.elementID: 4949780992.130>
+                            StaticText, 0x1065b7d40, {{64.0, 186.0}, {190.0, 20.3}}, label: '那就沿着河边慢慢走吧。' <AX element pid: 97524, elementOrHash.elementID: 4898410880.118>
+                            StaticText, 0x1065b7e80, {{52.0, 223.3}, {31.0, 13.3}}, label: '08:22' <AX element pid: 97524, elementOrHash.elementID: 4898411776.119>
+                          Cell, 0x102e7b700, {{0.0, 244.7}, {402.0, 99.7}} <AX element pid: 97524, elementOrHash.elementID: 4981067760.262>
+                            Other, 0x102e7b840, {{358.0, 251.7}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '静态头像' <AX element pid: 97524, elementOrHash.elementID: 4981071200.267>
+                              Image, 0x102e7b980, {{358.0, 251.7}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 97524, elementOrHash.elementID: 4949778944.129>
+                            StaticText, 0x102e7bac0, {{148.0, 263.7}, {190.0, 42.3}}, label: 'Native durable D72BAD98' <AX element pid: 97524, elementOrHash.elementID: 4898409088.116>
+                            StaticText, 0x102e7bd40, {{268.7, 323.0}, {81.3, 13.3}}, label: '22:46  演示空间' <AX element pid: 97524, elementOrHash.elementID: 4898409984.117>
+                          Cell, 0x102e7be80, {{0.0, 344.3}, {402.0, 121.7}} <AX element pid: 97524, elementOrHash.elementID: 4981070960.263>
+                            Other, 0x106456e40, {{358.0, 351.3}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '静态头像' <AX element pid: 97524, elementOrHash.elementID: 4981066320.270>
+                              Image, 0x106456f80, {{358.0, 351.3}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 97524, elementOrHash.elementID: 4952614912.271>
+                            StaticText, 0x106456d00, {{148.0, 363.3}, {190.0, 64.3}}, label: 'UI recall original 1CB2A4B52842E7CA5705CA40' <AX element pid: 97524, elementOrHash.elementID: 4953350016.268>
+                            StaticText, 0x1064570c0, {{268.0, 444.7}, {82.0, 13.3}}, label: '06:48  演示空间' <AX element pid: 97524, elementOrHash.elementID: 4953350912.269>
+                          Other, 0x106457200, {{369.0, 182.3}, {30.0, 283.7}}, label: '垂直滚动条, 2页', value: 100% <AX element pid: 97524, elementOrHash.elementID: 4897927168.110>
+                            Other, 0x1064552c0, {{396.0, 326.0}, {3.0, 137.0}} <AX element pid: 97524, elementOrHash.elementID: 4412212096.127>
+                          Other, 0x106454a00, {{0.0, 433.0}, {402.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 97524, elementOrHash.elementID: 4897926656.111>
+                            Other, 0x106454dc0, {{3.0, 460.0}, {393.0, 3.0}} <AX element pid: 97524, elementOrHash.elementID: 4412407104.128>
+                        Other, 0x106455400, {{0.0, 466.0}, {402.0, 72.0}} <AX element pid: 97524, elementOrHash.elementID: 4412393664.104>
+                          Button, 0x106455540, {{12.0, 480.0}, {44.0, 44.0}}, label: '添加附件' <AX element pid: 97524, elementOrHash.elementID: 4897818880.112>
+                          TextField, 0x106455680, {{60.0, 478.0}, {280.0, 48.0}}, label: '写一条消息…', placeholderValue: '写一条消息…', Keyboard Focused <AX element pid: 97524, elementOrHash.elementID: 4895735808.113>
+                          Button, 0x106454140, {{344.0, 480.0}, {44.0, 44.0}}, label: '发送' <AX element pid: 97524, elementOrHash.elementID: 4897820416.114>
+                Other, 0x106454000, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4417541632.17>
+                  Other, 0x106456580, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4417544192.21>
+          Other, 0x1064557c0, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 97524, elementOrHash.elementID: 4417080832.9>
+            Other, 0x106457480, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4417088896.11>
+            Other, 0x106456940, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 97524, elementOrHash.elementID: 4417538048.12>
+  Window, 0x106456a80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4895737088.93>
+    Other, 0x106456bc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4410038848.94>
+      Other, 0x1066b4000, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4416619840.95>
+      Other, 0x1066b4140, {{0.0, 538.0}, {402.0, 336.0}} <AX element pid: 97524, elementOrHash.elementID: 4416618944.178>
+        Other, 0x1066b4280, {{0.0, 538.0}, {402.0, 336.0}}, identifier: 'inputView' <AX element pid: 97524, elementOrHash.elementID: 4952032768.258>
+  Window, 0x1066b43c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4952477440.176>
+    Other, 0x1066b4500, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 97524, elementOrHash.elementID: 4952778752.177>
+      Other, 0x1066b4640, {{0.0, 538.0}, {402.0, 336.0}} <AX element pid: 97524, elementOrHash.elementID: 4416780288.179>
+        Other, 0x1066b4780, {{0.0, 538.0}, {402.0, 45.0}}, identifier: 'SystemInputAssistantView' <AX element pid: 97524, elementOrHash.elementID: 4897831936.181>
+          Other, 0x1066b48c0, {{0.0, 538.0}, {402.0, 45.0}} <AX element pid: 97524, elementOrHash.elementID: 4416672128.185>
+            Other, 0x1066b4a00, {{0.0, 538.0}, {402.0, 45.0}}, identifier: 'CenterPageView' <AX element pid: 97524, elementOrHash.elementID: 4950629888.190>
+              Other, 0x1066b4b40, {{0.0, -62.0}, {402.0, 1245.0}} <AX element pid: 97524, elementOrHash.elementID: 4412405312.195>
+                ScrollView, 0x1066b4c80, {{0.0, 538.0}, {402.0, 45.0}} <AX element pid: 97524, elementOrHash.elementID: 4410072576.198>
+              Other, 0x1066b4dc0, {{0.0, 538.0}, {402.0, 45.0}} <AX element pid: 97524, elementOrHash.elementID: 4412405760.196>
+                Other, 0x1066b4f00, {{0.0, 538.0}, {402.0, 45.0}} <AX element pid: 97524, elementOrHash.elementID: 4416913408.199>
+                  Other, 0x1066b5040, {{0.0, 538.0}, {402.0, 55.0}} <AX element pid: 97524, elementOrHash.elementID: 4952894720.238>
+                    Other, 0x1066b5180, {{0.0, 538.0}, {402.0, 55.0}} <AX element pid: 97524, elementOrHash.elementID: 4416756736.239>
+                      Other, 0x1066b52c0, {{0.0, 538.0}, {402.0, 55.0}} <AX element pid: 97524, elementOrHash.elementID: 4952895360.240>
+                        CollectionView, 0x1066b5400, {{0.0, 538.0}, {402.0, 55.0}} <AX element pid: 97524, elementOrHash.elementID: 4951828992.242>
+        Other, 0x1066b5540, {{0.0, 538.0}, {402.0, 336.0}} <AX element pid: 97524, elementOrHash.elementID: 4416914752.182>
+          Other, 0x1066b5680, {{0.0, 538.0}, {402.0, 336.0}} <AX element pid: 97524, elementOrHash.elementID: 4951235328.186>
+            Other, 0x1066b57c0, {{0.0, 538.0}, {402.0, 336.0}} <AX element pid: 97524, elementOrHash.elementID: 4978813568.191>
+        Other, 0x1066b5900, {{0.0, 583.0}, {402.0, 233.0}} <AX element pid: 97524, elementOrHash.elementID: 4416706688.183>
+          Keyboard, 0x1066b5a40, {{0.0, 583.0}, {402.0, 233.0}} <AX element pid: 97524, elementOrHash.elementID: 4952163584.187>
+            Other, 0x1066b5b80, {{0.0, 583.0}, {402.0, 233.0}} <AX element pid: 97524, elementOrHash.elementID: 4897396736.192>
+              Other, 0x1066b5cc0, {{0.0, 583.0}, {402.0, 233.0}}, identifier: 'UIKeyboardLayoutStar Preview' <AX element pid: 97524, elementOrHash.elementID: 4410582016.197>
+                Key, 0x1066b5e00, {{0.0, 583.0}, {0.0, 0.0}}, label: 'Padding-Left' <AX element pid: 97524, elementOrHash.elementID: 4979835760.200>
+                Key, 0x1066b5f40, {{4.7, 590.0}, {39.3, 54.0}}, label: 'q' <AX element pid: 97524, elementOrHash.elementID: 4979836560.201>
+                Key, 0x1066b6080, {{44.0, 590.0}, {39.7, 54.0}}, label: 'w' <AX element pid: 97524, elementOrHash.elementID: 4979836320.202>
+                Key, 0x1066b61c0, {{83.7, 590.0}, {39.3, 54.0}}, label: 'e' <AX element pid: 97524, elementOrHash.elementID: 4979836400.203>
+                Key, 0x1066b6300, {{123.0, 590.0}, {39.7, 54.0}}, label: 'r' <AX element pid: 97524, elementOrHash.elementID: 4979836480.204>
+                Key, 0x1066b6440, {{162.7, 590.0}, {39.3, 54.0}}, label: 't' <AX element pid: 97524, elementOrHash.elementID: 4979836720.205>
+                Key, 0x1066b6580, {{202.0, 590.0}, {39.7, 54.0}}, label: 'y' <AX element pid: 97524, elementOrHash.elementID: 4979836800.206>
+                Key, 0x1066b66c0, {{241.7, 590.0}, {39.3, 54.0}}, label: 'u' <AX element pid: 97524, elementOrHash.elementID: 4979837520.207>
+                Key, 0x1066b6800, {{281.0, 590.0}, {39.7, 54.0}}, label: 'i' <AX element pid: 97524, elementOrHash.elementID: 4979836960.208>
+                Key, 0x1066b6940, {{320.7, 590.0}, {39.3, 54.0}}, label: 'o' <AX element pid: 97524, elementOrHash.elementID: 4979837040.209>
+                Key, 0x1066b6a80, {{360.0, 590.0}, {39.7, 54.0}}, label: 'p' <AX element pid: 97524, elementOrHash.elementID: 4979837440.210>
+                Key, 0x1066b6bc0, {{0.0, 583.0}, {0.0, 0.0}}, label: 'Padding-Right' <AX element pid: 97524, elementOrHash.elementID: 4979837120.211>
+                Key, 0x1066b6d00, {{0.0, 583.0}, {0.0, 0.0}}, label: 'Padding-Left' <AX element pid: 97524, elementOrHash.elementID: 4979837200.212>
+                Key, 0x1066b6e40, {{24.3, 644.0}, {39.3, 54.0}}, label: 'a' <AX element pid: 97524, elementOrHash.elementID: 4979837280.213>
+                Key, 0x1066b6f80, {{63.7, 644.0}, {39.7, 54.0}}, label: 's' <AX element pid: 97524, elementOrHash.elementID: 4979837360.214>
+                Key, 0x1066b70c0, {{103.3, 644.0}, {39.3, 54.0}}, label: 'd' <AX element pid: 97524, elementOrHash.elementID: 4979837600.215>
+                Key, 0x1066b7200, {{142.7, 644.0}, {39.7, 54.0}}, label: 'f' <AX element pid: 97524, elementOrHash.elementID: 4979838240.216>
+                Key, 0x1066b7340, {{182.3, 644.0}, {39.3, 54.0}}, label: 'g' <AX element pid: 97524, elementOrHash.elementID: 4979837680.217>
+                Key, 0x1066b7480, {{221.7, 644.0}, {39.7, 54.0}}, label: 'h' <AX element pid: 97524, elementOrHash.elementID: 4979837760.218>
+                Key, 0x1066b75c0, {{261.3, 644.0}, {39.3, 54.0}}, label: 'j' <AX element pid: 97524, elementOrHash.elementID: 4979838160.219>
+                Key, 0x1066b7700, {{300.7, 644.0}, {39.7, 54.0}}, label: 'k' <AX element pid: 97524, elementOrHash.elementID: 4979837840.220>
+                Key, 0x1066b7840, {{340.3, 644.0}, {39.3, 54.0}}, label: 'l' <AX element pid: 97524, elementOrHash.elementID: 4979837920.221>
+                Key, 0x1066b7980, {{0.0, 583.0}, {0.0, 0.0}}, label: 'Padding-Right' <AX element pid: 97524, elementOrHash.elementID: 4979838000.222>
+                Button, 0x1066b7ac0, {{4.7, 698.0}, {51.3, 54.0}}, identifier: 'shift', label: 'shift' <AX element pid: 97524, elementOrHash.elementID: 4979838080.223>
+                Key, 0x1066b7c00, {{0.0, 583.0}, {0.0, 0.0}}, label: 'Padding-Left' <AX element pid: 97524, elementOrHash.elementID: 4979838960.224>
+                Key, 0x1066b7d40, {{63.7, 698.0}, {39.7, 54.0}}, label: 'z' <AX element pid: 97524, elementOrHash.elementID: 4979838400.225>
+                Key, 0x1066b7e80, {{103.3, 698.0}, {39.3, 54.0}}, label: 'x' <AX element pid: 97524, elementOrHash.elementID: 4979838480.226>
+                Key, 0x1066c8000, {{142.7, 698.0}, {39.7, 54.0}}, label: 'c' <AX element pid: 97524, elementOrHash.elementID: 4979838880.227>
+                Key, 0x1066c8140, {{182.3, 698.0}, {39.3, 54.0}}, label: 'v' <AX element pid: 97524, elementOrHash.elementID: 4979838560.228>
+                Key, 0x1066c8280, {{221.7, 698.0}, {39.7, 54.0}}, label: 'b' <AX element pid: 97524, elementOrHash.elementID: 4979838640.229>
+                Key, 0x1066c83c0, {{261.3, 698.0}, {39.3, 54.0}}, label: 'n' <AX element pid: 97524, elementOrHash.elementID: 4979838720.230>
+                Key, 0x1066c8500, {{300.7, 698.0}, {39.7, 54.0}}, label: 'm' <AX element pid: 97524, elementOrHash.elementID: 4979838800.231>
+                Key, 0x1066c8640, {{0.0, 583.0}, {0.0, 0.0}}, label: 'Padding-Right' <AX element pid: 97524, elementOrHash.elementID: 4979839040.232>
+                Key, 0x1066c8780, {{348.0, 698.0}, {51.7, 54.0}}, identifier: 'delete', label: '删除' <AX element pid: 97524, elementOrHash.elementID: 4979839120.233>
+                Key, 0x1066c88c0, {{4.7, 752.0}, {49.3, 54.0}}, identifier: 'more', label: '数字' <AX element pid: 97524, elementOrHash.elementID: 4979839520.234>
+                Button, 0x1066c8a00, {{54.0, 752.0}, {49.3, 54.0}}, identifier: 'emoji', label: '表情符号' <AX element pid: 97524, elementOrHash.elementID: 4979839680.235>
+                Key, 0x1066c8b40, {{103.3, 752.0}, {197.3, 54.0}}, identifier: 'space', label: ' ' <AX element pid: 97524, elementOrHash.elementID: 4979839840.236>
+                Button, 0x1066c8c80, {{300.7, 752.0}, {99.0, 54.0}}, identifier: 'Return', label: '换行' <AX element pid: 97524, elementOrHash.elementID: 4979839920.237>
+        Other, 0x1066c8dc0, {{0.0, 583.0}, {402.0, 291.0}} <AX element pid: 97524, elementOrHash.elementID: 4412135552.184>
+          Button, 0x1066c8f00, {{8.5, 805.7}, {68.1, 68.7}}, label: '下一个键盘', value: English (US) <AX element pid: 97524, elementOrHash.elementID: 4953356288.188>
+            StaticText, 0x1066c9040, {{8.5, 805.7}, {0.0, 0.0}} <AX element pid: 97524, elementOrHash.elementID: 4953357184.193>
+          Button, 0x1066c9180, {{325.4, 805.4}, {68.1, 68.7}}, identifier: 'dictation', label: '听写' <AX element pid: 97524, elementOrHash.elementID: 4953348224.189>
+            StaticText, 0x1066c92c0, {{325.4, 805.4}, {0.0, 0.0}} <AX element pid: 97524, elementOrHash.elementID: 4953349120.194>
+          Button, 0x1066c9400, {{325.4, 805.4}, {68.1, 68.7}}, identifier: 'dictation', label: '听写' <AX element pid: 97524, elementOrHash.elementID: 4953348224.189>
+            StaticText, 0x1066c9540, {{325.4, 805.4}, {0.0, 0.0}} <AX element pid: 97524, elementOrHash.elementID: 4953349120.194>

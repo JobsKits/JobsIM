@@ -1,0 +1,46 @@
+{
+  "privateFixture": "/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/Paired/45414c65212c482581f154275b43e709",
+  "ports": [
+    63544,
+    63545,
+    63546,
+    63547
+  ],
+  "roleBase": 49101,
+  "inputs": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "5dd81d6b0cf0ef3ef43bb7db0d560f056e5f0c2f3dc142ca4ee227f6c0fb7947",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "c9a020408e17171f5dbaf75a8d1d988d1d03e7b1ac467d66a4e2b04191bec201"
+  },
+  "realInstanceTouched": false,
+  "physicalJournalDeletionAuthorized": false,
+  "deployment": {
+    "running": true,
+    "responses": [
+      0
+    ]
+  },
+  "deploymentID": "179b4459-d7a0-4b97-973d-a060334fecb0",
+  "ledgerCreated": true,
+  "contractSmokeExit": 0,
+  "undeployment": {
+    "exitCode": 0,
+    "responses": [
+      0,
+      1,
+      2
+    ]
+  },
+  "businessRemoved": true,
+  "journalAndKeysPreserved": true,
+  "archives": [
+    "JobsIM-20261118-085658-42077.cms"
+  ],
+  "recoveryKeyPreserved": true,
+  "portsReleased": true,
+  "status": "passed-partial-protected-retained",
+  "after": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "5dd81d6b0cf0ef3ef43bb7db0d560f056e5f0c2f3dc142ca4ee227f6c0fb7947",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "c9a020408e17171f5dbaf75a8d1d988d1d03e7b1ac467d66a4e2b04191bec201"
+  },
+  "inputStable": true
+}

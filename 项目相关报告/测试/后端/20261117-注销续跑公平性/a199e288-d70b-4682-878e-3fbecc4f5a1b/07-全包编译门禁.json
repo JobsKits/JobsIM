@@ -1,0 +1,17 @@
+{
+  "started": false,
+  "reason": "4 GiB preflight gate: no Go process was started",
+  "availableBytes": "3565473792",
+  "requiredBytes": "4294967296",
+  "at": "2026-11-17T01:09:48.013Z",
+  "intendedCommand": [
+    "go",
+    "test",
+    "-json",
+    "-p=1",
+    "-run",
+    "^$",
+    "./..."
+  ],
+  "scope": "additional frozen all-package compile; does not change the completed 19-test result"
+}

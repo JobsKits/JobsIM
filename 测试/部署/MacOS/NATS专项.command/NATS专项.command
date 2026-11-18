@@ -15,7 +15,7 @@ prepare_fixture() {
     umask 077
     TEST_DIR="${${(%):-%x}:A:h}"
     REPO="${TEST_DIR}/../../../.."; REPO="${REPO:A}"
-    RUN="$REPO/部署/MacOS/部署运行.command/部署运行.command"
+    RUN="$REPO/部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command"
     SOURCE_HASH="$(shasum -a 256 "$RUN" | cut -d' ' -f1)"
     TEST_ROOT="$HOME/Library/Application Support/JobsIM/DeploymentTests"
     mkdir -p "$TEST_ROOT"
@@ -26,6 +26,7 @@ prepare_fixture() {
     sed '/^cleanup() {/,$d' "$RUN" > "$STATE/definitions.zsh"
     source "$STATE/definitions.zsh"
     rm -- "$STATE/definitions.zsh"; rmdir "$STATE"
+    DEPLOY_MODE=""; RUN_DIR=""; LOG_FILE=/dev/null; LOCAL_ACCESS=private; CLOUDFLARED_EXECUTABLE=""; FZF_EXECUTABLE=""; TUNNEL_PID=""; BROWSER_MENU_PID=""; QR_PAGE=""; QR_BINARY=""
     ACTION=check; YES=1; MAIN_PORT=16543; JOURNAL_PORT=16544; HTTPS_PORT=9443; ROLE_PORT=18101; PUBLIC_HOST=127.0.0.1
     NATS_MAX_FILE=536870912; NATS_MAX_MEMORY=33554432
     TEST_NODE="${JOBS_IM_TEST_NODE:-$(command -v node)}"
@@ -85,7 +86,7 @@ verify_foreign_pid() {
     kill -TERM "$SLEEP_PID"; wait "$SLEEP_PID" 2>/dev/null || true; SLEEP_PID=''
     print 'PASS 外来PID保留；自有sleep已精确结束' | tee -a "$REPORT/归属保护.txt"
     [[ "$(shasum -a 256 "$RUN" | cut -d' ' -f1)" == "$SOURCE_HASH" ]] || { print -u2 '专项期间源码变化，不能绑定当前SHA，需新轮重验。'; return 2; }
-    shasum -a 256 "$RUN" "$REPO/部署/MacOS/停止备份.command/停止备份.command" > "$REPORT/源码SHA256.txt"
+    shasum -a 256 "$RUN" "$REPO/部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command" > "$REPORT/源码SHA256.txt"
     COMPLETED=1
 }
 # 脚本级退出钩子避免函数返回时提前清理，始终只处理本专项收据。

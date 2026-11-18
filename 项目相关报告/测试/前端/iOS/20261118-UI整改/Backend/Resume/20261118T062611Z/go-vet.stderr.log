@@ -1,0 +1,2 @@
+../../../测试/后端/接口/sync_object_receipts_test.go:50:11: assignment copies lock value to other: jobsim/backend.App contains sync/atomic.Bool contains sync/atomic.noCopy
+../../../测试/后端/接口/sync_receipts_test.go:99:11: assignment copies lock value to other: jobsim/backend.App contains sync/atomic.Bool contains sync/atomic.noCopy

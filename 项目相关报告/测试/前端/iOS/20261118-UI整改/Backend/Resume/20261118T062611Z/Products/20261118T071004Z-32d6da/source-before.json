@@ -1,0 +1,712 @@
+[
+  {
+    "path": "代码/后端/Go/account_deletion.go",
+    "bytes": 14661,
+    "sha256": "a67fd995b086277f7025732b0d25725044cd8668009a8c2cf4b92dedbda4fe00"
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_governance.go",
+    "bytes": 11981,
+    "sha256": "d7f4ff616c1747100a01e098e3414bcb931431ca74db6b3f99c4a55b556d18c1"
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_identity.go",
+    "bytes": 11598,
+    "sha256": "22764daa364d8b216f70626d8d00a05a2f9e9e5320afb6d30f832ee26929015e"
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_owner.go",
+    "bytes": 11472,
+    "sha256": "75ace432022f44af206626ef4211c696c43ee889ecbba31f3f5ca0b5fd273920"
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_proof.go",
+    "bytes": 11948,
+    "sha256": "bb25f85b990d348ca653612658e4dddaf921b18ec9633ab082d06ba2c267ce67"
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_safety.go",
+    "bytes": 8643,
+    "sha256": "f64675a5790ec9d691fabef7a7adc67b6f42a2abc4dc85a863fb0275ae8536ec"
+  },
+  {
+    "path": "代码/后端/Go/admin_identity.go",
+    "bytes": 10674,
+    "sha256": "2d190871a402043ab019e498088a6af3ab4f7cb9cd39a40cbfe256b8326c61b2"
+  },
+  {
+    "path": "代码/后端/Go/asset_migrations.go",
+    "bytes": 3075,
+    "sha256": "a134b1f2de14973d1eb92b7584b82bdcdde889f4677d733e8242f3a257f71179"
+  },
+  {
+    "path": "代码/后端/Go/avatar.go",
+    "bytes": 14083,
+    "sha256": "5d0855484044dec49ebe34ea1ed839443a2c069e2ffe83ba00fdac7ac46adbfa"
+  },
+  {
+    "path": "代码/后端/Go/avatar_media.go",
+    "bytes": 10883,
+    "sha256": "7abfe51a6abe7382d9a5b7d2254af35d04c6a11f9852e32f56ee67ea4998a6af"
+  },
+  {
+    "path": "代码/后端/Go/cmd/jobsimd/main.go",
+    "bytes": 5933,
+    "sha256": "5007009d6d1ba0142a5e49fa00b5d9c48b47bf68cbe6880aee87741fbbcc4243"
+  },
+  {
+    "path": "代码/后端/Go/cmd/jobsimops/main.go",
+    "bytes": 5408,
+    "sha256": "e66a7be4e88defd925503b7726081fd525226ee7db71b7cbe05d338273381406"
+  },
+  {
+    "path": "代码/后端/Go/contact_policy.go",
+    "bytes": 1223,
+    "sha256": "a8fd2851518c03d767f8bc2e9791701198cddc0b29836c259bd6b686173142b2"
+  },
+  {
+    "path": "代码/后端/Go/contact_relationship.go",
+    "bytes": 1877,
+    "sha256": "ccdb8ac8fec13f2344ea159d62a1d66425f567056f102f04d254855d480ae976"
+  },
+  {
+    "path": "代码/后端/Go/control.go",
+    "bytes": 8881,
+    "sha256": "22254bf0d6419fe5b8a7f0c153bcddfe5c9ecf5fc26b1895fd224e62504ecaf1"
+  },
+  {
+    "path": "代码/后端/Go/conversation.go",
+    "bytes": 18789,
+    "sha256": "08a5156941081ffbfe6947288941f016bc5eca6c6d992093cf61abfc53b00ac8"
+  },
+  {
+    "path": "代码/后端/Go/deployment_disk.go",
+    "bytes": 1348,
+    "sha256": "6acd2d6e7d64b784e6f1816de28518471abb9dd1bbd7a1909d763822938a858a"
+  },
+  {
+    "path": "代码/后端/Go/deployment_handoff.go",
+    "bytes": 2398,
+    "sha256": "09a96b700739770f3ac879d770c23a4db3e61343ca6397803ba3e55798575f17"
+  },
+  {
+    "path": "代码/后端/Go/deployment_restore.go",
+    "bytes": 21967,
+    "sha256": "da36f8c4af06ffd2b7f1661be40ccd465c4d21bfef35148a7534ce07ccd712eb"
+  },
+  {
+    "path": "代码/后端/Go/deployment_restore_finalize.go",
+    "bytes": 10607,
+    "sha256": "cead86d31c2076dbe1bad8e81cdb48a1e8eda3afb80f6581d52030231b987fde"
+  },
+  {
+    "path": "代码/后端/Go/deployment_restore_spec.go",
+    "bytes": 13911,
+    "sha256": "0bd1b7c779b2600d8c5a8bafc0ca1dda864a066ba4c1c6475e9a9fe73587e927"
+  },
+  {
+    "path": "代码/后端/Go/directory.go",
+    "bytes": 19118,
+    "sha256": "36946f63a122c41f9c7f8b6ca213cf7e53ce54dd45c38357f2c4a2f59823cb9a"
+  },
+  {
+    "path": "代码/后端/Go/draft_reply.go",
+    "bytes": 1607,
+    "sha256": "62b1613038d82fa53b21da3e615687c1e3a442d6d010a16c98f731c317fbcd3f"
+  },
+  {
+    "path": "代码/后端/Go/draft_reply_holders.go",
+    "bytes": 14397,
+    "sha256": "cd87283c49e25a5d86ab799dc42c6f41616d5defc1a611fc54b5b14639efa6b4"
+  },
+  {
+    "path": "代码/后端/Go/draft_reply_revocation.go",
+    "bytes": 8869,
+    "sha256": "c61f3fb43a9fb952fca269f6e3b91d1d6c1371d8218534c283a022d2bf5e6af2"
+  },
+  {
+    "path": "代码/后端/Go/export.go",
+    "bytes": 22840,
+    "sha256": "313767b7b6e148cd944e794f6c83613d4d31735ed42b75cb8a308fe82bec1289"
+  },
+  {
+    "path": "代码/后端/Go/export_identity.go",
+    "bytes": 5670,
+    "sha256": "4f90a090d18556070f4088c82a19d61974b6ae75fc05254e557bc9a250f99ab4"
+  },
+  {
+    "path": "代码/后端/Go/export_lock_unix.go",
+    "bytes": 671,
+    "sha256": "945aab26432f3e0ba8d46e7c687c267b209f3fb439a7380f162e40363ede3812"
+  },
+  {
+    "path": "代码/后端/Go/export_lock_windows.go",
+    "bytes": 736,
+    "sha256": "0a2ebf2546b37d15cf75a4dfccd1eb06f43624eeb768f75d00bbf3610e10adb5"
+  },
+  {
+    "path": "代码/后端/Go/export_restore.go",
+    "bytes": 4335,
+    "sha256": "8551fae1f02b158e7c1678b53b5e78dc49e6b0ba792fffe2829418b3e1114b82"
+  },
+  {
+    "path": "代码/后端/Go/export_worker.go",
+    "bytes": 16590,
+    "sha256": "7dff206b50d93c5d8950711fee055450b1c3af5eee2f7d1aaa75f17ec0a224c1"
+  },
+  {
+    "path": "代码/后端/Go/forward_media.go",
+    "bytes": 9441,
+    "sha256": "fc4fa2b9dc74d7ec2f5eb3b72b913c6a07cb6b355af01b97d2c0363ebbbb2bee"
+  },
+  {
+    "path": "代码/后端/Go/forward_projection.go",
+    "bytes": 10340,
+    "sha256": "534d07126f6fe22a65fc6d31243bb2e316f49e36964099b0f41c5149f71c7aaa"
+  },
+  {
+    "path": "代码/后端/Go/forward_revocation.go",
+    "bytes": 13677,
+    "sha256": "918209d28afb1284e35cd1c4597f4aa3a9ec27fdebcddbb01c62f04783bce509"
+  },
+  {
+    "path": "代码/后端/Go/go.mod",
+    "bytes": 564,
+    "sha256": "ec36829e562534c65761f66950e6b48529d55e52aa682e59552e1cc734d7fb4a"
+  },
+  {
+    "path": "代码/后端/Go/go.sum",
+    "bytes": 3299,
+    "sha256": "9d454b55d6bcff8a6be33c58dac9c225621a8c2ebc3211e52820cdb0199e047a"
+  },
+  {
+    "path": "代码/后端/Go/group_delegate.go",
+    "bytes": 1659,
+    "sha256": "639c3c6e1f7bb913a0600df697f8d0a07da426c0933da8033b0ac2097715d254"
+  },
+  {
+    "path": "代码/后端/Go/group_invites.go",
+    "bytes": 28608,
+    "sha256": "79de84770020c76022e69d13c310a1a5540069304664daadcc71b7f2a8443fcb"
+  },
+  {
+    "path": "代码/后端/Go/group_operator.go",
+    "bytes": 3706,
+    "sha256": "ff30a2db1fee0ae8e37a4af5606625fd61deb952dd2e8789093b53a512a818eb"
+  },
+  {
+    "path": "代码/后端/Go/group_policy.go",
+    "bytes": 19245,
+    "sha256": "d82e50582c807ca1d380e24440187087a20836203812797fa7539f3546e279e8"
+  },
+  {
+    "path": "代码/后端/Go/group_safety.go",
+    "bytes": 6054,
+    "sha256": "196b50ac78ae1ca0b30a0890c608f09160a5bb69d617ac0ad270c814eb90137d"
+  },
+  {
+    "path": "代码/后端/Go/identity.go",
+    "bytes": 41904,
+    "sha256": "9efe7fb7c1767b3c5cfc4b90f92d7d8d7195412fee73798981ac9f6b343cdfe0"
+  },
+  {
+    "path": "代码/后端/Go/journal.go",
+    "bytes": 12384,
+    "sha256": "e8f1b565cfc970795dde6b7ed9fbde229ac9b1a4740573cacafd907736ae46ca"
+  },
+  {
+    "path": "代码/后端/Go/journal_receipt_readiness.go",
+    "bytes": 1243,
+    "sha256": "08e33a26408d90f166063395a75cd7b12aa14f8b0241e0805c5096e112ce0d01"
+  },
+  {
+    "path": "代码/后端/Go/media.go",
+    "bytes": 7714,
+    "sha256": "d78ced295af56a71780235ea194244e3d4e85fd583da837dd525352c2dcac8c5"
+  },
+  {
+    "path": "代码/后端/Go/media_export.go",
+    "bytes": 6924,
+    "sha256": "ea16bed40b67df43ec028f49ab9cc688cc755f424fb3dbd5f5bba9de4efda14d"
+  },
+  {
+    "path": "代码/后端/Go/media_format.go",
+    "bytes": 6371,
+    "sha256": "003a2b9d56287572afe672d9ef10d3e32cd287437b2f50363e72a940d8712278"
+  },
+  {
+    "path": "代码/后端/Go/media_legacy_erasure.go",
+    "bytes": 5372,
+    "sha256": "6c0ea10ed87eb8933de0b25f453684cd67178249e58b61a43b335c7535308703"
+  },
+  {
+    "path": "代码/后端/Go/media_read_floor.go",
+    "bytes": 639,
+    "sha256": "dcfca7cb85f48195e2e74aa899281a63b028df4cc0dab6280b5befcb80784628"
+  },
+  {
+    "path": "代码/后端/Go/media_receipts.go",
+    "bytes": 3007,
+    "sha256": "4a43d28cc86b10bb158ebf1c9f1561f74c8452a37f431f542db7b90dfef3628b"
+  },
+  {
+    "path": "代码/后端/Go/media_restore.go",
+    "bytes": 2986,
+    "sha256": "7828328f2d70db4c55c8147f3a9e0a842aab735fb15e4f43a95d3d24a35e8c14"
+  },
+  {
+    "path": "代码/后端/Go/media_retention.go",
+    "bytes": 20487,
+    "sha256": "e4216a2bb6d0d79e90c1558a31d97fa7a168003482541bf3cf61bd968f86ebc1"
+  },
+  {
+    "path": "代码/后端/Go/media_upload.go",
+    "bytes": 11959,
+    "sha256": "d71fdfd39a8ee3203e9a506c99ba897fdd48b84099f4b778d48cfe689448e5b7"
+  },
+  {
+    "path": "代码/后端/Go/media_upload_cleanup.go",
+    "bytes": 5317,
+    "sha256": "fb1b03e891ffeb326f55db998bf7c4afaf33417c75ae0a2e49c7e32660ed13a6"
+  },
+  {
+    "path": "代码/后端/Go/media_upload_identity.go",
+    "bytes": 3114,
+    "sha256": "096f178477a4c2332253880031a95a4bd7c770f1d27782d1e1f43dd3ffa7ef82"
+  },
+  {
+    "path": "代码/后端/Go/media_upload_model.go",
+    "bytes": 8034,
+    "sha256": "e5f79d5585a1475c1b4f7ebf027d1ad39c38adb4d91e93cf6f3f4f20f7c126da"
+  },
+  {
+    "path": "代码/后端/Go/media_upload_safety.go",
+    "bytes": 3492,
+    "sha256": "ad32fa5ce4e21ef6ae18e4045ab78b4547aaeb171830c08085681a64fe2b55b4"
+  },
+  {
+    "path": "代码/后端/Go/media_webm.go",
+    "bytes": 11301,
+    "sha256": "0969ed215bca4cb1fd5c9c149e18b79fd721a12225e3e03c01212194a96521e5"
+  },
+  {
+    "path": "代码/后端/Go/mentions_announcements.go",
+    "bytes": 22641,
+    "sha256": "54cb181d54b231161b843c4c66eded95c176f0633010e7b9b33060e9caff6d1a"
+  },
+  {
+    "path": "代码/后端/Go/message.go",
+    "bytes": 23553,
+    "sha256": "dd294e0d9dd10fc0e4c5f27fee43333175701c60552f1c2cc9244092539946ec"
+  },
+  {
+    "path": "代码/后端/Go/message_export.go",
+    "bytes": 18510,
+    "sha256": "9cf6ad58686f4850a9404ac0b1afae5016c6a87b8ece738eb1a45583ec22b8a9"
+  },
+  {
+    "path": "代码/后端/Go/message_lifecycle.go",
+    "bytes": 419,
+    "sha256": "ae5808a853f96f418bfbf4762fceebd385741bcff226637871f4bb032729b329"
+  },
+  {
+    "path": "代码/后端/Go/message_migration.go",
+    "bytes": 8103,
+    "sha256": "dd56a099767d678dc5df7c22ed5554c4e1216497b92f410d37ad66447cd17593"
+  },
+  {
+    "path": "代码/后端/Go/message_read_points.go",
+    "bytes": 11405,
+    "sha256": "75df5f23b075a0c93f3670c4e8705c2f6631072e18a320c9509975b0ff7608e7"
+  },
+  {
+    "path": "代码/后端/Go/message_read_summary.go",
+    "bytes": 5314,
+    "sha256": "acb1d4a1beb736b047feb1de20e77f06ff5812b6c3fff069a683d9a5a823c61d"
+  },
+  {
+    "path": "代码/后端/Go/message_retract_request.go",
+    "bytes": 1238,
+    "sha256": "27d70a334de8fd5d7b08acf426e56a18d7bd783082dff1b58c0eb35561fe88b9"
+  },
+  {
+    "path": "代码/后端/Go/mfa.go",
+    "bytes": 14209,
+    "sha256": "2bbe2c7351536d7c8eca6ed885ea89e46362ef8a3c22468886b7324db20dcccb"
+  },
+  {
+    "path": "代码/后端/Go/migration_identity.go",
+    "bytes": 4697,
+    "sha256": "ab606209c12f25279f7da98feeb79e82b97abfea0f81908455b004ed7d53e9d9"
+  },
+  {
+    "path": "代码/后端/Go/migration_interest.go",
+    "bytes": 3456,
+    "sha256": "b4fb59045eb047aa202d39eb267714816b709d91c32b2b9aece2d4f36bd6d5a4"
+  },
+  {
+    "path": "代码/后端/Go/migration_invalidation.go",
+    "bytes": 9062,
+    "sha256": "88db350304884db3b2c1bbd4fa03669472fe7f3be0a3e9fa596e4d508b9f8bc6"
+  },
+  {
+    "path": "代码/后端/Go/migrations.go",
+    "bytes": 14833,
+    "sha256": "100c2e9741b74a620320db59a81952f91942fa342d607bd36851454ee0eeada6"
+  },
+  {
+    "path": "代码/后端/Go/operations.go",
+    "bytes": 28125,
+    "sha256": "c86fcbbaf8ce7811564895c554b1f91ca8bda2ade1f47246d74d112b52d4dcaa"
+  },
+  {
+    "path": "代码/后端/Go/owner_lifecycle.go",
+    "bytes": 2128,
+    "sha256": "450911cba96de2bfe0523a4208a7f9965fd1d81bd11cec647ddc59de383bb24d"
+  },
+  {
+    "path": "代码/后端/Go/password_change.go",
+    "bytes": 12573,
+    "sha256": "93d1c4cdca8dbadc0b3eaf51ed8a409e1416cae6ff5b886e0d3a31035368fb61"
+  },
+  {
+    "path": "代码/后端/Go/password_change_worker.go",
+    "bytes": 6758,
+    "sha256": "79f9e7377fc3e9821fa4682edf9d782d1e0557781f43ede9415df0f726fff774"
+  },
+  {
+    "path": "代码/后端/Go/personal_export.go",
+    "bytes": 14366,
+    "sha256": "973dbb7670c611e5cbadcaa6e7864cb58620fd8468e1da99ac83ea3664ac544e"
+  },
+  {
+    "path": "代码/后端/Go/personal_export_crypto.go",
+    "bytes": 3435,
+    "sha256": "82d2a03463f09c49da0cf4718753718ecba6d7ace3f9455b28adfa914eed5683"
+  },
+  {
+    "path": "代码/后端/Go/personal_export_fence.go",
+    "bytes": 6583,
+    "sha256": "bd9912dbc2286707fb95ce52add9e92a026393466417ca2082d8db006332705a"
+  },
+  {
+    "path": "代码/后端/Go/personal_export_media.go",
+    "bytes": 8054,
+    "sha256": "eb9ce79b732cc802abb05120368cf0f4a8533e09e0b8f22b9b115c690c51e374"
+  },
+  {
+    "path": "代码/后端/Go/personal_export_owner.go",
+    "bytes": 23834,
+    "sha256": "daf23ca1bece0d7800863b1aea16d931c725fe37711ebd8393fadbdc2e4af63a"
+  },
+  {
+    "path": "代码/后端/Go/personal_export_safety.go",
+    "bytes": 2210,
+    "sha256": "b78f09ce5351fb3c67d4e0cb8e224888b456c5da7753f34c6a156c7871c5ffb6"
+  },
+  {
+    "path": "代码/后端/Go/personal_export_worker.go",
+    "bytes": 24841,
+    "sha256": "f87074aebcc65aee8446277737be358a9c4c71091d433d26e673e4087cfd2ff9"
+  },
+  {
+    "path": "代码/后端/Go/receipt_capabilities.go",
+    "bytes": 14669,
+    "sha256": "93ba0ca89fe54b6510794452732089a1a456c04e5fe5f8c5fad542eee07e4c8c"
+  },
+  {
+    "path": "代码/后端/Go/receipt_delivery.go",
+    "bytes": 19648,
+    "sha256": "dbaf56b3f6487d58a49049c1b86f5dddb799dc39b7019f8b9d51b3fd8a76cc4c"
+  },
+  {
+    "path": "代码/后端/Go/receipt_delivery_worker.go",
+    "bytes": 10598,
+    "sha256": "12cdf63e4a425136c465f1024b7e2b1ec49c28003b09b34e97b17f876eae062e"
+  },
+  {
+    "path": "代码/后端/Go/report_evidence.go",
+    "bytes": 4508,
+    "sha256": "2e970a258c378298c8842d86b568d728c37a2caaa06eaf69eb36c5cb05f39b35"
+  },
+  {
+    "path": "代码/后端/Go/report_evidence_model.go",
+    "bytes": 5128,
+    "sha256": "c3f5eac20c076e1b5926d1fd5a51167c3b4081890c98fcdc1b715a8fbd8dc608"
+  },
+  {
+    "path": "代码/后端/Go/report_media.go",
+    "bytes": 5543,
+    "sha256": "4b3e5ca04a6112dd4d6457c91acffd1b1c1387f09b455f6b9728b470ff6ed223"
+  },
+  {
+    "path": "代码/后端/Go/reports.go",
+    "bytes": 13370,
+    "sha256": "5f8b876cd26af03823631b40cf3dce810ded1b2c1ddaf1374e82b904278d61b4"
+  },
+  {
+    "path": "代码/后端/Go/request_gate.go",
+    "bytes": 4091,
+    "sha256": "fc2d396272d4ae4b0c8e348f227795e3059139b6dac7557c22c1a3bacec85199"
+  },
+  {
+    "path": "代码/后端/Go/reset_grant.go",
+    "bytes": 8613,
+    "sha256": "9bccd9ef44ce8aece1d48ebd90b143c5c84d8cb1cedd35a82e8cd9e525448e72"
+  },
+  {
+    "path": "代码/后端/Go/restore_runner.go",
+    "bytes": 16476,
+    "sha256": "84a883206c965ab1367f87d3eb8508f1ebe7b5cb8ea431f6ace3860ae3fe13d2"
+  },
+  {
+    "path": "代码/后端/Go/retention_access.go",
+    "bytes": 3506,
+    "sha256": "b6c82cfc5c60f1f2be9ff000487db6fd03da9aba201ce9518e0355c45a53bff8"
+  },
+  {
+    "path": "代码/后端/Go/retention_clock.go",
+    "bytes": 2028,
+    "sha256": "97a445deab46141dfdf0249894d251bf50ff153f9ae03b8b6e8e74de2e0f5a1b"
+  },
+  {
+    "path": "代码/后端/Go/retention_edit.go",
+    "bytes": 3710,
+    "sha256": "4b0c60bce39103ed5bbd18aacbeb423d617da1f5f5c67bf6a8b9d605df54f681"
+  },
+  {
+    "path": "代码/后端/Go/retention_legacy.go",
+    "bytes": 2898,
+    "sha256": "972eb4f55301a384fff4dda50f25b4eaf76a9f6d99a48fe1c28507e91ff5eb50"
+  },
+  {
+    "path": "代码/后端/Go/retention_policy.go",
+    "bytes": 28234,
+    "sha256": "32c1e8a2b9e254827e419e1b496c4e57e53e070eb85762bd1a07552a6ef99a45"
+  },
+  {
+    "path": "代码/后端/Go/retention_read.go",
+    "bytes": 1807,
+    "sha256": "ee7ea229e1f1ff6768c4a1c9197c8d1eb02922955dc15bcbb7acf9467318105c"
+  },
+  {
+    "path": "代码/后端/Go/retention_readiness.go",
+    "bytes": 2158,
+    "sha256": "0e7a1cdc2ae1a372f56c420a8404b7269de204fd5f6263a12ae34b80a8e39dd3"
+  },
+  {
+    "path": "代码/后端/Go/retention_safety.go",
+    "bytes": 4203,
+    "sha256": "622aa0a52434bf86541c0bca20f8f9fd59c544a92e69106c00763b53c21e64ad"
+  },
+  {
+    "path": "代码/后端/Go/retention_worker.go",
+    "bytes": 13260,
+    "sha256": "c5eb13cea62087b6251de597db89c920adcaf4e8f54008ed124cbb0190f8214d"
+  },
+  {
+    "path": "代码/后端/Go/search.go",
+    "bytes": 8730,
+    "sha256": "8a76126bd5816e92d485a6f5ae687b12201d2fcf055085a4ebcfaaae9515a5b6"
+  },
+  {
+    "path": "代码/后端/Go/security.go",
+    "bytes": 2838,
+    "sha256": "156d165e4e9317ef5cc4941d893bcead210da9c33cf3e1c71da9b09e735c8c30"
+  },
+  {
+    "path": "代码/后端/Go/self_draft.go",
+    "bytes": 34815,
+    "sha256": "2d558eb21047c44c417e76b142fb840eb5f1a6ff8c84c9be10f55f583bfb6d6a"
+  },
+  {
+    "path": "代码/后端/Go/self_draft_floor.go",
+    "bytes": 28536,
+    "sha256": "d3cc3e59eefc0ddb9708a08beac3f782406e219ddfe9fbd16546c0138825a47b"
+  },
+  {
+    "path": "代码/后端/Go/self_draft_safety.go",
+    "bytes": 9723,
+    "sha256": "432b1bc09282a5f1cebc664d10042039bab1e19d70697aa58af400c4ea00554a"
+  },
+  {
+    "path": "代码/后端/Go/self_draft_sync.go",
+    "bytes": 1783,
+    "sha256": "1c1ba0e744ebe1c44e0ea67a0c6d65260d3fbabd476101c9e62f36c938ed0c53"
+  },
+  {
+    "path": "代码/后端/Go/self_read.go",
+    "bytes": 28432,
+    "sha256": "75108a645e5829568bba5c08ddd0e9f77b4ecda56ea047a639bfc86dd523d9c0"
+  },
+  {
+    "path": "代码/后端/Go/self_state.go",
+    "bytes": 346,
+    "sha256": "829f650898f841282757399b46755ebe572db2a9d6f8bd6cb546348961f4c9ea"
+  },
+  {
+    "path": "代码/后端/Go/self_unread.go",
+    "bytes": 4769,
+    "sha256": "e8140f0e91c9c62f54edd196d23007cf4d2db776c0a1d542112fac133268fdc5"
+  },
+  {
+    "path": "代码/后端/Go/self_views.go",
+    "bytes": 17179,
+    "sha256": "eb1d5d17a7f754f66bded0183bead35b8e2751b76892ba79add875300bdfab33"
+  },
+  {
+    "path": "代码/后端/Go/send_admission.go",
+    "bytes": 16049,
+    "sha256": "3a28303df9f59a9f45b69205ef76507588729b1090d918f02cb76f2e28cd89e8"
+  },
+  {
+    "path": "代码/后端/Go/server.go",
+    "bytes": 16221,
+    "sha256": "d8e9deb7fc44156dba9d121eff5a77c425709ce978988061513eefee4f1d8f8b"
+  },
+  {
+    "path": "代码/后端/Go/session_auth_retirement.go",
+    "bytes": 4061,
+    "sha256": "426bcee0fb6a85088ca012760ccba34e25fd8b3028c50e70c0ea4e09ec7a8a11"
+  },
+  {
+    "path": "代码/后端/Go/session_bff.go",
+    "bytes": 6255,
+    "sha256": "1bec80fb5453530e9ed9979d26f09fa6593b339b484f410267f66896dd14cfe1"
+  },
+  {
+    "path": "代码/后端/Go/session_refresh.go",
+    "bytes": 12515,
+    "sha256": "c167bd8e5fc2b70ab564aadbd791c15b3e7d89c66745762b0b355c27118b70bb"
+  },
+  {
+    "path": "代码/后端/Go/session_refresh_model.go",
+    "bytes": 11534,
+    "sha256": "274a4fff519cb1be2018c6f11de554d2cafa55813defe00723bbc4b7c2567a43"
+  },
+  {
+    "path": "代码/后端/Go/source_preferences.go",
+    "bytes": 15453,
+    "sha256": "9da6fd7c1f67b8c4df0f527ec429a5db421e169479e448e1e395813a83a993b2"
+  },
+  {
+    "path": "代码/后端/Go/sync_classification.go",
+    "bytes": 3833,
+    "sha256": "01d1a009b1d5272c707bf832afa845fe0c15a4344b6c8cc7686f07f8d755f98e"
+  },
+  {
+    "path": "代码/后端/Go/sync_kinds.go",
+    "bytes": 3554,
+    "sha256": "ccef1e6e5bd5475ab29eed4d8b27f115d70262cd7e991a2e7e141b8e911162a5"
+  },
+  {
+    "path": "代码/后端/Go/sync_migration.go",
+    "bytes": 19294,
+    "sha256": "137939c5ec81d452dc7e8a391128dab1353b01dfcee65a7035f0a5cf65112b3d"
+  },
+  {
+    "path": "代码/后端/Go/sync_migration_cleanup.go",
+    "bytes": 8614,
+    "sha256": "fce3d452bf3021b5ee32829b2f1ddc9d8a785fc0a4299fcb76788cfe4ff21907"
+  },
+  {
+    "path": "代码/后端/Go/sync_migration_delivery.go",
+    "bytes": 6394,
+    "sha256": "fd8d3385d841b755a23c10e57a533cfdd926ec4a840d17af2f83b9bf9f4a5b5e"
+  },
+  {
+    "path": "代码/后端/Go/sync_migration_model.go",
+    "bytes": 15893,
+    "sha256": "15f2637be8a91202f1b21576de897f1fef0a9bcd299cd93e97050a7ae6b490df"
+  },
+  {
+    "path": "代码/后端/Go/sync_migration_validate.go",
+    "bytes": 14432,
+    "sha256": "ec16adff68463dc14fcb4543fc326eedc6645d910a8619041c0062a2e1172d73"
+  },
+  {
+    "path": "代码/后端/Go/sync_nats.go",
+    "bytes": 16919,
+    "sha256": "6fde3203d73ebb711d1faaba3055d76fb2fb595efcc480cbe23ba366165e2852"
+  },
+  {
+    "path": "代码/后端/Go/sync_object_receipts.go",
+    "bytes": 19099,
+    "sha256": "6f2c1ba8c5129a83bb1abe4050193d5ad371e553d053fff26aa8a278b6776ebc"
+  },
+  {
+    "path": "代码/后端/Go/sync_origin.go",
+    "bytes": 1455,
+    "sha256": "726c93add53d9d20fa0f59984146025af564465c679f7cf554f4fc0432207107"
+  },
+  {
+    "path": "代码/后端/Go/sync_outbox.go",
+    "bytes": 15217,
+    "sha256": "3339a2a0f0273b70f6b4ca748b56c7bdc25afade349e10ee0bf07cafcfbcf46b"
+  },
+  {
+    "path": "代码/后端/Go/sync_owner.go",
+    "bytes": 17579,
+    "sha256": "07b08dd4e6a84e6393e82de3bb0e01ca77349efe3179196723e2cfca09fb2b9b"
+  },
+  {
+    "path": "代码/后端/Go/sync_private_unix.go",
+    "bytes": 250,
+    "sha256": "24ab4b0ea6ed424050b2a575abec7230b9308fa29dace99c9ccf70d3a7114562"
+  },
+  {
+    "path": "代码/后端/Go/sync_private_windows.go",
+    "bytes": 1411,
+    "sha256": "3b5e6e3d9e277ecd50337ec49d3cadff159e3247deed56a22de59e6ea0dd7ed9"
+  },
+  {
+    "path": "代码/后端/Go/sync_protocol.go",
+    "bytes": 4169,
+    "sha256": "89fd0ba822b13adab336dc2003e19732321297a39b19267f9bf2b1250c4ccf22"
+  },
+  {
+    "path": "代码/后端/Go/sync_receipt_policy.go",
+    "bytes": 2869,
+    "sha256": "2678232977e993dd2909a4aabe3ea5641a1fbabfbfdccbde576c5c27ff57adb0"
+  },
+  {
+    "path": "代码/后端/Go/sync_receipts.go",
+    "bytes": 25178,
+    "sha256": "bccf34bf6b81006d0fc83ff0151389c94138251100da1a8788dd0d5891fa15b0"
+  },
+  {
+    "path": "代码/后端/Go/sync_schemas.go",
+    "bytes": 9583,
+    "sha256": "e5890ba11de7cd826f726c4f37908aef0ccc6692a1f05078f1ea8a11dfeb28f3"
+  },
+  {
+    "path": "代码/后端/Go/sync_self.go",
+    "bytes": 3765,
+    "sha256": "6cd4c10763d5fed49799b1b8a00af4b14b5b3fded4376fe1e2c3b8a4b45029ec"
+  },
+  {
+    "path": "代码/后端/Go/sync_service.go",
+    "bytes": 35963,
+    "sha256": "1d5df0e786070b131e98f27edd17efefcfcb026bb8e73e2e857ac4df0e9e5aa8"
+  },
+  {
+    "path": "代码/后端/Go/sync_validation.go",
+    "bytes": 9867,
+    "sha256": "17e4367c2c95d731afc9e02da6dafb9a1decf646b8a32b5d537325c2af056bfc"
+  },
+  {
+    "path": "代码/后端/Go/types.go",
+    "bytes": 5082,
+    "sha256": "4435a689849cb497da45d9aedfce2058713afc9c25948490104f2d4e14880005"
+  },
+  {
+    "path": "代码/后端/Go/username.go",
+    "bytes": 5775,
+    "sha256": "cb7e16dd0b529f0408c3f8c804658b9578733b2d7160351476f3696b148596e6"
+  },
+  {
+    "path": "代码/后端/Go/web.go",
+    "bytes": 2101,
+    "sha256": "7f022cfb049090a6ab70ac099533c9df69287291afff53c5753ec0143b6955ce"
+  }
+]

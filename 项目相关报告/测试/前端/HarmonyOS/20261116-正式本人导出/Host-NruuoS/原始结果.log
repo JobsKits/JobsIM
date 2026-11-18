@@ -1,0 +1,26 @@
+✔ job projection requires exact strings but never private HTTP fields (5.942292ms)
+✔ ten languages cover every native export label and identify this device (0.325458ms)
+✔ create persists original body before first POST and successful loss uses lookup only (2.648417ms)
+✔ unknown fresh404 retains intent and only explicit same body can first create (0.991459ms)
+✔ lookup wrong404 and transport failure never become creating POST (0.732875ms)
+✔ disk persistence failure sends zero creating request (0.295625ms)
+✔ capability withdrawal permits lookup/status/cancel but denies new create and delivery (2.096334ms)
+✔ current family retirement blocks even late successful create from local publication (0.34525ms)
+✔ mutated body/hash and secret-bearing local records fail before any HTTP (0.354625ms)
+✔ tickets stay ephemeral and completed job404 never re-creates a task (0.591459ms)
+✔ bounded ZIP slices reject truncated200, tail garbage and forged central record (0.600334ms)
+✔ server filename is safe, localized and ZIP only (0.590209ms)
+✔ shipped repository persists original across reopen, enforces CAS and physical UUID (86.274542ms)
+✔ actual API streams to sink with CA, no redirects and RAM-only ticket header (2.650958ms)
+✔ oversized headers and identity retirement close stream without finish (0.729084ms)
+✔ expired download coordinates one refresh and resets partial error bytes (0.379292ms)
+✔ native file implementation fsyncs file and directory before chooser and writes exact ZIP (18.697583ms)
+✔ cancelled native picker is not saved; late identity failure cleans its new empty destination (9.019209ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 363.074959

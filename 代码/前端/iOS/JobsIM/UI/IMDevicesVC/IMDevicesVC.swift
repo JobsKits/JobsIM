@@ -28,7 +28,7 @@ final class IMDevicesVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
             make in make.edges.equalToSuperview()
         }
         table.byEmptyButtonProvider { [weak self] in
-            IMUI.button(IMStrings.text("empty") + "\n" + IMStrings.text("reload")) {
+            IMUI.emptyButton {
                 self?.requestReload()
             }
         }
@@ -65,7 +65,7 @@ final class IMDevicesVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
         let current = item.firstText("deviceId", "id") == currentID
         cell.byText(item.firstText("name", "deviceName", "deviceId", "id"))
             .bySecondaryText(current ? IMStrings.text("currentDevice") : item["createdAt"].text)
-            .byAccessoryType(.disclosureIndicator)
+            .byIMThemeAccessoryType(.disclosureIndicator)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

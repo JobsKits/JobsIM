@@ -1,0 +1,30 @@
+{
+  "note": "测试后摘要与mtime界限，不虚称跑前字节副本；原日志完整保留含恢复失败",
+  "runStart": "2026-11-17T02:07:27.953723+08:00",
+  "files": {
+    "代码/后端/Go/account_deletion_owner.go": {
+      "sha256": "0d1e41ac1e00144fec48b42fce0c4fc73d5d1ddfa17d7dfcc53249a9d5e2ccb1",
+      "lastWriteBeforeRunStart": true
+    },
+    "测试/后端/接口/account_deletion_pg_test.go": {
+      "sha256": "f73289e713b5fd67f558ac4c7333bbe63af77244d4101a8976c318e2f2b93f53",
+      "lastWriteBeforeRunStart": true
+    },
+    "代码/后端/Go/group_invites.go": {
+      "sha256": "79de84770020c76022e69d13c310a1a5540069304664daadcc71b7f2a8443fcb",
+      "lastWriteBeforeRunStart": true
+    },
+    "测试/后端/接口/group_manager_original_test.go": {
+      "sha256": "be2b79f9a930636cae5ba34bd0cfd09f036d9ae15f0f6de124ce9f0127aa3be5",
+      "lastWriteBeforeRunStart": false
+    },
+    "代码/后端/Go/password_change.go": {
+      "sha256": "93d1c4cdca8dbadc0b3eaf51ed8a409e1416cae6ff5b886e0d3a31035368fb61",
+      "lastWriteBeforeRunStart": true
+    },
+    "测试/后端/接口/password_change_pg_test.go": {
+      "sha256": "af1c05a1211c32301828c8f432da3eb293146e3c0c6fd6b2cf9ce369ca2a0288",
+      "lastWriteBeforeRunStart": true
+    }
+  }
+}

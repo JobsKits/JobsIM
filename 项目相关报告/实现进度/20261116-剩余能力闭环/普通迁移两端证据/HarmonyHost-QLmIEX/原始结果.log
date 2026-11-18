@@ -1,0 +1,26 @@
+✔ per-store context remains distinct from legacy transport false and runtime readiness (7.139791ms)
+✔ measured approval scope survives guard and family refresh, rejects another physical store or build (1.136292ms)
+✔ rc1 and ro1 delivery generation and manifest are an inseparable original pair (3.739959ms)
+✔ stored original receipt intent rejects secrets and altered body, result tuple cannot be substituted (1.368042ms)
+✔ historical qualification target is still current message even when old manifest expired, never infer originalTarget (0.649125ms)
+✔ lost body ACK keeps exact nonce durable; cold reconciliation and repeated receive perform only original lookup (6.590833ms)
+✔ unknown original cannot borrow successor family for explicit retry (3.033458ms)
+✔ approval withdrawal preserves lookup but blocks unseen mutation, server profiles alone cannot qualify (3.5185ms)
+✔ a late result after lifecycle stop never marks the original receipt recorded (5.857167ms)
+✔ automatic coordinator defaults off and never treats a cursor as an ACK (11.685959ms)
+✔ automatic backfill never borrows a new qualification into old frozen targets (1.08625ms)
+✔ automatic new body mutates once and unknown subsequent rounds only query the original (1.63425ms)
+✔ automatic candidate cannot silently rebase an edited content version (0.890583ms)
+✔ actual repository commits exact raw body and original intent atomically, reopens and guards CAS (147.015041ms)
+✔ injected intent disk failure rolls back the accompanying plaintext body (123.06625ms)
+✔ global clears original body and proof while retaining a terminal nonsecret responsibility (158.093958ms)
+✔ zero-byte ordinary original has a real descriptor and SHA(empty); object and intent share one transaction (128.662375ms)
+✔ same-process probe cannot qualify and a later process must recover original durable probe rows (127.723458ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1144.700125

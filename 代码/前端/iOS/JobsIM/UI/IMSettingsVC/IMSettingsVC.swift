@@ -18,8 +18,8 @@ import UserNotifications
 final class IMSettingsVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
 
     private let sections = [
-        ["displayName", "avatar", "connection"], ["theme", "language", "font", "selfState"],
-        ["notifications", "devices", "recoveryCodes", "dataExport", "backup", "myReports"], ["logout"],
+        ["connection"], ["theme", "language", "font", "selfState"],
+        ["notifications", "devices", "recoveryCodes", "passwordChange", "accountDeletion", "joinGroup", "dataExport", "personalMigration", "receiptTitle", "backup", "myReports"], ["logout"],
     ]
     private lazy var table = UITableView.make(style: .insetGrouped)
         .byDelegate(self)
@@ -32,6 +32,20 @@ final class IMSettingsVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
         table.byAddTo(content) { [unowned self] make in
             make.edges.equalToSuperview()
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        table.byReloadData()
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard isViewLoaded,
+              traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) else {
+            return
+        }
+        table.byReloadData()
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,7 +65,7 @@ final class IMSettingsVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
         let cell = UITableViewCell.make(style: .value1, reuseIdentifier: nil)
         var detail = ""
         if key == "connection" {
-            detail = session.demo ? IMStrings.text("demo") : session.baseURL?.host ?? ""
+            detail = session.demo ? "" : session.baseURL?.host ?? ""
         } else if key == "theme" {
             detail = IMStrings.text(UserDefaults.standard.string(forKey: "theme") ?? "system")
         } else if key == "language" {
@@ -63,10 +77,11 @@ final class IMSettingsVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
             let value = UserDefaults.standard.integer(forKey: "fontScale")
             detail = IMStrings.text(value == 4 ? "large" : value == -2 ? "small" : "standard")
         }
-        cell
-            .byText(IMStrings.text(key == "logout" && session.demo ? "backReal" : key))
+        IMUI.cellTheme(cell)
+            .byText(IMStrings.text(key))
             .bySecondaryText(detail)
-            .byAccessoryType(.disclosureIndicator)
+            .byIMThemeAccessoryType(.disclosureIndicator)
+            .byAccessibilityIdentifier("settings." + key)
         return cell
     }
 
@@ -127,18 +142,23 @@ final class IMSettingsVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
             }
             navigationController?.pushViewController(IMPersonalStateVC(), animated: true)
         } else if key == "logout" {
+            if session.isDemonstrationEnvironment {
+                session.leaveDemonstrationEnvironment()
+                return
+            }
             perform { [weak self] in
                 guard let self else { return }
+                let wasDemo = self.session.demo
                 await self.session.logout()
-                if !self.session.demo && self.session.token != nil {
+                if !wasDemo && self.session.token != nil {
                     throw IMAPIError(
                         status: 0, code: "LOCAL_LOGOUT_NOT_SAVED", message: IMStrings.text("connectionNeeded")
                     )
                 }
             }
         } else if key == "connection" {
-            if session.demo {
-                session.exitDemo()
+            if session.isDemonstrationEnvironment {
+                session.leaveDemonstrationEnvironment()
                 return
             }
             present(UINavigationController.make(IMAuthVC()), animated: true)
@@ -175,12 +195,42 @@ final class IMSettingsVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
             present(sheet, animated: true)
         } else if key == "myReports" {
             navigationController?.pushViewController(IMReportVC(), animated: true)
+        } else if key == "joinGroup" {
+            guard !session.demo, session.currentCredentialPair != nil else {
+                IMUI.alert(self, message: IMStrings.text("connectionNeeded"))
+                return
+            }
+            navigationController?.pushViewController(IMGroupGovernanceVC(), animated: true)
+        } else if key == "passwordChange" {
+            guard !session.demo, let pair = session.currentCredentialPair else {
+                IMUI.alert(self, message: IMStrings.text("connectionNeeded"))
+                return
+            }
+            navigationController?.pushViewController(IMPasswordChangeVC(username: pair.username), animated: true)
+        } else if key == "accountDeletion" {
+            guard !session.demo, let pair = session.currentCredentialPair else {
+                IMUI.alert(self, message: IMStrings.text("connectionNeeded"))
+                return
+            }
+            navigationController?.pushViewController(IMAccountDeletionVC(username: pair.username), animated: true)
         } else if key == "dataExport" {
             guard !session.demo, session.currentCredentialPair != nil else {
                 IMUI.alert(self, message: IMStrings.text("connectionNeeded"))
                 return
             }
             navigationController?.pushViewController(IMDataExportVC(), animated: true)
+        } else if key == "personalMigration" {
+            guard !session.demo, session.currentCredentialPair != nil else {
+                IMUI.alert(self, message: IMStrings.text("connectionNeeded"))
+                return
+            }
+            navigationController?.pushViewController(IMMigrationVC(), animated: true)
+        } else if key == "receiptTitle" {
+            guard !session.demo, session.currentCredentialPair != nil else {
+                IMUI.alert(self, message: IMStrings.text("connectionNeeded"))
+                return
+            }
+            navigationController?.pushViewController(IMReceiptVC(), animated: true)
         } else if key == "avatar" {
             navigationController?.pushViewController(IMAvatarVC(), animated: true)
         } else if key == "backup" {
@@ -202,7 +252,7 @@ final class IMSettingsVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
                     IMUI.alert(
                         self, title: IMStrings.text("recoveryCodes"),
                         message: codes.isEmpty
-                            ? IMStrings.text(self.session.demo ? "demo" : "codesUnavailable")
+                            ? IMStrings.text("codesUnavailable")
                             : IMStrings.text("recoveryWarning") + "\n\n" + codes)
                 }
             }
@@ -240,6 +290,7 @@ final class IMSettingsVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
                     save(option.0)
                     // A cloud write must acquire its captured owner before any root replacement.
                     if refreshImmediately {
+                        self?.table.byReloadData()
                         self?.session.changed?()
                     }
                 })

@@ -1,0 +1,16 @@
+{
+  "exitCode": 0,
+  "jvm": {
+    "tests": 28,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "inputUnchanged": true,
+  "sourceCount": 77,
+  "packages": {
+    "项目相关报告/实现进度/20261116-剩余能力闭环/群控证据/Android交叉审后/app-debug.apk": "15167f79905403843ba107c1b42ba73a707ac0a3dcd12998bd5de0ba12d29009",
+    "项目相关报告/实现进度/20261116-剩余能力闭环/群控证据/Android交叉审后/app-debug-androidTest.apk": "1c741f49632655a9a3e576cc84fb3314b45446dd37041404e74a019b25741a3b"
+  },
+  "nativeTestsExecuted": false
+}

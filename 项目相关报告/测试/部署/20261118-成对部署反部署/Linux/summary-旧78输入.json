@@ -1,0 +1,102 @@
+{
+  "date": "2026-11-18",
+  "status": "isolated-validation-passed-native-Linux-pending",
+  "platforms": [
+    "Ubuntu",
+    "Debian",
+    "RockyLinux",
+    "AlibabaCloudLinux"
+  ],
+  "scripts": 8,
+  "desktopEntries": 8,
+  "selfContained": true,
+  "modeDefault": "fzf local+QuickTunnel or server with real HTTPS origin and certificate/key/CA; independent state/reference for each distro+mode",
+  "tools": {
+    "machineVersionCache": true,
+    "officialLatestQueries": [
+      "go",
+      "fzf",
+      "node LTS",
+      "nats-server",
+      "cloudflared(local only)",
+      "postgres(report only; business stays native PG18)"
+    ],
+    "healthAndDigestChecks": true,
+    "automaticDatabaseMajorUpgrade": false,
+    "businessDependencyUpdates": "report only, readonly locks"
+  },
+  "lifecycle": {
+    "identityCheckedProcesses": true,
+    "reverseStopOrder": [
+      "owned tunnel/menu",
+      "Go",
+      "NATS",
+      "PostgreSQL"
+    ],
+    "parentGuardian": true,
+    "strictOriginTLS": true,
+    "quickPublicURLRebindsOnlyOwnedGo": true,
+    "systemServiceInstallation": false,
+    "realLinuxLifecycleTested": false
+  },
+  "undeploy": {
+    "defaultFirstChoice": "stop-retain",
+    "defaultCleanupPolicy": "external verified backup then clear created sources",
+    "wipeRequiresExplicitChoice": true,
+    "independentEnterConfirmation": true,
+    "yesBypass": false,
+    "createdVsReused": "first origin ledger with uid/dev/inode; legacy without ledger preserved",
+    "protected": [
+      "JournalDatabase",
+      "Secrets",
+      "TLS",
+      "owner",
+      "Application/instance.json",
+      "existing backups and offline archives",
+      "recovery keys",
+      "shared machine SDK/tool cache",
+      "source tree"
+    ],
+    "resume": "original immutable plan, policy and attempted items; changed bytes/inodes stop; any undeploy checkpoint blocks reinitialization",
+    "returnWhenProtectedRetained": 2,
+    "partialIsNotCompleteRestore": true
+  },
+  "verification": {
+    "host": "darwin",
+    "pass": 78,
+    "fail": 0,
+    "skip": 0,
+    "result": "项目相关报告/测试/部署/20261118-成对部署反部署/Linux/Run-1794963505068/结果.json",
+    "scope": "Bash syntax, non-Linux refusal and actual private file operations. Darwin stat flags adapted; process lifecycle explicit stubs. No target Linux, real PG/NATS, network tunnel, package install or actual instance touched.",
+    "encryptedBackup": "actual OpenSSL3 CMS encryption/decryption, private-file manifest byte comparison; no real business data",
+    "desktop": "actual decoded Desktop Exec in paths with Chinese/spaces/quotes/dollar text; only fake packages execute; relative/URI/multiple packages rejected",
+    "notExecuted": [
+      "four target distributions",
+      "real PG/NATS start/stop",
+      "real server certificate/public DNS deployment",
+      "official asset download/install",
+      "real Cloudflare tunnel/BFF public integration",
+      "Linux desktop trust/double click",
+      "actual Linux TTY color and parent-death/terminal lifecycle"
+    ]
+  },
+  "artifacts": {
+    "manifest": "项目相关报告/测试/部署/20261118-成对部署反部署/Linux/最终源码清单.json",
+    "sourceSnapshots": "项目相关报告/测试/部署/20261118-成对部署反部署/Linux/原输入/Linux",
+    "earlierResults": [
+      "项目相关报告/测试/部署/20261118-成对部署反部署/Linux/Run-1794962623155/结果.json",
+      "项目相关报告/测试/部署/20261118-成对部署反部署/Linux/Run-1794962657829/结果.json",
+      "项目相关报告/测试/部署/20261118-成对部署反部署/Linux/Run-1794963174123/结果.json",
+      "项目相关报告/测试/部署/20261118-成对部署反部署/Linux/Run-1794963385423/结果.json"
+    ]
+  },
+  "legacyMigration": {
+    "removed": "部署/Linux",
+    "newPlatforms": 4,
+    "onlyKnownLegacyFilesRemoved": 8,
+    "originalsPreservedInReport": true
+  },
+  "changesOutsideScope": false,
+  "commit": false,
+  "push": false
+}

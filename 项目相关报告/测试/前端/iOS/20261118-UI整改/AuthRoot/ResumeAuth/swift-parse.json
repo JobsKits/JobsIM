@@ -1,0 +1,17 @@
+{
+  "exitCode": 0,
+  "files": [
+    "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift",
+    "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthAppearance.swift",
+    "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthTextField.swift",
+    "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthBackgroundView.swift",
+    "代码/前端/iOS/JobsIM/UI/IMAuthSettingsVC/IMAuthSettingsVC.swift",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIImage/IMAuthThumbnail+Make.swift",
+    "代码/前端/iOS/JobsIM/UI/Factories/UITextField/UITextField+DSL.swift",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIBlurEffect/UIBlurEffect+Make.swift",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIVisualEffectView/UIVisualEffectView+Make.swift",
+    "代码/前端/iOS/JobsIM/UI/Factories/AVPlayer/AVPlayer+Make.swift",
+    "代码/前端/iOS/JobsIM/UI/Factories/AVPlayerLayer/AVPlayerLayer+Make.swift"
+  ],
+  "scope": "frontend parse only; no module/typecheck/build"
+}

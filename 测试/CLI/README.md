@@ -16,6 +16,8 @@
 - [七、完整附件收讫本地闭环](#object-receipts)
 - [八、正式本人导出客户端](#personal-data-export)
 - [九、本人主动改密客户端](#own-password-change)
+- [本人注销](#jobs-toc-heading-10)
+- [逐store合格收讫候选](#jobs-toc-heading-11)
 
 </details>
 <!-- jobs-toc:end -->
@@ -28,7 +30,9 @@
 node 运行测试.mjs/运行测试.mjs
 ```
 
-使用 `GO_BINARY` 可指定用户级 Go。入口从自身位置解析工程，用临时 Go overlay 引入[外置测试](./outbox_test.go)，同时引入 outbox_test.go、governance_test.go 与 collaboration_test.go，不复制测试到业务工程，不依赖当前工作目录。
+使用 `GO_BINARY` 可指定用户级 Go。入口从自身位置解析工程，用临时 Go overlay 自动发现本目录全部普通 `*_test.go` 外置测试，当前15份／139个顶层方法，包含普通迁移与逐store收讫；不复制测试到业务工程，不依赖当前工作目录。
+
+当前正式入口完整实跑137 PASS／0 FAIL／2环境SKIP，139个方法逐名称对齐；[当前回归证据](../../项目相关报告/测试/回归/20261118-全项目回归/README.md)保留原名单漏挂22方法的证据。真实HTTPS认证协调器和系统秘密存储诊断未提供显式环境，仍明确跳过。
 
 真实 SQLite／故障测试覆盖发送前持久事务、丢响应沿原ID、同ID异参拒绝、进程重开、账户／恢复代次隔离、旧队列冻结、正文与游标原子提交、大字符串ID、版本／游标防倒退，以及原JSONL显式整批迁入和源文件保护。搜索协作新增旧 map[string]string 摘要兼容、原 @所有人资格跨进程保留／缺能力只读／失效冻结、签名游标原样传回与查询／身份围栏、精确源重新鉴权、公告未知原操作／旧事实不回滚／拒绝正文持久化及 SQL 回滚。新增原发信资格跨进程重启不变、资格失效持久冻结、旧缺值不补齐及无能力声明服务不POST。新增治理原操作落盘后丢响应／重开沿原 ID、删除好友只冻对应 direct、原 payload 字节／hash 不变、退群前历史／游标撤回、注入 SQL 错误整事务回滚、原代际参数和 PATCH 未知结果不重放、schema1→2 保留旧行。治理本地冻结后显式对账只 GET，不因远端撤权请求未达而新建旧消息；既成退群结果确认不回填历史。网络故障由独立HTTP测试服务产生，不用返回本地成功代替。
 
@@ -95,5 +99,18 @@ preparation修订及第13对象组现已执行：实际子进程文件fsync到SQ
 [password_change_test.go](./password_change_test.go)新增8顶层组，覆盖真实SQLite非秘密原责任、原family显式首建、匿名纯查及重开、后继family绝不附AT／不被旧结果清除、unknown交接restore gate、cap撤回／坏结果／SQL失败及OTP延迟换family／cap。证明以测试内存参数注入，vault为显式fake；没有真实TTY／HTTPS／OS库正向。
 
 [最终原始证据](../../项目相关报告/测试/CLI/20261116-本人主动改密/README.md)的注册源码99方法＝raw唯一97PASS＋2SKIP，无FAIL，Go退出0，候选71500985构建通过。旧行锚定计数遇提示粘行少报，原JSON不改；[逐名称集合](../../项目相关报告/测试/CLI/20261116-本人主动改密/03-final-local/顶层方法集合.json)及计数复核为本轮准确依据。运行器仅修顶层结果解析、排除带slash子项，轻量文本复核通过；门禁后未重新Go执行该解析器，产品Go输入与实际已跑版本逐SHA相同。
+
+历史[全项目回归的CLI本地范围](../../项目相关报告/测试/回归/20261116-全项目回归/Web-CLI.md)当时重新Go执行97 PASS／0 FAIL／2环境SKIP，99个顶层方法逐名称对齐。此结果另存新目录，旧95计数原件及其更正依据不改；HTTPS和系统vault仍为明确跳过，不能计入通过。
+
+
+## <span id="jobs-toc-heading-10" data-jobs-toc="v2">本人注销</span><!-- jobs-toc:heading-end -->
+
+登录后`account-delete`确认申请；`account-deletions`、`deletion-reconcile REQUEST_ID`、`deletion-retry REQUEST_ID`、`deletion-query REQUEST_ID`、`deletion-cancel REQUEST_ID`和`deletion-cancel-retry REQUEST_ID`也可从启动参数进入本机原任务。口令／恢复码／OTP只经TTY读取，禁止秘密参数；原nonce／family／物理库／epoch和cancel版本公开责任WAL／FULL耐久。未知先查，明确续原单；受限proof只RAM，completed精确清原本人所有本机store及托管ReceiptObjects，其他profile／user和外部文件保留。
+
+注销专项当时实跑全runner115通过／0失败／2环境跳过、注销11方法通过（含一次恢复码unknown取消），host二进制已构建；随后main.go将未保存默认URL改为9443，当时因4GiB磁盘门禁未重编。该历史限制不作为当前源码测试状态，当前回归见本页前文。详见[独立限定报告](../../项目相关报告/实现进度/20261116-剩余能力闭环/CLI注销.md)，不把HTTP／vault适配当真实HTTPS／安全库或TTY操作通过。
+
+## <span id="jobs-toc-heading-11" data-jobs-toc="v2">逐store合格收讫候选</span><!-- jobs-toc:heading-end -->
+
+[receipt_negotiation_test.go](./receipt_negotiation_test.go)新增12个顶层方法，已随当前52输入候选编译并完整本地135 PASS／0 FAIL／2环境SKIP，普通迁移10方法包含在同一轮内。真实私有SQLite／本机文件操作与明确注入HTTP覆盖新context真值和旧transport false、原store／epoch／readiness、DG／manifest原pair及父对象、storage-results unknown不写、探针、policy原nonce／CAS与未资格不入队、raw同FULL保存／失败回滚／global清除、fresh cloud_only精确原Envelope／receipt及legacy原permission、旧build不阻新批准声明／纯查且旧资格不创建新ACK或after策略。初轮global夹具133／1／2与原binary保留，修正位置参数复用夹具后窄global过，再同binary完整回归；原生产stage/global与零残留断言未放松。实际输入、候选及原始日志见[逐store报告](../../项目相关报告/实现进度/20261116-剩余能力闭环/逐store合格收讫.md)，不加入上方任何历史计数。后端3独立双PG／真实JetStream方法及59相关PG另记，HTTP夹具不冒充客户端真实服务资格、目标OS或断电证明。
 
 <a id="🔚" href="#前言">回到首页</a>

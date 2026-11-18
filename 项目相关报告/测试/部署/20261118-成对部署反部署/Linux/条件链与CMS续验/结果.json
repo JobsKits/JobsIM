@@ -1,0 +1,179 @@
+{
+  "at": "2026-11-18T01:58:27.124Z",
+  "host": "darwin",
+  "work": "/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-sBHrZF",
+  "sourceBefore": {
+    "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "a42eac0dd37c1c2c4c6fae5eb6c9c039456d785a84e8693c7dada797cb7d73a1",
+    "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "071594ac46ce3995d8cf5db15b3266278f9483d0de5506dc151190a220f7ec5e",
+    "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "64cf31d3f9e2bebe7fa6ecb868ef8b61c78c7c7419800a42b5b049ffd7358b29",
+    "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "7272475d0688c39fef377a7a6075e7e7f2f01bcd44b0571228e3fc8fec7f0afd",
+    "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "651cd1abb8a67549ba0857c2aafbb32c83c68040048239ac5e483b2bcb8fac50",
+    "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "1b442fffb40aabec733d0059f277e5717f1d8b33f2ee055c671d1bf67ef68331",
+    "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "c82a4fece70c8f19f69fecf63afb5d31ce4164fc2144c01a59551d888c8753d0",
+    "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "9829c3321b829903c7c7dd42f8295af3f7dd06e2b739141da536ed4c2c9d5862"
+  },
+  "sourceAfter": {
+    "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "a42eac0dd37c1c2c4c6fae5eb6c9c039456d785a84e8693c7dada797cb7d73a1",
+    "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "071594ac46ce3995d8cf5db15b3266278f9483d0de5506dc151190a220f7ec5e",
+    "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "64cf31d3f9e2bebe7fa6ecb868ef8b61c78c7c7419800a42b5b049ffd7358b29",
+    "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "7272475d0688c39fef377a7a6075e7e7f2f01bcd44b0571228e3fc8fec7f0afd",
+    "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "651cd1abb8a67549ba0857c2aafbb32c83c68040048239ac5e483b2bcb8fac50",
+    "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "1b442fffb40aabec733d0059f277e5717f1d8b33f2ee055c671d1bf67ef68331",
+    "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "c82a4fece70c8f19f69fecf63afb5d31ce4164fc2144c01a59551d888c8753d0",
+    "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "9829c3321b829903c7c7dd42f8295af3f7dd06e2b739141da536ed4c2c9d5862"
+  },
+  "pass": 17,
+  "fail": 2,
+  "skip": 0,
+  "results": [
+    {
+      "name": "conditional-undeploy-manifest-fails-before-archive-delete",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "local-default-does-not-require-cloudflare",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "disk-actual-byte-boundary",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "按当前资产实际字节预留后不足4GiB，暂停新下载／解包；不清缓存。\n"
+    },
+    {
+      "name": "conditional-dispatch-backup-manifest",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "conditional-dispatch-backup-dump",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "conditional-dispatch-backup-restore-list",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "conditional-dispatch-backup-stop-go",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "conditional-dispatch-backup-stop-broker",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "conditional-dispatch-backup-prepare-pg",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "conditional-dispatch-backup-manifest-empty",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "logical-eight-dumps-cms-roundtrip",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "已生成并解密验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-sBHrZF/case-26/Backups/JobsIM-20261118-095822-8083.cms\n恢复私钥独立保存于：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-sBHrZF/case-26/Recovery/key.pem；请另行离线保管。备份不包含这把解密私钥。\n备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。\n仅运维停止；数据库、对象、独立journal、CA与备份保留，未执行反部署清理。\n./broker-manifest.txt\n"
+    },
+    {
+      "name": "conditional-cms-tar",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "conditional-cms-encrypt",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 1,
+      "signal": null,
+      "output": "已生成并解密验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-sBHrZF/case-28/Backups/JobsIM-20261118-095824-8814.cms\n恢复私钥独立保存于：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-sBHrZF/case-28/Recovery/key.pem；请另行离线保管。备份不包含这把解密私钥。\n备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。\n仅运维停止；数据库、对象、独立journal、CA与备份保留，未执行反部署清理。\n"
+    },
+    {
+      "name": "conditional-cms-decrypt",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 1,
+      "signal": null,
+      "output": "已生成并解密验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-sBHrZF/case-29/Backups/JobsIM-20261118-095824-9209.cms\n恢复私钥独立保存于：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-sBHrZF/case-29/Recovery/key.pem；请另行离线保管。备份不包含这把解密私钥。\n备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。\n仅运维停止；数据库、对象、独立journal、CA与备份保留，未执行反部署清理。\n"
+    },
+    {
+      "name": "conditional-cms-decrypted-dump",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "quick-failure-keeps-local",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "https://127.0.0.1:9443/\n公开入口已撤回；本地服务健康，仍可在菜单重试穿透、查看诊断或停止。\n{\"url\":\"https://127.0.0.1:9443\"}\nstart-local\nlocal-qr\n穿透未就绪，收回公开描述并恢复本机入口。\n"
+    },
+    {
+      "name": "quick-late-exit-monitor-still-has-stop-menu",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "https://127.0.0.1:9443/\n公开入口已撤回；本地服务健康，仍可在菜单重试穿透、查看诊断或停止。\nguardian\n"
+    },
+    {
+      "name": "local-mode-monitor-does-not-demand-tunnel",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "source-stable",
+      "passed": true
+    }
+  ],
+  "scope": "Bash syntax, non-Linux refusal and actual private file operations. Darwin stat flags adapted; process lifecycle explicit stubs. No target Linux, real PG/NATS, network tunnel, package install or actual instance touched."
+}

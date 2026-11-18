@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-16T16:26:10.333Z",
+  "typecheck": "passed",
+  "build": "passed",
+  "output": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/PasswordChange/1794846370195-98392/Production",
+  "artifacts": [
+    {
+      "name": "index-DOFFbBfO.js",
+      "size": 565686,
+      "sha256": "868d9db3f500df05dbd9220b79a8d0275a5d22c821d7699d8902bb31b2ecef44"
+    },
+    {
+      "name": "index-DOFFbBfO.js.map",
+      "size": 2007809,
+      "sha256": "d374e5edee2e4163ed88215452bbe6e9c71ebae026aa578a6a2aa2df317d0244"
+    },
+    {
+      "name": "index-ZILFTibV.css",
+      "size": 27955,
+      "sha256": "c2ffd1f7963ab2366932835e251c8fdc0406dbfb58ce68cc7b59e806ca8173a5"
+    }
+  ],
+  "free": 11952197632
+}

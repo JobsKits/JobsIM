@@ -1,0 +1,155 @@
+**Exploration: 代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools.ets**
+
+Found 64 symbols across 1 file. 1 file pinned from the query.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools.ets`** — GroupEnvironment(interface), family(property), namespace(property), epoch(property), profile(property), user(property), deployment(property), GroupIntent(interface), kind(property), result(property), +50 more
+
+```arkts
+1	// Created by Jobs on 2026年11月17日，星期二.
+2	import { ApiFailure, GroupMember } from './Models';
+3	import { SyncJSON, SyncRules } from './SyncProtocol';
+4	import { SelfRules } from './SelfProtocol';
+5	
+6	export interface GroupEnvironment { profile: string; deployment: string; user: string; epoch: string; namespace: string; family: string; }
+7	export interface GroupIntent { id: string; conversation: string; namespace: string; epoch: string; kind: string; method: string; path: string; lookup: string; body: string; created: string; attempts: number; state: string; result: string; family?: string; }
+8	export interface GroupInvitation { deploymentId: string; conversationId: string; inviteId: string; token: string; }
+9	export interface GroupPage { items: string[]; next: string; }
+10	export interface GroupCodec { encode: (text: string) => string; decode: (text: string) => string; }
+11	export interface GroupRepository { list: () => Promise<GroupIntent[]>; insert: (row: GroupIntent) => Promise<void>; replace: (before: GroupIntent, after: GroupIntent) => Promise<void>; }
+12	export interface GroupPorts { environment: GroupEnvironment; current: () => boolean; uuid: () => string; repository: GroupRepository; codec: GroupCodec; request: (route: string, method: string, body: string) => Promise<string>; }
+13	export class GroupRules {
+14	  static fail(code: string = 'GROUP_INVALID'): never { throw new Error(code); }
+15	  static invitation(text: string, deployment: string, codec: GroupCodec): GroupInvitation {
+16	    if (!text.startsWith('JobsIM-Invite-1:') || text.length > 4096) { GroupRules.fail(); }
+17	    const encoded = text.slice('JobsIM-Invite-1:'.length); const raw = codec.decode(encoded); if (codec.encode(raw) !== encoded) { GroupRules.fail(); }
+18	    const value = SyncJSON.parse(raw); const id = value.get('inviteId').string(); const token = value.get('token').string();
+19	    if (value.keys().sort().join(',') !== 'conversationId,deploymentId,inviteId,token' || value.get('deploymentId').string() !== deployment ||
+20	      !SyncRules.uuid(value.get('conversationId').string()) || !SyncRules.uuid(id) || !new RegExp('^' + id + '\\.[A-Za-z0-9_-]{43}$').test(token)) { GroupRules.fail(); }
+21	    return { deploymentId: deployment, conversationId: value.get('conversationId').string(), inviteId: id, token: token };
+22	  }
+23	  static validate(row: GroupIntent): void {
+24	    const keys = Object.keys(row).sort().join(',');
+25	    if (!['attempts,body,conversation,created,epoch,id,kind,lookup,method,namespace,path,result,state','attempts,body,conversation,created,epoch,family,id,kind,lookup,method,namespace,path,result,state'].includes(keys) || row.family !== undefined && !SyncRules.uuid(row.family) ||
+26	      !SyncRules.uuid(row.id) || !SyncRules.uuid(row.conversation) || !row.namespace || SyncRules.counter(row.epoch) === '0' || !Number.isSafeInteger(row.attempts) || row.attempts < 0 ||
+27	      !['governance', 'invite', 'join', 'revoke', 'decide'].includes(row.kind) || !['POST', 'DELETE'].includes(row.method) || !['unsent', 'unknown', 'applied'].includes(row.state)) { GroupRules.fail(); }
+28	    const base = '/conversations/' + row.conversation + '/';
+29	    let method = 'POST'; let route = base + 'governance'; let lookup = route + '/operations/' + row.id;
+30	    if (row.kind === 'invite' || row.kind === 'join') { route = base + (row.kind === 'invite' ? 'invites' : 'join-requests'); lookup = route + '/operations/' + row.id; }
+31	    if (row.kind === 'revoke' || row.kind === 'decide') { const prefix = base + (row.kind === 'revoke' ? 'invites/' : 'join-requests/'); if (!row.path.startsWith(prefix) || !SyncRules.uuid(row.path.slice(prefix.length))) { GroupRules.fail(); } route = row.path; if (row.kind === 'revoke') { method = 'DELETE'; } }
+32	    if (row.method !== method || row.path !== route || row.lookup !== lookup) { GroupRules.fail(); }
+33	    const value = SyncJSON.parse(row.body);
+34	    const allowed = ['requestId', 'version', 'membershipGeneration', 'roleGeneration', 'action', 'targetId', 'targetMembershipGeneration', 'targetRoleGeneration', 'role', 'mutedUntil', 'muteAll', 'slowSeconds', 'maxMembers', 'expiresAt', 'maxUses', 'approvalRequired', 'inviteId', 'approve'];
+35	    if (value.get('requestId').string() !== row.id || value.keys().some((key: string) => !allowed.includes(key))) { GroupRules.fail(); }
+36	    SelfRules.timestamp(row.created); if (row.result && SyncJSON.parse(row.result).has('token')) { GroupRules.fail(); }
+37	  }
+38	  static manager(snapshot: string): boolean { const value = SyncJSON.parse(snapshot); return ['owner', 'admin'].includes(value.get('role').string()) && !value.get('readOnly').bool(); }
+39	}
+40	export class GroupTools {
+41	  private ports: GroupPorts; private snapshot: string = ''; private conversation: string = ''; private tokens: Map<string, string> = new Map();
+42	  constructor(ports: GroupPorts) { this.ports = ports; }
+43	  private check(): void { if (!this.ports.current()) { GroupRules.fail('GROUP_CONTEXT_CHANGED'); } }
+44	  clear(): void { this.tokens.clear(); this.snapshot = ''; }
+45	  async list(): Promise<GroupIntent[]> {
+46	    const rows = await this.ports.repository.list(); this.check(); const e = this.ports.environment; const prefix = 'live|' + e.profile + '|' + e.deployment + '|' + e.user + '|';
+47	    rows.forEach((row: GroupIntent) => { GroupRules.validate(row); if (!row.namespace.startsWith(prefix)) { GroupRules.fail(); } }); return rows;
+48	  }
+49	  async load(conversation: string): Promise<string> {
+50	    if (!SyncRules.uuid(conversation)) { GroupRules.fail(); } this.check();
+51	    const raw = await this.ports.request('/conversations/' + conversation + '/governance', 'GET', ''); this.check(); const value = SyncJSON.parse(raw);
+52	    for (const key of ['version', 'membershipGeneration', 'roleGeneration']) { if (SyncRules.counter(value.get(key).string()) === '0') { GroupRules.fail(); } }
+53	    value.get('readOnly').bool(); value.get('role').string(); this.conversation = conversation; this.snapshot = raw; if (!GroupRules.manager(raw)) { this.tokens.clear(); } return raw;
+54	  }
+55	  async page(conversation: string, kind: string, after: string = ''): Promise<GroupPage> {
+56	    if (!SyncRules.uuid(conversation) || !['members', 'invites', 'join-requests'].includes(kind) || after && !SyncRules.uuid(after)) { GroupRules.fail(); }
+57	    const raw = await this.ports.request('/conversations/' + conversation + '/' + kind + '?limit=50' + (after ? '&after=' + after : ''), 'GET', ''); this.check();
+58	    const value = SyncJSON.parse(raw); const next = value.get('nextCursor').string(); const items = value.get('items').list();
+59	    if (items.length > 50 || next && (!SyncRules.uuid(next) || next === after)) { GroupRules.fail(); }
+60	    if (kind === 'invites' && !after) { this.tokens.clear(); }
+61	    const output: string[] = [];
+62	    for (const item of items) {
+63	      const id = item.get('id').string(); if (!SyncRules.uuid(id)) { GroupRules.fail(); }
+64	      if (kind === 'members') { if (SyncRules.counter(item.get('membershipGeneration').string()) === '0' || SyncRules.counter(item.get('roleGeneration').string()) === '0') { GroupRules.fail(); } }
+65	      if (kind === 'invites') {
+66	        this.tokens.set(id, item.get('token').string()); const safe: Record<string, Object | null> = {};
+67	        for (const key of ['id', 'expiresAt', 'maxUses', 'uses', 'approvalRequired', 'revokedAt']) { if (item.has(key)) { safe[key] = item.get(key).value; } } output.push(JSON.stringify(safe));
+68	      } else { output.push(item.raw()); }
+69	    }
+70	    return { items: output, next: next };
+71	  }
+72	  prepare(action: string, target?: GroupMember, fields: string = '{}'): GroupIntent {
+73	    this.check(); if (!this.snapshot) { GroupRules.fail('GROUP_SNAPSHOT_REQUIRED'); }
+74	    const value = SyncJSON.parse(this.snapshot); const id = this.ports.uuid(); const e = this.ports.environment;
+75	    if (action === 'recover' ? value.get('canRecover').value !== true : !GroupRules.manager(this.snapshot)) { GroupRules.fail(); }
+76	    if (['settings','role','transfer','dissolve'].includes(action) && value.get('role').string() !== 'owner' || ['role','mute','transfer','recover'].includes(action) && !target || ['role','mute','transfer'].includes(action) && target?.role === 'owner') { GroupRules.fail(); }
+77	    const body: Record<string, Object | null> = {}; body['requestId'] = id; body['version'] = value.get('version').string(); body['membershipGeneration'] = value.get('membershipGeneration').string(); body['roleGeneration'] = value.get('roleGeneration').string();
+78	    let kind = 'governance'; let method = 'POST'; let route = '/conversations/' + this.conversation + '/governance'; let lookup = route + '/operations/' + id;
+79	    const extra = SyncJSON.parse(fields);
+80	    if (action === 'invite') { kind = 'invite'; route = '/conversations/' + this.conversation + '/invites'; lookup = route + '/operations/' + id; }
+81	    else if (action === 'revoke' || action === 'decide') {
+82	      const targetId = extra.get('id').string(); if (!SyncRules.uuid(targetId)) { GroupRules.fail(); } kind = action;
+83	      route = '/conversations/' + this.conversation + (action === 'revoke' ? '/invites/' : '/join-requests/') + targetId; method = action === 'revoke' ? 'DELETE' : 'POST';
+84	    } else { if (!['settings', 'role', 'mute', 'transfer', 'dissolve', 'recover'].includes(action)) { GroupRules.fail(); } body['action'] = action; }
+85	    for (const key of extra.keys()) { if (key !== 'id') { body[key] = extra.get(key).value; } }
+86	    if (target) { if (!SyncRules.uuid(target.id) || SyncRules.counter(target.membershipGeneration) === '0' || SyncRules.counter(target.roleGeneration ?? '') === '0') { GroupRules.fail(); }
+87	      body['targetId'] = target.id; body['targetMembershipGeneration'] = target.membershipGeneration; body['targetRoleGeneration'] = target.roleGeneration ?? ''; }
+88	    const row: GroupIntent = { id: id, conversation: this.conversation, namespace: e.namespace, epoch: e.epoch, kind: kind, method: method, path: route, lookup: lookup, body: JSON.stringify(body), created: new Date().toISOString(), attempts: 0, state: 'unsent', result: '', family: e.family }; GroupRules.validate(row); return row;
+89	  }
+90	  joining(code: string): GroupIntent {
+91	    const e = this.ports.environment; const invite = GroupRules.invitation(code.trim(), e.deployment, this.ports.codec); const id = this.ports.uuid(); const route = '/conversations/' + invite.conversationId + '/join-requests';
+92	    const body: Record<string, Object> = {}; body['requestId'] = id; body['inviteId'] = invite.inviteId;
+93	    const row: GroupIntent = { id: id, conversation: invite.conversationId, namespace: e.namespace, epoch: e.epoch, kind: 'join', method: 'POST', path: route, lookup: route + '/operations/' + id, body: JSON.stringify(body), created: new Date().toISOString(), attempts: 0, state: 'unsent', result: '', family: e.family }; GroupRules.validate(row); return row;
+94	  }
+95	  async perform(candidate: GroupIntent, retry: boolean, code: string = '', otp: string = ''): Promise<string | undefined> {
+96	    this.check(); GroupRules.validate(candidate);
+97	    const originals = await this.list(); let row = originals.find((item: GroupIntent) => item.id === candidate.id); this.check();
+98	    if (!row && candidate.kind === 'join') { const invite = SyncJSON.parse(candidate.body).get('inviteId').string(); row = originals.find((item: GroupIntent) => item.kind === 'join' && item.conversation === candidate.conversation && SyncJSON.parse(item.body).get('inviteId').string() === invite && (item.state !== 'applied' || Boolean(item.result) && SyncJSON.parse(item.result).get('state').string() === 'pending')); }
+99	
+100	    if (!row) { row = candidate; await this.ports.repository.insert(row); this.check(); }
+101	    let result: SyncJSON | undefined;
+102	    try { result = SyncJSON.parse(await this.ports.request(row.lookup, 'GET', '')); }
+103	    catch (error) { this.check(); if (!(error instanceof ApiFailure) || error.status !== 404 || error.code !== 'GROUP_OPERATION_NOT_FOUND') { throw error as Error; } }
+104	    this.check(); if (!result && !retry) { return undefined; }
+105	    if (!result) {
+106	      if (row.epoch !== this.ports.environment.epoch) { GroupRules.fail('GROUP_OLD_EPOCH_READ_ONLY'); }
+107	      if (row.namespace !== this.ports.environment.namespace || !row.family || row.family !== this.ports.environment.family) { GroupRules.fail('GROUP_ORIGINAL_SESSION_REQUIRED'); }
+108	      const parsed = SyncJSON.parse(row.body); const body: Record<string, Object | null> = {};
+109	      for (const key of parsed.keys()) { body[key] = parsed.get(key).value; }
+110	      if (row.kind === 'join') { const invite = GroupRules.invitation(code.trim(), this.ports.environment.deployment, this.ports.codec); if (invite.conversationId !== row.conversation || invite.inviteId !== parsed.get('inviteId').string()) { GroupRules.fail(); } body['token'] = invite.token; }
+111	      if (parsed.has('action') && parsed.get('action').string() === 'recover') {
+112	        if (!/^[0-9]{6}$/.test(otp)) { GroupRules.fail(); }
+113	        const step: Record<string, Object | null> = {}; step['requestId'] = row.id; step['action'] = 'group.recover'; step['targetId'] = row.conversation; step['payload'] = parsed.value; step['otp'] = otp;
+114	        const proof = SyncJSON.parse(await this.ports.request('/auth/step-up', 'POST', JSON.stringify(step))); this.check(); const authorization = proof.get('authorizationId').string(); if (!SyncRules.uuid(authorization)) { GroupRules.fail(); } body['stepUpId'] = authorization;
+115	      }
+116	      const before = row; row = JSON.parse(JSON.stringify(row)) as GroupIntent; row.attempts++; row.state = 'unknown'; await this.ports.repository.replace(before, row); this.check();
+117	      result = SyncJSON.parse(await this.ports.request(row.path, row.method, JSON.stringify(body))); this.check();
+118	    }
+119	    if (result.get('requestId').string() !== row.id) { GroupRules.fail(); }
+120	    for (const key of ['version','membershipGeneration']) { if (result.has(key) && result.get(key).value !== null && SyncRules.counter(result.get(key).string()) === '0') { GroupRules.fail(); } }
+121	    if (row.kind === 'governance' && (result.get('status').string() !== 'applied' || result.get('action').string() !== SyncJSON.parse(row.body).get('action').string())) { GroupRules.fail(); }
+122	    if (row.kind === 'revoke' || row.kind === 'decide') {
+123	      const expected = row.kind === 'revoke' ? 'revoked' : SyncJSON.parse(row.body).get('approve').bool() ? 'approved' : 'rejected';
+124	      if (result.get('status').string() !== 'applied' || result.get('action').string() !== (row.kind === 'revoke' ? 'invite_revoke' : 'join_decide') || result.get('targetId').string() !== row.path.slice(row.path.lastIndexOf('/')+1) || result.get('state').string() !== expected || row.kind === 'decide' && expected === 'approved' && SyncRules.counter(result.get('membershipGeneration').string()) === '0') { GroupRules.fail(); }
+125	    }
+126	    if (row.kind === 'join') { const state = result.get('state').string(); if (!['pending','approved','rejected'].includes(state) || !SyncRules.uuid(result.get('id').string()) || state === 'approved' && SyncRules.counter(result.get('membershipGeneration').string()) === '0') { GroupRules.fail(); } }
+127	    if (result.has('token')) { const id = result.get('id').string(); const token = result.get('token').string(); if (row.kind !== 'invite' || !SyncRules.uuid(id) || !new RegExp('^' + id + '\\.[A-Za-z0-9_-]{43}$').test(token)) { GroupRules.fail(); } this.tokens.set(id, token); }
+128	    const safe: Record<string, Object | null> = {};
+129	    for (const key of ['requestId', 'status', 'action', 'version', 'id', 'expiresAt', 'maxUses', 'uses', 'approvalRequired', 'revokedAt', 'state', 'membershipGeneration', 'targetId']) { if (result.has(key)) { safe[key] = result.get(key).value; } }
+130	    const after = JSON.parse(JSON.stringify(row)) as GroupIntent; after.state = 'applied'; after.result = JSON.stringify(safe); await this.ports.repository.replace(row, after); this.check(); return after.result;
+131	  }
+132	  share(id: string): string {
+133	    const token = this.tokens.get(id); if (!token) { GroupRules.fail('GROUP_INVITE_RELOAD_REQUIRED'); }
+134	    const value: GroupInvitation = { deploymentId: this.ports.environment.deployment, conversationId: this.conversation, inviteId: id, token: token };
+135	    return 'JobsIM-Invite-1:' + this.ports.codec.encode(JSON.stringify(value));
+136	  }
+137	}
+```
+
+
+---
+> **Complete source for 1 file is included above — do NOT re-read them.** If your question also needs files/symbols listed under "Not shown above" (or any area this call didn't cover), make ANOTHER codegraph_explore targeting those names — it returns the same source with line numbers and is cheaper and more complete than reading.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~717 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

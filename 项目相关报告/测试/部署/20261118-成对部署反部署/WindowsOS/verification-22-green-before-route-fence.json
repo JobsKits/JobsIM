@@ -1,0 +1,41 @@
+{
+  "functionsExitCode": 0,
+  "functionsCommand": [
+    "pwsh",
+    "-NoLogo",
+    "-NoProfile",
+    "-File",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/部署/Windows/生命周期.ps1/生命周期.ps1",
+    "-ReportDirectory",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/部署/20261118-成对部署反部署/WindowsOS"
+  ],
+  "actualWindowsInstanceTouched": false,
+  "platform": "macOS host PowerShell",
+  "copiedChineseSpaceBracketPaths": [
+    {
+      "entry": "Deployment/【Windows】部署.ps1/【Windows】部署.ps1",
+      "exitCode": 0,
+      "stateNotCreated": true,
+      "workingDirectory": "/",
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/中文 空格 改名[入口]-f9a5a13f"
+    },
+    {
+      "entry": "Undeployment/【Windows】反部署.ps1/【Windows】反部署.ps1",
+      "exitCode": 0,
+      "stateNotCreated": true,
+      "workingDirectory": "/",
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/中文 空格 改名[入口]-f9a5a13f"
+    }
+  ],
+  "deployNonWindows": {
+    "exitCode": 2,
+    "stateNotCreated": true
+  },
+  "undeployNonWindows": {
+    "exitCode": 2,
+    "stateNotCreated": true
+  },
+  "inputCount": 13,
+  "inputMismatches": [],
+  "passed": true
+}

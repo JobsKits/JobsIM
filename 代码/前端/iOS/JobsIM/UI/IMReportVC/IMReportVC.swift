@@ -5,47 +5,42 @@
 //  Created by Jobs on 2026年11月15日，星期日.
 //
 
-import UIKit
-
 import JobsByUIKit
 import JobsIMCore
 import JobsSwiftBaseDefines
 import JobsSwiftDSL
-
 import SnapKit
+import UIKit
 
 @MainActor
 final class IMReportVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
     private var items: [IMJSON] = []
+    private let boundNamespace = IMSession.shared.namespace
     private lazy var table = UITableView.make(style: .insetGrouped).byDataSource(self).byDelegate(self)
         .byBackgroundColor(IMUI.background)
     static func present(on controller: IMBaseVC, type: String, id: String) {
-        IMUI.prompt(controller, title: IMStrings.text("reportReason")) { reason in
-            guard !reason.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
-                return
-            }
-            controller.perform {
-                try await IMReportService().submit(type: type, id: id, reason: reason)
-                IMUI.alert(
-                    controller, title: IMStrings.text("done"),
-                    message: IMStrings.text(controller.session.demo ? "demo" : "reportSubmitted"))
-            }
-        }
+        controller.navigationController?.pushViewController(
+            IMReportComposerVC(targetType: type, targetID: id, targetUserID: type == "user" ? id : nil),
+            animated: true)
     }
     override func viewDidLoad() {
+        hidesBottomBarWhenPushed = true
         screenTitle = IMStrings.text("myReports")
         super.viewDidLoad()
         table.byAddTo(content) {
-            make in make.edges.equalToSuperview()
+            make in
+            make.edges.equalToSuperview()
         }
         table.byEmptyButtonProvider { [weak self] in
-            IMUI.button(IMStrings.text("empty") + "\n" + IMStrings.text("reload")) {
+            IMUI.emptyButton {
                 self?.reload()
             }
         }
-        table.refreshControl = UIRefreshControl.jobsMake { control in
-            control.addTarget(self, action: #selector(reload), for: .valueChanged)
-        }
+        table.byRefreshControl(
+            UIRefreshControl.jobsMake {
+                control in
+                control.addTarget(self, action: #selector(reload), for: .valueChanged)
+            })
         reload()
     }
     @objc private func reload() {
@@ -53,9 +48,20 @@ final class IMReportVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
             guard let self else {
                 return
             }
+            guard self.session.namespace == self.boundNamespace else {
+                return
+            }
             self.items = await self.session.list("reports")
+            guard self.session.namespace == self.boundNamespace else {
+                return
+            }
+            self.items += self.session.pendingComposedReports.map {
+                $0.setting("composedIntent", .bool(true))
+            }
             self.items += try self.session.store.list("report-outbox", namespace: self.session.namespace).map
-            { $0.setting("state", .string("unknown")) }
+            {
+                $0.setting("state", .string("unknown"))
+            }
             self.table.reloadData()
             self.table.byReloadEmptyViewAuto()
             self.table.refreshControl?.endRefreshing()
@@ -66,7 +72,7 @@ final class IMReportVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = items[indexPath.row]
-        return UITableViewCell.make(style: .subtitle, reuseIdentifier: nil)
+        let cell = UITableViewCell.make(style: .subtitle, reuseIdentifier: nil)
             .byText(item["reason"].text)
             .bySecondaryText(
                 [
@@ -78,10 +84,28 @@ final class IMReportVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
                     item["id"].text,
                 ].joined(
                     separator: " · "))
+        IMUI.cellTheme(cell)
+        return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let item = items[indexPath.row]
+        guard session.namespace == boundNamespace else {
+            return
+        }
+        if item["composedIntent"] == .bool(true) {
+            IMUI.confirm(self, title: IMStrings.text("retryOriginalReport"), message: item["reason"].text) {
+                [weak self] in
+                self?.perform {
+                    guard let self, self.session.namespace == self.boundNamespace else {
+                        return
+                    }
+                    _ = try await self.session.resumeReport(id: item["id"].text)
+                    self.reload()
+                }
+            }
+            return
+        }
         guard item["state"].text == "unknown" else {
             return
         }
@@ -90,5 +114,4 @@ final class IMReportVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
             self?.reload()
         }
     }
-
 }

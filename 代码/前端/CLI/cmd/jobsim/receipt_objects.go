@@ -132,7 +132,11 @@ func receiptValidateObjectChallenge(v receiptObjectChallenge, p receiptOperation
 	if err != nil || sigErr != nil || len(sig) != 32 || syncDecode(raw, &proof) != nil {
 		return syncRefuse("INVALID_OBJECT_RECEIPT_PROOF")
 	}
-	want := receiptProofTuple{Scope: p.Binding.ScopeID, User: p.Binding.PrincipalID, Device: p.Binding.DeviceID, Store: v.Store, Epoch: v.Epoch, Qualification: v.Qualification, Message: v.Message, Conversation: v.Conversation, Content: v.Content, Digest: v.Digest, Permission: permission, Expires: expires.Unix()}
+	generation, manifest, err := receiptOriginalDelivery(p)
+	if err != nil {
+		return err
+	}
+	want := receiptProofTuple{Scope: p.Binding.ScopeID, User: p.Binding.PrincipalID, Device: p.Binding.DeviceID, Store: v.Store, Epoch: v.Epoch, Qualification: v.Qualification, Message: v.Message, Conversation: v.Conversation, Content: v.Content, Digest: v.Digest, Permission: permission, Expires: expires.Unix(), Generation: generation, Manifest: manifest}
 	// This is tuple consistency only; the server alone authenticates the ro1 signature.
 	if proof.receiptProofTuple != want || proof.Parent != p.ID || proof.Object != v.Object.ID || proof.Size != v.Object.Size || proof.ObjectDigest != v.Object.Digest {
 		return syncRefuse("OBJECT_RECEIPT_CONTEXT_CHANGED")
@@ -399,9 +403,15 @@ func receiptValidateObjectResult(raw json.RawMessage, o receiptOperation) error 
 		Complete      *bool  `json:"objectComplete"`
 		Target        *bool  `json:"targetRangeComplete"`
 		Deletion      *bool  `json:"deletionEligible"`
+		Generation    string `json:"deliveryGeneration"`
+		Manifest      string `json:"manifestDigest"`
 	}
 	d := o.Object
 	if d == nil || syncDecode(raw, &v) != nil || v.ID != o.ID || v.Status != "recorded" || v.Kind != "object_received" || v.Parent != d.Parent || v.Message != o.Message || v.Conversation != o.Conversation || v.Content != o.Content || v.Epoch != o.Binding.RestoreEpoch || v.Device != o.Binding.DeviceID || v.Store != o.Binding.StoreGeneration || v.Qualification != receiptParentQualification(o) || v.Object != d.Object || v.Size != d.Size || v.ObjectDigest != d.Digest || v.BodyDigest != o.Digest || v.Qualified == nil || !*v.Qualified || v.Complete == nil || !*v.Complete || !receiptFalse(v.Target) || !receiptFalse(v.Deletion) {
+		return syncRefuse("OBJECT_RECEIPT_RESULT_INVALID")
+	}
+	generation, manifest, err := receiptOriginalDelivery(o)
+	if err != nil || generation != v.Generation || manifest != v.Manifest {
 		return syncRefuse("OBJECT_RECEIPT_RESULT_INVALID")
 	}
 	return nil

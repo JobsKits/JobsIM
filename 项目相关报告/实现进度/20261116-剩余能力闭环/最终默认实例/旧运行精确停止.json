@@ -1,0 +1,12 @@
+{
+  "pid": 73214,
+  "verifiedCommand": "/bin/zsh 部署/MacOS/部署运行.command/部署运行.command run --yes",
+  "signal": "SIGINT",
+  "ports": {
+    "9443": "",
+    "16543": "",
+    "16544": "",
+    "4222": ""
+  },
+  "dataPreserved": true
+}

@@ -1,0 +1,14 @@
+{"Time":"2026-11-17T01:40:14.035625+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-17T01:40:14.628892+08:00","Action":"run","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup"}
+{"Time":"2026-11-17T01:40:14.628974+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup","Output":"=== RUN   TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup\n","OutputType":"frame"}
+{"Time":"2026-11-17T01:40:18.537614+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup","Output":"    deployment_restore_pg_test.go:314: native restore plan: unexpected deployment archive component\n","OutputType":"error"}
+{"Time":"2026-11-17T01:40:18.537663+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup","Output":"--- FAIL: TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup (3.91s)\n","OutputType":"frame"}
+{"Time":"2026-11-17T01:40:18.537672+08:00","Action":"fail","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup","Elapsed":3.91}
+{"Time":"2026-11-17T01:40:18.537889+08:00","Action":"run","Package":"jobsim/backend","Test":"TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie"}
+{"Time":"2026-11-17T01:40:18.5379+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie","Output":"=== RUN   TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie\n","OutputType":"frame"}
+{"Time":"2026-11-17T01:40:18.878622+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie","Output":"    password_change_pg_test.go:483: fresh authenticated browser change failed: 403\n","OutputType":"error"}
+{"Time":"2026-11-17T01:40:19.179885+08:00","Action":"output","Package":"jobsim/backend","Test":"TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie","Output":"--- FAIL: TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie (0.64s)\n","OutputType":"frame"}
+{"Time":"2026-11-17T01:40:19.179927+08:00","Action":"fail","Package":"jobsim/backend","Test":"TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie","Elapsed":0.64}
+{"Time":"2026-11-17T01:40:19.179941+08:00","Action":"output","Package":"jobsim/backend","Output":"FAIL\n","OutputType":"frame"}
+{"Time":"2026-11-17T01:40:19.183+08:00","Action":"output","Package":"jobsim/backend","Output":"FAIL\tjobsim/backend\t5.147s\n","OutputType":"frame"}
+{"Time":"2026-11-17T01:40:19.183035+08:00","Action":"fail","Package":"jobsim/backend","Elapsed":5.147}

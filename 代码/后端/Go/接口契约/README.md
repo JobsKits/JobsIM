@@ -13,14 +13,15 @@
   - [2.1、访问／刷新家族与未知结果](#session-refresh-implementation)
   - [2.2、Web BFF 与多标签身份围栏](#bff-refresh-implementation)
   - [2.3、本人主动改密](#own-password-change)
-- [三、会话与消息](#jobs-toc-heading-7)
-  - [普通引用式转发](#jobs-toc-heading-8)
-  - [结构化提及与群公告](#jobs-toc-heading-9)
-- [四、联系人、媒体与运维](#jobs-toc-heading-10)
-- [五、独立角色](#jobs-toc-heading-11)
-- [六、管理员强验证与凭据重置](#jobs-toc-heading-12)
-- [七、静态头像与最小举报治理](#jobs-toc-heading-13)
-- [八、受控导出实验](#jobs-toc-heading-14)
+  - [2.4、本人注销与受限数据权利](#own-account-deletion)
+- [三、会话与消息](#jobs-toc-heading-8)
+  - [普通引用式转发](#jobs-toc-heading-9)
+  - [结构化提及与群公告](#jobs-toc-heading-10)
+- [四、联系人、媒体与运维](#jobs-toc-heading-11)
+- [五、独立角色](#jobs-toc-heading-12)
+- [六、管理员强验证与凭据重置](#jobs-toc-heading-13)
+- [七、静态头像与举报治理](#jobs-toc-heading-14)
+- [八、受控导出实验](#jobs-toc-heading-15)
 - [九、权威快照与增量同步底座](#authoritative-sync)
   - [9.1、设备与流绑定](#sync-registration)
   - [9.2、完整页清单与安装顺序](#sync-snapshot)
@@ -31,6 +32,7 @@
 - [十、存储批准与独立正文收讫](#durable-content-receipts)
   - [10.1、独立完整对象收讫](#durable-object-receipts)
 - [十一、正式本人数据导出](#personal-data-export)
+- [十一、普通个人端侧迁移](#jobs-toc-heading-26)
 
 </details>
 <!-- jobs-toc:end -->
@@ -60,7 +62,8 @@
 - 未登录register/login/recover不先取CSRF；Web要求同源Origin、application/json及X-JobsIM-Client:web，不开放跨源CORS。当前未实现匿名前置挑战，不把它写成已交付。
 - 登录SetCookie后 `GET /api/auth/csrf` → `{csrfToken}`；Web所有写请求发送`X-CSRF-Token`，并检查同源Origin；跨源不自动开放。之后`POST /api/auth/confirm {}`带CSRF，确认前Cookie不能访问聊天。
 - `POST /api/auth/logout`；`GET /api/me`返回flat User；`GET /api/auth/context`返回`{user,deviceId,restoreEpoch,familyId,refreshGeneration,accessExpiresAt,idleExpiresAt,absoluteExpiresAt,sourceContextId}`供客户端恢复真实命名空间，不返回token／refreshToken；`GET /api/auth/sessions`；`DELETE /api/auth/sessions/{deviceId}`。登录响应user也包含restoreEpoch；客户端Outbox冻结原epoch，不因重连或刷新重写。
-- `PATCH /api/me` `{displayName}` → User。昵称由directory域权威保存，用户搜索／联系人／会话成员通过受鉴权域RPC读取当前昵称。
+- `PATCH /api/me` `{displayName}` → flat `User`。昵称由directory域权威保存，用户搜索／联系人／会话成员通过受鉴权域RPC读取当前昵称。
+- `PATCH /api/me/username` `{username,expectedUsername,requestId}` → `{user:User,current,username,requestId}`。username与expectedUsername沿local-username-v1规范化，原requestId为8～128字符；当前正常本人／原家族授权不因改名变更，待恢复／安全变更／注销仍拒绝。锁原userId并核expectedUsername，受控唯一占名、原子预留新旧名，旧名不再登录且不能被其他人占用；不换userId/device/family/epoch，不撤既有合法会话。重试同原ID异参409 `IDEMPOTENCY_CONFLICT`，预期旧名已变409 `USERNAME_CHANGED`，重名409 `USERNAME_TAKEN`。响应username是原操作目标，user是当前权威资料，后来再次改名则旧原操作current=false；端侧读回GET /me后仅更新当前匹配pair的用户名，不改未知旧请求／Outbox命名空间。 日常成功改名后旧名保留占用且不再作当前登录名；灾备恢复按已确认资料RPO／业务快照可能恢复旧资料名及对应登录名，userId保持不变、占名保护仍在，恢复后须在当前epoch重新认证。现有reserve_username日志只保护占名，不能宣称最新登录名永不回退；隔离恢复专项待验。
 - `POST /api/auth/recovery-codes` `{password,requestId}` → `{codes,batchId}`，只当次生成返回原码；重复查询只返脱敏状态。`POST /api/auth/recover` `{username,code,password,requestId}` → `{status}`，单次消费、改密和撤旧会话；恢复不自动登录。
 
 ### 2.1、<span id="session-refresh-implementation">访问／刷新家族与未知结果</span>
@@ -103,15 +106,33 @@ identity先持久`prepared`原责任及绑定实例／本人／设备／epoch的
 
 源码与4组纯规则／真实PG专项的实际范围见[改密检查点](../../../../项目相关报告/测试/后端/20261116-本人主动改密/README.md)。各端产品入口、真实HTTPS、独立双集群恢复另验，不能借当前后端切片称全部账号功能完成。
 
-普通认证及恢复路径还要求`deletion_state='none'`；requested／processing／completed都不能新发登录、旋转RT、解析BFF、恢复密码或授正式导出principal。已准备未提交的主动改密在注销状态出现后退休，已完成原单仍可核历史但current=false。该[门禁增量](../../../../项目相关报告/测试/后端/20261116-注销普通准入门禁/README.md)没有提供注销申请、受限数据权利证明／取消或最终清理接口，不能据此开启完整注销能力。
+普通认证及恢复路径还要求`deletion_state='none'`；requested／processing／completed都不能新发登录、旋转RT、解析BFF、恢复密码或授正式导出principal。已准备未提交的主动改密在注销状态出现后退休，已完成原单仍可核历史但current=false。原[门禁增量](../../../../项目相关报告/测试/后端/20261116-注销普通准入门禁/README.md)仅证明普通准入；后续完整注销协议见[本人注销与受限数据权利](#own-account-deletion)，实际端侧和执行证据单独登记。
 
-## <span id="jobs-toc-heading-7" data-jobs-toc="v2">三、会话与消息</span><!-- jobs-toc:heading-end -->
+### 2.4、<span id="own-account-deletion">本人注销与受限数据权利</span>
+
+只读内建 `features.own_account_deletion=true` 表示实现本协议，不能代替五端接线／真实设备验收。全部公开入口归 Identity，Web JSON、原family／CSRF／同源 Origin 要求沿现有认证约定。原申请／结果／受限证明／查询／取消各自每IP每分钟15次限流；管理员审计证明另需当前管理员会话及MFA。
+
+- 首次 `POST /api/auth/deletion-requests` 体为 `{requestId,username,deviceId,restoreEpoch,password,otp?}`：原nonce为8～128字符，当前本人AT／原设备／epoch＋当前可信密码；管理员需TOTP。密码NFC规范化，只在内存验证，持久原单仅存有钥摘要，OTP不进入业务摘要。先持久原责任和普通访问围栏，Governance保存数据库绝对冷静截止，独立journal请求intent保护后跨owner撤导出／转发，Identity本域标requested、递增security_version、撤全部family／RT／BFF／短期交付。返回已确认请求需要重新登录时，注销状态本身继续拒绝普通登录。
+- `POST /api/auth/deletion-results` 接受同一原体，可省OTP；匿名只查原申请，不创建、不续跑、不改变会话。未知404 `ACCOUNT_DELETION_NOT_FOUND`，原证明不匹配403 `DATA_RIGHTS_REJECTED`。原创建提交未知时保留同nonce／body责任，只有用户明确重试才再POST原申请；新家族AT不能借给原单。已存在原单允许匿名同体续跑，历史回复不清后来登录Cookie。
+- 公共结果为 `{deletionId,requestId,status,requestVersion,restoreEpoch,cancelUntil,cancelRequestId,requiresNewLogin:true}`；版本与epoch均十进制字符串。状态为 `pending/requested/cancel_pending/processing/completed/cancelled/retired`；原责任尚未获冷静截止或旧未保护代际退休时cancelUntil为null，否则为原ISO绝对时刻。默认冷静期7天，`--account-deletion-cooldown-days`／`JOBS_IM_ACCOUNT_DELETION_COOLDOWN_DAYS`允许0～30天，0表示立即取得清理资格，不表示先跳过撤权或journal。
+- 无普通会话时，`POST /api/auth/data-rights/proofs` 体 `{username,deletionId,requestVersion,purpose,password?,recoveryCode?,otp?}`，purpose严格为`query`或`cancel`，密码／恢复码二选一。密码须当前正常可信凭据，管理员密码证明另需MFA；恢复码只消费当前有效批次，消费写独立journal避免旧备份复用。响应 `{proof,deletionId,requestVersion,purpose,expiresAt,restoreEpoch}`，5分钟不透明proof只在内存，绑定实例／本人／原申请／版本／用途／当前安全与恢复代际。proof不能用于聊天、refresh、解封或恢复墓碑。
+- `POST /api/auth/data-rights/query {proof}` 仅接受query用途；`POST /api/auth/data-rights/cancel {proof,requestId}`仅接受cancel用途，requestId是持久非秘密原取消nonce。Governance同一行锁／row_version仲裁：仅requested且DBnow<cancelUntil→cancel_pending；worker仅截止后requested→processing。任一方获资格，另一方不能跨越；processing/completed不可取消。取消未知保持cancel_pending，沿原nonce查原申请结果里的cancelRequestId，不换操作假报成功。旧proof仅可重查同一个已经成立的取消，不能借安全版本变化取消新责任。
+- Identity只在原deletion_request_id且仍requested时清该注销门禁，递增security_version；保留banned／tombstoned、recovery_state及其他撤权／期限。旧session始终无效；journal result、跨owner排空和确认完成后Governance才显示cancelled。取消后正常使用须重新登录并满足其余权限。
+- 受控管理员核验入口 `POST /api/admin/users/{id}/data-rights-proofs {requestId,deletionId,requestVersion,purpose,reason,otp}` 要求当前管理员、有效MFA与10～512字节审计理由，持久操作者／目标／原申请／用途／理由；它只发同一受限proof，不签普通会话、解封或重设密码。注销completed且原密码／恢复凭据已清除后，独立正常管理员仍可按原申请和当前精确版本审计签发5分钟query证明，过期须重新MFA和独立审计；completed签cancel返回409 `DELETION_CANCEL_CLOSED`。被注销本人旧密码／恢复码不能据此重新取得证明。
+- processing后各owner只凭Governance当前原版本与已到数据库截止执行：message复用持久global擦除队列、源／转发／草稿／导出排空与删除引用；media按精确owner及原UUID对象删除附件、未提交上传和头像字节并fsync；directory清资料与私人偏好、移除联系人；conversation退出成员，失效群主转owner_unavailable只读而不阻塞本人注销；sync清本人快照／流／本地库注册／view／read／草稿；governance仅保最小审计事实。全部owner确认后再清当前密码／MFA秘密和短期交付，保用户名占用键及最小安全记录。
+- 请求、取消结果和owner擦除均有typed最小journal事实；取消intent不能降闸，completed不能恢复。Identity／Governance后台按持久last_attempt_at公平选择有界续跑批次，永久失败的早期责任保留原deadline／状态并让出后续批次，不阻塞其它申请。隔离恢复先重放门禁／内容floor，再删除已保护owner的精确恢复媒体文件、退休旧群治理grant，最后才开放新epoch。客户端仍须分别执行本地数据与global回归，服务端完成不代表已擦除关机设备或历史离线备份。
+
+源码为 `account_deletion*.go`，外置真实PG用例为 `测试/后端/接口/account_deletion_pg_test.go`；最终10项真实隔离PG方法全部通过，含33消息／33头像分页、恢复字节重清及未知责任续跑；RPC为进程内生产handler，journal在隔离测试PG独立schema，不称真实HTTPS或独立双集群恢复。证据见[注销后端报告](../../../../项目相关报告/实现进度/20261116-剩余能力闭环/注销后端.md)。
+
+2026-11-17追加[公平续跑与完成回执回归](../../../../项目相关报告/测试/后端/20261117-注销续跑公平性/README.md)：新增3反例修前全部失败，冻结修后输入19项注销相关方法全部通过／无跳过，包含准入、原PG用例、末页拒读及新增反例；不与前序轮次累计。独立新PG已停止，未连接用户实例；角色间RPC仍是进程内生产handler。
+
+## <span id="jobs-toc-heading-8" data-jobs-toc="v2">三、会话与消息</span><!-- jobs-toc:heading-end -->
 
 - `GET /api/conversations` → `{items:[Conversation]}`。
 - `GET /api/conversations/{id}` → Conversation；本人当前有效成员读取，支持定位列表前100条以外的合法来源，不凭旧搜索结果恢复资格。
 - `POST /api/conversations` `{kind,title,memberIds,requestId?}` → Conversation。
 - `GET /api/conversations/{id}/members` → `{items:[User+{role,membershipGeneration,roleGeneration}]}`；墓碑成员仅返回稳定身份占位／state，不能回填正常展示资料。
-- `POST /api/conversations/{id}/members` `{userId}`；`DELETE .../members/{userId}?membershipGeneration=<原代际>`；`PATCH /api/conversations/{id}` `{title?,ownerId?}`。退群／踢出必须保留原资格代际，缺值400、跨重入代际409，禁止旧请求作用于新的重入资格。群主须转让后退出；墓碑导致owner_unavailable，恢复账号不会自动恢复群治理，独立治理接管尚未交付。
+- `POST /api/conversations/{id}/members` `{userId}`；`DELETE .../members/{userId}?membershipGeneration=<原代际>`；`PATCH /api/conversations/{id}`只接`{title}`，旧`ownerId`转让入口400拒绝。退群／踢出必须保留原资格代际，缺值400、跨重入代际409。转让、角色、禁言、策略、解散及独立恢复使用[群治理原单协议](./群治理/README.md)，不借后来的owner资格补旧操作。群主须转让后退出；owner_unavailable不会因账号恢复自动解除，恢复需独立operator grant、当前管理员及绑定原操作的step-up。
 - `GET /api/conversations/{id}/messages?after=<cursor>&limit=100` → `{items:[Message],cursor}`。history.cursor的精确格式为`epoch:sequence`，两个分量均为十进制字符串；仅首次从头请求可传`0`，不得把整个游标解析成UInt64或只持久sequence。旧epoch返回HTTP409、`error.code=RESTORE_EPOCH_CHANGED`，客户端冻结旧Outbox并重新核对身份与服务端历史。
 - `POST /api/conversations/{id}/messages` 普通分支传`{clientMsgId,type,text,restoreEpoch,sendAdmission,replyToId?,attachmentId?,mentionedUserIds?,mentionAll?}`，转发分支见下文，均返回Message。客户端在新意图入本地事务时冻结原sendAdmission／本人membershipGeneration，发送、重启及未知结果核对均保持原ID／原载荷，不能给旧队列补新快照。服务端先验当前读取ACL，再沿原sender＋clientMsgId核对完整原摘要；已成功事实仍受当前读取ACL，群重入可能不能读原成员期正文。同ID变更快照也属于`IDEMPOTENCY_CONFLICT`。未建原ID缺快照或快照失效返回HTTP409 `SEND_ADMISSION_CHANGED`，该意图永久冻结，重新获权不自动重发。旧无字段的既成消息保持原摘要兼容，缺字段未建消息严格拒绝。不存在的旧restoreEpoch仍返回RESTORE_EPOCH_CHANGED，不可换ID自动重发。
 
@@ -120,7 +141,7 @@ identity先持久`prepared`原责任及绑定实例／本人／设备／epoch的
 当前围栏限定同一主机、同一个规范化本地StateDir内的独立角色进程：发信持操作系统共享锁直到真实PG提交完成；删友／拉黑／接受／入退群及群只读状态变更持排他锁。目录发信授权代际独立于私密入站申请gate，撤权和新接受推进，unblock／reopen本身不授予发信。消息提交前fsync原事务标记；未知、取消或崩溃遗留先核PG原事务状态和原消息摘要，未证实则503 `ADMISSION_RECOVERY_REQUIRED`，不按超时清理。角色启动验证回环地址及OS锁能力，关键内部RPC校验规范化StateDir证明，错目录503拒绝；不把此实现当成跨主机分布锁或吞吐达标。
 - `PATCH /api/messages/{id}` `{text,expectedVersion,requestId?}` → Message。
 - `GET /api/messages/{id}` → Message；重新核当前源读取ACL，撤回返回既有删除占位；群退出／重入的旧成员期历史按既有规则拒绝。搜索／收藏定位前重新读会话与原消息，不直接回显旧列表快照。
-- `DELETE /api/messages/{id}` → Message；仅作者或有权群治理者，撤回留占位。
+- `DELETE /api/messages/{id}` → Message；仅作者或有权群治理者，撤回留占位。 可选体`{expectedVersion,requestId}`两字段须同时有效：expectedVersion为规范十进制字符串，未撤回且当前Message.version不同则409 `VERSION_CONFLICT`；已Deleted可沿同对象重放成功。空体旧调用兼容，原retract:id操作不变；不得为旧菜单快照补最新版本。
 - `POST /api/messages/{id}/reactions` `{emoji}`；`DELETE .../reactions/{emoji}`。
 - `PUT|DELETE /api/messages/{id}/pin`；`PUT|DELETE /api/messages/{id}/favorite`。
 - `GET /api/search?q=...&conversationId?&cursor?&limit?` → `{items:[Message],cursor,hasMore}`，q为1～256 UTF8字节，非空；`GET /api/favorites?conversationId?&cursor?&limit?`使用相同分页对象，无需搜索词，只读本人收藏的当前源引用。源撤回、失权或旧群成员期不能从收藏找回正文，不复制正文作为独立收藏快照。
@@ -128,7 +149,7 @@ identity先持久`prepared`原责任及绑定实例／本人／设备／epoch的
 
 `features.role_admission=true`为只读内建角色围栏标志，表示sendAdmission同时绑定本人roleGeneration；角色名称不是代际。owner→member→owner不能恢复旧token，普通未建旧意图也保守返回SEND_ADMISSION_CHANGED；当前readACL下已提交原ID不受新写资格检查阻断。旧send_admission-only服务尚无该保护，客户端@all新发送与原未成重放须明确检查role_admission；普通消息／单独成员提及仍按既有send_admission门禁。只读message-results与公告原operation查询不要求角色写能力，也绝不降级为创建型发送。
 
-### <span id="jobs-toc-heading-8" data-jobs-toc="v2">普通引用式转发</span><!-- jobs-toc:heading-end -->
+### <span id="jobs-toc-heading-9" data-jobs-toc="v2">普通引用式转发</span><!-- jobs-toc:heading-end -->
 
 `features.forwarding=true`是只读内建实现标志，旧`text_forward`保持false。支持普通text／image／audio／video／file及最多8层转发，新增写仍复查messages／media父能力和目标发信资格。旧服务缺forwarding时不提交这个新分支。消息读取给当前读者可用的`forwardAdmission`，为不透明`fa1.`证明，绑定本人、源消息／contentVersion、源会话原成员代际、本人securityVersion及restoreEpoch；不含正文，也不授予目标收件人源会话权限。
 
@@ -144,7 +165,7 @@ identity先持久`prepared`原责任及绑定实例／本人／设备／epoch的
 
 新意图错误：400 `INVALID_FORWARD`／`FORWARD_PROTOCOL_REQUIRED`／`FORWARD_DEPTH_LIMIT`；409 `FORWARD_ADMISSION_CHANGED`／`FORWARD_SOURCE_CHANGED`／`FORWARD_SOURCE_UNAVAILABLE`；源成员期明确403 `NOT_A_MEMBER`／`HISTORY_NOT_ALLOWED`；临时不可证明503 `FORWARD_QUALIFICATION_UNAVAILABLE`。明确原证明／资格失败保留原body并冻结，503保留未知，不换ID或证明。真实范围见[普通转发测试](../../../../测试/后端/接口/forward_refs.py/README.md)。
 
-### <span id="jobs-toc-heading-9" data-jobs-toc="v2">结构化提及与群公告</span><!-- jobs-toc:heading-end -->
+### <span id="jobs-toc-heading-10" data-jobs-toc="v2">结构化提及与群公告</span><!-- jobs-toc:heading-end -->
 
 bootstrap／capabilities的`features.mentions=true`及`features.announcements=true`为只读内建实现标志，不能经管理员切换。新结构化提及仍检查groups及消息发送的messages父能力，公告新发布检查groups／messages；既有获权读取、原结果核对和清除引用不因关闭新能力而旁路身份／群权限，也不阻止必要清理。
 
@@ -158,24 +179,24 @@ bootstrap／capabilities的`features.mentions=true`及`features.announcements=tr
 
 公告只保存本群源messageId／sourceVersion／到期引用，不复制聊天正文。每次GET校验当前群加入下界、源当前精确contentVersion、未撤回、正文可用及来源未冻结；源变化只回占位，需群主新操作明确刷新引用。公告sourceVersion绑定Message.contentVersion（十进制字符串，旧行初始1），仅正文编辑／撤回／正文不可用等内容变化递增；反应／置顶／个人收藏只推进Message.version，不使公告失效。客户端兼容旧服务取source.contentVersion存在时优先使用，旧版没有该字段时才用source.version；新服务只校验contentVersion。公告父群行锁内的源RPC不回调持锁群；发布／清除、成员／关系变更及消息内容写由同主机OS围栏串行，公告读取持共享围栏，不宣称跨主机原子或完整strong-profile公告灾备已验收。
 
-## <span id="jobs-toc-heading-10" data-jobs-toc="v2">四、联系人、媒体与运维</span><!-- jobs-toc:heading-end -->
+## <span id="jobs-toc-heading-11" data-jobs-toc="v2">四、联系人、媒体与运维</span><!-- jobs-toc:heading-end -->
 
 - `GET /api/users?q=` → `{items:[User]}`；`GET /api/contacts` → `{items:[User],requests:[{id,requesterId,recipientId,state,requester?:User}]}`。申请人资料从identity／directory当前权威资料批量聚合；仅当前有效入站申请、当前好友或本人可返回，blocks／墓碑／失效资格不回填正常旧资料。requester缺失时显示不可用占位，不能保留上一响应里的旧资料；头像仍遵守既有好友／共同有效会话可见权限，不因陌生申请自动放宽。收件箱只把pending且recipientId为当前本人的项作为可接受申请。
 - `GET /api/contacts/{peerId}/relationship` → `{peerId,blockedByMe,friend,inboundGate:'open'|'denied',generation,inboundReopened}`。仅查询已鉴权用户自己对peer的持久关系／入站策略，不返回对方的blocks或私人门禁，不含资料、头像地址、正文或MFA材料，也不扩大现有读取／通信权限。generation为十进制字符串；`'0'`表示尚无本人持久gate行、入站采用默认open，GET不创建行。inboundReopened仅当本人当前open代际确有对应的成功reopen操作才为true，不把默认open或旧操作成功当成当前已重开。合法但未知peer UUID返回同样的本人默认状态，不通过此接口探测账号存在性；缺身份401，无效／本人peer ID为400。现有写接口参数保持原样，写入仍各自重新鉴权。
-- `POST /api/contacts/requests` `{userId,requestId?}` → `{id,state}`；`POST /api/contacts/requests/{id}/accept|reject`；`DELETE /api/contacts/{userId}`。
-- `PUT|DELETE /api/blocks/{userId}`，双方私聊新发送阻断；解黑不重放旧申请。
-- `POST /api/contacts/{peerId}/reopen` `{requestId}` → `{status:'opened',direction:'inbound',peerId,generation,requestId,current}`。这是当前收件人明确允许peer重新发入站申请，只改本人的gate；双方任一block仍存在则拒绝新操作。重复原ID只返原代际，current区分原成功与后来再次关门；旧pending终结、旧accepted／原申请ID不复活。收件人先reopen，发送人用新requestId申请，再由收件人新接受；不能拿发送人的账号去重开对方许可。
-- `POST /api/media`，multipart字段`file` → `{id,name,contentType,size,url}`；先私人上传，再由消息绑定；`GET /api/media/{id}`经当前权威授权下载，不公开对象目录。
+- `POST /api/contacts/requests` `{userId,requestId?}` → `{id,state}`；`POST /api/contacts/requests/{id}/accept|reject`；`DELETE /api/contacts/{userId}`。未被任一方拉黑时，拒绝／删除后可以用新requestId发起不限轮数的独立申请；旧已结请求409 `REQUEST_STALE`，不能以旧accepted恢复关系。每对同方向仅一个有效pending，不同ID重复409 `CONTACT_REQUEST_PENDING`，原ID同参查询不重复建单／计数。新pending每申请人／接收人每分钟5次、申请人总每分钟30次，超限429 `CONTACT_RATE_LIMITED`，下一窗口可再申请。接受／拒绝终结该对其他旧pending；删除同时移除双方好友并退休旧请求／通信准入，无一键undo。
+- `PUT|DELETE /api/blocks/{userId}`：拉黑保留双方friend／联系人列表，任一方block均拒绝双向direct新消息和媒体绑定；共同群成员／获权历史继续按既有ACL，不补投旧未提交队列。已有好友可打开或创建direct进入设置，阻断期间sendAdmission为空。block/unblock都退休旧通信代际；解除后当前仍为friend且另一方未阻断，才重新取得新sendAdmission。删除后解除block不恢复好友。原成功消息核对／合法历史与新投递分别处理。
+- `POST /api/contacts/{peerId}/reopen` `{requestId}`保留旧客户端兼容返回，不能恢复好友或旧申请。当前新申请不以reopen为前置门，UI不再显示“允许此人新好友申请”；relationship的inboundGate／inboundReopened仅兼容旧策略元数据，不授予通信／恢复关系。
+- <span id="stable-media-upload">稳定媒体上传</span>：`POST /api/media` 保留 multipart `file`，可选稳定原请求；`GET /api/media/capabilities` 返回 `stable-upload-v1` 能力与大小边界，`POST /api/media/upload-results` 只查原责任，404不建单、prepared不发布文件。同原身份／原metadata／真实bytes SHA的明确重试固定objectId，旧无nonce调用继续兼容但不具幂等保证；`GET /api/media/{id}`仍经当前权威授权，不公开对象目录。唯一完整DTO、错误与两端恢复语义见[稳定上传合同](../../../../测试/后端/接口/media_upload/README.md)，实际范围见[稳定上传验证](../../../../项目相关报告/测试/后端/20261117-稳定媒体上传/README.md)。
 - `GET /api/capabilities` → `{features:{...},versions:{...}}`；管理员`PUT /api/capabilities/{name}` `{enabled,expectedVersion,requestId,stepUpId}`，仅开放已实现且可变的能力，不能开启after_receipt/E2EE等未交付项。
 - `GET /api/health` → `{status,service}`；管理员`GET /api/admin/status`报告真实依赖、所选保护档与未验收项。备份为受控运维命令，不返回数据库连接串或秘密。
 
-## <span id="jobs-toc-heading-11" data-jobs-toc="v2">五、独立角色</span><!-- jobs-toc:heading-end -->
+## <span id="jobs-toc-heading-12" data-jobs-toc="v2">五、独立角色</span><!-- jobs-toc:heading-end -->
 
 单Go工程提供`--service=gateway|identity|directory|conversation|message|media|control|journal|governance|sync`独立启动；开发`--service=all`在同进程拉起独立HTTP角色、每角色数据库池和schema。内部端口从base起依次为identity至sync，共9个；journal使用另一个真实PG集群。角色通过受鉴权内部HTTP调用，不JOIN其他域私表、不共享事务。此开发切片尚未等于已验收微服务部署，跨机mTLS、最小权限、完整日志恢复、强保护等须后续真实验收。
 
 `GET /api/me/export`仍仅导出本人账号／联系人／有效会话目录元数据，不含聊天正文、Cookie、token、密码哈希、恢复码或E2EE秘密；正式本人包另见[第十一节](#personal-data-export)。引用式转发与实验导出是独立能力，不能因转发可用便宣称链级导出holder已完成。
 
-## <span id="jobs-toc-heading-12" data-jobs-toc="v2">六、管理员强验证与凭据重置</span><!-- jobs-toc:heading-end -->
+## <span id="jobs-toc-heading-13" data-jobs-toc="v2">六、管理员强验证与凭据重置</span><!-- jobs-toc:heading-end -->
 
 首位管理员只通过`jobsimops --mode bootstrap-admin`在本人受控机器初始化，显式提供私密TOTP登记文件和密码环境变量。普通注册不占用admin/root等保留名，不交付共享默认密码，不把管理员重置等同于登录目标账号。
 
@@ -186,16 +207,20 @@ bootstrap／capabilities的`features.mentions=true`及`features.announcements=tr
 - `POST /api/admin/users/{id}/reset-grants` `{reason,expectedVersion,requestId,stepUpId}` → `{id,userId,credential?,credentialAvailable,expiresAt,status,version,requestId}`。密码重置凭证为600秒、单次、绑定用户／用途／安全代际／恢复epoch，颁发即撤旧会话并拒绝旧密码登录。原凭证只首次返回；丢响应后查询不再回显，必须经新的强验证操作重发。
 - `POST /api/auth/reset-password` `{username,grant,password,requestId}` → `{status}`，提交本人新密码、消费凭证并再次撤旧会话，不自动登录，不改变封禁，不重置MFA；不能拿账号恢复码或重置凭证互换用途。
 
-## <span id="jobs-toc-heading-13" data-jobs-toc="v2">七、静态头像与最小举报治理</span><!-- jobs-toc:heading-end -->
+## <span id="jobs-toc-heading-14" data-jobs-toc="v2">七、静态头像与举报治理</span><!-- jobs-toc:heading-end -->
 
 - `POST /api/me/avatar`，multipart `file`＋`requestId`＋`expectedVersion=profileVersion`。当前仅标准静态JPEG/PNG、≤2MiB／16MP，拒动图和未实现解码格式。真实解码、中心裁剪、剥元数据，生成512及128 JPEG。响应`{user,operationId,status,current,result}`；status为applied/prepared/cancelled/superseded。
 - `GET /api/me/avatar/operations/{requestId}`查询原完成事实；后续头像覆盖后仍保持原result且current=false。`GET /api/avatars/{id}`要求当前资料引用及本人／当前好友／共同有效会话可见资格，双向blocks优先拒绝。头像purpose与聊天附件独立，`/api/media/{头像id}`不能旁路；使用中头像不套聊天附件保留期。
-- `POST /api/reports` `{targetType:'message'|'user'|'conversation',targetId,reason,requestId}` → `Report={id,reporterId,targetType,targetId,reason,state,version,createdAt,updatedAt}`。对消息／会话重验当前源访问，原ID异参409。
-- `GET /api/reports`只列本人；`GET /api/admin/reports`列治理范围，两者响应`{items,includesChatBodies:false}`。管理员`PATCH /api/admin/reports/{id}` `{state:'reviewed'|'dismissed'|'action_required',reason,expectedVersion,requestId,stepUpId}`；`GET /api/admin/report-operations/{requestId}`查原结果。
+- `POST /api/reports/evidence`：独立举报材料multipart `file`＋稳定上传8字段`requestId/userId/deviceId/familyId/restoreEpoch/name/size/sha256`，size为十进制字节字符串，实际字节SHA256小写hex。只接受真实图片≤20MiB／视频≤64MiB，purpose由入口固定为report_evidence，不能伪装聊天附件。`GET /api/reports/evidence/capabilities`返回stable-upload-v1及maxBytes／maxImageBytes／maxVideoBytes／maxRequestBytes字符串边界和resultPath；`POST /api/reports/evidence/upload-results`体为相同8字段，只查原责任。同体明确重试固定objectId，原ID跨purpose或改身份／metadata为冲突，恢复／擦除floor继续拒旧。
+- 上传成功／原结果为`{protocol,requestId,uploadState:'committed',id,name,contentType,size,sha256,url}`；size在响应为JSON整数，url是本人鉴权预览`/api/reports/evidence/<objectId>`。不能用metadata存在表示字节已上传完成，也不能把URL放进普通聊天附件绑定。
+- `POST /api/reports` `{targetType:'message'|'user'|'conversation',targetId,reason,requestId,evidenceIds?:[UUID],selectedMessageIds?:[UUID]}` → `Report={id,reporterId,targetType,targetId,targetUserId?,reason,state,version,createdAt,updatedAt}`。旧4字段请求摘要兼容；最多10个不同本人材料、50条不同当前获权消息，全部由用户主动选择，任一不合格不部分建单。保存对象引用与消息当前contentVersion，不复制全会话或旧聊天正文。message目标的targetUserId由源发送者权威解析；conversation兼容目标不虚构被举报用户。
+- `GET /api/reports`只列本人；`GET /api/admin/reports`只允许当前管理员，两者为`{items,includesChatBodies:false}`；可选state／reporterId／targetUserId过滤，列表最多100条。`GET /api/reports/{id}`只读本人详情；`GET /api/admin/reports/{id}`官方管理端详情：`{report,evidence:[{id,name?,contentType?,size?,sha256?,url?,available}],selectedMessages:[{id,conversationId?,senderId?,type?,text?,contentVersion?,createdAt?,attachmentURL?,available}],includesWholeConversation:false}`。available=false只保id，不回旧正文／URL。
+- 详情evidence URL为`/api/reports/evidence/<objectId>?reportId=<reportId>`；选中聊天附件的管理端URL为`/api/admin/reports/<reportId>/messages/<messageId>/attachment`，本人路径为`/api/reports/...`。必须带当前鉴权／同源BFF读取字节，不能裸用公开图片地址；当前管理员／举报单关联、原举报者当前源权限、精确contentVersion、撤回／焚毁／删除／保留期及media floor在每次读取重新验证。失败401/403/404/410，private,no-store；临时来源依赖未知也只展示unavailable，不回退缓存。文件缺失／软链／非原对象不能宣称可用。
+- 管理员`PATCH /api/admin/reports/{id}` `{state:'reviewed'|'dismissed'|'action_required',reason,expectedVersion,requestId,stepUpId}`与`GET /api/admin/report-operations/{requestId}`保持既有MFA／原操作／CAS语义；材料查看不授予处置权。
 
-这是目标＋理由的最小举报切片；完整证据选择／附件／处置进度／申诉、群头像和完整资料导出仍未交付，不能据此宣称完整I验收。
+联系人／改名／举报材料的新增8个顶层用例已按当前源码实际通过，含2项纯规则、6项隔离PG生产角色处理器；补验17项既有上传／保留期／用户名／准入锁及2项锁复制夹具，共27个不同顶层方法通过，完整外置overlay和生产包go vet均通过。原附件首次下载失败及修正、原vet失败、环境skip与固定SHA原件补验分别保留在[恢复窗口证据](../../../../项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/summary.json)，不将重复执行累加为新方法数。PG用例为每例随机专属数据库、角色同库各schema及进程内RPC，不代表真实HTTPS／NATS／双PG灾备／原生UI；3份已同步断言的HTTP脚本及跨端接线仍待真实环境验证。此前[低磁盘源码阶段](../../../../项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/summary.json)原件冻结保留。申诉、群头像和完整I验收仍不在本切片结论内。
 
-## <span id="jobs-toc-heading-14" data-jobs-toc="v2">八、受控导出实验</span><!-- jobs-toc:heading-end -->
+## <span id="jobs-toc-heading-15" data-jobs-toc="v2">八、受控导出实验</span><!-- jobs-toc:heading-end -->
 
 只有显式启动`--experimental-exports`才开放本节实验路由与构建器；实验包范围为可获权普通聊天及真实附件，不能替代[正式本人数据导出](#personal-data-export)。`chat_export`现在声明正式入口，不开启或改写实验协议。实验关闭后保留受控清理组件继续排空此前责任。
 
@@ -325,7 +350,7 @@ S2新增`preferences`（directory owner）、`conversation_view/read_state/read_
 
 | 入口 | 请求与结果 |
 | --- | --- |
-| `PUT /api/sync/storage` | `{requestId,storeGeneration,revisionEpoch,profileId,buildDigest,verificationDigest}`；只能声明已登记的当前物理库及精确批准项。返回`{result,current,storage,deletionEligible:false,afterReceiptEnabled:false}`，原请求异参409；换批准项产生新qualificationId，同项原身份不变 |
+| `PUT /api/sync/storage` | `{requestId,storeGeneration,revisionEpoch,profileId,buildDigest,verificationDigest}`；只能声明已登记的当前物理库及精确批准项。返回`{result,current,storage,deletionEligible:false,afterReceiptEnabled:<当前批准物理库＋实际传输与删除事实就绪>}`，原请求异参409；换批准项产生新qualificationId，同项原身份不变 |
 | `GET /api/sync/storage?schemaVersion=2` | 当前本人／device／epoch／物理库的`storage:{qualificationId,storeGeneration,restoreEpoch,profileId,buildDigest,verificationDigest,storageContract,qualified,objectQualified}`；未声明为false，不写新资格 |
 | `POST /api/sync/receipt-challenges` | `{messageId,schemaVersion?}`；当前合格声明且仍能完整读取普通消息才返回原`bodyEnvelope/bodyDigest`、内容版本和时限一小时的原挑战。绑定实例／本人／device／物理库／epoch／qualification／内容与权限代际；引用转发另需完整source-holder合同，当前拒绝 |
 | `POST /api/sync/receipts` | `{requestId,storeGeneration,revisionEpoch,qualificationId,kind:'message_content',challenge,bodyDigest}`；原生端必须先校验原字节，并在本地耐久事务提交正文与原回执意图。服务端验证原挑战、当前内容版本与权限、存储批准，并在SQL事务持久原请求摘要及结果 |
@@ -333,7 +358,7 @@ S2新增`preferences`（directory owner）、`conversation_view/read_state/read_
 
 结果的`storageQualifiedAtCommit:true`仅表示提交时部署批准项相符；`contentVersion/restoreEpoch/bodyDigest`是原内容事实，后续编辑不会改写。旧结果不确认新版或新设备，策略撤销不撤回已记录的历史事实。未提交旧epoch、换库／device、旧qualification、旧内容、权限ABA及过期挑战分别明确拒绝；调用方保留原意图，不自动补新proof或换nonce。
 
-以上正文回执保持`objectComplete:false,targetRangeComplete:false,deletionEligible:false`，不能确认附件完整字节。原4组纯规则／3组真SQL证据见[正文检查点](../../../../项目相关报告/测试/后端/20261116-收讫与草稿实现/README.md)；当前CLI正文receipt_outbox的67本地验证另见[端侧报告](../../../../项目相关报告/测试/CLI/20261116-正文收讫/README.md)，不追认原后端轮次已测试该客户端。完整目标、累计确认与删除worker未交付，`after_receipt`继续false。
+以上正文回执保持`objectComplete:false,targetRangeComplete:false,deletionEligible:false`，不能确认附件完整字节。原4组纯规则／3组真SQL证据见[正文检查点](../../../../项目相关报告/测试/后端/20261116-收讫与草稿实现/README.md)；当前CLI正文receipt_outbox的67本地验证另见[端侧报告](../../../../项目相关报告/测试/CLI/20261116-正文收讫/README.md)，不追认原后端轮次已测试该客户端。冻结目标、累计确认、编辑代际与保留worker已接入；单次receipt原结果中的false不冒充整范围完成。启用门槛与本轮证据见[当前收讫清理](../../../../项目相关报告/实现进度/20261116-剩余能力闭环/收讫清理.md)。
 
 ### 10.1、<span id="durable-object-receipts">独立完整对象收讫</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
 
@@ -370,6 +395,10 @@ ZIP内有`account-export.json`、`manifest.json`、`Data/<owner>/<kind>/<id>.jso
 
 制品默认24小时，封装key仅以实例key密封留服务端至合法清理；下载在源SH／artifact SH内先完整验证密文长度／SHA、每块AEAD和final、无尾随字节，再从原不可变文件第二遍解密经TLS交付，零明文落盘暂存。损坏／截断409 `EXPORT_INTEGRITY_FAILED`发生在任何ZIP正文之前；错票／到期票403 `EXPORT_DOWNLOAD_AUTH_REQUIRED`。开始后的取消／到期／网络断开只留下客户端不完整ZIP，不往流中追加JSON。源版本变化／global／撤权、任务取消／到期都会拒交付并清理；unknown holder拒绝下载，worker仅恢复持久未决责任，不靠TTL宣布清完。普通RT轮换不改变已捕获公开设备版本，不误撤包。
 
-恢复只重建拒旧事实，全部旧epoch任务取消、sealed key／ticket清空、完整prefix与metadata／media holder退休；旧create body仍可查metadata，旧未成epoch409 `RESTORE_EPOCH_CHANGED`。已交付到用户控制的外部ZIP不由服务端声称远程抹除。当前`after_receipt=false`，完整对象／累计targets／收讫+n与cloud_only清理仍按独立收讫保留切片继续交付；将来启用该策略前必须接入相同源撤交付和期限收紧边界，不能借独立24小时包延寿。
+恢复只重建拒旧事实，全部旧epoch任务取消、sealed key／ticket清空、完整prefix与metadata／media holder退休；旧create body仍可查metadata，旧未成epoch409 `RESTORE_EPOCH_CHANGED`。已交付到用户控制的外部ZIP不由服务端声称远程抹除。收讫+n及cloud_only任务已接入相同源撤交付和期限收紧边界；原生批准、实际传输与独立事实未就绪时after_receipt仍false，不能借独立24小时包延寿。
+
+## <span id="jobs-toc-heading-26" data-jobs-toc="v2">十一、普通个人端侧迁移</span><!-- jobs-toc:heading-end -->
+
+独立同实例／同账号／personal迁移采用配对、加密capsule、另一次已认证HTTPS重新认证取钥和目标整批联网validate；不会新建服务器消息或迁移凭据／Outbox／qualified ACK。源撤权、原版本变化、global、截止与恢复均退旧交付，失败保源。完整请求、公开manifest原字节信封及AES-GCM格式见[普通迁移合同](./普通迁移/README.md)，当前源码与实际验证边界见[实现报告](../../../../项目相关报告/实现进度/20261116-剩余能力闭环/普通端侧迁移.md)。
 
 <a id="🔚" href="#前言" style="font-size:17px; color:green; font-weight:bold;">我是有底线的➤点我回到首页</a>

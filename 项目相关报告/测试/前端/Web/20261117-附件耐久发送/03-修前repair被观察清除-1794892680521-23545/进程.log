@@ -1,0 +1,10 @@
+1:18:04 PM [vite] (client) [optimizer] bundling dependencies...
+AssertionError [ERR_ASSERTION]: ordinary global observation cannot clear a damaged erasure-floor repair obligation
+    at /Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs:109:14 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

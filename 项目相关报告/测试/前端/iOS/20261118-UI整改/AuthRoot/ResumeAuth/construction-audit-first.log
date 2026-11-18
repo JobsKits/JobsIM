@@ -1,0 +1,11 @@
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift	1648	ISO8601DateFormatter	ISO8601DateFormatter()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Services/IMDemoEnvironmentService/IMDemoEnvironmentService.swift	189	JSONDecoder	JSONDecoder()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Services/IMDemoEnvironmentService/IMDemoEnvironmentService.swift	199	JSONEncoder	JSONEncoder()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Services/IMDemoEnvironmentService/IMDemoEnvironmentService.swift	207	JSONDecoder	JSONDecoder()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationJSON.swift	87	JSONDecoder	JSONDecoder()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptBuild.swift	16	NSLock	NSLock()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Services/IMRememberedLoginStore/IMRememberedLoginStore.swift	98	JSONDecoder	JSONDecoder()
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Services/IMRememberedLoginStore/IMRememberedLoginStore.swift	102	JSONEncoder	JSONEncoder()
+parameterized	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/Factories/UIImage/UIImage+AuthMake.swift	25	UIImage	UIImage(cgImage: thumbnail)
+zero-argument	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/Factories/UINavigationBarAppearance/UINavigationBarAppearance+IMTheme.swift	13	UINavigationBarAppearance	UINavigationBarAppearance()
+issues=10 issue_files=7 factory_hits=34 scanned=132 sdk_classes=3512

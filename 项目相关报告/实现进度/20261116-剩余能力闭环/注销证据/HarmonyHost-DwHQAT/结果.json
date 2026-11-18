@@ -1,0 +1,19 @@
+{
+  "exitCode": 0,
+  "typeErrors": 0,
+  "native": false,
+  "https": false,
+  "hashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "c522b1c4454a28172562a86d74f875c9adfa25481a5862103f12d1c913dee3f9",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordChange.ets": "f13bee654b85bb39d262ebc20769f45e33d1c6bbb9dbda913007218a6ea8dc42",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordText.ets": "3c68c3c53a74651965cd1c3e08ac78645bab4977ac52309e2b43d305c2d49ae9",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Deletion.ets": "f473ebfa5a8f0021f19b781035eef932fda4b18973c666df26171dc32f1dee17",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionText.ets": "023dd1d87a964bf10fdb8c4f0bcdb83cbd9365ff9984723a2a5bf859d2cc815c",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionStore.ets": "50b4ac4ca3ae3cfc337a9d72931e591be9060826fa43b8c79b538e963afd5245",
+    "测试/前端/HarmonyOS/Unit/RunDeletion.mjs/RunDeletion.mjs": "f759f59adcae5e7e528ae51af9e2aaf2112bac1df69258d35f14a833871b7f25",
+    "测试/前端/HarmonyOS/Unit/Deletion.test.cjs/Deletion.test.cjs": "e6cc929f7dc2d103ae45e40569be73ed32617ab969123d7d51674f2940cbcbf3",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "status": "failed",
+  "results": [
+    {
+      "name": "mobile conversation touch navigation",
+      "status": "passed"
+    },
+    {
+      "name": "touch send remains usable",
+      "status": "passed"
+    },
+    {
+      "name": "keyboard visible viewport keeps composer inside",
+      "status": "failed",
+      "error": "keyboard must retain readable message area"
+    },
+    {
+      "name": "keyboard viewport offset keeps app visible",
+      "status": "passed"
+    },
+    {
+      "name": "pinch zoom retains document layout",
+      "status": "passed"
+    },
+    {
+      "name": "layout 320x568",
+      "status": "passed"
+    },
+    {
+      "name": "layout 390x844",
+      "status": "passed"
+    },
+    {
+      "name": "layout 430x932",
+      "status": "passed"
+    },
+    {
+      "name": "layout 844x390",
+      "status": "failed",
+      "error": "conversation history must remain visible"
+    },
+    {
+      "name": "touch return to conversation list",
+      "status": "passed"
+    },
+    {
+      "name": "mobile authentication modal fits visible viewport",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font zh-CN",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font zh-TW",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font bo",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font en",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ja",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font fr",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font es",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font de",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ru",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ko",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme light",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme dark",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme system",
+      "status": "passed"
+    },
+    {
+      "name": "no unhandled page errors",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "scope": "Chrome mobile/touch and explicit visualViewport fixture; not physical iOS/Android keyboard"
+}

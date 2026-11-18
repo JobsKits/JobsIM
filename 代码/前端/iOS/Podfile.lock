@@ -193,30 +193,30 @@ DEPENDENCIES:
   - ESPullToRefresh (from `Vendor/ESPullToRefresh-2.9.3`)
   - GKNavigationBarSwift (from `Vendor/GKNavigationBarSwift-1.7.3`)
   - GRDB.swift (from `Vendor/GRDB.swift-7.11.1`)
-  - "JobsByQuartzCore (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByQuartzCore@Pods`)"
-  - "JobsByUIKit (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByUIKit@Pods`)"
-  - "JobsByWebKit (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByWebKit@Pods`)"
-  - "JobsGetWindow (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsGetWindow@Pods`)"
-  - "JobsImageTools (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsImageTools@Pods`)"
+  - "JobsByQuartzCore (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByQuartzCore@Pods`)"
+  - "JobsByUIKit (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByUIKit@Pods`)"
+  - "JobsByWebKit (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByWebKit@Pods`)"
+  - "JobsGetWindow (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsGetWindow@Pods`)"
+  - "JobsImageTools (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsImageTools@Pods`)"
   - JobsIMCore (from `JobsByPods/JobsIMCore`)
   - JobsIMStorage (from `JobsByPods/JobsIMStorage`)
   - JobsIMTransport (from `JobsByPods/JobsIMTransport`)
-  - "JobsInheritance (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsInheritance@Pods`)"
-  - "Jobsl10n (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/Jobsl10n@Pods`)"
-  - "JobsNavBar (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNavBar@Pods`)"
-  - "JobsNetworking (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNetworking@Pods`)"
-  - "JobsNetworking/Async (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNetworking@Pods`)"
-  - "JobsScale (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsScale@Pods`)"
-  - "JobsSwiftBaseDefines (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftBaseDefines@Pods`)"
-  - "JobsSwiftBlock (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftBlock@Pods`)"
-  - "JobsSwiftDebugTools (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftDebugTools@Pods`)"
-  - "JobsSwiftDSL (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftDSL@Pods`)"
-  - "JobsSwiftFoundation (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftFoundation@Pods`)"
-  - "JobsSwiftStandardLibrary (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftStandardLibrary@Pods`)"
-  - "JobsSwiftTimer (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftTimer@Pods`)"
-  - "JobsTextTools (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsTextTools@Pods`)"
-  - "JobsToast (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsToast@Pods`)"
-  - "JobsViewPush (from `../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsViewPush@Pods`)"
+  - "JobsInheritance (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsInheritance@Pods`)"
+  - "Jobsl10n (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/Jobsl10n@Pods`)"
+  - "JobsNavBar (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNavBar@Pods`)"
+  - "JobsNetworking (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNetworking@Pods`)"
+  - "JobsNetworking/Async (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNetworking@Pods`)"
+  - "JobsScale (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsScale@Pods`)"
+  - "JobsSwiftBaseDefines (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftBaseDefines@Pods`)"
+  - "JobsSwiftBlock (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftBlock@Pods`)"
+  - "JobsSwiftDebugTools (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftDebugTools@Pods`)"
+  - "JobsSwiftDSL (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftDSL@Pods`)"
+  - "JobsSwiftFoundation (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftFoundation@Pods`)"
+  - "JobsSwiftStandardLibrary (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftStandardLibrary@Pods`)"
+  - "JobsSwiftTimer (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftTimer@Pods`)"
+  - "JobsTextTools (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsTextTools@Pods`)"
+  - "JobsToast (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsToast@Pods`)"
+  - "JobsViewPush (from `../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsViewPush@Pods`)"
   - Kingfisher (from `Vendor/Kingfisher-8.14.0`)
   - lottie-ios (from `Vendor/lottie-ios-4.6.1`)
   - Moya (from `Vendor/Moya-15.0.0`)
@@ -253,15 +253,15 @@ EXTERNAL SOURCES:
   GRDB.swift:
     :path: Vendor/GRDB.swift-7.11.1
   JobsByQuartzCore:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByQuartzCore@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByQuartzCore@Pods"
   JobsByUIKit:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByUIKit@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByUIKit@Pods"
   JobsByWebKit:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByWebKit@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsByWebKit@Pods"
   JobsGetWindow:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsGetWindow@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsGetWindow@Pods"
   JobsImageTools:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsImageTools@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsImageTools@Pods"
   JobsIMCore:
     :path: JobsByPods/JobsIMCore
   JobsIMStorage:
@@ -269,35 +269,35 @@ EXTERNAL SOURCES:
   JobsIMTransport:
     :path: JobsByPods/JobsIMTransport
   JobsInheritance:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsInheritance@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsInheritance@Pods"
   Jobsl10n:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/Jobsl10n@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/Jobsl10n@Pods"
   JobsNavBar:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNavBar@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNavBar@Pods"
   JobsNetworking:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNetworking@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsNetworking@Pods"
   JobsScale:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsScale@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsScale@Pods"
   JobsSwiftBaseDefines:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftBaseDefines@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftBaseDefines@Pods"
   JobsSwiftBlock:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftBlock@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftBlock@Pods"
   JobsSwiftDebugTools:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftDebugTools@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftDebugTools@Pods"
   JobsSwiftDSL:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftDSL@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftDSL@Pods"
   JobsSwiftFoundation:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftFoundation@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftFoundation@Pods"
   JobsSwiftStandardLibrary:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftStandardLibrary@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftStandardLibrary@Pods"
   JobsSwiftTimer:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftTimer@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsSwiftTimer@Pods"
   JobsTextTools:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsTextTools@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsTextTools@Pods"
   JobsToast:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsToast@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsToast@Pods"
   JobsViewPush:
-    :path: "../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsViewPush@Pods"
+    :path: "../../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods/JobsViewPush@Pods"
   Kingfisher:
     :path: Vendor/Kingfisher-8.14.0
   lottie-ios:
@@ -377,6 +377,6 @@ SPEC CHECKSUMS:
   SwiftMessages: bfefe945bc05ce7cd328303d53d0d1849e29109d
   YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
 
-PODFILE CHECKSUM: e602da0143641269bb56548bcd3fa1cbcdb6f3cb
+PODFILE CHECKSUM: 3ba5ba4200ac23235182f338b0d4df1a1a630c6e
 
 COCOAPODS: 1.17.0

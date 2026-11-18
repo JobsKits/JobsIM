@@ -1,0 +1,63 @@
+{
+  "buildDirectory": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AccountDeletion/1794850284064-66969/Production",
+  "assets": [
+    {
+      "name": "assets/index-CI7uKxyI.js",
+      "sha256": "441b213a8be9f8db4fb922f8c4f789fed011e24986c5af89e89f01328ae2dfbf",
+      "bytes": 611696
+    },
+    {
+      "name": "assets/index-BIH98Oqq.css",
+      "sha256": "9654206a36fda2c7a1e63a9cd4d4571f950c8b06391f86773f77cc943e3feb1c",
+      "bytes": 28109
+    }
+  ],
+  "checks": {
+    "02-注销最终": 23,
+    "03-改密回归": [
+      "original non-secret responsibility commits before HTTP; success retires only its original family",
+      "committed lost response is recovered with original nonce and anonymous result lookup, never another write",
+      "a dependency 403 after preparation cannot release the original family gate",
+      "pre-delivery loss plus automatic original 404 creates nothing; explicit same-family retry keeps the nonce",
+      "successor family cannot authorize an unseen old intent or be cleared by an old completed result",
+      "cold original metadata remains usable without a session, while prepared continuation stays anonymous",
+      "capability withdrawal permits original result checks but refuses unseen publication",
+      "OTP wait/capability checks reject a changed original family before authorized HTTP",
+      "malformed success and late-family results never confirm or clear replacement credentials",
+      "exact first rejection keeps a rejected original and never invokes automatic refresh",
+      "unknown responsibility gates ordinary APIs and survives a reopened action service",
+      "strict IndexedDB abort precedes any first publication and forbids leaked password metadata",
+      "same-operation wrong password proof only reads and does not invent a replacement intent",
+      "real lifecycle lock cancels an old queued action after family replacement without any HTTP",
+      "NFC proof handling preserves significant spaces and never persists proof material",
+      "unexpected fields supplied with identity cannot leak into durable metadata",
+      "an IndexedDB gate wait cannot borrow a successor family for an older ordinary API request",
+      "cold BFF context learning cannot reactivate the family with durable unknown responsibility",
+      "actual anonymous fetch ignores response Set-Cookie and never sends the successor browser Cookie",
+      "actual form clears proof fields immediately and requires explicit risk consent",
+      "actual submit includes administrator OTP only on fresh authorization and exposes a truthful changed result",
+      "ten languages and three themes keep the full form and original empty/reload state within mobile width"
+    ],
+    "04-导出回归": [
+      "filename and complete ZIP validation reject traversal, controls, duplicates, truncated streams and trailing bytes",
+      "actual apiFile uses cookie/family/header authentication, validates ZIP and rejects MIME/size/truncation before handoff",
+      "lost successful create is reconciled by original-body result with no second creating POST",
+      "unreached original stays read-only on check and only explicit retry reuses its exact ID/body",
+      "cancel original is durable and stable; checking an unknown cancellation never resends it",
+      "capability withdrawal, frozen namespace and corrupt body digest each block creating writes",
+      "capability withdrawal still allows original cancellation but blocks both new creation and downloads",
+      "late create from a retired family cannot bind a job or change the original payload",
+      "Web Locks queued original retry is fenced before any write after context retirement",
+      "strict metadata projection preserves decimal counters, drops unknown secrets and rejects wrong epoch/job",
+      "download ticket is RAM/header-only and never persisted in task originals",
+      "browser download/ZIP-directory limits have a specific localized error and never hand oversized files to save",
+      "rendered task lifecycle creates, downloads via a short-lived Blob URL and requires explicit cancellation confirmation",
+      "rendered unknown task offers read-only check and explicit same-request retry; failed current GET clears its prior downloadable view",
+      "unmounted old-family download completion cannot create a Blob URL or publish into the next account",
+      "a missing Intl locale uses explicit local numeric dates rather than the browser host language",
+      "ten complete languages inherit all three native Web theme settings without mobile horizontal overflow",
+      "rendered capability withdrawal preserves existing original check/cancel controls while disabling create/download",
+      "unsupported connection has a truthful empty/connect/reload state and no synthetic ZIP"
+    ]
+  }
+}

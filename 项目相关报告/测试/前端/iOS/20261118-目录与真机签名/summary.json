@@ -1,0 +1,104 @@
+{
+  "date": "2026-11-18",
+  "scope": "iOS project filesystem synchronization and physical-device signing/install/launch; no XCTest or complete business-flow rerun",
+  "modifiedFiles": [
+    "代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj",
+    "代码/前端/iOS/Scripts/GenerateProject.rb",
+    "代码/前端/iOS/README.md"
+  ],
+  "projectStructure": {
+    "status": "passed",
+    "model": "PBXFileSystemSynchronizedRootGroup",
+    "path": "JobsIM",
+    "physicalChildren": [
+      "App",
+      "Resource",
+      "Services",
+      "UI"
+    ],
+    "exceptions": [
+      "Resource/Info.plist",
+      "Resource/Simulator.entitlements"
+    ],
+    "targetUUIDsPreserved": true,
+    "podsAndTestPhasesPreserved": true,
+    "testSourcesAndResourcesPreserved": true,
+    "baseConfigsPreserved": true,
+    "generatorExistingAndFreshIdempotent": true,
+    "visualXcodeVerified": false,
+    "visualReason": "Xcode scripting model opened the workspace, but AX exposed zero windows and CGWindowList had no visible Xcode window; physical-tree/model/actual compiler inputs are the evidence, no screenshot verification claimed"
+  },
+  "deviceBuild": {
+    "status": "passed",
+    "exitCode": 0,
+    "elapsedSeconds": 118.42,
+    "diskInitialBytes": 9810513920,
+    "diskMinimumBytes": 8859475968,
+    "diskFinalBytes": 8862363648,
+    "abortedForDisk": false,
+    "derivedData": "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw",
+    "physicalSwiftSources": 78,
+    "compiledSwiftSources": 79,
+    "additionalXcodeGeneratedSources": [
+      "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Intermediates.noindex/JobsIM.build/Debug-iphoneos/JobsIM.build/DerivedSources/GeneratedAssetSymbols.swift"
+    ],
+    "allPhysicalSourcesCompiled": true,
+    "localizationCount": 10,
+    "assetsPresent": true,
+    "infoProcessed": true,
+    "simulatorEntitlementsCopied": false
+  },
+  "signature": {
+    "status": "passed",
+    "verificationExitCode": 0,
+    "team": "K5692KLW75",
+    "bundleIdentifier": "com.jobs.im",
+    "identitySHA1": "624B5DAF975AACD47C00DCB0EEC845CCC35FD400",
+    "existingIdentityReused": true,
+    "newIdentityOrAccountCreated": false,
+    "profileUUID": "f43390e0-d5f9-443e-b6a6-173baa819c9a",
+    "profileExpiry": "2026-11-25T02:54:33",
+    "profileIncludesDevice": true,
+    "entitlements": {
+      "application-identifier": "K5692KLW75.com.jobs.im",
+      "com.apple.developer.team-identifier": "K5692KLW75",
+      "get-task-allow": true
+    }
+  },
+  "installation": {
+    "status": "passed",
+    "deviceUDID": "00008110-000625583EE3801E",
+    "model": "iPhone 13",
+    "os": "iOS 27.2.1",
+    "bundleIdentifier": "com.jobs.im",
+    "installationURL": "file:///private/var/containers/Bundle/Application/8D70030D-D440-42E5-93D5-82175A71B0FF/JobsIM.app/",
+    "uninstallExecuted": false,
+    "userDataDeletionExecuted": false
+  },
+  "launch": {
+    "status": "passed",
+    "firstAttempt": "device SBMainWorkspace denied untrusted profile; original launch.json/log preserved",
+    "userAction": "user confirmed trusting the existing developer profile and leaving device unlocked",
+    "retryCountAfterUserConfirmation": 1,
+    "rebuildOrReinstallBeforeRetry": false,
+    "processIdentifier": 85059,
+    "runningInFinalQuery": true,
+    "runningExecutableMatchesInstalledProduct": true
+  },
+  "inputs": {
+    "buildOwnedSourceAndProjectCount": 111,
+    "finalOwnedSourceConfigDocCount": 118,
+    "drift": []
+  },
+  "unverified": [
+    "Xcode navigator visual appearance",
+    "new XCTest execution after project migration",
+    "complete physical-device business flows",
+    "other devices/OS/signing teams"
+  ],
+  "product": {
+    "appPath": "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Products/Debug-iphoneos/JobsIM.app",
+    "binarySHA256": "11d0966feace9380d3852ae16b198b2281ce533f04fac9f5a963276965782a0c",
+    "debugDylibSHA256": "ac8e6694348ab76de95d96a145bfe92d014c09864fafc617f5f831999d390d30"
+  }
+}

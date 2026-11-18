@@ -1,0 +1,12 @@
+{
+  "time": "2026-11-18T17:22:23.081639+08:00",
+  "documents": 22,
+  "links": 1777,
+  "missing": [],
+  "acceptanceUnchanged": 243,
+  "tocDocuments": 273,
+  "actualState": "unit105 green scopedbuild16; UI12 specified theme/profile/emptygreen with4otherfailures; UI13AuthExitgreen with1otherfailure; newPreview/profile-full-save currentbuild19 pending",
+  "backendInput": 236,
+  "backendCredentialSnapshot": "credential-final-runtime.json",
+  "centralUnchanged": true
+}

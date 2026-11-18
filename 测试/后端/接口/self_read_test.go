@@ -279,8 +279,8 @@ func TestSelfReadConcurrentObservationUnionUsesCASRetry(t *testing.T) {
 	}
 	close(release)
 	for range 2 {
-		if <-done != nil {
-			t.Fatal("concurrent observed-ID union did not resolve through a fresh owner collect")
+		if err := <-done; err != nil {
+			t.Fatal("concurrent observed-ID union did not resolve through a fresh owner collect:", err)
 		}
 	}
 	state, err := app.loadSelfReadState(ctx, app.DB, user, conversation)

@@ -1,0 +1,4 @@
+后端回归：34份外置测试；真实数据库用例仍需显式隔离环境。
+ok  	jobsim/backend	0.641s
+?   	jobsim/backend/cmd/jobsimd	[no test files]
+?   	jobsim/backend/cmd/jobsimops	[no test files]

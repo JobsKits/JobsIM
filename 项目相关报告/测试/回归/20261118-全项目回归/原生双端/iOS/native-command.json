@@ -1,0 +1,14 @@
+[
+  "/usr/bin/xcodebuild",
+  "test-without-building",
+  "-xctestrun",
+  "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/Regression122-20261118.xctestrun",
+  "-destination",
+  "platform=iOS Simulator,id=736D4534-6DBF-42A9-97A9-8DABFC208987",
+  "-parallel-testing-enabled",
+  "NO",
+  "-maximum-concurrent-test-simulator-destinations",
+  "1",
+  "-resultBundlePath",
+  "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/\u9879\u76ee\u76f8\u5173\u62a5\u544a/\u6d4b\u8bd5/\u56de\u5f52/20261118-\u5168\u9879\u76ee\u56de\u5f52/\u539f\u751f\u53cc\u7aef/iOS/native.xcresult"
+]

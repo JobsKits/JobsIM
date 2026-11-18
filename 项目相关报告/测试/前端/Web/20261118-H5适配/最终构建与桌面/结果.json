@@ -1,0 +1,30 @@
+[
+  {
+    "name": "TypeScript",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "cwd": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web",
+    "code": 0
+  },
+  {
+    "name": "Vite",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/node_modules/vite/bin/vite.js",
+      "build",
+      "--outDir",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/Web/20261118-H5适配/最终构建与桌面/Dist"
+    ],
+    "cwd": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web",
+    "code": 0
+  },
+  {
+    "name": "Desktop",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/browser.cjs/browser.cjs"
+    ],
+    "cwd": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM",
+    "code": 0
+  }
+]

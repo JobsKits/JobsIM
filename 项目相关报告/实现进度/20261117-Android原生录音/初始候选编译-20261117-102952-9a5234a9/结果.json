@@ -1,0 +1,6 @@
+{
+  "status": "preflight_failed",
+  "exitCode": 1,
+  "gradleStarted": false,
+  "reason": "Runner incorrectly expected platforms/android-37/android.jar; installed warm platform is android-37.0. No toolchain or SDK changed."
+}

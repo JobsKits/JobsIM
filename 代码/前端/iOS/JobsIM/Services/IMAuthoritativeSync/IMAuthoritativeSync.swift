@@ -57,6 +57,7 @@ final class IMAuthoritativeSync {
                     let obsolete = [
                         "SNAPSHOT_EXPIRED", "SNAPSHOT_INVALIDATED", "SYNC_SNAPSHOT_EXPIRED",
                         "SYNC_SNAPSHOT_INVALIDATED", "SYNC_PERMISSION_CHANGED",
+                        "SYNC_PAGE_NOT_INSTALLABLE",
                     ].contains(code)
                     try? store.syncRestrict(
                         namespace: namespace, reason: code, resetSnapshot: obsolete)
@@ -199,6 +200,14 @@ final class IMAuthoritativeSync {
 
     private func snapshot(_ original: IMJSON, binding: IMJSON) async throws {
         var state = original
+        // 兼容修复前保留的不可安装快照；正常重试必须申请新快照，不复用旧幂等请求。
+        if state["restriction"] == .string("SYNC_PAGE_NOT_INSTALLABLE"),
+            state["snapshotIntent"] != .null || state["manifest"] != .null
+        {
+            try store.syncRestrict(
+                namespace: namespace, reason: "SYNC_PAGE_NOT_INSTALLABLE", resetSnapshot: true)
+            state = try store.syncState(namespace: namespace)
+        }
         let schema = state["schemaVersion"].text.isEmpty ? "1" : state["schemaVersion"].text
         if state["snapshotIntent"] == .null {
             let intent: IMJSON = .object([

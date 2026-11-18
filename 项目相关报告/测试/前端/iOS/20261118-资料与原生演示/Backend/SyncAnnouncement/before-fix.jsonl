@@ -1,0 +1,9 @@
+{"Time":"2026-11-18T17:49:15.853194+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-18T17:49:16.371067+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate"}
+{"Time":"2026-11-18T17:49:16.371183+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate","Output":"=== RUN   TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:49:16.894913+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate","Output":"    sync_announcement_capture_test.go:25: direct/self/group baseline is not installable\n","OutputType":"error"}
+{"Time":"2026-11-18T17:49:16.942793+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate","Output":"--- FAIL: TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate (0.57s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:49:16.942849+08:00","Action":"fail","Package":"jobsim/backend","Test":"TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate","Elapsed":0.57}
+{"Time":"2026-11-18T17:49:16.942885+08:00","Action":"output","Package":"jobsim/backend","Output":"FAIL\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:49:16.944089+08:00","Action":"output","Package":"jobsim/backend","Output":"FAIL\tjobsim/backend\t1.091s\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:49:16.944115+08:00","Action":"fail","Package":"jobsim/backend","Elapsed":1.091}

@@ -1,0 +1,391 @@
+{
+  "at": "2026-11-18T00:44:28.766Z",
+  "host": "darwin",
+  "work": "/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o",
+  "sourceBefore": {
+    "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "608802de34668315149e3819339a3102ad7a5f57b6b8be21340e7eaf717be76e",
+    "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "f00c5b410fb0815d7574cd9a1fe0519653233abe7326a7527a46ea907248c7af",
+    "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "9750d70ee04610dd2b4088717e070ea33cd0728ecdbc2a4f8f11741c5d6ba326",
+    "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "e0ed59d3f7609192ae95306f78c528d6e6c8de4546df23ae20491cd25e058594",
+    "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "a6b16c6ca63300e61badcbc2fdd816807449a2c80026755f79df4d947e6a2499",
+    "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "4ede2a2607bc977e093cece65d41ea9ea0b7fbec23aeb98c5b188c0cbc8e3530",
+    "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "209d9bf5ada5cce8ce2382a9a84f42a2ae4fa82744bb587f556be986e4317618",
+    "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "bc406b390501647d75f973906c2aeacc117e3bee9b158a50eb78460c69fa1f5e"
+  },
+  "sourceAfter": {
+    "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "608802de34668315149e3819339a3102ad7a5f57b6b8be21340e7eaf717be76e",
+    "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "f00c5b410fb0815d7574cd9a1fe0519653233abe7326a7527a46ea907248c7af",
+    "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "9750d70ee04610dd2b4088717e070ea33cd0728ecdbc2a4f8f11741c5d6ba326",
+    "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "e0ed59d3f7609192ae95306f78c528d6e6c8de4546df23ae20491cd25e058594",
+    "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "a6b16c6ca63300e61badcbc2fdd816807449a2c80026755f79df4d947e6a2499",
+    "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "4ede2a2607bc977e093cece65d41ea9ea0b7fbec23aeb98c5b188c0cbc8e3530",
+    "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "209d9bf5ada5cce8ce2382a9a84f42a2ae4fa82744bb587f556be986e4317618",
+    "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "bc406b390501647d75f973906c2aeacc117e3bee9b158a50eb78460c69fa1f5e"
+  },
+  "pass": 46,
+  "fail": 0,
+  "skip": 0,
+  "results": [
+    {
+      "name": "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:syntax",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:help",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "JobsIM Ubuntu 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n用法：本平台部署脚本 [menu|check|plan|status|run|backup|stop|undeploy] [--mode local|server] [--state 私有绝对路径] [--yes] [--no-backup]。--yes不跳过反部署清理确认。\n"
+    },
+    {
+      "name": "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:host-refused",
+      "passed": true,
+      "expected": 2,
+      "exitCode": 2,
+      "signal": null,
+      "output": "JobsIM Ubuntu 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n须在对应Linux发行版使用Bash4+；当前宿主未执行Linux部署。\n"
+    },
+    {
+      "name": "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:syntax",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:help",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "JobsIM Ubuntu 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n用法：本平台部署脚本 [menu|check|plan|status|run|backup|stop|undeploy] [--mode local|server] [--state 私有绝对路径] [--yes] [--no-backup]。--yes不跳过反部署清理确认。\n"
+    },
+    {
+      "name": "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:host-refused",
+      "passed": true,
+      "expected": 2,
+      "exitCode": 2,
+      "signal": null,
+      "output": "JobsIM Ubuntu 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n须在对应Linux发行版使用Bash4+；当前宿主未执行Linux部署。\n"
+    },
+    {
+      "name": "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:syntax",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:help",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "JobsIM Debian 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n用法：本平台部署脚本 [menu|check|plan|status|run|backup|stop|undeploy] [--mode local|server] [--state 私有绝对路径] [--yes] [--no-backup]。--yes不跳过反部署清理确认。\n"
+    },
+    {
+      "name": "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:host-refused",
+      "passed": true,
+      "expected": 2,
+      "exitCode": 2,
+      "signal": null,
+      "output": "JobsIM Debian 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n须在对应Linux发行版使用Bash4+；当前宿主未执行Linux部署。\n"
+    },
+    {
+      "name": "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:syntax",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:help",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "JobsIM Debian 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n用法：本平台部署脚本 [menu|check|plan|status|run|backup|stop|undeploy] [--mode local|server] [--state 私有绝对路径] [--yes] [--no-backup]。--yes不跳过反部署清理确认。\n"
+    },
+    {
+      "name": "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:host-refused",
+      "passed": true,
+      "expected": 2,
+      "exitCode": 2,
+      "signal": null,
+      "output": "JobsIM Debian 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n须在对应Linux发行版使用Bash4+；当前宿主未执行Linux部署。\n"
+    },
+    {
+      "name": "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:syntax",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:help",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "JobsIM RockyLinux 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n用法：本平台部署脚本 [menu|check|plan|status|run|backup|stop|undeploy] [--mode local|server] [--state 私有绝对路径] [--yes] [--no-backup]。--yes不跳过反部署清理确认。\n"
+    },
+    {
+      "name": "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:host-refused",
+      "passed": true,
+      "expected": 2,
+      "exitCode": 2,
+      "signal": null,
+      "output": "JobsIM RockyLinux 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n须在对应Linux发行版使用Bash4+；当前宿主未执行Linux部署。\n"
+    },
+    {
+      "name": "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:syntax",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:help",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "JobsIM RockyLinux 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n用法：本平台部署脚本 [menu|check|plan|status|run|backup|stop|undeploy] [--mode local|server] [--state 私有绝对路径] [--yes] [--no-backup]。--yes不跳过反部署清理确认。\n"
+    },
+    {
+      "name": "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:host-refused",
+      "passed": true,
+      "expected": 2,
+      "exitCode": 2,
+      "signal": null,
+      "output": "JobsIM RockyLinux 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n须在对应Linux发行版使用Bash4+；当前宿主未执行Linux部署。\n"
+    },
+    {
+      "name": "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:syntax",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:help",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "JobsIM AlibabaCloudLinux 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n用法：本平台部署脚本 [menu|check|plan|status|run|backup|stop|undeploy] [--mode local|server] [--state 私有绝对路径] [--yes] [--no-backup]。--yes不跳过反部署清理确认。\n"
+    },
+    {
+      "name": "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh:host-refused",
+      "passed": true,
+      "expected": 2,
+      "exitCode": 2,
+      "signal": null,
+      "output": "JobsIM AlibabaCloudLinux 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n须在对应Linux发行版使用Bash4+；当前宿主未执行Linux部署。\n"
+    },
+    {
+      "name": "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:syntax",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:help",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "JobsIM AlibabaCloudLinux 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n用法：本平台部署脚本 [menu|check|plan|status|run|backup|stop|undeploy] [--mode local|server] [--state 私有绝对路径] [--yes] [--no-backup]。--yes不跳过反部署清理确认。\n"
+    },
+    {
+      "name": "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh:host-refused",
+      "passed": true,
+      "expected": 2,
+      "exitCode": 2,
+      "signal": null,
+      "output": "JobsIM AlibabaCloudLinux 原生成对部署：fzf选择本地穿透／服务器；反部署单独选择保留或备份／清零清理。\n影响：本项目独立实例、机器级工具缓存；不安装系统服务、不改全局PATH、CA或防火墙。关闭运行终端，服务将结束。\n须在对应Linux发行版使用Bash4+；当前宿主未执行Linux部署。\n"
+    },
+    {
+      "name": "eight native implementations agree except distro/default action",
+      "passed": true
+    },
+    {
+      "name": "created-origin",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "legacy-preserved",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "缺可信原点清单；保留旧实例，未完成反部署。\n"
+    },
+    {
+      "name": "wipe-protected-journal-keys-source",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-2/instance/owner\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-2/instance/Secrets\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-2/instance/JournalDatabase\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-2/instance/TLS\n反部署部分完成；受保护journal／密钥、复用或未知资源保留。禁止将此实例当新部署重建。\n"
+    },
+    {
+      "name": "repeat-partial",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-3/instance/owner\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-3/instance/Secrets\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-3/instance/JournalDatabase\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-3/instance/TLS\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-3/instance/owner\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-3/instance/Secrets\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-3/instance/JournalDatabase\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-3/instance/TLS\n反部署部分完成；受保护journal／密钥、复用或未知资源保留。禁止将此实例当新部署重建。\n反部署部分完成；受保护journal／密钥、复用或未知资源保留。禁止将此实例当新部署重建。\n"
+    },
+    {
+      "name": "reused-data-preserved",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-4/instance/owner\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-4/instance/Secrets\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-4/instance/JournalDatabase\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-4/instance/TLS\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-4/instance/Application\n反部署部分完成；受保护journal／密钥、复用或未知资源保留。禁止将此实例当新部署重建。\n"
+    },
+    {
+      "name": "symlink-ancestor",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "路径含符号链接祖先，保留并停止。\n"
+    },
+    {
+      "name": "symlink-tree",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "hardlink-tree",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "发现硬链接，保留资源。\n"
+    },
+    {
+      "name": "unknown-top",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "未知顶层资源保留，反部署未完成：ForeignProject\n"
+    },
+    {
+      "name": "changed-inode",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "资源身份偏离清单，保留：Application\n"
+    },
+    {
+      "name": "backup-failure",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "post-confirm-mutation",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "确认后的源内容变化，源与原备份保留，不重新备份后续删。\n"
+    },
+    {
+      "name": "interruption-resume",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-12/instance/owner\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-12/instance/Secrets\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-12/instance/JournalDatabase\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-12/instance/TLS\n已有部署/停止事务锁；不删除锁或接管未知事务。请核对实例Processes和Lock归属。\n反部署部分完成；受保护journal／密钥、复用或未知资源保留。禁止将此实例当新部署重建。\n"
+    },
+    {
+      "name": "retain-no-removal",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "仅停止；部署资料和数据保留，未执行反部署清理。\n"
+    },
+    {
+      "name": "server-reject-loopback",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "服务器模式拒绝回环或监听地址，不能把本地模式贴成服务器标签。\n"
+    },
+    {
+      "name": "server-real-origin",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": ""
+    },
+    {
+      "name": "confirmation-eof",
+      "passed": true,
+      "expected": 130,
+      "exitCode": 130,
+      "signal": null,
+      "output": "反部署实例：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-confirmation-eof/instance\n处理：wipe；仅清单created资源；JournalDatabase、Secrets、TLS、外置备份和恢复钥保留。\n恢复后果：清理程序、业务数据库与媒体后，本实例不可直接继续运行；独立journal不得回滚。\n回车确认此准确范围；任何非空输入或EOF取消（--yes不跳过）："
+    },
+    {
+      "name": "confirmation-nonempty",
+      "passed": true,
+      "expected": 130,
+      "exitCode": 130,
+      "signal": null,
+      "output": "反部署实例：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-confirmation-nonempty/instance\n处理：wipe；仅清单created资源；JournalDatabase、Secrets、TLS、外置备份和恢复钥保留。\n恢复后果：清理程序、业务数据库与媒体后，本实例不可直接继续运行；独立journal不得回滚。\n回车确认此准确范围；任何非空输入或EOF取消（--yes不跳过）："
+    },
+    {
+      "name": "confirmation-enter",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "反部署实例：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-confirmation-enter/instance\n处理：wipe；仅清单created资源；JournalDatabase、Secrets、TLS、外置备份和恢复钥保留。\n恢复后果：清理程序、业务数据库与媒体后，本实例不可直接继续运行；独立journal不得回滚。\n回车确认此准确范围；任何非空输入或EOF取消（--yes不跳过）："
+    },
+    {
+      "name": "cold-cms-backup-bytes",
+      "passed": true,
+      "expected": 0,
+      "exitCode": 0,
+      "signal": null,
+      "output": "已外置解密并逐文件验真：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-cold-backup/Backups/JobsIM-undeploy-20261118-084427-150.cms\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-cold-backup/instance/owner\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-cold-backup/instance/Secrets\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-cold-backup/instance/JournalDatabase\n保留资源／原点尚未完全还原：/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-hTs17o/case-cold-backup/instance/TLS\n反部署部分完成；受保护journal／密钥、复用或未知资源保留。禁止将此实例当新部署重建。\n"
+    },
+    {
+      "name": "source-stable",
+      "passed": true
+    }
+  ],
+  "scope": "Bash syntax, non-Linux refusal and actual private file operations. Darwin stat flags adapted; process lifecycle explicit stubs. No target Linux, real PG/NATS, network tunnel, package install or actual instance touched."
+}

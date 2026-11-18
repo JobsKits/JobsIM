@@ -1,0 +1,11 @@
+{
+  "started": "2026-11-16T14:58:10.465Z",
+  "finished": "2026-11-16T14:58:50.958Z",
+  "code": 0,
+  "signal": null,
+  "reason": "completed",
+  "minFree": 25286094848,
+  "goFlags": "-p=1",
+  "goToolchain": "local",
+  "networkModules": "off"
+}

@@ -1,0 +1,231 @@
+{
+  "frozenAt": "2026-11-17T07:33:46.238942+00:00",
+  "android": {
+    "report": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android声明严格DTO-20261117-152503-67efeeb1",
+    "inputCount": 147,
+    "currentSourceDifferences": [],
+    "actualJvm": {
+      "tests": 50,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "jvmSuites": 10,
+    "instrumentationCompiled": 101,
+    "instrumentationExecuted": false,
+    "instrumentationMethods": {
+      "com.jobs.im.AdmissionFenceTest": [
+        "missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox"
+      ],
+      "com.jobs.im.AuthoritativeSyncTest": [
+        "auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage",
+        "changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult",
+        "exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives",
+        "globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval",
+        "globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive",
+        "incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart",
+        "localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody",
+        "sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof"
+      ],
+      "com.jobs.im.CollaborationLifecycleTest": [
+        "realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference"
+      ],
+      "com.jobs.im.DatabaseIsolationTest": [
+        "liveOutboxSurvivesIndependentDemoWrites"
+      ],
+      "com.jobs.im.DiscoveryCollaborationUiTest": [
+        "nativeFavoritesExactSourceMentionsAndAnnouncementControlsReachRealBackend"
+      ],
+      "com.jobs.im.DiscoveryLifecycleTest": [
+        "realLookupPagesKeepOpaqueCursorsAndReauthorizeAnUnlistedSource"
+      ],
+      "com.jobs.im.ForwardLifecycleTest": [
+        "originalForwardSurvivesUnknownRepliesWithoutNewProofAndScrubsLostSources"
+      ],
+      "com.jobs.im.ForwardUiTest": [
+        "nativeSourceSelectionAndExplicitOriginalRetryCreateRealReferences"
+      ],
+      "com.jobs.im.GroupLifecycleTest": [
+        "coldJoinReusesOneNonceAndRequiresTheOriginalReenteredCode",
+        "lateSuccessfulMutationCannotPublishIntoAnotherIdentity",
+        "laterFamilyOrDeviceCannotPublishTheOriginal404AtSameEpoch",
+        "legacyResponsibilityWithoutOriginalFamilyStaysReadOnly",
+        "lostMutationUsesOnlyOriginalResultAndTokensRemainRamOnly",
+        "originalTransferNeverRebasesAfterConfirmation",
+        "roleWithdrawalClearsVisibleInvitesAndRamTokens"
+      ],
+      "com.jobs.im.LiveApiTest": [
+        "verifiedTlsTwoAccountMessageContract"
+      ],
+      "com.jobs.im.Migration8To9Test": [
+        "originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification"
+      ],
+      "com.jobs.im.MigrationHistoryLifecycleTest": [
+        "durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200",
+        "newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait",
+        "validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody"
+      ],
+      "com.jobs.im.ModelClosureTest": [
+        "realNativeModelKeepsOriginalOperationsAndRelationshipGenerations"
+      ],
+      "com.jobs.im.NativeSelfStateHttpsTest": [
+        "nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps",
+        "realDraftLossUsesReadonlyOriginalBodyAndRetiredSourceKeepsIndependentText",
+        "realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue"
+      ],
+      "com.jobs.im.NativeSessionHttpsTest": [
+        "nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope",
+        "realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair",
+        "realLostRefreshAndThreeIntentClosureRetireUnknownAncestors"
+      ],
+      "com.jobs.im.NativeSessionLifecycleTest": [
+        "committedPairHandoffRecoversAndRetiresOriginalOutboxWithoutChangingPayload",
+        "concurrentExpiredRequestsShareOneRotationAndPublishOnlyDurablePair",
+        "initialUnknownChainKeepsOriginalIdsAndRejectsLateDelivery",
+        "lateEpochInvalidationAndLegacyCommitCannotEraseRecoveredPair",
+        "lateExpiredBusinessCannotBorrowReplacementFamilyAndOther401NeverRefreshes",
+        "retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch",
+        "secureWriteFailureAndUnknownRefreshStayBlockedAcrossRestart"
+      ],
+      "com.jobs.im.NativeUiTest": [
+        "realConversationGroupAndSettingsRenderInNativeActivity"
+      ],
+      "com.jobs.im.NotificationPrivacyTest": [
+        "localAlertHidesBodyAndRejectsAnotherNamespace"
+      ],
+      "com.jobs.im.OwnDeletionLifecycleTest": [
+        "finalLocalErasureKeepsOtherAccountsAndThePublicResponsibility",
+        "legacyCancelWithoutVersionRemainsReadOnlyAcrossReload",
+        "pendingOriginalCanPersistUnknownBeforeResumingTheSameRequest",
+        "preparedDependency403CannotReleaseTheOriginalGate",
+        "repeatedNewerQueriesNeverRebaseOriginalCancellation",
+        "unknownCancelRequiresQueryBeforeAnyNewProofAndKeepsOriginalVersion",
+        "unknownCancellationRetainsOneNonceAndQueriesItsOriginalResult",
+        "unknownSurvivesReopenWithoutPasswordOtpOrFamilyToken",
+        "withdrawnCapabilityKeepsUnknownLookupReadonly"
+      ],
+      "com.jobs.im.OwnPasswordLifecycleTest": [
+        "explicitRetryNeverBorrowsSuccessorFamilyToken",
+        "lateReplyCannotClearAChangedIdentity",
+        "preparedDependency403KeepsOriginalPaused",
+        "unknownSurvivesReconstructionAndContainsNoPasswordsOrOtp",
+        "withdrawnCapabilityAndChangedEpochAllowLookupButNoPendingOrUnseenMutation",
+        "wrongProofCannotUnpauseUnknownOrCreateAnotherOperation"
+      ],
+      "com.jobs.im.PersonalExportLifecycleTest": [
+        "cancellationUnknownRetainsNonceAndReadOnlyCheckNeverResendsIt",
+        "cancelledSystemSelectionIsNeverSavedAndOldFamilyCannotPublishPreparedFile",
+        "capabilityWithdrawalKeepsOriginalCancellationButNoNewCreateOrDownload",
+        "lostCreateReconcilesOriginalWithoutSecondCreatingPost",
+        "unreachedOriginalNeedsExplicitSameBodyRetry"
+      ],
+      "com.jobs.im.RoleAdmissionLifecycleTest": [
+        "ownerRoundTripCannotReviveOldAllMentionOrAnnouncementAndMissingFlagNeverWrites"
+      ],
+      "com.jobs.im.SelfStateTest": [
+        "changedDraftReplyRequiresReselectionAndCreatesNoCloudWrite",
+        "draftCapturesIndependentTextAndDistinctOriginalProofsWithoutChangingLocalMessageOutbox",
+        "firstActivationRemainsEnabledAndSameIdentityResetRejectsLateResponse",
+        "lateIdentityOrChangedProjectionGuardCannotPublishSelfState",
+        "queuedUiIntentCapturesLifecycleBeforeMutexAndCannotAdoptResetIdentity",
+        "retiredDraftIsNotRecordedAsAppliedAndIndependentTextRequiresExplicitRecovery",
+        "s2ProjectionAndCursorShareTransactionAndWrongSubjectCannotPartiallyPublish",
+        "schemaUpgradeRetainsPhysicalRegistrationAndSeparatesOriginalSchemaCursor",
+        "sparseVisibleObservationDoesNotClearIndependentManualUnreadAndConflictFreezesOriginal",
+        "unknownNotFoundRequiresExplicitRetryAndUsesIdenticalOriginalRequest",
+        "unknownPreferenceSurvivesColdReopenAndReadonlyResultNeverReplaysWrite",
+        "viewRfc3339OffsetsAreParsedWithoutReencodingOriginalServerFields",
+        "wrongPrincipalOrNumericCountersRollbackSelfProjectionAndCursorTogether"
+      ],
+      "com.jobs.im.StorageLifecycleTest": [
+        "anonymousReconnectFreezesEveryAccountOfOnlyTheOldInstanceEpoch",
+        "durableQueueDraftRevisionAndCursorRemainAtomic",
+        "versionTwoUpgradePreservesOriginalPendingIdentity"
+      ],
+      "com.jobs.im.VoiceRecordingNativeTest": [
+        "cancelReleasesRecorderAndDeletesOnlyTheOwnedClip",
+        "changedFamilyRejectsClipAndReturningToOriginalCannotRestoreIt",
+        "realAacStopProducesPreviewWithoutStartingUpload"
+      ],
+      "com.jobs.im.VoiceUploadApiNativeTest": [
+        "committedRequiresOriginalDigestSizeNameAndCanonicalUrl",
+        "lateFamilyChangeCannotPromoteTheOriginalResult",
+        "missingResultIsReadOnlyAndKeepsExactOriginalTuple",
+        "preparedNeverBecomesAUsableMediaUrl"
+      ],
+      "com.jobs.im.VoiceUploadGlobalFloorNativeTest": [
+        "conflictingObjectPreservesClipAndPendingCleanupUntilVerifiedHolderIsRepaired",
+        "globalDenySurvivesTerminalReceiptGcAndRejectsLateOriginalPrepare",
+        "verifiedGlobalCreatesDenyAfterTerminalReceiptWasAlreadyGc"
+      ],
+      "com.jobs.im.VoiceUploadQueueNativeTest": [
+        "changedFamilyCannotReusePreparedBytesAndDoesNotEraseTheOnlyClip",
+        "clipOnlyFailureIsRetainedAndBlocksNewHttpResponsibility",
+        "completedAccountFloorRejectsLatePrepareAndLateObjectPromotion",
+        "durableManifestStageRecoversTheSameTaskWithoutSending",
+        "durableTerminalBeforeUnlinkResumesLocalCleanupWithoutHttp",
+        "erasureRemovesExactAccountAndPreservesAnotherUsersTask",
+        "globalCleanupUsesOriginalSenderAndExactClientMapping",
+        "interruptedCopyRemainsAttributableForExactAccountErasure",
+        "publicationFailureRetriesTheSameIdsAndRejectsAChangedOriginalBody",
+        "tornNewManifestDoesNotReplaceTheOriginalAtomicBody",
+        "uploadAndEnqueueUnknownKeepOriginalIdsAndReplyAcrossReconstruction"
+      ]
+    },
+    "artifacts": [
+      {
+        "path": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android声明严格DTO-20261117-152503-67efeeb1/app-debug-androidTest.apk",
+        "sha256": "fc2b7e960f474e15db06ef5119f38e91c27f04b6abb504a8c097b1e350d0457b",
+        "bytes": 1182140,
+        "crcOK": true,
+        "compiledTestNamesFound": 101,
+        "missingTestNames": []
+      },
+      {
+        "path": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android声明严格DTO-20261117-152503-67efeeb1/app-debug.apk",
+        "sha256": "31406361b74f9c2df1c420e8c391ad9a8f84ac1277cae2f8a2f85128b0939a5a",
+        "bytes": 17588015,
+        "crcOK": true
+      }
+    ]
+  },
+  "harmony": [
+    {
+      "mode": "default",
+      "exitCode": 0,
+      "inputCount": 69,
+      "currentSourceDifferences": [],
+      "stagedInputDifferences": [],
+      "artifacts": [
+        {
+          "path": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Harmony严格DTO与迟到global-20261117-152700-default/entry-default-unsigned.hap",
+          "sha256": "2ec6571dd6430730d7ff3cd917821c581957553c70de4240a39ed42a44fce852",
+          "bytes": 2639404,
+          "crcOK": true,
+          "signed": false
+        }
+      ]
+    },
+    {
+      "mode": "ohosTest",
+      "exitCode": 0,
+      "inputCount": 69,
+      "currentSourceDifferences": [],
+      "stagedInputDifferences": [],
+      "artifacts": [
+        {
+          "path": "项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Harmony严格DTO与迟到global-20261117-152700-ohosTest/entry-ohosTest-unsigned.hap",
+          "sha256": "dc4e1e0f3b17928e6f77b602675739bc5ddaf3f5c959e230e1a52b3234260293",
+          "bytes": 1947272,
+          "crcOK": true,
+          "signed": false,
+          "methodsCompiled": 63,
+          "methodsFoundInABC": 63,
+          "executed": false
+        }
+      ]
+    }
+  ],
+  "deviceEvidence": "separate owned AVD run pending",
+  "oldDistWritePerformed": false
+}

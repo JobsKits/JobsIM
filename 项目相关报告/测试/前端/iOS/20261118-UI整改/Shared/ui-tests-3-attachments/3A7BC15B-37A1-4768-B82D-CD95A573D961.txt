@@ -1,0 +1,4 @@
+Query chain:
+ →Find: Target Application 'com.jobs.im'
+  ↪︎Find: Descendants matching type Button
+    ↪︎Find: Elements matching predicate '"解除拉黑" IN identifiers'

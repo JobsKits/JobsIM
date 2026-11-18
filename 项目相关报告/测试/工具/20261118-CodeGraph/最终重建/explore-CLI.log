@@ -1,0 +1,637 @@
+**Exploration: 代码/前端/CLI/cmd/jobsim/auth.go**
+
+Found 31 symbols across 1 file. 1 file pinned from the query.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/前端/CLI/cmd/jobsim/auth.go`** — freezePreviousCLIStores(function), freezePreviousCLIStore(calls), freezePreviousCLIStore(function), calls(calls), authPair(instantiates), persist(calls), authPair(references), owns(calls), Write(calls), appendAuthKey(calls), +49 more
+
+```go
+20		"golang.org/x/term"
+21	)
+22	
+23	var errVaultUnavailable = errors.New("system credential storage unavailable")
+24	var errVaultNotFound = errors.New("system credential entry absent")
+25	
+26	type credentialVault interface {
+27		Read() ([]byte, error)
+28		Write([]byte) error
+29		Delete() error
+30	}
+31	
+32	type authPair struct {
+33		Token             string `json:"token"`
+34		RefreshToken      string `json:"refreshToken"`
+35		FamilyID          string `json:"familyId"`
+36		RefreshGeneration string `json:"refreshGeneration"`
+37		DeviceID          string `json:"deviceId"`
+38		RestoreEpoch      string `json:"restoreEpoch"`
+39		SourceContextID   string `json:"sourceContextId"`
+40		AccessExpiresAt   string `json:"accessExpiresAt"`
+41		IdleExpiresAt     string `json:"idleExpiresAt"`
+42		AbsoluteExpiresAt string `json:"absoluteExpiresAt"`
+43		StoreGeneration   string `json:"storeGeneration,omitempty"`
+44		MessageStore      string `json:"messageStore,omitempty"`
+45		User              struct {
+46			ID       string `json:"id"`
+47			Username string `json:"username"`
+48		} `json:"user"`
+49	}
+50	
+51	// This structure is the only authentication data allowed in ordinary SQLite.
+52	type authState struct {
+53		Status            string       `json:"status"`
+54		UserID            string       `json:"userId,omitempty"`
+55		FamilyID          string       `json:"familyId,omitempty"`
+56		DeviceID          string       `json:"deviceId,omitempty"`
+57		RefreshGeneration string       `json:"refreshGeneration,omitempty"`
+58		RefreshRequestID  string       `json:"refreshRequestId,omitempty"`
+59		InitialRequestID  string       `json:"initialRequestId,omitempty"`
+60		Pending           []authIntent `json:"pending,omitempty"`
+61		StoreGeneration   string       `json:"storeGeneration,omitempty"`
+62		MessageStore      string       `json:"messageStore,omitempty"`
+63	}
+64	
+65	type authIntent struct {
+66		Mode               string   `json:"mode"`
+67		Username           string   `json:"username"`
+68		RequestID          string   `json:"requestId"`
+69		DeviceName         string   `json:"deviceName"`
+70		PreviousFamilyID   string   `json:"previousFamilyId,omitempty"`
+71		PreviousRequestID  string   `json:"previousRequestId,omitempty"`
+72		PreviousRequestIDs []string `json:"previousRequestIds,omitempty"`
+73		DeliveryExpired    bool     `json:"deliveryExpired,omitempty"`
+74	}
+75	
+76	type authManager struct {
+77		mu        sync.Mutex
+78		c         *client
+79		db        *sql.DB
+80		vault     credentialVault
+81		release   func()
+82		state     authState
+83		pair      authPair
+84		username  string
+85		profile   string
+86		root      string
+87		temporary bool
+88		refresh   bool
+89		chain     bool
+90	}
+91	
+92	func openAuthManager(c *client, root, profile, username string, refresh, chain bool, reader *bufio.Reader) (*authManager, error) {
+93		username = strings.ToLower(strings.TrimSpace(username))
+94		if username == "" {
+95			return nil, fmt.Errorf("username required")
+96		}
+97		directory := filepath.Join(root, "JobsIM", "CLI", "Authentication", profile, fingerprint(username))
+98		if err := os.MkdirAll(directory, 0700); err != nil {
+99			return nil, err
+100		}
+101		release, err := lockAuthDirectory(directory)
+102		if err != nil {
+103			return nil, err
+104		}
+105		m := &authManager{c: c, root: root, profile: profile, username: username, refresh: refresh, chain: chain, release: release}
+106		failed := true
+107		defer func() {
+108			if failed {
+109				m.close()
+110			}
+111		}()
+112		path := filepath.Join(directory, "authentication.sqlite")
+
+... (gap) ...
+
+148		} else if err != sql.ErrNoRows {
+149			return nil, err
+150		}
+151		if err = m.ownDeletionRestoreGate(); err != nil {
+152			return nil, err
+153		}
+154		if err = m.passwordChangeRestoreGate(); err != nil {
+155			return nil, err
+156		}
+157		m.vault, err = openCredentialVault(fingerprint(profile + ":" + username + ":personal"))
+158		if err == nil {
+159			probe, readErr := m.vault.Read()
+160			if errors.Is(readErr, errVaultNotFound) {
+161				// A missing readable item does not prove the store accepts writes.
+162				err = m.vault.Write([]byte("JobsIM nonsecret availability probe"))
+163				if err == nil {
+164					err = m.vault.Delete()
+165				}
+166			} else if readErr == nil {
+167				err = m.vault.Write(probe)
+168			} else {
+169				err = readErr
+170			}
+171			erase(probe)
+172		}
+173		if err != nil {
+174			if !errors.Is(err, errVaultUnavailable) {
+
+... (gap) ...
+
+188		return m, nil
+189	}
+190	
+191	func (m *authManager) close() {
+192		m.pair = authPair{}
+193		if m.db != nil {
+194			m.db.Close()
+195		}
+196		if m.release != nil {
+197			m.release()
+198		}
+199	}
+200	
+201	func (m *authManager) persist() error {
+202		raw, err := json.Marshal(m.state)
+203		if err != nil {
+204			return err
+205		}
+206		_, err = m.db.Exec("INSERT INTO authentication_state(singleton,payload) VALUES(1,?) ON CONFLICT(singleton) DO UPDATE SET payload=excluded.payload", string(raw))
+207		return err
+208	}
+209	
+210	func (m *authManager) validPair(pair authPair) bool {
+211		if pair.Token == "" || pair.User.ID == "" || pair.User.Username != m.username || pair.DeviceID == "" || pair.RestoreEpoch != m.c.epoch {
+212			return false
+213		}
+214		if !m.refresh {
+215			return pair.RefreshToken == ""
+216		}
+217		if pair.RefreshToken == "" || pair.FamilyID == "" || !decimal.MatchString(pair.RefreshGeneration) || pair.SourceContextID != "personal" {
+218			return false
+219		}
+220		for _, value := range []string{pair.AccessExpiresAt, pair.IdleExpiresAt, pair.AbsoluteExpiresAt} {
+221			deadline, err := time.Parse(time.RFC3339Nano, value)
+222			if err != nil || deadline.Location() != time.UTC {
+223				return false
+224			}
+225		}
+226		return true
+227	}
+228	
+229	func (m *authManager) publish(pair authPair) {
+230		m.pair = pair
+231		m.c.token, m.c.user, m.c.serverDevice = pair.Token, pair.User.ID, pair.DeviceID
+232	}
+233	
+234	func (m *authManager) accept(pair authPair, initial string) error {
+235		if !m.validPair(pair) {
+236			return fmt.Errorf("authentication response is incomplete; original intent remains unknown")
+237		}
+238		if m.state.FamilyID == pair.FamilyID && m.state.DeviceID == pair.DeviceID {
+239			pair.StoreGeneration, pair.MessageStore = m.state.StoreGeneration, m.state.MessageStore
+240		}
+241		if !m.temporary {
+242			raw, err := json.Marshal(pair)
+243			if err != nil {
+244				return err
+245			}
+246			err = m.vault.Write(raw)
+247			erase(raw)
+248			if err != nil {
+249				return fmt.Errorf("secure credential replacement failed; original result remains unknown")
+250			}
+251		}
+252		previous := m.state
+253		m.state = authState{Status: "active", UserID: pair.User.ID, FamilyID: pair.FamilyID, DeviceID: pair.DeviceID, RefreshGeneration: pair.RefreshGeneration, InitialRequestID: initial, StoreGeneration: pair.StoreGeneration, MessageStore: pair.MessageStore}
+254		if err := m.persist(); err != nil {
+255			m.state = previous
+256			return fmt.Errorf("authentication handoff failed; protected unknown marker retained")
+257		}
+258		m.publish(pair)
+259		return nil
+260	}
+261	
+262	func (m *authManager) restore() (bool, error) {
+263		if err := m.ownDeletionRestoreGate(); err != nil {
+264			return false, err
+265		}
+266		if err := m.passwordChangeRestoreGate(); err != nil {
+267			return false, err
+268		}
+269		if m.temporary || m.state.Status != "active" || len(m.state.Pending) > 0 {
+270			return false, nil
+271		}
+272		raw, err := m.vault.Read()
+273		if errors.Is(err, errVaultNotFound) {
+274			return false, nil
+275		}
+276		if err != nil {
+277			return false, fmt.Errorf("system credential entry cannot be read; retain protected state and unlock the system store")
+278		}
+279		defer erase(raw)
+280		var pair authPair
+281		if json.Unmarshal(raw, &pair) != nil || !m.validPair(pair) || pair.FamilyID != m.state.FamilyID || pair.DeviceID != m.state.DeviceID || pair.RefreshGeneration != m.state.RefreshGeneration {
+282			m.state.Status = "reauth_required"
+283			return false, m.persist()
+284		}
+285		if !m.existingStoreMatches(pair) {
+286			m.state.Status = "reauth_required"
+287			return false, m.persist()
+288		}
+289		m.publish(pair)
+290		var context authPair
+291		if err := m.c.call("GET", "/api/auth/context", nil, &context); err != nil {
+292			var api *apiFailure
+293			if !errors.As(err, &api) || api.Status != 401 {
+294				return false, err
+295			}
+296			m.pair = authPair{}
+297			m.c.token = ""
+298			m.state.Status = "reauth_required"
+299			return false, m.persist()
+300		}
+301		if context.FamilyID != m.pair.FamilyID || context.DeviceID != m.pair.DeviceID || context.User.ID != m.pair.User.ID || context.RestoreEpoch != m.c.epoch {
+302			return false, fmt.Errorf("authenticated context changed; no local namespace opened")
+303		}
+304		return true, nil
+305	}
+306	
+307	func (m *authManager) existingStoreMatches(pair authPair) bool {
+308		if m.state.MessageStore == "" || m.state.StoreGeneration == "" || pair.MessageStore != m.state.MessageStore || pair.StoreGeneration != m.state.StoreGeneration || filepath.IsAbs(pair.MessageStore) || filepath.Clean(pair.MessageStore) != pair.MessageStore {
+309			return false
+310		}
+311		base := filepath.Join(m.root, "JobsIM", "CLI", m.profile)
+312		path := filepath.Join(base, pair.MessageStore)
+313		relative, err := filepath.Rel(base, path)
+314		if err != nil || strings.HasPrefix(relative, ".."+string(filepath.Separator)) || relative == ".." {
+315			return false
+316		}
+317		info, err := os.Lstat(path)
+318		if err != nil || !info.Mode().IsRegular() {
+319			return false
+320		}
+321		u := url.URL{Scheme: "file", Path: filepath.ToSlash(path)}
+322		db, err := sql.Open("sqlite", u.String()+"?mode=ro&_pragma=busy_timeout(5000)")
+323		if err != nil {
+324			return false
+325		}
+326		defer db.Close()
+327		var raw, epoch string
+328		var retired int
+329		if db.QueryRow("SELECT value FROM metadata WHERE key='identity'").Scan(&raw) != nil || db.QueryRow("SELECT value FROM metadata WHERE key='epoch'").Scan(&epoch) != nil || db.QueryRow("SELECT count(*) FROM metadata WHERE key='auth_retired' AND value='1'").Scan(&retired) != nil || retired != 0 || epoch != m.c.epoch {
+330			return false
+331		}
+332		var identity localIdentity
+333		return json.Unmarshal([]byte(raw), &identity) == nil && identity.ConnectionProfile == m.profile && identity.DeploymentID == m.c.deployment && identity.UserID == pair.User.ID && identity.DeviceID == pair.DeviceID && identity.Space == "personal" && identity.StoreGeneration == pair.StoreGeneration
+334	}
+335	
+336	func (m *authManager) bindMessageStore(relative, generation string) error {
+337		m.mu.Lock()
+338		defer m.mu.Unlock()
+339		pair := m.pair
+340		pair.MessageStore, pair.StoreGeneration = relative, generation
+341		if !m.temporary {
+342			raw, err := json.Marshal(pair)
+343			if err != nil {
+344				return err
+345			}
+346			err = m.vault.Write(raw)
+347			erase(raw)
+348			if err != nil {
+349				return fmt.Errorf("secure local-store binding failed; authentication remains unactivated locally")
+350			}
+351		}
+352		m.state.MessageStore, m.state.StoreGeneration = relative, generation
+353		if err := m.persist(); err != nil {
+354			return err
+355		}
+356		m.publish(pair)
+357		return nil
+358	}
+359	
+360	func appendAuthKey(keys []string, key string) []string {
+361		if key == "" {
+362			return keys
+363		}
+364		for _, existing := range keys {
+365			if existing == key {
+366				return keys
+367			}
+368		}
+369		return append(keys, key)
+370	}
+371	
+372	func (m *authManager) prepareInitial(mode string) (authIntent, error) {
+373		if len(m.state.Pending) > 0 && mode != "reauthenticate" {
+374			return m.state.Pending[len(m.state.Pending)-1], nil
+375		}
+376		intent := authIntent{Mode: mode, Username: m.username, RequestID: id(), DeviceName: "JobsIM CLI"}
+377		if len(m.state.Pending) > 0 {
+378			last := m.state.Pending[len(m.state.Pending)-1]
+379			if last.Mode == "register" && !last.DeliveryExpired && m.state.FamilyID == "" {
+380				return intent, fmt.Errorf("unknown registration must continue its original ID until the server confirms delivery expiry; local elapsed time proves nothing")
+381			}
+382			var keys []string
+383			for _, previous := range m.state.Pending {
+384				for _, key := range previous.PreviousRequestIDs {
+385					keys = appendAuthKey(keys, key)
+386				}
+387				keys = appendAuthKey(keys, previous.PreviousRequestID)
+388				keys = appendAuthKey(keys, previous.RequestID)
+389			}
+390			if len(keys) > 64 || len(keys) > 1 && !m.chain {
+391				return intent, fmt.Errorf("server does not prove this complete authentication retirement chain; continue the original intent")
+392			}
+393			intent.Mode, intent.PreviousRequestIDs = "reauthenticate", keys
+394			intent.PreviousRequestID = keys[len(keys)-1]
+395		}
+396		if m.state.FamilyID != "" && mode != "register" {
+397			intent.Mode, intent.PreviousFamilyID = "reauthenticate", m.state.FamilyID
+398		}
+399		if intent.Mode == "reauthenticate" && intent.PreviousFamilyID == "" && len(intent.PreviousRequestIDs) == 0 {
+400			return intent, fmt.Errorf("no original family or unknown initial intent is recorded; use login")
+401		}
+402		m.state.Pending = append(m.state.Pending, intent)
+403		m.state.Status = "initial_pending"
+404		if err := m.persist(); err != nil {
+405			return intent, err
+406		}
+407		return intent, nil
+408	}
+409	
+410	func (m *authManager) authenticate(mode string, reader *bufio.Reader) error {
+411		intent, err := m.prepareInitial(mode)
+412		if err != nil {
+413			return err
+414		}
+415		var capability struct {
+416			DeploymentID string `json:"deploymentId"`
+417			RestoreEpoch string `json:"restoreEpoch"`
+418			Features     struct {
+419				Refresh bool `json:"auth_refresh"`
+420				Chain   bool `json:"auth_retirement_chain"`
+421			} `json:"features"`
+422		}
+423		if err = m.c.callWithToken("GET", "/api/bootstrap", nil, &capability, ""); err != nil {
+424			return err
+425		}
+426		if capability.DeploymentID != m.c.deployment || capability.RestoreEpoch != m.c.epoch || m.refresh && !capability.Features.Refresh || len(intent.PreviousRequestIDs) > 1 && !capability.Features.Chain {
+427			return fmt.Errorf("server no longer proves the original authentication context or complete retirement protocol; original intent retained")
+428		}
+429		password, err := secretInput(reader, "Password: ")
+430		if err != nil {
+431			return err
+432		}
+433		defer erase(password)
+434		payload := map[string]any{"username": intent.Username, "password": string(password), "requestId": intent.RequestID, "deviceName": intent.DeviceName}
+435		if intent.PreviousFamilyID != "" {
+436			payload["previousFamilyId"] = intent.PreviousFamilyID
+
+... (gap) ...
+
+443		}
+444		defer delete(payload, "password")
+445		var pair authPair
+446		err = m.c.callWithToken("POST", "/api/auth/"+intent.Mode, payload, &pair, "")
+447		var api *apiFailure
+448		if errors.As(err, &api) && api.Code == "MFA_REQUIRED" {
+449			otp, readErr := secretInput(reader, "Authenticator code: ")
+450			if readErr != nil {
+451				return readErr
+452			}
+453			payload["otp"] = string(otp)
+454			err = m.c.callWithToken("POST", "/api/auth/"+intent.Mode, payload, &pair, "")
+455			erase(otp)
+456			delete(payload, "otp")
+457		}
+458		if err != nil {
+459			if errors.As(err, &api) && api.Code == "DELIVERY_EXPIRED" {
+460				m.state.Pending[len(m.state.Pending)-1].DeliveryExpired = true
+461				if persistErr := m.persist(); persistErr != nil {
+462					return persistErr
+463				}
+464			}
+465			return fmt.Errorf("%w; original authentication intent retained; use its original proof or explicit reauthenticate", err)
+466		}
+467		return m.accept(pair, intent.RequestID)
+468	}
+469	
+470	func (m *authManager) snapshot() (authPair, error) {
+471		m.mu.Lock()
+472		defer m.mu.Unlock()
+473		if m.state.Status != "active" || m.pair.Token == "" {
+474			return authPair{}, fmt.Errorf("authentication is stopped; verify the account and retire the original unknown family")
+475		}
+476		return m.pair, nil
+477	}
+478	
+479	func (m *authManager) rotate(original authPair) (authPair, error) {
+480		m.mu.Lock()
+481		defer m.mu.Unlock()
+482		if m.state.Status != "active" || m.pair.FamilyID != original.FamilyID || m.pair.DeviceID != original.DeviceID || m.pair.User.ID != original.User.ID {
+483			return authPair{}, fmt.Errorf("original authentication context is no longer active")
+484		}
+485		if m.pair.RefreshGeneration != original.RefreshGeneration {
+486			return m.pair, nil
+487		}
+488		if !m.refresh || original.RefreshToken == "" {
+489			return authPair{}, fmt.Errorf("this server/session has no refresh protocol; authenticate again")
+490		}
+491		m.state.Status, m.state.RefreshRequestID = "refresh_unknown", id()
+492		if err := m.persist(); err != nil {
+493			return authPair{}, err
+494		}
+495		body := map[string]string{"requestId": m.state.RefreshRequestID, "refreshToken": original.RefreshToken, "familyId": original.FamilyID, "refreshGeneration": original.RefreshGeneration}
+496		var fresh authPair
+497		if err := m.c.callWithToken("POST", "/api/auth/refresh", body, &fresh, ""); err != nil {
+498			m.pair = authPair{}
+499			m.c.token = ""
+500			return authPair{}, fmt.Errorf("%w; refresh outcome is stopped, old refresh credential will not be reused", err)
+501		}
+502		next, ok := new(big.Int).SetString(original.RefreshGeneration, 10)
+503		if !ok {
+504			return authPair{}, fmt.Errorf("original refresh generation invalid")
+505		}
+506		next.Add(next, big.NewInt(1))
+507		if !m.validPair(fresh) || fresh.FamilyID != original.FamilyID || fresh.DeviceID != original.DeviceID || fresh.User.ID != original.User.ID || fresh.RefreshGeneration != next.String() || fresh.AbsoluteExpiresAt != original.AbsoluteExpiresAt {
+508			m.pair, m.c.token = authPair{}, ""
+509			return authPair{}, fmt.Errorf("refresh response changed the original identity or deadline; outcome remains unknown")
+510		}
+511		if err := m.accept(fresh, m.state.InitialRequestID); err != nil {
+512			m.pair, m.c.token = authPair{}, ""
+513			return authPair{}, err
+514		}
+515		return fresh, nil
+516	}
+517	
+518	func (m *authManager) logout() error {
+519		m.mu.Lock()
+520		defer m.mu.Unlock()
+521		if (m.state.Status == "signed_out" || m.state.Status == "password_changed" || m.state.Status == "account_deletion_stopped" || m.state.Status == "account_deletion_unknown") && m.pair.Token == "" {
+522			return nil
+523		}
+524		original := m.pair
+525		m.state.Status = "logout_pending"
+526		persistErr := m.persist()
+527		m.pair, m.c.token = authPair{}, ""
+528		var deleteErr error
+529		if m.vault != nil && !m.temporary {
+530			deleteErr = m.vault.Delete()
+531		}
+532		if original.Token == "" {
+533			if persistErr != nil {
+534				return fmt.Errorf("local credentials stopped; durable revocation record and server completion remain unconfirmed")
+535			}
+536			return fmt.Errorf("original family remains pending verified revocation")
+537		}
+538		err := m.c.callWithToken("POST", "/api/auth/logout", map[string]string{}, nil, original.Token)
+539		if err == nil {
+540			m.state.Status = "signed_out"
+541			if persistErr := m.persist(); persistErr != nil {
+542				return persistErr
+543			}
+544		}
+545		if deleteErr != nil {
+546			return fmt.Errorf("local session stopped; system credential deletion requires retry")
+547		}
+548		if persistErr != nil {
+549			return fmt.Errorf("runtime and system credentials cleared; durable revocation record could not be updated")
+550		}
+551		return err
+552	}
+553	
+554	func (c *client) call(method, path string, body any, out any) error {
+555		stamp, guardErr := c.syncHTTPGuard(method, path)
+556		if guardErr != nil {
+557			return guardErr
+558		}
+559		var observed json.RawMessage
+560		target := out
+561		observe := c.store != nil && syncProtectedPath(method, path) && !strings.HasSuffix(path, "/message-results")
+562		if observe {
+563			target = &observed
+564		}
+565		finish := func(e error) error {
+566			if e != nil {
+567				var api *apiFailure
+568				if c.store != nil && errors.As(e, &api) && (api.Status == 401 || api.Code == "RESTORE_EPOCH_CHANGED" || api.Code == "DEPLOYMENT_CHANGED") {
+569					retireErr := c.store.retireSyncIdentity("SYNC_REAUTH_REQUIRED")
+570					c.lookup = nil
+571					c.token = ""
+572					if retireErr != nil {
+573						return fmt.Errorf("%w; retiring local identity failed: %v", e, retireErr)
+574					}
+575				}
+576				return e
+577			}
+578			if observe {
+579				if e = c.observeMessageGlobals(method, path, body, observed); e != nil {
+580					return e
+581				}
+582				if out != nil && len(observed) != 0 {
+583					return syncDecode(observed, out)
+584				}
+585			}
+586			return nil
+587		}
+588		if c.auth == nil {
+589			err := c.callWithToken(method, path, body, target, c.token)
+590			if guardErr := c.syncHTTPAfter(stamp); guardErr != nil {
+591				return guardErr
+592			}
+593			return finish(err)
+594		}
+595		original, err := c.auth.snapshot()
+596		if err != nil {
+597			return err
+598		}
+599		var frozen any
+600		if body != nil {
+601			raw, err := json.Marshal(body)
+602			if err != nil {
+603				return err
+604			}
+605			frozen = json.RawMessage(raw)
+606		}
+607		err = c.callWithToken(method, path, frozen, target, original.Token)
+608		if guardErr := c.syncHTTPAfter(stamp); guardErr != nil {
+609			return guardErr
+610		}
+611		if !c.auth.owns(original) {
+612			return fmt.Errorf("late response belongs to a stopped authentication context")
+613		}
+614		var api *apiFailure
+615		if !errors.As(err, &api) || api.Status != 401 || api.Code != "ACCESS_EXPIRED" {
+616			return finish(err)
+617		}
+618		fresh, err := c.auth.rotate(original)
+619		if err != nil {
+620			return err
+621		}
+622		err = c.callWithToken(method, path, frozen, target, fresh.Token)
+623		if guardErr := c.syncHTTPAfter(stamp); guardErr != nil {
+624			return guardErr
+625		}
+626		if !c.auth.owns(fresh) {
+627			return fmt.Errorf("late retried response belongs to a stopped authentication context")
+628		}
+629		return finish(err)
+630	}
+631	
+632	func (m *authManager) owns(original authPair) bool {
+633		m.mu.Lock()
+634		defer m.mu.Unlock()
+635		return m.state.Status == "active" && m.pair.FamilyID == original.FamilyID && m.pair.DeviceID == original.DeviceID && m.pair.User.ID == original.User.ID
+636	}
+637	
+638	// Body bytes are replayed only after an authenticated ACCESS_EXPIRED rejection.
+639	// A transport failure remains unknown and never enters this replay path.
+640	func (c *client) authenticatedResponse(method, path, contentType string, body []byte, timeout time.Duration) (*http.Response, error) {
+641		return c.authenticatedDownloadResponse(method, path, contentType, body, timeout, "")
+642	}
+643	
+644	// Short export tickets stay in this request header and in memory only.
+645	func (c *client) authenticatedDownloadResponse(method, path, contentType string, body []byte, timeout time.Duration, downloadToken string) (*http.Response, error) {
+646		var token string
+647		var original authPair
+648		var err error
+649		if c.auth != nil {
+650			original, err = c.auth.snapshot()
+651			if err != nil {
+652				return nil, err
+653			}
+
+... (gap) ...
+
+678		if err != nil || c.auth == nil {
+679			return response, err
+680		}
+681		if !c.auth.owns(original) {
+682			response.Body.Close()
+683			return nil, fmt.Errorf("late media response belongs to a stopped authentication context")
+684		}
+685		if response.StatusCode != 401 {
+686			return response, nil
+687		}
+688		raw, readErr := readLimited(response.Body, 1<<20)
+689		response.Body.Close()
+690		var rejection struct {
+691			Error struct {
+692				Code string `json:"code"`
+693			} `json:"error"`
+694		}
+695		if readErr != nil || json.Unmarshal(raw, &rejection) != nil || rejection.Error.Code != "ACCESS_EXPIRED" {
+696			return nil, fmt.Errorf("media authorization rejected; original operation is not replayed")
+697		}
+698		fresh, err := c.auth.rotate(original)
+699		if err != nil {
+700			return nil, err
+701		}
+702		response, err = request(fresh.Token)
+703		if err == nil && !c.auth.owns(fresh) {
+704			response.Body.Close()
+705			return nil, fmt.Errorf("late media retry belongs to a stopped authentication context")
+706		}
+707		return response, err
+708	}
+709	
+```
+

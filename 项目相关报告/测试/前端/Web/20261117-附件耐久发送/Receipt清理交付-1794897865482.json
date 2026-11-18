@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-17T06:44:25.470Z",
+  "caseCount": 3,
+  "caseMode": "receipt-cleanup-only",
+  "execution": "08-收讫查询注销清理-1794897771473-27751",
+  "old41Rerun": false,
+  "type": false,
+  "build": false,
+  "productSourceModifiedByThisAgent": false,
+  "docs": [
+    "测试/前端/Web/attachment-browser.cjs/README.md",
+    "项目相关报告/测试/前端/Web/20261117-附件耐久发送/README.md"
+  ],
+  "links": 52,
+  "broken": [],
+  "files": {
+    "代码/前端/Web/Src/AccountDeletionCleanup.ts": "54e239333dc15e7624fb722dfd52361943e7a28c6d9a8d72baea714463668cf9",
+    "代码/前端/Web/Src/ReceiptContext.ts": "0d406758f79b635043891567472981bad90db6a4a3e59028cba78ebc7bd660cb",
+    "测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs": "3f0ec9758039cb259905f7d02dd3f5c1aab686c995c47cb32c97c327387b6ad2",
+    "项目相关报告/测试/前端/Web/20261117-附件耐久发送/运行器.cjs": "e1f5dd1bdfcec6e2da7e02e7935a2177baff91719d7db7b7771c5b469d6032cf",
+    "测试/前端/Web/attachment-browser.cjs/README.md": "4514505cf780055562f19a96a82095a418ab0307f890b55f6dcbc57710ec03fc",
+    "项目相关报告/测试/前端/Web/20261117-附件耐久发送/README.md": "c3807b234ea5c92380db459047c32cd321720b131404a9069f341f7b25471cbe"
+  }
+}

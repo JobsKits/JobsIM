@@ -1,0 +1,20 @@
+**Exploration: 代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift**
+
+Found 33 symbols across 1 file.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here. (Exception: files flagged "⚠ changed on disk" below drifted from the index after their last sync — their source is omitted rather than risk a mis-sliced block; Read those specific files.)
+
+**`代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift`** — ⚠ changed on disk after the last index sync — source omitted (indexed line ranges no longer match, so a slice could show the wrong code). Read this file directly for current content; the change is picked up on that project's next index sync.
+
+
+> ⚠ Changed on disk after the last index sync: 代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift. Line numbers referencing this file elsewhere in this response (flow steps, blast radius, symbol lists) may be shifted until that project's next sync re-indexes it.
+**Not shown above — explore these names for their source**
+
+- 代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift: IMAuthCoordinator:12, session:15, refreshTasks:16, initialProofs:17, requestOverride:18, secureWrite:19, +27 more
+
+---
+> **Complete source for these files is included above — do NOT re-read them.** If your question also needs files/symbols listed under "Not shown above" (or any area this call didn't cover), make ANOTHER codegraph_explore targeting those names — it returns the same source with line numbers and is cheaper and more complete than reading.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~788 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

@@ -327,6 +327,8 @@ class SyncStore(private val database: ChatDatabase) {
             }
         }
         if (globals.isNotEmpty()) {
+            MigrationStore.eraseGlobalInTransaction(database,identity,globals)
+            ReceiptStore.eraseGlobalInTransaction(database,identity,globals)
             // Stored forward projections do not expose their source ID. Retire every controlled body.
             messages.forwardHolders(holderPrefix(identity)).forEach { messages.put(if (it.retracted) erased(it) else Forwarding.hidden(it)) }
             eraseUnread(identity, globals)

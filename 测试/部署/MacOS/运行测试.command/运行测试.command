@@ -5,8 +5,8 @@ set -eu
 setopt NO_NOMATCH PIPE_FAIL
 SCRIPT_DIR="${${(%):-%x}:A:h}"
 REPO="${SCRIPT_DIR}/../../../.."; REPO="${REPO:A}"
-RUN="$REPO/部署/MacOS/部署运行.command/部署运行.command"
-STOP="$REPO/部署/MacOS/停止备份.command/停止备份.command"
+RUN="$REPO/部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command"
+STOP="$REPO/部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command"
 MODE="${1:-unit}"
 CONTROLLER=''
 cleanup() {
@@ -21,8 +21,9 @@ TRAPTERM() { cleanup; exit 143; }
 unit_tests() {
     local file
     for file in "$REPO"/部署/MacOS/**/*.command(.N); do zsh -n "$file"; done
-    for file in "$REPO"/部署/Linux/**/*.sh(.N); do bash -n "$file"; done
+    for file in "$REPO"/部署/{Ubuntu,Debian,RockyLinux,AlibabaCloudLinux}/**/*.sh(.N); do bash -n "$file"; done
     local fixture="$(mktemp -d "${TMPDIR:-/tmp/}JobsIM-deploy-test.XXXXXX")"
+    fixture="${fixture:A}"
     "$RUN" check --state "$fixture/untouched" > /dev/null
     [[ ! -e "$fixture/untouched" ]] || { print -u2 'check创建了state'; return 2; }
     "$RUN" plan --state "$fixture/untouched" > /dev/null
@@ -44,22 +45,9 @@ wait_ready() {
     print -u2 '等候入口启动超时'; return 2
 }
 integration_tests() {
-    [[ "${2:-}" == --yes && -n "${JOBS_IM_TEST_STATE:-}" ]] || { print -u2 'integration需显式JOBS_IM_TEST_STATE和第二参数--yes；会创建测试账户、数据库和备份。'; return 2; }
-    export JOBS_IM_HTTPS_PORT="${JOBS_IM_HTTPS_PORT:-19443}"
-    export JOBS_IM_PG_PORT="${JOBS_IM_PG_PORT:-17543}"
-    export JOBS_IM_JOURNAL_PORT="${JOBS_IM_JOURNAL_PORT:-17544}"
-    export JOBS_IM_INTERNAL_PORT="${JOBS_IM_INTERNAL_PORT:-20101}"
-    local REPORT="$REPO/项目相关报告/测试/部署/MacOS/$(date +%Y%m%d-%H%M%S)"
-    mkdir -p "$REPORT"
-    "$RUN" run --yes --state "$JOBS_IM_TEST_STATE" > "$REPORT/run.log" 2>&1 &
-    CONTROLLER=$!
-    wait_ready
-    NODE_EXTRA_CA_CERTS="$JOBS_IM_TEST_STATE/TLS/ca.crt" JOBS_IM_TEST_URL="https://127.0.0.1:$JOBS_IM_HTTPS_PORT" node "$REPO/测试/部署/MacOS/ContractSmoke.mjs" | tee "$REPORT/smoke.log"
-    "$STOP" stop --yes --state "$JOBS_IM_TEST_STATE" | tee "$REPORT/backup-stop.log"
-    wait "$CONTROLLER"; CONTROLLER=''
-    if lsof -nP -iTCP:"$JOBS_IM_HTTPS_PORT" -sTCP:LISTEN >/dev/null 2>&1; then return 2; fi
-    [[ -f "$JOBS_IM_TEST_STATE/MainDatabase/PG_VERSION" && -f "$JOBS_IM_TEST_STATE/JournalDatabase/PG_VERSION" ]] || return 2
-    print 'PASS：真实独立双PG、源码构建、严格TLS、聊天契约、加密备份验真和保留数据停止。恢复演练未包含。' | tee "$REPORT/result.txt"
+    [[ "${2:-}" == --yes ]] || { print -u2 'integration需--yes，仅授权自动创建本轮新私密实例。'; return 2; }
+    command -v python3 >/dev/null || { print -u2 '集成测试驱动需现有Python3，正式部署不依赖它。'; return 2; }
+    python3 "$REPO/测试/部署/MacOS/成对原生集成.py/成对原生集成.py" --yes
 }
 main() {
     case "$MODE" in

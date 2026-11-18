@@ -11,6 +11,8 @@ import (
 )
 
 func (a *App) mediaRoutes(h func(string, func(http.ResponseWriter, *http.Request) error), internal func(func(http.ResponseWriter, *http.Request) error) func(http.ResponseWriter, *http.Request) error) {
+	a.reportMediaRoutes(h, internal)
+	a.mediaUploadRoutes(h)
 	a.avatarMediaRoutes(h, internal)
 	a.exportMediaRoutes(h, internal)
 	a.forwardMediaRoutes(h, internal)
@@ -55,6 +57,9 @@ func (a *App) mediaRoutes(h func(string, func(http.ResponseWriter, *http.Request
 	}))
 }
 func (a *App) upload(w http.ResponseWriter, r *http.Request) error {
+	return a.uploadForPurpose(w, r, "")
+}
+func (a *App) uploadForPurpose(w http.ResponseWriter, r *http.Request, purpose string) error {
 	u, e := a.current(r)
 	if e != nil {
 		return e
@@ -62,7 +67,7 @@ func (a *App) upload(w http.ResponseWriter, r *http.Request) error {
 	if e = a.requireFeature(r.Context(), "media"); e != nil {
 		return e
 	}
-	r.Body = http.MaxBytesReader(w, r.Body, 64<<20)
+	r.Body = http.MaxBytesReader(w, r.Body, mediaUploadRequestLimit)
 	if e = r.ParseMultipartForm(1 << 20); e != nil {
 		return fail(413, "UPLOAD_LIMIT", "Upload limit is 64 MiB")
 	}
@@ -124,6 +129,21 @@ func (a *App) upload(w http.ResponseWriter, r *http.Request) error {
 	if e != nil {
 		return e
 	}
+	if purpose == "report_evidence" && !strings.HasPrefix(ct, "image/") && !strings.HasPrefix(ct, "video/") {
+		return fail(400, "REPORT_EVIDENCE_TYPE", "Report evidence must be a validated image or video")
+	}
+	name := filepath.Base(strings.ReplaceAll(header.Filename, "\\", "/"))
+	request, stable, stableError := a.multipartMediaUpload(r, name, total, hash.Sum(nil))
+	if stableError != nil {
+		return stableError
+	}
+	request.purpose = purpose
+	if purpose == "report_evidence" && !stable {
+		return fail(400, "REPORT_UPLOAD_IDENTITY_REQUIRED", "Independent report evidence requires the exact stable upload metadata")
+	}
+	if stable {
+		return a.finishMediaUpload(w, r, request, tmp, ct, total, hash.Sum(nil))
+	}
 	if e = os.Rename(tmp, filepath.Join(dir, id)); e != nil {
 		return e
 	}
@@ -136,7 +156,6 @@ func (a *App) upload(w http.ResponseWriter, r *http.Request) error {
 	if e != nil {
 		return e
 	}
-	name := filepath.Base(strings.ReplaceAll(header.Filename, "\\", "/"))
 	_, e = a.DB.Exec(r.Context(), `INSERT INTO media.objects(id,owner_id,name,content_type,size_bytes,sha256,storage_key) VALUES($1,$2,$3,$4,$5,$6,$7)`, id, u.ID, name, ct, total, hash.Sum(nil), id)
 	if e != nil {
 		return e
@@ -155,32 +174,56 @@ func (a *App) download(w http.ResponseWriter, r *http.Request) error {
 	if e != nil {
 		return fail(404, "OBJECT_NOT_FOUND", "Object unavailable")
 	}
+	if e = a.requireMediaOwnerReadable(r.Context(), r.PathValue("id")); e != nil {
+		return e
+	}
 	if message != nil {
-		if e = a.rpc(r.Context(), "message", "/internal/attachment-confirm", map[string]string{"userId": u.ID, "objectId": r.PathValue("id"), "messageId": *message}, nil); e != nil {
+		if e = a.mediaAttachmentAccess(r.Context(), *message, r.PathValue("id"), u.ID, u.DeviceID, r.Header.Get("X-JobsIM-Store-Generation"), u.RestoreEpoch, ""); e != nil {
 			return e
 		}
 	} else if owner != u.ID {
 		return fail(403, "FORBIDDEN", "Private upload")
 	}
-	if key != filepath.Base(key) {
+	messageID := ""
+	if message != nil {
+		messageID = *message
+	}
+	return a.servePrivateMedia(w, r, r.PathValue("id"), name, ct, key, messageID)
+}
+func (a *App) servePrivateMedia(w http.ResponseWriter, r *http.Request, objectID, name, ct, key, messageID string) error {
+	if key == "." || key != objectID || key != filepath.Base(key) {
 		return fail(500, "STORAGE_INTEGRITY", "Invalid storage identity")
 	}
-	f, e := os.Open(filepath.Join(a.Config.StateDir, "Media", key))
+	path := filepath.Join(a.Config.StateDir, "Media", key)
+	before, e := os.Lstat(path)
+	if e != nil || !before.Mode().IsRegular() {
+		return fail(404, "OBJECT_MISSING", "Original regular object bytes unavailable")
+	}
+	f, e := os.Open(path)
 	if e != nil {
 		return fail(404, "OBJECT_MISSING", "Object bytes unavailable")
 	}
 	defer f.Close()
 	stat, e := f.Stat()
-	if e != nil {
-		return e
+	if e != nil || !stat.Mode().IsRegular() || !os.SameFile(before, stat) {
+		return fail(503, "STORAGE_INTEGRITY", "Original object changed while opening")
+	}
+	var source io.ReadSeeker = f
+	if messageID != "" {
+		due, deadlineError := a.mediaReadDeadline(r.Context(), messageID, objectID)
+		if deadlineError != nil {
+			return deadlineError
+		}
+		source = &mediaRetainedReader{File: f, ctx: r.Context(), due: due}
 	}
 	disposition := "attachment"
 	if strings.HasPrefix(ct, "image/") || strings.HasPrefix(ct, "audio/") || strings.HasPrefix(ct, "video/") {
 		disposition = "inline"
 	}
+	w.Header().Set("X-Content-Type-Options", "nosniff")
 	w.Header().Set("Content-Type", ct)
 	w.Header().Set("Content-Disposition", mime.FormatMediaType(disposition, map[string]string{"filename": name}))
 	w.Header().Set("Cache-Control", "private,no-store")
-	http.ServeContent(w, r, name, stat.ModTime(), f)
+	http.ServeContent(w, r, name, stat.ModTime(), source)
 	return nil
 }

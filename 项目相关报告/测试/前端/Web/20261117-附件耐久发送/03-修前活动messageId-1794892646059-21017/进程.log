@@ -1,0 +1,10 @@
+1:17:29 PM [vite] (client) [optimizer] bundling dependencies...
+AssertionError [ERR_ASSERTION]: active Blob must not trust an asserted server message ID
+    at /Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs:106:254 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

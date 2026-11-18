@@ -77,7 +77,7 @@ final class IMDataExportVC: IMBaseVC,
             make.top.equalTo(header.snp.bottom).offset(8)
             make.left.right.bottom.equalToSuperview()
         }.byEmptyButtonProvider { [weak self] in
-            IMUI.button(IMStrings.text("exportEmpty") + "\n" + IMStrings.text("reload")) {
+            IMUI.emptyButton(title: IMStrings.text("exportEmpty")) {
                 self?.reload()
             }
         }
@@ -316,7 +316,7 @@ final class IMDataExportVC: IMBaseVC,
             .byTitleCor(IMUI.foreground)
             .byDetailTitleCor(IMUI.secondary)
             .bySelectionStyle(row.action == nil || busy ? .none : .default)
-            .byAccessoryType(row.action == nil ? .none : .disclosureIndicator)
+            .byIMThemeAccessoryType(row.action == nil ? .none : .disclosureIndicator)
             .byAccessibilityLabel(row.title + " " + row.detail)
     }
 

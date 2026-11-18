@@ -1,0 +1,8 @@
+{"Time":"2026-11-17T10:35:47.627378+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-17T10:35:48.131896+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage"}
+{"Time":"2026-11-17T10:35:48.131964+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage","Output":"=== RUN   TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage\n","OutputType":"frame"}
+{"Time":"2026-11-17T10:35:48.982909+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage","Output":"--- PASS: TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage (0.85s)\n","OutputType":"frame"}
+{"Time":"2026-11-17T10:35:48.983008+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage","Elapsed":0.85}
+{"Time":"2026-11-17T10:35:48.983067+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-17T10:35:48.984874+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t1.357s\n"}
+{"Time":"2026-11-17T10:35:48.984903+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":1.358}

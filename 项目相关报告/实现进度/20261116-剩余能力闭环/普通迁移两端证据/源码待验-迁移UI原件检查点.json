@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-17T11:50:06.344221",
+  "validated": false,
+  "hostRunner": "refused before transpile/tests by 4GiB disk gate",
+  "newJvmMethodsNotRun": 6,
+  "newHostMethodsNotRun": 13,
+  "nativeCompile": false,
+  "device": false,
+  "https": false,
+  "sha256": {
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt": "7b70ebb5c60a7181dfa5a598b538c7f00f083e52c73c906a06304f1ce1d46b3b",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationScreen.kt": "8cd5e7ea3617c08317011d0ccf70551b9cc49ad88c9e1a4b0bd9f58e3a57a959",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationService.kt": "a3c4c244dd12f7550421586c840c3da1c595384592b0d27d88083d82ede4fcd5",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationText.kt": "19a778c37aad5e8db365b18cee50763e8efc59e1acd924fbe5d4b3d6fc39ba4e",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationProtocol.kt": "9ecd4ceefb955cd276167f56accd9ff0ffc56d55904655308f6901a2efe36ec4",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationText.ets": "9a0d8868087b0554fb8b078b8489e0043c97299e186cb19b2128eed15cf7c1cb",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationNative.ets": "95b6676c9e7cba36ce61d3d77987e7a016f15b14511ee3e95bb98b8ca11282fc",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets": "e6cce886e88bfb877b8b8fcb7dc3a44bdd1f22f1309da26417fc7272341a12a8",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets": "5b48d607615cda380c2bf14bcc31bb80ee55d52e3beea3f1351a0337283f30a9",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationService.ets": "64b614e8b732350f6da9518183b5ec3e741b241e8bf190dcdee33eb6dadff317",
+    "测试/前端/Android/Unit/MigrationRulesTest.kt": "bab445ef23da59c8b20fd1002748989058b4d71807737a69f57713eeb9d2fba0",
+    "测试/前端/HarmonyOS/Unit/RunMigration.mjs/RunMigration.mjs": "5add65d995619486d8bc9865a76beca0e4bf029c582a0dffde99d50225b49483",
+    "测试/前端/HarmonyOS/Unit/Migration.test.cjs/Migration.test.cjs": "8ddb147d8b4cc33e479f2350dc13ded9ec5d44ea937efda8ba7a33f5be1a1d8f"
+  }
+}

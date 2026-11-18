@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "url": "https://127.0.0.1:9443",
+  "checks": {
+    "/api/health": {
+      "status": 200,
+      "size": 36
+    },
+    "/api/bootstrap": {
+      "status": 200,
+      "size": 894,
+      "deploymentId": "59c4a138-3d17-4ede-9bde-ef7cd1aa8fb3",
+      "features": {
+        "groups": true,
+        "authoritative_sync": true,
+        "sync_jetstream": true,
+        "own_password_change": true,
+        "own_account_deletion": true
+      }
+    },
+    "/": {
+      "status": 200,
+      "size": 446
+    }
+  },
+  "scope": "original default instance strict HTTPS, no test actor or messages created",
+  "serverSHA256": "edccc5e3a13b3287380cf5bbd894445410bb50fc2b81392f417eca3cc9b6133e"
+}

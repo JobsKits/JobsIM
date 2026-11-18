@@ -1,0 +1,32 @@
+[
+  {
+    "file": "测试/前端/Web/attachment-rules.cjs/README.md",
+    "sourceSHA": "8c20a3897edc3b924bbc1a91730016e5437994abb0f9dc4410fa70f864eec7f0",
+    "generatedSHA": "500440cfe084e838b5786476946717dc82795bc7b4da3185b053596aa18d8e5e",
+    "inspection": {
+      "tocCount": 1,
+      "headingCount": 2
+    },
+    "checkGenerated": true
+  },
+  {
+    "file": "测试/前端/Web/attachment-browser.cjs/README.md",
+    "sourceSHA": "b48650f7b39dd698941f65aeaf17315bfb1b7c5ac8ee2ff89439d5c80466a82d",
+    "generatedSHA": "8567681f6e9f22c2393296c65820de110e977e5fbf2ed874d9e9c0b709bc95ff",
+    "inspection": {
+      "tocCount": 1,
+      "headingCount": 3
+    },
+    "checkGenerated": true
+  },
+  {
+    "file": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/README.md",
+    "sourceSHA": "de72633c502660327c7dd132382988d761a3b65e1614a8f5335271ded5bf7664",
+    "generatedSHA": "b76f73c5818f2e372161a9c168cd02db0c40ba4762b7665df024cb391e75f3b1",
+    "inspection": {
+      "tocCount": 1,
+      "headingCount": 4
+    },
+    "checkGenerated": true
+  }
+]

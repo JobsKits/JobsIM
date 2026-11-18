@@ -1,0 +1,8 @@
+=== RUN   TestDeploymentDiskReserveIgnoresShadowedDF
+    deployment_disk_test.go:31: PATH shadowing broke the available system disk probe: cannot verify the 4 GiB restore disk reserve
+--- FAIL: TestDeploymentDiskReserveIgnoresShadowedDF (0.00s)
+FAIL
+FAIL	jobsim/backend	0.807s
+?   	jobsim/backend/cmd/jobsimd	[no test files]
+?   	jobsim/backend/cmd/jobsimops	[no test files]
+FAIL

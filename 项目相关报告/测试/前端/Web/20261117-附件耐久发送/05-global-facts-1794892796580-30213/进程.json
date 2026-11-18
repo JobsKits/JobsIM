@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-11-17T05:19:56.609Z",
+  "finishedAt": "2026-11-17T05:20:01.536Z",
+  "args": [
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/global-facts.cjs/global-facts.cjs"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "expectedFailure": false,
+  "validProductReproduction": false,
+  "stopped": "",
+  "minimumFree": 24524124160,
+  "inputsUnchanged": true,
+  "realAPI": false
+}

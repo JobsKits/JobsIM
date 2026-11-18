@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-11-17T00:51:23.242Z",
+  "finishedAt": "2026-11-17T00:51:26.147Z",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/data-export.cjs/data-export.cjs"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "stopped": "",
+  "freeBefore": 4918870016,
+  "minimumFree": 4908711936,
+  "freeAfter": 4910342144,
+  "inputsUnchanged": true,
+  "actualAPI": false,
+  "dependencyInstall": false
+}

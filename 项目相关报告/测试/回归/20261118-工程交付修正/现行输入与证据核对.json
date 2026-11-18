@@ -1,0 +1,19 @@
+{
+  "sourceGroups": {
+    "CodeGraph": 775,
+    "二维码": 20,
+    "iOS": 118
+  },
+  "checked": 913,
+  "mismatches": [],
+  "QRRawEvidenceChecked": 10,
+  "QREvidenceMismatches": [],
+  "signedAppBinaryStillMatches": true,
+  "CodeGraphFinalState": "complete-final-source-verified",
+  "unverified": [
+    "Xcode navigator visual inspection",
+    "Linux/Windows native QR desktop display",
+    "physical camera scan/public networking",
+    "complete iPhone business flows"
+  ]
+}

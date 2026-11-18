@@ -1,0 +1,28 @@
+{
+  "recordedAt": "2026-11-18T06:43:32.327217+00:00",
+  "files": {
+    "代码/前端/Web/Src/AdminPanel.tsx": "4aa537f5496b49c37771b018cb223755e033def3c89881a395dcc86cbc8a597a",
+    "代码/前端/Web/Src/AdminReportDetail.tsx": "18852e9410010c1199bd62f1cf3a85a682e50aad95909195de895c2d5e938691",
+    "代码/前端/Web/Src/AdminReportProtocol.ts": "358f06527e04011f03a8554ff83fdbdfb6e06e76ade321e0c0f670ebcb7e32ce",
+    "代码/前端/Web/Src/AdminReportLabels.ts": "86a8ce8df4cbb678c65fc81cff9cea00422c250365a38eb6458164b43dc632a0",
+    "代码/前端/Web/Src/AdminReport.css": "dd2a145906511c2bc278b2c67ff622b3fda4ad0503c7c7eeb1128aafb4ffa0e6",
+    "代码/前端/Web/Src/i18n.ts": "45562cf643ec00c721473eeb23bdccf367cda499e17e8798a9bca607c95b98f5",
+    "代码/前端/Web/Src/api.ts": "319dec1d73e4355b7f43517e4d5615302be20f21b45ed624d69c5317e447a89f",
+    "代码/前端/Web/Src/AuthSession.ts": "b3073d6f452a2164953d626814b3330a63daa7724d610507a906b758dda0f25e",
+    "代码/前端/Web/Src/styles.css": "972a706c44ab376d40591542b914928e88ffa3523d7e535f8c1dd93c63616927",
+    "测试/前端/Web/admin-report-evidence.cjs/browser.cjs": "418ae1ca1b9093bf2b65c098db8f2aaf80148727773b33c7b564cdf0f2992f33",
+    "代码/前端/iOS/JobsIM/Resource/Assets.xcassets/AppIcon.appiconset/AppIcon.png": "94a642d716e8f494f4ea9a132fdc55fa9f828c93a71324d35f15a8a73adfec53",
+    "测试/前端/iOS/Fixtures/NativeVideo.data": "e3355ce3469b47930b6d83694f911c05360bbbc5d432018c68a3756f598af63a",
+    "测试/前端/Web/admin-report-evidence.cjs/admin-report-evidence.cjs": "5e9cc32a026438697ca102db578d3c5420f7771a5d54af2718dbfbcb812ef51e",
+    "测试/前端/Web/admin-report-evidence.cjs/README.md": "7f013eb68daee944ce915c9f7a54bc75751c0e29915e43a8da34aa7a45fa9522",
+    "项目相关报告/测试/前端/Web/20261118-管理员举报证据/README.md": "d9566c5d2be155a1d86b6c26db489b7c53735263c834953ddcbde85525821db2",
+    "项目相关报告/测试/前端/Web/20261118-管理员举报证据/Resume/README.md": "79ed3e2b33934c604089f7eb6708ec82b18dc5af9f3f2a904cf925c0204a2035",
+    "项目相关报告/测试/前端/Web/20261118-管理员举报证据/Resume/summary.json": "1c34268c31c9f9588435db2efab489b1acf13e8e45386a89bf69984ac0cc6085"
+  },
+  "round2InputDrift": [],
+  "priorStaticProductionDrift": [],
+  "twoRoundProductionDrift": [],
+  "documentLinksMissing": [],
+  "diskAtSeal": "Filesystem   1024-blocks      Used Available Capacity  iused     ifree %iused  Mounted on\n/dev/disk3s5   971298980 928311784  16341800    99% 10779119 163418000    6%   /System/Volumes/Data\n",
+  "browserRuntime": "Closed by runner finally; no instance stop/cleanup used"
+}

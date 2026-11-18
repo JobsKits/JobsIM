@@ -1,0 +1,14 @@
+{
+  "label": "05-构建",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/Web/node_modules/vite/bin/vite.js",
+    "build",
+    "--outDir",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/Web/GroupGovernance/1794874112975-22930/Production"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 1.01,
+  "minimumFreeBytes": 5752446976,
+  "reason": null
+}

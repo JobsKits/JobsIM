@@ -99,6 +99,9 @@ func (a *App) rawForwardSource(ctx context.Context, id, user string) (Message, m
 	if e != nil {
 		return m, nil, e
 	}
+	if e = a.retentionReadState(ctx, &m); e != nil {
+		return m, nil, e
+	}
 	meta, e := a.member(ctx, user, m.ConversationID)
 	if e != nil {
 		return m, nil, e
@@ -188,6 +191,11 @@ func (a *App) projectForward(ctx context.Context, m *Message, depth int, visited
 }
 
 func (a *App) projectMessage(ctx context.Context, m *Message, user string, meta map[string]any) {
+	if err := a.retentionReadState(ctx, m); err != nil {
+		m.ContentUnavailable = true
+		m.Text = ""
+		m.AttachmentID = ""
+	}
 	visited := map[string]bool{m.ID: true}
 	a.projectForward(ctx, m, 0, visited)
 	if m.Deleted || m.ContentUnavailable || m.ForwardUnavailable || m.sourcePending {

@@ -10,6 +10,7 @@ func init() {
 	migrations["conversation"] += `ALTER TABLE conversation.members ADD COLUMN IF NOT EXISTS export_pending_operation_id text;`
 }
 func (a *App) exportIdentityRoutes(h func(string, func(http.ResponseWriter, *http.Request) error), internal func(func(http.ResponseWriter, *http.Request) error) func(http.ResponseWriter, *http.Request) error) {
+	a.mediaUploadIdentityRoutes(h, internal)
 	a.forwardIdentityRoutes(h, internal)
 	a.forwardPendingIdentityRoutes(h, internal)
 	h("POST /internal/exports/principal", internal(func(w http.ResponseWriter, r *http.Request) error {

@@ -1,0 +1,52 @@
+{
+  "finishedAt": "2026-11-17T04:20:29.461Z",
+  "total": 164,
+  "statuses": {
+    "verify": {
+      "startedAt": "2026-11-17T04:20:16.701Z",
+      "finishedAt": "2026-11-17T04:20:21.980Z",
+      "status": 0,
+      "signal": null
+    },
+    "check": {
+      "startedAt": "2026-11-17T04:20:21.980Z",
+      "finishedAt": "2026-11-17T04:20:29.363Z",
+      "status": 1,
+      "signal": null
+    }
+  },
+  "changedDuringReadOnlyChecks": [],
+  "allDocumentBytesStable": true,
+  "sameOriginalStage": true,
+  "sameOriginalFlags": true,
+  "stageSHA256": "6843504649c043b36a5c924eb5ff174fc449ba3e89a9083971f6aa37f7e95de1",
+  "flagsSHA256": "fb367fe4c17c0dfee1a73e825094b87b113815d30c96e019269a8b9891c69bab",
+  "rawIndexCheckPassed": false,
+  "rawIndexFailures": [
+    "项目相关报告/实现进度/20261117-Android原生录音/README.md（未暂存、已删除或格式错误）",
+    "项目相关报告/测试/前端/Web/20261117-Web基础音频/README.md（未暂存、已删除或格式错误）",
+    "项目相关报告/测试/前端/Web/20261117-原身份等待围栏/README.md（未暂存、已删除或格式错误）",
+    "项目相关报告/测试/后端/20261117-WebM音轨识别/README.md（未暂存、已删除或格式错误）",
+    "项目相关报告/测试/后端/20261117-注销续跑公平性/README.md（未暂存、已删除或格式错误）",
+    "测试/前端/Web/audio-rules.cjs/README.md（未暂存、已删除或格式错误）",
+    "测试/前端/Web/audio-browser.cjs/README.md（未暂存、已删除或格式错误）",
+    "测试/前端/Web/account-deletion-cleanup.cjs/README.md（未暂存、已删除或格式错误）",
+    "测试/后端/接口/media_upload/README.md（未暂存、已删除或格式错误）",
+    "项目相关报告/测试/后端/20261117-稳定媒体上传/README.md（未暂存、已删除或格式错误）"
+  ],
+  "installCompleted": false,
+  "installReason": "Second attempt safely stopped when another chat changed CLI README during stat cache refresh; local config already updated and preserved. No further install/restore attempted.",
+  "indexLockExists": false,
+  "temporaryIndexes": [],
+  "registered": [
+    "测试/前端/Web/audio-rules.cjs/README.md",
+    "测试/前端/Web/audio-browser.cjs/README.md",
+    "测试/前端/Web/account-deletion-cleanup.cjs/README.md",
+    "测试/后端/接口/media_upload/README.md",
+    "项目相关报告/测试/后端/20261117-稳定媒体上传/README.md"
+  ],
+  "staged": false,
+  "committed": false,
+  "pushed": false,
+  "globalConfigModified": false
+}

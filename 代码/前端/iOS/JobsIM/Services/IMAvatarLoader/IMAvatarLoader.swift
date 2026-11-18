@@ -10,7 +10,7 @@ import UIKit
 
 @MainActor
 enum IMAvatarLoader {
-    static func image(_ path: String, namespace: IMNamespace) async -> UIImage? {
+    static func image(_ path: String, namespace: IMNamespace, maxPixelSize: Int = 288) async -> UIImage? {
         let session = IMSession.shared
         guard session.namespace == namespace, !session.demo,
             session.api != nil, session.token != nil,
@@ -36,7 +36,7 @@ enum IMAvatarLoader {
             guard !Task.isCancelled, session.namespace == namespace else {
                 return nil
             }
-            return UIImage.make(contentsOfFile: file.path)
+            return UIImage.makeAvatar(contentsOfFile: file.path, maxPixelSize: maxPixelSize)
         } catch {
             return nil
         }

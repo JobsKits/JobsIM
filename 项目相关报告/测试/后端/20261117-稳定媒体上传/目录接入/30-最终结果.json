@@ -1,0 +1,34 @@
+{
+  "finishedAt": "2026-11-17T04:18:57.708Z",
+  "registered": [
+    "测试/前端/Web/audio-rules.cjs/README.md",
+    "测试/前端/Web/audio-browser.cjs/README.md",
+    "测试/前端/Web/account-deletion-cleanup.cjs/README.md",
+    "测试/后端/接口/media_upload/README.md",
+    "项目相关报告/测试/后端/20261117-稳定媒体上传/README.md"
+  ],
+  "total": 164,
+  "originalEntriesPreserved": true,
+  "install": 1,
+  "verify": null,
+  "rawIndexCheck": null,
+  "rawIndexPassed": false,
+  "rawIndexScope": "Actual original index blobs only; no staging performed",
+  "sameStage": true,
+  "sameFlags": true,
+  "stageSHA256": "6843504649c043b36a5c924eb5ff174fc449ba3e89a9083971f6aa37f7e95de1",
+  "flagsSHA256": "fb367fe4c17c0dfee1a73e825094b87b113815d30c96e019269a8b9891c69bab",
+  "changedDocuments": [
+    "代码/前端/CLI/README.md",
+    "项目相关报告/资产盘点/README.md"
+  ],
+  "converterUnchanged": true,
+  "checkedLinks": 44,
+  "broken": [],
+  "duplicates": [],
+  "globalConfigModified": false,
+  "build": false,
+  "staged": false,
+  "committed": false,
+  "pushed": false
+}

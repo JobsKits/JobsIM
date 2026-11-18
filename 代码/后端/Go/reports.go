@@ -11,23 +11,24 @@ import (
 )
 
 type Report struct {
-	ID         string    `json:"id"`
-	ReporterID string    `json:"reporterId"`
-	TargetType string    `json:"targetType"`
-	TargetID   string    `json:"targetId"`
-	Reason     string    `json:"reason"`
-	State      string    `json:"state"`
-	Version    string    `json:"version"`
-	CreatedAt  time.Time `json:"createdAt"`
-	UpdatedAt  time.Time `json:"updatedAt"`
+	ID           string    `json:"id"`
+	ReporterID   string    `json:"reporterId"`
+	TargetType   string    `json:"targetType"`
+	TargetID     string    `json:"targetId"`
+	TargetUserID string    `json:"targetUserId,omitempty"`
+	Reason       string    `json:"reason"`
+	State        string    `json:"state"`
+	Version      string    `json:"version"`
+	CreatedAt    time.Time `json:"createdAt"`
+	UpdatedAt    time.Time `json:"updatedAt"`
 }
 
-const reportColumns = `id::text,reporter_id::text,target_type,target_id::text,reason,state,row_version,created_at,updated_at`
+const reportColumns = `id::text,reporter_id::text,target_type,target_id::text,reason,state,row_version,created_at,updated_at,COALESCE(target_user_id::text,'')`
 
 func scanReport(row pgx.Row) (Report, error) {
 	var v Report
 	var version int64
-	e := row.Scan(&v.ID, &v.ReporterID, &v.TargetType, &v.TargetID, &v.Reason, &v.State, &version, &v.CreatedAt, &v.UpdatedAt)
+	e := row.Scan(&v.ID, &v.ReporterID, &v.TargetType, &v.TargetID, &v.Reason, &v.State, &version, &v.CreatedAt, &v.UpdatedAt, &v.TargetUserID)
 	v.Version = str(version)
 	return v, e
 }
@@ -36,6 +37,7 @@ func validReportState(state string) bool {
 }
 
 func (a *App) governanceRoutes(h func(string, func(http.ResponseWriter, *http.Request) error), internal func(func(http.ResponseWriter, *http.Request) error) func(http.ResponseWriter, *http.Request) error) {
+	a.reportEvidenceGovernanceRoutes(h, internal)
 	h("POST /api/reports", a.createReport)
 	h("GET /api/reports", func(w http.ResponseWriter, r *http.Request) error { return a.listReports(w, r, false) })
 	h("GET /api/admin/reports", func(w http.ResponseWriter, r *http.Request) error { return a.listReports(w, r, true) })
@@ -66,17 +68,15 @@ func (a *App) createReport(w http.ResponseWriter, r *http.Request) error {
 	if e != nil {
 		return e
 	}
-	var q struct {
-		TargetType string `json:"targetType"`
-		TargetID   string `json:"targetId"`
-		Reason     string `json:"reason"`
-		RequestID  string `json:"requestId"`
-	}
+	var q reportCreateRequest
 	if e = decode(r, &q); e != nil {
 		return e
 	}
 	if (q.TargetType != "message" && q.TargetType != "user" && q.TargetType != "conversation") || !validAssetID(q.TargetID) || len(q.RequestID) < 8 || len(q.RequestID) > 128 || !utf8.ValidString(q.Reason) || utf8.RuneCountInString(strings.TrimSpace(q.Reason)) < 1 || utf8.RuneCountInString(q.Reason) > 1000 {
 		return fail(400, "INVALID_REPORT", "Report target, 1–1000 character reason and stable requestId required")
+	}
+	if !validReportSelection(q.EvidenceIDs, reportFileLimit) || !validReportSelection(q.SelectedMessageIDs, reportMessageLimit) {
+		return fail(400, "INVALID_REPORT_SELECTION", "At most10 distinct evidence files and50 distinct current messages may be selected")
 	}
 	raw, _ := json.Marshal(q)
 	digest := keyedDigest(a.Config.Key, "report:"+u.ID, raw)
@@ -103,10 +103,19 @@ func (a *App) createReport(w http.ResponseWriter, r *http.Request) error {
 	if count > 5 {
 		return fail(429, "REPORT_RATE_LIMITED", "Report limit reached; try later")
 	}
+	targetUser := ""
 	switch q.TargetType {
 	case "message":
-		e = a.rpc(r.Context(), "message", "/internal/report-target", map[string]string{"userId": u.ID, "messageId": q.TargetID}, nil)
+		var target struct {
+			SenderID string `json:"senderId"`
+		}
+		e = a.rpc(r.Context(), "message", "/internal/report-target", map[string]string{"userId": u.ID, "messageId": q.TargetID}, &target)
+		targetUser = target.SenderID
+		if e == nil && !validAssetID(targetUser) {
+			e = fail(503, "REPORT_TARGET_UNAVAILABLE", "Current message target identity could not be qualified")
+		}
 	case "user":
+		targetUser = q.TargetID
 		e = a.rpc(r.Context(), "identity", "/internal/users", map[string]any{"ids": []string{q.TargetID}}, nil)
 	case "conversation":
 		_, e = a.member(r.Context(), u.ID, q.TargetID)
@@ -114,16 +123,47 @@ func (a *App) createReport(w http.ResponseWriter, r *http.Request) error {
 	if e != nil {
 		return e
 	}
+	for _, object := range q.EvidenceIDs {
+		if e = a.rpc(r.Context(), "media", "/internal/report-evidence", map[string]string{"objectId": object, "userId": u.ID}, nil); e != nil {
+			return e
+		}
+	}
+	selected := map[string]string{}
+	for _, message := range q.SelectedMessageIDs {
+		view, lookup := a.reportMessageEvidence(r.Context(), u.ID, message, "")
+		if lookup != nil {
+			return lookup
+		}
+		selected[message] = view.ContentVersion
+	}
 	id := newID()
-	_, e = a.DB.Exec(r.Context(), `INSERT INTO governance.reports(id,reporter_id,target_type,target_id,reason,request_id,request_digest) VALUES($1,$2,$3,$4,$5,$6,$7) ON CONFLICT(reporter_id,request_id) DO NOTHING`, id, u.ID, q.TargetType, q.TargetID, q.Reason, q.RequestID, digest)
+	tx, e := a.DB.Begin(r.Context())
 	if e != nil {
 		return e
 	}
-	if e = a.DB.QueryRow(r.Context(), `SELECT request_digest FROM governance.reports WHERE reporter_id=$1 AND request_id=$2`, u.ID, q.RequestID).Scan(&prior); e != nil {
+	defer tx.Rollback(r.Context())
+	_, e = tx.Exec(r.Context(), `INSERT INTO governance.reports(id,reporter_id,target_type,target_id,reason,request_id,request_digest,target_user_id) VALUES($1,$2,$3,$4,$5,$6,$7,NULLIF($8,'')::uuid) ON CONFLICT(reporter_id,request_id) DO NOTHING`, id, u.ID, q.TargetType, q.TargetID, q.Reason, q.RequestID, digest, targetUser)
+	if e != nil {
+		return e
+	}
+	if e = tx.QueryRow(r.Context(), `SELECT id::text,request_digest FROM governance.reports WHERE reporter_id=$1 AND request_id=$2 FOR UPDATE`, u.ID, q.RequestID).Scan(&id, &prior); e != nil {
 		return e
 	}
 	if !bytes.Equal(prior, digest) {
 		return fail(409, "IDEMPOTENCY_CONFLICT", "Concurrent report differs")
+	}
+	for _, object := range q.EvidenceIDs {
+		if _, e = tx.Exec(r.Context(), `INSERT INTO governance.report_evidence(report_id,object_id) VALUES($1,$2) ON CONFLICT DO NOTHING`, id, object); e != nil {
+			return e
+		}
+	}
+	for message, version := range selected {
+		if _, e = tx.Exec(r.Context(), `INSERT INTO governance.report_messages(report_id,message_id,content_version) VALUES($1,$2,$3) ON CONFLICT DO NOTHING`, id, message, version); e != nil {
+			return e
+		}
+	}
+	if e = tx.Commit(r.Context()); e != nil {
+		return e
 	}
 	v, e := scanReport(a.DB.QueryRow(r.Context(), `SELECT `+reportColumns+` FROM governance.reports WHERE reporter_id=$1 AND request_id=$2`, u.ID, q.RequestID))
 	if e != nil {
@@ -144,7 +184,11 @@ func (a *App) listReports(w http.ResponseWriter, r *http.Request, admin bool) er
 	if state != "" && !validReportState(state) {
 		return fail(400, "INVALID_REPORT_STATE", "Unknown report state")
 	}
-	rows, e := a.DB.Query(r.Context(), `SELECT `+reportColumns+` FROM governance.reports WHERE($1 OR reporter_id=$2)AND($3='' OR state=$3) ORDER BY created_at DESC,id LIMIT 100`, admin, u.ID, state)
+	reporter, target := r.URL.Query().Get("reporterId"), r.URL.Query().Get("targetUserId")
+	if reporter != "" && !validAssetID(reporter) || target != "" && !validAssetID(target) {
+		return fail(400, "INVALID_REPORT_FILTER", "Stable reporter or target user ID required")
+	}
+	rows, e := a.DB.Query(r.Context(), `SELECT `+reportColumns+` FROM governance.reports WHERE($1 OR reporter_id=$2)AND($3='' OR state=$3)AND($4='' OR reporter_id=NULLIF($4,'')::uuid)AND($5='' OR target_user_id=NULLIF($5,'')::uuid) ORDER BY created_at DESC,id LIMIT 100`, admin, u.ID, state, reporter, target)
 	if e != nil {
 		return e
 	}
@@ -285,10 +329,11 @@ func (a *App) reportMessageRoutes(h func(string, func(http.ResponseWriter, *http
 		if e != nil {
 			return e
 		}
-		if m.Deleted {
+		if m.Deleted || m.ContentUnavailable || m.ForwardUnavailable || m.sourcePending {
 			return fail(404, "MESSAGE_NOT_FOUND", "Deleted message cannot supply report evidence")
 		}
-		respond(w, 200, map[string]string{"messageId": m.ID, "conversationId": m.ConversationID})
+		respond(w, 200, map[string]string{"messageId": m.ID, "conversationId": m.ConversationID, "senderId": m.SenderID})
 		return nil
 	}))
+	h("POST /internal/report-message", internal(a.reportMessageSource))
 }

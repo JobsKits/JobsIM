@@ -1,0 +1,21 @@
+✔ raw Go JSON slices preserve escapes, nested quoted delimiters and large string counters (3.546291ms)
+✔ real AES-GCM and raw primary digest decode text without Go reencoding (1.593167ms)
+✔ original attachment bytes match independent manifest size and digest (0.765833ms)
+✔ capsule tampering, wrong target and AAD never release plaintext (0.4375ms)
+✔ manifest envelope cannot be replaced by equivalent reencoded JSON or qualified flags (0.418208ms)
+✔ install token binds original physical target, epoch, digest and five second window (0.448958ms)
+✔ unknown pairing first performs pure lookup and never creates automatically (0.945917ms)
+✔ lost first mutation retains original nonce and no password or proof in metadata (1.863042ms)
+✔ successor family may query but cannot create original unseen operation (0.6175ms)
+✔ forwarded text is reference-only; definitive revoke erases, unknown hides body (0.542084ms)
+✔ forwarded text durable selection is allowed, secret metadata fields are rejected (0.329375ms)
+✔ installed_reported with local committed digest does not fetch a new key (0.474667ms)
+✔ stopped service accepts neither list publication nor networking (0.126792ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 137.198208

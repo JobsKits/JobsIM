@@ -1,0 +1,46 @@
+{
+  "timeUTC": "2026-11-18T07:29:38.828628+00:00",
+  "status": "source-and-parse-complete-runtime-pending",
+  "cause": [
+    "Real page header is GKNavigationBar, with native UINavigationBar hidden",
+    "External BaseVC.viewDidAppear calls jobsEnsureNavigationDefaults and rebinds JobsThemeCenter after old IMBaseVC.viewWillAppear colors",
+    "JobsIM does not configure JobsThemeCenter packet; missing packet rejects setStyle, retaining light fallback palette",
+    "Bar tint does not override custom back/more button configuration foreground"
+  ],
+  "changes": [
+    "Final app-owned appearance applied after super.viewDidAppear and on trait changes",
+    "Current effective traits resolve IMUI colors; opaque standard/scrollEdge/compact/compactScrollEdge and native/GK bars share snapshot",
+    "Explicit custom button tint/title states plus native bar-item normal/highlight/focus/disabled palette",
+    "Tab status style forwards through existing GK navigation container to IMBaseVC preferredStatusBarStyle",
+    "Hidden root headers remain hidden, Auth custom controls unchanged"
+  ],
+  "sources": [
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMBaseVC/IMBaseVC.swift",
+      "sha256": "d4b1bae14199272444163242e7c4d74ff6d0f6b8ddb1008069c1ec052f2e59f0"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMRootVC/IMRootVC.swift",
+      "sha256": "2ea33dff13d1b75c172bd2105024dce7cf8ec4060eb958c5923343600f62185a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UINavigationBarAppearance/UINavigationBarAppearance+Make.swift",
+      "sha256": "035f91cafd33438de0cdb8bf1754d2aea399f751ee6ea49b161f2a42a9eae115"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UIViewController/UIViewController+IMNavigationAppearance.swift",
+      "sha256": "7ebfbd006c887be51e2cca20d7e0f4b4d4ac5ecd8d81a0bf298e53eefd8dfc59"
+    }
+  ],
+  "parseExitCode": 0,
+  "built": false,
+  "runtimeVerified": false,
+  "pending": [
+    "white/day, black/night and follow-system navigation screenshots",
+    "status/title/back/more foreground against actual background",
+    "scroll-edge/compact and push/pop refresh",
+    "hidden root header and Auth custom gear regression"
+  ],
+  "externalPodsAndTemplateEdited": false,
+  "AppDelegateEdited": false
+}

@@ -1,0 +1,110 @@
+{
+  "reviewedPath": "项目相关报告/资产盘点/README.md",
+  "reviewedSHA256": "7c504a69c4d93639b8432a75f20e8448ea0c32b2c36b6bda47e0bc3f6c491748",
+  "directSharedFileEdits": false,
+  "applyMode": "parent merges exact current cells; line numbers advisory; preserve all other platform columns and historical evidence",
+  "suggestions": [
+    {
+      "lineAtReview": 33,
+      "rowPrefix": "| CLI 当前完整本地集 |",
+      "column1Based": 2,
+      "oldCell": "产品命令、原意图／SQLite／安全库策略不变，测试清单与现有运行器对齐",
+      "proposedCell": "版本化群治理、同实例普通迁移和逐store收讫协商已接；默认cloud_history／transport_only，原nonce／family／物理库围栏和真实原生probe保持",
+      "reason": "删除当前行“产品源码不变”的旧状态，不能追认旧97范围为新功能"
+    },
+    {
+      "lineAtReview": 33,
+      "rowPrefix": "| CLI 当前完整本地集 |",
+      "column1Based": 3,
+      "oldCell": "无CLI产品源码变更，文档同步当前11外置用例文件",
+      "proposedCell": "当前52项Go源码／外置测试及锁文件输入冻结；群治理5专项、迁移10方法、逐store协商12方法均纳同一完整候选；源码导航见[CLI](../../代码/前端/CLI/README.md)",
+      "reason": "以冻结输入数代替过时11测试文件状态，不与历史范围相加"
+    },
+    {
+      "lineAtReview": 33,
+      "rowPrefix": "| CLI 当前完整本地集 |",
+      "column1Based": 4,
+      "oldCell": "99顶层名单=97PASS／0FAIL／2环境SKIP，无遗漏；真实HTTPS／系统库正向未验，[原件](../测试/回归/20261116-全项目回归/Web-CLI.md)",
+      "proposedCell": "[当前完整结果](../实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-升级门禁最终-20261117-142600/完整本地结果.json)：135 PASS／0 FAIL／2环境SKIP，跑前后52输入SHA一致；实际Mach-O arm64产品已构建且--help退出0，产品与.test分别记SHA。真实HTTPS协调器及系统秘密库诊断未启；[报告](../实现进度/20261116-剩余能力闭环/逐store合格收讫.md)",
+      "reason": "原99=97PASS/2SKIP作为旧原件保留，不再作为当前唯一结果"
+    },
+    {
+      "lineAtReview": 43,
+      "rowPrefix": "| [CLI](../../代码/前端/CLI/README.md) |",
+      "column1Based": 3,
+      "oldCell": "[附件收讫](../测试/CLI/20261116-附件收讫/README.md)eb42候选：80本地／0失败／2环境跳过及MacOS构建，含持久preparation／global和晚到文件／SQL围栏；[正式本人导出](../测试/CLI/20261116-正式本人导出/README.md)13cd候选：88本地／0失败／2环境跳过及MacOS构建；该轮35项typed输入已独立封存；后续改密候选另验，不再声称旧输入与当前全部源一致",
+      "proposedCell": "[当前候选](../实现进度/20261116-剩余能力闭环/逐store合格收讫.md)完整135 PASS／0 FAIL／2环境SKIP，含10迁移／5群治理／12逐store专项；实际[Mach-O arm64产品](../实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-升级门禁最终-20261117-142600/jobsim-darwin-arm64)SHA e17f5340cfabe6b5b3e4ced7ab3100107f594a8c155bc9131066af1c5e7e2c25，产品Go与锁集合SHA e3f70ca8aca35763dbee116e7b1154a08d718aa14f4a11603b13f7300193e114",
+      "reason": "原80/88证据可另留历史链接，但不能取代当前135范围"
+    },
+    {
+      "lineAtReview": 43,
+      "rowPrefix": "| [CLI](../../代码/前端/CLI/README.md) |",
+      "column1Based": 4,
+      "oldCell": "两轮均真实SQLite／文件fsync＋注入HTTP，无真实收讫批准／导出HTTPS／PG。旧15a4的55本地／13真TTY、12ac正文67及395对象79各留原件不累计；process-only不是DPK正向，Windows／Linux目标未验，targets／累计ACK／删除及after_receipt仍未闭环",
+      "proposedCell": "真实SQLite／私有文件fsync，HTTP为显式注入；未自动批准生产profile。真实客户端收讫／迁移HTTPS双设备、断电证明、系统秘密库正向和Windows／Linux本机运行未验；历史55＋13、67、79、80、88等原件均不累计",
+      "reason": "后端已有target/retention worker，不再写后端源码缺失；五端真实资格实链仍另验"
+    },
+    {
+      "lineAtReview": 84,
+      "rowPrefix": "| 正文／对象可靠收讫 |",
+      "column1Based": 4,
+      "oldCell": "新receipt-context／profiles／target／storage-results及保留策略命令源码已接，49输入候选编译过、0实际方法；[原合同](../../代码/后端/Go/接口契约/合格收讫/README.md)",
+      "proposedCell": "receipt-context／profiles／target／storage-results与保留策略命令已接；原bodyEnvelope同FULL保存、历史qualifiedAtCommit纯查、新ACK核当前build＋probe。12专项包含在当前135 PASS／0 FAIL／2环境SKIP中，实际arm64产品已构建；[报告](../实现进度/20261116-剩余能力闭环/逐store合格收讫.md)",
+      "reason": "消除49输入只编译／0方法过时结论；保留客户端注入HTTP边界"
+    },
+    {
+      "lineAtReview": 84,
+      "rowPrefix": "| 正文／对象可靠收讫 |",
+      "column1Based": 5,
+      "oldCell": "默认cloud_history；本build／本库真实probe及部署精确批准后才显式声明。后端真实双PG物理ID／fsync／epoch与NATS双连接分开核；新增readiness正反与全端ACK仍待验，不自动批准a4",
+      "proposedCell": "默认cloud_history，旧bootstrap after_receipt=false；新逐store资格和正文／原件能力分别协商，本build／本物理库probe与部署精确批准后才可显式声明。后端真实独立双PG／JetStream正反3顶层通过、相关PG59顶层通过（含65通过事件，不跨轮累加）；全端真实资格实链仍待验，不自动批准a4",
+      "reason": "真实readiness正反已完成，不再写后端readiness待验；保留设备未覆盖边界"
+    },
+    {
+      "lineAtReview": 86,
+      "rowPrefix": "| 群管理 |",
+      "column1Based": 4,
+      "oldCell": "group-policy／group-change／group-check／group-retry／invite-code／join-group／邀请撤销及审批已接；第五轮102本地／2环境跳过，追加跨family／typed回执继续；独立恢复待接",
+      "proposedCell": "[CLI群治理](../../代码/前端/CLI/README.md#governance)已接版本化转让、策略、邀请／审批、分页、独立运营授权＋本次MFA恢复；group_intents保原nonce／route／body／family，group-check纯查，group-retry显式续原单。5顶层专项包含在当前135 PASS／0 FAIL／2环境SKIP，HTTP为注入；旧102轮保历史，真实治理HTTPS／MFA另验",
+      "reason": "独立恢复已接且原版本与跨family反例实际执行，不继续写独立恢复待接"
+    },
+    {
+      "lineAtReview": 95,
+      "rowPrefix": "| 本人账号注销 |",
+      "column1Based": 4,
+      "oldCell": "[115本地方法／0失败／2环境跳过](../实现进度/20261116-剩余能力闭环/CLI注销.md)，覆盖原恢复码与全epoch本地擦除；后续默认URL／迁移／协商仅候选编译",
+      "proposedCell": "[原注销11专项](../实现进度/20261116-剩余能力闭环/CLI注销.md)均随当前135 PASS／0 FAIL／2环境SKIP再验；默认URL／迁移／协商当前源已编译执行，实际arm64产品已构建。原恢复码与全epoch本地擦除边界保持；真实HTTPS／系统秘密库仍另验",
+      "reason": "115旧轮不变，当前不能再写新源只编译"
+    },
+    {
+      "lineAtReview": 96,
+      "rowPrefix": "| 八域服务端备份恢复／普通迁移 |",
+      "column1Based": 4,
+      "oldCell": "[普通迁移四源／8方法](../实现进度/20261116-剩余能力闭环/CLI普通迁移.md)已候选编译、0方法执行；原配对／nonce／密文stage／独立历史／原件已接，cloud_only原qualified来源续接",
+      "proposedCell": "[普通迁移10方法](../实现进度/20261116-剩余能力闭环/CLI普通迁移.md)全部随当前52输入135 PASS／0 FAIL／2环境SKIP通过；原配对／nonce／密文stage／独立历史／完整原件、cloud_only原qualified精确来源、0字节及双连接global发布围栏已验。实际arm64产品与.test各封SHA；真实双设备HTTPS另验",
+      "reason": "旧8方法／0执行已失效；普通迁移不授ACK或搬Outbox"
+    },
+    {
+      "lineAtReview": 106,
+      "rowPrefix": "| 2 | 合格ACK／对象／目标与保留策略 |",
+      "column1Based": 3,
+      "oldCell": "CLI对象eb42的80本地／Mac构建已过，含preparation／global／晚到围栏；13cd导出88不计入收讫真实验证。后端9f3b有7纯／9真PG／构建，无收讫HTTPS／端文件耐久实链。补真实批准／原件交付、冻结targets／累计ACK、撤权／恢复及保留worker，达到原保护条件后才可启after_receipt",
+      "proposedCell": "后端冻结目标／累计事实／保留worker及逐storereadiness正反已有真实独立双PG／JetStream证据，3专项与59相关PG分别封存；CLI12协商／原单专项随当前135本地通过，新ACK／after策略继续当前build＋probe＋部署批准。旧after_receipt全局false保兼容；继续五端实际合格库、原件交付和端到端保护实链验证，不能由HTTP替身或部署profile列表冒认本端合格。见[报告](../实现进度/20261116-剩余能力闭环/逐store合格收讫.md)",
+      "reason": "未完工作应定位端到端实际资格验证，不能继续称后端target／worker未实现"
+    }
+  ],
+  "iOSReadOnlyFindings": [
+    {
+      "path": "项目相关报告/实现进度/20261116-剩余能力闭环/iOS收讫.md",
+      "finding": "global段仍写同writer先unlink；现生产是floor／metadata／精确dev+ino cleanup task同事务先提交，成功后事务外drain及启动恢复drain，rollback有writer fence和inode核对",
+      "action": "root按最终iOS冻结证据更新，不能把先unlink回滚风险写回当前合同"
+    },
+    {
+      "path": "项目相关报告/实现进度/20261116-剩余能力闭环/iOS收讫.md",
+      "finding": "Service/UI在接与6方法parse-only、99轮待验已落后于当前8 Storage方法及122候选执行；目录实读122最初111/11和合同修正112/10，均保原失败证据",
+      "action": "root根据最终原生实际结果另更新，不以本次CLI135或源存在推认iOS已全过"
+    }
+  ],
+  "evidence": "项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/最终已验源码与可执行候选-142600.json",
+  "validationBoundary": "documentation-only review; no production source writes, compile, service startup, data cleanup or commit"
+}

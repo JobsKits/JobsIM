@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jobs.im.MigrationRulesTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-17T06:59:48.673Z" hostname="JobsdeAir" time="0.007">
+  <properties/>
+  <testcase name="invalidUtf8AndOversizedDecodeFailClosed" classname="com.jobs.im.MigrationRulesTest" time="0.001"/>
+  <testcase name="originalJsonSlicesPreserveEscapedBracesAndNestedArrays" classname="com.jobs.im.MigrationRulesTest" time="0.003"/>
+  <testcase name="hashUsesOriginalBytes" classname="com.jobs.im.MigrationRulesTest" time="0.001"/>
+  <testcase name="base64RequiresCanonicalWireEncoding" classname="com.jobs.im.MigrationRulesTest" time="0.001"/>
+  <testcase name="allMigrationLanguagesHaveEveryEntry" classname="com.jobs.im.MigrationRulesTest" time="0.0"/>
+  <testcase name="duplicateRootOrTrailingDataIsRejected" classname="com.jobs.im.MigrationRulesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

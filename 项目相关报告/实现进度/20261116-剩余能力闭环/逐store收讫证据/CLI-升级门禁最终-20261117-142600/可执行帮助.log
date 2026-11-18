@@ -1,0 +1,9 @@
+Usage of /Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-升级门禁最终-20261117-142600/jobsim-darwin-arm64:
+  -ca string
+    	Instance-specific trusted CA PEM
+  -data-dir string
+    	Private local state root; defaults to the user configuration directory
+  -insecure-loopback
+    	Allow HTTP on loopback for development; TLS verification is never disabled
+  -server string
+    	JobsIM instance HTTPS URL (default "https://127.0.0.1:9443")

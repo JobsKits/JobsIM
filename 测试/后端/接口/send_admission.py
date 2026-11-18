@@ -40,8 +40,13 @@ try:
  stale=payload(old);assert send(a,d,stale,409)['error']['code']=='SEND_ADMISSION_CHANGED';send(a,d,payload(fresh))
  # Repeated acceptance/deletion must not fabricate a fresh authorization.
  call('DELETE','/api/contacts/'+bid,token=at);call('DELETE','/api/contacts/'+bid,token=at);friend(a,b);before_block=snapshot(a,d)['sendAdmission']
- call('PUT','/api/blocks/'+bid,{},at);call('DELETE','/api/blocks/'+bid,token=at);assert snapshot(a,d)['sendAdmission']==''
- call('POST','/api/contacts/'+aid+'/reopen',{'requestId':str(uuid.uuid4())},bt);friend(a,b);assert snapshot(a,d)['sendAdmission']!=before_block;assert send(a,d,payload(before_block),409)['error']['code']=='SEND_ADMISSION_CHANGED'
+ before_b=snapshot(b,d)['sendAdmission'];call('PUT','/api/blocks/'+bid,{},at)
+ assert snapshot(a,d)['sendAdmission']=='' and snapshot(b,d)['sendAdmission']==''
+ for actor,peer in [(at,bid),(bt,aid)]:assert any(item['id']==peer for item in call('GET','/api/contacts',token=actor)['items'])
+ assert send(a,d,payload(before_block),409)['error']['code']=='SEND_ADMISSION_CHANGED';assert send(b,d,payload(before_b),409)['error']['code']=='SEND_ADMISSION_CHANGED'
+ blocked=call('POST','/api/conversations',{'kind':'direct','memberIds':[bid]},at);assert blocked['id']==d and blocked['sendAdmission']==''
+ call('DELETE','/api/blocks/'+bid,token=at);restored=snapshot(a,d)['sendAdmission'];assert restored and restored!=before_block
+ assert send(a,d,payload(before_block),409)['error']['code']=='SEND_ADMISSION_CHANGED';send(a,d,payload(restored))
  group=call('POST','/api/conversations',{'kind':'group','title':'Admission scope','memberIds':[bid]},at);g=group['id'];b_old=snapshot(b,g);b_original=payload(b_old['sendAdmission']);send(b,g,b_original)
  members=call('GET','/api/conversations/'+g+'/members',token=at)['items'];generation=next(x['membershipGeneration'] for x in members if x['id']==bid)
  call('DELETE','/api/conversations/'+g+'/members/'+bid+'?membershipGeneration='+generation,token=at);call('POST','/api/conversations/'+g+'/members',{'userId':bid},at);b_new=snapshot(b,g);assert b_new['membershipGeneration']!=generation and b_new['sendAdmission']!=b_old['sendAdmission']

@@ -1,0 +1,27 @@
+Analyzing dependencies
+Downloading dependencies
+Installing JobsByQuartzCore 0.0.1
+Installing JobsByUIKit 0.0.1
+Installing JobsByWebKit 0.0.1
+Installing JobsGetWindow 0.1.14
+Installing JobsImageTools 0.1.14
+Installing JobsInheritance 0.0.1
+Installing JobsNavBar 0.1.14
+Installing JobsNetworking 1.0.1
+Installing JobsScale 0.1.14
+Installing JobsSwiftBaseDefines 0.1.6
+Installing JobsSwiftBlock 0.1.0
+Installing JobsSwiftDSL 0.1.0
+Installing JobsSwiftDebugTools 0.0.1
+Installing JobsSwiftFoundation 0.1.1
+Installing JobsSwiftStandardLibrary 0.0.1
+Installing JobsSwiftTimer 0.1.0
+Installing JobsTextTools 0.1.14
+Installing JobsToast 0.1.14
+Installing JobsViewPush 0.0.1
+Installing Jobsl10n 0.1.14
+Generating Pods project
+Integrating client project
+Pod installation complete! There are 46 dependencies from the Podfile and 46 total pods installed.
+
+[!] AFNetworking has been deprecated in favor of Alamofire

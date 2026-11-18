@@ -1,0 +1,19 @@
+{
+  "startedAt": "2026-11-17T00:51:21.487Z",
+  "finishedAt": "2026-11-17T00:51:23.240Z",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/account-deletion.cjs/account-deletion.cjs"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "stopped": "",
+  "freeBefore": 4928380928,
+  "minimumFree": 4918267904,
+  "freeAfter": 4918878208,
+  "inputsUnchanged": true,
+  "actualAPI": false,
+  "dependencyInstall": false
+}

@@ -1,0 +1,334 @@
+{
+  "at": "2026-11-17T05:55:19.669Z",
+  "stages": [
+    {
+      "dir": "02-修前错namespace-1794892621441-18710",
+      "startedAt": "2026-11-17T05:17:01.485Z",
+      "finishedAt": "2026-11-17T05:17:16.070Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs"
+      ],
+      "exit": {
+        "code": 1,
+        "signal": null
+      },
+      "expectedFailure": "global",
+      "validProductReproduction": true,
+      "stopped": "",
+      "minimumFree": 24681197568,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "03-修前repair被观察清除-1794892680521-23545",
+      "startedAt": "2026-11-17T05:18:00.587Z",
+      "finishedAt": "2026-11-17T05:18:17.288Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs"
+      ],
+      "exit": {
+        "code": 1,
+        "signal": null
+      },
+      "expectedFailure": "repair",
+      "validProductReproduction": true,
+      "stopped": "",
+      "minimumFree": 24644907008,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "03-修前活动messageId-1794892646059-21017",
+      "startedAt": "2026-11-17T05:17:26.145Z",
+      "finishedAt": "2026-11-17T05:17:38.331Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs"
+      ],
+      "exit": {
+        "code": 1,
+        "signal": null
+      },
+      "expectedFailure": "active",
+      "validProductReproduction": true,
+      "stopped": "",
+      "minimumFree": 24668917760,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "04-附件与清理浏览器-1794892718400-26457",
+      "startedAt": "2026-11-17T05:18:38.425Z",
+      "finishedAt": "2026-11-17T05:18:57.107Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 24623890432,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "05-audio-browser-1794892813129-30213",
+      "startedAt": "2026-11-17T05:20:13.140Z",
+      "finishedAt": "2026-11-17T05:20:28.596Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/audio-browser.cjs/audio-browser.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 24382468096,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "05-auth-session-1794892806839-30213",
+      "startedAt": "2026-11-17T05:20:06.846Z",
+      "finishedAt": "2026-11-17T05:20:13.121Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 24459104256,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "05-global-facts-1794892796580-30213",
+      "startedAt": "2026-11-17T05:19:56.609Z",
+      "finishedAt": "2026-11-17T05:20:01.536Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/global-facts.cjs/global-facts.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 24524124160,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "05-outbox-proof-1794892801537-30213",
+      "startedAt": "2026-11-17T05:20:01.548Z",
+      "finishedAt": "2026-11-17T05:20:06.839Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 24491622400,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "07-认证固定第1次-1794893088289-40862",
+      "startedAt": "2026-11-17T05:24:48.304Z",
+      "finishedAt": "2026-11-17T05:24:50.031Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 23528800256,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "07-认证固定第2次-1794893090036-40862",
+      "startedAt": "2026-11-17T05:24:50.039Z",
+      "finishedAt": "2026-11-17T05:24:51.346Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 23517630464,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "07-认证固定第3次-1794893091351-40862",
+      "startedAt": "2026-11-17T05:24:51.354Z",
+      "finishedAt": "2026-11-17T05:24:52.710Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 23506841600,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "07-认证固定第4次-1794893092715-40862",
+      "startedAt": "2026-11-17T05:24:52.718Z",
+      "finishedAt": "2026-11-17T05:24:54.077Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 23496802304,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    },
+    {
+      "dir": "07-认证固定第5次-1794893094082-40862",
+      "startedAt": "2026-11-17T05:24:54.084Z",
+      "finishedAt": "2026-11-17T05:24:55.376Z",
+      "args": [
+        "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+      ],
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "expectedFailure": false,
+      "validProductReproduction": false,
+      "stopped": "",
+      "minimumFree": 23486836736,
+      "inputsUnchanged": true,
+      "realAPI": false,
+      "currentProductDrift": []
+    }
+  ],
+  "counts": [
+    {
+      "path": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/05-global-facts-1794892796580-30213/浏览器/结果.json",
+      "keys": [
+        "scope",
+        "apiAttempts",
+        "inputSHA256",
+        "results",
+        "passed",
+        "failed"
+      ],
+      "count": 6
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/05-outbox-proof-1794892801537-30213/浏览器/原请求队列结果.json",
+      "keys": [
+        "runtime",
+        "checks",
+        "errors",
+        "hashes",
+        "date"
+      ],
+      "count": 10
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/05-auth-session-1794892806839-30213/浏览器/浏览器协议结果.json",
+      "keys": [
+        "simulatedBFF",
+        "realBackend",
+        "checks",
+        "refreshCalls",
+        "initialCalls",
+        "learnCalls",
+        "date"
+      ],
+      "count": 16
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/05-audio-browser-1794892813129-30213/浏览器/结果.json",
+      "keys": [
+        "startedAt",
+        "finishedAt",
+        "passed",
+        "checks",
+        "sourceBefore",
+        "sourceAfter",
+        "nativeRecording",
+        "realMicrophone",
+        "realAPI",
+        "allHTTPFixtures",
+        "realIndexedDB",
+        "realMediaRecorder"
+      ],
+      "count": 19
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/04-附件与清理浏览器-1794892718400-26457/浏览器/结果.json",
+      "keys": [
+        "startedAt",
+        "finishedAt",
+        "passed",
+        "checks",
+        "sourceBefore",
+        "sourceAfter",
+        "realIndexedDB",
+        "realWebLocks",
+        "realAPI",
+        "realMicrophone",
+        "HTTP"
+      ],
+      "count": 41
+    }
+  ],
+  "allCurrentProductInputsMatch": true,
+  "allStageInputsUnchanged": true,
+  "minimumFreeBytes": 23486836736,
+  "authHistorical09Unattributed": true,
+  "currentAuthFive": "固定5次认证-1794893088191-40862.json",
+  "privateProductProof": "同输入私有产物复用-1794892597771.json",
+  "productModifiedInThisValidationWindow": false,
+  "realAPI": false,
+  "realMicrophone": false
+}

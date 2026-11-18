@@ -1,0 +1,70 @@
+{
+  "scopeChangedToReadOnly": true,
+  "productionWritesStopped": true,
+  "initialCopies": [
+    "sync_migration_model.go",
+    "sync_migration_validate.go",
+    "migration_identity.go",
+    "message_migration.go"
+  ],
+  "subsequentSemanticEdits": [
+    "sync_migration_model.go",
+    "sync_migration_validate.go"
+  ],
+  "originalDrafts": {
+    "sync_migration_model.go": {
+      "path": "项目相关报告/测试/后端/20261117-普通迁移/草稿原件/sync_migration_model.go.pending",
+      "sha256": "f3712b37061adfead2aafbcf2251b545234023c80252382d61a3190c8a33c8ea"
+    },
+    "sync_migration_validate.go": {
+      "path": "项目相关报告/测试/后端/20261117-普通迁移/草稿原件/sync_migration_validate.go.pending",
+      "sha256": "ddbd0fba827edfa5473a4d81865d5b9fb6eac8e72248799bbcb303daf554be0e"
+    },
+    "migration_identity.go": {
+      "path": "项目相关报告/测试/后端/20261117-普通迁移/草稿原件/migration_identity.go.pending",
+      "sha256": "5d863de88a4670eac07cdee0c6c5959e9963f1392a25e06f2b44fb6551d935ef"
+    },
+    "message_migration.go": {
+      "path": "项目相关报告/测试/后端/20261117-普通迁移/草稿原件/message_migration.go.pending",
+      "sha256": "e5dd07c25c99cb0a74598b7d9a44dcabe55c8618a7197cbfd1bd242fb5c90304"
+    }
+  },
+  "currentReadOnlySHA": {
+    "sync_migration_model.go": "5645a6da1d5e20b36255d111aafd63ccd4639de5d66f8963e115beaca4ba59b8",
+    "sync_migration_validate.go": "68003fd0b170eff8f40613956df103c1761e725d58ed21d8fe28d81db5132a5b",
+    "migration_identity.go": "16f738c444405b7071870b0fb2f1fa189c70f8602a128f6d89ad24f99c59e9c0",
+    "message_migration.go": "72896d4e39675d43a02ea84884e223b5f97dcd137363e3db1584b3860eda2943"
+  },
+  "unresolvedFindings": [
+    {
+      "severity": "P1",
+      "file": "代码/后端/Go/message_migration.go",
+      "trigger": "ContentUnavailable without an explicit protected cloud_only lifecycle fact",
+      "impact": "Unknown/restored-missing/protection_pending content is labelled cloud_only",
+      "recommendation": "Require a protected cloud_only floor; otherwise reject unknown classification"
+    },
+    {
+      "severity": "P1",
+      "file": "代码/后端/Go/media_retention.go",
+      "trigger": "Independent media expiry reaches clearRetainedMediaBytes",
+      "impact": "Source unlink/ACK can finish before controlled migration capsules and keys are drained",
+      "recommendation": "After durable terminal media floor, before unlink/bytes_cleared ACK, drain migrations under the existing live EX; preserve pending on failure"
+    },
+    {
+      "severity": "P2",
+      "file": "代码/后端/Go/sync_migration_delivery.go",
+      "trigger": "Range with digest-based If-Range",
+      "impact": "No strong ETag/digest request binding; digest-based If-Range falls back to full200 rather than confirmed resumable206",
+      "recommendation": "Strong capsule SHA ETag; bind expected manifest/capsule digest and reject mismatch"
+    },
+    {
+      "severity": "P2",
+      "file": "代码/后端/Go/sync_migration_delivery.go",
+      "trigger": "Path replaced between Open and fileDigest(path)",
+      "impact": "Hash checks a reopened path rather than the file descriptor served",
+      "recommendation": "Hash the already-verified opened FD then rewind same FD"
+    }
+  ],
+  "testsRun": false,
+  "productionCurrentOwnership": "another JobsIM chat; no rollback or deletion performed"
+}

@@ -1,0 +1,25 @@
+{
+  "markerDatabaseDropped": true,
+  "results": [
+    {
+      "name": "PGMain",
+      "port": 62381,
+      "ownedDatabaseResidue": 0,
+      "queryExit": 0,
+      "stopExit": 0,
+      "postmasterPIDRemoved": true,
+      "portClosed": true
+    },
+    {
+      "name": "PGJournal",
+      "port": 62382,
+      "ownedDatabaseResidue": 0,
+      "queryExit": 0,
+      "stopExit": 0,
+      "postmasterPIDRemoved": true,
+      "portClosed": true
+    }
+  ],
+  "privateDataPreserved": true,
+  "defaultInstanceTouched": false
+}

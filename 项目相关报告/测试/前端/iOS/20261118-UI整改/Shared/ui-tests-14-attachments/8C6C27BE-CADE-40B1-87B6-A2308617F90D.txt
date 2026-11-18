@@ -1,0 +1,86 @@
+Application, 0x110dcdcc0, pid: 95246, label: 'JobsIM' <App element pid: 95246>
+  Window (Main), 0x110dcdf40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4335665152.4>
+    Other, 0x110dce080, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4341936640.229>
+    Other, 0x110dce1c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4831122432.230>
+      Other, 0x110dce300, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4831121152.231>
+        Other, 0x110dce440, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4336488448.232>
+          Other, 0x110dce580, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4359487488.233>
+            Other, 0x110dce6c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4341776384.235>
+              Other, 0x110dce800, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4341925888.237>
+                Other, 0x110dce940, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4344996608.240>
+                  Other, 0x110dced00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4341781504.262>
+                    Other, 0x110dcebc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4335196288.265>
+                      Other, 0x110dcea80, {{0.0, 62.0}, {402.0, 729.0}} <AX element pid: 95246, elementOrHash.elementID: 4335202560.268>
+                        Other, 0x110dcee40, {{16.0, 62.0}, {370.0, 44.0}} <AX element pid: 95246, elementOrHash.elementID: 4341899776.271>
+                          Button, 0x110dcef80, {{342.0, 62.0}, {44.0, 44.0}}, label: '添加朋友' <AX element pid: 95246, elementOrHash.elementID: 4830009472.274>
+                        Table, 0x110dcf0c0, {{0.0, 106.0}, {402.0, 685.0}}, label: '空列表' <AX element pid: 95246, elementOrHash.elementID: 4336582656.272>
+                          Other, 0x110dcf200, {{12.0, 118.0}, {378.0, 212.0}} <AX element pid: 95246, elementOrHash.elementID: 4341904384.275>
+                            Other, 0x110dcf340, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4364812288.283>
+                              Image, 0x110dcf480, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4344725504.292>
+                              Other, 0x110dcf5c0, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4341906432.289>
+                                Other, 0x110dcf700, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4341891072.301>
+                                  Other, 0x110dcf840, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4366004224.302>
+                                    Other, 0x110dcf980, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4341502464.303>
+                                      Other, 0x110dcfac0, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4341502976.304>
+                                        Other, 0x110dcfc00, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4357889536.306>
+                                          Other, 0x110dcfd40, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4359328128.308>
+                                      Other, 0x110dcfe80, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4357890816.305>
+                                        Other, 0x107cba440, {{12.0, 118.0}, {378.0, 56.0}} <AX element pid: 95246, elementOrHash.elementID: 4341504000.307>
+                                SearchField, 0x107cb9e00, {{20.0, 124.0}, {362.0, 44.0}}, label: '搜索联系人', placeholderValue: '搜索联系人' <AX element pid: 95246, elementOrHash.elementID: 4366002688.281>
+                                  Image, 0x107cb8780, {{32.0, 136.0}, {20.7, 19.3}}, identifier: 'magnifyingglass', label: '搜索' <AX element pid: 95246, elementOrHash.elementID: 4344733824.291>
+                            Button, 0x107cbb700, {{12.0, 174.0}, {378.0, 52.0}}, label: '新的朋友' <AX element pid: 95246, elementOrHash.elementID: 4830013056.278>
+                              StaticText, 0x107cbb840, {{48.3, 189.7}, {67.7, 20.3}}, label: '新的朋友' <AX element pid: 95246, elementOrHash.elementID: 4341785600.286>
+                            Button, 0x107cbbac0, {{12.0, 226.0}, {378.0, 52.0}}, label: '群聊' <AX element pid: 95246, elementOrHash.elementID: 4830013952.279>
+                              StaticText, 0x107cbb980, {{59.0, 241.7}, {34.0, 20.3}}, label: '群聊' <AX element pid: 95246, elementOrHash.elementID: 4341779456.287>
+                            Button, 0x107cb9180, {{12.0, 278.0}, {378.0, 52.0}}, label: '星标朋友' <AX element pid: 95246, elementOrHash.elementID: 4830014848.280>
+                              StaticText, 0x107cb9cc0, {{52.0, 293.7}, {67.7, 20.3}}, label: '星标朋友' <AX element pid: 95246, elementOrHash.elementID: 4341778944.288>
+                          Other, 0x107cb9400, {{382.0, 106.0}, {20.0, 685.0}}, label: '节索引' <AX element pid: 95246, elementOrHash.elementID: 4364562432.276>
+                          Button, 0x107cb9f40, {{130.0, 405.3}, {142.0, 86.7}}, identifier: 'empty.state', label: '这里还没有内容, 重新加载', value: 重新加载 <AX element pid: 95246, elementOrHash.elementID: 4830010368.277>
+                            StaticText, 0x107cbb480, {{142.0, 440.7}, {118.0, 20.3}}, label: '这里还没有内容' <AX element pid: 95246, elementOrHash.elementID: 4341864448.284>
+                            StaticText, 0x107cba6c0, {{171.0, 467.0}, {59.7, 18.0}}, label: '重新加载' <AX element pid: 95246, elementOrHash.elementID: 4341864960.285>
+                          Button, 0x107cb9b80, {{12.0, 174.0}, {378.0, 52.0}}, label: '新的朋友' <AX element pid: 95246, elementOrHash.elementID: 4830013056.278>
+                            StaticText, 0x110d94000, {{48.3, 189.7}, {67.7, 20.3}}, label: '新的朋友' <AX element pid: 95246, elementOrHash.elementID: 4341785600.286>
+                          Button, 0x110d94140, {{12.0, 226.0}, {378.0, 52.0}}, label: '群聊' <AX element pid: 95246, elementOrHash.elementID: 4830013952.279>
+                            StaticText, 0x110d94280, {{59.0, 241.7}, {34.0, 20.3}}, label: '群聊' <AX element pid: 95246, elementOrHash.elementID: 4341779456.287>
+                          Button, 0x110d943c0, {{12.0, 278.0}, {378.0, 52.0}}, label: '星标朋友' <AX element pid: 95246, elementOrHash.elementID: 4830014848.280>
+                            StaticText, 0x110d94500, {{52.0, 293.7}, {67.7, 20.3}}, label: '星标朋友' <AX element pid: 95246, elementOrHash.elementID: 4341778944.288>
+                          SearchField, 0x110d94640, {{20.0, 124.0}, {362.0, 44.0}}, label: '搜索联系人', placeholderValue: '搜索联系人' <AX element pid: 95246, elementOrHash.elementID: 4366002688.281>
+                            Image, 0x110d94780, {{32.0, 136.0}, {20.7, 19.3}}, identifier: 'magnifyingglass', label: '搜索' <AX element pid: 95246, elementOrHash.elementID: 4344733824.291>
+                Toolbar, 0x110d948c0, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: '工具栏' <AX element pid: 95246, elementOrHash.elementID: 4341927936.241>
+                  Other, 0x110d94a00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4359495168.263>
+          Other, 0x110d94b40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4335671296.234>
+            Other, 0x110d94c80, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 95246, elementOrHash.elementID: 4341938176.236>
+              Other, 0x110d94dc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4344990784.238>
+                TabBar, 0x110d94f00, {{0.0, 791.0}, {402.0, 83.0}}, label: '标签页栏' <AX element pid: 95246, elementOrHash.elementID: 4364553984.242>
+                  Other, 0x110d95040, {{62.7, 791.0}, {277.0, 62.0}} <AX element pid: 95246, elementOrHash.elementID: 4336496128.243>
+                    Other, 0x110d95180, {{62.7, 791.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4341790720.244>
+                    Other, 0x110d952c0, {{62.7, 791.0}, {277.0, 62.0}} <AX element pid: 95246, elementOrHash.elementID: 4344997056.245>
+                      Button, 0x110d95400, {{66.7, 795.0}, {95.0, 54.0}}, label: '联系人', Selected <AX element pid: 95246, elementOrHash.elementID: 4335672320.248>
+                        Image, 0x110d95540, {{95.3, 802.3}, {37.7, 26.7}}, identifier: 'person.2', label: '两个人' <AX element pid: 95246, elementOrHash.elementID: 4336502656.252>
+                      Button, 0x110d95680, {{153.7, 795.0}, {95.0, 54.0}}, label: '消息' <AX element pid: 95246, elementOrHash.elementID: 4335675392.249>
+                        Image, 0x110d957c0, {{182.0, 800.0}, {38.7, 30.0}}, identifier: 'bubble.left.and.bubble.right', label: '对话' <AX element pid: 95246, elementOrHash.elementID: 4831119232.253>
+                      Button, 0x110d95900, {{240.7, 795.0}, {95.0, 54.0}}, label: 'demo_jobs' <AX element pid: 95246, elementOrHash.elementID: 4361124864.250>
+                    Other, 0x110d95a40, {{62.7, 791.0}, {277.0, 62.0}} <AX element pid: 95246, elementOrHash.elementID: 4344996160.246>
+                    Other, 0x110d95b80, {{66.7, 795.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4359492608.247>
+                      Other, 0x110d95cc0, {{66.7, 795.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4345001984.251>
+                        Other, 0x110d95e00, {{66.7, 795.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4336486912.254>
+                        Other, 0x110d95f40, {{66.7, 795.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4341932544.255>
+                          Other, 0x110d96080, {{66.7, 795.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4344988992.256>
+                            Other, 0x110d961c0, {{66.7, 795.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4344987648.258>
+                              Other, 0x110d96300, {{66.7, 795.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4344988096.260>
+                            Other, 0x110d96440, {{66.7, 795.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4341933568.259>
+                          Other, 0x110d96580, {{66.7, 795.0}, {95.0, 54.0}} <AX element pid: 95246, elementOrHash.elementID: 4344989440.257>
+              Other, 0x110d966c0, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 95246, elementOrHash.elementID: 4341939200.239>
+                Other, 0x110d96800, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 95246, elementOrHash.elementID: 4366001152.261>
+                  Other, 0x110d96940, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 95246, elementOrHash.elementID: 4341789696.264>
+                    Other, 0x110d96a80, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 95246, elementOrHash.elementID: 4341787648.266>
+                      Other, 0x110d96bc0, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 95246, elementOrHash.elementID: 4831120512.269>
+                        Other, 0x110d96d00, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 95246, elementOrHash.elementID: 4335192256.273>
+                    Other, 0x110d96e40, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 95246, elementOrHash.elementID: 4831121792.267>
+                      Other, 0x110d96f80, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 95246, elementOrHash.elementID: 4341780992.270>
+    Other, 0x110d970c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4357885056.7>
+      Button, 0x110d97200, {{290.0, 642.0}, {100.0, 44.0}}, identifier: 'demo.environment', label: '演示环境' <AX element pid: 95246, elementOrHash.elementID: 4336534400.9>
+        StaticText, 0x110d97340, {{316.0, 656.7}, {48.0, 14.3}}, label: '演示环境' <AX element pid: 95246, elementOrHash.elementID: 4341893632.11>
+  Window, 0x110d97480, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4335858176.107>
+    Other, 0x110d975c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4341542912.110>
+      Other, 0x110d97700, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 95246, elementOrHash.elementID: 4341543936.145>

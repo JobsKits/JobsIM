@@ -1,0 +1,103 @@
+{
+  "createdAt": "2026-11-17T08:26:57.992761+00:00",
+  "platforms": [
+    "Android",
+    "HarmonyOS"
+  ],
+  "status": "current APK/HAP source frozen; Android real local+HTTPS completed; Harmony device unverified",
+  "entries": [
+    {
+      "feature": "ordinary personal migration",
+      "entry": "settings/current conversation → ordinary history migration",
+      "behavior": "target pairing; exact source snapshot/nonce; result-first explicit retry; manifest raw SHA/capsule GCM/Go JSON raw digest; final validate; atomic archive; readable body and explicit original save; forward fresh reobserve; final post-await Store snapshot exactly matches original body, UI verified sync revision rejects stale global response",
+      "defaults": "cloud_history; metadata_only or user explicit full; no credential/Outbox/cursor/ACK migration",
+      "persistence": "public intent/source IDs/CV/modes+raw proved bodies; Android noBackup/Migrations; Harmony private personal-migrations and five RDB tables",
+      "lifecycle": "RAM password/OTP/key clear on leave/background; exact original family/store/guard; global/account floor blocks late publication; private cleanup only",
+      "code": [
+        "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationProtocol.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationService.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationScreen.kt",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationService.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationNative.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt"
+      ],
+      "difference": "qualified cloud_only uses original raw body/sourceReceiptId and object fact, historical QID/messageCurrent; no originalTarget/current approval restriction for historical lawful fact; no original fact blocked",
+      "i18n": "40 keys × 10 languages; 3 themes; 20-row paging/empty/reload"
+    },
+    {
+      "feature": "per physical store content/object receipts",
+      "entry": "settings → reliable storage; archive/body/object save; optional current-session automatic body",
+      "behavior": "locally measured executable+FULL transaction/reopen; exact operator approval; explicit declaration; rc1 raw body+intent atomic; ro1 original fd+directory fsync and descriptor/intent atomic; result-first original nonce; strict original7 or paired9 storage DTO normalizes canonical7; exact physical DB reopen probe; unmeasured split build stays unqualified",
+      "defaults": "automatic off in RAM per family/store; no auto probe/declaration/object download; legacy transport false unchanged; no production profile approved by this task",
+      "persistence": "namespace/store/epoch/build-scoped measurement without sync guard/family; original proof/body/descriptor; Android sync_records + private receipt-originals, Harmony receipt_intents/bodies/objects/cleanup/measurements/probes + private files",
+      "lifecycle": "single action exact guard/family; logout/background/new family stops; global retires proof and queues owned bytes before index removal; completed owner erasure all epochs, other users/external files retained",
+      "code": [
+        "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptProtocol.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptStore.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptService.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptCoordinator.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptStore.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptNative.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCoordinator.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCleanup.ets"
+      ],
+      "difference": "new explicit per-store negotiation replaces permanent false gate only after genuine measurement/approval; cold bounded target reconciliation; unknown no automatic mutation; storage legacy7/new9 compatible and build upgrade pure lookup not blocked",
+      "i18n": "28 keys × 10 languages; 3 themes; 20-row paging/empty/reload"
+    },
+    {
+      "feature": "mobile runtime storage budget and trusted OS root",
+      "entry": "migration/receipt writes and completed account cleanup",
+      "behavior": "only trusted OS root canonicalized; generated child symlinks rejected; safe bytes calculation with 64MiB rollback reserve",
+      "defaults": "metadata pure lookup does not require4GiB; new package128MiB and original64MiB limits preserved",
+      "persistence": "same private namespace/files and Room/RDB intents; no format conversion or data cleanup",
+      "lifecycle": "IO failure rolls back SQL and only new original; global/owner floor retains authority",
+      "code": [
+        "代码/前端/Android/app/src/main/java/com/jobs/im/NativeStorageBudget.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptStore.kt",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionCleanup.kt",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeStorageBudget.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationNative.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptNative.ets"
+      ],
+      "difference": "fixed real Android OS alias rejection; replaced accidental host4GiB product gate; actual build and samephysical probe retained",
+      "verification": "4 previous local failures preserved then corrected; actual migration3/deletion9/Receipt4 all pass; JVM4+host2 budget counterexamples"
+    }
+  ],
+  "verified": {
+    "android": "150inputs; 11suites54JVM PASS0FAIL0SKIP; current same-package105 unique instrumentation=local102(86PASS/16actualAssumeSKIP/0FAIL)+productionHTTPS3PASS; initial affected16 separately PASS but not added; package readback hashes exact",
+    "harmony": "70input app+63method testHAP built unsigned; CRC all valid and63ABC names; migration22/receipt23/sync36 host current input pass; no Harmony device/NAPI execution",
+    "fullInputMap": "普通迁移两端证据/最终当前两端输入SHA256.json",
+    "finalArtifacts": "普通迁移两端证据/最终移动端存储修复候选完整复核.json",
+    "nativeLedger": "普通迁移两端证据/Android独立AVD-20261117-153544-d52437/最终105逐方法实际核对.json",
+    "finalHandoff": "普通迁移两端证据/最终说明后交接核对.json",
+    "httpsMethods": [
+      "nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps",
+      "realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue",
+      "realDraftLossUsesReadonlyOriginalBodyAndRetiredSourceKeepsIndependentText"
+    ],
+    "sixHttpsAccountsClosed": true
+  },
+  "pending": [
+    "16 instrumentation environment assumptions retained and not called pass",
+    "physical device/power loss/system save/full locale-theme matrix",
+    "new migration/qualified receipt production HTTPS and actual per-user-store approval/automatic intake",
+    "Harmony signature/real device/NAPI/OS bundle readability",
+    "Web qualified ACK is outside native source scope and still not delivered"
+  ],
+  "noSideEffects": [
+    "old source manifests/artifacts/Dist retained",
+    "no user cache or data cleanup",
+    "only own private5580AVD created/resumed/stopped; data retained,5554untouched",
+    "Canonical supplied/stopped by Root; defaulta4untouched",
+    "no commit/push"
+  ]
+}

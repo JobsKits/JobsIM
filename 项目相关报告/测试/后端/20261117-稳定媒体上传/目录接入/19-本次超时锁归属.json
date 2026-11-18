@@ -1,0 +1,16 @@
+{
+  "pid": "91377",
+  "processExited": true,
+  "lock": {
+    "size": 0,
+    "birthtime": "2026-11-17T04:16:23.107Z",
+    "mtime": "2026-11-17T04:16:23.107Z"
+  },
+  "temporaryIndex": {
+    "path": ".git/index.jobs-toc-91377-1794888983107",
+    "size": 7489244,
+    "birthtime": "2026-11-17T04:16:23.108Z",
+    "mtime": "2026-11-17T04:16:23.109Z"
+  },
+  "action": "Moved only exact owned orphan lock/temp into evidence; real index left untouched"
+}

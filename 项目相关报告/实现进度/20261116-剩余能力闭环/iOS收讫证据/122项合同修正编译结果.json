@@ -1,0 +1,24 @@
+{
+  "exitCode": 0,
+  "seconds": 113.12998604774475,
+  "freeBytesAfter": 13648953344,
+  "inputCount": 126,
+  "inputMismatches": [],
+  "command": [
+    "/usr/bin/xcodebuild",
+    "-workspace",
+    "JobsIM.xcworkspace",
+    "-scheme",
+    "JobsIM",
+    "-destination",
+    "platform=iOS Simulator,id=37CB226C-C735-4A2D-8FCA-453E2E5F9DFB",
+    "-derivedDataPath",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData",
+    "-jobs",
+    "1",
+    "ONLY_ACTIVE_ARCH=YES",
+    "ARCHS=arm64",
+    "CODE_SIGN_IDENTITY=-",
+    "build-for-testing"
+  ]
+}

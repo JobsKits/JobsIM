@@ -1,0 +1,1 @@
+MarkdownToc：文档已恢复，但索引状态缓存未刷新；暂存内容未替换。请结束其它 Git 操作并核实索引权限，再运行 node .jobs-markdown-toc/MarkdownToc.mjs restore：文档被并发修改：代码/前端/CLI/README.md

@@ -1,0 +1,6 @@
+Query chain:
+ →Find: Target Application 'com.jobs.im'
+  ↪︎Find: Descendants matching type Table
+    ↪︎Find: Descendants matching type Cell
+      ↪︎Find: Elements matching predicate 'label CONTAINS "image/"'
+        ↪︎Find: First Match

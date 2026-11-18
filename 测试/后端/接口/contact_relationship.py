@@ -57,20 +57,23 @@ try:
  call('POST','/api/contacts/'+aid+'/reopen',{'requestId':str(uuid.uuid4())},b['token']);assert relationship(a,bid)==current_a
  request=call('POST','/api/contacts/requests',{'userId':bid,'requestId':str(uuid.uuid4())},a['token']);before_reject=relationship(a,bid)
  call('POST','/api/contacts/requests/'+request['id']+'/reject',{},b['token']);assert relationship(a,bid)==before_reject,'peer private gate is not projected into caller metadata'
- b_closed=relationship(b,aid);assert b_closed['inboundGate']=='denied' and not b_closed['inboundReopened']
+ b_closed=relationship(b,aid);assert b_closed['inboundGate']=='open' and not b_closed['inboundReopened']
  # Supplying somebody else's owner ID never changes whose data is queried.
  assert relationship(a,bid,'?ownerId='+bid+'&userId='+bid+'&accountId='+bid)==current_a
- call('POST','/api/contacts/'+aid+'/reopen',{'requestId':str(uuid.uuid4())},b['token']);assert relationship(a,bid)==current_a
+ # Rejection retires the old request; a fresh explicit round needs no reopen.
  renewed=call('POST','/api/contacts/requests',{'userId':bid,'requestId':str(uuid.uuid4())},a['token']);call('POST','/api/contacts/requests/'+renewed['id']+'/accept',{},b['token']);assert relationship(a,bid)['friend'] and relationship(b,aid)['friend']
  image=avatar(b);assert call('GET',image,token=a['token'],binary=True).startswith(b'\xff\xd8')
- call('PUT','/api/blocks/'+bid,{},a['token']);assert relationship(a,bid)['blockedByMe'] and not relationship(a,bid)['friend'];assert not relationship(b,aid)['blockedByMe'];call('GET',image,token=a['token'],expect=403)
+ call('PUT','/api/blocks/'+bid,{},a['token']);assert relationship(a,bid)['blockedByMe'] and relationship(a,bid)['friend'];assert not relationship(b,aid)['blockedByMe'] and relationship(b,aid)['friend'];call('GET',image,token=a['token'],expect=403)
  call('PUT','/api/blocks/'+aid,{},b['token']);call('DELETE','/api/blocks/'+bid,token=a['token']);assert not relationship(a,bid)['blockedByMe'] and relationship(b,aid)['blockedByMe'];call('GET',image,token=a['token'],expect=403)
- call('DELETE','/api/blocks/'+aid,token=b['token']);closed=relationship(a,bid);assert not closed['blockedByMe'] and not closed['friend'] and closed['inboundGate']=='denied' and not closed['inboundReopened'];call('GET',image,token=a['token'],expect=403)
+ call('DELETE','/api/blocks/'+aid,token=b['token']);closed=relationship(a,bid);assert not closed['blockedByMe'] and closed['friend'] and closed['inboundGate']=='open' and not closed['inboundReopened'];assert call('GET',image,token=a['token'],binary=True).startswith(b'\xff\xd8')
  assert call('POST','/api/contacts/'+bid+'/reopen',reopen_a,a['token'])['current'] is False;assert relationship(a,bid)==closed,'old successful reopen is not current permission'
+ call('DELETE','/api/contacts/'+bid,token=a['token']);assert not relationship(a,bid)['friend'] and not relationship(b,aid)['friend'];call('GET',image,token=a['token'],expect=403)
+ call('POST','/api/contacts/requests/'+renewed['id']+'/accept',{},b['token'],expect=409)
+ fresh=call('POST','/api/contacts/requests',{'userId':bid,'requestId':str(uuid.uuid4())},a['token']);call('POST','/api/contacts/requests/'+fresh['id']+'/accept',{},b['token']);assert relationship(a,bid)['friend'] and relationship(b,aid)['friend']
  b_private=relationship(b,aid);new_open=call('POST','/api/contacts/'+bid+'/reopen',{'requestId':str(uuid.uuid4())},a['token']);observed=relationship(a,bid);assert observed['generation']==new_open['generation'] and observed['inboundReopened'];assert relationship(b,aid)==b_private
  sql("UPDATE directory.contacts SET request_generation=9007199254740993,request_gate='denied' WHERE owner_id='"+aid+"' AND peer_id='"+bid+"'")
  large=relationship(a,bid);assert large['generation']=='9007199254740993' and not large['inboundReopened'];assert relationship(b,aid)==b_private
- report={'status':'passed','httpAssertions':checks,'ownerOnlyMetadata':True,'noPeerPrivateGateProjection':True,'blockedByMeIsOwnerScoped':True,'queryOwnerOverrideIgnored':True,'defaultReadCreatesNoRows':True,'currentReopenGenerationOnly':True,'largeGenerationStaysDecimalString':True,'avatarACLUnchanged':True,'scope':'real HTTPS/two-account PostgreSQL relationship metadata; no full I acceptance'}
+ report={'status':'passed','httpAssertions':checks,'ownerOnlyMetadata':True,'noPeerPrivateGateProjection':True,'blockedByMeIsOwnerScoped':True,'queryOwnerOverrideIgnored':True,'defaultReadCreatesNoRows':True,'currentReopenGenerationOnly':True,'largeGenerationStaysDecimalString':True,'avatarACLUnchanged':True,'blockKeepsFriend':True,'newRoundsNeedNoReopen':True,'deleteRequiresNewAcceptance':True,'scope':'real HTTPS/two-account PostgreSQL relationship metadata; no full I acceptance'}
  destination=pathlib.Path(__file__).resolve().parents[3]/'项目相关报告/测试/后端/执行记录' / uuid.uuid4().hex / '本人关系只读接口实测.json';destination.parent.mkdir(parents=True,exist_ok=True);destination.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print(json.dumps(report))
 finally:
  for token in tokens:

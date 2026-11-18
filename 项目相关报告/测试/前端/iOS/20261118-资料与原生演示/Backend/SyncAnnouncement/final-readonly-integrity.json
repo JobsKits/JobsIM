@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-18T18:08:13.503005+08:00",
+  "sourceInputs": 236,
+  "sourceDrift": [],
+  "products": [
+    {
+      "path": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/部署/MacOS/演示控制面/Products/build.kLF7Wo9m/JobsIMDemoHost",
+      "bytes": 11208578,
+      "expectedSHA256": "1460dfdb6151e2fcc0653a60a4790b55ca282f8ccfc867329d6f634bf0c05443",
+      "actualSHA256": "1460dfdb6151e2fcc0653a60a4790b55ca282f8ccfc867329d6f634bf0c05443",
+      "matches": true
+    },
+    {
+      "path": "/Users/jobs/Library/Application Support/JobsIM/Demo/NativeDemo-v1/Instance/Bin/JobsIMd",
+      "bytes": 22793186,
+      "expectedSHA256": "745255b1cfbdbfd9c7c012b6a49e4ddd309c88fb773e6c91b1edfab200040973",
+      "actualSHA256": "745255b1cfbdbfd9c7c012b6a49e4ddd309c88fb773e6c91b1edfab200040973",
+      "matches": true
+    }
+  ],
+  "controllerPID": 64239,
+  "controllerCommand": "部署/MacOS/演示控制面/Products/build.kLF7Wo9m/JobsIMDemoHost serve",
+  "backendPID": 64663,
+  "backendPIDMatchesFrozenRuntime": true,
+  "backendCommand": "/Users/jobs/Library/Application Support/JobsIM/Demo/NativeDemo-v1/Instance/Bin/JobsIMd --service all --addr 192.168.1.16:19543 --internal-base-port 19560 --state-dir /Users/jobs/Library/Application Support/JobsIM/Demo/NativeDemo-v1/Instance/Application --tls-cert /Users/jobs/Library/Application Support/JobsIM/Demo/NativeDemo-v1/Instance/TLS/server.crt --tls-key /Users/jobs/Library/Application Support/JobsIM/Demo/NativeDemo-v1/Instance/TLS/server.key --web-dir /Users/jobs/Library/Application Support/JobsIM/Demo/NativeDemo-v1/Instance/WebDist.J2URpB",
+  "ports": "COMMAND     PID USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nJobsIMDem 64239 jobs    6u  IPv4 0x3203e4faebe79bf3      0t0  TCP 192.168.1.16:19544 (LISTEN)\npostgres  64427 jobs    5u  IPv4 0xfd56d3c1446df8fb      0t0  TCP 127.0.0.1:19545 (LISTEN)\npostgres  64450 jobs    5u  IPv4 0xb74af72d474c1e41      0t0  TCP 127.0.0.1:19546 (LISTEN)\nnats-serv 64624 jobs    6u  IPv4 0xc33c1f6c99dcb4d7      0t0  TCP 127.0.0.1:19547 (LISTEN)\nJobsIMd   64663 jobs   24u  IPv4 0x1987123e8b406a53      0t0  TCP 192.168.1.16:19543 (LISTEN)\n",
+  "readyStatus": {
+    "httpStatus": 200,
+    "state": "ready",
+    "deploymentId": "2cbd9bd2-1205-44fb-870c-9cad48135c48",
+    "caSha256": "32f19f9acab109242ac61b3802bfb35ba656f32f4eef17d06d56058e9158bfcb",
+    "statusOmitsAccounts": true
+  },
+  "syncV2Evidence": {
+    "requests": 9,
+    "schema": "2",
+    "allPagesInstallable": true,
+    "contacts": 2,
+    "announcementRefsMatchOnlyGroups": true,
+    "qualifiedAck": false
+  },
+  "scope": "read-only final check; no restart, business mutation, seed rewrite or additional Go run"
+}

@@ -312,11 +312,14 @@ func (c *client) performPasswordChange(db *sql.DB, o passwordChangeIntent, proof
 		}
 		unseen = true
 	}
+	if !available {
+		return empty, syncRefuse("PASSWORD_CHANGE_CAPABILITY_REQUIRED")
+	}
 	token := ""
 	if available && unseen {
 		token = c.passwordChangeOriginalToken(o)
 	}
-	if fresh && unseen && token == "" {
+	if unseen && token == "" {
 		return empty, syncRefuse("PASSWORD_CHANGE_ORIGINAL_FAMILY_REQUIRED")
 	}
 	if token != "" && len(proof.OTP) == 0 && c.reader != nil {
@@ -332,11 +335,18 @@ func (c *client) performPasswordChange(db *sql.DB, o passwordChangeIntent, proof
 		}
 		token = c.passwordChangeOriginalToken(o)
 		if !stillAvailable {
-			token = ""
+			return empty, syncRefuse("PASSWORD_CHANGE_CAPABILITY_REQUIRED")
 		}
-		if fresh && token == "" {
+		if token == "" {
 			return empty, syncRefuse("PASSWORD_CHANGE_ORIGINAL_FAMILY_REQUIRED")
 		}
+	}
+	stillAvailable, e := c.passwordChangeCapability(o, false)
+	if e != nil {
+		return empty, e
+	}
+	if !stillAvailable {
+		return empty, syncRefuse("PASSWORD_CHANGE_CAPABILITY_REQUIRED")
 	}
 	priorAttempts := o.Attempts
 	o, err = savePasswordChange(db, o, func(row *passwordChangeIntent) error { row.Attempts++; row.State = "unknown"; return nil })
@@ -352,7 +362,7 @@ func (c *client) performPasswordChange(db *sql.DB, o passwordChangeIntent, proof
 	result, err = c.passwordChangeHTTP(o, proof, "/api/auth/password-change", token)
 	if err != nil {
 		var api *apiFailure
-		if fresh && priorAttempts == 0 && errors.As(err, &api) && oneOf(fmt.Sprint(api.Status), "400", "401", "403", "429") {
+		if fresh && priorAttempts == 0 && errors.As(err, &api) && (api.Status == 400 && api.Code == "INVALID_PASSWORD_CHANGE" || api.Status == 403 && api.Code == "PASSWORD_CHANGE_REJECTED" || api.Status == 429 && api.Code == "RATE_LIMITED") {
 			_, _ = savePasswordChange(db, o, func(row *passwordChangeIntent) error { row.State = "rejected"; return nil })
 			if c.auth != nil {
 				c.auth.mu.Lock()

@@ -186,6 +186,9 @@ func (a *App) registerMessageExport(w http.ResponseWriter, r *http.Request) erro
 			return e
 		}
 	}
+	if err := a.retentionRequireCloud(r.Context(), q.MessageID); err != nil {
+		return err
+	}
 	var conversation, kind string
 	var created time.Time
 	if e := a.DB.QueryRow(r.Context(), `SELECT conversation_id::text,created_at,type FROM message.messages WHERE id=$1`, q.MessageID).Scan(&conversation, &created, &kind); e != nil {
@@ -217,6 +220,13 @@ func (a *App) registerMessageExport(w http.ResponseWriter, r *http.Request) erro
 	}
 	if deleted || unavailable || pending != nil || str(version) != q.SourceVersion {
 		return fail(409, "EXPORT_SOURCE_CHANGED", "Source was changed or frozen")
+	}
+	var boundary *time.Time
+	if e = tx.QueryRow(r.Context(), `SELECT min(due_at) FROM message.lifecycle_jobs WHERE scope_id=$1 AND message_id=$2`, a.Config.DeploymentID, q.MessageID).Scan(&boundary); e != nil {
+		return e
+	}
+	if boundary != nil && boundary.Before(q.ExpiresAt) {
+		q.ExpiresAt = *boundary
 	}
 	_, e = tx.Exec(r.Context(), `INSERT INTO message.export_holders(job_id,artifact_id,message_id,user_id,restore_epoch,build_generation,source_version,state,expires_at) VALUES($1,$2,$3,$4,$5::bigint,$6::bigint,$7,'prepared',$8) ON CONFLICT DO NOTHING`, q.JobID, q.ArtifactID, q.MessageID, q.UserID, q.RestoreEpoch, q.BuildGeneration, version, q.ExpiresAt)
 	if e != nil {
@@ -263,6 +273,9 @@ func (a *App) readMessageExport(w http.ResponseWriter, r *http.Request, body boo
 		if e := a.requirePersonalExportBuild(r.Context(), q.JobID, q.UserID); e != nil {
 			return e
 		}
+	}
+	if err := a.retentionRequireCloud(r.Context(), q.MessageID); err != nil {
+		return err
 	}
 	var conversation, kind string
 	var created time.Time
@@ -380,6 +393,9 @@ func (a *App) freezeMessageSourcesAt(ctx context.Context, message, operation str
 	if e = tx.Commit(ctx); e != nil {
 		return e
 	}
+	if e = a.drainMigrations(ctx); e != nil {
+		return e
+	}
 	if content {
 		if e = a.beginForwardRevocation(ctx, forwardRevocation{OperationID: operation, SourceMessageID: message}); e != nil {
 			return e
@@ -395,7 +411,9 @@ func (a *App) freezeMessageSourcesAt(ctx context.Context, message, operation str
 		return e
 	}
 	if content {
-		return a.requireForwardRevocation(ctx, forwardRevocation{OperationID: operation, SourceMessageID: message})
+		if e = a.requireForwardRevocation(ctx, forwardRevocation{OperationID: operation, SourceMessageID: message}); e != nil {
+			return e
+		}
 	}
-	return nil
+	return a.drainMigrations(ctx)
 }

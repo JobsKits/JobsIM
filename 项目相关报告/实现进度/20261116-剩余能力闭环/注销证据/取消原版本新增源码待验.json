@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-17T09:40:00.293183",
+  "nativeCancellationChanges": "unknown requires pure query, original cancelVersion immutable; legacy missing version query only; query proof cannot silently rebase",
+  "nativeHostExpectedMethodsNotExecuted": 16,
+  "androidDeletionInstrumentMethodsNotCompiled": 9,
+  "hypiumMethodsNotCompiled": 57,
+  "cliNewMethodNotExecuted": 11,
+  "reason": "disk below4GiB; no new tests/host/native/device/PG",
+  "sourceHashes": {
+    "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletion.kt": "b25da4bea169969c60f4509b3be74433489e7fec6ee934bb7057138b0aa1a5ea",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionScreen.kt": "56783f70546ae75f3b354ac61d2752b40189b4e97cc136812a076012bbd77f19",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionText.kt": "7201439fb091b4213047c6920afbca6e2cc64460007fabf772a09207bfb9bb3f",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Deletion.ets": "c7ba167d85538f6c95f64330f49ed6e63a599849aa365367f1bd9a10674bae14",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionStore.ets": "199d6313438583d8017240b6f497e7d9cee2cf9c90dfa9ce78a8db1933f1c53d",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionText.ets": "fd818201add827b0cd774e47a098a01f6893f5e448048f79feb7bd7ff516aaa2",
+    "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets": "7a467d10eccb9345648bf854d50ae20a26183b811c2b1a55a0a7b8cce6421e52",
+    "测试/前端/Android/Instrumentation/OwnDeletionLifecycleTest.kt": "5442e4e53c2e762f11fe46da06f4cfa66afa437f7dbb1358b76e54308a2438f8",
+    "测试/前端/HarmonyOS/Unit/Deletion.test.cjs/Deletion.test.cjs": "33ec8ba2e7839a76eb5da142af3c2bedecd564c4416bc6e83989635d87dd4269",
+    "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets": "b11038aade812bed0030441dbc051a3eeaee2afe697d04034109c894e9c0f99c",
+    "代码/前端/CLI/cmd/jobsim/own_deletion.go": "97a4657ad17609c43ed8ae1b8af02a4fb1c473796d7c7c30c052d3b8fc833e7b",
+    "测试/CLI/own_deletion_test.go": "49dd6a97b8ee264d82e5ae3df5c15a5eee81aebb39726a14fe61d428caf48452"
+  },
+  "pendingResumeFix": "unknown state may retain its last public pending result; nonce and ordinary-family gate remain unchanged"
+}

@@ -21,8 +21,24 @@ extension UIDocumentPickerViewController {
         return picker
     }
 
-    static func makeExporting(_ file: URL, delegate: UIDocumentPickerDelegate) -> UIDocumentPickerViewController {
+    static func makeAvatarImages(delegate: UIDocumentPickerDelegate) -> UIDocumentPickerViewController {
+        let picker = UIDocumentPickerViewController(
+            forOpeningContentTypes: [.jpeg, .png, .gif], asCopy: true)
+        picker.directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        picker.delegate = delegate
+        return picker
+    }
+
+    static func makeExporting(_ file: URL, delegate: UIDocumentPickerDelegate)
+        -> UIDocumentPickerViewController
+    {
         let picker = UIDocumentPickerViewController(forExporting: [file], asCopy: true)
+        picker.delegate = delegate
+        return picker
+    }
+
+    static func makeImporting(delegate: UIDocumentPickerDelegate) -> UIDocumentPickerViewController {
+        let picker = make()
         picker.delegate = delegate
         return picker
     }

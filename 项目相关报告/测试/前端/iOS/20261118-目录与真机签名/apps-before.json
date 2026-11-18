@@ -1,0 +1,33 @@
+{
+  "info" : {
+    "arguments" : [
+      "devicectl",
+      "device",
+      "info",
+      "apps",
+      "--device",
+      "00008110-000625583EE3801E",
+      "--filter",
+      "bundleIdentifier == \"com.jobs.im\"",
+      "--json-output",
+      "项目相关报告/测试/前端/iOS/20261118-目录与真机签名/apps-before.json"
+    ],
+    "commandType" : "devicectl.device.info.apps",
+    "environment" : {
+      "TERM" : "dumb"
+    },
+    "jsonVersion" : 5,
+    "outcome" : "success",
+    "version" : "651.32"
+  },
+  "result" : {
+    "apps" : [
+
+    ],
+    "defaultAppsIncluded" : false,
+    "deviceIdentifier" : "FE8207C9-DB32-564B-8990-44C558C044A6",
+    "hiddenAppsIncluded" : false,
+    "internalAppsIncluded" : false,
+    "removableAppsIncluded" : true
+  }
+}

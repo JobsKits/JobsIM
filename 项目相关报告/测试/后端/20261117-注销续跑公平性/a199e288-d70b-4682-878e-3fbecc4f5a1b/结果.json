@@ -1,0 +1,81 @@
+{
+  "runID": "a199e288-d70b-4682-878e-3fbecc4f5a1b",
+  "scope": "isolated PostgreSQL with in-process role RPC, no HTTPS/native/live-instance verification",
+  "stages": [
+    {
+      "label": "04-修前反例",
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-p=1",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^TestClosureAuditDeletion",
+        "."
+      ],
+      "code": 1,
+      "signal": null,
+      "gate": null,
+      "pass": [],
+      "skip": [],
+      "fail": [
+        "TestClosureAuditDeletionCompletedReceiptCanRenewOnlyThroughAuditedAdmin",
+        "TestClosureAuditDeletionIdentityRecoveryDoesNotStarveLaterIntent",
+        "TestClosureAuditDeletionGovernanceRecoveryDoesNotStarveLaterIntent"
+      ]
+    },
+    {
+      "label": "05-修后注销回归",
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-p=1",
+        "-count=1",
+        "-timeout=180s",
+        "-run",
+        "^Test(ClosureAuditDeletion|AccountDeletion)",
+        "."
+      ],
+      "code": 0,
+      "signal": null,
+      "gate": null,
+      "pass": [
+        "TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes",
+        "TestAccountDeletionAdmissionRetiresPreparedPasswordChange",
+        "TestAccountDeletionAdmissionHistoricalPasswordResultIsNotCurrent",
+        "TestAccountDeletionAdmissionPreparedAdminResetCannotReopenTarget",
+        "TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected",
+        "TestAccountDeletionPGRevokesFamiliesAndOriginalLookupNeverCreates",
+        "TestAccountDeletionPGPurposeProofAndCancelPreserveIndependentDenials",
+        "TestAccountDeletionPGCancelUnknownWaitsForJournalResult",
+        "TestAccountDeletionPGZeroCooldownCleansOwnerDataAndCannotCancel",
+        "TestAccountDeletionPGRecoveryCodeIsOneUseAndPurposeCannotAuthorizeChat",
+        "TestAccountDeletionPGSafetyCancelIntentCannotReopenAndCompletedCannotResurrect",
+        "TestAccountDeletionPGExpiredAndOldEpochProofCannotMutate",
+        "TestAccountDeletionPGOldVersionCanReverifyQueryButCannotRebaseCancellation",
+        "TestAccountDeletionPGInitialJournalUnknownKeepsOriginalAndWorkerResumes",
+        "TestAccountDeletionPGMultipleOwnerPagesAndRestoredMediaStayErased",
+        "TestAccountDeletionPGUnqueuedLastPageReadDenial",
+        "TestClosureAuditDeletionCompletedReceiptCanRenewOnlyThroughAuditedAdmin",
+        "TestClosureAuditDeletionIdentityRecoveryDoesNotStarveLaterIntent",
+        "TestClosureAuditDeletionGovernanceRecoveryDoesNotStarveLaterIntent"
+      ],
+      "skip": [],
+      "fail": []
+    }
+  ],
+  "cluster": {
+    "identity": "7708939865112687365|/Users/jobs/Library/Application Support/JobsIM/Integration/a199e288-d70b-4682-878e-3fbecc4f5a1b/Safety/Postgres/Main|on|on",
+    "port": 62381,
+    "newPrivateRun": true,
+    "externalTests": 41
+  },
+  "greenPassed": true,
+  "ownedClusterStopped": true,
+  "minimumFreeBytes": "4576174080",
+  "changedLiveInputs": [],
+  "finishedAt": "2026-11-17T01:04:24.983Z"
+}

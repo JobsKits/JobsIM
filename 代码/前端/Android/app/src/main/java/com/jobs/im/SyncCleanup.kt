@@ -4,7 +4,8 @@ import java.io.File
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class SyncMediaCleanup(private val database: ChatDatabase, private val cache: File) {
+class SyncMediaCleanup(private val database: ChatDatabase, private val cache: File,
+    private val voiceUploads: VoiceUploadQueue? = null) {
     companion object {
         fun sidecar(cache: File, namespace: String, id: String) = File(cache,
             "Attachments/" + Isolation.digest(namespace.removeSuffix("|sync-retained")) + "/" + Isolation.digest(id) + ".bin")
@@ -28,6 +29,7 @@ class SyncMediaCleanup(private val database: ChatDatabase, private val cache: Fi
                 val removed = withContext(Dispatchers.IO) {
                     holders.map { remove(cache, it.namespace, it.id) }.all { it }
                 }
+                voiceUploads?.eraseMessages(plan.scope, plan.id, holders)
                 if (removed && forwardClean) store.completeCleanup(plan)
             }
         }

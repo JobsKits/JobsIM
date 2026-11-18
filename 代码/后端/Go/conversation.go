@@ -12,6 +12,7 @@ func (a *App) conversationRoutes(h func(string, func(http.ResponseWriter, *http.
 	a.ownerLifecycleRoutes(h, internal)
 	a.mentionAnnouncementConversationRoutes(h, internal)
 	a.forwardPendingConversationRoutes(h, internal)
+	a.groupRoutes(h)
 	h("POST /internal/export", internal(func(w http.ResponseWriter, r *http.Request) error {
 		var q struct {
 			UserID string `json:"userId"`
@@ -78,11 +79,24 @@ func (a *App) conversationRoutes(h func(string, func(http.ResponseWriter, *http.
 			permission = grant
 			allowed = allowed && !blocked && friends
 		}
+		slowSeconds := 0
+		if kind == "group" {
+			grant, groupAllowed, policy, err := a.groupAdmission(r.Context(), q.ConversationID, q.UserID, role, generation)
+			if err != nil {
+				return err
+			}
+			permission = grant
+			allowed = allowed && groupAllowed
+			slowSeconds = policy.SlowSeconds
+			if q.Action == "send" && !groupAllowed {
+				return fail(403, "GROUP_MUTED", "Current group mute policy forbids sending")
+			}
+		}
 		admission := ""
 		if allowed {
 			admission = a.sendAdmission(q.UserID, q.ConversationID, kind, generation, roleGeneration, permission)
 		}
-		respond(w, 200, map[string]any{"kind": kind, "ownerId": owner, "role": role, "state": state, "readOnly": state == "owner_unavailable", "membershipGeneration": str(generation), "roleGeneration": str(roleGeneration), "sendAdmission": admission, "joinedAt": joined, "peerId": peer})
+		respond(w, 200, map[string]any{"kind": kind, "ownerId": owner, "role": role, "state": state, "readOnly": state == "owner_unavailable", "membershipGeneration": str(generation), "roleGeneration": str(roleGeneration), "sendAdmission": admission, "joinedAt": joined, "peerId": peer, "slowSeconds": strconv.Itoa(slowSeconds)})
 		return nil
 	}))
 }
@@ -93,7 +107,7 @@ func (a *App) conversationByID(r *http.Request, id, user string) (Conversation, 
 	if e != nil {
 		return c, e
 	}
-	rows, e := a.DB.Query(r.Context(), `SELECT user_id::text FROM conversation.members WHERE conversation_id=$1 AND state='active' ORDER BY user_id`, id)
+	rows, e := a.DB.Query(r.Context(), `SELECT user_id::text FROM conversation.members WHERE conversation_id=$1 AND state='active' ORDER BY user_id LIMIT 200`, id)
 	if e != nil {
 		return c, e
 	}
@@ -110,9 +124,10 @@ func (a *App) conversationByID(r *http.Request, id, user string) (Conversation, 
 		return c, e
 	}
 	c.Cursor = "0"
-	c.ReadOnly = c.State == "owner_unavailable"
+	c.ReadOnly = c.State != "active"
 	var generation, roleGeneration int64
-	if e = a.DB.QueryRow(r.Context(), `SELECT membership_generation,role_generation FROM conversation.members WHERE conversation_id=$1 AND user_id=$2 AND state='active' AND export_pending_operation_id IS NULL`, id, user).Scan(&generation, &roleGeneration); e != nil {
+	var memberRole string
+	if e = a.DB.QueryRow(r.Context(), `SELECT membership_generation,role_generation,role FROM conversation.members WHERE conversation_id=$1 AND user_id=$2 AND state='active' AND export_pending_operation_id IS NULL`, id, user).Scan(&generation, &roleGeneration, &memberRole); e != nil {
 		return c, fail(403, "NOT_A_MEMBER", "Current active membership required")
 	}
 	c.MembershipGeneration = str(generation)
@@ -130,6 +145,14 @@ func (a *App) conversationByID(r *http.Request, id, user string) (Conversation, 
 				permission = grant
 			}
 		}
+	}
+	if c.Kind == "group" {
+		grant, groupAllowed, _, err := a.groupAdmission(r.Context(), id, user, memberRole, generation)
+		if err != nil {
+			return c, err
+		}
+		permission = grant
+		allowed = allowed && groupAllowed
 	}
 	if allowed {
 		c.SendAdmission = a.sendAdmission(user, id, c.Kind, generation, roleGeneration, permission)
@@ -208,7 +231,7 @@ func (a *App) createConversation(w http.ResponseWriter, r *http.Request) error {
 			if e != nil {
 				return e
 			}
-			if blocked || !friends {
+			if !friends || blocked && q.Kind != "direct" {
 				return fail(403, "FRIENDSHIP_REQUIRED", "Add and accept this contact first")
 			}
 		}
@@ -269,44 +292,47 @@ func (a *App) members(w http.ResponseWriter, r *http.Request) error {
 	if _, e = a.member(r.Context(), u.ID, r.PathValue("id")); e != nil {
 		return e
 	}
-	c, e := a.conversationByID(r, r.PathValue("id"), u.ID)
+	after, limit, e := groupPage(r)
 	if e != nil {
 		return e
 	}
-	var users struct {
-		Items []User `json:"items"`
-	}
-	if e = a.rpc(r.Context(), "identity", "/internal/users", map[string]any{"ids": c.MemberIDs, "includeUnavailable": true}, &users); e != nil {
-		return e
-	}
-	rows, e := a.DB.Query(r.Context(), `SELECT user_id::text,role,membership_generation,role_generation FROM conversation.members WHERE conversation_id=$1 AND state='active'`, c.ID)
+	rows, e := a.DB.Query(r.Context(), `SELECT user_id::text,role,membership_generation::text,role_generation::text FROM conversation.members WHERE conversation_id=$1 AND state='active' AND ($2='' OR user_id>NULLIF($2,'')::uuid) ORDER BY user_id LIMIT $3`, r.PathValue("id"), after, limit+1)
 	if e != nil {
 		return e
 	}
-	roles := map[string]string{}
-	generations := map[string]string{}
-	roleGenerations := map[string]string{}
+	ids := []string{}
+	roles := map[string][3]string{}
 	for rows.Next() {
-		var id, role string
-		var generation, roleGeneration int64
-		if e = rows.Scan(&id, &role, &generation, &roleGeneration); e != nil {
+		var id, role, membership, generation string
+		if e = rows.Scan(&id, &role, &membership, &generation); e != nil {
 			rows.Close()
 			return e
 		}
-		roles[id] = role
-		generations[id] = str(generation)
-		roleGenerations[id] = str(roleGeneration)
+		ids = append(ids, id)
+		roles[id] = [3]string{role, membership, generation}
 	}
 	rows.Close()
 	if e = rows.Err(); e != nil {
 		return e
 	}
-	for i := range users.Items {
-		users.Items[i].Role = roles[users.Items[i].ID]
-		users.Items[i].MembershipGeneration = generations[users.Items[i].ID]
-		users.Items[i].RoleGeneration = roleGenerations[users.Items[i].ID]
+	next := ""
+	if len(ids) > limit {
+		ids = ids[:limit]
+		next = ids[limit-1]
 	}
-	respond(w, 200, users)
+	var users struct {
+		Items []User `json:"items"`
+	}
+	if e = a.rpc(r.Context(), "identity", "/internal/users", map[string]any{"ids": ids, "includeUnavailable": true}, &users); e != nil {
+		return e
+	}
+	for i := range users.Items {
+		role := roles[users.Items[i].ID]
+		users.Items[i].Role = role[0]
+		users.Items[i].MembershipGeneration = role[1]
+		users.Items[i].RoleGeneration = role[2]
+	}
+	respond(w, 200, map[string]any{"items": users.Items, "nextCursor": next})
 	return nil
 }
 func (a *App) addMember(w http.ResponseWriter, r *http.Request) error {
@@ -347,11 +373,15 @@ func (a *App) addMember(w http.ResponseWriter, r *http.Request) error {
 	if e = tx.QueryRow(r.Context(), `SELECT count(*) FROM conversation.members WHERE conversation_id=$1 AND state='active'`, r.PathValue("id")).Scan(&count); e != nil {
 		return e
 	}
-	if count >= 200 {
+	var maxMembers int
+	if e = tx.QueryRow(r.Context(), `SELECT COALESCE((SELECT max_members FROM conversation.group_settings WHERE conversation_id=$1),200)`, r.PathValue("id")).Scan(&maxMembers); e != nil {
+		return e
+	}
+	if count >= maxMembers {
 		return fail(409, "GROUP_FULL", "Group limit reached")
 	}
 	var gen int64
-	e = tx.QueryRow(r.Context(), `INSERT INTO conversation.members(conversation_id,user_id,role) VALUES($1,$2,'member') ON CONFLICT(conversation_id,user_id) DO UPDATE SET state='active',membership_generation=conversation.members.membership_generation+1,joined_at=now() WHERE conversation.members.state<>'active' RETURNING membership_generation`, r.PathValue("id"), q.UserID).Scan(&gen)
+	e = tx.QueryRow(r.Context(), `INSERT INTO conversation.members(conversation_id,user_id,role) VALUES($1,$2,'member') ON CONFLICT(conversation_id,user_id) DO UPDATE SET role='member',state='active',membership_generation=conversation.members.membership_generation+1,role_generation=conversation.members.role_generation+1,joined_at=now() WHERE conversation.members.state<>'active' RETURNING membership_generation`, r.PathValue("id"), q.UserID).Scan(&gen)
 	if e == pgx.ErrNoRows {
 		respond(w, 200, map[string]string{"status": "already_member"})
 		return nil
@@ -464,6 +494,9 @@ func (a *App) updateConversation(w http.ResponseWriter, r *http.Request) error {
 	if e = decode(r, &q); e != nil {
 		return e
 	}
+	if q.OwnerID != nil {
+		return fail(400, "GROUP_ORIGINAL_PERMISSION_REQUIRED", "Transfer requires the original governance nonce, group version, actor and successor permission versions")
+	}
 	tx, e := a.DB.Begin(r.Context())
 	if e != nil {
 		return e
@@ -478,23 +511,6 @@ func (a *App) updateConversation(w http.ResponseWriter, r *http.Request) error {
 			return fail(400, "TITLE_TOO_LONG", "Title too long")
 		}
 		_, e = tx.Exec(r.Context(), `UPDATE conversation.conversations SET title=$2,version=version+1,updated_at=now() WHERE id=$1`, r.PathValue("id"), *q.Title)
-		if e != nil {
-			return e
-		}
-	}
-	if q.OwnerID != nil && *q.OwnerID != owner {
-		var active bool
-		if e = tx.QueryRow(r.Context(), `SELECT EXISTS(SELECT 1 FROM conversation.members WHERE conversation_id=$1 AND user_id=$2 AND state='active')`, r.PathValue("id"), *q.OwnerID).Scan(&active); e != nil {
-			return e
-		}
-		if !active {
-			return fail(409, "ACTIVE_MEMBER_REQUIRED", "New owner must be active")
-		}
-		_, e = tx.Exec(r.Context(), `UPDATE conversation.members SET role=CASE WHEN user_id=$2 THEN 'owner' ELSE 'member' END,role_generation=role_generation+1 WHERE conversation_id=$1 AND(user_id=$2 OR user_id=$3)`, r.PathValue("id"), *q.OwnerID, owner)
-		if e != nil {
-			return e
-		}
-		_, e = tx.Exec(r.Context(), `UPDATE conversation.conversations SET owner_id=$2,version=version+1,updated_at=now() WHERE id=$1`, r.PathValue("id"), *q.OwnerID)
 		if e != nil {
 			return e
 		}

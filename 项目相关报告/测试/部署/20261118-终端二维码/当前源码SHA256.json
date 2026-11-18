@@ -1,0 +1,22 @@
+{
+  "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "955ba7f9d2197e8a1a79a1360be3643867714c88f6f7750eaf5a86a99a6eec6b",
+  "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "ea390066e9e2514651164ac7f088c2f6673e441ba97caf7a6b9129c1b46c91c9",
+  "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "2ebec3687ad9e5963cf4b93c5743d23b383911b36b38f3a2e78fe8282535a2c1",
+  "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "c40761d1ce3e81de7bbeea75f63f8b16a38cc5cfe0e5d1f2b5e6d56025a5bcd9",
+  "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "45bbcb6790c4f9005f5b3a98365f67e196148a3408a1ef7c4f48d7ebfb3d72d7",
+  "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "c6ee981d2fa109965830b8c2fbb6120453a47586944a52cdeb53868aa33754b3",
+  "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "f2fe2126681bc4a729d1ee33544d3dc3415b63fc29c99d4fc3cf8801ba39be8e",
+  "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "38189a7be0e95348393595d67ddc3625b3bbedb388b9a5d0a9f33e463b71ec92",
+  "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "901237ec9639c1272a6eb1f2cf420c30ca4f0bd3b22bf350a4c9dd90a28b7027",
+  "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "5097f9b8d33ee63f476be11f9ae481f5778deada9f5a6f95a77c722bf3b576c6",
+  "部署/Windows/Deployment/【Windows】部署.ps1/【Windows】部署.ps1": "aca45e9e2359fae4509e6c707916ebb295231e7e7cb44689da3663630638fa9c",
+  "部署/Windows/Undeployment/【Windows】反部署.ps1/【Windows】反部署.ps1": "15200ad33ace951e7d0dcf926e16a190d08e8303d82eb7e0e99f3c8da85920ff",
+  "部署/公共组件/地址二维码/main.go": "402d2d6025bd9fa96fbd07b351a716646f3e034e7355fd29eb23ad51d83854da",
+  "部署/公共组件/地址二维码/go.mod": "d5e0aa717a0ca7ae4fe288ca03687110a0988152cc88052aa05d656396219107",
+  "部署/公共组件/地址二维码/go.sum": "7221a09241e81ea6133d0bb49d1dd62b7a9e205272525ec9f21d4e7c20464df4",
+  "部署/公共组件/地址二维码/README.md": "01c867ddfa5377f4c70e25bcbf14a24cbac38246daa99f44bdd821500a5fe715",
+  "测试/部署/二维码/终端二维码.py/终端二维码.py": "429779e9f4ddcc8b0c6442c745da856683feb854e0fd6eff128e10b5aafd04ee",
+  "测试/部署/二维码/终端二维码.py/README.md": "51bab94b952641519adde3332e92dea33f10b2ba58d048b4a1dbc0862f7a1f99",
+  "测试/部署/二维码/终端二维码.py/渲染终端码.js": "122c9ad815c39d92433873c205f61633a2c2b7e24431306124488619c955b524",
+  "测试/部署/MacOS/成对原生集成.py/成对原生集成.py": "4f0cec81ae4dfbe48ada6828cb4c31d5f0d0e302c5b88b20cd8996c6cd13eab4"
+}

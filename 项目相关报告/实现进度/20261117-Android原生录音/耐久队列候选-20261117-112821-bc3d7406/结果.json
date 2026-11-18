@@ -1,0 +1,21 @@
+{
+  "exitCode": 1,
+  "stopReason": "",
+  "seconds": 26.117,
+  "minimumFreeBytes": 5099094016,
+  "diskSamples": 26,
+  "inputCount": 142,
+  "inputUnchanged": true,
+  "currentSourceDifferences": [],
+  "results": [],
+  "totals": {
+    "tests": 0,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "artifacts": {},
+  "deviceTests": "not executed; adb inventory empty",
+  "report": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/耐久队列候选-20261117-112821-bc3d7406",
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Android/VoiceUpload/20261117-112821-bc3d7406"
+}

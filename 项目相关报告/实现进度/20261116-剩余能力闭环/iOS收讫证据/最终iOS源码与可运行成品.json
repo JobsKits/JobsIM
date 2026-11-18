@@ -1,0 +1,600 @@
+{
+  "at": "2026-11-17T15:12:32+0800",
+  "appPath": "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/Debug-iphonesimulator/JobsIM.app",
+  "editableSource": "代码/前端/iOS",
+  "project": "代码/前端/iOS/JobsIM.xcworkspace",
+  "buildEntry": "代码/前端/iOS/README.md",
+  "architecture": "arm64 iOS Simulator",
+  "sourceInputs": {
+    "代码/前端/iOS/JobsIM/Services/IMHistoryExport/IMHistoryExport.swift": "974505cb05180433b078980b54bc6ac6961724ff674afccc465c5a89fa637979",
+    "代码/前端/iOS/JobsIM/Services/IMPersonalStateService/IMPersonalStateService.swift": "4351eaf0640bedda43251703e38be0937da23bd50bcf35c90251ee5ea8dd0ad9",
+    "代码/前端/iOS/JobsIM/Services/IMStrings/IMStrings.swift": "a8ab98b2a10a0b013f220e7a0da541b71bd3f8e8f7e4c303516a4bd5c4f861d1",
+    "代码/前端/iOS/JobsIM/Services/IMReportService/IMReportService.swift": "5830615fd5a5255a944849c487f92f0fbfdbeb58cf3b2c3fa74757db0a4770b0",
+    "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMAuthoritativeSync.swift": "45f037ac2464665f9d09ded2512100dfd800a445ce7b587214556b5fba289eef",
+    "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMSyncProtocol.swift": "bcfe6b0d115cfdc6dc2d9b5c80bc692c150bbe8127355e57f7608d996e558fb3",
+    "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptService.swift": "a807b5d5038c4f9a1e10347e92a65e8e88d907deefcdc332e91d43be468b7542",
+    "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptCoordinator.swift": "e18cd76071efd2132363fd57532fa7a30c37b8d0147581c3109c0305e502d193",
+    "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptBuild.swift": "0cd86c88e9e72a7482d13037268fe7f1b0be74c5b5fef96f9acba5d248bbd922",
+    "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptProtocol.swift": "41d477927d78c78b4d55d5bf72760833dcba2f2d0a36ec093f2f47461e0939bb",
+    "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessagePage.swift": "f6f627cdf3bd3c2fe5bedf6295c8906a2b39fa487d737f2d5f1753dfe5853cc1",
+    "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessageListService.swift": "3f0edfbbc9ca0d14d6b7707a297219f0b9de064cdbee1a7dc454b738c3409dc6",
+    "代码/前端/iOS/JobsIM/Services/IMPasswordChangeService/IMPasswordChangeService.swift": "8bc436115ab33c550fcce6317e9ce36b3daa013514bd840f97dcca19e02dfb7b",
+    "代码/前端/iOS/JobsIM/Services/IMContactService/IMContactService.swift": "2c121a90c269a452a05be90ed3a54f70c3e962888fc4348e844be504b06a2adf",
+    "代码/前端/iOS/JobsIM/Services/IMMediaLoader/IMMediaLoader.swift": "e8b0abf139412a178a93c9652e0b7e7ff51b7c925c62b6ba52e3335e4c93ebfa",
+    "代码/前端/iOS/JobsIM/Services/IMGroupGovernanceService/IMGroupGovernanceService.swift": "f0f4edc1b926b867e8f7f72172ab7ce4a62815b93951ec40daff97aa4e4a5dcb",
+    "代码/前端/iOS/JobsIM/Services/IMAvatarLoader/IMAvatarLoader.swift": "43f6b6053d9d2c475ddd77bfabdf289995a05ada25078b4c84ef444dc01d9e43",
+    "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportService.swift": "c141999f3095244c06c893e1c73c46446a3d65a8687a0cea40cdd60911dad05a",
+    "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportArchive.swift": "b6bf0a4b0b6030c90cec39d8e7ba9f2c4d2796c496e85c9e8cea1aab3ed5886f",
+    "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportProtocol.swift": "8a4c408e101f077c8611762b3d23532d152f49f9075c2711c12144059e4f6ebf",
+    "代码/前端/iOS/JobsIM/Services/IMKeychain/IMKeychain.swift": "52486c05587fdd0000f163cb91ab3fd7b952ffdbd51a8d3a9469ee55feb682be",
+    "代码/前端/iOS/JobsIM/Services/IMNotifications/IMNotifications.swift": "1008bf967f34e52c9de3c6b56304b631e1fd3c9c269a136fea5ab8506bb330d9",
+    "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionService.swift": "c79fcba0e5f2918f9e40b5d9719b4542666e74bdc8a8bfce9f3d15690ce4a42b",
+    "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionFiles.swift": "b3ed75ab92e9877e4f89864fe10d836b16fe4481f0835715e1a067c48addc33d",
+    "代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift": "4fec8b320c95873dbc91d36d5894a5c316d3e206e10a50a83682ed61cd289a66",
+    "代码/前端/iOS/JobsIM/Services/IMMediaCache/IMMediaCache.swift": "1779aa8afc45a46b7dadf23b93daf22d395ce19d3ab12b1dd45ba805e6ffa80d",
+    "代码/前端/iOS/JobsIM/Services/IMSyncCoordinator/IMSyncCoordinator.swift": "881e125a7c656a016a6956f164eb796dbd7255eff69e621752cd4a5291819f3c",
+    "代码/前端/iOS/JobsIM/Services/IMAvatarService/IMAvatarService.swift": "74ce0187e8ce33e2d6cde4a62326f86ab08c9b9cdd5e59509969a1f147208b34",
+    "代码/前端/iOS/JobsIM/Services/IMAnnouncementService/IMAnnouncementService.swift": "26e309237271aff306ac6e8e3b26153b81b18bc937e8cf0750479ae1cd9abda0",
+    "代码/前端/iOS/JobsIM/Services/IMTrustStore/IMTrustStore.swift": "3d44db4b19cf7788cce87a7ef90b6df98e390bbb38e53201d9575997b26d166f",
+    "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift": "d84fc8beee4ee4ff5333d99aaf35b44dcac082b7a114e4fb53852e5a6f258cc4",
+    "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationJSON.swift": "46bc11d58ed3b03708dcd11becb59687998607083d7d38463b2652a4b8e96c38",
+    "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationProtocol.swift": "b9d0bda158415d6d8af3008746e34c04084dbd96f4eb25828bb11a24d6367309",
+    "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationService.swift": "0ab316f75ebd76c81595eec7bdf996c4a0aa724340ef5eb74a3f4a6069d22064",
+    "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift": "e3924506a60a195e8013ecb51c8405040e550c1dce7efbd6bae1e77d0f2de87a",
+    "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMCredentialPair.swift": "b6f0fa031c77b6885f67de6f38088fe805e3a2eeedf3e481b51377429016f6bb",
+    "代码/前端/iOS/JobsIM/App/SceneDelegate/SceneDelegate.swift": "d61fdb998d38cdeca792925e4b86b94c10ad74faba3fd13c9d47de38a59b011d",
+    "代码/前端/iOS/JobsIM/App/AppDelegate/AppDelegate.swift": "00c1694024480335efe8f2bdbcc5a9ebe45e76f2f81ba33388dde89d26bb167a",
+    "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift": "e8ec6f2b27d40508ef2483ac0186bc5207d9fb383bf68453246cfac64dbeca57",
+    "代码/前端/iOS/JobsIM/UI/IMUI/IMUI.swift": "fc7a02646831d1fbc18fbb1bbf89ae189dc627d35d4332f3e1bc3f1423ed8c6b",
+    "代码/前端/iOS/JobsIM/UI/IMReportVC/IMReportVC.swift": "b1ee6dc57f7ba857dc67a8fe60615a22674c37053f459a03782ed66f6e05c0dc",
+    "代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift": "45e74bbec2b3cb4e610b1ece5f252b87e0e7c68cce0c63b0f51bbfb2c081da6b",
+    "代码/前端/iOS/JobsIM/UI/IMPersonalStateVC/IMPersonalStateVC.swift": "51825fb0414be6bd541c6d6820889e1b944b1a8397b935b323d4527b5ce28522",
+    "代码/前端/iOS/JobsIM/UI/IMDevicesVC/IMDevicesVC.swift": "0c93ad9fc0afd7f61ae895cac646aedf613db655f164c3970d4d503db0e8423d",
+    "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift": "593eb24a6be23e1ae679f74b7bf1c53d8b2cae7fac6d45463a1ea33c446cc9a9",
+    "代码/前端/iOS/JobsIM/UI/IMDataExportVC/IMDataExportVC.swift": "463273500c4864d41be1a735a2b777114363a08bdae9d025ee8060a07d5b304c",
+    "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift": "fba7163e067686bb03a9e98d299524e38096afb937d817b562ad64a2484807f5",
+    "代码/前端/iOS/JobsIM/UI/IMAvatarView/IMAvatarView.swift": "fec45b3b6bdefbd18aa2d694e84cf1e764b88d78e93e881aec7e27b554a8b72e",
+    "代码/前端/iOS/JobsIM/UI/IMContactRequestsVC/IMContactRequestsVC.swift": "6c20737a58f6e12d2f11d966952338d98b97561cead6c0545cd57ea839b1b70c",
+    "代码/前端/iOS/JobsIM/UI/IMPasswordChangeVC/IMPasswordChangeVC.swift": "4ed2454fbfadec17ba10e980e0b3e4ea10187be316f1ada46b7070ef4ff7aa08",
+    "代码/前端/iOS/JobsIM/UI/IMAvatarVC/IMAvatarVC.swift": "82e15a8be784ab5a1eccec5100ffa3fd171d0cb99fbda58f888445e8a1a527a5",
+    "代码/前端/iOS/JobsIM/UI/IMConversationCell/IMConversationCell.swift": "abd75cfbac3c008e43e89ddd55b290f269ba23abe7ff11161d4bc3121becbd5c",
+    "代码/前端/iOS/JobsIM/UI/IMBaseVC/IMBaseVC.swift": "d470eea3906b5095c07cd25483774614531ec6dfc2541fcbde83858da40536bd",
+    "代码/前端/iOS/JobsIM/UI/IMAccountDeletionVC/IMAccountDeletionVC.swift": "82ff53b42ab1ceb35efff730232fa31c4bc704105e0ed9c0d5b7870e10619586",
+    "代码/前端/iOS/JobsIM/UI/IMGroupGovernanceVC/IMGroupGovernanceVC.swift": "1ad691001f00d9840d52bcce61d0890c2105fb9db2694ca2c25c0a0c31a2d70d",
+    "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift": "42c8254bc0d6fec0cb91d516344e7617de9a638553ff3fcd39dca346f315d132",
+    "代码/前端/iOS/JobsIM/UI/IMReceiptVC/IMReceiptVC.swift": "ba7e607f640666ff96778a4c1d7dc64329b5f0d90d7501751f49b9f2d0b7b6cd",
+    "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift": "737823272527ceeccdaf5df931bb53aa5f6a26e3d1700c4e0ebaff491acbae55",
+    "代码/前端/iOS/JobsIM/UI/IMMigrationVC/IMMigrationVC.swift": "21da8d598e45838098cbc48b9d46244f954f9b726ff7affab073bc49260319d1",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIImage/UIImage+Make.swift": "c031aaa7ac1e0a7cc62e875070870a69d6b397bc7a000778891501d05f97e9a0",
+    "代码/前端/iOS/JobsIM/UI/Factories/PHPickerViewController/PHPickerViewController+Make.swift": "f8b6bab9e0e75b84789979c0ebe40840cbf37faad7b473bdf0aa6b1f96d9a10c",
+    "代码/前端/iOS/JobsIM/UI/Factories/UNNotificationRequest/UNNotificationRequest+Make.swift": "acd270ecdc7acb107e787746890b424468a8dbfc9abc430f46dd9023644cad07",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIWindow/UIWindow+Make.swift": "cfaace340dc3a91ee39df76355ecea4872103203293634ab6daea9506993c705",
+    "代码/前端/iOS/JobsIM/UI/Factories/UISegmentedControl/UISegmentedControl+Make.swift": "68cb6197c89282e0dab54bf5031e46621dea38d23f4a5f4e4c128c0c02b4817a",
+    "代码/前端/iOS/JobsIM/UI/Factories/PHPickerConfiguration/PHPickerConfiguration+Make.swift": "c88d947fc6509ec7a6f4c28c2aa4a41ae114e45f3fb07e0f4cb4b3246322d1e6",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIColor/UIColor+Make.swift": "f692681c023daeb725188d768764f5c561a171f039b235d0a94bb201a1b13e5c",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIAlertController/UIAlertController+Make.swift": "6c1c51f777f84448920026a18e9bd09a254dcdd6f1dd7bbaec96d02061124333",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIAlertAction/UIAlertAction+Make.swift": "2039989497d095ff0cf27f7cefcf4e76f7a5719331899f9db848322866b8153d",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIContextMenuConfiguration/UIContextMenuConfiguration+Make.swift": "1d890efb7393dc288640332d79319d5c6b38b18a0e3f512d3c5fa9e086ffd794",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIView/UIView+DSL.swift": "25fa9bfe3e4815665d67ab3215f4458c112419bfe665a2b5a1d3c1ec45797467",
+    "代码/前端/iOS/JobsIM/UI/Factories/UITabBarItem/UITabBarItem+Make.swift": "3a587ac9b1116e3b658f0e2a83cf0cca3c6cfeea646ff1f128e3fabb1000fddd",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift": "216f84c8abaaf78890ea3809a35abc82bea8b90ef166c2dc7df46cb14dbabd88",
+    "代码/前端/iOS/JobsIM/UI/Factories/UINavigationController/UINavigationController+Make.swift": "7d41021b699066d4a9c913d782e4172e518451d03972a1984e20eee78e6f0606",
+    "代码/前端/iOS/JobsIM/UI/Factories/UITableView/UITableView+Make.swift": "82d9a099577651028b00e141c25007ca56058ca23282f80612fe146db21c119d",
+    "代码/前端/iOS/JobsIM/UI/Factories/AVAudioRecorder/AVAudioRecorder+Make.swift": "34ebc78c05d3c2d961dbb23880187b9bf41de8ddd11ef91b48557654aa487140",
+    "代码/前端/iOS/JobsIM/UI/Factories/FileHandle/FileHandle+Make.swift": "dcfa30524365d79d3af1a7b14650108db25afb0ecdfb4b39da312aa41321d05c",
+    "代码/前端/iOS/JobsIM/UI/Factories/UIActivityViewController/UIActivityViewController+Make.swift": "02395eb87d8919299e04643351070d2f0da69813a664f7e2a8cd83f9c41714e3",
+    "代码/前端/iOS/JobsIM/UI/Factories/NSAttributedString/NSAttributedString+Make.swift": "00735281d3d81ee162f7b01406338888799c66a1a454254fd89224d1bc816e31",
+    "代码/前端/iOS/JobsByPods/JobsIMCore/Core/ISO8601DateFormatter/ISO8601DateFormatter+Make.swift": "3676c995da8a68f9aac5b30f87657a7d71ff05fff6a9c513d10454d5082e69a8",
+    "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONEncoder/JSONEncoder+Make.swift": "348b6f8224e19b2b7217b8ce7a7b00fadf1ea5c9529334ffc6bd196719ae5c26",
+    "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONDecoder/JSONDecoder+Make.swift": "27bef2eb06e3c530c3b80b0095156998b382dda85944fb158245f8b7350e0907",
+    "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMNamespace/IMNamespace.swift": "4cdb9367113b58ce7c8e480ea24ca298372f9b7552950e6a511c74a510307221",
+    "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMJSON/IMJSON.swift": "0ed97d370038e94ae2cfd489838fc66883f1f94c7501d299e72e9aedab2a54dc",
+    "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMCursor/IMCursor.swift": "3915274c5d488c3680a423acf43632dcd51c09817c3c70cd58c1c4640acd29e5",
+    "代码/前端/iOS/JobsByPods/JobsIMCore/Core/NSDecimalNumber/NSDecimalNumber+Make.swift": "76db6be5c2150985e70241b07c461e617d6dd93b1dad38931b4e342e324097e3",
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/URLRequest/URLRequest+Make.swift": "3fe446c96aa4f98b199e0ae68e6d5c0b4000f0bc12d14c6f17dfab0786614e4e",
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIError/IMAPIError.swift": "9549b5c6f851fc28cca031a03cc6b25673b7b4706d2e63dc28a413c974ca3415",
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceCertificate/IMInstanceCertificate.swift": "b038d39ebc12a94461b2f86e767fe7022ce76a93010abc96b13d253554e53146",
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIClient/IMAPIClient.swift": "9dcdf2c178b21a9baaa5666e44146cf95cfca46d0b82661c66f0c4489db130a2",
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceEvaluator/IMInstanceEvaluator.swift": "0651b78ccd4d83519b75ab8bbdd968fdba0deae6b71beefeee714aaefaf7e1b1",
+    "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift": "1f72fe4ebb7fb7383b1d059f70f7948e2fe109fc4c407539689e197332c296de",
+    "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift": "0e7a09e0b11b34f4073a417595e0a4a0139556b499e80024e51fe5b47dcd6683",
+    "测试/前端/iOS/IMStorageTests.swift": "fcf8b21e44acc8eb06421918f121d214a2c497fd994fccedf31338e23ddf47c9",
+    "测试/前端/iOS/IMSelfStateIntegrationTests.swift": "786110539f2e1ee06114e4460309c05ee124434d96d079454c6c96159a43ee86",
+    "测试/前端/iOS/IMDataExportTests.swift": "dc0603dca2b7191f3a05dca52b8d808b004f3ac831a9ea884d8f49f5aa08be26",
+    "测试/前端/iOS/IMAuthoritativeSyncTests.swift": "d8fcf9b2d858053a6dc7c34681cd3615ccb5f10fd00fe5fee7670a1c0c4bc97a",
+    "测试/前端/iOS/IMPersonalStateTests.swift": "cc811f4e20fa2a2b19f134d67951a9570d02fcbdf5850cc5cfa4d1b5602f10c7",
+    "测试/前端/iOS/IMNotificationTests.swift": "41ba5efb12c4fad73abc21d7494ef27e228fcd75311a42c16357a8e7bd3aa96b",
+    "测试/前端/iOS/IMMessageListTests.swift": "b041e3bbc0a0a9533d7402c832d8be4ba22ef2b46aaa2eceb82b33384486d6bb",
+    "测试/前端/iOS/IMLifecycleTests.swift": "e793b0b096a31926fff36e39c164f8e5fe548e47f455af363df63fa45392fa8b",
+    "测试/前端/iOS/IMMigrationServiceTests.swift": "01c1b40da168e7ae4a2821e77e4d44a369a795ce676790b3bbb1c9a10c32240e",
+    "测试/前端/iOS/IMSessionTests.swift": "eed892fe7162d95ff693460ef5bdab462c6ac887de2efcbd77aa823efd8c30f4",
+    "测试/前端/iOS/IMReceiptStorageTests.swift": "1bca785886cf2f6b8bb5035a2e340dafc984940ff4ecb37bd9ee2372055fca9a",
+    "测试/前端/iOS/IMAuthCoordinatorTests.swift": "eaa7ee35f8cf461e16dc7e19952f69b3dbace5304d8f09d714f8f1b63aa38876",
+    "测试/前端/iOS/IMAuthRefreshIntegrationTests.swift": "74d2fae6dd5206db6e02306a01018a27a67f1a9e82ab59ff8afc4e53a8f2d485",
+    "测试/前端/iOS/IMMigrationTests.swift": "70fd61edf61add4848a9d47a56c629911e5f295799d1a83a2187f0961b062561",
+    "测试/前端/iOS/IMCompletionTests.swift": "a7cb262c61db47f748f912e8bd7a77712eca886edebd6288defbdccfcd2ac69a",
+    "测试/前端/iOS/IMReceiptServiceTests.swift": "737746e3c8649cc5d9903811b4bf17be6e9ad64cdb94a66112068a3893ec811f",
+    "测试/前端/iOS/IMIntegrationFixture.swift": "a6c1a0f529a09f837ea8c542ab62fbeaa114efd1009daa91fa9d4eb5218b83f7",
+    "测试/前端/iOS/IMForwardTests.swift": "c3315f842a94769368c17989ca8052fb8facc8c20053ad973342553c7afa7f7e",
+    "测试/前端/iOS/IMMediaTests.swift": "e4c3023d23e1a5301307f19dc311b1581f588d9987a82c5d8905684e017e2ad2",
+    "测试/前端/iOS/IMAuthCredentialTests.swift": "a09449a8da1a616ddef3e638e9585b7738e743619d86c9c387955c9484e4c6e4",
+    "测试/前端/iOS/IMSendAdmissionTests.swift": "4355ad2211621b0f189862d1f60ff64564d5dca6feaef789983b32593966db17",
+    "代码/前端/iOS/JobsIM/Resource/de.lproj/Localizable.strings": "687c8b8032755db60cb63c113616253fdb9329e100a5483173383c4bc09e1aff",
+    "代码/前端/iOS/JobsIM/Resource/zh-Hans.lproj/Localizable.strings": "60141a02730b99a2a8c4d0db3597e13991b7b440bc9fc7c35ebf7869f6bb6c4a",
+    "代码/前端/iOS/JobsIM/Resource/ja.lproj/Localizable.strings": "280909480ec0ea669a72af42f467d271021bc7bd255a52892e66d5f5abc9c91e",
+    "代码/前端/iOS/JobsIM/Resource/en.lproj/Localizable.strings": "ec24c4cf0ae13b633fec6acc126a9e3deedd57b5d587d8272632437cf1c69b5b",
+    "代码/前端/iOS/JobsIM/Resource/es.lproj/Localizable.strings": "63f0c6c2df1ed076e410a936e4fcabd2c5d0b48a4a883008c67ee3638dd7497c",
+    "代码/前端/iOS/JobsIM/Resource/ko.lproj/Localizable.strings": "ae981916c767e47e57b9e7074ca76f34a61e818c2b199fad5d3d844d1822a19d",
+    "代码/前端/iOS/JobsIM/Resource/zh-Hant.lproj/Localizable.strings": "286da581080be3cb6a8653477a414b043295a048a1b937f7f99844824f558c1b",
+    "代码/前端/iOS/JobsIM/Resource/bo.lproj/Localizable.strings": "30318fa2db3423322bc5b5066ce2c3ed042d1363a9fc29b5ba4205ac7cb68d94",
+    "代码/前端/iOS/JobsIM/Resource/ru.lproj/Localizable.strings": "07cdf2385df74795f8e167f7a41893cfcc83dd14975f221e3e80dbe67b5863bb",
+    "代码/前端/iOS/JobsIM/Resource/fr.lproj/Localizable.strings": "a2f497b5b34e841da6842d43f897fcbda6414c049399abb8c449166dcf4a66ad",
+    "代码/前端/iOS/Podfile": "b1c062108b2bdaa7a3fa2bf5af58a6c175f3946a77be26ffa0221efe65b9d5fb",
+    "代码/前端/iOS/Podfile.lock": "cc9d7a0b19ea948c8021a8428c35575efb43611105d9e2dff715c779c49f9dae",
+    "代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj": "c359c99f3ef3d73dd7501de16ba81e33809093eb92f1e7efaeba13970c18892d"
+  },
+  "appFiles": {
+    "Alamofire.bundle/Info.plist": {
+      "bytes": 745,
+      "sha256": "6afe5bf8846c658a613e04a6be054ce39dd2d5959149bdf9522995998be9b78e"
+    },
+    "Alamofire.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 373,
+      "sha256": "521eb6ef8430773e5c010e1838fe9dd8fa5d62b7b76d1cea8d7d8daadcb144e2"
+    },
+    "Assets.car": {
+      "bytes": 1498104,
+      "sha256": "1f576f197c8db6809b84666f93e1d96b9c84121990c0631780e4db49f48f5732"
+    },
+    "CocoaLumberjackPrivacy.bundle/Info.plist": {
+      "bytes": 773,
+      "sha256": "16fd491da7607bdc78d89a1e23ff3330a27ec4ed7387c7e0ef7d4c8e03ff1a70"
+    },
+    "CocoaLumberjackPrivacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 793,
+      "sha256": "132cec00260de184d85685aac9d53a42947aa9872da74647c457714e6b5fe7b6"
+    },
+    "ESPullToRefresh.bundle/Info.plist": {
+      "bytes": 758,
+      "sha256": "2248036e7f162dc8f639c6f12454b81eb42f13d4a1fd571ac3b32a8e3cdc40aa"
+    },
+    "ESPullToRefresh.bundle/icon_pull_to_refresh_arrow@2x.png": {
+      "bytes": 918,
+      "sha256": "7b63f0797955808f29f60d81946cc030e749759e18c6d500df722bcb028bac9b"
+    },
+    "GKNavigationBarSwift.bundle/btn_back_black@2x.png": {
+      "bytes": 1013,
+      "sha256": "f86e5ff2371c5e7471ec714783e076286c760ab985c7f64e5d7e4d5ecc73d3a8"
+    },
+    "GKNavigationBarSwift.bundle/btn_back_black@3x.png": {
+      "bytes": 1278,
+      "sha256": "7bb05edf7058051de57e23318249ade923a80431427dc0872082934b785a3456"
+    },
+    "GKNavigationBarSwift.bundle/btn_back_white@2x.png": {
+      "bytes": 1252,
+      "sha256": "a4c62568488d0cbd9ae957b487b3f337c524d529573ecaa1e7ec76c56e1ecf32"
+    },
+    "GKNavigationBarSwift.bundle/btn_back_white@3x.png": {
+      "bytes": 1387,
+      "sha256": "f7f1825682bc0aef2c04aef9287bd991e52fc4034d994c609aa3ec518dd7a8aa"
+    },
+    "GKNavigationBarSwift.bundle/nav_line.png": {
+      "bytes": 81,
+      "sha256": "41b538a1c6febc26ca8845f23aeb116a9282f3f908914d27387a24454b04a2d6"
+    },
+    "GKNavigationBarSwift.bundle/nav_line@2x.png": {
+      "bytes": 81,
+      "sha256": "41b538a1c6febc26ca8845f23aeb116a9282f3f908914d27387a24454b04a2d6"
+    },
+    "GKNavigationBarSwift.bundle/nav_line@3x.png": {
+      "bytes": 81,
+      "sha256": "41b538a1c6febc26ca8845f23aeb116a9282f3f908914d27387a24454b04a2d6"
+    },
+    "Info.plist": {
+      "bytes": 1443,
+      "sha256": "bedd7bedc8d540679ebe6011289a259f271c32e49a0938fe49238a055070209c"
+    },
+    "JobsByUIKitPrivacy.bundle/Info.plist": {
+      "bytes": 764,
+      "sha256": "b3b67f16236d6e44846f6254653a29549284edc11046bca9eeaa98ad9434c133"
+    },
+    "JobsByUIKitPrivacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 598,
+      "sha256": "a331d51864743ebe4e00dd22360b4a538b6b3ac26a6b3eb54094e60a36959a12"
+    },
+    "JobsIM": {
+      "bytes": 40064,
+      "sha256": "bf2f76fc36fdc5eecfb7607cbf19a358852a2b9a83ddbd2102fa74e1708b7353"
+    },
+    "JobsIM.debug.dylib": {
+      "bytes": 49975840,
+      "sha256": "e93b6da89c7133a54e73de431d31832e6beabe9628a8e111162da3aeb1b353d3"
+    },
+    "JobsNetworkingPrivacy.bundle/Info.plist": {
+      "bytes": 770,
+      "sha256": "0a146eb9aa908388c3a147220a07f318d4582aad110c3ca461d1e070e7968bff"
+    },
+    "JobsNetworkingPrivacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 599,
+      "sha256": "10da67f217824f019288ec328ababc290ab0399c52e9be77a24d494339137da2"
+    },
+    "JobsSwiftBaseDefinesPrivacy.bundle/Info.plist": {
+      "bytes": 782,
+      "sha256": "484e844b1d61d6a047f5d34c67af2331867ab58f75bbc7ed32e74ad0b19c3c37"
+    },
+    "JobsSwiftBaseDefinesPrivacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 598,
+      "sha256": "a331d51864743ebe4e00dd22360b4a538b6b3ac26a6b3eb54094e60a36959a12"
+    },
+    "JobsSwiftDebugToolsPrivacy.bundle/Info.plist": {
+      "bytes": 780,
+      "sha256": "936975403fb91991af816ff3b43ee3c38386e2f144ffddbd0548b47770b22487"
+    },
+    "JobsSwiftDebugToolsPrivacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 598,
+      "sha256": "a331d51864743ebe4e00dd22360b4a538b6b3ac26a6b3eb54094e60a36959a12"
+    },
+    "JobsSwiftFoundationPrivacy.bundle/Info.plist": {
+      "bytes": 780,
+      "sha256": "339489e453cef86373765349c1e75e520133c991b7d8c781aeef9e839e5e1535"
+    },
+    "JobsSwiftFoundationPrivacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 598,
+      "sha256": "a331d51864743ebe4e00dd22360b4a538b6b3ac26a6b3eb54094e60a36959a12"
+    },
+    "JobsSwiftTimerPrivacy.bundle/Info.plist": {
+      "bytes": 770,
+      "sha256": "26fd3ca86946ce9a2d993fc6eb695e8bbaa67db728b7841579b5a29f3c0cab88"
+    },
+    "JobsSwiftTimerPrivacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 600,
+      "sha256": "08d90e6946dbfea0d0b5b17fb659d77eed23e443b745d8e7b5b9fa378cb74477"
+    },
+    "Jobsl10nPrivacy.bundle/Info.plist": {
+      "bytes": 759,
+      "sha256": "17a9fd506cf2cf7414d28e5ae5f4184603d47a9e68ddb2e5a35d6e276d899cc2"
+    },
+    "Jobsl10nPrivacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 598,
+      "sha256": "a331d51864743ebe4e00dd22360b4a538b6b3ac26a6b3eb54094e60a36959a12"
+    },
+    "Kingfisher.bundle/Info.plist": {
+      "bytes": 747,
+      "sha256": "b47283e7f0c150e8527f679733f6cf4ba7c22300f367cf7f000010de607807b1"
+    },
+    "Kingfisher.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 707,
+      "sha256": "c858b743c639e7bf644354de41d128c0ee4af13d348f5cd4e60492a4b287dbf9"
+    },
+    "LottiePrivacyInfo.bundle/Info.plist": {
+      "bytes": 762,
+      "sha256": "6a6ae09b0563f41a0bc3f8d466378857344604f1a6a2c358131a100456809560"
+    },
+    "LottiePrivacyInfo.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 599,
+      "sha256": "10da67f217824f019288ec328ababc290ab0399c52e9be77a24d494339137da2"
+    },
+    "PkgInfo": {
+      "bytes": 8,
+      "sha256": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0"
+    },
+    "PlugIns/JobsIMTests.xctest/AuthRefreshPublic.json": {
+      "bytes": 823,
+      "sha256": "bc896d5ef4ce20df08fd02e0e42cd279eceb329942ae37fbd486233ef454ab64"
+    },
+    "PlugIns/JobsIMTests.xctest/Avatar.data": {
+      "bytes": 258366,
+      "sha256": "be2cbcc9654b544d1fc0e762afe981d696f1ed3c9b8b8379187635990a0d55c9"
+    },
+    "PlugIns/JobsIMTests.xctest/Info.plist": {
+      "bytes": 667,
+      "sha256": "5f98bac467534a5431c9eb1fa595bd51e32e7eca04e0a1abbd1b640ff476f4ee"
+    },
+    "PlugIns/JobsIMTests.xctest/IntegrationCA.pem": {
+      "bytes": 1172,
+      "sha256": "564e0b1d1828c3ef98fb082b87eb6b91b00c49caf3f8cb88778a33729a46f8b9"
+    },
+    "PlugIns/JobsIMTests.xctest/IntegrationServer.pem": {
+      "bytes": 1249,
+      "sha256": "3c3f0ac56cfdadfcd422d3e5e970c5d1226bb0766c42ecf9ed5ced7900d3eb06"
+    },
+    "PlugIns/JobsIMTests.xctest/JobsIMTests": {
+      "bytes": 5032640,
+      "sha256": "d2ee7f0604d092a719fae7d8148f8b09e698b8adc6963e9374a00e8631c2dc0c"
+    },
+    "PlugIns/JobsIMTests.xctest/NativeVideo.data": {
+      "bytes": 6395,
+      "sha256": "e3355ce3469b47930b6d83694f911c05360bbbc5d432018c68a3756f598af63a"
+    },
+    "PlugIns/JobsIMTests.xctest/OwnPasswordPublic.json": {
+      "bytes": 1717,
+      "sha256": "6153fbe4dd21e504cb016e92c7f3706101bf275156197a2ed6a07a1aaf6bed08"
+    },
+    "PlugIns/JobsIMTests.xctest/SelfStatePublic.json": {
+      "bytes": 1520,
+      "sha256": "7ac19521cae5a2d87ac4ace5552f4ac2876747ca065f39c135132611b683f722"
+    },
+    "PlugIns/JobsIMTests.xctest/_CodeSignature/CodeResources": {
+      "bytes": 3366,
+      "sha256": "68e55662ed01785442082f39338be6a4ea56c4f2302e4197a05db965e024a33b"
+    },
+    "PromiseKit_Privacy.bundle/Info.plist": {
+      "bytes": 764,
+      "sha256": "fd8caeeccd8ca7b6533958990912ddacbc363802936b2d2a42421ac3e7429efc"
+    },
+    "PromiseKit_Privacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 228,
+      "sha256": "a7081f1506c90e8e673100e5c161e765b8b7a624446e20bd4bd6efaca80808b8"
+    },
+    "RxCocoa_Privacy.bundle/Info.plist": {
+      "bytes": 758,
+      "sha256": "2fffacfbdd9f3601831611fd4088dd659a374e8896f4d48a0dc94445fd9bee47"
+    },
+    "RxCocoa_Privacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 372,
+      "sha256": "f4f500f5abaffd2140879447a5d7dcf9e08f1241b88537a2597e1566daf8ad62"
+    },
+    "RxRelay_Privacy.bundle/Info.plist": {
+      "bytes": 758,
+      "sha256": "32597b8d7ec9eaf5d68dd3b231f986542d2738340496c934d4851faeb91c1244"
+    },
+    "RxRelay_Privacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 372,
+      "sha256": "f4f500f5abaffd2140879447a5d7dcf9e08f1241b88537a2597e1566daf8ad62"
+    },
+    "RxSwift_Privacy.bundle/Info.plist": {
+      "bytes": 758,
+      "sha256": "2182c077c976f82913ff66658749b5fb44592b08e5bda9c9511f90cbe821df52"
+    },
+    "RxSwift_Privacy.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 372,
+      "sha256": "f4f500f5abaffd2140879447a5d7dcf9e08f1241b88537a2597e1566daf8ad62"
+    },
+    "SDWebImage.bundle/Info.plist": {
+      "bytes": 747,
+      "sha256": "6a5dcfe376fe3cc825adec97404969391babe843ee4dda6c1c9036339167c19f"
+    },
+    "SDWebImage.bundle/PrivacyInfo.xcprivacy": {
+      "bytes": 599,
+      "sha256": "03b2c70833a331a2b1efd11ff168ed02a8eadfd5e7d1fbf30eecc7509a4aea47"
+    },
+    "SwiftMessages.bundle/CardView.nib": {
+      "bytes": 7113,
+      "sha256": "d327573596673a241a7bb506b901e35c29993112f65cc9c880e701a1e342f453"
+    },
+    "SwiftMessages.bundle/CenteredView.nib": {
+      "bytes": 7928,
+      "sha256": "06e113bab2994d45fc1d9ce4075d9d2d5b2f31da74c33ae34de9424fd7aafa82"
+    },
+    "SwiftMessages.bundle/Info.plist": {
+      "bytes": 753,
+      "sha256": "d3498da561d1bb625b95bcd3eba505987e88d1a48d875d58921e2a889dddb451"
+    },
+    "SwiftMessages.bundle/MessageView.nib": {
+      "bytes": 5751,
+      "sha256": "78f2ecacf4a5def8cebc58597f8fc0e6c3a2bd346c3027206e6ed3080ac00bec"
+    },
+    "SwiftMessages.bundle/StatusLine.nib": {
+      "bytes": 3117,
+      "sha256": "fe03ad6504acdfe0a62bb6aa03911b8545ae672612fff7c294350cf73ccb7141"
+    },
+    "SwiftMessages.bundle/TabView.nib": {
+      "bytes": 7394,
+      "sha256": "f8dabd323228a0c00e1272b8b6720347968a1a56374d39d34e380ae6fc435035"
+    },
+    "SwiftMessages.bundle/errorIcon.png": {
+      "bytes": 622,
+      "sha256": "9c85b30607807d10a91f632a1b626958dcac921c9414b46fd234e87d91fa006b"
+    },
+    "SwiftMessages.bundle/errorIcon@2x.png": {
+      "bytes": 1159,
+      "sha256": "f8d3e989eee0e8abbbf25dfeb2b69fb3e2ee77c247788778aff972844b740b20"
+    },
+    "SwiftMessages.bundle/errorIcon@3x.png": {
+      "bytes": 1655,
+      "sha256": "501b1d9c75583adf9abc428af65e4468777f24f694a8b5f72370b476f210fc71"
+    },
+    "SwiftMessages.bundle/errorIconLight.png": {
+      "bytes": 806,
+      "sha256": "da2f5153e07d541bbe1b2f3572260e75bfbe8cd8776f844c4616ca1b4ef00607"
+    },
+    "SwiftMessages.bundle/errorIconLight@2x.png": {
+      "bytes": 1661,
+      "sha256": "0cdf2ed028cdbd85f0de7de63b573ee094155ae59ed2dc9825a0f885de08e76e"
+    },
+    "SwiftMessages.bundle/errorIconLight@3x.png": {
+      "bytes": 2479,
+      "sha256": "48af82889b08f113ebc407ea76ccc23a17e58e5a6d368385ed6e243c5d73d2a1"
+    },
+    "SwiftMessages.bundle/errorIconSubtle.png": {
+      "bytes": 246,
+      "sha256": "cb0df27cb96a8dd92948d92f6fb05357ac3291a400ea3fed210ed3796307b323"
+    },
+    "SwiftMessages.bundle/errorIconSubtle@2x.png": {
+      "bytes": 320,
+      "sha256": "cc9a968c713da39a7317e6600c7019f310594719e9e549f9448ae57518d65239"
+    },
+    "SwiftMessages.bundle/errorIconSubtle@3x.png": {
+      "bytes": 408,
+      "sha256": "23ef6fcbc2fff5ffb49c6cee2fbe334dec374a314e036b2cd53ab92f2e718c35"
+    },
+    "SwiftMessages.bundle/infoIcon.png": {
+      "bytes": 392,
+      "sha256": "f7c24553b2764080b4e43c829e211368fa46e8fb23b7a2e7ec7e4307fce15a7c"
+    },
+    "SwiftMessages.bundle/infoIcon@2x.png": {
+      "bytes": 909,
+      "sha256": "346aef14606b5703e2d80a18fac69859011419cff0585d4b99019b0b17aadece"
+    },
+    "SwiftMessages.bundle/infoIcon@3x.png": {
+      "bytes": 1331,
+      "sha256": "90e461d9217751a0badb399c25a9d391136d404c0166e905ef704235085ca87a"
+    },
+    "SwiftMessages.bundle/infoIconLight.png": {
+      "bytes": 492,
+      "sha256": "158248f2ae0877bef27d5ee8f9e563c56f79dbd9ffe026c6f2117c92bdcd3f35"
+    },
+    "SwiftMessages.bundle/infoIconLight@2x.png": {
+      "bytes": 1396,
+      "sha256": "e81e9c73c41b89d78367898a59776fc0f9faa1abc0fe90e3e2508c76e7800631"
+    },
+    "SwiftMessages.bundle/infoIconLight@3x.png": {
+      "bytes": 2094,
+      "sha256": "9c169ddb1af945db148dd2649eba0d38232d46457f03cf935466a0e6072f9dcd"
+    },
+    "SwiftMessages.bundle/infoIconSubtle.png": {
+      "bytes": 176,
+      "sha256": "c7eb9c04d2ec5a75fe26816d206a74e91d9f1fdfb8b84da08be54b9fef6cb84d"
+    },
+    "SwiftMessages.bundle/infoIconSubtle@2x.png": {
+      "bytes": 195,
+      "sha256": "e866cb84a1bfb1e938072d4f7f00d55394ed77641a39e17bff42bad84113a432"
+    },
+    "SwiftMessages.bundle/infoIconSubtle@3x.png": {
+      "bytes": 225,
+      "sha256": "02eb8fe90e9db77faa4c9a540f03487c5b41fb8f632b02a4c3a459828f8207e9"
+    },
+    "SwiftMessages.bundle/successIcon.png": {
+      "bytes": 580,
+      "sha256": "76b5baf57d44bdb702fd03519a4077a372d38d9a6f4bc74c1204c8062f084e49"
+    },
+    "SwiftMessages.bundle/successIcon@2x.png": {
+      "bytes": 1105,
+      "sha256": "4dc265cccfd5adba757041f92c9a4678b8bdc6775516813c88adde4fd418b348"
+    },
+    "SwiftMessages.bundle/successIcon@3x.png": {
+      "bytes": 1584,
+      "sha256": "1f19c67e2a0e3e9e2673d95ecf363cf6aa6b263cf41bc5a95c3c3f862ce45089"
+    },
+    "SwiftMessages.bundle/successIconLight.png": {
+      "bytes": 754,
+      "sha256": "c55526136ea198acc79ed960a1fd24fa9f5cac4023b8093052241103d2b38899"
+    },
+    "SwiftMessages.bundle/successIconLight@2x.png": {
+      "bytes": 1615,
+      "sha256": "b0b1923f20319eb2aced424ed50796e6cbc6ad507f959f3bffdb1120e7d0fa93"
+    },
+    "SwiftMessages.bundle/successIconLight@3x.png": {
+      "bytes": 2371,
+      "sha256": "cbdd0e94d530ca6834da04bb1e9c8e97112c29193183ffb84eb051f4e9aeff0d"
+    },
+    "SwiftMessages.bundle/successIconSubtle.png": {
+      "bytes": 258,
+      "sha256": "a39c27adefe9ad000038b9118ac76998fd42bf72cc375ac0ceb2820046e4441e"
+    },
+    "SwiftMessages.bundle/successIconSubtle@2x.png": {
+      "bytes": 316,
+      "sha256": "ea51fdb2888644a4c41ed2c41822899c977f5d0213d778f4000bafba7f69a4c1"
+    },
+    "SwiftMessages.bundle/successIconSubtle@3x.png": {
+      "bytes": 399,
+      "sha256": "d9e9d0780f13dc7de4de70bf6bf7c5c5943cdeee8a5f29fd15e22c9940c1300e"
+    },
+    "SwiftMessages.bundle/warningIcon.png": {
+      "bytes": 392,
+      "sha256": "c0f361e91a01b300229860b7f0953df0ec2d2079a52cf993f70aed15407764a9"
+    },
+    "SwiftMessages.bundle/warningIcon@2x.png": {
+      "bytes": 908,
+      "sha256": "0a46290bddd7cd4bbb7c598461f490e28ef49f47edf6c459e33378aeca2ad200"
+    },
+    "SwiftMessages.bundle/warningIcon@3x.png": {
+      "bytes": 1333,
+      "sha256": "f1ec8f090e11eedc1cdb53ec49ad1ba1b91283cb015eaac9533df75ddff90b65"
+    },
+    "SwiftMessages.bundle/warningIconLight.png": {
+      "bytes": 490,
+      "sha256": "c9503c9f42834aa2645aa32d0509b194389beb10aa7969860991298cc240de29"
+    },
+    "SwiftMessages.bundle/warningIconLight@2x.png": {
+      "bytes": 1407,
+      "sha256": "5ccd59b634db69ed8bb1302a867ceced3a5d6778d5e57f3543c1ecc397e3d3f6"
+    },
+    "SwiftMessages.bundle/warningIconLight@3x.png": {
+      "bytes": 2095,
+      "sha256": "703971640f02e58db89fcedb5880fcf394cfa2eee58cc9b089fa2fb6892611c7"
+    },
+    "SwiftMessages.bundle/warningIconSubtle.png": {
+      "bytes": 174,
+      "sha256": "127724a374c24705f669c5928dad518c01924f41a314e20f449c8148011084fc"
+    },
+    "SwiftMessages.bundle/warningIconSubtle@2x.png": {
+      "bytes": 196,
+      "sha256": "a0b36f5eaf7950214b5acdb833acaf5832255b636c0fa67f6ced30c94b6f5403"
+    },
+    "SwiftMessages.bundle/warningIconSubtle@3x.png": {
+      "bytes": 227,
+      "sha256": "92419adc7a7de84701914a8aa8d2ce5dcf7c3d95aba830fd8a0fb37874357ed0"
+    },
+    "_CodeSignature/CodeResources": {
+      "bytes": 31029,
+      "sha256": "afd939e3cf2ab3d18f07931931073830d373966c27a325e3b4594d2603aa3443"
+    },
+    "__preview.dylib": {
+      "bytes": 16800,
+      "sha256": "ab52def670de386fe2d16503ca5461943353f57cc5224a52fb0cf0b17715fa31"
+    },
+    "bo.lproj/Localizable.strings": {
+      "bytes": 31076,
+      "sha256": "a59e9db62839da94fd843e58496734ff17377d4907eb0ee8a2183e07ed81f8a4"
+    },
+    "de.lproj/Localizable.strings": {
+      "bytes": 32847,
+      "sha256": "a17b4959794eb4ed24fc383795c874351ca0d9fff9f4a5a8dc8c460c30125d55"
+    },
+    "en.lproj/Localizable.strings": {
+      "bytes": 22170,
+      "sha256": "01c57cd09b1e4fda68c0e10d8601bc1b22dbdaac39ea642e350ddbf4799d499d"
+    },
+    "es.lproj/Localizable.strings": {
+      "bytes": 30920,
+      "sha256": "0c03b837eaf11b139f6402ae4ecc6ed1a5d34442ede27a22a854e241520a52ba"
+    },
+    "fr.lproj/Localizable.strings": {
+      "bytes": 33677,
+      "sha256": "6e6828888eca8f9a648d76012164098f01f275932839b72641aa0a57153aad15"
+    },
+    "ja.lproj/Localizable.strings": {
+      "bytes": 19026,
+      "sha256": "708393cf845e3f7faf13d270c9ae145e5543e8b2b863aba2c762d47caf3be3d3"
+    },
+    "ko.lproj/Localizable.strings": {
+      "bytes": 20103,
+      "sha256": "901056acf0f5bfb38578aff4b099c516d631601e4eebe98eac6a7795ca06e16b"
+    },
+    "ru.lproj/Localizable.strings": {
+      "bytes": 33393,
+      "sha256": "caf451f371183ce2a579d28a7bb5170a13fedfdee25e3b2d3afc8ef7b7e19feb"
+    },
+    "zh-Hans.lproj/Localizable.strings": {
+      "bytes": 15891,
+      "sha256": "8c8aedc84efee76571bf3065da2d282bff0be7d825c926d477f0d93a0cac9d35"
+    },
+    "zh-Hant.lproj/Localizable.strings": {
+      "bytes": 15921,
+      "sha256": "d7d3388ff77c61425443801756ed4b6f1a465a6c8d9d05dd64527c267e17ed07"
+    }
+  },
+  "codesignVerifyExit": 0,
+  "unit": {
+    "methods": 122,
+    "passed": 122,
+    "failed": 0,
+    "skipped": 0
+  },
+  "demoUI": {
+    "methods": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "screenshotsActuallyViewed": [
+      "最终演示UI截图/17F5A23E-F514-4497-96CE-B827D288423D.png",
+      "最终演示UI截图/B3FF07EF-0502-44DB-91DA-21CCE969FFB2.png"
+    ]
+  },
+  "ownSimulator": "37CB226C-C735-4A2D-8FCA-453E2E5F9DFB",
+  "ownSimulatorFinalState": "Shutdown",
+  "realDevice": false,
+  "receiptTransport": "explicit fixture",
+  "productionQualificationGranted": false
+}

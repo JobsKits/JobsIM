@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-11-17T05:20:01.548Z",
+  "finishedAt": "2026-11-17T05:20:06.839Z",
+  "args": [
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "expectedFailure": false,
+  "validProductReproduction": false,
+  "stopped": "",
+  "minimumFree": 24491622400,
+  "inputsUnchanged": true,
+  "realAPI": false
+}

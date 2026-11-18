@@ -1,0 +1,19 @@
+{
+  "exitCode": 0,
+  "inputCount": 52,
+  "changedInputs": [],
+  "freeBeforeBytes": 27207954432,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "test",
+    "-c",
+    "-p",
+    "1",
+    "-overlay",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-完整候选-20261117-130619/overlay.json",
+    "-o",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-完整候选-20261117-130619/候选.test",
+    "./cmd/jobsim"
+  ],
+  "binarySHA256": "7eb776f9f18c74d48628bd964f7a19bce4b43484bd4c9bdb23370662a2141989"
+}

@@ -1,0 +1,9 @@
+JobsIM部署/反部署：本地穿透或服务器双模式；undeploy仅按原点清理，独立journal/密钥默认保留；stop/backup为运维子动作。
+JobsIM MacOS · run
+实例：/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/Paired/15183dcea2c845b792f323ce5c479d43/State
+HTTPS=59267；业务PG=59265；独立journalPG=59266；内部角色=49101～49109
+只操作此收据匹配实例；不改系统CA或全局工具。反部署清理还需独立选择和最终回车确认；stop/backup保留数据。
+自托管NATS=127.0.0.1:59268；磁盘上限=536870912；内存上限=33554432。
+关闭此运行终端，服务将结束
+本轮工具检查与诊断：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-deploy-session.bOB1gY
+[?2026h[?7l[?25l[6n[?2004$p[6n[0m[?25h[?7h[?2026l[?2026h[?7l[?25l[J[?2004h[-1A[G[K[1B[3G[3G[1A[2G[?25h[?7h[?2026l[?2026h[?7l[?25l[2G[?25h[?7h[?2026l

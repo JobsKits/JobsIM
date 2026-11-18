@@ -36,6 +36,8 @@ final class IMSession {
     private var syncObservers: [UUID: @MainActor () -> Void] = [:]
     private var selfStateBusy = Set<String>()
     private var locallyObserved = Set<String>()
+    var accountSelectionID = UUID()
+    var profileMutationInProgress = false
 
     func observeSync(_ callback: @escaping @MainActor () -> Void) -> UUID {
         let id = UUID()
@@ -225,7 +227,9 @@ final class IMSession {
                 let value = try? JSONDecoder.make().decode(IMJSON.self, from: data)
             {
                 user = value
-                if !UserDefaults.standard.bool(forKey: "loggedOut:" + profile + ":" + user["id"].text) {
+                if !UserDefaults.standard.bool(forKey: "loggedOut:" + profile + ":" + user["id"].text),
+                    !UserDefaults.standard.bool(forKey: "accountSelectionRequired:" + profile)
+                {
                     let stored = IMKeychain.read(profile + ":" + user["id"].text)
                     if stored?.first != "{" { token = stored }
                 }
@@ -237,6 +241,7 @@ final class IMSession {
                 credentialPair = nil
                 lastError = IMStrings.text("connectionNeeded")
             }
+            resumeLocalAccountErasure()
         }
     }
 
@@ -312,6 +317,7 @@ final class IMSession {
         UserDefaults.standard.set(profile, forKey: "instanceProfile")
         UserDefaults.standard.set(id, forKey: "instanceDeployment")
         UserDefaults.standard.set(fingerprint, forKey: "instanceTrustFingerprint")
+        resumeLocalAccountErasure()
         if switched {
             changed?()
         }
@@ -360,6 +366,7 @@ final class IMSession {
                 throw error
             }
             UserDefaults.standard.set(false, forKey: "loggedOut:" + profile + ":" + value["id"].text)
+            UserDefaults.standard.set(false, forKey: "accountSelectionRequired:" + profile)
             token = secret
             user = value
             UserDefaults.standard.set(try JSONEncoder.make().encode(value), forKey: "user:" + profile)
@@ -378,6 +385,10 @@ final class IMSession {
             "id": .string("demo-jobs"), "username": .string("jobs"), "displayName": .string("Jobs"),
         ])
         token = nil
+        if let saved = try? store.list("demo-profile", namespace: namespace).first,
+            saved["id"].text == "demo-jobs" {
+            user = saved
+        }
         seedDemo()
         changed?()
     }
@@ -390,6 +401,11 @@ final class IMSession {
     }
 
     func logout() async {
+        guard !profileMutationInProgress else {
+            lastError = IMStrings.text("accountOperationBusy")
+            changed?()
+            return
+        }
         if demo {
             exitDemo()
             return
@@ -475,9 +491,9 @@ final class IMSession {
         }
     }
 
-    func conversationSnapshot() async -> [IMJSON] {
+    func conversationSnapshot(synchronize: Bool = true) async -> [IMJSON] {
         let ns = namespace
-        if !demo {
+        if !demo, synchronize {
             await synchronizeAuthoritatively()
         }
         guard namespace == ns else { return [] }
@@ -519,7 +535,8 @@ final class IMSession {
         guard namespace == ns else {
             return []
         }
-        return values.map { value in
+        let currentValues = (try? store.list("conversations", namespace: ns)) ?? []
+        return currentValues.map { value in
             let id = value["id"].text
             let unread = (try? store.list("unread:" + id, namespace: namespace))?.count ?? 0
             let last = (try? store.list("messages:" + id, namespace: namespace))?.last
@@ -764,17 +781,23 @@ final class IMSession {
         }
     }
 
-    func contactsSnapshot() async -> [IMJSON] {
+    func contactsSnapshot(synchronize: Bool = true) async -> [IMJSON] {
         let ns = namespace
         if demo {
             return (try? store.list("contacts", namespace: ns)) ?? []
         }
-        await synchronizeAuthoritatively()
+        if synchronize {
+            await synchronizeAuthoritatively()
+        }
         guard namespace == ns else { return [] }
-        let rows = (try? store.list("contacts", namespace: ns)) ?? []
         // 当前公开资料只用于显示；同步friend集合仍由权威投影决定。
-        guard let response = try? await action("contacts", method: "GET"), namespace == ns else { return rows }
-        let profiles = Dictionary(response["items"].list.map { ($0["id"].text, $0) }, uniquingKeysWith: { first, _ in first })
+        let response = try? await action("contacts", method: "GET")
+        guard namespace == ns else {
+            return []
+        }
+        // 资料请求期间仍可能收到删除/限制投影；按返回时的权威集合合并，不能复活旧联系人。
+        let rows = (try? store.list("contacts", namespace: ns)) ?? []
+        let profiles = Dictionary((response?["items"].list ?? []).map { ($0["id"].text, $0) }, uniquingKeysWith: { first, _ in first })
         return rows.map { profiles[$0["id"].text] ?? $0 }
     }
 
@@ -789,6 +812,29 @@ final class IMSession {
                                     additionalFeature: path.hasSuffix("/draft") || path.hasSuffix("/draft-results") ? "cloud_drafts" : nil) { api, token in
             return try await api.request(path, method: method, body: body, token: token)
         }
+    }
+
+    private func resumeLocalAccountErasure() {
+        guard !demo, UUID(uuidString: deployment) != nil else {
+            return
+        }
+        let expectedProfile = profile
+        let expectedDeployment = deployment
+        Task { [weak self] in
+            guard let self, self.profile == expectedProfile, self.deployment == expectedDeployment,
+                let rows = try? self.store.list("account-deletion-operations", namespace: IMAccountDeletionService.metadata(self)) else {
+                return
+            }
+            for username in Set(rows.filter { $0["state"].text == "completed" && $0["cleanup"] != .bool(true) }.map { $0["username"].text }) {
+                try? await IMAccountDeletionService(session: self, username: username).resumeLocalCleanup()
+            }
+        }
+    }
+
+    func accountOperationBlocked(_ pair: IMCredentialPair) throws -> Bool {
+        return try store.accountIsErased(profile: pair.profile, deployment: pair.deploymentID, user: pair.userID)
+            || IMPasswordChangeService.blocks(self, pair: pair)
+            || IMAccountDeletionService.blocks(self, pair: pair)
     }
 
     func authorized<T>(requiredFeature: String? = nil, additionalFeature: String? = nil,
@@ -806,6 +852,9 @@ final class IMSession {
         func invoke(_ accessToken: String) async throws -> T {
             let value = try await operation(api, accessToken)
             guard namespace == ns else { throw SessionError.noInstance }
+            if let pair = currentCredentialPair, try accountOperationBlocked(pair) {
+                throw SessionError.noInstance
+            }
             return value
         }
         do {
@@ -847,6 +896,14 @@ final class IMSession {
         didEnqueue: (() -> Void)? = nil
     ) async throws {
         let ns = namespace
+        if demo {
+            let contacts = (try? store.list("contacts", namespace: ns)) ?? []
+            let metadata = (try? store.list("conversations", namespace: ns))?.first { $0["id"].text == conversation }
+            let peer = metadata?["peer"]["id"].text ?? conversation
+            if contacts.contains(where: { ($0["id"].text == peer || $0["id"].text == conversation) && $0["blockedByMe"] == .bool(true) }) {
+                throw IMAPIError(status: 403, code: "CONTACT_BLOCKED", message: IMStrings.text("blockedMessage"))
+            }
+        }
         let snapshot = try admissionSnapshot(conversation, supplied: admission)
         let id = clientID
         var body: [String: IMJSON] = [
@@ -983,11 +1040,15 @@ final class IMSession {
     private func demoAction(_ path: String, method: String, body: [String: IMJSON]) throws -> IMJSON {
         let parts = path.split(separator: "/").map(String.init)
         if parts.first == "messages", parts.count >= 2 {
-            for conversation in try store.list("conversations", namespace: namespace) {
+            let conversations = try store.list("conversations", namespace: namespace).sorted {
+                $0["id"].text == activeConversation && $1["id"].text != activeConversation
+            }
+            for conversation in conversations {
                 let collection = "messages:" + conversation["id"].text
                 if var value = try store.list(collection, namespace: namespace).first(where: {
                     $0["id"].text == parts[1]
                 }) {
+                    value = value.setting("conversationId", conversation["id"])
                     if method == "PATCH" {
                         value = value.setting("text", body["text"] ?? .string(""))
                     } else if method == "DELETE" && parts.count == 2 {
@@ -996,7 +1057,11 @@ final class IMSession {
                         value = value.setting(
                             parts.last == "pin" ? "pinned" : "favorite", .bool(method != "DELETE"))
                         if parts.last == "favorite" {
-                            try store.save([value], collection: "saved", namespace: namespace)
+                            if method == "DELETE" {
+                                try store.remove(value["id"].text, collection: "saved", namespace: namespace)
+                            } else {
+                                try store.save([value], collection: "saved", namespace: namespace)
+                            }
                         }
                     } else if parts.last == "reactions" {
                         value = value.setting(

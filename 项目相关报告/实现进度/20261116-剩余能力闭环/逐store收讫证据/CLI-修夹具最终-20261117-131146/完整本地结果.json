@@ -1,0 +1,26 @@
+{
+  "exitCode": 0,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "tool",
+    "test2json",
+    "-p",
+    "jobsim/cli/cmd/jobsim",
+    "-t",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-修夹具最终-20261117-131146/候选.test",
+    "-test.v",
+    "-test.timeout=120s"
+  ],
+  "topLevel": {
+    "pass": 134,
+    "fail": 0,
+    "skip": 2
+  },
+  "failures": [],
+  "skips": [
+    "TestAuthCoordinatorActualHTTPSAndUnknownClosure",
+    "TestAuthNativeSystemVaultSeparateDiagnostic"
+  ],
+  "changedInputs": [],
+  "binarySHA256": "33eef21c97e2c904cfbcb417e26af37d287d5afd1c336f5c64cc2c23cbeae1ff"
+}

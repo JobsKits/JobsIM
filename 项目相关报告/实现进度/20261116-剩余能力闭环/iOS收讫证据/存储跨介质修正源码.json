@@ -1,0 +1,13 @@
+{
+  "source": "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift",
+  "sha256": "0e7a09e0b11b34f4073a417595e0a4a0139556b499e80024e51fe5b47dcd6683",
+  "parsePassed": true,
+  "compiled": false,
+  "changes": [
+    "floor and exact inode cleanup duty commit before unlink",
+    "writer fence covers managed lstat/unlink/create/recovery races",
+    "rollback owns created FD device/inode only",
+    "missing path requires parent fsync",
+    "8 storage regression methods pending native execution"
+  ]
+}

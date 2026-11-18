@@ -1,0 +1,710 @@
+{
+  "status": "passed",
+  "scope": "dedicated demo; ordinary metadata registration/snapshot only, no business mutation",
+  "registration": {
+    "deviceId": "d2bd743e-09ff-4b1c-81e1-eec6167a1f5f",
+    "principalId": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+    "qualification": "transport_only",
+    "qualifiedAck": false,
+    "restoreEpoch": "1",
+    "schemaVersion": "2",
+    "scopeId": "2cbd9bd2-1205-44fb-870c-9cad48135c48",
+    "sourceContextId": "personal",
+    "storeGeneration": "48316311-4ee7-456f-908c-f3c40f274864",
+    "streamId": "f271c7a4-6775-4b9e-bc65-35f681db51e5"
+  },
+  "context": {
+    "afterReceiptEnabled": false,
+    "authorizedScopes": [
+      {
+        "id": "0d35d87b-155e-4b15-b659-fa5b405f114c",
+        "floor": "0001-01-01T00:00:00Z"
+      },
+      {
+        "id": "466dd179-e0fd-41e5-b042-86255d762cef",
+        "floor": "2026-11-18T16:34:22.473136+08:00"
+      }
+    ],
+    "coverage": {
+      "absence": "unknown",
+      "classification": "explicit_known_only",
+      "excluded": [
+        "exact_unread_counts",
+        "cloud_attachment_upload_queue",
+        "attachment_bytes",
+        "qualified_ack",
+        "ordinary_local_migration",
+        "formal_export_package",
+        "account_deletion",
+        "peer_public_read_receipts",
+        "peer_presence"
+      ],
+      "included": [
+        "own_account",
+        "own_device_metadata",
+        "own_profile",
+        "own_contacts_and_relationships",
+        "own_contact_requests",
+        "current_conversations",
+        "current_member_ids",
+        "authorized_messages_and_interactions",
+        "historically_entitled_global_tombstones",
+        "announcements",
+        "attachment_references",
+        "own_font_preference",
+        "own_conversation_views",
+        "own_read_points",
+        "own_read_observation_metadata",
+        "own_text_drafts"
+      ],
+      "schemaVersion": "2"
+    },
+    "deviceId": "d2bd743e-09ff-4b1c-81e1-eec6167a1f5f",
+    "head": "34",
+    "minimumPosition": "0",
+    "permissionGeneration": "57d7417bfda5b0d032e5895ba3ca3170089ef93e775632e027493628bc2aa727",
+    "principalId": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+    "qualification": "transport_only",
+    "qualifiedAck": false,
+    "restoreEpoch": "1",
+    "scopeId": "2cbd9bd2-1205-44fb-870c-9cad48135c48",
+    "snapshotRequired": true,
+    "sourceContextId": "personal",
+    "storeGeneration": "48316311-4ee7-456f-908c-f3c40f274864",
+    "streamId": "f271c7a4-6775-4b9e-bc65-35f681db51e5",
+    "transport": {
+      "connected": true,
+      "httpReplay": "compensation",
+      "kind": "nats_jetstream"
+    }
+  },
+  "manifest": {
+    "snapshotId": "07718ad7-33ee-4e8d-a67d-b662673ab1e4",
+    "scopeId": "2cbd9bd2-1205-44fb-870c-9cad48135c48",
+    "principalId": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+    "sourceContextId": "personal",
+    "deviceId": "d2bd743e-09ff-4b1c-81e1-eec6167a1f5f",
+    "storeGeneration": "48316311-4ee7-456f-908c-f3c40f274864",
+    "restoreEpoch": "1",
+    "streamId": "f271c7a4-6775-4b9e-bc65-35f681db51e5",
+    "schemaVersion": "2",
+    "boundary": "38",
+    "boundaryToken": "<redacted-present>",
+    "ownerWatermarks": {
+      "auth": "79",
+      "conversation": "8",
+      "directory": "42",
+      "message": "2",
+      "sync": "0"
+    },
+    "permissionGeneration": "57d7417bfda5b0d032e5895ba3ca3170089ef93e775632e027493628bc2aa727",
+    "classificationWatermark": "2",
+    "coverage": {
+      "absence": "unknown",
+      "classification": "explicit_known_only",
+      "excluded": [
+        "exact_unread_counts",
+        "cloud_attachment_upload_queue",
+        "attachment_bytes",
+        "qualified_ack",
+        "ordinary_local_migration",
+        "formal_export_package",
+        "account_deletion",
+        "peer_public_read_receipts",
+        "peer_presence"
+      ],
+      "included": [
+        "own_account",
+        "own_device_metadata",
+        "own_profile",
+        "own_contacts_and_relationships",
+        "own_contact_requests",
+        "current_conversations",
+        "current_member_ids",
+        "authorized_messages_and_interactions",
+        "historically_entitled_global_tombstones",
+        "announcements",
+        "attachment_references",
+        "own_font_preference",
+        "own_conversation_views",
+        "own_read_points",
+        "own_read_observation_metadata",
+        "own_text_drafts"
+      ],
+      "schemaVersion": "2"
+    },
+    "pageManifest": [
+      {
+        "page": 0,
+        "count": 18,
+        "digest": "15f21c3de58e22fd359ac24e80f2f30894e7466eb09d94d559e1e2c6af2cb78f"
+      }
+    ],
+    "expiresAt": "2026-11-18T10:12:38.261516Z"
+  },
+  "pages": [
+    {
+      "page": 0,
+      "keys": [
+        "digestScope",
+        "installable",
+        "items",
+        "page",
+        "pageDigest",
+        "permissionGeneration",
+        "qualifiedAck",
+        "referenceEnvelope",
+        "refs",
+        "requiresAtomicInstall",
+        "requiresFinalValidation",
+        "restoreEpoch",
+        "snapshotId"
+      ],
+      "installable": false,
+      "projectionKinds": {
+        "account": 1,
+        "devices": 1,
+        "contact_request": 2,
+        "contacts": 1,
+        "preferences": 1,
+        "profile": 1,
+        "relationship": 1,
+        "announcement": 2,
+        "conversation": 2,
+        "message": 2,
+        "conversation_view": 2,
+        "read_state": 2
+      },
+      "projectionObjectKeys": [
+        {
+          "kind": "account",
+          "state": "available",
+          "keys": [
+            "displayName",
+            "id",
+            "signature",
+            "username"
+          ]
+        },
+        {
+          "kind": "devices",
+          "state": "available",
+          "keys": [
+            "items"
+          ]
+        },
+        {
+          "kind": "contact_request",
+          "state": "available",
+          "keys": [
+            "createdAt",
+            "generation",
+            "id",
+            "recipientId",
+            "requesterId",
+            "state"
+          ]
+        },
+        {
+          "kind": "contact_request",
+          "state": "available",
+          "keys": [
+            "createdAt",
+            "generation",
+            "id",
+            "recipientId",
+            "requesterId",
+            "state"
+          ]
+        },
+        {
+          "kind": "contacts",
+          "state": "available",
+          "keys": [
+            "items"
+          ]
+        },
+        {
+          "kind": "preferences",
+          "state": "available",
+          "keys": [
+            "explicit",
+            "fontPreset",
+            "revisionEpoch",
+            "scopeId",
+            "sourceContextId",
+            "userId",
+            "version"
+          ]
+        },
+        {
+          "kind": "profile",
+          "state": "available",
+          "keys": [
+            "avatarThumbnailURL",
+            "avatarURL",
+            "displayName",
+            "profileVersion",
+            "signature"
+          ]
+        },
+        {
+          "kind": "relationship",
+          "state": "available",
+          "keys": [
+            "items"
+          ]
+        },
+        {
+          "kind": "announcement",
+          "state": "redacted",
+          "keys": "NoneType"
+        },
+        {
+          "kind": "announcement",
+          "state": "available",
+          "keys": [
+            "canManage",
+            "conversationId",
+            "state",
+            "version"
+          ]
+        },
+        {
+          "kind": "conversation",
+          "state": "available",
+          "keys": [
+            "cursor",
+            "id",
+            "kind",
+            "memberIds",
+            "membershipGeneration",
+            "ownerId",
+            "readOnly",
+            "roleGeneration",
+            "sendAdmission",
+            "state",
+            "title",
+            "updatedAt"
+          ]
+        },
+        {
+          "kind": "conversation",
+          "state": "available",
+          "keys": [
+            "cursor",
+            "id",
+            "kind",
+            "memberIds",
+            "membershipGeneration",
+            "ownerId",
+            "readOnly",
+            "roleGeneration",
+            "sendAdmission",
+            "state",
+            "title",
+            "updatedAt"
+          ]
+        },
+        {
+          "kind": "message",
+          "state": "available",
+          "keys": [
+            "clientMsgId",
+            "contentVersion",
+            "conversationId",
+            "createdAt",
+            "creationEpoch",
+            "creationSequence",
+            "deleted",
+            "favorite",
+            "forwardAdmission",
+            "id",
+            "mentionedMe",
+            "pinned",
+            "reactions",
+            "senderId",
+            "sequence",
+            "text",
+            "type",
+            "updatedAt",
+            "version"
+          ]
+        },
+        {
+          "kind": "message",
+          "state": "available",
+          "keys": [
+            "clientMsgId",
+            "contentVersion",
+            "conversationId",
+            "createdAt",
+            "creationEpoch",
+            "creationSequence",
+            "deleted",
+            "favorite",
+            "forwardAdmission",
+            "id",
+            "mentionedMe",
+            "pinned",
+            "reactions",
+            "senderId",
+            "sequence",
+            "text",
+            "type",
+            "updatedAt",
+            "version"
+          ]
+        },
+        {
+          "kind": "conversation_view",
+          "state": "available",
+          "keys": [
+            "archived",
+            "conversationId",
+            "hidden",
+            "id",
+            "manualUnread",
+            "manualUnreadFrom",
+            "manualUnreadGeneration",
+            "manualUnreadMarkedAt",
+            "mutedUntil",
+            "pinnedRank",
+            "revisionEpoch",
+            "scopeId",
+            "sourceContextId",
+            "userId",
+            "version"
+          ]
+        },
+        {
+          "kind": "conversation_view",
+          "state": "available",
+          "keys": [
+            "archived",
+            "conversationId",
+            "hidden",
+            "id",
+            "manualUnread",
+            "manualUnreadFrom",
+            "manualUnreadGeneration",
+            "manualUnreadMarkedAt",
+            "mutedUntil",
+            "pinnedRank",
+            "revisionEpoch",
+            "scopeId",
+            "sourceContextId",
+            "userId",
+            "version"
+          ]
+        },
+        {
+          "kind": "read_state",
+          "state": "available",
+          "keys": [
+            "continuityStatus",
+            "conversationId",
+            "countStatus",
+            "id",
+            "membershipGeneration",
+            "readPoint",
+            "revisionEpoch",
+            "scopeId",
+            "sourceContextId",
+            "userId",
+            "version",
+            "writable"
+          ]
+        },
+        {
+          "kind": "read_state",
+          "state": "available",
+          "keys": [
+            "continuityStatus",
+            "conversationId",
+            "countStatus",
+            "id",
+            "membershipGeneration",
+            "readPoint",
+            "revisionEpoch",
+            "scopeId",
+            "sourceContextId",
+            "userId",
+            "version",
+            "writable"
+          ]
+        }
+      ]
+    }
+  ],
+  "contactProjections": [
+    {
+      "ref": {
+        "owner": "directory",
+        "kind": "contacts",
+        "id": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "revision": "14",
+        "revisionEpoch": "1",
+        "subjectUserId": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "state": "active"
+      },
+      "state": "available",
+      "bodyDigest": "99ff70950e9cb9eb9208c99c9a5e28d3cdd5e8647f1f1a0831e102902e6de051",
+      "bodyEnvelope": "<redacted-present>",
+      "object": {
+        "items": [
+          {
+            "generation": "1",
+            "inboundGate": "open",
+            "peerId": "9ec5bfc3-1e7f-4269-bfac-ce3df6499f42",
+            "state": "friend"
+          },
+          {
+            "generation": "1",
+            "inboundGate": "open",
+            "peerId": "c80dc8d6-dc9b-44f2-8dd7-f0765f443a91",
+            "state": "friend"
+          }
+        ]
+      },
+      "currentRevision": "14",
+      "currentRevisionEpoch": "1",
+      "revisionMatch": true
+    },
+    {
+      "ref": {
+        "owner": "directory",
+        "kind": "relationship",
+        "id": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "revision": "0",
+        "revisionEpoch": "1",
+        "subjectUserId": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "state": "active"
+      },
+      "state": "available",
+      "bodyDigest": "eef46741adfc3a9f76294d3b78f37a45f113092ac9d44ee77c7a038a88ff09a1",
+      "bodyEnvelope": "<redacted-present>",
+      "object": {
+        "items": []
+      },
+      "currentRevision": "0",
+      "currentRevisionEpoch": "1",
+      "revisionMatch": true
+    }
+  ],
+  "profiles": [
+    {
+      "ref": {
+        "owner": "auth",
+        "kind": "account",
+        "id": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "revision": "3",
+        "revisionEpoch": "1",
+        "subjectUserId": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "state": "active"
+      },
+      "state": "available",
+      "bodyDigest": "79350d9cfab326ea6439db0f2e0bc8f4adcecdf8c6fbc4f4939f83f256deb9e7",
+      "bodyEnvelope": "<redacted-present>",
+      "object": {
+        "displayName": "demo_jobs",
+        "id": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "signature": "",
+        "username": "demo_jobs"
+      },
+      "currentRevision": "3",
+      "currentRevisionEpoch": "1",
+      "revisionMatch": true
+    },
+    {
+      "ref": {
+        "owner": "directory",
+        "kind": "profile",
+        "id": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "revision": "16",
+        "revisionEpoch": "1",
+        "subjectUserId": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "state": "active"
+      },
+      "state": "available",
+      "bodyDigest": "33b8baa0eb524051eeba68f79fc98197ef5cd3a22c418b0a4ebc2c258ef75ec0",
+      "bodyEnvelope": "<redacted-present>",
+      "object": {
+        "avatarThumbnailURL": "",
+        "avatarURL": "",
+        "displayName": "Jobs",
+        "profileVersion": "2",
+        "signature": "让消息回到人与人之间。"
+      },
+      "currentRevision": "16",
+      "currentRevisionEpoch": "1",
+      "revisionMatch": true
+    }
+  ],
+  "validation": {
+    "boundaryToken": "<redacted-present>",
+    "canInstall": true,
+    "classificationWatermark": "2",
+    "permissionGeneration": "57d7417bfda5b0d032e5895ba3ca3170089ef93e775632e027493628bc2aa727",
+    "qualifiedAck": false,
+    "requiresLocalAtomicInstall": true,
+    "restoreEpoch": "1"
+  },
+  "delta": {
+    "authorizedScopes": [
+      {
+        "id": "0d35d87b-155e-4b15-b659-fa5b405f114c",
+        "floor": "0001-01-01T00:00:00Z"
+      },
+      {
+        "id": "466dd179-e0fd-41e5-b042-86255d762cef",
+        "floor": "2026-11-18T16:34:22.473136+08:00"
+      }
+    ],
+    "cursor": "<redacted-present>",
+    "hasMore": false,
+    "head": "38",
+    "items": [],
+    "permissionGeneration": "57d7417bfda5b0d032e5895ba3ca3170089ef93e775632e027493628bc2aa727",
+    "position": "38",
+    "qualifiedAck": false,
+    "restoreEpoch": "1",
+    "snapshotRequired": false
+  },
+  "checks": [
+    {
+      "method": "POST",
+      "path": "/api/auth/login",
+      "status": 200,
+      "keys": [
+        "absoluteExpiresAt",
+        "accessExpiresAt",
+        "deviceId",
+        "familyId",
+        "idleExpiresAt",
+        "refreshGeneration",
+        "refreshToken",
+        "restoreEpoch",
+        "sourceContextId",
+        "token",
+        "user"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/sync/device",
+      "status": 200,
+      "keys": [
+        "deviceId",
+        "principalId",
+        "qualification",
+        "qualifiedAck",
+        "restoreEpoch",
+        "schemaVersion",
+        "scopeId",
+        "sourceContextId",
+        "storeGeneration",
+        "streamId"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/context",
+      "status": 200,
+      "keys": [
+        "afterReceiptEnabled",
+        "authorizedScopes",
+        "coverage",
+        "deviceId",
+        "head",
+        "minimumPosition",
+        "permissionGeneration",
+        "principalId",
+        "qualification",
+        "qualifiedAck",
+        "restoreEpoch",
+        "scopeId",
+        "snapshotRequired",
+        "sourceContextId",
+        "storeGeneration",
+        "streamId",
+        "transport"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/snapshots",
+      "status": 201,
+      "keys": [
+        "boundary",
+        "boundaryToken",
+        "classificationWatermark",
+        "coverage",
+        "deviceId",
+        "expiresAt",
+        "ownerWatermarks",
+        "pageManifest",
+        "permissionGeneration",
+        "principalId",
+        "restoreEpoch",
+        "schemaVersion",
+        "scopeId",
+        "snapshotId",
+        "sourceContextId",
+        "storeGeneration",
+        "streamId"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/snapshots/07718ad7-33ee-4e8d-a67d-b662673ab1e4/pages/0",
+      "status": 200,
+      "keys": [
+        "digestScope",
+        "installable",
+        "items",
+        "page",
+        "pageDigest",
+        "permissionGeneration",
+        "qualifiedAck",
+        "referenceEnvelope",
+        "refs",
+        "requiresAtomicInstall",
+        "requiresFinalValidation",
+        "restoreEpoch",
+        "snapshotId"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/sync/snapshots/07718ad7-33ee-4e8d-a67d-b662673ab1e4/validate",
+      "status": 200,
+      "keys": [
+        "boundaryToken",
+        "canInstall",
+        "classificationWatermark",
+        "permissionGeneration",
+        "qualifiedAck",
+        "requiresLocalAtomicInstall",
+        "restoreEpoch"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/sync/changes",
+      "status": 200,
+      "keys": [
+        "authorizedScopes",
+        "cursor",
+        "hasMore",
+        "head",
+        "items",
+        "permissionGeneration",
+        "position",
+        "qualifiedAck",
+        "restoreEpoch",
+        "snapshotRequired"
+      ]
+    }
+  ]
+}

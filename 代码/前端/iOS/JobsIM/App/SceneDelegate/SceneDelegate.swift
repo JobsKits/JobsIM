@@ -28,6 +28,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         app.window = window
         app.showRoot()
         window.byMakeKeyAndVisible()
+        // 首次显示会在窗口中安装根视图，之后再将浮标置于最上层。
+        app.refreshDemoOverlay()
     }
     func sceneDidBecomeActive(_ scene: UIScene) {
         IMSyncCoordinator.shared.start()

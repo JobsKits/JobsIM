@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-18T12:03:41.236Z",
+  "totals": {
+    "business": {
+      "files": 522,
+      "lines": 112625,
+      "percent": 57.65
+    },
+    "tests": {
+      "files": 265,
+      "lines": 56810,
+      "percent": 29.08
+    },
+    "configuration": {
+      "files": 56,
+      "lines": 25908,
+      "percent": 13.26
+    }
+  },
+  "totalLines": 195343
+}

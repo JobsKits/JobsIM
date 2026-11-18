@@ -6,6 +6,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -48,6 +49,7 @@ type cliPasswordFixture struct {
 	result       passwordChangeResult
 	recorded     bool
 	feature      bool
+	writeCode    string
 	writeStatus  int
 	resultStatus int
 	authHeaders  []string
@@ -125,7 +127,11 @@ func (r *cliPasswordFixture) servePassword(w http.ResponseWriter, q *http.Reques
 			return true
 		}
 		if r.writeStatus != 200 {
-			cliSyncJSON(w, r.writeStatus, map[string]any{"error": map[string]string{"code": "PASSWORD_CHANGE_REJECTED"}})
+			code := r.writeCode
+			if code == "" {
+				code = "PASSWORD_CHANGE_REJECTED"
+			}
+			cliSyncJSON(w, r.writeStatus, map[string]any{"error": map[string]string{"code": code}})
 			return true
 		}
 		r.recorded = true
@@ -235,8 +241,8 @@ func TestPasswordChangeSuccessorFamilyNeverAuthorizesOldUnknown(t *testing.T) {
 	if _, err = r.client.performPasswordChange(r.db, o, &r.proof, true, false); err == nil {
 		t.Fatal("anonymous unseen change accepted")
 	}
-	if len(r.authHeaders) != 1 || r.authHeaders[0] != "" {
-		t.Fatal("later family leaked to old intention")
+	if len(r.authHeaders) != 0 {
+		t.Fatal("unseen old intention attempted creation without its original family")
 	}
 	if string(r.vault.raw) != string(before) || m.state.Status != "active" {
 		t.Fatal("later family altered")
@@ -385,5 +391,38 @@ func TestPasswordChangeSQLFailureAndRejectionNeverReuseOTPOrRefresh(t *testing.T
 		if b != 0 {
 			t.Fatal("OTP buffer not erased")
 		}
+	}
+}
+
+func TestPasswordChangePreparedDependencyRejectionKeepsOriginalGate(t *testing.T) {
+	r := cliPasswordSetup(t)
+	o := r.prepare()
+	r.writeStatus = 403
+	r.writeCode = "EXPORT_PERMISSION_DENIED"
+	if _, err := r.client.performPasswordChange(r.db, o, &r.proof, false, true); err == nil {
+		t.Fatal("prepared dependency failure accepted")
+	}
+	if r.load(o.ID).State != "unknown" || r.client.auth.state.Status != "password_change_unknown" {
+		t.Fatal("dependency 403 released a potentially prepared original family")
+	}
+}
+func TestPasswordChangeWithdrawnCapabilityOnlyQueriesOriginal(t *testing.T) {
+	for _, pending := range []bool{false, true} {
+		t.Run(fmt.Sprint(pending), func(t *testing.T) {
+			r := cliPasswordSetup(t)
+			o := r.prepare()
+			r.feature = false
+			if pending {
+				r.recorded = true
+				r.resultStatus = 200
+				r.result.Status = "pending"
+				r.result.Current = new(bool)
+				r.result.Login = new(bool)
+			}
+			_, _ = r.client.performPasswordChange(r.db, o, &r.proof, true, false)
+			if len(r.calls("/api/auth/password-change")) != 0 || len(r.calls("/api/auth/password-change-results")) != 1 {
+				t.Fatal("withdrawn capability retried instead of querying the original only")
+			}
+		})
 	}
 }

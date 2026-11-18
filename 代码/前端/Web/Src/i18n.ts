@@ -1,3 +1,4 @@
+import { adminReportLabels } from "./AdminReportLabels";
 export const languages: Record<string, string> = {
   "zh-CN": "简体中文",
   "zh-TW": "繁體中文",
@@ -47,4 +48,4 @@ export const dictionaries: Record<
   }),
 );
 export const translate = (locale: string, key: string) =>
-  dictionaries[locale]?.[key] ?? dictionaries.en[key] ?? key;
+  adminReportLabels[locale]?.[key] ?? adminReportLabels.en[key] ?? dictionaries[locale]?.[key] ?? dictionaries.en[key] ?? key;

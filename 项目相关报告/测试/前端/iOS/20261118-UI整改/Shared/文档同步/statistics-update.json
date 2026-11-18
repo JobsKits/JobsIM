@@ -1,0 +1,27 @@
+{
+  "time": "2026-11-18T18:23:16.085870+08:00",
+  "reportAt": "2026-11-18T10:18:42.124Z",
+  "reportSHA256": "85b59c3e6875bfe49cdc312f775faf88449fb136c67985bf4f33b336c6b69423",
+  "files": 843,
+  "totalLines": 194807,
+  "totals": {
+    "business": {
+      "files": 522,
+      "lines": 112359,
+      "percent": 57.68
+    },
+    "tests": {
+      "files": 265,
+      "lines": 56540,
+      "percent": 29.02
+    },
+    "configuration": {
+      "files": 56,
+      "lines": 25908,
+      "percent": 13.3
+    }
+  },
+  "onlyDisplayUpdated": true,
+  "historicalPagesAndRoutesRemainDated20261117": true,
+  "noFullProjectHashClaim": true
+}

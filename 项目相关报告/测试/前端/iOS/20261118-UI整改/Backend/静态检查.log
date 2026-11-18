@@ -1,0 +1,4 @@
+gofmt -w/-l: 20 explicit owned Go source/test files, exit=0, unformatted=0. Parser/format only.
+Python ast.parse: 3 HTTP scripts, parsed=3. Script bodies not executed.
+External overlay discovery: ui_contract_test.go included; 8 top-level test methods declared.
+No Go compile, Go test, PostgreSQL, HTTPS server, deployment, or user-instance operation was run.

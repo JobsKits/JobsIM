@@ -1,0 +1,12 @@
+{
+  "label": "05-类型",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/Web/node_modules/typescript/bin/tsc",
+    "--noEmit"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 1.01,
+  "minimumFreeBytes": 7956430848,
+  "reason": null
+}

@@ -1,0 +1,10 @@
+{
+  "exit": 0,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "vet",
+    "-p",
+    "1",
+    "./..."
+  ]
+}

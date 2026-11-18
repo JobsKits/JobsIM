@@ -1,0 +1,15 @@
+file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E6%B5%8B%E8%AF%95/%E9%83%A8%E7%BD%B2/%E4%BA%8C%E7%BB%B4%E7%A0%81/%E9%AA%8C%E8%AF%81%E4%BA%8C%E7%BB%B4%E7%A0%81.mjs/%E9%AA%8C%E8%AF%81%E4%BA%8C%E7%BB%B4%E7%A0%81.mjs:12
+function exec(file,args,env={}){const r=spawnSync(file,args,{encoding:'utf8',timeout:60000,env:{...process.env,...env}});if(r.error||r.status!==0)throw Error(`${file}: ${r.status}\n${r.stderr}`);return r.stdout;}
+                                                                                                                                                        ^
+
+Error: /Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go: 1
+go: downloading github.com/skip2/go-qrcode v0.0.0-20200617195104-da1b6568686e
+main.go:19:2: module lookup disabled by GOPROXY=off
+
+    at exec (file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E6%B5%8B%E8%AF%95/%E9%83%A8%E7%BD%B2/%E4%BA%8C%E7%BB%B4%E7%A0%81/%E9%AA%8C%E8%AF%81%E4%BA%8C%E7%BB%B4%E7%A0%81.mjs/%E9%AA%8C%E8%AF%81%E4%BA%8C%E7%BB%B4%E7%A0%81.mjs:12:153)
+    at file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E6%B5%8B%E8%AF%95/%E9%83%A8%E7%BD%B2/%E4%BA%8C%E7%BB%B4%E7%A0%81/%E9%AA%8C%E8%AF%81%E4%BA%8C%E7%BB%B4%E7%A0%81.mjs/%E9%AA%8C%E8%AF%81%E4%BA%8C%E7%BB%B4%E7%A0%81.mjs:14:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:569:25)
+    at async node:internal/modules/esm/loader:650:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:105:5)
+
+Node.js v26.13.1

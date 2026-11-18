@@ -1,0 +1,18 @@
+{
+  "startedAt": "2026-11-17T02:20:44.336Z",
+  "finishedAt": "2026-11-17T02:20:44.584Z",
+  "args": [
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/node_modules/typescript/bin/tsc",
+    "--noEmit",
+    "-p",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/tsconfig.json"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "stopped": "",
+  "minimumFree": 11639078912,
+  "inputsUnchanged": true,
+  "realAPI": false
+}

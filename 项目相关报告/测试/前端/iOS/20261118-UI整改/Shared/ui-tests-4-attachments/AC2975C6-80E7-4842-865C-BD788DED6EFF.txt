@@ -1,0 +1,55 @@
+Application, 0x108188000, pid: 90217, label: 'JobsIM' <App element pid: 90217>
+  Window (Main), 0x108189400, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4364780544.4>
+    Other, 0x108189540, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4386230272.5>
+      Other, 0x108189680, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4385923840.6>
+        Other, 0x1081897c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4383591040.7>
+          Other, 0x108189900, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4383936512.8>
+            Other, 0x108189a40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4366086400.10>
+              Other, 0x108189b80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4383600448.13>
+                Other, 0x108189cc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4383603584.16>
+                  Other, 0x108189e00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4366146560.20>
+                    Other, 0x108189f40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4383052160.84>
+                      NavigationBar, 0x10818a080, {{0.0, 0.0}, {402.0, 116.0}}, identifier: '林间' <AX element pid: 90217, elementOrHash.elementID: 4864180992.85>
+                        Button, 0x10818a1c0, {{20.0, 72.7}, {36.0, 22.7}}, label: '返回' <AX element pid: 90217, elementOrHash.elementID: 4864183296.87>
+                        StaticText, 0x10818a300, {{183.0, 73.0}, {36.0, 22.0}}, label: '林间' <AX element pid: 90217, elementOrHash.elementID: 4864917504.88>
+                        Button, 0x10818a440, {{338.0, 66.0}, {44.0, 36.0}}, label: '聊天设置' <AX element pid: 90217, elementOrHash.elementID: 4864180224.89>
+                      Other, 0x10818a580, {{0.0, 116.0}, {402.0, 724.0}} <AX element pid: 90217, elementOrHash.elementID: 4366115136.86>
+                        Other, 0x10818a6c0, {{24.0, 116.0}, {354.0, 14.3}} <AX element pid: 90217, elementOrHash.elementID: 4383100864.90>
+                          StaticText, 0x10818a800, {{24.0, 116.0}, {354.0, 14.3}}, label: '演示空间' <AX element pid: 90217, elementOrHash.elementID: 4850807040.93>
+                        Table, 0x10818a940, {{0.0, 182.3}, {402.0, 585.7}} <AX element pid: 90217, elementOrHash.elementID: 4849081344.91>
+                          Cell, 0x10818aa80, {{0.0, 182.3}, {402.0, 99.7}} <AX element pid: 90217, elementOrHash.elementID: 4907986576.94>
+                            Other, 0x10818abc0, {{12.0, 189.3}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '静态头像' <AX element pid: 90217, elementOrHash.elementID: 4907987296.103>
+                              Image, 0x10818ad00, {{12.0, 189.3}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 90217, elementOrHash.elementID: 4907720704.117>
+                            StaticText, 0x10818ae40, {{64.0, 201.3}, {190.0, 42.3}}, label: '有时候，把事情说清楚， 就已经往前走了一大步。' <AX element pid: 90217, elementOrHash.elementID: 4864920192.104>
+                            StaticText, 0x10818af80, {{52.0, 260.7}, {31.3, 13.3}}, label: '08:20' <AX element pid: 90217, elementOrHash.elementID: 4864921088.105>
+                          Cell, 0x10818b0c0, {{0.0, 282.0}, {402.0, 99.7}} <AX element pid: 90217, elementOrHash.elementID: 4907987536.95>
+                            Other, 0x10818b200, {{358.0, 289.0}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '静态头像' <AX element pid: 90217, elementOrHash.elementID: 4907987856.108>
+                              Image, 0x10818b340, {{358.0, 289.0}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 90217, elementOrHash.elementID: 4907722752.118>
+                            StaticText, 0x10818b480, {{148.0, 301.0}, {190.0, 42.3}}, label: '是的。让消息回到人与人之间。' <AX element pid: 90217, elementOrHash.elementID: 4864921984.106>
+                            StaticText, 0x10818b5c0, {{270.3, 360.3}, {79.7, 13.3}}, label: '08:21  演示空间' <AX element pid: 90217, elementOrHash.elementID: 4864922880.107>
+                          Cell, 0x10818b700, {{0.0, 381.7}, {402.0, 77.7}} <AX element pid: 90217, elementOrHash.elementID: 4907987616.96>
+                            Other, 0x10818b840, {{12.0, 388.7}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '静态头像' <AX element pid: 90217, elementOrHash.elementID: 4907988576.109>
+                              Image, 0x10818b980, {{12.0, 388.7}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 90217, elementOrHash.elementID: 4907720192.119>
+                            StaticText, 0x10818bac0, {{64.0, 400.7}, {190.0, 20.3}}, label: '那就沿着河边慢慢走吧。' <AX element pid: 90217, elementOrHash.elementID: 4864923776.110>
+                            StaticText, 0x10818bc00, {{52.0, 438.0}, {31.0, 13.3}}, label: '08:22' <AX element pid: 90217, elementOrHash.elementID: 4864924672.111>
+                          Cell, 0x10818bd40, {{0.0, 459.3}, {402.0, 99.7}} <AX element pid: 90217, elementOrHash.elementID: 4907987696.97>
+                            Other, 0x10818be80, {{358.0, 466.3}, {32.0, 32.0}}, identifier: 'avatar.fallback', label: '静态头像' <AX element pid: 90217, elementOrHash.elementID: 4907988736.114>
+                              Image, 0x104a3fc00, {{358.0, 466.3}, {32.0, 32.0}}, identifier: 'Logo' <AX element pid: 90217, elementOrHash.elementID: 4907727872.120>
+                            StaticText, 0x104a3f340, {{148.0, 478.3}, {190.0, 42.3}}, label: 'Native durable D72BAD98' <AX element pid: 90217, elementOrHash.elementID: 4864925568.112>
+                            StaticText, 0x104a3f480, {{268.7, 537.7}, {81.3, 13.3}}, label: '22:46  演示空间' <AX element pid: 90217, elementOrHash.elementID: 4864926464.113>
+                          Other, 0x104a3f5c0, {{369.0, 182.3}, {30.0, 585.7}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 90217, elementOrHash.elementID: 4864372736.98>
+                            Other, 0x104a3f700, {{396.0, 143.3}, {3.0, 36.0}} <AX element pid: 90217, elementOrHash.elementID: 4383111168.115>
+                          Other, 0x104a3f840, {{0.0, 735.0}, {402.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 90217, elementOrHash.elementID: 4864372224.99>
+                            Other, 0x104a3f980, {{-39.0, 762.0}, {36.0, 3.0}} <AX element pid: 90217, elementOrHash.elementID: 4383110720.116>
+                        Other, 0x104a3fac0, {{0.0, 768.0}, {402.0, 72.0}} <AX element pid: 90217, elementOrHash.elementID: 4383096832.92>
+                          Button, 0x104a3fd40, {{12.0, 782.0}, {44.0, 44.0}}, label: '添加附件' <AX element pid: 90217, elementOrHash.elementID: 4864182528.100>
+                          TextField, 0x108039180, {{60.0, 780.0}, {280.0, 48.0}}, label: '写一条消息…', placeholderValue: '写一条消息…', value: UI recall original... <AX element pid: 90217, elementOrHash.elementID: 4862214144.101>
+                          Button, 0x1080392c0, {{344.0, 782.0}, {44.0, 44.0}}, label: '发送' <AX element pid: 90217, elementOrHash.elementID: 4864184064.102>
+                Other, 0x108039400, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4383938048.17>
+                  Other, 0x108039540, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4383940608.21>
+          Other, 0x108038dc0, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 90217, elementOrHash.elementID: 4383591936.9>
+            Other, 0x108038c80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4383600000.11>
+            Other, 0x10803a440, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 90217, elementOrHash.elementID: 4383934464.12>
+  Window, 0x10803ad00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4862215424.81>
+    Other, 0x10803ae40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4383112064.82>
+      Other, 0x10803af80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 90217, elementOrHash.elementID: 4363949760.83>

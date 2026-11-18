@@ -1,0 +1,17 @@
+{
+  "exitCode": 0,
+  "typeErrors": 0,
+  "native": false,
+  "https": false,
+  "hashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "37eca20d93cbc959041bc5466327dcffc04c20f92e509a05b0c689f9b668d4d8",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordChange.ets": "b84a3603a6a624be867a860d89aff80d43c240d67769ed78c4be7f6323a66213",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordText.ets": "3c68c3c53a74651965cd1c3e08ac78645bab4977ac52309e2b43d305c2d49ae9",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordStore.ets": "1fc65181e311c8a02e1194d272039d41e92e054d24d6d316ba2fb93952876544",
+    "测试/前端/HarmonyOS/Unit/RunPassword.mjs/RunPassword.mjs": "30a74e6159d92041b029a206f34033bb63f720941a5c122ef095e4044dce9c96",
+    "测试/前端/HarmonyOS/Unit/Password.test.cjs/Password.test.cjs": "4521d3d5ed6308a5caacc4b6b3ffe9b427620d0411c932e4de49fa797aa15268",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee"
+  }
+}

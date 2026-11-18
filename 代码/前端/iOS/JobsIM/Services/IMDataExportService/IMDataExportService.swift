@@ -213,6 +213,7 @@ final class IMDataExportService {
             let ticket = try IMDataExportProtocol.ticket(await self.request(path + "/download-ticket", method: "POST", original: "{}"), job: job)
             try self.requireCurrent()
             let folder = FileManager.default.temporaryDirectory.appendingPathComponent("JobsIMDataExport-" + UUID().uuidString)
+            try self.session.store.registerAccountPrivateFile(namespace: self.namespace, kind: "export", name: folder.lastPathComponent)
             try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
             let file = folder.appendingPathComponent("jobsim-personal-data.zip")
             do {

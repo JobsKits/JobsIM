@@ -1,0 +1,26 @@
+{
+  "runUuid": "67001a78-80a6-4670-98de-49058acbdc9d",
+  "reportDir": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z",
+  "privateRealm": "/Users/jobs/Library/Application Support/JobsIM/Integration/67001a78-80a6-4670-98de-49058acbdc9d/Safety",
+  "environmentFile": "/Users/jobs/Library/Application Support/JobsIM/Integration/67001a78-80a6-4670-98de-49058acbdc9d/Safety/ui-environment.json",
+  "pgData": "/Users/jobs/Library/Application Support/JobsIM/Integration/67001a78-80a6-4670-98de-49058acbdc9d/Safety/PGMain",
+  "pgBin": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin",
+  "pgPid": 47909,
+  "pgPort": 62381,
+  "pgOwner": "s2_owner_67001a7880a6",
+  "steps": [
+    {
+      "step": "initdb",
+      "exit": 0
+    },
+    {
+      "step": "start",
+      "exit": 0
+    }
+  ],
+  "diskBeforeKiB": 19230684,
+  "overlayFiles": 50,
+  "realmURLIsMetadataOnly": true,
+  "noHTTPListener": true,
+  "scope": "One owned PostgreSQL cluster, one random per-test database, nine role schemas/in-process RPC; no real HTTPS/NATS or separate-cluster restore."
+}

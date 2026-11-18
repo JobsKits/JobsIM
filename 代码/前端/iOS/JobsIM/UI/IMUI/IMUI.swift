@@ -15,10 +15,52 @@ import UIKit
 enum IMUI {
 
     static let foreground = UIColor.make(light: 0x17201B, dark: 0xEDF4EF)
-    static let green = UIColor.make(hex: 0x287C66)
+    static let green = UIColor.make(light: 0x287C66, dark: 0x65C8AB)
+    // 文字强调色随主题变化，承载白字的实心底色保持足够深。
+    static let greenFill = UIColor.make(hex: 0x287C66)
     static let background = UIColor.make(light: 0xFAF9F6, dark: 0x101512)
     static let panel = UIColor.make(light: 0xFFFFFF, dark: 0x1B241F)
     static let secondary = UIColor.make(light: 0x66726C, dark: 0xABB7AE)
+    static let separator = UIColor.make(light: 0xD7E0DA, dark: 0x34453A)
+    static let selection = UIColor.make(light: 0xF2F6F3, dark: 0x28382F)
+
+    @discardableResult
+    static func cellTheme(_ cell: UITableViewCell) -> UITableViewCell {
+        cell
+            .byBackgroundColor(panel)
+            .byIMThemeBackground(normal: panel, selected: selection)
+            .byContentView {
+                $0.byBackgroundColor(JobsCor.clear)
+            }
+            .byTitleCor(foreground)
+            .byDetailTitleCor(secondary)
+            .byTitleFont(font(.body))
+            .byDetailTitleFont(font(.subheadline))
+    }
+
+    static func emptyButton(
+        title: String? = nil, subtitle: String? = nil, icon: String = "tray", action: @escaping () -> Void
+    ) -> UIButton {
+        return UIButton.sys()
+            .byAccessibilityIdentifier("empty.state")
+            .byTitle(title ?? IMStrings.text("empty"))
+            .bySubTitle(subtitle ?? IMStrings.text("reload"))
+            .byAccessibilityLabel((title ?? IMStrings.text("empty")) + ", "
+                + (subtitle ?? IMStrings.text("reload")))
+            .byTitleFont(font(.headline))
+            .bySubTitleFont(font(.subheadline))
+            .byTitleColor(foreground)
+            .bySubTitleColor(secondary)
+            .byImage(icon.sysImg)
+            .byTintColor(green)
+            .byImagePlacement(.top)
+            .byTitlePadding(6)
+            .byTitleAlignment(.center)
+            .byNumberOfLines(0)
+            .onTap { _ in
+                action()
+            }
+    }
 
     static func label(_ text: String = "", style: UIFont.TextStyle = .body, color: UIColor? = nil) -> UILabel
     {
@@ -41,9 +83,8 @@ enum IMUI {
         UIButton.sys()
             .byTitle(title)
             .byTitleColor(primary ? JobsCor.white : green)
-            .byBackgroundColor(primary ? green : JobsCor.clear)
+            .byBackgroundColor(primary ? greenFill : JobsCor.clear)
             .byCornerRadius(14)
-            .byAccessibilityLabel(title)
             .onTap { _ in
                 action()
             }
@@ -85,7 +126,7 @@ enum IMUI {
         presentDialog(alert, on: controller)
     }
 
-    private static func presentDialog(_ alert: UIAlertController, on controller: UIViewController) {
+    static func presentDialog(_ alert: UIAlertController, on controller: UIViewController) {
         let present = {
             guard controller.viewIfLoaded?.window != nil else {
                 return

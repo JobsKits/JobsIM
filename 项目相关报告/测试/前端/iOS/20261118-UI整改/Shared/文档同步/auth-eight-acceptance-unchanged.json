@@ -1,0 +1,979 @@
+{
+  "items": 243,
+  "beforeAfterIdentical": true,
+  "allUnaccepted": true,
+  "IDsAndScopeAndState": {
+    "FE-001": {
+      "scope": "I；II外部渠道",
+      "state": "未验收"
+    },
+    "FE-002": {
+      "scope": "I；II外部渠道",
+      "state": "未验收"
+    },
+    "FE-003": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-004": {
+      "scope": "I再次验证；II通行密钥",
+      "state": "未验收"
+    },
+    "FE-005": {
+      "scope": "I；II外部渠道",
+      "state": "未验收"
+    },
+    "FE-006": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-007": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-008": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-009": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-010": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-011": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-012": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-013": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-014": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-015": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-016": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-017": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-018": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-019": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-020": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-021": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-022": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-023": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-024": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-025": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-026": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-027": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-028": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-029": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-030": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-031": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-032": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-033": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-034": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-035": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-036": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-037": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-038": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-039": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-040": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-041": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-042": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-043": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-044": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-045": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-046": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-047": {
+      "scope": "I基础群；II大群专项",
+      "state": "未验收"
+    },
+    "FE-048": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-049": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-050": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-051": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-052": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-053": {
+      "scope": "I媒体播放；II通话",
+      "state": "未验收"
+    },
+    "FE-054": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-055": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-056": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-057": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-058": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "FE-059": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-060": {
+      "scope": "I基础；III高级子能力",
+      "state": "未验收"
+    },
+    "FE-061": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-062": {
+      "scope": "I基础；III高级子能力",
+      "state": "未验收"
+    },
+    "FE-063": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-064": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-065": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-066": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-067": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-068": {
+      "scope": "I；II外部渠道",
+      "state": "未验收"
+    },
+    "FE-069": {
+      "scope": "I；II外部渠道",
+      "state": "未验收"
+    },
+    "FE-070": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-071": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-072": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-073": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-074": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-075": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-076": {
+      "scope": "I基础；III高级子能力",
+      "state": "未验收"
+    },
+    "FE-077": {
+      "scope": "I基础；III高级子能力",
+      "state": "未验收"
+    },
+    "FE-078": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-079": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-080": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-081": {
+      "scope": "II-06后续SDK专项",
+      "state": "未验收"
+    },
+    "FE-082": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-083": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-084": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-085": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-086": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-087": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-088": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-089": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-090": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-091": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-092": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-093": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-094": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-095": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "FE-096": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-097": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-098": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "FE-099": {
+      "scope": "II-06后续SDK专项",
+      "state": "未验收"
+    },
+    "FE-100": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-101": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "FE-102": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "BE-001": {
+      "scope": "I；II渠道／扩展",
+      "state": "未验收"
+    },
+    "BE-002": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-003": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-004": {
+      "scope": "I；II渠道／扩展",
+      "state": "未验收"
+    },
+    "BE-005": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-006": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-007": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-008": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-009": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-010": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-011": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-012": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "BE-013": {
+      "scope": "I；II渠道／扩展",
+      "state": "未验收"
+    },
+    "BE-014": {
+      "scope": "I；II渠道／扩展",
+      "state": "未验收"
+    },
+    "BE-015": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "BE-016": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "BE-017": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "BE-018": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "BE-019": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "BE-020": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-021": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-022": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-023": {
+      "scope": "II开放接口／II-06 SDK",
+      "state": "未验收"
+    },
+    "BE-024": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "BE-025": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-026": {
+      "scope": "II会员；III购买",
+      "state": "未验收"
+    },
+    "BE-027": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "BE-028": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "BE-029": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "BE-030": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "BE-031": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "BE-032": {
+      "scope": "II-06后续SDK专项",
+      "state": "未验收"
+    },
+    "BE-033": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "BE-034": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "BE-035": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "BE-036": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "SEC-01": {
+      "scope": "I；II外部子能力",
+      "state": "未验收"
+    },
+    "SEC-02": {
+      "scope": "I设备；换票后续",
+      "state": "未验收"
+    },
+    "SEC-03": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "SEC-04": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "SEC-05": {
+      "scope": "I；II外部子能力",
+      "state": "未验收"
+    },
+    "SEC-06": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "SEC-07": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "SEC-08": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "SEC-09": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "SEC-10": {
+      "scope": "I；II外部子能力",
+      "state": "未验收"
+    },
+    "SEC-11": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "SEC-12": {
+      "scope": "I；III入口组",
+      "state": "未验收"
+    },
+    "T-01": {
+      "scope": "I；III高级组合",
+      "state": "未验收"
+    },
+    "T-02": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-03": {
+      "scope": "I；III高级组合",
+      "state": "未验收"
+    },
+    "T-04": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-05": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-06": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-07": {
+      "scope": "I通知；II远程推送",
+      "state": "未验收"
+    },
+    "T-08": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-09": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "T-10": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "T-11": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-12": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-13": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-14": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "T-15": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-16": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "T-17": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "T-18": {
+      "scope": "I治理；II机器人；III AI",
+      "state": "未验收"
+    },
+    "T-19": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-20": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "T-21": {
+      "scope": "II-06后续SDK专项",
+      "state": "未验收"
+    },
+    "T-22": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-23": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "T-24": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-25": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "T-26": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-27": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-28": {
+      "scope": "I回归；II渠道",
+      "state": "未验收"
+    },
+    "T-29": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-30": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "T-31": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "T-32": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-33": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "T-34": {
+      "scope": "II-06后续SDK专项",
+      "state": "未验收"
+    },
+    "T-35": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "T-36": {
+      "scope": "I配置；III入口组",
+      "state": "未验收"
+    },
+    "T-37": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-38": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "T-39": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-40": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "T-41": {
+      "scope": "I；III高级组合",
+      "state": "未验收"
+    },
+    "T-42": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-43": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "T-44": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-45": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-46": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "T-47": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-48": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-49": {
+      "scope": "I个人；II机器人／II-06 SDK",
+      "state": "未验收"
+    },
+    "T-50": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-51": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-52": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-53": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-54": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-55": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "T-56": {
+      "scope": "III强保护专项",
+      "state": "未验收"
+    },
+    "T-57": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "T-58": {
+      "scope": "III强保护专项",
+      "state": "未验收"
+    },
+    "ARCH-01": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-02": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-03": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-04": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-05": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-06": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-07": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-08": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-09": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-10": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "ARCH-11": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "ARCH-12": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-13": {
+      "scope": "I；II渠道子能力",
+      "state": "未验收"
+    },
+    "ARCH-14": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-15": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-16": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-17": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-18": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-19": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-20": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-21": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-22": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "ARCH-23": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-24": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-25": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "ARCH-26": {
+      "scope": "II-06后续SDK专项",
+      "state": "未验收"
+    },
+    "ARCH-27": {
+      "scope": "I；II渠道子能力",
+      "state": "未验收"
+    },
+    "ARCH-28": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-29": {
+      "scope": "II",
+      "state": "未验收"
+    },
+    "ARCH-30": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-31": {
+      "scope": "I；强保护双点另验",
+      "state": "未验收"
+    },
+    "ARCH-32": {
+      "scope": "III",
+      "state": "未验收"
+    },
+    "ARCH-33": {
+      "scope": "I；强保护另验",
+      "state": "未验收"
+    },
+    "ARCH-34": {
+      "scope": "I",
+      "state": "未验收"
+    },
+    "ARCH-35": {
+      "scope": "III强保护专项",
+      "state": "未验收"
+    }
+  }
+}

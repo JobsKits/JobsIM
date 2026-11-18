@@ -1,0 +1,24 @@
+{
+  "documents": 37,
+  "localLinks": 729,
+  "missingLinks": [
+
+  ],
+  "iOSFinalInputs": 102,
+  "iOSInputDrift": [
+
+  ],
+  "existingXcodeProjectPreserved": true,
+  "podPackages": [
+    {
+      "action": "Install",
+      "executable": true,
+      "sameAsTemplate": true
+    },
+    {
+      "action": "Update",
+      "executable": true,
+      "sameAsTemplate": true
+    }
+  ]
+}

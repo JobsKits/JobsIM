@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Download, FileText, RefreshCw } from "lucide-react";
 import { apiBytes } from "./api";
+import { authSnapshot, authSnapshotCurrent } from "./AuthSession";
+import MessagePlayback, { type MessagePlaybackIdentity } from "./MessagePlayback";
 
 export default function PrivateMedia({
   path,
@@ -9,29 +11,34 @@ export default function PrivateMedia({
   name,
   version,
   t,
+  playback,
 }: {
   path: string;
   type: string;
   name: string;
   version: string;
   t: (key: string) => string;
+  playback?: MessagePlaybackIdentity;
 }) {
   const [url, setURL] = useState("");
+  const [digest, setDigest] = useState("");
   const [failed, setFailed] = useState(false);
   const [busy, setBusy] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const downloadContext = useRef<AbortController | null>(null);
+  const ownedURL = useRef("");
   useEffect(() => {
     const controller = new AbortController();
     downloadContext.current = controller;
     setBusy(false);
     return () => { controller.abort(); };
-  }, [path, type, version]);
+  }, [path, type, version, playback?.namespace, playback?.familyId]);
   useEffect(() => {
-    const controller = new AbortController();
+    const controller = new AbortController(), snapshot = authSnapshot();
     let active = true,
       objectURL = "";
     setURL("");
+    setDigest("");
     setFailed(false);
     if (type === "file") return () => controller.abort();
     if (path.startsWith("blob:")) {
@@ -41,9 +48,13 @@ export default function PrivateMedia({
     setBusy(true);
     void apiBytes(path.substring(4), { signal: controller.signal })
       .then((blob) => {
-        if (!active) return;
-        objectURL = URL.createObjectURL(blob);
-        setURL(objectURL);
+        return (async () => {
+          const mediaDigest = type === "audio" || type === "video"
+            ? [...new Uint8Array(await crypto.subtle.digest("SHA-256", await blob.arrayBuffer()))].map(value => value.toString(16).padStart(2, "0")).join("") : "";
+          if (!active || playback?.familyId && !authSnapshotCurrent(snapshot)) return;
+          objectURL = URL.createObjectURL(blob); ownedURL.current = objectURL;
+          setDigest(mediaDigest); setURL(objectURL);
+        })();
       })
       .catch(() => {
         if (active) setFailed(true);
@@ -55,8 +66,9 @@ export default function PrivateMedia({
       active = false;
       controller.abort();
       if (objectURL) URL.revokeObjectURL(objectURL);
+      if (ownedURL.current === objectURL) ownedURL.current = "";
     };
-  }, [path, type, version, attempt]);
+  }, [path, type, version, attempt, playback?.namespace, playback?.familyId, playback?.contentVersion]);
   const download = async () => {
     if (busy) return;
     const controller = downloadContext.current;
@@ -101,22 +113,9 @@ export default function PrivateMedia({
         alt={name}
         onError={() => setFailed(true)}
       />
-    ) : type === "audio" ? (
-      <audio
-        controls
-        preload="metadata"
-        src={url}
-        aria-label={name}
-        onError={() => setFailed(true)}
-      />
     ) : (
-      <video
-        controls
-        preload="metadata"
-        src={url}
-        aria-label={name}
-        onError={() => setFailed(true)}
-      />
+      <MessagePlayback url={url} path={path} kind={type === "audio" ? "audio" : "video"} name={name} version={version} digest={digest} identity={playback ?? {}}
+        onUnavailable={() => { if (ownedURL.current) URL.revokeObjectURL(ownedURL.current); ownedURL.current = ""; setURL(""); setFailed(true); }} />
     );
   return (
     <div className="private-media-placeholder" role="status">

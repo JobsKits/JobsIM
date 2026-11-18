@@ -1,0 +1,50 @@
+{
+  "error" : {
+    "code" : 4016,
+    "domain" : "com.apple.dt.CoreDeviceError",
+    "userInfo" : {
+      "CurrentlyAssertableStates" : {
+        "array" : [
+
+        ]
+      },
+      "NSLocalizedDescription" : {
+        "string" : "The device is not able to fulfill the requested usage assertion requirements."
+      },
+      "RequestedDeviceStates" : {
+        "array" : [
+          {
+            "string" : "com.apple.coredevice.powerAssertionTaken"
+          },
+          {
+            "string" : "com.apple.coredevice.coreDeviceServicesLoaded"
+          },
+          {
+            "string" : "com.apple.coredevice.remoteServiceDiscoveryTrustedConnectivityAvailable"
+          }
+        ]
+      }
+    }
+  },
+  "errorSignature" : "(com.apple.dt.CoreDeviceError 4016)",
+  "info" : {
+    "arguments" : [
+      "devicectl",
+      "device",
+      "install",
+      "app",
+      "--device",
+      "00008110-000625583EE3801E",
+      "项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/成品/device-build-9/JobsIM.app",
+      "--json-output",
+      "项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/device-build-9-install.json"
+    ],
+    "commandType" : "devicectl.device.install.app",
+    "environment" : {
+      "TERM" : "dumb"
+    },
+    "jsonVersion" : 5,
+    "outcome" : "failed",
+    "version" : "651.32"
+  }
+}

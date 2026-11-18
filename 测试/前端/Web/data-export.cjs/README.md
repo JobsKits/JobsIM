@@ -21,7 +21,7 @@
 
 本脚本只启动私有Vite和实际Chrome，使用真实React、IndexedDB严格事务与Web Locks，导出HTTP服务、文件接收端和浏览器保存动作由测试注入。私有Vite不读取项目代理，所有浏览器`/api`外网请求阻断，不连接58443／E2或其它后端。
 
-当前脚本Node语法检查、18组Chrome注入用例、锁定TypeScript类型检查及独立发行构建均通过，三张十语／主题代表截图已实看。磁盘低于4GiB时脚本在启动Vite／Chrome前退出。结果与首轮类型失败分别保留在[中央独立入口](../../../../项目相关报告/测试/前端/Web/20261116-正式本人导出/README.md)，不追认其它包或后端测试。
+当前脚本含19组Chrome注入用例，覆盖缺少所选Intl语言时的明确数字日期回退；最新执行、类型检查与独立构建见[当前回归](../../../../项目相关报告/测试/回归/20261116-全项目回归/Web-CLI.md)。原18组、首轮类型失败及三张原截图保留在[中央独立入口](../../../../项目相关报告/测试/前端/Web/20261116-正式本人导出/README.md)，不改旧记录、不追认其它包或后端测试。磁盘低于4GiB时脚本在启动Vite／Chrome前退出。
 
 ## <span id="jobs-toc-heading-2" data-jobs-toc="v2">二、运行方法 <a href="#前言">🔼</a> <a href="#🔚">🔽</a></span><!-- jobs-toc:heading-end -->
 
@@ -33,7 +33,7 @@ node 测试/前端/Web/data-export.cjs/data-export.cjs
 
 ## <span id="jobs-toc-heading-3" data-jobs-toc="v2">三、用例范围 <a href="#前言">🔼</a> <a href="#🔚">🔽</a></span><!-- jobs-toc:heading-end -->
 
-脚本覆盖：创建成功丢响应的纯查单、原请求未达后明确同体重试、取消原单持久化、能力撤回收尾、原namespace冻结／摘要损坏／排队及迟到身份围栏、真实`apiFile`的`credentials:include`／family/header传递、安全文件名／ZIP完整性／大小／MIME反例、任务UI确认与重载、下载跨账号拒绝、十语三主题和窄屏空态。注入保存端不会证明浏览器已将字节持久写入用户磁盘。
+脚本覆盖：创建成功丢响应的纯查单、原请求未达后明确同体重试、取消原单持久化、能力撤回收尾、原namespace冻结／摘要损坏／排队及迟到身份围栏、真实`apiFile`的`credentials:include`／family/header传递、安全文件名／ZIP完整性／大小／MIME反例、任务UI确认与重载、下载跨账号拒绝、十语三主题和窄屏空态。日期反例明确注入不完整Intl环境，要求实际任务行呈现本地时区的`YYYY-MM-DD HH:mm`，不静默借用浏览器宿主语言。注入保存端不会证明浏览器已将字节持久写入用户磁盘。
 
 ## <span id="jobs-toc-heading-4" data-jobs-toc="v2">四、真实联调边界 <a href="#前言">🔼</a> <a href="#🔚">🔽</a></span><!-- jobs-toc:heading-end -->
 

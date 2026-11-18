@@ -15,14 +15,19 @@ export class AuthCoordinator {
   private refreshTask?: Promise<string>;
   private proofs: MemoryProof[] = [];
   private revision: number = 0;
+  private passwordFamily: string = '';
+  private deletionFamily: string = '';
 
   constructor(connection: AuthConnection, ports: AuthPorts) { this.connection = connection; this.ports = ports; }
   private scope(): string { return Isolation.namespace(this.connection.profile, this.connection.deployment, '__auth__', false, this.connection.epoch, 'metadata', 'personal'); }
   private protocolScope(): string { return Isolation.namespace(this.connection.profile, this.connection.deployment, '__auth__', false, 'protocol', 'metadata', 'personal'); }
   stamp(): string {
-    return (this.ports.current() ? '' : 'inactive|') + this.scope() + '|' + String(this.revision) + '|' + (this.pair ? AuthRules.namespace(this.pair) + '|' + this.pair.familyId : 'signed-out');
+    return (this.ports.current() ? '' : 'inactive|') + this.scope() + '|' + String(this.revision) + '|' + (this.pair ? AuthRules.namespace(this.pair) + '|' + this.pair.familyId : 'signed-out') + (this.pair?.familyId === this.passwordFamily ? '|password-paused' : '') + (this.pair?.familyId === this.deletionFamily ? '|deletion-paused' : '');
   }
   currentFamily(): string { return this.pair?.familyId ?? ''; }
+  passwordOwner(): CredentialPair | undefined { return this.ports.current() ? this.pair : undefined; }
+  passwordPause(family: string, paused: boolean): void { if (this.pair?.familyId === family) { this.passwordFamily = paused ? family : ''; } }
+  deletionPause(family: string, paused: boolean): void { if (this.pair?.familyId === family) { this.deletionFamily = paused ? family : ''; } }
   private async locked(action: () => Promise<void>): Promise<void> {
     const work = AuthCoordinator.mutationTail.then(action);
     AuthCoordinator.mutationTail = work.catch((_error: Error) => {});
@@ -69,10 +74,12 @@ export class AuthCoordinator {
   }
   async before(stamp: string): Promise<string> {
     if (!this.ports.current() || stamp !== this.stamp() || this.closing) { throw new Error('SESSION_SCOPE_CHANGED'); }
+    if (this.pair && (await this.ports.read(this.scope(), 'password-change:' + this.pair.familyId) || await this.ports.read(this.scope(), 'account-deletion:' + this.pair.familyId))) { throw new Error('PASSWORD_CHANGE_RESULT_UNKNOWN'); }
     await this.verify();
     if (this.refreshTask) { await this.refreshTask; }
     if (stamp !== this.stamp() || !this.pair) { throw new Error('AUTH_REAUTH_REQUIRED'); }
     const pair = this.pair;
+    if (await this.ports.read(this.scope(), 'password-change:' + pair.familyId) || await this.ports.read(this.scope(), 'account-deletion:' + pair.familyId)) { throw new Error('PASSWORD_CHANGE_RESULT_UNKNOWN'); }
     const refresh = await this.ports.read(this.scope(), 'refresh:' + pair.familyId);
     const initial = await this.pending(pair.username);
     if ((refresh && (JSON.parse(refresh) as RefreshRecord).state !== 'completed') || initial ||
@@ -175,6 +182,8 @@ export class AuthCoordinator {
     }
     const pair = this.pair;
     if (!pair || !binding || await this.ports.read(this.scope(), 'logout:' + pair.familyId)) { throw new Error('AUTH_REAUTH_REQUIRED'); }
+    if (await this.ports.read(this.scope(), 'password-change:' + pair.familyId)) { this.passwordFamily = pair.familyId; return; }
+    if (await this.ports.read(this.scope(), 'account-deletion:' + pair.familyId)) { this.deletionFamily = pair.familyId; return; }
     const contextStamp = this.stamp();
     let contextToken = '';
     let context: AuthContext;
@@ -190,6 +199,7 @@ export class AuthCoordinator {
   }
   async refresh(token: string, stamp: string): Promise<string> {
     if (!this.ports.current() || stamp !== this.stamp() || !this.pair) { throw new Error('SESSION_SCOPE_CHANGED'); }
+    if (await this.ports.read(this.scope(), 'password-change:' + this.pair.familyId) || await this.ports.read(this.scope(), 'account-deletion:' + this.pair.familyId)) { throw new Error('PASSWORD_CHANGE_RESULT_UNKNOWN'); }
     if (this.pair.token !== token) { return this.pair.token; }
     if (this.refreshTask) { return this.refreshTask; }
     await this.verify();

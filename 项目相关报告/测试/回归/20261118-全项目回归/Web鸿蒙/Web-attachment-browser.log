@@ -1,0 +1,55 @@
+6:42:58 AM [vite] (client) [Unhandled rejection] AbortError: signal is aborted without reason
+ > Module.resetRequestContext Src/api.ts:490:17
+    488 |  }
+    489 |  export function resetRequestContext() {
+    490 |    requestContext.abort();
+        |                   ^
+    491 |    requestContext = new AbortController();
+    492 |    bindMessageNamespace("");
+
+6:42:58 AM [vite] (client) [Unhandled rejection] AbortError: signal is aborted without reason
+ > Module.resetRequestContext Src/api.ts:490:17
+    488 |  }
+    489 |  export function resetRequestContext() {
+    490 |    requestContext.abort();
+        |                   ^
+    491 |    requestContext = new AbortController();
+    492 |    bindMessageNamespace("");
+
+6:42:59 AM [vite] (client) [Unhandled error] InvalidStateError: Failed to execute 'abort' on 'IDBTransaction': The transaction has finished.
+ > cursor.onsuccess Src/AttachmentSendStore.ts:96:42
+    94 |        }
+    95 |        const prepared = prepareAttachmentHolders(holders, entry); check(); for (const value of prepared) store.put(val...
+    96 |      } catch (error) { failure = error; tx.abort(); }
+       |                                            ^
+    97 |    };
+    98 |    return finish(tx, () => entry, context.isCurrent, () => failure);
+
+6:43:00 AM [vite] (client) [Unhandled rejection] AbortError: signal is aborted without reason
+ > Module.resetRequestContext Src/api.ts:490:17
+    488 |  }
+    489 |  export function resetRequestContext() {
+    490 |    requestContext.abort();
+        |                   ^
+    491 |    requestContext = new AbortController();
+    492 |    bindMessageNamespace("");
+
+6:43:00 AM [vite] (client) [Unhandled rejection] AbortError: signal is aborted without reason
+ > Module.resetRequestContext Src/api.ts:490:17
+    488 |  }
+    489 |  export function resetRequestContext() {
+    490 |    requestContext.abort();
+        |                   ^
+    491 |    requestContext = new AbortController();
+    492 |    bindMessageNamespace("");
+
+6:43:01 AM [vite] (client) [Unhandled error] Error: injected linked failure
+ > read.onsuccess Src/storage.ts:188:14
+    186 |        read.onsuccess = () => {
+    187 |          const existing: Message[] = read.result ?? value.outbox;
+    188 |          store.put(
+        |                ^
+    189 |            guarded([
+    190 |              ...existing.filter((m) => m.clientMsgId !== message.clientMsgId),
+
+{"out":"/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-attachment-browser","passed":41}

@@ -1,0 +1,180 @@
+{
+  "status": "observed",
+  "method": "ordinary seed session for GET-only business inspection; logged out afterward",
+  "checks": {
+    "/api/bootstrap": {
+      "status": 200,
+      "response": {
+        "deploymentId": "2cbd9bd2-1205-44fb-870c-9cad48135c48",
+        "restoreEpoch": "1",
+        "features": {
+          "account_metadata_export": true,
+          "admin_writes": true,
+          "after_receipt": false,
+          "announcements": true,
+          "auth_refresh": true,
+          "auth_retirement_chain": true,
+          "authoritative_sync": true,
+          "avatars": true,
+          "chat_export": true,
+          "cloud_drafts": true,
+          "durable_object_receipt_protocol": true,
+          "durable_receipt_protocol": true,
+          "e2ee": false,
+          "email_otp": false,
+          "favorites": true,
+          "forwarding": true,
+          "groups": true,
+          "independent_journal": true,
+          "media": true,
+          "mentions": true,
+          "messages": true,
+          "own_account_deletion": true,
+          "own_password_change": true,
+          "pins": true,
+          "qualified_receipt_negotiation": true,
+          "reactions": true,
+          "registration": true,
+          "remote_push": false,
+          "reports": true,
+          "role_admission": true,
+          "rtc": false,
+          "safe_restore": false,
+          "search": true,
+          "send_admission": true,
+          "strong_protection": false,
+          "sync_jetstream": true,
+          "sync_self_state": true,
+          "text_forward": false
+        }
+      }
+    },
+    "/api/auth/context": {
+      "status": 200,
+      "response": {
+        "user": {
+          "createdAt": "2026-11-18T08:34:21.837355Z",
+          "signature": "让消息回到人与人之间。",
+          "profileVersion": "2",
+          "deviceId": "7f4571bc-787f-4023-a2c5-56d2191ffa79",
+          "restoreEpoch": "1",
+          "id": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+          "username": "demo_jobs",
+          "displayName": "Jobs"
+        },
+        "deviceId": "7f4571bc-787f-4023-a2c5-56d2191ffa79",
+        "restoreEpoch": "1",
+        "familyId": "8836800c-a4a8-4925-9668-bcecaa2e4bc6",
+        "refreshGeneration": "1",
+        "accessExpiresAt": "2026-11-18T09:49:53.448156Z",
+        "idleExpiresAt": "2026-12-18T09:34:53.448156Z",
+        "absoluteExpiresAt": "2027-02-16T09:34:53.448156Z",
+        "sourceContextId": "personal"
+      }
+    },
+    "/api/me": {
+      "status": 200,
+      "response": {
+        "createdAt": "2026-11-18T08:34:21.837355Z",
+        "signature": "让消息回到人与人之间。",
+        "contactBindings": {
+          "email": {
+            "state": "unbound"
+          },
+          "phone": {
+            "state": "unbound"
+          }
+        },
+        "profileVersion": "2",
+        "restoreEpoch": "1",
+        "id": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+        "username": "demo_jobs",
+        "displayName": "Jobs"
+      }
+    },
+    "/api/contacts": {
+      "status": 200,
+      "response": {
+        "items": [
+          {
+            "signature": "",
+            "profileVersion": "2",
+            "id": "9ec5bfc3-1e7f-4269-bfac-ce3df6499f42",
+            "username": "demo_lin",
+            "displayName": "小林"
+          },
+          {
+            "signature": "",
+            "profileVersion": "2",
+            "id": "c80dc8d6-dc9b-44f2-8dd7-f0765f443a91",
+            "username": "demo_xia",
+            "displayName": "小夏"
+          }
+        ],
+        "requests": [
+          {
+            "id": "5363d3b7-fcaf-40f1-82f9-d62f05145ba0",
+            "recipientId": "c80dc8d6-dc9b-44f2-8dd7-f0765f443a91",
+            "requester": {
+              "signature": "",
+              "profileVersion": "2",
+              "id": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+              "username": "demo_jobs",
+              "displayName": "Jobs"
+            },
+            "requesterId": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+            "state": "accepted"
+          },
+          {
+            "id": "cde81e3c-adc5-47ce-8213-2f9d3151268a",
+            "recipientId": "9ec5bfc3-1e7f-4269-bfac-ce3df6499f42",
+            "requester": {
+              "signature": "",
+              "profileVersion": "2",
+              "id": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+              "username": "demo_jobs",
+              "displayName": "Jobs"
+            },
+            "requesterId": "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+            "state": "accepted"
+          }
+        ]
+      }
+    },
+    "/api/conversations": {
+      "status": 200,
+      "response": {
+        "items": [
+          {
+            "state": "active",
+            "readOnly": false,
+            "id": "466dd179-e0fd-41e5-b042-86255d762cef",
+            "kind": "group",
+            "title": "周末小组",
+            "memberIds": [
+              "9ec5bfc3-1e7f-4269-bfac-ce3df6499f42",
+              "a5293569-3e10-44a9-b7a1-814ff3bafde5",
+              "c80dc8d6-dc9b-44f2-8dd7-f0765f443a91"
+            ],
+            "updatedAt": "2026-11-18T16:43:54.362511+08:00"
+          },
+          {
+            "state": "active",
+            "readOnly": false,
+            "id": "0d35d87b-155e-4b15-b659-fa5b405f114c",
+            "kind": "direct",
+            "title": "",
+            "memberIds": [
+              "9ec5bfc3-1e7f-4269-bfac-ce3df6499f42",
+              "a5293569-3e10-44a9-b7a1-814ff3bafde5"
+            ],
+            "updatedAt": "2026-11-18T16:34:22.44059+08:00"
+          }
+        ],
+        "keys": [
+          "items"
+        ]
+      }
+    }
+  }
+}

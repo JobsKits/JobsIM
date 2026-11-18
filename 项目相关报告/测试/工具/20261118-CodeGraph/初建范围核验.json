@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-18T03:12:20.422Z",
+  "indexed": 717,
+  "languages": {
+    "javascript": 62,
+    "kotlin": 114,
+    "xml": 1,
+    "properties": 2,
+    "python": 49,
+    "go": 243,
+    "swift": 118,
+    "typescript": 57,
+    "arkts": 46,
+    "tsx": 22,
+    "ruby": 3
+  },
+  "forbiddenPaths": [],
+  "ownTestFiles": 246,
+  "classifiedTests": 144,
+  "scopeNote": "All current own tests are indexed; some Chinese test paths are not recognized by CodeGraph isTest heuristic. File paths and calls remain queryable. Shell/PowerShell not mapped to an unrelated grammar.",
+  "accepted": true
+}

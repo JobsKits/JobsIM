@@ -1,11 +1,28 @@
-import { authProtocol, authSnapshot, clearInitialProofs, expireInitial, finishActivatedInitial, hasInitialProof, hasAuthResponsibility, pendingInitial, prepareInitial, retainInitialProof, unconfirmedInitial, type InitialAuth } from "./AuthSession";
+import { isRectInVisibleViewport, useVisibleViewport } from "./useVisibleViewport";
+import { authProtocol, authSnapshot, authSnapshotCurrent, clearInitialProofs, expireInitial, finishActivatedInitial, hasInitialProof, hasAuthResponsibility, pendingInitial, prepareInitial, retainInitialProof, unconfirmedInitial, type InitialAuth } from "./AuthSession";
 import PrivateMedia from "./PrivateMedia";
+import AudioRecorderPanel from "./AudioRecorderPanel";
+import AttachmentSendPanel from "./AttachmentSendPanel";
+import { AttachmentSendActions, type AttachmentSendContext } from "./AttachmentSendActions";
+import { acceptAttachmentMessage, linkAttachmentEnqueue, withAttachmentPublication } from "./AttachmentSendStore";
+import { attachmentLabel } from "./AttachmentSendLabels";
 import { runDurableSync } from "./SyncEngine";
 import { adoptSelfDraft, hasDurableSyncResponsibility, loadPersonalState } from "./SyncStore";
 import { SelfStateActions } from "./SelfStateActions";
 import SelfStatePanel from "./SelfStatePanel";
 import SelfDraftRecovery from "./SelfDraftRecovery";
 import DataExportPanel from "./DataExportPanel";
+import PasswordChangePanel from "./PasswordChangePanel";
+import type { PasswordChangeContext } from "./PasswordChangeActions";
+import AccountDeletionPanel from "./AccountDeletionPanel";
+import type { AccountDeletionContext } from "./AccountDeletionActions";
+import { accountDeletionLabel } from "./AccountDeletionLabels";
+import GroupGovernancePanel from "./GroupGovernancePanel";
+import GroupJoinPanel from "./GroupJoinPanel";
+import MigrationEntry from "./MigrationPanel";
+import ReceiptEntry from "./ReceiptPanel";
+import type { GroupGovernanceContext } from "./GroupGovernanceActions";
+import { groupLabel } from "./GroupGovernanceLabels";
 import type { DataExportContext } from "./DataExportActions";
 import { emptyPersonalState, personalStateRecord, type PersonalState } from "./SelfStateProtocol";
 import { selfLabel } from "./SelfStateLabels";
@@ -285,6 +302,7 @@ function MessageImage({ src, alt }: { src: string; alt: string }) {
   );
 }
 export default function App() {
+  useVisibleViewport();
   const [locale, setLocale] = useState(() => pref("jobsim.locale", "zh-CN"));
   const t = useCallback((k: string) => translate(locale, k), [locale]);
   const [theme, setTheme] = useState(() => pref("jobsim.theme", "system"));
@@ -323,6 +341,7 @@ export default function App() {
   }, []);
   const [notice, setNotice] = useState("");
   const [busy, setBusy] = useState(false);
+  const [attachmentRevision, setAttachmentRevision] = useState(0);
   const [requiresOTP, setRequiresOTP] = useState(false);
   const [avatarPending, setAvatarPending] = useState<AvatarIntent | null>(null);
   const [reply, setReply] = useState<Message | null>(null);
@@ -339,6 +358,7 @@ export default function App() {
   const [requests, setRequests] = useState<any[]>([]);
   const [people, setPeople] = useState<User[]>([]);
   const [members, setMembers] = useState<User[]>([]);
+  const [memberCursor, setMemberCursor] = useState("");
   const [generated, setGenerated] = useState<string[]>([]);
   const [sessions, setSessions] = useState<any[]>([]);
   const [pick, setPick] = useState<string[]>([]);
@@ -654,7 +674,7 @@ export default function App() {
     } finally {
       setBooted(true);
     }
-  }), [t]);
+  }).catch(report), [t]);
   useEffect(() => {
     void bootstrap();
   }, []);
@@ -665,7 +685,7 @@ export default function App() {
         const search = document.querySelector<HTMLInputElement>(
           ".sidebar .search input",
         );
-        if (innerWidth > 700) search?.focus();
+        if (search && search.getClientRects().length && getComputedStyle(search).visibility !== "hidden") search.focus();
         else setModal("search");
       }
       if (e.key === "Escape") setMore("");
@@ -1161,6 +1181,8 @@ export default function App() {
     setEditing(null);
     setMore("");
     setDetails(false);
+    setMembers([]);
+    setMemberCursor("");
   }, [selected]);
   useEffect(() => {
     const box = thread.current;
@@ -1190,6 +1212,25 @@ export default function App() {
       identity: { scopeId: deployment, userId: session.user.id, deviceId: session.deviceId, epoch: session.restoreEpoch ?? "1" },
       isCurrent: () => namespace.current === key && changing.current === generation && authSnapshot().auth?.familyId === family,
     };
+  };
+  const capturePasswordChangeContext = (): PasswordChangeContext | undefined => {
+    if (!deployment) return undefined;
+    const scopeId = deployment, generation = changing.current, family = authSnapshot().auth?.familyId;
+    const original = captureDataExportContext();
+    return { scopeId,
+      identity: original && session ? { ...original.identity, username: session.user.username, epoch: original.identity.epoch, familyId: family!, namespace: original.namespace } : undefined,
+      isCurrent: () => deployment === scopeId && changing.current === generation && authSnapshot().auth?.familyId === family,
+      onPause: () => { invalidateSession(); },
+    };
+  };
+  const captureAccountDeletionContext = (): AccountDeletionContext | undefined => {
+    const context = capturePasswordChangeContext();
+    return context ? { ...context, onPause: () => invalidateSession() } : undefined;
+  };
+  const captureGroupContext = (): GroupGovernanceContext | undefined => {
+    const context = capturePasswordChangeContext();
+    if (demo || !context?.identity) return undefined;
+    return { identity: context.identity, isCurrent: context.isCurrent, request: (path, options) => api(path, options, 15000) };
   };
   useEffect(() => {
     setSelfBusy(false);
@@ -1262,7 +1303,7 @@ export default function App() {
       const observed = messages.filter(row => !row.pending && !row.deleted && !row.contentUnavailable && row.senderId !== session.user.id).filter(row => {
         const article = document.getElementById("message-" + row.id), bubble = article?.querySelector(".bubble") ?? article;
         const rect = bubble?.getBoundingClientRect();
-        if (!article || !rect || rect.height <= 0 || rect.top < Math.max(0, box.top) || rect.bottom > Math.min(innerHeight, box.bottom) || rect.left < Math.max(0, box.left) || rect.right > Math.min(innerWidth, box.right)) return false;
+        if (!article || !rect || !isRectInVisibleViewport(rect, box)) return false;
         const x = (rect.left + rect.right) / 2, y = (rect.top + rect.bottom) / 2;
         return [[x, y], [rect.left + 2, y], [rect.right - 2, y], [x, rect.top + 2], [x, rect.bottom - 2]].every(([left, top]) => {
           const hit = document.elementFromPoint(left, top);
@@ -1292,7 +1333,9 @@ export default function App() {
     return () => { alive = false; clearTimeout(timer); };
   }, [demo, session, viewActive, modal, details, mobileOpen, section, selected, features.sync_self_state, conversation?.membershipGeneration, messages.length, live.syncRevision, visibleRevision]);
   const writeMessage = async (m: Message, generation = changing.current) => {
-    if (generation !== changing.current || !session || demo || m.frozen) return;
+    const originalFamily = m.originFamilyId;
+    const sendCurrent = () => generation === changing.current && (!originalFamily || authSnapshot().auth?.familyId === originalFamily);
+    if (!sendCurrent() || !session || demo || m.frozen) return;
     if (globalStorageFailure.current) { setNotice(t("syncRestricted")); return; }
     if (syncGuard.current.required && !syncGuard.current.ready) {
       setNotice(t("syncPreparing"));
@@ -1307,7 +1350,7 @@ export default function App() {
         deploymentId: string;
         features: Record<string, boolean>;
       }>("/bootstrap");
-      if (generation !== changing.current) return;
+      if (!sendCurrent()) return;
       if (support.deploymentId !== deployment) {
         setNotice(t("notSupported"));
         return;
@@ -1316,7 +1359,7 @@ export default function App() {
       const original = await prepareOutboxAttempt(key, m.clientMsgId);
       if (
         !original ||
-        generation !== changing.current ||
+        !sendCurrent() ||
         key !== namespace.current
       )
         return;
@@ -1341,7 +1384,7 @@ export default function App() {
           if (!(error instanceof ApiError && error.status === 404)) throw error;
         }
       }
-      if (generation !== changing.current) return;
+      if (!sendCurrent()) return;
       if (!result) {
         if (
           support.features?.send_admission !== true ||
@@ -1351,16 +1394,24 @@ export default function App() {
           setNotice(t("notSupported"));
           return;
         }
-        result = await api<Message>(
-          `/conversations/${m.conversationId}/messages`,
-          json("POST", payload),
-        );
+        const publish = () => api<Message>(`/conversations/${m.conversationId}/messages`, json("POST", payload));
+        if (m.attachmentRequestId) {
+          const context = captureAttachmentContext();
+          if (!context || context.identity.familyId !== m.originFamilyId) return;
+          result = await withAttachmentPublication(context, m, publish);
+        } else result = await publish();
       }
-      if (generation !== changing.current) return;
+      if (!sendCurrent()) return;
       if (!validOriginalMessageResult(result, session.user.id, m.conversationId, m.clientMsgId)) throw new SyncProtocolError("SYNC_INVALID_RECONCILIATION");
-      const isCurrent = () => generation === changing.current && key === namespace.current;
+      const isCurrent = () => sendCurrent() && key === namespace.current;
+      if (m.attachmentRequestId) {
+        const context = captureAttachmentContext();
+        if (!context || context.identity.familyId !== m.originFamilyId) return;
+        await acceptAttachmentMessage(context, result);
+        setAttachmentRevision(value => value + 1);
+      }
       const removed = await acknowledgeOriginalOutbox(key, session.user.id, [{ clientMsgId: m.clientMsgId, conversationId: m.conversationId, originalBody: payload }], isCurrent);
-      if (generation !== changing.current) return;
+      if (!sendCurrent()) return;
       if (!removed.includes(m.clientMsgId)) return;
       const accepted = result;
       setLive((s) => {
@@ -1385,7 +1436,7 @@ export default function App() {
       });
       setOnline(true);
     } catch (error) {
-      if (generation !== changing.current) return;
+      if (!sendCurrent()) return;
       if (error instanceof ApiError) {
         setOnline(true);
         if (error.code === "RESTORE_EPOCH_CHANGED") {
@@ -1410,7 +1461,7 @@ export default function App() {
         ) {
           const key = namespace.current;
           await freezeOutboxMessage(key, m.clientMsgId, error.code);
-          if (generation !== changing.current || key !== namespace.current)
+          if (!sendCurrent() || key !== namespace.current)
             return;
           setLive((space) => ({
             ...space,
@@ -1443,6 +1494,7 @@ export default function App() {
     attachmentId?: string,
     type = "text",
     text?: string,
+    onQueued?: () => void,
   ) => {
     e?.preventDefault();
     if (conversation?.readOnly) {
@@ -1541,6 +1593,7 @@ export default function App() {
     };
     try {
       await queueMessage(namespace.current, next, m);
+      onQueued?.();
       if (generation !== changing.current) return;
       setReply((current) => (current?.id === m.replyToId ? null : current));
       setLive((current) => ({
@@ -1781,10 +1834,41 @@ export default function App() {
       report(e);
     }
   };
-  const upload = async (file: File) => {
+  const captureAttachmentContext = (): AttachmentSendContext | undefined => {
+    const snapshot = authSnapshot(), auth = snapshot.auth, key = namespace.current, generation = changing.current, selection = currentSelection.current;
+    if (demo || !session || !auth?.userId || !auth.deviceId || !auth.familyId || !key) return;
+    const identity = { namespace: key, userId: auth.userId, deviceId: auth.deviceId, familyId: auth.familyId, restoreEpoch: auth.restoreEpoch };
+    const isCurrent = () => generation === changing.current && key === namespace.current && selection === currentSelection.current && authSnapshotCurrent(snapshot);
+    const context: AttachmentSendContext = {
+      identity, isCurrent,
+      enqueue: async entry => {
+        if (!isCurrent() || featureState.current.media !== true) throw Error("ATTACHMENT_CONTEXT_CHANGED");
+        const message = entry.message, latest = liveRef.current;
+        const next = { ...latest, outbox: [...latest.outbox.filter(value => value.clientMsgId !== message.clientMsgId), message], messages: { ...latest.messages, [message.conversationId]: [...(latest.messages[message.conversationId] ?? []).filter(value => value.clientMsgId !== message.clientMsgId), message] } };
+        await queueMessage(key, next, message, linkAttachmentEnqueue(context, entry, message));
+        if (!isCurrent()) return;
+        setLive(current => ({ ...current, outbox: [...current.outbox.filter(value => value.clientMsgId !== message.clientMsgId), message], messages: { ...current.messages, [message.conversationId]: [...(current.messages[message.conversationId] ?? []).filter(value => value.clientMsgId !== message.clientMsgId), message] } }));
+        setAttachmentRevision(value => value + 1);
+        await writeMessage(message, generation);
+      },
+      accepted: async (entry, message) => {
+        if (!isCurrent()) throw Error("ATTACHMENT_CONTEXT_CHANGED");
+        await acceptAttachmentMessage(context, message);
+        const removed = await acknowledgeOriginalOutbox(key, identity.userId, [{ clientMsgId: entry.clientMsgId, conversationId: entry.message.conversationId, originalBody: messagePayload(entry.message) }], isCurrent);
+        if (!isCurrent()) return;
+        if (removed.includes(entry.clientMsgId)) setLive(current => ({ ...current, outbox: current.outbox.filter(value => value.clientMsgId !== entry.clientMsgId), messages: { ...current.messages, [message.conversationId]: [...(current.messages[message.conversationId] ?? []).filter(value => value.clientMsgId !== entry.clientMsgId), message] } }));
+        setAttachmentRevision(value => value + 1);
+      },
+    };
+    return context;
+  };
+  const upload = async (file: File, recordingCurrent: () => boolean = () => true): Promise<boolean> => {
+    const generation = changing.current, key = namespace.current, selection = selected, snapshot = authSnapshot();
+    const isCurrent = () => generation === changing.current && key === namespace.current && currentSelection.current === selection && recordingCurrent() && (!session?.familyId || authSnapshotCurrent(snapshot));
+    if (!isCurrent() || !canSend || editing || busy) return false;
     if (file.size > 64 * 1024 * 1024) {
       setNotice(t("attachmentLimit"));
-      return;
+      return false;
     }
     if (demo) {
       const a = URL.createObjectURL(file);
@@ -1819,34 +1903,25 @@ export default function App() {
           [selected]: [...(s.messages[selected] ?? []), m],
         },
       }));
-      return;
+      return true;
     }
+    const context = captureAttachmentContext();
+    if (!context || !conversation || !me || !conversation.sendAdmission) return false;
     setBusy(true);
     try {
-      const form = new FormData();
-      form.append("file", file);
-      const r = await api<{ id: string }>(
-        "/media",
-        { method: "POST", body: form },
-        120000,
-      );
-      setBusy(false);
-      await send(
-        undefined,
-        r.id,
-        file.type.startsWith("image/")
-          ? "image"
-          : file.type.startsWith("audio/")
-            ? "audio"
-            : file.type.startsWith("video/")
-              ? "video"
-              : "file",
-        file.name,
-      );
+      const now = new Date().toISOString(), message: Message = { id: uid(), clientMsgId: uid(), conversationId: selected, senderId: me.id, type: file.type.startsWith("image/") ? "image" : file.type.startsWith("audio/") ? "audio" : file.type.startsWith("video/") ? "video" : "file", text: file.name, createdAt: now, updatedAt: now, version: "1", sequence: "0", deleted: false, reactions: [], pinned: false, favorite: false, pending: true, restoreEpoch: context.identity.restoreEpoch, sendAdmission: conversation.sendAdmission, replyToId: reply?.id, mentionedUserIds: [...mentionDraft.userIds], mentionAll: mentionDraft.all || undefined };
+      const preparation = new AttachmentSendActions({ ...context, isCurrent: () => context.isCurrent() && recordingCurrent() });
+      const entry = await preparation.prepare(file, message, reply ? reply.contentVersion ?? reply.version : undefined);
+      if (!context.isCurrent()) return true;
+      setAttachmentRevision(value => value + 1); setNotice(attachmentLabel(locale, "retained"));
+      // The strict Blob/manifest handoff owns subsequent work; closing the RAM preview cannot cancel it.
+      void new AttachmentSendActions(context).run(entry.requestId, true).catch(() => {}).finally(() => { if (context.isCurrent()) setAttachmentRevision(value => value + 1); });
+      return true;
     } catch (e) {
-      report(e);
+      if (isCurrent()) report(e);
+      return false;
     } finally {
-      setBusy(false);
+      if (generation === changing.current && key === namespace.current) setBusy(false);
     }
   };
   const openConversation = (c: Conversation) => {
@@ -1922,9 +1997,10 @@ export default function App() {
       if (request === peopleRequest.current) report(e);
     }
   };
-  const refreshMembers = async (id = selected) => {
+  const refreshMembers = async (id = selected, append = false) => {
     const generation = changing.current;
     if (demo) {
+      setMemberCursor("");
       setMembers(
         demoUsers
           .filter((user) => conversation?.memberIds.includes(user.id))
@@ -1933,11 +2009,14 @@ export default function App() {
       return;
     }
     try {
-      const result = await api<{ items: User[] }>(
-        "/conversations/" + encodeURIComponent(id) + "/members",
+      const after = append ? memberCursor : "";
+      const result = await api<{ items: User[]; nextCursor?: string }>(
+        "/conversations/" + encodeURIComponent(id) + "/members?limit=50" + (after ? "&after=" + encodeURIComponent(after) : ""),
       );
-      if (generation === changing.current && currentSelection.current === id)
-        setMembers(result.items ?? []);
+      if (generation === changing.current && currentSelection.current === id) {
+        setMembers(rows => append ? [...rows, ...(result.items ?? []).filter(item => !rows.some(row => row.id === item.id))] : result.items ?? []);
+        setMemberCursor(result.nextCursor ?? "");
+      }
     } catch (error) {
       if (generation === changing.current) report(error);
     }
@@ -1998,12 +2077,13 @@ export default function App() {
           setMembers((rows) => rows.filter((user) => user.id !== target!.id));
       } else {
         const path = "/conversations/" + encodeURIComponent(current.id);
-        if (action === "rename" || action === "transfer") {
+        if (action === "transfer") throw new SyncProtocolError("GROUP_PERMISSION_CHANGED");
+        if (action === "rename") {
           const updated = await api<Conversation>(
             path,
             json(
               "PATCH",
-              action === "rename" ? { title } : { ownerId: target!.id },
+              { title },
             ),
           );
           if (generation !== changing.current) return;
@@ -3058,6 +3138,15 @@ export default function App() {
               <DataExportPanel key={namespace.current + "|data-export|" + authSnapshot().auth?.familyId}
                 context={captureDataExportContext()} enabled={!demo && features.chat_export === true} locale={locale} t={t}
                 onConnect={() => setModal("connect")} onReload={() => void sync()} />
+              <MigrationEntry context={captureGroupContext()} enabled={!demo && features.authoritative_sync === true && syncGuard.current.ready}
+                observations={JSON.stringify([space.conversations.map(row => [row.id, row.membershipGeneration, row.state, row.readOnly]), Object.values(space.messages).flat().filter(row => row.forwarded || row.deleted).map(row => [row.id, row.contentVersion, row.deleted, row.contentUnavailable, row.forwardUnavailable])])}
+                administrator={session?.user.admin === true} locale={locale} t={t} onLogin={() => setModal("signIn")} onReload={() => void sync()} />
+              <ReceiptEntry context={captureGroupContext()} enabled={!demo && features.authoritative_sync === true && syncGuard.current.ready}
+                locale={locale} t={t} onLogin={() => setModal("signIn")} />
+              <PasswordChangePanel context={capturePasswordChangeContext()} enabled={!demo && features.own_password_change === true}
+                administrator={session?.user.admin === true} locale={locale} t={t} onLogin={() => setModal("signIn")} />
+              <AccountDeletionPanel context={captureAccountDeletionContext()} enabled={!demo && features.own_account_deletion === true}
+                administrator={session?.user.admin === true} locale={locale} t={t} onLogin={() => setModal("signIn")} />
               {!demo && features.reports && (
                 <button
                   className="setting-line"
@@ -3285,6 +3374,7 @@ export default function App() {
                                   name={m.text}
                                   version={m.version}
                                   t={t}
+                                  playback={{ namespace: demo ? "" : namespace.current, messageId: m.id, conversationId: m.conversationId, contentVersion: m.contentVersion ?? m.version, familyId: session?.familyId, forwarded: m.forwarded, locale }}
                                 />
                               ) : (
                                 <p>{messageText(m)}</p>
@@ -3481,6 +3571,7 @@ export default function App() {
                   </IconButton>
                 </div>
               )}
+              <div className="composer-accessories">
               <div className="composer-tools">
                 <IconButton
                   label={t("attachment")}
@@ -3515,6 +3606,12 @@ export default function App() {
                   {t(conversation.kind === "group" ? "group" : "direct")}
                 </span>
               </div>
+              <AudioRecorderPanel contextKey={[demo ? "demo" : namespace.current, session?.familyId ?? "", selected, reply?.id ?? "", editing?.id ?? ""].join("|")}
+                disabled={busy || !canSend || !!editing || (!demo && features.media !== true)} locale={locale} onSend={upload} />
+              </div>
+              <AttachmentSendPanel context={demo ? undefined : captureAttachmentContext()} revision={attachmentRevision} locale={locale}
+                conversationName={id => { const source = space.conversations.find(value => value.id === id); return source ? conversationLabel(source) : id; }} />
+              <div className="composer-draft">
               <textarea
                 ref={composer}
                 name="message"
@@ -3547,6 +3644,7 @@ export default function App() {
                   {busy ? t("working") : t("send")}
                   <Send size={16} />
                 </button>
+              </div>
               </div>
               <input
                 ref={fileInput}
@@ -3620,6 +3718,10 @@ export default function App() {
               )}
               onReload={() => void refreshMembers()}
               onAction={groupAction}
+              hasMore={!!memberCursor}
+              onLoadMore={() => void refreshMembers(conversation.id, true)}
+              governance={!demo ? <GroupGovernancePanel context={captureGroupContext()} conversationId={conversation.id} members={members}
+                locale={locale} t={t} onMessage={setNotice} onChanged={async () => { await sync(); await refreshMembers(conversation.id); }} /> : undefined}
             />
           ) : (
             <>
@@ -3852,7 +3954,19 @@ export default function App() {
                         {t(m)}
                       </button>
                     ))}
+                  <button onClick={() => setModal("accountDeletion")}>{accountDeletionLabel(locale, "title")}</button>
                 </div>
+              </>
+            ) : modal === "accountDeletion" ? (
+              <>
+                <h2 id="modal-title">{accountDeletionLabel(locale, "title")}</h2>
+                <AccountDeletionPanel context={captureAccountDeletionContext()} enabled={!demo && features.own_account_deletion === true}
+                  administrator={session?.user.admin === true} locale={locale} t={t} onLogin={() => setModal("signIn")} />
+              </>
+            ) : modal === "joinGroup" ? (
+              <>
+                <h2 id="modal-title">{groupLabel(locale, "joinByCode")}</h2>
+                <GroupJoinPanel context={captureGroupContext()} locale={locale} t={t} onChanged={async () => { await sync(); }} onLogin={() => setModal("signIn")} />
               </>
             ) : modal === "connect" ? (
               <>
@@ -3906,6 +4020,7 @@ export default function App() {
                 <h2 id="modal-title">
                   {t(modal === "addMember" ? "members" : "newChat")}
                 </h2>
+                {modal === "newChat" && <button type="button" className="secondary" onClick={() => setModal("joinGroup")}>{groupLabel(locale,"joinByCode")}</button>}
                 <label className="search">
                   <Search size={17} />
                   <input

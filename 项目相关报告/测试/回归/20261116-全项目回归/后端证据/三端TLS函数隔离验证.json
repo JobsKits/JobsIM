@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "incompleteLeafPreserved": true,
+      "failedGenerationStagedOnly": true,
+      "platformImplementation": "MacOS",
+      "executedOn": "MacOS",
+      "actualTLSFunction": true,
+      "strictPythonTLS": true,
+      "validExistingFilesBytePreserved": true,
+      "legacyLeafRejectedAndBytePreserved": true,
+      "nativeTargetOS": true
+    },
+    {
+      "incompleteLeafPreserved": true,
+      "failedGenerationStagedOnly": true,
+      "platformImplementation": "Linux",
+      "executedOn": "MacOS",
+      "actualTLSFunction": true,
+      "strictPythonTLS": true,
+      "validExistingFilesBytePreserved": true,
+      "legacyLeafRejectedAndBytePreserved": true,
+      "nativeTargetOS": false
+    },
+    {
+      "incompleteLeafPreserved": true,
+      "failedGenerationStagedOnly": true,
+      "platformImplementation": "WindowsOS",
+      "executedOn": "MacOS",
+      "actualTLSFunction": true,
+      "strictPythonTLS": true,
+      "validExistingFilesBytePreserved": true,
+      "legacyLeafRejectedAndBytePreserved": true,
+      "nativeTargetOS": false
+    }
+  ],
+  "globalCAChanged": false,
+  "testRoot": "/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/TLS-5421fe56f1"
+}

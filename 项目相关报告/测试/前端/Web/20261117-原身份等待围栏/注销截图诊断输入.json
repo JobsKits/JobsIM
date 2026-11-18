@@ -1,0 +1,9 @@
+{
+  "originalScript": "测试/前端/Web/account-deletion.cjs/account-deletion.cjs",
+  "originalSHA": "a3d10b3e5ed3b930523936f68d52ee12db2e18ee4ee532705f8abe4c818a5fce",
+  "diagnosticSHA": "7b3fb8347a6abb1160f367788bca91cacd770dc222f158b79a50abd1c74a22c5",
+  "onlyChanges": [
+    "root derived from process cwd for this report-local diagnostic",
+    "wait160ms, record DOM panel count/rectangles and fixture-only screenshot after viewport change"
+  ]
+}

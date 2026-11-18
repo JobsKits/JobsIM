@@ -92,6 +92,9 @@ AND pending_operation_id=$2 AND credential_generation=$3 AND security_version=$4
 	if err = a.drainPersonalExportInvalidations(ctx); err != nil {
 		return err
 	}
+	if err = a.drainMigrations(ctx); err != nil {
+		return err
+	}
 	_, err = a.DB.Exec(ctx, `UPDATE auth.password_changes SET state='completed',updated_at=now() WHERE user_id=$1 AND request_id=$2 AND state='committed' AND restore_epoch=$3`, value.User, value.Request, value.Epoch)
 	return err
 }

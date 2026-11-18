@@ -1,0 +1,31 @@
+✔ per-store context remains distinct from legacy transport false and runtime readiness (1.738875ms)
+✔ measured approval scope survives guard and family refresh, rejects another physical store or build (0.302292ms)
+✔ rc1 and ro1 delivery generation and manifest are an inseparable original pair (0.698083ms)
+✔ stored original receipt intent rejects secrets and altered body, result tuple cannot be substituted (0.289875ms)
+✔ historical qualification target is still current message even when old manifest expired, never infer originalTarget (0.256083ms)
+✔ lost body ACK keeps exact nonce durable; cold reconciliation and repeated receive perform only original lookup (1.240416ms)
+✔ unknown original cannot borrow successor family for explicit retry (0.5805ms)
+✔ approval withdrawal preserves lookup but blocks unseen mutation, server profiles alone cannot qualify (0.705833ms)
+✔ a late result after lifecycle stop never marks the original receipt recorded (0.402833ms)
+✔ automatic coordinator defaults off and never treats a cursor as an ACK (2.415ms)
+✔ automatic backfill never borrows a new qualification into old frozen targets (0.332958ms)
+✔ automatic new body mutates once and unknown subsequent rounds only query the original (0.55625ms)
+✔ automatic candidate cannot silently rebase an edited content version (0.147166ms)
+✔ actual repository commits exact raw body and original intent atomically, reopens and guards CAS (28.779167ms)
+✔ injected intent disk failure rolls back the accompanying plaintext body (25.405416ms)
+✔ global clears original body and proof while retaining a terminal nonsecret responsibility (26.116625ms)
+✔ zero-byte ordinary original has a real descriptor and SHA(empty); object and intent share one transaction (26.343458ms)
+✔ same-process probe cannot qualify and a later process must recover original durable probe rows (29.352ms)
+✔ storage result accepts both legacy seven metadata and paired new qualification flags (0.2865ms)
+✔ build upgrade can read context, approved new profiles and original facts before any new ACK qualification (0.284125ms)
+✔ storage fact canonicalizes legitimate content/object seven and nine fields without granting current qualification (0.21275ms)
+✔ storage fact rejects missing metadata, unknown fields, half flags, nonbool, false qualification and contract mismatch (0.375125ms)
+✔ first storage submission and original lookup both persist canonical seven across either server format (0.6475ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 250.170208

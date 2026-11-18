@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-17T15:37:20+0800",
+  "sameDeployment": true,
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 200,
+      "sha256": "a02f39dfd6a3e328d094e80d5f640e15650e9ac1d8a641b2c75dc929b0ea138f"
+    },
+    {
+      "path": "/api/bootstrap",
+      "status": 200,
+      "sha256": "db9939189bd1dbb99d63d9f77e677954610a6958fbd6a40d1b6b5756fc4ad68d"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "bcddb207f7c589e3d6310d1cdd37b70ca17568e4485184e8bdd3802e408c2379"
+    }
+  ]
+}

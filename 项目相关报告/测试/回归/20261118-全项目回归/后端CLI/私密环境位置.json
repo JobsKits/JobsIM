@@ -1,0 +1,26 @@
+{
+  "environmentFile": "/Users/jobs/Library/Application Support/JobsIM/Integration/dbd733dd-fa9e-458f-8946-4214be40546b/Safety/test-environment.json",
+  "secretValuesIncluded": false,
+  "ports": [
+    62381,
+    62382
+  ],
+  "steps": [
+    {
+      "name": "PGMain",
+      "step": "pg_ctl",
+      "exit": 0
+    },
+    {
+      "name": "PGJournal",
+      "step": "initdb",
+      "exit": 0
+    },
+    {
+      "name": "PGJournal",
+      "step": "pg_ctl",
+      "exit": 0
+    }
+  ],
+  "setupFirstAttempt": "pg_ctl -o unquoted spaced Unix socket path rejected before listen; retry disables Unix sockets"
+}

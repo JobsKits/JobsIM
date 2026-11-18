@@ -1,0 +1,130 @@
+{
+  "at": "2026-11-17T04:48:06.323Z",
+  "counterSHA256": "27d6f75adfc1bd1351d92476650200833108d260ebe20cbb7de19332bff34ba4",
+  "statistics": {
+    "at": "2026-11-17T04:48:06.070Z",
+    "totals": {
+      "business": {
+        "files": 448,
+        "lines": 101972,
+        "percent": 63.42
+      },
+      "tests": {
+        "files": 237,
+        "lines": 51221,
+        "percent": 31.86
+      },
+      "configuration": {
+        "files": 49,
+        "lines": 7601,
+        "percent": 4.73
+      }
+    },
+    "totalLines": 160794
+  },
+  "sourceFileCount": 734,
+  "changedSources": [],
+  "sameReportFileList": true,
+  "HTTP": {
+    "sourceFiles": 134,
+    "counts": {
+      "ordinary": 134,
+      "admin": 11,
+      "experimental": 5,
+      "health": 1
+    },
+    "totalExperimentalOn": 151,
+    "totalExperimentalOff": 146
+  },
+  "iosConcreteControllers": [
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMAccountDeletionVC/IMAccountDeletionVC.swift",
+      "class": "IMAccountDeletionVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift",
+      "class": "IMAuthVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMAvatarVC/IMAvatarVC.swift",
+      "class": "IMAvatarVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift",
+      "class": "IMChatVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMContactRequestsVC/IMContactRequestsVC.swift",
+      "class": "IMContactRequestsVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMDataExportVC/IMDataExportVC.swift",
+      "class": "IMDataExportVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMDevicesVC/IMDevicesVC.swift",
+      "class": "IMDevicesVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMGroupGovernanceVC/IMGroupGovernanceVC.swift",
+      "class": "IMGroupGovernanceVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift",
+      "class": "IMGroupVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift",
+      "class": "IMListVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMMigrationVC/IMMigrationVC.swift",
+      "class": "IMMigrationVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMPasswordChangeVC/IMPasswordChangeVC.swift",
+      "class": "IMPasswordChangeVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMPersonalStateVC/IMPersonalStateVC.swift",
+      "class": "IMPersonalStateVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMReceiptVC/IMReceiptVC.swift",
+      "class": "IMReceiptVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMReportVC/IMReportVC.swift",
+      "class": "IMReportVC"
+    },
+    {
+      "file": "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift",
+      "class": "IMSettingsVC"
+    }
+  ],
+  "history": [
+    {
+      "source": "项目相关报告/项目统计/报告.json",
+      "path": "历史/20261117-2026-11-17T044805381Z-读取前-报告.json",
+      "sha256": "2b38ab8b9eefe9e9653986c0088d22ac8d4c8ed68219eb3473b120430150a6cc"
+    },
+    {
+      "source": "项目相关报告/项目统计/HTTP路由源码快照.json",
+      "path": "历史/20261117-2026-11-17T044805381Z-读取前-HTTP路由源码快照.json",
+      "sha256": "51525b5a0f634e89a9231c433a18cdf316513caf95b51fc366830077a88e879b"
+    },
+    {
+      "source": "项目相关报告/项目统计/README.md",
+      "path": "历史/20261117-2026-11-17T044805381Z-读取前-README.md.txt",
+      "sha256": "b5386f89abe3a8c8bf1d54e7f2af475202df504fb6a1ac49ad416580f01c16d6"
+    },
+    {
+      "source": "README.md",
+      "path": "历史/20261117-2026-11-17T044805381Z-读取前-根README.md.txt",
+      "sha256": "e1513beaaf43c9661821bab2a3845e5a70c9576204876e6bb4fd7ce72ddad0f1"
+    }
+  ],
+  "build": false,
+  "service": false,
+  "stageOrCommit": false
+}

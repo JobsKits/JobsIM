@@ -1,0 +1,22 @@
+PASS exact string counters and RFC3339 offset stay intact
+PASS wrong principal live response cannot stage a write
+PASS a changed cloud version cannot silently replace the value the user reviewed
+PASS lost response resumes exact original body after cold coordinator
+PASS completed action checks current again without rewriting
+PASS unknown pending result alone never resends
+PASS capability withdrawn between proof and write stops original mutation
+PASS queued old identity cannot borrow a later account
+PASS server read UUID is independent and only observed IDs are cleared
+PASS observed membership cannot be rebound by a fresh read GET
+PASS definite CAS rejection plus exact negative result retains an immutable rejected intent
+PASS manual unread retains independent generation CAS
+PASS retired draft is terminal and recovery does not replace local input
+PASS prepared draft remains pending and explicit retry retains nonce and proofs
+PASS explicit adopt is local CAS and never changes the message outbox
+PASS adopt CAS includes structured mentions and clears old mentions without changing outbox
+PASS S1 upgrade archives original responsibility without replacing physical store or queue
+PASS personal metadata and cursor roll back together on wrong scope
+PASS owner clock stays separate from object version and raw origin conflicts roll back
+PASS reply admissions are excluded from ordinary persisted message views
+PASS all ten languages provide every own-state UI label
+PASS S2 active view does not clear unseen holes or legacy unknown creation order

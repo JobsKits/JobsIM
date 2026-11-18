@@ -23,6 +23,8 @@ import {
 } from "./AuthSession";
 import { bindMessageNamespace, messageFactRevision, projectMessageResponse, refreshPrivateMediaFacts } from "./MessageFacts";
 import { exportFileName, exportZIPLimit, validateExportZIP } from "./DataExportArchive";
+import { passwordChangeFamilyBlocked } from "./PasswordChangeStore";
+import { deletionFamilyBlocked } from "./AccountDeletionStore";
 
 let csrf = "";
 let requestContext = new AbortController();
@@ -276,6 +278,11 @@ async function request(
   ]);
   let snapshot = authSnapshot();
   const initial = initialPaths.has(path);
+  if (!initial && !publicPaths.has(path) && path !== "/auth/logout" && await passwordChangeFamilyBlocked(snapshot.auth?.deploymentId, snapshot.auth?.familyId))
+    throw new ApiError(409, "PASSWORD_CHANGE_RESULT_UNKNOWN", "Check the original password change before using this family");
+  if (!initial && !publicPaths.has(path) && path !== "/auth/logout" && await deletionFamilyBlocked(snapshot.auth?.deploymentId, snapshot.auth?.familyId))
+    throw new ApiError(409, "ACCOUNT_DELETION_RESULT_UNKNOWN", "Check the original deletion before using this family");
+  if (!initial && !publicPaths.has(path)) checkSnapshot(snapshot, signal);
   if (
     authProtocol() &&
     !initial &&
@@ -286,6 +293,7 @@ async function request(
     if (!authStorageValid()) throw boundary("AUTH_STORAGE_UNAVAILABLE");
     if (authBlocked()) throw boundary(authBlocked());
     await waitForRefresh(snapshot, signal);
+    checkSnapshot(snapshot, signal);
     snapshot = authSnapshot();
     if (!snapshot.auth && (!contextPaths.has(path) || pendingInitial()))
       throw boundary("AUTH_REAUTH_REQUIRED");
@@ -304,6 +312,9 @@ async function request(
       error.code === "ACCESS_EXPIRED"
     ) {
       await refreshSession(snapshot);
+      // Same-family rotation preserves the identity revision; another login
+      // must not take ownership of this call's original body after the wait.
+      if (snapshot.auth) checkSnapshot(snapshot, signal);
       snapshot = authSnapshot();
       signal.throwIfAborted();
       response = await raw(path, options, snapshot, signal);
@@ -352,6 +363,11 @@ async function jsonResponse<T>(
     if (metadata) {
       if (snapshot.auth && metadata.familyId !== snapshot.auth.familyId)
         throw boundary("AUTH_CONTEXT_CHANGED");
+      if (await passwordChangeFamilyBlocked(metadata.deploymentId, metadata.familyId))
+        throw new ApiError(409, "PASSWORD_CHANGE_RESULT_UNKNOWN", "Original password change requires explicit reconciliation");
+      if (await deletionFamilyBlocked(metadata.deploymentId, metadata.familyId))
+        throw new ApiError(409, "ACCOUNT_DELETION_RESULT_UNKNOWN", "Original account deletion requires explicit reconciliation");
+      checkSnapshot(snapshot, signal);
       rememberPublicAuth(metadata);
       confirmInitial(metadata.familyId);
     }
@@ -404,6 +420,30 @@ export async function apiBytes(
       throw new ApiError(409, "MEDIA_CONTEXT_CHANGED", "Media visibility changed");
   }
   return data;
+}
+export async function apiBoundedBytes(path: string, limit: number, options: RequestInit = {}, timeout = 30000): Promise<Uint8Array<ArrayBuffer>> {
+  if (!Number.isSafeInteger(limit) || limit < 0 || limit > 128 * 1024 * 1024) throw new ApiError(413, "BINARY_LIMIT", "A bounded binary request is required");
+  const factsRevision = messageFactRevision();
+  const { response, snapshot, signal } = await request(path, options, timeout);
+  const declared = response.headers.get("Content-Length"), reader = response.body?.getReader();
+  if (!reader) throw new ApiError(503, "BINARY_UNAVAILABLE", "Original binary response unavailable");
+  const parts: Uint8Array<ArrayBuffer>[] = []; let size = 0;
+  try {
+    if (declared !== null && (!/^(0|[1-9]\d*)$/.test(declared) || Number(declared) > limit)) throw new ApiError(413, "BINARY_LIMIT", "Binary response exceeds its bound");
+    while (true) {
+      checkSnapshot(snapshot, signal); const chunk = await reader.read(); checkSnapshot(snapshot, signal);
+      if (chunk.done) break; size += chunk.value.byteLength;
+      if (size > limit) throw new ApiError(413, "BINARY_LIMIT", "Binary response exceeds its bound");
+      parts.push(new Uint8Array(chunk.value));
+    }
+    if (declared !== null && Number(declared) !== size) throw new ApiError(503, "BINARY_INCOMPLETE", "Original binary response is incomplete");
+    if (path.startsWith("/media/") || /^\/messages\/[^/]+\/attachment$/.test(path)) {
+      await refreshPrivateMediaFacts(snapshot.auth, () => !signal.aborted && (!authProtocol() || authSnapshotCurrent(snapshot)));
+      if (factsRevision !== messageFactRevision()) throw new ApiError(409, "MEDIA_CONTEXT_CHANGED", "Media visibility changed");
+    }
+    checkSnapshot(snapshot, signal);
+    const bytes = new Uint8Array(size); let at = 0; for (const part of parts) { bytes.set(part, at); at += part.length; } return bytes;
+  } catch (error) { await reader.cancel().catch(() => {}); throw error; }
 }
 export async function apiFile(
   path: string,

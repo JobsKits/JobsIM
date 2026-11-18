@@ -1,0 +1,28 @@
+✔ per-store context remains distinct from legacy transport false and runtime readiness (8.826333ms)
+✔ measured approval scope survives guard and family refresh, rejects another physical store or build (0.8735ms)
+✔ rc1 and ro1 delivery generation and manifest are an inseparable original pair (3.985792ms)
+✔ stored original receipt intent rejects secrets and altered body, result tuple cannot be substituted (0.620042ms)
+✔ historical qualification target is still current message even when old manifest expired, never infer originalTarget (0.432541ms)
+✔ lost body ACK keeps exact nonce durable; cold reconciliation and repeated receive perform only original lookup (5.221291ms)
+✔ unknown original cannot borrow successor family for explicit retry (1.38775ms)
+✔ approval withdrawal preserves lookup but blocks unseen mutation, server profiles alone cannot qualify (1.469459ms)
+✔ a late result after lifecycle stop never marks the original receipt recorded (2.501625ms)
+✔ automatic coordinator defaults off and never treats a cursor as an ACK (10.331667ms)
+✔ automatic backfill never borrows a new qualification into old frozen targets (0.637584ms)
+✔ automatic new body mutates once and unknown subsequent rounds only query the original (0.960208ms)
+✔ automatic candidate cannot silently rebase an edited content version (0.435042ms)
+✔ actual repository commits exact raw body and original intent atomically, reopens and guards CAS (86.174333ms)
+✔ injected intent disk failure rolls back the accompanying plaintext body (78.74025ms)
+✔ global clears original body and proof while retaining a terminal nonsecret responsibility (83.880833ms)
+✔ zero-byte ordinary original has a real descriptor and SHA(empty); object and intent share one transaction (102.679709ms)
+✔ same-process probe cannot qualify and a later process must recover original durable probe rows (110.018417ms)
+✔ storage result accepts both legacy seven metadata and paired new qualification flags (1.181667ms)
+✔ build upgrade can read context, approved new profiles and original facts before any new ACK qualification (1.064584ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 816.207833

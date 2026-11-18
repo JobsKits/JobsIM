@@ -11,14 +11,17 @@
 - [一、使用](#use)
 - [二、联系人与群管理](#governance)
 - [三、Outbox与范围](#outbox)
-- [schema2本人状态与云草稿](#jobs-toc-heading-5)
-- [四、搜索、收藏与群协作](#collaboration)
-- [五、刷新与系统安全凭据](#refresh)
-- [六、权威快照与增量](#authoritative-sync)
-- [七、独立正文收讫](#content-receipts)
-- [八、完整附件收讫](#object-receipts)
-- [九、正式本人数据导出](#personal-data-export)
-- [十、本人主动改密](#own-password-change)
+- [四、schema2本人状态与云草稿](#schema2%E6%9C%AC%E4%BA%BA%E7%8A%B6%E6%80%81%E4%B8%8E%E4%BA%91%E8%8D%89%E7%A8%BF)
+- [五、搜索、收藏与群协作](#collaboration)
+- [六、刷新与系统安全凭据](#refresh)
+- [七、权威快照与增量](#authoritative-sync)
+- [八、独立正文收讫](#content-receipts)
+  - [当前物理库的合格收讫协商](#jobs-toc-heading-10)
+- [九、完整附件收讫](#object-receipts)
+- [十、正式本人数据导出](#personal-data-export)
+- [十一、本人主动改密](#own-password-change)
+- [十二、本人注销](#own-account-deletion)
+- [十三、普通端侧迁移增量](#personal-migration)
 
 </details>
 <!-- jobs-toc:end -->
@@ -53,12 +56,17 @@ jobsim --server https://实例入口 --ca /该实例受控CA.pem login
 | `members 会话ID` | 读取当前成员及每人的 membershipGeneration |
 | `add-member 会话ID 用户ID` | 按后端权限加人；未知结果先用 members 核对，不自动重放 |
 | `remove-member 会话ID 用户ID 原成员代际` | 必须明确提供该成员的原代际，不用最新代际替换旧请求；移除本人执行与 leave 相同的本地撤回 |
-| `rename 会话ID 新群名`、`transfer 会话ID 新群主ID` | 分别只发送 title／ownerId 字段；群主须先转让再离群 |
+| `rename 会话ID 新群名` | 只发送title字段；转让使用下方带完整原版本和代际的命令 |
+| `transfer 会话ID 新群主ID 群版本 本人成员代际 本人角色代际 目标成员代际 目标角色代际` | 固定原观察及nonce后再写；拒绝不带版本的旧转让形式，群主须先转让再离群 |
 | `leave 会话ID 本人原成员代际` | 先核对当前群快照仍是该原代际，再事务冻结该群待发、撤本机该群历史／游标；私人草稿保留。旧离群意图遇重入新代际时不触碰新的本地数据 |
 
 好友申请和重新开放申请的原操作会跨进程恢复；成功事实与当前关系分开显示，旧“曾开放”不会冒充当前已开放。网络失败／响应无法解析保留 pending；明确 4xx（429 除外）记失败，用户核对关系后才能发起新的明确意图；后台不重试。实例或恢复代际变化冻结旧操作。
 
 群改名、转让、成员变更、删除好友、拉黑和退群的写请求每次命令只发送一次；未知结果不能推断服务端已执行。此时本地冻结／退群撤回仍保留，先通过 relationship／members／conversations 核对当前事实。冻结原因独立保存为 CONTACT_REMOVED、PEER_BLOCKED、CONVERSATION_LEFT、SEND_ADMISSION_CHANGED 或 RESTORE_EPOCH_CHANGED，原消息 payload／sendAdmission／ID／摘要均保留。
+
+群治理还提供`group-policy 会话ID`、`group-change 会话ID 群版本 本人成员代际 本人角色代际 settings|mute|role|dissolve | JSON_CHANGES`，以及`group-invites`／`group-applications`分页、`create-invite`／`revoke-invite`／`group-approve`／`group-reject`。`invite-code 会话ID 邀请ID`只在终端显示当前邀请码，`join-group 原邀请码`固定原部署及邀请；邀请token、OTP和step-up证明仅RAM，不入SQLite。`group-recover 会话ID 现有继任者ID 群版本 目标成员代际`要求独立本地运营授权与本次真实MFA，不借普通群主转让权限。
+
+`group_intents`先耐久保存原nonce／route／完整body／family，再发写请求；`group-operations`列原责任，`group-check 原操作ID`只查原结果，`group-retry 原操作ID`显式沿原单续跑。后继family和缺family的legacy记录不创建旧操作，回执必须匹配类型化目标。当前[group_governance_test.go](../../../测试/CLI/group_governance_test.go)5个顶层专项均包含在[完整135 PASS／0 FAIL／2环境SKIP](../../../项目相关报告/实现进度/20261116-剩余能力闭环/逐store收讫证据/CLI-升级门禁最终-20261117-142600/完整本地结果.json)内，覆盖恢复MFA仅RAM、原许可／nonce纯查、邀请码不落库、SQL失败零写及后继family／错误typed目标拒绝。HTTP为注入，真实群治理HTTPS／管理员MFA及目标系统秘密库另验。
 
 当前源码将 `reconcile 原clientMsgId` 统一接到原会话路由的只读 `message-results`，始终发送原完整 body，核对完整 Message、本人的 sender／clientMsgId／conversationId，并在 SQLite 事务内重比原 payload_hash 后确认。同步流或历史里的相同 clientMsgId 不确认 Outbox。404、409、网络未知或坏 200 保留原行；冻结消息不重建、不补最新资格。治理旧报告的历史分页查找仅证明当时固定 binary，不能追认为本轮源码已实跑。
 
@@ -79,7 +87,7 @@ jobsim --server https://实例入口 --ca /该实例受控CA.pem login
 
 [普通转发限定验证](../../../项目相关报告/测试/CLI/20261115-普通转发/README.md)覆盖原引用入队、两类未知结果、原proof冻结和转发缓存无正文。`download-forward 消息ID | 目标路径`每次重新鉴权下载；普通展示去除临时proof，转发离线缓存保持占位。明确下载的本机文件不承诺远程撤销。
 
-## <span id="jobs-toc-heading-5" data-jobs-toc="v2">schema2本人状态与云草稿</span><!-- jobs-toc:heading-end -->
+## 四、<span id="schema2本人状态与云草稿">schema2本人状态与云草稿</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 普通`sync`在当前实例明确支持`authoritative_sync`／`sync_jetstream`／`sync_self_state`时自动选择协议schema2，不要求用户先理解schema。S1旧责任的control、引用、事件和页暂存在同一SQLite事务按旧stream封存，新流从完整快照开始；原物理UUID、认证32hex绑定、namespace、Outbox原字节、终态和清理责任保留。已有S2遇能力消失拒绝降级；`sync-schema 2`供显式诊断，不能变成空库继承旧设备资格的入口。继续使用本地数据库schema4，新增`sync_stream_archive`／`self_operations`，协议schema号不等于数据库schema号。
 
@@ -110,7 +118,7 @@ jobsim --server https://实例入口 --ca /该实例受控CA.pem login
 | cloud-draft／采纳／恢复 | self_operations原method／route／body／hash；dr1／da1不进普通展示／缓存，独立本地输入不被旧结果覆盖 | 文本、回复、global仅失效reply、清除及本地CAS实际通过；retired恢复文本仅本地源规则，未做本轮真故障注入 |
 | self-operations／resume-self | requestId与server operationId分开，prepared／retired／applied分开，完成后也纯查当前标记 | 55本地与13真实链包含current=false；未注入真实丢响应／同family重启 |
 
-## 四、<span id="collaboration">搜索、收藏与群协作</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
+## 五、<span id="collaboration">搜索、收藏与群协作</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
 
 | 命令 | 输入与结果 |
 | --- | --- |
@@ -129,7 +137,7 @@ jobsim --server https://实例入口 --ca /该实例受控CA.pem login
 
 成员提及需要实时 mentions／send_admission，@所有人还需要 role_admission 和原角色快照；旧缺保护只能只读原结果。明确成员／资格拒绝永久冻结，429／暂时策略失败保留原意图。公告原操作的 requestId、CAS、成员／角色代际、源 contentVersion 和期限保持不变；未知不能被新操作覆盖，已知失效被冻结后才允许用户另建新意图。恢复代际变化冻结旧操作。真实 HTTPS 与受控丢响应／SQL 故障的边界分别见报告，不将局部测试视为完整 I 验收。
 
-## 五、<span id="refresh">刷新与系统安全凭据</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
+## 六、<span id="refresh">刷新与系统安全凭据</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
 
 默认使用[系统凭据适配](./原生助手/Keychain/README.md)：macOS随包自有Swift Keychain助手；Windows Generic Credential Manager／本机持久；Linux系统Secret Service的secret-tool。AT／RT及精确family／generation／UTC期限作为单项安全记录原子替换，普通SQLite只存非秘密初始意图、完整退休链、family和unknown／待撤销责任。Go仍CGO关闭；既有x/sys现为直接使用，未引入新第三方包装库。缺助手、错误签名／摘要、锁定或系统拒绝不写明文文件、环境变量或参数；交互终端可明确输入yes选择本进程临时模式，无人值守失败。
 
@@ -137,7 +145,7 @@ jobsim --server https://实例入口 --ca /该实例受控CA.pem login
 
 quit／logout立即停本端，尽力删除该安全存储会话条目并撤原family；临时会话没有写入OS条目，只停其运行内存与服务器家族。离线或响应未知保留非秘密待撤销，重启本人新证明先退休旧family。普通SQLite写失败也不能短路安全库删除和在线撤销。当前[刷新报告](../../../项目相关报告/测试/CLI/20261115-刷新家族/README.md)分别记录31组本机测试、真实HTTPS协调器和实际TTY限程会话；Mac系统库正向写未通过，Win／Linux仅amd64跨编译。正式签名／应用授权与目标系统服务仍须分别验证，不把构建或受限模式写成三系统／全I验收。
 
-## 六、<span id="authoritative-sync">权威快照与增量</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
+## 七、<span id="authoritative-sync">权威快照与增量</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
 
 最初的[源码检查点](../../../项目相关报告/测试/CLI/20261116-权威同步/README.md)原样保留。资源恢复后的[本地编译回归](../../../项目相关报告/测试/CLI/20261116-权威同步编译回归/20261116-113743-192d48/README.md)已完成 MacOS arm64 Go 构建及正式 overlay 运行器：45 个顶层本地测试通过（旧 31＋新 sync 14），0 失败，真实 HTTPS／原生凭据库 2 项按本轮范围跳过。仅新隔离 binary，不更新旧发行产物；该本地轮未执行真实服务；后续固定57专项见本节末尾，跨系统原生仍未验证。
 
@@ -155,7 +163,7 @@ quit／logout立即停本端，尽力删除该安全存储会话条目并撤原f
 
 同一权威同步候选另完成[Linux／Windows amd64 离线交叉编译](../../../项目相关报告/测试/CLI/20261116-权威同步交叉编译/20261116-123709-093a23/README.md)，CGO=0；19 项 Go／模块输入与上述 MacOS／HTTPS binary 相同，无源码改动。只验证 ELF／PE 产物及编译兼容，未运行目标系统程序或凭据库，不能称 Windows／Linux 原生通过。
 
-## 七、<span id="content-receipts">独立正文收讫</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
+## 八、<span id="content-receipts">独立正文收讫</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
 
 该切片使用[后端第十节](../../后端/Go/接口契约/README.md#durable-content-receipts)，需当前实例实时声明`durable_receipt_protocol`、`authoritative_sync`和`sync_jetstream`。先正常`sync`登记当前物理库；默认未获存储批准，不自报合格。保持本地schema4、原认证32hex绑定及独立physical UUID，不换device或旧队列命名空间。
 
@@ -165,12 +173,29 @@ quit／logout立即停本端，尽力删除该安全存储会话条目并撤原f
 | `storage-declare PROFILE_ID BUILD_SHA256 VERIFICATION_SHA256` | 显式声明部署者已批准的构建／存储验证报告。核本地可执行文件SHA与WAL／FULL，原PUT body／nonce先入`storage_declarations`再HTTP；已有未收口声明须沿原ID续跑 |
 | `receive-text 消息ID` | 当前普通纯文本challenge核原bodyEnvelope字节SHA、完整Message、scope／本人／device／store／epoch／qualification／permission及有效期；同SQLite事务保存正文与`receipt_outbox`原nonce／body／摘要，再查原结果及尝试首写 |
 | `receipts` | 只列原请求ID、类型、消息ID、epoch和状态，不打印正文、rc1、原body或临时许可 |
-| `reconcile-receipt 原请求ID` | 普通正文始终以完整原body调用只读receipt-results；404／503／坏200保留原意图，不创建收据。声明没有独立results接口，只GET当前观察，不冒认原PUT已成功 |
-| `retry-receipt 原请求ID` | 本次用户明确动作，先查正文原结果；仅对应404、仍pending及原资格／内容／期限／本地门禁都有效，才沿原body写一次。声明同样只重投原PUT，不换nonce |
+| `reconcile-receipt 原请求ID` | 正文始终以完整原body调用只读receipt-results；新协商服务的声明先纯查storage-results，404／503／坏200保留原意图，不创建收据或声明。旧服务声明仅GET当前观察，不冒认原PUT已成功 |
+| `retry-receipt 原请求ID` | 本次用户明确动作，先查原结果；仅对应404、仍pending及原资格／内容／期限／本地门禁都有效，才沿原body写一次。声明保留原六字段／nonce，新协商下重核部署批准与当前库探针 |
 
 正文和收据意图达到同一WAL／FULL事务提交点前不发送回执，SQL失败整体回滚。重启后原意图可查／续；不会自动刷新旧challenge或将旧qualification／epoch补成新值。过期未成意图冻结但仍可只读查询历史已成事实；已完成收据遇404不重建。普通同步的相同clientMsgId与正文收讫都不确认正式发送Outbox，也不推进累计收讫位置或把history当已阅。global删除清正文后，原收据只留无正文tuple／摘要与事实，不能凭旧请求复活内容。
 
-部署批准项和本地文件SHA检查不等于运行时认证、远程硬盘／断电证明或OS安全库正向验收。原67项正文切片仅普通纯文本；正文收据仍要求`objectComplete:false`、`targetRangeComplete:false`、`deletionEligible:false`，`after_receipt`关闭。当前新增的普通媒体描述／完整原对象收据见[附件收讫](#object-receipts)，没有冻结目标范围、合格累计ACK或云端唯一副本删除完成声明。
+部署批准项和本地文件SHA检查不等于运行时认证、远程硬盘／断电证明或OS安全库正向验收。正文收据仍要求`objectComplete:false`、`targetRangeComplete:false`、`deletionEligible:false`；原bootstrap的`after_receipt`保持false，新协商的逐store能力单独核验。普通媒体描述／完整原对象收据见[附件收讫](#object-receipts)，原67项证据不扩大为累计目标或云端删除验收。
+
+### <span id="jobs-toc-heading-10" data-jobs-toc="v2">当前物理库的合格收讫协商</span><!-- jobs-toc:heading-end -->
+
+新增[qualified-receipts-v1契约](../../后端/Go/接口契约/合格收讫/README.md)保留旧bootstrap／sync context／storage顶层false，另取当前store的资格及服务端实时保护。`receipt_negotiation.go`核本人／设备／physical UUID／epoch／schema与正文、原件能力的分别一致性；未批准的普通库继续transport_only和cloud_history。当前build通过部署批准的精确报告后才能声明，服务端profiles列表本身不是本机通过证据。新声明除核可执行SHA与WAL／FULL，还做当前物理库的实际FULL探针；file合同增加随机私有文件的完整读回、文件和目录fsync，探针不生成消息ACK。
+
+| 命令 | 行为、持久化与生命周期 |
+| --- | --- |
+| `receipt-context` | 只读当前库qualifiedAck、正文／原件开关和独立PG／JetStream保护，当前身份或guard变化拒迟到结果；不改原同步游标或资格 |
+| `receipt-profiles` | 本机实际可执行SHA查询部署已批准的精确profile／报告／合同；空列表不自动批准，不声明 |
+| `receipt-target 消息ID` | 只读本人原目标／原DG和manifest摘要／正文与原件既成事实；自己ACK不等于所有人完成，不列他人设备 |
+| `retention 会话ID` | 读取当前保留策略与CAS版本，默认cloud_history |
+| `retention-set 会话ID 所见版本 \| 完整POLICY_JSON` | 先核逐store相应能力；明确n（含0）、对象独立延迟及receiptScope，原nonce／CAS／完整策略在SQLite FULL提交后才PUT，作用于新消息 |
+| `retention-operations`／`retention-retry 原请求ID` | 只列本人原责任；未知保pending，显式retry只发原nonce／CAS／JSON一次，已完成只显示原结果。已知版本／权限冲突保失败事实，不能换最新CAS复活旧单 |
+
+正文rc1与原件ro1保留并成对核验`deliveryGeneration/manifestDigest`，原件必须沿父正文的同一目标tuple；原结果缺失或更换该对值保留pending。旧无manifest证明允许空对，不给旧消息补目标。原bodyEnvelope和原摘要在同一正文／receipt意图FULL事务独立存入receipt_bodies，global同事务删除，注销清整个本人库；outbox不增加第二份正文。它只为合法cloud_only普通迁移保留精确旧字节，不重编码猜原SHA，也不继承源资格。迁移先纯查原content／object结果，按原QID历史查询与messageCurrent核DG-MG；批准后来撤回不抹原qualifiedAtCommit，无原目标不补进清理范围，legacy无DG还须原完整permission及fresh明确cloud_only，原始字节未保留的旧记录不能反造。
+
+当前[逐store收讫报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/逐store合格收讫.md)已封52输入、候选测试二进制与完整本地135 PASS／0 FAIL／2环境SKIP，含新增12方法及普通迁移10方法；实际darwin/arm64可执行候选及--help另验，.test与产品SHA分记；本机SQLite／fsync真实，HTTP明确为注入。后端同轮独立双PG／JetStream正反另通过3方法及59相关PG，不冒充CLI已连接该服务或目标系统／断电证明。首轮global夹具133／1／2原证据保留，修夹具未改生产删除逻辑或放松断言。未给生产a4配置任何批准项。
 
 本轮67顶层本地PASS／0FAIL／2项显式环境跳过（含新增12组SQLite／注入HTTP）及MacOS arm64新候选构建见[正文收讫证据](../../../项目相关报告/测试/CLI/20261116-正文收讫/README.md)。未连接真实收讫服务／E2、未实际配置部署批准策略、未做目标OS或设备断电测试；15a4历史55＋13和旧binary不覆盖。
 
@@ -180,7 +205,7 @@ quit／logout立即停本端，尽力删除该安全存储会话条目并撤原f
 | receive-text | receiptValidateChallenge原字节SHA及tuple；stageReceipt同事务正文＋receipt_outbox；不保存第二份正文或改发送Outbox | 提交前HTTP检查、故障回滚、原体重开、身份／guard／global／过期反例通过 |
 | receipts／reconcile／retry | 本人原库原请求；自动／普通核对纯查，显式retry才原body写，完成／冻结不凭404新建 | 原nonce／资格不替换，未知不成功，正文事实不等于对象／targets完成；真实HTTPS仍待验 |
 
-## 八、<span id="object-receipts">完整附件收讫</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
+## 九、<span id="object-receipts">完整附件收讫</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
 
 默认附件资格为false。部署方必须批准当前CLI构建及验证报告的`native_sqlite_full_file_fsync_v1`存储合同，当前`storage-status`明确返回`qualified:true`、`objectQualified:true`和相同`storageContract`后，才可取得附件挑战。旧`native_sqlite_full_v1`或旧服务省略新增字段仅保正文资格；重新构建／批准新合同后，旧qualification的父收据不能自动继承，须用户明确在新资格下取得正文收据。操作还需实时`durable_object_receipt_protocol`，绝不凭协议存在自证耐久或打开删除。
 
@@ -207,7 +232,7 @@ quit／logout立即停本端，尽力删除该安全存储会话条目并撤原f
 
 
 
-## 九、<span id="personal-data-export">正式本人数据导出</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
+## 十、<span id="personal-data-export">正式本人数据导出</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
 
 独立接入[正式后端第十一节](../../后端/Go/接口契约/README.md#personal-data-export)，不从本地history／retained或旧实验接口拼包。当前scope／本人／personal／device／epoch／连接profile／physical UUID／session family必须匹配。create／download需实时`chat_export:true`；cap撤回后仍允许原任务纯查与取消收尾。
 
@@ -234,7 +259,7 @@ ZIP流写目标目录0600私有`.part`，完整count／SHA、ZIP结束记录及�
 
 [本轮报告](../../../项目相关报告/测试/CLI/20261116-正式本人导出/README.md)已保首类型失败、最终同输入88 PASS／0FAIL／2环境跳过及MacOS arm64新候选13cd2438；不借后端／Web真矩阵追认CLI真实HTTPS，原80／79／67候选及历史均保原件。
 
-## 十、<span id="own-password-change">本人主动改密</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
+## 十一、<span id="own-password-change">本人主动改密</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
 
 使用[后端2.3合同](../../后端/Go/接口契约/README.md#own-password-change)，新建需当前实例实时`own_password_change:true`与原已登录本人；密码验证／管理员TOTP由服务端执行，不使用恢复码替代。新密码由服务端按NFC规则校验；CLI不trim／截断，只作UTF8、字节上限和二次输入一致性检查。证明只由TTY读取，不接密码参数，不持久密码对／OTP／无钥密码请求hash。
 
@@ -257,5 +282,19 @@ ZIP流写目标目录0600私有`.part`，完整count／SHA、ZIP结束记录及�
 | 主动改密／原单 | password_change.go；默认不发起；Authentication SQLite仅非秘密责任，证明仅TTY内存 | 新8顶层组含SQL失败、无密码／hash、原单重开与原身份门禁；网络均注入 |
 | 显式原单重试 | 先匿名纯查；仅原family／token／device／epoch／profile／namespace／physical仍匹配才首次授权，OTP后再核 | pre-delivery丢请求后原家族首建、后继家族无AT、OTP期间换family／cap拒写 |
 | 停旧凭据／restore gate | unknown先停普通业务；只删除原family安全库项／退休原物理namespace，旧结果不碰后继 | 真SQLite交接与fake vault反例，不冒充真实系统库或设备验证 |
+
+当前[完整本地回归](../../../项目相关报告/测试/回归/20261116-全项目回归/Web-CLI.md)重新执行11份外置测试、99个顶层方法：97 PASS／0 FAIL／2环境SKIP，方法集合与源码逐项相等。真实HTTPS协调器与原生安全库诊断仍未运行；本地重跑不扩大正式导出、主动改密或对象收讫的真实服务验证范围。
+
+
+## 十二、<span id="own-account-deletion">本人注销</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+登录后`account-delete`确认申请；`account-deletions`、`deletion-reconcile REQUEST_ID`、`deletion-retry REQUEST_ID`、`deletion-query REQUEST_ID`、`deletion-cancel REQUEST_ID`和`deletion-cancel-retry REQUEST_ID`也可从启动参数进入本机原任务。口令／恢复码／OTP只经TTY读取，禁止秘密参数；原nonce／family／物理库／epoch和cancel版本公开责任WAL／FULL耐久。未知先查，明确续原单；受限proof只RAM，completed精确清原本人所有本机store及托管ReceiptObjects，其他profile／user和外部文件保留。
+
+最后实跑全runner115通过／0失败／2环境跳过、注销11方法通过（含一次恢复码unknown取消），host二进制已构建；其后main.go仅将未保存默认URL改为9443，此默认值增量未重编。当前磁盘4GiB门禁不运行新测试／编译。详见[独立限定报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/CLI注销.md)，不把HTTP／vault适配当真实HTTPS／安全库或TTY操作通过。
+
+
+## 十三、<span id="personal-migration">普通端侧迁移增量</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+新增`migration-*`配对、创建、目标导入、原单查询／显式重试／取消、独立历史及完整原件保存入口；选择文件只列原ID／contentVersion／objectMode。密码／OTP／proof／key只留本次RAM，默认保源且不授予合格ACK，失败不换原nonce。原件和JSON原片段经长度／SHA／GCM核验，目标FULL整批发布不改游标／Outbox，global优先清stage和独立副本。当前仅候选编译，7个新增方法尚未执行，真实双设备和新成品待验；[入口、边界与验证](../../../项目相关报告/实现进度/20261116-剩余能力闭环/CLI普通迁移.md)。
 
 <a id="🔚" href="#前言">返回首页</a>

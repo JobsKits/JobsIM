@@ -1,0 +1,141 @@
+{
+  "scope": "host-isolated PowerShell functions; Windows SID/ACL/process probes explicitly shimmed",
+  "passed": 33,
+  "failed": 0,
+  "cases": [
+    {
+      "name": "PowerShell pair parses and lifecycle bodies are identical except default action",
+      "status": "passed"
+    },
+    {
+      "name": "clear performs an actual local inverse and retains external backup/key files",
+      "status": "passed"
+    },
+    {
+      "name": "original empty directory survives inverse cleanup",
+      "status": "passed"
+    },
+    {
+      "name": "legacy state without origin refuses destructive cleanup",
+      "status": "passed"
+    },
+    {
+      "name": "unknown resource added after seal blocks every removal",
+      "status": "passed"
+    },
+    {
+      "name": "changed owned file is preserved with original origin",
+      "status": "passed"
+    },
+    {
+      "name": "symbolic directory and file resources refuse traversal",
+      "status": "passed"
+    },
+    {
+      "name": "missing original backup blocks interrupted inverse retry",
+      "status": "passed"
+    },
+    {
+      "name": "interrupted cleanup resumes only its unchanged remaining entries",
+      "status": "passed"
+    },
+    {
+      "name": "source mutation during backup prevents all source cleanup",
+      "status": "passed"
+    },
+    {
+      "name": "backup verification failure preserves source and creates no undo journal",
+      "status": "passed"
+    },
+    {
+      "name": "exclusive transaction lock rejects a concurrent writer",
+      "status": "passed"
+    },
+    {
+      "name": "server configuration rejects credential/path/port confusion and accepts explicit HTTPS origin",
+      "status": "passed"
+    },
+    {
+      "name": "asset wire contract rejects forged checksum and foreign release source",
+      "status": "passed"
+    },
+    {
+      "name": "C# native process bridge compiles on host without executing Win32 calls",
+      "status": "passed"
+    },
+    {
+      "name": "independent recovery journal and matching credentials survive clear and repeat inverse",
+      "status": "passed"
+    },
+    {
+      "name": "foreign owner and path-injected managed PG profiles are refused",
+      "status": "passed"
+    },
+    {
+      "name": "unknown transaction-lock file is a conflict and is never implicitly deleted",
+      "status": "passed"
+    },
+    {
+      "name": "Yes does not bypass the independent destructive choice",
+      "status": "passed"
+    },
+    {
+      "name": "Quick tunnel launch has empty session config and explicit trusted origin CA/SAN",
+      "status": "passed"
+    },
+    {
+      "name": "encrypted backup decrypts to identical bytes and retains its matching external key",
+      "status": "passed"
+    },
+    {
+      "name": "server certificate SAN and matching key are checked before copying originals",
+      "status": "passed"
+    },
+    {
+      "name": "an existing external-data instance cannot silently switch to a new managed database",
+      "status": "passed"
+    },
+    {
+      "name": "clear preserves the exact instance secret, TLS, Secrets, journal and owner while removing other owned business bytes",
+      "status": "passed"
+    },
+    {
+      "name": "Quick descriptor uses system edge trust and direct descriptor retains its own CA contract",
+      "status": "passed"
+    },
+    {
+      "name": "real Undeploy to Backup chain rejects a missing broker receipt before archive or deletion",
+      "status": "passed"
+    },
+    {
+      "name": "native failing dump exit propagates through actual Undeploy and preserves source",
+      "status": "passed"
+    },
+    {
+      "name": "native failing restore-list exit propagates through actual Undeploy before archive",
+      "status": "passed"
+    },
+    {
+      "name": "backup completeness requires broker plus all eight dump/list pairs and rejects duplicate or escaping members",
+      "status": "passed"
+    },
+    {
+      "name": "local mode defaults to loopback without public confirmation or cloudflared preparation",
+      "status": "passed"
+    },
+    {
+      "name": "Quick start failure and late exit recover strict local origin while explicit retry can publish a new public origin",
+      "status": "passed"
+    },
+    {
+      "name": "a stop request fences a late restart only for its exact host PID and start time",
+      "status": "passed"
+    },
+    {
+      "name": "disk reserve accepts only actual additional bytes above four GiB and rejects negative or overflowing budgets",
+      "status": "passed"
+    }
+  ],
+  "windowsNativeExecuted": false,
+  "fixture": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsFunctionFixtures/JobsIM-Windows-Undo-12242e0e178445f8b069cacbc298dba4"
+}

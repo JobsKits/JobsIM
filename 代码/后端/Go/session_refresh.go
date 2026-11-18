@@ -257,9 +257,13 @@ func (a *App) StartSessionWorkers(ctx context.Context) {
 				if a.protect(attempt, j.op, "result", "auth.revoke_device", payload) != nil {
 					continue
 				}
+				if a.drainMigrations(attempt) != nil {
+					continue
+				}
 				_, _ = a.DB.Exec(attempt, `UPDATE auth.session_revocations SET state='cleared' WHERE session_id=$1`, j.id)
 			}
 			_ = a.drainPersonalExportInvalidations(attempt)
+			_ = a.drainMigrations(attempt)
 			expireFence()
 			closeExportFence(fence)
 			cancel()

@@ -62,6 +62,8 @@ type receiptProofTuple struct {
 	Digest        string `json:"bodyDigest"`
 	Permission    string `json:"permission"`
 	Expires       int64  `json:"expires"`
+	Generation    string `json:"deliveryGeneration,omitempty"`
+	Manifest      string `json:"manifestDigest,omitempty"`
 }
 type receiptOperation struct {
 	ID           string              `json:"id"`
@@ -87,7 +89,10 @@ func receiptMigrate(tx *sql.Tx) error {
 CREATE TABLE IF NOT EXISTS storage_declarations(id TEXT PRIMARY KEY,epoch TEXT NOT NULL,payload TEXT NOT NULL,payload_hash TEXT NOT NULL,state TEXT NOT NULL CHECK(state IN('pending','completed','frozen')),result TEXT NOT NULL DEFAULT '');
 CREATE TABLE IF NOT EXISTS receipt_objects(request_id TEXT PRIMARY KEY,epoch TEXT NOT NULL,message_id TEXT NOT NULL,descriptor TEXT NOT NULL,descriptor_hash TEXT NOT NULL,state TEXT NOT NULL CHECK(state IN('ready','erasing','erased')));
 CREATE TABLE IF NOT EXISTS receipt_object_preparations(request_id TEXT PRIMARY KEY,epoch TEXT NOT NULL,message_id TEXT NOT NULL,payload TEXT NOT NULL,payload_hash TEXT NOT NULL);
-CREATE TABLE IF NOT EXISTS receipt_object_cleanup(request_id TEXT PRIMARY KEY,descriptor TEXT NOT NULL,descriptor_hash TEXT NOT NULL);`)
+CREATE TABLE IF NOT EXISTS receipt_object_cleanup(request_id TEXT PRIMARY KEY,descriptor TEXT NOT NULL,descriptor_hash TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS receipt_native_probe(id INTEGER PRIMARY KEY CHECK(id=1),epoch TEXT NOT NULL,store_generation TEXT NOT NULL,payload_hash TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS receipt_bodies(request_id TEXT PRIMARY KEY,epoch TEXT NOT NULL,message_id TEXT NOT NULL,content_version TEXT NOT NULL,body_envelope TEXT NOT NULL,body_digest TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS receipt_policy_operations(id TEXT PRIMARY KEY,epoch TEXT NOT NULL,conversation_id TEXT NOT NULL,payload TEXT NOT NULL,payload_hash TEXT NOT NULL,state TEXT NOT NULL CHECK(state IN('pending','completed','failed')),result TEXT NOT NULL DEFAULT '');`)
 	return err
 }
 func receiptTable(kind string) string {
@@ -152,6 +157,33 @@ func receiptLocalBuild(build string) error {
 	return nil
 }
 func receiptFalse(v *bool) bool { return v != nil && !*v }
+func receiptDeliveryPair(generation, digest string) error {
+	if generation == "" && digest == "" {
+		return nil
+	}
+	if n, err := syncCounter(generation); err != nil || n == 0 || !syncDigestPattern.MatchString(digest) {
+		return syncRefuse("RECEIPT_DELIVERY_INVALID")
+	}
+	return nil
+}
+func receiptOriginalDelivery(o receiptOperation) (string, string, error) {
+	var body struct {
+		Challenge string `json:"challenge"`
+	}
+	if syncDecode([]byte(o.Body), &body) != nil {
+		return "", "", syncRefuse("RECEIPT_INTENT_CHANGED")
+	}
+	parts := strings.Split(body.Challenge, ".")
+	if len(parts) != 3 || o.Kind == "message_content" && parts[0] != "rc1" || o.Kind == "object_received" && parts[0] != "ro1" {
+		return "", "", syncRefuse("RECEIPT_INTENT_CHANGED")
+	}
+	raw, err := base64.RawURLEncoding.Strict().DecodeString(parts[1])
+	var proof receiptProofTuple
+	if err != nil || syncDecode(raw, &proof) != nil || receiptDeliveryPair(proof.Generation, proof.Manifest) != nil {
+		return "", "", syncRefuse("RECEIPT_DELIVERY_INVALID")
+	}
+	return proof.Generation, proof.Manifest, nil
+}
 func receiptCheckStorage(v receiptStorageView, b syncBinding) error {
 	if !receiptFalse(v.Deletion) || !receiptFalse(v.After) || v.Storage.Store != b.StoreGeneration || v.Storage.Epoch != b.RestoreEpoch {
 		return syncRefuse("RECEIPT_STORAGE_INVALID")
@@ -209,6 +241,9 @@ func receiptValidateMessageChallenge(q receiptChallenge, b syncBinding, qualific
 	// Decoding checks accidental scope substitution; only the server verifies its HMAC.
 	if p.Scope != b.ScopeID || p.User != b.PrincipalID || p.Device != b.DeviceID || p.Store != b.StoreGeneration || p.Epoch != b.RestoreEpoch || p.Qualification != qualification || p.Message != message || p.Conversation != q.Conversation || p.Content != q.Content || p.Digest != q.Digest || p.Permission != permission || p.Expires != expires.Unix() {
 		return nil, syncRefuse("RECEIPT_CONTEXT_CHANGED")
+	}
+	if err = receiptDeliveryPair(p.Generation, p.Manifest); err != nil {
+		return nil, err
 	}
 	if n, e := syncCounter(q.Content); e != nil || n == 0 {
 		return nil, syncRefuse("RECEIPT_CONTENT_INVALID")
@@ -272,7 +307,7 @@ func (s *localStore) receiptControl(q syncSQL, expected *syncControl, current fu
 	}
 	return control, nil
 }
-func (s *localStore) stageReceipt(control syncControl, o receiptOperation, message json.RawMessage, current func() bool) error {
+func (s *localStore) stageReceipt(control syncControl, o receiptOperation, message json.RawMessage, current func() bool, originalEnvelope ...string) error {
 	if receiptHash(o) != o.Hash || receiptCheckIntent(o) != nil || o.State != "pending" || o.Binding.check(control.syncBinding, true) != nil {
 		return syncRefuse("RECEIPT_INTENT_INVALID")
 	}
@@ -329,6 +364,22 @@ func (s *localStore) stageReceipt(control syncControl, o receiptOperation, messa
 	}
 	if err != nil {
 		return err
+	}
+	if len(originalEnvelope) != 0 {
+		if len(originalEnvelope) != 1 || o.Kind != "message_content" {
+			return syncRefuse("RECEIPT_CONTENT_INVALID")
+		}
+		raw, err := syncEnvelope(originalEnvelope[0], o.Digest)
+		if err != nil {
+			return err
+		}
+		normalized, err := receiptNormalized(raw)
+		if err != nil || !syncEqual(normalized, message) {
+			return syncRefuse("RECEIPT_CONTENT_CHANGED")
+		}
+		if _, err = tx.Exec("INSERT INTO receipt_bodies(request_id,epoch,message_id,content_version,body_envelope,body_digest) VALUES(?,?,?,?,?,?)", o.ID, s.epoch, o.Message, o.Content, originalEnvelope[0], o.Digest); err != nil {
+			return err
+		}
 	}
 	if !current() {
 		return syncRefuse("RECEIPT_CONTEXT_CHANGED")
@@ -402,11 +453,17 @@ func receiptValidateResult(raw json.RawMessage, o receiptOperation) error {
 		Object        *bool  `json:"objectComplete"`
 		Target        *bool  `json:"targetRangeComplete"`
 		Deletion      *bool  `json:"deletionEligible"`
+		Generation    string `json:"deliveryGeneration"`
+		Manifest      string `json:"manifestDigest"`
 	}
 	var body struct {
 		Qualification string `json:"qualificationId"`
 	}
 	if syncDecode([]byte(o.Body), &body) != nil || syncDecode(raw, &v) != nil || v.ID != o.ID || v.Status != "recorded" || v.Message != o.Message || v.Conversation != o.Conversation || v.Content != o.Content || v.Epoch != o.Binding.RestoreEpoch || v.Device != o.Binding.DeviceID || v.Store != o.Binding.StoreGeneration || v.Qualification != body.Qualification || v.Digest != o.Digest || v.Kind != "message_content" || v.Qualified == nil || !*v.Qualified || !receiptFalse(v.Object) || !receiptFalse(v.Target) || !receiptFalse(v.Deletion) {
+		return syncRefuse("RECEIPT_RESULT_INVALID")
+	}
+	generation, manifest, err := receiptOriginalDelivery(o)
+	if err != nil || v.Generation != generation || v.Manifest != manifest {
 		return syncRefuse("RECEIPT_RESULT_INVALID")
 	}
 	return nil
@@ -415,24 +472,42 @@ func (c *client) receiptCapabilities() error {
 	return c.receiptCapabilitiesFor(false)
 }
 func (c *client) receiptCapabilitiesFor(object bool) error {
+	negotiated, err := c.receiptNegotiationAdvertised(object)
+	if err != nil || !negotiated {
+		return err
+	}
+	s, current, err := c.receiptContext()
+	if err != nil {
+		return err
+	}
+	control, err := s.receiptControl(s.db, nil, current, false)
+	if err != nil {
+		return err
+	}
+	// Current-build checks belong to new declarations/ACK writes. An upgrade
+	// must still inspect/reconcile old facts and declare its newly approved build.
+	_, err = c.getReceiptNegotiation(control)
+	return err
+}
+func (c *client) receiptNegotiationAdvertised(object bool) (bool, error) {
 	var boot struct {
 		Deployment string          `json:"deploymentId"`
 		Epoch      string          `json:"restoreEpoch"`
 		Features   map[string]bool `json:"features"`
 	}
 	if err := c.call("GET", "/api/bootstrap", nil, &boot); err != nil {
-		return err
+		return false, err
 	}
 	if boot.Deployment != c.deployment || boot.Epoch != c.epoch {
-		return syncRefuse("RECEIPT_CONTEXT_CHANGED")
+		return false, syncRefuse("RECEIPT_CONTEXT_CHANGED")
 	}
 	if !boot.Features["durable_receipt_protocol"] || !boot.Features["authoritative_sync"] || !boot.Features["sync_jetstream"] || boot.Features["after_receipt"] {
-		return syncRefuse("RECEIPT_CAPABILITY_REQUIRED")
+		return false, syncRefuse("RECEIPT_CAPABILITY_REQUIRED")
 	}
 	if object && !boot.Features["durable_object_receipt_protocol"] {
-		return syncRefuse("OBJECT_RECEIPT_CAPABILITY_REQUIRED")
+		return false, syncRefuse("OBJECT_RECEIPT_CAPABILITY_REQUIRED")
 	}
-	return nil
+	return boot.Features["qualified_receipt_negotiation"], nil
 }
 func (c *client) receiptContext() (*localStore, func() bool, error) {
 	s := c.store
@@ -488,7 +563,23 @@ func (c *client) performReceipt(id string, explicit bool, fresh bool) (json.RawM
 	}
 	var raw json.RawMessage
 	if o.Kind == "storage" {
-		if !explicit || o.State != "pending" {
+		negotiated, e := c.receiptNegotiationAdvertised(false)
+		if e != nil {
+			return nil, e
+		}
+		if negotiated {
+			err = c.call("POST", "/api/sync/storage-results", json.RawMessage(o.Body), &raw)
+			if err == nil {
+				if err = receiptValidateStorageResult(raw, o, control); err != nil {
+					return nil, err
+				}
+				return raw, s.finishReceipt(o, control, raw, "completed", current)
+			}
+			var api *apiFailure
+			if !errors.As(err, &api) || api.Status != 404 || api.Code != "STORAGE_DECLARATION_NOT_FOUND" || (!explicit && !fresh) || o.State != "pending" {
+				return nil, err
+			}
+		} else if !explicit || o.State != "pending" {
 			v, e := c.getReceiptStorage(control)
 			if e != nil {
 				return nil, e
@@ -556,6 +647,15 @@ func (c *client) performReceipt(id string, explicit bool, fresh bool) (json.RawM
 		if err = receiptLocalBuild(body.Build); err != nil {
 			return nil, err
 		}
+		negotiated, e := c.receiptNegotiationAdvertised(false)
+		if e != nil {
+			return nil, e
+		}
+		if negotiated {
+			if err = c.receiptPrepareDeclaration(control, body.Profile, body.Build, body.Verification, current); err != nil {
+				return nil, err
+			}
+		}
 	}
 	if err = c.receiptCapabilities(); err != nil {
 		return nil, err
@@ -568,18 +668,21 @@ func (c *client) performReceipt(id string, explicit bool, fresh bool) (json.RawM
 		return nil, err
 	}
 	if o.Kind == "storage" {
-		var v receiptStorageView
-		var body receiptStorage
-		if syncDecode(raw, &v) != nil || syncDecode([]byte(o.Body), &body) != nil || v.Result == nil || v.Current == nil || receiptCheckStorage(v, control.syncBinding) != nil || v.Result.Store != o.Binding.StoreGeneration || v.Result.Epoch != o.Binding.RestoreEpoch || !syncUUIDPattern.MatchString(v.Result.Qualification) || v.Result.Profile != body.Profile || v.Result.Build != body.Build || v.Result.Verification != body.Verification {
-			return nil, syncRefuse("RECEIPT_STORAGE_INVALID")
-		}
-		if *v.Current != (v.Storage.Qualified && v.Storage.Qualification == v.Result.Qualification) {
-			return nil, syncRefuse("RECEIPT_STORAGE_INVALID")
+		if err = receiptValidateStorageResult(raw, o, control); err != nil {
+			return nil, err
 		}
 	} else if err = receiptValidateResult(raw, o); err != nil {
 		return nil, err
 	}
 	return raw, s.finishReceipt(o, control, raw, "completed", current)
+}
+func receiptValidateStorageResult(raw json.RawMessage, o receiptOperation, control syncControl) error {
+	var v receiptStorageView
+	var body receiptStorage
+	if syncDecode(raw, &v) != nil || syncDecode([]byte(o.Body), &body) != nil || v.Result == nil || v.Current == nil || receiptCheckStorage(v, control.syncBinding) != nil || v.Result.Store != o.Binding.StoreGeneration || v.Result.Epoch != o.Binding.RestoreEpoch || !syncUUIDPattern.MatchString(v.Result.Qualification) || v.Result.Profile != body.Profile || v.Result.Build != body.Build || v.Result.Verification != body.Verification || *v.Current != (v.Storage.Qualified && v.Storage.Qualification == v.Result.Qualification) {
+		return syncRefuse("RECEIPT_STORAGE_INVALID")
+	}
+	return nil
 }
 func (c *client) receiveReceiptText(message string) (json.RawMessage, error) {
 	return c.receiveReceiptMessage(message, true)
@@ -632,7 +735,7 @@ func (c *client) receiveReceiptMessage(message string, textOnly bool) (json.RawM
 	body, _ := json.Marshal(map[string]string{"requestId": request, "storeGeneration": control.StoreGeneration, "revisionEpoch": s.epoch, "qualificationId": challenge.Qualification, "kind": "message_content", "challenge": challenge.Challenge, "bodyDigest": challenge.Digest})
 	o := receiptOperation{ID: request, Kind: "message_content", Binding: control.syncBinding, Method: "POST", Route: "/api/sync/receipts", Body: string(body), Message: message, Conversation: challenge.Conversation, Content: challenge.Content, Digest: challenge.Digest, CachedDigest: fingerprint(string(normalized)), Expires: challenge.Expires, State: "pending"}
 	o.Hash = receiptHash(o)
-	if err = s.stageReceipt(control, o, normalized, current); err != nil {
+	if err = s.stageReceipt(control, o, normalized, current, challenge.Envelope); err != nil {
 		return nil, err
 	}
 	return c.performReceipt(o.ID, false, true)
@@ -654,7 +757,7 @@ func receiptExecutableDigest() (string, error) {
 	return hex.EncodeToString(h.Sum(nil)), nil
 }
 func (c *client) receiptCommand(cmd, args string) (bool, error) {
-	if !oneOf(cmd, "storage-status", "storage-declare", "receive-text", "receive-message", "receive-object", "receive-object-file", "receipt-file-status", "receipts", "reconcile-receipt", "retry-receipt") {
+	if !oneOf(cmd, "retention", "retention-set", "retention-retry", "retention-operations", "receipt-context", "receipt-profiles", "receipt-target", "storage-status", "storage-declare", "receive-text", "receive-message", "receive-object", "receive-object-file", "receipt-file-status", "receipts", "reconcile-receipt", "retry-receipt") {
 		return false, nil
 	}
 	c.syncMu.Lock()
@@ -724,6 +827,12 @@ func (c *client) receiptCommand(cmd, args string) (bool, error) {
 	if err != nil {
 		return true, err
 	}
+	if oneOf(cmd, "receipt-context", "receipt-profiles", "receipt-target") {
+		return true, c.receiptNegotiationCommand(cmd, args, control)
+	}
+	if oneOf(cmd, "retention", "retention-set", "retention-retry", "retention-operations") {
+		return true, c.receiptPolicyCommand(cmd, args, control, current)
+	}
 	if cmd == "storage-status" {
 		v, e := c.getReceiptStorage(control)
 		if e != nil {
@@ -752,6 +861,15 @@ func (c *client) receiptCommand(cmd, args string) (bool, error) {
 	}
 	if strings.ToLower(journal) != "wal" || full != 2 {
 		return true, syncRefuse("RECEIPT_STORAGE_DURABILITY_REQUIRED")
+	}
+	negotiated, e := c.receiptNegotiationAdvertised(false)
+	if e != nil {
+		return true, e
+	}
+	if negotiated {
+		if e = c.receiptPrepareDeclaration(control, parts[0], parts[1], parts[2], current); e != nil {
+			return true, e
+		}
 	}
 	// An unresolved declaration must be explicitly resumed, never silently replaced.
 	var n int

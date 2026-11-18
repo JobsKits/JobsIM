@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-18",
+  "scope": "macOS native deployment regression",
+  "unit": {
+    "exit": 0,
+    "log": "unit.log"
+  },
+  "relocation": {
+    "exit": 0,
+    "nativeChecks": 16,
+    "syntaxScripts": 4,
+    "result": "工作树搬迁/结果.json"
+  },
+  "integration": {
+    "exit": 0,
+    "report": "项目相关报告/测试/部署/MacOS/20261118-064048",
+    "checks": [
+      "strict HTTPS",
+      "two accounts contact acceptance",
+      "direct message",
+      "original client ID idempotent retry",
+      "recipient history",
+      "logout",
+      "encrypted backup decrypt and list verification",
+      "owned service shutdown with state preserved"
+    ]
+  },
+  "nats": {
+    "exit": 0,
+    "report": "项目相关报告/测试/部署/NATS/20261118-064121-79438",
+    "checks": [
+      "missing and incorrect token rejection",
+      "JetStream file publication",
+      "restart persistence",
+      "config drift rejection",
+      "foreign PID preservation"
+    ]
+  },
+  "powershell": {
+    "parserExit": 0,
+    "files": 2,
+    "log": "powershell-files.log",
+    "initialFailure": "broken existing cache path; retry with process-only XDG_CACHE_HOME; initial directory discovery corrected with -File",
+    "helpExit": 0,
+    "nonWindowsCheckExit": 2,
+    "noStateCreated": true
+  },
+  "ports": [
+    19443,
+    17543,
+    17544,
+    20101,
+    20102,
+    20103,
+    20104,
+    20105,
+    20106,
+    20107,
+    20108,
+    20109,
+    24222
+  ],
+  "listenersRemaining": 0,
+  "sourceInputs": 235,
+  "sourceDrift": [],
+  "notVerified": [
+    "database restore drill",
+    "Linux native runtime",
+    "Windows native runtime",
+    "physical devices",
+    "full 243 acceptance items"
+  ],
+  "defaultInstanceTouched": false,
+  "finalIntegration": {
+    "exit": 0,
+    "sourceInputs": 235,
+    "sourceDrift": [],
+    "assetMismatch": [],
+    "report": "项目相关报告/测试/部署/MacOS/20261118-065216",
+    "deploymentId": "2a9974f4-c91a-4a44-bce7-98e702b3688d",
+    "restoreEpoch": "1"
+  }
+}

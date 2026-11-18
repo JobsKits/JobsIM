@@ -1,0 +1,186 @@
+> hvigor [33mWARN: The version number of the 'entry' module does not comply with the SemVer specification.
+               This will affect the installation and publication by ohpm.
+               Make sure the value of version in the oh-package.json5 file of the module complies with the SemVer specification.[39m
+> hvigor [32mFinished :entry:ohosTest@PreBuild... after 243 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CreateModuleInfo... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GenerateMetadata... after 6 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ConfigureCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@MergeProfile... after 6 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CreateBuildProfile... after 3 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PreCheckSyscap... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgContextInfo... after 14 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgSdkInfo... after 3 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessIntegratedHsp... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@BuildNativeWithCmake... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@MakePackInfo... after 4 ms [39m
+> hvigor [32mFinished :entry:ohosTest@SyscapTransform... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessProfile... after 165 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessRouterMap... after 4 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessShareConfig... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessStartupConfig... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@BuildNativeWithNinja... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessResource... after 6 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GenerateLoaderJson... after 12 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessLibs... after 10 ms [39m
+> hvigor [33mWARN: Warning: 'app_name' conflict, first declared.
+at /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/AppScope/resources/base/element/string.json
+but declared again.
+at /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/resources/base/element/string.json
+[39m
+> hvigor [32mFinished :entry:ohosTest@CompileResource... after 500 ms [39m
+> hvigor [32mFinished :entry:ohosTest@DoNativeStrip... after 3 ms [39m
+> hvigor [33mWARN: [33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:30:363
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:30:385
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:30:466
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:30:489
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:30:509
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:31:185
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:31:217
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:31:240
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:31:255
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:31:324
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:32:16
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:32:65
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:32:96
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:37:40
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:37:61
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:37:139
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:37:162
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:37:182
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:38:44
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:38:88
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:38:118
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:39:31
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:40:191
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:40:212
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:40:212
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:42:143
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:43:76
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:43:258
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:43:316
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:43:349
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:43:370
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:44:97
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:44:118
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:47:124
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:47:174
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:47:250
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:47:385
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:47:478
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:49:98
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:49:123
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:49:123
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:49:198
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:50:81
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:51:86
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:51:141
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:51:257
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[33mWARN: [33m[33mArkTS:WARN File: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/MigrationReceipt.hwH3Ys/entry/src/main/ets/Data/MigrationNative.ets:51:350
+ Function may throw exceptions. Special handling is required.
+[39m[39m
+[39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestCompileArkTS... after 12 s 305 ms [39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestBuildJS... after 3 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CacheNativeLibs... after 4 ms [39m
+> hvigor [32mFinished :entry:ohosTest@OhosTestCopyMockConfigJson... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@GeneratePkgModuleJson... after 9 ms [39m
+> hvigor [32mFinished :entry:ohosTest@ProcessCompiledResources... after 2 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PackageHap... after 812 ms [39m
+> hvigor [32mFinished :entry:ohosTest@PackingCheck... after 6 ms [39m
+> hvigor [33mWARN: No signingConfig found for product default[39m
+> hvigor [32mFinished :entry:ohosTest@SignHap... after 1 ms [39m
+> hvigor [32mFinished :entry:ohosTest@CollectDebugSymbol... after 1 ms [39m
+> hvigor [32mFinished :entry:assembleHap... after 1 ms [39m
+> hvigor [32mBUILD SUCCESSFUL in 17 s 195 ms [39m

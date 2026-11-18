@@ -1,0 +1,435 @@
+{
+  "at": "2026-11-18T03:30:30.855Z",
+  "status": "passed",
+  "commands": [
+    {
+      "name": "index",
+      "executable": "/usr/bin/time",
+      "args": [
+        "-l",
+        "/opt/homebrew/bin/codegraph",
+        "index",
+        "."
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "status-strict",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "status",
+        "--json",
+        "--strict",
+        "."
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "files",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "files",
+        "--json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "sqlite-integrity",
+      "executable": "/usr/bin/sqlite3",
+      "args": [
+        "-batch",
+        "-readonly",
+        "-init",
+        "/dev/null",
+        ".codegraph/codegraph.db",
+        "PRAGMA integrity_check;"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "explore-CLI",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "explore",
+        "--path",
+        ".",
+        "--max-files",
+        "1",
+        "代码/前端/CLI/cmd/jobsim/auth.go"
+      ],
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "explore-Swift",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "explore",
+        "--path",
+        ".",
+        "--max-files",
+        "1",
+        "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift"
+      ],
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "explore-Kotlin",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "explore",
+        "--path",
+        ".",
+        "--max-files",
+        "1",
+        "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt"
+      ],
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "explore-ArkTS",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "explore",
+        "--path",
+        ".",
+        "--max-files",
+        "1",
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools.ets"
+      ],
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "explore-部署公共Go",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "explore",
+        "--path",
+        ".",
+        "--max-files",
+        "1",
+        "部署/公共组件/地址二维码/main.go"
+      ],
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "explore-二维码Python测试",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "explore",
+        "--path",
+        ".",
+        "--max-files",
+        "1",
+        "测试/部署/二维码/终端二维码.py/终端二维码.py"
+      ],
+      "exitCode": 0,
+      "signal": null
+    },
+    {
+      "name": "status-final",
+      "executable": "/opt/homebrew/bin/codegraph",
+      "args": [
+        "status",
+        "--json",
+        "--strict",
+        "."
+      ],
+      "exitCode": 0,
+      "signal": null
+    }
+  ],
+  "sourceInputs": 775,
+  "sourceDigest": "49b8768f29e2cb504ce827c7390b75b88fe60e506d7e4dc3ca405c13e8b99427",
+  "sourceStable": true,
+  "configSHA256": "8f4a68a2674a37c871dbf7223d4eef6f31ab38f742055a471dbd17e8939e6962",
+  "indexStatus": {
+    "initialized": true,
+    "version": "1.6.3",
+    "projectPath": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM",
+    "indexPath": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/.codegraph",
+    "lastIndexed": "2026-11-18T03:28:54.581Z",
+    "fileCount": 720,
+    "nodeCount": 17464,
+    "edgeCount": 62550,
+    "dbSizeBytes": 92360704,
+    "walSizeBytes": 0,
+    "backend": "node-sqlite",
+    "journalMode": "wal",
+    "nodesByKind": {
+      "class": 429,
+      "constant": 944,
+      "enum": 29,
+      "enum_member": 31,
+      "field": 931,
+      "file": 718,
+      "function": 2540,
+      "import": 4629,
+      "interface": 132,
+      "method": 4074,
+      "namespace": 111,
+      "property": 1759,
+      "route": 6,
+      "struct": 323,
+      "type_alias": 152,
+      "variable": 656
+    },
+    "languages": [
+      "arkts",
+      "go",
+      "javascript",
+      "kotlin",
+      "properties",
+      "python",
+      "ruby",
+      "swift",
+      "tsx",
+      "typescript",
+      "xml"
+    ],
+    "filesByLanguage": {
+      "arkts": 46,
+      "go": 243,
+      "javascript": 63,
+      "kotlin": 114,
+      "properties": 2,
+      "python": 51,
+      "ruby": 3,
+      "swift": 118,
+      "tsx": 22,
+      "typescript": 57,
+      "xml": 1
+    },
+    "parsedFilesByLanguage": {
+      "arkts": 46,
+      "go": 243,
+      "javascript": 63,
+      "kotlin": 111,
+      "python": 51,
+      "ruby": 3,
+      "swift": 118,
+      "tsx": 22,
+      "typescript": 57
+    },
+    "unparsedLanguages": [],
+    "pendingChanges": {
+      "added": 0,
+      "modified": 0,
+      "removed": 0
+    },
+    "worktreeMismatch": null,
+    "rebuildInProgress": false,
+    "index": {
+      "builtWithVersion": "1.6.3",
+      "builtWithExtractionVersion": 28,
+      "currentExtractionVersion": 28,
+      "reindexRecommended": false,
+      "frameworksChangedSinceIndex": null,
+      "state": "complete",
+      "pendingRefs": 0,
+      "filesNeedingReindex": 0,
+      "filesWithParseErrors": 0
+    }
+  },
+  "indexedFiles": 720,
+  "forbiddenPaths": [],
+  "ownTests": 249,
+  "classifiedOwnTests": 144,
+  "unsupportedScripts": [
+    {
+      "file": "代码/前端/Android/gradlew.bat",
+      "sha256": "475c4f08cd57cf2faa819e7f36d72aa93f0ad646ea23a8f7fa3ef54dee1cbc52"
+    },
+    {
+      "file": "代码/前端/HarmonyOS/工具链/【MacOS】准备工具链.command/【MacOS】准备工具链.command",
+      "sha256": "48e532c8a2708566cb8df75cefe8f2ebaffae5efdfc7a171c1ebfc59bc404f32"
+    },
+    {
+      "file": "代码/前端/iOS/ScriptsByPods/【MacOS@Xcode】🫘当前工程Pod Install.command/【MacOS@Xcode】🫘当前工程Pod Install.command",
+      "sha256": "906d5c0ac10111aceec2f84b38431559311f47f3f85e005d9be0d029d049ad05"
+    },
+    {
+      "file": "代码/前端/iOS/ScriptsByPods/【MacOS@Xcode】🫘当前工程Pod Update.command/【MacOS@Xcode】🫘当前工程Pod Update.command",
+      "sha256": "fedd366440bbc67e1bf6b5fbf9f326f2a6805df5de78928f9b13210ad7489ce3"
+    },
+    {
+      "file": "代码/前端/Web/Scripts/准备环境.command/准备环境.command",
+      "sha256": "3507f30dcec8bff95325eeddc06fd957c613ae83dfc49aa3a76260e313003175"
+    },
+    {
+      "file": "测试/前端/Android/运行测试.command/运行测试.command",
+      "sha256": "df66cd39fd528308cb00daeb074a661d879cc2e89b2e55c9315b05f44314b1bf"
+    },
+    {
+      "file": "测试/前端/HarmonyOS/【MacOS】运行规则测试.command/【MacOS】运行规则测试.command",
+      "sha256": "1a8698504f6095fda161009d6fc705deeeaa1f2e7730f3fca77cc6f36e6618d3"
+    },
+    {
+      "file": "测试/前端/HarmonyOS/运行测试.command/运行测试.command",
+      "sha256": "30ce691c6400044f79e15d83d2bb2a2fae1294d716502f3c333f26ba2ed281e2"
+    },
+    {
+      "file": "测试/部署/MacOS/NATS专项.command/NATS专项.command",
+      "sha256": "0d1a6d518c19a6ac89e2e8eb0ed9af772b62f53533abf0e727c0346bade15b34"
+    },
+    {
+      "file": "测试/部署/MacOS/运行测试.command/运行测试.command",
+      "sha256": "8aae7884fdab258ac9892263059b31ea60a5780bc9051b0c63e57090dc115459"
+    },
+    {
+      "file": "测试/部署/Windows/生命周期.ps1/生命周期.ps1",
+      "sha256": "db4bb2f6d65a1a4b51ec012ef31543999f55c443a15d9344ab1cd484be1feb53"
+    },
+    {
+      "file": "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh",
+      "sha256": "901237ec9639c1272a6eb1f2cf420c30ca4f0bd3b22bf350a4c9dd90a28b7027"
+    },
+    {
+      "file": "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh",
+      "sha256": "5097f9b8d33ee63f476be11f9ae481f5778deada9f5a6f95a77c722bf3b576c6"
+    },
+    {
+      "file": "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh",
+      "sha256": "45bbcb6790c4f9005f5b3a98365f67e196148a3408a1ef7c4f48d7ebfb3d72d7"
+    },
+    {
+      "file": "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh",
+      "sha256": "c6ee981d2fa109965830b8c2fbb6120453a47586944a52cdeb53868aa33754b3"
+    },
+    {
+      "file": "部署/MacOS/【MacOS】双击反部署（快捷入口）.command",
+      "sha256": "edc0f03526dc971b305aa34113c39881707e5da125a0f138e8b0827584d3ae78"
+    },
+    {
+      "file": "部署/MacOS/【MacOS】双击部署（快捷入口）.command",
+      "sha256": "282e219c3e2754d71d2a1c974282825702c8eead172e7d0d54f6294b6774a3fc"
+    },
+    {
+      "file": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "sha256": "955ba7f9d2197e8a1a79a1360be3643867714c88f6f7750eaf5a86a99a6eec6b"
+    },
+    {
+      "file": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "sha256": "ea390066e9e2514651164ac7f088c2f6673e441ba97caf7a6b9129c1b46c91c9"
+    },
+    {
+      "file": "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh",
+      "sha256": "f2fe2126681bc4a729d1ee33544d3dc3415b63fc29c99d4fc3cf8801ba39be8e"
+    },
+    {
+      "file": "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh",
+      "sha256": "38189a7be0e95348393595d67ddc3625b3bbedb388b9a5d0a9f33e463b71ec92"
+    },
+    {
+      "file": "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh",
+      "sha256": "2ebec3687ad9e5963cf4b93c5743d23b383911b36b38f3a2e78fe8282535a2c1"
+    },
+    {
+      "file": "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh",
+      "sha256": "c40761d1ce3e81de7bbeea75f63f8b16a38cc5cfe0e5d1f2b5e6d56025a5bcd9"
+    },
+    {
+      "file": "部署/Windows/【Windows】双击反部署（快捷入口）.cmd",
+      "sha256": "54df276fcc07c9a6c46ff6589ac95c5445ad697ca6cc1ba27aa373cedcb7d626"
+    },
+    {
+      "file": "部署/Windows/【Windows】双击部署（快捷入口）.cmd",
+      "sha256": "674c1756ef9e2b1f3db5ba5b20770577182b5736cbf1a02f1d2dffc84e1b212e"
+    },
+    {
+      "file": "部署/Windows/Deployment/【Windows】部署.ps1/【Windows】部署.ps1",
+      "sha256": "aca45e9e2359fae4509e6c707916ebb295231e7e7cb44689da3663630638fa9c"
+    },
+    {
+      "file": "部署/Windows/Undeployment/【Windows】反部署.ps1/【Windows】反部署.ps1",
+      "sha256": "15200ad33ace951e7d0dcf926e16a190d08e8303d82eb7e0e99f3c8da85920ff"
+    }
+  ],
+  "sqliteIntegrity": "ok",
+  "queries": [
+    {
+      "name": "Web",
+      "query": "代码/前端/Web/Src/useVisibleViewport.ts isRectInVisibleViewport",
+      "symbols": 4,
+      "pathMatched": true,
+      "log": "最终重建/explore-Web.log"
+    },
+    {
+      "name": "Go后端",
+      "query": "代码/后端/Go/deployment_disk.go",
+      "symbols": 1,
+      "pathMatched": true,
+      "log": "最终重建/explore-Go后端.log"
+    },
+    {
+      "name": "CLI",
+      "query": "代码/前端/CLI/cmd/jobsim/auth.go",
+      "symbols": 31,
+      "pathMatched": true,
+      "log": "最终重建/explore-CLI.log"
+    },
+    {
+      "name": "Swift",
+      "query": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift",
+      "symbols": 39,
+      "pathMatched": true,
+      "log": "最终重建/explore-Swift.log"
+    },
+    {
+      "name": "Kotlin",
+      "query": "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt",
+      "symbols": 11,
+      "pathMatched": true,
+      "log": "最终重建/explore-Kotlin.log"
+    },
+    {
+      "name": "ArkTS",
+      "query": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools.ets",
+      "symbols": 64,
+      "pathMatched": true,
+      "log": "最终重建/explore-ArkTS.log"
+    },
+    {
+      "name": "部署公共Go",
+      "query": "部署/公共组件/地址二维码/main.go",
+      "symbols": 12,
+      "pathMatched": true,
+      "log": "最终重建/explore-部署公共Go.log"
+    },
+    {
+      "name": "二维码Python测试",
+      "query": "测试/部署/二维码/终端二维码.py/终端二维码.py",
+      "symbols": 6,
+      "pathMatched": true,
+      "log": "最终重建/explore-二维码Python测试.log"
+    }
+  ],
+  "hooks": [
+    {
+      "file": ".git/hooks/post-commit",
+      "exists": false
+    },
+    {
+      "file": ".git/hooks/post-merge",
+      "exists": false
+    },
+    {
+      "file": ".git/hooks/post-checkout",
+      "exists": false
+    }
+  ],
+  "backgroundMetadata": [],
+  "resources": {
+    "wallSeconds": 11.58,
+    "maxRSSBytes": 765771776,
+    "afterFreeKiB": 5972904,
+    "reserveGiB": 4,
+    "workers": 1
+  },
+  "dbSHA256": "7ad38698611ffcc855a4030c0e8c3b5e8601f67f374d6c1ed99721475c744695",
+  "verificationHarnessCorrection": "Initial checker expected plural \"symbols\" and rejected valid Go output \"Found 1 symbol\"; actual CLI query succeeded. Singular/plural accepted, original valid raw output preserved; no source/index rerun needed."
+}

@@ -1,0 +1,28 @@
+✔ ten languages contain every group control (0.62825ms)
+✔ share code is strict standard base64 UTF8, instance-bound and exact typed fields (1.101125ms)
+✔ staged transfer freezes actor and original target generations without later rebasing (1.645709ms)
+✔ unknown governance result is queried by original nonce without another mutation (0.302042ms)
+✔ only original lookup404 can authorize explicit retry; dependency403 never creates (0.143791ms)
+✔ prepared dependency403 leaves original unknown and preserves its body (0.162292ms)
+✔ invitation token stays only in RAM and deliberate share code; close clears it (0.255667ms)
+✔ cold join retains only nonce/inviteId and requires reentering the same code (0.401834ms)
+✔ unknown join cannot replace its invite token by another invitation (0.243041ms)
+✔ old epoch remains original-result-only even for an explicit retry (0.300125ms)
+✔ member and invitation pagination retain UUID cursor and remove invite token from public page (0.173208ms)
+✔ recovery uses canRecover and RAM-only step-up for the frozen original payload (0.188958ms)
+✔ member-only and unavailable groups cannot stage manager operations (0.104583ms)
+✔ late identity change cannot publish a successful mutation into the successor (0.118292ms)
+✔ malformed result nonce or numeric generation remains unknown (0.198792ms)
+✔ shipped RDB repository CAS and owner isolation survive reopening without invite secrets (29.756ms)
+✔ reloading a withdrawn manager role clears RAM share tokens (0.193792ms)
+✔ later family or device namespace may only query the original even at the same epoch (0.3105ms)
+✔ legacy public rows missing original family remain result-only (0.129708ms)
+✔ revoke and approval require typed original action target and state (0.49275ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 144.179292

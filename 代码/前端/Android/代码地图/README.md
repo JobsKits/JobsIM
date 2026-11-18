@@ -2,6 +2,8 @@
 
 ![Jobs出品，必属精品](https://picsum.photos/1500/400)
 
+2026-11-17当前完整候选：[145份输入SHA](../../../../项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入SHA256.json)、[46 JVM通过／双APK编译结果](../../../../项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/结果.json)。98个仪器方法只编译；本表提及的旧设备／HTTPS证据仍按其原报告范围，不外推到当前整合源。当前[应用APK](../../../../项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/app-debug.apk)与[测试APK](../../../../项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/app-debug-androidTest.apk)未安装。构建后文档更新与编译源保全见[收口SHA](./../../../../项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/构建后文档收口SHA.json)。
+
 | 入口 | 职责 |
 | --- | --- |
 | [MainActivity.kt](../app/src/main/java/com/jobs/im/MainActivity.kt) | Compose 页面、导航、身份／连接表单、消息动作、原生附件选择、主题与字号 |
@@ -34,6 +36,15 @@
 | [Forwarding.kt](../app/src/main/java/com/jobs/im/Forwarding.kt) | 原转发 body 校验、明确资格拒绝、不可用投影清理与同源固定附件路径 |
 | [ForwardScreens.kt](../app/src/main/java/com/jobs/im/ForwardScreens.kt) | 原生来源预览／更新后重选与目标会话选择 |
 | [Assets.kt](../app/src/main/java/com/jobs/im/Assets.kt) | 有界文件读取与真实图片格式识别 |
+| [VoiceRecordingComposer.kt](../app/src/main/java/com/jobs/im/VoiceRecordingComposer.kt)／[Engine](../app/src/main/java/com/jobs/im/VoiceRecordingEngine.kt) | 聊天原生录音面板、显式授权／开始、停止后试听及明确发送；生命周期、焦点／路由／系统静音中断停止并撤原资格 |
+| [VoiceRecordingRules.kt](../app/src/main/java/com/jobs/im/VoiceRecordingRules.kt)／[Files](../app/src/main/java/com/jobs/im/VoiceRecordingFiles.kt)／[Text](../app/src/main/java/com/jobs/im/VoiceRecordingText.kt) | 原namespace／family／会话／准入lease、5分钟／8MiB限制、私有暂存与精确自有清理、十语标签；ChatModel复用原上传／Room Outbox，新候选证据见[录音报告](../../../../项目相关报告/实现进度/20261117-Android原生录音/README.md) |
+| [VoiceUploadProtocol.kt](../app/src/main/java/com/jobs/im/VoiceUploadProtocol.kt)／[Queue](../app/src/main/java/com/jobs/im/VoiceUploadQueue.kt) | 原requestId／clientMsgId／reply／稳定本人归属、noBackup原件与AtomicFile／file-dir fsync；同FileLock账号／消息floor、global精确会话归属、冲突保清理责任及terminal续清。7纯规则通过，14个文件仪器只编译 |
+| [VoiceUploadApi.kt](../app/src/main/java/com/jobs/im/VoiceUploadApi.kt)／[Coordinator](../app/src/main/java/com/jobs/im/VoiceUploadCoordinator.kt) | stable-upload-v1能力／原结果／同原体重试，objectId先耐久再同原ID交Room；ENQUEUE_UNKNOWN先查原message结果，不换family／回复目标。4个API仪器只编译，真实HTTPS待验 |
+| [VoiceUploadScreen.kt](../app/src/main/java/com/jobs/im/VoiceUploadScreen.kt)／[Text](../app/src/main/java/com/jobs/im/VoiceUploadText.kt) | 当前本人本机任务、完整空态／重载、纯查询／明确恢复／未上传取消、冻结只读；十语24键／沿用三主题，仅保存任务不冒充已发出 |
+| [ReceiptCoordinator.kt](../app/src/main/java/com/jobs/im/ReceiptCoordinator.kt)／[Service](../app/src/main/java/com/jobs/im/ReceiptService.kt)／[Protocol](../app/src/main/java/com/jobs/im/ReceiptProtocol.kt) | 现行本机收讫资格、正文与对象原结果协调；已纳入完整候选编译，qualification与设备耐久证明不因编译自动成立 |
+| [ReceiptStore.kt](../app/src/main/java/com/jobs/im/ReceiptStore.kt)／[Screen](../app/src/main/java/com/jobs/im/ReceiptScreen.kt)／[Text](../app/src/main/java/com/jobs/im/ReceiptText.kt) | 原责任／本机原件与测量、可读入口和十语；qualified普通迁移源由独立原件路径提供，当前无本轮设备／cold-target通过结论 |
+| [MigrationProtocol.kt](../app/src/main/java/com/jobs/im/MigrationProtocol.kt)／[Service](../app/src/main/java/com/jobs/im/MigrationService.kt)／[Store](../app/src/main/java/com/jobs/im/MigrationStore.kt) | 普通personal迁移的原请求、配对、密封包／key、只查与目标安装责任；qualified源和目标持久意图已编译，6 MigrationRules执行通过，V8→9仪器本轮仅编译 |
+| [MigrationScreen.kt](../app/src/main/java/com/jobs/im/MigrationScreen.kt)／[Text](../app/src/main/java/com/jobs/im/MigrationText.kt) | 原生迁移任务、qualified候选、配对／发送／接收／撤包及独立历史，十语40键／三主题；精确冻结归属见[范围核对](../../../../项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/整合源码范围核对.json) |
 | [LocalAlerts.kt](../app/src/main/java/com/jobs/im/LocalAlerts.kt) | 默认关闭的本地通知、权限／命名空间门禁与隐藏正文 |
 | [ProfileAvatar.kt](../app/src/main/java/com/jobs/im/ProfileAvatar.kt) | 本地 Logo 兜底与鉴权头像异步显示 |
 | [ExtraStrings.kt](../app/src/main/java/com/jobs/im/ExtraStrings.kt) | 管理／隐私／错误状态新增十语词条 |

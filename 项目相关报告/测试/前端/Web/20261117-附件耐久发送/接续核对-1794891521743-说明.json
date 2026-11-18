@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-17T04:59:32.950Z",
+  "priorCheckpoint": "接续核对-1794891521743.json",
+  "candidate": "项目相关报告/实现进度/20261117-Android原生录音/并发整合待验源清单-20261117-125639.json",
+  "unchangedInputs": 22,
+  "changedInputs": [
+    {
+      "file": "项目相关报告/实现进度/20261117-Android原生录音/README.md",
+      "expected": "84fdf6fcabde45798c27d321816aa6f4efbff4236773fd38676298cd9d3124bb",
+      "current": "97d63ba5dcfafa3e2637b3b2c0094939d0f3f980a47b8da9de572ae3f465499f"
+    }
+  ],
+  "changeExplained": true,
+  "reason": "Root appended the integrated-manifest navigation and its source-only boundary to this report after the manifest was written; every other input, including ChatModel and queue/cleanup code, still exactly matches. Prior JSON remains byte-for-byte unchanged.",
+  "codeInputDrift": [],
+  "linksChecked": 306,
+  "brokenLinks": 0,
+  "build": false,
+  "device": false,
+  "currentDurableProductDelivered": false
+}

@@ -1,0 +1,11 @@
+{
+  "pass": [
+    "TestProfileAnimatedGIFKeepsFramesDelayLoopAndDisposal",
+    "TestProfileAnimatedGIFRejectsAllocationAndMalformedBudgets",
+    "TestProfilePGOwnFieldsAndContactPrivacy"
+  ],
+  "fail": [],
+  "skip": [],
+  "exit": 0,
+  "elapsedSeconds": 4.86
+}

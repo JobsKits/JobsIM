@@ -1,0 +1,22 @@
+PASS: strict TLS, two registered accounts, contact acceptance, direct text, original-ID retry and recipient history
+Deployment 2a9974f4-c91a-4a44-bce7-98e702b3688d; restoreEpoch=1
+JobsIM：check/plan/status只读；run启动本实例双PG、loopback JetStream与Go角色；stop默认备份并保留数据。
+go version go1.27.4 darwin/arm64
+pg_ctl (PostgreSQL) 18.7 (Postgres.app)
+OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+v26.13.1
+nats-server: v2.15.3
+JobsIM MacOS · stop
+实例：/Users/jobs/Library/Application Support/JobsIM/Regression/20261118-deploy
+HTTPS=19443；业务PG=17543；独立journalPG=17544；内部角色=20101～20109
+只操作此收据匹配实例；不安装全局工具、不清理数据、不修改系统CA。先应用后NATS停止；备份后保持停止。
+自托管NATS=127.0.0.1:24222；磁盘上限=536870912；内存上限=33554432。
+已生成并解密验真：/Users/jobs/Documents/JobsIMBackups/Regression-20261118-deploy/JobsIM-20261118-065223-9663.cms
+恢复私钥独立保存于：/Users/jobs/Library/Application Support/JobsIM/RegressionKeys/20261118-deploy/key.pem；请另行离线保管。备份不包含这把解密私钥。
+归档范围明确列出业务PG、独立journal及已停JetStream/配置/token；不自动回滚journal。归档验真不等于broker或数据库恢复演练。
+waiting for server to shut down.... done
+server stopped
+waiting for server to shut down.... done
+server stopped
+本实例已停止；数据库、对象、CA/私钥、独立journal与既有备份均保留。
+PASS：真实独立双PG、源码构建、严格TLS、聊天契约、加密备份验真和保留数据停止。恢复演练未包含。

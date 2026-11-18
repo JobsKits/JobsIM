@@ -13,7 +13,7 @@ import (
 )
 
 // The client filename and MIME never authorize an audio/video type. Inspect the
-// ISO BMFF track handlers so AAC/M4A is not mislabeled as a video container.
+// container tracks so audio-only BMFF/WebM is not mislabeled as video.
 func classifyStoredMedia(path, sniffed string) (string, error) {
 	f, e := os.Open(path)
 	if e != nil {
@@ -27,6 +27,19 @@ func classifyStoredMedia(path, sniffed string) (string, error) {
 	prefix := make([]byte, 32)
 	n, _ := f.ReadAt(prefix, 0)
 	prefix = prefix[:n]
+	if len(prefix) >= 4 && string(prefix[:4]) == "\x1a\x45\xdf\xa3" {
+		audio, video, e := webmTracks(f, stat.Size())
+		if e != nil {
+			return "", fail(400, "INVALID_MEDIA_CONTAINER", "Invalid WebM track structure")
+		}
+		if video {
+			return "video/webm", nil
+		}
+		if audio {
+			return "audio/webm", nil
+		}
+		return "application/octet-stream", nil
+	}
 	if len(prefix) >= 12 && string(prefix[4:8]) == "ftyp" {
 		audio, video, e := bmffTracks(f, stat.Size())
 		if e != nil {

@@ -1,0 +1,23 @@
+{
+  "runtime": "real Chrome IndexedDB; all API traffic blocked; supplied proofs are test doubles",
+  "checks": [
+    "legacy namespace removes only an exact original route and body after a supplied successful read proof",
+    "matching client ID with a changed body, admission or target route never acknowledges the original intent",
+    "the transaction compares the latest durable queue instead of trusting an earlier proof snapshot",
+    "another sender cannot acknowledge the current principal's queue even with an equal client ID and body",
+    "a modern namespace requires its durable active-device pointer before exact proof acknowledgment",
+    "an old device cannot erase its frozen queue after another device owns the scope",
+    "a late authentication lifecycle refuses the transaction without erasing any intent",
+    "a malformed proof aborts the entire IndexedDB transaction without an unhandled page error",
+    "valid opaque CLI client IDs are accepted without a UUID assumption and the server UTF-8 byte limit is enforced",
+    "a malformed 200 result with only matching attribution fields cannot create an original-body acknowledgment proof"
+  ],
+  "errors": [],
+  "hashes": {
+    "代码/前端/Web/Src/storage.ts": "9f81597f61d4ebfb3011d246889e39d616ceb704374356388cdafd522f823026",
+    "代码/前端/Web/Src/SyncView.ts": "cea1be4b73b5143d27abeb3cff780bca8b7ab00ab14dbadbe791c1b8a63dd533",
+    "代码/前端/Web/Src/forward.ts": "688de48c837608a7f36f1452fe79155d819946f97499e8bead0e7872ebfa9e0d",
+    "测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs": "567d73b59fc4d306a8d060a85e9ba609ac5967d1d5287d6cb444b191fb1af3c2"
+  },
+  "date": "2026-11-16T14:59:23.896Z"
+}

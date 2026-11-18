@@ -1,0 +1,17 @@
+{
+  "originalPlannedLabel": "99 local / two environment methods",
+  "actualOriginalFrozenSource": 101,
+  "actualOriginalFinished": 98,
+  "actualOriginalCounts": {
+    "PASS": 78,
+    "FAIL": 4,
+    "SKIP_ASSUMPTION": 16
+  },
+  "actualExcludedOriginalMethods": [
+    "nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps",
+    "realDraftLossUsesReadonlyOriginalBodyAndRetiredSourceKeepsIndependentText",
+    "realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue"
+  ],
+  "currentFinalResult": "最终105逐方法实际核对.json",
+  "originalRawEvidenceUnmodified": true
+}

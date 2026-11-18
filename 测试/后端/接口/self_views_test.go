@@ -56,11 +56,27 @@ func TestSelfViewIntentKeepsExactCountersAndExplicitNulls(t *testing.T) {
 	}
 }
 
-func TestPrivateStateGatewayUsesSharedResponseFence(t *testing.T) {
-	for _, path := range []string{"/api/conversations/id/read", "/api/conversations/id/read-results", "/api/conversations/id/view", "/api/conversations/id/view-results", "/api/conversations/id/draft", "/api/conversations/id/draft-results", "/api/me/preferences", "/api/me/preferences-results", "/api/me/preferences/operations/original-request"} {
-		request := httptest.NewRequest("POST", path, nil)
-		if gatewayProjectionMode(request) != "shared" {
-			t.Fatalf("private state response has no shared instance fence: %s", path)
+func TestPrivateStateGatewayUsesReadAndWriteResponseFences(t *testing.T) {
+	cases := []struct{ method, path, mode string }{
+		{"GET", "/api/conversations/id/read", "shared"},
+		{"PUT", "/api/conversations/id/read", "exclusive"},
+		{"POST", "/api/conversations/id/read-results", "shared"},
+		{"GET", "/api/conversations/id/view", "shared"},
+		{"PATCH", "/api/conversations/id/view", "exclusive"},
+		{"POST", "/api/conversations/id/view-results", "shared"},
+		{"GET", "/api/conversations/id/draft", "shared"},
+		{"PUT", "/api/conversations/id/draft", "exclusive"},
+		{"DELETE", "/api/conversations/id/draft", "exclusive"},
+		{"POST", "/api/conversations/id/draft-results", "shared"},
+		{"GET", "/api/me/preferences", "shared"},
+		{"PATCH", "/api/me/preferences", "exclusive"},
+		{"POST", "/api/me/preferences-results", "shared"},
+		{"GET", "/api/me/preferences/operations/original-request", "shared"},
+	}
+	for _, item := range cases {
+		request := httptest.NewRequest(item.method, item.path, nil)
+		if gatewayProjectionMode(request) != item.mode {
+			t.Fatalf("private state fence %s %s: want %s, got %s", item.method, item.path, item.mode, gatewayProjectionMode(request))
 		}
 	}
 	for _, path := range []string{"/api/conversations/id/unknown", "/api/notconversations/id/view", "/api/conversations/id/view/extra"} {

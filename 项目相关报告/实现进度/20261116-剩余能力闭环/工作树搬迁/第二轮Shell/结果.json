@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "nativeMacOSChecks": 12,
+  "linuxNativeExecuted": false,
+  "usesRealInstance": false,
+  "inputs": {
+    "部署/MacOS/部署运行.command/部署运行.command": "1992ac405fd50eeeba64760503d15abcb369074bc25fd868cf27d5b0197f65c6",
+    "部署/MacOS/停止备份.command/停止备份.command": "700ef7a68d16945560264e20d79b04107967a412ced4f9850214267ea41850db",
+    "部署/Linux/部署运行.sh/部署运行.sh": "4a0f58afe243bc8a53f506283bbf93d9bc8b1a73c3dd83686cbeb9fe5e21d681",
+    "部署/Linux/停止备份.sh/停止备份.sh": "4551ece5d1b994af8da9bb31518b127688dc191a67096bcfd49daa44870d9ab5"
+  },
+  "after": {
+    "部署/MacOS/部署运行.command/部署运行.command": "1992ac405fd50eeeba64760503d15abcb369074bc25fd868cf27d5b0197f65c6",
+    "部署/MacOS/停止备份.command/停止备份.command": "700ef7a68d16945560264e20d79b04107967a412ced4f9850214267ea41850db",
+    "部署/Linux/部署运行.sh/部署运行.sh": "4a0f58afe243bc8a53f506283bbf93d9bc8b1a73c3dd83686cbeb9fe5e21d681",
+    "部署/Linux/停止备份.sh/停止备份.sh": "4551ece5d1b994af8da9bb31518b127688dc191a67096bcfd49daa44870d9ab5"
+  },
+  "results": [
+    {
+      "path": "部署/MacOS/部署运行.command/部署运行.command",
+      "syntaxExit": 0,
+      "nativeExit": 0
+    },
+    {
+      "path": "部署/MacOS/停止备份.command/停止备份.command",
+      "syntaxExit": 0,
+      "nativeExit": 0
+    },
+    {
+      "path": "部署/Linux/部署运行.sh/部署运行.sh",
+      "syntaxExit": 0
+    },
+    {
+      "path": "部署/Linux/停止备份.sh/停止备份.sh",
+      "syntaxExit": 0
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+**Exploration: 代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthTextField.swift**
+
+Found 12 symbols across 1 file. 1 file pinned from the query.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthTextField.swift`** — IMAuthTextField(class), allowsReveal(field), passwordVisible(field), revealButton(field), placeholder(field), byAuthIdentifier(method), setPasswordVisible(method), refreshReveal(method), textRect(method), editingRect(method), +2 more
+
+```swift
+1	//
+2	//  IMAuthTextField.swift
+3	//  JobsIM
+4	//
+5	//  Created by Jobs on 2026年11月18日，星期三.
+6	//
+7	
+8	import JobsByUIKit
+9	import JobsSwiftBaseDefines
+10	import JobsSwiftDSL
+11	import UIKit
+12	
+13	@MainActor
+14	final class IMAuthTextField: UITextField {
+15	
+16	    private let allowsReveal: Bool
+17	    private(set) var passwordVisible = false
+18	    private lazy var revealButton = IMAuthAppearance.button("", compact: true) { [weak self] in
+19	        guard let self else {
+20	            return
+21	        }
+22	        self.setPasswordVisible(!self.passwordVisible)
+23	    }
+24	
+25	    init(_ key: String, secure: Bool = false) {
+26	        allowsReveal = secure
+27	        super.init(frame: .zero)
+28	        let placeholder = IMStrings.text(key)
+29	        byFont(IMAuthAppearance.font(14))
+30	            .byTextColor(IMUI.foreground)
+31	            .byBackgroundColor(IMAuthAppearance.input)
+32	            .byCornerRadius(11)
+33	            .byBorderWidth(1)
+34	            .byBorderColor(IMAuthAppearance.outline)
+35	            .byAttributedPlaceholder(.make(string: placeholder, attributes: [
+36	                .foregroundColor: IMAuthAppearance.secondary,
+37	                .font: IMAuthAppearance.font(14),
+38	            ]))
+39	            .byAutocorrectionType(.no)
+40	            .byAutocapitalizationType(.none)
+41	            .bySecureTextEntry(secure)
+42	            .byAccessibilityLabel(placeholder)
+43	        if secure {
+44	            revealButton.byFrame(CGRect(x: 0, y: 0, width: 44, height: 44))
+45	            byRightView(revealButton, mode: .always)
+46	            refreshReveal()
+47	        }
+48	    }
+49	
+50	    required init?(coder: NSCoder) {
+51	        fatalError("init(coder:) has not been implemented")
+52	    }
+53	
+54	    @discardableResult
+55	    func byAuthIdentifier(_ identifier: String) -> Self {
+56	        byAccessibilityIdentifier(identifier)
+57	        refreshReveal()
+58	        return self
+59	    }
+60	
+61	    func setPasswordVisible(_ visible: Bool) {
+62	        guard allowsReveal else {
+63	            return
+64	        }
+65	        let value = text
+66	        let range = selectedTextRange
+67	        passwordVisible = visible
+68	        // 安全输入切换会重置系统光标，保留正在编辑的位置。
+69	        bySecureTextEntry(!visible)
+70	            .byText(value)
+71	            .bySelectedTextRange(range)
+72	        refreshReveal()
+73	    }
+74	
+75	    private func refreshReveal() {
+76	        guard allowsReveal else {
+77	            return
+78	        }
+79	        revealButton
+80	            .byImage((passwordVisible ? "eye.slash" : "eye").sysImg(pointSize: 19))
+81	            .byConfiguration {
+82	                $0.byPreferredSymbolConfigurationForImage(IMAuthAppearance.smallIconConfiguration)
+83	            }
+84	            .byAccessibilityLabel(IMStrings.text(passwordVisible ? "authHidePassword" : "authShowPassword"))
+85	            .byAccessibilityIdentifier((accessibilityIdentifier ?? "auth.secret") + ".visibility")
+86	    }
+87	
+88	    override func textRect(forBounds bounds: CGRect) -> CGRect {
+89	        return super.textRect(forBounds: bounds).insetBy(dx: 12, dy: 3)
+90	    }
+91	
+92	    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+93	        return super.editingRect(forBounds: bounds).insetBy(dx: 12, dy: 3)
+94	    }
+95	
+96	    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+97	        guard allowsReveal else {
+98	            return super.rightViewRect(forBounds: bounds)
+99	        }
+100	        // UITextField会按按钮固有尺寸重算rightView；显式保留44点触控，与小图标解耦。
+101	        return CGRect(x: bounds.maxX - 47, y: bounds.midY - 22, width: 44, height: 44)
+102	    }
+103	
+104	    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+105	        super.traitCollectionDidChange(previousTraitCollection)
+106	        byBorderColor(IMAuthAppearance.outline.resolvedColor(with: traitCollection))
+107	    }
+108	}
+```
+
+
+---
+> **Complete source for 1 file is included above — do NOT re-read them.** If your question also needs files/symbols listed under "Not shown above" (or any area this call didn't cover), make ANOTHER codegraph_explore targeting those names — it returns the same source with line numbers and is cheaper and more complete than reading.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~788 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

@@ -6,10 +6,9 @@
 //
 
 import Foundation
-import UniformTypeIdentifiers
-
 import JobsIMCore
 import JobsIMTransport
+import UniformTypeIdentifiers
 
 @MainActor
 final class IMAvatarService {
@@ -26,11 +25,12 @@ final class IMAvatarService {
         }
         let bytes = try Data(contentsOf: source)
         guard bytes.count <= 2 * 1024 * 1024, bytes.count > 0 else {
-            throw IMAPIError(status: 413, code: "AVATAR_LIMIT", message: "JPEG / PNG ≤ 2 MiB")
+            throw IMAPIError(status: 413, code: "AVATAR_LIMIT", message: IMStrings.text("avatarFormats"))
         }
         let type = UTType(filenameExtension: source.pathExtension)
-        guard type == .jpeg || type == .png else {
-            throw IMAPIError(status: 400, code: "STATIC_AVATAR_REQUIRED", message: "JPEG / PNG")
+        guard type == .jpeg || type == .png || type == .gif else {
+            throw IMAPIError(
+                status: 400, code: "AVATAR_FORMAT_REQUIRED", message: IMStrings.text("avatarFormats"))
         }
         let ns = session.namespace
         if !(try session.store.list("avatar-operations", namespace: ns)).isEmpty {
@@ -49,9 +49,14 @@ final class IMAvatarService {
         try bytes.write(to: directory.appendingPathComponent(fileName), options: .atomic)
         let operation = IMJSON.object([
             "id": .string(id), "fileName": .string(fileName), "expectedVersion": user["profileVersion"],
-            "mime": .string(type == .png ? "image/png" : "image/jpeg"),
+            "mime": .string(type?.preferredMIMEType ?? "application/octet-stream"),
         ])
-        try session.store.save([operation], collection: "avatar-operations", namespace: ns)
+        do {
+            try session.store.save([operation], collection: "avatar-operations", namespace: ns)
+        } catch {
+            try? FileManager.default.removeItem(at: directory.appendingPathComponent(fileName))
+            throw error
+        }
         try await retry()
     }
     func retry() async throws {
@@ -73,8 +78,11 @@ final class IMAvatarService {
                     return try await api.upload(
                         self.directory.appendingPathComponent(operation["fileName"].text),
                         mimeType: operation["mime"].text, token: token, path: "me/avatar",
-                        form: ["requestId": id, "expectedVersion": operation["expectedVersion"].text.isEmpty
-                            ? "1" : operation["expectedVersion"].text])
+                        form: [
+                            "requestId": id,
+                            "expectedVersion": operation["expectedVersion"].text.isEmpty
+                                ? "1" : operation["expectedVersion"].text,
+                        ])
                 }
             } catch let failure as IMAPIError {
                 if [400, 413].contains(failure.status) || failure.code == "VERSION_CONFLICT" {

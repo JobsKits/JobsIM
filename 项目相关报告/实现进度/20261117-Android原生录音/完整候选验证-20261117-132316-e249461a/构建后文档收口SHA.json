@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-17T06:03:12.578659+00:00",
+  "status": "post-build documentation update only",
+  "buildResult": "项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/结果.json",
+  "buildResultSHA256": "373c2fa6aab5ec233d3cfaafbd4390291caba1cfe2d832f342598d975eeb2e9d",
+  "frozenInputManifest": "项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入SHA256.json",
+  "frozenInputManifestSHA256": "b3b1b2b0480eaddbaf4c7bf44de67785db6e66634b920eb638d874636aad9a54",
+  "originalBuildStatus": "passed",
+  "originalInputMatchedAtBuildEnd": true,
+  "approvedPostBuildDocs": [
+    "代码/前端/Android/README.md",
+    "代码/前端/Android/代码地图/README.md",
+    "项目相关报告/实现进度/20261117-Android原生录音/README.md"
+  ],
+  "currentInputDifferences": [
+    {
+      "path": "代码/前端/Android/README.md",
+      "frozenSHA256": "fd10752b44b3fb4fe460b3d29e7062bb1814908f959bec5c1824d98401a28288",
+      "currentSHA256": "977051ef21e0e97175c97ee0054365b1d6e5803a8bf063250d4edc7f94ffe406"
+    },
+    {
+      "path": "代码/前端/Android/代码地图/README.md",
+      "frozenSHA256": "cf94f846f243529d0f2d1a1a23e17b5a2bce6492723d5b822bc67086219be616",
+      "currentSHA256": "9ab346896533fee7a7e8ade241ba9980cbd3bc8e827f6cf8c85d598b124ec93c"
+    }
+  ],
+  "unexpectedExecutableSourceDifferences": [],
+  "allOther143FrozenInputsUnchanged": true,
+  "currentDocumentSHA256": {
+    "代码/前端/Android/README.md": "977051ef21e0e97175c97ee0054365b1d6e5803a8bf063250d4edc7f94ffe406",
+    "代码/前端/Android/代码地图/README.md": "9ab346896533fee7a7e8ade241ba9980cbd3bc8e827f6cf8c85d598b124ec93c",
+    "项目相关报告/实现进度/20261117-Android原生录音/README.md": "187e12948c4a1f26c33bdc35e78040bb948a23395cffee6ba79365e35c585ac6"
+  },
+  "newBuildOrDeviceExecution": false,
+  "artifactPaths": {
+    "app-debug.apk": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/app-debug.apk",
+    "app-debug-androidTest.apk": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/app-debug-androidTest.apk"
+  },
+  "boundary": "the immutable145 manifest includes Android README and map README before this authorized documentation update; the other143 inputs still match. No executable source/resource/build config or test changed in this documentation step."
+}

@@ -1,0 +1,14 @@
+.admin-report-filters { display: grid; gap: 10px; margin-bottom: 14px; }
+.admin-report-filters label { display: grid; gap: 5px; }
+.admin-report-filters input { min-width: 0; width: 100%; padding: 10px; color: var(--text); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.admin-report-filter-actions, .admin-report-detail header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.admin-report-detail { margin-top: 20px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--text); }
+.admin-report-detail h3, .admin-report-detail h4 { margin: 10px 0; }
+.admin-report-detail dl { display: grid; gap: 4px; }
+.admin-report-detail dd { margin: 0 0 8px; overflow-wrap: anywhere; }
+.admin-report-detail dt, .admin-report-hint, .admin-evidence-card small { color: var(--muted); }
+.admin-report-detail p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.admin-evidence-card { display: grid; gap: 8px; border-top: 1px solid var(--line); padding: 14px 0; min-width: 0; }
+.admin-evidence-card small { overflow-wrap: anywhere; }
+.admin-evidence-media { display: flex; flex-wrap: wrap; gap: 8px; }
+.admin-evidence-media img, .admin-evidence-media video { display: block; flex-basis: 100%; max-width: 100%; max-height: 420px; object-fit: contain; border-radius: 8px; background: var(--canvas); }

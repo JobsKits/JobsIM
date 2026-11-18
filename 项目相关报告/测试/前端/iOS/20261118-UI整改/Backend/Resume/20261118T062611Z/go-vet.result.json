@@ -1,0 +1,16 @@
+{
+  "exit": 1,
+  "elapsedSeconds": 0.746,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "-C",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/后端/Go",
+    "vet",
+    "-p",
+    "1",
+    "-overlay",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/overlay.json",
+    "."
+  ],
+  "scope": "Current backend package and its complete external-test overlay; no CLI/deployment/native UI test."
+}

@@ -1,0 +1,109 @@
+{
+  "status": "failed",
+  "results": [
+    {
+      "name": "mobile conversation touch navigation",
+      "status": "passed"
+    },
+    {
+      "name": "touch send remains usable",
+      "status": "failed",
+      "error": "locator.waitFor: Error: strict mode violation: getByText('H5 isolated demo', { exact: true }) resolved to 2 elements:\n    1) <span>H5 isolated demo</span> aka locator('aside').getByText('H5 isolated demo')\n    2) <p>H5 isolated demo</p> aka getByRole('article', { name: 'Jobs: H5 isolated demo' }).getByText('H5 isolated demo')\n\nCall log:\n\u001b[2m  - waiting for getByText('H5 isolated demo', { exact: true }) to be visible\u001b[22m\n"
+    },
+    {
+      "name": "keyboard visible viewport keeps composer inside",
+      "status": "failed",
+      "error": "{\"x\":10,\"y\":610.625,\"width\":370,\"height\":221.375}"
+    },
+    {
+      "name": "keyboard viewport offset keeps app visible",
+      "status": "failed",
+      "error": "{\"x\":0,\"y\":0,\"width\":390,\"height\":844}"
+    },
+    {
+      "name": "layout 320x568",
+      "status": "passed"
+    },
+    {
+      "name": "layout 390x844",
+      "status": "passed"
+    },
+    {
+      "name": "layout 430x932",
+      "status": "passed"
+    },
+    {
+      "name": "layout 844x390",
+      "status": "failed",
+      "error": "phone conversation must retain single-pane navigation"
+    },
+    {
+      "name": "touch return to conversation list",
+      "status": "failed",
+      "error": "locator.tap: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.thread-header button[aria-label=\"返回\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"返回\" type=\"button\" aria-label=\"返回\" class=\"icon-button \">…</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying tap action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "name": "mobile authentication modal fits visible viewport",
+      "status": "failed",
+      "error": "{\"x\":202,\"y\":23.40625,\"width\":440,\"height\":343.1875}"
+    },
+    {
+      "name": "mobile large font zh-CN",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font zh-TW",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font bo",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font en",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ja",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font fr",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font es",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font de",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ru",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ko",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme light",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme dark",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme system",
+      "status": "passed"
+    },
+    {
+      "name": "no unhandled page errors",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "scope": "Chrome mobile/touch and explicit visualViewport fixture; not physical iOS/Android keyboard"
+}

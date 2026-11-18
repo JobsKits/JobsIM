@@ -136,6 +136,7 @@ private fun Home(model: ChatModel) {
     val input = model.draft
     var person by remember { mutableStateOf<Person?>(null) }
     var details by remember { mutableStateOf(false) }
+    var migrationHistory by remember { mutableStateOf(false) }
     var edit by remember { mutableStateOf<MessageRow?>(null) }
     var editing by remember { mutableStateOf("") }
     var lookup by remember { mutableStateOf<String?>(null) }
@@ -203,6 +204,7 @@ private fun Home(model: ChatModel) {
                             Icon(Icons.Default.Favorite, t("favoritesList"))
                         }
                     }
+                    if (selected != null && !model.demo) TextButton(onClick = { migrationHistory = true }, enabled = !model.busy) { Text(MigrationText.text(model.language, "title")) }
                     if (selected != null)
                         TextButton(onClick = { details = true }, enabled = !model.busy) {
                             Text(t("details"))
@@ -384,6 +386,7 @@ private fun Home(model: ChatModel) {
                         ) {
                             Icon(Icons.Default.Add, t("attachment"))
                         }
+                        VoiceRecordingComposer(model)
                         OutlinedTextField(
                             input,
                             { model.updateDraft(it) },
@@ -458,6 +461,7 @@ private fun Home(model: ChatModel) {
     }
     if (person != null) PersonDialog(person!!, model) { person = null }
     if (details && model.selected != null) GroupDialog(model) { details = false }
+    if (migrationHistory) MigrationScreen(model) { migrationHistory = false }
     LaunchedEffect(model.selected?.id) { details = false }
     if (connection) ConnectionDialog(model) { connection = false }
     if (newChat) {
@@ -980,7 +984,17 @@ private fun Settings(model: ChatModel) {
     fun t(key: String) = Strings.text(model.language, key)
     var password by remember { mutableStateOf("") }
     var exports by remember { mutableStateOf(false) }
+    var passwordChange by remember { mutableStateOf(false) }
+    var accountDeletion by remember { mutableStateOf(false) }
+    var groupJoin by remember { mutableStateOf(false) }
+    var migration by remember { mutableStateOf(false) }
+    var receipts by remember { mutableStateOf(false) }
     if (exports) PersonalExportScreen(model) { exports = false }
+    if (passwordChange) OwnPasswordScreen(model) { passwordChange = false }
+    if (accountDeletion) OwnDeletionScreen(model) { accountDeletion = false }
+    if (groupJoin) GroupScreen(model) { groupJoin = false }
+    if (migration) MigrationScreen(model) { migration = false }
+    if (receipts) ReceiptScreen(model) { receipts = false }
     LazyColumn(
         contentPadding = PaddingValues(20.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -1052,6 +1066,15 @@ private fun Settings(model: ChatModel) {
             SelfStateActions(model)
         }
         item { AccountTools(model) }
+        item { OutlinedButton(onClick = { receipts = true }, enabled = !model.demo && model.userId.isNotEmpty(), modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) { Text(ReceiptText.text(model.language, "title")) } }
+        item { OutlinedButton(onClick = { migration = true }, enabled = !model.demo && model.userId.isNotEmpty(), modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) { Text(MigrationText.text(model.language, "title")) } }
+        item { OutlinedButton(onClick={groupJoin=true},enabled=!model.demo&&model.userId.isNotEmpty(),modifier=Modifier.fillMaxWidth().heightIn(min=48.dp)){Text(GroupText.text(model.language,"join"))} }
+        item {
+            OutlinedButton(onClick = { accountDeletion = true }, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) { Text(OwnDeletionText.text(model.language, "title")) }
+        }
+        item {
+            OutlinedButton(onClick = { passwordChange = true }, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) { Text(OwnPasswordText.text(model.language, "title")) }
+        }
         item {
             OutlinedButton(onClick = { exports = true }, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) { Text(t("exportTitle")) }
         }

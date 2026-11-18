@@ -1,0 +1,99 @@
+{
+  "scope": "Actual Web admin report/evidence components in isolated loopback Vite and existing Chrome; all APIs explicit fixtures",
+  "completedAt": "2026-11-18T06:43:32.326552+00:00",
+  "productionModifiedDuringResume": false,
+  "browserRounds": [
+    {
+      "directory": "browser-1",
+      "passed": 40,
+      "failed": 1,
+      "failure": "test exact-text selector included target ID; correct row visible in preserved screenshot"
+    },
+    {
+      "directory": "browser-2",
+      "passed": 42,
+      "failed": 0
+    }
+  ],
+  "currentBrowser": {
+    "passed": 42,
+    "failed": 0,
+    "headless": true,
+    "physicalMobile": false,
+    "environment": "browser-2/environment.json",
+    "sourceDrift": [],
+    "pageErrors": [],
+    "forbiddenRequests": []
+  },
+  "static": {
+    "tscNoEmit": "prior exit 0; eight production inputs unchanged",
+    "protocolPassed": 16,
+    "protocolFailed": 0,
+    "protocolObservedAgain": true,
+    "mfaApply": "original function byte-identical; form entered without submit"
+  },
+  "coverage": {
+    "behaviorChecks": 19,
+    "localeThemeLayoutChecks": 20,
+    "otherChecks": [
+      "desktop actual evidence screenshot",
+      "unmount cleanup",
+      "page-error and request boundary"
+    ],
+    "locales": [
+      "zh-CN",
+      "zh-TW",
+      "bo",
+      "en",
+      "ja",
+      "fr",
+      "es",
+      "de",
+      "ru",
+      "ko"
+    ],
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "visibilityTransition": "explicit document.hidden/visibilitychange fixture, not physical backgrounding"
+  },
+  "requests": {
+    "totalAPI": 58,
+    "binary": 12,
+    "allGET": true,
+    "binaryCurrentFixtureCookieAndFamily": true,
+    "liveServiceTouched": false,
+    "mfaSubmitted": false
+  },
+  "binding": {
+    "browserInputCount": 12,
+    "productionFileCount": 9,
+    "round2VsCurrentDrift": [],
+    "round1VsRound2ProductionDrift": [],
+    "priorStaticProductionDrift": []
+  },
+  "screenshotsVisuallyInspected": [
+    "browser-1/failure-1.png",
+    "browser-2/admin-320-light-en.png",
+    "browser-2/admin-320-dark-bo.png",
+    "browser-2/admin-desktop-dark-evidence.png"
+  ],
+  "unverified": [
+    "Real authentication and report/media GET",
+    "Backend per-read admin/source authorization, selected-content version and deletion floors",
+    "Actual MFA/state mutation",
+    "Physical mobile, keyboard and real background lifecycle",
+    "Application-level follow-system theme selection",
+    "Full-size 20MiB image/64MiB video response streaming"
+  ],
+  "sourceFrozen": true,
+  "notes": [
+    "No production source change required; only browser fixture/selector and nearby documentation added or updated.",
+    "Initial failed evidence preserved; no real/default instance, user data or shared tool modified."
+  ]
+}

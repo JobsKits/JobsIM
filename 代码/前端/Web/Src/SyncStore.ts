@@ -193,6 +193,25 @@ export function ensureSyncState(namespace: string, identity: SyncIdentity, isCur
   });
 }
 
+// Migration observes this physical store; it never creates registration or receipt eligibility.
+export function receiptSyncStore(namespace: string, identity: SyncIdentity, isCurrent: () => boolean) {
+  return update(namespace, identity, isCurrent, (_store, state) => {
+    if (!state || !state.streamId || state.restriction) fail("RECEIPT_SYNC_REQUIRED");
+    return { storeGeneration: state.storeGeneration, schemaVersion: state.protocolSchema ?? "1" };
+  });
+}
+
+export function migrationSyncSource(namespace: string, identity: SyncIdentity, isCurrent: () => boolean) {
+  return update(namespace, identity, isCurrent, (_store, state, latest, _stage, _retained, globalIDs) => {
+    if (!state || !state.streamId || state.restriction) fail("MIGRATION_SYNC_REQUIRED");
+    return { storeGeneration: state.storeGeneration, guardGeneration: state.guardGeneration,
+      messages: structuredClone(Object.values(latest.messages).flat().filter(message =>
+        !message.pending && !message.frozen && !message.deleted && !message.contentUnavailable && (!message.forwardUnavailable || message.forwarded) && !globalIDs.has(message.id),
+      )),
+    };
+  });
+}
+
 export function selectSyncSchema(namespace: string, identity: SyncIdentity, expected: DurableSyncState, schema: SyncSchema, isCurrent: () => boolean) {
   return update(namespace, identity, isCurrent, (store, state, latest, _stage, retained, globalIDs) => {
     if (!state || state.guardGeneration !== expected.guardGeneration) fail("SYNC_LOCAL_RESTRICTION_CHANGED");

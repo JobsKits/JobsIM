@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/Users/jobs/Library/Android/sdk/emulator/emulator",
+    "-avd",
+    "JobsIMReview_20261114_1424",
+    "-read-only",
+    "-no-snapshot-save",
+    "-no-window",
+    "-no-boot-anim",
+    "-no-audio",
+    "-memory",
+    "2048",
+    "-cores",
+    "2",
+    "-port",
+    "5584"
+  ],
+  "pid": 85853,
+  "avd": "JobsIMReview_20261114_1424",
+  "serial": "emulator-5584",
+  "readOnlyOverlay": true,
+  "freeBytesBefore": 22858428416
+}

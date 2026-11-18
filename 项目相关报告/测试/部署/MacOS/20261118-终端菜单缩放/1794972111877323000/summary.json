@@ -1,0 +1,57 @@
+{
+  "fzfVersion": "0.75.0 (Homebrew)",
+  "fixture": "/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM 菜单缩放 fqeu6zzv",
+  "terminalGuiDragVerified": false,
+  "scope": "真实PTY协议/窗口尺寸/键盘；未连接Terminal图形界面，未启停现有服务",
+  "sources": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "34b6d5cc8949a654b01963745159fe6446a3a540dab0f43412773949aeb13b7e",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "4a67710da96181b8577125b9b269bcaf8965c831755bc8e32cf768a34cc7c3d4"
+  },
+  "cases": [
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "baseline",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        12877,
+        2396,
+        4289,
+        1866,
+        3261
+      ],
+      "alternateScreenEnters": 0,
+      "alternateScreenExits": 0
+    },
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "browser-choose",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        13008,
+        2720,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "browser-resume",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        13008,
+        2720,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 2,
+      "alternateScreenExits": 2
+    }
+  ]
+}

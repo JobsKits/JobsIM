@@ -1,0 +1,8 @@
+{"Time":"2026-11-18T14:40:54.270173+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-18T14:40:54.768789+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG"}
+{"Time":"2026-11-18T14:40:54.769217+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Output":"=== RUN   TestUIReportSelectedAttachmentAndMissingEvidencePG\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:40:55.732616+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Output":"--- PASS: TestUIReportSelectedAttachmentAndMissingEvidencePG (0.96s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:40:55.733393+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Elapsed":0.96}
+{"Time":"2026-11-18T14:40:55.73342+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:40:55.734229+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t1.464s\n"}
+{"Time":"2026-11-18T14:40:55.734248+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":1.464}

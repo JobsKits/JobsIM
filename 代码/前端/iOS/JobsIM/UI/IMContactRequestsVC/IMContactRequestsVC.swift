@@ -26,7 +26,7 @@ final class IMContactRequestsVC: IMBaseVC, UITableViewDataSource, UITableViewDel
             make in make.edges.equalToSuperview()
         }
         table.byEmptyButtonProvider { [weak self] in
-            IMUI.button(IMStrings.text("empty") + "\n" + IMStrings.text("reload")) {
+            IMUI.emptyButton {
                 self?.reload()
             }
         }

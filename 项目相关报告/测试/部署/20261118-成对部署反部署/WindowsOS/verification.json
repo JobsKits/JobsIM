@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "hostFunctions": {
+    "passed": 38,
+    "failed": 0,
+    "exitCode": 0
+  },
+  "inputCount": 13,
+  "inputMismatches": [],
+  "entries": [
+    {
+      "name": "deploy-check",
+      "exitCode": 0,
+      "expected": 0,
+      "stateNotCreated": true,
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/身份最终 中文 空格[入口]-cecb4788",
+      "cwd": "/"
+    },
+    {
+      "name": "undo-plan",
+      "exitCode": 0,
+      "expected": 0,
+      "stateNotCreated": true,
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/身份最终 中文 空格[入口]-cecb4788",
+      "cwd": "/"
+    },
+    {
+      "name": "server-plan",
+      "exitCode": 0,
+      "expected": 0,
+      "stateNotCreated": true,
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/身份最终 中文 空格[入口]-cecb4788",
+      "cwd": "/"
+    },
+    {
+      "name": "deploy-platform",
+      "exitCode": 2,
+      "expected": 2,
+      "stateNotCreated": true,
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/身份最终 中文 空格[入口]-cecb4788",
+      "cwd": "/"
+    },
+    {
+      "name": "undo-platform",
+      "exitCode": 2,
+      "expected": 2,
+      "stateNotCreated": true,
+      "copyRoot": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/身份最终 中文 空格[入口]-cecb4788",
+      "cwd": "/"
+    }
+  ],
+  "missingDocLinks": [],
+  "nativeWindowsExecuted": false,
+  "actualUserInstanceTouched": false,
+  "sqlBoundary": "PG size/dump/list use explicit host fixtures; native false exits, CMS/SAN are actual host tools, not Windows SQL",
+  "objectIdentityBoundary": "production reads Windows FILE_ID_INFO + owner SID/link-count/attributes on one handle; host executes actual macOS inode/uid/link metadata substitute plus compile only, Windows APIs not executed",
+  "finalConfirmation": "independent empty ReadLine only; nonempty/whitespace/EOF cancels; Yes does not bypass",
+  "defaultLocal": "loopback; Quick separate opt-in; prepare/start/late failures retain strict local Go/NATS and expose retry/diagnose/stop",
+  "protected": [
+    "Application/instance.json and containing directory",
+    "JournalDatabase",
+    "Postgres/journal*",
+    "Secrets",
+    "TLS",
+    "owner/origin/undo",
+    "existing backups/offline sets/matching recovery keys",
+    "shared SDK/tools/source"
+  ],
+  "partialExitCode": 2,
+  "budget": "4GiB reserve plus actual download chunks, ZIP expanded size, PG size, source/dump and verification copies; not a measured Windows minimum"
+}

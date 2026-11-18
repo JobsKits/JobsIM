@@ -1,0 +1,51 @@
+{
+  "at": "2026-11-17T04:54:52.264Z",
+  "currentStatisticsMatchSealedFinal": true,
+  "sourceFilesRechecked": 735,
+  "changedSinceFinalRead": [
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptService.kt",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptStore.kt",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptNative.ets",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncEngine.ets",
+    "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift",
+    "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptCoordinator.swift",
+    "代码/前端/iOS/JobsIM/UI/IMReceiptVC/IMReceiptVC.swift"
+  ],
+  "historicalCopies": [
+    {
+      "file": "历史/20261117-2026-11-17T044805381Z-读取前-报告.json",
+      "match": true
+    },
+    {
+      "file": "历史/20261117-2026-11-17T044805381Z-读取前-HTTP路由源码快照.json",
+      "match": true
+    },
+    {
+      "file": "历史/20261117-2026-11-17T044805381Z-读取前-README.md.txt",
+      "match": true
+    },
+    {
+      "file": "历史/20261117-2026-11-17T044805381Z-读取前-根README.md.txt",
+      "match": true
+    }
+  ],
+  "localLinksChecked": 22,
+  "broken": [],
+  "toolSHA256": "27d6f75adfc1bd1351d92476650200833108d260ebe20cbb7de19332bff34ba4",
+  "toolUnchanged": true,
+  "rootREADMEEditScope": "Section 5 only (targeted patch); other sections are concurrently maintained by root",
+  "notRun": [
+    "Go",
+    "database",
+    "service",
+    "browser",
+    "native",
+    "build",
+    "stage",
+    "commit",
+    "push"
+  ]
+}

@@ -16,7 +16,7 @@ fs.mkdirSync(workRoot, { recursive: true });
 const work = fs.mkdtempSync(path.join(workRoot, 'AuthRules-'));
 const data = path.join(repository, '代码/前端/HarmonyOS/entry/src/main/ets/Data');
 const hashes = {};
-for (const name of ['Models', 'Strings', 'AuthCoordinator', 'Api']) {
+for (const name of ['Models', 'Strings', 'AuthCoordinator', 'SyncProtocol', 'SelfProtocol', 'ExportProtocol', 'Api']) {
   const file = path.join(data, name + '.ets');
   const source = fs.readFileSync(file, 'utf8');
   const result = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2020, module: ts.ModuleKind.CommonJS }, reportDiagnostics: true, fileName: name + '.ts' });

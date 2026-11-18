@@ -1,0 +1,85 @@
+JobsIM部署/反部署：本地穿透或服务器双模式；undeploy仅按原点清理，独立journal/密钥默认保留；stop/backup为运维子动作。
+JobsIM MacOS · run
+实例：/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/Paired/762dfb6271fc46ccb7c9e892510a13af/State
+HTTPS=51655；业务PG=51653；独立journalPG=51654；内部角色=49101～49109
+只操作此收据匹配实例；不改系统CA或全局工具。反部署清理还需独立选择和最终回车确认；stop/backup保留数据。
+自托管NATS=127.0.0.1:51656；磁盘上限=536870912；内存上限=33554432。
+关闭此运行终端，服务将结束
+本轮工具检查与诊断：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-deploy-session.3sPg01
+[?2026h[?7l[?25l[6n[?2004$p[6n[0m[?25h[?7h[?2026l[?2026h[?7l[?25l[J
+[G
+[G
+[G
+[G
+[G
+[G
+[G
+[G
+[G
+[G
+[G
+[G
+[G
+[G[?1000h[?1002h[?1006h[?2004h[14A[G[K[6n[?25h[?7h[?2026l[?2026h[?7l[?25l[;2m╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B│ [139G │[1B╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯[13A[3G[3G[0m                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[12A[3G[3G                                                                                                                                         [3G[;1m部署模式 > [3B[3G▌[0m [;1;7m本地部署＋内网穿透[0m                                                                                                                    [139G [139G[1B[3G[;2m▌[0m 服务器部署                                                                                                                            [139G [139G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[1B[3G                                                                                                                                         [3G[11A[3G  2/2[;2m ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m [1B[3G                                                                                                                                         [3G  ↑/↓选择、回车确认；Esc取消。本地模式会公开临时HTTPS入口。[2A[14G[?25h[?7h[?2026l[?2026h[?7l[?25l[14G[?25h[?7h[?2026l[?2026h[?7l[?25l[3B[3G[;2m▌[0m 本地部署＋内网穿透[1B[3G[;1m▌[0m [;1;7m服务器部署[4A[14G[0m[?25h[?7h[?2026l[?2026h[?7l[?25l[1A[J[?1000l[?1002l[?1006l[?2004l[?25h[?7h[?2026l服务器模式不建穿透；外部反向代理/防火墙由部署方配置，TLS须显式提供并核验SAN和信任链。
+磁盘门禁：实际可用=14965911552；保留=4294967296；本步字节预算=0
+依赖检查｜准备本轮官方稳定版本解析器；不会修改源码或全局工具。
+工具版本｜go｜当前 1.27.4｜官方稳定目标 1.27.4
+采用工具｜go 1.27.4｜/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go
+工具版本｜fzf｜当前 0.75.0｜官方稳定目标 0.75.0
+采用工具｜fzf 0.75.0｜/opt/homebrew/bin/fzf
+go version go1.27.4 darwin/arm64
+pg_ctl (PostgreSQL) 18.7 (Postgres.app)
+OpenSSL 4.1.0 23 Oct 2026 (Library: OpenSSL 4.1.0 23 Oct 2026)
+nats-server: v2.15.3
+工具核验：node；实际=26.13.1；官方目标=26.13.1；时间=2026-11-18T01:30:15Z；位置=/opt/homebrew/bin/node
+工具核验：nats-server；实际=2.15.3；官方目标=2.15.3；时间=2026-11-18T01:30:16Z；位置=/Users/jobs/Library/Application Support/JobsIM/Toolchains/NATS-v2.15.3/nats-server-v2.15.3-darwin-arm64/nats-server
+工具核验：postgres；实际=18.7；官方目标=18.7；时间=2026-11-18T01:30:17Z；位置=/Users/jobs/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin/pg_ctl
+业务依赖检查｜backend｜最多5秒，仅检查当前模块路径；源码依赖锁保持不变。
+业务依赖检查未完成或超时｜backend｜按现有锁构建，不视为已确认最新；详见日志。
+业务依赖检查｜qr｜最多5秒，仅检查当前模块路径；源码依赖锁保持不变。
+业务依赖检查完成｜qr当前模块路径未报告更新；未检查换路径的新主版本。
+waiting for server to start.... done
+server started
+waiting for server to start.... done
+server started
+/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/Paired/762dfb6271fc46ccb7c9e892510a13af/TLSInput/server.crt: OK
+磁盘门禁：实际可用=14773301248；保留=4294967296；本步字节预算=0
+构建Go角色与WebDist；依赖缓存留在用户级，未安装全局工具。
+npm notice run jobsim-web@0.0.0 build
+npm notice run tsc --noEmit && vite build
+vite v8.3.8 building client environment for production...
+[2K✓ 2159 modules transformed.
+[2Krendering chunks (1)...[2Kcomputing gzip size...
+[2KDist/index.html                   0.50 kB │ gzip:   0.33 kB
+Dist/assets/index-ClKdIxoy.css   34.68 kB │ gzip:   7.30 kB
+Dist/assets/index-BsyctD8p.js   840.29 kB │ gzip: 264.71 kB │ map: 2,653.11 kB
+
+[2K[1G[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[2K[1G[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../../../../.cache/JobsIM/Web/node_modules/lucide-react/dist/esm/Icon.mjs" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../../../../.cache/JobsIM/Web/node_modules/lucide-react/dist/esm/Icon.mjs:2:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m2 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[2K[1G[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../../../../.cache/JobsIM/Web/node_modules/lucide-react/dist/esm/context.mjs" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../../../../.cache/JobsIM/Web/node_modules/lucide-react/dist/esm/context.mjs:2:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m2 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+✓ built in 146ms
+⠙[1G[0K用户端：
+https://localhost:51655
+管理入口：https://localhost:51655（管理写入口尚未交付，不生成假后台URL）

@@ -73,6 +73,514 @@ final class IMAuthCoordinatorTests: XCTestCase {
         UserDefaults.standard.removeObject(forKey: "loggedOut:" + session.profile + ":" + userID)
     }
 
+    private func deletionView(_ request: IMJSON, id: String, state: String = "requested", version: String = "1", cancel: String = "") -> IMJSON {
+        return .object(["deletionId": .string(id), "requestId": request["id"], "status": .string(state),
+                        "requestVersion": .string(version), "restoreEpoch": request["restoreEpoch"],
+                        "cancelUntil": state == "requested" ? .string(ISO8601DateFormatter.make().string(from: Date().addingTimeInterval(600))) : .null,
+                        "cancelRequestId": .string(cancel), "requiresNewLogin": .bool(true)])
+    }
+
+    func testDeletionUnknownDoesNotBorrowSuccessorFamilyOrStoreProof() async throws {
+        let value = try session()
+        defer { cleanup(value) }
+        var writes = 0
+        let service = IMAccountDeletionService(session: value, username: "credential_user", request: { path, _, _ in
+            if path == "bootstrap" {
+                return .object(["deploymentId": .string(self.deployment), "restoreEpoch": .string("1"), "features": .object(["own_account_deletion": .bool(true)])])
+            }
+            if path == "auth/deletion-results" {
+                throw IMAPIError(status: 404, code: "ACCOUNT_DELETION_NOT_FOUND", message: "not found")
+            }
+            writes += 1
+            throw IMAPIError(status: 403, code: "DEPENDENCY_DENIED", message: "uncertain protected operation")
+        })
+        let row = try await service.prepare()
+        let proof = try IMAccountDeletionService.credential(password: " original secret ", otp: "123456")
+        do {
+            _ = try await service.perform(row["id"].text, credential: proof, action: .submit)
+            XCTFail("Expected unknown dependency result")
+        } catch {}
+        XCTAssertEqual(try service.rows().first?["state"].text, "unknown")
+        XCTAssertTrue(try value.accountOperationBlocked(XCTUnwrap(value.currentCredentialPair)))
+        let bytes = try JSONEncoder.make().encode(service.rows())
+        XCTAssertFalse(String(decoding: bytes, as: UTF8.self).contains("original secret"))
+        XCTAssertFalse(String(decoding: bytes, as: UTF8.self).contains("123456"))
+        let next = try IMCredentialPair(response: response().setting("familyId", .string(UUID().uuidString)),
+                                        profile: value.profile, deploymentID: deployment, requestID: "successor-request")
+        value.credentialPair = next
+        value.token = next.accessToken
+        XCTAssertFalse(try value.accountOperationBlocked(next))
+        let unseen = try await service.perform(row["id"].text, credential: proof, action: .check)
+        XCTAssertNil(unseen)
+        do {
+            _ = try await service.perform(row["id"].text, credential: proof, action: .retry)
+            XCTFail("A successor cannot create the unseen original operation")
+        } catch {}
+        XCTAssertEqual(writes, 1)
+        XCTAssertEqual(value.currentCredentialPair, next)
+    }
+
+    func testDeletionUnknownCancelKeepsOriginalNonceAndRejectsWrongPurpose() async throws {
+        let value = try session()
+        defer { cleanup(value) }
+        let deletionID = UUID().uuidString.lowercased()
+        var original: IMJSON = .null
+        var stored: IMJSON?
+        var cancelBodies: [IMJSON] = []
+        var wrongPurpose = true
+        let service = IMAccountDeletionService(session: value, username: "credential_user", request: { path, body, _ in
+            switch path {
+            case "bootstrap":
+                return .object(["deploymentId": .string(self.deployment), "restoreEpoch": .string("1"), "features": .object(["own_account_deletion": .bool(true)])])
+            case "auth/deletion-results":
+                guard let stored else { throw IMAPIError(status: 404, code: "ACCOUNT_DELETION_NOT_FOUND", message: "not found") }
+                return stored
+            case "auth/deletion-requests":
+                stored = self.deletionView(original, id: deletionID)
+                return stored!
+            case "auth/data-rights/proofs":
+                return .object(["deletionId": .string(deletionID), "requestVersion": .string("1"), "restoreEpoch": .string("1"),
+                                "purpose": .string(wrongPurpose ? "query" : body["purpose"]!.text),
+                                "expiresAt": .string(ISO8601DateFormatter.make().string(from: Date().addingTimeInterval(240))),
+                                "proof": .string(String(repeating: "p", count: 64))])
+            case "auth/data-rights/query":
+                return stored!
+            case "auth/data-rights/cancel":
+                cancelBodies.append(.object(body))
+                if cancelBodies.count == 1 { throw IMAPIError(status: 0, code: "UNKNOWN", message: "lost response") }
+                stored = self.deletionView(original, id: deletionID, state: "cancelled", version: "2", cancel: body["requestId"]!.text)
+                return stored!
+            default:
+                throw IMSession.SessionError.invalidInstance
+            }
+        })
+        original = try await service.prepare()
+        let proof = try IMAccountDeletionService.credential(password: " proof secret ")
+        _ = try await service.perform(original["id"].text, credential: proof, action: .submit)
+        XCTAssertNil(value.currentCredentialPair)
+        do {
+            _ = try await service.cancel(original["id"].text, credential: proof)
+            XCTFail("Wrong-purpose proof must be rejected before cancellation")
+        } catch {}
+        XCTAssertTrue(cancelBodies.isEmpty)
+        wrongPurpose = false
+        do { _ = try await service.cancel(original["id"].text, credential: proof) } catch {}
+        XCTAssertEqual(try service.rows().first?["cancelSent"], .bool(true))
+        do { _ = try await service.cancel(original["id"].text, credential: proof) } catch {}
+        XCTAssertEqual(cancelBodies.count, 1)
+        _ = try await service.query(original["id"].text, credential: proof)
+        XCTAssertEqual(try service.rows().first?["cancelSent"], .bool(false))
+        _ = try await service.cancel(original["id"].text, credential: proof)
+        XCTAssertEqual(cancelBodies.count, 2)
+        XCTAssertEqual(cancelBodies[0]["requestId"], cancelBodies[1]["requestId"])
+        XCTAssertEqual(try service.rows().first?["state"].text, "cancelled")
+        XCTAssertEqual(try service.rows().first?["proof"], .null)
+    }
+
+    func testDeletionFloorBlocksLateWritersAcrossEpochsPreservesOtherAccountsAndProfiles() throws {
+        let value = try session()
+        defer { cleanup(value) }
+        let pair = try XCTUnwrap(value.currentCredentialPair)
+        let old = pair.namespace
+        let future = IMNamespace(profile: value.profile, account: userID, demo: false, restoreEpoch: "2", deploymentID: deployment, sourceContextID: "personal")
+        let other = IMNamespace(profile: value.profile, account: UUID().uuidString.lowercased(), demo: false, restoreEpoch: "1", deploymentID: deployment, sourceContextID: "personal")
+        let neighbor = IMNamespace(profile: "other-profile", account: userID, demo: false, restoreEpoch: "1", deploymentID: deployment, sourceContextID: "personal")
+        for ns in [old, future, other, neighbor] {
+            try value.store.save([.object(["id": .string("private-row"), "text": .string(ns == old || ns == future ? "erased unique private fixture" : "unrelated lawful fixture")])], collection: "messages", namespace: ns)
+        }
+        let owned = "JobsIMDataExport-" + UUID().uuidString
+        try value.store.registerAccountPrivateFile(namespace: old, kind: "export", name: owned)
+        let keys = try value.store.beginAccountDeletionCleanup(profile: value.profile, deployment: deployment, user: userID, originalNamespace: old.key)
+        XCTAssertEqual(Set(keys), Set([old.key, future.key]))
+        XCTAssertThrowsError(try value.store.list("messages", namespace: old))
+        XCTAssertThrowsError(try value.store.save([.object(["id": .string("late")])], collection: "messages", namespace: future))
+        XCTAssertThrowsError(try value.store.commitAuthenticationBinding(previousNamespaces: [], newNamespace: old, metadata: [], metadataNamespace: metadata(value)))
+        XCTAssertTrue(try value.accountOperationBlocked(pair))
+        XCTAssertEqual(try value.store.accountDeletionFiles(profile: value.profile, deployment: deployment, user: userID).first?["name"].text, owned)
+        try value.store.finishAccountDeletionCleanup(profile: value.profile, deployment: deployment, user: userID)
+        XCTAssertTrue(try value.store.accountDeletionFiles(profile: value.profile, deployment: deployment, user: userID).isEmpty)
+        XCTAssertEqual(try value.store.list("messages", namespace: other).count, 1)
+        XCTAssertEqual(try value.store.list("messages", namespace: neighbor).count, 1)
+        let restart = try reopened(value)
+        XCTAssertTrue(try restart.store.accountIsErased(profile: value.profile, deployment: deployment, user: userID))
+        XCTAssertThrowsError(try restart.store.save([.object(["id": .string("resurrection")])], collection: "messages", namespace: old))
+        let path = try XCTUnwrap(databasePaths[value.profile])
+        let wal = URL(fileURLWithPath: path.path + "-wal")
+        if FileManager.default.fileExists(atPath: wal.path) {
+            let data = try Data(contentsOf: wal)
+            XCTAssertFalse(String(decoding: data, as: UTF8.self).contains("erased unique private fixture"))
+        }
+    }
+
+    func testGroupUnknownReusesOriginalNonceAndObservedPermission() async throws {
+        let value = try session()
+        defer {
+            cleanup(value)
+        }
+        let group = UUID().uuidString.lowercased()
+        let observed: IMJSON = .object(["version": .string("9007199254740993"),
+                                      "membershipGeneration": .string("7"), "roleGeneration": .string("8")])
+        var writes: [[String: IMJSON]] = []
+        var finish = false
+        let service = IMGroupGovernanceService(session: value, request: { _, method, body in
+            if method == "GET" {
+                throw IMAPIError(status: 404, code: "GROUP_OPERATION_NOT_FOUND", message: "not found")
+            }
+            writes.append(body)
+            guard finish else {
+                throw IMAPIError(status: 0, code: "TRANSPORT_UNKNOWN", message: "unknown")
+            }
+            return .object(["requestId": body["requestId"]!, "status": .string("applied"), "action": body["action"]!, "version": .string("9007199254740994")])
+        })
+        do {
+            _ = try await service.change(group, observed: observed, action: "settings",
+                changes: ["muteAll": .bool(true), "slowSeconds": .number(5), "maxMembers": .number(500)])
+            XCTFail("Expected unknown original operation")
+        } catch {}
+        XCTAssertEqual(writes.count, 1)
+        let pending = try XCTUnwrap(service.pending(group))
+        do {
+            _ = try await service.reconcile(group, retry: false)
+            XCTFail("Expected pure unseen lookup")
+        } catch {}
+        XCTAssertEqual(writes.count, 1)
+        XCTAssertEqual(pending["payload"]["version"].text, "9007199254740993")
+        finish = true
+        _ = try await service.reconcile(group, retry: true)
+        XCTAssertEqual(writes.count, 2)
+        XCTAssertEqual(writes[0], writes[1])
+        XCTAssertNil(try service.pending(group))
+    }
+
+    func testGroupInvitationCapabilityStaysInMemoryAcrossColdResume() async throws {
+        let value = try session()
+        defer {
+            cleanup(value)
+        }
+        let group = UUID().uuidString.lowercased()
+        let invite = UUID().uuidString.lowercased()
+        let capability = "private-invitation-fixture-" + UUID().uuidString
+        var firstID = ""
+        let service = IMGroupGovernanceService(session: value, request: { _, method, body in
+            if method == "GET" {
+                throw IMAPIError(status: 404, code: "GROUP_OPERATION_NOT_FOUND", message: "not found")
+            }
+            firstID = body["requestId"]!.text
+            XCTAssertTrue(body["token"]?.text == capability)
+            throw IMAPIError(status: 0, code: "TRANSPORT_UNKNOWN", message: "unknown")
+        })
+        let code = try service.invitationCode(group, invite: .object(["id": .string(invite), "token": .string(capability)]))
+        do {
+            _ = try await service.join(code)
+            XCTFail("Expected unknown initial join")
+        } catch {}
+        let pending = try XCTUnwrap(service.pending(group))
+        XCTAssertEqual(pending["id"].text, firstID)
+        XCTAssertEqual(pending["payload"]["token"], .null)
+        let bytes = try JSONEncoder.make().encode(pending)
+        XCTAssertFalse(String(decoding: bytes, as: UTF8.self).contains(capability))
+        let cold = try reopened(value)
+        cold.user = value.user
+        cold.credentialPair = value.credentialPair
+        cold.token = value.token
+        let restored = IMGroupGovernanceService(session: cold, request: { _, method, body in
+            if method == "GET" {
+                throw IMAPIError(status: 404, code: "GROUP_OPERATION_NOT_FOUND", message: "not found")
+            }
+            XCTAssertEqual(body["requestId"]?.text, firstID)
+            XCTAssertTrue(body["token"]?.text == capability)
+            return .object(["requestId": body["requestId"]!, "id": .string(UUID().uuidString.lowercased()), "state": .string("pending")])
+        })
+        _ = try await restored.join(code)
+        XCTAssertNil(try restored.pending(group))
+    }
+
+    func testGroupSuccessorFamilyOnlyQueriesHistoricalOriginalAndTypedTargetMustMatch() async throws {
+        let value = try session()
+        defer { cleanup(value) }
+        let group = UUID().uuidString.lowercased()
+        let invite = UUID().uuidString.lowercased()
+        var writes = 0
+        var authoritative: IMJSON?
+        let service = IMGroupGovernanceService(session: value, request: { _, method, _ in
+            if method == "GET" {
+                guard let authoritative else { throw IMAPIError(status: 404, code: "GROUP_OPERATION_NOT_FOUND", message: "not found") }
+                return authoritative
+            }
+            writes += 1
+            throw IMAPIError(status: 0, code: "UNKNOWN", message: "lost response")
+        })
+        let observed: IMJSON = .object(["version": .string("2"), "membershipGeneration": .string("3"), "roleGeneration": .string("4")])
+        do { try await service.revoke(group, observed: observed, invite: invite) } catch {}
+        let row = try XCTUnwrap(service.pending(group))
+        let next = try IMCredentialPair(response: response().setting("deviceId", .string(UUID().uuidString))
+            .setting("familyId", .string(UUID().uuidString)), profile: value.profile, deploymentID: deployment, requestID: "successor-group-request")
+        value.credentialPair = next
+        value.token = next.accessToken
+        XCTAssertNotNil(try service.pending(group))
+        do { _ = try await service.reconcile(group, retry: true) } catch {}
+        XCTAssertEqual(writes, 1)
+        authoritative = .object(["requestId": row["id"], "status": .string("applied"), "action": .string("invite_revoke"), "targetId": .string(UUID().uuidString), "state": .string("revoked")])
+        do {
+            _ = try await service.reconcile(group, retry: false)
+            XCTFail("A different typed target cannot complete this original operation")
+        } catch {}
+        XCTAssertNotNil(try service.pending(group))
+        authoritative = authoritative?.setting("targetId", .string(invite))
+        _ = try await service.reconcile(group, retry: false)
+        XCTAssertNil(try service.pending(group))
+        XCTAssertEqual(writes, 1)
+        XCTAssertEqual(value.currentCredentialPair, next)
+    }
+
+    func testGroupJoinRejectsAnotherDeploymentAndSecretMetadata() async throws {
+        let value = try session()
+        defer {
+            cleanup(value)
+        }
+        var calls = 0
+        let service = IMGroupGovernanceService(session: value, request: { _, _, _ in
+            calls += 1
+            return .null
+        })
+        let group = UUID().uuidString.lowercased()
+        let other: IMJSON = .object(["deploymentId": .string(UUID().uuidString.lowercased()),
+                                    "conversationId": .string(group), "inviteId": .string(UUID().uuidString.lowercased()),
+                                    "token": .string("fixture-invitation")])
+        let code = "JobsIM-Invite-1:" + (try JSONEncoder.make().encode(other)).base64EncodedString()
+        do {
+            _ = try await service.join(code)
+            XCTFail("Cross-deployment invitation accepted")
+        } catch {}
+        do {
+            _ = try await service.create(group, route: "join-requests", body: ["token": .string("must-not-persist")])
+            XCTFail("Invitation proof entered ordinary durable metadata")
+        } catch {}
+        XCTAssertEqual(calls, 0)
+        XCTAssertNil(try service.pending(group))
+    }
+
+    func testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily() async throws {
+        guard let file = Bundle(for: Self.self).url(forResource: "OwnPasswordPublic", withExtension: "json") else {
+            throw XCTSkip("Explicit current canonical HTTPS fixture not installed")
+        }
+        let configuration = try JSONDecoder.make().decode(IMJSON.self, from: Data(contentsOf: file))
+        let address = configuration["url"].text
+        let certificate = try IMInstanceCertificate(address: address,
+            certificate: Data(configuration["caPEM"].text.utf8), verifiedFingerprint: configuration["fingerprint"].text)
+        let base = try XCTUnwrap(URL(string: address))
+        let api = IMAPIClient(baseURL: IMSession.apiURL(base), certificate: certificate)
+        let bootstrap = try await api.request("bootstrap")
+        XCTAssertTrue(bootstrap["deploymentId"] == configuration["deploymentId"])
+        XCTAssertTrue(bootstrap["features"]["own_password_change"] == .bool(true))
+        let database = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".sqlite")
+        let value = IMSession(store: try IMLocalStore(path: database.path))
+        value.profile = "canonical-password:" + UUID().uuidString
+        value.deployment = bootstrap["deploymentId"].text
+        value.restoreEpoch = bootstrap["restoreEpoch"].text
+        value.baseURL = base
+        value.api = api
+        let oldInjected = ProcessInfo.processInfo.environment["JOBS_IM_SYNC_INJECTED_TESTS"]
+        setenv("JOBS_IM_SYNC_INJECTED_TESTS", "0", 1)
+        defer {
+            value.stopAuthoritativeSync()
+            if let oldInjected {
+                setenv("JOBS_IM_SYNC_INJECTED_TESTS", oldInjected, 1)
+            } else {
+                unsetenv("JOBS_IM_SYNC_INJECTED_TESTS")
+            }
+            try? IMKeychain.write(nil, key: value.profile + ":" + value.user["id"].text)
+            UserDefaults.standard.removeObject(forKey: "user:" + value.profile)
+        }
+        let username = "ios_pw_" + UUID().uuidString.replacingOccurrences(of: "-", with: "").prefix(16).lowercased()
+        let current = UUID().uuidString + UUID().uuidString
+        let replacement = UUID().uuidString + UUID().uuidString
+        _ = try await value.authenticate(mode: "register", username: username, password: current, requestID: UUID().uuidString)
+        let pair = try XCTUnwrap(value.currentCredentialPair)
+        let service = IMPasswordChangeService(session: value, username: username)
+        let row = try await service.prepare()
+        let proof = try IMPasswordChangeService.proof(current: current, replacement: replacement,
+                                                     confirmation: replacement, otp: "")
+        var result = try await service.perform(row["id"].text, proof: proof, action: .submit)
+        for _ in 0..<100 {
+            if result?["status"].text == "changed" {
+                break
+            }
+            try await Task.sleep(for: .milliseconds(100))
+            result = try await service.perform(row["id"].text, proof: proof, action: .check)
+        }
+        XCTAssertTrue(result?["status"].text == "changed")
+        XCTAssertNil(value.currentCredentialPair)
+        XCTAssertTrue(try IMPasswordChangeService.blocks(value, pair: pair))
+        do {
+            _ = try await api.request("me", token: pair.accessToken)
+            XCTFail("Original access remained valid after actual password change")
+        } catch let error as IMAPIError {
+            XCTAssertEqual(error.status, 401)
+        }
+        do {
+            _ = try await value.authenticate(mode: "login", username: username, password: current, requestID: UUID().uuidString)
+            XCTFail("Original password remained valid after actual password change")
+        } catch let error as IMAPIError {
+            XCTAssertTrue([401, 403].contains(error.status))
+        }
+        _ = try await value.authenticate(mode: "login", username: username, password: replacement, requestID: UUID().uuidString)
+        let successor = try XCTUnwrap(value.currentCredentialPair)
+        XCTAssertTrue(successor.familyID != pair.familyID && successor.userID == pair.userID)
+        _ = try await service.perform(row["id"].text, proof: proof, action: .check)
+        XCTAssertTrue(value.currentCredentialPair?.familyID == successor.familyID)
+        let metadata = try JSONEncoder.make().encode(IMJSON.array(service.rows()))
+        let text = String(decoding: metadata, as: UTF8.self)
+        XCTAssertFalse(text.contains(current))
+        XCTAssertFalse(text.contains(replacement))
+        let reopened = IMSession(store: try IMLocalStore(path: database.path))
+        reopened.profile = value.profile
+        reopened.deployment = value.deployment
+        reopened.restoreEpoch = value.restoreEpoch
+        let restored = IMPasswordChangeService(session: reopened, username: username)
+        XCTAssertTrue(try restored.rows().first?["state"].text == "changed")
+        _ = try await api.request("auth/logout", method: "POST", body: [:], token: successor.accessToken)
+    }
+
+    func testPasswordChangeUnknownUsesOriginalAndNeverPersistsProof() async throws {
+        let value = try session()
+        defer {
+            cleanup(value)
+        }
+        let pair = try XCTUnwrap(value.currentCredentialPair)
+        let old = UUID().uuidString
+        let replacement = UUID().uuidString
+        let proof = try IMPasswordChangeService.proof(current: old, replacement: replacement, confirmation: replacement, otp: "123456")
+        var writes = 0
+        var checks = 0
+        var finish = false
+        let service = IMPasswordChangeService(session: value, username: pair.username, request: { path, body, token in
+            if path == "bootstrap" {
+                return .object(["deploymentId": .string(self.deployment), "restoreEpoch": .string("1"),
+                                "features": .object(["own_password_change": .bool(true)])])
+            }
+            if path == "auth/password-change-results" {
+                checks += 1
+                XCTAssertNil(token)
+                XCTAssertNil(body["otp"])
+                throw IMAPIError(status: 404, code: "PASSWORD_CHANGE_OPERATION_NOT_FOUND", message: "not found")
+            }
+            writes += 1
+            XCTAssertEqual(token, pair.accessToken)
+            guard finish else {
+                throw IMAPIError(status: 0, code: "TRANSPORT_UNKNOWN", message: "unknown")
+            }
+            return .object(["requestId": body["requestId"]!, "restoreEpoch": .string("1"), "status": .string("changed"),
+                            "credentialGeneration": .string("2"), "securityVersion": .string("2"),
+                            "current": .bool(true), "requiresNewLogin": .bool(true)])
+        })
+        let row = try await service.prepare()
+        do {
+            _ = try await service.perform(row["id"].text, proof: proof, action: .submit)
+            XCTFail("Expected unknown response")
+        } catch {}
+        XCTAssertEqual(writes, 1)
+        XCTAssertTrue(try IMPasswordChangeService.blocks(value, pair: pair))
+        let stored = try service.rows()
+        let bytes = try JSONEncoder.make().encode(IMJSON.array(stored))
+        let text = String(decoding: bytes, as: UTF8.self)
+        XCTAssertFalse(text.contains(old))
+        XCTAssertFalse(text.contains(replacement))
+        XCTAssertFalse(text.contains("123456"))
+        let unknown = try await service.perform(row["id"].text, proof: proof, action: .check)
+        XCTAssertNil(unknown)
+        XCTAssertEqual(writes, 1)
+        finish = true
+        let result = try await service.perform(row["id"].text, proof: proof, action: .retry)
+        XCTAssertEqual(result?["status"].text, "changed")
+        XCTAssertEqual(writes, 2)
+        XCTAssertEqual(checks, 3)
+        XCTAssertNil(value.currentCredentialPair)
+        XCTAssertTrue(try IMPasswordChangeService.blocks(value, pair: pair))
+        XCTAssertEqual(try service.rows().first?["id"], row["id"])
+        let reopened = try reopened(value)
+        let restored = IMPasswordChangeService(session: reopened, username: pair.username)
+        XCTAssertEqual(try restored.rows().first?["state"].text, "changed")
+    }
+
+    func testPasswordChangeLateResultCannotSignOutSuccessorFamily() async throws {
+        let value = try session()
+        defer {
+            cleanup(value)
+        }
+        let previous = try XCTUnwrap(value.currentCredentialPair)
+        let replacement = UUID().uuidString
+        let successor = try IMCredentialPair(response: response().setting("familyId", .string(UUID().uuidString)),
+                                              profile: value.profile, deploymentID: deployment, requestID: "successor-auth-request")
+        let proof = try IMPasswordChangeService.proof(current: UUID().uuidString, replacement: replacement, confirmation: replacement, otp: "")
+        let service = IMPasswordChangeService(session: value, username: previous.username, request: { path, body, _ in
+            if path == "bootstrap" {
+                return .object(["deploymentId": .string(self.deployment), "restoreEpoch": .string("1"),
+                                "features": .object(["own_password_change": .bool(true)])])
+            }
+            if path == "auth/password-change-results" {
+                throw IMAPIError(status: 404, code: "PASSWORD_CHANGE_OPERATION_NOT_FOUND", message: "not found")
+            }
+            value.credentialPair = successor
+            value.token = successor.accessToken
+            return .object(["requestId": body["requestId"]!, "restoreEpoch": .string("1"), "status": .string("changed"),
+                            "credentialGeneration": .string("2"), "securityVersion": .string("2"),
+                            "current": .bool(false), "requiresNewLogin": .bool(true)])
+        })
+        let row = try await service.prepare()
+        _ = try await service.perform(row["id"].text, proof: proof, action: .submit)
+        XCTAssertEqual(value.currentCredentialPair?.familyID, successor.familyID)
+        XCTAssertEqual(try service.rows().first?["state"].text, "changed")
+    }
+
+    func testPasswordChangeOriginalRemainsQueryableAfterCapabilityWithdrawalAndRestore() async throws {
+        let value = try session()
+        defer {
+            cleanup(value)
+        }
+        let pair = try XCTUnwrap(value.currentCredentialPair)
+        let replacement = UUID().uuidString
+        let proof = try IMPasswordChangeService.proof(current: UUID().uuidString, replacement: replacement, confirmation: replacement, otp: "")
+        var restored = false
+        var mutationCalls = 0
+        let service = IMPasswordChangeService(session: value, username: pair.username, request: { path, body, token in
+            if path == "bootstrap" {
+                return .object(["deploymentId": .string(self.deployment), "restoreEpoch": .string(restored ? "2" : "1"),
+                                "features": .object(["own_password_change": .bool(!restored)])])
+            }
+            if path == "auth/password-change" {
+                mutationCalls += 1
+            }
+            XCTAssertNil(token)
+            return .object(["requestId": body["requestId"]!, "restoreEpoch": .string("1"), "status": .string("retired"),
+                            "credentialGeneration": .string("2"), "securityVersion": .string("2"),
+                            "current": .bool(false), "requiresNewLogin": .bool(false)])
+        })
+        let row = try await service.prepare()
+        restored = true
+        let result = try await service.perform(row["id"].text, proof: proof, action: .check)
+        XCTAssertEqual(result?["status"].text, "retired")
+        XCTAssertEqual(mutationCalls, 0)
+    }
+
+    func testPasswordChangeTransportRefusesPlainHTTPBeforeSendingProof() async throws {
+        let api = IMAPIClient(baseURL: URL(string: "http://127.0.0.1:1/api/")!)
+        do {
+            _ = try await api.passwordChange("auth/password-change", body: [:], token: nil)
+            XCTFail("Sensitive transport must require HTTPS")
+        } catch {}
+    }
+
+    func testPasswordChangeProofValidationAndMetadataRejectSecrets() throws {
+        XCTAssertThrowsError(try IMPasswordChangeService.proof(current: "same", replacement: "same", confirmation: "same", otp: ""))
+        let value = try session()
+        defer {
+            cleanup(value)
+        }
+        let invalid: IMJSON = .object(["id": .string(UUID().uuidString), "currentPassword": .string(UUID().uuidString)])
+        XCTAssertThrowsError(try value.store.comparePasswordChangeIntent(namespace: IMPasswordChangeService.metadata(value), previous: nil, next: invalid))
+    }
+
     func testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace() async throws {
         let session = try session()
         defer { cleanup(session) }

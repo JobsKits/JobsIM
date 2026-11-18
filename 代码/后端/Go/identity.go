@@ -70,6 +70,9 @@ func (a *App) rate(ctx context.Context, subject string, max int) error {
 	return nil
 }
 func (a *App) identityRoutes(h func(string, func(http.ResponseWriter, *http.Request) error), internal func(func(http.ResponseWriter, *http.Request) error) func(http.ResponseWriter, *http.Request) error) {
+	a.profileIdentityRoutes(h)
+	h("PATCH /api/me/username", a.changeOwnUsername)
+	a.groupIssuerRoutes(h, internal)
 	a.mfaRoutes(h, internal)
 	a.exportIdentityRoutes(h, internal)
 	a.adminIdentityRoutes(h)
@@ -89,6 +92,10 @@ func (a *App) identityRoutes(h func(string, func(http.ResponseWriter, *http.Requ
 			return e
 		}
 		applyUserProfile(&u, profile)
+		u.ContactBindings, e = a.ownContactBindings(r.Context(), u.ID)
+		if e != nil {
+			return e
+		}
 		respond(w, 200, u)
 		return nil
 	})
@@ -217,7 +224,7 @@ func (a *App) authorize(w http.ResponseWriter, r *http.Request) error {
 	}
 	var u User
 	var pending bool
-	var created, accessExpires time.Time
+	var created, accessExpires, registered time.Time
 	sessionToken, kind := q.Token, "native"
 	if !strings.HasPrefix(q.Authorization, "Bearer ") {
 		browser, e := a.browserSession(r.Context(), q.Token)
@@ -232,7 +239,7 @@ func (a *App) authorize(w http.ResponseWriter, r *http.Request) error {
 		}
 		sessionToken, kind = browser.Credentials.Token, "web"
 	}
-	e = a.DB.QueryRow(r.Context(), `SELECT u.id::text,u.username,u.display_name,u.admin,s.web_pending,s.created_at,s.device_id::text,s.access_expires_at FROM auth.sessions s JOIN auth.users u ON u.id=s.user_id JOIN auth.instance i ON i.singleton WHERE s.token_digest=$1 AND s.auth_kind=$5 AND s.family_id IS NOT NULL AND s.revoked_at IS NULL AND (s.export_pending_operation_id IS NULL OR ((s.export_pending_operation_id='logout:'||s.device_id::text OR s.export_pending_operation_id='revoke-device:'||s.user_id::text||':'||s.device_id::text) AND (($3='GET' AND $4='/api/auth/csrf') OR ($3='POST' AND $4='/api/auth/logout' AND s.export_pending_operation_id='logout:'||s.device_id::text) OR ($3='DELETE' AND $4='/api/auth/sessions/'||s.device_id::text AND s.export_pending_operation_id='revoke-device:'||s.user_id::text||':'||s.device_id::text)))) AND s.expires_at>now() AND s.generation=u.credential_generation AND u.state='active' AND u.recovery_state='normal' AND u.deletion_state='none' AND u.pending_operation_id IS NULL AND s.security_version=u.security_version AND s.restore_epoch=$2 AND s.source_context_id='personal' AND s.source_generation=i.personal_source_generation`, tokenDigest(sessionToken), epoch, q.Method, q.Path, kind).Scan(&u.ID, &u.Username, &u.DisplayName, &u.Admin, &pending, &created, &u.DeviceID, &accessExpires)
+	e = a.DB.QueryRow(r.Context(), `SELECT u.id::text,u.username,u.display_name,u.admin,u.created_at,s.web_pending,s.created_at,s.device_id::text,s.access_expires_at FROM auth.sessions s JOIN auth.users u ON u.id=s.user_id JOIN auth.instance i ON i.singleton WHERE s.token_digest=$1 AND s.auth_kind=$5 AND s.family_id IS NOT NULL AND s.revoked_at IS NULL AND (s.export_pending_operation_id IS NULL OR ((s.export_pending_operation_id='logout:'||s.device_id::text OR s.export_pending_operation_id='revoke-device:'||s.user_id::text||':'||s.device_id::text) AND (($3='GET' AND $4='/api/auth/csrf') OR ($3='POST' AND $4='/api/auth/logout' AND s.export_pending_operation_id='logout:'||s.device_id::text) OR ($3='DELETE' AND $4='/api/auth/sessions/'||s.device_id::text AND s.export_pending_operation_id='revoke-device:'||s.user_id::text||':'||s.device_id::text)))) AND s.expires_at>now() AND s.generation=u.credential_generation AND u.state='active' AND u.recovery_state='normal' AND u.deletion_state='none' AND u.pending_operation_id IS NULL AND s.security_version=u.security_version AND s.restore_epoch=$2 AND s.source_context_id='personal' AND s.source_generation=i.personal_source_generation`, tokenDigest(sessionToken), epoch, q.Method, q.Path, kind).Scan(&u.ID, &u.Username, &u.DisplayName, &u.Admin, &registered, &pending, &created, &u.DeviceID, &accessExpires)
 	if e != nil {
 		if e == pgx.ErrNoRows {
 			return fail(401, "UNAUTHORIZED", "Sign in again")
@@ -253,6 +260,7 @@ func (a *App) authorize(w http.ResponseWriter, r *http.Request) error {
 			return fail(403, "ORIGIN_REJECTED", "Cross-origin request rejected")
 		}
 	}
+	u.CreatedAt = registered.UTC().Format(time.RFC3339Nano)
 	u.RestoreEpoch = str(epoch)
 	respond(w, 200, u)
 	return nil
@@ -1059,6 +1067,7 @@ func applyUserProfile(u *User, p AvatarProfile) {
 	if p.DisplayName != "" {
 		u.DisplayName = p.DisplayName
 	}
+	u.Signature = p.Signature
 	u.ProfileVersion = p.ProfileVersion
 	u.AvatarURL = p.AvatarURL
 	u.AvatarThumbnailURL = p.AvatarThumbnailURL

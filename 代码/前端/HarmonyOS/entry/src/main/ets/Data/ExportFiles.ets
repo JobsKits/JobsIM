@@ -14,8 +14,10 @@ export interface ExportSink {
 export class ExportFiles implements ExportSink {
   private static active: Set<string> = new Set();
   private directory: string; private path: string; private file?: fs.File; private count: number = 0; private current: () => boolean;
-  constructor(context: common.UIAbilityContext, current: () => boolean) {
-    this.current = current; this.directory = context.cacheDir + '/personal-exports';
+  constructor(context: common.UIAbilityContext, current: () => boolean, namespace: string = '') {
+    this.current = current; const root = context.cacheDir + '/personal-exports';
+    if (!fs.accessSync(root)) { fs.mkdirSync(root); }
+    this.directory = namespace ? root + '/' + encodeURIComponent(namespace) : root;
     if (!fs.accessSync(this.directory)) { fs.mkdirSync(this.directory); }
     this.path = this.directory + '/' + util.generateRandomUUID(true) + '.part'; ExportFiles.active.add(this.path);
   }
@@ -81,7 +83,7 @@ export class ExportFiles implements ExportSink {
     } catch (_) {
       // The system provider may retain a partial new document. Never call it saved.
       try { fs.unlinkSync(destinations[0]); } catch (_) {}
-      ExportRules.fail('EXPORT_SAVE_FAILED');
+      throw new Error('EXPORT_SAVE_FAILED');
     } finally { if (this.file) { fs.closeSync(this.file); this.file = undefined; } }
   }
   dispose(): void { if (this.file) { fs.closeSync(this.file); this.file = undefined; } if (fs.accessSync(this.path)) { fs.unlinkSync(this.path); } ExportFiles.active.delete(this.path); }

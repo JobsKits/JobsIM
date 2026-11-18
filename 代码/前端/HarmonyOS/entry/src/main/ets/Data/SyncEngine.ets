@@ -19,6 +19,8 @@ export interface SyncEnginePorts {
   current: () => boolean;
   request: (path: string, method: string, body: string) => Promise<string>;
   cleanup: () => Promise<void>;
+  committed?: (messages:string[])=>void;
+  historyChanged?: ()=>void;
 }
 
 export class SyncEngine {
@@ -142,8 +144,12 @@ export class SyncEngine {
       next.restriction = ''; next.snapshotRequest = ''; next.manifest = ''; next.guard = this.ports.uuid();
       const proofs = await this.proofs(); this.check(); if (manifest) { this.protocol.alive(manifest); }
       await this.ports.store.syncInstall({ expected: control, next: next, manifest: manifest, pages: pages, projections: projections, events: delta.events, proofs: proofs }, () => this.current());
-      this.hasMore = delta.more;
+      this.check();this.hasMore = delta.more;
+      const changed=pages.reduce((all:SyncProjection[],page:SyncPage)=>all.concat(page.projections),[] as SyncProjection[]).concat(projections);
+      if(changed.some((row:SyncProjection)=>row.ref.kind==='message')){try{this.ports.historyChanged?.();}catch(_){}}
       await this.ports.cleanup();
+      this.check();const installed:SyncProjection[]=pages.reduce((all:SyncProjection[],page:SyncPage)=>all.concat(page.projections),[] as SyncProjection[]).concat(projections);try{this.ports.committed?.(installed.filter((row:SyncProjection)=>row.ref.kind==='message'&&row.state==='available'&&Boolean(row.object)).map((row:SyncProjection)=>row.object));}catch(_){}
+
     } catch (error) {
       if (responsible && this.current()) {
         const reason = error instanceof ApiFailure ? error.code : (error as Error).message;

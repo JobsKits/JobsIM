@@ -1,0 +1,8 @@
+{"Time":"2026-11-18T17:49:57.096264+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-18T17:49:57.48938+08:00","Action":"run","Package":"jobsim/backend","Test":"TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate"}
+{"Time":"2026-11-18T17:49:57.489481+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate","Output":"=== RUN   TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:49:58.027559+08:00","Action":"output","Package":"jobsim/backend","Test":"TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate","Output":"--- PASS: TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate (0.54s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:49:58.027592+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestSyncSnapshotPGDirectSelfGroupCaptureAndRedactedGate","Elapsed":0.54}
+{"Time":"2026-11-18T17:49:58.027612+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:49:58.028824+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.932s\n"}
+{"Time":"2026-11-18T17:49:58.028841+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.933}

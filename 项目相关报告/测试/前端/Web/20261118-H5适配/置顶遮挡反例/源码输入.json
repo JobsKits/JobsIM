@@ -1,0 +1,30 @@
+{
+  "description": "Exact production content used for the failing pinned-overlay run, reconstructed by removing the sole following CSS line; App/hook/index unchanged. Test is exact failing 52-case input.",
+  "rows": [
+    {
+      "source": "代码/前端/Web/Src/App.tsx",
+      "input": "置顶遮挡反例/源码输入/App.tsx",
+      "sha256": "ce7bdcb8d0a8d0c6ccb749db931208a37a2d962c473df2cc37758beb0392d884"
+    },
+    {
+      "source": "代码/前端/Web/Src/styles.css",
+      "input": "置顶遮挡反例/源码输入/styles.css",
+      "sha256": "ed11b57af6b679e84955b4dba719bfcb2d40e4af9a1ee1683345b6c5c2caca4f"
+    },
+    {
+      "source": "代码/前端/Web/Src/useVisibleViewport.ts",
+      "input": "置顶遮挡反例/源码输入/useVisibleViewport.ts",
+      "sha256": "3d37c4706204c146a35e9ff2133e5146306b69519f6d66cd499da3e385d68ee6"
+    },
+    {
+      "source": "代码/前端/Web/index.html",
+      "input": "置顶遮挡反例/源码输入/index.html",
+      "sha256": "23b8f03d3ac531ef4344062d468754aaae0cb8903b2605178a85ccee1f0797ad"
+    },
+    {
+      "source": "测试/前端/Web/h5-browser.cjs/h5-browser.cjs",
+      "input": "置顶遮挡反例/源码输入/h5-browser.cjs",
+      "sha256": "04eea742fb339e84aa9bd4ffb9dc0eba0a3130b76b20ceb80c6d0a75513a94fb"
+    }
+  ]
+}

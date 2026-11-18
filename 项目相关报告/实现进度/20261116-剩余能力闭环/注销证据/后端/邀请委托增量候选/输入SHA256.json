@@ -1,0 +1,7 @@
+{
+  "sourceHashes": {
+    "代码/后端/Go/account_deletion_owner.go": "0d1e41ac1e00144fec48b42fce0c4fc73d5d1ddfa17d7dfcc53249a9d5e2ccb1",
+    "测试/后端/接口/account_deletion_pg_test.go": "f73289e713b5fd67f558ac4c7333bbe63af77244d4101a8976c318e2f2b93f53"
+  },
+  "status": "source implemented; 10 PG passed per running agent; exact pre-run mapping pending; not a tested-input freeze"
+}

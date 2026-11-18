@@ -1,0 +1,25 @@
+✔ ten languages contain all deletion controls and password input is normalized (1.011167ms)
+✔ creating request persists original public responsibility and pause before mutation, no secrets (3.531833ms)
+✔ unknown success resumes by anonymous original lookup without another creating request (0.512167ms)
+✔ capability withdrawal or changed epoch permits lookup but no mutation for pending or404 (1.386042ms)
+✔ unseen original cannot borrow a successor family or create anonymously (0.30775ms)
+✔ prepared dependency403 stays unknown and ordinary business remains paused (0.168791ms)
+✔ unknown cancellation preserves one nonce; query verifies purpose and observes original result (0.6745ms)
+✔ cancel confirmation cannot silently rebase its seen request version (0.260875ms)
+✔ wrong-purpose or expired proof cannot submit cancellation (0.538417ms)
+✔ result identity/version substitution and late identity changes cannot publish (0.449375ms)
+✔ metadata rejects secret fields; disk failure sends no creating request (0.269583ms)
+✔ shipped RDB repository persists pause/CAS, reopens, and erases only completed own namespaces (49.330667ms)
+✔ unknown cancellation refuses another proof or mutation until pure query, then preserves original version and nonce (0.933916ms)
+✔ querying a newer server version never rebases an original cancellation even after repeated queries (0.71525ms)
+✔ legacy cancellation without captured version is query-only and never receives inferred qualification (0.446334ms)
+✔ pending original can persist unknown with its last public result before explicit same-nonce resume (0.843875ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 208.723458
+Host evidence: 项目相关报告/实现进度/20261116-剩余能力闭环/注销证据/HarmonyHost-ecJtjW

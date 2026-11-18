@@ -1,0 +1,19 @@
+deploymentId：6c66c71f-8ab0-48a5-8516-4ce2875f9af8
+CA SHA256：87:DB:64:0D:F6:0F:EA:12:D5:1B:A3:90:49:17:0E:A3:E3:22:08:C7:34:4D:CC:6F:5F:D3:D4:32:18:EE:20:31
+公开连接描述：/Users/jobs/Library/Application Support/JobsIM/DeploymentTests/Paired/31fc9ed30dd14f3880ec18e8b38a4dd4/State/connection.json
+Web须按系统/浏览器受控信任本CA或另用公信HTTPS；未信任时阻断，不能绕过证书警告。脚本不自动安装全局CA。
+离线二维码由本项目锁定的本地编码器生成；见本轮扫码页。
+关闭此运行终端，服务将结束
+
+用户端
+https://localhost:62668/
+终端未显示方块码，请打开下方本地二维码页面。
+
+仅本机，手机不可用
+https://127.0.0.1:62668/
+终端未显示方块码，请打开下方本地二维码页面。
+
+本地二维码页面（浏览器打开）：
+/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-deploy-session.BofemU/AccessQR/index.html
+[?2026h[?7l[?25l[6n[?2004$p[6n[0m[?25h[?7h[?2026l服务退出；已将PG收尾交给持锁的本实例控制事务。
+cleanup:print:7: write error: interrupt

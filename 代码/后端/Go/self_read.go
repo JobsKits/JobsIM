@@ -513,7 +513,7 @@ func (a *App) commitSelfRead(ctx context.Context, u User, conversation string, p
 		return operation, false, fail(409, "RESTORE_EPOCH_CHANGED", "Read owner epoch changed before commit")
 	}
 	cursorID := stableID(a.Config.Key, "self-read-cursor:"+scope+":personal:"+u.ID+":"+conversation)
-	if _, err = tx.Exec(ctx, `INSERT INTO sync.read_cursors(id,scope_id,source_context_id,user_id,conversation_id,revision_epoch,membership_generation) VALUES($1,$2,'personal',$3,$4,$5,$6) ON CONFLICT(scope_id,source_context_id,user_id,conversation_id) DO NOTHING`, cursorID, scope, u.ID, conversation, epoch, membership.Generation); err != nil {
+	if _, err = tx.Exec(ctx, `INSERT INTO sync.read_cursors(id,scope_id,source_context_id,user_id,conversation_id,revision_epoch,membership_generation) VALUES($1,$2,'personal',$3,$4,$5,$6) ON CONFLICT DO NOTHING`, cursorID, scope, u.ID, conversation, epoch, membership.Generation); err != nil {
 		return operation, false, err
 	}
 	locked := selfReadState{Exists: true}

@@ -1,0 +1,46 @@
+{
+  "at": "2026-11-17T06:03:40.201Z",
+  "changes": [
+    {
+      "file": "项目相关报告/实现进度/README.md",
+      "before": "fb59995094d60345fa196fbcf4ac9775c1c25b9c6f0e392c538afd29a4d2d4e3",
+      "after": "2067161f106b381a12fb595c02661b9f5310e7d2b09699844cdad5bd088e653c"
+    },
+    {
+      "file": "项目相关报告/实现进度/README.md",
+      "before": "2067161f106b381a12fb595c02661b9f5310e7d2b09699844cdad5bd088e653c",
+      "after": "69b0492bdeb966f39683d82e1f819c34a8a89a489d3c7f0017309c506402722e"
+    },
+    {
+      "file": "项目相关报告/资产盘点/README.md",
+      "before": "7a19bccca8348fcfed4eb8b925b48a30942a13c2c7d888edd03b05355d69a925",
+      "after": "d896b14a4c4213c37c1e7bcd20b4f658080583412c5f248439f6623428cd0868"
+    },
+    {
+      "file": "项目相关报告/资产盘点/README.md",
+      "before": "d896b14a4c4213c37c1e7bcd20b4f658080583412c5f248439f6623428cd0868",
+      "after": "09a1051bd6bd25c24962c70c862c3360f08bc7965c4ef1a8a9916cb14c157d3e"
+    },
+    {
+      "file": "项目相关报告/资产盘点/README.md",
+      "before": "09a1051bd6bd25c24962c70c862c3360f08bc7965c4ef1a8a9916cb14c157d3e",
+      "after": "82f784fa598950bc955eff9641c336965fe418137e607b7f7467f16ef01a8cba"
+    },
+    {
+      "file": "项目相关报告/资产盘点/README.md",
+      "before": "82f784fa598950bc955eff9641c336965fe418137e607b7f7467f16ef01a8cba",
+      "after": "5623db518f673654483e91227c5a5663892bfae3e9d0bda45d734fbb5fdc617f"
+    },
+    {
+      "file": "README.md",
+      "before": "4e9d6c52c59bc5e98772ea170765fc6e4ca377f094135a49d8e684e25f39ba31",
+      "after": "350871f91133b19512587cf71cd07e456c26ef2d7a474251b1d018f2b6680d3e"
+    },
+    {
+      "file": "../README.md",
+      "before": "5b4b583aefa7a038f1f69d3ead306106ed2bf76cecdde69249d424ba92060b07",
+      "after": "e20fcc8f5592412ab52d9440b5c1f550a7717a9c8580808f8bd2ab42c7dac836"
+    }
+  ],
+  "scope": "navigation/status only; no product source mutation"
+}

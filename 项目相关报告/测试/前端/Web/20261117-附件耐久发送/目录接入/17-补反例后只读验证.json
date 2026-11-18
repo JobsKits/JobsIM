@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-17T04:47:42.809Z",
+  "sourceBefore": {
+    "测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs": "907bd2a0ee398755d9238c8295d5ac468da61d046ea7e57a939b1f4ec8116dea",
+    "项目相关报告/测试/前端/Web/20261117-附件耐久发送/运行器.cjs": "4a0d77b323a45ee670adcad7b371c8782d684e5147ab3b9a75da439cf00041cc",
+    "代码/前端/Web/Src/GlobalMessages.ts": "e0478fcdcfcd0d3c733fd64a99e7c2a0e66ad28a27edea1f3c85a15dc20e3eae"
+  },
+  "sourceAfter": {
+    "测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs": "907bd2a0ee398755d9238c8295d5ac468da61d046ea7e57a939b1f4ec8116dea",
+    "项目相关报告/测试/前端/Web/20261117-附件耐久发送/运行器.cjs": "4a0d77b323a45ee670adcad7b371c8782d684e5147ab3b9a75da439cf00041cc",
+    "代码/前端/Web/Src/GlobalMessages.ts": "e0478fcdcfcd0d3c733fd64a99e7c2a0e66ad28a27edea1f3c85a15dc20e3eae"
+  },
+  "syntax": [
+    {
+      "file": "测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "file": "项目相关报告/测试/前端/Web/20261117-附件耐久发送/运行器.cjs",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "verify": {
+    "status": 0,
+    "stdout": "工作区 193 份文档均为本地 [toc]，转换往返与幂等验证通过；未修改文件或暂存区。\n",
+    "stderr": ""
+  },
+  "browserExecuted": false,
+  "buildExecuted": false,
+  "typeCheckExecuted": false
+}

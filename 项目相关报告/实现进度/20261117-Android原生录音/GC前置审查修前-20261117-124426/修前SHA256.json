@@ -1,0 +1,29 @@
+{
+  "status": "pre-fix source snapshot only; no build or test execution",
+  "files": {
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadProtocol.kt": {
+      "SHA256": "aad8f631b1d893ea559320b588a3064ba276ddd60d12e0c7fc9ef5b19d960efb",
+      "mtimeNs": 1794886877154295652
+    },
+    "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt": {
+      "SHA256": "97d8c9c7384b5ca8ee2d9e9c75734fcb0cd38a8070441a43f18350908346e55f",
+      "mtimeNs": 1794887643850144695
+    },
+    "测试/前端/Android/Unit/VoiceUploadRulesTest.kt": {
+      "SHA256": "3401714a0cd596b26afe0824a1d5d021bae8c6ed5e6d2aa136cf2dc0b9ecbf8f",
+      "mtimeNs": 1794887163023776835
+    },
+    "测试/前端/Android/Instrumentation/VoiceUploadGlobalFloorNativeTest.kt": {
+      "SHA256": "e61f73a9304914cb2cd9d2e1c3d159cd176189f1ffc4585e858a2509200742b7",
+      "mtimeNs": 1794887741521114332
+    },
+    "项目相关报告/实现进度/20261117-Android原生录音/README.md": {
+      "SHA256": "883790f1f54bb8e3e5159f9ffe8b4927e8e12a0f699daaffe5638bea2f96164b",
+      "mtimeNs": 1794890439496999979
+    },
+    "测试/前端/Android/Instrumentation/VoiceUploadQueueNativeTest.kt": {
+      "SHA256": "7ab785ee5982bd3a492be2d90be2da7fd0d6c5def1b47d721e66833f98c80885",
+      "mtimeNs": 1794887163024143421
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jobs.im.GroupRulesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-17T07:25:42.514Z" hostname="JobsdeAir" time="0.025">
+  <properties/>
+  <testcase name="allTenLanguagesHaveCompleteGroupControls" classname="com.jobs.im.GroupRulesTest" time="0.02"/>
+  <testcase name="observedGenerationsNeverBecomeFloatingPointOrZero" classname="com.jobs.im.GroupRulesTest" time="0.002"/>
+  <testcase name="invitationDiagnosticNeverContainsTheBearer" classname="com.jobs.im.GroupRulesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,160 @@
+=== RUN   TestJobsIMNodeLTSChoosesNumericLatestAndExactOfficialDigest
+=== RUN   TestJobsIMNodeLTSChoosesNumericLatestAndExactOfficialDigest/darwin
+=== RUN   TestJobsIMNodeLTSChoosesNumericLatestAndExactOfficialDigest/windows
+=== RUN   TestJobsIMNodeLTSChoosesNumericLatestAndExactOfficialDigest/linux
+--- PASS: TestJobsIMNodeLTSChoosesNumericLatestAndExactOfficialDigest (0.00s)
+    --- PASS: TestJobsIMNodeLTSChoosesNumericLatestAndExactOfficialDigest/darwin (0.00s)
+    --- PASS: TestJobsIMNodeLTSChoosesNumericLatestAndExactOfficialDigest/windows (0.00s)
+    --- PASS: TestJobsIMNodeLTSChoosesNumericLatestAndExactOfficialDigest/linux (0.00s)
+=== RUN   TestJobsIMNodeRejectsMissingDuplicateOrBadTargetDigest
+--- PASS: TestJobsIMNodeRejectsMissingDuplicateOrBadTargetDigest (0.00s)
+=== RUN   TestJobsIMPostgresReportsVersionWithoutInventingBinary
+--- PASS: TestJobsIMPostgresReportsVersionWithoutInventingBinary (0.00s)
+=== RUN   TestJobsIMNATSUsesExactOfficialAssetAndDigest
+--- PASS: TestJobsIMNATSUsesExactOfficialAssetAndDigest (0.00s)
+=== RUN   TestNumericVersionComparisonAndCLI
+--- PASS: TestNumericVersionComparisonAndCLI (0.00s)
+=== RUN   TestGoSelectsNewestStableAndTargetArchive
+--- PASS: TestGoSelectsNewestStableAndTargetArchive (0.00s)
+=== RUN   TestGoUnsupportedDoesNotChooseOlderRelease
+--- PASS: TestGoUnsupportedDoesNotChooseOlderRelease (0.00s)
+=== RUN   TestGoRejectsMalformedOfficialRecord
+=== RUN   TestGoRejectsMalformedOfficialRecord/filename
+=== RUN   TestGoRejectsMalformedOfficialRecord/sha256
+=== RUN   TestGoRejectsMalformedOfficialRecord/version
+=== RUN   TestGoRejectsMalformedOfficialRecord/duplicate
+=== RUN   TestGoRejectsMalformedOfficialRecord/tag
+--- PASS: TestGoRejectsMalformedOfficialRecord (0.00s)
+    --- PASS: TestGoRejectsMalformedOfficialRecord/filename (0.00s)
+    --- PASS: TestGoRejectsMalformedOfficialRecord/sha256 (0.00s)
+    --- PASS: TestGoRejectsMalformedOfficialRecord/version (0.00s)
+    --- PASS: TestGoRejectsMalformedOfficialRecord/duplicate (0.00s)
+    --- PASS: TestGoRejectsMalformedOfficialRecord/tag (0.00s)
+=== RUN   TestGitHubAssetsUseExactOfficialNamesAndDigest
+=== RUN   TestGitHubAssetsUseExactOfficialNamesAndDigest/fzfdarwin
+=== RUN   TestGitHubAssetsUseExactOfficialNamesAndDigest/fzfwindows
+=== RUN   TestGitHubAssetsUseExactOfficialNamesAndDigest/fzffreebsd
+=== RUN   TestGitHubAssetsUseExactOfficialNamesAndDigest/cloudflareddarwin
+=== RUN   TestGitHubAssetsUseExactOfficialNamesAndDigest/cloudflaredlinux
+=== RUN   TestGitHubAssetsUseExactOfficialNamesAndDigest/cloudflaredwindows
+--- PASS: TestGitHubAssetsUseExactOfficialNamesAndDigest (0.00s)
+    --- PASS: TestGitHubAssetsUseExactOfficialNamesAndDigest/fzfdarwin (0.00s)
+    --- PASS: TestGitHubAssetsUseExactOfficialNamesAndDigest/fzfwindows (0.00s)
+    --- PASS: TestGitHubAssetsUseExactOfficialNamesAndDigest/fzffreebsd (0.00s)
+    --- PASS: TestGitHubAssetsUseExactOfficialNamesAndDigest/cloudflareddarwin (0.00s)
+    --- PASS: TestGitHubAssetsUseExactOfficialNamesAndDigest/cloudflaredlinux (0.00s)
+    --- PASS: TestGitHubAssetsUseExactOfficialNamesAndDigest/cloudflaredwindows (0.00s)
+=== RUN   TestGitHubUnsupportedNeverMixesArchitecture
+--- PASS: TestGitHubUnsupportedNeverMixesArchitecture (0.00s)
+=== RUN   TestGitHubRejectsUnsafeMetadata
+=== RUN   TestGitHubRejectsUnsafeMetadata/draft
+=== RUN   TestGitHubRejectsUnsafeMetadata/prerelease
+=== RUN   TestGitHubRejectsUnsafeMetadata/tag
+=== RUN   TestGitHubRejectsUnsafeMetadata/missing-v
+=== RUN   TestGitHubRejectsUnsafeMetadata/digest
+=== RUN   TestGitHubRejectsUnsafeMetadata/bad-host
+=== RUN   TestGitHubRejectsUnsafeMetadata/credential-url
+=== RUN   TestGitHubRejectsUnsafeMetadata/query-url
+=== RUN   TestGitHubRejectsUnsafeMetadata/duplicate
+--- PASS: TestGitHubRejectsUnsafeMetadata (0.00s)
+    --- PASS: TestGitHubRejectsUnsafeMetadata/draft (0.00s)
+    --- PASS: TestGitHubRejectsUnsafeMetadata/prerelease (0.00s)
+    --- PASS: TestGitHubRejectsUnsafeMetadata/tag (0.00s)
+    --- PASS: TestGitHubRejectsUnsafeMetadata/missing-v (0.00s)
+    --- PASS: TestGitHubRejectsUnsafeMetadata/digest (0.00s)
+    --- PASS: TestGitHubRejectsUnsafeMetadata/bad-host (0.00s)
+    --- PASS: TestGitHubRejectsUnsafeMetadata/credential-url (0.00s)
+    --- PASS: TestGitHubRejectsUnsafeMetadata/query-url (0.00s)
+    --- PASS: TestGitHubRejectsUnsafeMetadata/duplicate (0.00s)
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/valid
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/old-version
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/wrong-os
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/wrong-arch
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/wrong-file
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/wrong-url
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/wrong-kind
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/bad-sha
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/duplicate
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/malformed
+=== RUN   TestMissingDigestOnlyUsesExactControlledLock/missing
+--- PASS: TestMissingDigestOnlyUsesExactControlledLock (0.01s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/valid (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/old-version (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/wrong-os (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/wrong-arch (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/wrong-file (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/wrong-url (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/wrong-kind (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/bad-sha (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/duplicate (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/malformed (0.00s)
+    --- PASS: TestMissingDigestOnlyUsesExactControlledLock/missing (0.00s)
+=== RUN   TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow
+=== RUN   TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/rate-limit
+=== RUN   TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/forbidden
+=== RUN   TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/too-many
+=== RUN   TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/server
+=== RUN   TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/html
+=== RUN   TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/trailing
+=== RUN   TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/oversize
+=== RUN   TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/timeout
+--- PASS: TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow (0.01s)
+    --- PASS: TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/rate-limit (0.00s)
+    --- PASS: TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/forbidden (0.00s)
+    --- PASS: TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/too-many (0.00s)
+    --- PASS: TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/server (0.00s)
+    --- PASS: TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/html (0.00s)
+    --- PASS: TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/trailing (0.00s)
+    --- PASS: TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/oversize (0.01s)
+    --- PASS: TestHTTPJSONAndNetworkFailuresProduceNoSuccessRow/timeout (0.00s)
+=== RUN   TestCLIRejectsSourceOverridesAndInvalidSelectors
+--- PASS: TestCLIRejectsSourceOverridesAndInvalidSelectors (0.00s)
+=== RUN   TestSourceRedirectAndCertificateFailuresAreNotRetried
+=== RUN   TestSourceRedirectAndCertificateFailuresAreNotRetried/redirect
+=== RUN   TestSourceRedirectAndCertificateFailuresAreNotRetried/certificate
+--- PASS: TestSourceRedirectAndCertificateFailuresAreNotRetried (0.00s)
+    --- PASS: TestSourceRedirectAndCertificateFailuresAreNotRetried/redirect (0.00s)
+    --- PASS: TestSourceRedirectAndCertificateFailuresAreNotRetried/certificate (0.00s)
+=== RUN   TestModuleReportUsesOnlyFixedCommandAndTemporaryFiles
+--- PASS: TestModuleReportUsesOnlyFixedCommandAndTemporaryFiles (0.01s)
+=== RUN   TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates
+=== RUN   TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates/no-update
+=== RUN   TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates/error
+=== RUN   TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates/invalid-json
+=== RUN   TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates/mutate
+--- PASS: TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates (0.02s)
+    --- PASS: TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates/no-update (0.01s)
+    --- PASS: TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates/error (0.01s)
+    --- PASS: TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates/invalid-json (0.01s)
+    --- PASS: TestModuleReportDoesNotLeakFailuresOrConfuseNoUpdates/mutate (0.01s)
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/original
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/inside
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/symlink
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/hardlink
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/wrong-copy
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/missing-sum
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/linked-sum
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/timeout-zero
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/timeout-long
+=== RUN   TestModuleReportRejectsOriginalInModuleAndLinkedCopies/relative-go
+--- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies (0.01s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/original (0.00s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/inside (0.00s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/symlink (0.00s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/hardlink (0.00s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/wrong-copy (0.00s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/missing-sum (0.00s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/linked-sum (0.00s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/timeout-zero (0.00s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/timeout-long (0.00s)
+    --- PASS: TestModuleReportRejectsOriginalInModuleAndLinkedCopies/relative-go (0.00s)
+=== RUN   TestModuleReportTimeoutReapsItsOwnChildTree
+--- PASS: TestModuleReportTimeoutReapsItsOwnChildTree (1.15s)
+=== RUN   TestModuleReportRejectsUnsafeReportFieldsAndPartialErrors
+--- PASS: TestModuleReportRejectsUnsafeReportFieldsAndPartialErrors (0.00s)
+=== RUN   TestModuleReportTERMAlsoReapsItsOwnTree
+--- PASS: TestModuleReportTERMAlsoReapsItsOwnTree (0.18s)
+PASS
+ok  	jobs.local/deployversions	1.829s

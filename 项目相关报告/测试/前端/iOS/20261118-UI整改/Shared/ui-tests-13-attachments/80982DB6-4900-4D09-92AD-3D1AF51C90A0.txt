@@ -1,0 +1,6 @@
+Query chain:
+ →Find: Target Application 'com.jobs.im'
+  ↪︎Find: Descendants matching type Image
+    ↪︎Find: Elements matching predicate '"PXGGridLayout-Info" IN identifiers'
+      ↪︎Find: Elements matching predicate 'label CONTAINS "11月18日, 15:09"'
+        ↪︎Find: First Match

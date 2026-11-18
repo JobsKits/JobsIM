@@ -14,8 +14,14 @@ public final class IMAPIClient: @unchecked Sendable {
 
     private let agent: JobsDefaultAgent
     private let trusted: IMInstanceAgent?
+    private let passwordChanges: IMPasswordChangeTransport
+    private let migrations: IMMigrationTransport
+    private let receipts: IMReceiptTransport
 
     public init(baseURL: URL, certificate: IMInstanceCertificate? = nil) {
+        passwordChanges = IMPasswordChangeTransport(baseURL: baseURL, certificate: certificate)
+        migrations = IMMigrationTransport(baseURL: baseURL, certificate: certificate)
+        receipts = IMReceiptTransport(baseURL: baseURL, certificate: certificate)
         let config = JobsRequestConfig(
             baseURL: baseURL, timeout: 4, logger: JobsLogger(isEnabled: false), usesEphemeralSession: true)
         trusted = certificate.map { IMInstanceAgent(config: config, certificate: $0) }
@@ -50,12 +56,96 @@ public final class IMAPIClient: @unchecked Sendable {
             }
         }
     }
+    public func passwordChange(_ path: String, body: [String: IMJSON], token: String?) async throws -> IMJSON {
+        let bytes = try JSONEncoder.make().encode(IMJSON.object(body))
+        let cancellation = JobsRequestToken()
+        return try await withTaskCancellationHandler {
+            try await withCheckedThrowingContinuation { continuation in
+                passwordChanges.request(path, body: bytes, token: token, cancellation: cancellation) { result in
+                    continuation.resume(with: result.mapError { Self.failure($0) })
+                }
+            }
+        } onCancel: {
+            cancellation.cancel()
+        }
+    }
+
+    public func accountDeletion(_ path: String, body: [String: IMJSON], token: String?) async throws -> IMJSON {
+        guard ["auth/deletion-requests", "auth/deletion-results", "auth/data-rights/proofs",
+               "auth/data-rights/query", "auth/data-rights/cancel"].contains(path) else {
+            throw IMAPIError(status: 0, code: "INVALID_ACCOUNT_DELETION_ROUTE", message: "Invalid account operation")
+        }
+        return try await passwordChange(path, body: body, token: token)
+    }
+
+    public func migration(_ path: String, method: String = "POST", body: [String: IMJSON] = [:], token: String, store: String) async throws -> IMJSON {
+        let bytes = try await migrationData(path, method: method, body: body, token: token, store: store)
+        return try JSONDecoder.make().decode(IMJSON.self, from: bytes)
+    }
+
+    public func migrationCapsule(_ id: String, token: String, store: String) async throws -> Data {
+        guard UUID(uuidString: id) != nil else {
+            throw IMAPIError(status: 0, code: "INVALID_MIGRATION_ID", message: "Invalid migration")
+        }
+        return try await migrationData("sync/migrations/" + id + "/capsule", method: "GET", token: token, store: store)
+    }
+
+    public func migrationOriginalObject(_ id: String, token: String, store: String) async throws -> Data {
+        guard UUID(uuidString: id) != nil else {
+            throw IMAPIError(status: 0, code: "INVALID_MIGRATION_OBJECT", message: "Invalid original object")
+        }
+        return try await migrationData("media/" + id, method: "GET", token: token, store: store)
+    }
+
+    private func migrationData(_ path: String, method: String, body: [String: IMJSON] = [:], token: String, store: String) async throws -> Data {
+        let bytes = try JSONEncoder.make().encode(IMJSON.object(body))
+        let cancellation = JobsRequestToken()
+        return try await withTaskCancellationHandler {
+            try await withCheckedThrowingContinuation { continuation in
+                migrations.request(path, method: method, body: bytes, token: token, store: store,
+                                   cancellation: cancellation) { result in
+                    continuation.resume(with: result.mapError { Self.failure($0) })
+                }
+            }
+        } onCancel: {
+            cancellation.cancel()
+        }
+    }
+
+    public func receipt(_ path: String, method: String = "POST", body: [String: IMJSON] = [:], token: String, store: String) async throws -> IMJSON {
+        let data = try await receiptData(path, method: method, body: body, token: token, store: store)
+        return try JSONDecoder.make().decode(IMJSON.self, from: data)
+    }
+
+    public func receiptOriginalObject(_ id: String, token: String, store: String) async throws -> Data {
+        guard UUID(uuidString: id) != nil else {
+            throw IMAPIError(status: 0, code: "INVALID_RECEIPT_OBJECT", message: "Invalid original object")
+        }
+        return try await receiptData("media/" + id, method: "GET", token: token, store: store)
+    }
+
+    private func receiptData(_ path: String, method: String, body: [String: IMJSON] = [:], token: String, store: String) async throws -> Data {
+        let bytes = try JSONEncoder.make().encode(IMJSON.object(body))
+        let cancellation = JobsRequestToken()
+        return try await withTaskCancellationHandler {
+            try await withCheckedThrowingContinuation { continuation in
+                receipts.request(path, method: method, body: bytes, token: token, store: store,
+                    cancellation: cancellation) { result in
+                    continuation.resume(with: result.mapError { Self.failure($0) })
+                }
+            }
+        } onCancel: {
+            cancellation.cancel()
+        }
+    }
+
     public func upload(
-        _ file: URL, mimeType: String, token: String, path: String = "media", form: [String: String] = [:]
+        _ file: URL, mimeType: String, token: String, path: String = "media", form: [String: String] = [:],
+        fileName: String? = nil
     ) async throws -> IMJSON {
         let request = JobsUploadRequest(
             path: path,
-            files: [.file(url: file, name: "file", fileName: file.lastPathComponent, mimeType: mimeType)],
+            files: [.file(url: file, name: "file", fileName: fileName ?? file.lastPathComponent, mimeType: mimeType)],
             form: form.mapValues { JobsValue($0) },
             headers: ["Authorization": "Bearer " + token], timeout: 120)
         return try await withCheckedThrowingContinuation { continuation in

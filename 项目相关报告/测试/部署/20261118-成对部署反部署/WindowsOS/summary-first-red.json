@@ -1,0 +1,80 @@
+{
+  "scope": "host-isolated PowerShell functions; Windows SID/ACL/process probes explicitly shimmed",
+  "passed": 4,
+  "failed": 11,
+  "cases": [
+    {
+      "name": "PowerShell pair parses and lifecycle bodies are identical except default action",
+      "status": "passed"
+    },
+    {
+      "name": "clear performs an actual local inverse and retains external backup/key files",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "original empty directory survives inverse cleanup",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "legacy state without origin refuses destructive cleanup",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "unknown resource added after seal blocks every removal",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "changed owned file is preserved with original origin",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "symbolic directory and file resources refuse traversal",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "missing original backup blocks interrupted inverse retry",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "interrupted cleanup resumes only its unchanged remaining entries",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "source mutation during backup prevents all source cleanup",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "backup verification failure preserves source and creates no undo journal",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "exclusive transaction lock rejects a concurrent writer",
+      "status": "failed",
+      "error": "资源含符号链接或junction，保留并停止。"
+    },
+    {
+      "name": "server configuration rejects credential/path/port confusion and accepts explicit HTTPS origin",
+      "status": "passed"
+    },
+    {
+      "name": "asset wire contract rejects forged checksum and foreign release source",
+      "status": "passed"
+    },
+    {
+      "name": "C# native process bridge compiles on host without executing Win32 calls",
+      "status": "passed"
+    }
+  ],
+  "windowsNativeExecuted": false,
+  "fixture": "/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Windows-Undo-8d301e3594ab4dd08aea2808dbb8fca7"
+}

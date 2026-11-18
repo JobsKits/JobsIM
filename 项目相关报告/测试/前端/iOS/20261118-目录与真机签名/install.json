@@ -1,0 +1,37 @@
+{
+  "info" : {
+    "arguments" : [
+      "devicectl",
+      "device",
+      "install",
+      "app",
+      "--device",
+      "00008110-000625583EE3801E",
+      "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Products/Debug-iphoneos/JobsIM.app",
+      "--json-output",
+      "项目相关报告/测试/前端/iOS/20261118-目录与真机签名/install.json"
+    ],
+    "commandType" : "devicectl.device.install.app",
+    "environment" : {
+      "TERM" : "dumb"
+    },
+    "jsonVersion" : 5,
+    "outcome" : "success",
+    "version" : "651.32"
+  },
+  "result" : {
+    "deviceIdentifier" : "FE8207C9-DB32-564B-8990-44C558C044A6",
+    "installedApplications" : [
+      {
+        "bundleID" : "com.jobs.im",
+        "databaseSequenceNumber" : 2556,
+        "databaseUUID" : "00409CAF-0CCB-4B2A-8391-D4DAE3B735A3",
+        "installationURL" : "file:///private/var/containers/Bundle/Application/8D70030D-D440-42E5-93D5-82175A71B0FF/JobsIM.app/",
+        "launchServicesIdentifier" : "unknown",
+        "options" : {
+
+        }
+      }
+    ]
+  }
+}

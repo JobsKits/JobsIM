@@ -1,0 +1,23 @@
+{
+  "native": false,
+  "network": false,
+  "sqlite": "Python adapter, not Harmony RDB NAPI",
+  "fileSystem": "Node adapter, not Harmony NAPI or a system document provider",
+  "hashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "87001bcee11532bbe471a4d573f432e75ecfd35c5f133292dfc4a2aac9a7ea28",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportProtocol.ets": "15d34dd49d5c53f867a992901fa95e4c97913389c40ae158be2c2d9cb8a7f321",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportService.ets": "97cd2298eaacb7bd7904eb9c875463ad800b0d8aad208eec048a972eb918fa9e",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportStore.ets": "c1b259a3d0609bead61d79195dcbce4b02de8c31d137967fbd51e46534a9adab",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportFiles.ets": "ee62cb359d22f5ea5d68df7d3d8f90416d426c36cc705c1ffdee018e1297b9d3",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportText.ets": "9d24a64a9c50f098f41bc3a71a2b176ee0f6913458d884393012ea981417ac97",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Api.ets": "f831c18b23e47a1ab070fbd4cac3342a0b9e0c148a51273ed1b518f47772028a",
+    "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets": "695acf7e48697968d4ecf8ceb5c03cfdeef168fb0755c6a76643a0b9f937da5a",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/AuthCoordinator.ets": "03315fa61d4f4faee60f5e0d2378d372d179e90c486f5ff853651c6eaf6c405d",
+    "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets": "150457c2bc5d9dc89cec3090603383df46c1dc150b15b5416156ef490eccb362",
+    "测试/前端/HarmonyOS/Unit/RunExport.mjs": "430066ee89874aff32108461352659071abbaf0b4389f31a3220ee51082066dc",
+    "测试/前端/HarmonyOS/Unit/Export.test.cjs": "73b3c48f70e106b07d2fc6b6019d6366dc84d275954c50b63fb0573b3fe37c69",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee"
+  }
+}

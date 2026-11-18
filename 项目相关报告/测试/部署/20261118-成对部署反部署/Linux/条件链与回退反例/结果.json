@@ -1,0 +1,131 @@
+{
+  "at": "2026-11-18T01:54:54.162Z",
+  "host": "darwin",
+  "work": "/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6",
+  "sourceBefore": {
+    "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "f6db91dafebae8f702e7bb352f3fd9dbd0b2b16e7fc6bd381720522e9baa0114",
+    "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "071594ac46ce3995d8cf5db15b3266278f9483d0de5506dc151190a220f7ec5e",
+    "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "64cf31d3f9e2bebe7fa6ecb868ef8b61c78c7c7419800a42b5b049ffd7358b29",
+    "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "7272475d0688c39fef377a7a6075e7e7f2f01bcd44b0571228e3fc8fec7f0afd",
+    "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "651cd1abb8a67549ba0857c2aafbb32c83c68040048239ac5e483b2bcb8fac50",
+    "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "1b442fffb40aabec733d0059f277e5717f1d8b33f2ee055c671d1bf67ef68331",
+    "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "c82a4fece70c8f19f69fecf63afb5d31ce4164fc2144c01a59551d888c8753d0",
+    "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "9829c3321b829903c7c7dd42f8295af3f7dd06e2b739141da536ed4c2c9d5862"
+  },
+  "sourceAfter": {
+    "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "f6db91dafebae8f702e7bb352f3fd9dbd0b2b16e7fc6bd381720522e9baa0114",
+    "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "071594ac46ce3995d8cf5db15b3266278f9483d0de5506dc151190a220f7ec5e",
+    "部署/Debian/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "64cf31d3f9e2bebe7fa6ecb868ef8b61c78c7c7419800a42b5b049ffd7358b29",
+    "部署/Debian/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "7272475d0688c39fef377a7a6075e7e7f2f01bcd44b0571228e3fc8fec7f0afd",
+    "部署/RockyLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "651cd1abb8a67549ba0857c2aafbb32c83c68040048239ac5e483b2bcb8fac50",
+    "部署/RockyLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "1b442fffb40aabec733d0059f277e5717f1d8b33f2ee055c671d1bf67ef68331",
+    "部署/AlibabaCloudLinux/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "c82a4fece70c8f19f69fecf63afb5d31ce4164fc2144c01a59551d888c8753d0",
+    "部署/AlibabaCloudLinux/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "9829c3321b829903c7c7dd42f8295af3f7dd06e2b739141da536ed4c2c9d5862"
+  },
+  "pass": 1,
+  "fail": 12,
+  "skip": 0,
+  "results": [
+    {
+      "name": "conditional-undeploy-manifest-fails-before-archive-delete",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 1,
+      "signal": null,
+      "output": "已外置解密并逐文件验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-16/Backups/JobsIM-undeploy-20261118-095447-98128.cms\n保留资源／原点尚未完全还原：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-16/instance/owner\n保留资源／原点尚未完全还原：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-16/instance/Secrets\n保留资源／原点尚未完全还原：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-16/instance/JournalDatabase\n保留资源／原点尚未完全还原：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-16/instance/TLS\n保留资源／原点尚未完全还原：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-16/instance/Application\n反部署部分完成；受保护journal／密钥、复用或未知资源保留。禁止将此实例当新部署重建。\n"
+    },
+    {
+      "name": "local-default-does-not-require-cloudflare",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 127,
+      "signal": null,
+      "output": "/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-17.sh: line 36: select_local_access: command not found\n"
+    },
+    {
+      "name": "disk-actual-byte-boundary",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 127,
+      "signal": null,
+      "output": "/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-18.sh: line 36: disk_budget_bytes: command not found\n"
+    },
+    {
+      "name": "conditional-dispatch-backup-manifest",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 1,
+      "signal": null,
+      "output": "已生成并解密验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-19/Backups/JobsIM-20261118-095448-99396.cms\n恢复私钥独立保存于：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-19/Recovery/key.pem；请另行离线保管。备份不包含这把解密私钥。\n备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。\n仅运维停止；数据库、对象、独立journal、CA与备份保留，未执行反部署清理。\nsha256sum: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-19/Backups/JobsIM-20261118-095448-99396.cms: No such file or directory\nrm: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-19/Backups/.staging-20261118-095448-99396/broker-manifest.txt: No such file or directory\n"
+    },
+    {
+      "name": "conditional-dispatch-backup-dump",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 1,
+      "signal": null,
+      "output": "已生成并解密验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/JobsIM-20261118-095450-99672.cms\n恢复私钥独立保存于：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Recovery/key.pem；请另行离线保管。备份不包含这把解密私钥。\n备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。\n仅运维停止；数据库、对象、独立journal、CA与备份保留，未执行反部署清理。\nsha256sum: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/JobsIM-20261118-095450-99672.cms: No such file or directory\nrm: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/.staging-20261118-095450-99672/gateway.dump: No such file or directory\nrm: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/.staging-20261118-095450-99672/identity.dump: No such file or directory\nrm: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/.staging-20261118-095450-99672/contact.dump: No such file or directory\nrm: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/.staging-20261118-095450-99672/message.dump: No such file or directory\nrm: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/.staging-20261118-095450-99672/media.dump: No such file or directory\nrm: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/.staging-20261118-095450-99672/control.dump: No such file or directory\nrm: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/.staging-20261118-095450-99672/sync.dump: No such file or directory\nrm: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-20/Backups/.staging-20261118-095450-99672/journal.dump: No such file or directory\n"
+    },
+    {
+      "name": "conditional-dispatch-backup-restore-list",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 1,
+      "signal": null,
+      "output": "已生成并解密验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-21/Backups/JobsIM-20261118-095451-99923.cms\n恢复私钥独立保存于：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-21/Recovery/key.pem；请另行离线保管。备份不包含这把解密私钥。\n备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。\n仅运维停止；数据库、对象、独立journal、CA与备份保留，未执行反部署清理。\nsha256sum: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-21/Backups/JobsIM-20261118-095451-99923.cms: No such file or directory\n"
+    },
+    {
+      "name": "conditional-dispatch-backup-stop-go",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 1,
+      "signal": null,
+      "output": "已生成并解密验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-22/Backups/JobsIM-20261118-095451-299.cms\n恢复私钥独立保存于：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-22/Recovery/key.pem；请另行离线保管。备份不包含这把解密私钥。\n备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。\n仅运维停止；数据库、对象、独立journal、CA与备份保留，未执行反部署清理。\nsha256sum: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-22/Backups/JobsIM-20261118-095451-299.cms: No such file or directory\n"
+    },
+    {
+      "name": "conditional-dispatch-backup-stop-broker",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 1,
+      "signal": null,
+      "output": "已生成并解密验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-23/Backups/JobsIM-20261118-095452-1003.cms\n恢复私钥独立保存于：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-23/Recovery/key.pem；请另行离线保管。备份不包含这把解密私钥。\n备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。\n仅运维停止；数据库、对象、独立journal、CA与备份保留，未执行反部署清理。\nsha256sum: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-23/Backups/JobsIM-20261118-095452-1003.cms: No such file or directory\n"
+    },
+    {
+      "name": "conditional-dispatch-backup-prepare-pg",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 1,
+      "signal": null,
+      "output": "已生成并解密验真：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-24/Backups/JobsIM-20261118-095452-1424.cms\n恢复私钥独立保存于：/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-24/Recovery/key.pem；请另行离线保管。备份不包含这把解密私钥。\n备份包含独立journal导出，但不自动覆盖当前journal。尚未实现安全恢复向导，不以归档验真冒充恢复演练。\n仅运维停止；数据库、对象、独立journal、CA与备份保留，未执行反部署清理。\nsha256sum: /private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-24/Backups/JobsIM-20261118-095452-1424.cms: No such file or directory\n"
+    },
+    {
+      "name": "quick-failure-keeps-local",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 127,
+      "signal": null,
+      "output": "/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-Linux-qxz2E6/case-25.sh: line 48: attempt_quick_access: command not found\n"
+    },
+    {
+      "name": "quick-late-exit-monitor-still-has-stop-menu",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 2,
+      "signal": null,
+      "output": "本轮公网隧道退出，回收本轮服务。\n"
+    },
+    {
+      "name": "local-mode-monitor-does-not-demand-tunnel",
+      "passed": false,
+      "expected": 0,
+      "exitCode": 2,
+      "signal": null,
+      "output": "本轮公网隧道退出，回收本轮服务。\n"
+    },
+    {
+      "name": "source-stable",
+      "passed": true
+    }
+  ],
+  "scope": "Bash syntax, non-Linux refusal and actual private file operations. Darwin stat flags adapted; process lifecycle explicit stubs. No target Linux, real PG/NATS, network tunnel, package install or actual instance touched."
+}

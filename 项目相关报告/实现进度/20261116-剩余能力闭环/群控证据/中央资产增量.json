@@ -1,0 +1,47 @@
+{
+  "entry": [
+    "Android群成员→群治理与邀请／设置→分享码入群",
+    "Harmony群成员→群治理与邀请／设置→分享码入群"
+  ],
+  "behavior": "settings/mute/role/transfer/dissolve/invites/join/approval/50项UUID分页/canRecover+RAM OTP stepup；原actor/target快照+nonce；新namespace/family不借AT续旧单；旧缺family只查",
+  "defaults": "群false/0/200；创建邀请1次/需审批/1天；群主admin豁免普通群禁言间隔",
+  "persistence": "Room sync_records/group-operation；RDB group_action_intents；公开nonce/body/family UUID；无token/OTP/stepUp；注销completed按本人前缀清",
+  "lifecycle": "后台/离页/失权清RAM；迟到身份不发布；3主题十语37键；empty/reload",
+  "sourceImplemented": true,
+  "actualVerification": {
+    "AndroidJVM": 28,
+    "HarmonyGroupHost": 20,
+    "HarmonyDeletionHost": 12,
+    "APKsCompiled": 2,
+    "HAPsCompiled": 2,
+    "nativeCompileInputMappings": 124,
+    "groupInstrumentMethodsCompiledOnly": 7,
+    "hypiumMethodsCompiledOnly": 54,
+    "device": false,
+    "nativeHTTPS": false
+  },
+  "report": "项目相关报告/实现进度/20261116-剩余能力闭环/Android-HarmonyOS群控.md",
+  "packages": [
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/群控证据/Android交叉审后/app-debug.apk",
+      "sha256": "15167f79905403843ba107c1b42ba73a707ac0a3dcd12998bd5de0ba12d29009",
+      "bytes": 18827119
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/群控证据/Android交叉审后/app-debug-androidTest.apk",
+      "sha256": "1c741f49632655a9a3e576cc84fb3314b45446dd37041404e74a019b25741a3b",
+      "bytes": 1695354
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/群控证据/Harmony交叉审后-default/entry-default-unsigned.hap",
+      "sha256": "8c99e557541283c6783da2ea78a18960a79926e84a1883195e6bd033a602bcb0",
+      "bytes": 1903202
+    },
+    {
+      "file": "项目相关报告/实现进度/20261116-剩余能力闭环/群控证据/Harmony交叉审后-ohosTest/entry-ohosTest-unsigned.hap",
+      "sha256": "030bea3fa9be5f454d49022e854f784b46cdfce150f0537234e33618d31e6294",
+      "bytes": 1744925
+    }
+  ],
+  "deletionDeltaPG": "注销证据/后端/邀请委托与处理中门禁最终/冻结结果.json:12顶层全过，跑前后当前12源一致"
+}

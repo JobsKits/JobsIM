@@ -1,0 +1,9 @@
+{"Time":"2026-11-18T14:39:15.394841+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-18T14:39:15.796791+08:00","Action":"run","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG"}
+{"Time":"2026-11-18T14:39:15.796866+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Output":"=== RUN   TestUIReportSelectedAttachmentAndMissingEvidencePG\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:39:17.114094+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Output":"    ui_contract_test.go:396: selected report attachment status=410 actualBytes=107 expectedBytes=138 cache=\"no-store\"\n","OutputType":"error"}
+{"Time":"2026-11-18T14:39:17.291606+08:00","Action":"output","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Output":"--- FAIL: TestUIReportSelectedAttachmentAndMissingEvidencePG (1.49s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:39:17.291704+08:00","Action":"fail","Package":"jobsim/backend","Test":"TestUIReportSelectedAttachmentAndMissingEvidencePG","Elapsed":1.49}
+{"Time":"2026-11-18T14:39:17.291969+08:00","Action":"output","Package":"jobsim/backend","Output":"FAIL\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:39:17.293361+08:00","Action":"output","Package":"jobsim/backend","Output":"FAIL\tjobsim/backend\t1.898s\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:39:17.293392+08:00","Action":"fail","Package":"jobsim/backend","Elapsed":1.899}

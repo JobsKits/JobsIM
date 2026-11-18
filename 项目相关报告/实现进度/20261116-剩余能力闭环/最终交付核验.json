@@ -1,0 +1,69 @@
+{
+  "at": "2026-11-17T16:33:19+0800",
+  "indexEntriesAndFlagsUnchanged": true,
+  "mobileFrozenInputs": 220,
+  "mobileCodeConfigAssetMismatches": [],
+  "mobileDocumentationChanges": [
+    "代码/前端/Android/README.md",
+    "测试/前端/Android/README.md",
+    "代码/前端/HarmonyOS/README.md"
+  ],
+  "androidFinalLedger": {
+    "05-最终本地102": {
+      "finished": 102,
+      "counts": {
+        "SKIP_ASSUMPTION": 16,
+        "PASS": 86
+      }
+    },
+    "04-真实HTTPS": {
+      "finished": 3,
+      "counts": {
+        "PASS": 3
+      }
+    }
+  },
+  "ownedAVDStop": {
+    "ownedPID": 37478,
+    "ownedSerial": "emulator-5580",
+    "ownedAVD": "JobsIM_Regression_20261117_153544_d52437",
+    "reason": "owned_stop_requested",
+    "exitCode": 0,
+    "ownedProcessStillRunning": false,
+    "ownedSerialStillListed": false,
+    "dataRetained": true,
+    "minimumFreeBytes": 14765195264,
+    "onlyOwnAVDControlled": true
+  },
+  "defaultStrictCAResourceChecks": [
+    {
+      "path": "/api/health",
+      "status": 200,
+      "sha256": "a02f39dfd6a3e328d094e80d5f640e15650e9ac1d8a641b2c75dc929b0ea138f"
+    },
+    {
+      "path": "/api/bootstrap",
+      "status": 200,
+      "sha256": "db9939189bd1dbb99d63d9f77e677954610a6958fbd6a40d1b6b5756fc4ad68d"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "bcddb207f7c589e3d6310d1cdd37b70ca17568e4485184e8bdd3802e408c2379"
+    },
+    {
+      "path": "/assets/index-B3U1AnNU.js",
+      "status": 200,
+      "sha256": "ba564110169077f714cd2ece90cb18bc64ba2a1911754ccc54de5687cd16839b"
+    },
+    {
+      "path": "/assets/index-Cavxj1zD.css",
+      "status": 200,
+      "sha256": "3e3ef20c2c45176a9e23ef8cdefa2e81bc51f815772497fb1e2483c801e94a2c"
+    }
+  ],
+  "localLinksChecked": 620,
+  "missingLinks": [],
+  "committed": false,
+  "pushed": false
+}

@@ -1,0 +1,23 @@
+{
+  "menu": "Pod Install",
+  "actualXcodeMenuLaunched": true,
+  "scriptExists": true,
+  "executable": true,
+  "observed": [
+    {
+      "pid": 15214,
+      "started": "Tue Nov 17 10:44:28 2026",
+      "path": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/ScriptsByPods/【MacOS@Xcode】🫘当前工程Pod Install.command/【MacOS@Xcode】🫘当前工程Pod Install.command",
+      "argumentsMatchCurrentWorkspace": true
+    },
+    {
+      "pid": 15003,
+      "started": "Tue Nov 17 10:44:28 2026",
+      "path": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/ScriptsByPods/【MacOS@Xcode】🫘当前工程Pod Install.command/【MacOS@Xcode】🫘当前工程Pod Install.command",
+      "argumentsMatchCurrentWorkspace": true
+    }
+  ],
+  "verificationLaunchCancelledBeforeConfirm": true,
+  "podInstallViaBehaviorExecuted": false,
+  "terminalGUIBlockedByTool": true
+}

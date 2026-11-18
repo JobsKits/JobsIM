@@ -38,7 +38,10 @@ CREATE INDEX IF NOT EXISTS sync_receipts_content ON sync.content_receipts(scope_
 	if err != nil {
 		return err
 	}
-	return migrateSyncObjectReceipts(ctx, tx)
+	if err = migrateSyncObjectReceipts(ctx, tx); err != nil {
+		return err
+	}
+	return migrateReceiptDelivery(ctx, tx)
 }
 
 type storageDeclaration struct {
@@ -86,8 +89,8 @@ func (a *App) syncReceiptRoutes(h func(string, func(http.ResponseWriter, *http.R
 
 func (a *App) getStorageQualification(ctx context.Context, u User, store string) (storageQualification, error) {
 	var value storageQualification
-	err := a.DB.QueryRow(ctx, `SELECT qualification_id::text,store_generation::text,restore_epoch::text,profile_id,build_digest,verification_digest,storage_contract
-FROM sync.storage_qualifications WHERE scope_id=$1 AND source_context_id='personal' AND user_id=$2 AND device_id=$3 AND restore_epoch=$4 AND store_generation=$5`, a.Config.DeploymentID, u.ID, u.DeviceID, u.RestoreEpoch, store).Scan(&value.ID, &value.Store, &value.Epoch, &value.Profile, &value.Build, &value.Verification, &value.Contract)
+	err := a.DB.QueryRow(ctx, `SELECT q.qualification_id::text,q.store_generation::text,q.restore_epoch::text,q.profile_id,q.build_digest,q.verification_digest,q.storage_contract
+FROM sync.storage_qualifications q JOIN sync.device_stores d USING(scope_id,source_context_id,user_id,device_id,restore_epoch,store_generation) WHERE q.scope_id=$1 AND q.source_context_id='personal' AND q.user_id=$2 AND q.device_id=$3 AND q.restore_epoch=$4 AND q.store_generation=$5`, a.Config.DeploymentID, u.ID, u.DeviceID, u.RestoreEpoch, store).Scan(&value.ID, &value.Store, &value.Epoch, &value.Profile, &value.Build, &value.Verification, &value.Contract)
 	if err == pgx.ErrNoRows {
 		return storageQualification{Store: store, Epoch: u.RestoreEpoch}, nil
 	}
@@ -114,6 +117,8 @@ func (a *App) getSyncStorage(w http.ResponseWriter, r *http.Request) error {
 		return err
 	}
 	w.Header().Set("Cache-Control", "no-store")
+	// Legacy storage responses remain transport-compatible. New clients obtain
+	// live per-store lifecycle flags from the versioned receipt-context endpoint.
 	respond(w, 200, map[string]any{"storage": value, "afterReceiptEnabled": false, "deletionEligible": false})
 	return nil
 }
@@ -179,7 +184,7 @@ RETURNING qualification_id::text`, a.Config.DeploymentID, u.ID, u.DeviceID, u.Re
 	if err != nil {
 		return err
 	}
-	result, _ = json.Marshal(map[string]any{"qualificationId": qualification, "storeGeneration": store, "restoreEpoch": u.RestoreEpoch, "profileId": q.ProfileID, "buildDigest": q.BuildDigest, "verificationDigest": q.VerificationDigest, "storageContract": profile.StorageContract})
+	result, _ = json.Marshal(map[string]any{"qualificationId": qualification, "storeGeneration": store, "restoreEpoch": u.RestoreEpoch, "profileId": q.ProfileID, "buildDigest": q.BuildDigest, "verificationDigest": q.VerificationDigest, "storageContract": profile.StorageContract, "qualified": true, "objectQualified": profile.StorageContract == receiptFileContract})
 	if _, err = tx.Exec(r.Context(), `INSERT INTO sync.storage_declarations(scope_id,user_id,device_id,restore_epoch,request_id,request_digest,result) VALUES($1,$2,$3,$4,$5,$6,$7)`, a.Config.DeploymentID, u.ID, u.DeviceID, u.RestoreEpoch, q.RequestID, digest, result); err != nil {
 		return err
 	}
@@ -204,18 +209,20 @@ func (a *App) respondStorageDeclaration(w http.ResponseWriter, r *http.Request, 
 }
 
 type receiptProof struct {
-	Scope         string `json:"scope"`
-	User          string `json:"user"`
-	Device        string `json:"device"`
-	Store         string `json:"store"`
-	Epoch         string `json:"epoch"`
-	Qualification string `json:"qualification"`
-	Message       string `json:"message"`
-	Conversation  string `json:"conversation"`
-	Content       string `json:"contentVersion"`
-	BodyDigest    string `json:"bodyDigest"`
-	Permission    string `json:"permission"`
-	Expires       int64  `json:"expires"`
+	Scope              string `json:"scope"`
+	User               string `json:"user"`
+	Device             string `json:"device"`
+	Store              string `json:"store"`
+	Epoch              string `json:"epoch"`
+	Qualification      string `json:"qualification"`
+	Message            string `json:"message"`
+	Conversation       string `json:"conversation"`
+	Content            string `json:"contentVersion"`
+	BodyDigest         string `json:"bodyDigest"`
+	Permission         string `json:"permission"`
+	Expires            int64  `json:"expires"`
+	DeliveryGeneration string `json:"deliveryGeneration,omitempty"`
+	ManifestDigest     string `json:"manifestDigest,omitempty"`
 }
 
 func (a *App) encodeReceiptProof(proof receiptProof) string {
@@ -242,6 +249,9 @@ func (a *App) decodeReceiptProof(token string, now time.Time) (receiptProof, err
 	}
 	if proof.Expires <= now.Unix() || proof.Expires > now.Add(time.Hour+time.Minute).Unix() {
 		return proof, fail(409, "RECEIPT_PROOF_EXPIRED", "Retain the old receipt intent; do not replace its proof or identity")
+	}
+	if (proof.DeliveryGeneration == "") != (proof.ManifestDigest == "") || proof.DeliveryGeneration != "" && (!syncValidationCounter(proof.DeliveryGeneration, false) || !syncValidationDigest(proof.ManifestDigest)) {
+		return proof, fail(400, "INVALID_RECEIPT_PROOF", "Delivery generation and frozen manifest must be paired")
 	}
 	return proof, nil
 }
@@ -311,6 +321,10 @@ func (a *App) syncReceiptChallenge(w http.ResponseWriter, r *http.Request) error
 		return err
 	}
 	proof := receiptProof{Scope: a.Config.DeploymentID, User: u.ID, Device: u.DeviceID, Store: reg.Store, Epoch: u.RestoreEpoch, Qualification: storage.ID, Message: message.ID, Conversation: message.ConversationID, Content: message.ContentVersion, BodyDigest: projection.BodyDigest, Permission: view.Permission, Expires: time.Now().Add(time.Hour).Unix()}
+	proof.DeliveryGeneration, proof.ManifestDigest, err = a.receiptDeliveryTuple(r.Context(), message.ID, u.RestoreEpoch, message.ContentVersion)
+	if err != nil {
+		return err
+	}
 	w.Header().Set("Cache-Control", "no-store")
 	respond(w, 200, map[string]any{"challenge": a.encodeReceiptProof(proof), "messageId": message.ID, "conversationId": message.ConversationID, "contentVersion": message.ContentVersion, "restoreEpoch": u.RestoreEpoch, "storeGeneration": reg.Store, "qualificationId": storage.ID, "bodyEnvelope": projection.BodyEnvelope, "bodyDigest": projection.BodyDigest, "expiresAt": time.Unix(proof.Expires, 0).UTC(), "requiresAtomicLocalCommit": true, "objectComplete": false, "deletionEligible": false})
 	return nil
@@ -425,6 +439,13 @@ func (a *App) submitSyncReceipt(w http.ResponseWriter, r *http.Request) error {
 	if message.ContentVersion != proof.Content || message.ConversationID != proof.Conversation {
 		return fail(409, "RECEIPT_CONTENT_CHANGED", "An old receipt never acknowledges an edited message")
 	}
+	generation, manifestDigest, err := a.receiptDeliveryTuple(r.Context(), message.ID, proof.Epoch, proof.Content)
+	if err != nil {
+		return err
+	}
+	if generation != proof.DeliveryGeneration || manifestDigest != proof.ManifestDigest {
+		return fail(409, "RECEIPT_GENERATION_CHANGED", "An earlier manifest cannot acknowledge the current delivery generation")
+	}
 	view, err := a.syncCurrentView(r.Context(), u)
 	if err != nil {
 		return err
@@ -433,6 +454,7 @@ func (a *App) submitSyncReceipt(w http.ResponseWriter, r *http.Request) error {
 		return fail(409, "RECEIPT_PERMISSION_CHANGED", "Current authorization no longer matches the original content delivery")
 	}
 	result := map[string]any{"operationId": q.RequestID, "status": "recorded", "messageId": proof.Message, "conversationId": proof.Conversation, "contentVersion": proof.Content, "restoreEpoch": proof.Epoch, "deviceId": proof.Device, "storeGeneration": proof.Store, "qualificationId": proof.Qualification, "bodyDigest": proof.BodyDigest, "receiptKind": "message_content", "storageQualifiedAtCommit": true, "deletionEligible": false, "objectComplete": false, "targetRangeComplete": false}
+	result["deliveryGeneration"], result["manifestDigest"] = proof.DeliveryGeneration, proof.ManifestDigest
 	raw, _ := json.Marshal(q)
 	digest := keyedDigest(a.Config.Key, "content-receipt-request:"+u.ID+":"+u.DeviceID, raw)
 	encodedResult, _ := json.Marshal(result)

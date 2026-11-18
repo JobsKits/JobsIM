@@ -1,0 +1,144 @@
+{
+  "time": "2026-11-18T12:03:20.131510+00:00",
+  "documents": 27,
+  "checked": 1861,
+  "missing": [],
+  "duplicateAnchors": [],
+  "inputs": [
+    {
+      "path": "../README.md",
+      "sha256": "9791a47ebbd2de49bfc9dacfddf693778fbf5454f411affe0034bf355ceb18eb",
+      "bytes": 15281
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "a955e71ad5ac7615ee9492eabf032ecccd4f650f45b6366f9308f4928739a26b",
+      "bytes": 3385
+    },
+    {
+      "path": "PRODUCT.md",
+      "sha256": "9a5bff06119783213f1989d0da947cd52bdf9ced1a053cdd3d09e8f5a9e4c3da",
+      "bytes": 2821
+    },
+    {
+      "path": "README.md",
+      "sha256": "b4e97dcadb9f64749bfb1c9c27e8b2cbc54c6b201ccd34597b532e42c678d1b9",
+      "bytes": 24326
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAuthSettingsVC/README.md",
+      "sha256": "da791899c7e432b47a0598bf99b7fc527e7f70c540f79ada2b2330f770ba1873",
+      "bytes": 4053
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMAuthVC/README.md",
+      "sha256": "f548af7a38bef3f928a1fa0531ebbbc7bfd0d4cc909bee574caadf46acf566d8",
+      "bytes": 5223
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatVC/README.md",
+      "sha256": "34ab2d75bb7c42202627d7d74ff1295c74619211a73fb884633251b0a51badb5",
+      "bytes": 2419
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactsVC/README.md",
+      "sha256": "f385e478d63ec195b709ab07baf4cae0c90a7770e86207a124484a5e73f89a6f",
+      "bytes": 2320
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportComposerVC/README.md",
+      "sha256": "7909a18373d6adca377f216f4b1da23dee311c62bdef4dc8a8ab2dbb56456a36",
+      "bytes": 2531
+    },
+    {
+      "path": "代码/前端/iOS/README.md",
+      "sha256": "2d4e96c915b5a5f2151b3dd544fcb457f7a3689e25c1fc5863c01154672913e4",
+      "bytes": 38548
+    },
+    {
+      "path": "测试/后端/接口/原生演示HTTPS.py/README.md",
+      "sha256": "69e160b5fbd16301b08c10e35f50adc65cb7dc470ef50e80034e6a0aa704cac8",
+      "bytes": 1393
+    },
+    {
+      "path": "部署/MacOS/演示控制面/README.md",
+      "sha256": "7f4f9cf416fa7b690ac5b6680a2bc6b0de25d1145d986ce3d320b8614712c587",
+      "bytes": 3524
+    },
+    {
+      "path": "部署/MacOS/演示控制面/【MacOS】启动演示控制面.command/README.md",
+      "sha256": "70d896cccd73b16d6926d7aee1c7ec54efcb27a7ac8c2ec3931888b18e3feebe",
+      "bytes": 967
+    },
+    {
+      "path": "需求/IM前端架构表.md/IM前端架构表.md",
+      "sha256": "c16f0901227950ddf1f6fd3dd086c35aecc4840dd3b729c07f125b3a470ebef7",
+      "bytes": 117428
+    },
+    {
+      "path": "需求/IM功能验收表.md/IM功能验收表.md",
+      "sha256": "39cf60eeb61a6772ce9af8c4ab6401e7d05f24e81b8d1271312f4e0e9e155d03",
+      "bytes": 120611
+    },
+    {
+      "path": "需求/IM后端架构表.md/IM后端架构表.md",
+      "sha256": "1be0f280ab6de8a4e1d45d8cd2dfd2008ba9b76bd9d2deaecc28b5b8f745006c",
+      "bytes": 252867
+    },
+    {
+      "path": "需求/IM通信方式图解.md/IM通信方式图解.md",
+      "sha256": "59a48966cab000e5dfe100bfc6af1d8676c28a642547e2b7ad409b3977b738be",
+      "bytes": 36089
+    },
+    {
+      "path": "需求/IM需求明细表.md/IM需求明细表.md",
+      "sha256": "a709159c6f1b9ed7c8f8c3c20c134725f13980a22676c41dc6f4f0c3e7d4f692",
+      "bytes": 271214
+    },
+    {
+      "path": "需求/JobsIM数据库设计.md/JobsIM数据库设计.md",
+      "sha256": "b8c2ced9af5b6569548ac3c5aa87e7760dc26d98e7ea24b0a660f5d931901c5a",
+      "bytes": 179185
+    },
+    {
+      "path": "需求/README.md",
+      "sha256": "34c470b3e6c1d6e8a8ef0bbfef50c8433d9bf04abbc308519951c18ec0f0925b",
+      "bytes": 42519
+    },
+    {
+      "path": "项目相关报告/测试/前端/Web/20261118-管理员举报证据/Resume/README.md",
+      "sha256": "79ed3e2b33934c604089f7eb6708ec82b18dc5af9f3f2a904cf925c0204a2035",
+      "bytes": 4089
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/AuthRoot/ResumeAuth/README.md",
+      "sha256": "1ece55cb8ec80560507ae54dac8617b8e34ed39bb800310c02d1ec19062a025c",
+      "bytes": 3334
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/生成隔离单元配置.py/README.md",
+      "sha256": "23c4409ab904feacb40bd1170e2c1ea590e422813ea158d2b7bf329863da60fe",
+      "bytes": 1992
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-资料与原生演示/Backend/README.md",
+      "sha256": "a8901ac47e9d6eb3eef5b6ad6621e471b769d3d17b7048745262b706144c4d9e",
+      "bytes": 7479
+    },
+    {
+      "path": "项目相关报告/测试/工具/20261118-CodeGraph/README.md",
+      "sha256": "c28d1164d314eb74b5eff0861ac7723e66690335dc99556349bc36692e667dd7",
+      "bytes": 5752
+    },
+    {
+      "path": "项目相关报告/资产盘点/README.md",
+      "sha256": "586dcbc3a51375c84caf8d9ec151d4ea986ccc7008be0c865ccaa2cbe2366baf",
+      "bytes": 68382
+    },
+    {
+      "path": "项目相关报告/项目统计/README.md",
+      "sha256": "de25b200e57c0ba467448c20ef5214df1f4876e1735d5660e1299dabb2a3afa1",
+      "bytes": 4844
+    }
+  ]
+}

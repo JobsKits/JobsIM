@@ -1,0 +1,55 @@
+import hashlib,http.server,json,os,pathlib,re,secrets,shutil,ssl,subprocess,threading,urllib.request
+root=pathlib.Path.cwd()
+base=pathlib.Path.home()/'Library/Application Support/JobsIM/DeploymentTests'/('TLS-'+secrets.token_hex(5))
+base.mkdir(parents=True,mode=0o700)
+results=[]
+for platform,shell,file in [('MacOS','/bin/zsh','部署/MacOS/部署运行.command/部署运行.command'),('Linux','/bin/bash','部署/Linux/部署运行.sh/部署运行.sh'),('WindowsOS','/opt/homebrew/bin/pwsh','部署/WindowsOS/部署运行.ps1/部署运行.ps1')]:
+    state=base/(platform+' 中文 空格')
+    (state/'TLS').mkdir(parents=True);(state/'Logs').mkdir()
+    source=(root/file).read_text()
+    if platform!='WindowsOS':
+        program=source.split('\n# 按反依赖顺序回收')[0]
+        program+='\nSTATE="$JOBS_IM_TLS_TEST_STATE"; OPENSSL="$JOBS_IM_TLS_TEST_OPENSSL"; PUBLIC_HOST=127.0.0.1\nprepare_tls\n'
+        command=[shell,'-c',program]
+    else:
+        function=re.search(r'function Prepare-TLS \{[\s\S]+?\n\}',source).group()
+        function+='\nfunction Invoke-Tool { param([string]$Executable,[string[]]$Arguments) & $Executable @Arguments *> $null; if($LASTEXITCODE -ne 0){throw "TLS tool rejected fixture"} }\n'
+        function+='$State=$env:JOBS_IM_TLS_TEST_STATE; $OpenSSL=$env:JOBS_IM_TLS_TEST_OPENSSL; Prepare-TLS\n'
+        command=[shell,'-NoProfile','-NonInteractive','-Command',function]
+    env=os.environ|{'JOBS_IM_TLS_TEST_STATE':str(state),'JOBS_IM_TLS_TEST_OPENSSL':shutil.which('openssl'),'XDG_CACHE_HOME':str(base/'HostCache'),'XDG_CONFIG_HOME':str(base/'HostConfig'),'XDG_DATA_HOME':str(base/'HostData')}
+    generated=subprocess.run(command,env=env,capture_output=True,timeout=45)
+    if generated.returncode:
+        (base/'failure.stderr').write_bytes(generated.stderr);raise AssertionError(platform+' production TLS template failed; private stderr retained')
+    def hashes():return {p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (state/'TLS').iterdir() if p.is_file()}
+    original=hashes()
+    reused=subprocess.run(command,env=env,capture_output=True,timeout=10)
+    assert reused.returncode==0 and hashes()==original,platform+' changed valid existing TLS'
+    class Handler(http.server.BaseHTTPRequestHandler):
+        def do_GET(self):self.send_response(200);self.end_headers();self.wfile.write(b'TLS verified')
+        def log_message(self,*args):pass
+    server=http.server.HTTPServer(('127.0.0.1',0),Handler)
+    context=ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER);context.load_cert_chain(state/'TLS/server.crt',state/'TLS/server.key')
+    server.socket=context.wrap_socket(server.socket,server_side=True)
+    thread=threading.Thread(target=server.serve_forever);thread.start()
+    try:
+        strict=ssl.create_default_context(cafile=str(state/'TLS/ca.crt'))
+        with urllib.request.urlopen(f'https://127.0.0.1:{server.server_port}',context=strict,timeout=5) as response:assert response.read()==b'TLS verified'
+    finally:server.shutdown();server.server_close();thread.join()
+    old=state/'TLS/legacy.ext';old.write_text('subjectAltName=IP:127.0.0.1\nextendedKeyUsage=serverAuth\n')
+    issuer=subprocess.run([shutil.which('openssl'),'x509','-req','-in',str(state/'TLS/server.csr'),'-CA',str(state/'TLS/ca.crt'),'-CAkey',str(state/'TLS/ca.key'),'-set_serial','99','-days','2','-out',str(state/'TLS/server.crt'),'-extfile',str(old)],capture_output=True,timeout=10)
+    assert issuer.returncode==0
+    invalid=hashes()
+    rejected=subprocess.run(command,env=env,capture_output=True,timeout=10)
+    assert rejected.returncode!=0 and invalid==hashes(),platform+' did not preserve/reject legacy leaf'
+    incomplete=base/(platform+' incomplete')
+    (incomplete/'TLS').mkdir(parents=True);(incomplete/'Logs').mkdir()
+    sentinel=incomplete/'TLS/server.key';sentinel.write_text('KEEP_EXISTING_LEAF')
+    rejected=subprocess.run(command,env=env|{'JOBS_IM_TLS_TEST_STATE':str(incomplete)},capture_output=True,timeout=10)
+    assert rejected.returncode!=0 and sentinel.read_text()=='KEEP_EXISTING_LEAF' and len(list((incomplete/'TLS').iterdir()))==1,platform+' overwrote incomplete leaf material'
+    failed=base/(platform+' generated failure')
+    (failed/'TLS').mkdir(parents=True);(failed/'Logs').mkdir()
+    fake=base/'fail-openssl';fake.write_text('#!/bin/sh\nexit 19\n');fake.chmod(0o700)
+    failure=subprocess.run(command,env=env|{'JOBS_IM_TLS_TEST_STATE':str(failed),'JOBS_IM_TLS_TEST_OPENSSL':str(fake)},capture_output=True,timeout=10)
+    assert failure.returncode!=0 and not list((failed/'TLS').iterdir()) and len(list(failed.glob('.TLS-pending*')))==1,platform+' published failed generated TLS material'
+    results.append({'incompleteLeafPreserved':True,'failedGenerationStagedOnly':True,'platformImplementation':platform,'executedOn':'MacOS','actualTLSFunction':True,'strictPythonTLS':True,'validExistingFilesBytePreserved':True,'legacyLeafRejectedAndBytePreserved':True,'nativeTargetOS':platform=='MacOS'})
+print(json.dumps({'results':results,'globalCAChanged':False,'testRoot':str(base)},ensure_ascii=False,indent=2))

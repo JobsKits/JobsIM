@@ -1,0 +1,18 @@
+{
+  "代码/后端/Go/sync_migration_model.go": {
+    "sha256": "fa53918cddfdc3ad54a6c9857db8d16d8a336a058e1fd951d4a7184d807feb8f",
+    "mtime_ns": 1794876200626487588
+  },
+  "代码/后端/Go/sync_migration_validate.go": {
+    "sha256": "68003fd0b170eff8f40613956df103c1761e725d58ed21d8fe28d81db5132a5b",
+    "mtime_ns": 1794876200626663713
+  },
+  "代码/后端/Go/migration_identity.go": {
+    "sha256": "16f738c444405b7071870b0fb2f1fa189c70f8602a128f6d89ad24f99c59e9c0",
+    "mtime_ns": 1794876059816034158
+  },
+  "代码/后端/Go/message_migration.go": {
+    "sha256": "72896d4e39675d43a02ea84884e223b5f97dcd137363e3db1584b3860eda2943",
+    "mtime_ns": 1794876059816236033
+  }
+}

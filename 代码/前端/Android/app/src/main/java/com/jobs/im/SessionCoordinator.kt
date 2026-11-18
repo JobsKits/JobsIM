@@ -349,6 +349,16 @@ class SessionApi(
         }
     }
 
+    override suspend fun migration(path:String,method:String,data:JSONObject?,store:String,current:()->Boolean):JSONObject {
+        val body=data?.toString();return authenticated{it.migration(path,method,body?.let{raw->JSONObject(raw)},store,current)}
+    }
+    override suspend fun receipt(path:String,method:String,data:JSONObject?,store:String,current:()->Boolean):JSONObject {
+        val body=data?.toString();return authenticated{it.receipt(path,method,body?.let{raw->JSONObject(raw)},store,current)}
+    }
+    override suspend fun migrationBytes(path:String,store:String,limit:Int,current:()->Boolean):ByteArray {
+        var received:ByteArray?=null;return try{authenticated{it.migrationBytes(path,store,limit,current).also{value->received=value}}}catch(error:Exception){received?.fill(0);throw error}
+    }
+
     override suspend fun upload(
         name: String,
         mime: String,
@@ -379,6 +389,10 @@ class LegacyReadOnlyApi(base: String, private val raw: Api, ca: ByteArray?) : Ap
         }
         return raw.request(path, method, data)
     }
+
+    override suspend fun migration(path:String,method:String,data:JSONObject?,store:String,current:()->Boolean):JSONObject = error("AUTH_REFRESH_UNSUPPORTED")
+    override suspend fun receipt(path:String,method:String,data:JSONObject?,store:String,current:()->Boolean):JSONObject = error("AUTH_REFRESH_UNSUPPORTED")
+    override suspend fun migrationBytes(path:String,store:String,limit:Int,current:()->Boolean):ByteArray = error("AUTH_REFRESH_UNSUPPORTED")
 
     override suspend fun upload(name: String, mime: String, bytes: ByteArray, path: String,
         fields: Map<String, String>): JSONObject = error("AUTH_REFRESH_UNSUPPORTED")

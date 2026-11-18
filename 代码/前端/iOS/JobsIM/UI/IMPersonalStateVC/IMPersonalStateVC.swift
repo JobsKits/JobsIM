@@ -59,7 +59,7 @@ final class IMPersonalStateVC: IMBaseVC, UITableViewDataSource, UITableViewDeleg
             make.edges.equalToSuperview()
         }
         table.byEmptyButtonProvider { [weak self] in
-            IMUI.button(IMStrings.text("empty") + "\n" + IMStrings.text("reload")) {
+            IMUI.emptyButton {
                 self?.reload()
             }
         }
@@ -319,7 +319,7 @@ final class IMPersonalStateVC: IMBaseVC, UITableViewDataSource, UITableViewDeleg
             .byDetailTitleNumberOfLines(0)
             .byTitleCor(IMUI.foreground)
             .byDetailTitleCor(IMUI.secondary)
-            .byAccessoryType(row.action == nil ? .none : .disclosureIndicator)
+            .byIMThemeAccessoryType(row.action == nil ? .none : .disclosureIndicator)
             .byUserInteractionEnabled(!busy && row.action != nil)
             .byAccessibilityIdentifier("self." + row.key)
     }

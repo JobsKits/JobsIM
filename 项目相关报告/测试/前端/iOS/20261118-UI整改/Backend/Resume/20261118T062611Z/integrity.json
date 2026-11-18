@@ -1,0 +1,269 @@
+{
+  "files": [
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/active-child.json",
+      "bytes": 690,
+      "sha256": "f262680197f010597d2c3ea689019e0d5794237c8029ff8a09c059651f6bf613"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/affected-existing.result.json",
+      "bytes": 2441,
+      "sha256": "a520232ad8a3e36635b2604f593f547462e0e8150788ffeb89711f7b9b522de9"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/affected-existing.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/affected-existing.stdout.jsonl",
+      "bytes": 18690,
+      "sha256": "cd7aff140f84209303febc923d019a7a1b2b67f17c0260fb4e636260deb819f7"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/attachment-diagnostic.result.json",
+      "bytes": 1121,
+      "sha256": "7905d731ed5a71502e973de65ecda3700633e9c6bd4d4953df45b81283889d5e"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/attachment-diagnostic.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/attachment-diagnostic.stdout.jsonl",
+      "bytes": 1578,
+      "sha256": "2476998c93073a7e59fa60c08333cb647b0d3f3108d0302fe95e9e6ceaa2232b"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/attachment-fixed.result.json",
+      "bytes": 1105,
+      "sha256": "bb9872d234dda768851131a9d04750815d5f8d6873c077bbf226963d5687b96e"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/attachment-fixed.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/attachment-fixed.stdout.jsonl",
+      "bytes": 1253,
+      "sha256": "7975e5b17ba92f5d660cbac0cb33dc772dab5cbec4ff17841409b45ad1d81fe7"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/browser-existing.result.json",
+      "bytes": 1208,
+      "sha256": "01de56f54cf9262f11eff92af8b2ee223dc1d7e4105792fc5f520ce46325cdfa"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/browser-existing.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/browser-existing.stdout.jsonl",
+      "bytes": 2025,
+      "sha256": "dbb9c5507821fb09021b33d7111e694faa131fdc03a9e01cf6c16c0de223036f"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/browser-fixture-input.json",
+      "bytes": 407,
+      "sha256": "58cfb7f6e66fdcbf71913b05dea185c6c47bc35b8a3d457f8d930c8688d6cec1"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/build-inputs.sha256.json",
+      "bytes": 33487,
+      "sha256": "6671fef04ee75c6602ad0b47cee3b9a1c755a877045182d6b31ddf5d530874dc"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/cleanup.json",
+      "bytes": 896,
+      "sha256": "e36a0c2e54cc660ff0cecb3be554f1c6880ac9e194be3bd2d7e52b85f2e6a2b8"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/document-links.json",
+      "bytes": 101,
+      "sha256": "e30aa47a535ccb5eae3d40ed5c642443f8b176c44ad02d3cb81eacf5a5f6e2c5"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet-final.result.json",
+      "bytes": 479,
+      "sha256": "e0d9777d2e3451028474d0f44596737520634674973744b5f471f3f26adb3104"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet-final.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet-final.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet-production-final.result.json",
+      "bytes": 311,
+      "sha256": "2b69278ec87e42f403624ad63a6fdcfd3796614baa0ebcfd0308fea9b7422e58"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet-production-final.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet-production-final.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet-production.result.json",
+      "bytes": 344,
+      "sha256": "2698eb140430c0fd77ab7a354643da966ef0d2efca515d7962e1077e4053324e"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet-production.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet-production.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet.result.json",
+      "bytes": 546,
+      "sha256": "9c3de81458f20dfc7a3c9550a93cf5fa34715ad0f22a3c8b20572b10f4a8a8db"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet.stderr.log",
+      "bytes": 349,
+      "sha256": "f8a7a57fe2ea19dfdb756aae116ff845dddd10a270218b566d1de9d66d1414e2"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/go-vet.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/initdb.log",
+      "bytes": 1095,
+      "sha256": "646e999983713888162613c8e4024e6244df8bc0767524e39e4b60b8f30a039c"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/new8-final.result.json",
+      "bytes": 1758,
+      "sha256": "38f5c7d347b5c356de2f5309e50348a41a54b2ae56b5d1980282fb22f76bbc67"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/new8-final.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/new8-final.stdout.jsonl",
+      "bytes": 6673,
+      "sha256": "e285112e3b6c218f0bc6f05fe6052b0a98dd5526c4d95558573a8210e12f451f"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/new8-first.result.json",
+      "bytes": 1762,
+      "sha256": "3ba6f2f95bbacab8a2cefcefbce1555fd0df0b73dade40d9e34b5456b30df554"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/new8-first.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/new8-first.stdout.jsonl",
+      "bytes": 6975,
+      "sha256": "13e87e6f0d2e93a72d7032b288d015e4bf90c2993ee313faea1747d8b8f522e4"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/overlay.json",
+      "bytes": 9565,
+      "sha256": "15956bcb434043d96d85e8bf32181c30f5acc7a7b4c4d3ffa41ff61ed78ad6f7"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/pg-final-stop.log",
+      "bytes": 56,
+      "sha256": "ca19178a35ab4153b75b494963b66ce8243e1b94c173107c87b44d09db23652d"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/process-audit.json",
+      "bytes": 1218,
+      "sha256": "dbdfc3c5a221dd0436a50046246672766296ce280817065d59b770dd6f232fd9"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/receipt-fixtures-fixed.result.json",
+      "bytes": 1228,
+      "sha256": "46cfc3a37c80604d00f743973e34e2ad89182aa67dcddbaea54462766fa93be2"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/receipt-fixtures-fixed.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/receipt-fixtures-fixed.stdout.jsonl",
+      "bytes": 2023,
+      "sha256": "978f2a4d220522c8c38ed30dcec6e5eca6c22fea82f5ed5fb483c5788119f3e5"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/resume-owned-fixes.diff",
+      "bytes": 2400,
+      "sha256": "6597e5c8fcea5a7f79a2294734a9190f7c0680f13f01dab95f05d59593753eab"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/run_targeted.py",
+      "bytes": 2620,
+      "sha256": "86d5f2cbb738e3a0eacd118afbfdfaa88d3223ea79f9bd4b77586442c3bbad77"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/runtime.json",
+      "bytes": 1195,
+      "sha256": "2f95a3c842f3db18c2142659cd1a6ac6ee8703d1481980bea5993c294905c2f7"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/start.log",
+      "bytes": 52,
+      "sha256": "66afd0411ccc09366e99fdd99b85f21899c8d2d064f5835126859618802153ad"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/summary.json",
+      "bytes": 18531,
+      "sha256": "0805cb45edca347d4a77a1b6a18400cc1182b3bd4d84022a95cd4b993ad92c89"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/修正前/report_media-first.go",
+      "bytes": 5426,
+      "sha256": "1607b129c31d7773a24cac5aed83ac98ac43788497db4d22522e327486f229da"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/修正前/sync_object_receipts_test.go",
+      "bytes": 18753,
+      "sha256": "650ec5f610c6bcbb4b3d5868a81ffcb2852bcae284bf3379f9f5eefa292a0232"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/修正前/sync_receipts_test.go",
+      "bytes": 5392,
+      "sha256": "cb9488a53b2bfe39ecc89b516643996084e6551f669a20e481edfb8c515eae55"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/修正前/ui_contract_test-first.go",
+      "bytes": 23463,
+      "sha256": "9224cb7de66da53e71977033894dd28b9de09273fd6bf1e618aa1c248615f1e0"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/修正前/后端测试README-执行前.md",
+      "bytes": 17906,
+      "sha256": "bfded9e56e79ae9b7db01fad860110b56e381f31f9cd8967a3128061365d1b58"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/Resume/20261118T062611Z/修正前/接口契约-执行前.md",
+      "bytes": 90107,
+      "sha256": "f37bd9d168d567eff4c76c6029657c1e9076774575f1edd2af6e9f4bf5a9e9e5"
+    }
+  ]
+}

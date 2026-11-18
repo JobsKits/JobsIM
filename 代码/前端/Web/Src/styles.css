@@ -169,7 +169,7 @@ button .avatar {
   pointer-events: none;
 }
 .app {
-  height: 100dvh;
+  height: var(--visible-height, 100dvh);
   min-height: 450px;
   display: flex;
   overflow: hidden;
@@ -714,6 +714,10 @@ button .avatar {
 }
 .composer:focus-within {
   box-shadow: 0 0 0 1px var(--accent);
+}
+.composer-accessories,
+.composer-draft {
+  display: contents;
 }
 .composer-tools {
   display: flex;
@@ -1266,7 +1270,7 @@ select {
     display: none;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 700px), (max-width: 1000px) and (hover: none) and (pointer: coarse) {
   .app {
     min-height: 350px;
   }
@@ -1473,7 +1477,7 @@ select {
   padding: 30px;
   background: var(--canvas);
 }
-@media (max-width: 700px) {
+@media (max-width: 700px), (max-width: 1000px) and (hover: none) and (pointer: coarse) {
   .icon-button,
   .composer-tools .icon-button,
   .message-actions .icon-button {
@@ -1558,7 +1562,7 @@ select {
   width: auto;
   margin: 0;
 }
-@media (max-width: 700px) {
+@media (max-width: 700px), (max-width: 1000px) and (hover: none) and (pointer: coarse) {
   .admin-columns {
     grid-template-columns: minmax(0, 1fr);
     gap: 10px;
@@ -1594,6 +1598,35 @@ select {
   display: grid;
   gap: 8px;
 }
+.password-change-panel > h4 { margin: 22px 0 12px; }
+.password-change-form, .password-change-account { display: grid; gap: 14px; margin-top: 18px; }
+.password-change-form label, .password-change-account label { display: grid; gap: 8px; min-width: 0; }
+.password-change-form input:not([type="checkbox"]), .password-change-form select, .password-change-account input { width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--text); font-size: calc(16px * var(--font-scale)); }
+.password-change-form .password-change-consent { display: flex; align-items: flex-start; gap: 10px; line-height: 1.7; }
+.account-deletion-panel .deletion-danger { color: var(--danger); }
+.account-deletion-panel .self-state-hint { overflow-wrap: anywhere; }
+.group-governance-panel, .group-join-panel { min-width: 0; border-top: 1px solid var(--line); margin-top: 22px; padding-top: 18px; }
+.group-governance-panel .self-state-hint, .group-join-panel .self-state-hint { overflow-wrap: anywhere; }
+.group-target { display: grid; gap: 8px; margin-top: 18px; }
+.group-target select, .group-join-panel textarea { width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; }
+.group-confirm { display: flex; align-items: flex-start; gap: 10px; line-height: 1.7; margin: 14px 0; }
+.migration-panel { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 12px; min-width: 0; }
+.migration-panel p, .migration-panel code, .migration-panel time { overflow-wrap: anywhere; }
+.migration-panel form { display: grid; gap: 12px; margin-block: 16px; }
+.migration-panel label:not(.group-consent) { display: grid; gap: 6px; min-width: 0; }
+.migration-panel textarea { min-height: 80px; resize: vertical; }
+.migration-panel input:not([type="checkbox"]), .migration-panel textarea { width: 100%; min-width: 0; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 10px; font: inherit; }
+.migration-choices, .migration-originals, .migration-history { display: grid; gap: 12px; margin-block: 12px; }
+.migration-choices label { display: flex !important; align-items: flex-start; gap: 10px !important; }
+.migration-choices input { flex: 0 0 auto; }
+.migration-choices span, .migration-panel small { min-width: 0; overflow-wrap: anywhere; }
+.migration-panel small { display: block; color: var(--muted); }
+.migration-originals article, .migration-history article, .migration-pairing, .migration-summary { padding: 12px; border: 1px solid var(--line); border-radius: 12px; min-width: 0; }
+.migration-originals button, .migration-summary button { margin: 6px 8px 0 0; }
+.migration-originals code { display: block; white-space: normal; }
+.password-change-consent input { margin-top: 6px; flex: 0 0 auto; }
+.password-change-panel article p { overflow-wrap: anywhere; }
+.password-change-panel .self-state-heading { flex-wrap: wrap; }
 .report-form textarea {
   width: 100%;
   min-height: 96px;
@@ -1771,4 +1804,92 @@ select {
   flex-direction: column;
   gap: 10px;
   padding: 16px;
+}
+
+.receipt-panel { display: grid; gap: 14px; padding: 18px; min-width: 0; overflow-wrap: anywhere; }
+.receipt-panel form, .receipt-panel label, .receipt-panel article { display: grid; gap: 10px; min-width: 0; }
+.receipt-panel form, .receipt-panel article { padding-block: 12px; }
+.receipt-panel textarea { min-height: 140px; resize: vertical; }
+.receipt-panel input, .receipt-panel textarea { width: 100%; min-width: 0; padding: 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--text); background: var(--surface); }
+.receipt-panel pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; }
+.receipt-panel details > summary { cursor: pointer; padding-block: 8px; }
+.receipt-readiness { display: grid; gap: 8px; margin: 0; }
+.receipt-readiness > div { display: flex; gap: 16px; justify-content: space-between; }
+.receipt-readiness dd { margin: 0; }
+
+/* Keep mobile controls inside the visual viewport and device safe areas. */
+@media (max-width: 700px), (max-width: 1000px) and (hover: none) and (pointer: coarse) {
+  .app {
+    position: fixed;
+    top: var(--visible-top, 0px);
+    left: 0;
+    width: 100%;
+    min-height: 0;
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+      env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  }
+  .modal-overlay {
+    top: var(--visible-top, 0px);
+    bottom: auto;
+    height: var(--visible-height, 100dvh);
+    padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px))
+      max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  }
+  .modal { max-height: calc(var(--visible-height, 100dvh) - 32px); }
+  :root[data-compact="true"] .thread-header { height: 48px; min-height: 48px; }
+  :root[data-compact="true"] .notice-banner {
+    flex-shrink: 0;
+    max-height: 26px;
+    overflow: auto;
+    padding: 3px 10px;
+    line-height: 1.3;
+  }
+  :root[data-compact="true"] .thread-body { min-height: 32px; }
+  :root[data-compact="true"] .pinned-bar { position: static; }
+  :root[data-compact="true"] .composer {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 2px;
+    margin: 0 8px 4px;
+    padding: 4px 8px;
+    max-height: min(172px, calc(var(--visible-height, 100dvh) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 112px));
+    overflow: auto;
+  }
+  :root[data-compact="true"] .composer-accessories {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    flex-shrink: 0;
+  }
+  :root[data-compact="true"] .composer-tools { margin-left: 0; flex: 1; min-width: 0; gap: 8px; overflow-x: auto; }
+  :root[data-compact="true"] .composer-tools .icon-button { flex: 0 0 44px; }
+  :root[data-compact="true"] .composer-context { flex-shrink: 0; }
+  :root[data-compact="true"] .composer .audio-recorder {
+    width: auto;
+    min-width: 0;
+    max-width: min(132px, 42vw);
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  :root[data-compact="true"] .audio-recorder button { min-height: 44px; padding: 4px 8px; font-size: calc(12px * var(--font-scale)); line-height: 1.2; }
+  :root[data-compact="true"] .composer-draft {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "message send" "hint hint";
+    gap: 2px 8px;
+    flex-shrink: 0;
+  }
+  :root[data-compact="true"] .composer textarea {
+    grid-area: message;
+    min-height: 44px;
+    height: 44px;
+    padding: 4px 0;
+    line-height: 1.3;
+  }
+  :root[data-compact="true"] .composer-bottom { display: contents; }
+  :root[data-compact="true"] .composer-bottom > span { grid-area: hint; line-height: 1.2; }
+  :root[data-compact="true"] .send-button { grid-area: send; min-height: 44px; gap: 8px; }
 }

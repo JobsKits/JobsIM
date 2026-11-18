@@ -233,6 +233,92 @@ final class IMAuthoritativeSyncTests: XCTestCase {
         }
     }
 
+    func testUninstallablePageRetryUsesNewSnapshotIntentAndRecoversNormally() async throws {
+        let f = try Fixture()
+        let engine = f.engine()
+        f.hook = { path, _ in
+            if path.hasSuffix("/pages/0") {
+                return try f.page(index: 0).setting("installable", .bool(false))
+            }
+            return nil
+        }
+        do {
+            try await engine.run()
+            XCTFail("An uninstallable snapshot was accepted")
+        } catch let failure as IMSyncProtocol.Failure {
+            XCTAssertEqual(failure.code, "SYNC_PAGE_NOT_INSTALLABLE")
+        }
+        let rejected = try f.store.syncState(namespace: f.namespace)
+        XCTAssertEqual(rejected["restriction"], .string("SYNC_PAGE_NOT_INSTALLABLE"))
+        XCTAssertEqual(rejected["snapshotIntent"], .null)
+        XCTAssertEqual(rejected["manifest"], .null)
+        XCTAssertTrue(try f.store.list("conversations", namespace: f.namespace).isEmpty)
+        let first = try XCTUnwrap(f.calls.first { $0.0 == "sync/snapshots" }?.2["requestId"])
+
+        f.hook = nil
+        try await engine.run()
+        let requests = f.calls.filter { $0.0 == "sync/snapshots" }
+        XCTAssertEqual(requests.count, 2)
+        XCTAssertNotEqual(requests.last?.2["requestId"], first)
+        let restored = try f.store.syncState(namespace: f.namespace)
+        XCTAssertEqual(restored["restriction"], .string(""))
+        XCTAssertEqual(restored["cursor"], .string("continuous-0"))
+        XCTAssertEqual(try f.store.list("conversations", namespace: f.namespace).count, 1)
+    }
+
+    func testPersistedUninstallableSnapshotDoesNotReuseLegacyIdempotencyKey() async throws {
+        let f = try Fixture()
+        let original = try f.store.syncState(namespace: f.namespace)
+        let obsoleteID = "99999999-9999-4999-8999-999999999999"
+        let intent: IMJSON = .object([
+            "requestId": .string(obsoleteID), "storeGeneration": original["storeGeneration"],
+            "schemaVersion": .string("1"), "pageSize": .number(100),
+        ])
+        _ = try f.store.syncUpdate(
+            namespace: f.namespace, expected: original,
+            next: original.setting("restriction", .string("SYNC_PAGE_NOT_INSTALLABLE"))
+                .setting("snapshotIntent", intent).setting("manifest", try f.manifest()))
+        try await f.engine().run()
+        let sent = try XCTUnwrap(f.calls.first { $0.0 == "sync/snapshots" })
+        XCTAssertNotEqual(sent.2["requestId"], .string(obsoleteID))
+        XCTAssertEqual(try f.store.syncState(namespace: f.namespace)["restriction"], .string(""))
+        XCTAssertEqual(try f.store.list("conversations", namespace: f.namespace).count, 1)
+    }
+
+    func testContactsHydrationMapsPeerIDsAndProfileSignatureRemainsValid() throws {
+        let f = try Fixture()
+        let peer = "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+        let removed = "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb"
+        let ref = f.ref(kind: "contacts", id: f.namespace.account)
+            .setting("owner", .string("directory"))
+        let body: IMJSON = .object([
+            "items": .array([
+                .object(["peerId": .string(peer), "state": .string("friend"),
+                         "generation": .string("1"), "inboundGate": .string("open")]),
+                .object(["peerId": .string(removed), "state": .string("deleted"),
+                         "generation": .string("2"), "inboundGate": .string("open")]),
+            ])
+        ])
+        let projection = try f.projection(ref, body: body)
+        _ = try IMSyncProtocol.projection(projection, reference: ref)
+        let state = try f.store.syncState(namespace: f.namespace)
+        try f.store.syncCommit(
+            namespace: f.namespace, expected: state, next: state,
+            projections: [projection], events: [], proofs: [], replaceCloud: false)
+        let rows = try f.store.list("contacts", namespace: f.namespace)
+        XCTAssertEqual(rows.count, 1)
+        XCTAssertEqual(rows.first?["id"], .string(peer))
+        XCTAssertEqual(rows.first?["peerId"], .string(peer))
+
+        let profileRef = f.ref(kind: "profile", id: peer).setting("owner", .string("directory"))
+        let profile: IMJSON = .object([
+            "id": .string(peer), "displayName": .string("小林"),
+            "signature": .string("保持联系"),
+        ])
+        let hydrated = try f.projection(profileRef, body: profile)
+        XCTAssertEqual(try IMSyncProtocol.projection(hydrated, reference: profileRef)["object"], profile)
+    }
+
     func testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions() async throws {
         let f = try Fixture()
         let original = try f.page(index: 0)

@@ -1,0 +1,14 @@
+[
+  "/Users/jobs/Library/Android/sdk/platform-tools/adb",
+  "-s",
+  "emulator-5580",
+  "shell",
+  "am",
+  "instrument",
+  "-w",
+  "-r",
+  "-e",
+  "class",
+  "com.jobs.im.MigrationHistoryLifecycleTest",
+  "com.jobs.im.test/androidx.test.runner.AndroidJUnitRunner"
+]

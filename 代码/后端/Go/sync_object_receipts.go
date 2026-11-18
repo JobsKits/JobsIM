@@ -62,6 +62,7 @@ type objectReceiptRequest struct {
 
 type contentReceiptParent struct {
 	Store, Qualification, Message, Conversation, Content, BodyDigest, Permission string
+	DeliveryGeneration, ManifestDigest                                           string
 }
 
 func validReceiptObjectSize(raw string) bool {
@@ -113,18 +114,22 @@ func (a *App) decodeObjectReceiptProof(token string, now time.Time) (objectRecei
 func (a *App) objectReceiptParent(ctx context.Context, u User, request string) (contentReceiptParent, error) {
 	var parent contentReceiptParent
 	err := a.DB.QueryRow(ctx, `SELECT store_generation::text,qualification_id::text,message_id::text,conversation_id::text,
-content_version::text,body_digest,permission_generation FROM sync.content_receipts
+content_version::text,body_digest,permission_generation,COALESCE(result->>'deliveryGeneration',''),COALESCE(result->>'manifestDigest','') FROM sync.content_receipts
 WHERE scope_id=$1 AND source_context_id='personal' AND user_id=$2 AND device_id=$3 AND restore_epoch=$4 AND request_id=$5`,
-		a.Config.DeploymentID, u.ID, u.DeviceID, u.RestoreEpoch, request).Scan(&parent.Store, &parent.Qualification, &parent.Message, &parent.Conversation, &parent.Content, &parent.BodyDigest, &parent.Permission)
+		a.Config.DeploymentID, u.ID, u.DeviceID, u.RestoreEpoch, request).Scan(&parent.Store, &parent.Qualification, &parent.Message, &parent.Conversation, &parent.Content, &parent.BodyDigest, &parent.Permission, &parent.DeliveryGeneration, &parent.ManifestDigest)
 	if err == pgx.ErrNoRows {
 		return parent, fail(409, "CONTENT_RECEIPT_REQUIRED", "This same physical store must first commit the original message descriptor receipt")
+	}
+	if err == nil && ((parent.DeliveryGeneration == "") != (parent.ManifestDigest == "") || parent.DeliveryGeneration != "" && (!syncValidationCounter(parent.DeliveryGeneration, false) || !syncValidationDigest(parent.ManifestDigest))) {
+		return parent, fail(503, "CONTENT_RECEIPT_CORRUPT", "The original parent delivery tuple cannot be verified")
 	}
 	return parent, err
 }
 
 func (a *App) currentReceiptObject(ctx context.Context, u User, parent contentReceiptParent) (receiptObject, error) {
 	var object receiptObject
-	_, message, err := a.receiptMessage(ctx, u, parent.Message)
+	var message Message
+	err := a.rpc(ctx, "message", "/internal/retention/receipt-source", retainedAccessRequest{Message: parent.Message, User: u.ID, Device: u.DeviceID, Store: parent.Store, Epoch: u.RestoreEpoch, Content: parent.Content}, &message)
 	if err != nil {
 		return object, err
 	}
@@ -134,7 +139,7 @@ func (a *App) currentReceiptObject(ctx context.Context, u User, parent contentRe
 	if !syncValidationID(message.AttachmentID) {
 		return object, fail(409, "RECEIPT_OBJECT_UNAVAILABLE", "A currently authorized original attachment is required")
 	}
-	if err = a.rpc(ctx, "media", "/internal/receipts/object", map[string]string{"userId": u.ID, "messageId": message.ID, "objectId": message.AttachmentID}, &object); err != nil {
+	if err = a.rpc(ctx, "media", "/internal/receipts/object", map[string]string{"userId": u.ID, "deviceId": u.DeviceID, "storeGeneration": parent.Store, "restoreEpoch": u.RestoreEpoch, "contentVersion": parent.Content, "messageId": message.ID, "objectId": message.AttachmentID}, &object); err != nil {
 		return object, err
 	}
 	if object.ID != message.AttachmentID || !validReceiptObjectSize(object.Size) || !syncValidationDigest(object.Digest) || object.ContentType == "" {
@@ -184,7 +189,7 @@ func (a *App) syncObjectReceiptChallenge(w http.ResponseWriter, r *http.Request)
 	if err != nil {
 		return err
 	}
-	proof := objectReceiptProof{receiptProof: receiptProof{Scope: a.Config.DeploymentID, User: u.ID, Device: u.DeviceID, Store: parent.Store, Epoch: u.RestoreEpoch, Qualification: parent.Qualification, Message: parent.Message, Conversation: parent.Conversation, Content: parent.Content, BodyDigest: parent.BodyDigest, Permission: parent.Permission, Expires: time.Now().Add(time.Hour).Unix()}, Parent: q.Parent, Object: object.ID, Size: object.Size, Digest: object.Digest}
+	proof := objectReceiptProof{receiptProof: receiptProof{Scope: a.Config.DeploymentID, User: u.ID, Device: u.DeviceID, Store: parent.Store, Epoch: u.RestoreEpoch, Qualification: parent.Qualification, Message: parent.Message, Conversation: parent.Conversation, Content: parent.Content, BodyDigest: parent.BodyDigest, Permission: parent.Permission, Expires: time.Now().Add(time.Hour).Unix(), DeliveryGeneration: parent.DeliveryGeneration, ManifestDigest: parent.ManifestDigest}, Parent: q.Parent, Object: object.ID, Size: object.Size, Digest: object.Digest}
 	respond(w, 200, map[string]any{"challenge": a.encodeObjectReceiptProof(proof), "parentReceiptId": q.Parent, "messageId": parent.Message, "conversationId": parent.Conversation, "contentVersion": parent.Content, "restoreEpoch": u.RestoreEpoch, "storeGeneration": parent.Store, "qualificationId": parent.Qualification, "bodyDigest": parent.BodyDigest, "object": object, "expiresAt": time.Unix(proof.Expires, 0).UTC(), "requiresDurableOriginalObject": true, "objectComplete": false, "targetRangeComplete": false, "deletionEligible": false})
 	return nil
 }
@@ -278,7 +283,7 @@ func (a *App) submitSyncObjectReceipt(w http.ResponseWriter, r *http.Request) er
 	if err != nil {
 		return err
 	}
-	if parent != (contentReceiptParent{proof.Store, proof.Qualification, proof.Message, proof.Conversation, proof.Content, proof.BodyDigest, proof.Permission}) {
+	if parent != (contentReceiptParent{Store: proof.Store, Qualification: proof.Qualification, Message: proof.Message, Conversation: proof.Conversation, Content: proof.Content, BodyDigest: proof.BodyDigest, Permission: proof.Permission, DeliveryGeneration: proof.DeliveryGeneration, ManifestDigest: proof.ManifestDigest}) {
 		return fail(409, "OBJECT_RECEIPT_PARENT_CHANGED", "Original message descriptor receipt differs")
 	}
 	storage, err := a.getStorageQualification(r.Context(), u, q.Store)
@@ -303,6 +308,9 @@ func (a *App) submitSyncObjectReceipt(w http.ResponseWriter, r *http.Request) er
 		return fail(409, "RECEIPT_OBJECT_CHANGED", "The current original object bytes differ from this receipt")
 	}
 	result := map[string]any{"operationId": q.RequestID, "status": "recorded", "receiptKind": "object_received", "parentReceiptId": proof.Parent, "messageId": proof.Message, "conversationId": proof.Conversation, "contentVersion": proof.Content, "restoreEpoch": proof.Epoch, "deviceId": proof.Device, "storeGeneration": proof.Store, "qualificationId": proof.Qualification, "objectId": proof.Object, "sizeBytes": proof.Size, "objectDigest": proof.Digest, "bodyDigest": proof.BodyDigest, "storageQualifiedAtCommit": true, "objectComplete": true, "targetRangeComplete": false, "deletionEligible": false}
+	if proof.DeliveryGeneration != "" {
+		result["deliveryGeneration"], result["manifestDigest"] = proof.DeliveryGeneration, proof.ManifestDigest
+	}
 	raw, _ := json.Marshal(q)
 	digest := keyedDigest(a.Config.Key, "object-receipt-request:"+u.ID+":"+u.DeviceID, raw)
 	encoded, _ := json.Marshal(result)
@@ -322,8 +330,8 @@ WHERE d.scope_id=$1 AND d.source_context_id='personal' AND d.user_id=$2 AND d.de
 		return fail(409, "OBJECT_RECEIPT_CONTEXT_CHANGED", "Physical storage or restore context changed before commit")
 	}
 	var lockedParent contentReceiptParent
-	err = tx.QueryRow(r.Context(), `SELECT store_generation::text,qualification_id::text,message_id::text,conversation_id::text,content_version::text,body_digest,permission_generation
-FROM sync.content_receipts WHERE scope_id=$1 AND source_context_id='personal' AND user_id=$2 AND device_id=$3 AND restore_epoch=$4 AND request_id=$5 FOR SHARE`, a.Config.DeploymentID, u.ID, u.DeviceID, u.RestoreEpoch, proof.Parent).Scan(&lockedParent.Store, &lockedParent.Qualification, &lockedParent.Message, &lockedParent.Conversation, &lockedParent.Content, &lockedParent.BodyDigest, &lockedParent.Permission)
+	err = tx.QueryRow(r.Context(), `SELECT store_generation::text,qualification_id::text,message_id::text,conversation_id::text,content_version::text,body_digest,permission_generation,COALESCE(result->>'deliveryGeneration',''),COALESCE(result->>'manifestDigest','')
+FROM sync.content_receipts WHERE scope_id=$1 AND source_context_id='personal' AND user_id=$2 AND device_id=$3 AND restore_epoch=$4 AND request_id=$5 FOR SHARE`, a.Config.DeploymentID, u.ID, u.DeviceID, u.RestoreEpoch, proof.Parent).Scan(&lockedParent.Store, &lockedParent.Qualification, &lockedParent.Message, &lockedParent.Conversation, &lockedParent.Content, &lockedParent.BodyDigest, &lockedParent.Permission, &lockedParent.DeliveryGeneration, &lockedParent.ManifestDigest)
 	if err != nil {
 		return err
 	}

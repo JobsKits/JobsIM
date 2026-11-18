@@ -1,0 +1,35 @@
+{
+  "timeUTC": "2026-11-18T06:58:39.642434+00:00",
+  "status": "draft-not-added-to-test-target",
+  "draftSourceSHA": "737cb6f7bbddc4d9d9fd8042cf80553c9e07b7a19bc8e348277082485ec64cfd",
+  "activeUITestSHAAtStart": "56bf18cea2ad9d175b296c35d697bb3be7339fca189710875b4929d1047d8e31",
+  "activeUITestUnmodifiedByThisTask": true,
+  "parseExitCode": 0,
+  "built": false,
+  "run": false,
+  "method": "testDemoReportSystemPickerPrivateCopyPreviewRemovalAndSubmit",
+  "preconditions": [
+    "dedicated 736D4534-6DBF-42A9-97A9-8DABFC208987 simulator only",
+    "root adds exactly one lawful AppIcon PNG via simctl addmedia",
+    "no real user photo library, account or API"
+  ],
+  "pickerAXConfirmed": false,
+  "expectedPickerAX": [
+    "collectionViews.firstMatch.cells = sole fixture thumbnail",
+    "navigationBars button label starts 添加 or equals 完成"
+  ],
+  "runtimeChecks": [
+    "one real system representation staged with filename/MIME/nonzero size",
+    "QuickLook preview only after picker closed",
+    "remove material",
+    "reselect same fixture, explicit 1 evidence/0 message confirmation",
+    "demo accepted, material UI removed, submitted button disabled"
+  ],
+  "limits": [
+    "UI preview demonstrates lifetime beyond provider callback; namespace/path and actual byte deletion require root read-only container verification",
+    "real preview screenshot must be visually inspected",
+    "system picker AX is a proposal until actual AX confirms it; stop instead of guessing coordinates or selecting another asset",
+    "demo metadata/digest validation does not prove formal evidence upload/outbox/backend review",
+    "no active production/test file modified, no build/simulator/photo tool started"
+  ]
+}

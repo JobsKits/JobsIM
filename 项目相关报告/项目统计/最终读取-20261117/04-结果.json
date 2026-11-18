@@ -1,0 +1,44 @@
+{
+  "at": "2026-11-17T04:52:11.564Z",
+  "statisticsAt": "2026-11-17T04:52:11.476Z",
+  "totals": {
+    "business": {
+      "files": 449,
+      "lines": 102352,
+      "percent": 63.48
+    },
+    "tests": {
+      "files": 237,
+      "lines": 51276,
+      "percent": 31.8
+    },
+    "configuration": {
+      "files": 49,
+      "lines": 7601,
+      "percent": 4.71
+    }
+  },
+  "totalLines": 161229,
+  "sourceFileCount": 735,
+  "changedSources": [],
+  "sameReportFileList": true,
+  "reusedHTTP": {
+    "sha256": "44d53c50c88ec31db07b28c1ed2349bc85c23d303cf575daddd6fb1c5b4cdf0c",
+    "at": "2026-11-17T04:48:06.302Z",
+    "sourceGoFiles": 134,
+    "changedGoSources": [],
+    "currentGoFileCount": 134,
+    "counts": {
+      "ordinary": 134,
+      "admin": 11,
+      "experimental": 5,
+      "health": 1
+    },
+    "totalExperimentalOn": 151,
+    "totalExperimentalOff": 146,
+    "rerun": false
+  },
+  "build": false,
+  "service": false,
+  "indexModified": false
+}

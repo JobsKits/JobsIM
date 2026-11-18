@@ -1,0 +1,47 @@
+{
+  "timeUTC": "2026-11-18T05:47:49.808429+00:00",
+  "mode": "read-only-source-review",
+  "typechecked": false,
+  "sources": [
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAccountUIService/IMAccountUIService.swift",
+      "sha256": "a6d65dc5b9009e6b0fc7c77df0d83c84db16053951280c60a97be8c3c7124aa2"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMProfileEditingService/IMProfileEditingService.swift",
+      "sha256": "1e12f13abf506311076863349c1a7cdfd95d9a32d034eee3385f54ca56a97c05"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMMessageEditingService/IMMessageEditingService.swift",
+      "sha256": "e979b36342d43cb3de1c08873f564757277cd1f11f4fb265c81c18487d1a538c"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMReportCompositionService/IMReportCompositionService.swift",
+      "sha256": "599b896188f493a0921e29999ad856e93cc6ea7c2561c703eff098282750b207"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift",
+      "sha256": "aa6687643520bf5ea1222afcf05c4b896b3a7331de5845bce2d3ed121bd6640a"
+    }
+  ],
+  "findings": [
+    {
+      "service": "IMReportCompositionService",
+      "boundary": "ReportOutbox file paths",
+      "detail": "createDirectory intermediates has no ancestor symlink checks; resume success cleanup only compares basename, without namespace/intent root containment. Reported to root; reviewer does not edit shared source."
+    },
+    {
+      "service": "IMReportCompositionService",
+      "boundary": "reason validation",
+      "detail": "client utf8<=8000 versus Go <=1000 Unicode characters; oversized reason admitted locally then deterministically rejected by server. Reported to root."
+    }
+  ],
+  "checked": [
+    "saved-account selection nonce/profile/namespace equality after async",
+    "restore checks user/device/source/family/refresh generation/credential request identity",
+    "profile rename stable outbox requestId and current-family checks",
+    "recall original ID/version and success confirmation before editor text",
+    "report upload persists unknown before network, stable 8 fields and original replay",
+    "current UI uses declared method signatures"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "exitCode": 0,
+  "typeErrors": 0,
+  "native": false,
+  "https": false,
+  "inputUnchanged": true,
+  "hashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "cb5e3567f6da62dc2d916b05b94156b041e0bcd59f1e91fde87b4a0acd3864e7",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets": "e460a463199e9f6d6930443d354e22e8b087345e6d6a0e22b1b774d8ad2c77a4",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets": "8e4646012c466916f17bb9f2737169bd7d94e3d8a5bae4d90b8713e5fdb896bb",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol.ets": "d759bb21325b3bfb6e8b5ad8f102c91db0758affb6deef58ee49d59414df0363",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptStore.ets": "bd40e9e37b5b4cb1dd282088fa904b627688e5c5410f32d1315e4858d7b9d49e",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets": "7bc079e25554546a83e611c2b2e4ad66beb8cfe268f576649fb7af2f41baabfe",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCoordinator.ets": "ce501a4a8def98f8c6d60b272ac4184d2c39a2c4f2fea610ca63064570e20e9f",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCleanup.ets": "b6494934d492097642622faad3112ba92f1dbf48b1a35fc709385d595c409270",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptText.ets": "5b5dbb2ffe2e14b0891acca3922b2e542e00f4394b16890509dc561fc189030b",
+    "测试/前端/HarmonyOS/Unit/RunReceipt.mjs/RunReceipt.mjs": "85fd7e4b546bf3325078f9a41442d45ffa1fac23ea11718f22d7cb7464ab12e4",
+    "测试/前端/HarmonyOS/Unit/Receipt.test.cjs/Receipt.test.cjs": "03859a5152d7aeffb4a801dc4fcf8d1702b80e8c04464b3f620c0cbaaef89650",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee"
+  },
+  "afterHashes": {
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "cb5e3567f6da62dc2d916b05b94156b041e0bcd59f1e91fde87b4a0acd3864e7",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets": "e460a463199e9f6d6930443d354e22e8b087345e6d6a0e22b1b774d8ad2c77a4",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets": "8e4646012c466916f17bb9f2737169bd7d94e3d8a5bae4d90b8713e5fdb896bb",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol.ets": "d759bb21325b3bfb6e8b5ad8f102c91db0758affb6deef58ee49d59414df0363",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptStore.ets": "bd40e9e37b5b4cb1dd282088fa904b627688e5c5410f32d1315e4858d7b9d49e",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets": "7bc079e25554546a83e611c2b2e4ad66beb8cfe268f576649fb7af2f41baabfe",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCoordinator.ets": "ce501a4a8def98f8c6d60b272ac4184d2c39a2c4f2fea610ca63064570e20e9f",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCleanup.ets": "b6494934d492097642622faad3112ba92f1dbf48b1a35fc709385d595c409270",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptText.ets": "5b5dbb2ffe2e14b0891acca3922b2e542e00f4394b16890509dc561fc189030b",
+    "测试/前端/HarmonyOS/Unit/RunReceipt.mjs/RunReceipt.mjs": "85fd7e4b546bf3325078f9a41442d45ffa1fac23ea11718f22d7cb7464ab12e4",
+    "测试/前端/HarmonyOS/Unit/Receipt.test.cjs/Receipt.test.cjs": "03859a5152d7aeffb4a801dc4fcf8d1702b80e8c04464b3f620c0cbaaef89650",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee"
+  }
+}

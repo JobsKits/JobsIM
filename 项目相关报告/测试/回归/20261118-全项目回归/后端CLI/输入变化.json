@@ -1,0 +1,18 @@
+{
+  "beforeFiles": 284,
+  "afterFiles": 285,
+  "changes": [
+    {
+      "path": "代码/后端/Go/deployment_disk.go",
+      "sha256": "6acd2d6e7d64b784e6f1816de28518471abb9dd1bbd7a1909d763822938a858a"
+    },
+    {
+      "path": "测试/CLI/运行测试.mjs/运行测试.mjs",
+      "sha256": "8cc58a3cc4d5e05311ec8ec7a3fe6397da35e26ac1e1a55c5558547f0459634a"
+    },
+    {
+      "path": "测试/后端/接口/deployment_disk_test.go",
+      "sha256": "8cadd0bd971099aecffd2b02f77699e5928a74901d70849101b84c3686c7c5f7"
+    }
+  ]
+}

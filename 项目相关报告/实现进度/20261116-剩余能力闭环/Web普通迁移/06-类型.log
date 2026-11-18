@@ -1,0 +1,4 @@
+Src/AccountDeletionCleanup.ts(40,10): error TS18048: 'parsed' is possibly 'undefined'.
+Src/AttachmentSendActions.ts(76,160): error TS2345: Argument of type 'Blob | undefined' is not assignable to parameter of type 'Blob'.
+  Type 'undefined' is not assignable to type 'Blob'.
+Src/AttachmentSendProtocol.ts(72,62): error TS2322: Type 'unknown' is not assignable to type 'string'.

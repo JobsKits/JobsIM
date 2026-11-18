@@ -1,0 +1,87 @@
+XCTAssertTrue failed - Attributes: Application, 0x10ed157c0, pid: 73754, label: 'JobsIM'
+Element subtree:
+ →Application, 0x10ed157c0, pid: 73754, label: 'JobsIM'
+    Window (Main), 0x10ed15900, {{0.0, 0.0}, {402.0, 874.0}}
+      Other, 0x10ed15a40, {{0.0, 0.0}, {402.0, 874.0}}
+        Other, 0x10ed15b80, {{0.0, 0.0}, {402.0, 874.0}}
+      Other, 0x10ed15cc0, {{0.0, 0.0}, {402.0, 874.0}}
+        Button, 0x10ed15e00, {{290.0, 642.0}, {100.0, 44.0}}, identifier: 'demo.environment', label: '演示环境'
+          StaticText, 0x10ed15f40, {{316.0, 656.7}, {48.0, 14.3}}, label: '演示环境'
+      Other, 0x10ed16080, {{0.0, 0.0}, {402.0, 874.0}}
+        Other, 0x10ed161c0, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'QLPreviewControllerView'
+          Other, 0x10ed16300, {{0.0, 0.0}, {402.0, 874.0}}
+            Other, 0x10ed16440, {{0.0, 0.0}, {402.0, 874.0}}
+              Other, 0x10ed16580, {{0.0, 0.0}, {402.0, 874.0}}
+                Other, 0x10ed166c0, {{0.0, 0.0}, {402.0, 874.0}}
+                  Other, 0x10ed16800, {{0.0, 0.0}, {402.0, 874.0}}
+                    Other, 0x10ed16940, {{0.0, 0.0}, {402.0, 874.0}}
+                      Other, 0x10ed16a80, {{0.0, 0.0}, {402.0, 874.0}}
+                        Other, 0x10ed16bc0, {{0.0, 0.0}, {402.0, 874.0}}
+                          Other, 0x10ed16d00, {{0.0, 0.0}, {402.0, 874.0}}
+                            Other, 0x10ed16e40, {{0.0, 0.0}, {804.0, 1748.0}}
+                              Other, 0x10ed16f80, {{0.0, 0.0}, {402.0, 874.0}}
+                                Other, 0x10ed170c0, {{0.0, 0.0}, {402.0, 874.0}}
+                                  Other, 0x10ed17200, {{0.0, 0.0}, {402.0, 874.0}}
+                                    Other, 0x10ed17340, {{0.0, 0.0}, {402.0, 874.0}}
+                                      Other, 0x10ed17480, {{0.0, 0.0}, {402.0, 874.0}}
+                                        Other, 0x10ed175c0, {{0.0, 0.0}, {402.0, 874.0}}
+                                          Other, 0x10ed17700, {{0.0, 0.0}, {402.0, 874.0}}
+                                            Other, 0x10ed17840, {{0.0, 0.0}, {402.0, 874.0}}
+                                              Other, 0x10ed17980, {{0.0, 0.0}, {402.0, 874.0}}
+                                                Other, 0x10ed17ac0, {{0.0, 0.0}, {402.0, 874.0}}
+                                                  ScrollView, 0x10ed17c00, {{0.0, 0.0}, {402.0, 874.0}}
+                                                    Other, 0x10ed17d40, {{0.0, 0.0}, {402.0, 874.0}}
+                                                      Other, 0x10ed17e80, {{0.0, 0.0}, {402.0, 874.0}}
+                                                        Other, 0x10ecc6d00, {{0.0, 0.0}, {402.0, 874.0}}
+                                                          Other, 0x10ecc6bc0, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'QLMarkupImageItemViewControllerMarkupImageViewAccessibilityIdentifier'
+                                                            Other, 0x10ecfb5c0, {{0.0, 0.0}, {402.0, 874.0}}
+                                                              Other, 0x10ecfb700, {{0.0, 0.0}, {402.0, 874.0}}
+                                                                Other, 0x10ecfb840, {{0.0, 0.0}, {402.0, 874.0}}
+                                                                  Other, 0x10ecfb340, {{0.0, 0.0}, {402.0, 874.0}}
+                                                                    ScrollView, 0x10ecfb480, {{0.0, 0.0}, {402.0, 874.0}}
+                                                                      Other, 0x10ecfb0c0, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'com.apple.pencilkit.tiledView'
+                                                                        Other, 0x10ecfb200, {{0.0, 0.0}, {402.0, 874.0}}
+                                                                        Other, 0x10ecf9400, {{0.0, 0.0}, {402.0, 874.0}}
+                                                                      Other, 0x10ecf9540, {{0.0, 236.0}, {402.0, 402.0}}, label: '图像画布'
+                                                                        Other, 0x10ecf9680, {{0.0, 236.0}, {402.0, 402.0}}, identifier: 'com.apple.paper.imageCanvasElementView'
+                                                                          Other, 0x10ecf97c0, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                            Other, 0x10ecf9900, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                              Other, 0x10ecfaa80, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                                Other, 0x10ecfabc0, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                                  Image, 0x10ecfad00, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                                Other, 0x10ecfae40, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                          Other, 0x10ecfaf80, {{0.0, 236.0}, {402.0, 402.0}}, identifier: 'com.apple.paper.canvasElementDrawingView'
+                                                                            Other, 0x10ecfa080, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                        Other, 0x10ecfa1c0, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                          Other, 0x10ecfa300, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                          Image, 0x10ecfa440, {{0.0, 236.0}, {402.0, 402.0}}, label: '有主体可提取'
+                                                                          Other, 0x10ecfa580, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                            Other, 0x10ecfa6c0, {{12.0, 567.0}, {378.0, 59.0}}
+                                                                              Other, 0x10ecfa940, {{12.0, 567.0}, {378.0, 59.0}}
+                                                                      Other, 0x10ecfa800, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                      Other, 0x10ecf9a40, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                      Other, 0x10ecf9b80, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                      Other, 0x10ecf9cc0, {{0.0, 236.0}, {402.0, 402.0}}, identifier: 'com.apple.paper.canvasElementResizeView'
+                                                                      TextView, 0x10ecf9e00, {{0.0, 236.0}, {402.0, 402.0}}
+                                                                      Other, 0x10ecf9f40, {{369.0, 62.0}, {30.0, 750.0}}, label: '垂直滚动条, 2页', value: 65%
+                                                                        Other, 0x10ecf9180, {{396.0, 3.0}, {3.0, 868.0}}
+                                                                      Other, 0x10ecf92c0, {{62.0, 841.0}, {278.0, 30.0}}, label: '水平滚动条, 1页', value: 0%
+                                                                        Other, 0x10ecf8f00, {{3.0, 868.0}, {396.0, 3.0}}
+                                                                      Other, 0x10ecf9040, {{369.0, 62.0}, {30.0, 750.0}}, label: '垂直滚动条, 2页', value: 65%
+                                                                        Other, 0x10ecf8c80, {{396.0, 3.0}, {3.0, 868.0}}
+                                                                      Other, 0x10ecf8dc0, {{62.0, 841.0}, {278.0, 30.0}}, label: '水平滚动条, 1页', value: 0%
+                                                                        Other, 0x10ecf8a00, {{3.0, 868.0}, {396.0, 3.0}}
+            Toolbar, 0x10ecf8b40, {{0.0, 0.0}, {402.0, 874.0}}, identifier: 'Toolbar', label: '工具栏'
+              Other, 0x10ecf88c0, {{0.0, 0.0}, {402.0, 874.0}}
+    Window, 0x10ecf8780, {{0.0, 0.0}, {402.0, 874.0}}
+      Other, 0x10ecf8640, {{0.0, 0.0}, {402.0, 874.0}}
+    Window, 0x10ecf8500, {{0.0, 0.0}, {402.0, 874.0}}
+      Other, 0x10ecf83c0, {{0.0, 0.0}, {402.0, 874.0}}
+        Other, 0x10ecf8280, {{0.0, 0.0}, {402.0, 874.0}}
+Path to element:
+ →Application, 0x10ed157c0, pid: 73754, label: 'JobsIM'
+Query chain:
+ →Find: Target Application 'com.jobs.im'
+  Output: {
+    Application, 0x10ecf8140, pid: 73754, label: 'JobsIM'
+  }

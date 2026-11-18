@@ -1,0 +1,70 @@
+✔ compact complete pair keeps precise generation and all context fields (1.783292ms)
+✔ concurrent expired requests consume one original RT (1.819416ms)
+✔ unknown refresh survives coordinator reconstruction and never reuses old RT (1.733125ms)
+✔ secure store failure never publishes the issued credential pair (0.37975ms)
+✔ unknown initial request keeps original ID/body and rejects changed proof before send (0.374667ms)
+✔ new current proof freezes a complete unknown ancestor closure without changing old body (0.400791ms)
+✔ late failure of original authentication cannot clear its verified successor (2.795208ms)
+✔ late old logout cannot erase a newly authenticated family (2.575875ms)
+✔ secured pair plus interrupted RDB handoff resumes with no new authentication (0.761584ms)
+✔ missing live auth capability stops before secret reads or HTTP auth (0.153667ms)
+✔ late cold-start context must not clear a newer authenticated device (1.015584ms)
+✔ password-change unknown blocks ordinary bearer and refresh across reconstruction without deleting the original pair (0.464083ms)
+✔ old password marker cannot pause or erase a later independent family (0.357625ms)
+✔ account-deletion unknown blocks ordinary bearer and refresh across reconstruction without deleting the original pair (0.791834ms)
+✔ old deletion marker cannot pause or erase a later independent family (0.300583ms)
+✔ business JSON, upload, attachment and avatar share one expiry coordination path (5.207917ms)
+✔ retired API binding stops before file read and network (1.137ms)
+✔ late successful business response cannot cross a new session namespace (0.442167ms)
+✔ transport unknown never consumes a refresh token or silently repeats a write (0.330417ms)
+✔ public initial authentication never attaches an existing access token (1.339666ms)
+✔ pending inbox is recipient-bound and never resurrects accepted requests (0.869959ms)
+✔ read-only and unavailable-owner groups reject writes (0.114792ms)
+✔ original group membership generation remains decimal text above JS safe integer (0.237125ms)
+✔ profile, account, device, demo and restore epochs each isolate local data (0.119458ms)
+✔ opaque history cursor is epoch-bound without integer coercion (0.105208ms)
+✔ restored secure credentials require matching account, device and epoch (0.069375ms)
+✔ strict authentication JSON separates login OTP from recovery code (0.468917ms)
+✔ connection descriptions reject credentials, HTTP, queries and fragments (1.366334ms)
+✔ all ten language tables cover the current control vocabulary (0.251292ms)
+✖ literal UI actions and labels resolve in every language (5.501667ms)
+✔ sending qualification support requires the current instance and an explicit capability (0.560334ms)
+✔ retries serialize the original admission and never infer missing legacy qualification (0.14675ms)
+✔ lookup paths keep search criteria and signed cursor separate, and favorites never use empty search (0.209125ms)
+✔ structured mentions require current members and owner-only all, with a copied stable selection (0.198792ms)
+✔ original outgoing mention IDs and all fields survive replay without a latest context rewrite (0.096875ms)
+✔ mention receipts do not re-alert on edit, read, block projection or later unblock (0.088ms)
+✔ announcement references content version rather than interaction version and rejects unavailable bodies (0.099208ms)
+✔ persistent announcement intent contains no copied text, attachment or credentials (0.319ms)
+✔ announcement clear keeps only the original CAS, generation and request identity (0.1165ms)
+✔ announcement expiration is an explicit stable native preset (0.9685ms)
+✔ only a definite server rejection permits discarding an announcement intent (0.0725ms)
+✔ privileged writes require explicit current-instance role admission support (0.101375ms)
+✔ announcement role qualification is frozen and legacy bodies are never supplemented (0.156625ms)
+✔ forward intents freeze only source references and never copy source content (0.171375ms)
+✔ unavailable forward projection removes body and any source media authority (0.121375ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 44
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 178.822667
+
+✖ failing tests:
+
+test at 测试/前端/HarmonyOS/Unit/Policies.test.mjs:56:1
+✖ literal UI actions and labels resolve in every language (5.501667ms)
+  AssertionError [ERR_ASSERTION]: Missing native UI key: membersList
+      at TestContext.<anonymous> (file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E6%B5%8B%E8%AF%95/%E5%89%8D%E7%AB%AF/HarmonyOS/Unit/Policies.test.mjs:60:32)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+Host-only work: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/AuthRules-QURYrT

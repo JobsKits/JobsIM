@@ -1,0 +1,29 @@
+--- full-integration-fixed-source
++++ final-menu-copy-only-source
+@@ -869,7 +869,7 @@
+ # 首屏和模式确认均在接管旧服务之前，取消不会停止既有实例。
+ select_im_mode() {
+     prepare_selector
+-    pick_operation '部署模式' '↑/↓选择、回车确认；Esc取消。本地模式会公开临时HTTPS入口。' $'local\t本地部署＋内网穿透' $'server\t服务器部署' || return $?
++    pick_operation '部署模式' '↑/↓选择、回车确认；Esc取消。本地默认仅本机；临时穿透需另选并确认。' $'local\t本地部署' $'server\t服务器部署' || return $?
+     [[ "$SELECTED_OPERATION" == local || "$SELECTED_OPERATION" == server ]] || return 2
+     DEPLOY_MODE="$SELECTED_OPERATION"
+     if [[ "$DEPLOY_MODE" == local ]]; then
+@@ -1534,7 +1534,7 @@
+     fi
+     origin_record created connection.json
+     print '用户端：'; show_endpoint "$url"
+-    print "管理入口：${url}（管理写入口尚未交付，不生成假后台URL）"
++    print '管理网页尚未交付，只有上述JobsIM用户入口，不生成后台URL。'
+     print "deploymentId：$deployment"
+     print "CA SHA256：$fingerprint"
+     print "公开连接描述：$STATE/connection.json"
+@@ -1615,7 +1615,7 @@
+ TRAPHUP() { cleanup; exit 143; }
+ # 展示入口能力；只读动作不需要交互，也不做任何初始化写入。
+ show_script_intro() {
+-    print 'JobsIM部署/反部署：本地穿透或服务器双模式；undeploy仅按原点清理，独立journal/密钥默认保留；stop/backup为运维子动作。'
++    print 'JobsIM部署/反部署：本地／服务器双模式，本地默认仅本机；undeploy仅按原点清理，独立journal/密钥默认保留；stop/backup为运维子动作。'
+ }
+ # 按已经解析的模式编排业务，未知归属始终保留。
+ dispatch_action() {

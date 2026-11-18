@@ -1,0 +1,50 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.5.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:processDebugNavigationResources
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :app:kspDebugKotlin
+
+> Task :app:compileDebugKotlin
+w: file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/ChatModel.kt:124:46 Expression is unused.
+w: file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/ChatModel.kt:136:46 Expression is unused.
+w: file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/GroupScreen.kt:33:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/OwnDeletion.kt:143:29 Elvis operator (?:) always returns the left operand of non-nullable type 'JSONObject'.
+w: file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/OwnPassword.kt:143:36 Elvis operator (?:) always returns the left operand of non-nullable type 'JSONObject'.
+w: file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/SelfState.kt:56:17 'when' expression over a subject of type 'Any?' is not exhaustive. Add a 'null' or 'else' branch.
+w: file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt:76:18 Unnecessary safe call on a non-null receiver of type 'Any'.
+w: file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt:237:13 'when' expression over a subject of type 'Any?' is not exhaustive. Add a 'null' or 'else' branch.
+
+> Task :app:javaPreCompileDebug
+> Task :app:compileDebugJavaWithJavac
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:compileDebugNavigationResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:processDebugResources
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:kspDebugUnitTestKotlin
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugJavaRes
+> Task :app:processDebugUnitTestJavaRes
+> Task :app:testDebugUnitTest
+
+[Incubating] Problems report is available at: file:///Users/jobs/Documents/GitHub/JobsProds/JobsIM/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 29s
+28 actionable tasks: 28 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.5.0/userguide/configuration_cache_enabling.html

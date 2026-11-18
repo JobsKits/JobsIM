@@ -1,0 +1,12 @@
+{"Time":"2026-11-18T14:45:12.348067+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-18T14:45:12.696541+08:00","Action":"run","Package":"jobsim/backend","Test":"TestWebMActualBrowserContainerClassification"}
+{"Time":"2026-11-18T14:45:12.696638+08:00","Action":"output","Package":"jobsim/backend","Test":"TestWebMActualBrowserContainerClassification","Output":"=== RUN   TestWebMActualBrowserContainerClassification\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:45:12.696998+08:00","Action":"output","Package":"jobsim/backend","Test":"TestWebMActualBrowserContainerClassification","Output":"--- PASS: TestWebMActualBrowserContainerClassification (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:45:12.697013+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestWebMActualBrowserContainerClassification","Elapsed":0}
+{"Time":"2026-11-18T14:45:12.697027+08:00","Action":"run","Package":"jobsim/backend","Test":"TestMediaUploadPGActualBrowserContainerRemainsAudio"}
+{"Time":"2026-11-18T14:45:12.697036+08:00","Action":"output","Package":"jobsim/backend","Test":"TestMediaUploadPGActualBrowserContainerRemainsAudio","Output":"=== RUN   TestMediaUploadPGActualBrowserContainerRemainsAudio\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:45:13.424398+08:00","Action":"output","Package":"jobsim/backend","Test":"TestMediaUploadPGActualBrowserContainerRemainsAudio","Output":"--- PASS: TestMediaUploadPGActualBrowserContainerRemainsAudio (0.73s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:45:13.424429+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestMediaUploadPGActualBrowserContainerRemainsAudio","Elapsed":0.73}
+{"Time":"2026-11-18T14:45:13.424445+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:45:13.424925+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t1.076s\n"}
+{"Time":"2026-11-18T14:45:13.424944+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":1.077}

@@ -1,0 +1,9 @@
+{
+  "ownedSafetyListeners": {
+    "62381": false,
+    "62382": false
+  },
+  "natsClosure": "test cleanup sends SIGTERM and waits for the exact spawned child; sync connection flags must become false before owned pools close",
+  "dataRetained": true,
+  "freeBytes": 23455092736
+}

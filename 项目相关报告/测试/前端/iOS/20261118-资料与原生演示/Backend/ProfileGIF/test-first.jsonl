@@ -1,0 +1,16 @@
+{"Time":"2026-11-18T16:42:39.637224+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-18T16:42:40.235308+08:00","Action":"run","Package":"jobsim/backend","Test":"TestProfileAnimatedGIFKeepsFramesDelayLoopAndDisposal"}
+{"Time":"2026-11-18T16:42:40.235424+08:00","Action":"output","Package":"jobsim/backend","Test":"TestProfileAnimatedGIFKeepsFramesDelayLoopAndDisposal","Output":"=== RUN   TestProfileAnimatedGIFKeepsFramesDelayLoopAndDisposal\n","OutputType":"frame"}
+{"Time":"2026-11-18T16:42:40.360132+08:00","Action":"output","Package":"jobsim/backend","Test":"TestProfileAnimatedGIFKeepsFramesDelayLoopAndDisposal","Output":"--- PASS: TestProfileAnimatedGIFKeepsFramesDelayLoopAndDisposal (0.12s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T16:42:40.360169+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestProfileAnimatedGIFKeepsFramesDelayLoopAndDisposal","Elapsed":0.12}
+{"Time":"2026-11-18T16:42:40.360195+08:00","Action":"run","Package":"jobsim/backend","Test":"TestProfileAnimatedGIFRejectsAllocationAndMalformedBudgets"}
+{"Time":"2026-11-18T16:42:40.360199+08:00","Action":"output","Package":"jobsim/backend","Test":"TestProfileAnimatedGIFRejectsAllocationAndMalformedBudgets","Output":"=== RUN   TestProfileAnimatedGIFRejectsAllocationAndMalformedBudgets\n","OutputType":"frame"}
+{"Time":"2026-11-18T16:42:40.360669+08:00","Action":"output","Package":"jobsim/backend","Test":"TestProfileAnimatedGIFRejectsAllocationAndMalformedBudgets","Output":"--- PASS: TestProfileAnimatedGIFRejectsAllocationAndMalformedBudgets (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T16:42:40.360676+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestProfileAnimatedGIFRejectsAllocationAndMalformedBudgets","Elapsed":0}
+{"Time":"2026-11-18T16:42:40.360684+08:00","Action":"run","Package":"jobsim/backend","Test":"TestProfilePGOwnFieldsAndContactPrivacy"}
+{"Time":"2026-11-18T16:42:40.360687+08:00","Action":"output","Package":"jobsim/backend","Test":"TestProfilePGOwnFieldsAndContactPrivacy","Output":"=== RUN   TestProfilePGOwnFieldsAndContactPrivacy\n","OutputType":"frame"}
+{"Time":"2026-11-18T16:42:40.851412+08:00","Action":"output","Package":"jobsim/backend","Test":"TestProfilePGOwnFieldsAndContactPrivacy","Output":"--- PASS: TestProfilePGOwnFieldsAndContactPrivacy (0.49s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T16:42:40.851437+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestProfilePGOwnFieldsAndContactPrivacy","Elapsed":0.49}
+{"Time":"2026-11-18T16:42:40.851446+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-18T16:42:40.852542+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t1.215s\n"}
+{"Time":"2026-11-18T16:42:40.85256+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":1.215}

@@ -1,0 +1,540 @@
+**Exploration: AttachmentSendStore**
+
+Found 35 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `send` (代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift:120) — 8 callers in `代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift`; tests: `测试/前端/iOS/IMForwardTests.swift`
+- `send` (代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift:871) — 6 callers; tests: `测试/前端/iOS/IMMessageListTests.swift`, `测试/前端/iOS/IMSessionTests.swift`, `测试/前端/iOS/IMSendAdmissionTests.swift`, `测试/前端/iOS/IMAuthRefreshIntegrationTests.swift`
+- `send` (代码/前端/Web/Src/AudioRecorderPanel.tsx:52) — 1 caller in `代码/前端/Web/Src/AudioRecorderPanel.tsx`; no tests found within 3 caller hops
+- `send` (代码/前端/CLI/cmd/jobsim/local.go:64) — 1 caller in `代码/前端/CLI/cmd/jobsim/main.go`; no tests found within 3 caller hops
+
+**Relationships**
+
+**calls:**
+- send → observe
+- IMInstanceAgent → permits
+- observe → make
+- observe → permits
+- observe → complete
+- decode → make
+- originalJSON → make
+- originalJSON → permits
+- originalJSON → complete
+- personalExport → complete
+- ... and 298 more
+
+**instantiates:**
+- IMInstanceAgent → IMInstanceEvaluator
+- IMAPIClient → IMInstanceAgent
+- personalExport → IMDownloadCompletion
+- download → IMDownloadCompletion
+- IMPasswordChangeTransport → IMInstanceEvaluator
+- IMReceiptTransport → IMInstanceEvaluator
+- IMMigrationTransport → IMInstanceEvaluator
+- send → IMMessageListService
+- testReferenceOutboxUnknownAndExplicitOriginalRetry → IMForwardService
+- testRealHTTPSLateForwardResponsesCannotReviveProjection → IMForwardService
+- ... and 12 more
+
+**references:**
+- IMInstanceAgent → IMInstanceCertificate
+- IMAPIClient → IMInstanceAgent
+- originalJSON → IMJSON
+- IMInstanceEvaluator → IMInstanceCertificate
+- send → IMSession
+- IMForwardService → IMSession
+- IMForwardService → IMJSON
+- send → IMJSON
+- send → SessionError
+- IMSession → IMJSON
+- ... and 64 more
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/前端/Web/Src/App.tsx`** — setModal(calls), references(references), api(calls), sync(calls), json(calls), Message(references), sendCurrent(calls), uid(calls), instantiates(instantiates), refreshMembers(calls), +58 more
+
+```tsx
+304	export default function App() {
+305	  useVisibleViewport();
+306	  const [locale, setLocale] = useState(() => pref("jobsim.locale", "zh-CN"));
+307	  const t = useCallback((k: string) => translate(locale, k), [locale]);
+308	  const [theme, setTheme] = useState(() => pref("jobsim.theme", "system"));
+309	  const [font, setFont] = useState(() => pref("jobsim.font", "normal"));
+310	  const [personalHolder, setPersonalHolder] = useState<{ namespace: string; data: PersonalState }>({ namespace: "", data: emptyPersonalState() });
+
+... (gap) ...
+
+399	  };
+400	  const liveRef = useRef(live);
+401	  liveRef.current = live;
+402	  const setLive = useCallback((update: Space | ((previous: Space) => Space)) => {
+403	    setLiveState(previous => {
+404	      const next = typeof update === "function" ? update(previous) : update;
+405	      const facts = globalMessages.current;
+406	      const safe = namespace.current && facts.scope === namespace.current.split("|").slice(0, 4).join("|")
+407	        ? applyKnownGlobals(next, facts.ids) : next;
+408	      return namespace.current && globalStorageFailure.current ? { ...safe, conversations: [], messages: {}, cursors: {}, profiles: {}, unread: {}, mentionUnread: {} } : safe;
+409	    });
+410	  }, []);
+411	  useEffect(() => subscribeGlobalMessages(notice => {
+412	    if (!namespace.current || namespace.current.split("|").slice(0, 4).join("|") !== notice.scope) return;
+413	    const previous = globalMessages.current;
+
+... (gap) ...
+
+519	    setAnnouncementSource(null);
+520	    setModal("signIn");
+521	  };
+522	  const report = (e: unknown) => {
+523	    if ((e instanceof ApiError && e.code === "AUTH_REQUEST_ABORTED") || (e instanceof DOMException && e.name === "AbortError")) return;
+524	    if (e instanceof SyncProtocolError && e.code === "SELF_LOCAL_DRAFT_CHANGED") { setNotice(selfLabel(locale, "localChanged")); return; }
+525	    if (e instanceof SyncProtocolError && e.code === "SELF_STATE_PENDING_OPERATION") { setNotice(selfLabel(locale, "pendingState")); return; }
+526	    if (e instanceof SyncProtocolError && e.code === "SELF_STATE_VERSION_CHANGED") { setNotice(selfLabel(locale, "stateChanged")); return; }
+527	    if (e instanceof ApiError && ["PREFERENCE_VERSION_CONFLICT", "VIEW_VERSION_CONFLICT", "MANUAL_UNREAD_CHANGED", "DRAFT_VERSION_CONFLICT"].includes(e.code)) { setNotice(selfLabel(locale, "stateChanged")); return; }
+528	    if (e instanceof ApiError && ["AUTH_REFRESH_UNKNOWN", "AUTH_CONTEXT_CHANGED"].includes(e.code)) {
+529	      setNotice(t(e.code === "AUTH_REFRESH_UNKNOWN" ? "authRefreshUnknown" : "authContextChanged"));
+530	      return;
+531	    }
+532	    if (e instanceof ApiError && e.status === 401 && session) {
+533	      invalidateSession();
+534	      setNotice(t("sessionExpired"));
+535	      return;
+536	    }
+537	    setNotice(
+538	      e instanceof ApiError && e.status === 401
+539	        ? t(
+540	            ["signIn", "register", "recovery"].includes(modal)
+541	              ? "authFailed"
+542	              : "sessionExpired",
+543	          )
+544	        : e instanceof ApiError && e.status === 404
+545	          ? t("notSupported")
+546	          : t("failure"),
+547	    );
+548	  };
+549	  useEffect(() => {
+550	    const required = (event: Event) => {
+551	      const code = (event as CustomEvent<{ code: string }>).detail.code;
+
+... (gap) ...
+
+1188	    const box = thread.current;
+1189	    if (box && readingBottom.current) box.scrollTop = box.scrollHeight;
+1190	  }, [messages.length]);
+1191	  const updateDraft = (value: string) => {
+1192	    localDraftRevision.current++;
+1193	    setSpace((s) => ({ ...s, drafts: { ...s.drafts, [selected]: value } }));
+1194	  };
+1195	  const captureSelfActions = () => {
+1196	    if (demo || !session || !namespace.current || !syncGuard.current.ready || features.sync_self_state !== true) throw new SyncProtocolError("SYNC_SELF_STATE_UNAVAILABLE");
+1197	    const auth = authSnapshot().auth;
+
+... (gap) ...
+
+1489	      }
+1490	    }
+1491	  };
+1492	  const send = async (
+1493	    e?: FormEvent,
+1494	    attachmentId?: string,
+1495	    type = "text",
+1496	    text?: string,
+1497	    onQueued?: () => void,
+1498	  ) => {
+1499	    e?.preventDefault();
+1500	    if (conversation?.readOnly) {
+1501	      setNotice(t("readOnlyConversation"));
+1502	      return;
+1503	    }
+1504	    if (!conversation || !me || busy || (!draft.trim() && !attachmentId))
+1505	      return;
+1506	    if (!demo && !conversation.sendAdmission) {
+1507	      setNotice(t("sendPermissionUnavailable"));
+1508	      void sync();
+1509	      return;
+1510	    }
+1511	    if (editing) {
+1512	      if (demo) {
+1513	        await mutate(editing, "edit", draft);
+1514	        setEditing(null);
+1515	        updateDraft("");
+1516	      } else {
+1517	        try {
+1518	          await api(
+1519	            "/messages/" + editing.id,
+1520	            json("PATCH", {
+1521	              text: draft,
+1522	              expectedVersion: editing.version,
+1523	              requestId: uid(),
+1524	            }),
+1525	          );
+1526	          setEditing(null);
+1527	          updateDraft("");
+1528	          void sync();
+1529	        } catch (e) {
+1530	          report(e);
+1531	        }
+1532	      }
+1533	      return;
+1534	    }
+1535	    const now = new Date().toISOString();
+1536	    const m: Message = {
+1537	      id: uid(),
+1538	      conversationId: selected,
+1539	      senderId: me.id,
+1540	      clientMsgId: uid(),
+1541	      type,
+1542	      text: text ?? draft,
+1543	      attachmentId,
+1544	      replyToId: reply?.id,
+1545	      createdAt: now,
+1546	      updatedAt: now,
+1547	      version: "1",
+1548	      sequence: String(Date.now()),
+1549	      deleted: false,
+1550	      reactions: [],
+1551	      pinned: false,
+1552	      favorite: false,
+1553	      pending: !demo,
+1554	      restoreEpoch: session?.restoreEpoch ?? "1",
+1555	      sendAdmission: conversation.sendAdmission,
+1556	      mentionedUserIds: mentionDraft.userIds.length
+1557	        ? [...mentionDraft.userIds]
+1558	        : undefined,
+1559	      mentionAll: mentionDraft.all || undefined,
+1560	    };
+1561	    if (demo) {
+1562	      setReply(null);
+1563	      setSample((s) => ({
+1564	        ...s,
+1565	        drafts: { ...s.drafts, [selected]: "" },
+1566	        mentionDrafts: {
+1567	          ...s.mentionDrafts,
+1568	          [selected]: { userIds: [], all: false },
+1569	        },
+1570	        messages: {
+1571	          ...s.messages,
+1572	          [selected]: [...(s.messages[selected] ?? []), m],
+1573	        },
+1574	      }));
+1575	      return;
+1576	    }
+1577	    if (sending.current) return;
+1578	    sending.current = true;
+1579	    const generation = changing.current;
+1580	    const latest = liveRef.current;
+1581	    const next = {
+1582	      ...latest,
+1583	      drafts: { ...latest.drafts, [selected]: "" },
+1584	      mentionDrafts: {
+1585	        ...latest.mentionDrafts,
+1586	        [selected]: { userIds: [], all: false },
+1587	      },
+1588	      outbox: [...latest.outbox, m],
+1589	      messages: {
+1590	        ...latest.messages,
+1591	        [selected]: [...(latest.messages[selected] ?? []), m],
+1592	      },
+1593	    };
+1594	    try {
+1595	      await queueMessage(namespace.current, next, m);
+1596	      onQueued?.();
+1597	      if (generation !== changing.current) return;
+1598	      setReply((current) => (current?.id === m.replyToId ? null : current));
+1599	      setLive((current) => ({
+1600	        ...current,
+1601	        drafts: {
+1602	          ...current.drafts,
+1603	          [selected]:
+1604	            (current.drafts[selected] ?? "") === draft
+1605	              ? ""
+1606	              : current.drafts[selected],
+1607	        },
+1608	        mentionDrafts: {
+1609	          ...current.mentionDrafts,
+1610	          [selected]:
+1611	            JSON.stringify(
+1612	              current.mentionDrafts?.[selected] ?? { userIds: [], all: false },
+1613	            ) === JSON.stringify(mentionDraft)
+1614	              ? { userIds: [], all: false }
+1615	              : current.mentionDrafts![selected],
+1616	        },
+1617	        outbox: [
+1618	          ...current.outbox.filter((old) => old.clientMsgId !== m.clientMsgId),
+1619	          m,
+1620	        ],
+1621	        messages: {
+1622	          ...current.messages,
+1623	          [selected]: [
+1624	            ...(current.messages[selected] ?? []).filter(
+1625	              (old) => old.clientMsgId !== m.clientMsgId,
+1626	            ),
+1627	            m,
+1628	          ],
+1629	        },
+1630	      }));
+1631	      await writeMessage(m, generation);
+1632	    } catch {
+1633	      setNotice(t("failure"));
+1634	    } finally {
+1635	      sending.current = false;
+1636	    }
+1637	  };
+1638	  const retryOutbox = async () => {
+1639	    const generation = changing.current;
+1640	    for (const m of live.outbox) {
+
+... (gap) ...
+
+1654	      setLive(previous => ({ ...previous, messages: { ...previous.messages, [message.conversationId]: (previous.messages[message.conversationId] ?? []).map(row => row.id === message.id && BigInt(row.version) <= BigInt(fresh.version) && !(row.deleted && !fresh.deleted) ? fresh : row) } }));
+1655	    } catch (error) { if (isCurrent()) report(error); }
+1656	  };
+1657	  const mutate = async (m: Message, action: string, value?: string) => {
+1658	    if (action === "announce") {
+1659	      setAnnouncementSource(m);
+1660	      setMore("");
+1661	      setModal("announcement");
+1662	      return;
+1663	    }
+1664	    if (action === "report") {
+1665	      if (demo || !features.reports) {
+1666	        setNotice(t("notSupported"));
+1667	        return;
+1668	      }
+1669	      setReportTarget({
+1670	        targetType: "message",
+1671	        targetId: m.id,
+1672	        label: messageText(m),
+1673	      });
+1674	      setMore("");
+1675	      setModal("reports");
+1676	      return;
+1677	    }
+1678	    if ((m.contentUnavailable || m.forwardUnavailable) && action !== "recall") {
+1679	      setNotice(t("contentUnavailable"));
+1680	      return;
+1681	    }
+1682	    setMore("");
+1683	    const capability = (
+1684	      {
+1685	        pin: "pins",
+1686	        favorite: "favorites",
+1687	        reaction: "reactions",
+1688	        forward: "forwarding",
+1689	      } as Record<string, string>
+1690	    )[action];
+1691	    if (capability && !enabled(capability)) {
+1692	      setNotice(t("notSupported"));
+1693	      return;
+1694	    }
+1695	    if (action === "reply") {
+1696	      localDraftRevision.current++;
+1697	      setReply(m);
+1698	      composer.current?.focus();
+1699	      return;
+1700	    }
+1701	    if (action === "edit-start") {
+1702	      localDraftRevision.current++;
+1703	      setEditing(m);
+1704	      updateDraft(m.text);
+1705	      composer.current?.focus();
+1706	      return;
+1707	    }
+1708	    if (action === "forward") {
+1709	      if (demo) {
+1710	        setForwarding(m);
+1711	        setModal("forward");
+1712	        return;
+1713	      }
+1714	      const generation = changing.current;
+1715	      try {
+1716	        const source = await api<Message>(
+1717	          "/messages/" + encodeURIComponent(m.id),
+1718	        );
+1719	        if (generation !== changing.current) return;
+1720	        if (
+1721	          source.deleted ||
+1722	          source.contentUnavailable ||
+1723	          source.forwardUnavailable
+1724	        ) {
+1725	          setNotice(t("contentUnavailable"));
+1726	          return;
+1727	        }
+1728	        if (
+1729	          (source.contentVersion ?? source.version) !==
+1730	          (m.contentVersion ?? m.version)
+1731	        ) {
+1732	          setLive((value) => ({
+1733	            ...value,
+1734	            messages: {
+1735	              ...value.messages,
+1736	              [source.conversationId]: (
+1737	                value.messages[source.conversationId] ?? []
+1738	              ).map((old) =>
+1739	                old.id === source.id
+1740	                  ? mergeMessageProjection(old, source)
+1741	                  : old,
+1742	              ),
+1743	            },
+1744	          }));
+1745	          setNotice(t("forwardSourceUpdated"));
+1746	          return;
+1747	        }
+1748	        if (!source.forwardAdmission || !source.contentVersion) {
+1749	          setNotice(t("notSupported"));
+1750	          return;
+1751	        }
+1752	        setForwarding(source);
+1753	        setModal("forward");
+1754	      } catch (error) {
+1755	        if (generation === changing.current) report(error);
+1756	      }
+1757	      return;
+1758	    }
+1759	    if (action === "copy") {
+1760	      await navigator.clipboard.writeText(m.text);
+1761	      setNotice(t("copied"));
+1762	      return;
+1763	    }
+1764	    if (action === "recall" && !confirm(t("confirmRecall"))) return;
+1765	    const local = () =>
+1766	      setSample((s) => ({
+1767	        ...s,
+1768	        messages: {
+1769	          ...s.messages,
+1770	          [m.conversationId]: (s.messages[m.conversationId] ?? []).map((x) =>
+1771	            x.id !== m.id
+1772	              ? x
+1773	              : action === "pin"
+1774	                ? { ...x, pinned: !x.pinned }
+1775	                : action === "favorite"
+1776	                  ? { ...x, favorite: !x.favorite }
+1777	                  : action === "recall"
+1778	                    ? { ...x, deleted: true, text: "" }
+1779	                    : action === "edit"
+1780	                      ? {
+1781	                          ...x,
+1782	                          text: value ?? x.text,
+1783	                          version: String(Number(x.version) + 1),
+1784	                        }
+1785	                      : action === "reaction"
+1786	                        ? {
+1787	                            ...x,
+1788	                            reactions: x.reactions.length
+1789	                              ? []
+1790	                              : [{ emoji: "👍", userId: me?.id }],
+1791	                          }
+1792	                        : x,
+1793	          ),
+1794	        },
+1795	      }));
+1796	    if (demo) {
+1797	      local();
+1798	      return;
+1799	    }
+1800	    try {
+1801	      const base = "/messages/" + m.id;
+1802	      await api(
+1803	        base +
+1804	          (action === "pin"
+1805	            ? "/pin"
+1806	            : action === "favorite"
+1807	              ? "/favorite"
+1808	              : action === "reaction"
+1809	                ? "/reactions"
+1810	                : ""),
+1811	        json(
+1812	          action === "pin"
+1813	            ? m.pinned
+1814	              ? "DELETE"
+1815	              : "PUT"
+1816	            : action === "favorite"
+1817	              ? m.favorite
+1818	                ? "DELETE"
+1819	                : "PUT"
+1820	              : action === "recall"
+1821	                ? "DELETE"
+1822	                : action === "edit"
+1823	                  ? "PATCH"
+1824	                  : "POST",
+1825	          action === "edit"
+1826	            ? { text: value, expectedVersion: m.version, requestId: uid() }
+1827	            : action === "reaction"
+1828	              ? { emoji: "👍" }
+1829	              : undefined,
+1830	        ),
+1831	      );
+1832	      await sync();
+1833	    } catch (e) {
+1834	      report(e);
+1835	    }
+1836	  };
+1837	  const captureAttachmentContext = (): AttachmentSendContext | undefined => {
+1838	    const snapshot = authSnapshot(), auth = snapshot.auth, key = namespace.current, generation = changing.current, selection = currentSelection.current;
+1839	    if (demo || !session || !auth?.userId || !auth.deviceId || !auth.familyId || !key) return;
+```
+
+**`代码/前端/Web/Src/AudioRecorderPanel.tsx`** — cancel(calls), AudioRecorderPanel(function), interrupt(calls), interrupt(function), interrupt(references), cancel(function), cancel(references), visibility(function), visibility(references), authChanged(function), +15 more
+
+```tsx
+14	  const ownership = useRef<() => boolean>(() => false);
+15	  const sendingOwner = useRef<AudioRecorderController | undefined>(undefined);
+16	  current.current = { contextKey, disabled };
+17	  const label = (key: string) => audioLabel(locale, key);
+18	  const supported = typeof MediaRecorder !== "undefined" && !!navigator.mediaDevices?.getUserMedia && window.isSecureContext;
+19	  useEffect(() => {
+20	    mounted.current = true;
+21	    const owner = contextKey, snapshot = authSnapshot();
+22	    const belongs = () => mounted.current && current.current.contextKey === owner && (owner.startsWith("demo|") || authSnapshotCurrent(snapshot)) && document.visibilityState === "visible";
+23	    ownership.current = belongs;
+24	    const recorder = new AudioRecorderController({
+25	      open: () => navigator.mediaDevices.getUserMedia({ audio: true, video: false }),
+26	      recorder: (stream, mimeType) => new MediaRecorder(stream, { mimeType }),
+27	      supported: mime => supported && MediaRecorder.isTypeSupported(mime),
+
+... (gap: interrupt (代码/前端/Web/Src/AudioRecorderPanel.tsx:33), visibility (代码/前端/Web/Src/AudioRecorderPanel.tsx:37), authChanged (代码/前端/Web/Src/AudioRecorderPanel.tsx:38)) ...
+
+49	    return () => URL.revokeObjectURL(value);
+50	  }, [state.preview]);
+51	  const cancel = () => { controller.current?.cancel(); previewElement.current?.pause(); setSendFailed(false); };
+52	  const send = async () => {
+53	    const source = controller.current, preview = source?.state.preview, owner = contextKey;
+54	    if (!source || !preview || sending || sendingOwner.current === source || disabled || !ownership.current()) return;
+55	    sendingOwner.current = source;
+56	    previewElement.current?.pause(); setSending(true); setSendFailed(false);
+57	    const belongs = ownership.current;
+58	    const isCurrent = () => belongs() && mounted.current && current.current.contextKey === owner && source.state.preview === preview;
+59	    try {
+60	      const suffix = preview.blob.type === "audio/mp4" ? "m4a" : "webm";
+61	      const queued = await onSend(new File([preview.blob], "voice-" + preview.createdAt + "." + suffix, { type: preview.blob.type }), isCurrent);
+62	      if (!isCurrent()) return;
+63	      if (queued) source.cancel(); else setSendFailed(true);
+64	    } catch { if (isCurrent()) setSendFailed(true); }
+65	    finally { if (sendingOwner.current === source) sendingOwner.current = undefined; if (mounted.current && current.current.contextKey === owner) setSending(false); }
+66	  };
+67	  const active = ["requesting", "recording", "stopping"].includes(state.phase);
+68	  return <div className="audio-recorder" aria-label={label("record")}>
+69	    {!active && !state.preview && <button className="secondary" type="button" disabled={disabled || !supported} onClick={() => { setSendFailed(false); void controller.current?.start(); }}><Mic size={17} />{label(state.phase === "error" ? "retry" : "record")}</button>}
+```
+
+**Not shown above — explore these names for their source**
+
+- 代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets: send:1109, Index:55, t:368, persistDraft:291, namespace:374, verifyEpoch:860, +14 more
+- 代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift: send:39, IMInstanceAgent:14, observe:44, decode:174, originalJSON:114, personalExport:132, +8 more
+- 代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift: send:871, admissionSnapshot:926, IMSession:13, action:783, reconcileOriginalMessage:957, requireSendAdmissionProtocol:943, +8 more
+- 代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt: send:1444, ChatModel:19, requireCurrent:301, job:344, refreshVisible:1209, verifyEpoch:782, +10 more
+- 代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift: send:120, IMForwardService:12, failure:218, requireProtocol:32, submit:171, retryOriginal:145, +4 more
+- 代码/前端/CLI/cmd/jobsim/local.go: send:64, queueAndSend:67, download:311
+- 代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets: writable:119, Conversation:2, Message:3
+- 代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt: messages:462, enqueue:341, MessageRow:62
+- 代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift: enqueue:113, acknowledge:210, freezeOutbox:182
+- 代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift: showForward:717, sendText:412, sendFile:924
+- ... and 44 more files
+
+---
+> **Verbatim source for 2 files is included above — treat it as already Read.** Trimmed for size: `App.tsx`, `AudioRecorderPanel.tsx`; gap markers and file headers name what was elided. For those, or anything under "Not shown above", make ANOTHER codegraph_explore with those exact names instead of reading the files — it returns their source with line numbers.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~717 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

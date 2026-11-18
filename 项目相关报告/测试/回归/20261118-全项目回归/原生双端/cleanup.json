@@ -1,0 +1,11 @@
+{
+  "iOS": {
+    "shutdownExitCode": 0,
+    "deviceRetainedForReview": true,
+    "onlyTaskDeviceTouched": true
+  },
+  "Android": {
+    "readOnlyOverlayStopped": true,
+    "baseAVDChangesNotSaved": true
+  }
+}

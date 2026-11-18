@@ -18,6 +18,9 @@ final class IMGroupVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
 
     private var conversation: IMJSON
     private var members: [IMJSON] = []
+    private var governance: IMJSON = .null
+    private var memberCursor = ""
+    private let groups = IMGroupGovernanceService()
     private var announcement: IMJSON = .null
     private var announcementEnabled = false
     private var announcementRoleProtected = false
@@ -38,6 +41,12 @@ final class IMGroupVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
                 keys.append("clearAnnouncement")
             }
             if announcementPending { keys.append("reconcileOriginal") }
+        }
+        if conversation["kind"].text == "group" && !session.demo {
+            keys.append("groupGovernance")
+        }
+        if !memberCursor.isEmpty {
+            keys.append("loadMore")
         }
         return keys + (conversation["kind"].text == "group" ? ["leave"] : []) + ["report"]
     }
@@ -65,7 +74,7 @@ final class IMGroupVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
             make.edges.equalToSuperview()
         }
         table.byEmptyButtonProvider { [weak self] in
-            IMUI.button(IMStrings.text("empty") + "\n" + IMStrings.text("reload")) {
+            IMUI.emptyButton {
                 self?.perform {
                     await self?.reload()
                 }
@@ -112,7 +121,19 @@ final class IMGroupVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
                 announcement = .null
             }
         }
-        members = await session.list("conversations/\(conversation["id"].text)/members")
+        if session.demo {
+            members = await session.list("conversations/\(conversation["id"].text)/members")
+        } else {
+            if conversation["kind"].text == "group" {
+                governance = (try? await groups.load(conversation["id"].text)) ?? .null
+            }
+            let page = try? await groups.read(conversation["id"].text, suffix: "members?limit=50")
+            guard session.namespace == namespace else {
+                return
+            }
+            members = page?["items"].list ?? []
+            memberCursor = page?["nextCursor"].text ?? ""
+        }
         guard session.namespace == namespace else { return }
         table.reloadData()
         table.byReloadEmptyViewAuto()
@@ -164,8 +185,8 @@ final class IMGroupVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
                         return
                     }
                     self.perform {
-                        _ = try await self.session.action(
-                            path, method: "PATCH", body: ["ownerId": member["id"]])
+                        _ = try await self.groups.change(self.conversation["id"].text, observed: self.governance,
+                                                         action: "transfer", target: member)
                         await self.reload()
                     }
                 })
@@ -181,6 +202,23 @@ final class IMGroupVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate {
             sheet.addAction(UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {})
             sheet.popoverPresentationController?.sourceView = tableView.cellForRow(at: indexPath)
             present(sheet, animated: true)
+        } else if actions[indexPath.row] == "groupGovernance" {
+            navigationController?.pushViewController(IMGroupGovernanceVC(conversation: conversation["id"].text), animated: true)
+        } else if actions[indexPath.row] == "loadMore" {
+            let cursor = memberCursor
+            let namespace = session.namespace
+            perform { [weak self] in
+                guard let self else {
+                    return
+                }
+                let page = try await self.groups.read(self.conversation["id"].text, suffix: "members?limit=50&after=" + cursor)
+                guard self.session.namespace == namespace, self.memberCursor == cursor else {
+                    return
+                }
+                self.members += page["items"].list
+                self.memberCursor = page["nextCursor"].text
+                self.table.reloadData()
+            }
         } else if actions[indexPath.row] == "rename" {
             IMUI.prompt(self, title: IMStrings.text("rename"), value: conversation["title"].text) {
                 [weak self] name in

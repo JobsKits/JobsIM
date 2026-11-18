@@ -1,0 +1,1 @@
+{"out":"/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/Web真实HTTPS改密/1794899866906-97329","passed":1,"failure":{"name":"TimeoutError","message":"locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.auth-modal input[name=username]') to be visible\u001b[22m\n"},"inputsUnchanged":true,"pageErrors":0}

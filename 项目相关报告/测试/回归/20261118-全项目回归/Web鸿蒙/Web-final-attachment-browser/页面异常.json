@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Error",
+    "message": "injected linked failure",
+    "stack": "Error: injected linked failure\n    at IDBObjectStore.put (eval at evaluate (:370:30), <anonymous>:1:221)\n    at read.onsuccess (http://127.0.0.1:63865/Src/storage.ts:175:11)",
+    "check": "linked Outbox abort rolls back enqueued state and retains the unique original",
+    "expectedFixture": true
+  }
+]

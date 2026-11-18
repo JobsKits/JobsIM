@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jobs.im.ReceiptRulesTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-17T08:05:59.125Z" hostname="JobsdeAir" time="0.002">
+  <properties/>
+  <testcase name="legacySevenAndPairedNineBecomeTheSameImmutableSevenFact" classname="com.jobs.im.ReceiptRulesTest" time="0.001"/>
+  <testcase name="requiredMetadataCannotBeMissingRetypedOrExtended" classname="com.jobs.im.ReceiptRulesTest" time="0.001"/>
+  <testcase name="originalTupleAndQualificationStayBoundToTheStoredDeclaration" classname="com.jobs.im.ReceiptRulesTest" time="0.0"/>
+  <testcase name="incompleteFlagsNonBooleansFalseQualificationAndContractMismatchAreRejected" classname="com.jobs.im.ReceiptRulesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

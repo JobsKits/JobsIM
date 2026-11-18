@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-11-17T00:51:26.149Z",
+  "finishedAt": "2026-11-17T00:51:26.528Z",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/前端/Web/20261117-原身份等待围栏/本轮运行器.cjs",
+    "--build"
+  ],
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "stopped": "",
+  "freeBefore": 4910333952,
+  "minimumFree": 4910333952,
+  "freeAfter": 4905545728,
+  "inputsUnchanged": true,
+  "actualAPI": false,
+  "dependencyInstall": false
+}

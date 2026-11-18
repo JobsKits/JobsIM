@@ -10,19 +10,22 @@ import (
 )
 
 type User struct {
-	RoleGeneration       string `json:"roleGeneration,omitempty"`
-	Role                 string `json:"role,omitempty"`
-	MembershipGeneration string `json:"membershipGeneration,omitempty"`
-	State                string `json:"state,omitempty"`
-	AvatarURL            string `json:"avatarURL,omitempty"`
-	AvatarThumbnailURL   string `json:"avatarThumbnailURL,omitempty"`
-	ProfileVersion       string `json:"profileVersion,omitempty"`
-	DeviceID             string `json:"deviceId,omitempty"`
-	RestoreEpoch         string `json:"restoreEpoch,omitempty"`
-	ID                   string `json:"id"`
-	Username             string `json:"username"`
-	DisplayName          string `json:"displayName"`
-	Admin                bool   `json:"admin,omitempty"`
+	CreatedAt            string           `json:"createdAt,omitempty"`
+	Signature            string           `json:"signature"`
+	ContactBindings      *ContactBindings `json:"contactBindings,omitempty"`
+	RoleGeneration       string           `json:"roleGeneration,omitempty"`
+	Role                 string           `json:"role,omitempty"`
+	MembershipGeneration string           `json:"membershipGeneration,omitempty"`
+	State                string           `json:"state,omitempty"`
+	AvatarURL            string           `json:"avatarURL,omitempty"`
+	AvatarThumbnailURL   string           `json:"avatarThumbnailURL,omitempty"`
+	ProfileVersion       string           `json:"profileVersion,omitempty"`
+	DeviceID             string           `json:"deviceId,omitempty"`
+	RestoreEpoch         string           `json:"restoreEpoch,omitempty"`
+	ID                   string           `json:"id"`
+	Username             string           `json:"username"`
+	DisplayName          string           `json:"displayName"`
+	Admin                bool             `json:"admin,omitempty"`
 }
 type Conversation struct {
 	RoleGeneration       string    `json:"roleGeneration"`
@@ -39,6 +42,7 @@ type Conversation struct {
 	Cursor               string    `json:"cursor"`
 }
 type Message struct {
+	retentionChecked      bool
 	Forwarded             bool   `json:"forwarded,omitempty"`
 	ForwardUnavailable    bool   `json:"forwardUnavailable,omitempty"`
 	ForwardAdmission      string `json:"forwardAdmission,omitempty"`
@@ -57,6 +61,8 @@ type Message struct {
 	MentionAll            bool       `json:"mentionAll,omitempty"`
 	MentionedMe           bool       `json:"mentionedMe"`
 	ContentUnavailable    bool       `json:"contentUnavailable,omitempty"`
+	DeleteScope           string     `json:"deleteScope,omitempty"`
+	DeletionGeneration    string     `json:"deletionGeneration,omitempty"`
 	ID                    string     `json:"id"`
 	ConversationID        string     `json:"conversationId"`
 	SenderID              string     `json:"senderId"`

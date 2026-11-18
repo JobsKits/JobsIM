@@ -1,0 +1,6 @@
+global	file:/Users/jobs/.local/share/jobs-markdown-toc/registrations/ec69398ef2262aed1be7/driver.gitconfig	filter.jobs-markdown-toc.clean '/opt/homebrew/bin/node' '/Users/jobs/.local/share/jobs-markdown-toc/registrations/ec69398ef2262aed1be7/MarkdownToc.mjs' clean
+global	file:/Users/jobs/.local/share/jobs-markdown-toc/registrations/ec69398ef2262aed1be7/driver.gitconfig	filter.jobs-markdown-toc.smudge '/opt/homebrew/bin/node' '/Users/jobs/.local/share/jobs-markdown-toc/registrations/ec69398ef2262aed1be7/MarkdownToc.mjs' smudge
+global	file:/Users/jobs/.local/share/jobs-markdown-toc/registrations/ec69398ef2262aed1be7/driver.gitconfig	filter.jobs-markdown-toc.required true
+local	file:.git/config	filter.jobs-markdown-toc.clean '/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node' '.jobs-markdown-toc/MarkdownToc.mjs' clean
+local	file:.git/config	filter.jobs-markdown-toc.smudge '/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node' '.jobs-markdown-toc/MarkdownToc.mjs' smudge
+local	file:.git/config	filter.jobs-markdown-toc.required true

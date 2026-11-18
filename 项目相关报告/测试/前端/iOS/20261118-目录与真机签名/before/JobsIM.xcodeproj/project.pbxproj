@@ -1,0 +1,1141 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01F7EC14BA82067F129D943A /* IMNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BD81CC01A73376BA66C54 /* IMNotifications.swift */; };
+		02A9F3FC10820AD95E60589B /* UINavigationController+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B93B55CA57FA47948857D9 /* UINavigationController+Make.swift */; };
+		0502453A983F00C0B96E6B67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9907D95526E58E638371E7D2 /* Foundation.framework */; };
+		08A7A4BDC09AEF1BDFFB2E35 /* UIAlertController+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31703310B12309844B38582E /* UIAlertController+Make.swift */; };
+		0A0BE188E925DBE01371D073 /* UISegmentedControl+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2422C60717C6ECD695EDD88 /* UISegmentedControl+Make.swift */; };
+		0A61532FE6EBBF9603601776 /* IMForwardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5A520C7099F7CAF8ACC932 /* IMForwardService.swift */; };
+		0B78DC1F5C13B94EDF62F2F2 /* IMAccountDeletionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EE2FAFDB289B690777EE17 /* IMAccountDeletionVC.swift */; };
+		0E228BDD78F8D4D6E345AA43 /* IMAuthCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CECCE9CF579B9A15DA51EE /* IMAuthCoordinatorTests.swift */; };
+		0E690E3469C5C3B929970632 /* Pods_JobsIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E25E4A2D664535D5CBFE62 /* Pods_JobsIM.framework */; };
+		0F1665B1EC1EAF97E20FEBAC /* IMSendAdmissionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49A1F78870DC5BD5CD5152C /* IMSendAdmissionTests.swift */; };
+		1316124B33F4098F7E2DA8A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDBF05174E4538DD5730693 /* AppDelegate.swift */; };
+		17DE1635D58F1E3877C66321 /* IMGroupGovernanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C08D7E174E748BDB12120 /* IMGroupGovernanceVC.swift */; };
+		194B3CE195946CAB633EDC19 /* IMMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61F154A7FB4C96796408CE5 /* IMMigrationTests.swift */; };
+		197701E4DD38C8D1D89B5BF3 /* UITabBarItem+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011262792F56FB0F542C6C62 /* UITabBarItem+Make.swift */; };
+		1D246C234BCC3C41E7BF64AC /* IMAvatarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2901C98B54E2889356FE41D5 /* IMAvatarService.swift */; };
+		1DFCEE5422D973217B55D584 /* IMMessageListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859832ABDB0FD175C5019621 /* IMMessageListUITests.swift */; };
+		2025F609EF2D0F29DE0BB1ED /* IMMessageListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56F29A99856FF3C40C7D7E5 /* IMMessageListTests.swift */; };
+		21D2C14FD4EBB58244D031BC /* IMHistoryExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F74535E33E5491C1DCD931 /* IMHistoryExport.swift */; };
+		2223FE29BDFA1DCC4AC3058A /* AuthRefreshPublic.json in Resources */ = {isa = PBXBuildFile; fileRef = 6840B5040703665C1B5C803C /* AuthRefreshPublic.json */; };
+		24926BA12F005855F92C74CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D675B4562604BD3A6EEA9FFA /* SceneDelegate.swift */; };
+		25DA2BFC4FD2AE3E09960346 /* IMSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC836C20D88677B2D432159 /* IMSession.swift */; };
+		299B6BEDEFEA961191D3163B /* IMListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D664346B67848B8382B2D5F2 /* IMListVC.swift */; };
+		29C6D546471E13A535CDBBE6 /* UIAlertAction+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AC3C750B48259EE5077855 /* UIAlertAction+Make.swift */; };
+		2CCB9C2ABBE36D7562956799 /* SelfStatePublic.json in Resources */ = {isa = PBXBuildFile; fileRef = C81B56E07B9F83F30B160CB9 /* SelfStatePublic.json */; };
+		2E77AA6FCF84343209E4D669 /* IMReceiptStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E328C198779F8AC95590C86 /* IMReceiptStorageTests.swift */; };
+		2F8541081007532DD4072867 /* IMPersonalStateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F4A0247E3AA2E014EBA108 /* IMPersonalStateVC.swift */; };
+		3184420EF24F416A6B8BA53D /* Avatar.data in Resources */ = {isa = PBXBuildFile; fileRef = 66E31261B88BCA66028F727D /* Avatar.data */; };
+		32CD8C564090D8C095EB67E5 /* IMReceiptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4093A6504D7B8F426CB3AC37 /* IMReceiptService.swift */; };
+		343F7640BB8A83537051E0D1 /* PHPickerViewController+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12658D08E5A248BDDD21A57E /* PHPickerViewController+Make.swift */; };
+		3826FAD7B0587DCEBED936CE /* IMKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93B28DA75E9C3E665B91F2 /* IMKeychain.swift */; };
+		38B3A06A92DB4A159F4E822A /* IMMediaCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE283DD409BA31FB4DEAC06 /* IMMediaCache.swift */; };
+		3C32951D984F17C5CBED545E /* IMMigrationJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD10C7DB904C0D4FFF60989 /* IMMigrationJSON.swift */; };
+		3E35D5B3788B80E5E55011AC /* IMAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4074B987B28387ADD6E34157 /* IMAuthVC.swift */; };
+		3EBF671477A76416B1C4FA4E /* IMMigrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E820FA419F7093ABE15746 /* IMMigrationVC.swift */; };
+		40435964BB03C975F24EC8C3 /* IMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FBE26402CFC0E95A8F904A /* IMUITests.swift */; };
+		437DF5F54547A4E7D44708CD /* UITableView+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3956A145ECB538DCD923C2 /* UITableView+Make.swift */; };
+		482EFB06DD6545758D84D026 /* IMDataExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90C0E1B0D9C4200A7EBEBD3 /* IMDataExportService.swift */; };
+		49E2FC43A1B32AD714FB7D23 /* NSAttributedString+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B7289613090C81C622CE8 /* NSAttributedString+Make.swift */; };
+		4A1A5FF79EB03F21C7F4A1F8 /* UIWindow+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F3DCA877B0D6FDC96601DF /* UIWindow+Make.swift */; };
+		4CBE8D95546458482D38B89E /* IMSyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8192E928F997C55A8A8A20C0 /* IMSyncCoordinator.swift */; };
+		4EB2B2501D813337E5837178 /* IMUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E0EB99D0493E9FF7B5AD83 /* IMUI.swift */; };
+		4F78160AEEC25E2F7B1553CF /* IMMediaLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC643AD4AB55B9371200D3E /* IMMediaLoader.swift */; };
+		52AD5C5878DBF405A4762753 /* IMReceiptBuild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739A5BB805BD3BB55495331B /* IMReceiptBuild.swift */; };
+		695482462BD6545A7A98E4F6 /* IMAuthCredentialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEF2DB97342F0BEFDB3CF03 /* IMAuthCredentialTests.swift */; };
+		69F379AF93C14EF4C2FC4373 /* IMSelfStateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4869199312CEBF371FF4C581 /* IMSelfStateUITests.swift */; };
+		6A4C3709927888386F38134A /* IMGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4E6CF0C64345D0F4FE154B /* IMGroupVC.swift */; };
+		6B3EF4ACAF2EB50B61FB6AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49E75D87313F6C6D1D3B1A1 /* Assets.xcassets */; };
+		6B4A2D8A971F8D3044DE8931 /* UIColor+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D590C8F6956F79E57A4E02D /* UIColor+Make.swift */; };
+		6B8071751D8783FEA4D87B15 /* PHPickerConfiguration+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCF13BE09574E0610086E38 /* PHPickerConfiguration+Make.swift */; };
+		6BD8632EA80F492CAAB5A1DB /* IMDataExportProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76EEF90252E46048B167282 /* IMDataExportProtocol.swift */; };
+		6D78A0B30D024100B941F78C /* IMDataExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E4E37675154203BE68557B /* IMDataExportTests.swift */; };
+		7221044C28BB2F8C44AE2601 /* IMMigrationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E3FE29FF0526DAE78B4A2B /* IMMigrationService.swift */; };
+		74CD045060ACAE245F10F05D /* IMMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A92CFEE8584C4ABE3F8CA3F /* IMMessageCell.swift */; };
+		76F5F66AC01F44548F1EC0D0 /* IMDataExportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD1C91F21F349F784CBD465 /* IMDataExportVC.swift */; };
+		7AB9F9E21209F5BD761F2A33 /* IMStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD1394644F77C9EB1E88 /* IMStorageTests.swift */; };
+		7B46B0AF5A6D4323690939A2 /* IMSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB146A7E88CF4389E5D0D9 /* IMSettingsVC.swift */; };
+		7E505032CE393E418CA14540 /* UNNotificationRequest+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A61ADE693E3690EFADEA9D /* UNNotificationRequest+Make.swift */; };
+		846364A7FDD16DA8F165BFEA /* UIActivityViewController+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28178923163E08949FE974B /* UIActivityViewController+Make.swift */; };
+		8805547F478253573ADDD3CE /* IntegrationCA.pem in Resources */ = {isa = PBXBuildFile; fileRef = A55631C7453B74BB5D0B0184 /* IntegrationCA.pem */; };
+		88BE50389A5E479961D9EF66 /* IMReceiptCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8A8C87E5C0F233F5109833 /* IMReceiptCoordinator.swift */; };
+		93026AF526428028ED33EE12 /* IMReceiptServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2917CF18442EACF5042D69F7 /* IMReceiptServiceTests.swift */; };
+		93A352427A378D4B4E5A0962 /* IMContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842218C866EA82DCDEA942C1 /* IMContactService.swift */; };
+		977E2E9B251CF4B105E03E03 /* IMIntegrationFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DFDFDF23EC7C780900D001 /* IMIntegrationFixture.swift */; };
+		9873A73D517F6AC18BFC3F2A /* IMReceiptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E011B9B2EE9F430008DDB7 /* IMReceiptVC.swift */; };
+		9AB7B53C47541FFF6EEC0AE6 /* IMStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1748A65217DF6400A3851E6 /* IMStrings.swift */; };
+		9B879C2E7F76B5F8C17A3F4B /* IMCredentialPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D07260C1FF18D71A9334AFE /* IMCredentialPair.swift */; };
+		9BA1B3C8E759DBB6A55CE414 /* IMPasswordChangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0DB872781166CFA15AF89 /* IMPasswordChangeVC.swift */; };
+		9DA364FF794DD9151BDB9904 /* UIContextMenuConfiguration+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E958E47E9B5A55EF89348E /* UIContextMenuConfiguration+Make.swift */; };
+		A2E9104D804A4B72D94CDCA3 /* IMSelfStateIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99457091227A3FA87002687 /* IMSelfStateIntegrationTests.swift */; };
+		A3F393F13ECB505EA59536D0 /* IMAuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1BDBF3EA84C92B6D43BB3 /* IMAuthCoordinator.swift */; };
+		A8DFA5E9B2E6062A0F4F5F02 /* IMReportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E29B54EA07357F43F068A1 /* IMReportService.swift */; };
+		AA8F758CB6749626FFB91F17 /* IMAvatarLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9959C53E6F50DD7F7AC0954A /* IMAvatarLoader.swift */; };
+		AAB016A016A016A016A01601 /* IMSyncProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB016A016A016A016A01611 /* IMSyncProtocol.swift */; };
+		AAB016A016A016A016A01602 /* IMAuthoritativeSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB016A016A016A016A01612 /* IMAuthoritativeSync.swift */; };
+		AAB016A016A016A016A01603 /* IMAuthoritativeSyncTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB016A016A016A016A01613 /* IMAuthoritativeSyncTests.swift */; };
+		ABE82A6AEC57439D9C6DCA0D /* IMAuthRefreshIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7556B7EB0E5C962AE538080D /* IMAuthRefreshIntegrationTests.swift */; };
+		AC7A50B0B588CE4A4006845D /* IMTrustStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF83A57E2562E921F597A2 /* IMTrustStore.swift */; };
+		B021A4B2C0F72205F58E6C1B /* IMDevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD7886D9109A8C38D9A5D29 /* IMDevicesVC.swift */; };
+		B0DFB06D45F00A0480C493D1 /* NativeVideo.data in Resources */ = {isa = PBXBuildFile; fileRef = 9C71157A9D163B0851D1FC06 /* NativeVideo.data */; };
+		B2F9A8860EEA1DE90AE57570 /* IMBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F653A446CA2C6D67E4FC3A40 /* IMBaseVC.swift */; };
+		B44E9B6CE848F7BB3AE38E2A /* UIImage+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A7891BABFFA1CB4C577045 /* UIImage+Make.swift */; };
+		B4786BF5F0DFA034232B06CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9907D95526E58E638371E7D2 /* Foundation.framework */; };
+		B50AB973EE1C26337D8E8987 /* IMAvatarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B5473360EAA3E3DD60B7C0 /* IMAvatarVC.swift */; };
+		B57AAA95B0825B9E8D41D718 /* IMChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBABCE3C19A88B46C3612CE3 /* IMChatVC.swift */; };
+		B95F3FD0A5E7D6A929F63024 /* IMMessagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5855F341C5D42CBB9B9432 /* IMMessagePage.swift */; };
+		BEC8CB4D763629944ED78BE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C239FCC38BE967625D771311 /* Localizable.strings */; };
+		BF51D8BBED9A8A68E5AAAF6B /* Pods_JobsIMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134CAF859EAD94B3F63CF562 /* Pods_JobsIMTests.framework */; };
+		C1813209063F434649C8936D /* IMContactRequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D3D4DE8B074470C78FAC0 /* IMContactRequestsVC.swift */; };
+		C21E36109349F3DFB1D9643A /* IMMigrationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FD876BA019C23C92FDBB60 /* IMMigrationProtocol.swift */; };
+		C2E04D9D6983BDB5307035E5 /* IMPasswordChangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE53F33B0653DF5FFB3772BC /* IMPasswordChangeService.swift */; };
+		C4B6B9D959665CC86E728B9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9907D95526E58E638371E7D2 /* Foundation.framework */; };
+		C7CE44AEFFB225B9A74D81D0 /* IMMigrationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043BCD4226518AE60AAB64F /* IMMigrationServiceTests.swift */; };
+		C83837049FF6866233E4CFA6 /* IMMediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA674621F8D74CB14177DCD /* IMMediaTests.swift */; };
+		C94D4B66B2DA6EA4D80A219B /* UIView+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E8AB80882AA3D2493C666 /* UIView+DSL.swift */; };
+		CAB3A0D764E6FF8C4D9964EC /* IMForwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1A4B7B796DAFDB0F3EB48D /* IMForwardTests.swift */; };
+		CDCA8C6BE956A3DC9705A4A5 /* IMNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D8008BB2A3101DD7A1A3AE /* IMNotificationTests.swift */; };
+		CEE63AC1F45859D3086EDC70 /* AVAudioRecorder+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8B1D1B38E97408EEE6A5AA /* AVAudioRecorder+Make.swift */; };
+		CF5D93EC85F461BAB7013FD0 /* IMGroupGovernanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403389360A3B0E2DD072AB16 /* IMGroupGovernanceService.swift */; };
+		D627AED700E7CC2C86F35D20 /* IMPersonalStateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC9AB7387DA959C144ED24 /* IMPersonalStateService.swift */; };
+		DB559BF74475661E23CB3066 /* IMSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532FF1D1CDD1F86E2C91D29A /* IMSessionTests.swift */; };
+		DEB4B659DECFCEBF7B9A9B86 /* IMAccountDeletionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB408024520D2B72E762C /* IMAccountDeletionService.swift */; };
+		DFC54205C72C5BB23F914ACD /* IMPersonalStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25678F6DFA97490C963E243 /* IMPersonalStateTests.swift */; };
+		E2E431112F2F9DAE3F783F9B /* IMReceiptProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730483B0711A197D5332D62E /* IMReceiptProtocol.swift */; };
+		E5C650972F5FFB3068942696 /* IMAnnouncementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0A01DB666378D985C1EA08 /* IMAnnouncementService.swift */; };
+		E77723C294F346E40F0158AE /* IMMessageListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56A538A045CC74D5516B67 /* IMMessageListService.swift */; };
+		EC6C164B3ECC4E5FB6D71207 /* IMDataExportArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C046BA46E4397A90838D3 /* IMDataExportArchive.swift */; };
+		ECF02D493ABC74C7439ADD51 /* IMConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BBCBAB554357664B483D53 /* IMConversationCell.swift */; };
+		F24A4F7B1915ED6E136C1FD5 /* IMCompletionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E7E73E71A557860020D7DD /* IMCompletionTests.swift */; };
+		F315897F4B2B76FF924C68A2 /* IntegrationServer.pem in Resources */ = {isa = PBXBuildFile; fileRef = 076FB502E18BD2C07D8DC9E0 /* IntegrationServer.pem */; };
+		F35176D1F1E2BB30BB519216 /* IMReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CFE7283D4D1CE544D1BD50 /* IMReportVC.swift */; };
+		F41E9FCA1F63D32FFB044EC7 /* UIDocumentPickerViewController+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473E70EA289A44171DC5913 /* UIDocumentPickerViewController+Make.swift */; };
+		F488A36E00C0B168723A4425 /* IMLifecycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E1164078996A390CA903B /* IMLifecycleTests.swift */; };
+		F6848199B796604D1C5DC411 /* IMAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7590D19F654E21067545E9DC /* IMAvatarView.swift */; };
+		F9B5F78F57704430BCAC83EF /* FileHandle+Make.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE1E774A51341EFB726566A /* FileHandle+Make.swift */; };
+		FB009A29A47F46A88D1DCB54 /* IMAccountDeletionFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAB4F721EA4EC61677929C6 /* IMAccountDeletionFiles.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		441A382365197999C5292E64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51F3BB1FF6F6EBA3ACF38C68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77D44C64001F1619CB2CFDB2;
+			remoteInfo = JobsIM;
+		};
+		4EC0EDFA803586A20FF15DA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51F3BB1FF6F6EBA3ACF38C68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77D44C64001F1619CB2CFDB2;
+			remoteInfo = JobsIM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00FBE26402CFC0E95A8F904A /* IMUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMUITests.swift; sourceTree = "<group>"; };
+		011262792F56FB0F542C6C62 /* UITabBarItem+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITabBarItem+Make.swift"; path = "UI/Factories/UITabBarItem/UITabBarItem+Make.swift"; sourceTree = "<group>"; };
+		04A0DB872781166CFA15AF89 /* IMPasswordChangeVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMPasswordChangeVC.swift; path = UI/IMPasswordChangeVC/IMPasswordChangeVC.swift; sourceTree = "<group>"; };
+		076FB502E18BD2C07D8DC9E0 /* IntegrationServer.pem */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IntegrationServer.pem; path = Fixtures/IntegrationServer.pem; sourceTree = "<group>"; };
+		0982A78C53810C7B16AF320B /* zh-Hans */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		0CC2D70E4AF58D25D090A4BA /* bo */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = bo; path = bo.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0D590C8F6956F79E57A4E02D /* UIColor+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Make.swift"; path = "UI/Factories/UIColor/UIColor+Make.swift"; sourceTree = "<group>"; };
+		1083072C67BEF148FB1A7CC8 /* Pods-JobsIMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsIMTests.debug.xcconfig"; path = "Target Support Files/Pods-JobsIMTests/Pods-JobsIMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		12658D08E5A248BDDD21A57E /* PHPickerViewController+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PHPickerViewController+Make.swift"; path = "UI/Factories/PHPickerViewController/PHPickerViewController+Make.swift"; sourceTree = "<group>"; };
+		134CAF859EAD94B3F63CF562 /* Pods_JobsIMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobsIMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1473E70EA289A44171DC5913 /* UIDocumentPickerViewController+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDocumentPickerViewController+Make.swift"; path = "UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift"; sourceTree = "<group>"; };
+		1687DD1B95099051FE853AF5 /* fr */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		16AC3C750B48259EE5077855 /* UIAlertAction+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertAction+Make.swift"; path = "UI/Factories/UIAlertAction/UIAlertAction+Make.swift"; sourceTree = "<group>"; };
+		181BD81CC01A73376BA66C54 /* IMNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMNotifications.swift; path = Services/IMNotifications/IMNotifications.swift; sourceTree = "<group>"; };
+		18B93B55CA57FA47948857D9 /* UINavigationController+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Make.swift"; path = "UI/Factories/UINavigationController/UINavigationController+Make.swift"; sourceTree = "<group>"; };
+		1CC836C20D88677B2D432159 /* IMSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMSession.swift; path = Services/IMSession/IMSession.swift; sourceTree = "<group>"; };
+		236E1164078996A390CA903B /* IMLifecycleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMLifecycleTests.swift; sourceTree = "<group>"; };
+		23E011B9B2EE9F430008DDB7 /* IMReceiptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMReceiptVC.swift; path = UI/IMReceiptVC/IMReceiptVC.swift; sourceTree = "<group>"; };
+		2901C98B54E2889356FE41D5 /* IMAvatarService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAvatarService.swift; path = Services/IMAvatarService/IMAvatarService.swift; sourceTree = "<group>"; };
+		2917CF18442EACF5042D69F7 /* IMReceiptServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMReceiptServiceTests.swift; sourceTree = "<group>"; };
+		2BD7886D9109A8C38D9A5D29 /* IMDevicesVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMDevicesVC.swift; path = UI/IMDevicesVC/IMDevicesVC.swift; sourceTree = "<group>"; };
+		2D8B1D1B38E97408EEE6A5AA /* AVAudioRecorder+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVAudioRecorder+Make.swift"; path = "UI/Factories/AVAudioRecorder/AVAudioRecorder+Make.swift"; sourceTree = "<group>"; };
+		31703310B12309844B38582E /* UIAlertController+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Make.swift"; path = "UI/Factories/UIAlertController/UIAlertController+Make.swift"; sourceTree = "<group>"; };
+		32E820FA419F7093ABE15746 /* IMMigrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMMigrationVC.swift; path = UI/IMMigrationVC/IMMigrationVC.swift; sourceTree = "<group>"; };
+		34F74535E33E5491C1DCD931 /* IMHistoryExport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMHistoryExport.swift; path = Services/IMHistoryExport/IMHistoryExport.swift; sourceTree = "<group>"; };
+		36BBCBAB554357664B483D53 /* IMConversationCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMConversationCell.swift; path = UI/IMConversationCell/IMConversationCell.swift; sourceTree = "<group>"; };
+		3CD1C91F21F349F784CBD465 /* IMDataExportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMDataExportVC.swift; path = UI/IMDataExportVC/IMDataExportVC.swift; sourceTree = "<group>"; };
+		3DD10C7DB904C0D4FFF60989 /* IMMigrationJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMMigrationJSON.swift; path = Services/IMMigrationService/IMMigrationJSON.swift; sourceTree = "<group>"; };
+		3EA674621F8D74CB14177DCD /* IMMediaTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMMediaTests.swift; sourceTree = "<group>"; };
+		3FE283DD409BA31FB4DEAC06 /* IMMediaCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMMediaCache.swift; path = Services/IMMediaCache/IMMediaCache.swift; sourceTree = "<group>"; };
+		403389360A3B0E2DD072AB16 /* IMGroupGovernanceService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMGroupGovernanceService.swift; path = JobsIM/Services/IMGroupGovernanceService/IMGroupGovernanceService.swift; sourceTree = "<group>"; };
+		4074B987B28387ADD6E34157 /* IMAuthVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAuthVC.swift; path = UI/IMAuthVC/IMAuthVC.swift; sourceTree = "<group>"; };
+		4093A6504D7B8F426CB3AC37 /* IMReceiptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMReceiptService.swift; path = Services/IMReceiptService/IMReceiptService.swift; sourceTree = "<group>"; };
+		40E0EB99D0493E9FF7B5AD83 /* IMUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMUI.swift; path = UI/IMUI/IMUI.swift; sourceTree = "<group>"; };
+		47E7E73E71A557860020D7DD /* IMCompletionTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMCompletionTests.swift; sourceTree = "<group>"; };
+		4869199312CEBF371FF4C581 /* IMSelfStateUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMSelfStateUITests.swift; sourceTree = "<group>"; };
+		49BE0E402B5E38DB4C6F97C1 /* es */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		49EC9AB7387DA959C144ED24 /* IMPersonalStateService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMPersonalStateService.swift; path = Services/IMPersonalStateService/IMPersonalStateService.swift; sourceTree = "<group>"; };
+		4C5855F341C5D42CBB9B9432 /* IMMessagePage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMMessagePage.swift; path = Services/IMMessageListService/IMMessagePage.swift; sourceTree = "<group>"; };
+		4E328C198779F8AC95590C86 /* IMReceiptStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMReceiptStorageTests.swift; sourceTree = "<group>"; };
+		50F3DCA877B0D6FDC96601DF /* UIWindow+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIWindow+Make.swift"; path = "UI/Factories/UIWindow/UIWindow+Make.swift"; sourceTree = "<group>"; };
+		51E29B54EA07357F43F068A1 /* IMReportService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMReportService.swift; path = Services/IMReportService/IMReportService.swift; sourceTree = "<group>"; };
+		532FF1D1CDD1F86E2C91D29A /* IMSessionTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMSessionTests.swift; sourceTree = "<group>"; };
+		53A2A825E1AFAF866FEC63E3 /* en */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		53E25E4A2D664535D5CBFE62 /* Pods_JobsIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JobsIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A92CFEE8584C4ABE3F8CA3F /* IMMessageCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMMessageCell.swift; path = UI/IMMessageCell/IMMessageCell.swift; sourceTree = "<group>"; };
+		5F8A8C87E5C0F233F5109833 /* IMReceiptCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMReceiptCoordinator.swift; path = Services/IMReceiptService/IMReceiptCoordinator.swift; sourceTree = "<group>"; };
+		66E31261B88BCA66028F727D /* Avatar.data */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = Avatar.data; path = Fixtures/Avatar.data; sourceTree = "<group>"; };
+		6840B5040703665C1B5C803C /* AuthRefreshPublic.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = AuthRefreshPublic.json; path = Fixtures/AuthRefreshPublic.json; sourceTree = "<group>"; };
+		6ABB6F78F081CCE68A7DB306 /* ja */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6E3C08D7E174E748BDB12120 /* IMGroupGovernanceVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMGroupGovernanceVC.swift; path = JobsIM/UI/IMGroupGovernanceVC/IMGroupGovernanceVC.swift; sourceTree = "<group>"; };
+		716D3D4DE8B074470C78FAC0 /* IMContactRequestsVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMContactRequestsVC.swift; path = UI/IMContactRequestsVC/IMContactRequestsVC.swift; sourceTree = "<group>"; };
+		730483B0711A197D5332D62E /* IMReceiptProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMReceiptProtocol.swift; path = Services/IMReceiptService/IMReceiptProtocol.swift; sourceTree = "<group>"; };
+		739A5BB805BD3BB55495331B /* IMReceiptBuild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMReceiptBuild.swift; path = Services/IMReceiptService/IMReceiptBuild.swift; sourceTree = "<group>"; };
+		7556B7EB0E5C962AE538080D /* IMAuthRefreshIntegrationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAuthRefreshIntegrationTests.swift; sourceTree = "<group>"; };
+		7590D19F654E21067545E9DC /* IMAvatarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAvatarView.swift; path = UI/IMAvatarView/IMAvatarView.swift; sourceTree = "<group>"; };
+		760CC2EDDCAFB71126D82B75 /* Pods-JobsIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsIM.release.xcconfig"; path = "Target Support Files/Pods-JobsIM/Pods-JobsIM.release.xcconfig"; sourceTree = "<group>"; };
+		79CECCE9CF579B9A15DA51EE /* IMAuthCoordinatorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAuthCoordinatorTests.swift; sourceTree = "<group>"; };
+		7D07260C1FF18D71A9334AFE /* IMCredentialPair.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMCredentialPair.swift; path = Services/IMAuthCredentials/IMCredentialPair.swift; sourceTree = "<group>"; };
+		7EE1E774A51341EFB726566A /* FileHandle+Make.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FileHandle+Make.swift"; path = "UI/Factories/FileHandle/FileHandle+Make.swift"; sourceTree = "<group>"; };
+		7FF9EEEC1EA998926A0624B9 /* Pods-JobsIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsIM.debug.xcconfig"; path = "Target Support Files/Pods-JobsIM/Pods-JobsIM.debug.xcconfig"; sourceTree = "<group>"; };
+		80A61ADE693E3690EFADEA9D /* UNNotificationRequest+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UNNotificationRequest+Make.swift"; path = "UI/Factories/UNNotificationRequest/UNNotificationRequest+Make.swift"; sourceTree = "<group>"; };
+		8192E928F997C55A8A8A20C0 /* IMSyncCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMSyncCoordinator.swift; path = Services/IMSyncCoordinator/IMSyncCoordinator.swift; sourceTree = "<group>"; };
+		842218C866EA82DCDEA942C1 /* IMContactService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMContactService.swift; path = Services/IMContactService/IMContactService.swift; sourceTree = "<group>"; };
+		84889C24DE8F81A1F254FD86 /* Pods-JobsIMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JobsIMTests.release.xcconfig"; path = "Target Support Files/Pods-JobsIMTests/Pods-JobsIMTests.release.xcconfig"; sourceTree = "<group>"; };
+		856B7289613090C81C622CE8 /* NSAttributedString+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+Make.swift"; path = "UI/Factories/NSAttributedString/NSAttributedString+Make.swift"; sourceTree = "<group>"; };
+		859832ABDB0FD175C5019621 /* IMMessageListUITests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMMessageListUITests.swift; sourceTree = "<group>"; };
+		85FD876BA019C23C92FDBB60 /* IMMigrationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMMigrationProtocol.swift; path = Services/IMMigrationService/IMMigrationProtocol.swift; sourceTree = "<group>"; };
+		8752A9B14636771CCDA82BB1 /* ru */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		879C046BA46E4397A90838D3 /* IMDataExportArchive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMDataExportArchive.swift; path = Services/IMDataExportService/IMDataExportArchive.swift; sourceTree = "<group>"; };
+		87A5013176F111E91C623A94 /* zh-Hant */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		88DB146A7E88CF4389E5D0D9 /* IMSettingsVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMSettingsVC.swift; path = UI/IMSettingsVC/IMSettingsVC.swift; sourceTree = "<group>"; };
+		891145B2E8AD6947FC4C20B4 /* JobsIMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobsIMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A93B28DA75E9C3E665B91F2 /* IMKeychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMKeychain.swift; path = Services/IMKeychain/IMKeychain.swift; sourceTree = "<group>"; };
+		8CC643AD4AB55B9371200D3E /* IMMediaLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMMediaLoader.swift; path = Services/IMMediaLoader/IMMediaLoader.swift; sourceTree = "<group>"; };
+		8DDBF05174E4538DD5730693 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = App/AppDelegate/AppDelegate.swift; sourceTree = "<group>"; };
+		8F5A520C7099F7CAF8ACC932 /* IMForwardService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMForwardService.swift; path = Services/IMForwardService/IMForwardService.swift; sourceTree = "<group>"; };
+		9907D95526E58E638371E7D2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9959C53E6F50DD7F7AC0954A /* IMAvatarLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAvatarLoader.swift; path = Services/IMAvatarLoader/IMAvatarLoader.swift; sourceTree = "<group>"; };
+		9C71157A9D163B0851D1FC06 /* NativeVideo.data */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = NativeVideo.data; path = Fixtures/NativeVideo.data; sourceTree = "<group>"; };
+		9D3956A145ECB538DCD923C2 /* UITableView+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Make.swift"; path = "UI/Factories/UITableView/UITableView+Make.swift"; sourceTree = "<group>"; };
+		9FAB4F721EA4EC61677929C6 /* IMAccountDeletionFiles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAccountDeletionFiles.swift; path = Services/IMAccountDeletionService/IMAccountDeletionFiles.swift; sourceTree = "<group>"; };
+		A4C057A3ED91FC742322AF9B /* JobsIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobsIM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55631C7453B74BB5D0B0184 /* IntegrationCA.pem */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IntegrationCA.pem; path = Fixtures/IntegrationCA.pem; sourceTree = "<group>"; };
+		A5DFDFDF23EC7C780900D001 /* IMIntegrationFixture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMIntegrationFixture.swift; sourceTree = "<group>"; };
+		AAB016A016A016A016A01611 /* IMSyncProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMSyncProtocol.swift; path = Services/IMAuthoritativeSync/IMSyncProtocol.swift; sourceTree = "<group>"; };
+		AAB016A016A016A016A01612 /* IMAuthoritativeSync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAuthoritativeSync.swift; path = Services/IMAuthoritativeSync/IMAuthoritativeSync.swift; sourceTree = "<group>"; };
+		AAB016A016A016A016A01613 /* IMAuthoritativeSyncTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAuthoritativeSyncTests.swift; sourceTree = "<group>"; };
+		AAEDB408024520D2B72E762C /* IMAccountDeletionService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAccountDeletionService.swift; path = Services/IMAccountDeletionService/IMAccountDeletionService.swift; sourceTree = "<group>"; };
+		B2CFE7283D4D1CE544D1BD50 /* IMReportVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMReportVC.swift; path = UI/IMReportVC/IMReportVC.swift; sourceTree = "<group>"; };
+		B2F4A0247E3AA2E014EBA108 /* IMPersonalStateVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMPersonalStateVC.swift; path = UI/IMPersonalStateVC/IMPersonalStateVC.swift; sourceTree = "<group>"; };
+		B4B5473360EAA3E3DD60B7C0 /* IMAvatarVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAvatarVC.swift; path = UI/IMAvatarVC/IMAvatarVC.swift; sourceTree = "<group>"; };
+		B61F154A7FB4C96796408CE5 /* IMMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMMigrationTests.swift; sourceTree = "<group>"; };
+		BBCF13BE09574E0610086E38 /* PHPickerConfiguration+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PHPickerConfiguration+Make.swift"; path = "UI/Factories/PHPickerConfiguration/PHPickerConfiguration+Make.swift"; sourceTree = "<group>"; };
+		BDC2AD1394644F77C9EB1E88 /* IMStorageTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMStorageTests.swift; sourceTree = "<group>"; };
+		BE53F33B0653DF5FFB3772BC /* IMPasswordChangeService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMPasswordChangeService.swift; path = Services/IMPasswordChangeService/IMPasswordChangeService.swift; sourceTree = "<group>"; };
+		C1748A65217DF6400A3851E6 /* IMStrings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMStrings.swift; path = Services/IMStrings/IMStrings.swift; sourceTree = "<group>"; };
+		C1EE2FAFDB289B690777EE17 /* IMAccountDeletionVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAccountDeletionVC.swift; path = UI/IMAccountDeletionVC/IMAccountDeletionVC.swift; sourceTree = "<group>"; };
+		C2422C60717C6ECD695EDD88 /* UISegmentedControl+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISegmentedControl+Make.swift"; path = "UI/Factories/UISegmentedControl/UISegmentedControl+Make.swift"; sourceTree = "<group>"; };
+		C3D8008BB2A3101DD7A1A3AE /* IMNotificationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMNotificationTests.swift; sourceTree = "<group>"; };
+		C7E4E37675154203BE68557B /* IMDataExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDataExportTests.swift; sourceTree = "<group>"; };
+		C81B56E07B9F83F30B160CB9 /* SelfStatePublic.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = SelfStatePublic.json; path = Fixtures/SelfStatePublic.json; sourceTree = "<group>"; };
+		CBABCE3C19A88B46C3612CE3 /* IMChatVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMChatVC.swift; path = UI/IMChatVC/IMChatVC.swift; sourceTree = "<group>"; };
+		CC0A01DB666378D985C1EA08 /* IMAnnouncementService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAnnouncementService.swift; path = Services/IMAnnouncementService/IMAnnouncementService.swift; sourceTree = "<group>"; };
+		CF2A1D25E135B57A6E2807C1 /* de */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D56F29A99856FF3C40C7D7E5 /* IMMessageListTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMMessageListTests.swift; sourceTree = "<group>"; };
+		D664346B67848B8382B2D5F2 /* IMListVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMListVC.swift; path = UI/IMListVC/IMListVC.swift; sourceTree = "<group>"; };
+		D675B4562604BD3A6EEA9FFA /* SceneDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = App/SceneDelegate/SceneDelegate.swift; sourceTree = "<group>"; };
+		D67C1C9DC61AECC86F1CF208 /* ko */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D99457091227A3FA87002687 /* IMSelfStateIntegrationTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMSelfStateIntegrationTests.swift; sourceTree = "<group>"; };
+		DA56A538A045CC74D5516B67 /* IMMessageListService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMMessageListService.swift; path = Services/IMMessageListService/IMMessageListService.swift; sourceTree = "<group>"; };
+		DA6E8AB80882AA3D2493C666 /* UIView+DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+DSL.swift"; path = "UI/Factories/UIView/UIView+DSL.swift"; sourceTree = "<group>"; };
+		DEEF2DB97342F0BEFDB3CF03 /* IMAuthCredentialTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAuthCredentialTests.swift; sourceTree = "<group>"; };
+		E3E3FE29FF0526DAE78B4A2B /* IMMigrationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMMigrationService.swift; path = Services/IMMigrationService/IMMigrationService.swift; sourceTree = "<group>"; };
+		E49A1F78870DC5BD5CD5152C /* IMSendAdmissionTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMSendAdmissionTests.swift; sourceTree = "<group>"; };
+		E5450D9467BCC679A5129EB7 /* JobsIMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobsIMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5A7891BABFFA1CB4C577045 /* UIImage+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Make.swift"; path = "UI/Factories/UIImage/UIImage+Make.swift"; sourceTree = "<group>"; };
+		E90C0E1B0D9C4200A7EBEBD3 /* IMDataExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMDataExportService.swift; path = Services/IMDataExportService/IMDataExportService.swift; sourceTree = "<group>"; };
+		ECB1BDBF3EA84C92B6D43BB3 /* IMAuthCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMAuthCoordinator.swift; path = Services/IMAuthCredentials/IMAuthCoordinator.swift; sourceTree = "<group>"; };
+		EE4E6CF0C64345D0F4FE154B /* IMGroupVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMGroupVC.swift; path = UI/IMGroupVC/IMGroupVC.swift; sourceTree = "<group>"; };
+		EFDF83A57E2562E921F597A2 /* IMTrustStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMTrustStore.swift; path = Services/IMTrustStore/IMTrustStore.swift; sourceTree = "<group>"; };
+		F043BCD4226518AE60AAB64F /* IMMigrationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMMigrationServiceTests.swift; sourceTree = "<group>"; };
+		F25678F6DFA97490C963E243 /* IMPersonalStateTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMPersonalStateTests.swift; sourceTree = "<group>"; };
+		F28178923163E08949FE974B /* UIActivityViewController+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIActivityViewController+Make.swift"; path = "UI/Factories/UIActivityViewController/UIActivityViewController+Make.swift"; sourceTree = "<group>"; };
+		F3E958E47E9B5A55EF89348E /* UIContextMenuConfiguration+Make.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIContextMenuConfiguration+Make.swift"; path = "UI/Factories/UIContextMenuConfiguration/UIContextMenuConfiguration+Make.swift"; sourceTree = "<group>"; };
+		F49E75D87313F6C6D1D3B1A1 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F653A446CA2C6D67E4FC3A40 /* IMBaseVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IMBaseVC.swift; path = UI/IMBaseVC/IMBaseVC.swift; sourceTree = "<group>"; };
+		F76EEF90252E46048B167282 /* IMDataExportProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IMDataExportProtocol.swift; path = Services/IMDataExportService/IMDataExportProtocol.swift; sourceTree = "<group>"; };
+		FD1A4B7B796DAFDB0F3EB48D /* IMForwardTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMForwardTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E5B8422324148CB340BCC45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B6B9D959665CC86E728B9F /* Foundation.framework in Frameworks */,
+				BF51D8BBED9A8A68E5AAAF6B /* Pods_JobsIMTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4597354CA7FB03B850EB0AFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0502453A983F00C0B96E6B67 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A34D7790DDE65FD819FAD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4786BF5F0DFA034232B06CC /* Foundation.framework in Frameworks */,
+				0E690E3469C5C3B929970632 /* Pods_JobsIM.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A6F2E21A3C4DF5F80C95319 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				47E7E73E71A557860020D7DD /* IMCompletionTests.swift */,
+				A5DFDFDF23EC7C780900D001 /* IMIntegrationFixture.swift */,
+				236E1164078996A390CA903B /* IMLifecycleTests.swift */,
+				3EA674621F8D74CB14177DCD /* IMMediaTests.swift */,
+				C3D8008BB2A3101DD7A1A3AE /* IMNotificationTests.swift */,
+				E49A1F78870DC5BD5CD5152C /* IMSendAdmissionTests.swift */,
+				532FF1D1CDD1F86E2C91D29A /* IMSessionTests.swift */,
+				BDC2AD1394644F77C9EB1E88 /* IMStorageTests.swift */,
+				66E31261B88BCA66028F727D /* Avatar.data */,
+				A55631C7453B74BB5D0B0184 /* IntegrationCA.pem */,
+				076FB502E18BD2C07D8DC9E0 /* IntegrationServer.pem */,
+				9C71157A9D163B0851D1FC06 /* NativeVideo.data */,
+				D56F29A99856FF3C40C7D7E5 /* IMMessageListTests.swift */,
+				FD1A4B7B796DAFDB0F3EB48D /* IMForwardTests.swift */,
+				DEEF2DB97342F0BEFDB3CF03 /* IMAuthCredentialTests.swift */,
+				79CECCE9CF579B9A15DA51EE /* IMAuthCoordinatorTests.swift */,
+				AAB016A016A016A016A01613 /* IMAuthoritativeSyncTests.swift */,
+				7556B7EB0E5C962AE538080D /* IMAuthRefreshIntegrationTests.swift */,
+				6840B5040703665C1B5C803C /* AuthRefreshPublic.json */,
+				F25678F6DFA97490C963E243 /* IMPersonalStateTests.swift */,
+				C7E4E37675154203BE68557B /* IMDataExportTests.swift */,
+				F043BCD4226518AE60AAB64F /* IMMigrationServiceTests.swift */,
+				2917CF18442EACF5042D69F7 /* IMReceiptServiceTests.swift */,
+				4E328C198779F8AC95590C86 /* IMReceiptStorageTests.swift */,
+				B61F154A7FB4C96796408CE5 /* IMMigrationTests.swift */,
+				D99457091227A3FA87002687 /* IMSelfStateIntegrationTests.swift */,
+				C81B56E07B9F83F30B160CB9 /* SelfStatePublic.json */,
+			);
+			name = Tests;
+			path = "../../../测试/前端/iOS";
+			sourceTree = "<group>";
+		};
+		4F965E403621578370069BA2 /* JobsIM */ = {
+			isa = PBXGroup;
+			children = (
+				8DDBF05174E4538DD5730693 /* AppDelegate.swift */,
+				D675B4562604BD3A6EEA9FFA /* SceneDelegate.swift */,
+				9959C53E6F50DD7F7AC0954A /* IMAvatarLoader.swift */,
+				2901C98B54E2889356FE41D5 /* IMAvatarService.swift */,
+				842218C866EA82DCDEA942C1 /* IMContactService.swift */,
+				34F74535E33E5491C1DCD931 /* IMHistoryExport.swift */,
+				8A93B28DA75E9C3E665B91F2 /* IMKeychain.swift */,
+				3FE283DD409BA31FB4DEAC06 /* IMMediaCache.swift */,
+				8CC643AD4AB55B9371200D3E /* IMMediaLoader.swift */,
+				181BD81CC01A73376BA66C54 /* IMNotifications.swift */,
+				51E29B54EA07357F43F068A1 /* IMReportService.swift */,
+				1CC836C20D88677B2D432159 /* IMSession.swift */,
+				C1748A65217DF6400A3851E6 /* IMStrings.swift */,
+				8192E928F997C55A8A8A20C0 /* IMSyncCoordinator.swift */,
+				EFDF83A57E2562E921F597A2 /* IMTrustStore.swift */,
+				2D8B1D1B38E97408EEE6A5AA /* AVAudioRecorder+Make.swift */,
+				BBCF13BE09574E0610086E38 /* PHPickerConfiguration+Make.swift */,
+				12658D08E5A248BDDD21A57E /* PHPickerViewController+Make.swift */,
+				F28178923163E08949FE974B /* UIActivityViewController+Make.swift */,
+				16AC3C750B48259EE5077855 /* UIAlertAction+Make.swift */,
+				31703310B12309844B38582E /* UIAlertController+Make.swift */,
+				0D590C8F6956F79E57A4E02D /* UIColor+Make.swift */,
+				F3E958E47E9B5A55EF89348E /* UIContextMenuConfiguration+Make.swift */,
+				1473E70EA289A44171DC5913 /* UIDocumentPickerViewController+Make.swift */,
+				E5A7891BABFFA1CB4C577045 /* UIImage+Make.swift */,
+				18B93B55CA57FA47948857D9 /* UINavigationController+Make.swift */,
+				C2422C60717C6ECD695EDD88 /* UISegmentedControl+Make.swift */,
+				011262792F56FB0F542C6C62 /* UITabBarItem+Make.swift */,
+				9D3956A145ECB538DCD923C2 /* UITableView+Make.swift */,
+				DA6E8AB80882AA3D2493C666 /* UIView+DSL.swift */,
+				50F3DCA877B0D6FDC96601DF /* UIWindow+Make.swift */,
+				80A61ADE693E3690EFADEA9D /* UNNotificationRequest+Make.swift */,
+				4074B987B28387ADD6E34157 /* IMAuthVC.swift */,
+				B4B5473360EAA3E3DD60B7C0 /* IMAvatarVC.swift */,
+				7590D19F654E21067545E9DC /* IMAvatarView.swift */,
+				F653A446CA2C6D67E4FC3A40 /* IMBaseVC.swift */,
+				CBABCE3C19A88B46C3612CE3 /* IMChatVC.swift */,
+				716D3D4DE8B074470C78FAC0 /* IMContactRequestsVC.swift */,
+				36BBCBAB554357664B483D53 /* IMConversationCell.swift */,
+				2BD7886D9109A8C38D9A5D29 /* IMDevicesVC.swift */,
+				EE4E6CF0C64345D0F4FE154B /* IMGroupVC.swift */,
+				D664346B67848B8382B2D5F2 /* IMListVC.swift */,
+				5A92CFEE8584C4ABE3F8CA3F /* IMMessageCell.swift */,
+				B2CFE7283D4D1CE544D1BD50 /* IMReportVC.swift */,
+				88DB146A7E88CF4389E5D0D9 /* IMSettingsVC.swift */,
+				40E0EB99D0493E9FF7B5AD83 /* IMUI.swift */,
+				E1CBB75C675159E76E12F34B /* Resource */,
+				4C5855F341C5D42CBB9B9432 /* IMMessagePage.swift */,
+				DA56A538A045CC74D5516B67 /* IMMessageListService.swift */,
+				CC0A01DB666378D985C1EA08 /* IMAnnouncementService.swift */,
+				856B7289613090C81C622CE8 /* NSAttributedString+Make.swift */,
+				8F5A520C7099F7CAF8ACC932 /* IMForwardService.swift */,
+				7D07260C1FF18D71A9334AFE /* IMCredentialPair.swift */,
+				ECB1BDBF3EA84C92B6D43BB3 /* IMAuthCoordinator.swift */,
+				AAB016A016A016A016A01611 /* IMSyncProtocol.swift */,
+				AAB016A016A016A016A01612 /* IMAuthoritativeSync.swift */,
+				49EC9AB7387DA959C144ED24 /* IMPersonalStateService.swift */,
+				7EE1E774A51341EFB726566A /* FileHandle+Make.swift */,
+				3CD1C91F21F349F784CBD465 /* IMDataExportVC.swift */,
+				E90C0E1B0D9C4200A7EBEBD3 /* IMDataExportService.swift */,
+				879C046BA46E4397A90838D3 /* IMDataExportArchive.swift */,
+				F76EEF90252E46048B167282 /* IMDataExportProtocol.swift */,
+				B2F4A0247E3AA2E014EBA108 /* IMPersonalStateVC.swift */,
+				BE53F33B0653DF5FFB3772BC /* IMPasswordChangeService.swift */,
+				04A0DB872781166CFA15AF89 /* IMPasswordChangeVC.swift */,
+				AAEDB408024520D2B72E762C /* IMAccountDeletionService.swift */,
+				9FAB4F721EA4EC61677929C6 /* IMAccountDeletionFiles.swift */,
+				C1EE2FAFDB289B690777EE17 /* IMAccountDeletionVC.swift */,
+				3DD10C7DB904C0D4FFF60989 /* IMMigrationJSON.swift */,
+				32E820FA419F7093ABE15746 /* IMMigrationVC.swift */,
+				E3E3FE29FF0526DAE78B4A2B /* IMMigrationService.swift */,
+				739A5BB805BD3BB55495331B /* IMReceiptBuild.swift */,
+				5F8A8C87E5C0F233F5109833 /* IMReceiptCoordinator.swift */,
+				23E011B9B2EE9F430008DDB7 /* IMReceiptVC.swift */,
+				4093A6504D7B8F426CB3AC37 /* IMReceiptService.swift */,
+				730483B0711A197D5332D62E /* IMReceiptProtocol.swift */,
+				85FD876BA019C23C92FDBB60 /* IMMigrationProtocol.swift */,
+			);
+			path = JobsIM;
+			sourceTree = "<group>";
+		};
+		A6BD32342D70DCCF73E825E6 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				00FBE26402CFC0E95A8F904A /* IMUITests.swift */,
+				859832ABDB0FD175C5019621 /* IMMessageListUITests.swift */,
+				4869199312CEBF371FF4C581 /* IMSelfStateUITests.swift */,
+			);
+			name = UITests;
+			path = "../../../测试/前端/iOS/UI";
+			sourceTree = "<group>";
+		};
+		AA07F25ED9DC8B702AF42437 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				760CC2EDDCAFB71126D82B75 /* Pods-JobsIM.release.xcconfig */,
+				7FF9EEEC1EA998926A0624B9 /* Pods-JobsIM.debug.xcconfig */,
+				84889C24DE8F81A1F254FD86 /* Pods-JobsIMTests.release.xcconfig */,
+				1083072C67BEF148FB1A7CC8 /* Pods-JobsIMTests.debug.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B30D20D7D79275A4C514EFD2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9907D95526E58E638371E7D2 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		B5BE45EDC8F7ABD9FBB59FD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4C057A3ED91FC742322AF9B /* JobsIM.app */,
+				891145B2E8AD6947FC4C20B4 /* JobsIMTests.xctest */,
+				E5450D9467BCC679A5129EB7 /* JobsIMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0ABF0BBCB7B9A94D6197EC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B30D20D7D79275A4C514EFD2 /* iOS */,
+				53E25E4A2D664535D5CBFE62 /* Pods_JobsIM.framework */,
+				134CAF859EAD94B3F63CF562 /* Pods_JobsIMTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1A16031573DA947125579D3 = {
+			isa = PBXGroup;
+			children = (
+				B5BE45EDC8F7ABD9FBB59FD3 /* Products */,
+				C0ABF0BBCB7B9A94D6197EC0 /* Frameworks */,
+				4F965E403621578370069BA2 /* JobsIM */,
+				4A6F2E21A3C4DF5F80C95319 /* Tests */,
+				A6BD32342D70DCCF73E825E6 /* UITests */,
+				AA07F25ED9DC8B702AF42437 /* Pods */,
+				403389360A3B0E2DD072AB16 /* IMGroupGovernanceService.swift */,
+				6E3C08D7E174E748BDB12120 /* IMGroupGovernanceVC.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		E1CBB75C675159E76E12F34B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C239FCC38BE967625D771311 /* Localizable.strings */,
+				F49E75D87313F6C6D1D3B1A1 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31D32F91222E17DCEB1DA22C /* JobsIMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42FCAF3A3EE735B65E5509B3 /* Build configuration list for PBXNativeTarget "JobsIMTests" */;
+			buildPhases = (
+				024E722C55D2C1324EA9C126 /* [CP] Check Pods Manifest.lock */,
+				7D950A43B0C39EBAC9BDC204 /* Sources */,
+				1E5B8422324148CB340BCC45 /* Frameworks */,
+				120180EE1F3F6507DF4525B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A19FDF50023E82F6D9CAD75 /* PBXTargetDependency */,
+			);
+			name = JobsIMTests;
+			productName = JobsIMTests;
+			productReference = 891145B2E8AD6947FC4C20B4 /* JobsIMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		77D44C64001F1619CB2CFDB2 /* JobsIM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6A005525F75737EEF5C13FE /* Build configuration list for PBXNativeTarget "JobsIM" */;
+			buildPhases = (
+				36EF6E7D1678BF25CDCBCB61 /* [CP] Check Pods Manifest.lock */,
+				B51CC091EFBDD2B94EA03C81 /* Sources */,
+				C1A34D7790DDE65FD819FAD5 /* Frameworks */,
+				68C0F709E0A93061549975EB /* Resources */,
+				BE191653BD9E08D4631E8538 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JobsIM;
+			productName = JobsIM;
+			productReference = A4C057A3ED91FC742322AF9B /* JobsIM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9694AEE3B703AE9E95588F26 /* JobsIMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C4E024D91801244D36FB5C /* Build configuration list for PBXNativeTarget "JobsIMUITests" */;
+			buildPhases = (
+				5FCCD4A449460F05F58FA010 /* Sources */,
+				4597354CA7FB03B850EB0AFC /* Frameworks */,
+				842E2FA1AD6781ED90769918 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48FB695F1A209BAE27FD1121 /* PBXTargetDependency */,
+			);
+			name = JobsIMUITests;
+			productName = JobsIMUITests;
+			productReference = E5450D9467BCC679A5129EB7 /* JobsIMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51F3BB1FF6F6EBA3ACF38C68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					77D44C64001F1619CB2CFDB2 = {
+						DevelopmentTeam = K5692KLW75;
+					};
+				};
+			};
+			buildConfigurationList = 87C1D2975BA201CF9B07993A /* Build configuration list for PBXProject "JobsIM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				bo,
+				de,
+				es,
+				fr,
+				ja,
+				ko,
+				ru,
+				"zh-Hans",
+				"zh-Hant",
+			);
+			mainGroup = D1A16031573DA947125579D3;
+			productRefGroup = B5BE45EDC8F7ABD9FBB59FD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77D44C64001F1619CB2CFDB2 /* JobsIM */,
+				31D32F91222E17DCEB1DA22C /* JobsIMTests */,
+				9694AEE3B703AE9E95588F26 /* JobsIMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		120180EE1F3F6507DF4525B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3184420EF24F416A6B8BA53D /* Avatar.data in Resources */,
+				8805547F478253573ADDD3CE /* IntegrationCA.pem in Resources */,
+				F315897F4B2B76FF924C68A2 /* IntegrationServer.pem in Resources */,
+				B0DFB06D45F00A0480C493D1 /* NativeVideo.data in Resources */,
+				2223FE29BDFA1DCC4AC3058A /* AuthRefreshPublic.json in Resources */,
+				2CCB9C2ABBE36D7562956799 /* SelfStatePublic.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C0F709E0A93061549975EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC8CB4D763629944ED78BE7 /* Localizable.strings in Resources */,
+				6B3EF4ACAF2EB50B61FB6AC8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842E2FA1AD6781ED90769918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		024E722C55D2C1324EA9C126 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JobsIMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36EF6E7D1678BF25CDCBCB61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JobsIM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE191653BD9E08D4631E8538 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JobsIM/Pods-JobsIM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FCCD4A449460F05F58FA010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40435964BB03C975F24EC8C3 /* IMUITests.swift in Sources */,
+				1DFCEE5422D973217B55D584 /* IMMessageListUITests.swift in Sources */,
+				69F379AF93C14EF4C2FC4373 /* IMSelfStateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D950A43B0C39EBAC9BDC204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F24A4F7B1915ED6E136C1FD5 /* IMCompletionTests.swift in Sources */,
+				977E2E9B251CF4B105E03E03 /* IMIntegrationFixture.swift in Sources */,
+				F488A36E00C0B168723A4425 /* IMLifecycleTests.swift in Sources */,
+				C83837049FF6866233E4CFA6 /* IMMediaTests.swift in Sources */,
+				CDCA8C6BE956A3DC9705A4A5 /* IMNotificationTests.swift in Sources */,
+				0F1665B1EC1EAF97E20FEBAC /* IMSendAdmissionTests.swift in Sources */,
+				DB559BF74475661E23CB3066 /* IMSessionTests.swift in Sources */,
+				7AB9F9E21209F5BD761F2A33 /* IMStorageTests.swift in Sources */,
+				2025F609EF2D0F29DE0BB1ED /* IMMessageListTests.swift in Sources */,
+				CAB3A0D764E6FF8C4D9964EC /* IMForwardTests.swift in Sources */,
+				695482462BD6545A7A98E4F6 /* IMAuthCredentialTests.swift in Sources */,
+				0E228BDD78F8D4D6E345AA43 /* IMAuthCoordinatorTests.swift in Sources */,
+				AAB016A016A016A016A01603 /* IMAuthoritativeSyncTests.swift in Sources */,
+				ABE82A6AEC57439D9C6DCA0D /* IMAuthRefreshIntegrationTests.swift in Sources */,
+				DFC54205C72C5BB23F914ACD /* IMPersonalStateTests.swift in Sources */,
+				6D78A0B30D024100B941F78C /* IMDataExportTests.swift in Sources */,
+				C7CE44AEFFB225B9A74D81D0 /* IMMigrationServiceTests.swift in Sources */,
+				93026AF526428028ED33EE12 /* IMReceiptServiceTests.swift in Sources */,
+				2E77AA6FCF84343209E4D669 /* IMReceiptStorageTests.swift in Sources */,
+				194B3CE195946CAB633EDC19 /* IMMigrationTests.swift in Sources */,
+				A2E9104D804A4B72D94CDCA3 /* IMSelfStateIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B51CC091EFBDD2B94EA03C81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1316124B33F4098F7E2DA8A6 /* AppDelegate.swift in Sources */,
+				24926BA12F005855F92C74CE /* SceneDelegate.swift in Sources */,
+				AA8F758CB6749626FFB91F17 /* IMAvatarLoader.swift in Sources */,
+				1D246C234BCC3C41E7BF64AC /* IMAvatarService.swift in Sources */,
+				93A352427A378D4B4E5A0962 /* IMContactService.swift in Sources */,
+				21D2C14FD4EBB58244D031BC /* IMHistoryExport.swift in Sources */,
+				3826FAD7B0587DCEBED936CE /* IMKeychain.swift in Sources */,
+				38B3A06A92DB4A159F4E822A /* IMMediaCache.swift in Sources */,
+				4F78160AEEC25E2F7B1553CF /* IMMediaLoader.swift in Sources */,
+				01F7EC14BA82067F129D943A /* IMNotifications.swift in Sources */,
+				A8DFA5E9B2E6062A0F4F5F02 /* IMReportService.swift in Sources */,
+				25DA2BFC4FD2AE3E09960346 /* IMSession.swift in Sources */,
+				9AB7B53C47541FFF6EEC0AE6 /* IMStrings.swift in Sources */,
+				4CBE8D95546458482D38B89E /* IMSyncCoordinator.swift in Sources */,
+				AC7A50B0B588CE4A4006845D /* IMTrustStore.swift in Sources */,
+				CEE63AC1F45859D3086EDC70 /* AVAudioRecorder+Make.swift in Sources */,
+				6B8071751D8783FEA4D87B15 /* PHPickerConfiguration+Make.swift in Sources */,
+				343F7640BB8A83537051E0D1 /* PHPickerViewController+Make.swift in Sources */,
+				846364A7FDD16DA8F165BFEA /* UIActivityViewController+Make.swift in Sources */,
+				29C6D546471E13A535CDBBE6 /* UIAlertAction+Make.swift in Sources */,
+				08A7A4BDC09AEF1BDFFB2E35 /* UIAlertController+Make.swift in Sources */,
+				6B4A2D8A971F8D3044DE8931 /* UIColor+Make.swift in Sources */,
+				9DA364FF794DD9151BDB9904 /* UIContextMenuConfiguration+Make.swift in Sources */,
+				F41E9FCA1F63D32FFB044EC7 /* UIDocumentPickerViewController+Make.swift in Sources */,
+				B44E9B6CE848F7BB3AE38E2A /* UIImage+Make.swift in Sources */,
+				02A9F3FC10820AD95E60589B /* UINavigationController+Make.swift in Sources */,
+				0A0BE188E925DBE01371D073 /* UISegmentedControl+Make.swift in Sources */,
+				197701E4DD38C8D1D89B5BF3 /* UITabBarItem+Make.swift in Sources */,
+				437DF5F54547A4E7D44708CD /* UITableView+Make.swift in Sources */,
+				C94D4B66B2DA6EA4D80A219B /* UIView+DSL.swift in Sources */,
+				4A1A5FF79EB03F21C7F4A1F8 /* UIWindow+Make.swift in Sources */,
+				7E505032CE393E418CA14540 /* UNNotificationRequest+Make.swift in Sources */,
+				3E35D5B3788B80E5E55011AC /* IMAuthVC.swift in Sources */,
+				B50AB973EE1C26337D8E8987 /* IMAvatarVC.swift in Sources */,
+				F6848199B796604D1C5DC411 /* IMAvatarView.swift in Sources */,
+				B2F9A8860EEA1DE90AE57570 /* IMBaseVC.swift in Sources */,
+				B57AAA95B0825B9E8D41D718 /* IMChatVC.swift in Sources */,
+				C1813209063F434649C8936D /* IMContactRequestsVC.swift in Sources */,
+				ECF02D493ABC74C7439ADD51 /* IMConversationCell.swift in Sources */,
+				B021A4B2C0F72205F58E6C1B /* IMDevicesVC.swift in Sources */,
+				6A4C3709927888386F38134A /* IMGroupVC.swift in Sources */,
+				299B6BEDEFEA961191D3163B /* IMListVC.swift in Sources */,
+				74CD045060ACAE245F10F05D /* IMMessageCell.swift in Sources */,
+				F35176D1F1E2BB30BB519216 /* IMReportVC.swift in Sources */,
+				7B46B0AF5A6D4323690939A2 /* IMSettingsVC.swift in Sources */,
+				4EB2B2501D813337E5837178 /* IMUI.swift in Sources */,
+				B95F3FD0A5E7D6A929F63024 /* IMMessagePage.swift in Sources */,
+				E77723C294F346E40F0158AE /* IMMessageListService.swift in Sources */,
+				E5C650972F5FFB3068942696 /* IMAnnouncementService.swift in Sources */,
+				49E2FC43A1B32AD714FB7D23 /* NSAttributedString+Make.swift in Sources */,
+				0A61532FE6EBBF9603601776 /* IMForwardService.swift in Sources */,
+				9B879C2E7F76B5F8C17A3F4B /* IMCredentialPair.swift in Sources */,
+				A3F393F13ECB505EA59536D0 /* IMAuthCoordinator.swift in Sources */,
+				AAB016A016A016A016A01601 /* IMSyncProtocol.swift in Sources */,
+				AAB016A016A016A016A01602 /* IMAuthoritativeSync.swift in Sources */,
+				D627AED700E7CC2C86F35D20 /* IMPersonalStateService.swift in Sources */,
+				F9B5F78F57704430BCAC83EF /* FileHandle+Make.swift in Sources */,
+				76F5F66AC01F44548F1EC0D0 /* IMDataExportVC.swift in Sources */,
+				482EFB06DD6545758D84D026 /* IMDataExportService.swift in Sources */,
+				EC6C164B3ECC4E5FB6D71207 /* IMDataExportArchive.swift in Sources */,
+				6BD8632EA80F492CAAB5A1DB /* IMDataExportProtocol.swift in Sources */,
+				2F8541081007532DD4072867 /* IMPersonalStateVC.swift in Sources */,
+				C2E04D9D6983BDB5307035E5 /* IMPasswordChangeService.swift in Sources */,
+				9BA1B3C8E759DBB6A55CE414 /* IMPasswordChangeVC.swift in Sources */,
+				CF5D93EC85F461BAB7013FD0 /* IMGroupGovernanceService.swift in Sources */,
+				17DE1635D58F1E3877C66321 /* IMGroupGovernanceVC.swift in Sources */,
+				DEB4B659DECFCEBF7B9A9B86 /* IMAccountDeletionService.swift in Sources */,
+				FB009A29A47F46A88D1DCB54 /* IMAccountDeletionFiles.swift in Sources */,
+				0B78DC1F5C13B94EDF62F2F2 /* IMAccountDeletionVC.swift in Sources */,
+				3C32951D984F17C5CBED545E /* IMMigrationJSON.swift in Sources */,
+				3EBF671477A76416B1C4FA4E /* IMMigrationVC.swift in Sources */,
+				7221044C28BB2F8C44AE2601 /* IMMigrationService.swift in Sources */,
+				52AD5C5878DBF405A4762753 /* IMReceiptBuild.swift in Sources */,
+				88BE50389A5E479961D9EF66 /* IMReceiptCoordinator.swift in Sources */,
+				9873A73D517F6AC18BFC3F2A /* IMReceiptVC.swift in Sources */,
+				32CD8C564090D8C095EB67E5 /* IMReceiptService.swift in Sources */,
+				E2E431112F2F9DAE3F783F9B /* IMReceiptProtocol.swift in Sources */,
+				C21E36109349F3DFB1D9643A /* IMMigrationProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48FB695F1A209BAE27FD1121 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JobsIM;
+			target = 77D44C64001F1619CB2CFDB2 /* JobsIM */;
+			targetProxy = 4EC0EDFA803586A20FF15DA2 /* PBXContainerItemProxy */;
+		};
+		8A19FDF50023E82F6D9CAD75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JobsIM;
+			target = 77D44C64001F1619CB2CFDB2 /* JobsIM */;
+			targetProxy = 441A382365197999C5292E64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C239FCC38BE967625D771311 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CC2D70E4AF58D25D090A4BA /* bo */,
+				CF2A1D25E135B57A6E2807C1 /* de */,
+				53A2A825E1AFAF866FEC63E3 /* en */,
+				49BE0E402B5E38DB4C6F97C1 /* es */,
+				1687DD1B95099051FE853AF5 /* fr */,
+				6ABB6F78F081CCE68A7DB306 /* ja */,
+				D67C1C9DC61AECC86F1CF208 /* ko */,
+				8752A9B14636771CCDA82BB1 /* ru */,
+				0982A78C53810C7B16AF320B /* zh-Hans */,
+				87A5013176F111E91C623A94 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0D28039388A6A72406637483 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84889C24DE8F81A1F254FD86 /* Pods-JobsIMTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGNING_ALLOWED[sdk=iphoneos*]" = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				COMPRESS_PNG_FILES = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobsIM.app/JobsIM";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16AE1B09AEC00E17E1D2382C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3A89BB9544F337CE04A9251B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGNING_ALLOWED[sdk=iphoneos*]" = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JobsIM;
+			};
+			name = Debug;
+		};
+		3B4BF6212FE2D7858D8B504B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1083072C67BEF148FB1A7CC8 /* Pods-JobsIMTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGNING_ALLOWED[sdk=iphoneos*]" = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				COMPRESS_PNG_FILES = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im.tests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobsIM.app/JobsIM";
+			};
+			name = Debug;
+		};
+		3FDF24681D938C1D5EA5B1C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF9EEEC1EA998926A0624B9 /* Pods-JobsIM.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGNING_ALLOWED[sdk=iphoneos*]" = NO;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = JobsIM/Resource/Simulator.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				DEVELOPMENT_TEAM = K5692KLW75;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = JobsIM/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80D74F7BAF1EFE1AEBB45F6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 760CC2EDDCAFB71126D82B75 /* Pods-JobsIM.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGNING_ALLOWED[sdk=iphoneos*]" = NO;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphonesimulator*]" = JobsIM/Resource/Simulator.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				DEVELOPMENT_TEAM = K5692KLW75;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = JobsIM/Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A975A95C8AE7B8BE56942747 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = YES;
+				"CODE_SIGNING_ALLOWED[sdk=iphoneos*]" = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "-";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobs.im.uitests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JobsIM;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D25FD109CAB89225D711489A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15C4E024D91801244D36FB5C /* Build configuration list for PBXNativeTarget "JobsIMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A975A95C8AE7B8BE56942747 /* Release */,
+				3A89BB9544F337CE04A9251B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42FCAF3A3EE735B65E5509B3 /* Build configuration list for PBXNativeTarget "JobsIMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D28039388A6A72406637483 /* Release */,
+				3B4BF6212FE2D7858D8B504B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87C1D2975BA201CF9B07993A /* Build configuration list for PBXProject "JobsIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D25FD109CAB89225D711489A /* Debug */,
+				16AE1B09AEC00E17E1D2382C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6A005525F75737EEF5C13FE /* Build configuration list for PBXNativeTarget "JobsIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D74F7BAF1EFE1AEBB45F6E /* Release */,
+				3FDF24681D938C1D5EA5B1C3 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51F3BB1FF6F6EBA3ACF38C68 /* Project object */;
+}

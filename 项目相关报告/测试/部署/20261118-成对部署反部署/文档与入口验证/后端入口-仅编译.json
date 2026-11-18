@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-18T01:52:17.597047+00:00",
+  "code": 0,
+  "scope": "Compile current external backend test overlay after two maintenance-stop path updates. No tests or database lifecycle executed.",
+  "source": "测试/后端/接口/deployment_restore_pg_test.go",
+  "externalFiles": 49,
+  "freeBefore": 14536118272
+}

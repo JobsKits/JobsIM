@@ -1,0 +1,5762 @@
+[
+  {
+    "path": ".jobs-markdown-toc/MarkdownToc.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 43,
+    "size": 27126,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/build.gradle.kts",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 1,
+    "size": 1870,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/AndroidManifest.xml",
+    "isTest": false,
+    "language": "xml",
+    "nodeCount": 1,
+    "size": 1185,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/AnnouncementModel.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 33,
+    "size": 13324,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Assets.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 8,
+    "size": 2020,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 217,
+    "size": 113425,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/CollaborationScreens.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 20,
+    "size": 14639,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/DiscoveryScreens.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 14,
+    "size": 5314,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 14,
+    "size": 4570,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ExtraStrings.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 14595,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/FeatureStrings.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 11024,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ForwardScreens.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 12,
+    "size": 3415,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Forwarding.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 9,
+    "size": 2725,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/GroupScreen.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 25,
+    "size": 13102,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/GroupText.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 13721,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/GroupTools.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 57,
+    "size": 18830,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/LocalAlerts.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 11,
+    "size": 1794,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 53,
+    "size": 54728,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ManagementScreens.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 24,
+    "size": 18090,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MessageDiscovery.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 26,
+    "size": 7108,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationProtocol.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 38,
+    "size": 15411,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationScreen.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 33,
+    "size": 13309,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationService.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 42,
+    "size": 17699,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 38,
+    "size": 18750,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/MigrationText.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 6,
+    "size": 15068,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/NativeSession.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 34,
+    "size": 11342,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/NativeStorageBudget.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 505,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletion.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 43,
+    "size": 15502,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionCleanup.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 9,
+    "size": 2193,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionScreen.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 24,
+    "size": 7039,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionText.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 12051,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnPassword.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 39,
+    "size": 12512,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnPasswordScreen.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 21,
+    "size": 6353,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/OwnPasswordText.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 12103,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportFiles.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 37,
+    "size": 12050,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportModel.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 59,
+    "size": 13062,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportScreen.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 23,
+    "size": 9664,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStore.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 15,
+    "size": 5419,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStrings.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 25113,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportWire.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 14,
+    "size": 4806,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ProfileAvatar.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 15,
+    "size": 1311,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptCoordinator.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 13,
+    "size": 1774,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptProtocol.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 21,
+    "size": 11785,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 29,
+    "size": 10000,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptService.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 41,
+    "size": 13895,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptStore.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 41,
+    "size": 15299,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptText.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 6,
+    "size": 16198,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfState.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 37,
+    "size": 16370,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateModel.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 52,
+    "size": 14216,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateStrings.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 9,
+    "size": 16371,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateUi.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 14,
+    "size": 7163,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SessionCoordinator.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 57,
+    "size": 18277,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SessionStrings.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 5502,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 84,
+    "size": 27257,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Strings.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 8,
+    "size": 15032,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 9,
+    "size": 1566,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncEngine.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 16,
+    "size": 8976,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncGuardApi.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 18,
+    "size": 4397,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 58,
+    "size": 16164,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/SyncStore.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 58,
+    "size": 26118,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/Transport.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 44,
+    "size": 18547,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingComposer.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 40,
+    "size": 7809,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingEngine.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 54,
+    "size": 10021,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingFiles.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 22,
+    "size": 2677,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingRules.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 20,
+    "size": 1215,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingText.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 13819,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadApi.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 15,
+    "size": 4366,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadCoordinator.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 4959,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadProtocol.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 45,
+    "size": 10961,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 77,
+    "size": 25291,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadScreen.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 34,
+    "size": 6908,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadText.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 7,
+    "size": 13453,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/build.gradle.kts",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 1,
+    "size": 212,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/gradle.properties",
+    "isTest": false,
+    "language": "properties",
+    "nodeCount": 0,
+    "size": 100,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/gradle/wrapper/gradle-wrapper.properties",
+    "isTest": false,
+    "language": "properties",
+    "nodeCount": 0,
+    "size": 281,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Android/settings.gradle.kts",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 1,
+    "size": 275,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/Scripts/Build.py/Build.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 13,
+    "size": 4704,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/auth.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 47,
+    "size": 27807,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/auth_lock_unix.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 6,
+    "size": 1274,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/auth_lock_windows.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 1722,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/auth_vault_darwin.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 22,
+    "size": 4795,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/auth_vault_linux.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 20,
+    "size": 3693,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/auth_vault_other.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 3,
+    "size": 299,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/auth_vault_windows.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 13,
+    "size": 3088,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/collaboration.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 37,
+    "size": 23152,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/credentials.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 1556,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/data_export.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 29,
+    "size": 15356,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/data_export_file.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 23,
+    "size": 8530,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/forward.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 12,
+    "size": 4012,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/governance.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 25,
+    "size": 10745,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/group_governance.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 22,
+    "size": 17209,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/local.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 25,
+    "size": 10713,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/main.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 30,
+    "size": 21102,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/migration_command.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 25,
+    "size": 25265,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/migration_history.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 7073,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/migration_protocol.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 27,
+    "size": 13980,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/migration_store.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 11952,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/own_deletion.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 30,
+    "size": 18481,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/own_deletion_cleanup.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 15,
+    "size": 7979,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/own_deletion_command.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 19,
+    "size": 8712,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/password_change.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 39,
+    "size": 23236,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/receipt.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 48,
+    "size": 35836,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/receipt_cleanup.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 8298,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/receipt_migration_source.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 12,
+    "size": 8692,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/receipt_negotiation.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 24,
+    "size": 12051,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/receipt_objects.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 42,
+    "size": 25126,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/receipt_policy.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 19,
+    "size": 10655,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/self_state.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 45,
+    "size": 37191,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/store.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 37,
+    "size": 23853,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/sync_engine.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 15,
+    "size": 19959,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/sync_protocol.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 46,
+    "size": 22184,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/cmd/jobsim/sync_store.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 41,
+    "size": 35762,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/CLI/原生助手/Keychain/JobsIMKeychain.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 21,
+    "size": 5316,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/hvigorfile.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 2,
+    "size": 103,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Api.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 33,
+    "size": 14721,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/AuthCoordinator.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 44,
+    "size": 24054,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Deletion.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 75,
+    "size": 12955,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionFiles.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 8,
+    "size": 2598,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionStore.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 25,
+    "size": 7236,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionText.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 6,
+    "size": 12419,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportFiles.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 32,
+    "size": 6625,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportProtocol.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 46,
+    "size": 8961,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportService.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 29,
+    "size": 5742,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportStore.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 21,
+    "size": 4013,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportText.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 5,
+    "size": 27965,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupStore.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 16,
+    "size": 3134,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupText.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 7,
+    "size": 14831,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 68,
+    "size": 16229,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationNative.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 29,
+    "size": 8002,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 68,
+    "size": 19096,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationService.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 55,
+    "size": 21823,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 49,
+    "size": 21514,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationText.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 5,
+    "size": 15383,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 350,
+    "size": 23218,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeServices.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 27,
+    "size": 6237,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeStorageBudget.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 6,
+    "size": 750,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordChange.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 76,
+    "size": 8728,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordStore.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 17,
+    "size": 3767,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordText.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 5,
+    "size": 13481,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCleanup.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 9,
+    "size": 2696,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCoordinator.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 24,
+    "size": 2434,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptNative.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 29,
+    "size": 6901,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 30,
+    "size": 12441,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 48,
+    "size": 18150,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptStore.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 40,
+    "size": 17308,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptText.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 5,
+    "size": 16416,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 79,
+    "size": 11898,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfState.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 43,
+    "size": 16696,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfText.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 4,
+    "size": 10565,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Store.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 40,
+    "size": 13595,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 7,
+    "size": 56212,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncEngine.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 37,
+    "size": 11968,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 139,
+    "size": 19511,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncStore.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 51,
+    "size": 34057,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncText.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 3,
+    "size": 2903,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/entryability/EntryAbility.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 7,
+    "size": 418,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets",
+    "isTest": false,
+    "language": "arkts",
+    "nodeCount": 454,
+    "size": 220159,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/HarmonyOS/hvigorfile.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 2,
+    "size": 103,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AccountDeletionActions.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 29,
+    "size": 11035,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AccountDeletionCleanup.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 17,
+    "size": 6282,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AccountDeletionLabels.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 5,
+    "size": 23731,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AccountDeletionPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 19,
+    "size": 11889,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AccountDeletionProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 40,
+    "size": 6783,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AccountDeletionStore.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 15,
+    "size": 6714,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AdminPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 37,
+    "size": 13718,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AnnouncementPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 31,
+    "size": 10298,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/App.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 148,
+    "size": 176713,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AttachmentErasureProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 20,
+    "size": 3189,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AttachmentSendActions.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 27,
+    "size": 8977,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AttachmentSendLabels.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 7,
+    "size": 16408,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AttachmentSendPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 14,
+    "size": 6594,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AttachmentSendProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 66,
+    "size": 12323,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AttachmentSendStore.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 31,
+    "size": 16717,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AudioMessageLabels.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 6,
+    "size": 13704,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AudioRecorderController.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 41,
+    "size": 6228,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AudioRecorderPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 16,
+    "size": 7045,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/AuthSession.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 81,
+    "size": 13857,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/DataExportActions.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 21,
+    "size": 5320,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/DataExportArchive.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 9,
+    "size": 4505,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/DataExportLabels.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 7,
+    "size": 21217,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/DataExportPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 21,
+    "size": 10051,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/DataExportProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 28,
+    "size": 4092,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/DataExportStore.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 14,
+    "size": 4445,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/GlobalMessages.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 36,
+    "size": 15661,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/GroupControls.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 6,
+    "size": 5448,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/GroupGovernanceActions.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 35,
+    "size": 11128,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/GroupGovernanceLabels.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 7,
+    "size": 14333,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/GroupGovernancePanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 23,
+    "size": 16617,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/GroupGovernanceProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 64,
+    "size": 8463,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/GroupGovernanceStore.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 25,
+    "size": 6766,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/GroupJoinPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 13,
+    "size": 5654,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MentionPicker.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 7,
+    "size": 2258,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MessageFacts.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 26,
+    "size": 6757,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MessageLookup.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 13,
+    "size": 8491,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MessagePlayback.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 38,
+    "size": 10542,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MigrationActions.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 48,
+    "size": 20599,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MigrationArchive.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 81,
+    "size": 16579,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MigrationHistoryStore.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 43,
+    "size": 13631,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MigrationLabels.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 7,
+    "size": 22110,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MigrationPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 46,
+    "size": 19863,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MigrationProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 37,
+    "size": 5696,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/MigrationStore.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 27,
+    "size": 7244,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/PasswordChangeActions.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 24,
+    "size": 9141,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/PasswordChangeLabels.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 6,
+    "size": 17464,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/PasswordChangePanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 17,
+    "size": 8934,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/PasswordChangeProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 33,
+    "size": 3982,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/PasswordChangeStore.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 11,
+    "size": 4465,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/PeerControls.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 20,
+    "size": 8551,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/PlaybackCheckpointProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 27,
+    "size": 5251,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/PlaybackCheckpointStore.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 8,
+    "size": 2796,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/PrivateMedia.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 9,
+    "size": 4714,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/ReceiptContext.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 82,
+    "size": 15196,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/ReceiptLabels.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 5,
+    "size": 14417,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/ReceiptPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 20,
+    "size": 7345,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/ReportPanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 29,
+    "size": 6804,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/SelfDraftRecovery.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 25,
+    "size": 12099,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/SelfStateActions.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 45,
+    "size": 16121,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/SelfStateLabels.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 8,
+    "size": 19207,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/SelfStatePanel.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 15,
+    "size": 7331,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/SelfStateProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 21,
+    "size": 5812,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/StorageDatabase.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 2,
+    "size": 310,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/SyncEngine.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 27,
+    "size": 10788,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/SyncProtocol.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 76,
+    "size": 13813,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/SyncStore.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 88,
+    "size": 30264,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/SyncView.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 14,
+    "size": 13599,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/api.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 35,
+    "size": 19819,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/demo.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 7,
+    "size": 2761,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/env.d.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 3,
+    "size": 108,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/forward.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 6,
+    "size": 2596,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/i18n.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 7,
+    "size": 56367,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/main.tsx",
+    "isTest": false,
+    "language": "tsx",
+    "nodeCount": 5,
+    "size": 234,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/storage.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 33,
+    "size": 16143,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/types.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 84,
+    "size": 2290,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/Src/useVisibleViewport.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 6,
+    "size": 2552,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/Web/vite.config.ts",
+    "isTest": false,
+    "language": "typescript",
+    "nodeCount": 4,
+    "size": 575,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMCursor/IMCursor.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 9,
+    "size": 1362,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMJSON/IMJSON.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 16,
+    "size": 2638,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/IMNamespace/IMNamespace.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 12,
+    "size": 1327,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/ISO8601DateFormatter/ISO8601DateFormatter+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 420,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONDecoder/JSONDecoder+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 233,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/JSONEncoder/JSONEncoder+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 233,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMCore/Core/NSDecimalNumber/NSDecimalNumber+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 281,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 107,
+    "size": 145103,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIClient/IMAPIClient.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 26,
+    "size": 11438,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIError/IMAPIError.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 7,
+    "size": 486,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 44,
+    "size": 22692,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceCertificate/IMInstanceCertificate.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 13,
+    "size": 2613,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceEvaluator/IMInstanceEvaluator.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 7,
+    "size": 1420,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsByPods/JobsIMTransport/Core/URLRequest/URLRequest+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 604,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/App/AppDelegate/AppDelegate.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 12,
+    "size": 6384,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/App/SceneDelegate/SceneDelegate.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 9,
+    "size": 926,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionFiles.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 12,
+    "size": 3963,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/IMAccountDeletionService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 42,
+    "size": 22416,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMAnnouncementService/IMAnnouncementService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 15,
+    "size": 6834,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 33,
+    "size": 29642,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMCredentialPair.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 27,
+    "size": 4536,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMAuthoritativeSync.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 25,
+    "size": 13986,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMAuthoritativeSync/IMSyncProtocol.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 26,
+    "size": 21114,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMAvatarLoader/IMAvatarLoader.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 5,
+    "size": 1527,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMAvatarService/IMAvatarService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 10,
+    "size": 4889,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMContactService/IMContactService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 7,
+    "size": 1854,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportArchive.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 9,
+    "size": 5652,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportProtocol.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 11,
+    "size": 5300,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 26,
+    "size": 10839,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMForwardService/IMForwardService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 17,
+    "size": 10086,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMGroupGovernanceService/IMGroupGovernanceService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 24,
+    "size": 14049,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMHistoryExport/IMHistoryExport.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 6,
+    "size": 2501,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMKeychain/IMKeychain.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 10,
+    "size": 2423,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMMediaCache/IMMediaCache.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 12,
+    "size": 8726,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMMediaLoader/IMMediaLoader.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 5,
+    "size": 567,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessageListService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 9,
+    "size": 5960,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMMessageListService/IMMessagePage.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 7,
+    "size": 821,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationJSON.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 18,
+    "size": 8275,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationProtocol.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 24,
+    "size": 14012,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMMigrationService/IMMigrationService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 53,
+    "size": 47689,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMNotifications/IMNotifications.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 20,
+    "size": 4881,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMPasswordChangeService/IMPasswordChangeService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 30,
+    "size": 12616,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMPersonalStateService/IMPersonalStateService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 31,
+    "size": 16340,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptBuild.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 19,
+    "size": 9119,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptCoordinator.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 44,
+    "size": 11672,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptProtocol.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 23,
+    "size": 18199,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMReceiptService/IMReceiptService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 40,
+    "size": 34384,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMReportService/IMReportService.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 7,
+    "size": 1590,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 84,
+    "size": 53502,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMStrings/IMStrings.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 5,
+    "size": 777,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMSyncCoordinator/IMSyncCoordinator.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 7,
+    "size": 842,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/Services/IMTrustStore/IMTrustStore.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 9,
+    "size": 1019,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/AVAudioRecorder/AVAudioRecorder+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 488,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/FileHandle/FileHandle+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 266,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/NSAttributedString/NSAttributedString+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 346,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerConfiguration/PHPickerConfiguration+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 426,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/PHPickerViewController/PHPickerViewController+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 328,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UIActivityViewController/UIActivityViewController+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 6,
+    "size": 374,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertAction/UIAlertAction+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 6,
+    "size": 430,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UIAlertController/UIAlertController+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 6,
+    "size": 401,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UIColor/UIColor+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 7,
+    "size": 459,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UIContextMenuConfiguration/UIContextMenuConfiguration+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 385,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 8,
+    "size": 1270,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UIImage/UIImage+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 5,
+    "size": 347,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UINavigationController/UINavigationController+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 6,
+    "size": 460,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UISegmentedControl/UISegmentedControl+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 6,
+    "size": 397,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UITabBarItem/UITabBarItem+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 6,
+    "size": 349,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UITableView/UITableView+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 6,
+    "size": 319,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UIView/UIView+DSL.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 254,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UIWindow/UIWindow+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 6,
+    "size": 359,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/Factories/UNNotificationRequest/UNNotificationRequest+Make.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 4,
+    "size": 373,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMAccountDeletionVC/IMAccountDeletionVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 27,
+    "size": 11353,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 25,
+    "size": 10914,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMAvatarVC/IMAvatarVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 13,
+    "size": 2531,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMAvatarView/IMAvatarView.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 12,
+    "size": 1727,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMBaseVC/IMBaseVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 21,
+    "size": 2742,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 76,
+    "size": 46198,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMContactRequestsVC/IMContactRequestsVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 16,
+    "size": 3754,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMConversationCell/IMConversationCell.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 14,
+    "size": 3382,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMDataExportVC/IMDataExportVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 50,
+    "size": 12222,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMDevicesVC/IMDevicesVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 16,
+    "size": 3564,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMGroupGovernanceVC/IMGroupGovernanceVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 38,
+    "size": 17664,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 31,
+    "size": 15875,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 50,
+    "size": 23959,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 17,
+    "size": 6314,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMMigrationVC/IMMigrationVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 76,
+    "size": 29721,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMPasswordChangeVC/IMPasswordChangeVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 28,
+    "size": 7843,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMPersonalStateVC/IMPersonalStateVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 39,
+    "size": 15007,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMReceiptVC/IMReceiptVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 49,
+    "size": 20156,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMReportVC/IMReportVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 16,
+    "size": 3458,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 20,
+    "size": 13957,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/JobsIM/UI/IMUI/IMUI.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 22,
+    "size": 5019,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/Scripts/Build.rb",
+    "isTest": false,
+    "language": "ruby",
+    "nodeCount": 17,
+    "size": 1794,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/Scripts/GenerateProject.rb",
+    "isTest": false,
+    "language": "ruby",
+    "nodeCount": 22,
+    "size": 5833,
+    "errors": []
+  },
+  {
+    "path": "代码/前端/iOS/Scripts/PrepareDependencies.rb",
+    "isTest": false,
+    "language": "ruby",
+    "nodeCount": 17,
+    "size": 2493,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/account_deletion.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 30,
+    "size": 14661,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_governance.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 11981,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_identity.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 11598,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_owner.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 11472,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_proof.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 18,
+    "size": 11948,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/account_deletion_safety.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 12,
+    "size": 8643,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/admin_identity.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 10674,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/asset_migrations.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 2,
+    "size": 3075,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/avatar.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 19,
+    "size": 14083,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/avatar_media.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 22,
+    "size": 10883,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/cmd/jobsimd/main.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 5933,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/cmd/jobsimops/main.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 5408,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/contact_relationship.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 5,
+    "size": 1877,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/control.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 8881,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/conversation.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 13,
+    "size": 18767,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/deployment_disk.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 1348,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/deployment_handoff.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 2398,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/deployment_restore.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 22,
+    "size": 21967,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/deployment_restore_finalize.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 16,
+    "size": 10607,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/deployment_restore_spec.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 30,
+    "size": 13911,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/directory.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 15,
+    "size": 17800,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/draft_reply.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 4,
+    "size": 1607,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/draft_reply_holders.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 16,
+    "size": 14397,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/draft_reply_revocation.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 16,
+    "size": 8869,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/export.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 30,
+    "size": 22840,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/export_identity.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 5670,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/export_lock_unix.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 671,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/export_lock_windows.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 736,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/export_restore.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 4335,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/export_worker.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 27,
+    "size": 16590,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/forward_media.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 21,
+    "size": 9441,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/forward_projection.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 23,
+    "size": 10340,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/forward_revocation.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 20,
+    "size": 13677,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/group_delegate.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 6,
+    "size": 1659,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/group_invites.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 29,
+    "size": 28608,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/group_operator.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 3706,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/group_policy.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 18,
+    "size": 19245,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/group_safety.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 6054,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/identity.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 39,
+    "size": 41853,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/journal.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 19,
+    "size": 12384,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/journal_receipt_readiness.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 4,
+    "size": 1243,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 6831,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_export.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 14,
+    "size": 6924,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_format.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 14,
+    "size": 6371,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_legacy_erasure.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 5372,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_read_floor.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 3,
+    "size": 639,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_receipts.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 3007,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_restore.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 2986,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_retention.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 27,
+    "size": 20487,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_upload.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 24,
+    "size": 11194,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_upload_cleanup.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 5317,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_upload_identity.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 3114,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_upload_model.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 29,
+    "size": 7728,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_upload_safety.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 12,
+    "size": 3492,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/media_webm.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 33,
+    "size": 11301,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/mentions_announcements.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 32,
+    "size": 22641,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/message.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 25,
+    "size": 23289,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/message_export.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 18,
+    "size": 18510,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/message_lifecycle.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 4,
+    "size": 419,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/message_migration.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 8103,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/message_read_points.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 25,
+    "size": 11405,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/message_read_summary.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 5314,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/mfa.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 28,
+    "size": 14209,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/migration_identity.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 4697,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/migration_interest.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 3456,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/migration_invalidation.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 9062,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/migrations.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 14833,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/operations.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 44,
+    "size": 27604,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/owner_lifecycle.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 5,
+    "size": 2128,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/password_change.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 28,
+    "size": 12573,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/password_change_worker.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 6758,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/personal_export.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 33,
+    "size": 14366,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/personal_export_crypto.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 13,
+    "size": 3435,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/personal_export_fence.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 6091,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/personal_export_media.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 8054,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/personal_export_owner.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 26,
+    "size": 23834,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/personal_export_safety.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 2210,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/personal_export_worker.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 30,
+    "size": 24841,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/receipt_capabilities.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 19,
+    "size": 14669,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/receipt_delivery.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 26,
+    "size": 19648,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/receipt_delivery_worker.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 10598,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/reports.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 11122,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/request_gate.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 4091,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/reset_grant.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 8613,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/restore_runner.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 19,
+    "size": 16476,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/retention_access.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 3506,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/retention_clock.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 2028,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/retention_edit.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 3710,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/retention_legacy.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 6,
+    "size": 2898,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/retention_policy.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 24,
+    "size": 28234,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/retention_read.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 5,
+    "size": 1807,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/retention_readiness.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 5,
+    "size": 2158,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/retention_safety.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 4203,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/retention_worker.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 13260,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/search.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 19,
+    "size": 8730,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/security.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 22,
+    "size": 2838,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/self_draft.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 44,
+    "size": 34815,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/self_draft_floor.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 35,
+    "size": 28536,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/self_draft_safety.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 15,
+    "size": 9723,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/self_draft_sync.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 4,
+    "size": 1783,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/self_read.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 39,
+    "size": 28432,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/self_state.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 3,
+    "size": 346,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/self_unread.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 4769,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/self_views.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 22,
+    "size": 17179,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/send_admission.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 38,
+    "size": 15918,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/server.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 33,
+    "size": 16176,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/session_auth_retirement.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 5,
+    "size": 4061,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/session_bff.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 14,
+    "size": 6255,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/session_refresh.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 12515,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/session_refresh_model.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 20,
+    "size": 11534,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/source_preferences.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 27,
+    "size": 15453,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_classification.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 3833,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_kinds.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 3554,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_migration.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 28,
+    "size": 19294,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_migration_cleanup.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 16,
+    "size": 8614,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_migration_delivery.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 14,
+    "size": 6394,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_migration_model.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 55,
+    "size": 15893,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_migration_validate.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 18,
+    "size": 14432,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_nats.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 37,
+    "size": 16919,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_object_receipts.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 28,
+    "size": 19099,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_origin.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 5,
+    "size": 1455,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_outbox.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 5,
+    "size": 15217,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_owner.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 17579,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_private_unix.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 4,
+    "size": 250,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_private_windows.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 5,
+    "size": 1411,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_protocol.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 14,
+    "size": 4169,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_receipt_policy.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 12,
+    "size": 2869,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_receipts.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 33,
+    "size": 25178,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_schemas.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 13,
+    "size": 9583,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_self.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 6,
+    "size": 3765,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_service.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 38,
+    "size": 35963,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/sync_validation.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 16,
+    "size": 9867,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/types.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 18,
+    "size": 5082,
+    "errors": []
+  },
+  {
+    "path": "代码/后端/Go/web.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 6,
+    "size": 2101,
+    "errors": []
+  },
+  {
+    "path": "工具/统计项目.mjs/统计项目.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 16,
+    "size": 3374,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/KeychainDiagnostic.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 5,
+    "size": 1307,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/auth-https.py/auth-https.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 26,
+    "size": 8843,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/auth_https_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 21,
+    "size": 9975,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/auth_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 32,
+    "size": 15409,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/collaboration-https.cjs/collaboration-https.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 20,
+    "size": 12124,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/collaboration_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 15422,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/data_export_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 24,
+    "size": 12068,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/forward-https.cjs/forward-https.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 18,
+    "size": 7161,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/governance_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 18,
+    "size": 17200,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/group_governance_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 14,
+    "size": 10039,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/https-integration.cjs/https-integration.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 20,
+    "size": 13116,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/migration_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 26,
+    "size": 15466,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/object-receipt-https.py/object-receipt-https.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 24,
+    "size": 13137,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/outbox_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 27,
+    "size": 24305,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/own_deletion_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 27,
+    "size": 14267,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/password_change_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 31,
+    "size": 14312,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/receipt_negotiation_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 25,
+    "size": 23758,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/receipt_objects_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 31,
+    "size": 26113,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/receipt_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 26,
+    "size": 19106,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/self-state-https.py/self-state-https.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 34,
+    "size": 15006,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/self_state_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 21,
+    "size": 14958,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/sync-https.py/sync-https.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 39,
+    "size": 17482,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/sync_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 44,
+    "size": 26166,
+    "errors": []
+  },
+  {
+    "path": "测试/CLI/运行测试.mjs/运行测试.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 19,
+    "size": 4289,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/AdmissionFenceTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 24,
+    "size": 11597,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/ApiFixtures.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 4,
+    "size": 310,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/AuthoritativeSyncTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 52,
+    "size": 20417,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/CollaborationLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 25,
+    "size": 18197,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/DatabaseIsolationTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 11,
+    "size": 2006,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/DiscoveryCollaborationUiTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 37,
+    "size": 16780,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/DiscoveryLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 22,
+    "size": 10259,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/ForwardLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 26,
+    "size": 28255,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/ForwardUiTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 19,
+    "size": 10052,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/GroupLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 47,
+    "size": 8653,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/LiveApiTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 15,
+    "size": 5380,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/Migration8To9Test.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 22,
+    "size": 12927,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/MigrationHistoryLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 26,
+    "size": 6255,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/ModelClosureTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 26,
+    "size": 18463,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/NativeForwardActions.kt",
+    "isTest": false,
+    "language": "kotlin",
+    "nodeCount": 24,
+    "size": 6061,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/NativeSelfStateHttpsTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 45,
+    "size": 22141,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/NativeSessionHttpsTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 40,
+    "size": 21272,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/NativeSessionLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 35,
+    "size": 21223,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/NativeUiTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 26,
+    "size": 7191,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/NotificationPrivacyTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 11,
+    "size": 2275,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/OwnDeletionLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 50,
+    "size": 10476,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/OwnPasswordLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 39,
+    "size": 7002,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/PersonalExportLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 50,
+    "size": 9239,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/ReceiptStorageLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 32,
+    "size": 8644,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/RoleAdmissionLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 24,
+    "size": 14649,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/SelfStateTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 74,
+    "size": 24266,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/StorageLifecycleTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 13,
+    "size": 8000,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/VoiceRecordingNativeTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 26,
+    "size": 5119,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/VoiceUploadApiNativeTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 27,
+    "size": 5142,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/VoiceUploadGlobalFloorNativeTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 22,
+    "size": 9083,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Instrumentation/VoiceUploadQueueNativeTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 30,
+    "size": 13373,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/GroupRulesTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 8,
+    "size": 672,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/IsolationTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 11,
+    "size": 2758,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/MigrationRulesTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 11,
+    "size": 2062,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/NativeStorageBudgetTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 9,
+    "size": 1429,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/OwnDeletionRulesTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 9,
+    "size": 1377,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/OwnPasswordRulesTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 10,
+    "size": 2293,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/PersonalExportFileTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 21,
+    "size": 4413,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/ReceiptRulesTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 13,
+    "size": 2870,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/SyncWireTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 11,
+    "size": 2437,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/VoiceRecordingRulesTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 11,
+    "size": 2175,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/Unit/VoiceUploadRulesTest.kt",
+    "isTest": true,
+    "language": "kotlin",
+    "nodeCount": 17,
+    "size": 5826,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/native_refresh.py/native_refresh.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 26,
+    "size": 11998,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/self_state_https.py/self_state_https.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 27,
+    "size": 16134,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/sync_build.py/sync_build.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 24,
+    "size": 10099,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Android/sync_instrument.py/sync_instrument.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 28,
+    "size": 12368,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets",
+    "isTest": true,
+    "language": "arkts",
+    "nodeCount": 28,
+    "size": 33625,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/OhosTest/ets/testability/TestAbility.ets",
+    "isTest": true,
+    "language": "arkts",
+    "nodeCount": 3,
+    "size": 107,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/OhosTest/ets/testrunner/OpenHarmonyTestRunner.ets",
+    "isTest": true,
+    "language": "arkts",
+    "nodeCount": 8,
+    "size": 457,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/Auth.test.cjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 27,
+    "size": 12633,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/AuthApi.test.cjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 22,
+    "size": 4692,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/Deletion.test.cjs/Deletion.test.cjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 26,
+    "size": 16097,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/Export.test.cjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 74,
+    "size": 21440,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/Group.test.cjs/Group.test.cjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 25,
+    "size": 15947,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/Migration.test.cjs/Migration.test.cjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 62,
+    "size": 21796,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/Password.test.cjs/Password.test.cjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 27,
+    "size": 13251,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/Policies.test.mjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 5,
+    "size": 15533,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/Receipt.test.cjs/Receipt.test.cjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 58,
+    "size": 26142,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/RunAuth.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 25,
+    "size": 3937,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/RunDeletion.mjs/RunDeletion.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 21,
+    "size": 3318,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/RunExport.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 24,
+    "size": 4174,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/RunGroup.mjs/RunGroup.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 21,
+    "size": 3281,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/RunMigration.mjs/RunMigration.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 23,
+    "size": 3786,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/RunPassword.mjs/RunPassword.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 21,
+    "size": 3271,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/RunReceipt.mjs/RunReceipt.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 23,
+    "size": 3686,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/RunSync.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 25,
+    "size": 3812,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/Sync.test.cjs",
+    "isTest": true,
+    "language": "javascript",
+    "nodeCount": 40,
+    "size": 34347,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/HarmonyOS/Unit/SyncSqlite.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 13,
+    "size": 760,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/account-deletion-cleanup.cjs/account-deletion-cleanup.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 9,
+    "size": 7750,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/account-deletion.cjs/account-deletion.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 22,
+    "size": 25676,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/admin-integration.cjs/admin-integration.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 22,
+    "size": 14086,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 44,
+    "size": 61469,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/attachment-rules.cjs/attachment-rules.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 15,
+    "size": 14910,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/audio-browser.cjs/audio-browser.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 19,
+    "size": 22873,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/audio-rules.cjs/audio-rules.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 26,
+    "size": 12994,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/auth-https.cjs/auth-https.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 20,
+    "size": 16598,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 19,
+    "size": 29159,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/browser.cjs/browser.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 5,
+    "size": 11448,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/business-global.cjs/business-global.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 15,
+    "size": 12879,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/data-export.cjs/data-export.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 23,
+    "size": 29046,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/draft-recovery.cjs/draft-recovery.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 19,
+    "size": 22253,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/forward.cjs/forward.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 15,
+    "size": 23440,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/global-facts.cjs/global-facts.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 16,
+    "size": 14891,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/group-governance.cjs/group-governance.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 21,
+    "size": 32720,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/h5-browser.cjs/h5-browser.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 11,
+    "size": 12013,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/integration.cjs/integration.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 14,
+    "size": 64447,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/migration.cjs/migration.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 25,
+    "size": 44086,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 14,
+    "size": 9725,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/owned-web-runtime.cjs/owned-web-runtime.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 30,
+    "size": 9581,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/password-change.cjs/password-change.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 27,
+    "size": 28159,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/receipt-context.cjs/receipt-context.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 20,
+    "size": 18065,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/self-state-https.cjs/self-state-https.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 54,
+    "size": 28364,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/self-state.cjs/self-state.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 18,
+    "size": 30376,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/sync-https.cjs/sync-https.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 16,
+    "size": 18633,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/sync-protocol.cjs/sync-protocol.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 14,
+    "size": 10558,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/sync-store.cjs/sync-store.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 20,
+    "size": 19735,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/Web/sync-view.cjs/sync-view.cjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 23,
+    "size": 19336,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMAuthCoordinatorTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 41,
+    "size": 50866,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMAuthCredentialTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 16,
+    "size": 5533,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMAuthRefreshIntegrationTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 16,
+    "size": 15510,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMAuthoritativeSyncTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 54,
+    "size": 38684,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMCompletionTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 17,
+    "size": 21486,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMDataExportTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 27,
+    "size": 14596,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMForwardTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 32,
+    "size": 40680,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMIntegrationFixture.swift",
+    "isTest": false,
+    "language": "swift",
+    "nodeCount": 10,
+    "size": 1486,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMLifecycleTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 14,
+    "size": 14094,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMMediaTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 9,
+    "size": 4356,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMMessageListTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 20,
+    "size": 27254,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMMigrationServiceTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 32,
+    "size": 19872,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMMigrationTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 49,
+    "size": 18255,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMNotificationTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 7,
+    "size": 2274,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMPersonalStateTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 27,
+    "size": 15362,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMReceiptServiceTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 57,
+    "size": 36890,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMReceiptStorageTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 38,
+    "size": 16259,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMSelfStateIntegrationTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 24,
+    "size": 23291,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMSendAdmissionTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 25,
+    "size": 22492,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMSessionTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 12,
+    "size": 4149,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/IMStorageTests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 14,
+    "size": 9124,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/UI/IMMessageListUITests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 7,
+    "size": 9260,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/UI/IMSelfStateUITests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 8,
+    "size": 6057,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/UI/IMUITests.swift",
+    "isTest": true,
+    "language": "swift",
+    "nodeCount": 10,
+    "size": 18636,
+    "errors": []
+  },
+  {
+    "path": "测试/前端/iOS/personal_state.py/personal_state.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 23,
+    "size": 18273,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/security_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 4870,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/account_deletion_admission.mjs/account_deletion_admission.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 27,
+    "size": 4775,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/account_deletion_admission_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 12,
+    "size": 12822,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/account_deletion_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 34,
+    "size": 24271,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/account_deletion_read_floor_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 4,
+    "size": 2391,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/admin_mfa.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 61,
+    "size": 9139,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/avatar_codec_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 2637,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/avatar_reports.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 76,
+    "size": 10048,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/backup_restore.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 87,
+    "size": 12275,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/closure_audit_completed_receipt_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 6811,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/closure_audit_deletion_fairness_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 5437,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/cloud_drafts.py/cloud_drafts.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 28,
+    "size": 14507,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/cloud_drafts.py/restore.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 22,
+    "size": 12357,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/contact_relationship.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 47,
+    "size": 8039,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/deployment_disk_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 1329,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/deployment_restore_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 33,
+    "size": 22635,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/draft_reply_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 3,
+    "size": 1513,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/export_fence_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 25,
+    "size": 13919,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/export_public.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 65,
+    "size": 8904,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/forward_compatibility.py/forward_compatibility.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 20,
+    "size": 13301,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/forward_fences.py/forward_fences.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 20,
+    "size": 10283,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/forward_gateway_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 26,
+    "size": 14345,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/forward_refs.py/forward_refs.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 36,
+    "size": 20116,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/forward_restore.py/forward_restore.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 25,
+    "size": 12274,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/fresh_migrations_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 4169,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/group_governance_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 14,
+    "size": 8726,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/group_manager_original_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 19,
+    "size": 12918,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/integration.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 57,
+    "size": 7862,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/media_owner_floor_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 2695,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/media_retention_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 33,
+    "size": 21962,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/media_upload_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 23,
+    "size": 18146,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/media_webm_browser_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 1853,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/media_webm_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 26,
+    "size": 12855,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/mentions_announcements.py/mentions_announcements.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 33,
+    "size": 26125,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/message_read_points_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 22,
+    "size": 12871,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/message_read_summary_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 4380,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/object_receipts.mjs/https.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 26,
+    "size": 10092,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/object_receipts.mjs/object_receipts.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 28,
+    "size": 4930,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/object_receipts.mjs/realm.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 22,
+    "size": 12162,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/password_change.mjs/password_change.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 27,
+    "size": 4693,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/password_change_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 35,
+    "size": 23074,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/password_change_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 4257,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_export_inventory_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 3034,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_export_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 23,
+    "size": 10788,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_exports.py/all_media.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 11,
+    "size": 4485,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_exports.py/compatibility.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 14,
+    "size": 9260,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_exports.py/final.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 12,
+    "size": 5022,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_exports.py/negative.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 13,
+    "size": 5696,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_exports.py/personal_exports.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 62,
+    "size": 39228,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_exports.py/realm.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 29,
+    "size": 19069,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_exports.py/report_restore.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 16,
+    "size": 8987,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_exports.py/reports.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 18,
+    "size": 8125,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/personal_exports.py/restore.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 27,
+    "size": 17112,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/receipt_capabilities_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 24,
+    "size": 19171,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/reset_grant.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 49,
+    "size": 6200,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/retention_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 32,
+    "size": 26512,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/role_qualification.py/role_qualification.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 15,
+    "size": 11772,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/s2_pg_guard_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 14,
+    "size": 5836,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/search_favorites.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 40,
+    "size": 7249,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/search_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 4,
+    "size": 1126,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/self_draft_floor_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 23,
+    "size": 18922,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/self_draft_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 4712,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/self_read_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 23,
+    "size": 16563,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/self_state_sync.py/self_state_sync.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 43,
+    "size": 26391,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/self_views_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 12486,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/self_views_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 7,
+    "size": 3763,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/send_admission.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 57,
+    "size": 8298,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/send_admission_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 22,
+    "size": 13319,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/session_closure.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 34,
+    "size": 3592,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/session_refresh.py/session_refresh.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 43,
+    "size": 33784,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/session_refresh_restore.py/session_refresh_restore.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 18,
+    "size": 9163,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/session_refresh_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 15,
+    "size": 6164,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/source_preferences_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 21,
+    "size": 14731,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_migration_fair_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 9,
+    "size": 4436,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_migration_forward_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 5,
+    "size": 2133,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_migration_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 34,
+    "size": 21818,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_object_receipts_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 30,
+    "size": 18753,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_outbox_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 13,
+    "size": 16991,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_receipts_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 21,
+    "size": 11306,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_receipts_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 17,
+    "size": 5392,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_register_pg_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 18,
+    "size": 6122,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_restore.py/sync_restore.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 46,
+    "size": 37513,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_schema_protocol_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 6,
+    "size": 3316,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_schemas_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 23,
+    "size": 17818,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_snapshot.py/sync_snapshot.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 35,
+    "size": 18924,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/接口/sync_snapshot_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 34,
+    "size": 24710,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/规范入口HTTPS.py/规范入口HTTPS.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 18,
+    "size": 8439,
+    "errors": []
+  },
+  {
+    "path": "测试/后端/运行测试.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 14,
+    "size": 1614,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/Linux/验证入口.mjs/验证入口.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 43,
+    "size": 17945,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/MacOS/ContractSmoke.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 16,
+    "size": 2622,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/MacOS/NATS协议.mjs/NATS协议.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 24,
+    "size": 4567,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/MacOS/反部署安全.mjs/反部署安全.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 22,
+    "size": 11109,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/MacOS/工作树搬迁.py/工作树搬迁.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 12,
+    "size": 4793,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/MacOS/成对原生集成.py/成对原生集成.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 29,
+    "size": 14744,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/MacOS/菜单缩放.py/菜单缩放.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 26,
+    "size": 10044,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/二维码/终端二维码.py/渲染终端码.js",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 2,
+    "size": 3659,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/二维码/终端二维码.py/终端二维码.py",
+    "isTest": false,
+    "language": "python",
+    "nodeCount": 20,
+    "size": 9727,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/二维码/验证二维码.mjs/验证二维码.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 16,
+    "size": 2355,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/依赖版本/jobsim_tools_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 11,
+    "size": 3148,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/依赖版本/main_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 32,
+    "size": 14397,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/依赖版本/module_report_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 19,
+    "size": 8349,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/依赖版本/module_report_unix_test.go",
+    "isTest": true,
+    "language": "go",
+    "nodeCount": 10,
+    "size": 1622,
+    "errors": []
+  },
+  {
+    "path": "测试/部署/依赖版本/运行测试.mjs/运行测试.mjs",
+    "isTest": false,
+    "language": "javascript",
+    "nodeCount": 14,
+    "size": 1142,
+    "errors": []
+  },
+  {
+    "path": "部署/公共组件/依赖版本/jobsim_tools.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 12,
+    "size": 3944,
+    "errors": []
+  },
+  {
+    "path": "部署/公共组件/依赖版本/main.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 45,
+    "size": 16222,
+    "errors": []
+  },
+  {
+    "path": "部署/公共组件/依赖版本/module_report.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 30,
+    "size": 8805,
+    "errors": []
+  },
+  {
+    "path": "部署/公共组件/依赖版本/process_unix.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 8,
+    "size": 541,
+    "errors": []
+  },
+  {
+    "path": "部署/公共组件/依赖版本/process_windows.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 23,
+    "size": 3824,
+    "errors": []
+  },
+  {
+    "path": "部署/公共组件/地址二维码/main.go",
+    "isTest": false,
+    "language": "go",
+    "nodeCount": 27,
+    "size": 9488,
+    "errors": []
+  }
+]

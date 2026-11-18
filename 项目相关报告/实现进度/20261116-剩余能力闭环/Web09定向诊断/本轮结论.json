@@ -1,0 +1,194 @@
+{
+  "startedAt": "2026-11-17T07:49:15.698Z",
+  "finishedAt": "2026-11-17T07:49:29.851Z",
+  "maximumRuns": 10,
+  "stoppedOnFirstFailure": false,
+  "actualRuns": 10,
+  "failedRuns": [],
+  "productionUnchanged": true,
+  "originalTestAssertionsRetained": true,
+  "realBackend": false,
+  "interpretation": "Bounded diagnostics only. Passing attempts do not explain or repair the original Web09 failure.",
+  "rounds": [
+    {
+      "index": 1,
+      "variant": {
+        "trailingSlash": true,
+        "concurrentImports": false
+      },
+      "mode": "base-with-trailing-slash+sequential-cold-module-imports",
+      "url": "http://127.0.0.1:52468/",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/1/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:15.823Z",
+      "elapsedSeconds": 1.808,
+      "exitCode": 0,
+      "minimumFreeBytes": 13760221184,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第01轮/浏览器/浏览器协议结果.json"
+    },
+    {
+      "index": 2,
+      "variant": {
+        "trailingSlash": false,
+        "concurrentImports": false
+      },
+      "mode": "base-no-trailing-slash+sequential-cold-module-imports",
+      "url": "http://127.0.0.1:52483",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/2/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:17.639Z",
+      "elapsedSeconds": 1.271,
+      "exitCode": 0,
+      "minimumFreeBytes": 13746601984,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第02轮/浏览器/浏览器协议结果.json"
+    },
+    {
+      "index": 3,
+      "variant": {
+        "trailingSlash": true,
+        "concurrentImports": true
+      },
+      "mode": "base-with-trailing-slash+parallel-cold-module-imports",
+      "url": "http://127.0.0.1:52493/",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/3/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:18.917Z",
+      "elapsedSeconds": 1.278,
+      "exitCode": 0,
+      "minimumFreeBytes": 13733380096,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第03轮/浏览器/浏览器协议结果.json"
+    },
+    {
+      "index": 4,
+      "variant": {
+        "trailingSlash": false,
+        "concurrentImports": true
+      },
+      "mode": "base-no-trailing-slash+parallel-cold-module-imports",
+      "url": "http://127.0.0.1:52503",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/4/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:20.201Z",
+      "elapsedSeconds": 1.265,
+      "exitCode": 0,
+      "minimumFreeBytes": 13714890752,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第04轮/浏览器/浏览器协议结果.json"
+    },
+    {
+      "index": 5,
+      "variant": {
+        "trailingSlash": true,
+        "concurrentImports": false
+      },
+      "mode": "base-with-trailing-slash+sequential-cold-module-imports",
+      "url": "http://127.0.0.1:52515/",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/5/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:21.473Z",
+      "elapsedSeconds": 1.311,
+      "exitCode": 0,
+      "minimumFreeBytes": 13713285120,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第05轮/浏览器/浏览器协议结果.json"
+    },
+    {
+      "index": 6,
+      "variant": {
+        "trailingSlash": false,
+        "concurrentImports": false
+      },
+      "mode": "base-no-trailing-slash+sequential-cold-module-imports",
+      "url": "http://127.0.0.1:52526",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/6/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:22.790Z",
+      "elapsedSeconds": 1.27,
+      "exitCode": 0,
+      "minimumFreeBytes": 13708169216,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第06轮/浏览器/浏览器协议结果.json"
+    },
+    {
+      "index": 7,
+      "variant": {
+        "trailingSlash": true,
+        "concurrentImports": true
+      },
+      "mode": "base-with-trailing-slash+parallel-cold-module-imports",
+      "url": "http://127.0.0.1:52536/",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/7/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:24.066Z",
+      "elapsedSeconds": 1.314,
+      "exitCode": 0,
+      "minimumFreeBytes": 13697273856,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第07轮/浏览器/浏览器协议结果.json"
+    },
+    {
+      "index": 8,
+      "variant": {
+        "trailingSlash": false,
+        "concurrentImports": true
+      },
+      "mode": "base-no-trailing-slash+parallel-cold-module-imports",
+      "url": "http://127.0.0.1:52547",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/8/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:25.387Z",
+      "elapsedSeconds": 1.344,
+      "exitCode": 0,
+      "minimumFreeBytes": 13677559808,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第08轮/浏览器/浏览器协议结果.json"
+    },
+    {
+      "index": 9,
+      "variant": {
+        "trailingSlash": true,
+        "concurrentImports": false
+      },
+      "mode": "base-with-trailing-slash+sequential-cold-module-imports",
+      "url": "http://127.0.0.1:52557/",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/9/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:26.737Z",
+      "elapsedSeconds": 1.302,
+      "exitCode": 0,
+      "minimumFreeBytes": 13659426816,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第09轮/浏览器/浏览器协议结果.json"
+    },
+    {
+      "index": 10,
+      "variant": {
+        "trailingSlash": true,
+        "concurrentImports": true
+      },
+      "mode": "base-with-trailing-slash+parallel-cold-module-imports",
+      "url": "http://127.0.0.1:52569/",
+      "freshViteCache": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AuthDiagnostic/1794901755698/10/Vite",
+      "freshBrowserProcessAndContext": true,
+      "startedAt": "2026-11-17T07:49:28.046Z",
+      "elapsedSeconds": 1.804,
+      "exitCode": 0,
+      "minimumFreeBytes": 13656838144,
+      "inputsUnchanged": true,
+      "completedGroups": 16,
+      "result": "项目相关报告/实现进度/20261116-剩余能力闭环/Web09定向诊断/第10轮/浏览器/浏览器协议结果.json"
+    }
+  ]
+}

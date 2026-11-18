@@ -59,7 +59,9 @@
 | [self_draft.go](../self_draft.go)／[self_draft_floor.go](../self_draft_floor.go) | 本人独立文本云草稿、原body只读结果、加密prepared intent／后台续跑、CAS与不可回退floor；不改正式Outbox |
 | [self_draft_safety.go](../self_draft_safety.go)／[self_draft_sync.go](../self_draft_sync.go) | typed无正文journal／恢复拒旧、reply失效保ownedText及S2 draft指针触发器 |
 | [draft_reply.go](../draft_reply.go)／[draft_reply_holders.go](../draft_reply_holders.go)／[draft_reply_revocation.go](../draft_reply_revocation.go) | dr1原读者资格、prepared／active／revoking holder、原selector账本与源／成员／principal／forward后代回调排空 |
-| [media.go](../media.go)／[media_format.go](../media_format.go) | 私有字节、消息授权与容器识别 |
+| [media.go](../media.go)／[media_format.go](../media_format.go)／[media_webm.go](../media_webm.go) | 私有字节、消息授权及有界BMFF／WebM实际轨道识别 |
+| [media_upload.go](../media_upload.go)／[media_upload_model.go](../media_upload_model.go)／[media_upload_identity.go](../media_upload_identity.go) | [稳定媒体上传合同](../接口契约/README.md#stable-media-upload)、原nonce／实际身份与SHA绑定、准备原体保全、不覆盖发布及纯查原结果 |
+| [media_upload_safety.go](../media_upload_safety.go)／[media_upload_cleanup.go](../media_upload_cleanup.go) | 最小journal责任、恢复缺单retired floor、owner有界精确清理staging／final，防止旧upload重建已清理UUID |
 | [avatar.go](../avatar.go)／[avatar_media.go](../avatar_media.go)／[asset_migrations.go](../asset_migrations.go) | 头像owner prepared／媒体规范化与原结果、最小举报模型 |
 | [reports.go](../reports.go) | 当前源授权、本人举报与强验证处置 |
 | [journal.go](../journal.go)／[operations.go](../operations.go) | 独立最小日志、认证加密归档和恢复门禁 |

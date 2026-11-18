@@ -1,0 +1,95 @@
+{
+  "base": "http://127.0.0.1:65065",
+  "configFile": false,
+  "proxy": false,
+  "results": [
+    {
+      "name": "auth-session",
+      "script": "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "startedAt": "2026-11-16T14:59:11.745Z",
+      "finishedAt": "2026-11-16T14:59:15.810Z",
+      "minFree": 25393750016,
+      "report": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/Web-CLI/auth-session"
+    },
+    {
+      "name": "sync-store",
+      "script": "测试/前端/Web/sync-store.cjs/sync-store.cjs",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "startedAt": "2026-11-16T14:59:15.810Z",
+      "finishedAt": "2026-11-16T14:59:19.898Z",
+      "minFree": 25396113408,
+      "report": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/Web-CLI/sync-store"
+    },
+    {
+      "name": "sync-view",
+      "script": "测试/前端/Web/sync-view.cjs/sync-view.cjs",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "startedAt": "2026-11-16T14:59:19.899Z",
+      "finishedAt": "2026-11-16T14:59:22.112Z",
+      "minFree": 25393025024,
+      "report": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/Web-CLI/sync-view"
+    },
+    {
+      "name": "outbox-proof",
+      "script": "测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "startedAt": "2026-11-16T14:59:22.112Z",
+      "finishedAt": "2026-11-16T14:59:24.244Z",
+      "minFree": 25391906816,
+      "report": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/Web-CLI/outbox-proof"
+    },
+    {
+      "name": "global-facts",
+      "script": "测试/前端/Web/global-facts.cjs/global-facts.cjs",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "startedAt": "2026-11-16T14:59:24.244Z",
+      "finishedAt": "2026-11-16T14:59:26.045Z",
+      "minFree": 25397366784,
+      "report": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/Web-CLI/global-facts"
+    },
+    {
+      "name": "self-state",
+      "script": "测试/前端/Web/self-state.cjs/self-state.cjs",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "startedAt": "2026-11-16T14:59:26.046Z",
+      "finishedAt": "2026-11-16T14:59:30.124Z",
+      "minFree": 25390612480,
+      "report": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/Web-CLI/self-state"
+    },
+    {
+      "name": "draft-recovery",
+      "script": "测试/前端/Web/draft-recovery.cjs/draft-recovery.cjs",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "startedAt": "2026-11-16T14:59:30.125Z",
+      "finishedAt": "2026-11-16T14:59:34.913Z",
+      "minFree": 25388085248,
+      "report": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/Web-CLI/draft-recovery"
+    },
+    {
+      "name": "data-export",
+      "script": "测试/前端/Web/data-export.cjs/data-export.cjs",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "startedAt": "2026-11-16T14:59:34.914Z",
+      "finishedAt": "2026-11-16T14:59:39.510Z",
+      "minFree": 25380601856,
+      "report": "/Users/jobs/Documents/GitHub/JobsIM/项目相关报告/测试/回归/20261116-全项目回归/Web-CLI/data-export"
+    }
+  ]
+}

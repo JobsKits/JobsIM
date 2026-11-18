@@ -1,0 +1,25 @@
+✔ raw Go JSON slices preserve escapes, nested quoted delimiters and large string counters (30.327125ms)
+✔ real AES-GCM and raw primary digest decode text without Go reencoding (15.423875ms)
+✔ original attachment bytes match independent manifest size and digest (16.667916ms)
+✔ capsule tampering, wrong target and AAD never release plaintext (7.34825ms)
+✔ manifest envelope cannot be replaced by equivalent reencoded JSON or qualified flags (0.764416ms)
+✔ install token binds original physical target, epoch, digest and five second window (0.597375ms)
+✔ unknown pairing first performs pure lookup and never creates automatically (42.647917ms)
+✔ lost first mutation retains original nonce and no password or proof in metadata (4.081958ms)
+✔ successor family may query but cannot create original unseen operation (1.242459ms)
+✔ forwarded text is reference-only; definitive revoke erases, unknown hides body (2.554791ms)
+✔ forwarded text durable selection is allowed, secret metadata fields are rejected (0.552125ms)
+✔ installed_reported with local committed digest does not fetch a new key (1.662833ms)
+✔ stopped service accepts neither list publication nor networking (0.379875ms)
+✔ production SQLite repository installs readable original text plus a lawful zero-byte object in one batch (1017.453208ms)
+✔ lawful cloud_only archive may replace a cloud-unavailable local placeholder, never a deleted floor (846.182459ms)
+✔ known global floor blocks staging any private object and exposes no partial history (728.496708ms)
+✔ history transaction failure publishes no batch and stale-context cleanup removes only unindexed owned staging (950.187541ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4104.354042

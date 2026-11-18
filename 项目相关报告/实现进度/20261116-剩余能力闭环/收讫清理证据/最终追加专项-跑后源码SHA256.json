@@ -1,0 +1,18 @@
+{
+  "files": {
+    "代码/后端/Go/account_deletion.go": "9bdc4fb2985207791b80b25b31784042f5ca3b23c1036da95824eea03e7f3f1a",
+    "代码/后端/Go/account_deletion_governance.go": "294bc575f02587731ac06fe1e8766ad72276a18865bc12c10bf5961ea8944956",
+    "代码/后端/Go/account_deletion_identity.go": "3013d63fe54e551a48517560c1d732f75504af0234d96f5d78823a31fb8d1d40",
+    "代码/后端/Go/account_deletion_owner.go": "0d2a2679f39599398bb4b06fbbf9d786da06b757aea90afcd401da1ba856ffb4",
+    "代码/后端/Go/account_deletion_proof.go": "e9a0272cef0a4ab6772c11172640c7d95d1f735dbe9a6b313a5f3ccfce92b04f",
+    "代码/后端/Go/account_deletion_safety.go": "f64675a5790ec9d691fabef7a7adc67b6f42a2abc4dc85a863fb0275ae8536ec",
+    "代码/后端/Go/password_change.go": "93d1c4cdca8dbadc0b3eaf51ed8a409e1416cae6ff5b886e0d3a31035368fb61",
+    "测试/后端/接口/account_deletion_pg_test.go": "57eed004391e9e58dfbaef79b9d9963844f1686de37b02f8c68864fa0b8ef769",
+    "代码/后端/Go/media_retention.go": "0cef468da453fda3dffaac0f9f294ea311de968f40948684640556b036d39e60",
+    "代码/后端/Go/media_legacy_erasure.go": "6c0ea10ed87eb8933de0b25f453684cd67178249e58b61a43b335c7535308703",
+    "代码/后端/Go/media_restore.go": "7828328f2d70db4c55c8147f3a9e0a842aab735fb15e4f43a95d3d24a35e8c14",
+    "测试/后端/接口/media_retention_pg_test.go": "91ff332ccf594519bfa385d1c91401848b5e191692b145657c419557cc6ee92b"
+  },
+  "unchanged": true,
+  "changed": []
+}

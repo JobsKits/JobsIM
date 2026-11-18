@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "scope": "real Chrome IndexedDB with simulated business API; no real server, no App GUI assertion",
+  "checks": [
+    "a complete direct DELETE DTO commits terminal cleanup and notifies visible holders before returning without rewriting Outbox",
+    "a forward response started before a new global fact cannot reopen its pre-delete projection",
+    "known terminals mask later exact-read and paged search bodies even when their owner version is higher",
+    "malformed business tombstones and raw sync pages cannot add trusted global facts",
+    "repeating a terminal does not keep invalidating projections and a later exact read can restore an unaffected forward",
+    "a full tombstone must match the original message route or conversation filter and original write client ID before permanent cleanup",
+    "an in-flight private attachment cannot publish bytes after a newer global observation",
+    "private media rereads shared durable facts before returning even when the peer writer has not published to this module",
+    "a failed terminal transaction still clears current holders through a failure notice and only reports recovery after durable retry"
+  ],
+  "errors": [],
+  "hashes": {
+    "代码/前端/Web/Src/MessageFacts.ts": "9b632494d74bb22a1b71f1c0c6bd573ad73d0808c6cd0045be4ff7459221eee8",
+    "代码/前端/Web/Src/GlobalMessages.ts": "e0478fcdcfcd0d3c733fd64a99e7c2a0e66ad28a27edea1f3c85a15dc20e3eae",
+    "代码/前端/Web/Src/StorageDatabase.ts": "93b3badb1aa759c06e13bc07982a9e69803fdcc41752c56374171b12414579aa",
+    "代码/前端/Web/Src/api.ts": "319dec1d73e4355b7f43517e4d5615302be20f21b45ed624d69c5317e447a89f",
+    "代码/前端/Web/Src/AuthSession.ts": "b3073d6f452a2164953d626814b3330a63daa7724d610507a906b758dda0f25e",
+    "代码/前端/Web/Src/storage.ts": "3f31b557235bf788c7a30aa7cec878eb1cca893ff4f2c0d308580f100715fe87",
+    "代码/前端/Web/Src/SyncStore.ts": "ad92f57aa06ba5a78201728fe0e86ebaa05c94d37565c5e8c686e49c158759ac",
+    "代码/前端/Web/Src/SyncView.ts": "cea1be4b73b5143d27abeb3cff780bca8b7ab00ab14dbadbe791c1b8a63dd533",
+    "代码/前端/Web/Src/SyncProtocol.ts": "9f9dc0866de08fc5f2e39dd5c5bbc16e520537b2f210fa6d8570acb30783ddc6",
+    "代码/前端/Web/Src/forward.ts": "688de48c837608a7f36f1452fe79155d819946f97499e8bead0e7872ebfa9e0d",
+    "代码/前端/Web/Src/types.ts": "5c5a6b984e2a7e0591fec3c47ed5bd9bfe36b2aba60f3a25e1164df0cdd21ce7",
+    "代码/前端/Web/Src/App.tsx": "980b91336c8470b0ab7085d7d31a27cfbb68776e712408298b9b764450777d4b",
+    "代码/前端/Web/Src/PrivateMedia.tsx": "8f7155ea9b2a48e0ac348ef78e84601894a48a0fdbc718dca98d993013902e35",
+    "测试/前端/Web/business-global.cjs/business-global.cjs": "3c7aa5a1dec193ee683355a71a255c32368c352b5ecda59769ca860672de1e07"
+  },
+  "date": "2026-11-17T22:42:18.800Z"
+}

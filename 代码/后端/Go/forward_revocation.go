@@ -102,7 +102,10 @@ func (a *App) freezeForwardHolders(ctx context.Context, message, operation strin
 		}
 	}
 	_, e = a.DB.Exec(ctx, `UPDATE message.export_holders SET state='cleared' WHERE message_id=$1 AND state='revoking'`, message)
-	return e
+	if e != nil {
+		return e
+	}
+	return a.drainMigrations(ctx)
 }
 
 func (a *App) finishForwardRevocation(ctx context.Context, operation string) (bool, error) {

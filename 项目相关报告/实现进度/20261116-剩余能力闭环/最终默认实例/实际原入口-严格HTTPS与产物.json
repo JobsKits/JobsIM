@@ -1,0 +1,143 @@
+{
+  "at": "2026-11-17T14:59:10+0800",
+  "entry": "部署/MacOS/部署运行.command/部署运行.command run --yes",
+  "sourceRoot": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM",
+  "sameDeploymentId": true,
+  "sameCA": true,
+  "connection": {
+    "deploymentId": "59c4a138-3d17-4ede-9bde-ef7cd1aa8fb3",
+    "name": "JobsIM",
+    "url": "https://127.0.0.1:9443",
+    "protocolVersion": "1",
+    "caSha256": "CC:55:80:C3:C7:D4:90:FB:40:1B:7B:85:8A:6A:54:10:17:F7:7F:BF:31:64:8C:50:6D:62:B3:0B:A5:B0:A3:F0"
+  },
+  "sourceInputCount": 228,
+  "inputMismatches": [],
+  "serverSHA256": "c384a329f0686dda9947aeb441ddc47e586c9da2dff825c4d462953eb38071a8",
+  "webRuntime": "/Users/jobs/Library/Application Support/JobsIM/Instances/a4c6d9d2688afce6/WebDist.OTGg8n",
+  "webCandidate": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/ReceiptDeclaration/1794897541275/Production",
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 200,
+      "bytes": 36,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "a02f39dfd6a3e328d094e80d5f640e15650e9ac1d8a641b2c75dc929b0ea138f"
+    },
+    {
+      "path": "/api/bootstrap",
+      "status": 200,
+      "bytes": 931,
+      "contentType": "application/json; charset=utf-8",
+      "sha256": "db9939189bd1dbb99d63d9f77e677954610a6958fbd6a40d1b6b5756fc4ad68d"
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 446,
+      "contentType": "text/html; charset=utf-8",
+      "sha256": "bcddb207f7c589e3d6310d1cdd37b70ca17568e4485184e8bdd3802e408c2379"
+    },
+    {
+      "path": "/assets/index-B3U1AnNU.js",
+      "status": 200,
+      "bytes": 838667,
+      "sha256": "ba564110169077f714cd2ece90cb18bc64ba2a1911754ccc54de5687cd16839b",
+      "matchesCandidateBytes": true
+    },
+    {
+      "path": "/assets/index-Cavxj1zD.css",
+      "status": 200,
+      "bytes": 32223,
+      "sha256": "3e3ef20c2c45176a9e23ef8cdefa2e81bc51f815772497fb1e2483c801e94a2c",
+      "matchesCandidateBytes": true
+    }
+  ],
+  "listenPorts": {
+    "9443": [
+      "p58119",
+      "cJobsIMd",
+      "f24",
+      "n127.0.0.1:9443"
+    ],
+    "16543": [
+      "p57815",
+      "cpostgres",
+      "f5",
+      "n127.0.0.1:16543"
+    ],
+    "16544": [
+      "p57833",
+      "cpostgres",
+      "f5",
+      "n127.0.0.1:16544"
+    ],
+    "4222": [
+      "p58087",
+      "cnats-server",
+      "f6",
+      "n127.0.0.1:4222"
+    ],
+    "18101": [
+      "p58119",
+      "cJobsIMd",
+      "f7",
+      "n127.0.0.1:18101"
+    ],
+    "18102": [
+      "p58119",
+      "cJobsIMd",
+      "f9",
+      "n127.0.0.1:18102"
+    ],
+    "18103": [
+      "p58119",
+      "cJobsIMd",
+      "f11",
+      "n127.0.0.1:18103"
+    ],
+    "18104": [
+      "p58119",
+      "cJobsIMd",
+      "f13",
+      "n127.0.0.1:18104"
+    ],
+    "18105": [
+      "p58119",
+      "cJobsIMd",
+      "f15",
+      "n127.0.0.1:18105"
+    ],
+    "18106": [
+      "p58119",
+      "cJobsIMd",
+      "f17",
+      "n127.0.0.1:18106"
+    ],
+    "18107": [
+      "p58119",
+      "cJobsIMd",
+      "f19",
+      "n127.0.0.1:18107"
+    ],
+    "18108": [
+      "p58119",
+      "cJobsIMd",
+      "f21",
+      "n127.0.0.1:18108"
+    ],
+    "18109": [
+      "p58119",
+      "cJobsIMd",
+      "f23",
+      "n127.0.0.1:18109"
+    ]
+  },
+  "backup": {
+    "path": "/Users/jobs/Documents/JobsIMBackups/a4c6d9d2688afce6/JobsIM-20261117-145631-57533.cms",
+    "sha256": "a7891bcebe22adcacec01bfda8f0d78ec37fe616dea39c5fc87e02012c930d81",
+    "decryptedManifestExists": true
+  },
+  "testActorsCreated": false,
+  "freeBytes": 12438130688
+}

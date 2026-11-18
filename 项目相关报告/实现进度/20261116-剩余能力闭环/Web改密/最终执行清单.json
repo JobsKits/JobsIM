@@ -1,0 +1,37 @@
+{
+  "results": [
+    {
+      "name": "password-change",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "minFree": 12075192320,
+      "at": "2026-11-16T16:21:12.610Z"
+    },
+    {
+      "name": "auth-session",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "minFree": 12071931904,
+      "at": "2026-11-16T16:21:14.223Z"
+    },
+    {
+      "name": "data-export",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "minFree": 12054249472,
+      "at": "2026-11-16T16:21:17.245Z"
+    },
+    {
+      "name": "browser",
+      "code": 0,
+      "signal": null,
+      "reason": "completed",
+      "minFree": 12048220160,
+      "at": "2026-11-16T16:21:18.977Z"
+    }
+  ],
+  "proxy": false
+}

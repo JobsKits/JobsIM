@@ -1,0 +1,58 @@
+{
+  "recordedAt": "2026-11-18T07:59:25.155391+00:00",
+  "scope": "Auth UI only; source and static validation, no new build/device/simulator execution",
+  "sourceFrozen": true,
+  "frozenInputCount": 25,
+  "inputDrift": [],
+  "swiftParse": {
+    "files": 11,
+    "exitCode": 0,
+    "typecheck": false
+  },
+  "localization": {
+    "newKeysEach": 24,
+    "totalKeysEach": 437,
+    "languages": 10,
+    "plutilPass": 10,
+    "existingChanges": "avatar zh-Hans/zh-Hant only"
+  },
+  "construction": {
+    "authIssues": [],
+    "allReportedIssues": 4,
+    "scope": "all self-maintained app and JobsIM Pods; other-owner issues reported, not edited",
+    "log": "construction-audit-all.log"
+  },
+  "chains": "heuristic all-source log retained; dsl_methods=0 and domain receiver repetitions are not blanket product defects or a pass claim",
+  "contrastMinimumStatic": 5.013198670487272,
+  "background": {
+    "source": "Commons / James Wheeler / CC0 / original 2017, source record maintained by root",
+    "path": "代码/前端/iOS/JobsIM/Resource/AuthMedia/AuthBackground.jpg",
+    "sha1": "68404a772e167a8232dfa6489760206b9b3dfcf1",
+    "imageIOThumbnailMaximum": 1600,
+    "default": "bundled image",
+    "video": "bundled optional, source only; muted and lifecycle-paused"
+  },
+  "contracts": {
+    "remember": "profile-specific; no automatic login, success + same connection + verified pair; no demo password persistence",
+    "demo": "dedicated service API and same-profile RAM candidate, cleartext prefill; explicit login",
+    "settings": "independent navigation push; original TLS/CA/descriptor confirmation preserved",
+    "authUnknownResult": "original proof prompt and request retry preserved; new connection clears old UI request signature"
+  },
+  "uiIdentifiers": [
+    "auth.settings",
+    "auth.cardTitle",
+    "auth.password.visibility",
+    "auth.confirmPassword.visibility",
+    "auth.rememberPassword",
+    "auth.modeSwitch"
+  ],
+  "unverified": [
+    "typecheck/build against selected modules",
+    "actual layout/theme/keyboard and long translations",
+    "actual remember Keychain UI path",
+    "TLS/document picker/device behavior",
+    "dedicated demo host startup/sign-in",
+    "video playback/lifecycle on target"
+  ],
+  "noAppSceneSessionOrThirdPartyModified": true
+}

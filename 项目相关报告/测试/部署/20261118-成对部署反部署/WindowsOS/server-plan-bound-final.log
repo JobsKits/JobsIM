@@ -1,0 +1,27 @@
+JobsIM Windows 成对部署/反部署：本地默认仅本机（临时穿透可选） / 服务器HTTPS。
+check/plan/status/help只读；run写入本项目私有实例，默认自动准备原生业务PG与物理独立journal PG。
+仅停止保留与完整反部署分别选择；清理默认先外置加密备份验真，清零需独立键盘复核。
+不DROP外部PG，不清共享SDK、旧备份或匹配恢复钥；缺原点/冲突/取消均保留。
+运行日志在实例Logs；Ctrl+C/关窗回收本次进程组，数据保留；Windows原生验收另列。
+{
+  "action": "plan",
+  "project": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/合同最终 中文 空格[入口]-4e96717f",
+  "state": "/Users/jobs/Library/Application Support/JobsIM/Regression/WindowsEntryCopies/未创建[保留 空]b760f069",
+  "mode": "server",
+  "roles": [
+    "identity",
+    "directory",
+    "conversation",
+    "message",
+    "media",
+    "control",
+    "journal",
+    "governance",
+    "sync"
+  ],
+  "httpsPort": 9443,
+  "nats": "nats://127.0.0.1:4222",
+  "databaseRoute": "default native owned business PG + physically independent retained journal; explicit external option; healthy PG18 bin required",
+  "undo": "origin-bound local inverse, external PG/shared tools retained",
+  "windowsNativeVerified": false
+}

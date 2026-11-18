@@ -1,0 +1,456 @@
+**Exploration: 代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift**
+
+Found 54 symbols across 1 file. 1 file pinned from the query.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift`** — calls(calls), instantiates(instantiates), references(references), selectMode(calls), refreshRemember(calls), refreshContext(calls), setSubmitting(calls), showConnectionAlert(calls), submit(calls), openSettings(calls), +57 more
+
+```swift
+13	import UIKit
+14	
+15	@MainActor
+16	final class IMAuthVC: IMBaseVC, UITextFieldDelegate {
+17	
+18	    private var mode = "login"
+19	    private var requestID = UUID().uuidString
+20	    private var inputSignature = ""
+21	    private var appeared = false
+22	    private var showsOTP = false
+23	    private var submitting = false
+24	    private var remembersPassword = false
+25	    private var restoredUsername: String?
+26	    private var contextSignature = ""
+27	    private var promptedForConnection = false
+28	    private lazy var background = IMAuthBackgroundView()
+29	    private lazy var scroll = UIScrollView.jobsMake {
+30	        $0.byKeyboardDismissMode(.interactive)
+31	    }
+32	    private lazy var canvas = UIView.jobsMake {
+33	        $0.byBackgroundColor(JobsCor.clear)
+34	    }
+35	    private lazy var panel = IMAuthGlassView()
+36	    private lazy var form = IMUI.stack(spacing: 12)
+37	    private lazy var logo = UIImageView.jobsMake {
+38	        $0.byImage(UIImage.make(named: "Logo"))
+39	            .byContentMode(.scaleAspectFit)
+40	            .byAccessibilityIdentifier("auth.logo")
+41	    }
+42	    private lazy var cardTitle = IMAuthAppearance.label(IMStrings.text("login"), size: 18, strong: true)
+43	        .byTextAlignment(.center)
+44	        .byAccessibilityIdentifier("auth.cardTitle")
+45	    private lazy var cardHelp = IMAuthAppearance.label(IMStrings.text("authLoginHint"))
+46	        .byTextAlignment(.center)
+47	    private lazy var rail = IMAuthAppearance.button(IMStrings.text("authSwitchRegister"), primary: true) { [weak self] in
+48	        guard let self else {
+49	            return
+50	        }
+51	        self.selectMode(self.mode == "login" ? "register" : "login")
+52	    }.byConfiguration {
+53	        $0.byBackground($0.background.byCornerRadius(0))
+54	    }.byTitleAlignment(.center)
+55	        .byTitleFont(IMAuthAppearance.font(12))
+56	        .byAccessibilityIdentifier("auth.modeSwitch")
+57	    private lazy var username = IMAuthTextField("username")
+58	        .byAuthIdentifier("auth.username")
+59	        .byTextContentType(.username)
+60	        .byDelegate(self)
+61	        .byAddAction(for: .editingChanged) { [weak self] _ in
+62	            self?.usernameChanged()
+63	        }
+64	    private lazy var password = IMAuthTextField("password", secure: true)
+65	        .byAuthIdentifier("auth.password")
+66	        .byTextContentType(.password)
+67	        .byDelegate(self)
+68	    private lazy var confirmPassword = IMAuthTextField("authConfirmPassword", secure: true)
+69	        .byAuthIdentifier("auth.confirmPassword")
+70	        .byTextContentType(.newPassword)
+71	        .byDelegate(self)
+72	    private lazy var otp = IMAuthTextField("authOTP")
+73	        .byAuthIdentifier("auth.otp")
+74	        .byTextContentType(.oneTimeCode)
+75	        .byKeyboardType(.numberPad)
+76	        .byDelegate(self)
+77	    private lazy var code = IMAuthTextField("recoveryCode")
+78	        .byAuthIdentifier("auth.recoveryCode")
+79	        .byDelegate(self)
+80	    private lazy var assistance = IMUI.stack(spacing: 8)
+81	        .byAxis(.horizontal)
+82	        .byDistribution(.fillEqually)
+83	    private lazy var remember = IMAuthAppearance.button(IMStrings.text("authRememberPassword"), compact: true) { [weak self] in
+84	        self?.toggleRemember()
+85	    }.byContentHorizontalAlignment(.leading)
+86	        .byTitleAlignment(.left)
+87	        .byAccessibilityIdentifier("auth.rememberPassword")
+88	    private lazy var recover = IMAuthAppearance.button(IMStrings.text("recover"), compact: true) { [weak self] in
+89	        self?.selectMode("recover")
+90	    }.byContentHorizontalAlignment(.trailing)
+91	        .byTitleAlignment(.right)
+92	        .byAccessibilityIdentifier("auth.recover")
+93	    private lazy var status = IMAuthAppearance.label(session.lastError ?? "")
+94	        .byAccessibilityIdentifier("auth.status")
+95	    private lazy var primary = IMAuthAppearance.button(IMStrings.text("login"), primary: true) { [weak self] in
+96	        self?.submit()
+97	    }.byAccessibilityIdentifier("auth.primary")
+98	    private lazy var mfa = IMAuthAppearance.button(IMStrings.text("authMFA"), compact: true) { [weak self] in
+99	        guard let self, !self.submitting else {
+100	            return
+101	        }
+102	        self.showsOTP.toggle()
+103	        self.selectMode("login")
+104	    }.byAccessibilityIdentifier("auth.mfa")
+105	    private lazy var help = IMUI.stack(spacing: 4)
+106	    private lazy var helpToggle = IMAuthAppearance.button(IMStrings.text("authHelp"), compact: true) { [weak self] in
+107	        guard let self else {
+108	            return
+109	        }
+110	        self.help.byHidden(!self.help.isHidden)
+111	    }.byAccessibilityIdentifier("auth.help")
+112	    private lazy var reauthenticate = IMAuthAppearance.button(IMStrings.text("authVerifyAgain"), compact: true) { [weak self] in
+113	        guard let self else {
+114	            return
+115	        }
+116	        IMUI.confirm(self, title: IMStrings.text("authVerifyAgain"), message: IMStrings.text("authVerifyExplanation")) {
+117	            self.submit(explicitNew: true)
+118	        }
+119	    }.byAccessibilityIdentifier("auth.reauthenticate")
+120	    private lazy var passwordChangeCheck = IMAuthAppearance.button(IMStrings.text("passwordChangeCheck"), compact: true) { [weak self] in
+121	        guard let self, !self.currentUsername.isEmpty else {
+122	            return
+123	        }
+124	        self.navigationController?.pushViewController(IMPasswordChangeVC(username: self.currentUsername), animated: true)
+125	    }
+126	    private lazy var deletionCheck = IMAuthAppearance.button(IMStrings.text("deletionCheck"), compact: true) { [weak self] in
+127	        guard let self, !self.currentUsername.isEmpty else {
+128	            return
+129	        }
+130	        self.navigationController?.pushViewController(IMAccountDeletionVC(username: self.currentUsername), animated: true)
+131	    }
+132	    private lazy var settings = IMAuthAppearance.button("") { [weak self] in
+133	        self?.openSettings()
+134	    }.byImage("gearshape".sysImg)
+135	        .byConfiguration {
+136	            $0.byBackground(UIBackgroundConfiguration.clear().byBackgroundColor(IMUI.panel).byCornerRadius(22))
+137	        }
+138	        .byAccessibilityLabel(IMStrings.text("authSettings"))
+139	        .byAccessibilityIdentifier("auth.settings")
+140	
+141	    private var currentUsername: String {
+142	        return (username.text ?? "").trimmingCharacters(in: .whitespacesAndNewlines)
+143	    }
+144	
+145	    override func viewDidLoad() {
+146	        screenTitle = ""
+147	        hidesScreenHeader = true
+148	        super.viewDidLoad()
+149	        assemble()
+150	        refreshContext(force: true)
+151	    }
+152	
+153	    private func assemble() {
+154	        background.byAddTo(view) {
+
+... (gap) ...
+
+208	            }
+209	        }
+210	        status.byHidden(session.lastError == nil)
+211	        selectMode("login", animated: false)
+212	        #if DEBUG
+213	            if ProcessInfo.processInfo.arguments.contains("--ui-test-generated-password") {
+214	                password.byText(UUID().uuidString + UUID().uuidString)
+215	            }
+216	        #endif
+217	    }
+218	
+219	    override func viewWillAppear(_ animated: Bool) {
+220	        super.viewWillAppear(animated)
+221	        refreshContext()
+222	        background.setActive(true)
+223	    }
+224	
+225	    override func viewDidAppear(_ animated: Bool) {
+226	        super.viewDidAppear(animated)
+227	        if session.api == nil && !promptedForConnection {
+228	            showConnectionAlert()
+229	        }
+230	        guard !appeared else {
+231	            return
+232	        }
+233	        appeared = true
+234	        guard !UIAccessibility.isReduceMotionEnabled else {
+235	            return
+236	        }
+237	        panel.byTransform(CGAffineTransform(scaleX: 0.01, y: 0.01))
+238	        UIView.jobsAnimateKeyframes(1, options: [.beginFromCurrentState]) { [weak self] in
+239	            UIView.jobsAddKeyframe(withRelativeStartTime: 0, relativeDuration: 0.65) {
+240	                self?.panel.byTransform(CGAffineTransform(scaleX: 1.1, y: 1.1))
+241	            }
+242	            UIView.jobsAddKeyframe(withRelativeStartTime: 0.65, relativeDuration: 0.35) {
+243	                self?.panel.byTransform(.identity)
+244	            }
+245	        }
+246	    }
+247	
+248	    override func viewWillDisappear(_ animated: Bool) {
+249	        background.setActive(false)
+250	        super.viewWillDisappear(animated)
+251	    }
+252	
+253	    private func refreshContext(force: Bool = false) {
+254	        let context = session.profile + "\u{0}" + session.deployment + "\u{0}" + (session.baseURL?.absoluteString ?? "")
+
+... (gap) ...
+
+265	        for field in [username, password, confirmPassword, otp, code] {
+266	            field.byText("")
+267	        }
+268	        password.setPasswordVisible(false)
+269	        confirmPassword.setPasswordVisible(false)
+270	        selectMode("login", animated: false)
+271	        if let candidate = IMDemoEnvironmentService.shared.currentCandidate, candidate.profile == session.profile {
+272	            username.byText(candidate.username)
+273	            password.byText(candidate.password)
+274	            password.setPasswordVisible(true)
+275	            status.byText(IMStrings.text("authDemoReady")).byHidden(false)
+276	        } else if !session.profile.isEmpty, !session.isDemonstrationEnvironment {
+277	            do {
+278	                if let candidate = try IMRememberedLoginStore.shared.restore(for: session.profile) {
+279	                    username.byText(candidate.username)
+280	                    password.byText(candidate.password)
+281	                    restoredUsername = candidate.username
+282	                    remembersPassword = true
+283	                }
+284	            } catch {
+285	                status.byText(error.localizedDescription).byHidden(false)
+286	            }
+287	        }
+288	        refreshRemember()
+289	    }
+290	
+291	    private func usernameChanged() {
+292	        if let restoredUsername, currentUsername != restoredUsername {
+293	            password.byText("")
+294	            self.restoredUsername = nil
+295	            remembersPassword = false
+296	            refreshRemember()
+297	        }
+298	    }
+299	
+300	    private func toggleRemember() {
+301	        guard !submitting, !session.isDemonstrationEnvironment else {
+302	            return
+303	        }
+304	        remembersPassword.toggle()
+305	        if !remembersPassword, !session.profile.isEmpty, !currentUsername.isEmpty {
+306	            do {
+307	                try IMRememberedLoginStore.shared.forget(for: session.profile, username: currentUsername)
+308	            } catch {
+309	                remembersPassword = true
+310	                IMUI.alert(self, message: error.localizedDescription)
+311	            }
+312	        }
+313	        refreshRemember()
+314	    }
+315	
+316	    private func refreshRemember() {
+317	        remember.bySelected(remembersPassword)
+318	            .byImage((remembersPassword ? "checkmark.circle.fill" : "circle").sysImg)
+319	            .byEnabled(!submitting && !session.isDemonstrationEnvironment)
+320	    }
+321	
+322	    private func openSettings() {
+323	        guard !submitting else {
+324	            return
+325	        }
+326	        view.byEndEditing(true)
+327	        let controller = IMAuthSettingsVC(
+328	            demoEnabled: session.isDemonstrationEnvironment,
+329	            onDemoChange: { enabled in
+330	                try await IMDemoEnvironmentService.shared.setEnabled(enabled)
+331	            },
+332	            onContextChanged: { [weak self] in
+333	                self?.refreshContext(force: true)
+334	            })
+335	        navigationController?.pushViewController(controller, animated: true)
+336	    }
+337	
+338	    private func showConnectionAlert() {
+339	        promptedForConnection = true
+340	        let alert = UIAlertController.make(title: IMStrings.text("connection"), message: IMStrings.text("authConnectionUnavailable"), style: .alert)
+341	        alert.addAction(UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {})
+342	        alert.addAction(UIAlertAction.make(IMStrings.text("authOpenSettings")) { [weak self] in
+343	            self?.openSettings()
+344	        })
+345	        IMUI.presentDialog(alert, on: self)
+346	    }
+347	
+348	    private func selectMode(_ value: String, animated: Bool = true) {
+349	        guard !submitting else {
+350	            return
+351	        }
+352	        view.byEndEditing(true)
+353	        if view.window != nil {
+354	            view.layoutIfNeeded()
+355	        }
+356	        mode = value
+357	        requestID = UUID().uuidString
+358	        inputSignature = ""
+359	        let registration = value == "register"
+360	        primary.byTitle(IMStrings.text(value))
+361	        cardTitle.byText(IMStrings.text(value))
+362	        cardHelp.byText(IMStrings.text(registration ? "authRegisterHint" : value == "recover" ? "authRecoverHint" : "authLoginHint"))
+363	        confirmPassword.byHidden(!registration)
+364	        assistance.byHidden(value != "login")
+365	        code.byHidden(value != "recover")
+366	        otp.byHidden(value != "login" || !showsOTP)
+367	        mfa.byHidden(value != "login")
+368	        reauthenticate.byHidden(value != "login")
+369	        password.byTextContentType(value == "login" ? .password : .newPassword)
+370	        rail.byTitle(IMStrings.text(value == "login" ? "authSwitchRegister" : "authSwitchLogin"))
+371	        form.snp.remakeConstraints { make in
+372	            make.top.bottom.equalToSuperview().inset(20)
+373	            make.leading.equalToSuperview().offset(registration ? 80 : 16)
+
+... (gap) ...
+
+395	        }
+396	    }
+397	
+398	    func textFieldDidBeginEditing(_ textField: UITextField) {
+399	        DispatchQueue.main.async { [weak self, weak textField] in
+400	            guard let self, let textField else {
+401	                return
+402	            }
+403	            self.scroll.byScrollRectToVisible(textField.convert(textField.bounds, to: self.scroll).insetBy(dx: 0, dy: -20), animated: true)
+404	        }
+405	    }
+406	
+407	    func textFieldDidEndEditing(_ textField: UITextField) {
+408	        guard textField === username, mode == "login", !submitting,
+409	            !session.isDemonstrationEnvironment, !session.profile.isEmpty,
+410	            !currentUsername.isEmpty, (password.text ?? "").isEmpty
+411	        else {
+412	            return
+413	        }
+414	        do {
+415	            if let candidate = try IMRememberedLoginStore.shared.restore(for: session.profile, username: currentUsername) {
+416	                password.byText(candidate.password)
+417	                restoredUsername = candidate.username
+418	                remembersPassword = true
+419	                refreshRemember()
+420	            }
+421	        } catch {
+422	            status.byText(error.localizedDescription).byHidden(false)
+423	        }
+424	    }
+425	
+426	    private func setSubmitting(_ value: Bool) {
+427	        submitting = value
+428	        for field in [username, password, confirmPassword, otp, code] {
+429	            field.byEnabled(!value)
+430	        }
+431	        for button in [primary, rail, settings, recover, mfa, helpToggle, reauthenticate, passwordChangeCheck, deletionCheck] {
+432	            button.byEnabled(!value)
+433	        }
+434	        refreshRemember()
+435	    }
+436	
+437	    private func submit(explicitNew: Bool = false, originalProofConfirmed: Bool = false) {
+438	        guard !submitting else {
+439	            return
+440	        }
+441	        guard session.api != nil, session.baseURL != nil, !session.profile.isEmpty else {
+442	            showConnectionAlert()
+443	            return
+444	        }
+445	        view.byEndEditing(true)
+446	        if mode == "register", password.text != confirmPassword.text {
+447	            IMUI.alert(self, message: IMStrings.text("authPasswordMismatch"))
+448	            return
+449	        }
+450	        let name = username.text ?? ""
+451	        let secret = password.text ?? ""
+452	        let recovery = code.text ?? ""
+453	        let authenticator = mode == "login" ? (otp.text ?? "") : ""
+454	        if !explicitNew, !originalProofConfirmed, inputSignature.isEmpty,
+455	            session.pendingAuthentication(name) != nil
+456	        {
+457	            IMUI.confirm(self, title: IMStrings.text("login"), message: IMStrings.text("authUnknownExplanation")) {
+458	                self.submit(originalProofConfirmed: true)
+459	            }
+460	            return
+461	        }
+462	        let signature = contextSignature + "\u{0}" + mode + "\u{0}" + name + "\u{0}" + secret + "\u{0}" + recovery + "\u{0}" + authenticator
+463	        if signature != inputSignature || explicitNew {
+464	            requestID = UUID().uuidString
+465	            inputSignature = signature
+466	        }
+467	        let submittedMode = mode, submittedProfile = session.profile, submittedDeployment = session.deployment
+468	        let submittedAddress = session.baseURL, submittedRequest = requestID, savePassword = remembersPassword
+469	        let presentationWindow = view.window
+470	        setSubmitting(true)
+471	        Task { [weak self] in
+472	            guard let self else {
+473	                return
+474	            }
+475	            defer {
+476	                self.setSubmitting(false)
+477	            }
+478	            do {
+479	                _ = try await self.session.authenticate(
+480	                    mode: submittedMode, username: name, password: secret, recoveryCode: recovery,
+481	                    requestID: submittedRequest, otp: authenticator, explicitReauthentication: explicitNew)
+482	                guard self.session.profile == submittedProfile, self.session.deployment == submittedDeployment,
+483	                    self.session.baseURL == submittedAddress
+484	                else {
+485	                    return
+486	                }
+487	                if submittedMode == "login", !self.session.isDemonstrationEnvironment,
+488	                    let pair = self.session.currentCredentialPair, pair.profile == submittedProfile,
+489	                    pair.deploymentID == submittedDeployment, pair.userID == self.session.user["id"].text {
+490	                    do {
+491	                        try IMRememberedLoginStore.shared.persistAfterVerifiedAuthentication(
+492	                            for: submittedProfile, username: name, password: secret, enabled: savePassword)
+493	                    } catch {
+494	                        if let controller = presentationWindow?.rootViewController {
+495	                            IMUI.alert(controller, message: error.localizedDescription)
+496	                        }
+497	                    }
+498	                }
+499	                self.password.byText("")
+500	                self.confirmPassword.byText("")
+501	                self.otp.byText("")
+502	                self.code.byText("")
+503	                self.inputSignature = ""
+504	                if submittedMode == "recover" {
+505	                    self.setSubmitting(false)
+506	                    self.selectMode("login")
+507	                    IMUI.alert(self, title: IMStrings.text("done"), message: IMStrings.text("login"))
+508	                }
+509	            } catch {
+510	                guard self.session.profile == submittedProfile, self.session.deployment == submittedDeployment,
+511	                    self.session.baseURL == submittedAddress
+512	                else {
+513	                    return
+514	                }
+515	                if self.session.pendingAuthentication(name) != nil {
+516	                    self.status.byText(IMStrings.text("authUnknownExplanation")).byHidden(false)
+517	                }
+518	                let serverFailure = (error as? IMAPIError).map { $0.status == 0 || $0.status >= 500 } ?? false
+519	                if error is URLError || error is IMSession.SessionError || serverFailure {
+520	                    self.showConnectionAlert()
+521	                } else {
+522	                    IMUI.alert(self, message: error.localizedDescription)
+523	                }
+524	            }
+525	        }
+```
+
+
+---
+> **Verbatim source for 1 file is included above — treat it as already Read.** Trimmed for size: `IMAuthVC.swift`; gap markers and file headers name what was elided. For those, or anything under "Not shown above", make ANOTHER codegraph_explore with those exact names instead of reading the files — it returns their source with line numbers.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~788 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

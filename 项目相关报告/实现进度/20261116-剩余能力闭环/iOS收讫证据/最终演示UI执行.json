@@ -1,0 +1,18 @@
+{
+  "exitCode": 0,
+  "seconds": 126.8264057636261,
+  "inputMismatches": [],
+  "freeBytes": 13890928640,
+  "command": [
+    "/usr/bin/xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/FinalDemo-20261117.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=37CB226C-C735-4A2D-8FCA-453E2E5F9DFB",
+    "-parallel-testing-enabled",
+    "NO",
+    "-resultBundlePath",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/iOS收讫证据/最终演示UI.xcresult"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "before": {
+    "stage": "6843504649c043b36a5c924eb5ff174fc449ba3e89a9083971f6aa37f7e95de1",
+    "flags": "fb367fe4c17c0dfee1a73e825094b87b113815d30c96e019269a8b9891c69bab"
+  },
+  "files": 156,
+  "additions": [
+    "项目相关报告/测试/前端/Web/20261117-原身份等待围栏/README.md",
+    "项目相关报告/测试/后端/20261117-注销续跑公平性/README.md"
+  ],
+  "commands": [
+    {
+      "mode": "install",
+      "code": 0,
+      "tail": "已启用本仓 156 份文档的双向过滤器：暂存时生成折叠目录，检出时还原 [toc]；现有本地目录已恢复。未暂存、提交或推送。"
+    },
+    {
+      "mode": "verify",
+      "code": 0,
+      "tail": "工作区 156 份文档均为本地 [toc]，转换往返与幂等验证通过；未修改文件或暂存区。"
+    }
+  ],
+  "after": {
+    "stage": "6843504649c043b36a5c924eb5ff174fc449ba3e89a9083971f6aa37f7e95de1",
+    "flags": "fb367fe4c17c0dfee1a73e825094b87b113815d30c96e019269a8b9891c69bab"
+  },
+  "indexEntriesAndFlagsUnchanged": true
+}

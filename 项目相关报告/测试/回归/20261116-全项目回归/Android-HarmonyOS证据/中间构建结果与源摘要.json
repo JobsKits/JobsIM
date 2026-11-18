@@ -1,0 +1,186 @@
+{
+  "createdAt": "2026-11-16T15:09:55.470Z",
+  "android": {
+    "jvm": [
+      {
+        "name": "com.jobs.im.IsolationTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "timestamp": "2026-11-16T15:07:59.275Z"
+      },
+      {
+        "name": "com.jobs.im.PersonalExportFileTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "timestamp": "2026-11-16T15:07:59.622Z"
+      },
+      {
+        "name": "com.jobs.im.SyncWireTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "timestamp": "2026-11-16T15:07:59.749Z"
+      }
+    ],
+    "nativeExecuted": false,
+    "https": false,
+    "jvmTotals": {
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "harmony": {
+    "authBefore": {
+      "pass": 36,
+      "fail": 5
+    },
+    "authAfter": {
+      "pass": 41,
+      "fail": 0
+    },
+    "sync": {
+      "pass": 35,
+      "fail": 0
+    },
+    "export": {
+      "pass": 18,
+      "fail": 0
+    },
+    "initialAppBuildExit": 255,
+    "appBuildExit": 0,
+    "testBuildExit": 0,
+    "hypiumExecuted": false,
+    "https": false
+  },
+  "artifacts": [
+    {
+      "file": "项目相关报告/测试/回归/20261116-全项目回归/Android-HarmonyOS证据/Harmony应用复验/entry-default-unsigned.hap",
+      "sha256": "6032bb2ba658f9182a216c73d451e0600a675a5f54261da3f4fc8c2ad4418564",
+      "bytes": 1454979,
+      "zipCRCValid": true,
+      "platform": "HarmonyOS",
+      "arkBytecodeSHA256": "c3e9020e4af25b511add518efa4e0d9201c2bad6a2c32ee640116fb6f9dcf295"
+    },
+    {
+      "file": "项目相关报告/测试/回归/20261116-全项目回归/Android-HarmonyOS证据/Harmony测试构建/entry-ohosTest-unsigned.hap",
+      "sha256": "26a2524640954be3803947e5a786c81f86a60434d84997af07afddb023aab624",
+      "bytes": 1569405,
+      "zipCRCValid": true,
+      "platform": "HarmonyOS",
+      "arkBytecodeSHA256": "0c67d2807d485f25fb605e68b5008f38bada3ad6dbd7041b7e4ae6926e50396e",
+      "compiledHypiumMethods": 42
+    },
+    {
+      "file": "项目相关报告/测试/回归/20261116-全项目回归/Android-HarmonyOS证据/Android/JobsIM-debug.apk",
+      "sha256": "119cd28a805e4eaf97529de137adb227a80a15a040151c979780912d54da8668",
+      "bytes": 18827119,
+      "zipCRCValid": true,
+      "platform": "Android"
+    },
+    {
+      "file": "项目相关报告/测试/回归/20261116-全项目回归/Android-HarmonyOS证据/Android/JobsIM-debug-androidTest.apk",
+      "sha256": "76826edf7a3d38a209b56c8503c08b572aa31e5c25d63c29dffeada4d134ed06",
+      "bytes": 1653733,
+      "zipCRCValid": true,
+      "platform": "Android"
+    }
+  ],
+  "sourceSHA256": {
+    "代码/前端/Android/app/src/main/java/com/jobs/im/AnnouncementModel.kt": "63be036049525c321954524c4a5697a6c8ab21f71ac2b9845a07e22cf28b0db7",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Assets.kt": "9900fa046e40e2e4b85769a6e55bb0d4aa366b75ceb314feea75872cde097e5d",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt": "a46c9e5a017b7c0b463a15046e1ad6a9cd34b99a474df41c8f3e7ed072f3204e",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/CollaborationScreens.kt": "07ee7b28f325e33e12aec3ae4f812a2bd724488c089cc786200758bc11fcb7c3",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/DiscoveryScreens.kt": "781aaca24f02eef9f55ac4feecaaf9b8cedb75090fe4ba531fc939b2e415b630",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Domain.kt": "04580cca737a6f9d4ca1f5d78f90fe6fa8a3eb415a41f76d2590b66faecff2a4",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ExtraStrings.kt": "8ae5c3bfe802a3f54f299d945ba4df56306db22d2e3d7dc7f7789cb8a5844558",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/FeatureStrings.kt": "a341c5ec4a99105fee4490b58398ae3525c8e672d2ddeac5f613044d127263fa",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ForwardScreens.kt": "0fb2d5cea01d33e6c3c2dbb352cbc5a3ab4e1f82c7bc7e14564e0e430bcd5ba7",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Forwarding.kt": "4d1a7ca373ddd12681706c9845439bd05d49d83312cffaed248b4d7b78732fae",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/LocalAlerts.kt": "8d374b5462fddc090f4759ad3bf70591bb94466e9ffe1abfbd2668989a7e643a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt": "5da021ae71bd1f8a6f6267ae034cb8d76f2525a054d457d8ae685d5d47aee07a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ManagementScreens.kt": "4f53e42c82854e5e59fe0f09f7da99473047e3be515f037d8ac1fdba2e7efa45",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/MessageDiscovery.kt": "23ab6b08d5500d9d74d9a1b532c908039dd445235e2da171e421edc52129c42a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/NativeSession.kt": "4c81e9583cf6ca68cbec82f8cf90a0f6d090995815044baaa1dc740345e3829b",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportFiles.kt": "59c0d4f669c58624dd6d21b25ccaaf0ca0ae6af6d1d38c9d8fba3b688d6e584a",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportModel.kt": "ad8e9a8940f33e80cb16cb2f01b39604e3761cef8b1f8e61cb205b7345b0f774",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportScreen.kt": "6ac407e9316c6bac51ad6e7cc7fba8ae568099d2794a6b21d6485a4d807810db",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStore.kt": "649481ca82a68ca08f08f89a73308434a770a627c4e0603bf9dfecf2611de1c2",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStrings.kt": "1dc2fe6e51f8fdedf382f4048494f041e7c0689d7783311136354ccf2b7c3465",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportWire.kt": "35dbc4e5ca539ab96795d1371e05bc420e5b2da8d21ddb8ee7a5fa2df594c049",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/ProfileAvatar.kt": "993d097d594ba1c1256b81067f00e481814809fda6b663d740d5847ba729f030",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SelfState.kt": "adc7ac10430c4f073c6c2d1e0f63e2fffdbe52a3512d230bf167d6efb2935186",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateModel.kt": "04c11493812da8b66acd83d9b66221f01e8f97ea6b3d25fbbea747ae5b039bdb",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateStrings.kt": "19638e5cb381e60ccfa998838e9595240e2f2e2e60b95ca7207b737c92f40479",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SelfStateUi.kt": "34f27f6c5416aa779564e1293d56d53034567c2077dcff3a235a9a12471a2a50",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SessionCoordinator.kt": "183aeb2c56a4aa4d1d3293930ffbc19af7c636ec71b6217636fa14c7e97cddcc",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SessionStrings.kt": "8287793aa4232e514a4f7d5bef75c4691f3270929d750f6c23850d462fc37ab8",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt": "d020575dc4008f255eaed04bdfadd4ad5f9d8203128ccc786ca08a5871790660",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Strings.kt": "0292c77200af36d828bee1206eb7f6fa8565b046d467319f3fd845a92f38fd79",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt": "d2c54f5b9e439cd429165e8ae086c2b32744cd329ee077707332822ab6b92635",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncEngine.kt": "5a153faf67971467236861ef9cbc7f74d263a4da036551450c189a9311a493ed",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncGuardApi.kt": "bc6be9a5a96c70185ce25b6e25ce37bd76d803f58dfe523feb19549372bb0679",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt": "9064fda3e28b1209f2e92f4263ec538451887b305e0b3c64ad609c3a9e5cc535",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/SyncStore.kt": "9118473f6660c93559b361d292b3561cbe20a147ed89ae272fa647081addf681",
+    "代码/前端/Android/app/src/main/java/com/jobs/im/Transport.kt": "5d2d7d2bb35c70f2fa6a8db92aafdcb0d0143e0999624423db5f4ffc1fc8840b",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Api.ets": "f831c18b23e47a1ab070fbd4cac3342a0b9e0c148a51273ed1b518f47772028a",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/AuthCoordinator.ets": "03315fa61d4f4faee60f5e0d2378d372d179e90c486f5ff853651c6eaf6c405d",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportFiles.ets": "8a4d3c5eb0634e4584dffff4caa6922a060464ea2272ed7b4cef3547d670d4b5",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportProtocol.ets": "15d34dd49d5c53f867a992901fa95e4c97913389c40ae158be2c2d9cb8a7f321",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportService.ets": "97cd2298eaacb7bd7904eb9c875463ad800b0d8aad208eec048a972eb918fa9e",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportStore.ets": "c1b259a3d0609bead61d79195dcbce4b02de8c31d137967fbd51e46534a9adab",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportText.ets": "9d24a64a9c50f098f41bc3a71a2b176ee0f6913458d884393012ea981417ac97",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets": "87001bcee11532bbe471a4d573f432e75ecfd35c5f133292dfc4a2aac9a7ea28",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeServices.ets": "378549e0133cd5edc2e8212e3fe94a01b2f2192b907b7e38c551806f4db9e52e",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfProtocol.ets": "38f728a72481f11c1e329e7089060b55f15bf88651a927269355c3f5f4c630fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfState.ets": "233673f5b738311621db2185740ba469bf9f5a73be82bba39834252aad30df5e",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SelfText.ets": "63554f0f9b55e928538daf285db5e7fdc7b2ccb29df5b6d0b70617979f2ff776",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Store.ets": "b8660b30de7972a8137686dc354328e85cc9f999fe9793630c92cdba49490e48",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets": "f8070229568cab15d7113784d2a602eea10c57a3f71fda57a36b010a80ad0db2",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncEngine.ets": "d938dd4232b302310df0b260a464ed744fc6049a41adfaff30d65dfa08c68b62",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncProtocol.ets": "2c2cdbb89493b7c97810c95addcfe8d38942b16ca30c6846a17dcb6e5eaa42ee",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncStore.ets": "dc86325b6de6437056d5b8f972f1e31d474d6643da91a96ffd51c47f32ef27fd",
+    "代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncText.ets": "cbdc1ff61579cffaf504bcd9a0f0720b91fb71660f336675169410a7cb8885e7",
+    "代码/前端/HarmonyOS/entry/src/main/ets/entryability/EntryAbility.ets": "9e1266f4455e211de75909d6d7f47f7812b9676e2365bab9cbfbd76bfa26afb8",
+    "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets": "15eab37b3ec770c03fe548c267722f7caa2c1019a31186dae45e25b4e95bf2ce",
+    "测试/前端/Android/Unit/IsolationTest.kt": "4e480f70c218b6cd833125a6813d864b5be29de1edeb0d26f9e6d9c039ad3edb",
+    "测试/前端/Android/Unit/PersonalExportFileTest.kt": "0a03e0f5b0d106146faf2542bdceb171b6e05eae3fcacb8a6ee1abbedb4a46c2",
+    "测试/前端/Android/Unit/SyncWireTest.kt": "9a6e6380569c3eb3ac41db37fd7eb6d0a399df12e19aea1e7ad57e850896b57d",
+    "测试/前端/HarmonyOS/Unit/Auth.test.cjs": "7d866d27d2bf0c00b00ee66274caedff351ecb379a812b6b431e85a19d4ce2e9",
+    "测试/前端/HarmonyOS/Unit/AuthApi.test.cjs": "d205651fb30b97effb8c93c234bbf93d734d4a92495ed31328d3570f82434484",
+    "测试/前端/HarmonyOS/Unit/Export.test.cjs": "73b3c48f70e106b07d2fc6b6019d6366dc84d275954c50b63fb0573b3fe37c69",
+    "测试/前端/HarmonyOS/Unit/Policies.test.mjs": "f2bcb36b295cc06b661fc39317649a503aac7f69b3b79647e71a1c3d2b27b55c",
+    "测试/前端/HarmonyOS/Unit/RunAuth.mjs": "73638d73bc6d2272c8dcb992358302c2899fe771541e8b4c6f28dab7f6760d42",
+    "测试/前端/HarmonyOS/Unit/RunExport.mjs": "430066ee89874aff32108461352659071abbaf0b4389f31a3220ee51082066dc",
+    "测试/前端/HarmonyOS/Unit/RunSync.mjs": "6b675d044e84ddb5ca3bd20b848c70ec71c989b24dd08f3ed92d1de8949ee132",
+    "测试/前端/HarmonyOS/Unit/Sync.test.cjs": "b0fba9e380fac18324bdaea5ee1be376a94870f849edaf3605ec21203d1d97ee",
+    "测试/前端/HarmonyOS/Unit/SyncSqlite.py": "31ccfba310c7a5aade238ce8f18183722a128b959fa7603680a870ec8b88aeee",
+    "测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets": "150457c2bc5d9dc89cec3090603383df46c1dc150b15b5416156ef490eccb362",
+    "测试/前端/HarmonyOS/OhosTest/ets/testability/TestAbility.ets": "80290bf630eda782dffa05c050eba7718642a892347909b998be3b91c0708f46",
+    "测试/前端/HarmonyOS/OhosTest/ets/testrunner/OpenHarmonyTestRunner.ets": "77a44f6c92751bff55704c8e8724f9fd5ca7db46915ea43ba0887fc02b35e448"
+  },
+  "protectedDist": [
+    {
+      "file": "代码/前端/Android/Dist/JobsIM-debug.apk",
+      "sha256": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3"
+    },
+    {
+      "file": "代码/前端/Android/Dist/Baselines/20261115-native-auth-refresh-debug.apk",
+      "sha256": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3"
+    },
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-default-unsigned.hap",
+      "sha256": "3db7f8c87b3ede705228ea0363ccd38d24af03de9877c744134312b2de9e9384"
+    },
+    {
+      "file": "代码/前端/HarmonyOS/Dist/entry-ohosTest-unsigned.hap",
+      "sha256": "d8c72d9fe4d18955ef93c9f12fb18797636668b7a3c54e5297e8bfc7d0d678bb"
+    }
+  ]
+}

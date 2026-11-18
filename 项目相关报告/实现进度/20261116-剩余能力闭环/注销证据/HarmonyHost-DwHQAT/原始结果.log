@@ -1,0 +1,20 @@
+✔ ten languages contain all deletion controls and password input is normalized (1.824125ms)
+✔ creating request persists original public responsibility and pause before mutation, no secrets (3.786458ms)
+✔ unknown success resumes by anonymous original lookup without another creating request (0.912833ms)
+✔ capability withdrawal or changed epoch permits lookup but no mutation for pending or404 (1.924292ms)
+✔ unseen original cannot borrow a successor family or create anonymously (0.372166ms)
+✔ prepared dependency403 stays unknown and ordinary business remains paused (0.207541ms)
+✔ unknown cancellation preserves one nonce; query verifies purpose and observes original result (0.704833ms)
+✔ cancel confirmation cannot silently rebase its seen request version (0.2595ms)
+✔ wrong-purpose or expired proof cannot submit cancellation (0.583292ms)
+✔ result identity/version substitution and late identity changes cannot publish (0.460125ms)
+✔ metadata rejects secret fields; disk failure sends no creating request (0.299459ms)
+✔ shipped RDB repository persists pause/CAS, reopens, and erases only completed own namespaces (72.445667ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 276.692709

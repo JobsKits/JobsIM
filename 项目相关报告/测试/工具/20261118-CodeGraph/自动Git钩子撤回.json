@@ -1,0 +1,71 @@
+{
+  "at": "2026-11-18T03:10:53.822Z",
+  "originalsPrivateBackup": "/private/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-CodeGraphHooks-xZzZMD",
+  "rows": [
+    {
+      "file": ".git/hooks/post-commit",
+      "action": "remove exact newly-created marker-only hook; restore absent state",
+      "birth": "2026-11-18T03:06:07.507Z",
+      "mode": "755",
+      "sha256": "5c9187cb47393639bd731e1250e189d18b69bdc0ebe4200359d8506f6de56a00",
+      "otherBody": "#!/bin/sh\n",
+      "restoredAbsent": true
+    },
+    {
+      "file": ".git/hooks/post-merge",
+      "action": "remove exact newly-created marker-only hook; restore absent state",
+      "birth": "2026-11-18T03:06:07.507Z",
+      "mode": "755",
+      "sha256": "5c9187cb47393639bd731e1250e189d18b69bdc0ebe4200359d8506f6de56a00",
+      "otherBody": "#!/bin/sh\n",
+      "restoredAbsent": true
+    },
+    {
+      "file": ".git/hooks/post-checkout",
+      "action": "remove exact newly-created marker-only hook; restore absent state",
+      "birth": "2026-11-18T03:06:07.507Z",
+      "mode": "755",
+      "sha256": "5c9187cb47393639bd731e1250e189d18b69bdc0ebe4200359d8506f6de56a00",
+      "otherBody": "#!/bin/sh\n",
+      "restoredAbsent": true
+    }
+  ],
+  "disableHooks": "No supported project setting in current native schema; index/sync do not run init refresh installer; no further init commands",
+  "projectInstructionCandidates": [
+    {
+      "file": "AGENTS.md",
+      "exists": false
+    },
+    {
+      "file": "CLAUDE.md",
+      "exists": false
+    },
+    {
+      "file": "GEMINI.md",
+      "exists": false
+    },
+    {
+      "file": ".mcp.json",
+      "exists": false
+    },
+    {
+      "file": ".codex",
+      "exists": false
+    },
+    {
+      "file": ".claude",
+      "exists": false
+    },
+    {
+      "file": ".cursor",
+      "exists": false
+    }
+  ],
+  "globalAgents": {
+    "file": "~/.codex/AGENTS.md",
+    "modified": "2026-11-17T09:35:06.249Z",
+    "sha256": "3e41a0dee7f12129d5c2989de00bf93b0365cde64d89a06d01db59311e0caf34",
+    "modifiedByThisTask": false
+  },
+  "agentInstallCommandRun": false
+}

@@ -1,0 +1,7 @@
+page.evaluate: ApiError: Authentication required
+    at boundary (http://127.0.0.1:62291/Src/api.ts:30:9)
+    at http://127.0.0.1:62291/Src/api.ts:129:51
+    at /Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs:100:60
+    at /Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs:100:39 {
+  log: []
+}

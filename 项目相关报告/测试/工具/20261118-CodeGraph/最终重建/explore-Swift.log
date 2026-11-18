@@ -1,0 +1,379 @@
+**Exploration: 代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift**
+
+Found 39 symbols across 1 file. 1 file pinned from the query.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift`** — complete(calls), calls(calls), configuration(field), instantiates(instantiates), session(field), baseURL(field), references(references), request(method), trust(field), complete(method), +23 more
+
+```swift
+12	@preconcurrency import Alamofire
+13	
+14	public final class IMInstanceAgent: JobsAgent, @unchecked Sendable {
+15	    public let config: JobsRequestConfig
+16	    public let headerHook: JobsHeaderHook = EmptyHeaderHook()
+17	    private let session: Session
+18	    private let certificate: IMInstanceCertificate
+19	    public init(config: JobsRequestConfig, certificate: IMInstanceCertificate) {
+20	        self.config = config
+21	        self.certificate = certificate
+22	        let configuration = URLSessionConfiguration.ephemeral
+23	        configuration.urlCache = nil
+24	        configuration.urlCredentialStorage = nil
+25	        configuration.timeoutIntervalForRequest = 120
+26	        let manager = ServerTrustManager(evaluators: [
+27	            (URL(string: certificate.address)?.host ?? ""): IMInstanceEvaluator(certificate: certificate)
+28	        ])
+29	        session = Session(
+30	            configuration: configuration, serverTrustManager: manager,
+31	            redirectHandler: Redirector(
+32	                behavior: .modify { _, request, _ in
+33	                    guard let url = request.url, certificate.permits(url) else {
+34	                        return nil
+35	                    }
+36	                    return request
+37	                }))
+38	    }
+39	    public func send<T: Decodable>(
+40	        _ request: JobsRequest, as type: T.Type, completion: @escaping (Result<T, JobsError>) -> Void
+41	    ) -> JobsRequestToken {
+42	        return observe(request, as: type, onEvent: { _ in }, completion: completion)
+43	    }
+44	    public func observe<T: Decodable>(
+45	        _ request: JobsRequest, as type: T.Type,
+46	        onEvent: @escaping (Result<(T, JobsResponseSource), JobsError>) -> Void,
+47	        completion: @escaping (Result<T, JobsError>) -> Void
+48	    ) -> JobsRequestToken {
+49	        let box = IMCompletion<T>(completion: completion, onEvent: onEvent)
+50	        let token = JobsRequestToken()
+51	        guard let url = URL(string: request.path, relativeTo: config.baseURL)?.absoluteURL,
+52	            certificate.permits(url)
+53	        else { box.complete(.failure(.invalidRequest(reason: "Origin mismatch"))); return token }
+54	        let data: Data?
+55	        do {
+56	            data = try request.body.map {
+57	                try JSONSerialization.data(withJSONObject: $0.mapValues { $0.raw ?? kCFNull as Any })
+58	            }
+59	        } catch { box.complete(.failure(.invalidRequest(reason: "Invalid JSON"))); return token }
+60	        let prepared = URLRequest.make(
+61	            url: url, method: request.method.rawValue, headers: request.headers, body: data,
+62	            timeout: request.timeout ?? 4)
+63	        let task = session.request(prepared)
+64	        token.setCancel { task.cancel() }
+65	        task.responseData { response in
+66	            token.setCancel {}
+67	            box.complete(Self.decode(response, type: type))
+68	        }
+69	        return token
+70	    }
+71	    func upload<T: Decodable>(
+72	        _ request: JobsUploadRequest, as type: T.Type, completion: @escaping (Result<T, JobsError>) -> Void
+73	    ) {
+74	        let box = IMCompletion<T>(completion: completion, onEvent: { _ in })
+75	        guard let url = URL(string: request.path, relativeTo: config.baseURL)?.absoluteURL,
+76	            certificate.permits(url)
+77	        else { box.complete(.failure(.invalidRequest(reason: "Origin mismatch"))); return }
+78	        session.upload(
+79	            multipartFormData: { form in
+80	                for (key, value) in request.form {
+81	                    form.append(Data(String(describing: value.raw ?? "").utf8), withName: key)
+82	                }
+83	                for file in request.files {
+84	                    switch file {
+85	                    case .file(let url, let name, let fileName, let mime):
+86	                        form.append(url, withName: name, fileName: fileName, mimeType: mime)
+87	                    case .data(let data, let name, let fileName, let mime):
+88	                        form.append(data, withName: name, fileName: fileName, mimeType: mime)
+89	                    }
+90	                }
+91	            }, to: url, method: .post, headers: HTTPHeaders(request.headers)
+92	        ).responseData { response in box.complete(Self.decode(response, type: type)) }
+93	    }
+94	    func download(_ request: JobsDownloadRequest, completion: @escaping (Result<URL, JobsError>) -> Void) {
+95	        let box = IMDownloadCompletion(completion)
+96	        guard certificate.permits(request.absoluteURL) else {
+97	            box.complete(.failure(.invalidRequest(reason: "Origin mismatch"))); return
+98	        }
+99	        session.request(request.absoluteURL, headers: HTTPHeaders(request.headers)).responseData { response in
+100	            guard response.error == nil, let status = response.response?.statusCode,
+101	                (200..<300).contains(status), let data = response.data
+102	            else {
+103	                box.complete(
+104	                    .failure(.http(statusCode: response.response?.statusCode ?? 0, data: response.data)));
+105	                return
+106	            }
+107	            do {
+108	                try data.write(to: request.destinationURL, options: .atomic);
+109	                box.complete(.success(request.destinationURL))
+110	            } catch { box.complete(.failure(.transport(underlying: "Private download could not be saved"))) }
+111	        }
+112	    }
+113	
+114	    func originalJSON(_ path: String, body: Data, accessToken: String, cancellation: JobsRequestToken,
+115	                      completion: @escaping (Result<IMJSON, JobsError>) -> Void) {
+116	        let box = IMCompletion<IMJSON>(completion: completion, onEvent: { _ in })
+117	        guard !cancellation.isCancelled,
+118	            let url = URL(string: path, relativeTo: config.baseURL)?.absoluteURL, certificate.permits(url) else {
+119	            box.complete(.failure(.invalidRequest(reason: "Origin mismatch")))
+120	            return
+121	        }
+122	        let request = URLRequest.make(url: url, method: "POST",
+123	            headers: ["Authorization": "Bearer " + accessToken, "Accept": "application/json"], body: body, timeout: 15)
+124	        let task = session.request(request).redirect(using: Redirector(behavior: .doNotFollow))
+125	        cancellation.setCancel { task.cancel() }
+126	        task.responseData { response in
+127	            cancellation.setCancel {}
+128	            box.complete(Self.decode(response, type: IMJSON.self))
+129	        }
+130	    }
+131	
+132	    func personalExport(_ id: String, ticket: String, destination: URL, accessToken: String,
+133	                        cancellation: JobsRequestToken, completion: @escaping (Result<URL, JobsError>) -> Void) {
+134	        let box = IMDownloadCompletion(completion)
+135	        let url = config.baseURL.appendingPathComponent("me/data-exports/" + id + "/download")
+136	        guard !cancellation.isCancelled, certificate.permits(url) else {
+137	            box.complete(.failure(.invalidRequest(reason: "Origin mismatch")))
+138	            return
+139	        }
+140	        let request = URLRequest.make(url: url, method: "GET", headers: ["Authorization": "Bearer " + accessToken,
+141	            "X-JobsIM-Download-Token": ticket, "Accept": "application/zip"], body: nil, timeout: 120)
+142	        let task = session.download(request, to: { _, _ in (destination, []) })
+143	            .redirect(using: Redirector(behavior: .doNotFollow))
+144	        cancellation.setCancel { task.cancel() }
+145	        task.downloadProgress { progress in
+146	            if progress.completedUnitCount > 1_073_741_824 || progress.totalUnitCount > 1_073_741_824 {
+147	                cancellation.cancel()
+148	            }
+149	        }.responseURL { response in
+150	            cancellation.setCancel {}
+151	            guard response.error == nil, response.response?.statusCode == 200, let file = response.fileURL else {
+152	                var failure: Data?
+153	                if let file = response.fileURL,
+154	                    let size = (try? FileManager.default.attributesOfItem(atPath: file.path)[.size]) as? NSNumber,
+155	                    size.uint64Value <= 65536 {
+156	                    failure = try? Data(contentsOf: file)
+157	                }
+158	                box.complete(.failure(.http(statusCode: response.response?.statusCode ?? 0, data: failure)))
+159	                return
+160	            }
+161	            guard response.response?.mimeType?.lowercased() == "application/zip",
+162	                response.response?.value(forHTTPHeaderField: "Cache-Control")?.lowercased().contains("no-store") == true,
+163	                response.response?.value(forHTTPHeaderField: "Content-Disposition")?.lowercased().hasPrefix("attachment;") == true,
+164	                let size = (try? FileManager.default.attributesOfItem(atPath: file.path)[.size]) as? NSNumber,
+165	                size.uint64Value > 0, size.uint64Value <= 1_073_741_824
+166	            else {
+167	                box.complete(.failure(.invalidRequest(reason: "Export ZIP response invalid")))
+168	                return
+169	            }
+170	            box.complete(.success(file))
+171	        }
+172	    }
+173	
+174	    private static func decode<T: Decodable>(_ response: AFDataResponse<Data>, type: T.Type) -> Result<
+175	        T, JobsError
+176	    > {
+177	        guard let status = response.response?.statusCode else {
+178	            return .failure(.transport(underlying: "TLS or transport validation failed"))
+179	        }
+180	        guard (200..<300).contains(status) else {
+181	            return .failure(.http(statusCode: status, data: response.data))
+182	        }
+183	        guard response.error == nil else {
+184	            return .failure(.transport(underlying: "Response incomplete"))
+185	        }
+186	        do {
+187	            return .success(
+188	                try JSONDecoder.make().decode(
+189	                    type, from: response.data?.isEmpty == false ? response.data! : Data("{}".utf8)))
+190	        } catch { return .failure(.decode(underlying: "Invalid response", data: nil)) }
+191	    }
+192	}
+193	
+194	final class IMPasswordChangeTransport: @unchecked Sendable {
+195	
+196	    private let session: Session
+197	    private let baseURL: URL
+198	
+199	    init(baseURL: URL, certificate: IMInstanceCertificate?) {
+200	        self.baseURL = baseURL
+201	        let configuration = URLSessionConfiguration.ephemeral
+202	        configuration.urlCache = nil
+203	        configuration.urlCredentialStorage = nil
+204	        configuration.httpCookieStorage = nil
+205	        configuration.httpShouldSetCookies = false
+206	        let trust = certificate.map { value in
+207	            ServerTrustManager(evaluators: [(baseURL.host ?? ""): IMInstanceEvaluator(certificate: value)])
+208	        }
+209	        session = Session(configuration: configuration, serverTrustManager: trust,
+210	                          redirectHandler: Redirector(behavior: .doNotFollow))
+211	    }
+212	
+213	    func request(_ path: String, body: Data, token: String?, cancellation: JobsRequestToken,
+214	                 completion: @escaping (Result<IMJSON, JobsError>) -> Void) {
+215	        let box = IMCompletion<IMJSON>(completion: completion, onEvent: { _ in })
+216	        guard !cancellation.isCancelled, baseURL.scheme == "https", baseURL.host != nil,
+217	            baseURL.user == nil, baseURL.password == nil, baseURL.query == nil, baseURL.fragment == nil,
+218	            ["auth/password-change", "auth/password-change-results", "auth/deletion-requests",
+219	             "auth/deletion-results", "auth/data-rights/proofs", "auth/data-rights/query",
+220	             "auth/data-rights/cancel"].contains(path), body.count <= 8192 else {
+221	            box.complete(.failure(.invalidRequest(reason: "Verified HTTPS account-operation route required")))
+222	            return
+223	        }
+224	        var headers = ["Accept": "application/json"]
+225	        if let token {
+226	            headers["Authorization"] = "Bearer " + token
+227	        }
+228	        let url = baseURL.appendingPathComponent(path)
+229	        let prepared = URLRequest.make(url: url, method: "POST", headers: headers, body: body, timeout: 20)
+230	        let task = session.request(prepared)
+231	        cancellation.setCancel { task.cancel() }
+232	        task.responseData { response in
+233	            cancellation.setCancel {}
+234	            guard let status = response.response?.statusCode, let bytes = response.data,
+235	                bytes.count <= 32768, response.error == nil else {
+236	                box.complete(.failure(.transport(underlying: "Password-change result unknown")))
+237	                return
+238	            }
+239	            guard status == 200 else {
+240	                box.complete(.failure(.http(statusCode: status, data: bytes)))
+241	                return
+242	            }
+243	            do {
+244	                box.complete(.success(try JSONDecoder.make().decode(IMJSON.self, from: bytes)))
+245	            } catch {
+246	                box.complete(.failure(.decode(underlying: "Invalid password-change result", data: nil)))
+247	            }
+248	        }
+249	    }
+250	}
+251	
+252	final class IMMigrationTransport: @unchecked Sendable {
+253	
+254	    private let session: Session
+255	    private let baseURL: URL
+256	
+257	    init(baseURL: URL, certificate: IMInstanceCertificate?) {
+258	        self.baseURL = baseURL
+259	        let configuration = URLSessionConfiguration.ephemeral
+260	        configuration.urlCache = nil
+261	        configuration.urlCredentialStorage = nil
+262	        configuration.httpCookieStorage = nil
+263	        configuration.httpShouldSetCookies = false
+264	        let trust = certificate.map { value in
+265	            ServerTrustManager(evaluators: [(baseURL.host ?? ""): IMInstanceEvaluator(certificate: value)])
+266	        }
+267	        session = Session(configuration: configuration, serverTrustManager: trust,
+268	                          redirectHandler: Redirector(behavior: .doNotFollow))
+269	    }
+270	
+271	    func request(_ path: String, method: String, body: Data, token: String, store: String,
+272	                 cancellation: JobsRequestToken, completion: @escaping (Result<Data, JobsError>) -> Void) {
+273	        let fixed: [String: String] = ["sync/migration-capabilities": "GET", "sync/migration-pairings": "POST",
+274	                                       "sync/migration-pairing-results": "POST", "sync/migrations": "POST",
+275	                                       "sync/migration-results": "POST"]
+276	        let parts = path.split(separator: "/", omittingEmptySubsequences: false)
+277	        let dynamic = parts.count >= 3 && parts.count <= 4 && parts[0] == "sync" && parts[1] == "migrations"
+278	            && UUID(uuidString: String(parts[2])) != nil
+279	        let originalObject = parts.count == 2 && parts[0] == "media" && UUID(uuidString: String(parts[1])) != nil && method == "GET"
+280	        let allowed = originalObject || fixed[path] == method || dynamic && (parts.count == 3 && method == "GET"
+281	            || parts.count == 4 && (parts[3] == "capsule" && method == "GET"
+282	                || ["key", "validate", "installed", "cancel"].contains(String(parts[3])) && method == "POST"))
+283	        guard allowed, !cancellation.isCancelled, UUID(uuidString: store) != nil, !token.isEmpty,
+284	            baseURL.scheme == "https", baseURL.host != nil, baseURL.user == nil, baseURL.password == nil,
+285	            baseURL.query == nil, baseURL.fragment == nil, body.count <= 128 * 1024 * 1024 else {
+286	            completion(.failure(.invalidRequest(reason: "Verified HTTPS migration route required")))
+287	            return
+288	        }
+289	        let binary = path.hasSuffix("/capsule") || originalObject
+290	        let limit: Int64 = originalObject ? 64 * 1024 * 1024 : path.hasSuffix("/capsule") ? 128 * 1024 * 1024 + 4096 : 2 * 1024 * 1024
+291	        let prepared = URLRequest.make(url: baseURL.appendingPathComponent(path), method: method,
+292	            headers: ["Accept": binary ? "application/octet-stream" : "application/json",
+293	                      "Authorization": "Bearer " + token, "X-JobsIM-Store-Generation": store],
+294	            body: method == "GET" ? nil : body, timeout: 90)
+295	        let task = session.request(prepared)
+296	        cancellation.setCancel { task.cancel() }
+297	        task.downloadProgress { progress in
+298	            if progress.completedUnitCount > limit || progress.totalUnitCount > limit {
+299	                task.cancel()
+300	            }
+301	        }
+302	        task.responseData { response in
+303	            cancellation.setCancel {}
+304	            guard !cancellation.isCancelled, let status = response.response?.statusCode,
+305	                let bytes = response.data, bytes.count <= limit, response.error == nil else {
+306	                completion(.failure(.transport(underlying: "Migration result unknown")))
+307	                return
+308	            }
+309	            guard status == 200 else {
+310	                completion(.failure(.http(statusCode: status, data: bytes.prefix(32768))))
+311	                return
+312	            }
+313	            completion(.success(bytes))
+314	        }
+315	    }
+316	}
+317	
+318	final class IMReceiptTransport: @unchecked Sendable {
+319	
+320	    private let session: Session
+321	    private let baseURL: URL
+322	
+323	    init(baseURL: URL, certificate: IMInstanceCertificate?) {
+324	        self.baseURL = baseURL
+325	        let configuration = URLSessionConfiguration.ephemeral
+326	        configuration.urlCache = nil
+327	        configuration.urlCredentialStorage = nil
+328	        configuration.httpCookieStorage = nil
+329	        configuration.httpShouldSetCookies = false
+330	        let trust = certificate.map { value in
+331	            return ServerTrustManager(evaluators: [(baseURL.host ?? ""): IMInstanceEvaluator(certificate: value)])
+332	        }
+333	        session = Session(configuration: configuration, serverTrustManager: trust,
+334	            redirectHandler: Redirector(behavior: .doNotFollow))
+335	    }
+
+... (gap: request (代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift:337)) ...
+
+375	            return
+376	        }
+377	        let limit: Int64 = binary ? 64 * 1024 * 1024 : 2 * 1024 * 1024
+378	        let prepared = URLRequest.make(url: url, method: method,
+379	            headers: ["Accept": binary ? "application/octet-stream" : "application/json",
+380	                "Authorization": "Bearer " + token, "X-JobsIM-Store-Generation": store],
+381	            body: method == "GET" ? nil : body, timeout: binary ? 90 : 15)
+
+... (gap) ...
+
+406	    }
+407	}
+408	
+409	private final class IMCompletion<T>: @unchecked Sendable {
+410	    let completion: (Result<T, JobsError>) -> Void
+411	    let onEvent: (Result<(T, JobsResponseSource), JobsError>) -> Void
+412	    init(
+413	        completion: @escaping (Result<T, JobsError>) -> Void,
+414	        onEvent: @escaping (Result<(T, JobsResponseSource), JobsError>) -> Void
+415	    ) { self.completion = completion; self.onEvent = onEvent }
+416	    func complete(_ result: Result<T, JobsError>) {
+417	        onEvent(result.map { ($0, .network) }); completion(result)
+418	    }
+419	}
+420	private final class IMDownloadCompletion: @unchecked Sendable {
+421	    let completion: (Result<URL, JobsError>) -> Void
+422	    init(_ completion: @escaping (Result<URL, JobsError>) -> Void) {
+423	        self.completion = completion
+424	    }
+425	    func complete(_ result: Result<URL, JobsError>) {
+426	        completion(result)
+427	    }
+428	}
+429	
+```
+
+
+---
+> **Verbatim source for 1 file is included above — treat it as already Read.** Trimmed for size: `IMInstanceAgent.swift`; gap markers and file headers name what was elided. For those, or anything under "Not shown above", make ANOTHER codegraph_explore with those exact names instead of reading the files — it returns their source with line numbers.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~720 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

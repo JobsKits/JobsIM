@@ -13,6 +13,7 @@ import (
 )
 
 type AvatarProfile struct {
+	Signature          string `json:"signature"`
 	DisplayName        string `json:"displayName"`
 	ProfileVersion     string `json:"profileVersion"`
 	AvatarURL          string `json:"avatarURL"`
@@ -41,7 +42,7 @@ func (a *App) avatarProfileFields(ctx context.Context, user string) (AvatarProfi
 	v := AvatarProfile{ProfileVersion: "1"}
 	var root, thumbnail *string
 	var version int64
-	e := a.DB.QueryRow(ctx, `SELECT display_name,row_version,avatar_object_id::text,avatar_thumbnail_id::text FROM directory.profiles WHERE user_id=$1`, user).Scan(&v.DisplayName, &version, &root, &thumbnail)
+	e := a.DB.QueryRow(ctx, `SELECT display_name,row_version,avatar_object_id::text,avatar_thumbnail_id::text,signature FROM directory.profiles WHERE user_id=$1`, user).Scan(&v.DisplayName, &version, &root, &thumbnail, &v.Signature)
 	if e == pgx.ErrNoRows {
 		return v, nil
 	}
@@ -210,9 +211,11 @@ func (a *App) publishAvatar(w http.ResponseWriter, r *http.Request) error {
 	process := avatarProcessRequest{UserID: u.ID, OperationID: request, Generation: str(generation), RestoreEpoch: u.RestoreEpoch, SourceDigest: source[:], Content: content}
 	if e = a.rpc(r.Context(), "media", "/internal/avatar/process", process, &outputs); e != nil {
 		var rejected *apiError
-		if errors.As(e,&rejected)&&rejected.Status==409&&rejected.Code=="AVATAR_SUPERSEDED"{
-			if _,ce:=a.current(r);ce!=nil{return ce}
-			return a.respondAvatarOperation(w,r,u,request)
+		if errors.As(e, &rejected) && rejected.Status == 409 && rejected.Code == "AVATAR_SUPERSEDED" {
+			if _, ce := a.current(r); ce != nil {
+				return ce
+			}
+			return a.respondAvatarOperation(w, r, u, request)
 		}
 		if errors.As(e, &rejected) && (rejected.Status == 400 || rejected.Status == 413) {
 			// Deterministic decode failures end only their own preparation; old live avatars remain intact.

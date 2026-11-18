@@ -1,0 +1,14 @@
+{
+  "exit": 0,
+  "elapsedSeconds": 0.263,
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+    "-C",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/后端/Go",
+    "vet",
+    "-p",
+    "1",
+    "."
+  ],
+  "scope": "Production backend package only"
+}

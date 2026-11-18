@@ -1,0 +1,88 @@
+#!/bin/zsh
+# shell: zsh
+FINISHING=0
+finish_regression() {
+    local code="$1"
+    (( ZSH_SUBSHELL == 0 && FINISHING == 0 )) || return "$code"
+    FINISHING=1
+    set +e
+    local child
+    for child in "${APP_PID:-}" "${NATS_PID:-}"; do
+        if [[ -n "$child" ]] && kill -0 "$child" 2>/dev/null; then kill -TERM "$child"; wait "$child"; fi
+    done
+    if [[ -n "${RUN:-}" && -n "${PG_BIN:-}" ]]; then
+        local label
+        for label in Journal Main; do
+            if [[ -f "$RUN/${label}Database/PG_VERSION" ]]; then
+                "$PG_BIN/pg_ctl" -D "$RUN/${label}Database" -m fast -w -t 30 stop >> "$REPORT/夹具生命周期.log" 2>&1
+            fi
+        done
+    fi
+    printf 'fixtureExit=%s\nprivateRun=%s\n' "$code" "${RUN:-not-created}" >> "$REPORT/夹具结果.txt"
+    print "fixtureExit=$code report=$REPORT"
+    return "$code"
+}
+TRAPEXIT() { finish_regression "$?"; }
+TRAPZERR() { local failed=$?; finish_regression "$failed"; exit "$failed"; }
+TRAPINT() { exit 130; }
+TRAPTERM() { exit 143; }
+main() {
+    set -eu
+    setopt NO_NOMATCH PIPE_FAIL
+    umask 077
+    REPO="${PWD:A}"
+    REPORT="$REPO/项目相关报告/实现进度/20261116-剩余能力闭环/恢复迁移证据"
+    RUN="$HOME/Library/Application Support/JobsIM/Integration/66bf4668-aa47-4668-b583-925a7ac93cc0/Safety"
+    OWNER=s2_owner_66bf4668aa47
+    PG_BIN="$HOME/Library/Application Support/JobsIM/Toolchains/PostgresApp-2.9.7/Postgres.app/Contents/Versions/18/bin"
+    GO_TOOL="$HOME/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go"
+    export PGPASSFILE="$RUN/Secrets/pgpass" GOMAXPROCS=2 GOPROXY=off GOTOOLCHAIN=local
+    local main_uri="postgresql://$OWNER@127.0.0.1:62381/postgres?sslmode=disable"
+    local journal_uri="postgresql://$OWNER@127.0.0.1:62382/postgres?sslmode=disable"
+    export JOBS_IM_DATABASE_URL="${main_uri/postgres\?/jobsim_regression_main?}" JOBS_IM_JOURNAL_DATABASE_URL="${journal_uri/postgres\?/jobsim_regression_journal?}"
+    local label port
+    for label in Main Journal; do
+        port=62381; [[ "$label" == Main ]] || port=62382
+        "$PG_BIN/pg_ctl" -D "$RUN/${label}Database" -l "$RUN/Logs/pg-$label.log" -w -t 30 -o "-p $port -h 127.0.0.1 -k '' -c max_connections=100 -c shared_buffers=64MB -c fsync=on -c full_page_writes=on -c synchronous_commit=on" start >> "$REPORT/夹具生命周期.log" 2>&1
+    done
+    local db_uri="$JOBS_IM_DATABASE_URL" journal_db_uri="$JOBS_IM_JOURNAL_DATABASE_URL"
+    export JOBS_IM_SYNC_SCHEMAS_TEST=1 JOBS_IM_SYNC_OUTBOX_TEST=1 JOBS_IM_DRAFT_FLOOR_TEST=1 JOBS_IM_SOURCE_PREFERENCES_TEST=1 JOBS_IM_SELF_READ_TEST=1 JOBS_IM_READ_POINT_TEST=1
+    local gate
+    for gate in SYNC_SCHEMAS DRAFT_FLOOR SOURCE_PREFERENCES SELF_READ READ_POINT; do
+        export "JOBS_IM_${gate}_REALM_URL=https://127.0.0.1:59443" "JOBS_IM_${gate}_ADMIN_URL=$main_uri"
+    done
+    export JOBS_IM_SYNC_OUTBOX_ADMIN_URL="$main_uri"
+    export JOBS_IM_REGRESSION_RUN="$RUN"
+    MAIN_URI="$main_uri" JOURNAL_URI="$journal_uri" python3 - <<'PY'
+import json,os,pathlib
+run=pathlib.Path(os.environ['JOBS_IM_REGRESSION_RUN'])
+common={'businessURL':os.environ['JOBS_IM_DATABASE_URL'],'journalURL':os.environ['JOBS_IM_JOURNAL_DATABASE_URL'],'stateDir':str(run/'AdmissionState'),'pgPassFile':os.environ['PGPASSFILE']}
+(run/'Secrets/admission.json').write_text(json.dumps(common))
+common['businessURL']=os.environ['MAIN_URI'];common['journalURL']=os.environ['JOURNAL_URI']
+(run/'Secrets/migrations.json').write_text(json.dumps(common))
+common['businessURL']=os.environ['MAIN_URI'].replace('/postgres?','/jobsim_regression_export?');common['journalURL']=os.environ['JOURNAL_URI'].replace('/postgres?','/jobsim_regression_export_journal?');common['stateDir']=str(run/'ExportHarnessState')
+(run/'Secrets/export.json').write_text(json.dumps(common))
+PY
+    export JOBS_IM_MIGRATION_TEST_ENV="$RUN/Secrets/migrations.json" JOBS_IM_ADMISSION_TEST_ENV="$RUN/Secrets/admission.json" JOBS_IM_EXPORT_TEST_ENV="$RUN/Secrets/export.json"
+    python3 - <<'OVERLAY'
+import pathlib,json
+root=pathlib.Path.cwd();tests=[root/'测试/后端/security_test.go',*sorted((root/'测试/后端/接口').glob('*_test.go'))]
+output=root/'项目相关报告/实现进度/20261116-剩余能力闭环/恢复迁移证据/全外置overlay.json'
+output.write_text(json.dumps({'Replace':{str(root/'代码/后端/Go'/x.name):str(x) for x in tests}}))
+OVERLAY
+    export JOBS_IM_DEPLOYMENT_RESTORE_TEST_ENV="$RUN/Secrets/deployment-restore-test.json" GO_BINARY="$GO_TOOL"
+    RESTORE_CASE_ROOT="$RUN" RESTORE_PG_BIN="$PG_BIN" RESTORE_REPOSITORY="$REPO" python3 - <<'RESTOREENV'
+import os,json,pathlib
+run=pathlib.Path(os.environ['RESTORE_CASE_ROOT'])
+old=json.loads((run/'Secrets/migrations.json').read_text())
+env={'Main':old['businessURL'],'Journal':old['journalURL'],'Root':str(run),'PGBin':os.environ['RESTORE_PG_BIN'],'OpenSSL':'/opt/homebrew/bin/openssl','NATS':str(pathlib.Path.home()/'Library/Application Support/JobsIM/Toolchains/NATS-v2.15.3/nats-server-v2.15.3-darwin-arm64/nats-server'),'Repository':os.environ['RESTORE_REPOSITORY']}
+(run/'Secrets/deployment-restore-test.json').write_text(json.dumps(env))
+RESTOREENV
+    local test_code=0
+    "$GO_TOOL" -C "$REPO/代码/后端/Go" test -p 1 -count=1 -json -overlay "$REPORT/全外置overlay.json" -timeout 600s -run '^Test(DeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup|JournalHandoffDecisionKeepsRetiredSourceSealedAndAllowsCanonicalSuccessor|GroupManagerOriginalPGApplicationProfilesKeepStateAndPagination)$' . > "$REPORT/全外置真实PG.jsonl" 2> "$REPORT/全外置真实PG.stderr.log" || test_code=$?
+    printf 'goPGTestExit=%s\n' "$test_code" >> "$REPORT/夹具结果.txt"
+    "$PG_BIN/psql" "$main_uri" -X -Atqc "SELECT count(*) FROM pg_database WHERE datname LIKE 'jobsim_sync_schemas_%' OR datname LIKE 'jobsim_self_read_%' OR datname LIKE 'jobsim_source_preferences_%' OR datname LIKE 'jobsim_read_point_%' OR datname LIKE 'jobsim_draft_floor_%' OR datname LIKE 'jobsim_sync_outbox_%' OR datname LIKE 'jobsim_migration_%'" > "$REPORT/随机测试数据库残留数.txt"
+
+    return "$test_code"
+}
+main "$@"

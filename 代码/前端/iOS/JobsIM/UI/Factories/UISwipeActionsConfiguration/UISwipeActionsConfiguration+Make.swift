@@ -1,0 +1,17 @@
+//
+//  UISwipeActionsConfiguration+Make.swift
+//  JobsIM
+//
+//  Created by Jobs on 2026年11月18日，星期三.
+//
+
+import UIKit
+
+extension UISwipeActionsConfiguration {
+    @MainActor
+    static func makeContactActions(_ actions: [UIContextualAction]) -> UISwipeActionsConfiguration {
+        let configuration = UISwipeActionsConfiguration(actions: actions)
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
+}

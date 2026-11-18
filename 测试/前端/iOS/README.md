@@ -27,6 +27,8 @@
 
 > 测试源码外置，测试target由[原生工程生成器](../../../代码/前端/iOS/Scripts/GenerateProject.rb)挂载；不改模板或第三方测试，不以局部通过代表243项全量验收。
 
+当前工作树的[跨端回归](../../../项目相关报告/测试/回归/20261116-全项目回归/iOS/README.md)在独立 iOS 27.2 模拟器完成 65 项本地原生测试和 1 项演示 UI，同轮 0 失败／跳过。`IMSessionTests` 增加有效明暗 trait 下的文字／背景与白字实心底对比度反例；原 64 项与首轮 UI 原件另存，不相加。当前切片无真实服务／系统保存／真机验证，后续各节保留其原历史范围。
+
 ## 一、<span id="native-tests">可执行测试</span> <a href="#前言">🔼</a> <a href="#🔚">🔽</a>
 
 | 测试 | 实际验证 |
@@ -36,6 +38,8 @@
 | [IMLifecycleTests](./IMLifecycleTests.swift) | 联系人接受／拒绝／删好友／拉黑／解黑／reopen与旧请求拒绝；群权限、代际移除、转让退出；头像操作对账／私有下载、举报去重；CA主机名／有效期／指纹／同源与无系统root拒绝 |
 | [IMNotificationTests](./IMNotificationTests.swift) | 真实系统本地通知送达、默认隐藏正文、跨namespace拒绝；须先通过通知授权UI |
 | [IMSessionTests](./IMSessionTests.swift) | 只读不入队、不消耗草稿；Outbox已提交才触发输入清空回调 |
+| [IMMigrationServiceTests](./IMMigrationServiceTests.swift)／[IMMigrationTests](./IMMigrationTests.swift) | 普通迁移非秘密原责任先耐久、未知只查／明确原体重试、family／CV／秘密字段门禁；原manifest／message字节SHA、AES-GCM、整批对象与FULL档案事务。HTTP为注入，SQLite／CryptoKit为真实原生执行，当前轮次见[迁移报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/iOS普通迁移.md) |
+| [IMReceiptStorageTests](./IMReceiptStorageTests.swift)／[IMReceiptServiceTests](./IMReceiptServiceTests.swift) | 当前物理SQLite FULL／原bytes、完整原件fsync／目录及跨介质失败／global清理、明确本测与部署批准分离、原nonce只查／family门禁、自动正文协调及代码集合摘要。最终122方法全部通过，Storage8＋Service14在内；首轮111／11、合同修正轮112／10及所有失败原件保留。HTTP／前后台为明确夹具，真实SQLite／文件probe执行，真实HTTPS／系统UI另验，详[收讫报告](../../../项目相关报告/实现进度/20261116-剩余能力闭环/iOS逐存储收讫.md) |
 | [IMSendAdmissionTests](./IMSendAdmissionTests.swift) | 原始载荷不变的旧SQLite升级、缺快照冻结、原ID／原快照重试、冻结UI不冒充接受、群与direct资格变化和旧无字段已提交事实兼容；新合同单独定向执行 |
 | [IMMessageListTests](./IMMessageListTests.swift)／[IMMessageListUITests](./UI/IMMessageListUITests.swift) | 本人收藏／搜索分页、精确来源ACL、冻结原结果纯查询；结构化提及与全体提及、公告丢响应／重启查原操作、引用内容版本与原生交互 |
 | [IMForwardTests](./IMForwardTests.swift) | 原引用Outbox、丢成功响应及首请求未到达、明确原ID重试、源版本重选／退重入、转发附件鉴权和离线清理、本地导出去敏、实例ID失配；与原生UI及真实对端确认分轮执行 |

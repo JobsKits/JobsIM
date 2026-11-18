@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-17T16:03:19+0800",
+  "publicConnection": {
+    "deploymentId": "3334f58a-4d55-41e9-9c9c-09957b52a73a",
+    "name": "JobsIM",
+    "url": "https://127.0.0.1:55443",
+    "protocolVersion": "1",
+    "caSha256": "54:22:1F:BE:21:28:A4:A2:3C:A0:3B:3F:25:9C:18:DC:90:6A:ED:52:70:E4:B3:F9:C6:31:59:39:71:0D:69:D5"
+  },
+  "caPath": "/Users/jobs/Library/Application Support/JobsIM/Regression/20261117-Canonical-完整运行/TLS/ca.crt",
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/api/bootstrap",
+      "status": 200
+    },
+    {
+      "path": "/",
+      "status": 200
+    }
+  ],
+  "defaultA4Touched": false
+}

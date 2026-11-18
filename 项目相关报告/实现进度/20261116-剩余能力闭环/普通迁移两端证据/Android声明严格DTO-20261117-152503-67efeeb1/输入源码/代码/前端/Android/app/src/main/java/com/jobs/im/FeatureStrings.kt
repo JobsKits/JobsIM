@@ -1,0 +1,36 @@
+package com.jobs.im
+
+object FeatureStrings {
+    private val keys =
+        "favoritesList|loadMore|viewOriginal|sourceUnavailable|searchLimit|conversationSearch|allConversations|originalMessage|mentions|mentionAll|mentionedYou|announcement|announcementEmpty|announcementUnavailable|announcementExpired|publishAnnouncement|clearAnnouncement|noExpiry|oneDay|sevenDays|pendingAnnouncement|chooseMessage|selectedMentions|expiry|forward|forwarded|forwardUnavailable|forwardChanged|forwardReselect|forwardTarget|forwardUnknown|forwardCheck|forwardRetry"
+            .split('|')
+    private val rows =
+        mapOf(
+                "zh-Hans" to
+                    "我的收藏|加载更多|查看原文|原消息不可用或已失去访问资格|搜索词需为1～256个UTF-8字节|仅此会话|全部会话|原消息|提及成员|提及所有人|提到了你|群公告|暂无群公告|公告来源已不可用|公告已到期|发布群公告|清除群公告|不设到期|一天后|七天后|有待核对的公告操作|选择群内消息|已选提及|到期时间|转发|转发消息|转发来源不可用|原消息已更新，请重新选择当前原文|使用更新后的原文|选择目标会话|尚未查到原发送结果，状态仍未知；可明确重试原发送|核对原发送结果|重试原发送",
+                "zh-Hant" to
+                    "我的收藏|載入更多|查看原文|原訊息不可用或已失去存取資格|搜尋詞需為1～256個UTF-8位元組|僅此會話|全部會話|原訊息|提及成員|提及所有人|提到了你|群公告|暫無群公告|公告來源已不可用|公告已到期|發布群公告|清除群公告|不設到期|一天後|七天後|有待核對的公告操作|選擇群內訊息|已選提及|到期時間|轉發|轉發訊息|轉發來源不可用|原訊息已更新，請重新選擇目前原文|使用更新後的原文|選擇目標會話|尚未查到原發送結果，狀態仍未知；可明確重試原發送|核對原發送結果|重試原發送",
+                "en" to
+                    "My favorites|Load more|View original|Original message is unavailable or access was revoked|Use 1–256 UTF-8 bytes for search|This conversation|All conversations|Original message|Mention members|Mention everyone|Mentioned you|Group announcement|No group announcement|Announcement source is unavailable|Announcement expired|Publish announcement|Clear announcement|No expiry|After one day|After seven days|Announcement operation needs reconciliation|Choose a group message|Selected mentions|Expires|Forward|Forwarded message|Forwarded source unavailable|The original changed. Select the updated original again|Use updated original|Choose destination|No original result found. Status is still unknown; explicitly retry the same send if needed|Check original result|Retry original send",
+                "ja" to
+                    "保存したメッセージ|さらに読み込む|原文を表示|元のメッセージを表示できないか権限がありません|検索語はUTF-8で1～256バイト|この会話のみ|すべての会話|元のメッセージ|メンバーをメンション|全員をメンション|あなたへのメンション|グループのお知らせ|お知らせはありません|お知らせの元データを表示できません|お知らせの期限が切れました|お知らせを公開|お知らせを削除|期限なし|1日後|7日後|お知らせ操作の確認が必要です|グループのメッセージを選択|選択したメンション|有効期限|転送|転送メッセージ|転送元を表示できません|原文が更新されました。更新後の原文を再選択してください|更新後の原文を使用|転送先を選択|元の送信結果は不明です。必要なら同じ送信を明示的に再試行してください|元の結果を確認|元の送信を再試行",
+                "fr" to
+                    "Mes favoris|Charger la suite|Voir l’original|Message indisponible ou accès révoqué|Utilisez 1 à 256 octets UTF-8|Cette conversation|Toutes les conversations|Message original|Mentionner des membres|Mentionner tout le monde|Vous a mentionné|Annonce du groupe|Aucune annonce|Source de l’annonce indisponible|Annonce expirée|Publier l’annonce|Effacer l’annonce|Sans expiration|Dans un jour|Dans sept jours|Opération d’annonce à vérifier|Choisir un message du groupe|Mentions sélectionnées|Échéance|Transférer|Message transféré|Source transférée indisponible|L’original a changé. Sélectionnez à nouveau sa version actuelle|Utiliser l’original actualisé|Choisir la destination|Résultat initial introuvable, état inconnu. Relancez explicitement le même envoi si nécessaire|Vérifier le résultat initial|Réessayer l’envoi initial",
+                "es" to
+                    "Mis favoritos|Cargar más|Ver original|Mensaje no disponible o acceso revocado|Usa entre 1 y 256 bytes UTF-8|Esta conversación|Todas las conversaciones|Mensaje original|Mencionar miembros|Mencionar a todos|Te mencionaron|Anuncio del grupo|Sin anuncio|La fuente del anuncio no está disponible|Anuncio caducado|Publicar anuncio|Borrar anuncio|Sin caducidad|En un día|En siete días|Hay que revisar la operación del anuncio|Elegir mensaje del grupo|Menciones seleccionadas|Caducidad|Reenviar|Mensaje reenviado|Origen no disponible|El original cambió. Vuelve a seleccionar su versión actual|Usar original actualizado|Elegir destino|No se encontró el resultado original. El estado sigue desconocido; reintenta explícitamente el mismo envío|Comprobar resultado original|Reintentar envío original",
+                "de" to
+                    "Meine Favoriten|Mehr laden|Original ansehen|Nachricht nicht verfügbar oder Zugriff entzogen|Suchbegriff mit 1–256 UTF-8-Bytes|Diese Unterhaltung|Alle Unterhaltungen|Originalnachricht|Mitglieder erwähnen|Alle erwähnen|Du wurdest erwähnt|Gruppenankündigung|Keine Ankündigung|Quelle der Ankündigung nicht verfügbar|Ankündigung abgelaufen|Ankündigung veröffentlichen|Ankündigung löschen|Kein Ablauf|Nach einem Tag|Nach sieben Tagen|Ankündigungsvorgang prüfen|Gruppennachricht auswählen|Ausgewählte Erwähnungen|Ablauf|Weiterleiten|Weitergeleitete Nachricht|Ursprung nicht verfügbar|Das Original wurde geändert. Aktuelle Fassung erneut auswählen|Aktuelles Original verwenden|Ziel auswählen|Kein ursprüngliches Ergebnis gefunden. Status unbekannt; bei Bedarf denselben Versand ausdrücklich erneut versuchen|Ursprüngliches Ergebnis prüfen|Ursprünglichen Versand wiederholen",
+                "ru" to
+                    "Избранное|Загрузить ещё|Открыть оригинал|Сообщение недоступно или доступ отозван|Запрос должен содержать 1–256 байт UTF-8|Эта беседа|Все беседы|Исходное сообщение|Упомянуть участников|Упомянуть всех|Вас упомянули|Объявление группы|Нет объявления|Источник объявления недоступен|Срок объявления истёк|Опубликовать объявление|Удалить объявление|Без срока|Через день|Через семь дней|Нужно проверить операцию объявления|Выбрать сообщение группы|Выбранные упоминания|Срок|Переслать|Пересланное сообщение|Источник недоступен|Оригинал изменён. Выберите обновлённый оригинал ещё раз|Использовать новый оригинал|Выбрать беседу|Исходный результат не найден. Статус неизвестен; при необходимости явно повторите ту же отправку|Проверить исходный результат|Повторить исходную отправку",
+                "ko" to
+                    "내 저장 메시지|더 불러오기|원문 보기|원문을 사용할 수 없거나 접근 권한이 없습니다|검색어는 UTF-8 기준 1~256바이트입니다|이 대화만|모든 대화|원본 메시지|멤버 언급|모두 언급|나를 언급함|그룹 공지|공지 없음|공지 원문을 사용할 수 없습니다|공지가 만료되었습니다|공지 게시|공지 삭제|만료 없음|하루 후|7일 후|공지 작업을 확인해야 합니다|그룹 메시지 선택|선택한 언급|만료|전달|전달된 메시지|전달 원문을 사용할 수 없음|원문이 변경되었습니다. 최신 원문을 다시 선택하세요|최신 원문 사용|전달할 대화 선택|원래 결과를 찾지 못했습니다. 상태는 알 수 없으며 필요한 경우 동일 전송을 명시적으로 다시 시도하세요|원래 결과 확인|원래 전송 다시 시도",
+                "bo" to
+                    "ངའི་ཉར་ཚགས།|དེ་ལས་མང་བ་འཇུག|མ་ཡིག་ལྟ།|མ་ཡིག་མེད་པའམ་འཛུལ་དབང་མེད།|འཚོལ་ཡིག་UTF-8་བཱའིཊ་1–256་དགོས།|ཁ་བརྡ་འདི་ཁོ་ན།|ཁ་བརྡ་ཚང་མ།|མ་འཕྲིན།|ཚོགས་མི་འབོད།|ཚང་མ་འབོད།|ཁྱེད་འབོད་ཡོད།|ཚོགས་བརྡ།|ཚོགས་བརྡ་མེད།|ཚོགས་བརྡའི་ཁུངས་མེད།|ཚོགས་བརྡའི་དུས་ཡོལ།|ཚོགས་བརྡ་སྤེལ།|ཚོགས་བརྡ་བསུབ།|དུས་ཚད་མེད།|ཉིན་གཅིག་རྗེས།|ཉིན་བདུན་རྗེས།|ཚོགས་བརྡའི་ལས་བསྐྱར་ཞིབ།|ཚོགས་ཀྱི་འཕྲིན་འདེམས།|འདེམས་པའི་འབོད།|དུས་ཚད།|བརྒྱུད་སྐུར།|བརྒྱུད་བསྐུར་འཕྲིན།|བརྒྱུད་སྐུར་ཁུངས་མེད།|མ་ཡིག་བསྒྱུར་ཡོད། གསར་པ་ཡང་འདེམས།|མ་ཡིག་གསར་པ་སྤྱོད།|ཁ་བརྡ་འདེམས།|སྐུར་འབྲས་མ་རྙེད། གནས་སྟངས་མ་ངེས། མ་སྐུར་ཡང་འབད་ཆོག|མ་འབྲས་ཞིབ་བཤེར།|མ་སྐུར་ཡང་འབད།",
+            )
+            .mapValues { it.value.split('|') }
+
+    fun text(language: String, key: String): String? =
+        keys.indexOf(key).takeIf { it >= 0 }?.let { rows[language]?.getOrNull(it) }
+
+    fun complete() = Strings.languages.keys.all { rows[it]?.size == keys.size }
+}

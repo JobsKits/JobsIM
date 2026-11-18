@@ -15,6 +15,7 @@
   - [1.4、高级中心化多 BaseURL 协调器](#endpoint-group-client)
   - [1.5、基础搜索范围与端侧私密索引](#local-search-contract)
   - [1.6、自托管实例首次连接与切换](#instance-onboarding-client)
+  - [1.7、桌面Web与手机H5适配](#mobile-web-h5)
 - [二、分层、依赖与能力开关](#frontend-layers)
   - [2.1、模块责任合同](#frontend-modules)
   - [2.2、配置、生效与历史读取](#frontend-capabilities)
@@ -25,6 +26,7 @@
   - [3.1、工程模板与模块组织](#ios-pods)
   - [3.2、UI 与代码块写法](#ios-dsl)
   - [3.3、源码与维护边界](#frontend-ownership)
+  - [3.4、原生导航与资料／聊天状态](#ios-ui-flow)
 - [四、SQLite 与封装选型](#storage-selection)
   - [4.1、三层职责与选择状态](#storage-responsibilities)
   - [4.2、耐久、性能与替换门禁](#storage-gates)
@@ -72,13 +74,15 @@
 | [八、构建与交付](#frontend-build) | 安装后行为、build 产物、锁定清单、验收 |
 | [架构图](#frontend-modules) | [五端存储与分层](#frontend-modules)、[本地事务](#local-sync-transaction-diagram)、[后端多端同步与历史恢复](../IM后端架构表.md/IM后端架构表.md#multidevice-sync-architecture) |
 
+前端工程以低总体成本与长期易维护为目标，优先原生语言和官方系统能力；跨平台复用须说明使用收益、运行时／桥接依赖及实际内存、冷启动、包体与系统适配成本。可编译为原生产物的公共源码不等同运行时中转，按实际架构判断；不以“原生”名称代替测量，不为统一技术栈额外增加用户部署环境。各端已有语言、Web运行方式及完整业务合同继续按本表实施，明确区分源码、构建、目标系统执行与真实业务验收。
+
 ## 一、<span id="frontend-scope">从零新建与五端工程边界</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 ### 1.1、<span id="new-project-boundary">独立新工程与模板承接</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 另起一套 IM 工程，从零设计并实现业务代码；不在既有业务工程上直接修改、改名或覆盖。旧代码仅用于提取有价值的工程经验，例如部署/反部署、自检、日志、挂载与构建交付。阶段 II/III 继承的是本项目已封版的新基线，不是旧业务源码。
 
-iOS 明确使用 <u>[**Swift**](https://www.swift.org/)</u>，以 Jobs 本人的 [Swift 基础工程](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/README.md) 为工程模板；承接自有通用 Pods、依赖解耦、脚本与 DSL 约定。新 App、标识、业务模块、配置、产物目录与验收记录独立建立；自有通用框架可按需复用并锁定来源版本，不搬入旧业务、Demo 入口、无关跨端引擎或默认账号。模板本身不因本需求自动获得修改授权。
+iOS 明确使用 <u>[**Swift**](https://www.swift.org/)</u>，以 Jobs 本人的 [Swift 基础工程](../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/README.md) 为工程模板；承接自有通用 Pods、依赖解耦、脚本与 DSL 约定。新 App、标识、业务模块、配置、产物目录与验收记录独立建立；自有通用框架可按需复用并锁定来源版本，不搬入旧业务、Demo 入口、无关跨端引擎或默认账号。模板本身不因本需求自动获得修改授权。
 
 ### 1.2、<span id="frontend-platforms">平台路线与确认状态</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -86,7 +90,7 @@ iOS 明确使用 <u>[**Swift**](https://www.swift.org/)</u>，以 Jobs 本人的
 
 | 阶段 | 五端当前交付范围 | 运行与依赖边界 |
 | --- | --- | --- |
-| I 基础自托管 | 本地用户名／密码、设备会话、不依赖邮件的可信恢复；单聊／群聊、文本／静态图／动图／语音／视频消息／文件、静态头像上传、回复／编辑／反应／转发／搜索、群管理、@／消息置顶／收藏；前台消息、应用内和本地通知、基础备份恢复、权限治理、十语与主题 | 可自托管的开源数据库、缓存、对象与消息组件属于本项目部署依赖，不因存在依赖而推迟日常能力。RTC通话与音视频消息分开；无外部推送仍可前台收发，后台不承诺即时到达 |
+| I 基础自托管 | 本地用户名／密码、设备会话、不依赖邮件的可信恢复；单聊／群聊、文本／静态图／动图／语音／视频消息／文件、静态／GIF动态头像上传、回复／编辑／反应／转发／搜索、群管理、@／消息置顶／收藏；前台消息、应用内和本地通知、基础备份恢复、权限治理、十语与主题 | 可自托管的开源数据库、缓存、对象与消息组件属于本项目部署依赖，不因存在依赖而推迟日常能力。RTC通话与音视频消息分开；无外部推送仍可前台收发，后台不承诺即时到达 |
 | II 外部渠道与专项资源 | 邮件OTP／SMTP、厂商远程推送与Web Push、RTC／[**LiveKit**](https://livekit.io/)／TURN、地图、通讯录发现、机器人／复杂调度、会员及频道等 | 按实际启用能力配置外部账户、证书、域名、配额和专项资源；未配置与已配置失败分别呈现，关闭这些能力不阻塞I阶段核心收发 |
 | III 高级专项 | E2EE／焚毁／协议切换、多入口、组织／财务／AI／链等 | 各模块单独立项、注册、授权及组合验收，不把基础消息置顶／@／收藏留到本阶段 |
 
@@ -101,7 +105,7 @@ I／II／III是同一项目的实施标段简称，不维护三套产品。允�
 | [**iOS**](https://developer.apple.com/ios/) | Swift，沿本人 [**UIKit**](https://developer.apple.com/documentation/uikit) 模板与 JobsByPods；系统 [**SQLite**](https://www.sqlite.org/)＋[**GRDB**](https://github.com/groue/GRDB.swift)＋自有 JobsIMStorage Pod | Codex 已选 iOS 16.0 起；继续本人 UIKit 路线；确切构建版本见第八章，集成尚未验收 |
 | [**Android**](https://developer.android.com/) | [**Kotlin**](https://kotlinlang.org/) / [**Jetpack Compose**](https://developer.android.com/compose)；[**Room**](https://developer.android.com/training/data-storage/room)＋AndroidX 内嵌 SQLite | Codex 已选 Android 8.0/API26 起；数据库配置与 ABI 由 Codex 实施验证 |
 | [**鸿蒙**](https://developer.huawei.com/consumer/cn/) | [**ArkTS/ArkUI**](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/arkts-overview) Stage；系统 [**RDB / relationalStore**](https://developer.huawei.com/consumer/cn/doc/doccenter-dev-faq/faqs-local-database-management-68) | Codex 已选 HarmonyOS 5.0/API12 起；原生鸿蒙路线，系统存储并发/持久性待工程实测 |
-| [**Web**](https://developer.mozilla.org/zh-CN/docs/Web) | [**TypeScript**](https://www.typescriptlang.org/) / [**React**](https://react.dev/) SPA；原生 [**IndexedDB**](https://www.w3.org/TR/IndexedDB/)＋自有有限适配 | Codex 已选具体浏览器基线；配额/驱逐/隐私模式单列，不套用原生 SQLite 耐久保证 |
+| [**Web：桌面与手机H5**](https://developer.mozilla.org/zh-CN/docs/Web) | [**TypeScript**](https://www.typescriptlang.org/) / [**React**](https://react.dev/) SPA；原生 [**IndexedDB**](https://www.w3.org/TR/IndexedDB/)＋自有有限适配 | Codex 已选具体浏览器基线；配额/驱逐/隐私模式单列，不套用原生 SQLite 耐久保证 |
 | CLI | [**Go**](https://go.dev/)＋[**modernc.org/sqlite**](https://pkg.go.dev/modernc.org/sqlite) | Codex 已选纯 Go 驱动与三桌面平台/双 CPU 架构；复用 IM API，数据库与凭据保护由 Codex 验证 |
 
 当前工程基线的框架、最低系统和参数由 Codex 决定并负责验证，不再交给用户补技术判断。各端以相同 IM 合同实现，各自留下构建/耐久/兼容证据；选型存在和组合通过是两种状态。服务端版本由 [后端表](../IM后端架构表.md/IM后端架构表.md#dependency-versions) 管理，客户端具体版本由 [前端锁定清单](#frontend-locks) 管理。
@@ -139,6 +143,15 @@ I阶段发行客户端连接用户明确选择的单一实例，提供输入服�
 公网使用公信HTTPS；局域网可在显式选择后使用具备正确SAN的本地CA证书。原生／CLI仅建立该实例专用信任条目，仍校验主机名、有效期及实际部署身份；Web通过受控说明由用户在OS／浏览器手动安装信任或改用公信HTTPS，不能自动向全局信任库安装CA。扫码展示指纹只供与可信部署终端比对，二维码本身不证明来源；信任失败不能跳过校验后照常登录。
 
 用户确认切换实例前展示目标与原实例身份，明确账号／历史不会自动迁移；确认前取消保留原会话。确认后按完整P隔离数据库、凭据、草稿、媒体、游标及Outbox，停止原连接和迟到异步结果写入新实例；原待发仍属于原实例，不能搬去新地址自动补发。返回原实例重验身份并恢复原队列对账。相同域名指向不同部署、同名用户位于不同实例、扫码后改地址及切换过程中恢复网络均列入验收。这是用户主动选择的固定接入，不启动III高级地址组轮询或后台自动跨实例发现。
+
+### 1.7、<span id="mobile-web-h5">桌面Web与手机H5适配</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+Web同时覆盖桌面浏览器与手机H5，使用同一套TypeScript／React页面、业务合同和API，不另外引入跨平台App引擎。手机界面按会话列表→聊天→返回的触控任务流适配，不把桌面双栏整体缩小。认证、会话、消息、附件／录音、设置及弹层均须完成移动端操作；权限、TLS、身份隔离、Outbox、原单与演示边界与桌面一致。
+
+- 布局覆盖小屏、常见手机、宽屏／横竖屏及字号放大，无横向溢出、截断主操作或仅hover可达的能力；内容阅读位置、草稿和当前任务随方向变化保持。
+- 顶部刘海、底部手势区与横屏侧边安全区留出控件可达空间；地址栏与软键盘改变可见区域时，输入框、发送及弹层主操作保持可见，关闭键盘恢复原布局，不关闭用户缩放。
+- 触控目标、焦点、滚动与菜单按手机浏览器实现，使用系统文件选择、媒体权限及可支持的下载／分享能力；iOS Safari、Android Chrome及其他声明浏览器分别验证，浏览器限制明确说明，不伪造原生后台／通知／文件耐久保证。
+- 白天／黑夜／系统主题、完整十语言、三档字号、无数据占位／重载、API优先与本地演示回退在H5同样完整；真实手机、浏览器模拟和视口／键盘注入分开记录，不将390px截图当成移动端全部验收。
 
 ## 二、<span id="frontend-layers">分层、依赖与能力开关</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -241,10 +254,10 @@ I阶段按[联系人合同](../IM需求明细表.md/IM需求明细表.md#contact
 
 | 操作 | 前端与多端结果 |
 | --- | --- |
-| 好友申请与接受 | 双向好友仅在对方接受成功后成立；申请／取消／拒绝／过期可见，重复点击及双方同时申请沿原请求对账。接收方拒绝或拉黑后不再新建相应请求，只有其主动重新开放后才允许新申请；不会把“接受消息会话”当作同意好友 |
+| 好友申请与接受 | 双向好友仅在对方接受成功后成立；申请／取消／拒绝／过期可见，重复点击及双方同时申请沿原请求对账。拒绝／取消／过期只结束原轮次，未拉黑可无限次发起新轮次；保留频控及单pair一个pending，拉黑才阻断新轮次，不提供重新开放开关；不会把“接受消息会话”当作同意好友 |
 | 删除好友 | 确认后移除双方好友关系，两端按权威结果刷新；不删除任一方合法历史。删除方可清理自己的私有备注／标签，不修改对方备注且不向对方回显；删除未知时不假称成功，不把关系删除误显示为已清聊天 |
-| 陌生消息请求 | 陌生文本仅进入受限请求区，不混入已接受聊天；附件不预载，不能自动来电／发阅读回执／取在线状态。接受只开放该请求会话，不自动建好友；拒绝／拉黑停止后续新请求，提供接收方主动重新开放入口 |
-| 拉黑与群共有历史 | 拉黑阻断相应私信／来电／新请求及被拉黑者定向提醒；不自动将任何人踢出共同群，也不隐藏或删除仍获权的群共有历史。群内不会因被拉黑者@产生定向提醒，群内禁言／成员权限仍按群权威分别校验。拉黑再解除后，旧accepted交接或迟到成功不能重开私聊；仅按新通信代际下明确重开／好友授权的权威结果恢复，不补投屏蔽期间消息 |
+| 陌生消息请求 | 陌生文本仅进入受限请求区，不混入已接受聊天；附件不预载，不能自动来电／发阅读回执／取在线状态。接受只开放该请求会话，不自动建好友；拒绝只结束当前轮次，未拉黑可另起新轮次；拉黑期间停止新请求，解黑不接受旧轮次 |
+| 拉黑与群共有历史 | 拉黑保留当前friend及列表行，阻断双方新私信／来电／新请求及被拉黑者定向提醒；不自动将任何人踢出共同群，也不隐藏或删除仍获权的群共有历史。群内不会因被拉黑者@产生定向提醒，群内禁言／成员权限仍按群权威分别校验。拉黑再解除后，旧accepted交接或迟到成功不能重开私聊；仍成立的friend按解黑后的新通信代际恢复；已删除关系须重新申请接受，不补投屏蔽期间消息 |
 | 入群及重新加入 | 初次加入只取得加入后的云历史；退群／被踢后停止新群写入和云正文／媒体读取，保留原合法本地普通副本且继续执行global清理。重新加入使用新的成员授权与历史起点，不补离开期间；新旧离线请求不能合并成未曾退群 |
 | 禁言、退群和移除 | 显示当前状态及原因；失去发言资格后冻结对应输入／待发重试，旧准入由服务端按权威边界仲裁，未知提交查原消息。失败可重新加载／查询原操作，不改ID绕过限制；成员列表／未读／媒体与通知同步撤权结果 |
 | 群主退出或解散 | 群主主动退出前先完成转让或明确解散，不能留下无主的可写群。解散终止新加入／新发送，云历史按群生命周期合同的权威可见范围处理；合法本地普通历史与global清理分别处理，不把解散当作保证所有外部副本已擦除 |
@@ -256,11 +269,15 @@ I阶段按[联系人合同](../IM需求明细表.md/IM需求明细表.md#contact
 
 ### 3.1、<span id="ios-pods">工程模板与模块组织</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-模板依据为实际 [Podfile](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile)、[Podfile.deps](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile.deps)、[JobsByPods](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods) 与 [Swift 工程框架文档](../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/SwiftDoc.md/Swift工程项目框架配置方案@Jobs.md/Swift工程项目框架配置方案@Jobs.md)。这些材料用于提炼新工程合同，不表示当前模板包含新 IM 功能。
+模板依据为实际 [Podfile](../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile)、[Podfile.deps](../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/Podfile.deps)、[JobsByPods](../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/JobsByPods) 与 [Swift 工程框架文档](../../../../JobsBaseConfig/JobsBaseConfig@JobsSwiftBaseConfigDemo/SwiftDoc.md/Swift工程项目框架配置方案@Jobs.md/Swift工程项目框架配置方案@Jobs.md)。这些材料用于提炼新工程合同，不表示当前模板包含新 IM 功能。
 
 主 App 负责品牌、页面与入口；IM 核心、存储、传输和可复用 UI 按责任拆成本地 Pods，避免所有逻辑堆进控制器或聚合 Pod。建议在新工程 `JobsByPods/` 下建立独立 IM 领域、存储和传输模块，名称在实施时锁定；UI 模块依赖核心，核心不依赖 UI。模块粒度按可维护和可验收职责划分，不按每张表/每个按钮建 Pod。
 
 承接 `JobsByUIKit`、`JobsSwiftDSL`、`JobsSwiftBlock`、`JobsSwiftBaseDefines`、`JobsNetworking`、`JobsEmptyAuto` 等所需能力；列清直接依赖、公开入口和自有源码基线。`Core` 只放源码且只有一层，`Resource` 与其平级；按现有 podspec/JobsPodspecKit 风格声明，资源不混入源码 glob，不复制 `Pods/` 生成树为可维护源码。
+
+Xcode中的主工程以蓝色文件系统同步文件夹管理，层级与磁盘上的`JobsIM/App`、`Resource`、`Services`、`UI`及其子目录一致，增删移动跟随实际文件位置，不把不同目录的Swift文件平铺成虚拟列表。同步文件夹正确关联App target，Info.plist、专用entitlements及其它不应复制／编译的配置列为例外；依赖工程、资源本地化和外置测试保持正确归属，不能为了展示目录而把源码整目录当资源复制。工程生成器与当前项目采用同一规则，重复生成／准备不抹掉已有Pods集成或用户工程设置。
+
+iPhone真机运行默认启用代码签名，使用已有且有效的开发团队、证书和匹配Bundle ID／设备的描述文件；模拟器专用设置限定在模拟器SDK，不能将`iphoneos`或所有target的签名统一关闭。App、嵌入代码及必要扩展逐项验证签名与entitlements后再安装；编译、有效签名、设备安装和启动分别取证，无签名产物不能称可安装真机成品。缺少账户／证书／描述文件时明确具体缺项，不改Bundle ID或生成新身份来掩盖阻塞。
 
 `Podfile.deps` 逐条声明依赖，只负责清单；`Podfile` 负责 hooks、统一脚本 helper、存在性检查和执行条件。模板当前通过 `post_integrate` 维护同一 `Pods/Pods.xcodeproj` 根组中的 `Podfile` 与 `Podfile.deps` 两个可编辑引用；新工程沿用去重、真实 Ruby 文件类型及根工程完整性原则，重复安装不能重复引用或覆盖 `PBXProject` 根 UUID，引用不能加入 Build Phase。可选报告/展示脚本缺失或失败告警跳过，实际依赖安装或必需工程错误仍作为失败；可选增强跳过会保留相应验收项未通过。模板当前的 SPM 校验可选择跳过、选执行则作为必需步骤，顶部 Ruby 加载也可能阻断；移植时逐项核对，不能把全部旧 hooks 概括成软失败。
 
@@ -275,6 +292,16 @@ UI 沿本人 UIKit 路线：控制器使用既有 Jobs 基类；视图通过同�
 ### 3.3、<span id="frontend-ownership">源码与维护边界</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
 只维护新 IM 自有源码和已明确接管的自有通用模块。第三方/供应商源码、`Pods/`、`ManualBySwiftPods@Pods/` 及生成代码不因放在工程里就成为自有；保留原作者、许可、来源和升级路径。自有薄适配层可自行实现，不能以“从零”抹掉合法复用组件的来源，也不因发现问题默认修改上游。
+
+### 3.4、<span id="ios-ui-flow">原生导航与资料／聊天状态</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
+
+按[完整iOS交互合同](../IM需求明细表.md/IM需求明细表.md#ios-native-ui-contract)实现：联系人／消息／当前账户三Tab，根页无重复标题，演示仅用可拖拽环境浮标，点击回登录且不自动恢复正式登录；AppIcon打包，认证门复用本人OC新工程AppDoor Style1视觉和切换动画，保持Swift与原认证协议。联系人滚动搜索、🌟A～Z#索引、星标迁移、独立添加／搜索页；点击直达独占聊天，消息页无新建按钮，空白收键盘。头像长按进入只读他人资料／可编辑本人资料，自己的Tab头像和用户名随权威资料更新。
+
+账户选择记录只引用当前实例档案中现有Keychain整对与非秘密身份绑定；切换先停止旧同步并悬置当前选择，不撤销旧家族／不清旧Outbox。目标经当前实例、恢复代际、家族和GET me核验后发布；迟到旧结果不得覆盖新账户。无效目标回认证门，不以缓存用户信息伪造已登录。资料改名沿原username／expectedUsername／requestId核对唯一性，未知不换原单；不改userId、家族、命名空间或旧认证请求正文。
+
+认证门采用本地图片／视频背景、半透明毛玻璃表单与实色侧栏，标题居中、登录／注册副说明统一“Jobs荣誉出品”，实色侧轨字体18pt；输入背景描边，密码及确认密码眼睛／记住圆形图标视觉18～20pt、最小44×44pt触控。卡片禁止用户上下拖动／惯性／回弹，键盘程序避让与自动定位保留；视频离页／后台暂停。记住密码默认关闭，成功认证后才按profile／UID／username进Keychain，演示候选不保存。右上齿轮推独立登录设置，连接／CA与真实Mac演示开关集中其中；连接异常使用取消／跳转设置持久弹框。“重新验证身份”只在独立登录设置；认证卡片不含技术恢复按钮／帮助展开或客户端OTP自选。OTP字段由服务端策略／明确挑战决定；认证／改密／注销的原证明可用时内部核对，证明缺失时经设置中的重新验证自然提示补充；保留原绑定／nonce，404不自动新建。资料页点头像进入设置，保留真实GIF动画；UID和注册时间只读，联系方式按真实绑定及隐私状态展示，昵称和签名可编辑，保存位于最底部。
+
+消息编辑先以所见消息ID／版本完成本人撤回，成功后回填原文；非空输入先选择覆盖或保存，保存的仅为操作前草稿，按当前账户／实例／epoch隔离并可恢复。举报保全选中材料私有副本与稳定上传8字段原单，未知先查原结果，再显式同体接续；后台按举报人和对象查看，聊天记录只存ID／contentVersion引用并重新核验当前源。拉黑保留联系人，删除须左红删除／右手滑确认，均不得擦除合法旧历史。设置cell／输入框／菜单统一主题色和十语言。
 
 ## 四、<span id="storage-selection">SQLite 与封装选型</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
@@ -321,6 +348,7 @@ WCDB 的价值在 SQLite/[**SQLCipher**](https://www.zetetic.net/sqlcipher/) 之
 | `messages` / I | P、message_id、send_namespace_id、client_message_id、conversation_id、sequence_epoch、server_seq、sender_id、sender_kind、type、revision_epoch、content_version、receipt_generation、body、content_digest、state、server_time、delete_scope、expires_at、crypto_protocol/epoch | PK P/message；会话/sequence_epoch/server_seq顺序索引；发送者/namespace/client_message_id幂等；sender kind区分人类与机器人，正文/状态/版本与入站处理同事务，高级私密字段按阶段使用 |
 | `inbox_events` / I | P、restore_epoch、stream_id、event_id、stream_seq、coverage_from/to、schema_version、aggregate_id/revision_epoch/version、payload、event_digest、hydration_status、body_digest、state、received_at | UNIQUE P/epoch/stream/event及已知stream_seq；payload为不可变元数据，动态正文存messages；同事件异eventDigest拒绝，对授权skip覆盖耐久应用但不生成正文回执；缺洞未完整应用不推进累计确认 |
 | `outbox_messages` / I | P、send_namespace_id、send_restore_epoch、client_message_id、conversation_id、payload、payload_digest、request_version、state、attempt_count、next_retry_at、last_error、server_message_id、created_at | UNIQUE P/namespace/client_message_id；稳定内容摘要，点击发送先提交；未知结果查询原命名空间和 ID，重试不迁移身份；终态保留覆盖幂等/重放窗口，过窗未知暂停对账 |
+| `attachment_send_intents` / I | P、request_id、client_message_id、family_id、restore_epoch、conversation_id、原回复目标／发送资格、规范文件manifest、原件引用、size／sha256、原消息body、state、frozen、object_result、server_message_id、revision、created_at／updated_at | 逻辑责任，不强制各端新增同名SQL表。用户明确发送前先保全原件与非秘密原单，再请求[稳定媒体协议](../../测试/后端/接口/media_upload/README.md)；两ID只固定一次，不存登录凭据。原结果未知先纯查，prepared／404仅明确同体重试；媒体确认先耐久，再沿固定client_message_id接续消息Outbox，服务器消息接受前保原件。跨身份／恢复代际冻结，不自动重发预览；停止本机待发不等于撤回已送消息。global按本人／会话／client与server映射精确清原件，清理终态后中断仍可只续本地清理；账号completed先持久拒写floor再清全部所属原件，晚到写不复活。 |
 | `sync_cursors` / I | P、stream_id、contiguous_seq、snapshot_id、snapshot_version、snapshot_coverage、classification_watermark、restore_epoch、updated_at | PK P/stream；只前进到所有必要事件已应用的连续位置，不用最大已见序号替代；快照完整校验/原子切换前不提交边界 |
 | `receipt_outbox` / I | P、restore_epoch、receipt_id、receipt_type、stream_id、message_id、content_revision_epoch、content_version、receipt_generation、target_manifest_digest、contiguous_seq、object_id、object_revision_epoch、object_version、content_digest、state、attempt_count | PK P/receipt_id；分支键均含恢复/登记存储代际：消息为P/epoch/message/内容代际/版本/generation/manifest/type，累计为P/epoch/stream/连续位置/type，对象再含消息内容代际/版本、receipt generation/manifest及object/对象代际/版本/digest/type；多附件/多流/编辑目标不覆盖。与本地提交同事务，旧代际不能确认新流/新版 |
 | `message_tombstones` / I | P、message_id、target_owner、delete_scope、lifecycle_generation、reason、effective_at、source_event_id | UNIQUE P/message/目标范围；记录 cloud_only/global/个人视图的不同事实；重复/旧版本不能放宽已成立范围，屏蔽迟到正文复活 |
@@ -496,9 +524,9 @@ I阶段先交付连接在线时的消息发现、应用内提示、未读／角�
 
 ### 7.2、<span id="frontend-demo">正式与本地演示隔离</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 
-进入/刷新/写操作正常尝试 API，失败时按 [产品演示合同](../IM需求明细表.md/IM需求明细表.md#chapter-4) 提供明确标记的本地演示。正式缓存与待发优先保留，演示使用独立身份、存储、队列、能力快照和模拟传输；假消息、模拟收讫/已读/删除不能向真实后端发送或推进真实游标，模拟发送不进入正式 Outbox。
+进入/刷新/写操作正常尝试 API，失败时按 [产品演示合同](../IM需求明细表.md/IM需求明细表.md#chapter-4) 提供明确标记的本地演示。正式缓存与待发优先保留，本地样例回退使用独立身份、存储、队列、能力快照和模拟传输；假消息、模拟收讫/已读/删除不能向正式后端发送或推进正式游标，模拟发送不进入正式 Outbox。
 
-正式账号弱网时，当前会话仍属于原账号／来源：保留真实缓存、编辑中草稿、选中对象、滚动位置和已明确提交的待发队列，分别显示离线、待发送与结果待核实。API失败不把当前输入框或聊天对象自动替换为样例会话；未登录预览及用户主动打开的演示入口继续提供本地回退。演示页面常驻醒目的“演示数据”标记、演示身份及“返回正式会话”入口；切回后恢复原真实上下文，演示草稿不拷成正式待发。
+正式账号弱网时，当前会话仍属于原账号／来源：保留真实缓存、编辑中草稿、选中对象、滚动位置和已明确提交的待发队列，分别显示离线、待发送与结果待核实。API失败不把当前输入框或聊天对象自动替换为样例会话；独立离线预览／测试可提供本地回退，登录设置中的专用实例开关必须实际启动和验真服务。iOS登录设置的演示开关调用当前Mac专用HTTPS控制面ensure-start／status，准备并验真隔离的Go／PostgreSQL／NATS与Web，非管理员种子账户明文预填后仍由用户点登录；实际业务走正常API和专属部署档案，不使用本地模拟器冒充服务启动。只保留一个可拖拽环境浮标，点击回登录，不自动恢复原正式账户；模拟样例仍只用于独立离线回退／测试，演示草稿不拷成正式待发。
 
 服务恢复后真响应自动更新正式缓存并按真实队列对账，演示编辑不合入真历史；用户仍在演示输入时先提示真实服务已恢复，不抢走焦点或把正在编辑的演示草稿提交为真消息。迟到响应按 P 与请求代次丢弃。切到演示视图不取消用户明确提交的正式消息，也不能把其未知提交结果当成本地模拟成功。T-13／47覆盖输入中断网、重复点击、恢复、切账号及演示返回的全过程。
 
@@ -506,7 +534,7 @@ I阶段先交付连接在线时的消息发现、应用内提示、未读／角�
 
 提供小/标准/大三档字体，持久化偏好，兼容系统辅助字号；布局换行/滚动，不靠缩小正文抵消大字体。支持读屏标签、状态变化、焦点、键盘、足够点击区域及减少动态效果；CLI 尊重终端字号/读屏并提供纯文本与结构化输出。按 [字体需求](../IM需求明细表.md/IM需求明细表.md#font-presets) 验收真实核心操作。
 
-基础图形端完整支持简体中文／繁体中文／藏文／英文／日文／法文／西班牙文／德文／俄罗斯文／韩文，主题采用白天/黑夜/跟随系统，所有既有页面、按钮状态、导航和富文本保持一致。动态列表覆盖加载、空、错误/离线、权限受限与重载，iOS 使用 JobsEmptyAuto 的完整空态入口。图片/图标优先按已确认的素材规则取得并打包，远程加载以本地合法资源兜底；来源、许可和离线演示说明进入 README。
+基础图形端完整支持简体中文／繁体中文／藏文／英文／日文／法文／西班牙文／德文／俄罗斯文／韩文，主题采用白天/黑夜/跟随系统，所有既有页面、按钮状态、导航和富文本保持一致。动态列表覆盖加载、空、错误/离线、权限受限与重载，iOS所有空列表统一复用JobsEmptyAuto的UIButton provider，图片／主标题／副标题竖排并点击重载，保留各列表专用文案。导航栏四种appearance、状态栏、返回／更多与标准cell背景配置随有效主题完整刷新，模板迟到绑定不得覆盖当前主题。图片/图标优先按已确认的素材规则取得并打包，远程加载以本地合法资源兜底；来源、许可和离线演示说明进入 README。
 
 ## 八、<span id="frontend-build">依赖安装、构建产物与前端交付</span> <a href="#前言" style="font-size:17px; color:green;"><b>🔼</b></a> <a href="#🔚" style="font-size:17px; color:green;"><b>🔽</b></a>
 

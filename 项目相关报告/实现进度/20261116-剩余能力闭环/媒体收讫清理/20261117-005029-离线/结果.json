@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/运行测试.py",
+    "--backend-only",
+    "--go",
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go"
+  ],
+  "exitCode": 0,
+  "reason": null,
+  "elapsedSeconds": 3.01,
+  "minimumFreeBytes": 12075892736,
+  "databaseMode": "explicit DB gates removed; PG tests skipped"
+}

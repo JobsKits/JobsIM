@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-16T16:28:28.294Z",
+  "finalSourceFiles": 43,
+  "currentMismatches": [],
+  "authRegressionProductsUnchanged": true,
+  "additionalInputs": [
+    {
+      "path": "代码/前端/Web/package.json",
+      "sha256": "6c78092501a5ab5cd4d1de0c3f9ed7d44ca99d21ef895ba083ea0f09f57e00a0"
+    },
+    {
+      "path": "代码/前端/Web/package-lock.json",
+      "sha256": "847cceff82a4dccb8381bc4ed50aad29a62eac52924d9758bad05d37cee72da6"
+    },
+    {
+      "path": "代码/前端/Web/tsconfig.json",
+      "sha256": "740232283c8e8275d96bb6f3c438e9c7fb281818e5fb5cb6573678456b64fb93"
+    },
+    {
+      "path": "代码/前端/Web/vite.config.ts",
+      "sha256": "ca8677504e6bccd13922735c79c22ba7d6b0ab46e3c6168617c4fab96133678c"
+    },
+    {
+      "path": "测试/前端/Web/auth-session.cjs/auth-session.cjs",
+      "sha256": "513bd91e78fc6a14a0ecc3779546ce82ba89c7adabf191fff23d568051ec6ff0"
+    },
+    {
+      "path": "测试/前端/Web/browser.cjs/browser.cjs",
+      "sha256": "9710ac6f28972e0f2f901f1cbdb8bc9619ef1096d4e9367efa0bf1df3ba56d4f"
+    },
+    {
+      "path": "测试/前端/Web/data-export.cjs/data-export.cjs",
+      "sha256": "782cca8c9a80096a6a823ceb3e7a51a65161d1aa089ab1f95f800a57f18701b5"
+    }
+  ],
+  "buildManifestSHA256": "83ee97a1472375ca3d13c321a931ac17a46e9e1a1c3cb233c7e9b1d84f1e8b9e"
+}

@@ -1,0 +1,29 @@
+Executable=/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw/Build/Products/Debug-iphoneos/JobsIM.app/JobsIM
+Identifier=com.jobs.im
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20400 size=495 flags=0x0(none) hashes=5+7 location=embedded
+VersionPlatform=2
+VersionMin=1048576
+VersionSDK=1769984
+Hash type=sha256 size=32
+CandidateCDHash sha256=d6bcab7e8219639856f763526565637342f99c3c
+CandidateCDHashFull sha256=d6bcab7e8219639856f763526565637342f99c3cd4b31716fe7ec4a2a63c242a
+Hash choices=sha256
+CMSDigest=d6bcab7e8219639856f763526565637342f99c3cd4b31716fe7ec4a2a63c242a
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=49152
+Executable Segment flags=0x11
+Page size=16384
+CDHash=d6bcab7e8219639856f763526565637342f99c3c
+Signature size=4785
+Authority=Apple Development: lg295060456@gmail.com (M438BSMH63)
+Authority=Apple Worldwide Developer Relations Certification Authority
+Authority=Apple Root CA
+Signed Time=Nov 18, 2026 at 11:08:24
+Info.plist entries=29
+TeamIdentifier=K5692KLW75
+Sealed Resources version=2 rules=10 files=97
+Internal requirements count=1 size=184
+Total signatures=1
+Chosen signature=1

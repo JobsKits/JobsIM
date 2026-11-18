@@ -25,7 +25,8 @@ func TestGatewayProjectionModeCoverage(t *testing.T) {
 		{"PATCH", "/api/messages/m", "exclusive"}, {"DELETE", "/api/messages/m", "exclusive"},
 		{"POST", "/api/messages/m/reactions", "shared"}, {"DELETE", "/api/messages/m/reactions/ok", "shared"},
 		{"PUT", "/api/messages/m/favorite", "shared"}, {"DELETE", "/api/messages/m/pin", "shared"},
-		{"POST", "/api/auth/recover", ""}, {"PUT", "/api/conversations/c/announcement", ""},
+		// Source changes must drain formal export holders before their response.
+		{"POST", "/api/auth/recover", "exclusive"}, {"PUT", "/api/conversations/c/announcement", "exclusive"},
 	}
 	for _, item := range cases {
 		r := httptest.NewRequest(item.method, "https://example.test"+item.path, nil)

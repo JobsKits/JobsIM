@@ -1,0 +1,27 @@
+{
+  "timeUTC": "2026-11-18T06:39:45.908074+00:00",
+  "status": "draft-only-not-added-to-target",
+  "testSourceUnmodifiedByThisTask": true,
+  "existingTestSourceSHA": "213df247e42959998360c0db78a3d22e2e9ca50d82edfc041bf40eb75b215b3c",
+  "draftSourceSHA": "59cba788058d4d99ededeb14e00491a69d6ac14e4092db22e0c4ebaa359079bd",
+  "methods": [
+    "testDemoPersonalSavedSettingsDarkAppearanceAndFirstTab",
+    "testDemoExitToUnauthenticatedAppDoorLoginRegistrationRail"
+  ],
+  "parseExitCode": 0,
+  "built": false,
+  "run": false,
+  "deviceOrFormalAPIUsed": false,
+  "requiredTarget": "dedicated 736D4534-6DBF-42A9-97A9-8DABFC208987 simulator without saved formal session",
+  "expectedEvidenceOnlyAfterRun": [
+    "dark Settings retained screenshot",
+    "dark first Contacts tab screenshot",
+    "AppDoor login/registration/restored screenshots"
+  ],
+  "boundaries": [
+    "no auth.connect/auth.primary taps or actual authentication",
+    "exit demo can restore saved formal session; the test fails without further actions if AppDoor absent",
+    "AX checks do not prove screenshot theme colors or contrast; screenshots require actual inspection",
+    "no edits to production or live IMUITests.swift during current compilation"
+  ]
+}

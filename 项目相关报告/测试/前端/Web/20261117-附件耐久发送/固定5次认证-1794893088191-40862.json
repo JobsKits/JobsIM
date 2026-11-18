@@ -1,0 +1,121 @@
+{
+  "planned": 5,
+  "completed": 5,
+  "attempts": [
+    {
+      "attempt": 1,
+      "base": "http://127.0.0.1:53596",
+      "trailingSlash": false,
+      "dir": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/Web/20261117-附件耐久发送/07-认证固定第1次-1794893088289-40862",
+      "result": {
+        "startedAt": "2026-11-17T05:24:48.304Z",
+        "finishedAt": "2026-11-17T05:24:50.031Z",
+        "args": [
+          "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+        ],
+        "exit": {
+          "code": 0,
+          "signal": null
+        },
+        "expectedFailure": false,
+        "validProductReproduction": false,
+        "stopped": "",
+        "minimumFree": 23528800256,
+        "inputsUnchanged": true,
+        "realAPI": false
+      }
+    },
+    {
+      "attempt": 2,
+      "base": "http://127.0.0.1:53615",
+      "trailingSlash": false,
+      "dir": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/Web/20261117-附件耐久发送/07-认证固定第2次-1794893090036-40862",
+      "result": {
+        "startedAt": "2026-11-17T05:24:50.039Z",
+        "finishedAt": "2026-11-17T05:24:51.346Z",
+        "args": [
+          "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+        ],
+        "exit": {
+          "code": 0,
+          "signal": null
+        },
+        "expectedFailure": false,
+        "validProductReproduction": false,
+        "stopped": "",
+        "minimumFree": 23517630464,
+        "inputsUnchanged": true,
+        "realAPI": false
+      }
+    },
+    {
+      "attempt": 3,
+      "base": "http://127.0.0.1:53629",
+      "trailingSlash": false,
+      "dir": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/Web/20261117-附件耐久发送/07-认证固定第3次-1794893091351-40862",
+      "result": {
+        "startedAt": "2026-11-17T05:24:51.354Z",
+        "finishedAt": "2026-11-17T05:24:52.710Z",
+        "args": [
+          "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+        ],
+        "exit": {
+          "code": 0,
+          "signal": null
+        },
+        "expectedFailure": false,
+        "validProductReproduction": false,
+        "stopped": "",
+        "minimumFree": 23506841600,
+        "inputsUnchanged": true,
+        "realAPI": false
+      }
+    },
+    {
+      "attempt": 4,
+      "base": "http://127.0.0.1:53639/",
+      "trailingSlash": true,
+      "dir": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/Web/20261117-附件耐久发送/07-认证固定第4次-1794893092715-40862",
+      "result": {
+        "startedAt": "2026-11-17T05:24:52.718Z",
+        "finishedAt": "2026-11-17T05:24:54.077Z",
+        "args": [
+          "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+        ],
+        "exit": {
+          "code": 0,
+          "signal": null
+        },
+        "expectedFailure": false,
+        "validProductReproduction": false,
+        "stopped": "",
+        "minimumFree": 23496802304,
+        "inputsUnchanged": true,
+        "realAPI": false
+      }
+    },
+    {
+      "attempt": 5,
+      "base": "http://127.0.0.1:53652/",
+      "trailingSlash": true,
+      "dir": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/Web/20261117-附件耐久发送/07-认证固定第5次-1794893094082-40862",
+      "result": {
+        "startedAt": "2026-11-17T05:24:54.084Z",
+        "finishedAt": "2026-11-17T05:24:55.376Z",
+        "args": [
+          "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+        ],
+        "exit": {
+          "code": 0,
+          "signal": null
+        },
+        "expectedFailure": false,
+        "validProductReproduction": false,
+        "stopped": "",
+        "minimumFree": 23486836736,
+        "inputsUnchanged": true,
+        "realAPI": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "startedAt": "2026-11-17T03:10:45.070Z",
+  "finishedAt": "2026-11-17T03:10:45.126Z",
+  "passed": 18,
+  "checks": [
+    "the original Blob and all eight manifest fields survive normalization without credentials",
+    "foreign user/device/family/epoch cannot take ownership of a stored intent",
+    "a changed body, file size or original client ID is refused",
+    "reply identity and observed content version remain paired",
+    "unsafe file names, noncanonical sizes and invalid digest forms fail closed",
+    "one recording is limited to 8 MiB consistently with the recorder controller",
+    "prepared upload results expose only the original object ID and cannot create a usable receipt",
+    "committed results bind name, exact bytes, MIME, hash and fixed media path",
+    "a prepared object ID cannot be replaced by a later committed result",
+    "32 items are enforced across all namespace/device holders in one account scope",
+    "64 MiB of actual retained Blobs refuses a further file before a network stage",
+    "completed metadata can yield capacity but unique active originals are never evicted",
+    "the same nonce or client ID cannot create another local intent",
+    "an intent cannot be moved to a foreign key or quota scope",
+    "global removes a mapped original by full user/conversation/client binding",
+    "same client in another conversation or another user cannot erase a unique original",
+    "known accepted server ID permits exact global removal without an inferred mapping",
+    "all ten locales provide the same nonempty durable attachment controls"
+  ],
+  "sourceBefore": {
+    "代码/前端/Web/Src/AttachmentSendProtocol.ts": "efb3153e33a3112eaef680ea39ff6243f77cd0b3df59f78887de339bd2892c9d",
+    "代码/前端/Web/Src/AttachmentSendLabels.ts": "02bdb731c92696b46f689d8abbc4a901f3b7793bd07b81283d0c48ca37b3c27b",
+    "代码/前端/Web/Src/AudioRecorderController.ts": "386c6c4ea76e107e7398a051a76c3cd7e9459eab08ce5ec4d762c1865d84ab40",
+    "测试/前端/Web/attachment-rules.cjs/attachment-rules.cjs": "1d7a17127256a50bc0a9eab344cc67e05b594f2248d94845ee29f922c39e6895"
+  },
+  "sourceAfter": {
+    "代码/前端/Web/Src/AttachmentSendProtocol.ts": "efb3153e33a3112eaef680ea39ff6243f77cd0b3df59f78887de339bd2892c9d",
+    "代码/前端/Web/Src/AttachmentSendLabels.ts": "02bdb731c92696b46f689d8abbc4a901f3b7793bd07b81283d0c48ca37b3c27b",
+    "代码/前端/Web/Src/AudioRecorderController.ts": "386c6c4ea76e107e7398a051a76c3cd7e9459eab08ce5ec4d762c1865d84ab40",
+    "测试/前端/Web/attachment-rules.cjs/attachment-rules.cjs": "1d7a17127256a50bc0a9eab344cc67e05b594f2248d94845ee29f922c39e6895"
+  },
+  "browser": false,
+  "indexedDB": false,
+  "API": false,
+  "build": false
+}

@@ -32,6 +32,13 @@
 | [business-global.cjs](./business-global.cjs/README.md) | 业务DTO原路由绑定、迟到媒体、存储失败后的终态重试 | 真实浏览器模块／IDB，业务API明示模拟 |
 | [sync-https.cjs](./sync-https.cjs/README.md) | 生产UI多页同步、未知发送查单、辅助503不阻global、空存储／撤权／历史global清理 | 独立同步环境／NATS、生产Dist、私密seed；辅助503明确注入 |
 | [self-state.cjs](./self-state.cjs/README.md) | 本人原动作、版本／成员代际、草稿恢复与采纳CAS，实际组件和移动布局 | 真实Chrome／IDB／WebLocks，HTTP明确注入 |
+| [draft-recovery.cjs](./draft-recovery.cjs/README.md) | 独立草稿发现、精确GET、复制／清空CAS、原单只读核对与迟到身份围栏 | 自启无代理私有Vite、真实Chrome／IDB／WebLocks；HTTP及剪贴板明确注入 |
+| [data-export.cjs](./data-export.cjs/README.md) | 正式导出原创建／取消责任、未知纯查、下载ZIP校验、账号与能力围栏、十语主题 | 自启无代理私有Vite、真实Chrome／IDB／WebLocks；HTTP与保存端明确注入 |
+| [password-change.cjs](./password-change.cjs/README.md) | 本人改密原责任、当前证明／OTP、匿名纯查／显式续跑、冷context／后继Cookie及IDB／锁围栏 | 自启无代理私有Vite、真实Chrome／IDB／WebLocks；响应／密码与Cookie安全路由为隔离夹具 |
+| [account-deletion.cjs](./account-deletion.cjs/README.md) | 当前本人申请、匿名原单、query/cancel用途隔离、原取消nonce、未知与冷family、十语及真实表单 | 自启无代理私有Vite、真实Chrome／IDB／WebLocks；密码／恢复码／证明及服务端响应为隔离夹具 |
+| [group-governance.cjs](./group-governance.cjs/README.md) | 群原actor／target代际、原单纯查、明确同体重试、标准邀请token只RAM、独立恢复、申请人页及十语空态 | 自启无代理私有Vite、真实Chrome／IDB；群HTTP／identity／clipboard为明确夹具 |
+| [migration.cjs](./migration.cjs/README.md) | 普通迁移原责任、密文／独立取钥、整批原子导入、global与引用门禁、完整空态／十语 | 真实Chrome／IDB／WebCrypto，HTTP／device／剪贴板为明确夹具；不授native资格 |
+| [receipt-context.cjs](./receipt-context.cjs/README.md) | 当前store／schema、服务器保护与浏览器未验证边界、原声明只查／新旧7与9字段结果、DG／manifest、十语及真实表单 | 当前定向13组真实Chrome通过，pageErrors为空；TypeScript与私有Vite构建通过。HTTP／身份为明确夹具，不授native资格 |
 | [self-state-https.cjs](./self-state-https.cjs/README.md) | 生产BFF／S2、可见／遮挡阅读、视图恢复、云草稿原单冷启、两浏览器及旧编辑清理 | 显式受管E2／生产Dist／指定CA，本轮新账号与退出核验 |
 | [owned-web-runtime.cjs](./owned-web-runtime.cjs/README.md) | 固定后端同实例切换已构建Web目录，精确PID短启与失败恢复 | 显式允许自有App重启及全部客户端已关闭；不启停PG／NATS |
 
@@ -53,6 +60,8 @@ JOBSIM_CA_FILE=/private/ca.pem JOBSIM_TEST_CERT=/private/server.pem node integra
 [普通转发真实联调](./forward.cjs/README.md)已验证两类未知结果的原ID／proof、源资格撤回后的无正文缓存和本人撤回入口；纯规则浏览器还核对错误附件原点／路径不回退源媒体ID。最终服务修订的复跑另留结果，不外推完整I。
 
 各组数只描述对应源码、包和环境的定向断言；Node、模拟 API、真实 HTTPS、原生模拟器和真机分别记录，不相加为需求完成数。
+
+当前源码的本地重跑、执行命令、源码摘要与未覆盖项集中在[Web／CLI回归报告](../../../项目相关报告/测试/回归/20261116-全项目回归/Web-CLI.md)。各入口的报告环境变量以其就近说明为准，例如同步投影使用 `JOBSIM_SYNC_VIEW_REPORT`，不能用统一变量替代全部专项配置。真实HTTPS入口仍须显式隔离服务，不因本地组通过自动执行。
 
 [独立草稿恢复专项](./draft-recovery.cjs/README.md)新增10组真实Chrome／React／IndexedDB／Web Locks注入检查，并完成TypeScript及私有生产构建；覆盖退群或未列出会话及只有retired原操作的候选、仅精确GET显示、复制／清空所见版本、原单404零重投、其它输入保持、能力撤回和旧family迟到／排队取消。全部`/api`路由阻断、Vite无API代理、剪贴板为注入接收端；无E2／真实后端／OS剪贴板证明。新候选及独立原输入见[本轮报告](../../../项目相关报告/测试/前端/Web/20261116-独立草稿恢复/README.md)，旧D5的11真／26本地不追认该增量。
 

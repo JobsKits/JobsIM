@@ -1,0 +1,11 @@
+{
+  "label": "04-导出回归",
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/data-export.cjs/data-export.cjs"
+  ],
+  "exitCode": 0,
+  "elapsedSeconds": 4.03,
+  "minimumFreeBytes": 7955415040,
+  "reason": null
+}

@@ -1,0 +1,11 @@
+10:19:00 AM [vite] (client) [console.error] An empty string ("") was passed to the src attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to src instead of an empty string.
+AssertionError [ERR_ASSERTION]: permission rejection stops playback and removes the exact checkpoint
+    at test (/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/audio-browser.cjs/audio-browser.cjs:55:91)
+    at async /Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/audio-browser.cjs/audio-browser.cjs:87:5 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

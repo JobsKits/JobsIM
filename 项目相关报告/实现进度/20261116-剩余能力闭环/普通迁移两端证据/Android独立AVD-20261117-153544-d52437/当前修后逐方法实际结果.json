@@ -1,0 +1,144 @@
+{
+  "03-修后定向": {
+    "methods": [
+      {
+        "class": "com.jobs.im.MigrationHistoryLifecycleTest",
+        "method": "validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.MigrationHistoryLifecycleTest",
+        "method": "durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.MigrationHistoryLifecycleTest",
+        "method": "newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.ReceiptStorageLifecycleTest",
+        "method": "fullTransactionPreservesExactBodyAndIntentOnReopenAndRollsBothBackOnFailure",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.ReceiptStorageLifecycleTest",
+        "method": "trustedOsRootAliasDoesNotPermitAnUntrustedGeneratedChildSymlink",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.ReceiptStorageLifecycleTest",
+        "method": "actualProbeReopensItsCurrentPhysicalDatabaseAndMeasuresInstalledApk",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.ReceiptStorageLifecycleTest",
+        "method": "zeroOriginalFsyncSharesItsDescriptorIntentTransactionAndGlobalCleansOnlyOwnedBytes",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.OwnDeletionLifecycleTest",
+        "method": "unknownCancelRequiresQueryBeforeAnyNewProofAndKeepsOriginalVersion",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.OwnDeletionLifecycleTest",
+        "method": "unknownCancellationRetainsOneNonceAndQueriesItsOriginalResult",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.OwnDeletionLifecycleTest",
+        "method": "preparedDependency403CannotReleaseTheOriginalGate",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.OwnDeletionLifecycleTest",
+        "method": "unknownSurvivesReopenWithoutPasswordOtpOrFamilyToken",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.OwnDeletionLifecycleTest",
+        "method": "legacyCancelWithoutVersionRemainsReadOnlyAcrossReload",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.OwnDeletionLifecycleTest",
+        "method": "pendingOriginalCanPersistUnknownBeforeResumingTheSameRequest",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.OwnDeletionLifecycleTest",
+        "method": "withdrawnCapabilityKeepsUnknownLookupReadonly",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.OwnDeletionLifecycleTest",
+        "method": "repeatedNewerQueriesNeverRebaseOriginalCancellation",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.OwnDeletionLifecycleTest",
+        "method": "finalLocalErasureKeepsOtherAccountsAndThePublicResponsibility",
+        "code": 0,
+        "status": "PASS"
+      }
+    ],
+    "counts": {
+      "PASS": 16
+    }
+  },
+  "04-真实HTTPS": {
+    "methods": [
+      {
+        "class": "com.jobs.im.NativeSelfStateHttpsTest",
+        "method": "nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.NativeSelfStateHttpsTest",
+        "method": "realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue",
+        "code": 0,
+        "status": "PASS"
+      },
+      {
+        "class": "com.jobs.im.NativeSelfStateHttpsTest",
+        "method": "realDraftLossUsesReadonlyOriginalBodyAndRetiredSourceKeepsIndependentText",
+        "code": 0,
+        "status": "PASS"
+      }
+    ],
+    "counts": {
+      "PASS": 3
+    }
+  },
+  "httpsAccounts": {
+    "count": 6,
+    "allClosed": true
+  },
+  "installedArtifacts": {
+    "com.jobs.im": {
+      "path": "/data/app/~~BKaSIALQh-9BoT2v_EIdFQ==/com.jobs.im-Y6jF2DvnpSUuncPP7w64Yg==/base.apk",
+      "sha256": "9660aa3856ceb28d06ac1212ca1a82a54e4c0fbcd272b82f9440c503c7e45c45"
+    },
+    "com.jobs.im.test": {
+      "path": "/data/app/~~fH8buYDmsmpOItOt7f48Ew==/com.jobs.im.test-DytBcTsI6gfVYsQmqCQHig==/base.apk",
+      "sha256": "7b3f14b431e42a5745fbe3b2f269cfb34aba9dfb573847223a1d257e1b010e04"
+    }
+  }
+}

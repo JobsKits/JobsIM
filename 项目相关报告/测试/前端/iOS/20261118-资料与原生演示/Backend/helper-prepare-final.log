@@ -1,0 +1,10 @@
+JobsIM Mac原生演示控制面
+准备当前Go后端＋Web；不常驻Node，不使用Docker/VM。
+控制HTTPS19544、业务HTTPS19543、双PG19545/19546、NATS19547、角色19560～19568。
+仅本机私有LAN，固定NativeDemo-v1；不会操作默认9443、系统CA或现有其他实例。
+iPhone开关只能幂等启动固定demo；无远程停止/删库。退出本窗口停止本demo并保留资料/CA。
+工具与模块只复用本机已有缓存；缺依赖时明确失败，不联网下载。
+准备本机demo当前Go/Web产品；不启动业务PG/NATS。
+公开demo描述： /Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/Resource/DemoHost/demo-host.json
+控制面： https://192.168.1.16:19544
+描述仅含控制URL和CA公钥证书/指纹；不包含密码、私钥或数据目录。

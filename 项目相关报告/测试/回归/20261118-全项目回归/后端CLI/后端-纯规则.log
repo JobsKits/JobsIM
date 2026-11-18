@@ -1,0 +1,744 @@
+后端回归：48份外置测试；真实数据库用例仍需显式隔离环境。
+=== RUN   TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes
+=== RUN   TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes/requested
+    account_deletion_admission_test.go:15: explicit future isolated sync-schema test window required
+=== RUN   TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes/processing
+    account_deletion_admission_test.go:15: explicit future isolated sync-schema test window required
+=== RUN   TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes/completed
+    account_deletion_admission_test.go:15: explicit future isolated sync-schema test window required
+--- PASS: TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes (0.00s)
+    --- SKIP: TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes/requested (0.00s)
+    --- SKIP: TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes/processing (0.00s)
+    --- SKIP: TestAccountDeletionAdmissionRejectsOrdinaryCredentialLanes/completed (0.00s)
+=== RUN   TestAccountDeletionAdmissionRetiresPreparedPasswordChange
+    account_deletion_admission_test.go:99: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionAdmissionRetiresPreparedPasswordChange (0.00s)
+=== RUN   TestAccountDeletionAdmissionHistoricalPasswordResultIsNotCurrent
+    account_deletion_admission_test.go:115: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionAdmissionHistoricalPasswordResultIsNotCurrent (0.00s)
+=== RUN   TestAccountDeletionAdmissionPreparedAdminResetCannotReopenTarget
+=== RUN   TestAccountDeletionAdmissionPreparedAdminResetCannotReopenTarget/before-resume
+    account_deletion_admission_test.go:128: explicit future isolated sync-schema test window required
+=== RUN   TestAccountDeletionAdmissionPreparedAdminResetCannotReopenTarget/after-precheck
+    account_deletion_admission_test.go:128: explicit future isolated sync-schema test window required
+--- PASS: TestAccountDeletionAdmissionPreparedAdminResetCannotReopenTarget (0.00s)
+    --- SKIP: TestAccountDeletionAdmissionPreparedAdminResetCannotReopenTarget/before-resume (0.00s)
+    --- SKIP: TestAccountDeletionAdmissionPreparedAdminResetCannotReopenTarget/after-precheck (0.00s)
+=== RUN   TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected
+=== RUN   TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected/login
+    account_deletion_admission_test.go:178: explicit future isolated sync-schema test window required
+=== RUN   TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected/registration
+    account_deletion_admission_test.go:178: explicit future isolated sync-schema test window required
+=== RUN   TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected/reauthentication
+    account_deletion_admission_test.go:178: explicit future isolated sync-schema test window required
+--- PASS: TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected (0.00s)
+    --- SKIP: TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected/login (0.00s)
+    --- SKIP: TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected/registration (0.00s)
+    --- SKIP: TestAccountDeletionAdmissionOriginalAuthenticationDeliveryIsRejected/reauthentication (0.00s)
+=== RUN   TestAccountDeletionPGRevokesFamiliesAndOriginalLookupNeverCreates
+    account_deletion_pg_test.go:141: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGRevokesFamiliesAndOriginalLookupNeverCreates (0.00s)
+=== RUN   TestAccountDeletionPGPurposeProofAndCancelPreserveIndependentDenials
+    account_deletion_pg_test.go:171: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGPurposeProofAndCancelPreserveIndependentDenials (0.00s)
+=== RUN   TestAccountDeletionPGCancelUnknownWaitsForJournalResult
+    account_deletion_pg_test.go:192: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGCancelUnknownWaitsForJournalResult (0.00s)
+=== RUN   TestAccountDeletionPGZeroCooldownCleansOwnerDataAndCannotCancel
+    account_deletion_pg_test.go:214: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGZeroCooldownCleansOwnerDataAndCannotCancel (0.00s)
+=== RUN   TestAccountDeletionPGRecoveryCodeIsOneUseAndPurposeCannotAuthorizeChat
+    account_deletion_pg_test.go:247: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGRecoveryCodeIsOneUseAndPurposeCannotAuthorizeChat (0.00s)
+=== RUN   TestAccountDeletionPGSafetyCancelIntentCannotReopenAndCompletedCannotResurrect
+    account_deletion_pg_test.go:280: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGSafetyCancelIntentCannotReopenAndCompletedCannotResurrect (0.00s)
+=== RUN   TestAccountDeletionPGExpiredAndOldEpochProofCannotMutate
+    account_deletion_pg_test.go:319: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGExpiredAndOldEpochProofCannotMutate (0.00s)
+=== RUN   TestAccountDeletionPGOldVersionCanReverifyQueryButCannotRebaseCancellation
+    account_deletion_pg_test.go:336: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGOldVersionCanReverifyQueryButCannotRebaseCancellation (0.00s)
+=== RUN   TestAccountDeletionPGInitialJournalUnknownKeepsOriginalAndWorkerResumes
+    account_deletion_pg_test.go:358: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGInitialJournalUnknownKeepsOriginalAndWorkerResumes (0.00s)
+=== RUN   TestAccountDeletionPGMultipleOwnerPagesAndRestoredMediaStayErased
+    account_deletion_pg_test.go:383: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGMultipleOwnerPagesAndRestoredMediaStayErased (0.00s)
+=== RUN   TestAccountDeletionPGUnqueuedLastPageReadDenial
+    account_deletion_read_floor_test.go:11: explicit future isolated sync-schema test window required
+--- SKIP: TestAccountDeletionPGUnqueuedLastPageReadDenial (0.00s)
+=== RUN   TestAvatarDecodeAndCanonicalOutputs
+--- PASS: TestAvatarDecodeAndCanonicalOutputs (0.01s)
+=== RUN   TestAvatarFilePublishIsIdempotentAndNeverOverwrites
+--- PASS: TestAvatarFilePublishIsIdempotentAndNeverOverwrites (0.01s)
+=== RUN   TestClosureAuditDeletionCompletedReceiptCanRenewOnlyThroughAuditedAdmin
+    closure_audit_completed_receipt_test.go:16: explicit future isolated sync-schema test window required
+--- SKIP: TestClosureAuditDeletionCompletedReceiptCanRenewOnlyThroughAuditedAdmin (0.00s)
+=== RUN   TestClosureAuditDeletionIdentityRecoveryDoesNotStarveLaterIntent
+    closure_audit_deletion_fairness_test.go:91: explicit future isolated sync-schema test window required
+--- SKIP: TestClosureAuditDeletionIdentityRecoveryDoesNotStarveLaterIntent (0.00s)
+=== RUN   TestClosureAuditDeletionGovernanceRecoveryDoesNotStarveLaterIntent
+    closure_audit_deletion_fairness_test.go:106: explicit future isolated sync-schema test window required
+--- SKIP: TestClosureAuditDeletionGovernanceRecoveryDoesNotStarveLaterIntent (0.00s)
+=== RUN   TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup
+    deployment_restore_pg_test.go:201: explicit owned eight-domain restore/native-start fixture required
+--- SKIP: TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup (0.00s)
+=== RUN   TestJournalHandoffDecisionKeepsRetiredSourceSealedAndAllowsCanonicalSuccessor
+--- PASS: TestJournalHandoffDecisionKeepsRetiredSourceSealedAndAllowsCanonicalSuccessor (0.00s)
+=== RUN   TestDraftReplyAdmissionHasIndependentPurposeAndFrozenQualification
+--- PASS: TestDraftReplyAdmissionHasIndependentPurposeAndFrozenQualification (0.00s)
+=== RUN   TestExportRealProtocolAndWriterFence
+    export_fence_test.go:31: explicit isolated export test environment required
+--- SKIP: TestExportRealProtocolAndWriterFence (0.00s)
+=== RUN   TestGatewayProjectionModeCoverage
+--- PASS: TestGatewayProjectionModeCoverage (0.00s)
+=== RUN   TestForwardTemporaryProjectionRecoversAtSameVersion
+    forward_gateway_test.go:51: explicit private isolated forward fixture required
+--- SKIP: TestForwardTemporaryProjectionRecoversAtSameVersion (0.00s)
+=== RUN   TestGatewayJSONFlushCancellationAndUntrustedProof
+    forward_gateway_test.go:212: explicit private isolated forward fixture required
+--- SKIP: TestGatewayJSONFlushCancellationAndUntrustedProof (0.00s)
+=== RUN   TestFreshPostgresDomainsMigrateFromEmptyDatabases
+    fresh_migrations_test.go:18: explicit private PostgreSQL test environment required
+--- SKIP: TestFreshPostgresDomainsMigrateFromEmptyDatabases (0.00s)
+=== RUN   TestGroupSafetyFieldsAndOriginalOperationIdentity
+--- PASS: TestGroupSafetyFieldsAndOriginalOperationIdentity (0.00s)
+=== RUN   TestGroupMuteExpiryAndRejoinNeverReviveOldAdmissionPG
+    group_governance_test.go:70: explicit isolated private PostgreSQL fixture required
+--- SKIP: TestGroupMuteExpiryAndRejoinNeverReviveOldAdmissionPG (0.00s)
+=== RUN   TestGroupSlowRateSameTransactionRollbackAndParallelUserPG
+    group_governance_test.go:89: explicit isolated private PostgreSQL fixture required
+--- SKIP: TestGroupSlowRateSameTransactionRollbackAndParallelUserPG (0.00s)
+=== RUN   TestGroupSafetyReplayRestrictsWithoutGrantOrMembershipABAPG
+    group_governance_test.go:117: explicit isolated private PostgreSQL fixture required
+--- SKIP: TestGroupSafetyReplayRestrictsWithoutGrantOrMembershipABAPG (0.00s)
+=== RUN   TestGroupManagerOriginalPGApplicationProfilesKeepStateAndPagination
+    group_manager_original_test.go:51: explicit future isolated sync-schema test window required
+--- SKIP: TestGroupManagerOriginalPGApplicationProfilesKeepStateAndPagination (0.00s)
+=== RUN   TestGroupManagerOriginalPGInviteCreationRejectsRoleABA
+    group_manager_original_test.go:110: explicit future isolated sync-schema test window required
+--- SKIP: TestGroupManagerOriginalPGInviteCreationRejectsRoleABA (0.00s)
+=== RUN   TestGroupManagerOriginalPGRevokeReadbackIsActorAndNonceBound
+    group_manager_original_test.go:137: explicit future isolated sync-schema test window required
+--- SKIP: TestGroupManagerOriginalPGRevokeReadbackIsActorAndNonceBound (0.00s)
+=== RUN   TestGroupManagerOriginalPGApprovalPreservesDecisionAndLargeGeneration
+    group_manager_original_test.go:170: explicit future isolated sync-schema test window required
+--- SKIP: TestGroupManagerOriginalPGApprovalPreservesDecisionAndLargeGeneration (0.00s)
+=== RUN   TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites
+=== RUN   TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/membership
+    group_manager_original_test.go:207: explicit future isolated sync-schema test window required
+=== RUN   TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/role
+    group_manager_original_test.go:207: explicit future isolated sync-schema test window required
+=== RUN   TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/security
+    group_manager_original_test.go:207: explicit future isolated sync-schema test window required
+=== RUN   TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/epoch
+    group_manager_original_test.go:207: explicit future isolated sync-schema test window required
+=== RUN   TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/inactive
+    group_manager_original_test.go:207: explicit future isolated sync-schema test window required
+--- PASS: TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites (0.00s)
+    --- SKIP: TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/membership (0.00s)
+    --- SKIP: TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/role (0.00s)
+    --- SKIP: TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/security (0.00s)
+    --- SKIP: TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/epoch (0.00s)
+    --- SKIP: TestGroupManagerOriginalPGIssuerChangesInvalidateUnconsumedInvites/inactive (0.00s)
+=== RUN   TestGroupManagerOriginalPGApprovalRechecksOriginalIssuer
+    group_manager_original_test.go:243: explicit future isolated sync-schema test window required
+--- SKIP: TestGroupManagerOriginalPGApprovalRechecksOriginalIssuer (0.00s)
+=== RUN   TestMediaRetentionPGProcessingOwnerFloorDeniesUnqueuedOriginals
+    media_owner_floor_test.go:13: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGProcessingOwnerFloorDeniesUnqueuedOriginals (0.00s)
+=== RUN   TestMediaRetentionIndependentModesRejectImplicitDelay
+--- PASS: TestMediaRetentionIndependentModesRejectImplicitDelay (0.00s)
+=== RUN   TestMediaRetentionStableTimestampAndStreamingDeadline
+--- PASS: TestMediaRetentionStableTimestampAndStreamingDeadline (0.00s)
+=== RUN   TestMediaRetentionPGCloudOnlyExactDeviceResumeAndRange
+    media_retention_pg_test.go:154: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGCloudOnlyExactDeviceResumeAndRange (0.00s)
+=== RUN   TestMediaRetentionPGDescriptorRequiresOriginalPhysicalTuple
+    media_retention_pg_test.go:189: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGDescriptorRequiresOriginalPhysicalTuple (0.00s)
+=== RUN   TestMediaRetentionPGDeadlineNeverExtendsAndJournalFailurePreservesBytes
+    media_retention_pg_test.go:215: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGDeadlineNeverExtendsAndJournalFailurePreservesBytes (0.00s)
+=== RUN   TestMediaRetentionPGArchivesBlockUnlinkUntilExactCancellation
+    media_retention_pg_test.go:252: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGArchivesBlockUnlinkUntilExactCancellation (0.00s)
+=== RUN   TestMediaRetentionPGObjectReceiptZeroAndSiblingIsolation
+    media_retention_pg_test.go:280: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGObjectReceiptZeroAndSiblingIsolation (0.00s)
+=== RUN   TestMediaRetentionPGReplayKeepsOldSnapshotClosed
+    media_retention_pg_test.go:309: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGReplayKeepsOldSnapshotClosed (0.00s)
+=== RUN   TestMediaRetentionPGCleanupWaitsForLiveProjectionAndRefusesSymlink
+    media_retention_pg_test.go:339: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGCleanupWaitsForLiveProjectionAndRefusesSymlink (0.00s)
+=== RUN   TestMediaRetentionPGLegacyRequiresExplicitOwnerWhitelist
+    media_retention_pg_test.go:375: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGLegacyRequiresExplicitOwnerWhitelist (0.00s)
+=== RUN   TestMediaRetentionPGClockAlarmSurvivesRestartAndPreservesBytes
+    media_retention_pg_test.go:410: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGClockAlarmSurvivesRestartAndPreservesBytes (0.00s)
+=== RUN   TestMediaRetentionPGLegacyGlobalErasureNeedsConfirmedSourceEvent
+    media_retention_pg_test.go:431: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGLegacyGlobalErasureNeedsConfirmedSourceEvent (0.00s)
+=== RUN   TestMediaRetentionPGBackupSelectionAndOfflineRestoreClear
+    media_retention_pg_test.go:484: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaRetentionPGBackupSelectionAndOfflineRestoreClear (0.00s)
+=== RUN   TestMediaUploadPGOriginalResultAndStableRetry
+    media_upload_pg_test.go:69: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaUploadPGOriginalResultAndStableRetry (0.00s)
+=== RUN   TestMediaUploadPGPreparedJournalUnknownAndPublishedCrashResume
+    media_upload_pg_test.go:106: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaUploadPGPreparedJournalUnknownAndPublishedCrashResume (0.00s)
+=== RUN   TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes
+=== RUN   TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes/missing
+    media_upload_pg_test.go:151: explicit future isolated sync-schema test window required
+=== RUN   TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes/retention
+    media_upload_pg_test.go:151: explicit future isolated sync-schema test window required
+=== RUN   TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes/owner
+    media_upload_pg_test.go:151: explicit future isolated sync-schema test window required
+--- PASS: TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes (0.00s)
+    --- SKIP: TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes/missing (0.00s)
+    --- SKIP: TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes/retention (0.00s)
+    --- SKIP: TestMediaUploadPGCommittedMissingOrFlooredNeverRepublishes/owner (0.00s)
+=== RUN   TestMediaUploadPGSuccessorFamilyEpochAndBanCannotResumeOriginal
+    media_upload_pg_test.go:176: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaUploadPGSuccessorFamilyEpochAndBanCannotResumeOriginal (0.00s)
+=== RUN   TestMediaUploadPGPreparedCannotOverwriteRegisteredOrDifferentBytes
+=== RUN   TestMediaUploadPGPreparedCannotOverwriteRegisteredOrDifferentBytes/registered
+    media_upload_pg_test.go:224: explicit future isolated sync-schema test window required
+=== RUN   TestMediaUploadPGPreparedCannotOverwriteRegisteredOrDifferentBytes/different-bytes
+    media_upload_pg_test.go:224: explicit future isolated sync-schema test window required
+--- PASS: TestMediaUploadPGPreparedCannotOverwriteRegisteredOrDifferentBytes (0.00s)
+    --- SKIP: TestMediaUploadPGPreparedCannotOverwriteRegisteredOrDifferentBytes/registered (0.00s)
+    --- SKIP: TestMediaUploadPGPreparedCannotOverwriteRegisteredOrDifferentBytes/different-bytes (0.00s)
+=== RUN   TestMediaUploadPGReplayRetiresMissingRequestAndClearsExactUUIDs
+    media_upload_pg_test.go:253: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaUploadPGReplayRetiresMissingRequestAndClearsExactUUIDs (0.00s)
+=== RUN   TestMediaUploadPGOwnerErasureWaitsForEveryPreparedPage
+    media_upload_pg_test.go:300: explicit future isolated sync-schema test window required
+--- SKIP: TestMediaUploadPGOwnerErasureWaitsForEveryPreparedPage (0.00s)
+=== RUN   TestMediaUploadManifestAndMinimalSafetyFields
+--- PASS: TestMediaUploadManifestAndMinimalSafetyFields (0.00s)
+=== RUN   TestWebMActualBrowserContainerClassification
+    media_webm_browser_test.go:33: explicit original browser Blob and its fixed SHA256 required
+--- SKIP: TestWebMActualBrowserContainerClassification (0.00s)
+=== RUN   TestMediaUploadPGActualBrowserContainerRemainsAudio
+    media_webm_browser_test.go:44: explicit original browser Blob and its fixed SHA256 required
+--- SKIP: TestMediaUploadPGActualBrowserContainerRemainsAudio (0.00s)
+=== RUN   TestWebMClassifiesActualTracksInsteadOfSniffOrName
+=== RUN   TestWebMClassifiesActualTracksInsteadOfSniffOrName/opus-browser-sniff
+=== RUN   TestWebMClassifiesActualTracksInsteadOfSniffOrName/vorbis-streaming-segment
+=== RUN   TestWebMClassifiesActualTracksInsteadOfSniffOrName/video-and-audio
+=== RUN   TestWebMClassifiesActualTracksInsteadOfSniffOrName/video-only
+=== RUN   TestWebMClassifiesActualTracksInsteadOfSniffOrName/binary-private-prefix-is-opaque
+=== RUN   TestWebMClassifiesActualTracksInsteadOfSniffOrName/unknown-clusters-and-trailing-cues
+=== RUN   TestWebMClassifiesActualTracksInsteadOfSniffOrName/rfc9559-chapter-display-id
+--- PASS: TestWebMClassifiesActualTracksInsteadOfSniffOrName (0.00s)
+    --- PASS: TestWebMClassifiesActualTracksInsteadOfSniffOrName/opus-browser-sniff (0.00s)
+    --- PASS: TestWebMClassifiesActualTracksInsteadOfSniffOrName/vorbis-streaming-segment (0.00s)
+    --- PASS: TestWebMClassifiesActualTracksInsteadOfSniffOrName/video-and-audio (0.00s)
+    --- PASS: TestWebMClassifiesActualTracksInsteadOfSniffOrName/video-only (0.00s)
+    --- PASS: TestWebMClassifiesActualTracksInsteadOfSniffOrName/binary-private-prefix-is-opaque (0.00s)
+    --- PASS: TestWebMClassifiesActualTracksInsteadOfSniffOrName/unknown-clusters-and-trailing-cues (0.00s)
+    --- PASS: TestWebMClassifiesActualTracksInsteadOfSniffOrName/rfc9559-chapter-display-id (0.00s)
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/audio-type-with-video-codec
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/video-type-with-audio-codec
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/unsupported-audio-codec
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/missing-codec-binary-decoy
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/missing-type
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/empty-tracks
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/no-tracks
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/tracks-after-cluster
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/duplicate-tracks
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/duplicate-number-and-uid
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/duplicate-type
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/duplicate-codec
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/oversized-codec
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/embedded-string-nul
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/misplaced-entry
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/unknown-tracks-size
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/unknown-entry-size
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/unknown-info-size
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/unknown-block-size
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/truncated-payload
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/zero-vint
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/reserved-multibyte-zero-id
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/reserved-one-id
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/nonminimal-id
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/oversized-id
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/truncated-size-vint
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/maximum-size-exceeds-file
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/second-segment
+=== RUN   TestWebMRejectsSpoofedAndMalformedTrackStructures/wrong-doctype
+--- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/audio-type-with-video-codec (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/video-type-with-audio-codec (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/unsupported-audio-codec (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/missing-codec-binary-decoy (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/missing-type (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/empty-tracks (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/no-tracks (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/tracks-after-cluster (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/duplicate-tracks (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/duplicate-number-and-uid (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/duplicate-type (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/duplicate-codec (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/oversized-codec (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/embedded-string-nul (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/misplaced-entry (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/unknown-tracks-size (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/unknown-entry-size (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/unknown-info-size (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/unknown-block-size (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/truncated-payload (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/zero-vint (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/reserved-multibyte-zero-id (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/reserved-one-id (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/nonminimal-id (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/oversized-id (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/truncated-size-vint (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/maximum-size-exceeds-file (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/second-segment (0.00s)
+    --- PASS: TestWebMRejectsSpoofedAndMalformedTrackStructures/wrong-doctype (0.00s)
+=== RUN   TestWebMBoundsElementsDepthTracksAndReaderAt
+=== RUN   TestWebMBoundsElementsDepthTracksAndReaderAt/track-count
+=== RUN   TestWebMBoundsElementsDepthTracksAndReaderAt/nested-metadata
+=== RUN   TestWebMBoundsElementsDepthTracksAndReaderAt/element-count
+--- PASS: TestWebMBoundsElementsDepthTracksAndReaderAt (0.00s)
+    --- PASS: TestWebMBoundsElementsDepthTracksAndReaderAt/track-count (0.00s)
+    --- PASS: TestWebMBoundsElementsDepthTracksAndReaderAt/nested-metadata (0.00s)
+    --- PASS: TestWebMBoundsElementsDepthTracksAndReaderAt/element-count (0.00s)
+=== RUN   TestWebMRejectsMalformedContainerThroughStoredMediaEntry
+--- PASS: TestWebMRejectsMalformedContainerThroughStoredMediaEntry (0.00s)
+=== RUN   TestWebMSkipsLargeEncodedPacketsButBoundsMetadata
+=== RUN   TestWebMSkipsLargeEncodedPacketsButBoundsMetadata/large-simple-block
+=== RUN   TestWebMSkipsLargeEncodedPacketsButBoundsMetadata/large-metadata-field
+--- PASS: TestWebMSkipsLargeEncodedPacketsButBoundsMetadata (0.00s)
+    --- PASS: TestWebMSkipsLargeEncodedPacketsButBoundsMetadata/large-simple-block (0.00s)
+    --- PASS: TestWebMSkipsLargeEncodedPacketsButBoundsMetadata/large-metadata-field (0.00s)
+=== RUN   TestWebMPreservesBMFFTrackClassification
+=== RUN   TestWebMPreservesBMFFTrackClassification/audio
+=== RUN   TestWebMPreservesBMFFTrackClassification/video
+=== RUN   TestWebMPreservesBMFFTrackClassification/mixed
+--- PASS: TestWebMPreservesBMFFTrackClassification (0.00s)
+    --- PASS: TestWebMPreservesBMFFTrackClassification/audio (0.00s)
+    --- PASS: TestWebMPreservesBMFFTrackClassification/video (0.00s)
+    --- PASS: TestWebMPreservesBMFFTrackClassification/mixed (0.00s)
+=== RUN   TestReadPointsPrivateCallerAndStrictMetadata
+--- PASS: TestReadPointsPrivateCallerAndStrictMetadata (0.00s)
+=== RUN   TestReadPointsInputOrderUnknownAndUniformVisibility
+    message_read_points_test.go:165: explicit future isolated read-point test window required
+--- SKIP: TestReadPointsInputOrderUnknownAndUniformVisibility (0.00s)
+=== RUN   TestReadPointsNumericCreationScanAndPagination
+    message_read_points_test.go:207: explicit future isolated read-point test window required
+--- SKIP: TestReadPointsNumericCreationScanAndPagination (0.00s)
+=== RUN   TestReadPointsMalformedMetadataCannotAdvance
+    message_read_points_test.go:232: explicit future isolated read-point test window required
+--- SKIP: TestReadPointsMalformedMetadataCannotAdvance (0.00s)
+=== RUN   TestUnreadSummaryCannotSelectArbitrarySourceOrInexactPrefix
+--- PASS: TestUnreadSummaryCannotSelectArbitrarySourceOrInexactPrefix (0.00s)
+=== RUN   TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles
+    message_read_summary_test.go:42: explicit future isolated read-point test window required
+--- SKIP: TestUnreadSummaryCountsCurrentEligibleIDsAndPreservesHoles (0.00s)
+=== RUN   TestPasswordChangePGRevokesEveryFamilyWithoutCredentialDelivery
+    password_change_pg_test.go:184: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGRevokesEveryFamilyWithoutCredentialDelivery (0.00s)
+=== RUN   TestPasswordChangePGJournalFailureCanResumeWithoutPlaintext
+    password_change_pg_test.go:253: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGJournalFailureCanResumeWithoutPlaintext (0.00s)
+=== RUN   TestPasswordChangePGCommittedResultRetryDoesNotRehash
+    password_change_pg_test.go:284: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGCommittedResultRetryDoesNotRehash (0.00s)
+=== RUN   TestPasswordChangePGRejectsNewUnownedIntentAndUnknownLookup
+    password_change_pg_test.go:304: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGRejectsNewUnownedIntentAndUnknownLookup (0.00s)
+=== RUN   TestPasswordChangePGOldEpochCannotInstallSealedCredential
+    password_change_pg_test.go:330: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGOldEpochCannotInstallSealedCredential (0.00s)
+=== RUN   TestPasswordChangePGAdminNeedsCurrentAuthenticator
+    password_change_pg_test.go:350: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGAdminNeedsCurrentAuthenticator (0.00s)
+=== RUN   TestPasswordChangePGAdminKeepsMFAAndCanQueryWithoutReplayingOTP
+    password_change_pg_test.go:359: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGAdminKeepsMFAAndCanQueryWithoutReplayingOTP (0.00s)
+=== RUN   TestPasswordChangePGBoundedOriginalKeyAndWorkerFairness
+    password_change_pg_test.go:383: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGBoundedOriginalKeyAndWorkerFairness (0.00s)
+=== RUN   TestPasswordChangePGResultProofOracleIsRateBounded
+    password_change_pg_test.go:404: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGResultProofOracleIsRateBounded (0.00s)
+=== RUN   TestPasswordChangePGCompletedLookupCannotBypassIndependentEpochGate
+    password_change_pg_test.go:421: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGCompletedLookupCannotBypassIndependentEpochGate (0.00s)
+=== RUN   TestPasswordChangePGConcurrentOriginalRetriesCommitOnce
+    password_change_pg_test.go:435: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGConcurrentOriginalRetriesCommitOnce (0.00s)
+=== RUN   TestPasswordChangePGResultBindsEpochAcrossItsReadAndJournalCheck
+    password_change_pg_test.go:450: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGResultBindsEpochAcrossItsReadAndJournalCheck (0.00s)
+=== RUN   TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie
+    password_change_pg_test.go:465: explicit future isolated sync-schema test window required
+--- SKIP: TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie (0.00s)
+=== RUN   TestPasswordChangeDecodeRejectsAmbiguousOrUnboundedInput
+--- PASS: TestPasswordChangeDecodeRejectsAmbiguousOrUnboundedInput (0.00s)
+=== RUN   TestPasswordChangeProofBindsOriginalIntentAndPurpose
+--- PASS: TestPasswordChangeProofBindsOriginalIntentAndPurpose (0.00s)
+=== RUN   TestPasswordChangeSealedReplacementCannotCrossContext
+--- PASS: TestPasswordChangeSealedReplacementCannotCrossContext (0.00s)
+=== RUN   TestPasswordChangeResultIsOutsideMutatingExportDrain
+--- PASS: TestPasswordChangeResultIsOutsideMutatingExportDrain (0.00s)
+=== RUN   TestPersonalExportRouteInventory
+    personal_export_inventory_test.go:87: ROUTE_INVENTORY_JSON={"allModeListeners":10,"allModeProcesses":1,"counts":{"admin":10,"experimental":5,"health":1,"ordinary":112},"databaseOrAPIExecution":false,"gatewayRoles":1,"ownerRoles":9,"routes":{"admin":["GET /api/admin/operations/{id}","GET /api/admin/report-operations/{id}","GET /api/admin/reports","GET /api/admin/status","GET /api/admin/users","PATCH /api/admin/reports/{id}","PATCH /api/admin/users/{id}/state","POST /api/admin/users/{id}/reset-grants","POST /api/auth/step-up","PUT /api/capabilities/{name}"],"experimental":["GET /api/me/exports/{id}","GET /api/me/exports/{id}/download","POST /api/me/exports","POST /api/me/exports/{id}/cancel","POST /api/me/exports/{id}/download-ticket"],"health":["GET /api/health"],"ordinary":["DELETE /api/auth/sessions/{deviceId}","DELETE /api/blocks/{userId}","DELETE /api/contacts/{userId}","DELETE /api/conversations/{id}/announcement","DELETE /api/conversations/{id}/draft","DELETE /api/conversations/{id}/invites/{inviteId}","DELETE /api/conversations/{id}/members/{userId}","DELETE /api/messages/{id}","DELETE /api/messages/{id}/favorite","DELETE /api/messages/{id}/pin","DELETE /api/messages/{id}/reactions/{emoji}","GET /api/auth/context","GET /api/auth/csrf","GET /api/auth/refresh-context","GET /api/auth/sessions","GET /api/avatars/{id}","GET /api/bootstrap","GET /api/capabilities","GET /api/contacts","GET /api/contacts/{userId}/relationship","GET /api/conversations","GET /api/conversations/{id}","GET /api/conversations/{id}/announcement","GET /api/conversations/{id}/announcement/operations/{requestId}","GET /api/conversations/{id}/draft","GET /api/conversations/{id}/governance","GET /api/conversations/{id}/governance/operations/{requestId}","GET /api/conversations/{id}/invites","GET /api/conversations/{id}/invites/operations/{requestId}","GET /api/conversations/{id}/join-requests","GET /api/conversations/{id}/join-requests/operations/{requestId}","GET /api/conversations/{id}/members","GET /api/conversations/{id}/messages","GET /api/conversations/{id}/read","GET /api/conversations/{id}/view","GET /api/favorites","GET /api/me","GET /api/me/avatar/operations/{id}","GET /api/me/data-exports/{id}","GET /api/me/data-exports/{id}/download","GET /api/me/export","GET /api/me/preferences","GET /api/me/preferences/operations/{requestId}","GET /api/media/capabilities","GET /api/media/{id}","GET /api/messages/{id}","GET /api/messages/{id}/attachment","GET /api/reports","GET /api/search","GET /api/sync/changes","GET /api/sync/context","GET /api/sync/snapshots/{id}/pages/{page}","GET /api/sync/storage","GET /api/users","PATCH /api/conversations/{id}","PATCH /api/conversations/{id}/view","PATCH /api/me","PATCH /api/me/preferences","PATCH /api/messages/{id}","POST /api/auth/confirm","POST /api/auth/login","POST /api/auth/logout","POST /api/auth/password-change","POST /api/auth/password-change-results","POST /api/auth/reauthenticate","POST /api/auth/recover","POST /api/auth/recovery-codes","POST /api/auth/refresh","POST /api/auth/register","POST /api/auth/reset-password","POST /api/contacts/requests","POST /api/contacts/requests/{id}/accept","POST /api/contacts/requests/{id}/reject","POST /api/contacts/{userId}/reopen","POST /api/conversations","POST /api/conversations/{id}/draft-results","POST /api/conversations/{id}/governance","POST /api/conversations/{id}/invites","POST /api/conversations/{id}/join-requests","POST /api/conversations/{id}/join-requests/{requestId}","POST /api/conversations/{id}/members","POST /api/conversations/{id}/message-results","POST /api/conversations/{id}/messages","POST /api/conversations/{id}/read-results","POST /api/conversations/{id}/view-results","POST /api/me/avatar","POST /api/me/data-export-results","POST /api/me/data-exports","POST /api/me/data-exports/{id}/cancel","POST /api/me/data-exports/{id}/download-ticket","POST /api/me/preferences-results","POST /api/media","POST /api/media/upload-results","POST /api/messages/{id}/reactions","POST /api/reports","POST /api/sync/classifications","POST /api/sync/object-receipt-challenges","POST /api/sync/object-receipt-results","POST /api/sync/object-receipts","POST /api/sync/receipt-challenges","POST /api/sync/receipt-results","POST /api/sync/receipts","POST /api/sync/snapshots","POST /api/sync/snapshots/{id}/validate","PUT /api/blocks/{userId}","PUT /api/conversations/{id}/announcement","PUT /api/conversations/{id}/draft","PUT /api/conversations/{id}/read","PUT /api/messages/{id}/favorite","PUT /api/messages/{id}/pin","PUT /api/sync/device","PUT /api/sync/storage"]},"schema2DynamicSyncSubroutes":0}
+--- PASS: TestPersonalExportRouteInventory (0.00s)
+=== RUN   TestPersonalExportRouteFenceClassification
+--- PASS: TestPersonalExportRouteFenceClassification (0.00s)
+=== RUN   TestPersonalExportNestedFenceRequiresAuthenticProof
+--- PASS: TestPersonalExportNestedFenceRequiresAuthenticProof (0.04s)
+=== RUN   TestPersonalExportSourceBufferDoesNotPartiallyDeliver
+--- PASS: TestPersonalExportSourceBufferDoesNotPartiallyDeliver (0.00s)
+=== RUN   TestPersonalExportPrivateProofCannotBypassServiceAuthentication
+--- PASS: TestPersonalExportPrivateProofCannotBypassServiceAuthentication (0.00s)
+=== RUN   TestPersonalExportProofScopeDrainsInflightAndRejectsLateRPC
+--- PASS: TestPersonalExportProofScopeDrainsInflightAndRejectsLateRPC (0.03s)
+=== RUN   TestPersonalExportCompleteAuthentication
+=== RUN   TestPersonalExportCompleteAuthentication/valid
+=== RUN   TestPersonalExportCompleteAuthentication/final_tag_corrupt
+=== RUN   TestPersonalExportCompleteAuthentication/middle_tag_corrupt
+=== RUN   TestPersonalExportCompleteAuthentication/truncated_final
+=== RUN   TestPersonalExportCompleteAuthentication/trailing_bytes
+=== RUN   TestPersonalExportCompleteAuthentication/wrong_key
+=== RUN   TestPersonalExportCompleteAuthentication/wrong_artifact_digest
+--- PASS: TestPersonalExportCompleteAuthentication (0.06s)
+    --- PASS: TestPersonalExportCompleteAuthentication/valid (0.01s)
+    --- PASS: TestPersonalExportCompleteAuthentication/final_tag_corrupt (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/middle_tag_corrupt (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/truncated_final (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/trailing_bytes (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/wrong_key (0.00s)
+    --- PASS: TestPersonalExportCompleteAuthentication/wrong_artifact_digest (0.00s)
+=== RUN   TestPersonalExportCancelledBeforePlaintext
+--- PASS: TestPersonalExportCancelledBeforePlaintext (0.03s)
+=== RUN   TestPersonalExportOriginalBodyAndNoAuthority
+--- PASS: TestPersonalExportOriginalBodyAndNoAuthority (0.00s)
+=== RUN   TestReceiptQualificationRotationDrainsOriginalSourceReaders
+--- PASS: TestReceiptQualificationRotationDrainsOriginalSourceReaders (0.09s)
+=== RUN   TestReceiptCapabilityPGIndependentJournalAndRealJetStream
+    receipt_capabilities_pg_test.go:204: explicit independent receipt PG/JetStream window required
+--- SKIP: TestReceiptCapabilityPGIndependentJournalAndRealJetStream (0.00s)
+=== RUN   TestReceiptCapabilityPGProfilesOriginalDeclarationAndSharedClusterRefusal
+    receipt_capabilities_pg_test.go:326: explicit future isolated sync-schema test window required
+--- SKIP: TestReceiptCapabilityPGProfilesOriginalDeclarationAndSharedClusterRefusal (0.00s)
+=== RUN   TestRetentionFrozenRangeNeverTreatsEmptyOrRevokedAsDelivered
+--- PASS: TestRetentionFrozenRangeNeverTreatsEmptyOrRevokedAsDelivered (0.00s)
+=== RUN   TestRetentionPolicyExplicitIndependentZeroAndBounds
+--- PASS: TestRetentionPolicyExplicitIndependentZeroAndBounds (0.00s)
+=== RUN   TestRetentionPGFirstCompletionImmutableAndJournalPending
+    retention_pg_test.go:183: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGFirstCompletionImmutableAndJournalPending (0.00s)
+=== RUN   TestRetentionPGDueCloudOnlyThenFutureGlobalAndNoDowngrade
+    retention_pg_test.go:222: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGDueCloudOnlyThenFutureGlobalAndNoDowngrade (0.00s)
+=== RUN   TestRetentionPGReadDeadlineAndEditPreserveOriginalBoundary
+    retention_pg_test.go:269: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGReadDeadlineAndEditPreserveOriginalBoundary (0.00s)
+=== RUN   TestRetentionPGAccumulatesExactFrozenOriginalRange
+    retention_pg_test.go:317: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGAccumulatesExactFrozenOriginalRange (0.00s)
+=== RUN   TestRetentionPGEditCopiesTargetsAndOldACKCannotFinishNewGeneration
+    retention_pg_test.go:359: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGEditCopiesTargetsAndOldACKCannotFinishNewGeneration (0.00s)
+=== RUN   TestRetentionPGExpiredLeaseCannotCommitOrReportCompletion
+    retention_pg_test.go:407: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGExpiredLeaseCannotCommitOrReportCompletion (0.00s)
+=== RUN   TestRetentionPGReplayKeepsAbsoluteDeadlineAndMissingSourceFloor
+    retention_pg_test.go:428: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGReplayKeepsAbsoluteDeadlineAndMissingSourceFloor (0.00s)
+=== RUN   TestRetentionPGRetainedAttachmentRequiresExactMemberAndPhysicalStore
+    retention_pg_test.go:464: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGRetainedAttachmentRequiresExactMemberAndPhysicalStore (0.00s)
+=== RUN   TestRetentionPGClockAlarmSurvivesRestart
+    retention_pg_test.go:499: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGClockAlarmSurvivesRestart (0.00s)
+=== RUN   TestRetentionPGLegacyAllowlistPreservesOnlyPreActivationBindings
+    retention_pg_test.go:514: explicit future isolated sync-schema test window required
+--- SKIP: TestRetentionPGLegacyAllowlistPreservesOnlyPreActivationBindings (0.00s)
+=== RUN   TestS2PGGuardRejectsForeignConnections
+--- PASS: TestS2PGGuardRejectsForeignConnections (0.00s)
+=== RUN   TestS2PGGuardRequiresCanonicalPrivatePassfile
+--- PASS: TestS2PGGuardRequiresCanonicalPrivatePassfile (0.00s)
+=== RUN   TestMessageListCursorBindsOwnerEpochAndQuery
+--- PASS: TestMessageListCursorBindsOwnerEpochAndQuery (0.00s)
+=== RUN   TestUsernameAndPasswordBoundaries
+--- PASS: TestUsernameAndPasswordBoundaries (0.00s)
+=== RUN   TestMalformedPathsCannotBecomeRestoreFacts
+--- PASS: TestMalformedPathsCannotBecomeRestoreFacts (0.00s)
+=== RUN   TestAuthenticatedBackupRejectsTruncationReorderAndTrailingData
+--- PASS: TestAuthenticatedBackupRejectsTruncationReorderAndTrailingData (0.00s)
+=== RUN   TestArgonAndCredentialSealing
+--- PASS: TestArgonAndCredentialSealing (0.54s)
+=== RUN   TestRFC6238CounterAndPayloadBinding
+--- PASS: TestRFC6238CounterAndPayloadBinding (0.00s)
+=== RUN   TestDraftOwnedCipherBindingSurvivesLogicalRebase
+--- PASS: TestDraftOwnedCipherBindingSurvivesLogicalRebase (0.00s)
+=== RUN   TestDraftFloorDenialCannotBeDowngradedAtSameTuple
+--- PASS: TestDraftFloorDenialCannotBeDowngradedAtSameTuple (0.00s)
+=== RUN   TestDraftReplyFloorKeepsOnlyMatchingOwnedCipher
+--- PASS: TestDraftReplyFloorKeepsOnlyMatchingOwnedCipher (0.00s)
+=== RUN   TestDraftFloorAbsentViewUnknownStageAndLateInsert
+    self_draft_floor_test.go:197: explicit future isolated draft-floor test window required
+--- SKIP: TestDraftFloorAbsentViewUnknownStageAndLateInsert (0.00s)
+=== RUN   TestDraftFloorPreservesOwnedBytesAndRejectsOldBackupText
+    self_draft_floor_test.go:256: explicit future isolated draft-floor test window required
+--- SKIP: TestDraftFloorPreservesOwnedBytesAndRejectsOldBackupText (0.00s)
+=== RUN   TestDraftPendingExactFloorRequiredAndImmutableMetadata
+    self_draft_floor_test.go:305: explicit future isolated draft-floor test window required
+--- SKIP: TestDraftPendingExactFloorRequiredAndImmutableMetadata (0.00s)
+=== RUN   TestDraftReferenceRetirementPreservesUnpublishedOwnedText
+    self_draft_floor_test.go:347: explicit future isolated draft-floor test window required
+--- SKIP: TestDraftReferenceRetirementPreservesUnpublishedOwnedText (0.00s)
+=== RUN   TestSelfDraftOriginalBodyAndScopeCannotBeSubstituted
+--- PASS: TestSelfDraftOriginalBodyAndScopeCannotBeSubstituted (0.00s)
+=== RUN   TestSelfDraftStrictJSONAndTextBounds
+--- PASS: TestSelfDraftStrictJSONAndTextBounds (0.00s)
+=== RUN   TestSelfDraftJournalNeverCarriesOwnedTextOrReplyProof
+--- PASS: TestSelfDraftJournalNeverCarriesOwnedTextOrReplyProof (0.00s)
+=== RUN   TestSelfReadPrefixRetainsHolesAndExactCreationOrder
+--- PASS: TestSelfReadPrefixRetainsHolesAndExactCreationOrder (0.00s)
+=== RUN   TestSelfReadStrictOriginalBodyAndNoSourceOverride
+--- PASS: TestSelfReadStrictOriginalBodyAndNoSourceOverride (0.00s)
+=== RUN   TestSelfReadPersistentHolesOriginalFactsAndLegacy
+    self_read_test.go:192: explicit future isolated personal-read test window required
+--- SKIP: TestSelfReadPersistentHolesOriginalFactsAndLegacy (0.00s)
+=== RUN   TestSelfReadConcurrentObservationUnionUsesCASRetry
+    self_read_test.go:247: explicit future isolated personal-read test window required
+--- SKIP: TestSelfReadConcurrentObservationUnionUsesCASRetry (0.00s)
+=== RUN   TestSelfReadEpochZeroRebaseAndQualification
+    self_read_test.go:293: explicit future isolated personal-read test window required
+--- SKIP: TestSelfReadEpochZeroRebaseAndQualification (0.00s)
+=== RUN   TestSelfViewPGDefaultCASAndOriginalFacts
+    self_views_pg_test.go:69: explicit future isolated personal-read test window required
+--- SKIP: TestSelfViewPGDefaultCASAndOriginalFacts (0.00s)
+=== RUN   TestSelfViewPGManualUnreadGenerationPreservesNewIntent
+    self_views_pg_test.go:133: explicit future isolated personal-read test window required
+--- SKIP: TestSelfViewPGManualUnreadGenerationPreservesNewIntent (0.00s)
+=== RUN   TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts
+    self_views_pg_test.go:169: explicit future isolated personal-read test window required
+--- SKIP: TestSelfViewPGEpochZeroRebaseRetainsOriginalFacts (0.00s)
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"hidden":null,"archived":true}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"manualUnread":null,"archived":true}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"archived":null,"hidden":false}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"hidden":false,"publicReadReceipts":true}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"pinnedRank":1.5}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"pinnedRank":-1}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"mutedUntil":"2026-11-16T10:00:00+08:00"}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"manualUnread":true}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"manualUnread":false,"expectedManualUnreadGeneration":"01"}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{"hidden":false,"expectedManualUnreadGeneration":"0"}
+=== RUN   TestSelfViewIntentRejectsAmbiguousFields/{}
+--- PASS: TestSelfViewIntentRejectsAmbiguousFields (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"hidden":null,"archived":true} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"manualUnread":null,"archived":true} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"archived":null,"hidden":false} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"hidden":false,"publicReadReceipts":true} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"pinnedRank":1.5} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"pinnedRank":-1} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"mutedUntil":"2026-11-16T10:00:00+08:00"} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"manualUnread":true} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"manualUnread":false,"expectedManualUnreadGeneration":"01"} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{"hidden":false,"expectedManualUnreadGeneration":"0"} (0.00s)
+    --- PASS: TestSelfViewIntentRejectsAmbiguousFields/{} (0.00s)
+=== RUN   TestSelfViewIntentKeepsExactCountersAndExplicitNulls
+--- PASS: TestSelfViewIntentKeepsExactCountersAndExplicitNulls (0.00s)
+=== RUN   TestPrivateStateGatewayUsesReadAndWriteResponseFences
+--- PASS: TestPrivateStateGatewayUsesReadAndWriteResponseFences (0.00s)
+=== RUN   TestAdmissionLockChild
+--- PASS: TestAdmissionLockChild (0.00s)
+=== RUN   TestAdmissionLockCancellationCrashAndStateIdentity
+--- PASS: TestAdmissionLockCancellationCrashAndStateIdentity (0.10s)
+=== RUN   TestAdmissionUnknownCommitMarkerRequiresPGProof
+    send_admission_test.go:129: isolated private PG configuration required
+--- SKIP: TestAdmissionUnknownCommitMarkerRequiresPGProof (0.00s)
+=== RUN   TestSendAdmissionWithIndependentRoleDatabases
+    send_admission_test.go:257: explicit private PG fixture required
+--- SKIP: TestSendAdmissionWithIndependentRoleDatabases (0.00s)
+=== RUN   TestRefreshTransactionSingleConsumeWithoutOuterProcessFence
+    session_refresh_test.go:22: explicit isolated refresh environment required
+--- SKIP: TestRefreshTransactionSingleConsumeWithoutOuterProcessFence (0.00s)
+=== RUN   TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite
+    source_preferences_test.go:104: explicit future isolated source-preferences test window required
+--- SKIP: TestSourcePreferencesReadUnknownAndRejectedRequestsDoNotWrite (0.00s)
+=== RUN   TestSourcePreferencesConcurrentCASAndOriginalFact
+    source_preferences_test.go:136: explicit future isolated source-preferences test window required
+--- SKIP: TestSourcePreferencesConcurrentCASAndOriginalFact (0.00s)
+=== RUN   TestSourcePreferencesConcurrentSameNonceRechecksAfterLock
+    source_preferences_test.go:200: explicit future isolated source-preferences test window required
+--- SKIP: TestSourcePreferencesConcurrentSameNonceRechecksAfterLock (0.00s)
+=== RUN   TestSourcePreferencesEpochResetRetainsOriginalFacts
+    source_preferences_test.go:262: explicit future isolated source-preferences test window required
+--- SKIP: TestSourcePreferencesEpochResetRetainsOriginalFacts (0.00s)
+=== RUN   TestSourcePreferencesStrictRequestAndExactCounters
+--- PASS: TestSourcePreferencesStrictRequestAndExactCounters (0.00s)
+=== RUN   TestSyncMigrationPGPoisonOwnerQueueStillRetiresOtherHolder
+    sync_migration_fair_pg_test.go:13: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGPoisonOwnerQueueStillRetiresOtherHolder (0.00s)
+=== RUN   TestSyncMigrationPGPoisonInterruptedBuildDoesNotStarveNextBatch
+    sync_migration_fair_pg_test.go:65: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGPoisonInterruptedBuildDoesNotStarveNextBatch (0.00s)
+=== RUN   TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage
+    sync_migration_forward_pg_test.go:10: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage (0.00s)
+=== RUN   TestSyncMigrationPGHTTPSBoundEncryptedWholeBatchAndNoQualification
+    sync_migration_pg_test.go:139: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGHTTPSBoundEncryptedWholeBatchAndNoQualification (0.00s)
+=== RUN   TestSyncMigrationPGOriginalResultsNeverCreateAndTargetCannotSwap
+    sync_migration_pg_test.go:188: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGOriginalResultsNeverCreateAndTargetCannotSwap (0.00s)
+=== RUN   TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked
+=== RUN   TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked/global
+    sync_migration_pg_test.go:207: explicit future isolated sync-schema test window required
+=== RUN   TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked/membership
+    sync_migration_pg_test.go:207: explicit future isolated sync-schema test window required
+=== RUN   TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked/security
+    sync_migration_pg_test.go:207: explicit future isolated sync-schema test window required
+=== RUN   TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked/store
+    sync_migration_pg_test.go:207: explicit future isolated sync-schema test window required
+--- PASS: TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked (0.00s)
+    --- SKIP: TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked/global (0.00s)
+    --- SKIP: TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked/membership (0.00s)
+    --- SKIP: TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked/security (0.00s)
+    --- SKIP: TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked/store (0.00s)
+=== RUN   TestSyncMigrationPGCloudOnlyNeedsOriginalQualifiedDigest
+    sync_migration_pg_test.go:249: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGCloudOnlyNeedsOriginalQualifiedDigest (0.00s)
+=== RUN   TestSyncMigrationPGCancellationDrainsAndCannotRepublish
+    sync_migration_pg_test.go:262: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGCancellationDrainsAndCannotRepublish (0.00s)
+=== RUN   TestSyncMigrationPGNoHTTPOrForgedGatewayTLS
+    sync_migration_pg_test.go:274: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGNoHTTPOrForgedGatewayTLS (0.00s)
+=== RUN   TestSyncMigrationPGRestoreRetiresKeysCapsulesAndPairings
+    sync_migration_pg_test.go:293: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGRestoreRetiresKeysCapsulesAndPairings (0.00s)
+=== RUN   TestSyncMigrationPGQualifiedLocalOnlySurvivesCloudCleanupWithoutNewACK
+    sync_migration_pg_test.go:345: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGQualifiedLocalOnlySurvivesCloudCleanupWithoutNewACK (0.00s)
+=== RUN   TestSyncMigrationPGUnprotectedUnavailableNeverBecomesLocalOnly
+=== RUN   TestSyncMigrationPGUnprotectedUnavailableNeverBecomesLocalOnly/unknown
+    sync_migration_pg_test.go:382: explicit future isolated sync-schema test window required
+=== RUN   TestSyncMigrationPGUnprotectedUnavailableNeverBecomesLocalOnly/protection_pending
+    sync_migration_pg_test.go:382: explicit future isolated sync-schema test window required
+--- PASS: TestSyncMigrationPGUnprotectedUnavailableNeverBecomesLocalOnly (0.00s)
+    --- SKIP: TestSyncMigrationPGUnprotectedUnavailableNeverBecomesLocalOnly/unknown (0.00s)
+    --- SKIP: TestSyncMigrationPGUnprotectedUnavailableNeverBecomesLocalOnly/protection_pending (0.00s)
+=== RUN   TestSyncMigrationPGIndependentObjectCleanupDrainsMigrationBeforeUnlink
+    sync_migration_pg_test.go:405: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGIndependentObjectCleanupDrainsMigrationBeforeUnlink (0.00s)
+=== RUN   TestSyncMigrationPGStoredManifestTupleAndDigestFailClosed
+    sync_migration_pg_test.go:453: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncMigrationPGStoredManifestTupleAndDigestFailClosed (0.00s)
+=== RUN   TestObjectReceiptProofIsPurposeAndByteBound
+--- PASS: TestObjectReceiptProofIsPurposeAndByteBound (0.00s)
+=== RUN   TestObjectReceiptPolicyDoesNotUpgradeSQLiteOnly
+--- PASS: TestObjectReceiptPolicyDoesNotUpgradeSQLiteOnly (0.00s)
+=== RUN   TestObjectReceiptPGOriginalResultsConcurrencyAndDescriptorSeparation
+    sync_object_receipts_test.go:147: explicit future isolated sync-schema test window required
+--- SKIP: TestObjectReceiptPGOriginalResultsConcurrencyAndDescriptorSeparation (0.00s)
+=== RUN   TestObjectReceiptPGRejectsOldQualificationContentPermissionAndBytes
+    sync_object_receipts_test.go:191: explicit future isolated sync-schema test window required
+--- SKIP: TestObjectReceiptPGRejectsOldQualificationContentPermissionAndBytes (0.00s)
+=== RUN   TestObjectReceiptPGSQLiteApprovalNeedsNewQualificationAndParent
+    sync_object_receipts_test.go:219: explicit future isolated sync-schema test window required
+--- SKIP: TestObjectReceiptPGSQLiteApprovalNeedsNewQualificationAndParent (0.00s)
+=== RUN   TestObjectReceiptPGMediaChecksRealOriginalFile
+    sync_object_receipts_test.go:242: explicit future isolated sync-schema test window required
+--- SKIP: TestObjectReceiptPGMediaChecksRealOriginalFile (0.00s)
+=== RUN   TestObjectReceiptPGDeadlineRecheckedAfterLocalLock
+    sync_object_receipts_test.go:282: explicit future isolated sync-schema test window required
+--- SKIP: TestObjectReceiptPGDeadlineRecheckedAfterLocalLock (0.00s)
+=== RUN   TestObjectReceiptMediaRequiresSourceFence
+--- PASS: TestObjectReceiptMediaRequiresSourceFence (0.00s)
+=== RUN   TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite
+    sync_object_receipts_test.go:361: explicit future isolated sync-schema test window required
+--- SKIP: TestObjectReceiptPGOriginalDownloadDrainsBeforeSourceWrite (0.00s)
+=== RUN   TestSyncOwnerOutboxContracts
+    sync_outbox_test.go:105: explicit isolated sync outbox test switch required
+--- SKIP: TestSyncOwnerOutboxContracts (0.00s)
+=== RUN   TestReceiptPGOriginalFactsAndVersionRevocation
+    sync_receipts_pg_test.go:99: explicit future isolated sync-schema test window required
+--- SKIP: TestReceiptPGOriginalFactsAndVersionRevocation (0.00s)
+=== RUN   TestReceiptPGPermissionPolicyAndDeviceDoNotInherit
+    sync_receipts_pg_test.go:159: explicit future isolated sync-schema test window required
+--- SKIP: TestReceiptPGPermissionPolicyAndDeviceDoNotInherit (0.00s)
+=== RUN   TestReceiptPGConcurrentDuplicateHasOneOriginalFact
+    sync_receipts_pg_test.go:207: explicit future isolated sync-schema test window required
+--- SKIP: TestReceiptPGConcurrentDuplicateHasOneOriginalFact (0.00s)
+=== RUN   TestReceiptPolicyRequiresExactNativeBuildAndEvidence
+--- PASS: TestReceiptPolicyRequiresExactNativeBuildAndEvidence (0.00s)
+=== RUN   TestReceiptPolicyFileIsBoundedAndStrict
+--- PASS: TestReceiptPolicyFileIsBoundedAndStrict (0.00s)
+=== RUN   TestReceiptProofBindsExactContentStoreAndRestoreEpoch
+--- PASS: TestReceiptProofBindsExactContentStoreAndRestoreEpoch (0.00s)
+=== RUN   TestReceiptRequestsRejectTailUnknownFieldsAndNumericEpoch
+--- PASS: TestReceiptRequestsRejectTailUnknownFieldsAndNumericEpoch (0.00s)
+=== RUN   TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas
+    sync_register_pg_test.go:77: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncRegisterPGKeepsOnePhysicalStoreAcrossSchemas (0.00s)
+=== RUN   TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores
+    sync_register_pg_test.go:108: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncRegisterPGConcurrentSchemasCannotAdoptTwoStores (0.00s)
+=== RUN   TestSyncSchemaIsBoundWithoutChangingChatIdentity
+--- PASS: TestSyncSchemaIsBoundWithoutChangingChatIdentity (0.00s)
+=== RUN   TestSyncSchemaOneNeverAllocatesNewPrivateKinds
+--- PASS: TestSyncSchemaOneNeverAllocatesNewPrivateKinds (0.00s)
+=== RUN   TestSyncNewPrivateWireCannotTargetAnotherSource
+--- PASS: TestSyncNewPrivateWireCannotTargetAnotherSource (0.00s)
+=== RUN   TestSyncProtocolSchemaCanonical
+--- PASS: TestSyncProtocolSchemaCanonical (0.00s)
+=== RUN   TestSyncSchemasPreserve57StateAndRepeatConstraintIDs
+    sync_schemas_test.go:135: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncSchemasPreserve57StateAndRepeatConstraintIDs (0.00s)
+=== RUN   TestSyncSchemasConflictingBackfillRollsBackAllDDL
+    sync_schemas_test.go:198: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncSchemasConflictingBackfillRollsBackAllDDL (0.00s)
+=== RUN   TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored
+    sync_schemas_test.go:232: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncSchemasExistingPhysicalStoreConflictIsNotIgnored (0.00s)
+=== RUN   TestSyncSchemasScopeMismatchMakesNoColumns
+    sync_schemas_test.go:255: explicit future isolated sync-schema test window required
+--- SKIP: TestSyncSchemasScopeMismatchMakesNoColumns (0.00s)
+=== RUN   TestSyncSnapshotCaptureRejectsChangingCommittedOwners
+    sync_snapshot_test.go:204: explicit ready window for the fresh sync realm required
+--- SKIP: TestSyncSnapshotCaptureRejectsChangingCommittedOwners (0.00s)
+=== RUN   TestSyncSnapshotNATSDuplicateAndBodyRejection
+    sync_snapshot_test.go:271: explicit ready window for the fresh sync realm required
+--- SKIP: TestSyncSnapshotNATSDuplicateAndBodyRejection (0.00s)
+=== RUN   TestSyncSnapshotMetadataAndEncryptedPagesContainReferencesOnly
+    sync_snapshot_test.go:347: explicit ready window for the fresh sync realm required
+--- SKIP: TestSyncSnapshotMetadataAndEncryptedPagesContainReferencesOnly (0.00s)
+=== RUN   TestSyncSnapshotCursorPreservesIntegersAboveFloatPrecision
+    sync_snapshot_test.go:432: explicit source execution window required
+--- SKIP: TestSyncSnapshotCursorPreservesIntegersAboveFloatPrecision (0.00s)
+=== RUN   TestSyncNATSTokenLocalPermission
+=== RUN   TestSyncNATSTokenLocalPermission/current_owner_0600
+=== RUN   TestSyncNATSTokenLocalPermission/group_world_0664_rejected
+=== RUN   TestSyncNATSTokenLocalPermission/over_4KiB_rejected
+=== RUN   TestSyncNATSTokenLocalPermission/symlink_rejected
+--- PASS: TestSyncNATSTokenLocalPermission (0.00s)
+    --- PASS: TestSyncNATSTokenLocalPermission/current_owner_0600 (0.00s)
+    --- PASS: TestSyncNATSTokenLocalPermission/group_world_0664_rejected (0.00s)
+    --- PASS: TestSyncNATSTokenLocalPermission/over_4KiB_rejected (0.00s)
+    --- PASS: TestSyncNATSTokenLocalPermission/symlink_rejected (0.00s)
+=== RUN   TestSyncSnapshotOwnedOutboxTransactions
+    sync_snapshot_test.go:502: explicit ready window for the fresh sync realm required
+--- SKIP: TestSyncSnapshotOwnedOutboxTransactions (0.00s)
+=== RUN   TestSyncSnapshotReplayDoesNotCrossMissingCommittedOrigin
+    sync_snapshot_test.go:509: explicit ready window for the fresh sync realm required
+--- SKIP: TestSyncSnapshotReplayDoesNotCrossMissingCommittedOrigin (0.00s)
+PASS
+ok  	jobsim/backend	1.370s
+?   	jobsim/backend/cmd/jobsimd	[no test files]
+?   	jobsim/backend/cmd/jobsimops	[no test files]

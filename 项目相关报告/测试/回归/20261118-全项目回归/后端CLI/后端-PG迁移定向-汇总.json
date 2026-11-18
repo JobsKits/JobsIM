@@ -1,0 +1,21 @@
+{
+  "testFiles": 49,
+  "pass": [
+    "TestSyncMigrationPGPoisonOwnerQueueStillRetiresOtherHolder",
+    "TestSyncMigrationPGPoisonInterruptedBuildDoesNotStarveNextBatch",
+    "TestSyncMigrationPGParentFreezeDrainsDerivedForwardPackage",
+    "TestSyncMigrationPGHTTPSBoundEncryptedWholeBatchAndNoQualification",
+    "TestSyncMigrationPGOriginalResultsNeverCreateAndTargetCannotSwap",
+    "TestSyncMigrationPGCurrentGlobalMembershipAndSecurityRechecked",
+    "TestSyncMigrationPGCloudOnlyNeedsOriginalQualifiedDigest",
+    "TestSyncMigrationPGCancellationDrainsAndCannotRepublish",
+    "TestSyncMigrationPGNoHTTPOrForgedGatewayTLS",
+    "TestSyncMigrationPGRestoreRetiresKeysCapsulesAndPairings",
+    "TestSyncMigrationPGQualifiedLocalOnlySurvivesCloudCleanupWithoutNewACK",
+    "TestSyncMigrationPGUnprotectedUnavailableNeverBecomesLocalOnly",
+    "TestSyncMigrationPGIndependentObjectCleanupDrainsMigrationBeforeUnlink",
+    "TestSyncMigrationPGStoredManifestTupleAndDigestFailClosed"
+  ],
+  "fail": [],
+  "skip": []
+}

@@ -1,0 +1,149 @@
+Application, 0x108cb1680, pid: 30659, label: 'JobsIM' <App element pid: 30659>
+  Window (Main), 0x108cb1540, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4402562048.4>
+    Other, 0x108cb17c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4411363328.5>
+      Other, 0x108cb1900, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4411106048.6>
+        Other, 0x108cb1a40, {{-402.0, -874.0}, {1206.0, 2622.0}} <AX element pid: 30659, elementOrHash.elementID: 4948642944.233>
+        Other, 0x108cb1b80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408836992.7>
+          Other, 0x108cb1cc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4409251328.8>
+            Other, 0x108cb1e00, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4403802368.10>
+              Other, 0x108cb1f40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408848192.13>
+                Other, 0x108cb2080, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408851328.16>
+                  Other, 0x108cb21c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4403862528.20>
+                    Other, 0x108cb2300, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408404480.196>
+                      NavigationBar, 0x108cb2440, {{0.0, 0.0}, {402.0, 116.0}}, identifier: '举报' <AX element pid: 30659, elementOrHash.elementID: 4947157248.197>
+                        Button, 0x108cb2580, {{20.0, 72.7}, {36.0, 22.7}}, label: '返回' <AX element pid: 30659, elementOrHash.elementID: 4947159552.199>
+                        StaticText, 0x108cb26c0, {{183.0, 73.0}, {36.0, 22.0}}, label: '举报' <AX element pid: 30659, elementOrHash.elementID: 4947177728.200>
+                      Other, 0x108cb2800, {{0.0, 116.0}, {402.0, 724.0}} <AX element pid: 30659, elementOrHash.elementID: 4408351296.198>
+                        ScrollView, 0x108cb2940, {{0.0, 116.0}, {402.0, 724.0}} <AX element pid: 30659, elementOrHash.elementID: 4401915904.201>
+                          Other, 0x108cb2a80, {{20.0, 136.0}, {362.0, 439.0}} <AX element pid: 30659, elementOrHash.elementID: 4408347712.202>
+                            Button, 0x108cb2bc0, {{20.0, 136.0}, {362.0, 34.3}}, label: '未完成举报' <AX element pid: 30659, elementOrHash.elementID: 4947158784.205>
+                              StaticText, 0x108cb2d00, {{158.7, 143.0}, {84.3, 20.3}}, label: '未完成举报' <AX element pid: 30659, elementOrHash.elementID: 4947171456.214>
+                            StaticText, 0x108cb2e40, {{20.0, 186.3}, {362.0, 20.3}}, label: '填写举报原因' <AX element pid: 30659, elementOrHash.elementID: 4947172352.206>
+                            TextView, 0x108cb2f80, {{20.0, 222.7}, {362.0, 120.0}} <AX element pid: 30659, elementOrHash.elementID: 4402613248.207>
+                              Other, 0x108cb30c0, {{349.0, 222.7}, {30.0, 120.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 30659, elementOrHash.elementID: 4947871744.215>
+                                Other, 0x108cb3200, {{376.0, 191.7}, {3.0, 28.0}} <AX element pid: 30659, elementOrHash.elementID: 4408410112.222>
+                              Other, 0x108cb3340, {{20.0, 309.7}, {362.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 30659, elementOrHash.elementID: 4947871232.216>
+                                Other, 0x108cb3480, {{-22.0, 336.7}, {36.0, 3.0}} <AX element pid: 30659, elementOrHash.elementID: 4408345472.223>
+                            StaticText, 0x108cb35c0, {{20.0, 358.7}, {362.0, 20.3}}, label: '举报材料' <AX element pid: 30659, elementOrHash.elementID: 4947173248.208>
+                            Button, 0x108cb3700, {{20.0, 395.0}, {362.0, 44.0}}, label: '添加图片或视频' <AX element pid: 30659, elementOrHash.elementID: 4947160320.209>
+                              StaticText, 0x108cb3840, {{142.0, 406.7}, {118.0, 20.3}}, label: '添加图片或视频' <AX element pid: 30659, elementOrHash.elementID: 4947174144.217>
+                            Button, 0x108cb3980, {{20.0, 471.0}, {362.0, 44.0}}, label: '选择聊天记录 (0/50)' <AX element pid: 30659, elementOrHash.elementID: 4947161088.210>
+                              StaticText, 0x108cb3ac0, {{124.3, 482.7}, {153.0, 20.3}}, label: '选择聊天记录 (0/50)' <AX element pid: 30659, elementOrHash.elementID: 4947175040.218>
+                            Button, 0x108cb3c00, {{20.0, 531.0}, {362.0, 44.0}}, label: '提交举报' <AX element pid: 30659, elementOrHash.elementID: 4947161856.211>
+                              StaticText, 0x108cb3d40, {{167.0, 542.7}, {67.7, 20.3}}, label: '提交举报' <AX element pid: 30659, elementOrHash.elementID: 4947175936.219>
+                          Other, 0x108cb3e80, {{369.0, 116.0}, {30.0, 696.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 30659, elementOrHash.elementID: 4947873792.203>
+                            Other, 0x108cb61c0, {{396.0, 364.0}, {3.0, 445.0}} <AX element pid: 30659, elementOrHash.elementID: 4408412352.212>
+                          Other, 0x108ce8000, {{28.0, 807.0}, {346.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 30659, elementOrHash.elementID: 4947873280.204>
+                            Other, 0x108ce8140, {{31.0, 834.0}, {340.0, 3.0}} <AX element pid: 30659, elementOrHash.elementID: 4408411904.213>
+                          Other, 0x108ce8280, {{369.0, 116.0}, {30.0, 696.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 30659, elementOrHash.elementID: 4947873792.203>
+                            Other, 0x108ce83c0, {{396.0, 364.0}, {3.0, 445.0}} <AX element pid: 30659, elementOrHash.elementID: 4408412352.212>
+                          Other, 0x108ce8500, {{28.0, 807.0}, {346.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 30659, elementOrHash.elementID: 4947873280.204>
+                            Other, 0x108ce8640, {{31.0, 834.0}, {340.0, 3.0}} <AX element pid: 30659, elementOrHash.elementID: 4408411904.213>
+                Other, 0x108ce8780, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4409252864.17>
+                  Other, 0x108ce88c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4409253888.21>
+          Other, 0x108ce8a00, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 30659, elementOrHash.elementID: 4408839680.9>
+            Other, 0x108ce8b40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408847744.11>
+            Other, 0x108ce8c80, {{0.0, 791.0}, {402.0, 83.0}} <AX element pid: 30659, elementOrHash.elementID: 4409249280.12>
+    Other, 0x108ce8dc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4948576768.230>
+      Other, 0x108ce8f00, {{-402.0, -874.0}, {1206.0, 2622.0}} <AX element pid: 30659, elementOrHash.elementID: 4948643584.231>
+      Other, 0x108ce9040, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4948640384.232>
+        Other, 0x108ce9180, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408453632.234>
+          Other, 0x108ce92c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408453184.235>
+            Other, 0x108ce9400, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408281280.236>
+              Other, 0x108ce9540, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408448704.237>
+                Other, 0x108ce9680, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4948642304.238>
+                  Other, 0x108ce97c0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4948581888.239>
+                    Other, 0x108ce9900, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 15850343854096033309.9999>
+                      Other, 0x108ce9a40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30669, elementOrHash.elementID: 4387645952.5>
+                        Other, 0x108ce9b80, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4388799104.6>
+                          Image, 0x108ce9cc0, {{-150.0, -78.0}, {702.0, 1102.0}} <AX element pid: 30669, elementOrHash.elementID: 4388799744.7>
+                          Other, 0x108ce9e00, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4387669760.8>
+                            Other, 0x108ce9f40, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4387670208.9>
+                              Other, 0x108cea080, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4387668416.10>
+                                Other, 0x108cea1c0, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4387672448.11>
+                                  Other, 0x108cea300, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4323232832.12>
+                                    Other, 0x108cea440, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4323235968.13>
+                                      Other, 0x108cea580, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4323240000.14>
+                                        Other, 0x108cea6c0, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4401166080.16>
+                                          Other, 0x108cea800, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4323243584.18>
+                                            NavigationBar, 0x108cea940, {{0.0, 88.0}, {402.0, 96.0}}, identifier: '照片' <AX element pid: 30669, elementOrHash.elementID: 4390052864.19>
+                                              StaticText, 0x108ceaa80, {{144.0, 97.7}, {114.3, 15.7}}, label: '选择最多10个项目。' <AX element pid: 30669, elementOrHash.elementID: 4323511808.22>
+                                              Button, 0x108ceabc0, {{20.0, 126.0}, {36.0, 36.0}}, identifier: 'Cancel', label: '取消' <AX element pid: 30669, elementOrHash.elementID: 4402485504.23>
+                                              SegmentedControl, 0x108cead00, {{138.0, 120.0}, {126.0, 48.0}}, label: '照片' <AX element pid: 30669, elementOrHash.elementID: 4390043648.24>
+                                                Button, 0x108ceae40, {{138.0, 120.0}, {63.0, 48.0}}, label: '照片', Selected <AX element pid: 30669, elementOrHash.elementID: 4390044416.28>
+                                                Button, 0x108ceaf80, {{201.0, 120.0}, {63.0, 48.0}}, label: '精选集' <AX element pid: 30669, elementOrHash.elementID: 4390045952.29>
+                                              Button, 0x108ceb0c0, {{346.0, 126.0}, {36.0, 36.0}}, label: '完成', Disabled <AX element pid: 30669, elementOrHash.elementID: 4402486784.25>
+                                            Other, 0x108ceb200, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4324052032.20>
+                                              Other, 0x108ceb340, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4324094656.26>
+                                                Other, 0x108ceb480, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4324056512.30>
+                                                  Other, 0x108ceb5c0, {{0.0, 72.0}, {402.0, 802.0}}, label: '照片' <AX element pid: 30669, elementOrHash.elementID: 4387677376.32>
+                                                    Other, 0x108ceb700, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4390045184.34>
+                                                      ScrollView, 0x108ceb840, {{0.0, 72.0}, {402.0, 802.0}}, identifier: 'photosView_content_scroll_view' <AX element pid: 30669, elementOrHash.elementID: 4321624064.37>
+                                                        Other, 0x108ceb980, {{0.0, 184.0}, {402.0, 544.3}}, identifier: 'photos_layout' <AX element pid: 30669, elementOrHash.elementID: 4402523392.40>
+                                                          Other, 0x108cebac0, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4387679168.46>
+                                                          Other, 0x108cebc00, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4321678336.47>
+                                                          Other, 0x108cebd40, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4387678720.48>
+                                                          Other, 0x108cebe80, {{0.0, 184.0}, {402.0, 142.0}}, identifier: 'PXGSingleViewLayout-Group' <AX element pid: 30669, elementOrHash.elementID: 4402525872.49>
+                                                            Other, 0x108cf0000, {{0.0, 184.0}, {402.0, 142.0}}, identifier: 'PXGSingleViewContainerView_AX', label: '私密访问照片, 你的照片图库会在此处显示，但“JobsIM”仅可访问你选定的项目。' <AX element pid: 30669, elementOrHash.elementID: 4811259136.57>
+                                                              Image, 0x108cf0140, {{32.0, 194.0}, {38.0, 38.0}}, identifier: 'PickerOnboardingHeaderViewIcon' <AX element pid: 30669, elementOrHash.elementID: 4774099968.58>
+                                                              Button, 0x108cf0280, {{350.0, 192.0}, {30.0, 22.0}}, label: '关闭' <AX element pid: 30669, elementOrHash.elementID: 4776002304.59>
+                                                              Button, 0x108cf03c0, {{82.0, 281.7}, {97.7, 20.3}}, label: '进一步了解…' <AX element pid: 30669, elementOrHash.elementID: 4776003072.60>
+                                                                StaticText, 0x108cf0500, {{82.0, 281.7}, {97.7, 20.3}}, label: '进一步了解…' <AX element pid: 30669, elementOrHash.elementID: 4776592256.67>
+                                                          Other, 0x108cf0640, {{0.0, 184.0}, {402.0, 142.0}}, label: '私密访问照片, 你的照片图库会在此处显示，但“JobsIM”仅可访问你选定的项目。' <AX element pid: 30669, elementOrHash.elementID: 4776636416.50>
+                                                            Image, 0x108cf0780, {{32.0, 194.0}, {38.0, 38.0}}, identifier: 'PickerOnboardingHeaderViewIcon' <AX element pid: 30669, elementOrHash.elementID: 4774099968.58>
+                                                            Button, 0x108cf08c0, {{350.0, 192.0}, {30.0, 22.0}}, label: '关闭' <AX element pid: 30669, elementOrHash.elementID: 4776002304.59>
+                                                            Button, 0x108cf0a00, {{82.0, 281.7}, {97.7, 20.3}}, label: '进一步了解…' <AX element pid: 30669, elementOrHash.elementID: 4776003072.60>
+                                                              StaticText, 0x108cf0b40, {{82.0, 281.7}, {97.7, 20.3}}, label: '进一步了解…' <AX element pid: 30669, elementOrHash.elementID: 4776592256.67>
+                                                          Other, 0x108cf0c80, {{0.0, 326.0}, {402.0, 402.3}}, identifier: 'photos_sectioned_layout' <AX element pid: 30669, elementOrHash.elementID: 4402525952.51>
+                                                            Other, 0x108cf0dc0, {{0.0, 326.0}, {402.0, 402.3}}, identifier: 'PXAssetsSectionLayout-Group' <AX element pid: 30669, elementOrHash.elementID: 4776891792.61>
+                                                              Other, 0x108cf0f00, {{0.0, 326.0}, {402.0, 402.3}}, identifier: 'PXZoomablePhotosLayout-Group' <AX element pid: 30669, elementOrHash.elementID: 4776897472.68>
+                                                                Other, 0x108cf1040, {{0.0, 326.0}, {402.0, 402.3}}, identifier: 'PXGZoomLayout-Group' <AX element pid: 30669, elementOrHash.elementID: 4776897312.74>
+                                                                  Other, 0x108cf1180, {{0.0, 326.0}, {402.0, 402.3}}, identifier: 'PXGDecoratingLayout-Group' <AX element pid: 30669, elementOrHash.elementID: 4776897632.79>
+                                                                    Other, 0x108cf12c0, {{0.0, 326.0}, {402.0, 402.3}}, identifier: 'PXGGridLayout-Group', label: '照片, 11月18日, 15:09, 照片, 2018年3月31日, 03:14, 照片, 2012年8月09日, 05:55, 照片, 2012年8月09日, 05:29, 照片, 2012年8月09日, 02:52, 照片, 2011年3月13日, 08:17, 照片, 2009年10月10日, 05:09' <AX element pid: 30669, elementOrHash.elementID: 4776898752.81>
+                                                                      Image, 0x108cf1400, {{0.0, 326.0}, {132.9, 133.0}}, identifier: 'PXGGridLayout-Info', label: '照片, 11月18日, 15:09' <AX element pid: 30669, elementOrHash.elementID: 4811258880.84>
+                                                                      Image, 0x108cf1540, {{134.6, 326.0}, {132.9, 133.0}}, identifier: 'PXGGridLayout-Info', label: '照片, 2018年3月31日, 03:14' <AX element pid: 30669, elementOrHash.elementID: 4811250560.85>
+                                                                      Image, 0x108cf1680, {{269.1, 326.0}, {132.9, 133.0}}, identifier: 'PXGGridLayout-Info', label: '照片, 2012年8月09日, 05:55' <AX element pid: 30669, elementOrHash.elementID: 4811258752.86>
+                                                                      Image, 0x108cf17c0, {{0.0, 460.7}, {132.9, 133.0}}, identifier: 'PXGGridLayout-Info', label: '照片, 2012年8月09日, 05:29' <AX element pid: 30669, elementOrHash.elementID: 4811259392.87>
+                                                                      Image, 0x108cf1900, {{134.6, 460.7}, {132.9, 133.0}}, identifier: 'PXGGridLayout-Info', label: '照片, 2012年8月09日, 02:52' <AX element pid: 30669, elementOrHash.elementID: 4811259264.88>
+                                                                      Image, 0x108cf1a40, {{269.1, 460.7}, {132.9, 133.0}}, identifier: 'PXGGridLayout-Info', label: '照片, 2011年3月13日, 08:17' <AX element pid: 30669, elementOrHash.elementID: 4811259328.89>
+                                                                      Image, 0x108cf1b80, {{0.0, 595.3}, {132.9, 133.0}}, identifier: 'PXGGridLayout-Info', label: '照片, 2009年10月10日, 05:09' <AX element pid: 30669, elementOrHash.elementID: 4811254400.90>
+                                                                Other, 0x108cf1cc0, {{0.0, 326.0}, {402.0, 0.0}}, identifier: 'PXZoomableInlineHeadersLayout-Group' <AX element pid: 30669, elementOrHash.elementID: 4776897392.75>
+                                                          Other, 0x108cf1e00, {{369.0, 184.0}, {30.0, 604.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 30669, elementOrHash.elementID: 4774087168.41>
+                                                            Other, 0x108cf1f40, {{396.0, 246.7}, {3.0, 538.3}} <AX element pid: 30669, elementOrHash.elementID: 4324096896.52>
+                                                          Other, 0x108cf2080, {{56.0, 755.0}, {290.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 30669, elementOrHash.elementID: 4774086656.42>
+                                                            Other, 0x108cf21c0, {{59.0, 782.0}, {284.0, 3.0}} <AX element pid: 30669, elementOrHash.elementID: 4324096000.53>
+                                                        Other, 0x108cf2300, {{369.0, 184.0}, {30.0, 604.0}}, label: '垂直滚动条, 1页', value: 0% <AX element pid: 30669, elementOrHash.elementID: 4774087168.41>
+                                                          Other, 0x108cf2440, {{396.0, 246.7}, {3.0, 538.3}} <AX element pid: 30669, elementOrHash.elementID: 4324096896.52>
+                                                        Other, 0x108cf2580, {{56.0, 755.0}, {290.0, 30.0}}, label: '水平滚动条, 1页', value: 0% <AX element pid: 30669, elementOrHash.elementID: 4774086656.42>
+                                                          Other, 0x108cf26c0, {{59.0, 782.0}, {284.0, 3.0}} <AX element pid: 30669, elementOrHash.elementID: 4324096000.53>
+                                            Other, 0x108cf2800, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4402464256.21>
+                                              Other, 0x108cf2940, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4402466304.27>
+                                                Toolbar, 0x108cf2a80, {{0.0, 788.0}, {402.0, 86.0}}, identifier: 'Toolbar', label: '工具栏' <AX element pid: 30669, elementOrHash.elementID: 4324152128.31>
+                                                  Other, 0x108cf2bc0, {{28.0, 798.0}, {346.0, 48.0}} <AX element pid: 30669, elementOrHash.elementID: 4324152576.33>
+                                                    Other, 0x108cf2d00, {{28.0, 798.0}, {346.0, 48.0}} <AX element pid: 30669, elementOrHash.elementID: 4324153024.35>
+                                                      Other, 0x108cf2e40, {{28.0, 798.0}, {0.0, 0.0}} <AX element pid: 30669, elementOrHash.elementID: 4324153472.38>
+                                                        Other, 0x108cf2f80, {{28.0, 798.0}, {48.0, 48.0}} <AX element pid: 30669, elementOrHash.elementID: 4324208448.43>
+                                                          Other, 0x108cf30c0, {{28.0, 798.0}, {48.0, 48.0}} <AX element pid: 30669, elementOrHash.elementID: 4324148992.54>
+                                                            Other, 0x108cf3200, {{33.0, 803.0}, {38.0, 38.0}} <AX element pid: 30669, elementOrHash.elementID: 4402486144.62>
+                                                              Other, 0x108cf3340, {{33.0, 803.0}, {38.0, 38.0}} <AX element pid: 30669, elementOrHash.elementID: 4774087680.69>
+                                                                Button, 0x108cf3480, {{33.0, 803.0}, {38.0, 38.0}}, identifier: 'Sort and Filter', label: '排序和筛选' <AX element pid: 30669, elementOrHash.elementID: 4402481664.76>
+                                                        Other, 0x108cf35c0, {{326.0, 798.0}, {48.0, 48.0}} <AX element pid: 30669, elementOrHash.elementID: 4324211584.44>
+                                                          Other, 0x108cf3700, {{326.0, 798.0}, {48.0, 48.0}} <AX element pid: 30669, elementOrHash.elementID: 4324150784.55>
+                                                            Other, 0x108cf3840, {{331.0, 803.0}, {38.0, 38.0}} <AX element pid: 30669, elementOrHash.elementID: 4402488064.63>
+                                                              Other, 0x108cf3980, {{331.0, 803.0}, {38.0, 38.0}} <AX element pid: 30669, elementOrHash.elementID: 4774090752.70>
+                                                                Button, 0x108cf3ac0, {{331.0, 803.0}, {38.0, 38.0}}, label: '搜索' <AX element pid: 30669, elementOrHash.elementID: 4402487424.77>
+                                                    Other, 0x108cf3c00, {{28.0, 798.0}, {346.0, 48.0}} <AX element pid: 30669, elementOrHash.elementID: 4324156608.36>
+                                                      Other, 0x108cf3d40, {{28.0, 798.0}, {0.0, 0.0}} <AX element pid: 30669, elementOrHash.elementID: 4324157056.39>
+                                                        Other, 0x108cf3e80, {{130.0, 798.0}, {142.0, 48.0}} <AX element pid: 30669, elementOrHash.elementID: 4324150336.45>
+                                                          Other, 0x108d08000, {{130.0, 798.0}, {142.0, 48.0}} <AX element pid: 30669, elementOrHash.elementID: 4324159744.56>
+                                                            Other, 0x108d08140, {{135.0, 806.0}, {132.0, 32.0}} <AX element pid: 30669, elementOrHash.elementID: 4402489344.64>
+                                                              Other, 0x108d08280, {{135.0, 806.0}, {132.0, 32.0}} <AX element pid: 30669, elementOrHash.elementID: 4402467328.71>
+                                                                Other, 0x108d083c0, {{135.0, 806.0}, {132.0, 32.0}} <AX element pid: 30669, elementOrHash.elementID: 4321682432.78>
+                                                                  Other, 0x108d08500, {{135.0, 806.0}, {132.0, 32.0}} <AX element pid: 30669, elementOrHash.elementID: 4324254016.80>
+                                                                    StaticText, 0x108d08640, {{171.2, 805.8}, {59.7, 18.0}}, label: '选择项目' <AX element pid: 30669, elementOrHash.elementID: 4324247744.82>
+                                                                    StaticText, 0x108d08780, {{169.7, 823.8}, {62.7, 14.3}}, label: ' 包含位置' <AX element pid: 30669, elementOrHash.elementID: 4324253568.83>
+                                      Other, 0x108d088c0, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4323240896.15>
+                                        Other, 0x108d08a00, {{0.0, 72.0}, {402.0, 802.0}} <AX element pid: 30669, elementOrHash.elementID: 4323241792.17>
+  Window, 0x108d08b40, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4900160768.95>
+    Other, 0x108d08c80, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4401862336.96>
+      Other, 0x108d08dc0, {{0.0, 0.0}, {402.0, 874.0}} <AX element pid: 30659, elementOrHash.elementID: 4408247616.97>

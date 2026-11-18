@@ -1,0 +1,25 @@
+ERROR: An error occurred evaluating a value using the specified filter. (com.apple.dt.CoreDeviceError error -1 (0xFFFFFFFF))
+       NSLocalizedFailureReason = Can't use in/contains operator with collection file:///private/var/containers/Bundle/Application/E012D27B-71D1-444E-B0FE-26E6A4172E4A/stable.app/Chrome (not a collection)
+       Name = NSInvalidArgumentException
+       Backtrace = (
+       	0   CoreFoundation                      0x00000001a460d7b0 __exceptionPreprocess + 176
+       	1   libobjc.A.dylib                     0x00000001a026865c objc_exception_throw + 88
+       	2   Foundation                          0x00000001a0a70a70 -[NSInPredicateOperator performPrimitiveOperationUsingObject:andObject:] + 452
+       	3   Foundation                          0x00000001a0a6f048 -[NSComparisonPredicate evaluateWithObject:substitutionVariables:] + 356
+       	4   CoreDeviceCLISupport                0x000000010153e2c8 -[NSPredicate(CoreDeviceAdditions) cd_evaluateWithObject:substitutionVariables:error:] + 72
+       	5   CoreDeviceCLISupport                0x0000000101639088 _swift_implicitisolationactor_to_executor_cast + 4284
+       	6   CoreDeviceCLISupport                0x000000010159fe58 __swift_closure_destructor.49 + 27312
+       	7   CoreDeviceCLISupport                0x00000001015a2e28 __swift_closure_destructor.8 + 260
+       	8   CoreDeviceCLISupport                0x000000010159c990 __swift_closure_destructor.49 + 13800
+       	9   CoreDeviceCLISupport                0x000000010159e658 __swift_closure_destructor.49 + 21168
+       	10  CoreDeviceCLISupport                0x000000010159fff8 __swift_closure_destructor.49 + 27728
+       	11  devicectl                           0x0000000100fbbac4 __swift_memcpy0_1 + 57656
+       	12  devicectl                           0x0000000100f5925d __swift_noop_void_return + 20313
+       	13  CoreDeviceCLISupport                0x0000000101560cb5 __swift_closure_destructor.15 + 36649
+       	14  CoreDeviceCLISupport                0x0000000101561179 __swift_closure_destructor.15 + 37869
+       	15  devicectl                           0x0000000100f5953d __swift_noop_void_return + 21049
+       	16  devicectl                           0x0000000101165049 __swift_closure_destructor.15 + 23205
+       	17  devicectl                           0x0000000100f5351d async_MainTQ4_ + 1
+       	18  devicectl                           0x0000000100f537c9 async_MainTY6_ + 313
+       	19  libswift_Concurrency.dylib          0x00000001a449ce69 _ZL22completeTaskAndReleasePN5swift12AsyncContextEPNS_10SwiftErrorE + 1
+       )

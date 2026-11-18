@@ -15,12 +15,16 @@ import UIKit
 @MainActor
 final class IMMessageCell: UITableViewCell {
 
+    var onAvatarLongPress: ((IMJSON) -> Void)?
+    private var representedSender: IMJSON = .null
     private lazy var avatar = IMAvatarView.make()
-    private lazy var bubble = UIView.jobsMake { view in
+    private lazy var bubble = UIView.jobsMake {
+        view in
         view.byCornerRadius(20)
     }
     private lazy var body = IMUI.label()
-    private lazy var preview = UIImageView.jobsMake { view in
+    private lazy var preview = UIImageView.jobsMake {
+        view in
         view.byContentMode(.scaleAspectFill).byClipsToBounds(true).byCornerRadius(12)
     }
     private var previewTask: Task<Void, Never>?
@@ -30,24 +34,37 @@ final class IMMessageCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         byBackgroundColor(IMUI.background)
-        avatar.byAddTo(contentView) { make in
+        avatar.byUserInteractionEnabled(true).jobs_addGestureRetView(
+            UILongPressGestureRecognizer.byConfig {
+                [weak self] (gesture: UILongPressGestureRecognizer) in
+                guard gesture.state == .began, let self, !self.representedSender["id"].text.isEmpty else {
+                    return
+                }
+                self.onAvatarLongPress?(self.representedSender)
+            }.byMinDuration(0.45)
+        ).byAddTo(contentView) {
+            make in
             make.top.equalToSuperview().inset(7)
             make.width.height.equalTo(32)
         }
-        bubble.byAddTo(contentView) { [unowned self] make in
+        bubble.byAddTo(contentView) {
+            [unowned self] make in
             make.top.equalToSuperview().inset(7)
             make.width.lessThanOrEqualTo(contentView.snp.width).multipliedBy(0.72)
         }
         let stack = IMUI.stack(spacing: 10)
         stack.byAddArrangedSubviews([preview, body])
-        preview.snp.makeConstraints { make in
+        preview.snp.makeConstraints {
+            make in
             make.width.equalTo(190)
             make.height.equalTo(150).priority(999)
         }
         stack.byAddTo(bubble) {
-            make in make.edges.equalToSuperview().inset(12)
+            make in
+            make.edges.equalToSuperview().inset(12)
         }
-        detail.byAddTo(contentView) { [unowned self] make in
+        detail.byAddTo(contentView) {
+            [unowned self] make in
             make.top.equalTo(bubble.snp.bottom).offset(5)
             make.bottom.equalToSuperview().inset(8)
         }
@@ -58,9 +75,23 @@ final class IMMessageCell: UITableViewCell {
         fatalError("init(coder:) is unavailable")
     }
 
+    func isAvatarPoint(_ point: CGPoint, in view: UIView) -> Bool {
+        avatar.bounds.contains(avatar.convert(point, from: view))
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        previewTask?.cancel()
+        previewRevision = UUID()
+        representedSender = .null
+        onAvatarLongPress = nil
+    }
+
     func configure(_ item: IMJSON, own: Bool, sender: IMJSON = .null) {
+        representedSender = sender
         avatar.show(sender)
-        avatar.snp.remakeConstraints { make in
+        avatar.snp.remakeConstraints {
+            make in
             make.top.equalToSuperview().inset(7)
             make.width.height.equalTo(32)
             if own {
@@ -86,8 +117,8 @@ final class IMMessageCell: UITableViewCell {
                     return
                 }
                 self.preview.byImage(image).byHidden(false).byAccessibilityIdentifier("message.image")
+                    .byAccessibilityLabel(IMStrings.text("image"))
                 self.preview.isAccessibilityElement = true
-                self.preview.accessibilityLabel = IMStrings.text("image")
                 // 图片到达后让自动高度重新计算，不改列表身份或滚动位置。
                 if let table = self.superview as? UITableView {
                     table.beginUpdates()
@@ -114,8 +145,9 @@ final class IMMessageCell: UITableViewCell {
         body
             .byText(text)
             .byTextColor(own ? JobsCor.white : IMUI.foreground)
-        bubble.byBackgroundColor(own ? IMUI.green : IMUI.panel)
-        bubble.snp.remakeConstraints { [unowned self] make in
+        bubble.byBackgroundColor(own ? IMUI.greenFill : IMUI.panel)
+        bubble.snp.remakeConstraints {
+            [unowned self] make in
             make.top.equalToSuperview().inset(7)
             make.width.lessThanOrEqualTo(contentView.snp.width).multipliedBy(0.72)
             if own {
@@ -133,7 +165,7 @@ final class IMMessageCell: UITableViewCell {
             : status == "queued"
                 ? IMStrings.text("unknown")
                 : status == "demo"
-                    ? IMStrings.text("demo")
+                    ? ""
                     : status == "rejected" ? IMStrings.text("error") : own ? IMStrings.text("accepted") : ""
         let reactions = item["reactions"].list.map {
             $0.firstText("emoji")
@@ -147,7 +179,8 @@ final class IMMessageCell: UITableViewCell {
             ].filter {
                 !$0.isEmpty
             }.joined(separator: "  "))
-        detail.snp.remakeConstraints { [unowned self] make in
+        detail.snp.remakeConstraints {
+            [unowned self] make in
             make.top.equalTo(bubble.snp.bottom).offset(5)
             make.bottom.equalToSuperview().inset(8)
             if own {

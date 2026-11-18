@@ -314,6 +314,21 @@ func Restore(ctx context.Context, o RestoreOptions) error {
 	if e != nil {
 		return e
 	}
+	if e = ClearRestoredAccountMedia(ctx, target, statePath); e != nil {
+		return e
+	}
+	if e = ClearRestoredRetainedMedia(ctx, target, statePath); e != nil {
+		return e
+	}
+	if e = ClearRestoredMediaUploads(ctx, target, statePath); e != nil {
+		return e
+	}
+	if e = CancelRestoredMigrations(ctx, target, statePath); e != nil {
+		return e
+	}
+	if e = ClearRestoredGroupRecoveryGrants(ctx, target); e != nil {
+		return e
+	}
 	retiredExports, e := CancelRestoredExports(ctx, o.TargetURL, statePath, epoch)
 	if e != nil {
 		return e

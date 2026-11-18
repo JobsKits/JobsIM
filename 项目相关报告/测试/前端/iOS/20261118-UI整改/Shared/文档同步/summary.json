@@ -1,0 +1,47 @@
+{
+  "time": "2026-11-18T16:33:56.319794+08:00",
+  "scope": "当前需求/README/资产/TOC文档同步；不修改中央UI整改README/summary、Swift、Xcode、测试源或业务数据",
+  "status": "document-checks-passed; new UI/backend integrated validation pending root",
+  "changedDocuments": [
+    "README.md",
+    "../README.md",
+    "PRODUCT.md",
+    "DESIGN.md",
+    "代码/前端/iOS/README.md",
+    "项目相关报告/资产盘点/README.md",
+    "需求/IM功能验收表.md/IM功能验收表.md",
+    "需求/IM后端架构表.md/IM后端架构表.md",
+    "需求/IM前端架构表.md/IM前端架构表.md",
+    "需求/IM需求明细表.md/IM需求明细表.md",
+    "需求/README.md",
+    ".jobs-markdown-toc/manifest.json",
+    ".gitattributes"
+  ],
+  "tocAdded": [
+    "代码/前端/iOS/JobsIM/UI/IMAuthVC/README.md",
+    "代码/前端/iOS/JobsIM/UI/IMAuthSettingsVC/README.md",
+    "项目相关报告/测试/前端/iOS/20261118-UI整改/AuthRoot/ResumeAuth/README.md",
+    "项目相关报告/测试/前端/Web/20261118-管理员举报证据/Resume/README.md"
+  ],
+  "tocDocumentsVerified": 268,
+  "links": {
+    "documents": 17,
+    "checked": 1719,
+    "missing": 0
+  },
+  "acceptance": {
+    "IDs": 243,
+    "uniqueIDs": 243,
+    "allUnaccepted": true,
+    "scopeAndStatusUnchanged": true
+  },
+  "evidenceBoundary": "device-build-5签名安装启动及ui-tests-8旧六项仅覆盖其冻结输入；新auth/theme/profile/GIF/realMacDemo不追认旧包",
+  "noCommitOrPush": true,
+  "checks": {
+    "toc": "toc-verify.log",
+    "acceptance": "acceptance-unchanged.json",
+    "links": "links.json",
+    "snapshots": "before.json",
+    "current": "after.json"
+  }
+}

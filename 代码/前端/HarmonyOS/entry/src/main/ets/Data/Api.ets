@@ -73,6 +73,33 @@ export class Api {
       return this.decode<T>(await session.fetch(request));
     } catch (error) { if (error instanceof ApiFailure) { throw error; } throw new ApiFailure(0, 'TRANSPORT_UNKNOWN'); } finally { session.close(); }
   }
+  async migration<T>(path: string, method: rcp.HttpMethod, body: string, store: string, current: () => boolean = () => true): Promise<T> {
+    if (!/^[0-9a-f-]{36}$/.test(store) || !/^\/sync\/(migration-capabilities|migration-pairings|migration-pairing-results|migration-results|migrations(?:\/[0-9a-f-]{36}(?:\/(?:key|validate|installed|cancel))?)?)$/.test(path) || body.length > 128*1024*1024) { throw new Error('MIGRATION_INVALID'); }
+    return this.authorized<T>(async (token: string) => {
+      const session = this.session(120000);const timer=setInterval(()=>{if(!current()){session.close();}},100);
+      try { if(!current()){throw new Error('MIGRATION_CONTEXT_CHANGED');}const request = new rcp.Request(this.base + '/api' + path,method,{ 'Authorization':'Bearer '+token,'X-JobsIM-Store-Generation':store,'Content-Type':'application/json','Accept':'application/json','Cache-Control':'no-store' },body || undefined); return this.decode<T>(await session.fetch(request)); }
+      catch (error) { if (error instanceof ApiFailure) { throw error; } throw new ApiFailure(0,'MIGRATION_RESULT_UNKNOWN'); } finally { clearInterval(timer);session.close(); }
+    });
+  }
+  async receipt<T>(path: string, method: rcp.HttpMethod, body: string, store: string, current: () => boolean = () => true): Promise<T> {
+    if (!/^[0-9a-f-]{36}$/.test(store) || !/^\/sync\/(receipt-context(?:\?schemaVersion=[12])?|receipt-profiles\?schemaVersion=[12]&buildDigest=[0-9a-f]{64}|receipt-targets\/[0-9a-f-]{36}(?:\?schemaVersion=[12](?:&qualificationId=[0-9a-f-]{36})?)?|storage(?:-results)?|receipt-challenges|receipts|receipt-results|object-receipt-challenges|object-receipts|object-receipt-results)$/.test(path) || body.length > 32*1024) { throw new Error('RECEIPT_INVALID'); }
+    return this.authorized<T>(async (token: string) => {
+      const session = this.session(120000);const timer=setInterval(()=>{if(!current()){session.close();}},100);
+      try { if(!current()){throw new Error('RECEIPT_CONTEXT_CHANGED');}const request = new rcp.Request(this.base + '/api' + path,method,{ 'Authorization':'Bearer '+token,'X-JobsIM-Store-Generation':store,'Content-Type':'application/json','Accept':'application/json','Cache-Control':'no-store' },body || undefined); return this.decode<T>(await session.fetch(request)); }
+      catch (error) { if (error instanceof ApiFailure) { throw error; } throw new ApiFailure(0,'RECEIPT_RESULT_UNKNOWN'); } finally { clearInterval(timer);session.close(); }
+    });
+  }
+  async migrationBytes(path: string, store: string, limit: number, current: () => boolean = () => true): Promise<Uint8Array> {
+    if (!/^[0-9a-f-]{36}$/.test(store) || !/^\/(sync\/migrations\/[0-9a-f-]{36}\/capsule|media\/[0-9a-f-]{36}|messages\/[0-9a-f-]{36}\/attachment)$/.test(path) || !Number.isSafeInteger(limit) || limit < 1 || limit > 128*1024*1024+4096) { throw new Error('MIGRATION_INVALID'); }
+    return this.authorized<Uint8Array>(async (token: string) => {
+      const session = this.session(120000);const timer=setInterval(()=>{if(!current()){session.close();}},100);
+      try {
+        if(!current()){throw new Error('MIGRATION_CONTEXT_CHANGED');}const request = new rcp.Request(this.base + '/api' + path,'GET',{ 'Authorization':'Bearer '+token,'X-JobsIM-Store-Generation':store,'Cache-Control':'no-store' });
+        request.configuration = { tracing: { httpEventsHandler: { onHeaderReceive: (headers: rcp.ResponseHeaders) => { const length=headers['content-length'];if(typeof length==='string' && /^\d+$/.test(length) && Number(length)>limit){session.close();throw new Error('MIGRATION_FILE_LIMIT');} } } } };
+        const response=await session.fetch(request);if(response.statusCode!==200){this.decode<Object>(response);}const bytes=response.body??(response.headers['content-length']==='0'?new ArrayBuffer(0):undefined);if(!bytes || bytes.byteLength>limit){throw new Error('MIGRATION_FILE_LIMIT');}const length=response.headers['content-length'];if(length!==undefined&&(typeof length!=='string'||!/^\d+$/.test(length)||Number(length)!==bytes.byteLength)){throw new Error('MIGRATION_FILE_INCOMPLETE');}if(!current()){new Uint8Array(bytes).fill(0);throw new Error('MIGRATION_CONTEXT_CHANGED');}return new Uint8Array(bytes);
+      }catch(error){if(error instanceof ApiFailure){throw error;}throw new ApiFailure(0,'MIGRATION_RESULT_UNKNOWN');}finally{clearInterval(timer);session.close();}
+    });
+  }
   async upload(uri: string): Promise<MediaResult> {
     return this.authorized<MediaResult>((token: string) => this.uploadRaw(uri, token));
   }

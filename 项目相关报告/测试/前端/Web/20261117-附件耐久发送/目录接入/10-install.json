@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-17T04:41:12.370Z",
+  "mode": "install",
+  "status": null,
+  "signal": "SIGTERM",
+  "stdout": "",
+  "stderr": "",
+  "error": "spawnSync /Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node ETIMEDOUT"
+}

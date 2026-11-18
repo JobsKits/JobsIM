@@ -1,0 +1,30 @@
+[
+  {
+    "name": "AbortError",
+    "message": "signal is aborted without reason",
+    "stack": "AbortError: signal is aborted without reason\n    at Module.resetRequestContext (http://127.0.0.1:62676/Src/api.ts:376:17)\n    at f.install (eval at evaluate (:370:30), <anonymous>:11:43)\n    at create (eval at evaluate (:370:30), <anonymous>:12:11)\n    at eval (eval at evaluate (:370:30), <anonymous>:49:190)\n    at async <anonymous>:381:23",
+    "check": "setup",
+    "expectedFixture": false
+  },
+  {
+    "name": "InvalidStateError",
+    "message": "Failed to execute 'abort' on 'IDBTransaction': The transaction has finished.",
+    "stack": "InvalidStateError: Failed to execute 'abort' on 'IDBTransaction': The transaction has finished.\n    at cursor.onsuccess (http://127.0.0.1:62676/Src/AttachmentSendStore.ts:131:7)",
+    "check": "strict IDB abort before prepare causes zero network calls",
+    "expectedFixture": false
+  },
+  {
+    "name": "AbortError",
+    "message": "signal is aborted without reason",
+    "stack": "AbortError: signal is aborted without reason\n    at Module.resetRequestContext (http://127.0.0.1:62676/Src/api.ts:376:17)\n    at f.install (eval at evaluate (:370:30), <anonymous>:11:43)\n    at create (eval at evaluate (:370:30), <anonymous>:12:11)\n    at eval (eval at evaluate (:370:30), <anonymous>:49:190)\n    at async <anonymous>:381:23",
+    "check": "between-checks",
+    "expectedFixture": false
+  },
+  {
+    "name": "Error",
+    "message": "injected linked failure",
+    "stack": "Error: injected linked failure\n    at IDBObjectStore.put (eval at evaluate (:370:30), <anonymous>:1:221)\n    at read.onsuccess (http://127.0.0.1:62676/Src/storage.ts:175:11)",
+    "check": "linked Outbox abort rolls back enqueued state and retains the unique original",
+    "expectedFixture": true
+  }
+]

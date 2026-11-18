@@ -1,0 +1,178 @@
+{
+  "scope": "Actual AdminPanel/auth/media components in local isolated Vite; all /api calls explicit fixtures, no live server/MFA; visibility transition explicitly injected; Chrome is not physical mobile",
+  "passed": 42,
+  "failed": 0,
+  "results": [
+    {
+      "name": "reporter UUID filter sends only the requested reporter and filters visible reports",
+      "status": "passed"
+    },
+    {
+      "name": "target-user and combined UUID filters preserve both query fields",
+      "status": "passed"
+    },
+    {
+      "name": "invalid UUID is rejected before any list request",
+      "status": "passed"
+    },
+    {
+      "name": "target-user filter alone selects its matching report",
+      "status": "passed"
+    },
+    {
+      "name": "clear filters restores both reports",
+      "status": "passed"
+    },
+    {
+      "name": "details show only selected material and make no automatic binary requests",
+      "status": "passed"
+    },
+    {
+      "name": "explicit image preview uses current auth and a blob URL with no-store and redirect refusal",
+      "status": "passed"
+    },
+    {
+      "name": "switching image previews releases the prior blob and leaves exactly one active preview",
+      "status": "passed"
+    },
+    {
+      "name": "video fixture decodes and switching away pauses and releases its source",
+      "status": "passed"
+    },
+    {
+      "name": "selected-message attachment also uses its report-bound authenticated route",
+      "status": "passed"
+    },
+    {
+      "name": "close detail revokes the last preview",
+      "status": "passed"
+    },
+    {
+      "name": "rapid pending preview switch aborts the old owner and creates only the final blob",
+      "status": "passed"
+    },
+    {
+      "name": "403 on a fresh read retires the previous blob and clears details without fallback",
+      "status": "passed"
+    },
+    {
+      "name": "available=false metadata cannot render stale body or fetch old evidence URLs",
+      "status": "passed"
+    },
+    {
+      "name": "closing while bytes are delayed cannot publish a late blob",
+      "status": "passed"
+    },
+    {
+      "name": "actual auth-boundary event clears preview and private detail",
+      "status": "passed"
+    },
+    {
+      "name": "explicit visibility fixture runs the production hidden-page cleanup",
+      "status": "passed"
+    },
+    {
+      "name": "read-only administrator may view detail but cannot enter mutation",
+      "status": "passed"
+    },
+    {
+      "name": "manage opens the existing MFA form without sending a step-up or mutation",
+      "status": "passed"
+    },
+    {
+      "name": "320px light zh-CN keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px light zh-TW keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px light bo keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px light en keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px light ja keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px light fr keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px light es keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px light de keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px light ru keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px light ko keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark zh-CN keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark zh-TW keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark bo keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark en keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark ja keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark fr keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark es keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark de keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark ru keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "320px dark ko keeps report filters and detail actions reachable",
+      "status": "passed"
+    },
+    {
+      "name": "desktop dark detail is visible with actual evidence",
+      "status": "passed"
+    },
+    {
+      "name": "unmount releases current blob and all preview DOM",
+      "status": "passed"
+    },
+    {
+      "name": "no unhandled page errors, external hosts or write requests",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "forbidden": [],
+  "sourceDrift": []
+}

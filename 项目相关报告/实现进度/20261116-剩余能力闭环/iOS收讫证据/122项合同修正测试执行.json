@@ -1,0 +1,19 @@
+{
+  "exitCode": 65,
+  "seconds": 104.94892573356628,
+  "freeBytesAfter": 12923305984,
+  "command": [
+    "/usr/bin/xcodebuild",
+    "test-without-building",
+    "-xctestrun",
+    "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/ReceiptMigration122Contract-20261117.xctestrun",
+    "-destination",
+    "platform=iOS Simulator,id=37CB226C-C735-4A2D-8FCA-453E2E5F9DFB",
+    "-parallel-testing-enabled",
+    "NO",
+    "-maximum-concurrent-test-simulator-destinations",
+    "1",
+    "-resultBundlePath",
+    "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/iOS收讫证据/122项合同修正原生.xcresult"
+  ]
+}

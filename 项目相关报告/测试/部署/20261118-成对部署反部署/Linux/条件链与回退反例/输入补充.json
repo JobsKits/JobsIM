@@ -1,0 +1,140 @@
+{
+  "librarySource": "项目相关报告/测试/部署/20261118-成对部署反部署/Linux/条件链修前输入.sh",
+  "fullSourceSHA256": "64cf31d3f9e2bebe7fa6ecb868ef8b61c78c7c7419800a42b5b049ffd7358b29",
+  "sourceOnlyLibrarySHA256": "ad9b8dc9fcb19adb05603f34051d12608bfebf434ac0ff548d801698be2de6c9",
+  "fixtures": [
+    {
+      "name": "case-0.sh",
+      "sha256": "47d4a6ddae8a6deff4f56c2b32fad2116af211a54b7e0f15fb27552de946721c"
+    },
+    {
+      "name": "case-1.sh",
+      "sha256": "a3000184cd3b036c00060145117723aa4bd3b631c139723a79eea457858c14de"
+    },
+    {
+      "name": "case-10.sh",
+      "sha256": "c350fa5ea9f23bb8205aa12547798b225e039ea9c7306a8bc841155749cab218"
+    },
+    {
+      "name": "case-11.sh",
+      "sha256": "d5ee0bccede80b1615ea58a15eb68df725a1dc6083d46692abf49467f7a105ab"
+    },
+    {
+      "name": "case-12.sh",
+      "sha256": "8d6d8becb1d80dfedadf2e4d8ff916a0f6a7e883e0903c98ae4de404594dd11a"
+    },
+    {
+      "name": "case-13.sh",
+      "sha256": "27f7c155c18c000b6392e793131bfa677f2b2123020738b9f62d9389bebc5fc1"
+    },
+    {
+      "name": "case-14.sh",
+      "sha256": "41f562512667981a9d46cf4dcc4beb258c6e6902fb594d863a3d90c0f2c7b961"
+    },
+    {
+      "name": "case-15.sh",
+      "sha256": "174e809d2228fde1da0084dc1277143fbad0dbf2833ac0898d0ac547f8428b1f"
+    },
+    {
+      "name": "case-16.sh",
+      "sha256": "0b977d0800afd3a5b8dd8a6ab5151fb4cb1972fa6c686df728401aa546adfe09"
+    },
+    {
+      "name": "case-17.sh",
+      "sha256": "ff0b5dee24c71ec7d73068330cd206d9dfe0672130d39e0d3e1158c22da4e0ea"
+    },
+    {
+      "name": "case-18.sh",
+      "sha256": "ec7abcc4227b9989b86d1b8e65cdd077cf5a7c1c4f9e8f376c0cdf5b912560eb"
+    },
+    {
+      "name": "case-19.sh",
+      "sha256": "97dcc82dec33849e07b9e8b749ab76f68e174daf96bad3ba6c0f99a24f37beb8"
+    },
+    {
+      "name": "case-2.sh",
+      "sha256": "9684e60d4362c6b8d9d71cb86cf3bdecd967402ade70186c00a2479f276e7f35"
+    },
+    {
+      "name": "case-20.sh",
+      "sha256": "530143a3ea0ef56ef11d3e77a55578c3cb5f7c993054b8a06f5cf57e39a248c0"
+    },
+    {
+      "name": "case-21.sh",
+      "sha256": "a1ea1d0dad37418b44b8ce1e68293b90e3c0bd9008cb4b7440f8409189d78aae"
+    },
+    {
+      "name": "case-22.sh",
+      "sha256": "f6cd90a7cf828481b7063cd9636bdb08548d54978a5f24d97d6303056e511eb2"
+    },
+    {
+      "name": "case-23.sh",
+      "sha256": "4771d88b7a470537129f8438c82ccb5789ff92d6b5a47e4f9e784f7952f4baca"
+    },
+    {
+      "name": "case-24.sh",
+      "sha256": "7e902c77bf56012c3cdecb511cdee294401ccddf7812e443ff3730377d41ebc6"
+    },
+    {
+      "name": "case-25.sh",
+      "sha256": "cbb8a0bb621e4c913ae4b05140563baaf90c1f95c74382b80a188fe996a66c59"
+    },
+    {
+      "name": "case-26.sh",
+      "sha256": "e12a02f59e0e799589db588cacc92878725c3fc262eca0798889dc5e352d241f"
+    },
+    {
+      "name": "case-27.sh",
+      "sha256": "40296722b69ca1e1193d651489e5b189d257ec69bb6c0fef973e72266d147487"
+    },
+    {
+      "name": "case-3.sh",
+      "sha256": "3cc8e0e2f0004312628e61a61a3af0ad24f4b1176c8e650f8b86d59d4a32a564"
+    },
+    {
+      "name": "case-4.sh",
+      "sha256": "1bfc9fc5b4a5001e5efa7130014d2f17686b9abeb1a666cd9c792c753f66726c"
+    },
+    {
+      "name": "case-5.sh",
+      "sha256": "65db77093e0d110214a6cf54904e259a5daa79e39bac2cc57f539cb3fcd897d3"
+    },
+    {
+      "name": "case-6.sh",
+      "sha256": "90f062e1bf3b12c78749ee09bee6558089c2c71e8107ec45a4e07b5cb7e8b995"
+    },
+    {
+      "name": "case-7.sh",
+      "sha256": "d3b1e1cc8e3690a439544b82d962f4f6e6be37e032c7d1660184b23fd9e1de3d"
+    },
+    {
+      "name": "case-8.sh",
+      "sha256": "3531d54a2b2e907dfda52b85eb51f2731ff0ecec6c6b67f7f7e652d87cc1e588"
+    },
+    {
+      "name": "case-9.sh",
+      "sha256": "61cae2784d7a7cb74c2241f6cf325701444b9bbeb4e92a625fe09ec133c063db"
+    },
+    {
+      "name": "cold-backup.sh",
+      "sha256": "79714dd677a599e5ce8240b196de6816d4609e9a94b2037b5c7b345a745f2ed5"
+    },
+    {
+      "name": "confirmation-enter.sh",
+      "sha256": "352b1e9abca137f9ec7f2313ec89e648a5e0e3d4122033f9c717bacc3d39797a"
+    },
+    {
+      "name": "confirmation-eof.sh",
+      "sha256": "a445dc06aec2530bd53fb3e815215fe59dbf00258334719ed9f99ffde61bfd48"
+    },
+    {
+      "name": "confirmation-nonempty.sh",
+      "sha256": "e14ccc14e9bd06f0134d9df0f0e27f3b406ed3af0a284c4b5c04908319dcb459"
+    },
+    {
+      "name": "library.sh",
+      "sha256": "ad9b8dc9fcb19adb05603f34051d12608bfebf434ac0ff548d801698be2de6c9"
+    }
+  ],
+  "meaning": "12 expected counterexamples to old behavior/missing contracts; not 12 independent product bugs. Old failure outputs and actual generated fixture files preserved."
+}

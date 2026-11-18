@@ -1,0 +1,99 @@
+{
+  "status": "read-only scope confirmation for the finished145 candidate",
+  "sourceComponents": {
+    "ReceiptCoordinator.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptCoordinator.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptCoordinator.kt",
+      "SHA256": "3eb82aa84bca34e5165a68b069e19a8dabca69e3c7b346b5add502fa5deebad7"
+    },
+    "ReceiptProtocol.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptProtocol.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptProtocol.kt",
+      "SHA256": "3ea610e4ff7bf9cd545b7f7911e028e67b958e1202183c1e9328eff5fbdaad44"
+    },
+    "ReceiptService.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptService.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptService.kt",
+      "SHA256": "c691e420520ee456e960b5be756f55cfd853cd179b90187bc8e47797784a7e45"
+    },
+    "ReceiptStore.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptStore.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptStore.kt",
+      "SHA256": "599f513fdc069d3d3ac81023489be64377c0ebd948d42f89c3ebfffd952a3292"
+    },
+    "ReceiptScreen.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt",
+      "SHA256": "76b10221554117bb3d39a5463c61ff227ed4943dd1c208b24c61b8dc656c9cfd"
+    },
+    "ReceiptText.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptText.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptText.kt",
+      "SHA256": "b318095243afd280b68012ba18e2eb8358747f3cdc3fad1a6294e8785f78ff87"
+    },
+    "MigrationProtocol.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationProtocol.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationProtocol.kt",
+      "SHA256": "c70cddbecc088217dd8020206bd8089885ef092414fd260351fbf4eb7462de22"
+    },
+    "MigrationService.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationService.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationService.kt",
+      "SHA256": "47b5eb35ac7c509acbbe57cf84102635c4362fb541e86917e10aeeadd09046d5"
+    },
+    "MigrationStore.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt",
+      "SHA256": "5e1eda7de2889525fe79939fda6ae95146cd998acdefad04a97bb6f659511696"
+    },
+    "MigrationScreen.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationScreen.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationScreen.kt",
+      "SHA256": "dfb0de3b14c32c2dddb1ca56c8deb017a08de159a61fbd4fa6a7acde9f7de754"
+    },
+    "MigrationText.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationText.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/MigrationText.kt",
+      "SHA256": "19a778c37aad5e8db365b18cee50763e8efc59e1acd924fbe5d4b3d6fc39ba4e"
+    },
+    "ChatModel.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+      "SHA256": "9f8bc0a7c3522476870e4cc7b9d3dd26a461710345b7ee56aaf33b282924c38b"
+    },
+    "Store.kt": {
+      "source": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt",
+      "frozenSource": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261117-Android原生录音/完整候选验证-20261117-132316-e249461a/输入源码/代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt",
+      "SHA256": "32fec90ad66ce797e53ed8dd7ab60153137cfbb4847f7314d148743fb2e2fd17"
+    }
+  },
+  "migrationTests": {
+    "测试/前端/Android/Unit/MigrationRulesTest.kt": {
+      "methods": [
+        "allMigrationLanguagesHaveEveryEntry",
+        "base64RequiresCanonicalWireEncoding",
+        "duplicateRootOrTrailingDataIsRejected",
+        "hashUsesOriginalBytes",
+        "invalidUtf8AndOversizedDecodeFailClosed",
+        "originalJsonSlicesPreserveEscapedBracesAndNestedArrays"
+      ],
+      "status": "executed PASS",
+      "SHA256": "bab445ef23da59c8b20fd1002748989058b4d71807737a69f57713eeb9d2fba0"
+    },
+    "测试/前端/Android/Instrumentation/Migration8To9Test.kt": {
+      "methods": [
+        "originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification"
+      ],
+      "status": "compiled only; not executed",
+      "SHA256": "e19618e3a8e4c742ece0ffce84f1f6ba1e0c714f002384142c6964ca92150433"
+    }
+  },
+  "qualificationAndColdTargetBoundary": "qualified source entries are present in MigrationService.qualifiedSources/ReceiptStore.migrationSources and MigrationScreen; target durable intent paths are in MigrationService/MigrationStore. These sources compile. No dedicated Receipt/qualified migration/cold-target runtime test was executed; do not infer runtime coverage from compilation or the six MigrationRules methods.",
+  "totals": {
+    "tests": 46,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "instrumentationCompiledOnlyMethodCount": 98
+}

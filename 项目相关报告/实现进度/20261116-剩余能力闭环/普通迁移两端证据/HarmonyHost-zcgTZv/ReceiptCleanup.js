@@ -1,0 +1,69 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReceiptCleanup = void 0;
+const SyncProtocol_1 = require("./SyncProtocol");
+class ReceiptCleanup {
+    static async exists(db) { const rows = await db.querySql("SELECT name FROM sqlite_master WHERE type='table' AND name IN('receipt_intents','receipt_bodies','receipt_objects','receipt_cleanup')"); let count = 0; try {
+        while (rows.goToNextRow()) {
+            count++;
+        }
+    }
+    finally {
+        rows.close();
+    } return count === 4; }
+    static async global(db, profile, deployment, user, id) {
+        if (!await ReceiptCleanup.exists(db)) {
+            return;
+        }
+        const prefix = 'live|' + profile + '|' + deployment + '|' + user + '|';
+        const rows = await db.querySql('SELECT namespace,id,payload FROM receipt_intents WHERE substr(namespace,1,length(?))=?', [prefix, prefix]);
+        const affected = [];
+        try {
+            while (rows.goToNextRow()) {
+                const value = SyncProtocol_1.SyncJSON.parse(rows.getString(2));
+                if (value.get('message').value === id) {
+                    affected.push([rows.getString(0), rows.getString(1), rows.getString(2)]);
+                }
+            }
+        }
+        finally {
+            rows.close();
+        }
+        for (const item of affected) {
+            const value = JSON.parse(item[2]);
+            value['body'] = '';
+            value['proof'] = '';
+            value['descriptor'] = '';
+            value['expires'] = '';
+            value['state'] = 'retired';
+            await db.executeSql('UPDATE receipt_intents SET payload=? WHERE namespace=? AND id=?', [JSON.stringify(value), item[0], item[1]]);
+            const objects = await db.querySql('SELECT payload FROM receipt_objects WHERE namespace=? AND id=?', [item[0], item[1]]);
+            const names = [];
+            try {
+                while (objects.goToNextRow()) {
+                    names.push(SyncProtocol_1.SyncJSON.parse(objects.getString(0)).get('path').string());
+                }
+            }
+            finally {
+                objects.close();
+            }
+            for (const name of names) {
+                await db.executeSql('INSERT OR IGNORE INTO receipt_cleanup VALUES(?,?)', [item[0], name]);
+            }
+            await db.executeSql('DELETE FROM receipt_objects WHERE namespace=? AND id=?', [item[0], item[1]]);
+            await db.executeSql('DELETE FROM receipt_bodies WHERE namespace=? AND id=?', [item[0], item[1]]);
+        }
+    }
+    static async plans(local) { return local.syncAccess(async (db) => { if (!await ReceiptCleanup.exists(db)) {
+        return [];
+    } const rows = await db.querySql('SELECT namespace,name FROM receipt_cleanup'); const result = []; try {
+        while (rows.goToNextRow()) {
+            result.push([rows.getString(0), rows.getString(1)]);
+        }
+    }
+    finally {
+        rows.close();
+    } return result; }); }
+    static async done(local, namespace, name) { await local.syncAccess(async (db) => { await db.executeSql('DELETE FROM receipt_cleanup WHERE namespace=? AND name=?', [namespace, name]); }); }
+}
+exports.ReceiptCleanup = ReceiptCleanup;

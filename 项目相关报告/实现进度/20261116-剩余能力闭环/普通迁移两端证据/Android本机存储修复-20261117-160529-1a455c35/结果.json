@@ -1,0 +1,460 @@
+{
+  "startedAt": "2026-11-17T08:05:29.776717+00:00",
+  "status": "passed",
+  "report": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/普通迁移两端证据/Android本机存储修复-20261117-160529-1a455c35",
+  "work": "/Users/jobs/Library/Application Support/JobsIM/Build/Android/ReceiptNative/20261117-160529-1a455c35",
+  "instrumentationExecuted": false,
+  "devicesStarted": false,
+  "apiUsed": false,
+  "cacheDeleted": false,
+  "protectedOriginalApkSHA256Before": {
+    "代码/前端/Android/Dist/JobsIM-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+    "代码/前端/Android/Dist/Baselines/20261115-foundation-debug.apk": "25144130343f8cd14c9308d8361334df4f86a17791af38ba34390ad007c23495",
+    "代码/前端/Android/Dist/Baselines/20261115-forward-projection-fence-debug.apk": "624785dc9619898162917aad32c443ab19a992129895f87d25c1d5e3523078e1",
+    "代码/前端/Android/Dist/Baselines/20261115-discovery-collaboration-before-role-debug.apk": "932da3500e0a02ede65cd3f7bcce82edafce879cc714e3c3cfb2c37abef215fe",
+    "代码/前端/Android/Dist/Baselines/20261115-forward-before-projection-fence-debug.apk": "bbe9c934cbc512e16ef0854b11442c56d5fbbf640c1b8fc381ed38537d870d71",
+    "代码/前端/Android/Dist/Baselines/20261115-discovery-role-debug.apk": "682be642852e96e4086fc879a54f95ceba17a0aa34b8d268311d1c90d907e80c",
+    "代码/前端/Android/Dist/Baselines/20261115-admission-before-theme-debug.apk": "e5eeee8506b63bc70554b621ed916a87dfeb40f69cdde23c978193100e7d0cbb",
+    "代码/前端/Android/Dist/Baselines/20261115-native-auth-refresh-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3"
+  },
+  "inputCount": 150,
+  "expectedJvmMethods": {
+    "com.jobs.im.GroupRulesTest": [
+      "allTenLanguagesHaveCompleteGroupControls",
+      "invitationDiagnosticNeverContainsTheBearer",
+      "observedGenerationsNeverBecomeFloatingPointOrZero"
+    ],
+    "com.jobs.im.IsolationTest": [
+      "allTenLanguagesHaveEveryControlLabel",
+      "certificateInputIsBoundedBeforeWholeFileAllocation",
+      "demoCanNeverEnterLiveTransport",
+      "endpointsRejectSecretsAndInsecureSchemes",
+      "restoreEpochChangeCannotResendOldOutbox",
+      "sameServerNameCannotMergeProfiles"
+    ],
+    "com.jobs.im.MigrationRulesTest": [
+      "allMigrationLanguagesHaveEveryEntry",
+      "base64RequiresCanonicalWireEncoding",
+      "duplicateRootOrTrailingDataIsRejected",
+      "hashUsesOriginalBytes",
+      "invalidUtf8AndOversizedDecodeFailClosed",
+      "originalJsonSlicesPreserveEscapedBracesAndNestedArrays"
+    ],
+    "com.jobs.im.NativeStorageBudgetTest": [
+      "aBatchBudgetIncludesEveryBodyAndOriginalWithoutGrantingAnObjectSizeException",
+      "aSmallBoundedWriteNeedsItsBytesAndReserveInsteadOfFourGiB",
+      "insufficientSpaceIsRejectedBeforeConsumingTheRollbackReserve",
+      "negativeOverflowAndOversizeRequirementsCannotWrapIntoAnAllowedWrite"
+    ],
+    "com.jobs.im.OwnDeletionRulesTest": [
+      "cancelledOrCompletedDeletionNeverRevivesTheOldFamily",
+      "deletionControlsCoverAllTenNativeLanguages",
+      "onlyExplicitPreAdmissionCodesCanDiscardAnUnknownCreation",
+      "proofPasswordUsesNfcAndBounds"
+    ],
+    "com.jobs.im.OwnPasswordRulesTest": [
+      "credentialsCannotEnterDiagnosticToStringAndAllTenLanguagesAreComplete",
+      "onlyDefinitePreAdmissionCodesCanUnpause",
+      "passwordUsesNfcCodePointsAndRejectsReuse",
+      "proofBoundsAndConfirmationCannotBeSilentlyChanged",
+      "unknownAndPreparedResponsibilityPauseOrdinaryBusiness"
+    ],
+    "com.jobs.im.PersonalExportFileTest": [
+      "completeZipIsRequiredEvenWhenHttpResponseWasSuccessful",
+      "directoryLimitsAreDistinctFromMalformedDirectoryCounts",
+      "everyLanguageDistinguishesCancelledSelectionFromSavedFile",
+      "serverFilenameIsRequiredAndCannotEscapeOrHideControls",
+      "zip64DirectoryHasExactSingleDiskBoundsWithoutWholeFileAllocation"
+    ],
+    "com.jobs.im.ReceiptRulesTest": [
+      "incompleteFlagsNonBooleansFalseQualificationAndContractMismatchAreRejected",
+      "legacySevenAndPairedNineBecomeTheSameImmutableSevenFact",
+      "originalTupleAndQualificationStayBoundToTheStoredDeclaration",
+      "requiredMetadataCannotBeMissingRetypedOrExtended"
+    ],
+    "com.jobs.im.SyncWireTest": [
+      "clientMessageIdIsOpaqueAndBoundedByUtf8Bytes",
+      "countersRemainExactAndRejectNonCanonicalOrOverflowValues",
+      "invalidUtf8CannotPassEvenWhenItsByteDigestMatches",
+      "originalEnvelopeHashUsesOriginalBytesRatherThanReserializedJson",
+      "rfc3339OffsetsAndVariableFractionsKeepTheSameInstant"
+    ],
+    "com.jobs.im.VoiceRecordingRulesTest": [
+      "cancelledLeaseCannotResumeAfterReturningToIdenticalIdentity",
+      "emptyShortAndOversizedClipsCannotBecomePreviewCandidates",
+      "everyLanguageIncludesPermissionAndRecoveryActions",
+      "recordingAndSendingNeverGrantAnotherSend",
+      "sourceSwitchAndPermissionChangesRejectTheOriginalClip"
+    ],
+    "com.jobs.im.VoiceUploadRulesTest": [
+      "everyLanguageIncludesQueueAndExplicitRecoveryActions",
+      "globalRequiresConversationSenderClientObjectAndCanonicalScopeButCrossesEpoch",
+      "namespaceMustExactlyMatchStableOwnerAndCannotContainAnInjectedComponent",
+      "originalOwnerIsStableAcrossProcessObjectsButNeverAcrossFamilyOrEpoch",
+      "originalReplyAndBodyAreFixedBeforeMediaUploadCompletes",
+      "preparedOrUnknownObjectCannotBeConvertedToAnOutgoingMessage",
+      "quotaAndDiskShortageRefuseNewTaskBeforeHttp"
+    ]
+  },
+  "compiledOnlyInstrumentationMethods": {
+    "com.jobs.im.AdmissionFenceTest": [
+      "missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox"
+    ],
+    "com.jobs.im.AuthoritativeSyncTest": [
+      "auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage",
+      "changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult",
+      "exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives",
+      "globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval",
+      "globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive",
+      "incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart",
+      "localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody",
+      "sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof"
+    ],
+    "com.jobs.im.CollaborationLifecycleTest": [
+      "realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference"
+    ],
+    "com.jobs.im.DatabaseIsolationTest": [
+      "liveOutboxSurvivesIndependentDemoWrites"
+    ],
+    "com.jobs.im.DiscoveryCollaborationUiTest": [
+      "nativeFavoritesExactSourceMentionsAndAnnouncementControlsReachRealBackend"
+    ],
+    "com.jobs.im.DiscoveryLifecycleTest": [
+      "realLookupPagesKeepOpaqueCursorsAndReauthorizeAnUnlistedSource"
+    ],
+    "com.jobs.im.ForwardLifecycleTest": [
+      "originalForwardSurvivesUnknownRepliesWithoutNewProofAndScrubsLostSources"
+    ],
+    "com.jobs.im.ForwardUiTest": [
+      "nativeSourceSelectionAndExplicitOriginalRetryCreateRealReferences"
+    ],
+    "com.jobs.im.GroupLifecycleTest": [
+      "coldJoinReusesOneNonceAndRequiresTheOriginalReenteredCode",
+      "lateSuccessfulMutationCannotPublishIntoAnotherIdentity",
+      "laterFamilyOrDeviceCannotPublishTheOriginal404AtSameEpoch",
+      "legacyResponsibilityWithoutOriginalFamilyStaysReadOnly",
+      "lostMutationUsesOnlyOriginalResultAndTokensRemainRamOnly",
+      "originalTransferNeverRebasesAfterConfirmation",
+      "roleWithdrawalClearsVisibleInvitesAndRamTokens"
+    ],
+    "com.jobs.im.LiveApiTest": [
+      "verifiedTlsTwoAccountMessageContract"
+    ],
+    "com.jobs.im.Migration8To9Test": [
+      "originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification"
+    ],
+    "com.jobs.im.MigrationHistoryLifecycleTest": [
+      "durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200",
+      "newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait",
+      "validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody"
+    ],
+    "com.jobs.im.ModelClosureTest": [
+      "realNativeModelKeepsOriginalOperationsAndRelationshipGenerations"
+    ],
+    "com.jobs.im.NativeSelfStateHttpsTest": [
+      "nativeSelfStateAndCloudDraftControlsRenderAndOperateThroughHttps",
+      "realDraftLossUsesReadonlyOriginalBodyAndRetiredSourceKeepsIndependentText",
+      "realSchemaTwoReadViewPreferencesAndAtomicOriginalQueue"
+    ],
+    "com.jobs.im.NativeSessionHttpsTest": [
+      "nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope",
+      "realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair",
+      "realLostRefreshAndThreeIntentClosureRetireUnknownAncestors"
+    ],
+    "com.jobs.im.NativeSessionLifecycleTest": [
+      "committedPairHandoffRecoversAndRetiresOriginalOutboxWithoutChangingPayload",
+      "concurrentExpiredRequestsShareOneRotationAndPublishOnlyDurablePair",
+      "initialUnknownChainKeepsOriginalIdsAndRejectsLateDelivery",
+      "lateEpochInvalidationAndLegacyCommitCannotEraseRecoveredPair",
+      "lateExpiredBusinessCannotBorrowReplacementFamilyAndOther401NeverRefreshes",
+      "retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch",
+      "secureWriteFailureAndUnknownRefreshStayBlockedAcrossRestart"
+    ],
+    "com.jobs.im.NativeUiTest": [
+      "realConversationGroupAndSettingsRenderInNativeActivity"
+    ],
+    "com.jobs.im.NotificationPrivacyTest": [
+      "localAlertHidesBodyAndRejectsAnotherNamespace"
+    ],
+    "com.jobs.im.OwnDeletionLifecycleTest": [
+      "finalLocalErasureKeepsOtherAccountsAndThePublicResponsibility",
+      "legacyCancelWithoutVersionRemainsReadOnlyAcrossReload",
+      "pendingOriginalCanPersistUnknownBeforeResumingTheSameRequest",
+      "preparedDependency403CannotReleaseTheOriginalGate",
+      "repeatedNewerQueriesNeverRebaseOriginalCancellation",
+      "unknownCancelRequiresQueryBeforeAnyNewProofAndKeepsOriginalVersion",
+      "unknownCancellationRetainsOneNonceAndQueriesItsOriginalResult",
+      "unknownSurvivesReopenWithoutPasswordOtpOrFamilyToken",
+      "withdrawnCapabilityKeepsUnknownLookupReadonly"
+    ],
+    "com.jobs.im.OwnPasswordLifecycleTest": [
+      "explicitRetryNeverBorrowsSuccessorFamilyToken",
+      "lateReplyCannotClearAChangedIdentity",
+      "preparedDependency403KeepsOriginalPaused",
+      "unknownSurvivesReconstructionAndContainsNoPasswordsOrOtp",
+      "withdrawnCapabilityAndChangedEpochAllowLookupButNoPendingOrUnseenMutation",
+      "wrongProofCannotUnpauseUnknownOrCreateAnotherOperation"
+    ],
+    "com.jobs.im.PersonalExportLifecycleTest": [
+      "cancellationUnknownRetainsNonceAndReadOnlyCheckNeverResendsIt",
+      "cancelledSystemSelectionIsNeverSavedAndOldFamilyCannotPublishPreparedFile",
+      "capabilityWithdrawalKeepsOriginalCancellationButNoNewCreateOrDownload",
+      "lostCreateReconcilesOriginalWithoutSecondCreatingPost",
+      "unreachedOriginalNeedsExplicitSameBodyRetry"
+    ],
+    "com.jobs.im.ReceiptStorageLifecycleTest": [
+      "actualProbeReopensItsCurrentPhysicalDatabaseAndMeasuresInstalledApk",
+      "fullTransactionPreservesExactBodyAndIntentOnReopenAndRollsBothBackOnFailure",
+      "trustedOsRootAliasDoesNotPermitAnUntrustedGeneratedChildSymlink",
+      "zeroOriginalFsyncSharesItsDescriptorIntentTransactionAndGlobalCleansOnlyOwnedBytes"
+    ],
+    "com.jobs.im.RoleAdmissionLifecycleTest": [
+      "ownerRoundTripCannotReviveOldAllMentionOrAnnouncementAndMissingFlagNeverWrites"
+    ],
+    "com.jobs.im.SelfStateTest": [
+      "changedDraftReplyRequiresReselectionAndCreatesNoCloudWrite",
+      "draftCapturesIndependentTextAndDistinctOriginalProofsWithoutChangingLocalMessageOutbox",
+      "firstActivationRemainsEnabledAndSameIdentityResetRejectsLateResponse",
+      "lateIdentityOrChangedProjectionGuardCannotPublishSelfState",
+      "queuedUiIntentCapturesLifecycleBeforeMutexAndCannotAdoptResetIdentity",
+      "retiredDraftIsNotRecordedAsAppliedAndIndependentTextRequiresExplicitRecovery",
+      "s2ProjectionAndCursorShareTransactionAndWrongSubjectCannotPartiallyPublish",
+      "schemaUpgradeRetainsPhysicalRegistrationAndSeparatesOriginalSchemaCursor",
+      "sparseVisibleObservationDoesNotClearIndependentManualUnreadAndConflictFreezesOriginal",
+      "unknownNotFoundRequiresExplicitRetryAndUsesIdenticalOriginalRequest",
+      "unknownPreferenceSurvivesColdReopenAndReadonlyResultNeverReplaysWrite",
+      "viewRfc3339OffsetsAreParsedWithoutReencodingOriginalServerFields",
+      "wrongPrincipalOrNumericCountersRollbackSelfProjectionAndCursorTogether"
+    ],
+    "com.jobs.im.StorageLifecycleTest": [
+      "anonymousReconnectFreezesEveryAccountOfOnlyTheOldInstanceEpoch",
+      "durableQueueDraftRevisionAndCursorRemainAtomic",
+      "versionTwoUpgradePreservesOriginalPendingIdentity"
+    ],
+    "com.jobs.im.VoiceRecordingNativeTest": [
+      "cancelReleasesRecorderAndDeletesOnlyTheOwnedClip",
+      "changedFamilyRejectsClipAndReturningToOriginalCannotRestoreIt",
+      "realAacStopProducesPreviewWithoutStartingUpload"
+    ],
+    "com.jobs.im.VoiceUploadApiNativeTest": [
+      "committedRequiresOriginalDigestSizeNameAndCanonicalUrl",
+      "lateFamilyChangeCannotPromoteTheOriginalResult",
+      "missingResultIsReadOnlyAndKeepsExactOriginalTuple",
+      "preparedNeverBecomesAUsableMediaUrl"
+    ],
+    "com.jobs.im.VoiceUploadGlobalFloorNativeTest": [
+      "conflictingObjectPreservesClipAndPendingCleanupUntilVerifiedHolderIsRepaired",
+      "globalDenySurvivesTerminalReceiptGcAndRejectsLateOriginalPrepare",
+      "verifiedGlobalCreatesDenyAfterTerminalReceiptWasAlreadyGc"
+    ],
+    "com.jobs.im.VoiceUploadQueueNativeTest": [
+      "changedFamilyCannotReusePreparedBytesAndDoesNotEraseTheOnlyClip",
+      "clipOnlyFailureIsRetainedAndBlocksNewHttpResponsibility",
+      "completedAccountFloorRejectsLatePrepareAndLateObjectPromotion",
+      "durableManifestStageRecoversTheSameTaskWithoutSending",
+      "durableTerminalBeforeUnlinkResumesLocalCleanupWithoutHttp",
+      "erasureRemovesExactAccountAndPreservesAnotherUsersTask",
+      "globalCleanupUsesOriginalSenderAndExactClientMapping",
+      "interruptedCopyRemainsAttributableForExactAccountErasure",
+      "publicationFailureRetriesTheSameIdsAndRejectsAChangedOriginalBody",
+      "tornNewManifestDoesNotReplaceTheOriginalAtomicBody",
+      "uploadAndEnqueueUnknownKeepOriginalIdsAndReplyAcrossReconstruction"
+    ]
+  },
+  "expectedJvmMethodCount": 54,
+  "compiledOnlyInstrumentationMethodCount": 105,
+  "exitCode": 0,
+  "buildSeconds": 68.391,
+  "jvmSuites": [
+    {
+      "name": "com.jobs.im.GroupRulesTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.IsolationTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.MigrationRulesTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.NativeStorageBudgetTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.OwnDeletionRulesTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.OwnPasswordRulesTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.PersonalExportFileTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.ReceiptRulesTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.SyncWireTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.VoiceRecordingRulesTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "com.jobs.im.VoiceUploadRulesTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "actualJvmMethods": {
+    "com.jobs.im.GroupRulesTest": [
+      "allTenLanguagesHaveCompleteGroupControls",
+      "invitationDiagnosticNeverContainsTheBearer",
+      "observedGenerationsNeverBecomeFloatingPointOrZero"
+    ],
+    "com.jobs.im.IsolationTest": [
+      "allTenLanguagesHaveEveryControlLabel",
+      "certificateInputIsBoundedBeforeWholeFileAllocation",
+      "demoCanNeverEnterLiveTransport",
+      "endpointsRejectSecretsAndInsecureSchemes",
+      "restoreEpochChangeCannotResendOldOutbox",
+      "sameServerNameCannotMergeProfiles"
+    ],
+    "com.jobs.im.MigrationRulesTest": [
+      "allMigrationLanguagesHaveEveryEntry",
+      "base64RequiresCanonicalWireEncoding",
+      "duplicateRootOrTrailingDataIsRejected",
+      "hashUsesOriginalBytes",
+      "invalidUtf8AndOversizedDecodeFailClosed",
+      "originalJsonSlicesPreserveEscapedBracesAndNestedArrays"
+    ],
+    "com.jobs.im.NativeStorageBudgetTest": [
+      "aBatchBudgetIncludesEveryBodyAndOriginalWithoutGrantingAnObjectSizeException",
+      "aSmallBoundedWriteNeedsItsBytesAndReserveInsteadOfFourGiB",
+      "insufficientSpaceIsRejectedBeforeConsumingTheRollbackReserve",
+      "negativeOverflowAndOversizeRequirementsCannotWrapIntoAnAllowedWrite"
+    ],
+    "com.jobs.im.OwnDeletionRulesTest": [
+      "cancelledOrCompletedDeletionNeverRevivesTheOldFamily",
+      "deletionControlsCoverAllTenNativeLanguages",
+      "onlyExplicitPreAdmissionCodesCanDiscardAnUnknownCreation",
+      "proofPasswordUsesNfcAndBounds"
+    ],
+    "com.jobs.im.OwnPasswordRulesTest": [
+      "credentialsCannotEnterDiagnosticToStringAndAllTenLanguagesAreComplete",
+      "onlyDefinitePreAdmissionCodesCanUnpause",
+      "passwordUsesNfcCodePointsAndRejectsReuse",
+      "proofBoundsAndConfirmationCannotBeSilentlyChanged",
+      "unknownAndPreparedResponsibilityPauseOrdinaryBusiness"
+    ],
+    "com.jobs.im.PersonalExportFileTest": [
+      "completeZipIsRequiredEvenWhenHttpResponseWasSuccessful",
+      "directoryLimitsAreDistinctFromMalformedDirectoryCounts",
+      "everyLanguageDistinguishesCancelledSelectionFromSavedFile",
+      "serverFilenameIsRequiredAndCannotEscapeOrHideControls",
+      "zip64DirectoryHasExactSingleDiskBoundsWithoutWholeFileAllocation"
+    ],
+    "com.jobs.im.ReceiptRulesTest": [
+      "incompleteFlagsNonBooleansFalseQualificationAndContractMismatchAreRejected",
+      "legacySevenAndPairedNineBecomeTheSameImmutableSevenFact",
+      "originalTupleAndQualificationStayBoundToTheStoredDeclaration",
+      "requiredMetadataCannotBeMissingRetypedOrExtended"
+    ],
+    "com.jobs.im.SyncWireTest": [
+      "clientMessageIdIsOpaqueAndBoundedByUtf8Bytes",
+      "countersRemainExactAndRejectNonCanonicalOrOverflowValues",
+      "invalidUtf8CannotPassEvenWhenItsByteDigestMatches",
+      "originalEnvelopeHashUsesOriginalBytesRatherThanReserializedJson",
+      "rfc3339OffsetsAndVariableFractionsKeepTheSameInstant"
+    ],
+    "com.jobs.im.VoiceRecordingRulesTest": [
+      "cancelledLeaseCannotResumeAfterReturningToIdenticalIdentity",
+      "emptyShortAndOversizedClipsCannotBecomePreviewCandidates",
+      "everyLanguageIncludesPermissionAndRecoveryActions",
+      "recordingAndSendingNeverGrantAnotherSend",
+      "sourceSwitchAndPermissionChangesRejectTheOriginalClip"
+    ],
+    "com.jobs.im.VoiceUploadRulesTest": [
+      "everyLanguageIncludesQueueAndExplicitRecoveryActions",
+      "globalRequiresConversationSenderClientObjectAndCanonicalScopeButCrossesEpoch",
+      "namespaceMustExactlyMatchStableOwnerAndCannotContainAnInjectedComponent",
+      "originalOwnerIsStableAcrossProcessObjectsButNeverAcrossFamilyOrEpoch",
+      "originalReplyAndBodyAreFixedBeforeMediaUploadCompletes",
+      "preparedOrUnknownObjectCannotBeConvertedToAnOutgoingMessage",
+      "quotaAndDiskShortageRefuseNewTaskBeforeHttp"
+    ]
+  },
+  "totals": {
+    "tests": 54,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "artifacts": {
+    "app-debug.apk": {
+      "sha256": "9660aa3856ceb28d06ac1212ca1a82a54e4c0fbcd272b82f9440c503c7e45c45",
+      "bytes": 17604399,
+      "freshPrivateOutput": true
+    },
+    "app-debug-androidTest.apk": {
+      "sha256": "7b3f14b431e42a5745fbe3b2f269cfb34aba9dfb573847223a1d257e1b010e04",
+      "bytes": 1196924,
+      "freshPrivateOutput": true
+    }
+  },
+  "frozenInputUnchanged": true,
+  "currentSourceDifferences": [],
+  "protectedOriginalApkSHA256After": {
+    "代码/前端/Android/Dist/JobsIM-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3",
+    "代码/前端/Android/Dist/Baselines/20261115-foundation-debug.apk": "25144130343f8cd14c9308d8361334df4f86a17791af38ba34390ad007c23495",
+    "代码/前端/Android/Dist/Baselines/20261115-forward-projection-fence-debug.apk": "624785dc9619898162917aad32c443ab19a992129895f87d25c1d5e3523078e1",
+    "代码/前端/Android/Dist/Baselines/20261115-discovery-collaboration-before-role-debug.apk": "932da3500e0a02ede65cd3f7bcce82edafce879cc714e3c3cfb2c37abef215fe",
+    "代码/前端/Android/Dist/Baselines/20261115-forward-before-projection-fence-debug.apk": "bbe9c934cbc512e16ef0854b11442c56d5fbbf640c1b8fc381ed38537d870d71",
+    "代码/前端/Android/Dist/Baselines/20261115-discovery-role-debug.apk": "682be642852e96e4086fc879a54f95ceba17a0aa34b8d268311d1c90d907e80c",
+    "代码/前端/Android/Dist/Baselines/20261115-admission-before-theme-debug.apk": "e5eeee8506b63bc70554b621ed916a87dfeb40f69cdde23c978193100e7d0cbb",
+    "代码/前端/Android/Dist/Baselines/20261115-native-auth-refresh-debug.apk": "e295688485e0caa73932670e48da227eae804108416625b62fba5b0e01cee8b3"
+  },
+  "stopReason": "completed",
+  "finishedAt": "2026-11-17T08:06:38.553925+00:00",
+  "seconds": 68.777,
+  "minimumFreeBytes": 15198482432,
+  "diskSamples": 68
+}

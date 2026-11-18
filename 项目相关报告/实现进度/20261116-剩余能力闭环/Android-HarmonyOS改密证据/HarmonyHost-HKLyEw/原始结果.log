@@ -1,0 +1,38 @@
+✔ NFC, codepoint bounds, password reuse and confirmation are checked (0.445208ms)
+✔ all ten languages contain every password control (0.080417ms)
+✔ original public responsibility is durable and paused before POST; no secret or secret hash is saved (2.217584ms)
+✔ lost success resumes by anonymous lookup only using the original nonce and pair (0.261458ms)
+✔ unknown404 lookup cannot create; explicit retry preserves the nonce and body (0.227958ms)
+✔ relogin never lends a new family token to an old original (0.184084ms)
+✔ disk failure sends zero creating requests (0.072375ms)
+✔ wrong proof or malformed result keeps an unknown responsibility paused (0.182916ms)
+✔ capability withdrawal still permits old lookup but cannot start a fresh change (0.179667ms)
+✔ pending is readonly until explicit same-request retry, with no new-family credentials (0.195459ms)
+✔ late identity change cannot publish or retire the successor (0.110792ms)
+✔ metadata rejects extra secret fields and changed bindings (0.108084ms)
+✖ real shipped repository atomically commits pause marker and public intent, survives reopen, rejects stale CAS (31.811417ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 12
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 116.118458
+
+✖ failing tests:
+
+test at 测试/前端/HarmonyOS/Unit/Password.test.cjs/Password.test.cjs:84:1
+✖ real shipped repository atomically commits pause marker and public intent, survives reopen, rejects stale CAS (31.811417ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async TestContext.<anonymous> (/Users/jobs/Documents/GitHub/JobsIM/测试/前端/HarmonyOS/Unit/Password.test.cjs/Password.test.cjs:95:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /ORIGINAL_PENDING/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

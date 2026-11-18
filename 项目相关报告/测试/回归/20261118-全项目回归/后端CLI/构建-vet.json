@@ -1,0 +1,22 @@
+[
+  {
+    "name": "后端",
+    "cmd": "build",
+    "exit": 0
+  },
+  {
+    "name": "后端",
+    "cmd": "vet",
+    "exit": 0
+  },
+  {
+    "name": "CLI",
+    "cmd": "build",
+    "exit": 0
+  },
+  {
+    "name": "CLI",
+    "cmd": "vet",
+    "exit": 0
+  }
+]

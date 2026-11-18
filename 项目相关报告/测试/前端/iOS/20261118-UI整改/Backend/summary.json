@@ -1,0 +1,258 @@
+{
+  "schema": "jobsim-ios-ui-backend-source-review-v1",
+  "status": "source-ready-validation-deferred",
+  "createdAt": "2026-11-18T05:50:48.465205+00:00",
+  "gitHead": "35dc0283adfe282e4925757dd3ba66eeb0a64afa",
+  "workingTreeHasPreexistingChanges": true,
+  "scope": "Owned backend source, external Go tests, three existing HTTP contract assertions and adjacent interface/backend/database docs; source only",
+  "sourceFiles": [
+    {
+      "path": "代码/后端/Go/contact_policy.go",
+      "bytes": 1223,
+      "sha256": "a8fd2851518c03d767f8bc2e9791701198cddc0b29836c259bd6b686173142b2"
+    },
+    {
+      "path": "代码/后端/Go/directory.go",
+      "bytes": 19118,
+      "sha256": "36946f63a122c41f9c7f8b6ca213cf7e53ce54dd45c38357f2c4a2f59823cb9a"
+    },
+    {
+      "path": "代码/后端/Go/conversation.go",
+      "bytes": 18789,
+      "sha256": "08a5156941081ffbfe6947288941f016bc5eca6c6d992093cf61abfc53b00ac8"
+    },
+    {
+      "path": "代码/后端/Go/operations.go",
+      "bytes": 28125,
+      "sha256": "c86fcbbaf8ce7811564895c554b1f91ca8bda2ade1f47246d74d112b52d4dcaa"
+    },
+    {
+      "path": "代码/后端/Go/media.go",
+      "bytes": 7714,
+      "sha256": "d78ced295af56a71780235ea194244e3d4e85fd583da837dd525352c2dcac8c5"
+    },
+    {
+      "path": "代码/后端/Go/media_upload.go",
+      "bytes": 11959,
+      "sha256": "d71fdfd39a8ee3203e9a506c99ba897fdd48b84099f4b778d48cfe689448e5b7"
+    },
+    {
+      "path": "代码/后端/Go/media_upload_model.go",
+      "bytes": 8034,
+      "sha256": "e5f79d5585a1475c1b4f7ebf027d1ad39c38adb4d91e93cf6f3f4f20f7c126da"
+    },
+    {
+      "path": "代码/后端/Go/report_evidence.go",
+      "bytes": 4508,
+      "sha256": "2e970a258c378298c8842d86b568d728c37a2caaa06eaf69eb36c5cb05f39b35"
+    },
+    {
+      "path": "代码/后端/Go/report_evidence_model.go",
+      "bytes": 5128,
+      "sha256": "c3f5eac20c076e1b5926d1fd5a51167c3b4081890c98fcdc1b715a8fbd8dc608"
+    },
+    {
+      "path": "代码/后端/Go/report_media.go",
+      "bytes": 5426,
+      "sha256": "1607b129c31d7773a24cac5aed83ac98ac43788497db4d22522e327486f229da"
+    },
+    {
+      "path": "代码/后端/Go/reports.go",
+      "bytes": 13370,
+      "sha256": "5f8b876cd26af03823631b40cf3dce810ded1b2c1ddaf1374e82b904278d61b4"
+    },
+    {
+      "path": "代码/后端/Go/server.go",
+      "bytes": 16221,
+      "sha256": "d8e9deb7fc44156dba9d121eff5a77c425709ce978988061513eefee4f1d8f8b"
+    },
+    {
+      "path": "代码/后端/Go/personal_export_fence.go",
+      "bytes": 6583,
+      "sha256": "bd9912dbc2286707fb95ce52add9e92a026393466417ca2082d8db006332705a"
+    },
+    {
+      "path": "代码/后端/Go/send_admission.go",
+      "bytes": 16049,
+      "sha256": "3a28303df9f59a9f45b69205ef76507588729b1090d918f02cb76f2e28cd89e8"
+    },
+    {
+      "path": "代码/后端/Go/username.go",
+      "bytes": 5775,
+      "sha256": "cb7e16dd0b529f0408c3f8c804658b9578733b2d7160351476f3696b148596e6"
+    },
+    {
+      "path": "代码/后端/Go/identity.go",
+      "bytes": 41904,
+      "sha256": "9efe7fb7c1767b3c5cfc4b90f92d7d8d7195412fee73798981ac9f6b343cdfe0"
+    },
+    {
+      "path": "代码/后端/Go/message.go",
+      "bytes": 23553,
+      "sha256": "dd294e0d9dd10fc0e4c5f27fee43333175701c60552f1c2cc9244092539946ec"
+    },
+    {
+      "path": "代码/后端/Go/message_retract_request.go",
+      "bytes": 1238,
+      "sha256": "27d70a334de8fd5d7b08acf426e56a18d7bd783082dff1b58c0eb35561fe88b9"
+    },
+    {
+      "path": "测试/后端/接口/ui_contract_test.go",
+      "bytes": 23463,
+      "sha256": "9224cb7de66da53e71977033894dd28b9de09273fd6bf1e618aa1c248615f1e0"
+    },
+    {
+      "path": "测试/后端/接口/media_upload_pg_test.go",
+      "bytes": 18278,
+      "sha256": "da31a3703191ae2b1ec3b7a069cebefec2198ebe5629d2078b6446b6268f6169"
+    },
+    {
+      "path": "测试/后端/接口/contact_relationship.py",
+      "bytes": 8648,
+      "sha256": "470832a0884d600e4d7d5600d1a31390ab34075c1377ea9039ad4e54efa0e723"
+    },
+    {
+      "path": "测试/后端/接口/integration.py",
+      "bytes": 8644,
+      "sha256": "66710728ac5d996cf2650f3bdf5053d5c321e7cd8cc13de61f04e773ea37543f"
+    },
+    {
+      "path": "测试/后端/接口/send_admission.py",
+      "bytes": 8784,
+      "sha256": "fe00b91da94c21e452ec981a4f5b4ece5554c36901e770b46073716ff16a819f"
+    },
+    {
+      "path": "需求/IM后端架构表.md/IM后端架构表.md",
+      "bytes": 251558,
+      "sha256": "7236aa2ebc21f5eac1ebece0f3641ffe41afd8cedef2b9905069f249b579be1b"
+    },
+    {
+      "path": "需求/JobsIM数据库设计.md/JobsIM数据库设计.md",
+      "bytes": 178891,
+      "sha256": "900518aa625e189f5c873be3561a6545740925da744658be1398ca0dde2080fe"
+    },
+    {
+      "path": "代码/后端/Go/接口契约/README.md",
+      "bytes": 90107,
+      "sha256": "f37bd9d168d567eff4c76c6029657c1e9076774575f1edd2af6e9f4bf5a9e9e5"
+    },
+    {
+      "path": "测试/后端/README.md",
+      "bytes": 17906,
+      "sha256": "bfded9e56e79ae9b7db01fad860110b56e381f31f9cd8967a3128061365d1b58"
+    }
+  ],
+  "backendBuildInputs": {
+    "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/build-inputs.sha256.json",
+    "sha256": "624813e365e47a4322486191647c87464502d77ce7e3395f9f644babf055dc7f",
+    "count": 142,
+    "compiled": false
+  },
+  "implemented": {
+    "contacts": "Block preserves friendship and shared-group/history ACL; both directions reject new direct commit/media binding; unblock retires old grants and restores only still-current friendship; delete removes both contacts and requires a fresh independent accepted request; no permanent reopen prerequisite; bounded new-pending rate and duplicate guard.",
+    "reports": "Independent report_evidence stable eight-field uploads, actual image/video classification, owner/purpose/floor checks, atomic explicit evidence/message-version references, own/admin detail and reporter/target filters, report-bound authenticated bytes, fresh source authorization and unavailable projections; old report four-field digest compatible; MFA disposition unchanged.",
+    "username": "PATCH /api/me/username with expectedUsername/requestId; stable userId/device/family/epoch, atomic canonical uniqueness/new-and-old reservations, current authoritative user and original-operation current flag; original four auth/profile flows retained.",
+    "retraction": "Optional original requestId/expectedVersion on DELETE; nondeleted changed snapshot returns409, already-deleted same-object replay succeeds, old empty body and retract:id remain."
+  },
+  "contract": {
+    "evidenceUpload": "POST /api/reports/evidence",
+    "stableFields": [
+      "requestId",
+      "userId",
+      "deviceId",
+      "familyId",
+      "restoreEpoch",
+      "name",
+      "size",
+      "sha256"
+    ],
+    "imageMaxBytes": 20971520,
+    "videoMaxBytes": 67108864,
+    "fileSelectionLimit": 10,
+    "messageSelectionLimit": 50,
+    "reasonMaxUnicodeRunes": 1000,
+    "reasonMinimum": "TrimSpace then at least1 Unicode rune; full original text counts toward max1000",
+    "evidenceURL": "/api/reports/evidence/<objectId>?reportId=<reportId>",
+    "adminSelectedAttachmentURL": "/api/admin/reports/<reportId>/messages/<messageId>/attachment",
+    "originalSelectedVersion": "contentVersion, not mutable display version",
+    "privacy": "User explicitly selects materials; includesWholeConversation=false; unavailable strips body and URL; private,no-store bytes and current ACL on every GET."
+  },
+  "verified": {
+    "gofmtParse": {
+      "files": 20,
+      "exit": 0,
+      "unformatted": 0,
+      "notACompile": true
+    },
+    "pythonAST": {
+      "files": 3,
+      "parsed": 3,
+      "httpExecuted": false
+    },
+    "externalOverlayDiscovery": {
+      "files": 50,
+      "newFileIncluded": true,
+      "newTests": [
+        "TestUIReportSelectionAndUploadPurpose",
+        "TestUIOptionalRetractionSnapshot",
+        "TestUIContactDeletionNewRoundsAndPendingPG",
+        "TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG",
+        "TestUIContactRateResetsWithoutPermanentGatePG",
+        "TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG",
+        "TestUIUsernameCurrentIdentityAndSnapshotRetractionPG",
+        "TestUIReportSelectedAttachmentAndMissingEvidencePG"
+      ]
+    },
+    "canonicalRequirementReferenceSequencePreserved": true
+  },
+  "newTests": {
+    "declared": [
+      "TestUIReportSelectionAndUploadPurpose",
+      "TestUIOptionalRetractionSnapshot",
+      "TestUIContactDeletionNewRoundsAndPendingPG",
+      "TestUIBlockKeepsFriendGroupAndRejectsOldDirectGrantPG",
+      "TestUIContactRateResetsWithoutPermanentGatePG",
+      "TestUIReportEvidenceOwnershipSelectedRefsAndRevocationPG",
+      "TestUIUsernameCurrentIdentityAndSnapshotRetractionPG",
+      "TestUIReportSelectedAttachmentAndMissingEvidencePG"
+    ],
+    "pureDeclared": 2,
+    "isolatedPGDeclared": 6,
+    "executed": 0,
+    "pass": null,
+    "fail": null,
+    "skip": null,
+    "note": "No Go test invocation; no skip is counted as pass. Video PG case uses explicitly synthetic container metadata and real upload bytes, not camera capture/playback proof."
+  },
+  "deferredVerification": [
+    "Go compile/typecheck/vet and both pure tests",
+    "Six new isolated-PG tests plus affected backend regression",
+    "Three updated real HTTP scripts against a newly isolated current-source service",
+    "Real iOS report media upload/selected source reads and official Web admin authenticated preview",
+    "Username old-snapshot restore/profile-RPO validation"
+  ],
+  "limitations": [
+    "Current disk below4GiB gate: compilation, PostgreSQL integration and deployment not executed. Prior report successes do not validate this source.",
+    "Username daily change retires the old current login name but preserves occupancy. Disaster recovery may restore an old profile/login name according to confirmed profile RPO/snapshot; stable userId/occupancy remain, and current-epoch reauthentication is required. Existing reserve_username journal protects name occupancy, not latest-name nonrollback; isolated restore verification remains outstanding.",
+    "Previously removed relations from older block semantics are not blindly reconstructed; no inferred automatic friendship restoration.",
+    "Legacy conversation-target reports have no fabricated targetUserId; old message-target reports without that stored field are not falsely assigned an unverified target."
+  ],
+  "resources": {
+    "diskAvailableKiB": 1826324,
+    "heavyValidationMinimumKiB": 4194304,
+    "dfOutput": "Filesystem   1024-blocks      Used Available Capacity  iused    ifree %iused  Mounted on\n/dev/disk3s5   971298980 942827260   1826324   100% 10736511 18263240   37%   /System/Volumes/Data",
+    "startedServices": [],
+    "ownedLongLivedProcesses": [],
+    "defaultUserInstanceTouched": false,
+    "portsOpened": [],
+    "cachesOrUserDataCleaned": false
+  },
+  "evidence": {
+    "staticChecks": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/static-checks.json",
+    "staticLog": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/静态检查.log",
+    "sourceBaseline": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/源码修改前SHA256.json",
+    "documentBaseline": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/文档修改前",
+    "HTTPBefore": "项目相关报告/测试/前端/iOS/20261118-UI整改/Backend/HTTP断言修改前"
+  },
+  "noCommitOrPush": true
+}

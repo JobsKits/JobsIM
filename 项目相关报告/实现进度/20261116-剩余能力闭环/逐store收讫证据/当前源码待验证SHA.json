@@ -1,0 +1,26 @@
+{
+  "boundary": "source-only snapshot after historical first candidate compile; no latest compile/runtime PASS claim",
+  "freeBytes": 1473994752,
+  "files": {
+    "代码/后端/Go/receipt_capabilities.go": "92ef5cf7e3295ce8efd8d4b8f54c0fdc66930c1cb065ef0e0428e5ab948dd97b",
+    "代码/后端/Go/journal_receipt_readiness.go": "08e33a26408d90f166063395a75cd7b12aa14f8b0241e0805c5096e112ce0d01",
+    "代码/后端/Go/retention_readiness.go": "0e7a1cdc2ae1a372f56c420a8404b7269de204fd5f6263a12ae34b80a8e39dd3",
+    "代码/后端/Go/retention_policy.go": "32c1e8a2b9e254827e419e1b496c4e57e53e070eb85762bd1a07552a6ef99a45",
+    "代码/后端/Go/receipt_delivery_worker.go": "12cdf63e4a425136c465f1024b7e2b1ec49c28003b09b34e97b17f876eae062e",
+    "代码/后端/Go/sync_receipts.go": "59f6b0a00f23e1126a1886d882e779155202c84f6d9bc0644d3450eb85657bfe",
+    "代码/后端/Go/sync_object_receipts.go": "7ae2ae593ae8acbcdaa492d9ba2fab6daa05a8cd1457a6ff243c7b70153c6ef0",
+    "代码/后端/Go/send_admission.go": "e70a630d4ad7f8e190be013157c15a57bcd4533aea086371e606c68d553017f6",
+    "代码/后端/Go/forward_media.go": "fc4fa2b9dc74d7ec2f5eb3b72b913c6a07cb6b355af01b97d2c0363ebbbb2bee",
+    "代码/后端/Go/server.go": "0e26c1a4224098e3a90680d32c95e48cdb337cae7e5cf69ecd7035539373a5cc",
+    "代码/后端/Go/control.go": "22254bf0d6419fe5b8a7f0c153bcddfe5c9ecf5fc26b1895fd224e62504ecaf1",
+    "代码/前端/CLI/cmd/jobsim/receipt.go": "956426963e263bb7e05a695e6874acaab22ab1a76c7fba29c8de3f490c9c25b1",
+    "代码/前端/CLI/cmd/jobsim/receipt_objects.go": "5921cc58db2d9fd5c69dff483c0b8039933120b636a077eae677f50fc7d7add5",
+    "代码/前端/CLI/cmd/jobsim/receipt_cleanup.go": "78b4d57078293ad7627e3d18802dc5af90a8847916b5f0108e2389d30d7243c2",
+    "代码/前端/CLI/cmd/jobsim/receipt_negotiation.go": "7103f21102b33ced43167bb7860db0c516e610f904da0016634b91b228426446",
+    "代码/前端/CLI/cmd/jobsim/receipt_policy.go": "45302eab8bd482ba0fa0d0978e3687f5917efb39f40481fbe261ee47d7b48b38",
+    "代码/前端/CLI/cmd/jobsim/receipt_migration_source.go": "34bc1f36ad426c463d4c72131baf09da082ca201a139c176369e3d3ed5cefb19",
+    "代码/前端/CLI/cmd/jobsim/main.go": "fcf1dc912c440ba16e8e3655acbc102af2ee3eb3f05d60f536651040a8c74b04",
+    "测试/CLI/receipt_negotiation_test.go": "c87332bf2ddba9acc053c4d65395357171a6a63a9b6a050256666ce7a28f7808",
+    "测试/后端/接口/receipt_capabilities_pg_test.go": "8830f5d5318092f2e3a7eceb438448cfb0c200622fd9093906dd0e7028555846"
+  }
+}

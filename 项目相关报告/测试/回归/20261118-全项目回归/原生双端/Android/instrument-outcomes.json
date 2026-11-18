@@ -1,0 +1,614 @@
+[
+  {
+    "class": "com.jobs.im.AdmissionFenceTest",
+    "test": "missedMembershipCycleCannotBorrowNewAdmissionForOriginalOutbox",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: got: <false>, expected: is <true>"
+  },
+  {
+    "class": "com.jobs.im.AuthoritativeSyncTest",
+    "test": "incompleteStageNeverInstallsOrAdvancesCursorAndOriginalNonceSurvivesRestart",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.AuthoritativeSyncTest",
+    "test": "changedCurrentIdentityOrCapabilityCannotUseLegacyMessagesAndLateApiResult",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.AuthoritativeSyncTest",
+    "test": "sameOpaqueClientIdNeverAcknowledgesWithoutOriginalRouteAndBodyProof",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.AuthoritativeSyncTest",
+    "test": "exactDeletedResultProtectsEveryHolderBeforeItsSyncEventArrives",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.AuthoritativeSyncTest",
+    "test": "globalCleanupSurvivesCommitCrashAndEmptyDeltaAndRetriesFailedSidecarRemoval",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.AuthoritativeSyncTest",
+    "test": "auxiliaryResultUnknownCannotBlockVerifiedGlobalAndNeverCreatesMessage",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.AuthoritativeSyncTest",
+    "test": "globalMinimalTombstoneErasesAllDeviceAndRetainedHoldersAndCannotRevive",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.AuthoritativeSyncTest",
+    "test": "localRestrictionRejectsLateCommitAndRetainsOrdinaryButNeverForwardBody",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.CollaborationLifecycleTest",
+    "test": "realMentionAndAnnouncementOperationsKeepOriginalMetadataAndCurrentContentReference",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: got: <false>, expected: is <true>"
+  },
+  {
+    "class": "com.jobs.im.DatabaseIsolationTest",
+    "test": "liveOutboxSurvivesIndependentDemoWrites",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.DiscoveryCollaborationUiTest",
+    "test": "nativeFavoritesExactSourceMentionsAndAnnouncementControlsReachRealBackend",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: got: <false>, expected: is <true>"
+  },
+  {
+    "class": "com.jobs.im.DiscoveryLifecycleTest",
+    "test": "realLookupPagesKeepOpaqueCursorsAndReauthorizeAnUnlistedSource",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: got: <false>, expected: is <true>"
+  },
+  {
+    "class": "com.jobs.im.ForwardLifecycleTest",
+    "test": "originalForwardSurvivesUnknownRepliesWithoutNewProofAndScrubsLostSources",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: got: <false>, expected: is <true>"
+  },
+  {
+    "class": "com.jobs.im.ForwardUiTest",
+    "test": "nativeSourceSelectionAndExplicitOriginalRetryCreateRealReferences",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: got: <false>, expected: is <true>"
+  },
+  {
+    "class": "com.jobs.im.GroupLifecycleTest",
+    "test": "lostMutationUsesOnlyOriginalResultAndTokensRemainRamOnly",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.GroupLifecycleTest",
+    "test": "roleWithdrawalClearsVisibleInvitesAndRamTokens",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.GroupLifecycleTest",
+    "test": "coldJoinReusesOneNonceAndRequiresTheOriginalReenteredCode",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.GroupLifecycleTest",
+    "test": "laterFamilyOrDeviceCannotPublishTheOriginal404AtSameEpoch",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.GroupLifecycleTest",
+    "test": "lateSuccessfulMutationCannotPublishIntoAnotherIdentity",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.GroupLifecycleTest",
+    "test": "legacyResponsibilityWithoutOriginalFamilyStaysReadOnly",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.GroupLifecycleTest",
+    "test": "originalTransferNeverRebasesAfterConfirmation",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.LiveApiTest",
+    "test": "verifiedTlsTwoAccountMessageContract",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: Live service and test CA are explicit inputs"
+  },
+  {
+    "class": "com.jobs.im.Migration8To9Test",
+    "test": "originalSchema8MigratesWithoutChangingOriginalIntentsOrInventingSyncQualification",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.MigrationHistoryLifecycleTest",
+    "test": "validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.MigrationHistoryLifecycleTest",
+    "test": "durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.MigrationHistoryLifecycleTest",
+    "test": "newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.ModelClosureTest",
+    "test": "realNativeModelKeepsOriginalOperationsAndRelationshipGenerations",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: got: <false>, expected: is <true>"
+  },
+  {
+    "class": "com.jobs.im.NativeSessionHttpsTest",
+    "test": "nativeUnknownSignInCanVerifyAgainAndColdRestoreWithoutMovingDeviceScope",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: Explicit native refresh scope is required"
+  },
+  {
+    "class": "com.jobs.im.NativeSessionHttpsTest",
+    "test": "realExpiredAccessSingleFlightPreservesOriginalSendAndSecurePair",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: Explicit native refresh scope is required"
+  },
+  {
+    "class": "com.jobs.im.NativeSessionHttpsTest",
+    "test": "realLostRefreshAndThreeIntentClosureRetireUnknownAncestors",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: Explicit native refresh scope is required"
+  },
+  {
+    "class": "com.jobs.im.NativeSessionLifecycleTest",
+    "test": "retainedApiObjectCannotAdoptANewFamilyWhenInvokedAfterSwitch",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.NativeSessionLifecycleTest",
+    "test": "lateEpochInvalidationAndLegacyCommitCannotEraseRecoveredPair",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.NativeSessionLifecycleTest",
+    "test": "lateExpiredBusinessCannotBorrowReplacementFamilyAndOther401NeverRefreshes",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.NativeSessionLifecycleTest",
+    "test": "initialUnknownChainKeepsOriginalIdsAndRejectsLateDelivery",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.NativeSessionLifecycleTest",
+    "test": "committedPairHandoffRecoversAndRetiresOriginalOutboxWithoutChangingPayload",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.NativeSessionLifecycleTest",
+    "test": "concurrentExpiredRequestsShareOneRotationAndPublishOnlyDurablePair",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.NativeSessionLifecycleTest",
+    "test": "secureWriteFailureAndUnknownRefreshStayBlockedAcrossRestart",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.NativeUiTest",
+    "test": "realConversationGroupAndSettingsRenderInNativeActivity",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: got: <false>, expected: is <true>"
+  },
+  {
+    "class": "com.jobs.im.NotificationPrivacyTest",
+    "test": "localAlertHidesBodyAndRejectsAnotherNamespace",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnDeletionLifecycleTest",
+    "test": "unknownCancelRequiresQueryBeforeAnyNewProofAndKeepsOriginalVersion",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnDeletionLifecycleTest",
+    "test": "unknownCancellationRetainsOneNonceAndQueriesItsOriginalResult",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnDeletionLifecycleTest",
+    "test": "preparedDependency403CannotReleaseTheOriginalGate",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnDeletionLifecycleTest",
+    "test": "unknownSurvivesReopenWithoutPasswordOtpOrFamilyToken",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnDeletionLifecycleTest",
+    "test": "legacyCancelWithoutVersionRemainsReadOnlyAcrossReload",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnDeletionLifecycleTest",
+    "test": "pendingOriginalCanPersistUnknownBeforeResumingTheSameRequest",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnDeletionLifecycleTest",
+    "test": "withdrawnCapabilityKeepsUnknownLookupReadonly",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnDeletionLifecycleTest",
+    "test": "repeatedNewerQueriesNeverRebaseOriginalCancellation",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnDeletionLifecycleTest",
+    "test": "finalLocalErasureKeepsOtherAccountsAndThePublicResponsibility",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnPasswordLifecycleTest",
+    "test": "withdrawnCapabilityAndChangedEpochAllowLookupButNoPendingOrUnseenMutation",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnPasswordLifecycleTest",
+    "test": "wrongProofCannotUnpauseUnknownOrCreateAnotherOperation",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnPasswordLifecycleTest",
+    "test": "lateReplyCannotClearAChangedIdentity",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnPasswordLifecycleTest",
+    "test": "explicitRetryNeverBorrowsSuccessorFamilyToken",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnPasswordLifecycleTest",
+    "test": "unknownSurvivesReconstructionAndContainsNoPasswordsOrOtp",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.OwnPasswordLifecycleTest",
+    "test": "preparedDependency403KeepsOriginalPaused",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.PersonalExportLifecycleTest",
+    "test": "cancellationUnknownRetainsNonceAndReadOnlyCheckNeverResendsIt",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.PersonalExportLifecycleTest",
+    "test": "capabilityWithdrawalKeepsOriginalCancellationButNoNewCreateOrDownload",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.PersonalExportLifecycleTest",
+    "test": "lostCreateReconcilesOriginalWithoutSecondCreatingPost",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.PersonalExportLifecycleTest",
+    "test": "unreachedOriginalNeedsExplicitSameBodyRetry",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.PersonalExportLifecycleTest",
+    "test": "cancelledSystemSelectionIsNeverSavedAndOldFamilyCannotPublishPreparedFile",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.ReceiptStorageLifecycleTest",
+    "test": "fullTransactionPreservesExactBodyAndIntentOnReopenAndRollsBothBackOnFailure",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.ReceiptStorageLifecycleTest",
+    "test": "trustedOsRootAliasDoesNotPermitAnUntrustedGeneratedChildSymlink",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.ReceiptStorageLifecycleTest",
+    "test": "actualProbeReopensItsCurrentPhysicalDatabaseAndMeasuresInstalledApk",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.ReceiptStorageLifecycleTest",
+    "test": "zeroOriginalFsyncSharesItsDescriptorIntentTransactionAndGlobalCleansOnlyOwnedBytes",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.RoleAdmissionLifecycleTest",
+    "test": "ownerRoundTripCannotReviveOldAllMentionOrAnnouncementAndMissingFlagNeverWrites",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: got: <false>, expected: is <true>"
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "viewRfc3339OffsetsAreParsedWithoutReencodingOriginalServerFields",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "retiredDraftIsNotRecordedAsAppliedAndIndependentTextRequiresExplicitRecovery",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "unknownNotFoundRequiresExplicitRetryAndUsesIdenticalOriginalRequest",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "changedDraftReplyRequiresReselectionAndCreatesNoCloudWrite",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "firstActivationRemainsEnabledAndSameIdentityResetRejectsLateResponse",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "wrongPrincipalOrNumericCountersRollbackSelfProjectionAndCursorTogether",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "schemaUpgradeRetainsPhysicalRegistrationAndSeparatesOriginalSchemaCursor",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "sparseVisibleObservationDoesNotClearIndependentManualUnreadAndConflictFreezesOriginal",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "lateIdentityOrChangedProjectionGuardCannotPublishSelfState",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "draftCapturesIndependentTextAndDistinctOriginalProofsWithoutChangingLocalMessageOutbox",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "unknownPreferenceSurvivesColdReopenAndReadonlyResultNeverReplaysWrite",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "s2ProjectionAndCursorShareTransactionAndWrongSubjectCannotPartiallyPublish",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.SelfStateTest",
+    "test": "queuedUiIntentCapturesLifecycleBeforeMutexAndCannotAdoptResetIdentity",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.StorageLifecycleTest",
+    "test": "durableQueueDraftRevisionAndCursorRemainAtomic",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.StorageLifecycleTest",
+    "test": "anonymousReconnectFreezesEveryAccountOfOnlyTheOldInstanceEpoch",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.StorageLifecycleTest",
+    "test": "versionTwoUpgradePreservesOriginalPendingIdentity",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceRecordingNativeTest",
+    "test": "cancelReleasesRecorderAndDeletesOnlyTheOwnedClip",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: Real microphone capture needs explicit voiceCapture=true on an isolated installation"
+  },
+  {
+    "class": "com.jobs.im.VoiceRecordingNativeTest",
+    "test": "changedFamilyRejectsClipAndReturningToOriginalCannotRestoreIt",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: Real microphone capture needs explicit voiceCapture=true on an isolated installation"
+  },
+  {
+    "class": "com.jobs.im.VoiceRecordingNativeTest",
+    "test": "realAacStopProducesPreviewWithoutStartingUpload",
+    "code": -4,
+    "stack": "org.junit.AssumptionViolatedException: Real microphone capture needs explicit voiceCapture=true on an isolated installation"
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadApiNativeTest",
+    "test": "committedRequiresOriginalDigestSizeNameAndCanonicalUrl",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadApiNativeTest",
+    "test": "missingResultIsReadOnlyAndKeepsExactOriginalTuple",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadApiNativeTest",
+    "test": "preparedNeverBecomesAUsableMediaUrl",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadApiNativeTest",
+    "test": "lateFamilyChangeCannotPromoteTheOriginalResult",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadGlobalFloorNativeTest",
+    "test": "conflictingObjectPreservesClipAndPendingCleanupUntilVerifiedHolderIsRepaired",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadGlobalFloorNativeTest",
+    "test": "globalDenySurvivesTerminalReceiptGcAndRejectsLateOriginalPrepare",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadGlobalFloorNativeTest",
+    "test": "verifiedGlobalCreatesDenyAfterTerminalReceiptWasAlreadyGc",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "completedAccountFloorRejectsLatePrepareAndLateObjectPromotion",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "changedFamilyCannotReusePreparedBytesAndDoesNotEraseTheOnlyClip",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "globalCleanupUsesOriginalSenderAndExactClientMapping",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "clipOnlyFailureIsRetainedAndBlocksNewHttpResponsibility",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "publicationFailureRetriesTheSameIdsAndRejectsAChangedOriginalBody",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "durableTerminalBeforeUnlinkResumesLocalCleanupWithoutHttp",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "interruptedCopyRemainsAttributableForExactAccountErasure",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "tornNewManifestDoesNotReplaceTheOriginalAtomicBody",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "durableManifestStageRecoversTheSameTaskWithoutSending",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "erasureRemovesExactAccountAndPreservesAnotherUsersTask",
+    "code": 0,
+    "stack": null
+  },
+  {
+    "class": "com.jobs.im.VoiceUploadQueueNativeTest",
+    "test": "uploadAndEnqueueUnknownKeepOriginalIdsAndReplyAcrossReconstruction",
+    "code": 0,
+    "stack": null
+  }
+]

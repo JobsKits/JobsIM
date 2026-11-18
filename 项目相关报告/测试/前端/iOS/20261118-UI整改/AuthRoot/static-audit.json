@@ -1,0 +1,57 @@
+{
+  "localization": {
+    "languages": 10,
+    "keysPerLanguage": {
+      "zh-Hans": 413,
+      "zh-Hant": 413,
+      "bo": 413,
+      "en": 413,
+      "ja": 413,
+      "fr": 413,
+      "es": 413,
+      "de": 413,
+      "ru": 413,
+      "ko": 413
+    },
+    "newKeysPerLanguage": {
+      "zh-Hans": 53,
+      "zh-Hant": 53,
+      "bo": 53,
+      "en": 53,
+      "ja": 53,
+      "fr": 53,
+      "es": 53,
+      "de": 53,
+      "ru": 53,
+      "ko": 53
+    },
+    "existingValuesPreserved": true,
+    "errors": []
+  },
+  "staticContrast": {
+    "light": {
+      "foreground/background": 15.844,
+      "foreground/panel": 16.682,
+      "foreground/selection": 15.293,
+      "secondary/background": 4.762,
+      "secondary/panel": 5.014,
+      "secondary/selection": 4.596,
+      "green/background": 4.789,
+      "green/panel": 5.042,
+      "green/selection": 4.622
+    },
+    "dark": {
+      "foreground/background": 16.509,
+      "foreground/panel": 14.247,
+      "foreground/selection": 11.071,
+      "secondary/background": 8.889,
+      "secondary/panel": 7.671,
+      "secondary/selection": 5.961,
+      "green/background": 9.141,
+      "green/panel": 7.889,
+      "green/selection": 6.131
+    },
+    "white_on_greenFill": 5.042
+  },
+  "boundary": "Final static tokens only; no runtime/typecheck/visual verification"
+}

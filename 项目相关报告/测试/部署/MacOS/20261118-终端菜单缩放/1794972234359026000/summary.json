@@ -1,0 +1,222 @@
+{
+  "fzfVersion": "0.75.0 (Homebrew)",
+  "fixture": "/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM 菜单缩放 cz7qbce4",
+  "terminalGuiDragVerified": false,
+  "scope": "真实PTY协议/窗口尺寸/键盘；未连接Terminal图形界面，未启停现有服务",
+  "sources": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "955ba7f9d2197e8a1a79a1360be3643867714c88f6f7750eaf5a86a99a6eec6b",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "ea390066e9e2514651164ac7f088c2f6673e441ba97caf7a6b9129c1b46c91c9"
+  },
+  "cases": [
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "browser-interrupt",
+      "passed": true,
+      "exitCode": 130,
+      "resizeOutputBytes": [
+        26016,
+        2720,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "browser-interrupt-empty",
+      "passed": true,
+      "exitCode": 130,
+      "resizeOutputBytes": [
+        26016,
+        2720,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "baseline",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        6146,
+        2396,
+        4289,
+        1866,
+        3261
+      ],
+      "alternateScreenEnters": 0,
+      "alternateScreenExits": 0
+    },
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "browser-choose",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        26016,
+        5440,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "browser-resume",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        26016,
+        5440,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 2,
+      "alternateScreenExits": 2
+    },
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "pick-choose",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        25720,
+        2580,
+        8656,
+        1734,
+        5632
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "mode": "pick-cancel",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        25720,
+        2580,
+        8656,
+        3468,
+        5632
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "mode": "browser-interrupt",
+      "passed": true,
+      "exitCode": 130,
+      "resizeOutputBytes": [
+        26016,
+        5440,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "mode": "browser-interrupt-empty",
+      "passed": true,
+      "exitCode": 130,
+      "resizeOutputBytes": [
+        13008,
+        2720,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "mode": "baseline",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        6774,
+        2396,
+        4289,
+        1866,
+        3261
+      ],
+      "alternateScreenEnters": 0,
+      "alternateScreenExits": 0
+    },
+    {
+      "source": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "mode": "browser-choose",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        13008,
+        2720,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "mode": "browser-resume",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        26016,
+        2720,
+        8804,
+        1869,
+        5780
+      ],
+      "alternateScreenEnters": 2,
+      "alternateScreenExits": 2
+    },
+    {
+      "source": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "mode": "pick-choose",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        25720,
+        2580,
+        8656,
+        1734,
+        5632
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    },
+    {
+      "source": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "mode": "pick-cancel",
+      "passed": true,
+      "exitCode": 0,
+      "resizeOutputBytes": [
+        25720,
+        2580,
+        8656,
+        1734,
+        5632
+      ],
+      "alternateScreenEnters": 1,
+      "alternateScreenExits": 1
+    }
+  ]
+}

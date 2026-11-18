@@ -1,0 +1,14 @@
+{
+  "origin": "http://127.0.0.1:54755",
+  "configFile": false,
+  "api": "Playwright explicit fixtures; every non-GET rejected",
+  "playwright": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+  "browserExecutable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "node": "v26.13.1",
+  "platform": "darwin",
+  "arch": "arm64",
+  "osRelease": "27.2.0",
+  "browserVersion": "157.0.8103.79",
+  "playwrightVersion": "1.65.1",
+  "startedAt": "2026-11-18T06:39:11.048Z"
+}

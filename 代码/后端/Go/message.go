@@ -13,7 +13,7 @@ import (
 	"unicode/utf8"
 )
 
-const messageColumns = `id::text,conversation_id::text,sender_id::text,client_msg_id,type,text,COALESCE(reply_to_id::text,''),COALESCE(attachment_id::text,''),created_at,updated_at,version,sequence,deleted,content_unavailable,content_version,export_pending_operation_id IS NOT NULL,COALESCE(sequence_epoch::text,'unknown'),COALESCE(creation_sequence::text,'unknown')`
+const messageColumns = `id::text,conversation_id::text,sender_id::text,client_msg_id,type,text,COALESCE(reply_to_id::text,''),COALESCE(attachment_id::text,''),created_at,updated_at,version,sequence,deleted,content_unavailable,content_version,export_pending_operation_id IS NOT NULL,COALESCE(sequence_epoch::text,'unknown'),COALESCE(creation_sequence::text,'unknown'),delete_scope,deletion_generation`
 
 // Field order and omitted additions preserve the original committed digest.
 type sendPayload struct {
@@ -33,8 +33,11 @@ type sendPayload struct {
 
 func scanMessage(row pgx.Row) (Message, error) {
 	var m Message
-	var version, sequence, contentVersion int64
-	e := row.Scan(&m.ID, &m.ConversationID, &m.SenderID, &m.ClientMsgID, &m.Type, &m.Text, &m.ReplyToID, &m.AttachmentID, &m.CreatedAt, &m.UpdatedAt, &version, &sequence, &m.Deleted, &m.ContentUnavailable, &contentVersion, &m.sourcePending, &m.CreationEpoch, &m.CreationSequence)
+	var version, sequence, contentVersion, deletion int64
+	e := row.Scan(&m.ID, &m.ConversationID, &m.SenderID, &m.ClientMsgID, &m.Type, &m.Text, &m.ReplyToID, &m.AttachmentID, &m.CreatedAt, &m.UpdatedAt, &version, &sequence, &m.Deleted, &m.ContentUnavailable, &contentVersion, &m.sourcePending, &m.CreationEpoch, &m.CreationSequence, &m.DeleteScope, &deletion)
+	if deletion > 0 {
+		m.DeletionGeneration = str(deletion)
+	}
 	m.Version = str(version)
 	m.ContentVersion = str(contentVersion)
 	m.Sequence = str(sequence)
@@ -80,6 +83,9 @@ func (a *App) loadMessage(ctx context.Context, id, user string) (Message, error)
 				return m, fail(403, "HISTORY_NOT_ALLOWED", "Message predates current membership")
 			}
 		}
+	}
+	if e = a.retentionReadState(ctx, &m); e != nil {
+		return m, e
 	}
 	e = a.enrich(ctx, &m, user)
 	if e == nil {
@@ -197,6 +203,9 @@ func (a *App) history(w http.ResponseWriter, r *http.Request) error {
 				continue
 			}
 		}
+		if e = a.retentionReadState(r.Context(), &m); e != nil {
+			return e
+		}
 		if e = a.enrich(r.Context(), &m, u.ID); e != nil {
 			return e
 		}
@@ -259,6 +268,9 @@ func (a *App) sendMessage(w http.ResponseWriter, r *http.Request) error {
 		if e != nil {
 			return e
 		}
+		if e = a.protectRetentionDeadlines(r.Context(), priorID); e != nil {
+			return e
+		}
 		respond(w, 200, m)
 		return nil
 	}
@@ -315,6 +327,13 @@ func (a *App) sendMessage(w http.ResponseWriter, r *http.Request) error {
 		return e
 	}
 	id := stableID(a.Config.Key, "message:"+u.ID+":"+q.ClientMsgID)
+	retention, e := a.prepareMessageRetention(r.Context(), u, id, r.PathValue("id"))
+	if e != nil {
+		return e
+	}
+	if q.Type == "forward" && retention.Policy.Mode == "after_receipt" {
+		return fail(409, "RETENTION_CONTENT_UNSUPPORTED", "Reference-only forwarding needs its independent source-holder receipt qualification")
+	}
 	if q.AttachmentID != "" {
 		if e = a.rpc(r.Context(), "media", "/internal/bind", map[string]string{"objectId": q.AttachmentID, "userId": u.ID, "messageId": id, "conversationId": r.PathValue("id"), "type": q.Type}, nil); e != nil {
 			return e
@@ -325,6 +344,9 @@ func (a *App) sendMessage(w http.ResponseWriter, r *http.Request) error {
 		return e
 	}
 	defer tx.Rollback(r.Context())
+	if e = a.enforceGroupRate(r.Context(), tx, meta, u.ID, r.PathValue("id")); e != nil {
+		return e
+	}
 	seq, e := nextSequence(r.Context(), tx, r.PathValue("id"))
 	if e != nil {
 		return e
@@ -342,6 +364,9 @@ func (a *App) sendMessage(w http.ResponseWriter, r *http.Request) error {
 	if e = a.persistMentions(r.Context(), tx, id, u.ID, r.PathValue("id"), mentions, q.MentionAll); e != nil {
 		return e
 	}
+	if e = a.persistMessageRetention(r.Context(), tx, id, retention); e != nil {
+		return e
+	}
 	_, e = tx.Exec(r.Context(), `INSERT INTO message.events(conversation_id,sequence,message_id) VALUES($1,$2,$3)`, r.PathValue("id"), seq, id)
 	if e != nil {
 		return e
@@ -355,6 +380,9 @@ func (a *App) sendMessage(w http.ResponseWriter, r *http.Request) error {
 	}
 	if e = clearAdmissionMarker(marker); e != nil {
 		return fail(503, "ADMISSION_RECOVERY_REQUIRED", "Original send committed; reconcile the original ID after admission recovery")
+	}
+	if e = a.protectRetentionDeadlines(r.Context(), id); e != nil {
+		return e
 	}
 	m, e := a.loadMessage(r.Context(), id, u.ID)
 	if e != nil {
@@ -425,6 +453,10 @@ func (a *App) editMessage(w http.ResponseWriter, r *http.Request) error {
 	if q.ExpectedVersion != m.Version {
 		return fail(409, "VERSION_CONFLICT", "Reload the current message")
 	}
+	retentionEdit, e := a.prepareRetentionEdit(r.Context(), m)
+	if e != nil {
+		return e
+	}
 	operation := a.messageMutationOperation(u.ID, m.ID, "edit", q)
 	version, e := strconv.ParseInt(m.Version, 10, 64)
 	if e != nil {
@@ -445,7 +477,7 @@ func (a *App) editMessage(w http.ResponseWriter, r *http.Request) error {
 		if tag.RowsAffected() != 1 {
 			return fail(409, "VERSION_CONFLICT", "Concurrent modification")
 		}
-		return nil
+		return a.persistRetentionEdit(r.Context(), tx, m.ID, retentionEdit)
 	})
 	if e != nil {
 		return e
@@ -465,6 +497,10 @@ func (a *App) deleteMessage(w http.ResponseWriter, r *http.Request) error {
 	if e != nil {
 		return e
 	}
+	q, e := decodeRetractionRequest(r)
+	if e != nil {
+		return e
+	}
 	m, e := a.loadMessage(r.Context(), r.PathValue("id"), u.ID)
 	if e != nil {
 		return e
@@ -478,6 +514,9 @@ func (a *App) deleteMessage(w http.ResponseWriter, r *http.Request) error {
 	}
 	if m.SenderID != u.ID && meta["readOnly"] == true {
 		return fail(409, "GROUP_OWNER_UNAVAILABLE", "Only the author retains erasure rights while the group is restricted")
+	}
+	if !m.Deleted && q.ExpectedVersion != "" && m.Version != q.ExpectedVersion {
+		return fail(409, "VERSION_CONFLICT", "Message changed after the selected snapshot; reload before a new retraction")
 	}
 	payload := map[string]any{"messageId": m.ID}
 	operation := "retract:" + m.ID
@@ -495,7 +534,7 @@ func (a *App) deleteMessage(w http.ResponseWriter, r *http.Request) error {
 	}
 	if !m.Deleted {
 		e = a.mutateMessage(r, u, m, operation, func(tx pgx.Tx, seq int64) error {
-			_, e := tx.Exec(r.Context(), `UPDATE message.messages SET deleted=true,text='',content_unavailable=false,content_version=content_version+1 WHERE id=$1 AND export_pending_operation_id=$2`, m.ID, operation)
+			_, e := tx.Exec(r.Context(), `UPDATE message.messages SET deleted=true,text='',content_unavailable=false,content_version=content_version+1,delete_scope='global',deletion_generation=deletion_generation+CASE WHEN delete_scope='global' THEN 0 ELSE 1 END WHERE id=$1 AND export_pending_operation_id=$2`, m.ID, operation)
 			return e
 		})
 		if e != nil {

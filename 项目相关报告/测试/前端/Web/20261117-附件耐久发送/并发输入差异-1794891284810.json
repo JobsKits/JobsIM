@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-17T04:54:44.810Z",
+  "result": [
+    {
+      "proof": "项目相关报告/测试/前端/Web/20261117-注销本机清理/规则-1794888586629/结果.json",
+      "inputs": 4,
+      "changed": []
+    },
+    {
+      "proof": "项目相关报告/实现进度/20261117-Android原生录音/最终待验源清单-20261117-125047.json",
+      "inputs": 23,
+      "changed": [
+        {
+          "file": "代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt",
+          "expected": "8e1a4cfdd083759c81ff4921fd64e2326549ddebc7d47ba319c3af80129b5d73",
+          "current": "9f8bc0a7c3522476870e4cc7b9d3dd26a461710345b7ee56aaf33b282924c38b"
+        }
+      ]
+    }
+  ],
+  "decision": "Keep old proofs frozen; inspect current exact source changes before any new claims. No heavy window or source rollback."
+}

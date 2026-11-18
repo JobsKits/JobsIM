@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+    "node_modules/typescript/bin/tsc",
+    "--noEmit"
+  ],
+  "exitCode": 1,
+  "elapsedSeconds": 0.24,
+  "freeBeforeBytes": 7799582720
+}

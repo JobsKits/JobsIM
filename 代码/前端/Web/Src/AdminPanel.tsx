@@ -9,6 +9,9 @@ import {
 } from "lucide-react";
 import { api, json, ApiError } from "./api";
 import { type UserReport } from "./ReportPanel";
+import AdminReportDetails from "./AdminReportDetail";
+import { checkedReportDetail, reportListPath, reportUUID, type AdminReportDetail } from "./AdminReportProtocol";
+import { authSnapshot, authSnapshotCurrent, type AuthSnapshot } from "./AuthSession";
 type AdminUser = {
   id: string;
   username: string;
@@ -61,6 +64,17 @@ export default function AdminPanel({
     [state, setState] = useState("active"),
     [pendingVersion, setPendingVersion] = useState(0);
   const [reports, setReports] = useState<UserReport[]>([]);
+  const [reportOwner, setReportOwner] = useState(actorId);
+  const [reporterFilter, setReporterFilter] = useState(""), [targetFilter, setTargetFilter] = useState("");
+  const [detail, setDetail] = useState<{ value: AdminReportDetail; owner: AuthSnapshot; actor: string; sequence: number } | null>(null);
+  const [selectedReport, setSelectedReport] = useState<UserReport | null>(null), [detailBusy, setDetailBusy] = useState(false);
+  const reportFilters = useRef({ reporterId: "", targetUserId: "" });
+  const detailGeneration = useRef(0), detailRequest = useRef<AbortController | null>(null), detailOwner = useRef<AuthSnapshot | null>(null);
+  const closeDetail = () => {
+    detailGeneration.current++; detailRequest.current?.abort(); detailRequest.current = null; detailOwner.current = null;
+    setDetail(null); setSelectedReport(null); setDetailBusy(false);
+  };
+
   const reportStatus = (value: string) =>
     t(
       (
@@ -83,6 +97,7 @@ export default function AdminPanel({
           : t("failure"),
     );
   const load = async () => {
+    closeDetail();
     const current = ++generation.current;
     try {
       const results = await Promise.all([
@@ -91,16 +106,21 @@ export default function AdminPanel({
         ),
         api<Capabilities>("/capabilities"),
         reportsEnabled
-          ? api<{ items: UserReport[] }>("/admin/reports")
+          ? api<{ items: UserReport[] }>(reportListPath(reportFilters.current.reporterId, reportFilters.current.targetUserId), { cache: "no-store", redirect: "error" })
           : Promise.resolve({ items: [] as UserReport[] }),
       ]);
       if (current !== generation.current) return;
       setUsers(results[0].items ?? []);
       setCaps(results[1]);
       setReports(results[2].items ?? []);
+      setReportOwner(actorId);
       onFeatures(results[1].features);
     } catch (error) {
-      if (current === generation.current) fail(error);
+      if (current === generation.current) {
+        setReports([]);
+        closeDetail();
+        fail(error);
+      }
     }
   };
   useEffect(() => {
@@ -108,7 +128,44 @@ export default function AdminPanel({
     return () => {
       generation.current++;
     };
-  }, []);
+  }, [actorId, reportsEnabled]);
+  useEffect(() => {
+    closeDetail();
+    const changed = () => { if (detailOwner.current && !authSnapshotCurrent(detailOwner.current)) closeDetail(); };
+    const hidden = () => { if (document.hidden) closeDetail(); else changed(); };
+    window.addEventListener("jobsim-auth-required", changed);
+    window.addEventListener("storage", changed);
+    document.addEventListener("visibilitychange", hidden);
+    return () => {
+      detailGeneration.current++; detailRequest.current?.abort(); detailRequest.current = null;
+      window.removeEventListener("jobsim-auth-required", changed);
+      window.removeEventListener("storage", changed);
+      document.removeEventListener("visibilitychange", hidden);
+    };
+  }, [actorId, reportsEnabled]);
+  const openReport = async (report: UserReport) => {
+    closeDetail(); setSelectedReport(report); setDetailBusy(true);
+    const current = detailGeneration.current, owner = authSnapshot(), controller = new AbortController();
+    detailRequest.current = controller; detailOwner.current = owner;
+    try {
+      const value = checkedReportDetail(await api<AdminReportDetail>("/admin/reports/" + encodeURIComponent(report.id),
+        { signal: controller.signal, cache: "no-store", redirect: "error" }), report.id);
+      if (current !== detailGeneration.current || controller.signal.aborted || !authSnapshotCurrent(owner)) return;
+      setDetail({ value, owner, actor: actorId, sequence: current });
+    } catch (error) {
+      if (current === detailGeneration.current && !controller.signal.aborted) { setDetail(null); fail(error); }
+    } finally {
+      if (current === detailGeneration.current) setDetailBusy(false);
+    }
+  };
+  const filterReports = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    try {
+      reportListPath(reporterFilter, targetFilter);
+      reportFilters.current = { reporterId: reporterFilter.trim(), targetUserId: targetFilter.trim() };
+      closeDetail(); setReports([]); void load();
+    } catch (error) { fail(error); }
+  };
   useEffect(() => {
     if (!op) return;
     const frame = requestAnimationFrame(() => {
@@ -309,35 +366,32 @@ export default function AdminPanel({
         {reportsEnabled && (
           <section className="admin-reports">
             <h3>{t("reports")}</h3>
-            {reports.map((item) => (
-              <button
-                className="setting-line"
-                key={item.id}
-                disabled={!canWrite || busy}
-                onClick={() =>
-                  select({
-                    action: "report.resolve",
-                    targetId: item.id,
-                    path: "/admin/reports/" + encodeURIComponent(item.id),
-                    method: "PATCH",
-                    label: item.reason,
-                    version: item.version,
-                  })
-                }
-              >
-                <span>
-                  <span>
-                    {item.reason}
-                    <small>{item.targetId.slice(0, 8)}</small>
-                  </span>
-                </span>
+            <form className="admin-report-filters" onSubmit={filterReports}>
+              <label>{t("reporterId")}<input value={reporterFilter} onChange={event => setReporterFilter(event.target.value)} pattern={reportUUID.source.replace(/a-f/g, "a-fA-F")} maxLength={36} aria-label={t("reporterId")} /></label>
+              <label>{t("targetUserId")}<input value={targetFilter} onChange={event => setTargetFilter(event.target.value)} pattern={reportUUID.source.replace(/a-f/g, "a-fA-F")} maxLength={36} aria-label={t("targetUserId")} /></label>
+              <div className="admin-report-filter-actions">
+                <button className="secondary" type="submit">{t("filterReports")}</button>
+                <button className="secondary" type="button" onClick={() => { setReporterFilter(""); setTargetFilter(""); reportFilters.current = { reporterId: "", targetUserId: "" }; closeDetail(); setReports([]); void load(); }}>{t("clearReportFilters")}</button>
+              </div>
+            </form>
+            {(reportOwner === actorId ? reports : []).map((item) => (
+              <button className="setting-line" key={item.id} disabled={busy} onClick={() => void openReport(item)}>
+                <span><span>{item.reason}<small>{item.targetId.slice(0, 8)}</small></span></span>
                 <span>{reportStatus(item.state)}</span>
               </button>
             ))}
-            {!reports.length && empty(() => void load())}
+            {(!reports.length || reportOwner !== actorId) && empty(() => void load())}
           </section>
         )}
       </div>
+      {reportsEnabled && selectedReport && !detail && <section className="admin-report-detail" aria-live="polite">
+        <header><h3>{t("reportDetail")}</h3><button type="button" className="secondary" onClick={closeDetail}>{t("close")}</button></header>
+        <p>{t(detailBusy ? "working" : "contentUnavailable")}</p>
+        {!detailBusy && <button type="button" className="secondary" onClick={() => void openReport(selectedReport)}>{t("reload")}</button>}
+      </section>}
+      {reportsEnabled && detail && detail.actor === actorId && <AdminReportDetails key={detail.value.report.id + "|" + detail.owner.revision + "|" + detail.sequence} detail={detail.value} owner={detail.owner} t={t} canWrite={canWrite && !busy}
+        onClose={closeDetail} onInvalid={() => { closeDetail(); onNotice(t("contentUnavailable")); }} onResolve={() => select({ action: "report.resolve", targetId: detail.value.report.id,
+          path: "/admin/reports/" + encodeURIComponent(detail.value.report.id), method: "PATCH", label: detail.value.report.reason, version: detail.value.report.version })} />}
       {op && (
         <form
           className="admin-operation"

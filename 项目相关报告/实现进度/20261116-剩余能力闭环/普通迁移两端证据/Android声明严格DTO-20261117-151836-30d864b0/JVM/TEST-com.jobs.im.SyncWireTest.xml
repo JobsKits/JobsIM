@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jobs.im.SyncWireTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-17T07:19:20.709Z" hostname="JobsdeAir" time="0.009">
+  <properties/>
+  <testcase name="invalidUtf8CannotPassEvenWhenItsByteDigestMatches" classname="com.jobs.im.SyncWireTest" time="0.002"/>
+  <testcase name="rfc3339OffsetsAndVariableFractionsKeepTheSameInstant" classname="com.jobs.im.SyncWireTest" time="0.004"/>
+  <testcase name="originalEnvelopeHashUsesOriginalBytesRatherThanReserializedJson" classname="com.jobs.im.SyncWireTest" time="0.002"/>
+  <testcase name="countersRemainExactAndRejectNonCanonicalOrOverflowValues" classname="com.jobs.im.SyncWireTest" time="0.0"/>
+  <testcase name="clientMessageIdIsOpaqueAndBoundedByUtf8Bytes" classname="com.jobs.im.SyncWireTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

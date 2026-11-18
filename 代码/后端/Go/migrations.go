@@ -120,6 +120,9 @@ func (a *App) migrate(ctx context.Context) error {
 		if err = migrateSyncReceipts(ctx, tx); err != nil {
 			return err
 		}
+		if err = migrateSyncMigrations(ctx, tx); err != nil {
+			return err
+		}
 		if err = migrateSelfViews(ctx, tx, a.Config.DeploymentID); err != nil {
 			return err
 		}
@@ -132,6 +135,9 @@ func (a *App) migrate(ctx context.Context) error {
 		if err = migrateSelfDraftOperations(ctx, tx, a.Config.DeploymentID); err != nil {
 			return err
 		}
+	}
+	if err = migrateMigrationInterests(ctx, tx, a.Role); err != nil {
+		return err
 	}
 	if owner := syncOwnerSchema(a.Role); owner != "" {
 		if owner == "message" {
@@ -163,7 +169,19 @@ CREATE TRIGGER sync_creation_epoch BEFORE INSERT OR UPDATE ON message.messages F
 			return err
 		}
 	}
+	if err = migrateRetentionLegacy(ctx, tx, a.Role); err != nil {
+		return err
+	}
 	if err = migratePersonalExports(ctx, tx, a.Role); err != nil {
+		return err
+	}
+	if err = migrateAccountDeletion(ctx, tx, a.Role); err != nil {
+		return err
+	}
+	if err = migrateMediaUploads(ctx, tx, a.Role); err != nil {
+		return err
+	}
+	if err = migrateMigrationInvalidations(ctx, tx, a.Role); err != nil {
 		return err
 	}
 	return tx.Commit(ctx)

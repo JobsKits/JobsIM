@@ -1,0 +1,209 @@
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+com.jobs.im.MigrationHistoryLifecycleTest:
+INSTRUMENTATION_STATUS: test=validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(MigrationHistoryLifecycleTest.kt:37)
+
+INSTRUMENTATION_STATUS: stream=
+Error in validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(com.jobs.im.MigrationHistoryLifecycleTest):
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(MigrationHistoryLifecycleTest.kt:37)
+
+INSTRUMENTATION_STATUS: test=validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(MigrationHistoryLifecycleTest.kt:56)
+
+INSTRUMENTATION_STATUS: stream=
+Error in durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(com.jobs.im.MigrationHistoryLifecycleTest):
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(MigrationHistoryLifecycleTest.kt:56)
+
+INSTRUMENTATION_STATUS: test=durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.jobs.im.MigrationHistoryLifecycleTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=3
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(MigrationHistoryLifecycleTest.kt:47)
+
+INSTRUMENTATION_STATUS: stream=
+Error in newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(com.jobs.im.MigrationHistoryLifecycleTest):
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(MigrationHistoryLifecycleTest.kt:47)
+
+INSTRUMENTATION_STATUS: test=newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 0.075
+There were 3 failures:
+1) validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(com.jobs.im.MigrationHistoryLifecycleTest)
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.validLate200CannotReviveGloballyErasedForwardOrPreviouslyCollectedOwnedBody(MigrationHistoryLifecycleTest.kt:37)
+2) durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(com.jobs.im.MigrationHistoryLifecycleTest)
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.durableUnavailableForwardPlaceholderCanStillUseFreshLegitimate200(MigrationHistoryLifecycleTest.kt:56)
+3) newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(com.jobs.im.MigrationHistoryLifecycleTest)
+java.lang.IllegalArgumentException: Failed requirement.
+	at com.jobs.im.MigrationStore.root(MigrationStore.kt:59)
+	at com.jobs.im.MigrationStore.disk(MigrationStore.kt:62)
+	at com.jobs.im.MigrationStore.install(MigrationStore.kt:72)
+	at com.jobs.im.MigrationHistoryLifecycleTest.fixture(MigrationHistoryLifecycleTest.kt:33)
+	at com.jobs.im.MigrationHistoryLifecycleTest.access$fixture(MigrationHistoryLifecycleTest.kt:16)
+	at com.jobs.im.MigrationHistoryLifecycleTest$fixture$1.invokeSuspend(MigrationHistoryLifecycleTest.kt:15)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:34)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+	at kotlinx.coroutines.BuildersKt.runBlocking(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+	at kotlinx.coroutines.BuildersKt.runBlocking$default(dex-id-a75164deb7ea3192df431dac7c06751b56aaa58f:1)
+	at com.jobs.im.MigrationHistoryLifecycleTest.newerLocalContentVersionAndDeletedFloorRejectOldReferenceAfterAwait(MigrationHistoryLifecycleTest.kt:47)
+
+FAILURES!!!
+Tests run: 3,  Failures: 3
+
+
+INSTRUMENTATION_CODE: -1

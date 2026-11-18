@@ -1,0 +1,9 @@
+{
+  "status": "expected-red",
+  "processExit": 0,
+  "ttyRows": 30,
+  "ttyColumns": 80,
+  "fallbackTextPresent": true,
+  "qrGlyphsPresent": false,
+  "reason": "Mac production caller omitted --ansi; public helper rejects rendering despite sufficient TTY width"
+}

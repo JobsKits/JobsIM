@@ -16,8 +16,8 @@ func init() {
 }
 func (a *App) exportMediaRoutes(h func(string, func(http.ResponseWriter, *http.Request) error), internal func(func(http.ResponseWriter, *http.Request) error) func(http.ResponseWriter, *http.Request) error) {
 	a.exportSourceCleanupRoutes(h, internal)
-	h("POST /internal/exports/register-media", internal(a.registerMediaExport))
-	h("POST /internal/exports/read-media", internal(a.readMediaExport))
+	h("POST /internal/exports/register-media", internal(a.withAdmissionFence("GET /api/media/{id}", a.registerMediaExport)))
+	h("POST /internal/exports/read-media", internal(a.withAdmissionFence("GET /api/media/{id}", a.readMediaExport)))
 }
 func (a *App) checkMediaExportSource(ctx context.Context, q exportHolderRequest) error {
 	var proof struct {
@@ -29,7 +29,7 @@ func (a *App) checkMediaExportSource(ctx context.Context, q exportHolderRequest)
 	if proof.AttachmentID == nil || *proof.AttachmentID != q.ObjectID {
 		return fail(403, "EXPORT_ATTACHMENT_CHANGED", "Attachment does not belong to the registered source")
 	}
-	return nil
+	return a.requireMediaRetention(ctx, q.MessageID, q.ObjectID)
 }
 func (a *App) registerMediaExport(w http.ResponseWriter, r *http.Request) error {
 	var q exportHolderRequest
@@ -38,6 +38,10 @@ func (a *App) registerMediaExport(w http.ResponseWriter, r *http.Request) error 
 	}
 	if e := a.checkMediaExportSource(r.Context(), q); e != nil {
 		return e
+	}
+	objectDeadline, deadlineError := a.mediaReadDeadline(r.Context(), q.MessageID, q.ObjectID)
+	if deadlineError != nil {
+		return deadlineError
 	}
 	tx, e := a.DB.Begin(r.Context())
 	if e != nil {
@@ -56,6 +60,9 @@ func (a *App) registerMediaExport(w http.ResponseWriter, r *http.Request) error 
 	expires := created.Add(30 * 24 * time.Hour)
 	if q.ExpiresAt.Before(expires) {
 		expires = q.ExpiresAt
+	}
+	if !objectDeadline.IsZero() && objectDeadline.Before(expires) {
+		expires = objectDeadline
 	}
 	if !time.Now().Before(expires) {
 		return fail(403, "EXPORT_MEDIA_EXPIRED", "Source media expired")
@@ -107,7 +114,7 @@ func (a *App) readMediaExport(w http.ResponseWriter, r *http.Request) error {
 	if e != nil {
 		return fail(403, "EXPORT_MEDIA_HOLDER_REQUIRED", "Current registered media holder required")
 	}
-	if key != filepath.Base(key) {
+	if key != q.ObjectID || key != filepath.Base(key) {
 		return fail(500, "STORAGE_INTEGRITY", "Invalid media storage key")
 	}
 	f, e := os.Open(filepath.Join(a.Config.StateDir, "Media", key))

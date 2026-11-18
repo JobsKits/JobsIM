@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "nativeMacOSChecks": 16,
+  "linuxNativeExecuted": false,
+  "usesRealInstance": false,
+  "inputs": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "1f37b06919add4e87d83aa020d774250becf644699a623242c799fe77dccc6be",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "afac444af942b8796c0ebd7848f3da5a1c9759d08782dc2a8c42f570ae9f3303",
+    "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "c0f76da3b825b90b11360a1aa443babc8d7e504d1968af7506ab27e983e4c5c7",
+    "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "071594ac46ce3995d8cf5db15b3266278f9483d0de5506dc151190a220f7ec5e"
+  },
+  "after": {
+    "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command": "1f37b06919add4e87d83aa020d774250becf644699a623242c799fe77dccc6be",
+    "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command": "afac444af942b8796c0ebd7848f3da5a1c9759d08782dc2a8c42f570ae9f3303",
+    "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh": "c0f76da3b825b90b11360a1aa443babc8d7e504d1968af7506ab27e983e4c5c7",
+    "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh": "071594ac46ce3995d8cf5db15b3266278f9483d0de5506dc151190a220f7ec5e"
+  },
+  "results": [
+    {
+      "path": "部署/MacOS/Deployment/【MacOS】部署JobsIM.command/【MacOS】部署JobsIM.command",
+      "syntaxExit": 0,
+      "nativeExit": 0
+    },
+    {
+      "path": "部署/MacOS/Undeployment/【MacOS】反部署JobsIM.command/【MacOS】反部署JobsIM.command",
+      "syntaxExit": 0,
+      "nativeExit": 0
+    },
+    {
+      "path": "部署/Ubuntu/Deployment/【Linux】部署JobsIM.sh/【Linux】部署JobsIM.sh",
+      "syntaxExit": 0
+    },
+    {
+      "path": "部署/Ubuntu/Undeployment/【Linux】反部署JobsIM.sh/【Linux】反部署JobsIM.sh",
+      "syntaxExit": 0
+    }
+  ]
+}

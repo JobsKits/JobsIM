@@ -263,7 +263,7 @@ export class ExportText {
   "de": [
     "Meine Daten exportieren",
     "Erstellen Sie ein Paket aktuell zugänglicher Daten, Nachrichten und Originaldateien. Weiterleitungen sind Platzhalter; Passwörter, Wiederherstellungscodes und Sitzungsschlüssel fehlen.",
-    "Exporte dieses Browsers",
+    "Exporte dieses Geräts",
     "Export anfordern",
     "Zum Export verbinden",
     "Diese Instanz bietet keinen regulären Export. Verbinden Sie eine unterstützte Instanz und laden Sie neu.",
@@ -286,7 +286,7 @@ export class ExportText {
     "Abgelaufen",
     "Wird bereinigt",
     "Verfügbar bis",
-    "Hier stehen nur Anfragen dieses Browsers. Das Löschen von Websitedaten bricht keinen Serverexport ab.",
+    "Hier stehen nur Anfragen dieses Geräts. Das Löschen lokaler App-Daten bricht keinen Serverexport ab.",
     "Drei Anfragen täglich. Pakete bleiben normalerweise 24 Stunden; frühere Rechteverluste oder Fristen beenden die Auslieferung.",
     "Die ursprüngliche Anfrage bleibt erhalten. Prüfen Sie das Ergebnis vor einer ausdrücklichen Wiederholung derselben Anfrage.",
     "Rechte werden vor Download und Speichern geprüft. Abbrechen der Dateiauswahl bedeutet nie gespeichert. Extern gespeicherte ZIPs unterliegen keiner späteren Serverbereinigung.",

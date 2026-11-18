@@ -47,16 +47,20 @@ try:
  found=call('GET','/api/search?q=durable',token=bt);assert any(x['id']==m['id'] for x in found['items'])
  history=call('GET',path,token=bt);assert len(history['items'])==2;assert history['cursor']!='0'
  call('PUT','/api/blocks/'+b['user']['id'],{},at);call('POST',path,{'clientMsgId':str(uuid.uuid4()),'type':'text','text':'Blocked','sendAdmission':again['sendAdmission']},bt,expect=409)
+ call('POST',path,{'clientMsgId':str(uuid.uuid4()),'type':'text','text':'Blocked reverse','sendAdmission':conv['sendAdmission']},at,expect=409)
+ for actor,peer in [(at,b['user']['id']),(bt,a['user']['id'])]:assert any(item['id']==peer for item in call('GET','/api/contacts',token=actor)['items'])
  blocked_inbox=call('GET','/api/contacts',token=bt);assert 'requester' not in next(x for x in blocked_inbox['requests'] if x['id']==request['id'])
+ blocked=call('POST','/api/conversations',{'kind':'direct','memberIds':[b['user']['id']]},at);assert blocked['id']==conv['id'] and blocked['sendAdmission']==''
  call('DELETE','/api/blocks/'+b['user']['id'],token=at);call('POST','/api/contacts/requests/'+request['id']+'/accept',{},bt,expect=409)
- # Reopening is an explicit recipient-owned new generation, not an unblock side effect.
- call('POST','/api/contacts/requests',{'userId':a['user']['id'],'requestId':str(uuid.uuid4())},bt,expect=403)
- reopen_body={'requestId':str(uuid.uuid4())};opened=call('POST','/api/contacts/'+b['user']['id']+'/reopen',reopen_body,at)
- assert opened['direction']=='inbound' and opened['current'];assert call('POST','/api/contacts/'+b['user']['id']+'/reopen',reopen_body,at)['generation']==opened['generation']
- call('POST','/api/contacts/'+c['user']['id']+'/reopen',reopen_body,at,expect=409)
- # Alice may reopen her own inbox; Bob's independently closed inbox is unchanged.
- call('POST','/api/contacts/requests',{'userId':b['user']['id'],'requestId':str(uuid.uuid4())},at,expect=403)
- renewed=call('POST','/api/contacts/requests',{'userId':a['user']['id'],'requestId':str(uuid.uuid4())},bt);call('POST','/api/contacts/requests/'+renewed['id']+'/accept',{},at)
+ restored=call('POST','/api/conversations',{'kind':'direct','memberIds':[b['user']['id']]},at);assert restored['sendAdmission'] and restored['sendAdmission']!=conv['sendAdmission']
+ call('POST',path,{'clientMsgId':str(uuid.uuid4()),'type':'text','text':'Old admission retired','sendAdmission':conv['sendAdmission']},at,expect=409)
+ # Delete removes both lists; only a new independent request and acceptance rebuild it.
+ call('DELETE','/api/contacts/'+b['user']['id'],token=at)
+ for actor,peer in [(at,b['user']['id']),(bt,a['user']['id'])]:assert all(item['id']!=peer for item in call('GET','/api/contacts',token=actor)['items'])
+ renewed=call('POST','/api/contacts/requests',{'userId':a['user']['id'],'requestId':str(uuid.uuid4())},bt);call('POST','/api/contacts/requests/'+renewed['id']+'/reject',{},at)
+ next_request={'userId':a['user']['id'],'requestId':str(uuid.uuid4())};renewed=call('POST','/api/contacts/requests',next_request,bt);assert call('POST','/api/contacts/requests',next_request,bt)['id']==renewed['id']
+ duplicate=call('POST','/api/contacts/requests',{'userId':a['user']['id'],'requestId':str(uuid.uuid4())},bt,expect=409);assert duplicate['error']['code']=='CONTACT_REQUEST_PENDING'
+ call('POST','/api/contacts/requests/'+renewed['id']+'/accept',{},at)
  call('POST','/api/contacts/requests',{'userId':b['user']['id'],'requestId':contactRequestID},at,expect=409)
  # Group membership and author-only editing are independent of direct friendship state.
  selfconv=call('POST','/api/conversations',{'kind':'self','memberIds':[]},at);assert selfconv['memberIds']==[a['user']['id']]

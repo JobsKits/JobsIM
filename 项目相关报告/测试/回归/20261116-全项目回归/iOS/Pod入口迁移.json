@@ -1,0 +1,14 @@
+[
+  {
+    "action": "Install",
+    "case": "中文空格emoji复制改名后，由工程外cwd按XcodeWorkspacePath只读定位",
+    "exit": 0,
+    "sourceSHA256": "906d5c0ac10111aceec2f84b38431559311f47f3f85e005d9be0d029d049ad05"
+  },
+  {
+    "action": "Update",
+    "case": "中文空格emoji复制改名后，由工程外cwd按XcodeWorkspacePath只读定位",
+    "exit": 0,
+    "sourceSHA256": "fedd366440bbc67e1bf6b5fbf9f326f2a6805df5de78928f9b13210ad7489ce3"
+  }
+]

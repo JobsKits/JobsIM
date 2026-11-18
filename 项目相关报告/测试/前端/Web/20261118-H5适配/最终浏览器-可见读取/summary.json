@@ -1,0 +1,211 @@
+{
+  "status": "passed",
+  "results": [
+    {
+      "name": "mobile conversation touch navigation",
+      "status": "passed"
+    },
+    {
+      "name": "touch send remains usable",
+      "status": "passed"
+    },
+    {
+      "name": "keyboard visible viewport keeps composer inside",
+      "status": "passed"
+    },
+    {
+      "name": "keyboard viewport offset keeps app visible",
+      "status": "passed"
+    },
+    {
+      "name": "pinch zoom retains document layout",
+      "status": "passed"
+    },
+    {
+      "name": "pinched visual viewport excludes an offscreen message still inside the layout container",
+      "status": "passed"
+    },
+    {
+      "name": "visible read bounds also exclude shifted viewport top and horizontal clipping",
+      "status": "passed"
+    },
+    {
+      "name": "coupled layout and visual viewport shrink at 230px preserves reading and sending",
+      "status": "passed"
+    },
+    {
+      "name": "touch attachment opens the browser file chooser",
+      "status": "passed"
+    },
+    {
+      "name": "touch recording with synthetic microphone retains preview and cancellation",
+      "status": "passed"
+    },
+    {
+      "name": "layout 320x568",
+      "status": "passed"
+    },
+    {
+      "name": "layout 390x844",
+      "status": "passed"
+    },
+    {
+      "name": "layout 430x932",
+      "status": "passed"
+    },
+    {
+      "name": "layout 844x390",
+      "status": "passed"
+    },
+    {
+      "name": "CtrlK follows the visible sidebar on coarse-pointer landscape",
+      "status": "passed"
+    },
+    {
+      "name": "touch return to conversation list",
+      "status": "passed"
+    },
+    {
+      "name": "mobile authentication modal fits visible viewport",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font zh-CN",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font zh-TW",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font bo",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font en",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font ja",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font fr",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font es",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font de",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font ru",
+      "status": "passed"
+    },
+    {
+      "name": "mobile small font ko",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font zh-CN",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font zh-TW",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font bo",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font en",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font ja",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font fr",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font es",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font de",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font ru",
+      "status": "passed"
+    },
+    {
+      "name": "mobile normal font ko",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font zh-CN",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font zh-TW",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font bo",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font en",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ja",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font fr",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font es",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font de",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ru",
+      "status": "passed"
+    },
+    {
+      "name": "mobile large font ko",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme light",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme dark",
+      "status": "passed"
+    },
+    {
+      "name": "mobile theme system",
+      "status": "passed"
+    },
+    {
+      "name": "no unhandled page errors",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "scope": "Chrome mobile/touch, synthetic microphone and explicit visualViewport fixture; not physical iOS/Android keyboard, real microphone or real HTTPS"
+}

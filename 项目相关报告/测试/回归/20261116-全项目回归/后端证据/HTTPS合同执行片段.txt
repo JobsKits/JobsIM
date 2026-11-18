@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+"""Strict-TLS smoke against only the current newly created regression realm."""
+import base64, hashlib, io, json, os, pathlib, secrets, ssl, time, urllib.error, urllib.parse, urllib.request, uuid, zipfile
+run=pathlib.Path(os.environ['JOBS_IM_REGRESSION_RUN'])
+base='https://127.0.0.1:59443'
+trust=ssl.create_default_context(cafile=str(run/'TLS/ca.crt'))
+checks=[]
+def check(value,label):
+    if not value: raise AssertionError(label)
+    checks.append(label)
+def call(method,path,body=None,actor=None,expect=200,binary=False,headers=None):
+    payload=None if body is None else json.dumps(body).encode()
+    h={'Content-Type':'application/json'}
+    if actor:h['Authorization']='Bearer '+actor['token']
+    h.update(headers or {})
+    request=urllib.request.Request(base+path,data=payload,method=method,headers=h)
+    try:
+        with urllib.request.urlopen(request,context=trust,timeout=20) as response:status=response.status;raw=response.read();rh=response.headers
+    except urllib.error.HTTPError as error:status=error.code;raw=error.read();rh=error.headers
+    code=None
+    try:parsed=json.loads(raw)
+    except Exception:parsed=None
+    if isinstance(parsed,dict):code=parsed.get('error',{}).get('code')
+    check(status==expect,method+' '+path.split('?')[0]+' status '+str(status)+(('/'+code) if code else ''))
+    return (raw,rh) if binary else parsed
+uid=lambda:str(uuid.uuid4())
+password='Regression-only original phrase '+secrets.token_hex(10)
+name='reg_'+secrets.token_hex(5)
+actor=call('POST','/api/auth/register',{'username':name,'password':password,'requestId':uid(),'deviceName':'Regression native'})
+peer=call('POST','/api/auth/register',{'username':'peer_'+secrets.token_hex(5),'password':password,'requestId':uid(),'deviceName':'Regression peer'})
+epoch=actor['restoreEpoch']
+request=call('POST','/api/contacts/requests',{'userId':peer['user']['id'],'requestId':uid()},actor)
+call('POST','/api/contacts/requests/'+request['id']+'/accept',{},peer)
+conversation=call('POST','/api/conversations',{'kind':'group','title':'Isolated regression','memberIds':[peer['user']['id']]},actor)
+conversation_id=conversation['id']
+payload={'clientMsgId':uid(),'type':'text','text':'isolated durable regression','restoreEpoch':epoch,'sendAdmission':conversation['sendAdmission']}
+message=call('POST','/api/conversations/'+conversation_id+'/messages',payload,actor)
+check(call('POST','/api/conversations/'+conversation_id+'/messages',payload,actor)['id']==message['id'],'same frozen body retains original message identity')
+current_draft=call('GET','/api/conversations/'+conversation_id+'/draft',actor=actor)
+draft_body={'requestId':uid(),'revisionEpoch':epoch,'expectedVersion':current_draft['version'],'draftAdmission':current_draft['draftAdmission'],'ownedText':'OWNED_REGRESSION_DRAFT','reply':None}
+check(call('PUT','/api/conversations/'+conversation_id+'/draft',draft_body,actor)['status']=='applied','draft mutation reaches durable applied state')
+check(call('POST','/api/conversations/'+conversation_id+'/draft-results',{'method':'PUT','body':draft_body},actor)['current'],'original draft proof is current')
+check(call('GET','/api/conversations/'+conversation_id+'/draft',actor=actor)['ownedText']=='OWNED_REGRESSION_DRAFT','draft independently reads back persisted text')
+store=uid()
+for schema in ['1','2']:
+    registration=call('PUT','/api/sync/device',{'requestId':uid(),'storeGeneration':store,'schemaVersion':schema},actor)
+    check(not registration['qualifiedAck'] and registration['storeGeneration']==store,'schema '+schema+' shares physical store without qualified ACK')
+context=call('GET','/api/sync/context?schemaVersion=2',actor=actor)
+check(context['transport']['connected'] and not context['qualifiedAck'] and not context['afterReceiptEnabled'],'real JetStream connected without enabling qualified ACK/deletion')
+snapshot_body={'requestId':uid(),'storeGeneration':store,'schemaVersion':'2','pageSize':17}
+snapshot=call('POST','/api/sync/snapshots',snapshot_body,actor,201)
+check(call('POST','/api/sync/snapshots',snapshot_body,actor)==snapshot,'snapshot original request is immutable')
+for manifest in snapshot['pageManifest']:
+    page=call('GET',f"/api/sync/snapshots/{snapshot['snapshotId']}/pages/{manifest['page']}",actor=actor)
+    refs=base64.urlsafe_b64decode(page['referenceEnvelope']+'===')
+    check(hashlib.sha256(refs).hexdigest()==manifest['digest']==page['pageDigest'],'snapshot page exact-envelope SHA256')
+    check(page['installable'],'snapshot page current ACL/version permits installation')
+valid=call('POST',f"/api/sync/snapshots/{snapshot['snapshotId']}/validate",{'pageDigests':[p['digest'] for p in snapshot['pageManifest']]},actor)
+check(valid['canInstall'] and valid['requiresLocalAtomicInstall'] and not valid['qualifiedAck'],'final validation preserves native atomic-install responsibility')
+call('GET','/api/sync/changes?'+urllib.parse.urlencode({'cursor':snapshot['boundaryToken'],'limit':25,'schemaVersion':'2'}),actor=actor)
+original={'requestId':uid(),'restoreEpoch':epoch}
+job=call('POST','/api/me/data-exports',original,actor,202)
+job_id=job['job']['id']
+check(call('POST','/api/me/data-export-results',original,actor)['job']['id']==job_id,'formal export original request resolves its same job')
+for attempt in range(100):
+    status=call('GET','/api/me/data-exports/'+job_id,actor=actor)
+    if status['job']['state']=='ready':break
+    check(status['job']['state'] in ['requested','building'],'formal export has no failed terminal state')
+    time.sleep(.15)
+else:raise AssertionError('formal export bounded readiness timeout')
+ticket=call('POST','/api/me/data-exports/'+job_id+'/download-ticket',{},actor)
+raw,headers=call('GET','/api/me/data-exports/'+job_id+'/download',actor=actor,binary=True,headers={'X-JobsIM-Download-Token':ticket['downloadToken']})
+check(headers.get_content_type()=='application/zip','formal download is usable ZIP over strict TLS')
+with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+    check(archive.testzip() is None,'formal ZIP entries pass CRC')
+    content=b'\n'.join(archive.read(n) for n in archive.namelist() if not n.endswith('/'))
+    check(b'OWNED_REGRESSION_DRAFT' in content and b'isolated durable regression' in content,'formal ZIP contains current authorized text and owned draft')
+new_password='Regression-only replacement '+secrets.token_hex(10)
+body={'requestId':uid(),'username':name,'deviceId':actor['deviceId'],'restoreEpoch':epoch,'currentPassword':password,'newPassword':new_password}
+call('POST','/api/auth/password-change-results',body,expect=404)
+changed=call('POST','/api/auth/password-change',body,actor)
+check(changed['status']=='changed' and changed['requiresNewLogin'],'password change completes and requires new authentication')
+check(call('POST','/api/auth/password-change-results',body)['current'],'password change anonymous original-proof lookup is current')
+call('GET','/api/me',actor=actor,expect=401)
+call('POST','/api/auth/login',{'username':name,'password':password,'requestId':uid(),'deviceName':'old password rejection'},expect=401)
+login=call('POST','/api/auth/login',{'username':name,'password':new_password,'requestId':uid(),'deviceName':'new password success'})
+call('GET','/api/me',actor=login)
+call('POST','/api/auth/logout',{},login)
+call('POST','/api/auth/logout',{},peer)
+print(json.dumps({'status':'passed','httpAndSemanticAssertions':len(checks),'checks':checks,'strictTLS':True,'independentPhysicalPG':True,'productionRoles':9,'realJetStream':True,'nativeAtomicInstallOrQualifiedACK':False,'accountDeletionPublicFlow':False,'restoreTested':False},ensure_ascii=False,indent=2))

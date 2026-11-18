@@ -1,0 +1,48 @@
+{
+  "status": "running",
+  "url": "https://127.0.0.1:9443",
+  "deploymentId": "59c4a138-3d17-4ede-9bde-ef7cd1aa8fb3",
+  "caSha256": "CC:55:80:C3:C7:D4:90:FB:40:1B:7B:85:8A:6A:54:10:17:F7:7F:BF:31:64:8C:50:6D:62:B3:0B:A5:B0:A3:F0",
+  "sameOriginalDeployment": true,
+  "sameOriginalCA": true,
+  "owner": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM",
+  "runtimeWebDirectory": "/Users/jobs/Library/Application Support/JobsIM/Instances/a4c6d9d2688afce6/WebDist.ouvNYw",
+  "webIsIndependentOfSourcePath": true,
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 200,
+      "sha256": "a02f39dfd6a3e328d094e80d5f640e15650e9ac1d8a641b2c75dc929b0ea138f",
+      "bytes": 36
+    },
+    {
+      "path": "/api/bootstrap",
+      "status": 200,
+      "sha256": "1328d9df805d56b802b92ec96d365a3e6c280b0e70bf43a62e546a963bd966d9",
+      "bytes": 894
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "d2bdff64153b135cb7e54d0944e42a7f74ce875465c8778c53dc56c99937cbdb",
+      "bytes": 446
+    },
+    {
+      "path": "/assets/index-DqRUomCR.js",
+      "status": 200,
+      "sha256": "9468d624d3bc7b8537401df5df79dcd6e6d167b287e600107caa765b88c8dedf",
+      "bytes": 756340
+    },
+    {
+      "path": "/assets/index-DgDohfYo.css",
+      "status": 200,
+      "sha256": "b9f5c87fa9594ee3a1085439f3a38a250409c45927178c83922686570e763f9b",
+      "bytes": 30952
+    }
+  ],
+  "serverBinarySHA256": "969f895c85de834ce2c9ee5a43754d66eeb109ac8f113d90b13b931014aea7fe",
+  "compiledWebSourcesVerifiedFromMap": 64,
+  "webSourceMismatches": [],
+  "backupCreatedAndDecryptVerifiedByEntry": true,
+  "userTestActorsCreated": false
+}

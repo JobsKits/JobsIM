@@ -244,6 +244,18 @@ fs.mkdirSync(out, { recursive: true });
     await page.getByRole("button", { name: "Request export", exact: true }).click();
     await page.getByRole("button", { name: "Download ZIP", exact: true }).waitFor();
     await page.setViewportSize({ width: 390, height: 844 });
+    await page.evaluate(() => {
+      window.exportSupportedLocales = Intl.DateTimeFormat.supportedLocalesOf;
+      Intl.DateTimeFormat.supportedLocalesOf = () => [];
+      const f = window.exportFixture; f.locale = "bo"; f.render();
+    });
+    try {
+      await page.waitForTimeout(40);
+      assert(await page.evaluate(() => { const headings = [...document.querySelectorAll(".data-export-panel article h4")]; return headings.length > 0 && headings.every(heading => /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}$/.test(heading.textContent)); }), "unsupported date locale silently used the browser host language");
+    } finally {
+      await page.evaluate(() => { Intl.DateTimeFormat.supportedLocalesOf = window.exportSupportedLocales; delete window.exportSupportedLocales; });
+    }
+    checks.push("a missing Intl locale uses explicit local numeric dates rather than the browser host language");
     for (const locale of await page.evaluate(() => Object.keys(window.exportTest.labels))) for (const theme of ["light", "dark", "system"]) {
       await page.evaluate(({ locale, theme }) => { const f = window.exportFixture; f.locale = locale; document.documentElement.lang = locale; document.documentElement.dataset.theme = theme === "system" ? "light" : theme; f.render(); }, { locale, theme });
       await page.waitForTimeout(20);

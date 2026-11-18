@@ -1,0 +1,17 @@
+{"Time":"2026-11-17T08:00:05.084149+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-17T08:00:05.621466+08:00","Action":"run","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup"}
+{"Time":"2026-11-17T08:00:05.621911+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup","Output":"=== RUN   TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup\n","OutputType":"frame"}
+{"Time":"2026-11-17T08:00:21.520634+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup","Output":"    deployment_restore_pg_test.go:335: Owned private source/target retained under the explicit restore test root; all target native resources stopped\n"}
+{"Time":"2026-11-17T08:00:21.52069+08:00","Action":"output","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup","Output":"--- PASS: TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup (15.90s)\n","OutputType":"frame"}
+{"Time":"2026-11-17T08:00:21.520707+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestDeploymentRestorePGEightDomainsCurrentLedgerAndNativeStartup","Elapsed":15.9}
+{"Time":"2026-11-17T08:00:21.52093+08:00","Action":"run","Package":"jobsim/backend","Test":"TestJournalHandoffDecisionKeepsRetiredSourceSealedAndAllowsCanonicalSuccessor"}
+{"Time":"2026-11-17T08:00:21.52094+08:00","Action":"output","Package":"jobsim/backend","Test":"TestJournalHandoffDecisionKeepsRetiredSourceSealedAndAllowsCanonicalSuccessor","Output":"=== RUN   TestJournalHandoffDecisionKeepsRetiredSourceSealedAndAllowsCanonicalSuccessor\n","OutputType":"frame"}
+{"Time":"2026-11-17T08:00:21.52095+08:00","Action":"output","Package":"jobsim/backend","Test":"TestJournalHandoffDecisionKeepsRetiredSourceSealedAndAllowsCanonicalSuccessor","Output":"--- PASS: TestJournalHandoffDecisionKeepsRetiredSourceSealedAndAllowsCanonicalSuccessor (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-17T08:00:21.520959+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestJournalHandoffDecisionKeepsRetiredSourceSealedAndAllowsCanonicalSuccessor","Elapsed":0}
+{"Time":"2026-11-17T08:00:21.520976+08:00","Action":"run","Package":"jobsim/backend","Test":"TestGroupManagerOriginalPGApplicationProfilesKeepStateAndPagination"}
+{"Time":"2026-11-17T08:00:21.520983+08:00","Action":"output","Package":"jobsim/backend","Test":"TestGroupManagerOriginalPGApplicationProfilesKeepStateAndPagination","Output":"=== RUN   TestGroupManagerOriginalPGApplicationProfilesKeepStateAndPagination\n","OutputType":"frame"}
+{"Time":"2026-11-17T08:00:21.94314+08:00","Action":"output","Package":"jobsim/backend","Test":"TestGroupManagerOriginalPGApplicationProfilesKeepStateAndPagination","Output":"--- PASS: TestGroupManagerOriginalPGApplicationProfilesKeepStateAndPagination (0.42s)\n","OutputType":"frame"}
+{"Time":"2026-11-17T08:00:21.943167+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestGroupManagerOriginalPGApplicationProfilesKeepStateAndPagination","Elapsed":0.42}
+{"Time":"2026-11-17T08:00:21.943184+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-17T08:00:21.946204+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t16.862s\n"}
+{"Time":"2026-11-17T08:00:21.946222+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":16.862}

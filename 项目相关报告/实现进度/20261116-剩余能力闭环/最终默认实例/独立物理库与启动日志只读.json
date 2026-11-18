@@ -1,0 +1,10 @@
+{
+  "systemIdentifiers": {
+    "MainDatabase": "7708779333786885841",
+    "JournalDatabase": "7708779336539700975"
+  },
+  "distinctPhysicalClusters": true,
+  "serverLogSHA256": "102bbe8f639b684743fbde38dfa87e67447fa2430e27754e9df3c670103257a4",
+  "errorFatalPanicLineCount": 0,
+  "userDataRead": false
+}

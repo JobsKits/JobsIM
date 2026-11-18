@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-17T04:41:38.130Z",
+  "mode": "status",
+  "status": 0,
+  "signal": null,
+  "stdout": "filter.jobs-markdown-toc.clean = file:.git/config\t'/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node' '.jobs-markdown-toc/MarkdownToc.mjs' clean\nfilter.jobs-markdown-toc.smudge = file:.git/config\t'/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node' '.jobs-markdown-toc/MarkdownToc.mjs' smudge\nfilter.jobs-markdown-toc.required = file:.git/config\ttrue\n受控文档：193 份；清单：.jobs-markdown-toc/manifest.json\n",
+  "stderr": ""
+}

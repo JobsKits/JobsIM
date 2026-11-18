@@ -1,0 +1,362 @@
+[
+  {
+    "label": "Web-final-typecheck",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/node_modules/typescript/bin/tsc",
+      "--noEmit"
+    ],
+    "cwd": "代码/前端/Web",
+    "env": {},
+    "startedAt": "2026-11-17T22:53:37.133Z",
+    "endedAt": "2026-11-17T22:53:37.407Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-build",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/node_modules/vite/bin/vite.js",
+      "build",
+      "--outDir",
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-Dist"
+    ],
+    "cwd": "代码/前端/Web",
+    "env": {},
+    "startedAt": "2026-11-17T22:53:37.408Z",
+    "endedAt": "2026-11-17T22:53:37.693Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-sync-protocol",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/sync-protocol.cjs/sync-protocol.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/"
+    },
+    "startedAt": "2026-11-17T22:53:37.693Z",
+    "endedAt": "2026-11-17T22:53:37.884Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-attachment-rules",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-rules.cjs/attachment-rules.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_ATTACHMENT_RULE_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-attachment-rules"
+    },
+    "startedAt": "2026-11-17T22:53:37.884Z",
+    "endedAt": "2026-11-17T22:53:38.004Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-audio-rules",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/audio-rules.cjs/audio-rules.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_AUDIO_RULE_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-audio-rules"
+    },
+    "startedAt": "2026-11-17T22:53:38.004Z",
+    "endedAt": "2026-11-17T22:53:38.116Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-account-deletion-cleanup",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/account-deletion-cleanup.cjs/account-deletion-cleanup.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/"
+    },
+    "startedAt": "2026-11-17T22:53:38.116Z",
+    "endedAt": "2026-11-17T22:53:38.220Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-auth-session",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/auth-session.cjs/auth-session.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_AUTH_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-auth-session"
+    },
+    "startedAt": "2026-11-17T22:53:38.220Z",
+    "endedAt": "2026-11-17T22:53:39.583Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-sync-store",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/sync-store.cjs/sync-store.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_SYNC_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-sync-store"
+    },
+    "startedAt": "2026-11-17T22:53:39.584Z",
+    "endedAt": "2026-11-17T22:53:41.162Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-sync-view",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/sync-view.cjs/sync-view.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_SYNC_VIEW_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-sync-view"
+    },
+    "startedAt": "2026-11-17T22:53:41.163Z",
+    "endedAt": "2026-11-17T22:53:42.063Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-outbox-proof",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/outbox-proof.cjs/outbox-proof.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_OUTBOX_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-outbox-proof"
+    },
+    "startedAt": "2026-11-17T22:53:42.063Z",
+    "endedAt": "2026-11-17T22:53:42.981Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-global-facts",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/global-facts.cjs/global-facts.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_GLOBAL_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-global-facts"
+    },
+    "startedAt": "2026-11-17T22:53:42.982Z",
+    "endedAt": "2026-11-17T22:53:43.714Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-business-global",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/business-global.cjs/business-global.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/"
+    },
+    "startedAt": "2026-11-17T22:53:43.714Z",
+    "endedAt": "2026-11-17T22:53:44.426Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-self-state",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/self-state.cjs/self-state.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_SYNC_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-self-state"
+    },
+    "startedAt": "2026-11-17T22:53:44.426Z",
+    "endedAt": "2026-11-17T22:53:46.074Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-draft-recovery",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/draft-recovery.cjs/draft-recovery.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_RECOVERY_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-draft-recovery"
+    },
+    "startedAt": "2026-11-17T22:53:46.075Z",
+    "endedAt": "2026-11-17T22:53:49.230Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-data-export",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/data-export.cjs/data-export.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_EXPORT_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-data-export"
+    },
+    "startedAt": "2026-11-17T22:53:49.231Z",
+    "endedAt": "2026-11-17T22:53:52.117Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-password-change",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/password-change.cjs/password-change.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_PASSWORD_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-password-change"
+    },
+    "startedAt": "2026-11-17T22:53:52.118Z",
+    "endedAt": "2026-11-17T22:53:54.585Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-account-deletion",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/account-deletion.cjs/account-deletion.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_DELETION_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-account-deletion"
+    },
+    "startedAt": "2026-11-17T22:53:54.586Z",
+    "endedAt": "2026-11-17T22:53:56.171Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-group-governance",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/group-governance.cjs/group-governance.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_GROUP_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-group-governance"
+    },
+    "startedAt": "2026-11-17T22:53:56.171Z",
+    "endedAt": "2026-11-17T22:53:58.136Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-migration",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/migration.cjs/migration.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_MIGRATION_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-migration"
+    },
+    "startedAt": "2026-11-17T22:53:58.136Z",
+    "endedAt": "2026-11-17T22:53:59.928Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-receipt-context",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/receipt-context.cjs/receipt-context.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_RECEIPT_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-receipt-context"
+    },
+    "startedAt": "2026-11-17T22:53:59.928Z",
+    "endedAt": "2026-11-17T22:54:01.424Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-attachment-browser",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_ATTACHMENT_BROWSER_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-attachment-browser"
+    },
+    "startedAt": "2026-11-17T22:54:01.424Z",
+    "endedAt": "2026-11-17T22:54:03.977Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-audio-browser",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/audio-browser.cjs/audio-browser.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/",
+      "JOBSIM_AUDIO_BROWSER_REPORT": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-audio-browser"
+    },
+    "startedAt": "2026-11-17T22:54:03.978Z",
+    "endedAt": "2026-11-17T22:54:09.285Z",
+    "code": 0,
+    "signal": null
+  },
+  {
+    "label": "Web-final-browser",
+    "args": [
+      "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/Web/browser.cjs/browser.cjs"
+    ],
+    "cwd": "",
+    "env": {
+      "JOBSIM_PLAYWRIGHT_MODULE": "/Users/jobs/Library/Application Support/JobsIM/Toolchains/Playwright-1.65.1/node_modules/playwright",
+      "JOBSIM_WEB_URL": "http://127.0.0.1:63624/"
+    },
+    "startedAt": "2026-11-17T22:54:09.285Z",
+    "endedAt": "2026-11-17T22:54:10.812Z",
+    "code": 0,
+    "signal": null
+  }
+]

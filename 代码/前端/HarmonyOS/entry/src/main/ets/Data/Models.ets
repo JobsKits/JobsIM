@@ -8,7 +8,7 @@ export interface Message {
   forwardOfId?: string; forwardSourceVersion?: string; sendAttempted?: boolean;
   deleted: boolean; contentUnavailable?: boolean; pinned: boolean; favorite: boolean; reactions: Reaction[]; state?: string; restoreEpoch?: string; sendAdmission?: string; freezeReason?: string;
 }
-export interface AdmissionFeatures { send_admission?: boolean; role_admission?: boolean; forwarding?: boolean; mentions?: boolean; announcements?: boolean; groups?: boolean; messages?: boolean; auth_refresh?: boolean; auth_retirement_chain?: boolean; authoritative_sync?: boolean; sync_jetstream?: boolean; sync_self_state?: boolean; cloud_drafts?: boolean; chat_export?: boolean; }
+export interface AdmissionFeatures { send_admission?: boolean; role_admission?: boolean; forwarding?: boolean; mentions?: boolean; announcements?: boolean; groups?: boolean; messages?: boolean; auth_refresh?: boolean; auth_retirement_chain?: boolean; authoritative_sync?: boolean; sync_jetstream?: boolean; sync_self_state?: boolean; cloud_drafts?: boolean; chat_export?: boolean; own_password_change?: boolean; own_account_deletion?: boolean; }
 export interface Bootstrap { deploymentId: string; name: string; protocolVersion: string; restoreEpoch: string; features?: AdmissionFeatures; }
 export interface AuthResult { token: string; user: User; deviceId: string; restoreEpoch: string; refreshToken?: string; familyId?: string; refreshGeneration?: string; accessExpiresAt?: string; idleExpiresAt?: string; absoluteExpiresAt?: string; sourceContextId?: string; }
 export interface ConversationList { items: Conversation[]; }
@@ -35,7 +35,7 @@ export class Isolation {
 export interface ContactRequest { id: string; requesterId: string; recipientId: string; state: string; requester?: User; }
 export interface ContactsResult { items: User[]; requests: ContactRequest[]; }
 export interface GroupMember extends User { role: string; membershipGeneration: string; roleGeneration?: string; }
-export interface MemberList { items: GroupMember[]; }
+export interface MemberList { items: GroupMember[]; nextCursor?: string; }
 export interface ReopenResult { current: boolean; generation: string; }
 export interface PendingOperation { requestId: string; payload: string; }
 export class Rules {

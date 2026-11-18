@@ -5,21 +5,20 @@
 //  Created by Jobs on 2026年11月14日，星期六.
 //
 
-import UIKit
-
+import GKNavigationBarSwift
 import JobsByUIKit
 import JobsInheritance
 import JobsSwiftBaseDefines
 import JobsSwiftDSL
-
-import GKNavigationBarSwift
 import SnapKit
+import UIKit
 
 @MainActor
 class IMBaseVC: BaseVC {
 
     let session = IMSession.shared
     var screenTitle = "JobsIM"
+    var hidesScreenHeader = false
     var rightActions: [UIButton] = []
     private var syncObservation: UUID?
     lazy var content = UIView.jobsMake { container in
@@ -34,8 +33,13 @@ class IMBaseVC: BaseVC {
             title: screenTitle, leftButton: root ? UIButton.sys().byHidden(true) : nil,
             rightButtons: rightActions)
         applyNavigationAppearance()
+        gk_navigationBar.byHidden(hidesScreenHeader)
         content.byAddTo(view) { [unowned self] make in
-            make.top.equalTo(gk_navigationBar.snp.bottom)
+            if self.hidesScreenHeader {
+                make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            } else {
+                make.top.equalTo(self.gk_navigationBar.snp.bottom)
+            }
             make.left.right.bottom.equalTo(view.safeAreaLayoutGuide)
         }
     }
@@ -49,6 +53,17 @@ class IMBaseVC: BaseVC {
         syncObservation = session.observeSync { [weak self] in
             self?.syncProjectionChanged()
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // The template reapplies its default GK palette here; the app's effective appearance wins last.
+        applyNavigationAppearance()
+        (UIApplication.shared.delegate as? AppDelegate)?.refreshDemoOverlay()
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return traitCollection.userInterfaceStyle == .dark ? .lightContent : .darkContent
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -66,14 +81,11 @@ class IMBaseVC: BaseVC {
         if navigationController?.viewControllers.first === self {
             gk_navLeftBarButtonItem = nil
         }
-        gk_navBackgroundColor = IMUI.background
-        gk_navTitleColor = IMUI.foreground
-        gk_navigationBar.tintColor = IMUI.green
+        byIMNavigationAppearance(hidesHeader: hidesScreenHeader)
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        JobsThemeCenter.shared.setStyle(traitCollection.userInterfaceStyle == .dark ? .dark : .light)
         applyNavigationAppearance()
     }
 

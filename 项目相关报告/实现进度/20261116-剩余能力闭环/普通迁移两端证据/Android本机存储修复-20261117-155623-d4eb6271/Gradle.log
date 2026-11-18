@@ -1,0 +1,105 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.5.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:generateDebugBuildConfig
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:processDebugNavigationResources
+> Task :app:parseDebugLocalResources
+> Task :app:generateDebugRFile
+> Task :app:kspDebugKotlin
+
+> Task :app:compileDebugKotlin
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/ChatModel.kt:129:46 Expression is unused.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/ChatModel.kt:141:46 Expression is unused.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/GroupScreen.kt:33:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/MigrationScreen.kt:35:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/OwnDeletion.kt:143:29 Elvis operator (?:) always returns the left operand of non-nullable type 'JSONObject'.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/OwnPassword.kt:143:36 Elvis operator (?:) always returns the left operand of non-nullable type 'JSONObject'.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt:31:58 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt:55:41 Unnecessary safe call on a non-null receiver of type 'JSONObject'.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt:61:173 Unnecessary safe call on a non-null receiver of type 'JSONObject'.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt:67:310 Unnecessary safe call on a non-null receiver of type 'JSONObject'.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt:72:156 Unnecessary safe call on a non-null receiver of type 'JSONObject'.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/SelfState.kt:56:17 'when' expression over a subject of type 'Any?' is not exhaustive. Add a 'null' or 'else' branch.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt:76:18 Unnecessary safe call on a non-null receiver of type 'Any'.
+w: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/app/src/main/java/com/jobs/im/SyncProtocol.kt:237:13 'when' expression over a subject of type 'Any?' is not exhaustive. Add a 'null' or 'else' branch.
+
+> Task :app:javaPreCompileDebug
+> Task :app:compileDebugJavaWithJavac
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:compileDebugNavigationResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:processDebugResources
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:kspDebugUnitTestKotlin
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugJavaRes
+> Task :app:processDebugUnitTestJavaRes
+> Task :app:testDebugUnitTest
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:generateDebugGlobalSynthetics
+> Task :app:mergeDebugJavaResource
+> Task :app:checkDebugDuplicateClasses
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeExtDexDebug
+> Task :app:mergeLibDexDebug
+> Task :app:dexBuilderDebug
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJniLibFolders
+> Task :app:mergeDebugNativeLibs
+> Task :app:stripDebugDebugSymbols
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:mergeDebugAndroidTestManifest
+> Task :app:processDebugAndroidTestManifest
+> Task :app:generateDebugAndroidTestBuildConfig
+> Task :app:generateDebugAndroidTestResources
+> Task :app:packageDebugAndroidTestResources
+> Task :app:processDebugAndroidTestNavigationResources
+> Task :app:parseDebugAndroidTestLocalResources
+> Task :app:generateDebugAndroidTestRFile
+> Task :app:kspDebugAndroidTestKotlin
+
+> Task :app:compileDebugAndroidTestKotlin FAILED
+e: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E6%B5%8B%E8%AF%95/%E5%89%8D%E7%AB%AF/Android/Instrumentation/ReceiptStorageLifecycleTest.kt:4:22 Unresolved reference 'usePrepared'.
+
+[Incubating] Problems report is available at: file:///Users/jobs/Library/Application%20Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/%E4%BB%A3%E7%A0%81/%E5%89%8D%E7%AB%AF/Android/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugAndroidTestKotlin' (registered by plugin 'com.android.internal.application').
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.btapi.BuildToolsApiCompilationWork
+   > Kotlin compiler: UNRESOLVED_IMPORT
+       Kotlin compiler error
+         Unresolved reference 'usePrepared'.
+         Location: /Users/jobs/Library/Application Support/JobsIM/Build/Android/ReceiptNative/20261117-155623-d4eb6271/测试/前端/Android/Instrumentation/ReceiptStorageLifecycleTest.kt line 4
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 46s
+56 actionable tasks: 56 executed

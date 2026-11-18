@@ -460,3 +460,41 @@ func TestPasswordChangePGResultBindsEpochAcrossItsReadAndJournalCheck(t *testing
 		t.Fatal("old metadata read adopted a newer matching business/journal epoch")
 	}
 }
+
+func TestPasswordChangePGFreshBrowserResponseNeverClearsLaterCookie(t *testing.T) {
+	ctx, a, user, q, _, _ := newPasswordChangePGApp(t)
+	tx, e := a.DB.Begin(ctx)
+	if e != nil {
+		t.Fatal(e)
+	}
+	delivery, e := a.issueSession(ctx, tx, user, "fresh-browser-password-test", 1, 1, 1, true)
+	if e != nil {
+		tx.Rollback(ctx)
+		t.Fatal(e)
+	}
+	if e = tx.Commit(ctx); e != nil {
+		t.Fatal(e)
+	}
+	pcExec(t, ctx, a, `UPDATE auth.bff_sessions SET state='active',browser_confirmed_at=now() WHERE session_id=$1`, delivery.SessionID)
+	pcExec(t, ctx, a, `UPDATE auth.sessions SET web_pending=false WHERE id=$1`, delivery.SessionID)
+	q.DeviceID = delivery.Result.DeviceID
+	raw, _ := json.Marshal(q)
+	r := httptest.NewRequest("POST", "/api/auth/password-change", bytes.NewReader(raw))
+	r.Header.Set("Content-Type", "application/json")
+	r.Header.Set("Origin", a.Config.PublicURL)
+	r.Header.Set("X-JobsIM-Client", "web")
+	r.Header.Set("X-CSRF-Token", a.csrf(delivery.BrowserCookie))
+	r.Header.Set("X-JobsIM-Auth-Family", delivery.Result.FamilyID)
+	r.AddCookie(&http.Cookie{Name: "__Host-jobsim_session", Value: delivery.BrowserCookie})
+	w := httptest.NewRecorder()
+	a.Handler().ServeHTTP(w, r)
+	if w.Code != 200 || pcBody(t, w)["status"] != "changed" {
+		t.Fatalf("fresh authenticated browser change failed: %d", w.Code)
+	}
+	if len(w.Header().Values("Set-Cookie")) != 0 {
+		t.Fatal("delayed first-response header can clear an independent later login cookie")
+	}
+	if pcCount(t, ctx, a, `SELECT count(*) FROM auth.bff_sessions WHERE user_id=$1 AND state<>'revoked'`, user.ID) != 0 {
+		t.Fatal("original browser family remained live without a clearing HTTP header")
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "typecheck": "passed",
+  "build": "passed",
+  "output": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/PasswordChange/1794846079238-77325/Production",
+  "artifacts": [
+    {
+      "name": "index-CibEEY0Z.js",
+      "size": 821023,
+      "sha256": "b384b04ec7a262e164474c8cd2885b98d4bb8f4e0f2ffb3a853d6f9f401c9472"
+    },
+    {
+      "name": "index-CibEEY0Z.js.map",
+      "size": 2858599,
+      "sha256": "dc9e7092b61ab197b5b51121a7cdcdee0a17d1cdf32b0987e41222ea8cb15506"
+    },
+    {
+      "name": "index-ZILFTibV.css",
+      "size": 27955,
+      "sha256": "c2ffd1f7963ab2366932835e251c8fdc0406dbfb58ce68cc7b59e806ca8173a5"
+    }
+  ],
+  "at": "2026-11-16T16:21:19.440Z",
+  "free": 12043649024
+}

@@ -22,6 +22,30 @@ import { ExportStore } from '../Data/ExportStore';
 import { ExportService, ExportPorts } from '../Data/ExportService';
 import { ExportFiles } from '../Data/ExportFiles';
 import { ExportText } from '../Data/ExportText';
+import { PasswordChange, PasswordRules, PasswordIntent, PasswordOwner, PasswordProof, PasswordPorts } from '../Data/PasswordChange';
+import { PasswordStore } from '../Data/PasswordStore';
+import { PasswordText } from '../Data/PasswordText';
+import { Deletion, DeletionRules, DeletionIntent, DeletionPorts, DeletionResult } from '../Data/Deletion';
+import { DeletionStore, DeletionLocalPlan } from '../Data/DeletionStore';
+import { DeletionFiles } from '../Data/DeletionFiles';
+import { DeletionText } from '../Data/DeletionText';
+import { GroupTools, GroupPorts, GroupEnvironment, GroupIntent, GroupRules, GroupPage } from '../Data/GroupTools';
+import { GroupStore } from '../Data/GroupStore';
+import { GroupText } from '../Data/GroupText';
+import { MigrationService, MigrationPorts } from '../Data/MigrationService';
+import { MigrationIdentity, MigrationRules } from '../Data/MigrationProtocol';
+import { MigrationStore, MigrationIntent } from '../Data/MigrationStore';
+import { MigrationFiles, MigrationNative } from '../Data/MigrationNative';
+import { MigrationText } from '../Data/MigrationText';
+import { ReceiptFiles } from '../Data/ReceiptNative';
+import { ReceiptCleanup } from '../Data/ReceiptCleanup';
+import { ReceiptIntent } from '../Data/ReceiptProtocol';
+import { ReceiptStore } from '../Data/ReceiptStore';
+import { ReceiptService, ReceiptPorts } from '../Data/ReceiptService';
+import { ReceiptText } from '../Data/ReceiptText';
+import { ReceiptCoordinator, ReceiptCoordinatorPorts, ReceiptCandidate, ReceiptCachePage } from '../Data/ReceiptCoordinator';
+import relationalStore from '@ohos.data.relationalStore';
+import pasteboard from '@ohos.pasteboard';
 import { Strings } from '../Data/Strings';
 import { User, Conversation, Message, Bootstrap, AuthResult, ConversationList, MessageList, LookupPage, UserList, Codes, Isolation, MediaResult, ContactRequest, ContactsResult, GroupMember, MemberList, ReopenResult, PendingOperation, Rules, DraftState, AuthContext, SessionPointer, DeviceSession, SessionList, AvatarPending, AvatarOperation, Report, ReportList, ReportDraft, Reaction, ConversationDraft, Announcement, AnnouncementIntent, AnnouncementMutation, AnnouncementOperation, AuthConnection, AuthPorts, AuthStateEntry, CredentialPair, ApiFailure } from '../Data/Models';
 
@@ -31,6 +55,75 @@ interface SelfDraftItem { conversation: string; title: string; writable: boolean
 @Entry
 @Component
 struct Index {
+  @State receiptAutoEnabled:boolean=false;
+  private receiptAutoIdentity?:MigrationIdentity;
+  private receiptAutomatic?:ReceiptCoordinator;
+  @State receiptRows:ReceiptIntent[]=[];
+  @State receiptContext:string='';
+  @State receiptReport:string='';
+  @State receiptProfiles:string[]=[];
+  @State receiptArchive:string[]=[];
+  @State receiptTarget:string='';
+  @State receiptNotice:string='';
+  @State receiptBusy:boolean=false;
+  @State receiptShown:number=20;
+  private receiptLife:number=0;
+  private receiptTimer:number=-1;
+  private receiptService?:ReceiptService;
+  @State migrationQualified:string[]=[];
+  @State migrationRows: MigrationIntent[] = [];
+  @State migrationHistory: string[] = [];
+  @State migrationCandidates: Message[] = [];
+  @State migrationSelected: string[] = [];
+  @State migrationFull: boolean = false;
+  @State migrationPassword: string = '';
+  @State migrationOTP: string = '';
+  @State migrationCode: string = '';
+  @State migrationID: string = '';
+  @State migrationNotice: string = '';
+  @State migrationBusy: boolean = false;
+  @State migrationShown: number = 20;
+  private migrationLife: number = 0;
+  private migrationTimer: number = -1;
+  private migrationService?: MigrationService;
+  private migrationIdentity?: MigrationIdentity;
+  @State groupSnapshot: string = '';
+  @State groupInvites: string[] = [];
+  @State groupRequests: string[] = [];
+  @State groupOperations: GroupIntent[] = [];
+  @State groupMembersNext: string = '';
+  @State groupInvitesNext: string = '';
+  @State groupRequestsNext: string = '';
+  @State groupControlId: string = '';
+  @State groupBusy: boolean = false;
+  @State groupNotice: string = '';
+  @State groupCode: string = '';
+  @State groupOTP: string = '';
+  @State groupMuteAll: boolean = false;
+  @State groupSlow: string = '0';
+  @State groupCapacity: string = '200';
+  @State groupUses: string = '1';
+  @State groupApproval: boolean = true;
+  @State groupShown: number = 20;
+  private groupLife: number = 0;
+  private groupService?: GroupTools;
+  @State deletionRows: DeletionIntent[] = [];
+  @State deletionPassword: string = '';
+  @State deletionRecovery: string = '';
+  @State deletionOTP: string = '';
+  @State deletionBusy: boolean = false;
+  @State deletionNotice: string = '';
+  @State deletionShown: number = 20;
+  private deletionLife: number = 0;
+  @State passwordRows: PasswordIntent[] = [];
+  @State passwordOld: string = '';
+  @State passwordNew: string = '';
+  @State passwordConfirm: string = '';
+  @State passwordOTP: string = '';
+  @State passwordBusy: boolean = false;
+  @State passwordNotice: string = '';
+  @State passwordShown: number = 20;
+  private passwordLife: number = 0;
   @StorageLink('JobsIM.foreground') @Watch('abilityVisibilityChanged') appVisible: boolean = true;
   @State syncRestricted: boolean = false;
   @State localEntries: boolean = false;
@@ -59,7 +152,7 @@ struct Index {
   @State theme: string = 'system';
   @State fontScale: number = 1;
   @State dark: boolean = false;
-  @State base: string = 'https://localhost:8443';
+  @State base: string = 'https://localhost:9443';
   @State connectionAddress: string = '';
   @State expectedId: string = '';
   @State caPem: string = '';
@@ -181,15 +274,15 @@ struct Index {
       this.startPolling();
     });
   }
-  onPageShow(): void { this.foregroundVisible = true; this.startPolling(); }
-  onPageHide(): void { this.foregroundVisible = false; this.closeExport(); this.stopSync(); this.stopPolling(); }
-  aboutToDisappear(): void { this.closeExport(); this.stopSync(); this.stopPolling(); }
-  private abilityVisibilityChanged(): void { if (!this.appVisible) { this.stopSync(); this.stopPolling(); } else if (this.foregroundVisible) { this.startPolling(); } }
+  onPageShow(): void { this.foregroundVisible = true; this.startPolling(); if(this.page==='migration'){this.openMigration(false);} if(this.page==='receipts'){this.openReceipt();} }
+  onPageHide(): void { this.receiptAutomatic?.stop(); this.closeReceipt(); this.closeMigration(); this.closeGroupTools(); this.closeDeletion(); this.clearPasswordInput(); this.passwordLife++; this.passwordBusy = false; this.foregroundVisible = false; this.closeExport(); this.stopSync(); this.stopPolling(); }
+  aboutToDisappear(): void { this.receiptAutomatic?.stop(); this.closeReceipt(); this.closeMigration(); this.closeGroupTools(); this.closeDeletion(); this.clearPasswordInput(); this.passwordLife++; this.passwordBusy = false; this.closeExport(); this.stopSync(); this.stopPolling(); }
+  private abilityVisibilityChanged(): void { if (!this.appVisible) { this.receiptAutomatic?.stop(); this.closeReceipt(); this.closeMigration(); this.closeGroupTools(); this.closeDeletion(); this.clearPasswordInput(); this.passwordLife++; this.passwordBusy = false; this.stopSync(); this.stopPolling(); } else if (this.foregroundVisible) { this.startPolling(); if(this.page==='migration'){this.openMigration(false);} if(this.page==='receipts'){this.openReceipt();} } }
   private stopSync(): void { this.syncLife++; this.synchronizer?.cancel(); this.synchronizer = undefined; this.syncKey = ''; }
   private startPolling(): void {
     if (this.pollTimer >= 0) { return; }
     this.pollTimer = setInterval(() => {
-      if (this.foregroundVisible && this.appVisible && !this.busy && !this.demo && this.token.length > 0 && this.page !== 'exports') { this.run(async () => this.reload()); }
+      if (this.foregroundVisible && this.appVisible && !this.busy && !this.demo && this.token.length > 0 && this.page !== 'exports' && this.page !== 'password' && this.page !== 'deletion' && this.page !== 'groupTools' && this.page !== 'migration' && this.page !== 'receipts' && !this.passwordPaused() && !this.deletionPaused()) { this.run(async () => this.reload()); }
     }, 5000);
   }
   private stopPolling(): void {
@@ -212,6 +305,66 @@ struct Index {
     if (this.page !== 'chats') { this.page = 'chats'; return true; }
     return false;
   }
+  private receiptAutomaticCurrent():boolean{const i=this.receiptAutoIdentity;return Boolean(i)&&this.receiptAutoEnabled&&this.foregroundVisible&&this.appVisible&&!this.demo&&this.token.length>0&&this.namespace()===i?.namespace&&(this.auth?.currentFamily()??'')===i?.family&&this.deviceId===i?.device&&this.restoreEpoch===i?.epoch&&!['receipts','migration','password','deletion','groupTools','exports'].includes(this.page)&&!this.passwordPaused()&&!this.deletionPaused();}
+  private receiptAutomaticFor(i:MigrationIdentity):boolean{return this.receiptAutoEnabled&&Boolean(this.receiptAutoIdentity)&&MigrationStore.samePrincipal(this.receiptAutoIdentity as MigrationIdentity,i);}
+  private setReceiptAutomatic(enabled:boolean):void{const service=this.receiptService;if(!enabled){this.receiptAutoEnabled=false;this.receiptAutoIdentity=undefined;this.receiptAutomatic?.stop();this.receiptAutomatic=undefined;return;}if(!service||!this.receiptQualified()){return;}const i=service.principal();if(this.namespace()!==i.namespace||(this.auth?.currentFamily()??'')!==i.family){return;}this.receiptAutomatic?.stop();this.receiptAutomatic=undefined;this.receiptAutoIdentity=i;this.receiptAutoEnabled=true;}
+  private async backgroundReceiptService(owned:()=>boolean):Promise<ReceiptService>{
+    const original=this.receiptAutoIdentity;if(!original||!owned()||!this.receiptAutomaticCurrent()){MigrationRules.fail('RECEIPT_NOT_ENABLED');}const c=await this.syncData.syncControl(this.syncIdentity());if(!c||c.physical!==original.store){MigrationRules.fail('RECEIPT_STORE_CHANGED');}const i:MigrationIdentity={profile:original.profile,deployment:original.deployment,user:original.user,device:original.device,family:original.family,epoch:original.epoch,namespace:original.namespace,store:original.store,guard:c.guard};const owner=this.authOwner;const connection=this.authConnectionIdentity();const current=():boolean=>owned()&&this.receiptAutomaticCurrent()&&this.authOwner===owner&&this.authConnectionIdentity()===connection&&Boolean(this.receiptAutoIdentity)&&MigrationStore.samePrincipal(this.receiptAutoIdentity as MigrationIdentity,i);
+    const files=new ReceiptFiles(getContext(this) as common.UIAbilityContext,i,current);const store=new ReceiptStore(this.store,i,current,files,MigrationNative.codec());await store.open();if(!current()){MigrationRules.fail();}const api=this.api();const ports:ReceiptPorts={identity:i,current:current,codec:MigrationNative.codec(),uuid:()=>util.generateRandomUUID(true),store:store,request:async(path:string,method:string,body:string,physical:string)=>JSON.stringify(await api.receipt<Object>(path,method as http.RequestMethod,body,physical,current)),binary:(path:string,physical:string,limit:number)=>api.migrationBytes(path,physical,limit,current)};return new ReceiptService(ports);
+  }
+  private offerReceiptAutomatic(raws:string[]):void{
+    if(!this.receiptAutomaticCurrent()){return;}if(!this.receiptAutomatic){const ports:ReceiptCoordinatorPorts={enabled:()=>this.receiptAutomaticCurrent(),factory:(owned:()=>boolean)=>this.backgroundReceiptService(owned),cached:async(after:string,limit:number)=>this.store.syncAccess(async(db:relationalStore.RdbStore)=>{const i=this.receiptAutoIdentity;if(!i||!this.receiptAutomaticCurrent()){MigrationRules.fail();}const rows=await db.querySql("SELECT id,payload FROM messages WHERE namespace=? AND id>? AND state NOT IN('pending','frozen') ORDER BY id LIMIT ?",[i.namespace,after,limit]);const candidates:ReceiptCandidate[]=[];let next='';try{while(rows.goToNextRow()){next=rows.getString(0);const m=SyncJSON.parse(rows.getString(1));if(m.get('deleted').value!==true&&m.get('forwarded').value!==true&&m.get('contentUnavailable').value!==true&&m.get('contentVersion').value!==null){const row:ReceiptCandidate={id:MigrationRules.id(next),version:MigrationRules.positive(m.get('contentVersion').string())};candidates.push(row);}}}finally{rows.close();}const result:ReceiptCachePage={rows:candidates,after:next};return result;})};this.receiptAutomatic=new ReceiptCoordinator(ports);}this.receiptAutomatic.offer(raws);
+  }
+  private r(key:string):string{return ReceiptText.text(this.language,key);}
+  private closeReceipt():void{this.receiptLife++;this.receiptService?.clear();this.receiptService=undefined;this.receiptBusy=false;this.receiptArchive=[];this.receiptReport='';this.receiptTarget='';if(this.receiptTimer>=0){clearInterval(this.receiptTimer);this.receiptTimer=-1;}}
+  private async openReceipt():Promise<void>{
+    this.closeReceipt();this.page='receipts';this.receiptNotice='';this.receiptRows=[];this.receiptProfiles=[];this.receiptContext='';const life=this.receiptLife;
+    try{if(this.busy||this.demo||!this.token||!this.auth?.currentFamily()){MigrationRules.fail();}const c=await this.syncData.syncControl(this.syncIdentity());if(!c||!c.cursor||c.restriction){MigrationRules.fail();}const family=this.auth?.currentFamily()??'';const owner=this.authOwner;const connection=this.authConnectionIdentity();const i:MigrationIdentity={profile:this.profile,deployment:this.deploymentId,user:this.userId,device:this.deviceId,family:family,epoch:this.restoreEpoch,namespace:this.namespace(),store:c.physical,guard:c.guard};const current=():boolean=>this.page==='receipts'&&life===this.receiptLife&&this.foregroundVisible&&this.appVisible&&!this.demo&&this.token.length>0&&this.namespace()===i.namespace&&(this.auth?.currentFamily()??'')===family&&this.authOwner===owner&&this.authConnectionIdentity()===connection;
+      const files=new ReceiptFiles(getContext(this) as common.UIAbilityContext,i,current);const store=new ReceiptStore(this.store,i,current,files,MigrationNative.codec());await store.open();if(!current()){return;}const api=this.api();const ports:ReceiptPorts={identity:i,current:current,codec:MigrationNative.codec(),uuid:()=>util.generateRandomUUID(true),store:store,request:async(path:string,method:string,body:string,physical:string)=>JSON.stringify(await api.receipt<Object>(path,method as http.RequestMethod,body,physical,current)),binary:(path:string,physical:string,limit:number)=>api.migrationBytes(path,physical,limit,current)};const service=new ReceiptService(ports);this.receiptService=service;await service.reconcile();await this.reloadReceipt(service);if(current()){this.receiptTimer=setInterval(()=>{if(current()&&!this.receiptBusy){this.reloadReceipt(service).catch((_error:Error)=>{if(current()){this.receiptArchive=[];this.receiptNotice=this.m('error');}});}},5000);}
+    }catch(_){if(life===this.receiptLife){this.receiptNotice=this.m('connect');}}
+  }
+  private async reloadReceipt(service:ReceiptService):Promise<void>{const context=await service.context();const rows=await service.rows();let profiles:string[]=[];let report='';try{profiles=await service.profiles();report=await service.measurement()??'';}catch(_){}const archive=await service.archive();await this.drainSyncCleanup();if(this.receiptService===service){this.receiptContext=context;this.receiptRows=rows;this.receiptProfiles=profiles;this.receiptReport=report;this.receiptArchive=archive;}}
+  private receiptAction(action:(service:ReceiptService)=>Promise<void>):void{const service=this.receiptService;const life=this.receiptLife;if(!service||this.receiptBusy){return;}this.receiptBusy=true;this.receiptNotice='';action(service).then(async()=>{if(life===this.receiptLife&&service===this.receiptService){await this.reloadReceipt(service);if(!this.receiptNotice){this.receiptNotice=this.m('success');}}}).catch((_error:Error)=>{if(life===this.receiptLife){this.receiptNotice=this.m('error');}}).finally(()=>{if(life===this.receiptLife){this.receiptBusy=false;}});}
+  private receiptQualified(objects:boolean=false):boolean{if(!this.receiptContext||!this.receiptReport){return false;}const c=SyncJSON.parse(this.receiptContext);const q=c.get('storage');const local=SyncJSON.parse(this.receiptReport);return q.get('qualified').value===true&&(!objects||q.get('objectQualified').value===true)&&['buildDigest','verificationDigest','storageContract'].every((key:string)=>q.get(key).value===local.get(key).value);}
+  private receiptQualification():string{return this.receiptQualified(true)?'qualified_content_and_objects':this.receiptQualified()?'qualified_content':'transport';}
+  private receiptTargetText(key:string):string{if(!this.receiptTarget){return '';}const value=SyncJSON.parse(this.receiptTarget).get(key);return typeof value.value==='boolean'?this.r(value.value?'recorded':'pending'):value.value===null?this.r('notComplete'):value.string();}
+  private async saveReceiptOriginal(parent:string):Promise<void>{
+    const original=this.receiptService?.principal();if(!original){return;}try{const context=getContext(this) as common.UIAbilityContext;const options=new picker.DocumentSaveOptions();options.newFileNames=[MigrationRules.id(parent)+'.bin'];const uris=await new picker.DocumentViewPicker(context).save(options);if(!uris.length){return;}if(uris.length!==1||!uris[0].startsWith('file://')){MigrationRules.fail();}if(!this.receiptService){await this.openReceipt();}const service=this.receiptService;if(!service||!MigrationStore.samePrincipal(original,service.principal())){MigrationRules.fail();}const bytes=await service.objectBytes(parent);try{if(service!==this.receiptService||!this.appVisible||!this.foregroundVisible){MigrationRules.fail();}const file=fs.openSync(uris[0],fs.OpenMode.WRITE_ONLY|fs.OpenMode.TRUNC);try{let offset=0;while(offset<bytes.length){if(service!==this.receiptService||!this.appVisible||!this.foregroundVisible){MigrationRules.fail();}const n=fs.writeSync(file.fd,bytes.buffer.slice(bytes.byteOffset+offset,bytes.byteOffset+bytes.length));if(n<=0){MigrationRules.fail();}offset+=n;}fs.fsyncSync(file.fd);}finally{fs.closeSync(file);}this.receiptNotice=this.m('success');}finally{bytes.fill(0);}}catch(_){this.receiptNotice=this.m('error');}
+  }
+  private async copyReceiptReport():Promise<void>{const report=this.receiptReport;const life=this.receiptLife;if(!report){return;}await pasteboard.getSystemPasteboard().setData(pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN,report));if(life===this.receiptLife){this.receiptNotice=this.m('copied');}}
+  private m(key:string):string{return MigrationText.text(this.language,key);}
+  private closeMigration():void{this.migrationLife++;this.migrationService?.clear();this.migrationService=undefined;this.migrationIdentity=undefined;this.migrationPassword='';this.migrationOTP='';this.migrationCode='';this.migrationHistory=[];this.migrationQualified=[];this.migrationBusy=false;if(this.migrationTimer>=0){clearInterval(this.migrationTimer);this.migrationTimer=-1;}}
+  private async openMigration(fresh:boolean=true):Promise<void>{
+    this.closeMigration();this.page='migration';if(fresh){this.migrationCandidates=this.rows.filter((row:Message)=>!row.deleted&&!row.contentUnavailable&&!row.forwardUnavailable&&!['pending','frozen'].includes(row.state??'')&&Boolean(row.contentVersion)&&['text','image','audio','video','file'].includes(row.type));this.migrationSelected=[];this.migrationRows=[];this.migrationShown=20;}
+    const life=this.migrationLife;this.migrationNotice='';
+    try{
+      if(this.busy||this.demo||!this.token||!this.auth?.currentFamily()){throw new Error('MIGRATION_STORE_NOT_READY');}
+      const control=await this.syncData.syncControl(this.syncIdentity());if(!control||!control.cursor||control.restriction){throw new Error('MIGRATION_STORE_NOT_READY');}
+      const family=this.auth?.currentFamily()??'';const owner=this.authOwner;const connection=this.authConnectionIdentity();
+      const i:MigrationIdentity={profile:this.profile,deployment:this.deploymentId,user:this.userId,device:this.deviceId,family:family,epoch:this.restoreEpoch,namespace:this.namespace(),store:control.physical,guard:control.guard};
+      const current=():boolean=>this.page==='migration'&&life===this.migrationLife&&this.foregroundVisible&&this.appVisible&&!this.demo&&this.token.length>0&&this.namespace()===i.namespace&&(this.auth?.currentFamily()??'')===family&&this.authOwner===owner&&this.authConnectionIdentity()===connection;
+      if(!current()){return;}const files=new MigrationFiles(getContext(this) as common.UIAbilityContext,i,current);const store=new MigrationStore(this.store,i,current,files);await store.open();if(!current()){return;}const api=this.api();const receiptFiles=new ReceiptFiles(getContext(this) as common.UIAbilityContext,i,current);const receiptStore=new ReceiptStore(this.store,i,current,receiptFiles,MigrationNative.codec());await receiptStore.open();
+      const ports:MigrationPorts={identity:i,current:current,uuid:()=>util.generateRandomUUID(true),store:store,files:files,codec:MigrationNative.codec(),request:async(path:string,method:string,body:string,physical:string)=>JSON.stringify(await api.migration<Object>(path,method as http.RequestMethod,body,physical,current)),source:async(path:string)=>{if(!current()){MigrationRules.fail();}const raw=JSON.stringify(await api.request<Object>(path));if(!current()){MigrationRules.fail();}return raw;},binary:(path:string,physical:string,limit:number)=>api.migrationBytes(path,physical,limit,current),qualifiedSources:()=>receiptStore.migrationSources(),qualifiedSource:(raw:string)=>receiptStore.migrationSource(raw),receiptIntent:(id:string)=>receiptStore.intent(id),receiptRequest:async(path:string,method:string,body:string,physical:string)=>JSON.stringify(await api.receipt<Object>(path,method as http.RequestMethod,body,physical,current))};
+      const service=new MigrationService(ports);this.migrationIdentity=i;this.migrationService=service;await service.capability();await this.reloadMigration(service);
+      if(current()){this.migrationTimer=setInterval(()=>{if(!this.migrationBusy&&current()){this.reloadMigration(service).catch((_error:Error)=>{if(current()){this.migrationHistory=[];this.migrationNotice=this.m('error');}});}},5000);}
+    }catch(_){if(life===this.migrationLife){this.migrationNotice=this.m('connect');}}
+  }
+  private async reloadMigration(service:MigrationService):Promise<void>{const rows=await service.rows();const qualified=await service.qualifiedSources();await this.drainSyncCleanup();const history=await service.history();if(this.migrationService===service){this.migrationRows=rows;this.migrationHistory=history;this.migrationQualified=qualified.filter((raw:string)=>!this.migrationCandidates.some((item:Message)=>item.id===SyncJSON.parse(raw).get('id').string()));}}
+  private migrationAction(action:(service:MigrationService,password:string,otp:string,code:string)=>Promise<void>):void{
+    const service=this.migrationService;const life=this.migrationLife;if(!service||this.migrationBusy){return;}const password=this.migrationPassword;const otp=this.migrationOTP;const code=this.migrationCode;this.migrationPassword='';this.migrationOTP='';this.migrationCode='';this.migrationBusy=true;this.migrationNotice='';
+    action(service,password,otp,code).then(async()=>{if(life===this.migrationLife&&this.migrationService===service){await this.reloadMigration(service);if(!this.migrationNotice){this.migrationNotice=this.m('success');}}}).catch((_error:Error)=>{if(life===this.migrationLife){this.migrationNotice=this.m('error');}}).finally(()=>{if(life===this.migrationLife){this.migrationBusy=false;}});
+  }
+  private migrationSelection():string{const rows:Object[]=[];for(const row of this.migrationCandidates.filter((item:Message)=>this.migrationSelected.includes(item.id))){const value:Record<string,Object>={};value['id']=row.id;value['conversationId']=row.conversationId;value['contentVersion']=row.contentVersion??'';value['type']=row.type;value['objectMode']=row.type==='text'?'none':this.migrationFull&&!row.forwarded&&Boolean(row.attachmentId)?'full':'metadata_only';if(row.forwarded){value['forwarded']=true;}else if(row.attachmentId){value['attachmentId']=row.attachmentId;}rows.push(value);}for(const raw of this.migrationQualified){const m=SyncJSON.parse(raw);if(!this.migrationSelected.includes(m.get('id').string())){continue;}const value:Record<string,Object>={};const mode=m.get('type').string()==='text'?'none':this.migrationFull&&m.has('sourceObjectReceiptId')?'full':'metadata_only';for(const key of ['id','conversationId','contentVersion','type','attachmentId','sourceReceiptId','sourceObjectReceiptId']){if(m.has(key)&&(key!=='sourceObjectReceiptId'||mode==='full')){value[key]=m.get(key).value as Object;}}value['objectMode']=mode;rows.push(value);}return JSON.stringify(rows);}
+  private migrationField(raw:string,key:string):string{const value=SyncJSON.parse(raw).get(key);return typeof value.value==='string'?value.string():'';}
+  private migrationCanSave(raw:string):boolean{const row=SyncJSON.parse(raw);return row.get('objectMode').value==='full'&&row.get('contentUnavailable').value!==true&&!row.get('forwarded').value;}
+  private async copyMigrationPair(id:string):Promise<void>{const service=this.migrationService;const life=this.migrationLife;if(!service){return;}try{const proof=service.sharePair(id);await pasteboard.getSystemPasteboard().setData(pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN,proof));if(life===this.migrationLife){this.migrationNotice=this.m('copied');}}catch(_){if(life===this.migrationLife){this.migrationNotice=this.m('error');}}}
+  private async saveMigrationObject(id:string):Promise<void>{
+    const original=this.migrationIdentity;if(!original){return;}const context=getContext(this) as common.UIAbilityContext;const options=new picker.DocumentSaveOptions();options.newFileNames=[MigrationRules.id(id)+'.bin'];
+    try{const uris=await new picker.DocumentViewPicker(context).save(options);if(!uris.length){return;}if(uris.length!==1||!uris[0].startsWith('file://')){MigrationRules.fail();}if(!this.migrationService){await this.openMigration(false);}const service=this.migrationService;const current=this.migrationIdentity;if(!service||!current||!MigrationStore.samePrincipal(original,current)){MigrationRules.fail();}
+      const info=SyncJSON.parse(await service.objectInfo(id));const namespace=info.get('namespace').string();const files=new MigrationFiles(context,{profile:current.profile,deployment:current.deployment,user:current.user,device:current.device,family:current.family,epoch:current.epoch,namespace:namespace,store:current.store,guard:current.guard},()=>this.migrationService===service&&this.foregroundVisible&&this.appVisible);const bytes=new Uint8Array(files.object(info.get('path').string()));
+      try{if(await MigrationNative.codec().hash(bytes)!==info.get('sha256').string()||this.migrationService!==service){MigrationRules.fail();}const file=fs.openSync(uris[0],fs.OpenMode.WRITE_ONLY|fs.OpenMode.TRUNC);try{let offset=0;while(offset<bytes.length){if(this.migrationService!==service){MigrationRules.fail();}const n=fs.writeSync(file.fd,bytes.buffer.slice(bytes.byteOffset+offset,bytes.byteOffset+bytes.length));if(n<=0){MigrationRules.fail();}offset+=n;}fs.fsyncSync(file.fd);}finally{fs.closeSync(file);}this.migrationNotice=this.m('success');}finally{bytes.fill(0);}
+    }catch(_){this.migrationNotice=this.m('error');}
+  }
   private t(key: string): string { return Strings.text(this.language, key); }
   private s(key: string): string { return SelfText.text(this.language, key); }
   private e(key: string): string { return ExportText.text(this.language, key); }
@@ -220,8 +373,164 @@ struct Index {
   private bubble(): string { return this.dark ? '#253A31' : '#DCEDE4'; }
   private namespace(): string { return Isolation.namespace(this.profile, this.deploymentId, this.userId, this.demo, this.restoreEpoch, this.deviceId, this.sourceContextId); }
   private operationNamespace(): string { return Isolation.namespace(this.profile, this.deploymentId, this.userId, this.demo, this.restoreEpoch, 'account-operations'); }
-  private api(): Api { return new Api(this.base, this.token, this.caPath, this.auth?.hooks()); }
-  private exportPageChanged(): void { if (this.page !== 'exports') { this.closeExport(); } }
+  private api(): Api { if (this.passwordPaused() || this.deletionPaused()) { throw new Error('ACCOUNT_SECURITY_RESULT_UNKNOWN'); } return new Api(this.base, this.token, this.caPath, this.auth?.hooks()); }
+  private p(key: string): string { return PasswordText.text(this.language, key); }
+  private clearPasswordInput(): void { this.passwordOld = ''; this.passwordNew = ''; this.passwordConfirm = ''; this.passwordOTP = ''; }
+  private passwordPaused(): boolean { const family = this.auth?.currentFamily() ?? ''; return Boolean(family) && this.passwordRows.some((row: PasswordIntent) => row.family === family && PasswordRules.blocked(row)); }
+  private passwordRepository(): PasswordStore {
+    const identity = this.authConnectionIdentity();
+    return new PasswordStore(this.store, this.profile, () => identity === this.authConnectionIdentity(), (row: PasswordIntent) => {
+      this.auth?.passwordPause(row.family, PasswordRules.blocked(row));
+      const index = this.passwordRows.findIndex((item: PasswordIntent) => item.id === row.id);
+      this.passwordRows = index < 0 ? [row, ...this.passwordRows] : this.passwordRows.map((item: PasswordIntent) => item.id === row.id ? row : item);
+      if (this.passwordPaused()) { this.stopSync(); this.clearSyncRAM(); this.rows = []; this.conversations = []; }
+    });
+  }
+  private async loadPasswordRows(): Promise<void> { const repository = this.passwordRepository(); await repository.open(); this.passwordRows = await repository.list(); }
+  private openPassword(): void { this.clearPasswordInput(); this.passwordShown = 20; this.passwordNotice = ''; this.page = 'password'; this.run(async () => this.loadPasswordRows()); }
+  private submitPassword(id: string, retry: boolean): void {
+    if (this.passwordBusy) { return; }
+    let proof: PasswordProof;
+    try { proof = PasswordRules.normalized(this.passwordOld, this.passwordNew, this.passwordConfirm, this.passwordOTP); }
+    catch (_) { this.passwordNotice = this.p('invalid'); return; }
+    this.clearPasswordInput(); this.passwordBusy = true; this.passwordNotice = '';
+    const life = this.passwordLife; const identity = this.authConnectionIdentity(); const family = this.auth?.currentFamily() ?? ''; const authOwner = this.authOwner;
+    const current = (): boolean => this.foregroundVisible && this.appVisible && this.page === 'password' && life === this.passwordLife && identity === this.authConnectionIdentity() && authOwner === this.authOwner && family === (this.auth?.currentFamily() ?? '');
+    const ports: PasswordPorts = {
+      profile: this.profile, origin: this.base, deployment: this.deploymentId, epoch: this.restoreEpoch, current: current,
+      owner: (): PasswordOwner | undefined => {
+        const pair = this.auth?.passwordOwner(); if (!pair || this.demo) { return undefined; }
+        return { user: pair.userId, username: pair.username, device: pair.deviceId, family: pair.familyId, namespace: Isolation.namespace(pair.profile, pair.deployment, pair.userId, false, pair.epoch, pair.deviceId, pair.sourceContextId), token: pair.token };
+      },
+      uuid: () => util.generateRandomUUID(true), repository: this.passwordRepository(),
+      prepare: async () => { await this.api().request<AuthContext>('/auth/context'); },
+      bootstrap: async () => { await this.verifySavedCA(); return new Api(this.base, '', this.caPath).request<Bootstrap>('/bootstrap'); },
+      request: async (route: string, body: string, token: string) => {
+        if (!current()) { throw new Error('PASSWORD_CHANGE_CONTEXT_CHANGED'); }
+        return JSON.stringify(await new Api(this.base, token, this.caPath).request<Object>(route, 'POST', body));
+      },
+      stop: async (row: PasswordIntent) => {
+        if (current() && this.auth?.currentFamily() === row.family) { await this.auth.clear(this.auth.stamp()); }
+      }
+    };
+    const service = new PasswordChange(ports);
+    service.perform(id, proof, retry).then(async () => { if (identity === this.authConnectionIdentity() && life === this.passwordLife) { await this.loadPasswordRows(); } })
+      .catch((error: Error) => { if (current()) { this.passwordNotice = this.p(error.message === 'PASSWORD_CHANGE_UNAVAILABLE' ? 'unavailable' : error.message === 'PASSWORD_CHANGE_ORIGINAL_PENDING' ? 'blocked' : 'error'); } })
+      .finally(() => { proof.currentPassword = ''; proof.newPassword = ''; proof.otp = ''; if (life === this.passwordLife) { this.passwordBusy = false; } });
+  }
+  private d(key: string): string { return DeletionText.text(this.language, key); }
+  private clearDeletionInput(): void { this.deletionPassword = ''; this.deletionRecovery = ''; this.deletionOTP = ''; }
+  private closeDeletion(): void { this.clearDeletionInput(); this.deletionLife++; this.deletionBusy = false; }
+  private deletionPaused(): boolean { const family = this.auth?.currentFamily() ?? ''; return Boolean(family) && this.deletionRows.some((row: DeletionIntent) => row.meta.family === family && DeletionRules.blocked(row)); }
+  private deletionRepository(): DeletionStore {
+    const identity = this.authConnectionIdentity();
+    return new DeletionStore(this.store, this.profile, () => identity === this.authConnectionIdentity(), (row: DeletionIntent) => {
+      this.auth?.deletionPause(row.meta.family, DeletionRules.blocked(row));
+      const at = this.deletionRows.findIndex((item: DeletionIntent) => item.meta.id === row.meta.id);
+      this.deletionRows = at < 0 ? [row, ...this.deletionRows] : this.deletionRows.map((item: DeletionIntent) => item.meta.id === row.meta.id ? row : item);
+      if (this.deletionPaused()) { this.stopSync(); this.clearSyncRAM(); this.rows = []; this.conversations = []; }
+    });
+  }
+  private async eraseDeletionLocal(row: DeletionIntent): Promise<void> {
+    await this.deletionRepository().eraseLocal(row, async (plan: DeletionLocalPlan) => DeletionFiles.clear(getContext(this) as common.UIAbilityContext, plan));
+  }
+  private async loadDeletionRows(): Promise<void> { const repository = this.deletionRepository(); await repository.open(); this.deletionRows = await repository.list(); }
+  private openDeletion(): void { this.clearDeletionInput(); this.deletionShown = 20; this.deletionNotice = ''; this.page = 'deletion'; this.run(async () => this.loadDeletionRows()); }
+  private deletionVersion(row: DeletionIntent): string { return row.result ? DeletionRules.result(row.result, row).requestVersion : ''; }
+  private deletionUntil(row: DeletionIntent): string { return row.result ? DeletionRules.result(row.result, row).cancelUntil ?? '' : ''; }
+  private submitDeletion(id: string, mode: string, version: string = ''): void {
+    if (this.deletionBusy || !this.foregroundVisible || !this.appVisible) { return; }
+    let password = this.deletionPassword; let recovery = this.deletionRecovery; let otp = this.deletionOTP;
+    this.clearDeletionInput(); this.deletionBusy = true; this.deletionNotice = '';
+    const life = this.deletionLife; const identity = this.authConnectionIdentity(); const family = this.auth?.currentFamily() ?? ''; const authOwner = this.authOwner;
+    const current = (): boolean => this.foregroundVisible && this.appVisible && this.page === 'deletion' && life === this.deletionLife && identity === this.authConnectionIdentity() && authOwner === this.authOwner && family === (this.auth?.currentFamily() ?? '');
+    const ports: DeletionPorts = {
+      profile: this.profile, origin: this.base, deployment: this.deploymentId, epoch: this.restoreEpoch, current: current,
+      owner: (): PasswordOwner | undefined => { const pair = this.auth?.passwordOwner(); if (!pair || this.demo) { return undefined; } return { user: pair.userId, username: pair.username, device: pair.deviceId, family: pair.familyId, namespace: Isolation.namespace(pair.profile, pair.deployment, pair.userId, false, pair.epoch, pair.deviceId, pair.sourceContextId), token: pair.token }; },
+      uuid: () => util.generateRandomUUID(true), repository: this.deletionRepository(),
+      prepare: async () => { await this.api().request<AuthContext>('/auth/context'); },
+      bootstrap: async () => { await this.verifySavedCA(); return new Api(this.base, '', this.caPath).request<Bootstrap>('/bootstrap'); },
+      request: async (route: string, body: string, token: string) => { if (!current()) { throw new Error('DELETION_CONTEXT_CHANGED'); } return JSON.stringify(await new Api(this.base, token, this.caPath).request<Object>(route, 'POST', body)); },
+      stop: async (row: DeletionIntent) => { if (!current()) { return; } if (row.state === 'completed') { await this.eraseDeletionLocal(row); } if (this.auth?.currentFamily() === row.meta.family) { await this.auth.clear(this.auth.stamp()); } }
+    };
+    const service = new Deletion(ports);
+    const action = mode === 'query' || mode === 'cancel' ? service.rights(id, password, recovery, otp, mode === 'cancel', version) : service.request(id, password, otp, mode === 'retry');
+    action.then(async () => { if (identity === this.authConnectionIdentity() && life === this.deletionLife) { await this.loadDeletionRows(); } })
+      .catch((error: Error) => { if (current()) { this.deletionNotice = this.d(error.message === 'DELETION_UNAVAILABLE' ? 'unavailable' : error.message === 'DELETION_ORIGINAL_PENDING' ? 'blocked' : 'error'); } })
+      .finally(() => { password = ''; recovery = ''; otp = ''; if (life === this.deletionLife) { this.deletionBusy = false; } });
+  }
+  private g(key: string): string { return GroupText.text(this.language, key); }
+  private groupManager(): boolean { return Boolean(this.groupSnapshot) && GroupRules.manager(this.groupSnapshot); }
+  private groupOwner(): boolean { return Boolean(this.groupSnapshot) && SyncJSON.parse(this.groupSnapshot).get('role').string() === 'owner' && !SyncJSON.parse(this.groupSnapshot).get('readOnly').bool(); }
+  private groupRecover(): boolean { return Boolean(this.groupSnapshot) && SyncJSON.parse(this.groupSnapshot).get('canRecover').value === true; }
+  private groupField(raw: string, key: string): string { const value = SyncJSON.parse(raw).get(key); return value.value === null ? '' : typeof value.value === 'string' ? value.string() : value.raw(); }
+  private closeGroupTools(): void { this.groupLife++; this.groupService?.clear(); this.groupService = undefined; this.groupCode = ''; this.groupOTP = ''; this.groupBusy = false; }
+  private openGroupTools(id: string): void {
+    this.closeGroupTools(); this.groupControlId = id; this.groupSnapshot = ''; this.groupInvites = []; this.groupRequests = []; this.groupOperations = []; this.members = []; this.groupMembersNext = ''; this.groupInvitesNext = ''; this.groupRequestsNext = ''; this.groupShown = 20; this.groupNotice = ''; this.page = 'groupTools';
+    const life = this.groupLife; const identity = this.authConnectionIdentity(); const family = this.auth?.currentFamily() ?? ''; const owner = this.authOwner;
+    const current = (): boolean => this.page === 'groupTools' && this.foregroundVisible && this.appVisible && life === this.groupLife && identity === this.authConnectionIdentity() && family === (this.auth?.currentFamily() ?? '') && owner === this.authOwner;
+    const environment: GroupEnvironment = { profile: this.profile, deployment: this.deploymentId, user: this.userId, epoch: this.restoreEpoch, namespace: this.namespace(), family: family };
+    const repository = new GroupStore(this.store, environment, current);
+    const ports: GroupPorts = { environment: environment, current: current, uuid: () => util.generateRandomUUID(true), repository: repository,
+      codec: { encode: (text: string) => new util.Base64Helper().encodeToStringSync(new util.TextEncoder().encodeInto(text)), decode: (text: string) => util.TextDecoder.create('utf-8', { fatal: true }).decodeToString(new util.Base64Helper().decodeSync(text)) },
+      request: async (route: string, method: string, body: string) => { if (!current()) { throw new Error('GROUP_CONTEXT_CHANGED'); } return JSON.stringify(await this.api().request<Object>(route, method as http.RequestMethod, body)); }
+    };
+    const service = new GroupTools(ports); this.groupService = service;
+    this.groupBusy = true;
+    repository.open().then(async () => { if (!current()) { return; } this.groupOperations = await service.list(); if (id) { await this.loadGroupControl(service); } })
+      .catch((_error: Error) => { if (current()) { this.groupNotice = this.g('error'); } })
+      .finally(() => { if (life === this.groupLife) { this.groupBusy = false; } });
+  }
+  private async loadGroupControl(service: GroupTools): Promise<void> {
+    const life = this.groupLife; const snapshot = await service.load(this.groupControlId); if (life !== this.groupLife) { return; } this.groupSnapshot = snapshot;
+    const policy = SyncJSON.parse(snapshot).get('policy'); this.groupMuteAll = policy.get('muteAll').bool(); this.groupSlow = String(policy.get('slowSeconds').integer(3600)); this.groupCapacity = String(policy.get('maxMembers').integer(10000));
+    await this.loadGroupPage(service, 'members', true);
+    if (this.groupManager()) { await this.loadGroupPage(service, 'invites', true); await this.loadGroupPage(service, 'join-requests', true); }
+  }
+  private async loadGroupPage(service: GroupTools, kind: string, first: boolean): Promise<void> {
+    const life = this.groupLife; const cursor = first ? '' : kind === 'members' ? this.groupMembersNext : kind === 'invites' ? this.groupInvitesNext : this.groupRequestsNext;
+    if (!first && !cursor) { return; } const page = await service.page(this.groupControlId, kind, cursor); if (life !== this.groupLife) { return; }
+    if (kind === 'members') { const incoming = page.items.map((raw: string) => JSON.parse(raw) as GroupMember); const old = first ? [] : this.members; this.members = old.filter((item: GroupMember) => !incoming.some((row: GroupMember) => row.id === item.id)).concat(incoming); this.groupMembersNext = page.next; }
+    else if (kind === 'invites') { const old = first ? [] : this.groupInvites; this.groupInvites = old.filter((raw: string) => !page.items.some((row: string) => this.groupField(row, 'id') === this.groupField(raw, 'id'))).concat(page.items); this.groupInvitesNext = page.next; }
+    else { const old = first ? [] : this.groupRequests; this.groupRequests = old.filter((raw: string) => !page.items.some((row: string) => this.groupField(row, 'id') === this.groupField(raw, 'id'))).concat(page.items); this.groupRequestsNext = page.next; }
+  }
+  private groupMore(kind: string): void {
+    const service = this.groupService; if (!service || this.groupBusy) { return; } const life = this.groupLife; this.groupBusy = true;
+    this.loadGroupPage(service, kind, false).catch((_error: Error) => { if (life === this.groupLife) { this.groupNotice = this.g('error'); } }).finally(() => { if (life === this.groupLife) { this.groupBusy = false; } });
+  }
+  private stageGroup(action: string, target?: GroupMember, fields: string = '{}', label: string = ''): void {
+    if (!this.groupService || this.groupBusy) { return; } const row = this.groupService.prepare(action, target, fields); const life = this.groupLife;
+    AlertDialog.show({ title: this.g('confirm'), message: (label || this.g(action)) + (target ? ' · ' + target.displayName : ''), primaryButton: { value: this.g('confirm'), action: () => { if (life === this.groupLife) { this.performGroup(row, true); } } }, secondaryButton: { value: this.t('cancel'), action: () => {} } });
+  }
+  private joinGroupCode(): void { if (!this.groupService || this.groupBusy) { return; } try { this.performGroup(this.groupService.joining(this.groupCode), true); } catch (_) { this.groupNotice = this.g('error'); } }
+  private performGroup(row: GroupIntent, retry: boolean): void {
+    const service = this.groupService; if (!service || this.groupBusy) { return; } let code = this.groupCode; let otp = this.groupOTP; const life = this.groupLife; this.groupCode = ''; this.groupOTP = ''; this.groupBusy = true; this.groupNotice = '';
+    service.perform(row, retry, code, otp).then(async (result: string | undefined) => {
+      if (life !== this.groupLife) { return; } const operations = await service.list(); if (life !== this.groupLife) { return; } this.groupOperations = operations; this.groupNotice = this.g(result && row.kind === 'join' ? this.groupJoinLabel(result) : result ? 'applied' : 'unknown');
+      if (result) { const conversations = (await this.api().request<ConversationList>('/conversations')).items; if (life !== this.groupLife) { return; } this.conversations = conversations; if (this.conversation) { this.conversation = this.conversations.find((item: Conversation) => item.id === this.conversation?.id); } }
+    }).catch(async (_error: Error) => { if (life === this.groupLife) { this.groupNotice = this.g('error'); try { const operations = await service.list(); if (life === this.groupLife) { this.groupOperations = operations; } } catch (_) {} } })
+      .finally(() => { code = ''; otp = ''; if (life === this.groupLife) { this.groupBusy = false; } });
+  }
+  private groupJoinLabel(raw: string): string { const state = SyncJSON.parse(raw).get('state').string(); return state === 'pending' ? 'joinPending' : state === 'approved' ? 'joinApproved' : state === 'rejected' ? 'joinRejected' : 'applied'; }
+  private copyGroupCode(id: string): void {
+    const service = this.groupService; if (!service) { return; } const life = this.groupLife;
+    try { const code = service.share(id); pasteboard.getSystemPasteboard().setData(pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, code)).then(() => { if (life === this.groupLife && service === this.groupService) { this.groupNotice = this.g('copied'); } }).catch((_error: Error) => { if (life === this.groupLife && service === this.groupService) { this.groupNotice = this.g('error'); } }); }
+    catch (_) { if (life === this.groupLife) { this.groupNotice = this.g('reloadRequired'); } }
+  }
+  private async loadGroupMembers(more: boolean): Promise<void> {
+    const conversation = this.conversation; if (!conversation) { return; } const cursor = more ? this.groupMembersNext : ''; if (more && !cursor) { return; }
+    const identity = this.authConnectionIdentity(); const page = this.demo ? { items: [], nextCursor: '' } as MemberList : await this.api().request<MemberList>('/conversations/' + conversation.id + '/members?limit=50' + (cursor ? '&after=' + cursor : ''));
+    if (identity !== this.authConnectionIdentity() || this.conversation?.id !== conversation.id) { return; } const next = page.nextCursor ?? ''; if (next && (!SyncRules.uuid(next) || next === cursor)) { throw new Error('GROUP_INVALID_CURSOR'); }
+    const previous = more ? this.members : []; this.members = previous.filter((old: GroupMember) => !page.items.some((item: GroupMember) => item.id === old.id)).concat(page.items); this.groupMembersNext = next;
+  }
+  private exportPageChanged(): void {
+    if (this.page !== 'receipts') { this.closeReceipt(); }
+    if (this.page !== 'migration') { this.closeMigration(); }
+    if (this.page !== 'exports') { this.closeExport(); }
+    if (this.page !== 'password') { this.clearPasswordInput(); this.passwordLife++; this.passwordBusy = false; }
+    if (this.page !== 'deletion') { this.closeDeletion(); }
+    if (this.page !== 'groupTools') { this.closeGroupTools(); }
+  }
   private closeExport(): void {
     this.exportLife++; this.exportTransfer++; this.exportService = undefined; this.exportBusy = false; this.exportDownloading = false;
     this.exportFiles?.dispose(); this.exportFiles = undefined; this.exportRows = []; this.exportViews = {}; this.exportSupported = false; this.exportNotice = '';
@@ -241,7 +550,7 @@ struct Index {
         request: async (route: string, method: string, body: string) => JSON.stringify(await api.request<Object>(route, method as http.RequestMethod, body)),
         download: async (job: string, ticket: string) => {
           const transfer = ++this.exportTransfer; const stillCurrent = (): boolean => current() && transfer === this.exportTransfer && this.foregroundVisible && this.appVisible;
-          const files = new ExportFiles(getContext(this) as common.UIAbilityContext, stillCurrent); this.exportFiles = files;
+          const files = new ExportFiles(getContext(this) as common.UIAbilityContext, stillCurrent, namespace); this.exportFiles = files;
           return api.dataExport(job, ticket, files, stillCurrent);
         }
       };
@@ -299,7 +608,9 @@ struct Index {
       store: this.syncData, codec: NativeServices.syncCodec(), uuid: () => util.generateRandomUUID(true),
       current: () => this.namespace() === identity.namespace && (this.auth?.stamp() ?? '') === auth && this.syncLife === life && this.token.length > 0 && !this.demo && this.foregroundVisible && this.appVisible,
       request: async (path: string, method: string, body: string) => JSON.stringify(await api.request<Object>(path, method as http.RequestMethod, body)),
-      cleanup: () => this.drainSyncCleanup()
+      cleanup: () => this.drainSyncCleanup(),
+      committed: (messages:string[]) => this.offerReceiptAutomatic(messages),
+      historyChanged: () => {this.closeMigration();this.migrationHistory=[];this.migrationQualified=[];}
     };
     this.synchronizer = new SyncEngine(identity, ports); return this.synchronizer;
   }
@@ -425,6 +736,8 @@ struct Index {
     this.selfDraft = undefined; this.selfRead = undefined; this.observedVisible.clear();
   }
   private async drainSyncCleanup(): Promise<void> {
+    for(const item of await ReceiptCleanup.plans(this.store)){ReceiptFiles.eraseOwned(getContext(this) as common.UIAbilityContext,item[0],[item[1]]);await ReceiptCleanup.done(this.store,item[0],item[1]);}
+    for (const item of await MigrationStore.cleanups(this.store)) { MigrationFiles.eraseOwned(getContext(this) as common.UIAbilityContext, item[0], [item[1]]); await MigrationStore.cleaned(this.store,item[0],item[1]); }
     const work = await this.syncData.cleanups();
     if (work.length) { this.clearSyncRAM(); }
     for (const item of work) {
@@ -468,6 +781,7 @@ struct Index {
       publish: (pair: CredentialPair | undefined, user: User | undefined) => {
         if (this.authOwner !== owner || this.authConnectionIdentity() !== identity) { return; }
         if (!pair || !user) { this.resetSessionView(); return; }
+        if(this.receiptAutoIdentity&&this.receiptAutoIdentity.family!==pair.familyId){this.receiptAutomatic?.stop();this.receiptAutomatic=undefined;this.receiptAutoIdentity=undefined;this.receiptAutoEnabled=false;}
         this.token = pair.token; this.userId = pair.userId; this.deviceId = pair.deviceId; this.sourceContextId = pair.sourceContextId;
         this.sessionAlias = 'JobsIM|' + this.namespace(); this.me = user; this.username = pair.username; this.demo = false;
       },
@@ -1002,7 +1316,7 @@ struct Index {
   }
   private async groupSettings(): Promise<void> {
     if (!this.conversation || this.conversation.kind !== 'group') { return; }
-    this.members = this.demo ? [] : (await this.api().request<MemberList>('/conversations/' + this.conversation.id + '/members')).items;
+    await this.loadGroupMembers(false);
     this.groupTitle = this.conversation.title;
     this.page = 'group';
   }
@@ -1022,7 +1336,8 @@ struct Index {
       await this.api().request<Object>('/conversations/' + conversation.id + '/members', 'POST', JSON.stringify({ userId: this.groupNewMember }));
       this.groupNewMember = '';
     } else {
-      await this.api().request<Conversation>('/conversations/' + conversation.id, 'PATCH', action === 'rename' ? JSON.stringify({ title: this.groupTitle }) : JSON.stringify({ ownerId: this.groupNewOwner }));
+      if (action !== 'rename') { throw new Error('GROUP_ORIGINAL_PERMISSION_REQUIRED'); }
+      await this.api().request<Conversation>('/conversations/' + conversation.id, 'PATCH', JSON.stringify({ title: this.groupTitle }));
       this.groupNewOwner = '';
     }
     this.conversations = (await this.api().request<ConversationList>('/conversations')).items;
@@ -1040,12 +1355,17 @@ struct Index {
   private async restoreSession(): Promise<void> {
     if (this.deploymentId.length === 0) { return; }
     await this.verifySavedCA();
+    await this.loadPasswordRows();
+    await this.loadDeletionRows();
+    for (const row of this.deletionRows.filter((item: DeletionIntent) => item.state === 'completed')) { await this.eraseDeletionLocal(row); }
     const raw = await this.prefs?.get('session', '') as string;
     const legacy = raw ? JSON.parse(raw) as SessionPointer : undefined;
     await this.ensureAuth().restore(legacy);
     if (this.token.length > 0) { await this.reload(); }
   }
   private resetSessionView(): void {
+    this.receiptAutomatic?.stop();this.receiptAutomatic=undefined;this.receiptAutoIdentity=undefined;this.receiptAutoEnabled=false;
+    this.clearPasswordInput(); this.clearDeletionInput();
     this.closeExport();
     this.stopSync(); this.forwardViews.clear(); this.clearSyncRAM(); this.syncRestricted = false; this.localEntries = false;
     this.selfService = undefined; this.selfKey = ''; this.selfSupported = false; this.selfAll = false; this.selfViews = {}; this.selfView = undefined; this.selfOperations = []; this.selfDraftEntries = []; this.cloudFontKey = ''; this.cloudFont = 'standard'; this.cloudReplyVersion = ''; this.draftRevision++;
@@ -1164,6 +1484,7 @@ struct Index {
     const path = (getContext(this) as common.UIAbilityContext).cacheDir + '/own-avatar-' + util.generateRandomUUID(true) + '.jpg';
     const file = fs.openSync(path, fs.OpenMode.CREATE | fs.OpenMode.WRITE_ONLY | fs.OpenMode.TRUNC);
     try { fs.writeSync(file.fd, result.data); } finally { fs.closeSync(file); }
+    await this.store.setValue(this.namespace(), 'own-avatar-sidecar:' + path.slice(path.lastIndexOf('/') + 1), path);
     this.avatarPath = path; this.ownAvatarRef = url;
   }
   private async showReports(): Promise<void> {
@@ -1424,6 +1745,11 @@ struct Index {
       Text(this.t('font')).fontSize(22 * this.fontScale).fontColor(this.foreground())
       Slider({ value: this.fontScale, min: 0.85, max: 1.3, step: 0.05 }).onChange((value: number) => { this.fontScale = value; this.saveSetting('fontScale', String(value)); })
       this.exportButton('exportTitle', () => { this.openExports(); })
+      Button(this.r('title')).height(52).width('100%').type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).enabled(!this.demo&&Boolean(this.userId)&&!this.busy).onClick(()=>this.openReceipt())
+      Button(this.m('title')).height(52).width('100%').type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).enabled(!this.demo&&Boolean(this.userId)&&!this.busy).onClick(()=>this.openMigration())
+      Button(this.g('join')).height(52).width('100%').type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).enabled(!this.demo && Boolean(this.userId)).onClick(() => this.openGroupTools(''))
+      Button(this.d('title')).height(52).width('100%').type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).onClick(() => this.openDeletion())
+      Button(this.p('title')).height(52).width('100%').type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).onClick(() => this.openPassword())
       if (!this.demo && this.selfSupported) { this.selfFontControls(); this.selfButton('title', () => this.run(async () => this.openSelfState())) }
       if (this.token.length > 0) {
         Text(this.me?.displayName ?? this.username).fontColor(this.foreground())
@@ -1447,12 +1773,86 @@ struct Index {
   @Builder private exportButton(key: string, action: () => void, enabled: boolean = true) {
     Button(this.e(key)).height(52).width('100%').type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).fontSize(16 * this.fontScale).enabled(enabled && !this.exportBusy).onClick(action)
   }
+  @Builder private deletionPage() {
+    Column({ space: 12 }) {
+      Button(this.t('back')).height(48).onClick(() => { this.closeDeletion(); this.page = 'settings'; })
+      Text(this.d('title')).fontSize(24 * this.fontScale).fontColor(this.foreground()).width('100%')
+      Text(this.d('help')).fontColor(this.foreground()).width('100%')
+      if (this.deletionNotice) { Text(this.deletionNotice).fontColor(this.foreground()).width('100%') }
+      if (this.deletionBusy) { LoadingProgress().width(28).height(28) }
+      TextInput({ placeholder: this.d('current'), text: this.deletionPassword }).type(InputType.Password).height(52).onChange((value: string) => this.deletionPassword = value)
+      TextInput({ placeholder: this.d('recovery'), text: this.deletionRecovery }).type(InputType.Password).height(52).onChange((value: string) => this.deletionRecovery = value)
+      TextInput({ placeholder: this.d('otp'), text: this.deletionOTP }).type(InputType.Password).height(52).onChange((value: string) => this.deletionOTP = value)
+      Button(this.d('submit')).height(52).width('100%').enabled(!this.deletionBusy && !this.demo && Boolean(this.userId) && Boolean(this.deletionPassword) && !this.deletionRecovery).onClick(() => {
+        AlertDialog.show({ title: this.d('title'), message: this.d('help'), primaryButton: { value: this.d('submit'), action: () => this.submitDeletion('', 'request') }, secondaryButton: { value: this.t('cancel'), action: () => {} } });
+      })
+      Text(this.d('requests')).fontColor(this.foreground()).fontSize(20 * this.fontScale)
+      Button(this.t('refresh')).height(48).enabled(!this.deletionBusy).onClick(() => this.run(async () => this.loadDeletionRows()))
+      if (!this.deletionRows.length) { this.emptyWith(() => this.run(async () => this.loadDeletionRows())) }
+      ForEach(this.deletionRows.slice(0, this.deletionShown), (row: DeletionIntent) => {
+        Column({ space: 8 }) {
+          Text(row.meta.username + ' · ' + row.meta.created).fontColor(this.foreground())
+          Text(this.d(row.state)).fontColor(this.foreground())
+          if (this.deletionUntil(row)) { Text(this.d('deadline') + ' · ' + this.deletionUntil(row)).fontColor(this.foreground()) }
+          if (DeletionRules.cancelFrozen(row)) { Text(this.d('cancelFrozen')).fontColor(this.foreground()) }
+          else if (row.cancelState === 'unknown') { Text(this.d('cancelQueryFirst')).fontColor(this.foreground()) }
+          if (row.result) {
+            Button(this.d('proofQuery')).height(48).width('100%').enabled(!this.deletionBusy && Boolean(this.deletionPassword) !== Boolean(this.deletionRecovery)).onClick(() => this.submitDeletion(row.meta.id, 'query'))
+            if (row.state === 'requested' && DeletionRules.cancelReady(row)) { Button(this.d('proofCancel')).height(48).width('100%').enabled(!this.deletionBusy && Boolean(this.deletionPassword) !== Boolean(this.deletionRecovery)).onClick(() => {
+              const version = this.deletionVersion(row);
+              AlertDialog.show({ title: this.d('title'), message: this.d('confirmCancel'), primaryButton: { value: this.d('proofCancel'), action: () => this.submitDeletion(row.meta.id, 'cancel', version) }, secondaryButton: { value: this.t('cancel'), action: () => {} } });
+            }) }
+          }
+          Button(this.d('check')).height(48).width('100%').enabled(!this.deletionBusy && Boolean(this.deletionPassword) && !this.deletionRecovery).onClick(() => this.submitDeletion(row.meta.id, 'lookup'))
+          if (['unsent', 'unknown', 'pending'].includes(row.state)) { Button(this.d('retry')).height(48).width('100%').enabled(!this.deletionBusy && Boolean(this.deletionPassword) && !this.deletionRecovery).onClick(() => this.submitDeletion(row.meta.id, 'retry')) }
+        }.width('100%').padding(12).backgroundColor(this.bubble())
+      }, (row: DeletionIntent) => row.meta.id)
+      if (this.deletionRows.length > this.deletionShown) { Button(this.t('loadMore')).height(48).onClick(() => this.deletionShown += 20) }
+    }.padding(20).width('100%')
+  }
+  @Builder private passwordPage() {
+    Column({ space: 12 }) {
+      Button(this.t('back')).height(48).onClick(() => { this.clearPasswordInput(); this.passwordLife++; this.passwordBusy = false; this.page = 'settings'; })
+      Text(this.p('title')).fontSize(24 * this.fontScale).fontColor(this.foreground()).width('100%')
+      Text(this.p('help')).fontColor(this.foreground()).width('100%')
+      if (this.passwordNotice) { Text(this.passwordNotice).fontColor(this.foreground()).width('100%') }
+      if (this.passwordBusy) { LoadingProgress().width(28).height(28) }
+      TextInput({ placeholder: this.p('current'), text: this.passwordOld }).type(InputType.Password).height(52).onChange((value: string) => this.passwordOld = value)
+      TextInput({ placeholder: this.p('new'), text: this.passwordNew }).type(InputType.Password).height(52).onChange((value: string) => this.passwordNew = value)
+      TextInput({ placeholder: this.p('confirm'), text: this.passwordConfirm }).type(InputType.Password).height(52).onChange((value: string) => this.passwordConfirm = value)
+      TextInput({ placeholder: this.p('otp'), text: this.passwordOTP }).type(InputType.Password).height(52).onChange((value: string) => this.passwordOTP = value)
+      Button(this.p('submit')).height(52).width('100%').enabled(!this.passwordBusy && !this.demo && Boolean(this.userId)).onClick(() => {
+        AlertDialog.show({ title: this.p('title'), message: this.p('help'), primaryButton: { value: this.p('submit'), action: () => this.submitPassword('', false) }, secondaryButton: { value: this.t('cancel'), action: () => {} } });
+      })
+      Text(this.p('requests')).fontColor(this.foreground()).fontSize(20 * this.fontScale)
+      Button(this.t('refresh')).height(48).enabled(!this.passwordBusy).onClick(() => this.run(async () => this.loadPasswordRows()))
+      if (!this.passwordRows.length) { this.emptyWith(() => this.run(async () => this.loadPasswordRows())) }
+      ForEach(this.passwordRows.slice(0, this.passwordShown), (row: PasswordIntent) => {
+        Column({ space: 8 }) {
+          Text(row.username + ' · ' + row.created).fontColor(this.foreground())
+          Text(this.p(row.state)).fontColor(this.foreground())
+          if (PasswordRules.blocked(row)) { Text(this.p('blocked')).fontColor(this.foreground()) }
+          if (row.state === 'changed') { Text(this.p('login')).fontColor(this.foreground()) }
+          Button(this.p('check')).height(48).width('100%').enabled(!this.passwordBusy).onClick(() => this.submitPassword(row.id, false))
+          if (['unsent', 'unknown', 'pending'].includes(row.state)) { Button(this.p('retry')).height(48).width('100%').enabled(!this.passwordBusy).onClick(() => this.submitPassword(row.id, true)) }
+        }.width('100%').padding(12).backgroundColor(this.bubble())
+      }, (row: PasswordIntent) => row.id)
+      if (this.passwordRows.length > this.passwordShown) { Button(this.t('loadMore')).height(48).onClick(() => this.passwordShown += 20) }
+    }.padding(20).width('100%')
+  }
   private exportState(view: ExportView | undefined): string {
     if (!view) { return this.e('exportUnknown'); }
     if (view.cleanup === 'source_handoff_pending' || ['revoking', 'cleaning'].includes(view.cleanup)) { return this.e('exportCleanup'); }
     if (Date.parse(view.expires) <= Date.now()) { return this.e('exportExpired'); }
-    const keys: Record<string, string> = { requested: 'exportRequested', building: 'exportBuilding', ready: 'exportReady', cancelled: 'exportCancelled', expired: 'exportExpired', failed: 'exportFailed' };
-    return this.e(keys[view.state] ?? 'exportUnknown');
+    switch (view.state) {
+      case 'requested': return this.e('exportRequested');
+      case 'building': return this.e('exportBuilding');
+      case 'ready': return this.e('exportReady');
+      case 'cancelled': return this.e('exportCancelled');
+      case 'expired': return this.e('exportExpired');
+      case 'failed': return this.e('exportFailed');
+      default: return this.e('exportUnknown');
+    }
   }
   @Builder private exportsPage() {
     Column({ space: 16 }) {
@@ -1547,8 +1947,153 @@ struct Index {
       Text(this.t('reopenHelp')).fontColor(this.foreground())
     }.padding(20)
   }
+  @Builder private receiptButton(key:string,handler:()=>void){Button(this.r(key)).height(48).width('100%').type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).enabled(!this.receiptBusy&&Boolean(this.receiptService)).onClick(handler)}
+  @Builder private receiptPage(){
+    Column({space:12}){
+      Button(this.m('back')).height(48).onClick(()=>this.page='settings')
+      Text(this.r('title')).fontSize(24*this.fontScale).fontColor(this.foreground()).width('100%')
+      Text(this.r('help')).fontColor(this.foreground())
+      if(this.receiptBusy){LoadingProgress().width(32).height(32)}
+      if(this.receiptNotice){Text(this.receiptNotice).fontColor(this.foreground())}
+      Text(this.r(this.receiptQualification())).fontColor(this.foreground())
+      Button(this.m('reload')).height(48).width('100%').enabled(!this.receiptBusy).onClick(()=>{if(this.receiptService){this.receiptAction(async(service:ReceiptService)=>this.reloadReceipt(service));}else{this.openReceipt();}})
+      this.receiptButton('verify',()=>this.receiptAction(async(service:ReceiptService)=>{const result=SyncJSON.parse(await service.measure(true));if(this.receiptService===service&&result.get('restartRequired').value===true){this.receiptNotice=this.r('restart');}}))
+      if(!this.receiptReport){Text(this.r('notVerified')).fontColor(this.foreground())}else{this.receiptButton('report',()=>this.copyReceiptReport())}
+      Row(){Checkbox().select(this.receiptService?this.receiptAutomaticFor(this.receiptService.principal()):false).enabled(!this.receiptBusy&&this.receiptQualified()).onChange((value:boolean)=>this.setReceiptAutomatic(value));Text(this.r('automatic')).fontColor(this.foreground()).layoutWeight(1)}.width('100%')
+      Text(this.r('automaticHelp')).fontColor(this.foreground())
+      Text(this.r('profiles')).fontSize(20*this.fontScale).fontColor(this.foreground())
+      if(!this.receiptProfiles.length){this.emptyWith(()=>this.openReceipt())}
+      ForEach(this.receiptProfiles,(raw:string)=>{Column({space:6}){Text(SyncJSON.parse(raw).get('id').string()).fontColor(this.foreground());this.receiptButton('declare',()=>this.receiptAction(async(service:ReceiptService)=>{const row=await service.declaration(SyncJSON.parse(raw).get('id').string());await service.resume(row.id,true);}));}.width('100%').padding(12).backgroundColor(this.bubble())},(raw:string)=>SyncJSON.parse(raw).get('id').string())
+      Text(this.r('saveBody')).fontSize(20*this.fontScale).fontColor(this.foreground())
+      if(!this.rows.length){this.emptyWith(()=>this.openReceipt())}
+      ForEach(this.rows.filter((row:Message)=>!row.deleted&&!row.forwarded&&!['pending','frozen'].includes(row.state??'')).slice(0,this.receiptShown),(row:Message)=>{Column(){Text(row.text||this.m('metadata')).fontColor(this.foreground());Button(this.r('saveBody')).height(48).enabled(!this.receiptBusy&&this.receiptQualified()).onClick(()=>this.receiptAction(async(service:ReceiptService)=>{await service.content(row.id,row.contentVersion??'');}));}.width('100%')},(row:Message)=>row.id)
+      Text(this.m('operations')).fontSize(20*this.fontScale).fontColor(this.foreground())
+      if(!this.receiptRows.length){this.emptyWith(()=>this.openReceipt())}
+      ForEach(this.receiptRows.slice(0,this.receiptShown),(row:ReceiptIntent)=>{Column({space:6}){Text(this.r(row.kind==='message_content'?'content':row.kind==='object_received'?'object':'storage')+' · '+this.r(row.state)).fontColor(this.foreground());if(row.message){Text(row.message).fontColor(this.foreground())}if(row.state!=='retired'){Button(this.m('check')).height(48).enabled(!this.receiptBusy).onClick(()=>this.receiptAction(async(service:ReceiptService)=>{await service.resume(row.id,false);}));if(row.state!=='recorded'){Button(this.m('retry')).height(48).enabled(!this.receiptBusy).onClick(()=>this.receiptAction(async(service:ReceiptService)=>{await service.resume(row.id,true);}));}}if(row.kind==='message_content'&&row.state==='recorded'){Button(this.r('saveObject')).height(48).enabled(!this.receiptBusy&&this.receiptQualified(true)).onClick(()=>this.receiptAction(async(service:ReceiptService)=>{await service.objectOriginal(row.id);}));}if(row.kind!=='storage'&&row.state!=='retired'){this.receiptButton('target',()=>this.receiptAction(async(service:ReceiptService)=>{const raw=await service.targets(row.id);if(this.receiptService===service){this.receiptTarget=raw;}}));}}.width('100%').padding(12).backgroundColor(this.bubble())},(row:ReceiptIntent)=>row.identity.namespace+row.id)
+      if(this.receiptTarget){Text(this.r('contentRecorded')+' · '+this.receiptTargetText('contentRecorded')).fontColor(this.foreground());Text(this.r('objectRecorded')+' · '+this.receiptTargetText('objectRecorded')).fontColor(this.foreground());Text(this.r('rangeTime')+' · '+this.receiptTargetText('contentCompleteAt')).fontColor(this.foreground())}
+      Text(this.m('archive')).fontSize(20*this.fontScale).fontColor(this.foreground())
+      if(!this.receiptArchive.length){this.emptyWith(()=>this.openReceipt())}
+      ForEach(this.receiptArchive.slice(0,this.receiptShown),(raw:string)=>{Column(){Text(SyncJSON.parse(raw).get('text').string()).fontColor(this.foreground()).width('100%');if(SyncJSON.parse(raw).has('sourceObjectReceiptId')){Button(this.m('original')).height(48).enabled(!this.receiptBusy).onClick(()=>this.saveReceiptOriginal(SyncJSON.parse(raw).get('sourceReceiptId').string()))}}.width('100%')},(raw:string)=>SyncJSON.parse(raw).get('id').string())
+      if(this.rows.length>this.receiptShown||this.receiptRows.length>this.receiptShown||this.receiptArchive.length>this.receiptShown){Button(this.m('more')).height(48).onClick(()=>this.receiptShown+=20)}
+    }.padding(20).width('100%')
+  }
+  @Builder private migrationButton(key:string,handler:()=>void){Button(this.m(key)).height(48).width('100%').type(ButtonType.Normal).backgroundColor(this.bubble()).fontColor(this.foreground()).enabled(!this.migrationBusy&&Boolean(this.migrationService)).onClick(handler)}
+  @Builder private migrationPage(){
+    Column({space:12}){
+      Button(this.m('back')).height(48).onClick(()=>this.page='settings')
+      Text(this.m('title')).fontSize(24*this.fontScale).fontColor(this.foreground()).width('100%')
+      Text(this.m('help')).fontColor(this.foreground())
+      if(this.migrationBusy){LoadingProgress().width(32).height(32)}
+      if(this.migrationNotice){Text(this.migrationNotice).fontColor(this.foreground())}
+      Button(this.m('reload')).height(48).width('100%').enabled(!this.migrationBusy).onClick(()=>{if(this.migrationService){this.migrationAction(async(service:MigrationService,_p:string,_o:string,_c:string)=>this.reloadMigration(service));}else{this.openMigration(false);}})
+      TextInput({placeholder:this.m('password'),text:this.migrationPassword}).type(InputType.Password).onChange((value:string)=>this.migrationPassword=value)
+      TextInput({placeholder:this.m('otp'),text:this.migrationOTP}).type(InputType.Password).onChange((value:string)=>this.migrationOTP=value)
+      this.migrationButton('pair',()=>this.migrationAction(async(service:MigrationService,p:string,o:string,_c:string)=>{const row=await service.stage('pairing');await service.pair(row.id,p,o,true);}))
+      Text(this.m('source')).fontSize(20*this.fontScale).fontColor(this.foreground())
+      TextInput({placeholder:this.m('code'),text:this.migrationCode}).type(InputType.Password).onChange((value:string)=>this.migrationCode=value)
+      Toggle({type:ToggleType.Checkbox,isOn:this.migrationFull}).onChange((value:boolean)=>this.migrationFull=value)
+      Text(this.m('full')).fontColor(this.foreground())
+      if(!this.migrationCandidates.length&&!this.migrationQualified.length){this.emptyWith(()=>this.openMigration())}
+      ForEach(this.migrationCandidates.slice(0,this.migrationShown),(row:Message)=>{Row(){Checkbox().select(this.migrationSelected.includes(row.id)).onChange((checked:boolean)=>this.migrationSelected=checked?this.migrationSelected.concat([row.id]):this.migrationSelected.filter((id:string)=>id!==row.id));Text(row.text||this.m('metadata')).fontColor(this.foreground()).layoutWeight(1)}.width('100%')},(row:Message)=>row.id)
+      ForEach(this.migrationQualified.slice(0,this.migrationShown),(raw:string)=>{Row(){Checkbox().select(this.migrationSelected.includes(SyncJSON.parse(raw).get('id').string())).onChange((checked:boolean)=>{const id=SyncJSON.parse(raw).get('id').string();this.migrationSelected=checked?this.migrationSelected.concat([id]):this.migrationSelected.filter((item:string)=>item!==id);});Text(SyncJSON.parse(raw).get('text').string()).fontColor(this.foreground()).layoutWeight(1)}.width('100%')},(raw:string)=>SyncJSON.parse(raw).get('id').string())
+      this.migrationButton('send',()=>{const selection=this.migrationSelection();this.migrationAction(async(service:MigrationService,p:string,o:string,c:string)=>{const row=await service.stage('create',selection);const result=await service.create(row.id,c,p,o,true);if(result&&this.migrationService===service){this.migrationID=result.id;}});})
+      Text(this.m('target')).fontSize(20*this.fontScale).fontColor(this.foreground())
+      TextInput({placeholder:this.m('package'),text:this.migrationID}).onChange((value:string)=>this.migrationID=value)
+      this.migrationButton('install',()=>{const id=this.migrationID;this.migrationAction(async(service:MigrationService,p:string,o:string,_c:string)=>{if(!await service.install(id,p,o)&&this.migrationService===service){this.migrationNotice=this.m('local');}});})
+      Text(this.m('operations')).fontSize(20*this.fontScale).fontColor(this.foreground())
+      if(!this.migrationRows.length){this.emptyWith(()=>this.openMigration(false))}
+      ForEach(this.migrationRows.slice(0,this.migrationShown),(row:MigrationIntent)=>{Column({space:6}){Text(this.m(row.kind)+' · '+this.m(row.state)).fontColor(this.foreground());Text(row.created).fontColor(this.foreground());if(row.migration){Text(row.migration).fontColor(this.foreground()).copyOption(CopyOptions.LocalDevice)}
+        this.migrationButton('check',()=>this.migrationAction(async(service:MigrationService,_p:string,_o:string,_c:string)=>{await service.checkOriginal(row.id);}))
+        if(row.kind==='pairing'){this.migrationButton('copy',()=>this.copyMigrationPair(row.id))}
+        if(row.kind!=='target'&&['unsent','unknown'].includes(row.state)){this.migrationButton('retry',()=>this.migrationAction(async(service:MigrationService,p:string,o:string,c:string)=>{if(row.kind==='pairing'){await service.pair(row.id,p,o,true);}else{await service.create(row.id,c,p,o,true);}}))}
+        if(row.migration&&row.state!=='retired'){this.migrationButton('cancel',()=>this.migrationAction(async(service:MigrationService,_p:string,_o:string,_c:string)=>{await service.cancel(row.migration);}))}
+      }.width('100%').padding(12).backgroundColor(this.bubble())},(row:MigrationIntent)=>row.identity.namespace+row.id)
+      Text(this.m('archive')).fontSize(20*this.fontScale).fontColor(this.foreground())
+      if(!this.migrationHistory.length){this.emptyWith(()=>this.openMigration(false))}
+      ForEach(this.migrationHistory.slice(0,this.migrationShown),(raw:string)=>{Column({space:6}){Text(this.migrationField(raw,'createdAt')).fontColor(this.foreground());Text(SyncJSON.parse(raw).get('contentUnavailable').value===true?this.m('unavailable'):this.migrationField(raw,'text')).fontColor(this.foreground()).copyOption(CopyOptions.LocalDevice);if(this.migrationCanSave(raw)){this.migrationButton('original',()=>this.saveMigrationObject(this.migrationField(raw,'id')))}else if(this.migrationField(raw,'type')!=='text'){Text(this.m('metadata')).fontColor(this.foreground())}}.width('100%').padding(12).backgroundColor(this.bubble())},(raw:string)=>this.migrationField(raw,'id'))
+      if(this.migrationQualified.length>this.migrationShown||this.migrationRows.length>this.migrationShown||this.migrationCandidates.length>this.migrationShown||this.migrationHistory.length>this.migrationShown){Button(this.m('more')).height(48).onClick(()=>this.migrationShown+=20)}
+    }.padding(20).width('100%')
+  }
+  @Builder private groupToolsPage() {
+    Column({ space: 12 }) {
+      Button(this.t('back')).height(48).onClick(() => { this.closeGroupTools(); this.page = this.groupControlId ? 'group' : 'settings'; })
+      Text(this.g('title')).fontSize(24 * this.fontScale).fontColor(this.foreground()).width('100%')
+      Text(this.g('help')).fontColor(this.foreground())
+      Text(this.g('privileged')).fontColor(this.foreground()).width('100%')
+      if (this.groupNotice) { Text(this.groupNotice).fontColor(this.foreground()).width('100%') }
+      if (this.groupBusy) { LoadingProgress().width(28).height(28) }
+      Button(this.t('refresh')).height(48).enabled(!this.groupBusy).onClick(() => this.openGroupTools(this.groupControlId))
+      TextInput({ placeholder: this.g('code'), text: this.groupCode }).type(InputType.Password).height(52).onChange((value: string) => this.groupCode = value)
+      Button(this.g('join')).height(48).width('100%').enabled(!this.groupBusy && Boolean(this.groupCode)).onClick(() => this.joinGroupCode())
+      if (this.groupOwner()) {
+        Text(this.g('settings')).fontSize(20 * this.fontScale).fontColor(this.foreground())
+        Row({ space: 10 }) { Toggle({ type: ToggleType.Switch, isOn: this.groupMuteAll }).onChange((value: boolean) => this.groupMuteAll = value); Text(this.g('muteAll')).fontColor(this.foreground()) }.width('100%')
+        TextInput({ placeholder: this.g('slow'), text: this.groupSlow }).type(InputType.Number).height(52).onChange((value: string) => this.groupSlow = value)
+        TextInput({ placeholder: this.g('capacity'), text: this.groupCapacity }).type(InputType.Number).height(52).onChange((value: string) => this.groupCapacity = value)
+        Button(this.g('save')).height(48).enabled(!this.groupBusy && /^[0-9]+$/.test(this.groupSlow) && Number(this.groupSlow) <= 3600 && /^[0-9]+$/.test(this.groupCapacity) && Number(this.groupCapacity) >= 2 && Number(this.groupCapacity) <= 10000).onClick(() => this.stageGroup('settings', undefined, JSON.stringify({ muteAll: this.groupMuteAll, slowSeconds: Number(this.groupSlow), maxMembers: Number(this.groupCapacity) }), this.g('save')))
+        Button(this.g('dissolve')).height(48).enabled(!this.groupBusy).onClick(() => this.stageGroup('dissolve'))
+      }
+      if (this.groupRecover()) { TextInput({ placeholder: this.t('otp'), text: this.groupOTP }).type(InputType.Password).height(52).onChange((value: string) => this.groupOTP = value) }
+      if (this.groupControlId) { Text(this.t('membersList')).fontSize(20 * this.fontScale).fontColor(this.foreground()) }
+      if (this.groupControlId && !this.members.length) { this.emptyWith(() => this.openGroupTools(this.groupControlId)) }
+      ForEach(this.members, (member: GroupMember) => {
+        Column({ space: 8 }) {
+          Text(member.displayName + ' · ' + member.username).fontColor(this.foreground())
+          if (this.groupOwner() && member.id !== this.userId) {
+            Button(this.t('transfer')).height(48).enabled(!this.groupBusy).onClick(() => this.stageGroup('transfer', member))
+            Button(this.g(member.role === 'admin' ? 'makeMember' : 'makeAdmin')).height(48).enabled(!this.groupBusy).onClick(() => this.stageGroup('role', member, JSON.stringify({ role: member.role === 'admin' ? 'member' : 'admin' }), this.g(member.role === 'admin' ? 'makeMember' : 'makeAdmin')))
+          }
+          if (this.groupManager() && member.role !== 'owner' && (this.groupOwner() || member.role !== 'admin')) {
+            Button(this.g('mute')).height(48).enabled(!this.groupBusy).onClick(() => this.stageGroup('mute', member, JSON.stringify({ mutedUntil: new Date(Date.now() + 3600000).toISOString() }), this.g('mute')))
+            Button(this.g('unmute')).height(48).enabled(!this.groupBusy).onClick(() => this.stageGroup('mute', member, JSON.stringify({ mutedUntil: '' }), this.g('unmute')))
+          }
+          if (this.groupRecover() && member.state !== 'tombstoned' && member.state !== 'banned') { Button(this.g('recover')).height(48).enabled(!this.groupBusy && /^[0-9]{6}$/.test(this.groupOTP)).onClick(() => this.stageGroup('recover', member)) }
+        }.width('100%').padding(12).backgroundColor(this.bubble())
+      }, (member: GroupMember) => member.id + ':' + member.membershipGeneration)
+      if (this.groupMembersNext) { Button(this.t('loadMore')).height(48).enabled(!this.groupBusy).onClick(() => this.groupMore('members')) }
+      if (this.groupManager()) {
+        Text(this.g('invites')).fontSize(20 * this.fontScale).fontColor(this.foreground())
+        TextInput({ placeholder: this.g('uses'), text: this.groupUses }).type(InputType.Number).height(52).onChange((value: string) => this.groupUses = value)
+        Row({ space: 10 }) { Toggle({ type: ToggleType.Switch, isOn: this.groupApproval }).onChange((value: boolean) => this.groupApproval = value); Text(this.g('approval')).fontColor(this.foreground()) }.width('100%')
+        Text(this.g('expires')).fontColor(this.foreground())
+        Button(this.g('invite')).height(48).enabled(!this.groupBusy && /^[0-9]+$/.test(this.groupUses) && Number(this.groupUses) >= 1 && Number(this.groupUses) <= 10000).onClick(() => this.stageGroup('invite', undefined, JSON.stringify({ maxUses: Number(this.groupUses), approvalRequired: this.groupApproval, expiresAt: new Date(Date.now() + 86400000).toISOString() })))
+        if (!this.groupInvites.length) { this.emptyWith(() => this.openGroupTools(this.groupControlId)) }
+        ForEach(this.groupInvites, (raw: string) => {
+          Column({ space: 8 }) {
+            Text(this.groupField(raw, 'expiresAt') + ' · ' + this.groupField(raw, 'uses') + '/' + this.groupField(raw, 'maxUses')).fontColor(this.foreground())
+            if (!this.groupField(raw, 'revokedAt')) { Button(this.g('copy')).height(48).enabled(!this.groupBusy).onClick(() => this.copyGroupCode(this.groupField(raw, 'id'))); Button(this.g('revoke')).height(48).enabled(!this.groupBusy).onClick(() => this.stageGroup('revoke', undefined, JSON.stringify({ id: this.groupField(raw, 'id') }))) }
+          }.width('100%').padding(12).backgroundColor(this.bubble())
+        }, (raw: string) => this.groupField(raw, 'id'))
+        if (this.groupInvitesNext) { Button(this.t('loadMore')).height(48).enabled(!this.groupBusy).onClick(() => this.groupMore('invites')) }
+        Text(this.g('requests')).fontSize(20 * this.fontScale).fontColor(this.foreground())
+        if (!this.groupRequests.length) { this.emptyWith(() => this.openGroupTools(this.groupControlId)) }
+        ForEach(this.groupRequests, (raw: string) => {
+          Column({ space: 8 }) {
+            Text((this.groupField(raw, 'displayName') || this.groupField(raw, 'username') || this.t('unavailableUser')) + ' · ' + this.groupField(raw, 'username') + ' · ' + this.g(this.groupJoinLabel(raw))).fontColor(this.foreground())
+            if (this.groupField(raw, 'state') === 'pending') {
+              Button(this.g('approve')).height(48).enabled(!this.groupBusy).onClick(() => this.stageGroup('decide', undefined, JSON.stringify({ id: this.groupField(raw, 'id'), approve: true }), this.g('approve')))
+              Button(this.g('reject')).height(48).enabled(!this.groupBusy).onClick(() => this.stageGroup('decide', undefined, JSON.stringify({ id: this.groupField(raw, 'id'), approve: false }), this.g('reject')))
+            }
+          }.width('100%').padding(12).backgroundColor(this.bubble())
+        }, (raw: string) => this.groupField(raw, 'id'))
+        if (this.groupRequestsNext) { Button(this.t('loadMore')).height(48).enabled(!this.groupBusy).onClick(() => this.groupMore('join-requests')) }
+      }
+      Text(this.g('operations')).fontSize(20 * this.fontScale).fontColor(this.foreground())
+      if (!this.groupOperations.some((row: GroupIntent) => !this.groupControlId || row.conversation === this.groupControlId)) { this.emptyWith(() => this.openGroupTools(this.groupControlId)) }
+      ForEach(this.groupOperations.filter((row: GroupIntent) => !this.groupControlId || row.conversation === this.groupControlId).slice(0, this.groupShown), (row: GroupIntent) => {
+        Column({ space: 8 }) {
+          Text(this.g(row.kind === 'governance' ? 'title' : row.kind === 'decide' ? 'requests' : row.kind) + ' · ' + this.g(row.kind === 'join' && row.state === 'applied' ? this.groupJoinLabel(row.result) : row.state)).fontColor(this.foreground())
+          Text(row.created).fontColor(this.foreground())
+          Button(this.g('check')).height(48).enabled(!this.groupBusy).onClick(() => this.performGroup(row, false))
+          if (row.state !== 'applied') { Button(this.g('retry')).height(48).enabled(!this.groupBusy).onClick(() => this.performGroup(row, true)) }
+        }.width('100%').padding(12).backgroundColor(this.bubble())
+      }, (row: GroupIntent) => row.namespace + ':' + row.id)
+      if (this.groupOperations.length > this.groupShown) { Button(this.t('loadMore')).height(48).onClick(() => this.groupShown += 20) }
+    }.padding(20).width('100%')
+  }
   @Builder private groupView() {
     Column({ space: 12 }) {
+      Button(this.g('title')).height(52).width('100%').enabled(!this.demo).onClick(() => this.openGroupTools(this.conversation?.id ?? ''))
       this.action('back', () => this.page = 'chats')
       Text(this.conversation?.title ?? '').fontSize(24 * this.fontScale).fontColor(this.foreground())
       if (this.conversation && !Rules.writable(this.conversation)) { Text(this.t('readOnly')).fontColor(this.foreground()) }
@@ -1561,7 +2106,7 @@ struct Index {
         this.action('addMember', () => this.run(async () => this.groupAction('addMember')))
         if (this.conversation.ownerId === this.userId) {
           TextInput({ placeholder: this.t('newOwner'), text: this.groupNewOwner }).onChange((value: string) => this.groupNewOwner = value)
-          this.action('transfer', () => this.confirmChange('transfer', async () => this.groupAction('transfer')))
+          this.action('transfer', () => this.openGroupTools(this.conversation?.id ?? ''))
         }
       }
       if (this.members.length === 0) { this.emptyWith(() => this.run(async () => this.groupSettings())) }
@@ -1571,10 +2116,11 @@ struct Index {
           Text(member.id).fontSize(12 * this.fontScale).fontColor(this.foreground()).copyOption(CopyOptions.LocalDevice)
           if (this.conversation && Rules.writable(this.conversation)) {
             if (member.id === this.userId && this.conversation.ownerId !== this.userId) { this.action('leave', () => this.confirmChange('leave', async () => this.groupAction('leave', member))) }
-            if (this.conversation.ownerId === this.userId && member.id !== this.userId) { this.action('transfer', () => { this.groupNewOwner = member.id; this.confirmChange('transfer', async () => this.groupAction('transfer')); }); this.action('remove', () => this.confirmChange('remove', async () => this.groupAction('remove', member))) }
+            if (this.conversation.ownerId === this.userId && member.id !== this.userId) { this.action('transfer', () => this.openGroupTools(this.conversation?.id ?? '')); this.action('remove', () => this.confirmChange('remove', async () => this.groupAction('remove', member))) }
           }
         }
       }, (member: GroupMember) => member.id + ':' + member.membershipGeneration)
+      if (this.groupMembersNext) { Button(this.t('loadMore')).height(48).onClick(() => this.run(async () => this.loadGroupMembers(true))) }
     }.padding(20).width('100%')
   }
   @Builder private createForm() {
@@ -1599,6 +2145,7 @@ struct Index {
       if (this.conversation && !this.demo) { this.action('report', () => { this.reportType = 'conversation'; this.reportTarget = this.conversation?.id ?? ''; this.reportReason = ''; this.page = 'reports'; }) }
       if (this.conversation?.kind === 'group') { this.action('groupSettings', () => this.run(async () => this.groupSettings())) }
       if (this.conversation?.kind === 'group' && this.announcementsSupported && !this.demo) { this.action('announcement', () => this.run(async () => this.showAnnouncement())) }
+      Button(this.m('title')).height(48).enabled(!this.demo&&!this.busy).onClick(()=>this.openMigration())
       this.action('searchMessages', () => this.run(async () => this.showLookup('search', true)))
       if (this.lookupFocusId.length > 0) { this.action('showConversation', () => this.lookupFocusId = '') }
       if (this.conversation && !Rules.writable(this.conversation)) { Text(this.t('readOnly')).fontColor(this.foreground()) }
@@ -1780,6 +2327,11 @@ struct Index {
         if (this.page === 'connect') { this.connectionForm() }
         else if (this.page === 'settings') { this.settings() }
         else if (this.page === 'exports') { this.exportsPage() }
+        else if (this.page === 'password') { this.passwordPage() }
+        else if (this.page === 'deletion') { this.deletionPage() }
+        else if (this.page === 'groupTools') { this.groupToolsPage() }
+        else if (this.page === 'migration') { this.migrationPage() }
+        else if(this.page==='receipts'){this.receiptPage()}
         else if (this.userId.length === 0) { this.authentication() }
         else if (this.page === 'sessions') { this.sessionsView() }
         else if (this.page === 'reports') { this.reportsView() }

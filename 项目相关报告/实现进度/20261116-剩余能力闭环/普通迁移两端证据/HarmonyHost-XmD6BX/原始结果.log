@@ -1,0 +1,30 @@
+✔ raw Go JSON slices preserve escapes, nested quoted delimiters and large string counters (4.436458ms)
+✔ real AES-GCM and raw primary digest decode text without Go reencoding (1.570625ms)
+✔ original attachment bytes match independent manifest size and digest (1.086125ms)
+✔ capsule tampering, wrong target and AAD never release plaintext (0.265083ms)
+✔ manifest envelope cannot be replaced by equivalent reencoded JSON or qualified flags (0.200042ms)
+✔ install token binds original physical target, epoch, digest and five second window (0.226292ms)
+✔ unknown pairing first performs pure lookup and never creates automatically (0.875416ms)
+✔ lost first mutation retains original nonce and no password or proof in metadata (0.565708ms)
+✔ successor family may query but cannot create original unseen operation (0.268208ms)
+✔ forwarded text is reference-only; definitive revoke erases, unknown hides body (0.331458ms)
+✔ forwarded text durable selection is allowed, secret metadata fields are rejected (0.1555ms)
+✔ installed_reported with local committed digest does not fetch a new key (0.342459ms)
+✔ stopped service accepts neither list publication nor networking (0.088584ms)
+✔ production SQLite repository installs readable original text plus a lawful zero-byte object in one batch (36.899416ms)
+✔ lawful cloud_only archive may replace a cloud-unavailable local placeholder, never a deleted floor (27.292792ms)
+✔ known global floor blocks staging any private object and exposes no partial history (23.546042ms)
+✔ history transaction failure publishes no batch and stale-context cleanup removes only unindexed owned staging (23.980125ms)
+✔ valid late 200 cannot republish actual installed forward or preceding owned archive after durable global (37.215209ms)
+✔ final history read rejects a newer local content version or deleted floor while valid forward GET is pending (47.058292ms)
+✔ ordinary durable forward placeholder is not a permanent revocation floor for a fresh legitimate 200 (23.262125ms)
+✔ mobile storage budget allows enough bounded space below four GiB and preserves 64MiB reserve (0.102542ms)
+✔ mobile storage requirements reject invalid integers, overflow and a cumulative oversized batch (0.081375ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 330.247125

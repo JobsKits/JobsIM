@@ -1,0 +1,427 @@
+{
+  "date": "2026-11-18",
+  "status": "passed-with-explicit-environment-limits",
+  "web": {
+    "commands": 23,
+    "suites": [
+      {
+        "suite": "typecheck",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-typecheck.log",
+        "status": "passed"
+      },
+      {
+        "suite": "build",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-build.log",
+        "status": "passed"
+      },
+      {
+        "suite": "sync-protocol",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-sync-protocol.log",
+        "pass": 12,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/前端/Web/执行记录/sync-protocol-1794956017882-10010/协议结果.json",
+        "status": "passed",
+        "scope": "Node production rules; no browser or real API"
+      },
+      {
+        "suite": "attachment-rules",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-attachment-rules.log",
+        "pass": 27,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-attachment-rules/结果.json",
+        "status": "passed",
+        "scope": "Node production rules; no browser or real API"
+      },
+      {
+        "suite": "audio-rules",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-audio-rules.log",
+        "pass": 22,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-audio-rules/结果.json",
+        "status": "passed",
+        "scope": "Node production rules; no browser or real API"
+      },
+      {
+        "suite": "account-deletion-cleanup",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-account-deletion-cleanup.log",
+        "pass": 14,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/前端/Web/20261117-注销本机清理/规则-1794956018218/结果.json",
+        "status": "passed",
+        "scope": "Node production rules; no browser or real API"
+      },
+      {
+        "suite": "auth-session",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-auth-session.log",
+        "pass": 16,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-auth-session/浏览器协议结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "sync-store",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-sync-store.log",
+        "pass": 12,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-sync-store/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "sync-view",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-sync-view.log",
+        "pass": 16,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-sync-view/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "outbox-proof",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-outbox-proof.log",
+        "pass": 10,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-outbox-proof/原请求队列结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "global-facts",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-global-facts.log",
+        "pass": 6,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-global-facts/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "business-global",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-business-global.log",
+        "pass": 9,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/前端/Web/执行记录/business-global-1794956023897-10113/业务终态结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "self-state",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-self-state.log",
+        "pass": 26,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-self-state/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "draft-recovery",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-draft-recovery.log",
+        "pass": 10,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-draft-recovery/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "data-export",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-data-export.log",
+        "pass": 19,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-data-export/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "password-change",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-password-change.log",
+        "pass": 22,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-password-change/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "account-deletion",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-account-deletion.log",
+        "pass": 23,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-account-deletion/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "group-governance",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-group-governance.log",
+        "pass": 29,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-group-governance/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "migration",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-migration.log",
+        "pass": 33,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-migration/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "receipt-context",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-receipt-context.log",
+        "pass": 13,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-receipt-context/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "attachment-browser",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-attachment-browser.log",
+        "pass": 41,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-attachment-browser/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "audio-browser",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-audio-browser.log",
+        "pass": 19,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-audio-browser/结果.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      },
+      {
+        "suite": "browser",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-browser.log",
+        "pass": 8,
+        "fail": 0,
+        "skip": 0,
+        "result": "项目相关报告/测试/前端/Web/执行记录/1794956049367-11225/browser-result.json",
+        "status": "passed",
+        "scope": "Actual Chrome/React/IndexedDB or UI; API isolated fixtures or blocked"
+      }
+    ],
+    "artifact": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-Dist/index.html",
+    "pageErrorGate": {
+      "redUnexpected": 3,
+      "red": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-pageerror-red/失败.json",
+      "finalUnexpected": 0,
+      "explicitInjectedEvents": 1,
+      "evidence": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Web-final-attachment-browser/页面异常.json",
+      "allowed": "Only exact injected linked failure in the named linked Outbox rollback check; no AbortError exclusion"
+    },
+    "warning": "Vite production chunk exceeds advisory 500 kB limit; build succeeds",
+    "realHTTPS": false,
+    "realMicrophone": false,
+    "priorAuthFlake": "This local 16-group pass does not resolve the separately recorded earlier cross-tab authentication flake"
+  },
+  "harmony": {
+    "hostSuites": [
+      {
+        "suite": "Auth",
+        "pass": 45,
+        "fail": 0,
+        "skip": 0,
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-finalHost-Auth.log",
+        "scope": "Host transpiled ArkTS with injected native ports; Python SQLite adapter when used; not Harmony device"
+      },
+      {
+        "suite": "Sync",
+        "pass": 36,
+        "fail": 0,
+        "skip": 0,
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-finalHost-Sync.log",
+        "scope": "Host transpiled ArkTS with injected native ports; Python SQLite adapter when used; not Harmony device"
+      },
+      {
+        "suite": "Export",
+        "pass": 18,
+        "fail": 0,
+        "skip": 0,
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-finalHost-Export.log",
+        "scope": "Host transpiled ArkTS with injected native ports; Python SQLite adapter when used; not Harmony device"
+      },
+      {
+        "suite": "Password",
+        "pass": 16,
+        "fail": 0,
+        "skip": 0,
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-finalHost-Password.log",
+        "scope": "Host transpiled ArkTS with injected native ports; Python SQLite adapter when used; not Harmony device"
+      },
+      {
+        "suite": "Deletion",
+        "pass": 16,
+        "fail": 0,
+        "skip": 0,
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-finalHost-Deletion.log",
+        "scope": "Host transpiled ArkTS with injected native ports; Python SQLite adapter when used; not Harmony device"
+      },
+      {
+        "suite": "Group",
+        "pass": 20,
+        "fail": 0,
+        "skip": 0,
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-finalHost-Group.log",
+        "scope": "Host transpiled ArkTS with injected native ports; Python SQLite adapter when used; not Harmony device"
+      },
+      {
+        "suite": "Migration",
+        "pass": 22,
+        "fail": 0,
+        "skip": 0,
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-finalHost-Migration.log",
+        "scope": "Host transpiled ArkTS with injected native ports; Python SQLite adapter when used; not Harmony device"
+      },
+      {
+        "suite": "Receipt",
+        "pass": 23,
+        "fail": 0,
+        "skip": 0,
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-finalHost-Receipt.log",
+        "scope": "Host transpiled ArkTS with injected native ports; Python SQLite adapter when used; not Harmony device"
+      }
+    ],
+    "builds": [
+      {
+        "mode": "build",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-final-build.log",
+        "manifest": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-final-build/source-manifest.json"
+      },
+      {
+        "mode": "test-build",
+        "exitCode": 0,
+        "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-final-test-build.log",
+        "manifest": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-final-test-build/source-manifest.json"
+      }
+    ],
+    "hypiumMethodsCompiled": 63,
+    "hypiumMethodsExecuted": 0,
+    "signed": false,
+    "hdcTargets": [],
+    "hdcEvidence": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-hdc-targets.log",
+    "artifacts": {
+      "S2本人状态基线.json": "e2169b61bf590f85816677626f96b027c83beb065bf723cad623fe58f91c7e51",
+      "entry-default-unsigned.hap": "b204dfb5ed5a8da9bf38b7285deb8da7004973b896a3e4cbd5669bbf2dce325b",
+      "entry-ohosTest-unsigned.hap": "7124965f753be71164bb7f1b3979f8caa4de2df1df814c2513e8c71a73f421d5",
+      "权威同步基线.json": "7cb6676e26f9fd568c29c289ec0718c69e667bc90b1a94cec98dab05d7e9233b",
+      "认证刷新基线.json": "6c9ecbd8ce03408a0f3d8286234dd28d223595769bb2517015d5acf3371bdf99"
+    },
+    "initialAuth": {
+      "pass": 44,
+      "fail": 1,
+      "skip": 0,
+      "log": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/Harmony-Auth.log"
+    },
+    "realHTTPS": false
+  },
+  "fixes": [
+    {
+      "area": "Harmony multilingual group UI",
+      "files": [
+        "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets",
+        "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets"
+      ],
+      "behavior": "Add member-list heading in ten languages; reuse existing unavailableUser fallback."
+    },
+    {
+      "area": "Web lifecycle-lock cancellation",
+      "files": [
+        "代码/前端/Web/Src/App.tsx"
+      ],
+      "behavior": "Pass lifecycle-lock acquisition rejection through the existing report handler; expected identity abort does not become unhandled, other errors keep their existing reporting."
+    },
+    {
+      "area": "Web attachment transaction failure",
+      "files": [
+        "代码/前端/Web/Src/AttachmentSendStore.ts"
+      ],
+      "behavior": "An already-aborted transaction cannot replace the original quota failure with a secondary InvalidStateError; original failure still rejects. Completion with a recorded failure rejects."
+    },
+    {
+      "area": "Web regression observability",
+      "files": [
+        "测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs"
+      ],
+      "behavior": "Gate unexpected pageerror/unhandled rejection; preserve the exact intentional linked rollback event; assert original quota error name and message."
+    }
+  ],
+  "source": {
+    "before": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/source-before.json",
+    "after": "项目相关报告/测试/回归/20261118-全项目回归/Web鸿蒙/source-final.json",
+    "changes": [
+      "代码/前端/Web/README.md",
+      "代码/前端/Web/Src/App.tsx",
+      "代码/前端/Web/Src/AttachmentSendStore.ts",
+      "代码/前端/HarmonyOS/README.md",
+      "代码/前端/HarmonyOS/entry/src/main/ets/Data/Strings.ets",
+      "代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets",
+      "测试/前端/Web/attachment-browser.cjs/README.md",
+      "测试/前端/Web/attachment-browser.cjs/attachment-browser.cjs",
+      "测试/前端/HarmonyOS/README.md"
+    ],
+    "allOtherEnumeratedInputsUnchanged": true
+  },
+  "boundaries": [
+    "No real user data, live instance, system CA, proxy, or shared tools changed.",
+    "No commit or push.",
+    "No Harmony target, unsigned HAP only; no device Hypium, NAPI, AssetStore, or device HTTPS claim.",
+    "Local Web suites and per-suite counts do not equal product requirement acceptance."
+  ]
+}

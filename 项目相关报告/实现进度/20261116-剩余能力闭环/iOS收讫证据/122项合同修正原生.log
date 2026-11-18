@@ -1,0 +1,422 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun "/Users/jobs/Library/Application Support/JobsIM/Build/iOS/DerivedData/Build/Products/ReceiptMigration122Contract-20261117.xctestrun" -destination "platform=iOS Simulator,id=37CB226C-C735-4A2D-8FCA-453E2E5F9DFB" -parallel-testing-enabled NO -maximum-concurrent-test-simulator-destinations 1 -resultBundlePath /Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/iOS收讫证据/122项合同修正原生.xcresult
+
+Writing result bundle at path:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/iOS收讫证据/122项合同修正原生.xcresult
+
+2026-11-17 14:50:11.095459+0800 JobsIM[43954:5689833] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Bundle/Application/89A0EC88-2564-483A-ACF0-3120E7CB73E4/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-17 14:50:11.095643+0800 JobsIM[43954:5689833] [framework] CoreUI: -[CUICatalog initWithName:fromBundle:error:] unable to find a bundle 'NSBundle </Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Bundle/Application/89A0EC88-2564-483A-ACF0-3120E7CB73E4/JobsIM.app/GKNavigationBarSwift.bundle> (not yet loaded)' with identifier '(null)'
+2026-11-17 14:50:11.164396+0800 JobsIM[43954:5689833] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-17 14:50:11.164591+0800 JobsIM[43954:5689833] [framework] CoreUI: CUIThemeStore: No theme registered with id=0
+2026-11-17 14:50:11.764199+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:11.764303+0800 JobsIM[43954:5689833] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:11.764409+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.003981+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.004084+0800 JobsIM[43954:5689833] [Assert] -[UIApplication isStatusBarHidden] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.004192+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.015259+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.015414+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.015527+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.015582+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.016066+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.016224+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.016290+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.016853+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.039591+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.039716+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.039834+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.039890+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.248682+0800 JobsIM[43954:5692900] [General] Failed to send CA Event for app launch measurements for ca_event_type: 0 event_name: com.apple.app_launch_measurement.FirstFramePresentationMetric
+2026-11-17 14:50:12.252883+0800 JobsIM[43954:5689833] [XPCErrors] non-launching port is incompatible with service identifier "com.apple.PointerUI.pointeruid.default-service"
+2026-11-17 14:50:12.275675+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.275776+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.275886+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.275934+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.335022+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.335153+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.335278+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.335350+0800 JobsIM[43954:5689833] [Assert] -[UIApplication statusBarOrientation] API has been deprecated and is a no-op on 27.0 and later.
+2026-11-17 14:50:12.372162+0800 JobsIM[43954:5692900] [General] Failed to send CA Event for app launch measurements for ca_event_type: 1 event_name: com.apple.app_launch_measurement.ExtendedLaunchMetrics
+Test Suite 'Selected tests' started at 2026-11-17 14:50:12.652.
+Test Suite 'JobsIMTests.xctest' started at 2026-11-17 14:50:12.652.
+Test Suite 'IMAuthCoordinatorTests' started at 2026-11-17 14:50:12.653.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testConcurrentExpiredRequestsConsumeRefreshOnceAndPreserveNamespace]' passed (0.096 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testDeletionFloorBlocksLateWritersAcrossEpochsPreservesOtherAccountsAndProfiles]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testDeletionFloorBlocksLateWritersAcrossEpochsPreservesOtherAccountsAndProfiles]' passed (0.029 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testDeletionUnknownCancelKeepsOriginalNonceAndRejectsWrongPurpose]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testDeletionUnknownCancelKeepsOriginalNonceAndRejectsWrongPurpose]' passed (0.038 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testDeletionUnknownDoesNotBorrowSuccessorFamilyOrStoreProof]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testDeletionUnknownDoesNotBorrowSuccessorFamilyOrStoreProof]' passed (0.018 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testFreshProofRetiresCompleteSavedChainWithoutChangingOldBodies]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testFreshProofRetiresCompleteSavedChainWithoutChangingOldBodies]' passed (0.035 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testGroupInvitationCapabilityStaysInMemoryAcrossColdResume]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testGroupInvitationCapabilityStaysInMemoryAcrossColdResume]' passed (0.021 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testGroupJoinRejectsAnotherDeploymentAndSecretMetadata]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testGroupJoinRejectsAnotherDeploymentAndSecretMetadata]' passed (0.012 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testGroupSuccessorFamilyOnlyQueriesHistoricalOriginalAndTypedTargetMustMatch]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testGroupSuccessorFamilyOnlyQueriesHistoricalOriginalAndTypedTargetMustMatch]' passed (0.026 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testGroupUnknownReusesOriginalNonceAndObservedPermission]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testGroupUnknownReusesOriginalNonceAndObservedPermission]' passed (0.018 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testMissingRetirementCapabilityKeepsOriginalIntentAndMakesNoRequest]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testMissingRetirementCapabilityKeepsOriginalIntentAndMakesNoRequest]' passed (0.015 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeLateResultCannotSignOutSuccessorFamily]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeLateResultCannotSignOutSuccessorFamily]' passed (0.018 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeOriginalRemainsQueryableAfterCapabilityWithdrawalAndRestore]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeOriginalRemainsQueryableAfterCapabilityWithdrawalAndRestore]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeProofValidationAndMetadataRejectSecrets]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeProofValidationAndMetadataRejectSecrets]' passed (0.012 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeTransportRefusesPlainHTTPBeforeSendingProof]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeTransportRefusesPlainHTTPBeforeSendingProof]' passed (0.027 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeUnknownUsesOriginalAndNeverPersistsProof]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testPasswordChangeUnknownUsesOriginalAndNeverPersistsProof]' passed (0.046 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRealHTTPSPasswordChangeUsesPhysicalStoreAndPreservesLaterFamily]' passed (2.620 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRestartFinishesSecuredInitialPairBeforeExposingNewNamespace]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testRestartFinishesSecuredInitialPairBeforeExposingNewNamespace]' passed (0.034 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testSecurePairFailureStopsPublishingAndRetainsNonsecretFamily]' passed (0.024 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testStaleOldFamilyCannotInvalidateReplacementDevice]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testStaleOldFamilyCannotInvalidateReplacementDevice]' passed (0.015 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownInitialUsesOriginalIDThenExplicitReauthLinksAndFreezesOldDevice]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownInitialUsesOriginalIDThenExplicitReauthLinksAndFreezesOldDevice]' passed (0.037 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRefreshPersistsBarrierAndNeverReusesOriginalSecret]' passed (0.020 seconds).
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRegistrationCannotBecomeUnlinkedFreshAuthentication]' started.
+Test Case '-[JobsIMTests.IMAuthCoordinatorTests testUnknownRegistrationCannotBecomeUnlinkedFreshAuthentication]' passed (0.018 seconds).
+Test Suite 'IMAuthCoordinatorTests' passed at 2026-11-17 14:50:15.856.
+	 Executed 22 tests, with 0 failures (0 unexpected) in 3.193 (3.204) seconds
+Test Suite 'IMAuthCredentialTests' started at 2026-11-17 14:50:15.858.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testKeychainStoresCompletePairAsSingleItem]' started.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testKeychainStoresCompletePairAsSingleItem]' passed (0.010 seconds).
+Test Case '-[JobsIMTests.IMAuthCredentialTests testNamespaceHandoffFreezesOldOutboxAndRollsBackPartialCommit]' started.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testNamespaceHandoffFreezesOldOutboxAndRollsBackPartialCommit]' passed (0.011 seconds).
+Test Case '-[JobsIMTests.IMAuthCredentialTests testPairStrictnessAndRotationKeepsDeviceNamespace]' started.
+Test Case '-[JobsIMTests.IMAuthCredentialTests testPairStrictnessAndRotationKeepsDeviceNamespace]' passed (0.012 seconds).
+Test Suite 'IMAuthCredentialTests' passed at 2026-11-17 14:50:15.892.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.033 (0.034) seconds
+Test Suite 'IMAuthoritativeSyncTests' started at 2026-11-17 14:50:15.892.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testAnnouncementPersistsOnlyReferenceWithoutSourceBodyOrProof]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testAnnouncementPersistsOnlyReferenceWithoutSourceBodyOrProof]' passed (0.019 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCapabilityLossCannotReturnToLegacyPollOrCreateRoutes]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCapabilityLossCannotReturnToLegacyPollOrCreateRoutes]' passed (0.015 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testCompleteSnapshotWaitsForFirstPermissionDeltaAndKeepsLargeVersions]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testDeltaOriginConflictRollsBackBodyAndContinuousPosition]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testDeltaOriginConflictRollsBackBodyAndContinuousPosition]' passed (0.023 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testGlobalIsTerminalAcrossDeviceRetainedSavedAndUnreadHolders]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testGlobalIsTerminalAcrossDeviceRetainedSavedAndUnreadHolders]' passed (0.023 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLateAccountContextCannotPublishSnapshot]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLateAccountContextCannotPublishSnapshot]' passed (0.009 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLocalGuardChangedAfterValidatePreventsLateAtomicCommit]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testLocalGuardChangedAfterValidatePreventsLateAtomicCommit]' passed (0.012 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testMissingOrCorruptedSecondPageNeverInstallsFirstPage]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testMissingOrCorruptedSecondPageNeverInstallsFirstPage]' passed (0.008 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOpaqueCLIClientNonceIsNotRequiredToBeAServerUUID]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOpaqueCLIClientNonceIsNotRequiredToBeAServerUUID]' passed (0.015 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOrdinaryCopiesRetainedWhileForwardBodyAndProofNeverPersistInSyncStore]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOrdinaryCopiesRetainedWhileForwardBodyAndProofNeverPersistInSyncStore]' passed (0.019 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOriginalReadOnlyProofClosesOutboxOnlyWithAtomicOriginalBodyMatch]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testOriginalReadOnlyProofClosesOutboxOnlyWithAtomicOriginalBodyMatch]' passed (0.015 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testRetainedEntryRequiresPreviouslyValidatedExactBodyAndSameIdentity]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testRetainedEntryRequiresPreviouslyValidatedExactBodyAndSameIdentity]' passed (0.016 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoNegotiationArchivesOldResponsibilityAndKeepsOriginalQueue]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoNegotiationArchivesOldResponsibilityAndKeepsOriginalQueue]' passed (0.019 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoPersonalEnvelopeIsExplicitAndOwnerBound]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoPersonalEnvelopeIsExplicitAndOwnerBound]' passed (0.003 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoPersonalStateAndCursorRollbackOnWrongScope]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSchemaTwoPersonalStateAndCursorRollbackOnWrongScope]' passed (0.018 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStoreGenerationSurvivesReopenAndCannotSilentlyReplaceARegisteredStore]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStoreGenerationSurvivesReopenAndCannotSilentlyReplaceARegisteredStore]' passed (0.018 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStrictCountersOriginalBodyDigestAndContinuousRedactions]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testStrictCountersOriginalBodyDigestAndContinuousRedactions]' passed (0.008 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSyncMatchingClientIDIsNotOutboxProofAndNeverPostsCreate]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testSyncMatchingClientIDIsNotOutboxProofAndNeverPostsCreate]' passed (0.019 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownDeltaCannotAdvanceCursorOrEraseLawfulOrdinaryCopy]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownDeltaCannotAdvanceCursorOrEraseLawfulOrdinaryCopy]' passed (0.021 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownSnapshotRetriesIdenticalDurableIntentAfterReopen]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testUnknownSnapshotRetriesIdenticalDurableIntentAfterReopen]' passed (0.032 seconds).
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testValidationWatermarkRegressionAndPermissionABARefuseInstallation]' started.
+Test Case '-[JobsIMTests.IMAuthoritativeSyncTests testValidationWatermarkRegressionAndPermissionABARefuseInstallation]' passed (0.023 seconds).
+Test Suite 'IMAuthoritativeSyncTests' passed at 2026-11-17 14:50:16.249.
+	 Executed 21 tests, with 0 failures (0 unexpected) in 0.350 (0.357) seconds
+Test Suite 'IMDataExportTests' started at 2026-11-17 14:50:16.249.
+Test Case '-[JobsIMTests.IMDataExportTests testCapabilityWithdrawalStillAllowsOriginalLookupAndSameCancelBody]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testCapabilityWithdrawalStillAllowsOriginalLookupAndSameCancelBody]' passed (0.020 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testCASPreservesFirstCancelBodyAndOriginalAgainstLateWriter]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testCASPreservesFirstCancelBodyAndOriginalAgainstLateWriter]' passed (0.006 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testCompleteZIPAndZIP64DirectoryAreRequiredBeforeSystemSave]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testCompleteZIPAndZIP64DirectoryAreRequiredBeforeSystemSave]' passed (0.003 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testLateIdentityResponseDoesNotBindOriginalJob]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testLateIdentityResponseDoesNotBindOriginalJob]' passed (0.008 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testOriginalNonceIsOpaqueAndRawWhitespaceHashCannotBeRewritten]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testOriginalNonceIsOpaqueAndRawWhitespaceHashCannotBeRewritten]' passed (0.008 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testReopenKeepsOnlyOriginalPublicMetadataAndDoesNotCreateSyncResponsibility]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testReopenKeepsOnlyOriginalPublicMetadataAndDoesNotCreateSyncResponsibility]' passed (0.016 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testTicketDeadlineAndTypeAreStrictWithoutPersistingTheToken]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testTicketDeadlineAndTypeAreStrictWithoutPersistingTheToken]' passed (0.005 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testUnknownCreationOnlyChecksOriginalUntilExplicitSameBodyRetry]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testUnknownCreationOnlyChecksOriginalUntilExplicitSameBodyRetry]' passed (0.017 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testUnsafeOrMissingExportDirectoryEntriesAreRejected]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testUnsafeOrMissingExportDirectoryEntriesAreRejected]' passed (0.002 seconds).
+Test Case '-[JobsIMTests.IMDataExportTests testViewStrictCountersAndMetadataDoesNotRetainUnknownSecretFields]' started.
+Test Case '-[JobsIMTests.IMDataExportTests testViewStrictCountersAndMetadataDoesNotRetainUnknownSecretFields]' passed (0.002 seconds).
+Test Suite 'IMDataExportTests' passed at 2026-11-17 14:50:16.339.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.086 (0.090) seconds
+Test Suite 'IMMigrationServiceTests' started at 2026-11-17 14:50:16.339.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testCredentialNFCAndSignificantSpacesStayInRam]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testCredentialNFCAndSignificantSpacesStayInRam]' passed (0.003 seconds).
+Test Case '-[JobsIMTests.IMMigrationServiceTests testIdentityChangeWhileLookupWaitsPreventsFirstCreatingPost]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testIdentityChangeWhileLookupWaitsPreventsFirstCreatingPost]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMMigrationServiceTests testLateForwardReadCannotRefillGloballyClearedArchive]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testLateForwardReadCannotRefillGloballyClearedArchive]' passed (0.023 seconds).
+Test Case '-[JobsIMTests.IMMigrationServiceTests testLateForwardReadCannotUndoCurrentUnavailableProjection]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testLateForwardReadCannotUndoCurrentUnavailableProjection]' passed (0.016 seconds).
+Test Case '-[JobsIMTests.IMMigrationServiceTests testMissingRegistrationDoesNotCreateStoreOrQualification]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testMissingRegistrationDoesNotCreateStoreOrQualification]' passed (0.006 seconds).
+Test Case '-[JobsIMTests.IMMigrationServiceTests testPairingPostsOnlyAfterDurableOriginalAndDoesNotPersistSecrets]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testPairingPostsOnlyAfterDurableOriginalAndDoesNotPersistSecrets]' passed (0.024 seconds).
+Test Case '-[JobsIMTests.IMMigrationServiceTests testSourceFreezesVersionAndDropsMutableDisplayAndAdmissionFields]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testSourceFreezesVersionAndDropsMutableDisplayAndAdmissionFields]' passed (0.035 seconds).
+Test Case '-[JobsIMTests.IMMigrationServiceTests testSuccessorFamilyCanQueryButCannotPublishUnseenOriginal]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testSuccessorFamilyCanQueryButCannotPublishUnseenOriginal]' passed (0.025 seconds).
+Test Case '-[JobsIMTests.IMMigrationServiceTests testToxicDurableMetadataRejectsBeforeAnyCreatingHttp]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testToxicDurableMetadataRejectsBeforeAnyCreatingHttp]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMMigrationServiceTests testUnknownLookupCreatesNothingAndExplicitRetryKeepsNonce]' started.
+Test Case '-[JobsIMTests.IMMigrationServiceTests testUnknownLookupCreatesNothingAndExplicitRetryKeepsNonce]' passed (0.026 seconds).
+Test Suite 'IMMigrationServiceTests' passed at 2026-11-17 14:50:16.529.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.186 (0.189) seconds
+Test Suite 'IMMigrationTests' started at 2026-11-17 14:50:16.529.
+Test Case '-[JobsIMTests.IMMigrationTests testEncryptedPacketAndFullOriginalPreserveExactCountersWithoutQualification]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testEncryptedPacketAndFullOriginalPreserveExactCountersWithoutQualification]' passed (0.022 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testEncryptedStageIsClearedByGlobalAndLateStageCannotReturn]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testEncryptedStageIsClearedByGlobalAndLateStageCannotReturn]' passed (0.023 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testExpiredPublishAndChangedGuardLeaveWholeArchiveUnpublished]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testExpiredPublishAndChangedGuardLeaveWholeArchiveUnpublished]' passed (0.015 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testForwardReobservationInvalidatesIndependentProjectionCopy]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testForwardReobservationInvalidatesIndependentProjectionCopy]' passed (0.015 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testGlobalDeniesInitialPublishAndClearsCommittedOriginalBytes]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testGlobalDeniesInitialPublishAndClearsCommittedOriginalBytes]' passed (0.027 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testGoFractionalNanosecondExpiryStagesAndPublishes]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testGoFractionalNanosecondExpiryStagesAndPublishes]' passed (0.013 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testManifestEnvelopeIsHashedAsOriginalBytesAndCrossTargetRejected]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testManifestEnvelopeIsHashedAsOriginalBytesAndCrossTargetRejected]' passed (0.007 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testNewerLocalContentAndMembershipChangeDenyStaleWholeImport]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testNewerLocalContentAndMembershipChangeDenyStaleWholeImport]' passed (0.015 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testOwnerUnavailableReadOnlyHistoryRemainsArchivable]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testOwnerUnavailableReadOnlyHistoryRemainsArchivable]' passed (0.008 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testPrimaryMessageDigestUsesAuthenticatedRawObjectBytes]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testPrimaryMessageDigestUsesAuthenticatedRawObjectBytes]' passed (0.007 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testUnknownSecretFieldsAndOriginalObjectDigestRejectWholePacket]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testUnknownSecretFieldsAndOriginalObjectDigestRejectWholePacket]' passed (0.009 seconds).
+Test Case '-[JobsIMTests.IMMigrationTests testWrongAADOrTamperedCapsuleNeverOpens]' started.
+Test Case '-[JobsIMTests.IMMigrationTests testWrongAADOrTamperedCapsuleNeverOpens]' passed (0.007 seconds).
+Test Suite 'IMMigrationTests' passed at 2026-11-17 14:50:16.702.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.170 (0.174) seconds
+Test Suite 'IMPersonalStateTests' started at 2026-11-17 14:50:16.703.
+Test Case '-[JobsIMTests.IMPersonalStateTests testCoveredOrModalMessageCellIsNotAnObservation]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testCoveredOrModalMessageCellIsNotAnObservation]' passed (0.131 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testCurrentGuardCanFinishOriginalPendingAfterReopenWithoutRebindingBody]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testCurrentGuardCanFinishOriginalPendingAfterReopenWithoutRebindingBody]' passed (0.032 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testDraftReadonlyQueryPreservesFullBodyAndMethodWithoutNewProof]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testDraftReadonlyQueryPreservesFullBodyAndMethodWithoutNewProof]' passed (0.000 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testEditorAdoptionRejectsLateLocalTextReplyAndMentionChanges]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testEditorAdoptionRejectsLateLocalTextReplyAndMentionChanges]' passed (0.000 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testExactDraftValidatesPrincipalEpochOriginalStringsAndSeparateAdmission]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testExactDraftValidatesPrincipalEpochOriginalStringsAndSeparateAdmission]' passed (0.000 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testPreparedAndRetiredAreDistinctFromAppliedAndDoNotCarryOldText]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testPreparedAndRetiredAreDistinctFromAppliedAndDoNotCarryOldText]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testPublicNativeFixtureSurvivesMissingPreferencesAndRejectsExtraSecretKeys]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testPublicNativeFixtureSurvivesMissingPreferencesAndRejectsExtraSecretKeys]' passed (0.002 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testReadServerOperationUUIDDoesNotNeedToEqualClientNonceAndIDsStayExact]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testReadServerOperationUUIDDoesNotNeedToEqualClientNonceAndIDsStayExact]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testRecoveryListsHideByDefaultKeepManualUnreadAndSortOriginalPinRank]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testRecoveryListsHideByDefaultKeepManualUnreadAndSortOriginalPinRank]' passed (0.014 seconds).
+Test Case '-[JobsIMTests.IMPersonalStateTests testRejectedArchiveIsOriginalBodyCASAndRetiredNeverBecomesCurrentCloudText]' started.
+Test Case '-[JobsIMTests.IMPersonalStateTests testRejectedArchiveIsOriginalBodyCASAndRetiredNeverBecomesCurrentCloudText]' passed (0.010 seconds).
+Test Suite 'IMPersonalStateTests' passed at 2026-11-17 14:50:16.905.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.192 (0.203) seconds
+Test Suite 'IMReceiptServiceTests' started at 2026-11-17 14:50:16.905.
+Test Case '-[JobsIMTests.IMReceiptServiceTests testApprovedServerQualificationDoesNotReplaceLocalProbe]' started.
+2026-11-17 14:50:16.930553+0800 JobsIM[43954:5692900] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-FE14F837-AB35-40DF-9C39-A63B1066F75B/client.sqlite-shm
+2026-11-17 14:50:16.930615+0800 JobsIM[43954:5692912] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-FE14F837-AB35-40DF-9C39-A63B1066F75B/client.sqlite-wal
+2026-11-17 14:50:16.930795+0800 JobsIM[43954:5692912] [logging] invalidated open fd: 12 (0x11)
+2026-11-17 14:50:16.930651+0800 JobsIM[43954:5692900] [logging] invalidated open fd: 13 (0x11)
+Test Case '-[JobsIMTests.IMReceiptServiceTests testApprovedServerQualificationDoesNotReplaceLocalProbe]' passed (0.026 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testAutomaticConsentRecoversExistingUnacknowledgedFrozenTargetWithoutNewDeclaration]' started.
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:544: error: -[JobsIMTests.IMReceiptServiceTests testAutomaticConsentRecoversExistingUnacknowledgedFrozenTargetWithoutNewDeclaration] : XCTAssertEqual failed: ("0") is not equal to ("1")
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:546: error: -[JobsIMTests.IMReceiptServiceTests testAutomaticConsentRecoversExistingUnacknowledgedFrozenTargetWithoutNewDeclaration] : XCTUnwrap failed: expected non-nil value of type "IMJSON"
+Test Case '-[JobsIMTests.IMReceiptServiceTests testAutomaticConsentRecoversExistingUnacknowledgedFrozenTargetWithoutNewDeclaration]' failed (0.957 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testAutomaticPauseBlocksNewWorkAndSameFamilyResumeReprobesWithoutDeclaring]' started.
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:602: error: -[JobsIMTests.IMReceiptServiceTests testAutomaticPauseBlocksNewWorkAndSameFamilyResumeReprobesWithoutDeclaring] : XCTAssertEqual failed: ("0") is not equal to ("1")
+Test Case '-[JobsIMTests.IMReceiptServiceTests testAutomaticPauseBlocksNewWorkAndSameFamilyResumeReprobesWithoutDeclaring]' failed (0.867 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testAutomaticUnknownOnlyQueriesAndSuccessorDoesNotInheritConsent]' started.
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:565: error: -[JobsIMTests.IMReceiptServiceTests testAutomaticUnknownOnlyQueriesAndSuccessorDoesNotInheritConsent] : XCTUnwrap failed: expected non-nil value of type "IMJSON"
+Test Case '-[JobsIMTests.IMReceiptServiceTests testAutomaticUnknownOnlyQueriesAndSuccessorDoesNotInheritConsent]' failed (0.406 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testBuildMeasurementIncludesDebugAndStorageCodeChanges]' started.
+Test Case '-[JobsIMTests.IMReceiptServiceTests testBuildMeasurementIncludesDebugAndStorageCodeChanges]' passed (0.033 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testBuildMeasurementRejectsUnverifiedCodeAndExternalSymlink]' started.
+Test Case '-[JobsIMTests.IMReceiptServiceTests testBuildMeasurementRejectsUnverifiedCodeAndExternalSymlink]' passed (0.011 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testCloudOnlyFullMigrationCannotBorrowContentReceiptAsOriginalObjectProof]' started.
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:490: error: -[JobsIMTests.IMReceiptServiceTests testCloudOnlyFullMigrationCannotBorrowContentReceiptAsOriginalObjectProof] : failed: caught error: "invalidIdentity"
+Test Case '-[JobsIMTests.IMReceiptServiceTests testCloudOnlyFullMigrationCannotBorrowContentReceiptAsOriginalObjectProof]' failed (0.203 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testCloudOnlyMigrationUsesExactQualifiedRawBytesWithoutExpandingOldTarget]' started.
+2026-11-17 14:50:19.655725+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-9864D784-9BE2-40A6-A4C8-3763AC552E81/client.sqlite-shm
+2026-11-17 14:50:19.655777+0800 JobsIM[43954:5692902] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-9864D784-9BE2-40A6-A4C8-3763AC552E81/client.sqlite
+2026-11-17 14:50:19.655755+0800 JobsIM[43954:5692903] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-9864D784-9BE2-40A6-A4C8-3763AC552E81/client.sqlite-wal
+2026-11-17 14:50:19.655939+0800 JobsIM[43954:5692902] [logging] invalidated open fd: 8 (0x11)
+2026-11-17 14:50:19.655877+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 13 (0x11)
+2026-11-17 14:50:19.656018+0800 JobsIM[43954:5692903] [logging] invalidated open fd: 12 (0x11)
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:438: error: -[JobsIMTests.IMReceiptServiceTests testCloudOnlyMigrationUsesExactQualifiedRawBytesWithoutExpandingOldTarget] : failed: caught error: "invalidIdentity"
+Test Case '-[JobsIMTests.IMReceiptServiceTests testCloudOnlyMigrationUsesExactQualifiedRawBytesWithoutExpandingOldTarget]' failed (0.249 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testLostReceiptResultOnlyQueriesOriginalNonceAndRetainsRawBytes]' started.
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:342: error: -[JobsIMTests.IMReceiptServiceTests testLostReceiptResultOnlyQueriesOriginalNonceAndRetainsRawBytes] : XCTUnwrap failed: expected non-nil value of type "IMJSON"
+Test Case '-[JobsIMTests.IMReceiptServiceTests testLostReceiptResultOnlyQueriesOriginalNonceAndRetainsRawBytes]' failed (0.202 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testOrdinarySyncAdvanceDoesNotInvalidateSameStoreMeasuredReport]' started.
+2026-11-17 14:50:20.050131+0800 JobsIM[43954:5692902] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-6DC92A54-F0CB-4C3D-9D2D-F0C9D3D99B87/client.sqlite-shm
+2026-11-17 14:50:20.050393+0800 JobsIM[43954:5692902] [logging] invalidated open fd: 13 (0x11)
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:329: error: -[JobsIMTests.IMReceiptServiceTests testOrdinarySyncAdvanceDoesNotInvalidateSameStoreMeasuredReport] : failed: caught error: "invalidIdentity"
+Test Case '-[JobsIMTests.IMReceiptServiceTests testOrdinarySyncAdvanceDoesNotInvalidateSameStoreMeasuredReport]' failed (0.191 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testRealLocalProbeExplicitDeclarationAndContentAtomicReceipt]' started.
+2026-11-17 14:50:20.269051+0800 JobsIM[43954:5692902] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-1CCEB46F-9390-4DD2-B9CA-5CBB5A5173AA/client.sqlite-shm
+2026-11-17 14:50:20.269165+0800 JobsIM[43954:5692902] [logging] invalidated open fd: 13 (0x11)
+2026-11-17 14:50:20.269210+0800 JobsIM[43954:5692903] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-1CCEB46F-9390-4DD2-B9CA-5CBB5A5173AA/client.sqlite
+2026-11-17 14:50:20.269352+0800 JobsIM[43954:5692903] [logging] invalidated open fd: 8 (0x11)
+2026-11-17 14:50:20.269230+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-1CCEB46F-9390-4DD2-B9CA-5CBB5A5173AA/client.sqlite-wal
+2026-11-17 14:50:20.269428+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 12 (0x11)
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:293: error: -[JobsIMTests.IMReceiptServiceTests testRealLocalProbeExplicitDeclarationAndContentAtomicReceipt] : failed: caught error: "invalidIdentity"
+Test Case '-[JobsIMTests.IMReceiptServiceTests testRealLocalProbeExplicitDeclarationAndContentAtomicReceipt]' failed (0.219 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testSecretDurableBodyIsRejectedBeforeQueryHttp]' started.
+2026-11-17 14:50:20.450787+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-DB13FF44-27B5-4D4F-AD61-700E21FE2FB6/client.sqlite-shm
+2026-11-17 14:50:20.450846+0800 JobsIM[43954:5692903] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-DB13FF44-27B5-4D4F-AD61-700E21FE2FB6/client.sqlite
+2026-11-17 14:50:20.450813+0800 JobsIM[43954:5692902] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-DB13FF44-27B5-4D4F-AD61-700E21FE2FB6/client.sqlite-wal
+2026-11-17 14:50:20.450969+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 13 (0x11)
+2026-11-17 14:50:20.451000+0800 JobsIM[43954:5692903] [logging] invalidated open fd: 8 (0x11)
+2026-11-17 14:50:20.451025+0800 JobsIM[43954:5692902] [logging] invalidated open fd: 12 (0x11)
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:398: error: -[JobsIMTests.IMReceiptServiceTests testSecretDurableBodyIsRejectedBeforeQueryHttp] : failed: caught error: "invalidIdentity"
+Test Case '-[JobsIMTests.IMReceiptServiceTests testSecretDurableBodyIsRejectedBeforeQueryHttp]' failed (0.182 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testSuccessorFamilyCannotFirstPublishUnknownOriginal]' started.
+/Users/jobs/Documents/GitHub/JobsProds/JobsIM/测试/前端/iOS/IMReceiptServiceTests.swift:374: error: -[JobsIMTests.IMReceiptServiceTests testSuccessorFamilyCannotFirstPublishUnknownOriginal] : XCTUnwrap failed: expected non-nil value of type "IMJSON"
+2026-11-17 14:50:20.692769+0800 JobsIM[43954:5693356] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-81AA872C-6EDD-4C6A-8AC5-26DA65D53234/client.sqlite-shm
+2026-11-17 14:50:20.692836+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-81AA872C-6EDD-4C6A-8AC5-26DA65D53234/client.sqlite-wal
+2026-11-17 14:50:20.692883+0800 JobsIM[43954:5693356] [logging] invalidated open fd: 13 (0x11)
+2026-11-17 14:50:20.692892+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 12 (0x11)
+2026-11-17 14:50:20.692903+0800 JobsIM[43954:5692900] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIM-ReceiptService-81AA872C-6EDD-4C6A-8AC5-26DA65D53234/client.sqlite
+2026-11-17 14:50:20.693022+0800 JobsIM[43954:5692900] [logging] invalidated open fd: 8 (0x11)
+Test Case '-[JobsIMTests.IMReceiptServiceTests testSuccessorFamilyCannotFirstPublishUnknownOriginal]' failed (0.241 seconds).
+Test Case '-[JobsIMTests.IMReceiptServiceTests testUnpairedDeliveryManifestRefusesBeforeLocalStageOrAck]' started.
+Test Case '-[JobsIMTests.IMReceiptServiceTests testUnpairedDeliveryManifestRefusesBeforeLocalStageOrAck]' passed (0.181 seconds).
+Test Suite 'IMReceiptServiceTests' failed at 2026-11-17 14:50:20.876.
+	 Executed 14 tests, with 11 failures (5 unexpected) in 3.966 (3.970) seconds
+Test Suite 'IMReceiptStorageTests' started at 2026-11-17 14:50:20.876.
+Test Case '-[JobsIMTests.IMReceiptStorageTests testCompleteOriginalFsyncDescriptorAndNonceSurviveReopen]' started.
+2026-11-17 14:50:20.905298+0800 JobsIM[43954:5692900] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-A3642B36-A9BA-4F7B-B72F-CDE3F5F5BE12/client.sqlite-shm
+2026-11-17 14:50:20.905349+0800 JobsIM[43954:5693356] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-A3642B36-A9BA-4F7B-B72F-CDE3F5F5BE12/client.sqlite-wal
+2026-11-17 14:50:20.905461+0800 JobsIM[43954:5692900] [logging] invalidated open fd: 13 (0x11)
+2026-11-17 14:50:20.905474+0800 JobsIM[43954:5693356] [logging] invalidated open fd: 12 (0x11)
+2026-11-17 14:50:20.905447+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-A3642B36-A9BA-4F7B-B72F-CDE3F5F5BE12/client.sqlite
+2026-11-17 14:50:20.905906+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 8 (0x11)
+Test Case '-[JobsIMTests.IMReceiptStorageTests testCompleteOriginalFsyncDescriptorAndNonceSurviveReopen]' passed (0.031 seconds).
+Test Case '-[JobsIMTests.IMReceiptStorageTests testContentOriginalBytesAndIntentCommitWithoutCursorOrOutboxChanges]' started.
+Test Case '-[JobsIMTests.IMReceiptStorageTests testContentOriginalBytesAndIntentCommitWithoutCursorOrOutboxChanges]' passed (0.018 seconds).
+Test Case '-[JobsIMTests.IMReceiptStorageTests testGlobalErasesRawBodyAndOriginalButPreservesFrozenOriginalQueryMetadata]' started.
+2026-11-17 14:50:20.952688+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-40B52639-A5BA-4C6C-8F54-85301C0E70B4/client.sqlite-shm
+2026-11-17 14:50:20.952774+0800 JobsIM[43954:5693356] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-40B52639-A5BA-4C6C-8F54-85301C0E70B4/client.sqlite-wal
+2026-11-17 14:50:20.952863+0800 JobsIM[43954:5692900] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-40B52639-A5BA-4C6C-8F54-85301C0E70B4/client.sqlite
+2026-11-17 14:50:20.953372+0800 JobsIM[43954:5692900] [logging] invalidated open fd: 8 (0x11)
+2026-11-17 14:50:20.952940+0800 JobsIM[43954:5693356] [logging] invalidated open fd: 12 (0x11)
+2026-11-17 14:50:20.952935+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 13 (0x11)
+Test Case '-[JobsIMTests.IMReceiptStorageTests testGlobalErasesRawBodyAndOriginalButPreservesFrozenOriginalQueryMetadata]' passed (0.029 seconds).
+Test Case '-[JobsIMTests.IMReceiptStorageTests testGlobalSQLFailureLeavesCompleteOriginalAndReceiptRowsRecoverable]' started.
+2026-11-17 14:50:20.990221+0800 JobsIM[43954:5692900] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-AFC3A72A-0EBC-4725-8F06-BE7F7EB0484D/client.sqlite-shm
+2026-11-17 14:50:20.990318+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-AFC3A72A-0EBC-4725-8F06-BE7F7EB0484D/client.sqlite-wal
+2026-11-17 14:50:20.990373+0800 JobsIM[43954:5693356] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-AFC3A72A-0EBC-4725-8F06-BE7F7EB0484D/client.sqlite
+2026-11-17 14:50:20.990380+0800 JobsIM[43954:5692900] [logging] invalidated open fd: 13 (0x11)
+2026-11-17 14:50:20.990445+0800 JobsIM[43954:5693356] [logging] invalidated open fd: 8 (0x11)
+2026-11-17 14:50:20.990437+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 12 (0x11)
+Test Case '-[JobsIMTests.IMReceiptStorageTests testGlobalSQLFailureLeavesCompleteOriginalAndReceiptRowsRecoverable]' passed (0.037 seconds).
+Test Case '-[JobsIMTests.IMReceiptStorageTests testGuardMemberAndDigestFailuresPublishNoPartialIntent]' started.
+2026-11-17 14:50:21.009183+0800 JobsIM[43954:5693356] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-2AAFF6A7-3B57-4529-BAB2-B1B579058C01/client.sqlite-shm
+2026-11-17 14:50:21.009365+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-2AAFF6A7-3B57-4529-BAB2-B1B579058C01/client.sqlite-wal
+2026-11-17 14:50:21.009597+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 12 (0x11)
+2026-11-17 14:50:21.009601+0800 JobsIM[43954:5693356] [logging] invalidated open fd: 13 (0x11)
+Test Case '-[JobsIMTests.IMReceiptStorageTests testGuardMemberAndDigestFailuresPublishNoPartialIntent]' passed (0.018 seconds).
+Test Case '-[JobsIMTests.IMReceiptStorageTests testLivePhysicalStoreProbeProducesBoundEvidenceWithoutQualification]' started.
+2026-11-17 14:50:21.029824+0800 JobsIM[43954:5692786] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-8977D024-3B6E-4670-A68B-A65CE8E30F25/client.sqlite-shm
+2026-11-17 14:50:21.029854+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-8977D024-3B6E-4670-A68B-A65CE8E30F25/client.sqlite-wal
+2026-11-17 14:50:21.030254+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 12 (0x11)
+2026-11-17 14:50:21.029920+0800 JobsIM[43954:5692786] [logging] invalidated open fd: 13 (0x11)
+Test Case '-[JobsIMTests.IMReceiptStorageTests testLivePhysicalStoreProbeProducesBoundEvidenceWithoutQualification]' passed (0.020 seconds).
+Test Case '-[JobsIMTests.IMReceiptStorageTests testQueuedCleanupCannotUnlinkSameNameSuccessorInode]' started.
+2026-11-17 14:50:21.055352+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-FFCB8CCF-F207-44BD-A462-B57B089F8F42/client.sqlite-shm
+2026-11-17 14:50:21.055388+0800 JobsIM[43954:5692786] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-FFCB8CCF-F207-44BD-A462-B57B089F8F42/client.sqlite-wal
+2026-11-17 14:50:21.055443+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 13 (0x11)
+2026-11-17 14:50:21.055444+0800 JobsIM[43954:5692786] [logging] invalidated open fd: 12 (0x11)
+2026-11-17 14:50:21.055497+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-FFCB8CCF-F207-44BD-A462-B57B089F8F42/client.sqlite
+2026-11-17 14:50:21.055530+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 8 (0x11)
+Test Case '-[JobsIMTests.IMReceiptStorageTests testQueuedCleanupCannotUnlinkSameNameSuccessorInode]' passed (0.025 seconds).
+Test Case '-[JobsIMTests.IMReceiptStorageTests testReceiptIntentCannotChangeOriginalTupleOrBorrowSuccessorFamily]' started.
+2026-11-17 14:50:21.075292+0800 JobsIM[43954:5692778] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-8AED3641-A0CB-41F3-88A5-23C5BBF63AE7/client.sqlite-shm
+2026-11-17 14:50:21.075436+0800 JobsIM[43954:5692786] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/jobs/Library/Developer/CoreSimulator/Devices/37CB226C-C735-4A2D-8FCA-453E2E5F9DFB/data/Containers/Data/Application/25563645-E548-4D94-8C7A-4955E0D4223F/tmp/JobsIMReceiptTests-8AED3641-A0CB-41F3-88A5-23C5BBF63AE7/client.sqlite-wal
+2026-11-17 14:50:21.075583+0800 JobsIM[43954:5692778] [logging] invalidated open fd: 13 (0x11)
+2026-11-17 14:50:21.075765+0800 JobsIM[43954:5692786] [logging] invalidated open fd: 12 (0x11)
+Test Case '-[JobsIMTests.IMReceiptStorageTests testReceiptIntentCannotChangeOriginalTupleOrBorrowSuccessorFamily]' passed (0.020 seconds).
+Test Suite 'IMReceiptStorageTests' passed at 2026-11-17 14:50:21.077.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.198 (0.201) seconds
+Test Suite 'IMSessionTests' started at 2026-11-17 14:50:21.077.
+Test Case '-[JobsIMTests.IMSessionTests testInputMayClearOnlyAfterOutboxCommit]' started.
+Test Case '-[JobsIMTests.IMSessionTests testInputMayClearOnlyAfterOutboxCommit]' passed (0.002 seconds).
+Test Case '-[JobsIMTests.IMSessionTests testReadableThemeColorsKeepAccentAndWhitePrimaryTextDistinct]' started.
+Test Case '-[JobsIMTests.IMSessionTests testReadableThemeColorsKeepAccentAndWhitePrimaryTextDistinct]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMSessionTests testReadOnlyDoesNotQueueOrConsumeDraft]' started.
+Test Case '-[JobsIMTests.IMSessionTests testReadOnlyDoesNotQueueOrConsumeDraft]' passed (0.002 seconds).
+Test Suite 'IMSessionTests' passed at 2026-11-17 14:50:21.083.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.005 (0.006) seconds
+Test Suite 'IMStorageTests' started at 2026-11-17 14:50:21.083.
+Test Case '-[JobsIMTests.IMStorageTests testCompleteEmptyListReplacesStaleProjection]' started.
+Test Case '-[JobsIMTests.IMStorageTests testCompleteEmptyListReplacesStaleProjection]' passed (0.003 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testEpochCursorIsExactAndRejectsWrongEpochOrRegression]' started.
+Test Case '-[JobsIMTests.IMStorageTests testEpochCursorIsExactAndRejectsWrongEpochOrRegression]' passed (0.000 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testIncomingUnreadIsAtomicDeduplicatedAndCursorCannotRegress]' started.
+Test Case '-[JobsIMTests.IMStorageTests testIncomingUnreadIsAtomicDeduplicatedAndCursorCannotRegress]' passed (0.004 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testMessageCursorAndProjectionCommitTogetherWithoutVersionRegression]' started.
+Test Case '-[JobsIMTests.IMStorageTests testMessageCursorAndProjectionCommitTogetherWithoutVersionRegression]' passed (0.004 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testNamespacesIsolateAccountsInstancesAndDemo]' started.
+Test Case '-[JobsIMTests.IMStorageTests testNamespacesIsolateAccountsInstancesAndDemo]' passed (0.003 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testOutboxIdentityIsStableAndCommitIsAtomic]' started.
+Test Case '-[JobsIMTests.IMStorageTests testOutboxIdentityIsStableAndCommitIsAtomic]' passed (0.004 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testOutboxSurvivesReopeningStore]' started.
+Test Case '-[JobsIMTests.IMStorageTests testOutboxSurvivesReopeningStore]' passed (0.015 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testStringIdentifiersKeepLargeValuesExact]' started.
+Test Case '-[JobsIMTests.IMStorageTests testStringIdentifiersKeepLargeValuesExact]' passed (0.001 seconds).
+Test Case '-[JobsIMTests.IMStorageTests testUnreadAndDraftSurviveReopeningWithoutReadReceipt]' started.
+Test Case '-[JobsIMTests.IMStorageTests testUnreadAndDraftSurviveReopeningWithoutReadReceipt]' passed (0.019 seconds).
+Test Suite 'IMStorageTests' passed at 2026-11-17 14:50:21.138.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.052 (0.055) seconds
+Test Suite 'JobsIMTests.xctest' failed at 2026-11-17 14:50:21.138.
+	 Executed 122 tests, with 11 failures (5 unexpected) in 8.432 (8.485) seconds
+Test Suite 'Selected tests' failed at 2026-11-17 14:50:21.138.
+	 Executed 122 tests, with 11 failures (5 unexpected) in 8.432 (8.486) seconds
+2026-11-17 14:51:11.644 xcodebuild[42897:5685634] [MT] IDETestOperationsObserverDebug: 101.618 elapsed -- Testing started completed.
+2026-11-17 14:51:11.644 xcodebuild[42897:5685634] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-17 14:51:11.644 xcodebuild[42897:5685634] [MT] IDETestOperationsObserverDebug: 101.618 sec, +101.618 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/实现进度/20261116-剩余能力闭环/iOS收讫证据/122项合同修正原生.xcresult
+
+Failing tests:
+	IMReceiptServiceTests.testAutomaticConsentRecoversExistingUnacknowledgedFrozenTargetWithoutNewDeclaration()
+	IMReceiptServiceTests.testAutomaticConsentRecoversExistingUnacknowledgedFrozenTargetWithoutNewDeclaration()
+	IMReceiptServiceTests.testAutomaticPauseBlocksNewWorkAndSameFamilyResumeReprobesWithoutDeclaring()
+	IMReceiptServiceTests.testAutomaticUnknownOnlyQueriesAndSuccessorDoesNotInheritConsent()
+	IMReceiptServiceTests.testCloudOnlyFullMigrationCannotBorrowContentReceiptAsOriginalObjectProof()
+	IMReceiptServiceTests.testCloudOnlyMigrationUsesExactQualifiedRawBytesWithoutExpandingOldTarget()
+	IMReceiptServiceTests.testLostReceiptResultOnlyQueriesOriginalNonceAndRetainsRawBytes()
+	IMReceiptServiceTests.testOrdinarySyncAdvanceDoesNotInvalidateSameStoreMeasuredReport()
+	IMReceiptServiceTests.testRealLocalProbeExplicitDeclarationAndContentAtomicReceipt()
+	IMReceiptServiceTests.testSecretDurableBodyIsRejectedBeforeQueryHttp()
+	IMReceiptServiceTests.testSuccessorFamilyCannotFirstPublishUnknownOriginal()
+
+** TEST EXECUTE FAILED **
+
+Testing started

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/tmp/jobsim-live-regression.py", line 60, in <module>
+    call('GET','/api/sync/changes?'+urllib.parse.urlencode({'cursor':snapshot['boundaryToken'],'limit':25}),actor=actor)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/jobsim-live-regression.py", line 24, in call
+    check(status==expect,method+' '+path.split('?')[0]+' status '+str(status)+(('/'+code) if code else ''))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/jobsim-live-regression.py", line 9, in check
+    if not value: raise AssertionError(label)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: GET /api/sync/changes status 409/SYNC_CONTEXT_CHANGED

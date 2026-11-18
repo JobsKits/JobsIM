@@ -1,0 +1,3 @@
+parameterized	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMContactsVC/IMContactUX.swift	63	UIContextualAction	UIContextualAction(style: .destructive, title: IMStrings.text("deleteAction"))
+parameterized	/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM/UI/IMContactsVC/IMContactUX.swift	72	UISwipeActionsConfiguration	UISwipeActionsConfiguration(actions: actions)
+issues=2 issue_files=1 factory_hits=0 scanned=6 sdk_classes=3512

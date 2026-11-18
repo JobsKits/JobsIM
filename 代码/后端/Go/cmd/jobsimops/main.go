@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"flag"
 	"fmt"
 	jobsim "jobsim/backend"
@@ -21,7 +22,9 @@ func run() error {
 	passwordEnv := flag.String("password-env", "JOBS_IM_BOOTSTRAP_PASSWORD", "Environment variable containing the new administrator password")
 	totpFile := flag.String("totp-secret-file", "", "Explicit private administrator authenticator enrollment file")
 	internalBase := flag.Int("internal-base-port", 8101, "First internal domain role port")
-	mode := flag.String("mode", "backup", "backup|restore|reconcile-admissions|bootstrap-admin")
+	deploymentSpec := flag.String("deployment-spec", "", "Private native eight-domain CMS restore spec; relative paths resolve beside this file")
+	mode := flag.String("mode", "backup", "backup|restore|reconcile-admissions|bootstrap-admin|grant-group-recovery|revoke-group-recovery")
+	groupActor := flag.String("user-id", "", "Original group recovery administrator principal")
 	pgbin := flag.String("pg-bin", "", "Matching PostgreSQL tool directory")
 	file := flag.String("file", "", "Encrypted backup file; never overwritten")
 	key := flag.String("key-file", "", "Separate private 32-byte recovery key")
@@ -34,7 +37,37 @@ func run() error {
 	flag.Parse()
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Minute)
 	defer cancel()
+	if *mode == "deployment-restore-plan" || *mode == "deployment-restore" {
+		if *deploymentSpec == "" {
+			return fmt.Errorf("--deployment-spec is required")
+		}
+		if *mode == "deployment-restore" && !*offline {
+			return fmt.Errorf("native deployment restore requires explicit --offline")
+		}
+		result, err := jobsim.DeploymentRestore(ctx, *deploymentSpec, *mode == "deployment-restore-plan")
+		if err != nil {
+			return err
+		}
+		raw, _ := json.MarshalIndent(result, "", "  ")
+		fmt.Println(string(raw))
+		return nil
+	}
 	o := jobsim.BackupOptions{BusinessURL: os.Getenv("JOBS_IM_DATABASE_URL"), JournalURL: os.Getenv("JOBS_IM_JOURNAL_DATABASE_URL"), StateDir: *state, TLSDir: *tls, PGBin: *pgbin, Output: *file, KeyFile: *key}
+	if *mode == "grant-group-recovery" || *mode == "revoke-group-recovery" {
+		urls := map[string]string{}
+		for i, role := range []string{"identity", "directory", "conversation", "message", "media", "control", "journal", "governance", "sync"} {
+			urls[role] = "http://127.0.0.1:" + strconv.Itoa(*internalBase+i)
+		}
+		config, e := jobsim.PrepareConfig(jobsim.Config{DatabaseURL: os.Getenv("JOBS_IM_CONVERSATION_DATABASE_URL"), StateDir: *state, RoleURLs: urls})
+		if e != nil {
+			return e
+		}
+		if e = jobsim.SetGroupRecoveryGrant(ctx, config, o.BusinessURL, *groupActor, *op, *mode == "revoke-group-recovery"); e != nil {
+			return e
+		}
+		fmt.Println("Explicit local group recovery permission updated and audited")
+		return nil
+	}
 	if *mode == "reconcile-admissions" {
 		messageURL := os.Getenv("JOBS_IM_MESSAGE_DATABASE_URL")
 		if messageURL == "" {

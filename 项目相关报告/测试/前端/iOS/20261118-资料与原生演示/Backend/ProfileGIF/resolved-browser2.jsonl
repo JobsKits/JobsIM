@@ -1,0 +1,12 @@
+{"Time":"2026-11-18T17:03:45.047224+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-18T17:03:45.825209+08:00","Action":"run","Package":"jobsim/backend","Test":"TestWebMActualBrowserContainerClassification"}
+{"Time":"2026-11-18T17:03:45.825552+08:00","Action":"output","Package":"jobsim/backend","Test":"TestWebMActualBrowserContainerClassification","Output":"=== RUN   TestWebMActualBrowserContainerClassification\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:03:45.825624+08:00","Action":"output","Package":"jobsim/backend","Test":"TestWebMActualBrowserContainerClassification","Output":"--- PASS: TestWebMActualBrowserContainerClassification (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:03:45.825651+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestWebMActualBrowserContainerClassification","Elapsed":0}
+{"Time":"2026-11-18T17:03:45.825669+08:00","Action":"run","Package":"jobsim/backend","Test":"TestMediaUploadPGActualBrowserContainerRemainsAudio"}
+{"Time":"2026-11-18T17:03:45.825677+08:00","Action":"output","Package":"jobsim/backend","Test":"TestMediaUploadPGActualBrowserContainerRemainsAudio","Output":"=== RUN   TestMediaUploadPGActualBrowserContainerRemainsAudio\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:03:46.375169+08:00","Action":"output","Package":"jobsim/backend","Test":"TestMediaUploadPGActualBrowserContainerRemainsAudio","Output":"--- PASS: TestMediaUploadPGActualBrowserContainerRemainsAudio (0.55s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:03:46.375192+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestMediaUploadPGActualBrowserContainerRemainsAudio","Elapsed":0.55}
+{"Time":"2026-11-18T17:03:46.375218+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-18T17:03:46.376308+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t1.329s\n"}
+{"Time":"2026-11-18T17:03:46.376321+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":1.329}

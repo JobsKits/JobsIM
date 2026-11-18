@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jobs.im.OwnDeletionRulesTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-17T07:19:20.664Z" hostname="JobsdeAir" time="0.005">
+  <properties/>
+  <testcase name="proofPasswordUsesNfcAndBounds" classname="com.jobs.im.OwnDeletionRulesTest" time="0.003"/>
+  <testcase name="cancelledOrCompletedDeletionNeverRevivesTheOldFamily" classname="com.jobs.im.OwnDeletionRulesTest" time="0.001"/>
+  <testcase name="onlyExplicitPreAdmissionCodesCanDiscardAnUnknownCreation" classname="com.jobs.im.OwnDeletionRulesTest" time="0.0"/>
+  <testcase name="deletionControlsCoverAllTenNativeLanguages" classname="com.jobs.im.OwnDeletionRulesTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,64 @@
+{
+  "steps": [
+    {
+      "label": "02-注销最终",
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/account-deletion.cjs/account-deletion.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 2.01,
+      "minimumFreeBytes": 7981252608,
+      "reason": null
+    },
+    {
+      "label": "03-改密回归",
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/password-change.cjs/password-change.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 3.01,
+      "minimumFreeBytes": 7969693696,
+      "reason": null
+    },
+    {
+      "label": "04-导出回归",
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "/Users/jobs/Documents/GitHub/JobsIM/测试/前端/Web/data-export.cjs/data-export.cjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 4.03,
+      "minimumFreeBytes": 7955415040,
+      "reason": null
+    },
+    {
+      "label": "05-类型",
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/Web/node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.01,
+      "minimumFreeBytes": 7956430848,
+      "reason": null
+    },
+    {
+      "label": "06-构建",
+      "command": [
+        "/Users/jobs/Library/Application Support/JobsIM/Toolchains/node-v24.22.1-darwin-arm64/bin/node",
+        "/Users/jobs/Documents/GitHub/JobsIM/代码/前端/Web/node_modules/vite/bin/vite.js",
+        "build",
+        "--outDir",
+        "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AccountDeletion/1794850284064-66969/Production"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.0,
+      "minimumFreeBytes": 7955668992,
+      "reason": null
+    }
+  ],
+  "buildDirectory": "/Users/jobs/Library/Application Support/JobsIM/Build/Web/AccountDeletion/1794850284064-66969/Production"
+}

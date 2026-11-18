@@ -1,0 +1,26 @@
+┌  Syncing CodeGraph
+│
+Scanning files...
+│
+●  Already up to date
+│
+└  Done
+
+        2.82 real         1.59 user         1.55 sys
+           204701696  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               39666  page reclaims
+                 305  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                 283  messages sent
+                 283  messages received
+                   0  signals received
+                  15  voluntary context switches
+                7676  involuntary context switches
+          1359498894  instructions retired
+           322550271  cycles elapsed
+            14174248  peak memory footprint

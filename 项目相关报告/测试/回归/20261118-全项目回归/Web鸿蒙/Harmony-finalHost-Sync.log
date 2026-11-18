@@ -1,0 +1,45 @@
+✔ exact counters and opaque cross-end client IDs, explicit full DTO (38.600042ms)
+✔ raw envelope bytes SHA and structural deep equality both required (0.56825ms)
+✔ all pages plus final validation and first changes precede atomic publication (38.600583ms)
+✔ owner reference revision is independent of Message business version (33.951292ms)
+✔ missing page item cannot publish partial body/cursor (34.100083ms)
+✔ raw body hash mismatch cannot publish partial body/cursor (31.882583ms)
+✔ outer object mismatch cannot publish partial body/cursor (31.236541ms)
+✔ permission ABA cannot publish partial body/cursor (32.688375ms)
+✔ reference current revision mismatch cannot publish partial body/cursor (31.704958ms)
+✔ classification watermark regression rejects complete snapshot (32.508334ms)
+✔ durable original registration and snapshot request survive failed round (38.104167ms)
+✔ same client ID from peer never acknowledges own original (72.2665ms)
+✔ auxiliary 503 and corrupt original evidence are zero proof but verified global still installs (55.875334ms)
+✔ full readonly original result confirms only matching sender route/body hash (67.84975ms)
+✔ malformed complete 200 and wrong sender never confirm queue (40.523833ms)
+✔ late context and SQLite transaction failure never publish body/cursor (54.517625ms)
+✔ ordinary retained copies stay isolated and global dominates newer resurrection (42.449583ms)
+✔ forward and announcement source body are never durable projections (59.233542ms)
+✔ terminal cleanup intent survives failure and retries without new events (60.179625ms)
+✔ capability absence does not create responsibility; disappearance never legacy falls back (37.197833ms)
+✔ registered physical UUID loss is refused instead of silently regenerating (41.994542ms)
+✔ global cleans all proven same-account old device/epoch holders without crossing other users (50.950041ms)
+✔ origin conflict aborts entire projection/cursor transaction (44.0905ms)
+✔ proof captured before a guard or payload mutation cannot close the current original (36.462875ms)
+✔ delta gap and unknown state do not advance a verified old cursor (40.078292ms)
+✔ S2 automatic transition archives old stream while retaining physical UUID and original queue (50.085125ms)
+✔ S2 ordinary updates cannot replace a schema or registration nonce (35.605042ms)
+✔ S2 personal projection has independent object version and exact own identity (29.569208ms)
+✔ S2 timestamps accept RFC3339 offsets without rewriting original text (0.226709ms)
+✔ S2 default empty draft is valid and cloud projection drops temporary authorizations (29.781459ms)
+✔ S2 native service preserves prepared body and checks completed current by readonly route (39.695125ms)
+✔ S2 completed404 and automatic unknown never create a personal write (34.413083ms)
+✔ S2 cloud adoption compares local original plus lifecycle in the same SQLite transaction (32.469708ms)
+✔ S2 stale visible membership rejects observation before creating an original write (35.349167ms)
+✔ S2 personal controls and state labels cover all ten languages (0.361208ms)
+✔ committed message invalidation clears RAM before cleanup awaits and never fires for failed publication (39.719416ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1498.850541
+Host-only work: /Users/jobs/Library/Application Support/JobsIM/Build/Harmony/Authoritative-Y8eJAp

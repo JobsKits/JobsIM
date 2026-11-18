@@ -1,0 +1,248 @@
+**Exploration: 部署/公共组件/地址二维码/main.go**
+
+Found 12 symbols across 1 file. 1 file pinned from the query.
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`部署/公共组件/地址二维码/main.go`** — card(instantiates), card(references), writeOutput(calls), card(struct), entries(type_alias), main(function), page(instantiates), page(struct), pageHTML(constant), parseCard(calls), +10 more
+
+```go
+19		qrcode "github.com/skip2/go-qrcode"
+20	)
+21	
+22	type entries []string
+23	
+24	func (e *entries) String() string     { return strings.Join(*e, ",") }
+25	func (e *entries) Set(s string) error { *e = append(*e, s); return nil }
+26	
+27	type card struct {
+28		Label, URL, SVG string
+29		Image           template.HTML
+30		Bitmap          [][]bool
+31	}
+32	type page struct {
+33		Title, Generated string
+34		Cards            []card
+35		Expired          bool
+36	}
+37	
+38	const pageHTML = `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:;"><title>{{.Title}}</title><style>body{font:16px system-ui,sans-serif;background:#eef2f7;color:#172236;margin:0;padding:24px}main{max-width:940px;margin:auto}h1{font-size:26px}.cards{display:flex;flex-wrap:wrap;gap:24px}.card{background:white;border:1px solid #d5dce5;border-radius:16px;padding:24px;flex:1 1 300px;min-width:0}.qr{background:#fff;max-width:360px;margin:auto}.qr svg{width:100%;height:auto;display:block}a{color:#0759bd;overflow-wrap:anywhere}textarea{width:100%;box-sizing:border-box;min-height:72px;padding:12px;font:14px monospace;margin:16px 0}small{color:#48566b}.notice{border-left:4px solid #c56c00;padding:12px;background:#fff5de}</style><main><h1>{{.Title}}</h1>{{if .Expired}}<p class="notice">本次部署已结束，此页二维码已失效。请重新部署并使用新页面。</p>{{else}}<p class="notice">扫码打开对应入口，再按页面要求登录。二维码只包含下面的访问地址。临时地址仅在本次服务与隧道运行期间有效；重新部署后请使用新码。</p><div class="cards">{{range .Cards}}<section class="card"><h2>{{.Label}}</h2><div class="qr">{{.Image}}</div><textarea readonly aria-label="{{.Label}}完整地址">{{.URL}}</textarea><a href="{{.URL}}" rel="noreferrer">打开{{.Label}}</a> · <a href="{{.SVG}}" download>保存二维码 SVG</a></section>{{end}}</div>{{end}}<p><small>生成时间：{{.Generated}}。地址与二维码生成成功不代表公网验收通过；请用手机实际验证登录、写入与刷新重读。</small></p></main></html>`
+39	
+40	// Reject credential-bearing or wildcard addresses before displaying or encoding anything.
+41	func parseCard(raw string) (card, error) {
+42		label, address, ok := strings.Cut(raw, "|")
+43		if !ok || strings.TrimSpace(label) == "" || strings.ContainsAny(raw, "\r\n\t\x1b") {
+44			return card{}, fmt.Errorf("入口必须为 标题|完整HTTP地址，不能含控制字符")
+45		}
+46		u, err := url.Parse(address)
+47		if err != nil || (u.Scheme != "http" && u.Scheme != "https") || u.Hostname() == "" || u.Opaque != "" {
+48			return card{}, fmt.Errorf("入口必须为完整HTTP或HTTPS地址")
+49		}
+50		if u.User != nil {
+51			return card{}, fmt.Errorf("入口不能含账户凭据")
+52		}
+53		query, err := url.ParseQuery(u.RawQuery)
+54		if err != nil {
+55			return card{}, fmt.Errorf("入口查询参数无效")
+56		}
+57		fragment, _ := url.ParseQuery(u.Fragment)
+58		for _, fields := range []url.Values{query, fragment} {
+59			for key := range fields {
+60				switch strings.ToLower(key) {
+61				case "token", "access_token", "refresh_token", "password", "passwd", "secret", "api_key", "apikey", "authorization", "credential", "session", "sessionid", "code", "signature", "sig":
+62					return card{}, fmt.Errorf("入口不能含认证或签名参数")
+63				}
+64			}
+65		}
+66		if u.Hostname() == "0.0.0.0" || u.Hostname() == "::" {
+67			return card{}, fmt.Errorf("监听通配地址不能作为访问入口")
+68		}
+69		qr, err := qrcode.New(address, qrcode.Medium)
+70		if err != nil {
+71			return card{}, fmt.Errorf("二维码内容过长或无法编码")
+72		}
+73		return card{Label: label, URL: address, Bitmap: qr.Bitmap()}, nil
+74	}
+75	
+76	// Keep the encoder's four-module quiet zone and use integer-aligned black cells.
+77	func svgFor(c card) string {
+78		n := len(c.Bitmap)
+79		var b strings.Builder
+80		fmt.Fprintf(&b, `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 %d %d" width="%d" height="%d" shape-rendering="crispEdges" role="img" aria-label="访问二维码"><rect width="100%%" height="100%%" fill="white"/><path fill="black" d="`, n, n, n*8, n*8)
+81		for y, row := range c.Bitmap {
+82			for x, dark := range row {
+83				if dark {
+84					fmt.Fprintf(&b, "M%d %dh1v1h-1z", x, y)
+85				}
+86			}
+87		}
+88		b.WriteString(`"/></svg>`)
+89		return b.String()
+90	}
+91	
+92	// Only owned ordinary output files may be atomically replaced.
+93	func writeOutput(dir, name string, data []byte) error {
+94		destination := filepath.Join(dir, name)
+95		if st, err := os.Lstat(destination); err == nil && !st.Mode().IsRegular() {
+96			return fmt.Errorf("拒绝替换非普通输出文件")
+97		} else if err != nil && !os.IsNotExist(err) {
+98			return err
+99		}
+100		tmp, err := os.CreateTemp(dir, ".qr-*")
+101		if err != nil {
+102			return err
+103		}
+104		defer os.Remove(tmp.Name())
+105		if _, err = tmp.Write(data); err != nil {
+106			tmp.Close()
+107			return err
+108		}
+109		if err = tmp.Close(); err != nil {
+110			return err
+111		}
+112		return os.Rename(tmp.Name(), destination)
+113	}
+114	
+115	// Background-filled two-column modules stay square without depending on block-glyph metrics.
+116	func terminalCard(out io.Writer, c card, width, height int, ansi bool) {
+117		fmt.Fprintf(out, "\n%s\n%s\n", c.Label, c.URL)
+118		_, noColor := os.LookupEnv("NO_COLOR")
+119		ansi = ansi && !noColor
+120		columns, rows := len(c.Bitmap)+2, (len(c.Bitmap)+1)/2+6
+121		if ansi {
+122			columns, rows = 2*len(c.Bitmap)+2, len(c.Bitmap)+6
+123		}
+124		if width < columns || (height > 0 && height < rows) {
+125			fmt.Fprintf(out, "终端二维码需要至少%d列×%d行；请使用本轮本地二维码图片或页面。\n", columns, rows)
+126			return
+127		}
+128		if ansi {
+129			fmt.Fprintln(out, "终端二维码（黑白方格）：")
+130			for _, row := range c.Bitmap {
+131				for _, dark := range row {
+132					if dark {
+133						fmt.Fprint(out, "\x1b[40m  ")
+134					} else {
+135						fmt.Fprint(out, "\x1b[47m  ")
+136					}
+137				}
+138				fmt.Fprintln(out, "\x1b[0m")
+139			}
+140			return
+141		}
+142		fmt.Fprintln(out, "终端二维码（字符显示；颜色由终端主题决定）：")
+143		for y := 0; y < len(c.Bitmap); y += 2 {
+144			for x := range c.Bitmap[y] {
+145				top := c.Bitmap[y][x]
+146				bottom := y+1 < len(c.Bitmap) && c.Bitmap[y+1][x]
+147				switch {
+148				case top && bottom:
+149					fmt.Fprint(out, "█")
+150				case top:
+151					fmt.Fprint(out, "▀")
+152				case bottom:
+153					fmt.Fprint(out, "▄")
+154				default:
+155					fmt.Fprint(out, " ")
+156				}
+157			}
+158			fmt.Fprintln(out)
+159		}
+160	}
+161	
+162	func run(args []string, out io.Writer) error {
+163		fs := flag.NewFlagSet("deployqr", flag.ContinueOnError)
+164		fs.SetOutput(io.Discard)
+165		var values entries
+166		dir := fs.String("output-dir", "", "本次运行独占的输出目录")
+167		title := fs.String("title", "部署访问入口", "页面标题")
+168		width := fs.Int("terminal-width", 0, "终端列数；0仅生成文件")
+169		height := fs.Int("terminal-height", 0, "终端行数；0不限制高度")
+170		ansi := fs.Bool("ansi", false, "终端允许黑白ANSI二维码")
+171		expire := fs.Bool("expire", false, "将本次页面标记失效")
+172		fs.Var(&values, "entry", "入口标题|完整URL，可重复")
+173		if err := fs.Parse(args); err != nil {
+174			return fmt.Errorf("二维码参数无效")
+175		}
+176		if *dir == "" || fs.NArg() != 0 || *width < 0 || *height < 0 || (!*expire && len(values) == 0) {
+177			return fmt.Errorf("需要 --output-dir 和至少一个 --entry")
+178		}
+179		var cards []card
+180		for _, raw := range values {
+181			c, err := parseCard(raw)
+182			if err != nil {
+183				return err
+184			}
+185			cards = append(cards, c)
+186		}
+187		// Validate before writing; do not follow a symlink output directory.
+188		if st, err := os.Lstat(*dir); err == nil && (!st.IsDir() || st.Mode()&os.ModeSymlink != 0) {
+189			return fmt.Errorf("二维码目录不能为符号链接或文件")
+190		} else if err != nil && !os.IsNotExist(err) {
+191			return err
+192		}
+193		if err := os.MkdirAll(*dir, 0700); err != nil {
+194			return err
+195		}
+196		for i := range cards {
+197			cards[i].SVG = fmt.Sprintf("%02d.svg", i+1)
+198			cards[i].Image = template.HTML(svgFor(cards[i]))
+199			if err := writeOutput(*dir, cards[i].SVG, []byte(cards[i].Image)); err != nil {
+200				return err
+201			}
+202			n := len(cards[i].Bitmap) * 8
+203			img := image.NewGray(image.Rect(0, 0, n, n))
+204			for y := 0; y < n; y++ {
+205				for x := 0; x < n; x++ {
+206					shade := color.Gray{Y: 255}
+207					if cards[i].Bitmap[y/8][x/8] {
+208						shade.Y = 0
+209					}
+210					img.SetGray(x, y, shade)
+211				}
+212			}
+213			var raster bytes.Buffer
+214			if err := png.Encode(&raster, img); err != nil {
+215				return err
+216			}
+217			if err := writeOutput(*dir, fmt.Sprintf("%02d.png", i+1), raster.Bytes()); err != nil {
+218				return err
+219			}
+220		}
+221		t, err := template.New("page").Parse(pageHTML)
+222		if err != nil {
+223			return err
+224		}
+225		var b bytes.Buffer
+226		if err := t.Execute(&b, page{Title: *title, Generated: time.Now().Format(time.RFC3339), Cards: cards, Expired: *expire}); err != nil {
+227			return err
+228		}
+229		if err := writeOutput(*dir, "index.html", b.Bytes()); err != nil {
+230			return err
+231		}
+232		if !*expire {
+233			// Keep the primary (first) address visible above the prompt when multiple cards scroll.
+234			for i := len(cards) - 1; i >= 0; i-- {
+235				terminalCard(out, cards[i], *width, *height, *ansi)
+236			}
+237			abs, _ := filepath.Abs(filepath.Join(*dir, "index.html"))
+238			fmt.Fprintf(out, "\n本地二维码页面（浏览器打开）：\n%s\n", abs)
+239		}
+240		return nil
+241	}
+242	func main() {
+243		if err := run(os.Args[1:], os.Stdout); err != nil {
+244			fmt.Fprintln(os.Stderr, "二维码未生成：", err)
+245			os.Exit(1)
+246		}
+247	}
+248	
+```
+
+
+---
+> **Complete source for 1 file is included above — do NOT re-read them.** If your question also needs files/symbols listed under "Not shown above" (or any area this call didn't cover), make ANOTHER codegraph_explore targeting those names — it returns the same source with line numbers and is cheaper and more complete than reading.
+
+> **Exploration guidance — advisory only, NOT a quota: this project (~720 files indexed) is usually covered in ≈2 focused explore calls, and extra calls are never rejected or rate-limited.** If the response above does not fully cover your question, run another codegraph_explore on the uncovered symbols — it is cheaper and more complete than Read. Only stop exploring when the response actually covers the flow you asked about.

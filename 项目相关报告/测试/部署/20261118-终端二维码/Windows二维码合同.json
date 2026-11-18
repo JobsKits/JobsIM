@@ -1,0 +1,20 @@
+[
+  {
+    "functionCall": "passed",
+    "host": "MacOS PowerShell; no Windows-native claim",
+    "syntax": "passed",
+    "file": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/部署/Windows/Deployment/【Windows】部署.ps1/【Windows】部署.ps1",
+    "ownPNGRequested": true,
+    "noColorEmptyHonored": true,
+    "loopbackLabel": true
+  },
+  {
+    "functionCall": "passed",
+    "host": "MacOS PowerShell; no Windows-native claim",
+    "syntax": "passed",
+    "file": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/部署/Windows/Undeployment/【Windows】反部署.ps1/【Windows】反部署.ps1",
+    "ownPNGRequested": true,
+    "noColorEmptyHonored": true,
+    "loopbackLabel": true
+  }
+]

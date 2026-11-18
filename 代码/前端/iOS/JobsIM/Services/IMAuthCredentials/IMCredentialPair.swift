@@ -76,6 +76,14 @@ struct IMCredentialPair: Codable, Equatable, Sendable {
         }
     }
 
+    func replacingUsername(_ value: String) throws -> IMCredentialPair {
+        let bytes = try JSONEncoder.make().encode(self)
+        let original = try JSONDecoder.make().decode(IMJSON.self, from: bytes)
+        let updated = original.setting("username", .string(value))
+        let encoded = try JSONEncoder.make().encode(updated)
+        return try Self.decode(String(decoding: encoded, as: UTF8.self))
+    }
+
     func serialized() throws -> String {
         return String(decoding: try JSONEncoder.make().encode(self), as: UTF8.self)
     }

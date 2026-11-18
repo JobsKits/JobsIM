@@ -1,0 +1,15 @@
+{
+  "webm": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/后端/20261117-稳定媒体上传/0a9751f3-83d2-4367-b824-6e13640f7d9d/真实浏览器合成音轨.webm",
+  "sha256": "3c7890c6485fcb0d914faf0c0449ae037619cdf059b36387e56f642e22b7edef",
+  "admissionFixture": "separate newly created marker database; production message schema; group and role tests create own random databases",
+  "startup": [
+    {
+      "name": "PGMain",
+      "exit": 0
+    },
+    {
+      "name": "PGJournal",
+      "exit": 0
+    }
+  ]
+}

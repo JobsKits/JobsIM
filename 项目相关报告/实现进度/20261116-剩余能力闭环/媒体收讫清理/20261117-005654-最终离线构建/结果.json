@@ -1,0 +1,41 @@
+[
+  {
+    "command": [
+      "python3",
+      "/Users/jobs/Documents/GitHub/JobsIM/测试/后端/运行测试.py",
+      "--backend-only",
+      "--go",
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go"
+    ],
+    "exitCode": 0,
+    "reason": null,
+    "elapsedSeconds": 3.03,
+    "minimumFreeBytes": 10559840256
+  },
+  {
+    "command": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+      "-C",
+      "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go",
+      "vet",
+      "./..."
+    ],
+    "exitCode": 0,
+    "reason": null,
+    "elapsedSeconds": 1.01,
+    "minimumFreeBytes": 10590117888
+  },
+  {
+    "command": [
+      "/Users/jobs/Library/Application Support/JobsIM/Toolchains/go1.27.4/go/bin/go",
+      "-C",
+      "/Users/jobs/Documents/GitHub/JobsIM/代码/后端/Go",
+      "build",
+      "./..."
+    ],
+    "exitCode": 0,
+    "reason": null,
+    "elapsedSeconds": 2.03,
+    "minimumFreeBytes": 10566496256
+  }
+]

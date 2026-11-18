@@ -1,0 +1,18 @@
+[
+  "xcodebuild",
+  "-workspace",
+  "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/iOS/JobsIM.xcworkspace",
+  "-scheme",
+  "JobsIM",
+  "-configuration",
+  "Debug",
+  "-destination",
+  "platform=iOS,id=00008110-000625583EE3801E",
+  "-derivedDataPath",
+  "/Users/jobs/Library/Developer/Xcode/DerivedData/JobsIM-deodxltkqdrsvkdyuhjsdbipcoqw",
+  "-jobs",
+  "2",
+  "-resultBundlePath",
+  "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-目录与真机签名/device-build.xcresult",
+  "build"
+]

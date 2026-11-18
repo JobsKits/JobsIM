@@ -1,0 +1,437 @@
+ M .gitattributes
+ M .gitignore
+ M .jobs-markdown-toc/manifest.json
+ M README.md
+ M 代码/前端/Android/README.md
+ M 代码/前端/Android/app/src/main/AndroidManifest.xml
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/ChatModel.kt
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/MainActivity.kt
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/ManagementScreens.kt
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/PersonalExportStrings.kt
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/SessionCoordinator.kt
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/Store.kt
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/SyncCleanup.kt
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/SyncGuardApi.kt
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/SyncStore.kt
+ M 代码/前端/Android/app/src/main/java/com/jobs/im/Transport.kt
+ M 代码/前端/Android/代码地图/README.md
+ M 代码/前端/CLI/README.md
+ M 代码/前端/CLI/cmd/jobsim/auth.go
+ M 代码/前端/CLI/cmd/jobsim/main.go
+ M 代码/前端/CLI/cmd/jobsim/password_change.go
+ M 代码/前端/CLI/cmd/jobsim/receipt.go
+ M 代码/前端/CLI/cmd/jobsim/receipt_cleanup.go
+ M 代码/前端/CLI/cmd/jobsim/receipt_objects.go
+ M 代码/前端/CLI/cmd/jobsim/store.go
+ M 代码/前端/CLI/cmd/jobsim/sync_store.go
+ M 代码/前端/HarmonyOS/README.md
+ M 代码/前端/HarmonyOS/entry/src/main/ets/Data/Api.ets
+ M 代码/前端/HarmonyOS/entry/src/main/ets/Data/AuthCoordinator.ets
+ M 代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportFiles.ets
+ M 代码/前端/HarmonyOS/entry/src/main/ets/Data/ExportText.ets
+ M 代码/前端/HarmonyOS/entry/src/main/ets/Data/Models.ets
+ M 代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncEngine.ets
+ M 代码/前端/HarmonyOS/entry/src/main/ets/Data/SyncStore.ets
+ M 代码/前端/HarmonyOS/entry/src/main/ets/pages/Index.ets
+ M 代码/前端/Web/README.md
+ M 代码/前端/Web/Src/App.tsx
+ M 代码/前端/Web/Src/DataExportPanel.tsx
+ M 代码/前端/Web/Src/GlobalMessages.ts
+ M 代码/前端/Web/Src/GroupControls.tsx
+ M 代码/前端/Web/Src/PrivateMedia.tsx
+ M 代码/前端/Web/Src/SyncStore.ts
+ M 代码/前端/Web/Src/api.ts
+ M 代码/前端/Web/Src/storage.ts
+ M 代码/前端/Web/Src/styles.css
+ M 代码/前端/Web/Src/types.ts
+ M 代码/前端/Web/代码地图/README.md
+ M 代码/前端/iOS/JobsByPods/JobsIMStorage/Core/IMLocalStore/IMLocalStore.swift
+ M 代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMAPIClient/IMAPIClient.swift
+ M 代码/前端/iOS/JobsByPods/JobsIMTransport/Core/IMInstanceAgent/IMInstanceAgent.swift
+ M 代码/前端/iOS/JobsIM.xcodeproj/project.pbxproj
+ M 代码/前端/iOS/JobsIM/Resource/bo.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Resource/de.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Resource/en.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Resource/es.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Resource/fr.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Resource/ja.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Resource/ko.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Resource/ru.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Resource/zh-Hans.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Resource/zh-Hant.lproj/Localizable.strings
+ M 代码/前端/iOS/JobsIM/Services/IMAuthCredentials/IMAuthCoordinator.swift
+ M 代码/前端/iOS/JobsIM/Services/IMAvatarService/IMAvatarService.swift
+ M 代码/前端/iOS/JobsIM/Services/IMDataExportService/IMDataExportService.swift
+ M 代码/前端/iOS/JobsIM/Services/IMSession/IMSession.swift
+ M 代码/前端/iOS/JobsIM/UI/Factories/UIDocumentPickerViewController/UIDocumentPickerViewController+Make.swift
+ M 代码/前端/iOS/JobsIM/UI/IMAuthVC/IMAuthVC.swift
+ M 代码/前端/iOS/JobsIM/UI/IMConversationCell/IMConversationCell.swift
+ M 代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift
+ M 代码/前端/iOS/JobsIM/UI/IMMessageCell/IMMessageCell.swift
+ M 代码/前端/iOS/JobsIM/UI/IMSettingsVC/IMSettingsVC.swift
+ M 代码/前端/iOS/JobsIM/UI/IMUI/IMUI.swift
+ M 代码/前端/iOS/Podfile
+ M 代码/前端/iOS/Podfile.lock
+ M 代码/前端/iOS/README.md
+ M 代码/前端/iOS/代码地图.md
+ M 代码/后端/Go/README.md
+ M 代码/后端/Go/avatar.go
+ M 代码/后端/Go/avatar_media.go
+ M 代码/后端/Go/cmd/jobsimd/main.go
+ M 代码/后端/Go/cmd/jobsimops/main.go
+ M 代码/后端/Go/control.go
+ M 代码/后端/Go/conversation.go
+ M 代码/后端/Go/export_identity.go
+ M 代码/后端/Go/forward_media.go
+ M 代码/后端/Go/forward_projection.go
+ M 代码/后端/Go/forward_revocation.go
+ M 代码/后端/Go/identity.go
+ M 代码/后端/Go/journal.go
+ M 代码/后端/Go/media.go
+ M 代码/后端/Go/media_export.go
+ M 代码/后端/Go/media_format.go
+ M 代码/后端/Go/media_receipts.go
+ M 代码/后端/Go/message.go
+ M 代码/后端/Go/message_export.go
+ M 代码/后端/Go/mfa.go
+ M 代码/后端/Go/migrations.go
+ M 代码/后端/Go/operations.go
+ M 代码/后端/Go/password_change.go
+ M 代码/后端/Go/password_change_worker.go
+ M 代码/后端/Go/personal_export_fence.go
+ M 代码/后端/Go/restore_runner.go
+ M 代码/后端/Go/search.go
+ M 代码/后端/Go/self_read.go
+ M 代码/后端/Go/send_admission.go
+ M 代码/后端/Go/server.go
+ M 代码/后端/Go/session_refresh.go
+ M 代码/后端/Go/sync_object_receipts.go
+ M 代码/后端/Go/sync_owner.go
+ M 代码/后端/Go/sync_receipts.go
+ M 代码/后端/Go/types.go
+ M 代码/后端/Go/代码地图/README.md
+ M 代码/后端/Go/接口契约/README.md
+ M 测试/CLI/README.md
+ M 测试/CLI/governance_test.go
+ M 测试/CLI/password_change_test.go
+ M 测试/CLI/运行测试.mjs/README.md
+ M 测试/CLI/运行测试.mjs/运行测试.mjs
+ M 测试/前端/Android/README.md
+ M 测试/前端/HarmonyOS/OhosTest/ets/test/List.test.ets
+ M 测试/前端/HarmonyOS/README.md
+ M 测试/前端/HarmonyOS/Unit/Auth.test.cjs
+ M 测试/前端/HarmonyOS/Unit/AuthApi.test.cjs
+ M 测试/前端/HarmonyOS/Unit/RunAuth.mjs
+ M 测试/前端/HarmonyOS/Unit/RunSync.mjs
+ M 测试/前端/HarmonyOS/Unit/Sync.test.cjs
+ M 测试/前端/Web/README.md
+ M 测试/前端/Web/auth-session.cjs/README.md
+ M 测试/前端/Web/auth-session.cjs/auth-session.cjs
+ M 测试/前端/Web/data-export.cjs/README.md
+ M 测试/前端/Web/data-export.cjs/data-export.cjs
+ M 测试/前端/iOS/IMAuthCoordinatorTests.swift
+ M 测试/前端/iOS/IMSessionTests.swift
+ M 测试/前端/iOS/README.md
+ M 测试/后端/README.md
+ M 测试/后端/接口/forward_gateway_test.go
+ M 测试/后端/接口/fresh_migrations_test.go
+ M 测试/后端/接口/password_change_pg_test.go
+ M 测试/后端/接口/self_read_test.go
+ M 测试/后端/接口/self_views_test.go
+ M 测试/后端/接口/send_admission_test.go
+ M 测试/后端/接口/sync_object_receipts_test.go
+ M 测试/后端/运行测试.py
+ M 测试/部署/MacOS/README.md
+ M 部署/Linux/README.md
+ M 部署/Linux/停止备份.sh/README.md
+ M 部署/Linux/停止备份.sh/停止备份.sh
+ M 部署/Linux/部署运行.sh/README.md
+ M 部署/Linux/部署运行.sh/部署运行.sh
+ M 部署/MacOS/README.md
+ M 部署/MacOS/停止备份.command/README.md
+ M 部署/MacOS/停止备份.command/停止备份.command
+ M 部署/MacOS/部署运行.command/README.md
+ M 部署/MacOS/部署运行.command/部署运行.command
+ M 部署/WindowsOS/README.md
+ M 部署/WindowsOS/停止备份.ps1/README.md
+ M 部署/WindowsOS/停止备份.ps1/停止备份.ps1
+ M 部署/WindowsOS/部署运行.ps1/README.md
+ M 部署/WindowsOS/部署运行.ps1/部署运行.ps1
+ M 需求/IM前端架构表.md/IM前端架构表.md
+ M 需求/JobsIM数据库设计.md/JobsIM数据库设计.md
+ M 项目相关报告/README.md
+ M 项目相关报告/实现进度/README.md
+ M 项目相关报告/测试/README.md
+ M 项目相关报告/测试/部署/MacOS/README.md
+ M 项目相关报告/资产盘点/README.md
+ M 项目相关报告/项目统计/HTTP路由源码快照.json
+ M 项目相关报告/项目统计/README.md
+ M 项目相关报告/项目统计/报告.json
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/GroupScreen.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/GroupText.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/GroupTools.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/MigrationProtocol.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/MigrationScreen.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/MigrationService.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/MigrationStore.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/MigrationText.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/NativeStorageBudget.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletion.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionCleanup.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionScreen.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/OwnDeletionText.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/OwnPassword.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/OwnPasswordScreen.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/OwnPasswordText.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptCoordinator.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptProtocol.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptScreen.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptService.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptStore.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/ReceiptText.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingComposer.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingEngine.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingFiles.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingRules.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceRecordingText.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadApi.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadCoordinator.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadProtocol.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadQueue.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadScreen.kt
+?? 代码/前端/Android/app/src/main/java/com/jobs/im/VoiceUploadText.kt
+?? 代码/前端/CLI/cmd/jobsim/group_governance.go
+?? 代码/前端/CLI/cmd/jobsim/migration_command.go
+?? 代码/前端/CLI/cmd/jobsim/migration_history.go
+?? 代码/前端/CLI/cmd/jobsim/migration_protocol.go
+?? 代码/前端/CLI/cmd/jobsim/migration_store.go
+?? 代码/前端/CLI/cmd/jobsim/own_deletion.go
+?? 代码/前端/CLI/cmd/jobsim/own_deletion_cleanup.go
+?? 代码/前端/CLI/cmd/jobsim/own_deletion_command.go
+?? 代码/前端/CLI/cmd/jobsim/receipt_migration_source.go
+?? 代码/前端/CLI/cmd/jobsim/receipt_negotiation.go
+?? 代码/前端/CLI/cmd/jobsim/receipt_policy.go
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/Deletion.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionFiles.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionStore.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/DeletionText.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupStore.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupText.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/GroupTools.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationNative.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationProtocol.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationService.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationStore.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/MigrationText.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/NativeStorageBudget.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordChange.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordStore.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/PasswordText.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCleanup.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptCoordinator.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptNative.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptProtocol.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptService.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptStore.ets
+?? 代码/前端/HarmonyOS/entry/src/main/ets/Data/ReceiptText.ets
+?? 代码/前端/Web/Src/AccountDeletionActions.ts
+?? 代码/前端/Web/Src/AccountDeletionCleanup.ts
+?? 代码/前端/Web/Src/AccountDeletionLabels.ts
+?? 代码/前端/Web/Src/AccountDeletionPanel.tsx
+?? 代码/前端/Web/Src/AccountDeletionProtocol.ts
+?? 代码/前端/Web/Src/AccountDeletionStore.ts
+?? 代码/前端/Web/Src/AttachmentErasureProtocol.ts
+?? 代码/前端/Web/Src/AttachmentSendActions.ts
+?? 代码/前端/Web/Src/AttachmentSendLabels.ts
+?? 代码/前端/Web/Src/AttachmentSendPanel.tsx
+?? 代码/前端/Web/Src/AttachmentSendProtocol.ts
+?? 代码/前端/Web/Src/AttachmentSendStore.ts
+?? 代码/前端/Web/Src/AudioMedia.css
+?? 代码/前端/Web/Src/AudioMessageLabels.ts
+?? 代码/前端/Web/Src/AudioRecorderController.ts
+?? 代码/前端/Web/Src/AudioRecorderPanel.tsx
+?? 代码/前端/Web/Src/GroupGovernanceActions.ts
+?? 代码/前端/Web/Src/GroupGovernanceLabels.ts
+?? 代码/前端/Web/Src/GroupGovernancePanel.tsx
+?? 代码/前端/Web/Src/GroupGovernanceProtocol.ts
+?? 代码/前端/Web/Src/GroupGovernanceStore.ts
+?? 代码/前端/Web/Src/GroupJoinPanel.tsx
+?? 代码/前端/Web/Src/MessagePlayback.tsx
+?? 代码/前端/Web/Src/MigrationActions.ts
+?? 代码/前端/Web/Src/MigrationArchive.ts
+?? 代码/前端/Web/Src/MigrationHistoryStore.ts
+?? 代码/前端/Web/Src/MigrationLabels.ts
+?? 代码/前端/Web/Src/MigrationPanel.tsx
+?? 代码/前端/Web/Src/MigrationProtocol.ts
+?? 代码/前端/Web/Src/MigrationStore.ts
+?? 代码/前端/Web/Src/PasswordChangeActions.ts
+?? 代码/前端/Web/Src/PasswordChangeLabels.ts
+?? 代码/前端/Web/Src/PasswordChangePanel.tsx
+?? 代码/前端/Web/Src/PasswordChangeProtocol.ts
+?? 代码/前端/Web/Src/PasswordChangeStore.ts
+?? 代码/前端/Web/Src/PlaybackCheckpointProtocol.ts
+?? 代码/前端/Web/Src/PlaybackCheckpointStore.ts
+?? 代码/前端/Web/Src/ReceiptContext.ts
+?? 代码/前端/Web/Src/ReceiptLabels.ts
+?? 代码/前端/Web/Src/ReceiptPanel.tsx
+?? 代码/前端/iOS/JobsIM/Services/IMAccountDeletionService/
+?? 代码/前端/iOS/JobsIM/Services/IMGroupGovernanceService/
+?? 代码/前端/iOS/JobsIM/Services/IMMigrationService/
+?? 代码/前端/iOS/JobsIM/Services/IMPasswordChangeService/
+?? 代码/前端/iOS/JobsIM/Services/IMReceiptService/
+?? 代码/前端/iOS/JobsIM/UI/IMAccountDeletionVC/
+?? 代码/前端/iOS/JobsIM/UI/IMGroupGovernanceVC/
+?? 代码/前端/iOS/JobsIM/UI/IMMigrationVC/
+?? 代码/前端/iOS/JobsIM/UI/IMPasswordChangeVC/
+?? 代码/前端/iOS/JobsIM/UI/IMReceiptVC/
+?? 代码/前端/iOS/ScriptsByPods/
+?? 代码/后端/Go/account_deletion.go
+?? 代码/后端/Go/account_deletion_governance.go
+?? 代码/后端/Go/account_deletion_identity.go
+?? 代码/后端/Go/account_deletion_owner.go
+?? 代码/后端/Go/account_deletion_proof.go
+?? 代码/后端/Go/account_deletion_safety.go
+?? 代码/后端/Go/deployment_disk.go
+?? 代码/后端/Go/deployment_handoff.go
+?? 代码/后端/Go/deployment_restore.go
+?? 代码/后端/Go/deployment_restore_finalize.go
+?? 代码/后端/Go/deployment_restore_spec.go
+?? 代码/后端/Go/group_delegate.go
+?? 代码/后端/Go/group_invites.go
+?? 代码/后端/Go/group_operator.go
+?? 代码/后端/Go/group_policy.go
+?? 代码/后端/Go/group_safety.go
+?? 代码/后端/Go/journal_receipt_readiness.go
+?? 代码/后端/Go/media_legacy_erasure.go
+?? 代码/后端/Go/media_read_floor.go
+?? 代码/后端/Go/media_restore.go
+?? 代码/后端/Go/media_retention.go
+?? 代码/后端/Go/media_upload.go
+?? 代码/后端/Go/media_upload_cleanup.go
+?? 代码/后端/Go/media_upload_identity.go
+?? 代码/后端/Go/media_upload_model.go
+?? 代码/后端/Go/media_upload_safety.go
+?? 代码/后端/Go/media_webm.go
+?? 代码/后端/Go/message_migration.go
+?? 代码/后端/Go/migration_identity.go
+?? 代码/后端/Go/migration_interest.go
+?? 代码/后端/Go/migration_invalidation.go
+?? 代码/后端/Go/receipt_capabilities.go
+?? 代码/后端/Go/receipt_delivery.go
+?? 代码/后端/Go/receipt_delivery_worker.go
+?? 代码/后端/Go/retention_access.go
+?? 代码/后端/Go/retention_clock.go
+?? 代码/后端/Go/retention_edit.go
+?? 代码/后端/Go/retention_legacy.go
+?? 代码/后端/Go/retention_policy.go
+?? 代码/后端/Go/retention_read.go
+?? 代码/后端/Go/retention_readiness.go
+?? 代码/后端/Go/retention_safety.go
+?? 代码/后端/Go/retention_worker.go
+?? 代码/后端/Go/sync_migration.go
+?? 代码/后端/Go/sync_migration_cleanup.go
+?? 代码/后端/Go/sync_migration_delivery.go
+?? 代码/后端/Go/sync_migration_model.go
+?? 代码/后端/Go/sync_migration_validate.go
+?? 代码/后端/Go/接口契约/合格收讫/
+?? 代码/后端/Go/接口契约/普通迁移/
+?? 代码/后端/Go/接口契约/群治理/
+?? 测试/CLI/group_governance_test.go
+?? 测试/CLI/migration_test.go
+?? 测试/CLI/own_deletion_test.go
+?? 测试/CLI/receipt_negotiation_test.go
+?? 测试/前端/Android/Instrumentation/GroupLifecycleTest.kt
+?? 测试/前端/Android/Instrumentation/MigrationHistoryLifecycleTest.kt
+?? 测试/前端/Android/Instrumentation/OwnDeletionLifecycleTest.kt
+?? 测试/前端/Android/Instrumentation/OwnPasswordLifecycleTest.kt
+?? 测试/前端/Android/Instrumentation/ReceiptStorageLifecycleTest.kt
+?? 测试/前端/Android/Instrumentation/VoiceRecordingNativeTest.kt
+?? 测试/前端/Android/Instrumentation/VoiceUploadApiNativeTest.kt
+?? 测试/前端/Android/Instrumentation/VoiceUploadGlobalFloorNativeTest.kt
+?? 测试/前端/Android/Instrumentation/VoiceUploadQueueNativeTest.kt
+?? 测试/前端/Android/Unit/GroupRulesTest.kt
+?? 测试/前端/Android/Unit/MigrationRulesTest.kt
+?? 测试/前端/Android/Unit/NativeStorageBudgetTest.kt
+?? 测试/前端/Android/Unit/OwnDeletionRulesTest.kt
+?? 测试/前端/Android/Unit/OwnPasswordRulesTest.kt
+?? 测试/前端/Android/Unit/ReceiptRulesTest.kt
+?? 测试/前端/Android/Unit/VoiceRecordingRulesTest.kt
+?? 测试/前端/Android/Unit/VoiceUploadRulesTest.kt
+?? 测试/前端/HarmonyOS/Unit/Deletion.test.cjs/
+?? 测试/前端/HarmonyOS/Unit/Group.test.cjs/
+?? 测试/前端/HarmonyOS/Unit/Migration.test.cjs/
+?? 测试/前端/HarmonyOS/Unit/Password.test.cjs/
+?? 测试/前端/HarmonyOS/Unit/README.md
+?? 测试/前端/HarmonyOS/Unit/Receipt.test.cjs/
+?? 测试/前端/HarmonyOS/Unit/RunDeletion.mjs/
+?? 测试/前端/HarmonyOS/Unit/RunGroup.mjs/
+?? 测试/前端/HarmonyOS/Unit/RunMigration.mjs/
+?? 测试/前端/HarmonyOS/Unit/RunPassword.mjs/
+?? 测试/前端/HarmonyOS/Unit/RunReceipt.mjs/
+?? 测试/前端/Web/account-deletion-cleanup.cjs/
+?? 测试/前端/Web/account-deletion.cjs/
+?? 测试/前端/Web/attachment-browser.cjs/
+?? 测试/前端/Web/attachment-rules.cjs/
+?? 测试/前端/Web/audio-browser.cjs/
+?? 测试/前端/Web/audio-rules.cjs/
+?? 测试/前端/Web/group-governance.cjs/
+?? 测试/前端/Web/migration.cjs/
+?? 测试/前端/Web/password-change.cjs/
+?? 测试/前端/Web/receipt-context.cjs/
+?? 测试/前端/iOS/IMMigrationServiceTests.swift
+?? 测试/前端/iOS/IMMigrationTests.swift
+?? 测试/前端/iOS/IMReceiptServiceTests.swift
+?? 测试/前端/iOS/IMReceiptStorageTests.swift
+?? 测试/后端/接口/account_deletion_pg_test.go
+?? 测试/后端/接口/account_deletion_read_floor_test.go
+?? 测试/后端/接口/closure_audit_completed_receipt_test.go
+?? 测试/后端/接口/closure_audit_deletion_fairness_test.go
+?? 测试/后端/接口/deployment_restore_pg_test.go
+?? 测试/后端/接口/group_governance_test.go
+?? 测试/后端/接口/group_manager_original_test.go
+?? 测试/后端/接口/media_owner_floor_test.go
+?? 测试/后端/接口/media_retention/
+?? 测试/后端/接口/media_retention_pg_test.go
+?? 测试/后端/接口/media_upload/
+?? 测试/后端/接口/media_upload_pg_test.go
+?? 测试/后端/接口/media_webm_browser_test.go
+?? 测试/后端/接口/media_webm_test.go
+?? 测试/后端/接口/receipt_capabilities_pg_test.go
+?? 测试/后端/接口/retention_pg_test.go
+?? 测试/后端/接口/sync_migration_fair_pg_test.go
+?? 测试/后端/接口/sync_migration_forward_pg_test.go
+?? 测试/后端/接口/sync_migration_pg_test.go
+?? 测试/后端/规范入口HTTPS.py/
+?? 测试/部署/MacOS/工作树搬迁.py/
+?? 项目相关报告/实现进度/20261116-剩余能力闭环/
+?? 项目相关报告/实现进度/20261117-Android原生录音/
+?? 项目相关报告/测试/前端/HarmonyOS/20261116-正式本人导出/Host-Ll9wty/
+?? 项目相关报告/测试/前端/HarmonyOS/20261116-正式本人导出/Host-NruuoS/
+?? 项目相关报告/测试/前端/HarmonyOS/20261116-正式本人导出/Host-RRrLTW/
+?? 项目相关报告/测试/前端/Web/20261117-Web基础音频/
+?? 项目相关报告/测试/前端/Web/20261117-原身份等待围栏/
+?? 项目相关报告/测试/前端/Web/20261117-注销本机清理/
+?? 项目相关报告/测试/前端/Web/20261117-附件耐久发送/
+?? 项目相关报告/测试/前端/Web/执行记录/1794841423159-81821/
+?? 项目相关报告/测试/前端/Web/执行记录/1794845747789-27983/
+?? 项目相关报告/测试/前端/Web/执行记录/1794846077269-79975/
+?? 项目相关报告/测试/前端/Web/执行记录/1794850350852-69548/
+?? 项目相关报告/测试/前端/Web/执行记录/1794874323084-23791/
+?? 项目相关报告/测试/前端/Web/执行记录/1794895698523-73666/
+?? 项目相关报告/测试/前端/Web/执行记录/business-global-1794841429854-81906/
+?? 项目相关报告/测试/前端/Web/执行记录/global-facts-1794841164538-70341/
+?? 项目相关报告/测试/前端/Web/执行记录/outbox-proof-1794841163895-69801/
+?? 项目相关报告/测试/前端/Web/执行记录/sync-view-1794841160200-69322/
+?? 项目相关报告/测试/后端/20261117-WebM音轨识别/
+?? 项目相关报告/测试/后端/20261117-基础续写/
+?? 项目相关报告/测试/后端/20261117-普通迁移/
+?? 项目相关报告/测试/后端/20261117-注销续跑公平性/
+?? 项目相关报告/测试/后端/20261117-稳定媒体上传/
+?? 项目相关报告/测试/回归/
+?? 项目相关报告/测试/部署/MacOS/20261116-双PG长路径/
+?? 项目相关报告/项目统计/历史/20261117-2026-11-17T044805381Z-读取前-HTTP路由源码快照.json
+?? 项目相关报告/项目统计/历史/20261117-2026-11-17T044805381Z-读取前-README.md.txt
+?? 项目相关报告/项目统计/历史/20261117-2026-11-17T044805381Z-读取前-报告.json
+?? 项目相关报告/项目统计/历史/20261117-2026-11-17T044805381Z-读取前-根README.md.txt
+?? 项目相关报告/项目统计/当前读取-20261117/
+?? 项目相关报告/项目统计/最终读取-20261117/

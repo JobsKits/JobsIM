@@ -1,0 +1,11 @@
+2:42:54 PM [vite] (client) [optimizer] bundling dependencies...
+2:43:00 PM [vite] (client) [Unhandled rejection] AbortError: signal is aborted without reason
+ > Module.resetRequestContext Src/api.ts:490:17
+    488 |  }
+    489 |  export function resetRequestContext() {
+    490 |    requestContext.abort();
+        |                   ^
+    491 |    requestContext = new AbortController();
+    492 |    bindMessageNamespace("");
+
+{"out":"/Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/Web/20261117-附件耐久发送/08-收讫查询注销清理-1794897771473-27751/浏览器","mode":"receipt-cleanup-only","passed":3}

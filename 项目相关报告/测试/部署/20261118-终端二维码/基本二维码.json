@@ -1,0 +1,8 @@
+{
+  "build": "passed",
+  "output": "HTML/SVG/PNG",
+  "pngDecoded": 2,
+  "credentialURLsRejected": 2,
+  "command": "JOBS_IM_GO=<existing pinned Go> node 测试/部署/二维码/验证二维码.mjs/验证二维码.mjs",
+  "outputDirectory": "/var/folders/r6/sb0vlrj92qg__pr4zcc4nznm0000gn/T/JobsIM-QR-74XvpG/中文 空格二维码"
+}

@@ -1,0 +1,12 @@
+{"Time":"2026-11-18T14:48:24.7915+08:00","Action":"start","Package":"jobsim/backend"}
+{"Time":"2026-11-18T14:48:25.204095+08:00","Action":"run","Package":"jobsim/backend","Test":"TestObjectReceiptProofIsPurposeAndByteBound"}
+{"Time":"2026-11-18T14:48:25.204164+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptProofIsPurposeAndByteBound","Output":"=== RUN   TestObjectReceiptProofIsPurposeAndByteBound\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:48:25.204987+08:00","Action":"output","Package":"jobsim/backend","Test":"TestObjectReceiptProofIsPurposeAndByteBound","Output":"--- PASS: TestObjectReceiptProofIsPurposeAndByteBound (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:48:25.205022+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestObjectReceiptProofIsPurposeAndByteBound","Elapsed":0}
+{"Time":"2026-11-18T14:48:25.205089+08:00","Action":"run","Package":"jobsim/backend","Test":"TestReceiptProofBindsExactContentStoreAndRestoreEpoch"}
+{"Time":"2026-11-18T14:48:25.205224+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptProofBindsExactContentStoreAndRestoreEpoch","Output":"=== RUN   TestReceiptProofBindsExactContentStoreAndRestoreEpoch\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:48:25.205264+08:00","Action":"output","Package":"jobsim/backend","Test":"TestReceiptProofBindsExactContentStoreAndRestoreEpoch","Output":"--- PASS: TestReceiptProofBindsExactContentStoreAndRestoreEpoch (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:48:25.20529+08:00","Action":"pass","Package":"jobsim/backend","Test":"TestReceiptProofBindsExactContentStoreAndRestoreEpoch","Elapsed":0}
+{"Time":"2026-11-18T14:48:25.2053+08:00","Action":"output","Package":"jobsim/backend","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-18T14:48:25.205797+08:00","Action":"output","Package":"jobsim/backend","Output":"ok  \tjobsim/backend\t0.414s\n"}
+{"Time":"2026-11-18T14:48:25.205832+08:00","Action":"pass","Package":"jobsim/backend","Elapsed":0.414}

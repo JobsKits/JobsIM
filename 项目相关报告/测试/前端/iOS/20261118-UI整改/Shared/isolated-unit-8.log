@@ -1,0 +1,13 @@
+已生成本地单元白名单配置（未执行测试）： /Users/jobs/Documents/GitHub/JobsProds/JobsIM/项目相关报告/测试/前端/iOS/20261118-UI整改/Shared/isolated-unit-8.xctestrun
+CLI再附加以下选择器：
+-only-testing:JobsIMTests/IMAuthCredentialTests
+-only-testing:JobsIMTests/IMAuthoritativeSyncTests
+-only-testing:JobsIMTests/IMDataExportTests
+-only-testing:JobsIMTests/IMMigrationServiceTests
+-only-testing:JobsIMTests/IMMigrationTests
+-only-testing:JobsIMTests/IMPersonalStateTests
+-only-testing:JobsIMTests/IMReceiptServiceTests
+-only-testing:JobsIMTests/IMReceiptStorageTests
+-only-testing:JobsIMTests/IMSessionTests
+-only-testing:JobsIMTests/IMStorageTests
+-only-testing:JobsIMTests/IMRememberedLoginTests

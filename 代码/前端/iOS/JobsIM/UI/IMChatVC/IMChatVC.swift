@@ -42,6 +42,22 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
     private var readOnly = false
     private weak var sendButton: UIButton?
     private weak var attachmentButton: UIButton?
+    private var replacingDraft = false
+    private lazy var dismissKeyboardTap = UITapGestureRecognizer.byConfig {
+        [weak self] (gesture: UITapGestureRecognizer) in
+        guard let self, !self.input.bounds.contains(gesture.location(in: self.input)) else {
+            return
+        }
+        var touched = self.view.hitTest(gesture.location(in: self.view), with: nil)
+        while let current = touched {
+            // Moving the keyboard before a button's touch-up can cancel its action.
+            if current is UIControl {
+                return
+            }
+            touched = current.superview
+        }
+        self.view.byEndEditing(true)
+    }.byCancelsTouchesInView(false)
     private var recorder: AVAudioRecorder?
     private var recordURL: URL?
     private let boundNamespace: IMNamespace
@@ -54,7 +70,8 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         .byBackgroundColor(IMUI.background)
         .byKeyboardDismissMode(.interactive)
     private lazy var input = IMUI.field(IMStrings.text("typeMessage"))
-    private lazy var compose = UIView.jobsMake { view in
+    private lazy var compose = UIView.jobsMake {
+        view in
         view.byBackgroundColor(IMUI.panel)
     }
     private lazy var note = IMUI.label("", style: .caption1, color: IMUI.green)
@@ -74,6 +91,7 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         boundNamespace = IMSession.shared.namespace
         readOnly = conversation["readOnly"] == .bool(true)
         super.init(nibName: nil, bundle: nil)
+        hidesBottomBarWhenPushed = true
     }
 
     required init?(coder: NSCoder) {
@@ -81,17 +99,70 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
     }
 
     override func viewDidLoad() {
-        screenTitle = conversation.firstText("title", "displayName", "id")
+        screenTitle = Self.displayTitle(
+            conversation: conversation, members: conversation["members"].list,
+            currentUserID: session.user["id"].text)
+        if !localHistory {
+            rightActions = [
+                IMUI.button("") { [weak self] in
+                    self?.showChatSettings()
+                }
+                .byImage("ellipsis".sysImg).byAccessibilityLabel(IMStrings.text("chatSettings"))
+            ]
+        }
         super.viewDidLoad()
         assemble()
         let draft = (try? session.store.list("drafts", namespace: boundNamespace))?.first {
             $0["id"].text == conversationID
         }
         input.byText(draft?["text"].text ?? "")
-        selectedMentionIDs = draft?["mentionedUserIds"].list.map { $0.text } ?? []
+        selectedMentionIDs =
+            draft?["mentionedUserIds"].list.map {
+                $0.text
+            } ?? []
         mentionAll = draft?["mentionAll"] == .bool(true)
         input.addTarget(self, action: #selector(saveDraft), for: .editingChanged)
         input.byEnabled(!localHistory)
+    }
+
+    static func displayTitle(
+        conversation: IMJSON, members: [IMJSON], currentUserID: String
+    ) -> String {
+        let kind = conversation["kind"].text
+        if kind == "direct" || kind == "self" {
+            let known = conversation["peer"]
+            let peerID = known["id"].text
+            let latest = members.first { member in
+                let id = member["id"].text
+                guard !id.isEmpty else {
+                    return false
+                }
+                if !peerID.isEmpty {
+                    return id == peerID
+                }
+                return kind == "self" ? id == currentUserID : id != currentUserID
+            }
+            // 只使用已获权的资料，不为显示标题额外读取用户档案。
+            for peer in [latest ?? .null, known] {
+                let name = peer.firstText("displayName", "username")
+                if !name.isEmpty {
+                    return name
+                }
+            }
+        }
+        return conversation.firstText("title", "displayName", "id")
+    }
+
+    private func updateConversationTitle() {
+        let value = Self.displayTitle(
+            conversation: conversation, members: memberProfiles,
+            currentUserID: session.user["id"].text)
+        guard value != screenTitle else {
+            return
+        }
+        screenTitle = value
+        jobsSetupGKNav(title: value, rightButtons: rightActions)
+        byIMNavigationAppearance(hidesHeader: hidesScreenHeader)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -124,7 +195,8 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
     }
 
     private func assemble() {
-        compose.byAddTo(content) { [unowned self] make in
+        compose.byAddTo(content) {
+            [unowned self] make in
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(view.keyboardLayoutGuide.snp.top)
             make.height.equalTo(max(72, IMUI.font(.body).lineHeight + 32))
@@ -136,7 +208,8 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         attach
             .byImage("plus.circle".sysImg)
             .byAccessibilityLabel(IMStrings.text("attach"))
-            .byAddTo(compose) { [unowned self] make in
+            .byAddTo(compose) {
+                [unowned self] make in
                 make.leading.equalToSuperview().inset(12)
                 make.centerY.equalToSuperview()
                 make.width.height.equalTo(44)
@@ -148,18 +221,21 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         send
             .byImage("arrow.up.circle.fill".sysImg)
             .byAccessibilityLabel(IMStrings.text("send"))
-            .byAddTo(compose) { [unowned self] make in
+            .byAddTo(compose) {
+                [unowned self] make in
                 make.trailing.equalToSuperview().inset(14)
                 make.centerY.equalToSuperview()
                 make.width.height.equalTo(44)
             }
-        input.byAddTo(compose) { [unowned self] make in
+        input.byAddTo(compose) {
+            [unowned self] make in
             make.leading.equalTo(attach.snp.trailing).offset(4)
             make.trailing.equalTo(send.snp.leading).offset(-4)
             make.centerY.equalToSuperview()
             make.height.greaterThanOrEqualTo(48)
         }
-        let context = UIStackView.jobsMake { row in
+        let context = UIStackView.jobsMake {
+            row in
             row
                 .byAxis(.horizontal)
                 .byAlignment(.center)
@@ -171,41 +247,47 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         members
             .byImage("person.2.circle".sysImg)
             .byAccessibilityLabel(IMStrings.text("members"))
-            .byEnabled(!localHistory)
-        members.snp.makeConstraints { make in
+            .byEnabled(!localHistory).byHidden(conversation["kind"].text != "group")
+        members.snp.makeConstraints {
+            make in
             make.width.height.equalTo(44)
         }
         note.byNumberOfLines(1)
         mentionButton.byHidden(true)
-        mentionButton.snp.makeConstraints { make in
+        mentionButton.snp.makeConstraints {
+            make in
             make.width.height.greaterThanOrEqualTo(44).priority(999)
         }
         context.byAddArrangedSubviews([note, mentionButton, members])
-        context.byAddTo(content) { [unowned self] make in
+        context.byAddTo(content) {
+            [unowned self] make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview().inset(24)
         }
         personalButton
             .byHidden(localHistory || !session.personalStatesEnabled)
-            .byAddTo(content) { make in
+            .byAddTo(content) {
+                make in
                 make.top.equalTo(context.snp.bottom)
                 make.leading.trailing.equalToSuperview().inset(24)
                 make.height.equalTo(44)
             }
-        table.byAddTo(content) { [unowned self] make in
+        table.byAddTo(content) {
+            [unowned self] make in
             make.top.equalTo(personalButton.snp.bottom).offset(8)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalTo(compose.snp.top)
         }
         table.register(IMMessageCell.self, forCellReuseIdentifier: "message")
         table.byEmptyButtonProvider { [weak self] in
-            IMUI.button(IMStrings.text("empty") + "\n" + IMStrings.text("reload")) {
+            IMUI.emptyButton {
                 self?.perform { [weak self] in
                     await self?.refresh()
                 }
             }
         }
-        note.byText(IMStrings.text(session.demo ? "demo" : "live"))
+        note.byText(session.isDemonstrationEnvironment ? "" : IMStrings.text("live"))
+        view.jobs_addGestureRetView(dismissKeyboardTap)
     }
 
     @objc private func saveDraft() {
@@ -225,16 +307,22 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         if let replyID {
             if replyReference["messageId"].text == replyID {
                 reference = replyReference
-            } else if let source = items.first(where: { $0["id"].text == replyID }),
+            } else if let source = items.first(where: {
+                $0["id"].text == replyID
+            }),
                 source["deleted"] != .bool(true), source["contentUnavailable"] != .bool(true),
-                (try? IMSyncProtocol.counter(source["contentVersion"])) != nil {
-                reference = .object(["messageId": .string(replyID), "sourceVersion": source["contentVersion"]])
+                (try? IMSyncProtocol.counter(source["contentVersion"])) != nil
+            {
+                reference = .object([
+                    "messageId": .string(replyID), "sourceVersion": source["contentVersion"],
+                ])
             } else {
                 try IMSyncProtocol.refuse("DRAFT_SOURCE_CHANGED")
             }
         }
-        return IMPersonalEditorSnapshot(text: input.text ?? "", reply: reference,
-                                         mentionIDs: selectedMentionIDs, mentionAll: mentionAll)
+        return IMPersonalEditorSnapshot(
+            text: input.text ?? "", reply: reference,
+            mentionIDs: selectedMentionIDs, mentionAll: mentionAll)
     }
 
     private func showPersonalState() {
@@ -244,9 +332,11 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         do {
             let original = try editorSnapshot()
             let family = session.currentCredentialPair?.familyID
-            let controller = IMPersonalStateVC(conversation: conversationID, editor: original) { [weak self] text, reply in
+            let controller = IMPersonalStateVC(conversation: conversationID, editor: original) {
+                [weak self] text, reply in
                 guard let self, self.session.namespace == self.boundNamespace,
-                    self.session.currentCredentialPair?.familyID == family else {
+                    self.session.currentCredentialPair?.familyID == family
+                else {
                     throw IMSession.SessionError.noInstance
                 }
                 try original.requireUnchanged(self.editorSnapshot())
@@ -271,7 +361,11 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         personalButton.byHidden(localHistory || !session.personalStatesEnabled)
         if localHistory {
             let updated = session.retainedMessages(conversationID)
-            if let id = previewMessageID, !updated.contains(where: { $0["id"].text == id }) {
+            if let id = previewMessageID,
+                !updated.contains(where: {
+                    $0["id"].text == id
+                })
+            {
                 previewURL = nil
                 previewMessageID = nil
                 if presentedViewController is QLPreviewController {
@@ -315,17 +409,21 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
             return
         }
         if let id = previewMessageID {
-            let value = updated.first(where: { $0["id"].text == id })
-            if value == nil || value?["deleted"] == .bool(true) || value?["contentUnavailable"] == .bool(true) {
-            previewURL = nil
-            previewMessageID = nil
-            if presentedViewController is QLPreviewController {
-                dismiss(animated: true)
-            }
+            let value = updated.first(where: {
+                $0["id"].text == id
+            })
+            if value == nil || value?["deleted"] == .bool(true) || value?["contentUnavailable"] == .bool(true)
+            {
+                previewURL = nil
+                previewMessageID = nil
+                if presentedViewController is QLPreviewController {
+                    dismiss(animated: true)
+                }
             }
         }
         let changed = updated != items || profiles != memberProfiles
         memberProfiles = profiles
+        updateConversationTitle()
         items = updated
         if changed {
             let shouldScroll =
@@ -333,7 +431,9 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
             table.reloadData()
             table.byReloadEmptyViewAuto()
             if let focus = focusMessageID,
-                let index = items.firstIndex(where: { $0["id"].text == focus }),
+                let index = items.firstIndex(where: {
+                    $0["id"].text == focus
+                }),
                 table.window != nil
             {
                 table.byLayoutIfNeeded()
@@ -345,36 +445,41 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         }
         let status = session.historyStatus[boundNamespace.key + ":" + conversationID] ?? 0
         if let metadata = (try? session.store.list("conversations", namespace: boundNamespace))?.first(
-            where: { $0["id"].text == conversationID })
+            where: {
+                $0["id"].text == conversationID
+            })
         {
             readOnly =
                 metadata["readOnly"] == .bool(true)
                 || !session.demo && metadata["sendAdmission"].text.isEmpty
         }
         readOnly = readOnly || [403, 404].contains(status)
-        sendButton?.byEnabled(!readOnly)
-        attachmentButton?.byEnabled(!readOnly)
+        sendButton?.byEnabled(!readOnly && !replacingDraft)
+        attachmentButton?.byEnabled(!readOnly && !replacingDraft)
         if !session.demo {
             let capabilities = try? await session.action("capabilities", method: "GET")
-            guard session.namespace == boundNamespace else { return }
+            guard session.namespace == boundNamespace else {
+                return
+            }
             featureFlags = capabilities?["features"] ?? .null
         }
         mentionButton
             .byHidden(conversation["kind"].text != "group" || featureFlags["mentions"] != .bool(true))
-            .byEnabled(!readOnly)
+            .byEnabled(!readOnly && !replacingDraft)
             .byTitle(
                 IMStrings.text("mention")
                     + (selectedMentionIDs.isEmpty ? "" : " (" + String(selectedMentionIDs.count) + ")"))
-        let key =
-            session.demo
-            ? "demo"
-            : [403, 404].contains(status) ? "cloudUnavailable" : status == 0 ? "live" : "disconnected"
-        let mentionNames = selectedMentionIDs.map { id in
-            memberProfiles.first { $0["id"].text == id }?.firstText("displayName", "username")
+        let key = [403, 404].contains(status) ? "cloudUnavailable" : status == 0 ? "live" : "disconnected"
+        let mentionNames = selectedMentionIDs.map {
+            id in
+            memberProfiles.first {
+                $0["id"].text == id
+            }?.firstText("displayName", "username")
                 ?? IMStrings.text("member")
         }
         let selection = mentionAll ? IMStrings.text("mentionAll") : mentionNames.joined(separator: ", ")
-        note.byText(IMStrings.text(key) + (selection.isEmpty ? "" : " · " + selection))
+        let connection = session.isDemonstrationEnvironment ? "" : IMStrings.text(key)
+        note.byText([connection, selection].filter { !$0.isEmpty }.joined(separator: " · "))
     }
 
     override func syncProjectionChanged() {
@@ -387,15 +492,20 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
             items = session.retainedMessages(conversationID)
         } else {
             items = session.cachedMessages(conversationID)
-            let metadata = (try? session.store.list("conversations", namespace: boundNamespace))?.first { $0["id"].text == conversationID }
+            let metadata = (try? session.store.list("conversations", namespace: boundNamespace))?.first {
+                $0["id"].text == conversationID
+            }
             readOnly = metadata == nil || metadata?["readOnly"] == .bool(true)
             if metadata == nil {
                 memberProfiles = []
             }
         }
         if let id = previewMessageID {
-            let value = items.first { $0["id"].text == id }
-            if value == nil || value?["deleted"] == .bool(true) || value?["contentUnavailable"] == .bool(true) {
+            let value = items.first {
+                $0["id"].text == id
+            }
+            if value == nil || value?["deleted"] == .bool(true) || value?["contentUnavailable"] == .bool(true)
+            {
                 previewURL = nil
                 previewMessageID = nil
                 if presentedViewController is QLPreviewController {
@@ -403,14 +513,14 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                 }
             }
         }
-        sendButton?.byEnabled(!readOnly && !localHistory)
-        attachmentButton?.byEnabled(!readOnly && !localHistory)
+        sendButton?.byEnabled(!readOnly && !localHistory && !replacingDraft)
+        attachmentButton?.byEnabled(!readOnly && !localHistory && !replacingDraft)
         table.reloadData()
         table.byReloadEmptyViewAuto()
     }
 
     private func sendText() {
-        guard !readOnly else {
+        guard !readOnly, !replacingDraft else {
             IMUI.alert(self, message: IMStrings.text("readOnly"))
             return
         }
@@ -477,7 +587,8 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         items.count
     }
 
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
         observeVisibleRows()
     }
 
@@ -509,7 +620,8 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
             else {
                 return
             }
-            let visible = (self.table.indexPathsForVisibleRows ?? []).compactMap { index -> String? in
+            let visible = (self.table.indexPathsForVisibleRows ?? []).compactMap {
+                index -> String? in
                 guard self.items.indices.contains(index.row),
                     let cell = self.table.cellForRow(at: index),
                     Self.isActuallyVisible(cell, table: self.table, controller: self)
@@ -525,13 +637,16 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                 }
                 return message["id"].text
             }
-            await self.session.observeVisibleMessages(visible, conversation: self.conversationID,
-                                                     membershipGeneration: originalMembership)
+            await self.session.observeVisibleMessages(
+                visible, conversation: self.conversationID,
+                membershipGeneration: originalMembership)
         }
     }
 
-    static func isActuallyVisible(_ cell: UITableViewCell, table: UITableView,
-                                  controller: UIViewController) -> Bool {
+    static func isActuallyVisible(
+        _ cell: UITableViewCell, table: UITableView,
+        controller: UIViewController
+    ) -> Bool {
         guard controller.presentedViewController == nil, !cell.isHidden, cell.alpha >= 0.99,
             let window = table.window, cell.window === window, window.isKeyWindow,
             controller.viewIfLoaded?.window === window
@@ -555,7 +670,13 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         let item = items[indexPath.row]
         cell.configure(
             item, own: item["senderId"] == session.user["id"],
-            sender: memberProfiles.first { $0["id"] == item["senderId"] } ?? .null)
+            sender: memberProfiles.first {
+                $0["id"] == item["senderId"]
+            } ?? .object(["id": item["senderId"]]))
+        cell.onAvatarLongPress = {
+            [weak self] user in
+            self?.navigationController?.pushViewController(IMUserProfileVC(user: user), animated: true)
+        }
         return cell
     }
 
@@ -572,7 +693,7 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
             openAttachment(item)
             return
         }
-        messageActions(item, source: tableView.cellForRow(at: indexPath))
+        view.byEndEditing(true)
     }
 
     func tableView(
@@ -582,42 +703,72 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
             return nil
         }
         let item = items[indexPath.row]
+        if let cell = tableView.cellForRow(at: indexPath) as? IMMessageCell,
+            cell.isAvatarPoint(point, in: tableView)
+        {
+            return nil
+        }
         guard item["contentUnavailable"] != .bool(true), item["status"].text != "frozen" else {
             return nil
         }
-        return UIContextMenuConfiguration.make { [weak self] _ in
-            var actions = [
-                UIAction.make(title: IMStrings.text("reply")) { _ in
-                    Task { @MainActor in
-                        self?.replyID = item["id"].text
-                        self?.replyReference = .object(["messageId": item["id"], "sourceVersion": item["contentVersion"]])
-                        self?.input.becomeFirstResponder()
-                    }
-                }
-            ]
-            if let self, self.session.demo || self.featureFlags["forwarding"] == .bool(true),
+        return UIContextMenuConfiguration.make {
+            [weak self] _ in
+            guard let self else {
+                return nil
+            }
+            var keys = ["reply", "favorite", "pin", "report", "selectMessages"]
+            if self.canEdit(item) {
+                keys.append("edit")
+            }
+            if self.canRecall(item) {
+                keys.append("delete")
+            }
+            if self.session.demo || self.featureFlags["forwarding"] == .bool(true),
                 item["deleted"] != .bool(true), item["status"].text.isEmpty
             {
-                actions.append(
-                    UIAction.make(title: IMStrings.text("forward")) { [weak self] _ in
-                        Task { @MainActor in
-                            self?.showForward(item)
-                        }
-                    })
+                keys.append("forward")
             }
-            if let self, IMForwardService.isForward(item), item["senderId"] == self.session.user["id"],
-                item["status"].text.isEmpty, item["deleted"] != .bool(true)
-            {
-                actions.append(
-                    UIAction.make(title: IMStrings.text("delete"), attributes: .destructive) {
-                        [weak self] _ in
-                        Task { @MainActor in
-                            self?.messageAction("delete", item: item)
-                        }
-                    })
+            let actions = keys.map {
+                key in
+                UIAction.make(
+                    title: self.actionTitle(key, item: item), attributes: key == "delete" ? .destructive : []
+                ) {
+                    [weak self] _ in
+                    Task {
+                        @MainActor in
+                        self?.messageAction(key, item: item)
+                    }
+                }
             }
             return UIMenu.make(children: actions)
         }
+    }
+
+    private func canRecall(_ item: IMJSON) -> Bool {
+        return item["senderId"] == session.user["id"]
+            && item["deleted"] != .bool(true) && item["contentUnavailable"] != .bool(true)
+            && (item["status"].text.isEmpty || session.demo && item["status"].text == "demo") && !readOnly
+            && !localHistory && !replacingDraft && recorder?.isRecording != true
+    }
+
+    private func canEdit(_ item: IMJSON) -> Bool {
+        return canRecall(item) && item["type"].text == "text" && !item["text"].text.isEmpty
+    }
+
+    private func actionTitle(_ key: String, item: IMJSON) -> String {
+        if key == "delete" {
+            return IMStrings.text("recallMessage")
+        }
+        if key == "edit" {
+            return IMStrings.text("recallAndEdit")
+        }
+        if key == "favorite", item["favorite"] == .bool(true) {
+            return IMStrings.text("removeFavorite")
+        }
+        if key == "pin", item["pinned"] == .bool(true) {
+            return IMStrings.text("unpinMessage")
+        }
+        return IMStrings.text(key)
     }
 
     private func messageActions(_ item: IMJSON, source: UIView?) {
@@ -629,11 +780,16 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
             item["status"].text == "frozen"
             ? ["reconcileOriginal"]
             : item["contentUnavailable"] == .bool(true)
-                ? (item["senderId"] == session.user["id"] ? ["report", "delete"] : ["report"])
-                : ["reply", "edit", "favorite", "pin", "react", "delete", "report"]
+                ? ["report"]
+                : ["reply", "favorite", "pin", "react", "report", "selectMessages"]
                     + ((session.demo || featureFlags["forwarding"] == .bool(true))
                         && item["deleted"] != .bool(true) && item["status"].text.isEmpty ? ["forward"] : [])
-        if IMForwardService.isForward(item) { keys.removeAll { $0 == "edit" } }
+        if canEdit(item) {
+            keys.append("edit")
+        }
+        if canRecall(item) {
+            keys.append("delete")
+        }
         if item["status"].text == "frozen", item["type"].text == "forward",
             item["freezeReason"].text == "forward_unknown"
         {
@@ -651,31 +807,40 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         }
         for key in keys {
             sheet.addAction(
-                UIAlertAction.make(IMStrings.text(key), style: key == "delete" ? .destructive : .default) {
-                    [weak self] in
+                UIAlertAction.make(
+                    actionTitle(key, item: item), style: key == "delete" ? .destructive : .default
+                ) { [weak self] in
                     self?.messageAction(key, item: item)
                 })
         }
-        sheet.addAction(UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {})
+        sheet.addAction(
+            UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {
+            })
         sheet.popoverPresentationController?.sourceView = source ?? view
         present(sheet, animated: true)
     }
 
     private func messageAction(_ key: String, item: IMJSON) {
+        guard session.namespace == boundNamespace else {
+            return
+        }
         let path = "messages/" + item["id"].text
         if key == "reconcileOriginal" {
             perform { [weak self] in
-                guard let self, self.session.namespace == self.boundNamespace else { return }
+                guard let self, self.session.namespace == self.boundNamespace else {
+                    return
+                }
                 try await self.session.reconcileOriginalMessage(item["clientMsgId"].text)
                 await self.refresh()
             }
         } else if key == "retryOriginalForward" {
             IMUI.confirm(
                 self, title: IMStrings.text("retryOriginalForward"), message: IMStrings.text("forwardUnknown")
-            ) {
-                [weak self] in
+            ) { [weak self] in
                 self?.perform {
-                    guard let self, self.session.namespace == self.boundNamespace else { return }
+                    guard let self, self.session.namespace == self.boundNamespace else {
+                        return
+                    }
                     try await IMForwardService().retryOriginal(item["clientMsgId"].text)
                     await self.refresh()
                 }
@@ -683,40 +848,68 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         } else if key == "publishAnnouncement" {
             publishAnnouncement(item)
         } else if key == "report" {
-            IMReportVC.present(on: self, type: "message", id: item["id"].text)
+            navigationController?.pushViewController(
+                IMReportComposerVC(
+                    targetType: "message", targetID: item["id"].text, targetUserID: item["senderId"].text,
+                    conversationID: conversationID, messageIDs: [item["id"].text]), animated: true)
+        } else if key == "selectMessages" {
+            navigationController?.pushViewController(
+                IMReportComposerVC(
+                    targetType: "conversation", targetID: conversationID, conversationID: conversationID),
+                animated: true)
         } else if key == "reply" {
             replyID = item["id"].text
             replyReference = .object(["messageId": item["id"], "sourceVersion": item["contentVersion"]])
             note.byText(IMStrings.text("reply") + " · " + item["text"].text)
             input.becomeFirstResponder()
-        } else if key == "edit" || key == "react" {
-            IMUI.prompt(self, title: IMStrings.text(key), value: key == "edit" ? item["text"].text : "👍") {
+        } else if key == "edit" {
+            beginEditing(item)
+        } else if key == "delete" {
+            guard canRecall(item) else {
+                return
+            }
+            IMUI.confirm(self, title: IMStrings.text("recallMessage"), message: item["text"].text) {
+                [weak self] in
+                self?.perform {
+                    guard let self, self.session.namespace == self.boundNamespace else {
+                        return
+                    }
+                    try await self.session.recallMessage(item, conversationID: self.conversationID)
+                    await self.refresh()
+                }
+            }
+        } else if key == "react" {
+            IMUI.prompt(self, title: IMStrings.text(key), value: "👍") {
                 [weak self] text in
                 self?.perform {
-                    _ = try await self?.session.action(
-                        path + (key == "react" ? "/reactions" : ""), method: key == "edit" ? "PATCH" : "POST",
-                        body: key == "edit"
-                            ? [
-                                "text": .string(text), "expectedVersion": item["version"],
-                                "requestId": .string(UUID().uuidString),
-                            ] : ["emoji": .string(text)])
-                    await self?.refresh()
+                    guard let self, self.session.namespace == self.boundNamespace else {
+                        return
+                    }
+                    _ = try await self.session.action(path + "/reactions", body: ["emoji": .string(text)])
+                    await self.refresh()
                 }
             }
         } else if key == "forward" {
             showForward(item)
         } else {
             perform { [weak self] in
-                _ = try await self?.session.action(
-                    path + (key == "delete" ? "" : "/" + key), method: key == "delete" ? "DELETE" : "PUT")
-                await self?.refresh()
+                guard let self, self.session.namespace == self.boundNamespace else {
+                    return
+                }
+                _ = try await self.session.action(
+                    path + "/" + key,
+                    method: (key == "favorite" && item["favorite"] == .bool(true)
+                        || key == "pin" && item["pinned"] == .bool(true)) ? "DELETE" : "PUT")
+                await self.refresh()
             }
         }
     }
 
     private func showForward(_ displayed: IMJSON) {
         perform { [weak self] in
-            guard let self, self.session.namespace == self.boundNamespace else { return }
+            guard let self, self.session.namespace == self.boundNamespace else {
+                return
+            }
             let source: IMJSON
             do {
                 source = self.session.demo ? displayed : try await IMForwardService().prepare(displayed)
@@ -725,8 +918,12 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                 throw error
             }
             let conversations = await self.session.conversationSnapshot()
-            guard self.session.namespace == self.boundNamespace else { return }
-            let targets = conversations.filter { $0["readOnly"] != .bool(true) }
+            guard self.session.namespace == self.boundNamespace else {
+                return
+            }
+            let targets = conversations.filter {
+                $0["readOnly"] != .bool(true)
+            }
             let picker = UIAlertController.make(
                 title: IMStrings.text("forward"),
                 message: targets.isEmpty ? IMStrings.text("empty") : nil, style: .actionSheet)
@@ -740,7 +937,9 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                 picker.addAction(
                     UIAlertAction.make(target.firstText("title", "displayName", "id")) { [weak self] in
                         self?.perform {
-                            guard let self, self.session.namespace == self.boundNamespace else { return }
+                            guard let self, self.session.namespace == self.boundNamespace else {
+                                return
+                            }
                             if self.session.demo {
                                 try await self.session.send(
                                     source["text"].text, conversation: target["id"].text)
@@ -751,10 +950,140 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                         }
                     })
             }
-            picker.addAction(UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {})
+            picker.addAction(
+                UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {
+                })
             picker.popoverPresentationController?.sourceView = self.view
             self.present(picker, animated: true)
         }
+    }
+
+    private func beginEditing(_ item: IMJSON) {
+        guard canEdit(item) else {
+            return
+        }
+        let current = input.text ?? ""
+        let choose: (IMDraftReplacementPolicy) -> Void = {
+            [weak self] policy in
+            guard let self, (self.input.text ?? "") == current else {
+                return
+            }
+            self.replacingDraft = true
+            self.input.byEnabled(false)
+            self.sendButton?.byEnabled(false)
+            self.attachmentButton?.byEnabled(false)
+            self.mentionButton.byEnabled(false)
+            self.perform {
+                defer {
+                    self.replacingDraft = false
+                    self.input.byEnabled(!self.readOnly && !self.localHistory)
+                    self.sendButton?.byEnabled(!self.readOnly)
+                    self.attachmentButton?.byEnabled(!self.readOnly)
+                    self.mentionButton.byEnabled(!self.readOnly)
+                }
+                guard self.session.namespace == self.boundNamespace else {
+                    throw IMSession.SessionError.noInstance
+                }
+                let original = try await self.session.recallForEditing(
+                    item, conversationID: self.conversationID, currentDraft: current, policy: policy)
+                guard self.session.namespace == self.boundNamespace, (self.input.text ?? "") == current else {
+                    return
+                }
+                self.input.byText(original)
+                self.replyID = nil
+                self.replyReference = .null
+                self.selectedMentionIDs = []
+                self.mentionAll = false
+                self.note.byText("")
+                self.saveDraft()
+                await self.refresh()
+                self.input.becomeFirstResponder()
+            }
+        }
+        if current.isEmpty {
+            IMUI.confirm(
+                self, title: IMStrings.text("recallAndEdit"), message: IMStrings.text("recallEditWarning")
+            ) {
+                choose(.overwrite)
+            }
+        } else {
+            let alert = UIAlertController.make(
+                title: IMStrings.text("draftConflict"), message: IMStrings.text("recallEditWarning"),
+                style: .alert)
+            alert.addAction(
+                UIAlertAction.make(IMStrings.text("overwriteDraft"), style: .destructive) {
+                    choose(.overwrite)
+                })
+            alert.addAction(
+                UIAlertAction.make(IMStrings.text("save")) {
+                    choose(.saveCurrent)
+                })
+            IMUI.presentDialog(alert, on: self)
+        }
+    }
+
+    private func showChatSettings() {
+        if conversation["kind"].text == "group" {
+            showGroup()
+            return
+        }
+        guard session.namespace == boundNamespace else {
+            return
+        }
+        let knownPeer = conversation["peer"]
+        guard
+            let peer = !knownPeer["id"].text.isEmpty
+                ? knownPeer
+                : memberProfiles.first(where: {
+                    !$0["id"].text.isEmpty && $0["id"] != session.user["id"]
+                })
+        else {
+            perform { [weak self] in
+                await self?.refresh()
+            }
+            return
+        }
+        navigationController?.pushViewController(
+            IMChatSettingsVC(
+                user: peer, conversationID: conversationID,
+                recoverDrafts: { [weak self] in
+                    self?.showSavedEditingDrafts()
+                }), animated: true)
+    }
+
+    private func showSavedEditingDrafts() {
+        guard session.namespace == boundNamespace else {
+            return
+        }
+        let picker = IMSavedEditingDraftsVC(conversationID: conversationID) {
+            [weak self] item in
+            guard let self else {
+                return
+            }
+            let restore = { [weak self] in
+                guard let self, self.session.namespace == self.boundNamespace else {
+                    return
+                }
+                do {
+                    let text = try self.session.restoreEditingDraft(
+                        id: item["id"].text, conversationID: self.conversationID)
+                    self.input.byText(text)
+                    self.saveDraft()
+                    self.navigationController?.popToViewController(self, animated: true)
+                } catch {
+                    IMUI.alert(self, message: error.localizedDescription)
+                }
+            }
+            if (self.input.text ?? "").isEmpty {
+                restore()
+            } else {
+                IMUI.confirm(
+                    self.navigationController?.visibleViewController ?? self,
+                    title: IMStrings.text("draftConflict"),
+                    message: IMStrings.text("restoreEditingDraft"), action: restore)
+            }
+        }
+        navigationController?.pushViewController(picker, animated: true)
     }
 
     private func showGroup() {
@@ -763,11 +1092,15 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
 
     private func showMentions() {
         perform { [weak self] in
-            guard let self, self.session.namespace == self.boundNamespace, !self.readOnly else { return }
+            guard let self, self.session.namespace == self.boundNamespace, !self.readOnly else {
+                return
+            }
             let metadata = try await IMMessageListService().conversation(self.conversationID)
             let response = try await self.session.action(
                 "conversations/" + self.conversationID + "/members", method: "GET")
-            guard self.session.namespace == self.boundNamespace else { return }
+            guard self.session.namespace == self.boundNamespace else {
+                return
+            }
             self.memberProfiles = response["items"].list
             let sheet = UIAlertController.make(
                 title: IMStrings.text("mention"), message: nil, style: .actionSheet)
@@ -791,10 +1124,14 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                     + person.firstText("displayName", "username", "id")
                 sheet.addAction(
                     UIAlertAction.make(title) { [weak self] in
-                        guard let self else { return }
+                        guard let self else {
+                            return
+                        }
                         self.mentionAll = false
                         if selected {
-                            self.selectedMentionIDs.removeAll { $0 == id }
+                            self.selectedMentionIDs.removeAll {
+                                $0 == id
+                            }
                         } else {
                             self.selectedMentionIDs.append(id)
                         }
@@ -809,7 +1146,9 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                     self?.saveDraft()
                     self?.refreshMentionSelection()
                 })
-            sheet.addAction(UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {})
+            sheet.addAction(
+                UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {
+                })
             sheet.popoverPresentationController?.sourceView = self.mentionButton
             self.present(sheet, animated: true)
         }
@@ -822,25 +1161,34 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
         note.byText(
             mentionAll
                 ? IMStrings.text("mentionAll")
-                : selectedMentionIDs.map { id in
-                    memberProfiles.first { $0["id"].text == id }?.firstText("displayName", "username")
+                : selectedMentionIDs.map {
+                    id in
+                    memberProfiles.first {
+                        $0["id"].text == id
+                    }?.firstText("displayName", "username")
                         ?? IMStrings.text("member")
                 }.joined(separator: ", "))
     }
 
     private func publishAnnouncement(_ source: IMJSON) {
         perform { [weak self] in
-            guard let self, self.session.namespace == self.boundNamespace else { return }
+            guard let self, self.session.namespace == self.boundNamespace else {
+                return
+            }
             let service = IMAnnouncementService()
             let current = try await service.load(self.conversationID)
-            guard self.session.namespace == self.boundNamespace else { return }
+            guard self.session.namespace == self.boundNamespace else {
+                return
+            }
             IMUI.confirm(
                 self, title: IMStrings.text("publishAnnouncement"),
                 message: IMStrings.text("announcementReference") + "\n"
                     + String(source["text"].text.prefix(200))
             ) { [weak self] in
                 self?.perform { [weak self] in
-                    guard let self, self.session.namespace == self.boundNamespace else { return }
+                    guard let self, self.session.namespace == self.boundNamespace else {
+                        return
+                    }
                     _ = try await service.publish(source, expectedVersion: current["version"].text)
                     await self.refresh()
                 }
@@ -849,7 +1197,7 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
     }
 
     private func attachments() {
-        guard !readOnly else {
+        guard !readOnly, !replacingDraft else {
             IMUI.alert(self, message: IMStrings.text("readOnly"))
             return
         }
@@ -864,18 +1212,19 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                     if kind == "audio" {
                         self.recordAudio()
                     } else if kind == "file" {
-                        let document = UIDocumentPickerViewController.make()
-                        document.delegate = self
+                        let document = UIDocumentPickerViewController.makeImporting(delegate: self)
                         self.present(document, animated: true)
                     } else {
                         let config = PHPickerConfiguration.make(filter: kind == "video" ? .videos : .images)
-                        let photo = PHPickerViewController.make(configuration: config)
-                        photo.delegate = self
+                            .byPreferredAssetRepresentationMode(.compatible)
+                        let photo = PHPickerViewController.make(configuration: config).byDelegate(self)
                         self.present(photo, animated: true)
                     }
                 })
         }
-        picker.addAction(UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {})
+        picker.addAction(
+            UIAlertAction.make(IMStrings.text("cancel"), style: .cancel) {
+            })
         picker.popoverPresentationController?.sourceView = compose
         present(picker, animated: true)
     }
@@ -893,10 +1242,13 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
             return
         }
         let type = provider.registeredTypeIdentifiers.first ?? UTType.data.identifier
-        Task { @MainActor [weak self] in
+        Task {
+            @MainActor [weak self] in
             do {
-                let copy: URL = try await withCheckedThrowingContinuation { continuation in
-                    provider.loadFileRepresentation(forTypeIdentifier: type) { url, error in
+                let copy: URL = try await withCheckedThrowingContinuation {
+                    continuation in
+                    provider.loadFileRepresentation(forTypeIdentifier: type) {
+                        url, error in
                         guard let url else {
                             continuation.resume(throwing: error ?? CocoaError(.fileReadUnknown))
                             return
@@ -956,12 +1308,17 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                 try FileManager.default.copyItem(at: url, to: destination)
             } else {
                 _ = try await self.session.verifyRestoreEpoch()
-                guard self.session.namespace == self.boundNamespace else { return }
-                attachment = try await self.session.authorized { api, token in
+                guard self.session.namespace == self.boundNamespace else {
+                    return
+                }
+                attachment = try await self.session.authorized {
+                    api, token in
                     return try await api.upload(url, mimeType: mime, token: token)
                 }
             }
-            guard self.session.namespace == self.boundNamespace else { return }
+            guard self.session.namespace == self.boundNamespace else {
+                return
+            }
             try await self.session.send(
                 url.lastPathComponent, conversation: self.conversationID, type: type,
                 attachment: attachment["id"].text, admission: admission,
@@ -969,7 +1326,9 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
                 didEnqueue: { [weak self] in
                     guard let self, self.session.namespace == self.boundNamespace,
                         self.selectedMentionIDs == mentioned, self.mentionAll == all
-                    else { return }
+                    else {
+                        return
+                    }
                     self.selectedMentionIDs = []
                     self.mentionAll = false
                     self.saveDraft()
@@ -1006,16 +1365,16 @@ final class IMChatVC: IMBaseVC, UITableViewDataSource, UITableViewDelegate,
             }
             self.previewMessageID = item["id"].text
             self.previewURL = file
-            let controller = QLPreviewController.jobsMake { controller in
-                controller.dataSource = self
-            }
+            let controller = QLPreviewController.make(dataSource: self)
             self.present(controller, animated: true)
         }
     }
 
     private func recordAudio() {
-        AVAudioSession.sharedInstance().requestRecordPermission { [weak self] allowed in
-            Task { @MainActor in
+        AVAudioSession.sharedInstance().requestRecordPermission {
+            [weak self] allowed in
+            Task {
+                @MainActor in
                 guard let self, allowed else {
                     return
                 }

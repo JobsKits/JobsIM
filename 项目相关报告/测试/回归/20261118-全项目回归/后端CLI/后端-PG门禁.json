@@ -1,0 +1,15 @@
+{
+  "privateEnvironment": "/Users/jobs/Library/Application Support/JobsIM/Integration/dbd733dd-fa9e-458f-8946-4214be40546b/Safety/test-environment.json",
+  "enabled": [
+    "MIGRATION",
+    "RECEIPT_RUNTIME",
+    "SOURCE_PREFERENCES",
+    "READ_POINT",
+    "SYNC_SCHEMAS",
+    "SELF_READ",
+    "DRAFT_FLOOR",
+    "SYNC_OUTBOX"
+  ],
+  "fixtureRealm": "loopback URL required by tests; HTTPS handlers create their own TLS test listeners",
+  "noDefaultInstance": true
+}

@@ -1,0 +1,4 @@
+Query chain:
+ →Find: Target Application 'com.jobs.im'
+  ↪︎Find: Descendants matching type CollectionView
+    ↪︎Find: First Match

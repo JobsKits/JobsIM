@@ -1,0 +1,103 @@
+{
+  "error" : {
+    "code" : -1,
+    "domain" : "com.apple.dt.CoreDeviceError",
+    "userInfo" : {
+      "Backtrace" : {
+        "array" : [
+          {
+            "string" : "0   CoreFoundation                      0x00000001a460d7b0 __exceptionPreprocess + 176"
+          },
+          {
+            "string" : "1   libobjc.A.dylib                     0x00000001a026865c objc_exception_throw + 88"
+          },
+          {
+            "string" : "2   Foundation                          0x00000001a0a70a70 -[NSInPredicateOperator performPrimitiveOperationUsingObject:andObject:] + 452"
+          },
+          {
+            "string" : "3   Foundation                          0x00000001a0a6f048 -[NSComparisonPredicate evaluateWithObject:substitutionVariables:] + 356"
+          },
+          {
+            "string" : "4   CoreDeviceCLISupport                0x000000010153e2c8 -[NSPredicate(CoreDeviceAdditions) cd_evaluateWithObject:substitutionVariables:error:] + 72"
+          },
+          {
+            "string" : "5   CoreDeviceCLISupport                0x0000000101639088 _swift_implicitisolationactor_to_executor_cast + 4284"
+          },
+          {
+            "string" : "6   CoreDeviceCLISupport                0x000000010159fe58 __swift_closure_destructor.49 + 27312"
+          },
+          {
+            "string" : "7   CoreDeviceCLISupport                0x00000001015a2e28 __swift_closure_destructor.8 + 260"
+          },
+          {
+            "string" : "8   CoreDeviceCLISupport                0x000000010159c990 __swift_closure_destructor.49 + 13800"
+          },
+          {
+            "string" : "9   CoreDeviceCLISupport                0x000000010159e658 __swift_closure_destructor.49 + 21168"
+          },
+          {
+            "string" : "10  CoreDeviceCLISupport                0x000000010159fff8 __swift_closure_destructor.49 + 27728"
+          },
+          {
+            "string" : "11  devicectl                           0x0000000100fbbac4 __swift_memcpy0_1 + 57656"
+          },
+          {
+            "string" : "12  devicectl                           0x0000000100f5925d __swift_noop_void_return + 20313"
+          },
+          {
+            "string" : "13  CoreDeviceCLISupport                0x0000000101560cb5 __swift_closure_destructor.15 + 36649"
+          },
+          {
+            "string" : "14  CoreDeviceCLISupport                0x0000000101561179 __swift_closure_destructor.15 + 37869"
+          },
+          {
+            "string" : "15  devicectl                           0x0000000100f5953d __swift_noop_void_return + 21049"
+          },
+          {
+            "string" : "16  devicectl                           0x0000000101165049 __swift_closure_destructor.15 + 23205"
+          },
+          {
+            "string" : "17  devicectl                           0x0000000100f5351d async_MainTQ4_ + 1"
+          },
+          {
+            "string" : "18  devicectl                           0x0000000100f537c9 async_MainTY6_ + 313"
+          },
+          {
+            "string" : "19  libswift_Concurrency.dylib          0x00000001a449ce69 _ZL22completeTaskAndReleasePN5swift12AsyncContextEPNS_10SwiftErrorE + 1"
+          }
+        ]
+      },
+      "NSLocalizedDescription" : {
+        "string" : "An error occurred evaluating a value using the specified filter."
+      },
+      "NSLocalizedFailureReason" : {
+        "string" : "Can't use in/contains operator with collection file:///private/var/containers/Bundle/Application/E012D27B-71D1-444E-B0FE-26E6A4172E4A/stable.app/Chrome (not a collection)"
+      },
+      "Name" : {
+        "string" : "NSInvalidArgumentException"
+      }
+    }
+  },
+  "errorSignature" : "(com.apple.dt.CoreDeviceError -1)",
+  "info" : {
+    "arguments" : [
+      "devicectl",
+      "device",
+      "info",
+      "processes",
+      "--device",
+      "00008110-000625583EE3801E",
+      "--filter",
+      "executable CONTAINS \"JobsIM\"",
+      "--json-output",
+      "项目相关报告/测试/前端/iOS/20261118-目录与真机签名/processes-after.json"
+    ],
+    "commandType" : "devicectl.device.info.processes",
+    "environment" : {
+      "TERM" : "dumb"
+    },
+    "jsonVersion" : 5,
+    "outcome" : "failed",
+    "version" : "651.32"
+  }
+}

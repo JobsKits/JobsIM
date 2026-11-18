@@ -1,0 +1,59 @@
+{
+  "scope": "Web admin report detail/evidence and reporterId/targetUserId filtering; no ordinary chat UI changes",
+  "sourceFiles": [
+    "AdminPanel.tsx",
+    "AdminReportDetail.tsx",
+    "AdminReportProtocol.ts",
+    "AdminReportLabels.ts",
+    "AdminReport.css",
+    "i18n.ts"
+  ],
+  "typescriptNoEmitExitCode": 0,
+  "protocol": {
+    "passed": 16,
+    "failed": 0,
+    "runtime": "Node built-in type stripping over actual production pure functions; no browser"
+  },
+  "inputs": {
+    "count": 11,
+    "drift": []
+  },
+  "mfa": "original apply and unknown-result retry function byte-identical; no live MFA operation executed",
+  "localization": {
+    "languages": 10,
+    "keysEach": 11
+  },
+  "media": {
+    "authentication": "existing apiBoundedBytes/current AuthSnapshot/HttpOnly-cookie and family headers",
+    "routes": [
+      "/api/reports/evidence/{objectId}?reportId={reportId}",
+      "/api/admin/reports/{reportId}/messages/{messageId}/attachment"
+    ],
+    "limitsBytes": {
+      "image": 20971520,
+      "video": 67108864
+    },
+    "responseChecks": [
+      "stream bound",
+      "evidence exact size",
+      "evidence SHA256",
+      "magic signature and MIME"
+    ],
+    "onlyExplicitLoad": true,
+    "singlePreview": "synchronous previous-release callback before next load; active-key render and cleanup",
+    "lifecycle": "abort/revoke on switch/close/unmount/auth loss/hidden; pause and release video source",
+    "persistentCache": false,
+    "oldBlobFallback": false
+  },
+  "documentLinksMissing": [],
+  "unverified": [
+    "Browser DOM/media/player and blob lifecycle",
+    "Real authenticated report and media GET",
+    "Backend permissions/floors/version refusal integration",
+    "Actual MFA state mutation",
+    "Three themes/ten languages on actual screen"
+  ],
+  "bundleBuilt": false,
+  "browserStarted": false,
+  "liveServiceTouched": false
+}

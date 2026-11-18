@@ -1,0 +1,305 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "7C57F457-9D97-4702-AF1E-4D70EC791D92.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "auth-frosted-card-photo-background-centered-register-eyes_0_0D5B1C61-8343-4B6D-9E92-51D057662F5B.png",
+        "timestamp" : 1794997261.692
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "F0FA9B7C-4E30-48E9-8DCA-5A66373FC85F.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "auth-settings-separate-connection-and-demo-switch_0_B288795B-C3B3-475A-99E6-C08948B10598.png",
+        "timestamp" : 1794997258.584
+      }
+    ],
+    "testIdentifier" : "IMUITests/testAuthSettingsPasswordEyesAndRememberLayout()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testAuthSettingsPasswordEyesAndRememberLayout"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "74EEC52D-1C2C-4C51-AB8D-110C6A196089.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-peer-avatar-long-press-read-only-profile_0_D601C07B-743B-4E34-8DF6-3573E9934B14.png",
+        "timestamp" : 1794997275.007
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoAvatarLongPressOpensReadOnlyPeerProfile()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoAvatarLongPressOpensReadOnlyPeerProfile"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "1111FAFD-9473-4F02-99B2-492BF1B8E54A.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-contact-delete-left-right-cancel-protection_0_98B67326-A541-4D3F-BE93-A1E06B77A023.png",
+        "timestamp" : 1794997292.326
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "7B48C679-06FB-4160-847F-EA1F54BF4714.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-block-preserves-contact-and-remove-action_0_78C5A4C9-B2D0-4726-8CDA-1CB4BB3811E4.png",
+        "timestamp" : 1794997284.411
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoContactBlockPreservesFriendAndDeletionCancel()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoContactBlockPreservesFriendAndDeletionCancel"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "54281750-F141-4196-97ED-CE57BDADC05C.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-direct-chat-hidden-tab-cell-tap-dismisses-keyboard_0_5B002B86-ED2D-43F2-9E48-F532B4CC38A1.png",
+        "timestamp" : 1794997314.965
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "270EED87-DCBC-42D4-936A-23AF61F7E6D7.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-contacts-first-three-tabs-no-duplicate-title_0_6DB4686B-03A4-416B-B8AC-F7732DF24BBB.png",
+        "timestamp" : 1794997307.78
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoContactsFirstNavigationAndKeyboardDismissal()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoContactsFirstNavigationAndKeyboardDismissal"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "AEA8B4A3-1161-46B9-815A-A0AD397C8010.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "AppDoor-login-restored-confirm-password-hidden_0_120B8A5E-7636-4973-9C7F-5AC849205FEF.png",
+        "timestamp" : 1794997332.876
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "CC255EE0-A9C6-4BB7-A9E8-F06C7A879D00.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "AppDoor-registration-left-rail-confirm-password-visible_0_8D2706FD-85DE-4DF0-8375-A985CB205E64.png",
+        "timestamp" : 1794997329.751
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "685D1E4F-5F97-4384-91EC-80E9D5B4BC25.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-exit-unauthenticated-AppDoor-login-right-rail_0_EEDC7289-95D9-4599-A0D6-1EE33302D055.png",
+        "timestamp" : 1794997327.616
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoExitToUnauthenticatedAppDoorLoginRegistrationRail()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoExitToUnauthenticatedAppDoorLoginRegistrationRail"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "B82DD096-66AD-4A16-82CF-A8B6C55CE556.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "own-profile-readonly-facts-signature-bottom-save_0_8D4FFED7-5F72-45E1-9F04-BF346EF93364.png",
+        "timestamp" : 1794997349.802
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "EEAC18A3-9CF6-4D72-A0CA-483DA33708FB.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "dark-saved-single-image-title-subtitle-empty-button_0_E5317ECD-E3B5-4EAD-BB23-F422A5A638A0.png",
+        "timestamp" : 1794997343.527
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoOwnProfileAvatarAndUnifiedEmptyButton()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoOwnProfileAvatarAndUnifiedEmptyButton"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "DE95F812-5E4D-4747-B31D-4724A6DBDD6C.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-dark-contacts-first-tab-after-settings_0_239C0107-BDDE-4291-9205-B4DE21737B9C.png",
+        "timestamp" : 1794997381.975
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "8BC9A3A7-D218-436C-8646-2B894F30DD74.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "personal-center-dark-cells-after-repeated-theme-switches_0_7F82C546-ABF2-418E-905B-B2A0DD773F3D.png",
+        "timestamp" : 1794997378.713
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "400B8265-D1DA-4E47-8649-7E18B7C9186B.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "settings-repeated-dark-choice-detail-and-cells_0_F2F5B0C6-CD50-476A-B6A9-A434E5A77061.png",
+        "timestamp" : 1794997376.971
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "77D55488-4E01-4744-ABB8-9D015C214AA3.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "settings-system-choice-detail-and-current-effective-appearance_0_A955AE94-9FC2-4676-9D4B-7F51B01CE439.png",
+        "timestamp" : 1794997373.608
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "475A115A-3738-493D-837D-60378D292B15.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "settings-switched-back-to-light-detail-and-cells_0_D0B90A95-1190-4F76-A415-10F4535D92C5.png",
+        "timestamp" : 1794997370.233
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "75B73A09-CBD0-45D9-B4CA-E045EF938501.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-dark-settings-retained-after-appearance-change_0_5B620542-B299-4CB4-A01D-AB9A38287D55.png",
+        "timestamp" : 1794997366.85
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoPersonalSavedSettingsDarkAppearanceAndFirstTab()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoPersonalSavedSettingsDarkAppearanceAndFirstTab"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "242C9148-B911-4E14-BAEC-D9FC386DBFCC.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-saved-existing-draft-restored-after-explicit-confirmation_0_4464C001-1F2D-4621-9DA8-3FECA86971C4.png",
+        "timestamp" : 1794997415.549
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "DFE7FBDB-E47C-407A-A6F7-0701C2430F80.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-recall-edit-before-choice-preserves-original-and-draft_0_46673BE9-7FE4-4B52-9E1E-428A66EFDA79.png",
+        "timestamp" : 1794997403.344
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoRecallKeepsExistingDraftAndCanRestoreIt()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoRecallKeepsExistingDraftAndCanRestoreIt"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "B0AACF68-B9E1-437F-98DC-EEB6453A7C32.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "demo-report-one-real-material-submitted-without-formal-API_0_B8BBAEED-FA78-4A00-BC15-B561D63FF170.png",
+        "timestamp" : 1794997458.834
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "57A7C471-379D-4B0B-9612-4DDBE7F289E2.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "native-PHPicker-only-AppIcon-fixture-before-selection_0_1BF3D9CD-67E3-4095-8C29-0ED11DD6464C.png",
+        "timestamp" : 1794997450.855
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "B5738149-D90D-4334-9573-2F82B25E93CB.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "report-selected-material-removed-before-submit_0_9885A4BC-897C-4041-B809-47961957998C.png",
+        "timestamp" : 1794997447.703
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "B325C414-DF5D-4CE1-91E6-5C8F97654AEE.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "report-private-copy-QuickLook-after-PHPicker-dismissed_0_CDC50415-8193-43D2-B111-137F169D80CC.png",
+        "timestamp" : 1794997442.534
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "68D17684-72DD-4F2E-8ACD-3CA93CA0A072.txt",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "report-staged-system-filename-MIME-and-size_0_3AE4C55E-A24B-498E-8C23-76F20A6C1E71.txt",
+        "timestamp" : 1794997440.71
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "E51459C5-DC74-4D19-B963-635090815AAD.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "native-PHPicker-only-AppIcon-fixture-before-selection_0_3EF48DC4-07A2-4F36-8229-AD164A46181F.png",
+        "timestamp" : 1794997437.179
+      }
+    ],
+    "testIdentifier" : "IMUITests/testDemoReportSystemPickerPrivateCopyPreviewRemovalAndSubmit()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testDemoReportSystemPickerPrivateCopyPreviewRemovalAndSubmit"
+  },
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "42873992-9F78-40D2-B55D-9EBF66B9684D",
+        "deviceName" : "JobsIM-UI-20261118-Resume",
+        "exportedFileName" : "141B2605-60F2-4138-841D-0452EA36A4E2.png",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "native-Mac-demo-normal-API-login-contacts-chat-and-single-floating-exit_0_D45A9FBB-40CF-44D2-8497-F99E42B83C30.png",
+        "timestamp" : 1794997481.225
+      }
+    ],
+    "testIdentifier" : "IMUITests/testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer()",
+    "testIdentifierURL" : "test://com.apple.xcode/JobsIM/JobsIMUITests/IMUITests/testNativeMacDemoSwitchPrefillsAndAuthenticatesThroughServer"
+  }
+]

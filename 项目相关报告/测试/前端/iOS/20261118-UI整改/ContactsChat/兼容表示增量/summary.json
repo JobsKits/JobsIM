@@ -1,0 +1,39 @@
+{
+  "timeUTC": "2026-11-18T05:55:48.367708+00:00",
+  "change": "PHPicker .compatible in report and chat selection; retain actual system filename and MIME; no custom transcoding",
+  "before": [
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/ContactsChat/兼容表示增量/修前/IMReportComposerVC.swift",
+      "bytes": 18124,
+      "sha256": "79d49356b6001a1830b9422f9c4614449ce5fb9df27583ef4f6a170960dc192a"
+    },
+    {
+      "path": "项目相关报告/测试/前端/iOS/20261118-UI整改/ContactsChat/兼容表示增量/修前/IMChatVC.swift",
+      "bytes": 55641,
+      "sha256": "fe9706e790b6ba56afdbca1c712274364ec37b9557c381574bb39794abfaf5c4"
+    }
+  ],
+  "after": [
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportComposerVC/IMReportComposerVC.swift",
+      "bytes": 18185,
+      "sha256": "b87b144250a4fb92ae0fd1825ac75103e9ede2b4acd6c7ed77db239fc8e2e565"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift",
+      "bytes": 55718,
+      "sha256": "33c8df08d491eba4cfabacaaac9223f7036dce7206216152d4d2bf53300f6a05"
+    }
+  ],
+  "swiftParse": {
+    "exitCode": 0,
+    "files": 19
+  },
+  "typechecked": false,
+  "built": false,
+  "deviceVerified": false,
+  "limitations": [
+    "compatible is a representation preference, not proof of JPEG/PNG/video encoding on this device",
+    "HEIC and video actual representation/upload/server acceptability still require device verification"
+  ]
+}

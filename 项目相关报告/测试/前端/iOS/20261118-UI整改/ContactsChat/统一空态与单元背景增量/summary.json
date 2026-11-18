@@ -1,0 +1,94 @@
+{
+  "timeUTC": "2026-11-18T07:36:07.470382+00:00",
+  "status": "source-and-parse-complete-runtime-pending",
+  "scope": [
+    "IMUI.emptyButton single entry using existing JobsEmptyAuto local providers",
+    "14 provider replacements with original reload action and specialized title preserved",
+    "group-governance empty sections use same image/title/subtitle reload button",
+    "standard cell theme explicitly configures backgroundConfiguration and selection/highlight colors"
+  ],
+  "sources": [
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportMessageSelectionVC/IMReportMessageSelectionVC.swift",
+      "sha256": "fce79348a25a8394c4cc63993b4c8f6dfdc12d7de868a14d28daa44727a4ab24"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReportVC/IMReportVC.swift",
+      "sha256": "4ced3b8a67d8a397e390372b0de4dca1f8efd346ba0c1ba766d766a246fff201"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMGroupVC/IMGroupVC.swift",
+      "sha256": "fa722fbb02b92c74832de040f9cc68424832eee307d4fc5e537f849832ff2e0a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMFriendSearchVC/IMFriendSearchVC.swift",
+      "sha256": "527023555667c90b2ccebada8ad5f96cdb14b01b40dd7e0c68d477a2b2e1092a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMPersonalStateVC/IMPersonalStateVC.swift",
+      "sha256": "acad15b6a4e7e6f1cb3946bda910aa6b3f01f7fb5307dd46f2e4fcfc95fb7089"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMDevicesVC/IMDevicesVC.swift",
+      "sha256": "43b6128f06f3f9fa1f64f9fc83b742649f3a043d5800312e1f52b07c04819525"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatVC/IMChatVC.swift",
+      "sha256": "f6972a54680022ac6a8abe63cf9b5de522514dffe1ab32acc595a9fae30556a7"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMDataExportVC/IMDataExportVC.swift",
+      "sha256": "d52c54bea0ab6f52a854599b5ca3792837906a7d069bb27c0df68744a3c9c79e"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactRequestsVC/IMContactRequestsVC.swift",
+      "sha256": "2ab47aab75e97d873ba2d6c62ae8de2fc20d9300310f6c56621b7f891740db20"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMListVC/IMListVC.swift",
+      "sha256": "f16255ee804887cfe6a67c43c49e0370915b4e31d73baed30abeda979a298d06"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMReceiptVC/IMReceiptVC.swift",
+      "sha256": "80b8001d66d3ea65a1763036ba1108f819b13500bc9dfe7a6192993cb14a1a21"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMChatSettingsVC/IMSavedEditingDraftsVC.swift",
+      "sha256": "7feffc0df4d5670de0b082d4580f8d86ea4352b7e8872a21e2f6abf5b6cd1c7a"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMContactsVC/IMContactsVC.swift",
+      "sha256": "3434bc9f179ef1271c5be736fee0a65f3f187b445346512c13254ab060c03a27"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMMigrationVC/IMMigrationVC.swift",
+      "sha256": "95aec53a32d5ad34eae3a3b62583843a9573ee57efac3c406c3c73276fa58a44"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMUI/IMUI.swift",
+      "sha256": "4a3b762fea51f90546e9b8c72db2cb4faec9a3d59a4b861ed1ab88f2cbbf8f95"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMGroupGovernanceVC/IMGroupGovernanceVC.swift",
+      "sha256": "b0309c3f531f55e57898b5047647200d65b1790b8b83cba828a7a25a5e117b65"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/Factories/UITableViewCell/UITableViewCell+IMBackground.swift",
+      "sha256": "eaef36be0541cf0404d47d05a0ebd51a3f9c612740186e6b19e2cd4bda0465be"
+    },
+    {
+      "path": "代码/前端/iOS/JobsIM/UI/IMEmptyStateCell/IMEmptyStateCell.swift",
+      "sha256": "b382f0b7257fabc1e64a698e84138695e516bf6e87737786f4304b69e0746a55"
+    }
+  ],
+  "parseExitCode": 0,
+  "built": false,
+  "runtimeVerified": false,
+  "externalPodsAndTemplateEdited": false,
+  "pending": [
+    "empty button vertical image/title/subtitle actual layout",
+    "10 languages, 3 themes, user font sizes",
+    "reload real callback and failed/empty transitions",
+    "Settings/Personal standard cell normal/selected background screenshots"
+  ]
+}

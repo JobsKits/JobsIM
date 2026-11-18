@@ -1,0 +1,706 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "mode": "base-with-trailing-slash+sequential-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.808,
+      "minimumFreeBytes": 13760221184,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "d7e5b7ee-b312-4800-a3ab-735e4cccdcdd",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "9d5f9e3e-9001-4256-aac3-33ee55c5918c",
+              "userId": "e80eaadc-911f-4b39-8480-a0f5f8a5cce9",
+              "username": "alice",
+              "deviceId": "82c863f6-3f64-47a5-b3c8-b620a087f3e8"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52468/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "d7e5b7ee-b312-4800-a3ab-735e4cccdcdd",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "9d5f9e3e-9001-4256-aac3-33ee55c5918c",
+              "userId": "e80eaadc-911f-4b39-8480-a0f5f8a5cce9",
+              "username": "alice",
+              "deviceId": "82c863f6-3f64-47a5-b3c8-b620a087f3e8"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52468/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "mode": "base-no-trailing-slash+sequential-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.271,
+      "minimumFreeBytes": 13746601984,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "cf970432-46e4-44c4-84b6-a24b6144c447",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "5ded8f01-e9ca-495d-b753-22c9fe1e610d",
+              "userId": "c57cb6f6-17c2-43ed-8dad-7848e47d7ba3",
+              "username": "alice",
+              "deviceId": "025e8783-cfce-40cf-9a15-81621e46c73e"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52483/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "cf970432-46e4-44c4-84b6-a24b6144c447",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "5ded8f01-e9ca-495d-b753-22c9fe1e610d",
+              "userId": "c57cb6f6-17c2-43ed-8dad-7848e47d7ba3",
+              "username": "alice",
+              "deviceId": "025e8783-cfce-40cf-9a15-81621e46c73e"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52483/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "mode": "base-with-trailing-slash+parallel-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.278,
+      "minimumFreeBytes": 13733380096,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "ee061d8b-6622-48c7-8aef-c84afa1a3d80",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "cb91e63c-ee69-4b66-9564-4ba7703332d3",
+              "userId": "a306a89a-49e0-4c41-b0e0-469871c537bc",
+              "username": "alice",
+              "deviceId": "c1ab86fe-fd79-414b-a530-4593b6ff3f1a"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52493/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "ee061d8b-6622-48c7-8aef-c84afa1a3d80",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "cb91e63c-ee69-4b66-9564-4ba7703332d3",
+              "userId": "a306a89a-49e0-4c41-b0e0-469871c537bc",
+              "username": "alice",
+              "deviceId": "c1ab86fe-fd79-414b-a530-4593b6ff3f1a"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52493/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "mode": "base-no-trailing-slash+parallel-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.265,
+      "minimumFreeBytes": 13714890752,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "141cd528-c659-47f2-b738-907b1a6c1546",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "427bf0fe-38bf-4740-a7eb-0f6000530e6c",
+              "userId": "520bead7-fd5a-4728-8821-66b96cf00816",
+              "username": "alice",
+              "deviceId": "84b5c2b4-bfde-4b39-9026-9f701bcf0803"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52503/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "141cd528-c659-47f2-b738-907b1a6c1546",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "427bf0fe-38bf-4740-a7eb-0f6000530e6c",
+              "userId": "520bead7-fd5a-4728-8821-66b96cf00816",
+              "username": "alice",
+              "deviceId": "84b5c2b4-bfde-4b39-9026-9f701bcf0803"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52503/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "mode": "base-with-trailing-slash+sequential-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.311,
+      "minimumFreeBytes": 13713285120,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "d81ae3ac-62b3-45d2-83c6-d3d8e0e74daa",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "3fe872f5-f44c-44c4-b3a1-fd340b34983b",
+              "userId": "badf577e-c323-4740-8ec2-02be09ad4707",
+              "username": "alice",
+              "deviceId": "371055b5-6fb7-4d82-bbde-5ce4a614e7f4"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52515/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "d81ae3ac-62b3-45d2-83c6-d3d8e0e74daa",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "3fe872f5-f44c-44c4-b3a1-fd340b34983b",
+              "userId": "badf577e-c323-4740-8ec2-02be09ad4707",
+              "username": "alice",
+              "deviceId": "371055b5-6fb7-4d82-bbde-5ce4a614e7f4"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52515/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "mode": "base-no-trailing-slash+sequential-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.27,
+      "minimumFreeBytes": 13708169216,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "3baa8cc4-b484-462a-8163-4991fad5f898",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "24aadf15-3fb7-4862-a2ee-92dd5b8b33b9",
+              "userId": "e3f67c81-daf7-48d7-a85e-128f7f99860e",
+              "username": "alice",
+              "deviceId": "9cab2c76-8769-4310-ba8c-b9c88efee838"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52526/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "3baa8cc4-b484-462a-8163-4991fad5f898",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "24aadf15-3fb7-4862-a2ee-92dd5b8b33b9",
+              "userId": "e3f67c81-daf7-48d7-a85e-128f7f99860e",
+              "username": "alice",
+              "deviceId": "9cab2c76-8769-4310-ba8c-b9c88efee838"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52526/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "mode": "base-with-trailing-slash+parallel-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.314,
+      "minimumFreeBytes": 13697273856,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "9803aa22-b697-48ec-9110-2e0dde599f89",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "bbc5d167-e5c3-4935-9ac6-1a2a8ec571d2",
+              "userId": "e77b7ecb-1529-4998-ad3b-679b52108c92",
+              "username": "alice",
+              "deviceId": "cc3e3b1e-6cac-4af1-bb46-51bba9efd190"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52536/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "9803aa22-b697-48ec-9110-2e0dde599f89",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "bbc5d167-e5c3-4935-9ac6-1a2a8ec571d2",
+              "userId": "e77b7ecb-1529-4998-ad3b-679b52108c92",
+              "username": "alice",
+              "deviceId": "cc3e3b1e-6cac-4af1-bb46-51bba9efd190"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52536/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "mode": "base-no-trailing-slash+parallel-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.344,
+      "minimumFreeBytes": 13677559808,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "1b5f9bbe-d15f-462d-93ed-a62a59815c19",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "90b61753-8f1d-46b4-a716-b3e38c7cdb9b",
+              "userId": "8f2f759b-e9f9-4643-8cd7-c066bdb436da",
+              "username": "alice",
+              "deviceId": "9a7eeffe-b12f-445f-b9de-86ca94a8a4ac"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52547/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "1b5f9bbe-d15f-462d-93ed-a62a59815c19",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "90b61753-8f1d-46b4-a716-b3e38c7cdb9b",
+              "userId": "8f2f759b-e9f9-4643-8cd7-c066bdb436da",
+              "username": "alice",
+              "deviceId": "9a7eeffe-b12f-445f-b9de-86ca94a8a4ac"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52547/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "mode": "base-with-trailing-slash+sequential-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.302,
+      "minimumFreeBytes": 13659426816,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "4eca0a53-4dde-4564-ab79-e345da2e659c",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "88be8676-840c-492f-8a42-bb9e0c3c3791",
+              "userId": "a5ea4a82-2071-4a6f-8a47-a23b8d13b876",
+              "username": "alice",
+              "deviceId": "e7e3e654-1b62-430a-8497-4bd7765c652b"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52557/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "4eca0a53-4dde-4564-ab79-e345da2e659c",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "88be8676-840c-492f-8a42-bb9e0c3c3791",
+              "userId": "a5ea4a82-2071-4a6f-8a47-a23b8d13b876",
+              "username": "alice",
+              "deviceId": "e7e3e654-1b62-430a-8497-4bd7765c652b"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52557/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "mode": "base-with-trailing-slash+parallel-cold-module-imports",
+      "exitCode": 0,
+      "groups": 16,
+      "sourceCount": 91,
+      "inputsUnchanged": true,
+      "elapsedSeconds": 1.804,
+      "minimumFreeBytes": 13656838144,
+      "twoTabs": [
+        {
+          "tab": 2,
+          "snapshot": {
+            "revision": 0,
+            "auth": {
+              "familyId": "1fd330f0-95ca-40b7-bf4b-995e8b65ee33",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "5dcdef00-52f3-442b-a70f-f87d160e107b",
+              "userId": "fc5011e3-7024-4dd5-9d29-8d936fbe0d94",
+              "username": "alice",
+              "deviceId": "59738917-8aa4-4c36-b864-e11ade188bb1"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52569/Src/AuthSession.ts"
+          ],
+          "events": 8
+        },
+        {
+          "tab": 1,
+          "snapshot": {
+            "revision": 1,
+            "auth": {
+              "familyId": "1fd330f0-95ca-40b7-bf4b-995e8b65ee33",
+              "refreshGeneration": "2",
+              "sourceContextId": "personal",
+              "restoreEpoch": "1",
+              "deploymentId": "5dcdef00-52f3-442b-a70f-f87d160e107b",
+              "userId": "fc5011e3-7024-4dd5-9d29-8d936fbe0d94",
+              "username": "alice",
+              "deviceId": "59738917-8aa4-4c36-b864-e11ade188bb1"
+            },
+            "blocked": ""
+          },
+          "authURLs": [
+            "http://127.0.0.1:52569/Src/AuthSession.ts"
+          ],
+          "events": 21
+        }
+      ],
+      "storageEventCountIncludingSnapshots": 28,
+      "broadcastEvents": 0,
+      "serverAuthModules": [
+        {
+          "url": "/Src/api.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/api.ts",
+          "importers": []
+        },
+        {
+          "url": "/Src/AuthSession.ts",
+          "id": "/Users/jobs/Documents/GitHub/JobsProds/JobsIM/代码/前端/Web/Src/AuthSession.ts",
+          "importers": [
+            "/Src/api.ts"
+          ]
+        }
+      ]
+    }
+  ],
+  "forbiddenFixtureValueOccurrencesInResults": [],
+  "conclusion": "10 bounded runs did not reproduce original Web09; unchanged production, no cause or repair established."
+}

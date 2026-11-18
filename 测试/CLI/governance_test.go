@@ -337,7 +337,11 @@ func TestGroupCommandsKeepExactContractAndDoNotReplayUnknownPatch(t *testing.T) 
 	}{{"members", "group", false}, {"add-member", "group peer", false}, {"remove-member", "group peer 9007199254740993123456", false}, {"rename", "group New title with spaces", true}, {"transfer", "group peer", true}} {
 		before := calls
 		err := c.command(command.cmd, command.args)
-		if (err != nil) != command.fail || calls != before+1 {
+		expectedCalls := 1
+		if command.cmd == "transfer" {
+			expectedCalls = 0
+		}
+		if (err != nil) != command.fail || calls != before+expectedCalls {
 			t.Fatal("command contract failed or unknown write replayed")
 		}
 	}

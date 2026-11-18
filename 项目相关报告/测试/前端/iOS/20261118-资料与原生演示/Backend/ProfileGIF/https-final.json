@@ -1,0 +1,142 @@
+{
+  "status": "passed",
+  "deploymentId": "2cbd9bd2-1205-44fb-870c-9cad48135c48",
+  "strictCAAndHost": true,
+  "dedicatedPorts": [
+    19543,
+    19544
+  ],
+  "nativeControllerFixedActions": true,
+  "statusOmitsCredentials": true,
+  "normalNonAdminProfilesAndGIF": true,
+  "actualAvatarSHA256": "1b6665f70f1c0d439c22b61bd9476d29f1945355482d2097601f82ac20ec523a",
+  "gifSourceSHA256": "470e796f862118a367f958970f14659cd036f561a09d79f28b8222143298aefb",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/api/demo/v1/status",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/demo/v1/ensure-start",
+      "status": 400
+    },
+    {
+      "method": "POST",
+      "path": "/api/demo/v1/stop",
+      "status": 404
+    },
+    {
+      "method": "POST",
+      "path": "/api/demo/v1/ensure-start",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/bootstrap",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/auth/register",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/me",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/me",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/me/avatar",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/avatars/5830537b-35eb-4656-9a43-81ab19b77fdb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/avatars/0d8e7a77-2866-4fe4-b833-84ae83b74e80",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/me/avatar",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/avatars/5830537b-35eb-4656-9a43-81ab19b77fdb",
+      "status": 403
+    },
+    {
+      "method": "POST",
+      "path": "/api/contacts/requests",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/contacts/requests/dd983f88-c99a-4377-9a58-26e94e447124/accept",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/avatars/5830537b-35eb-4656-9a43-81ab19b77fdb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/40030fe8-a31f-41c1-a7ce-ea1d6c222a95/profile",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/api/blocks/007ca467-632a-4fe0-939b-dfda856a38b5",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/avatars/5830537b-35eb-4656-9a43-81ab19b77fdb",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/40030fe8-a31f-41c1-a7ce-ea1d6c222a95/profile",
+      "status": 403
+    },
+    {
+      "method": "GET",
+      "path": "/api/users/40030fe8-a31f-41c1-a7ce-ea1d6c222a95/profile",
+      "status": 403
+    }
+  ],
+  "scope": "Dedicated NativeDemo-v1 only; no default instance, admin or iPhone verification"
+}
